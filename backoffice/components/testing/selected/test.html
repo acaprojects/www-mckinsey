@@ -1,0 +1,29 @@
+<div class="main view" ng-controller="TestCtrl">
+    <div id="testing">
+        <div>
+            <h1>{{state.test.name}}</h1>
+            <h2>{{test.details.klass}}</h2>
+
+            <table>
+                <tr ng-if="test.details.documentation.length > 0">
+                    <td>Reference Documentation</td>
+                    <td>
+                        <span ng-repeat="doc in test.details.documentation track by $index">
+                            <a ng-href="{{doc}}" target="_blank">{{doc}}</a>
+                            <br />
+                        </span>
+                    </td>
+                </tr>
+                <tr ng-repeat="(key, value) in test.details.details">
+                    <td>{{key.split('_').join(' ')}}</td>
+                    <td>{{value}}</td>
+                </tr>
+            </table>
+
+            <span class="rerun" ng-click="run_test();"></span>
+        </div>
+    </div>
+    <div id="terminal">
+        <textarea id="termin" type="text" ng-model="test.stdin" ng-change="input_changed()" ng-trim="false"></textarea>
+    </div>
+</div>
