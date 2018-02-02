@@ -1,0 +1,72 @@
+{
+  "configVersion": 1,
+  "index": "/bookings/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/bookings/favicon.ico",
+        "/bookings/index.html",
+        "/bookings/inline.e3859204e55a9264d8fe.bundle.js",
+        "/bookings/main.4321cc9c0c8c97c0e0cd.bundle.js",
+        "/bookings/polyfills.abdf53ca655716e505e0.bundle.js",
+        "/bookings/styles.d7dc38cc4a6d2d183b88.bundle.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/bookings/assets/img/touch.png"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "fonts",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*"
+      ]
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "settings",
+      "patterns": [
+        "\\/assets\\/settings\\.json"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 10000,
+      "version": 1
+    },
+    {
+      "name": "control-api",
+      "patterns": [
+        "\\/control"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 10000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/bookings/inline.e3859204e55a9264d8fe.bundle.js": "6c1a7bc8e4e390a2b04f5927e288b8f8f1dc4476",
+    "/bookings/assets/img/touch.png": "11b3fb72083a1bb87e02c8b9977e26108309b9c4",
+    "/bookings/main.4321cc9c0c8c97c0e0cd.bundle.js": "c136edcd4bee6f2a0ffd1cb966f3f6ca111ceacf",
+    "/bookings/polyfills.abdf53ca655716e505e0.bundle.js": "b838d2e8138f4c1dfbf35e40a68f6819bcc25a48",
+    "/bookings/styles.d7dc38cc4a6d2d183b88.bundle.css": "aaee388bbc2e4406b3d7e823a47de2eaf2e607ce",
+    "/bookings/favicon.ico": "5459953711ed224a36cb49b93710b540ee18a79e",
+    "/bookings/index.html": "234ba6799e81680c3167cc65bd27cbff4664db06"
+  }
+}
