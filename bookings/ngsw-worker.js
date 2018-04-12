@@ -90,14 +90,14 @@ class CacheDatabase {
         if (this.tables.has(name)) {
             this.tables.delete(name);
         }
-        return this.scope.caches.delete(`ngsw:db:bookings:${name}`);
+        return this.scope.caches.delete(`ngsw:bookings:db:${name}`);
     }
     list() {
-        return this.scope.caches.keys().then(keys => keys.filter(key => key.startsWith('ngsw:db:bookings:')));
+        return this.scope.caches.keys().then(keys => keys.filter(key => key.startsWith('ngsw:bookings:db:')));
     }
     open(name) {
         if (!this.tables.has(name)) {
-            const table = this.scope.caches.open(`ngsw:db:bookings:${name}`)
+            const table = this.scope.caches.open(`ngsw:bookings:db:${name}`)
                 .then(cache => new CacheTable(name, cache, this.adapter));
             this.tables.set(name, table);
         }
@@ -1337,7 +1337,7 @@ class AppVersion {
         this.assetGroups = (manifest.assetGroups || []).map(config => {
             // Every asset group has a cache that's prefixed by the manifest hash and the name of the
             // group.
-            const prefix = `ngsw:${this.manifestHash}:assets`;
+            const prefix = `ngsw:bookings:${this.manifestHash}:assets`;
             // Check the caching mode, which determines when resources will be fetched/updated.
             switch (config.installMode) {
                 case 'prefetch':
@@ -1348,7 +1348,7 @@ class AppVersion {
         });
         // Process each `DataGroup` declared in the manifest.
         this.dataGroups = (manifest.dataGroups || [])
-            .map(config => new DataGroup(this.scope, this.adapter, config, this.database, `ngsw:${config.version}:data`));
+            .map(config => new DataGroup(this.scope, this.adapter, config, this.database, `ngsw:bookings:${config.version}:data`));
     }
     get okay() { return this._okay; }
     /**
@@ -1861,7 +1861,7 @@ class Driver {
         }
     }
     async handlePush(data) {
-        this.broadcast({
+        await this.broadcast({
             type: 'PUSH',
             data,
         });
@@ -1872,7 +1872,7 @@ class Driver {
         let options = {};
         NOTIFICATION_OPTION_NAMES.filter(name => desc.hasOwnProperty(name))
             .forEach(name => options[name] = desc[name]);
-        this.scope.registration.showNotification(desc['title'], options);
+        await this.scope.registration.showNotification(desc['title'], options);
     }
     async reportStatus(client, promise, nonce) {
         const response = { type: 'STATUS', nonce, status: true };
@@ -2182,7 +2182,7 @@ class Driver {
         if (!res.ok) {
             if (res.status === 404) {
                 await this.deleteAllCaches();
-                this.scope.registration.unregister();
+                await this.scope.registration.unregister();
             }
             throw new Error('Manifest fetch failed!');
         }
@@ -2191,7 +2191,7 @@ class Driver {
     }
     async deleteAllCaches() {
         await (await this.scope.caches.keys())
-            .filter(key => key.startsWith('ngsw:'))
+            .filter(key => key.startsWith('ngsw:bookings:'))
             .reduce(async (previous, key) => {
             await Promise.all([
                 previous,
@@ -2265,7 +2265,7 @@ class Driver {
         // Firstly, check if the manifest version is correct.
         if (manifest.configVersion !== SUPPORTED_CONFIG_VERSION) {
             await this.deleteAllCaches();
-            this.scope.registration.unregister();
+            await this.scope.registration.unregister();
             throw new Error(`Invalid config version: expected ${SUPPORTED_CONFIG_VERSION}, got ${manifest.configVersion}.`);
         }
         // Cause the new version to become fully initialized. If this fails, then the
