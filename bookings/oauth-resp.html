@@ -9,7 +9,7 @@
         <script>
         var run_on_load = function() {
             var origin = window.location.origin;
-            if(window != window.top && window != window.parent ) {
+            if(window != window.top && window != window.parent && !localStorage || localStorage.getItem('iframe_auth') === 'true') {
                 console.log('Not main window/tab.');
                 var message = 'error';
                 if (window.location.hash.indexOf('access_token') !== -1) {
