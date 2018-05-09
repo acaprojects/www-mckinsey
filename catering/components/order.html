@@ -1,0 +1,30 @@
+
+<article>
+    <div class="created" ng-class="{accepted: order.accepted_at}">
+        {{(order.accepted_at || order.created_at) * 1000 | fromNow:prettyDate}}
+    </div>
+    <div class="location">
+        <span class="pe-7s-map-marker"></span> {{order.room_name}}
+    </div>
+    <div class="order">
+        {{order.order_text}}
+
+        <span role="button"
+                class="icon expand"
+                ng-class="{expanded: expanded}"
+                ng-touch="toggleContent()">
+        </span>
+    </div>
+    <div class="actions">
+        <span role="button" class="icon accept" ng-click="coModuleInstance.$exec('progress', order.id)"></span>
+    </div>
+</article>
+<div class="content">
+    <div>
+        <ul>
+            <li ng-repeat="item in order.order">
+                {{item.qty}} x {{item.item}} <span ng-if="item.notes">({{item.notes}})</span>
+            </li>
+        </ul>
+    </div>
+</div>

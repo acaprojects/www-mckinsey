@@ -1,0 +1,26 @@
+
+<div ng-class="current.klass || 'free'">
+    <span co-bind="'catering_status' as server.status"></span>
+    <span co-bind="'waiter_call' as server.call"></span>
+    <span co-bind="'waiter_status' as server.call_status"></span>
+    <span co-bind="'today' as server.today"></span>
+    <span co-bind="'catering_status' as server.status"></span>
+
+    <div class="actions" ng-class="checked.progress" ng-touch="nextCheck()">
+    </div>
+
+    <div class="details">
+        <h1>{{room.name}}</h1>
+
+        <div class="current" ng-class="current.klass || 'free'">
+            <b>{{current.owner}}</b>
+            <h3>{{current.subject}}</h3>
+        </div>
+
+        <div ng-if="next" class="next" ng-class="next.klass">
+            <h2 ng-if="next.klass == 'busy'">Next @ {{next.startPretty}}</h2>
+            <h2 ng-if="next.klass != 'busy'">Free @ {{next.startPretty}}</h2>
+            <b>{{next.subject || next.owner}}</b>
+        </div>
+    </div>
+</div>
