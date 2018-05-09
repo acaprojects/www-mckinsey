@@ -1,0 +1,58 @@
+
+<header>
+    <div class="info current">
+        <div>
+            <div>{{working.length}}</div>
+            <span>in the works</span>
+        </div>
+    </div>
+
+    <div class="info new">
+        <div>
+            <div>{{waiting.length}}</div>
+            <span>new orders</span>
+        </div>
+    </div>
+</header>
+
+<section class="working orders" co-bind="'working'" update-pretties>
+    <div ng-repeat="order in working track by $index" order="order" mod="coModuleInstance"></div>
+</section>
+
+<hr ng-if="working.length > 0 && waiting.length > 0" />
+
+<section class="waiting orders" co-bind="'waiting'" update-pretties>
+    <div ng-repeat="order in waiting track by $index" order="order" mod="coModuleInstance"></div>
+</section>
+
+<h1 ng-if="working.length == 0 && waiting.length == 0">No orders at the moment</h1>
+
+<!-- This is the timetable display -->
+<footer co-bind="'rooms'" ng-init="calls = []">
+    <div ng-repeat="room in rooms track by $index">
+        <div ng-if="room.sys_id" ng-scope>
+            <div co-system="room.sys_id" co-module="'Bookings'" class="room">
+                <div room-visual></div>
+            </div>
+        </div>
+    </div>
+
+    <modal name="waiter_call" title="Service Requested" no-close="true">
+        <p><b>The following rooms have requested service:</b></p>
+        <ul>
+            <li ng-repeat="call in calls track by $index">{{call}}</li>
+        </ul>
+        <menu>
+            <button
+                class="ok"
+                ng-touch="$root.$broadcast('acknowledge'); closeModal('waiter_call')"
+            >Acknowledge</button>
+        </menu>
+        <div style="clear: both"></div>
+    </modal>
+
+    <audio style="display: none" ng-if="waiting.length > 0 || calls.length > 0" ng-attr-autoplay="{{waiting.length > 0 || calls.length > 0}}" loop>
+        <source src="alert.aac" type="audio/aac">
+        <source src="alert.mp3" type="audio/mp3">
+    </audio>
+</footer>
