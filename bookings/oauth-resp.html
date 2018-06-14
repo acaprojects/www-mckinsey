@@ -9,7 +9,9 @@
         <script>
         var run_on_load = function() {
             var origin = window.location.origin;
-            if(window != window.top && window != window.parent && !localStorage || localStorage.getItem('iframe_auth') === 'true') {
+            if (window != window.top && window != window.parent &&
+                (!localStorage || localStorage.getItem('iframe_auth') === 'true') &&
+                origin === window.parent.location.origin) {
                 console.log('Not main window/tab.');
                 var message = 'error';
                 if (window.location.hash.indexOf('access_token') !== -1) {
@@ -19,7 +21,7 @@
                     message = '{"code":"' + window.location.search.replace(/^.*code=([^&]+).*$/, '$1') + '"}';
                 }
                 try {
-                    // Standards based browsers
+                        // Standards based browsers
                     parent.postMessage(message, origin);
                 } catch(e) {
                     console.error(e);

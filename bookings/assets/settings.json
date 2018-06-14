@@ -1,1 +1,26 @@
-{"version":"0.9.0","build":"2018-05-13T23:25:54.250Z","env":"prod","debug":true,"composer":{"domain":"demo.aca.im","route":"/bookings","protocol":"https:","use_domain":true,"local_login":false},"app":{"title":"Booking Panel","name":"Room Booking Panel","description":"ACA Room Booking Panel written with Angular Framework","short_name":"BOOKINGS","code":"BOOK","logo_type":"img","logo":"staff-app-latitude"},"disable":{"user_search":false}}
+{
+    "version": "0.10.2",
+    "build": 1528938301433,
+    "env": "prod",
+    "debug": true,
+    "composer": {
+        "domain": "",
+        "route": "/bookings",
+        "protocol": "https:",
+        "use_domain": true,
+        "local_login": false
+    },
+    "app": {
+        "title": "Booking Panel",
+        "name": "Room Booking Panel",
+        "description": "ACA Room Booking Panel written with Angular Framework",
+        "short_name": "BOOKINGS",
+        "code": "BOOK",
+        "logo_type": "img",
+        "logo": "staff-app-latitude"
+    },
+    "disable": {
+        "user_search": false
+    },
+    "mock": false
+}

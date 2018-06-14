@@ -8,11 +8,7 @@
       "updateMode": "prefetch",
       "urls": [
         "/bookings/favicon.ico",
-        "/bookings/index.html",
-        "/bookings/inline.318b50c57b4eba3d437b.bundle.js",
-        "/bookings/main.59d54c5191d449ff34c1.bundle.js",
-        "/bookings/polyfills.62ff759e7517db1c0938.bundle.js",
-        "/bookings/styles.f8b6e07b67a7afb58ea6.bundle.css"
+        "/bookings/index.html"
       ],
       "patterns": []
     },
@@ -60,11 +56,25 @@
     }
   ],
   "hashTable": {
-    "/bookings/inline.318b50c57b4eba3d437b.bundle.js": "998c6060446975e566fd17509558ddc68d72eec3",
-    "/bookings/main.59d54c5191d449ff34c1.bundle.js": "59f939d31644219fe27dd61c33fb7026f9751e3d",
-    "/bookings/polyfills.62ff759e7517db1c0938.bundle.js": "12c1dead6505867b7219c4eb6ef8ecc0e5ca51be",
-    "/bookings/styles.f8b6e07b67a7afb58ea6.bundle.css": "d7eeff26b814be04503b77a2608a0f7f059a62cc",
     "/bookings/favicon.ico": "5459953711ed224a36cb49b93710b540ee18a79e",
-    "/bookings/index.html": "2426efa82955195e80e7b7a3938271243fc20898"
-  }
+    "/bookings/index.html": "61954df4c6cc16a5ab134715aa579781f3192f42"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+    }
+  ]
 }
