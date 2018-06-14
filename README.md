@@ -9,6 +9,10 @@ and any other client-branded/custom frontends for this particular client
 
 When pushing, please ensure that any environment related settings (e.g. staff/assets/settings.json) match the actual production setting that is required. UAT settings can go into a `uat` branch
 
+# Usage
+* Treat `master` branch as the one to deploy to the UAT (or POC) server(s), including having any settings.json values up match the UAT environment requirements.
+* Treat `prod` branch as the one to deploy to the PROD server(s), including having any settings.json values up match the PROD environment requirements.
+
 
 ### Updating forks from this repo ###
 In your fork:
