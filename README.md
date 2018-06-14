@@ -15,7 +15,7 @@ In your fork:
 ```
 git remote add www-template https://bitbucket.org/aca/www-template
 git remote set-url --push template no-pushing-allowed  #Just to ensure you don't push your private fork to www-template
-git pull www-template master
+git pull -X theirs www-template master
 git push origin master
 ```
  
