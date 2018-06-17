@@ -20,7 +20,7 @@
         "logo": "staff-app-latitude"
     },
     "disable": {
-        "user_search": false
+        "user_search": true
     },
     "mock": false
 }
