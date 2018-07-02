@@ -18,7 +18,7 @@ When pushing, please ensure that any environment related settings (e.g. staff/as
 In your fork:
 ```
 git remote add www-template https://bitbucket.org/aca/www-template
-git remote set-url --push template no-pushing-allowed  #Just to ensure you don't push your private fork to www-template
+git remote set-url --push www-template no-pushing-allowed  #Just to ensure you don't push your private fork to www-template
 git pull -X theirs www-template master
 git push origin master
 ```
