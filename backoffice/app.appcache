@@ -29,10 +29,10 @@ components/testing/placeholder.html
 components/testing/testing-list.html
 components/triggers/placeholder.html
 components/triggers/triggers-list.html
-components/zones/placeholder.html
-components/zones/zones-list.html
 components/users/placeholder.html
 components/users/users-list.html
+components/zones/placeholder.html
+components/zones/zones-list.html
 layout/select2/select2.css
 components/dependencies/edit/edit-dep.html
 components/dependencies/edit/new-dep.html
@@ -58,16 +58,16 @@ components/triggers/edit/edit-condition.html
 components/triggers/edit/edit-trigger.html
 components/triggers/edit/new-trigger.html
 components/triggers/selected/trigger.html
-components/zones/edit/edit-zone.html
-components/zones/edit/new-zone.html
-components/zones/selected/zone.html
 components/users/edit/edit-user.html
 components/users/edit/new-user.html
 components/users/selected/user.html
+components/zones/edit/edit-zone.html
+components/zones/edit/new-zone.html
+components/zones/selected/zone.html
 
 NETWORK:
 http://*
 https://*
 *
 
-# hash: 505048a9a24904447f5f0a32baff02de7acccacc0b485cb706d19b50d9522e8c
+# hash: 31d1c2e4774075f929ddb0d690db91b168e43b5ab89281e8b0b390baaab9f6e5
