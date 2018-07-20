@@ -22,4 +22,12 @@ git remote set-url --push www-template no-pushing-allowed  #Just to ensure you d
 git pull -X theirs www-template master
 git push origin master
 ```
- 
+
+## Auto login
+
+Auto login page requires that the username and password be set as query parameters  
+  
+For example:  
+`
+https://yourdomain.com/auto_login.html?username=blah&password=1234&continue=/your-ui
+`
