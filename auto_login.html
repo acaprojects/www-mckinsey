@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Login</title>
+    <style>
+        svg circle {
+            transform-origin: center;
+            animation: sk-rotate-simple .8s infinite linear;
+        }
+
+        @keyframes sk-rotate-simple {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; flex-direction: column;">
+        <div style="height: 160px; width: 160px">
+            <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(0,0,0, .87)" stroke-width="12" stroke-dasharray="339.292" stroke-dashoffset="271.5"
+                    stroke-linecap="round" />
+            </svg>
+        </div>
+        <div style="font-size: 40px; margin-top: 1em; font-family: sans-serif">Authenticating...</div>
+    </div>
+    <script>
+        var hash_map = {}; // Store for parameters
+
+        function handleResponse(resp) {
+            console.log(resp);
+            setTimeout(function () {
+                // Login success continue
+                window.location.href = hash_map.continue || '/';
+            }, 3000);
+        }
+
+        function handleError(resp) {
+            console.error(resp);
+            setTimeout(function () {
+                // Error occurred return request
+                window.location.reload();
+            }, 3000);
+        }
+
+        function login() {
+            console.log('Logging in');
+            // Grab search string and remove question mark
+            var search = window.location.search.substr(1);
+            // Split paramter
+            var parts = search.split('&');
+            // Map parameters and values to an object
+            for (let i = 0; i < parts.length; i++) {
+                const param = parts[i].split('=');
+                hash_map[param[0]] = param[1];
+            }
+            // Check if credentials are present
+            if (hash_map.username && hash_map.password) {
+                var request = new XMLHttpRequest();
+
+                request.addEventListener("load", handleResponse);
+                request.addEventListener("error", handleError);
+                request.addEventListener("abort", handleError);
+                request.open('POST', '/auth/signin');
+                request.send('username=' + hash_map.username + '&password' + hash_map.password);
+            } else {
+                window.location.href = hash_map.continue || '/';
+            }
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener("DOMContentLoaded", login);
+        } else {
+            login();  // IE 8
+        }
+    </script>
+</body>
+
+</html>
