@@ -71,9 +71,9 @@
                 request.addEventListener("load", handleResponse);
                 request.addEventListener("error", handleError);
                 request.addEventListener("abort", handleError);
+                request.open('POST', '/auth/signin');
                 request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                     // Make request to auth endpoint
-                request.open('POST', '/auth/signin');
                 request.send('email=' + hash_map.username + '&password' + hash_map.password);
             } else {
                     // Return to referer if no credentials
