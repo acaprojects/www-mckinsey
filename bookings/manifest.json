@@ -1,0 +1,13 @@
+{
+    "short_name": "BOOKINGS",
+    "name": "Room Booking Panel",
+    "icons": [
+        {
+            "src": "assets/icon/launch.png",
+            "sizes": "196x196",
+            "type": "png"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "standalone"
+}
