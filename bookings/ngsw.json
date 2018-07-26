@@ -34,7 +34,7 @@
     {
       "name": "settings",
       "patterns": [
-        "\\/assets\\/settings\\.json"
+        "\\/bookings\\/assets\\/settings\\.json"
       ],
       "strategy": "freshness",
       "maxSize": 10,
@@ -57,7 +57,7 @@
   ],
   "hashTable": {
     "/bookings/favicon.ico": "5459953711ed224a36cb49b93710b540ee18a79e",
-    "/bookings/index.html": "61954df4c6cc16a5ab134715aa579781f3192f42"
+    "/bookings/index.html": "a04cc3bfa12643ac18e26657635bd173031fc8a2"
   },
   "navigationUrls": [
     {
@@ -66,15 +66,15 @@
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
   ]
 }
