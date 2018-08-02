@@ -74,7 +74,7 @@
                 request.open('POST', '/auth/signin');
                 request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                     // Make request to auth endpoint
-                request.send('email=' + hash_map.username + '&password' + hash_map.password);
+                request.send('email=' + hash_map.username + '&password=' + hash_map.password);
             } else {
                     // Return to referer if no credentials
                 window.location.href = hash_map.continue || '/';
