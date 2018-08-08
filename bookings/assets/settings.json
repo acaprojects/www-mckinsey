@@ -1,6 +1,6 @@
 {
     "version": "0.10.2",
-    "build": 1532591880000,
+    "build": 1533695280000,
     "env": "prod",
     "debug": true,
     "composer": {
@@ -21,6 +21,5 @@
     },
     "disable": {
         "user_search": true
-    },
-    "mock": false
+    }
 }
