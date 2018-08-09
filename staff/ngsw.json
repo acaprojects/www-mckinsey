@@ -1,0 +1,102 @@
+{
+  "configVersion": 1,
+  "index": "/staff/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/staff/favicon.ico",
+        "/staff/index.html"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/staff/assets/icon/launch.png",
+        "/staff/assets/img/caterer-01.jpg",
+        "/staff/assets/img/caterer-02.jpg",
+        "/staff/assets/img/caterer-03.jpg",
+        "/staff/assets/img/coffee.svg",
+        "/staff/assets/img/home-back.jpg",
+        "/staff/assets/img/logo-inverse.svg",
+        "/staff/assets/img/logo.svg",
+        "/staff/assets/img/skyline.jpg",
+        "/staff/assets/img/visa.svg",
+        "/staff/assets/maps/level_01.svg",
+        "/staff/assets/maps/level_02.svg",
+        "/staff/assets/maps/level_03.svg",
+        "/staff/assets/maps/level_10.svg"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*"
+      ]
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "settings",
+      "patterns": [
+        "\\/staff\\/assets\\/settings\\.json"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 10800000,
+      "timeoutMs": 10000,
+      "version": 1
+    },
+    {
+      "name": "control-api",
+      "patterns": [
+        "\\/control",
+        "\\/api"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 10000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/staff/assets/icon/launch.png": "98df582f92701da1badfcafff07a7be0afba0f58",
+    "/staff/assets/img/caterer-01.jpg": "18f9b877954267a56fe26d0fd77f3a56735503bf",
+    "/staff/assets/img/caterer-02.jpg": "076b6d2d512b8e5939f863e24300ba19b1f6faac",
+    "/staff/assets/img/caterer-03.jpg": "c7e2b4735c10ad80492a72fd4ddfdeba85994ee6",
+    "/staff/assets/img/coffee.svg": "8aae8d94029b017c4c24cb1c80423496b7d768da",
+    "/staff/assets/img/home-back.jpg": "1635c5b2726dd8651eec7ca5e97218eeb48aa496",
+    "/staff/assets/img/logo-inverse.svg": "34a90da886a635b6945716d5499d117d35ca4d23",
+    "/staff/assets/img/logo.svg": "3031f3b903415aea3326e12160a94d6302d3264d",
+    "/staff/assets/img/skyline.jpg": "0412c5e2b7443390f3b4dc1ae20783a9e4a5041f",
+    "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
+    "/staff/assets/maps/level_01.svg": "ebd3785093ea7ab6191c1064cbf2cdeff135624d",
+    "/staff/assets/maps/level_02.svg": "6aa6a148ca7d4e6e4c7e2b0dbcad960d979aebc6",
+    "/staff/assets/maps/level_03.svg": "bbd330f78e2bc2fe1f3187bf3714051e0d5ed2ab",
+    "/staff/assets/maps/level_10.svg": "8a9d178fd24fddafd5062b95c80f7d6581746cb5",
+    "/staff/favicon.ico": "5459953711ed224a36cb49b93710b540ee18a79e",
+    "/staff/index.html": "fc574aad1f1c20c57ed6b4a7327672a4096b7a11"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
