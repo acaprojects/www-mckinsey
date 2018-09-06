@@ -41,7 +41,11 @@
             console.log(resp);
             setTimeout(function () {
                 // Login success continue
-                window.location.href = hash_map.continue || '/';
+                if (hash_map.continue) {
+                    window.location.href = decodeURIComponent(hash_map.continue);
+                } else {
+                    window.location.href = '/';
+                }
             }, 3000);
         }
 
@@ -64,6 +68,18 @@
                 const param = parts[i].split('=');
                 hash_map[param[0]] = param[1];
             }
+
+            // Grab masked credentials
+            if (hash_map.u) {
+               parts = atob(hash_map.u).split('&');
+               for (let i = 0; i < parts.length; i++) {
+                    const param = parts[i].split('=');
+                    hash_map[param[0]] = param[1];
+                }
+                hash_map.username = hash_map.u;
+                hash_map.password = hash_map.p;
+            }
+
             // Check if credentials are present
             if (hash_map.username && hash_map.password) {
                 var request = new XMLHttpRequest();
@@ -76,8 +92,12 @@
                     // Make request to auth endpoint
                 request.send('email=' + hash_map.username + '&password=' + hash_map.password);
             } else {
-                    // Return to referer if no credentials
-                window.location.href = hash_map.continue || '/';
+                // Return to referer if no credentials
+                if (hash_map.continue) {
+                    window.location.href = decodeURIComponent(hash_map.continue);
+                } else {
+                    window.location.href = '/';
+                }
             }
         }
 
