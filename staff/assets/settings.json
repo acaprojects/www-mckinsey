@@ -1,21 +1,20 @@
 {
-    "version": "0.15.0",
-    "build": 1533790320000,
     "env": "prod",
     "debug": true,
+    "unlicensed": false,
     "composer": {
         "domain": "",
-        "route": "/staff",
+        "route": "/mkc",
         "protocol": "https:",
         "use_domain": true,
         "local_login": false
     },
     "app": {
-        "title": "ACA Projects",
-        "name": "ACA Projects",
-        "description": "ACA Projects Staff Application made in Angular 5+",
-        "short_name": "ACA",
-        "code": "ACA",
+        "title": "McKinsey & Company",
+        "name": "McKinsey & Company",
+        "description": "McKinsey & Company Staff Application made in Angular 5+",
+        "short_name": "McKinsey",
+        "code": "MCKINSEY",
         "login": {
             "forgot": false
         },
@@ -33,35 +32,46 @@
             "enabled": true,
             "header": true,
             "home": false,
-            "type": "color",
-            "full": true,
-            "background": "assets/img/caterer-03.jpg"
+            "type": "",
+            "full": false,
+            "background": "assets/img/skyline.jpg",
+            "src": "assets/img/skyline.jpg"
         },
         "copyright": "Copyright 2018 ACA Projects",
         "routing": false,
         "style": {
             "popout": true
         },
+        "orgs": true,
         "users": {
             "visitors": true,
             "external": true,
-            "can_add": false,
-            "custom_orgs": true
+            "can_add": true,
+            "custom_orgs": true,
+            "locate": true
         },
         "schedule": {
             "enabled": true,
             "visitors": true,
+            "new_visitors": true,
+            "edit_visitors": true,
+            "contacts": true,
             "popout": false
         },
         "route_settings": {
             "book": "booking"
         },
+        "lockers": {
+            "enabled": false,
+            "simple_filters": false
+        },
         "menu": {
             "type": "sidebar",
             "footer": "circles",
-            "named": false,
-            "home": true,
-            "reverse": true,
+            "named": true,
+            "reverse": false,
+            "home": false,
+            "enabled": false,
             "list": [
                 {
                     "id": "home",
@@ -80,26 +90,20 @@
                         {
                             "id": "explore/spaces",
                             "name": "Spaces"
-                        },
-                        {
-                            "id": "explore/people",
-                            "name": "People"
                         }
                     ]
                 },
                 {
                     "id": "schedule",
-                    "name": "My Bookings",
+                    "name": "My Day",
                     "items": []
                 },
                 {
-                    "id": "help",
-                    "name": "Help",
-                    "items": []
-                },
-                {
-                    "id": "control",
-                    "name": "Control",
+                    "id": "home",
+                    "name": "Logout",
+                    "query": {
+                        "logout": true
+                    },
                     "items": []
                 }
             ]
@@ -138,54 +142,21 @@
                 "id": "book",
                 "name": "Book",
                 "color": "",
-                "icon": {
-                    "class": "material-icons",
-                    "value": "add"
-                }
+                "img": "assets/icon/add.svg"
             },
             {
                 "id": "explore/spaces",
                 "name": "Spaces",
                 "color": "",
-                "icon": {
-                    "class": "material-icons",
-                    "value": "desktop_windows"
-                }
-            },
-            {
-                "id": "explore/people",
-                "name": "People",
-                "color": "",
-                "icon": {
-                    "class": "material-icons",
-                    "value": "people"
-                }
+                "img": "assets/icon/spaces.svg"
             },
             {
                 "id": "schedule",
-                "name": "My Bookings",
+                "name": "My Day",
                 "color": "",
                 "icon": {
                     "class": "material-icons",
-                    "value": "schedule"
-                }
-            },
-            {
-                "id": "help",
-                "name": "Help",
-                "color": "",
-                "icon": {
-                    "class": "material-icons",
-                    "value": "help_outline"
-                }
-            },
-            {
-                "id": "control",
-                "name": "Control",
-                "color": "",
-                "icon": {
-                    "class": "material-icons",
-                    "value": "settings_remote"
+                    "value": "event"
                 }
             }
         ],
@@ -195,17 +166,19 @@
         },
         "booking": {
             "min_attendees": 1,
-            "recurrence": true,
+            "recurrence": false,
             "limit": 12,
             "max_length": 480,
             "min_length": 15,
-            "room_select": false,
+            "room_select": true,
             "title_prefix": "",
             "charge": false,
-            "terms": true,
+            "terms": false,
             "old_filters": false,
-            "privacy": true,
+            "privacy": false,
             "control": false,
+            "lock_cancel": 120,
+            "external_floors": [],
             "fields": [
                 {
                     "id": "room",
@@ -214,28 +187,29 @@
                         "class": "material-icons",
                         "value": "room"
                     },
+                    "simple": true,
                     "description": "",
                     "type": "select",
-                    "edit": false,
+                    "conditions": {
+                        "room_select": false
+                    },
+                    "view_edit": true,
                     "required": true
                 },
                 {
                     "id": "attendees",
                     "name": "Attendees",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "people"
-                    },
+                    "img": "assets/icon/attendee.svg",
                     "description": "",
-                    "type": "select"
+                    "type": "list",
+                    "list_type": "users",
+                    "search": true,
+                    "new_text": "external attendee"
                 },
                 {
                     "id": "date",
                     "name": "Date",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "event"
-                    },
+                    "img": "assets/icon/calendar.svg",
                     "description": "",
                     "type": "select",
                     "required": true
@@ -243,10 +217,7 @@
                 {
                     "id": "duration",
                     "name": "Time",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "access_time"
-                    },
+                    "img": "assets/icon/clock.svg",
                     "description": "",
                     "type": "select",
                     "required": true
@@ -254,52 +225,48 @@
                 {
                     "id": "title",
                     "name": "Subject",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "local_offer"
-                    },
+                    "img": "assets/icon/subject.svg",
                     "description": "",
                     "type": "text",
                     "required": true
                 },
                 {
                     "id": "description",
-                    "name": "Description",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "description"
-                    },
+                    "name": "Notes",
+                    "img": "assets/icon/description.svg",
                     "description": "",
                     "type": "text"
                 },
                 {
                     "id": "catering",
                     "name": "Catering",
+                    "description": "",
                     "icon": {
                         "class": "material-icons",
                         "value": "room_service"
                     },
-                    "description": "",
                     "type": "select"
+                },
+                {
+                    "id": "private",
+                    "name": "Private",
+                    "description": "",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "lock"
+                    },
+                    "type": "toggle",
+                    "default": true
                 }
             ],
             "banner": {
                 "enabled": true,
                 "src": "assets/img/banner2.jpg",
-                "links": [
-                    {
-                        "id": "book",
-                        "name": "Book Space"
-                    },
-                    {
-                        "id": "book/visitor",
-                        "name": "Book Visitor"
-                    }
-                ]
+                "links": []
             }
         },
         "explore": {
-            "old_overlay": false,
+            "old_overlay": true,
             "control": false,
             "banner": {
                 "search": true,
@@ -310,7 +277,8 @@
         "control": {
             "banner": {
                 "search": true,
-                "src": "assets/img/banner.jpg"
+                "fullback": true,
+                "background": "assets/img/caterer-02.jpg"
             }
         },
         "people_min_char": 0,
@@ -319,16 +287,18 @@
         },
         "colors": {
             "rooms": {
-                "available": "#317c36",
-                "unavailable": "#cd212e",
-                "not-bookable": "#e6e6e6",
-                "pin": "#ff5252"
+                "available": "#37aabc",
+                "unavailable": "#e17982",
+                "not-bookable": "#9db4c2",
+                "pin": "#f2b36e"
             },
             "desks": {
-                "available-fill": "#8cd4da",
-                "available-stroke": "#6ab2af",
-                "unavailable-fill": "#ec9d99",
-                "unavailable-stroke": "#ca7b77",
+                "available-fill": "#37aabc",
+                "available-stroke": "#48bbcd",
+                "unavailable-fill": "#e17982",
+                "unavailable-stroke": "#f28a93",
+                "reserved-fill": "#f2b36e",
+                "reserved-stroke": "#ffc47f",
                 "not-bookable-fill": "#e6e6e6",
                 "not-bookable-stroke": "#c4c4c4"
             }
@@ -376,81 +346,21 @@
             "settings": true,
             "bookings": true,
             "keys": {
-                "general": [
-                    {
-                        "id": "lifts",
-                        "name": "Lifts",
-                        "icon": {
-                            "class": "material-icons",
-                            "value": "location_city"
-                        }
-                    },
-                    {
-                        "id": "toilets",
-                        "name": "Toilets",
-                        "icon": {
-                            "class": "material-icons",
-                            "value": "accessibility"
-                        }
-                    },
-                    {
-                        "id": "stairs",
-                        "name": "Stairs",
-                        "icon": {
-                            "class": "material-icons",
-                            "value": "trending_up"
-                        }
-                    }
-                ],
-                "room": [
+                "General": [
                     {
                         "id": "bookable",
-                        "name": "Bookable",
-                        "color": "#317c36"
+                        "name": "Space bookable",
+                        "color": "#37aabc"
                     },
-                    {
-                        "id": "in-use",
-                        "name": "In use",
-                        "color": "#cd212e"
-                    },
-                    {
-                        "id": "no-book",
-                        "name": "Not bookable",
-                        "color": "#545654"
-                    }
-                ],
-                "desk": [
                     {
                         "id": "bookable",
-                        "name": "Bookable",
-                        "color": "#317c36"
+                        "name": "Space unavailable",
+                        "color": "#e17982"
                     },
                     {
-                        "id": "in-use",
-                        "name": "In use",
-                        "color": "#cd212e"
-                    },
-                    {
-                        "id": "no-book",
-                        "name": "Not bookable",
-                        "color": "#545654"
-                    }
-                ],
-                "zone": [
-                    {
-                        "id": "low",
-                        "name": "Low Usage",
-                        "color": "#317c36"
-                    },
-                    {
-                        "id": "medium",
-                        "name": "Medium Usage",
-                        "color": "#f4a81d"
-                    },
-                    {
-                        "id": "high",
-                        "name": "High Usage",
-                        "color": "#cd212e"
+                        "id": "bookable",
+                        "name": "Space not-bookable",
+                        "color": "#9db4c2"
                     }
                 ]
             }

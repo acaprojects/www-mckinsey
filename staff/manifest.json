@@ -1,6 +1,6 @@
 {
-    "short_name": "ACA",
-    "name": "ACA Projects",
+    "short_name": "McKinsey",
+    "name": "McKinsey & Company",
     "icons": [
         {
             "src": "assets/icon/launch.png",
@@ -9,5 +9,7 @@
         }
     ],
     "start_url": "index.html",
+    "background_color": "#000",
+    "theme_color": "#000",
     "display": "standalone"
 }
