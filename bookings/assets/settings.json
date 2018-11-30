@@ -1,6 +1,4 @@
 {
-    "version": "0.10.2",
-    "build": 1533695280000,
     "env": "prod",
     "debug": true,
     "composer": {
@@ -17,7 +15,45 @@
         "short_name": "BOOKINGS",
         "code": "BOOK",
         "logo_type": "img",
-        "logo": "staff-app-latitude"
+        "logo": "staff-app-latitude",
+        "booking": {
+            "title_prefix": ""
+        },
+        "selection": {
+            "header": "Please select a Zen Zone to start",
+            "list": [
+                {
+                    "id": "sys-B0",
+                    "name": "A",
+                    "image": "assets/img/small_up.png"
+                },
+                {
+                    "id": "sys-B1",
+                    "name": "B",
+                    "image": "assets/img/large_up.png"
+                },
+                {
+                    "id": "sys-B2",
+                    "name": "C",
+                    "image": "assets/img/small_up.png"
+                },
+                {
+                    "id": "sys-B3",
+                    "name": "D",
+                    "image": "assets/img/large_down.png"
+                },
+                {
+                    "id": "sys-B4",
+                    "name": "E",
+                    "image": "assets/img/small_down.png"
+                },
+                {
+                    "id": "sys-B5",
+                    "name": "F",
+                    "image": "assets/img/large_down.png"
+                }
+            ]
+        }
     },
     "disable": {
         "user_search": true

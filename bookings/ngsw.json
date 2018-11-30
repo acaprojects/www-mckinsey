@@ -16,7 +16,12 @@
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
-      "urls": [],
+      "urls": [
+        "/bookings/assets/img/large_down.png",
+        "/bookings/assets/img/large_up.png",
+        "/bookings/assets/img/small_down.png",
+        "/bookings/assets/img/small_up.png"
+      ],
       "patterns": []
     },
     {
@@ -56,8 +61,12 @@
     }
   ],
   "hashTable": {
+    "/bookings/assets/img/large_down.png": "8e92c7c75840dbc7c8ea163f628a5182cfba0ce0",
+    "/bookings/assets/img/large_up.png": "32c0bbcbf2aa28bfbe9bc0596f5262a0092cb8c5",
+    "/bookings/assets/img/small_down.png": "e613191a281cdc700ba019862fe6b7125e7f5637",
+    "/bookings/assets/img/small_up.png": "555616ebdfd077fcda51501df3ffdb392f42510b",
     "/bookings/favicon.ico": "5459953711ed224a36cb49b93710b540ee18a79e",
-    "/bookings/index.html": "95212022d64926a8af2b1f084b110d27773bd17c"
+    "/bookings/index.html": "553bf79466ac378cffd6a9ac7dc04391046808af"
   },
   "navigationUrls": [
     {
