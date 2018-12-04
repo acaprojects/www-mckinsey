@@ -4,7 +4,7 @@
     "unlicensed": false,
     "composer": {
         "domain": "",
-        "route": "/mkc",
+        "route": "/staff",
         "protocol": "https:",
         "use_domain": true,
         "local_login": false
@@ -29,8 +29,8 @@
             "background": ""
         },
         "banner": {
-            "enabled": true,
-            "header": true,
+            "enabled": false,
+            "header": false,
             "home": false,
             "type": "",
             "full": false,
@@ -48,7 +48,8 @@
             "external": true,
             "can_add": true,
             "custom_orgs": true,
-            "locate": true
+            "locate": true,
+            "store": false
         },
         "schedule": {
             "enabled": true,
@@ -142,21 +143,24 @@
                 "id": "book",
                 "name": "Book",
                 "color": "",
-                "img": "assets/icon/add.svg"
+                "icon": {
+                    "class": "custom-book"
+                }
             },
             {
                 "id": "explore/spaces",
                 "name": "Spaces",
                 "color": "",
-                "img": "assets/icon/spaces.svg"
+                "icon": {
+                    "class": "custom-spaces"
+                }
             },
             {
                 "id": "schedule",
                 "name": "My Day",
                 "color": "",
                 "icon": {
-                    "class": "material-icons",
-                    "value": "event"
+                    "class": "custom-schedule"
                 }
             }
         ],
@@ -175,17 +179,18 @@
             "charge": false,
             "terms": false,
             "old_filters": false,
-            "privacy": false,
+            "privacy": true,
+            "meet": true,
             "control": false,
             "lock_cancel": 120,
             "external_floors": [],
+            "return_id": "",
             "fields": [
                 {
                     "id": "room",
                     "name": "Space",
                     "icon": {
-                        "class": "material-icons",
-                        "value": "room"
+                        "class": "custom-desk"
                     },
                     "simple": true,
                     "description": "",
@@ -197,9 +202,29 @@
                     "required": true
                 },
                 {
+                    "id": "date",
+                    "name": "Select Date",
+                    "description": "",
+                    "type": "date",
+                    "required": true,
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "keyboard_arrow_down"
+                    }
+                },
+                {
+                    "id": "duration",
+                    "name": "Select Time",
+                    "description": "",
+                    "type": "period",
+                    "required": true
+                },
+                {
                     "id": "attendees",
-                    "name": "Attendees",
-                    "img": "assets/icon/attendee.svg",
+                    "name": "Meeting Attendees",
+                    "icon": {
+                        "class": "custom-add-attendee"
+                    },
                     "description": "",
                     "type": "list",
                     "list_type": "users",
@@ -207,33 +232,15 @@
                     "new_text": "external attendee"
                 },
                 {
-                    "id": "date",
-                    "name": "Date",
-                    "img": "assets/icon/calendar.svg",
-                    "description": "",
-                    "type": "select",
-                    "required": true
-                },
-                {
-                    "id": "duration",
-                    "name": "Time",
-                    "img": "assets/icon/clock.svg",
-                    "description": "",
-                    "type": "select",
-                    "required": true
-                },
-                {
                     "id": "title",
-                    "name": "Subject",
-                    "img": "assets/icon/subject.svg",
+                    "name": "Meeting Subject",
                     "description": "",
                     "type": "text",
                     "required": true
                 },
                 {
                     "id": "description",
-                    "name": "Notes",
-                    "img": "assets/icon/description.svg",
+                    "name": "Meeting Description",
                     "description": "",
                     "type": "text"
                 },
@@ -242,21 +249,9 @@
                     "name": "Catering",
                     "description": "",
                     "icon": {
-                        "class": "material-icons",
-                        "value": "room_service"
+                        "class": "custom-catering"
                     },
                     "type": "select"
-                },
-                {
-                    "id": "private",
-                    "name": "Private",
-                    "description": "",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "lock"
-                    },
-                    "type": "toggle",
-                    "default": true
                 }
             ],
             "banner": {
