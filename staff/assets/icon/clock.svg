@@ -1,17 +1,1 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.764 29.764">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #0165bd;
-        stroke: #4285f4;
-        stroke-width: 2px;
-      }
-    </style>
-  </defs>
-  <title>clock</title>
-  <g id="Artboard_1" data-name="Artboard 1">
-    <g id="Group_1881" data-name="Group 1881">
-      <path id="Path_112" data-name="Path 112" class="cls-1" d="M14.882,1A13.882,13.882,0,1,0,28.764,14.882,13.882,13.882,0,0,0,14.882,1Zm0,1.111A12.772,12.772,0,1,1,2.111,14.884v0A12.774,12.774,0,0,1,14.882,2.111Zm0,3.887a.525.525,0,0,0-.555.493c0,.021,0,.041,0,.062v8.329a.525.525,0,0,0,.493.555c.021,0,.041,0,.062,0H22.1a.556.556,0,1,0,0-1.111H15.438V6.552a.525.525,0,0,0-.5-.552q-.03,0-.06,0Z"/>
-    </g>
-  </g>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.764 29.764"><defs><style>.cls-1{fill:#0165bd;stroke:#4285f4;stroke-width:2px}</style></defs><title>clock</title><g id="Artboard_1" data-name="Artboard 1"><g id="Group_1881" data-name="Group 1881"><path id="Path_112" data-name="Path 112" class="cls-1" d="M14.882 1a13.882 13.882 0 1 0 13.882 13.882A13.882 13.882 0 0 0 14.882 1zm0 1.111A12.772 12.772 0 1 1 2.111 14.884 12.774 12.774 0 0 1 14.882 2.111zm0 3.887a.525.525 0 0 0-.555.493v8.391a.525.525 0 0 0 .493.555h7.28a.556.556 0 1 0 0-1.111h-6.662V6.552a.525.525 0 0 0-.5-.552h-.06z"/></g></g></svg>
