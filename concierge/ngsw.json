@@ -1,0 +1,98 @@
+{
+  "configVersion": 1,
+  "index": "/concierge/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/concierge/favicon.ico",
+        "/concierge/index.html"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/concierge/assets/icon/launch.png",
+        "/concierge/assets/img/carpool.jpg",
+        "/concierge/assets/img/caterer-03.jpg",
+        "/concierge/assets/img/ergonomicsupport.jpg",
+        "/concierge/assets/img/logo-inverse.svg",
+        "/concierge/assets/img/logo.svg",
+        "/concierge/assets/img/report/background.png",
+        "/concierge/assets/img/report/booking.svg",
+        "/concierge/assets/img/report/other.svg",
+        "/concierge/assets/img/report/transition.svg",
+        "/concierge/assets/img/report/visitor.svg",
+        "/concierge/assets/img/scheduleheader.jpg"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*"
+      ]
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "settings",
+      "patterns": [
+        "\\/concierge\\/assets\\/settings\\.json"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 10800000,
+      "timeoutMs": 10000,
+      "version": 1
+    },
+    {
+      "name": "control-api",
+      "patterns": [
+        "\\/control",
+        "\\/api"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 10000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/concierge/assets/icon/launch.png": "98df582f92701da1badfcafff07a7be0afba0f58",
+    "/concierge/assets/img/carpool.jpg": "c886a2d6b52882e499289ef82a2e60e0acf9ad58",
+    "/concierge/assets/img/caterer-03.jpg": "c7e2b4735c10ad80492a72fd4ddfdeba85994ee6",
+    "/concierge/assets/img/ergonomicsupport.jpg": "1cf364bd2f58b1396d3330c785a5da48d240fa97",
+    "/concierge/assets/img/logo-inverse.svg": "34a90da886a635b6945716d5499d117d35ca4d23",
+    "/concierge/assets/img/logo.svg": "bbd667e2ed9f10d13206348cc331453f39596183",
+    "/concierge/assets/img/report/background.png": "315fe05ac5a2fbb81e28d66f6b51026bdbc8072e",
+    "/concierge/assets/img/report/booking.svg": "a206bac8d8edf99f24f5aa32b2150720ae6e3848",
+    "/concierge/assets/img/report/other.svg": "e4d0deb16f491794381facc68cbd71833e785592",
+    "/concierge/assets/img/report/transition.svg": "ef230675f3eb225e091cfe3537fc3de822ea8a75",
+    "/concierge/assets/img/report/visitor.svg": "898473ff4477a600ef97ccc1df26ea67d03775ea",
+    "/concierge/assets/img/scheduleheader.jpg": "2e1be96585029edaeed9f29fb98e9aa3ba1eda14",
+    "/concierge/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
+    "/concierge/index.html": "c53767c8cdd3803c5aa3e2526ace9507935f9d39"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

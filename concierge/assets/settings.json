@@ -1,0 +1,173 @@
+{
+    "version": "0.15.0",
+    "build": "local-dev",
+    "env": "prod",
+    "debug": true,
+    "composer": {
+        "domain": "",
+        "route": "/concierge",
+        "protocol": "https:",
+        "use_domain": true,
+        "local_login": false
+    },
+    "app": {
+        "title": "ACA Projects",
+        "name": "ACA Projects",
+        "description": "ACA Projects Staff Application made in Angular 5+",
+        "short_name": "ACA",
+        "code": "ACA",
+        "login": {
+            "forgot": false
+        },
+        "analytics": {
+            "enabled": false,
+            "tracking_id": ""
+        },
+        "logo": {
+            "type": "img",
+            "src": "assets/img/logo.svg",
+            "inverse": "assets/img/logo-inverse.svg",
+            "background": ""
+        },
+        "users": {
+            "visitors": true
+        },
+        "breakdown": false,
+        "menu": {
+            "list": [
+                {
+                    "id": "day-view",
+                    "name": "Day View",
+                    "icon": {
+                        "class": "custom-day",
+                        "value": ""
+                    }
+                },
+                {
+                    "id": "week-view",
+                    "name": "Week View",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "date_range"
+                    }
+                },
+                {
+                    "id": "visitor-list",
+                    "name": "Visitor List",
+                    "icon": {
+                        "class": "custom-visitor",
+                        "value": ""
+                    }
+                },
+                {
+                    "id": "reports",
+                    "name": "Reports",
+                    "icon": {
+                        "class": "custom-reports",
+                        "value": ""
+                    }
+                },
+                {
+                    "id": "notifications",
+                    "name": "Notifications",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "new_releases"
+                    },
+                    "count": "unread"
+                }
+            ]
+        },
+        "booking": {
+            "min_attendees": 0,
+            "search_host": true,
+            "fields": [
+                {
+                    "id": "room",
+                    "name": "Space",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "room"
+                    },
+                    "description": "",
+                    "type": "select",
+                    "required": true
+                },
+                {
+                    "id": "host",
+                    "name": "Host",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "account_box"
+                    },
+                    "description": "",
+                    "type": "select",
+                    "required": true
+                },
+                {
+                    "id": "attendees",
+                    "name": "Attendees",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "people"
+                    },
+                    "description": "",
+                    "type": "select"
+                },
+                {
+                    "id": "date",
+                    "name": "Date",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "event"
+                    },
+                    "description": "",
+                    "type": "select",
+                    "required": true
+                },
+                {
+                    "id": "duration",
+                    "name": "Time",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "access_time"
+                    },
+                    "description": "",
+                    "type": "select",
+                    "required": true
+                },
+                {
+                    "id": "title",
+                    "name": "Subject",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "local_offer"
+                    },
+                    "description": "",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "id": "description",
+                    "name": "Description",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "description"
+                    },
+                    "description": "",
+                    "type": "text"
+                },
+                {
+                    "id": "notes",
+                    "name": "Notes",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "note"
+                    },
+                    "description": "",
+                    "type": "textarea"
+                }
+            ]
+        }
+    }
+}
