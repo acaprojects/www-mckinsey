@@ -14,10 +14,18 @@
         "description": "ACA Room Booking Panel written with Angular Framework",
         "short_name": "BOOKINGS",
         "code": "BOOK",
-        "logo_type": "img",
-        "logo": "staff-app-latitude",
+        "logo": {
+            "type": "img",
+            "src": "assets/img/logo.svg",
+            "inverse": "assets/img/logo-inverse.svg",
+            "background": ""
+        },
+        "topbar": true,
         "booking": {
             "title_prefix": ""
+        },
+        "rooms": {
+            "enabled": true
         },
         "selection": {
             "header": "Please select a Zen Zone to start",
