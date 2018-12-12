@@ -121,6 +121,7 @@
                 "book/attendees": "Manage Attendees",
                 "book/results": "Booking Results",
                 "explore": "Explore",
+                "schedule": "View your Schedule",
                 "explore/spaces": "Spaces",
                 "explore/people": "People",
                 "visitor": "Book Visitor",
@@ -166,7 +167,10 @@
         ],
         "zones": {
             "enabled": false,
-            "toggle": "room"
+            "toggle": "room",
+            "status": false,
+            "filters": false,
+            "infourl": "assets/icon/info.svg"
         },
         "booking": {
             "min_attendees": 1,
@@ -344,18 +348,18 @@
                 "General": [
                     {
                         "id": "bookable",
-                        "name": "Space bookable",
-                        "color": "#37aabc"
+                        "name": "Free",
+                        "color": "#48AB61 "
                     },
                     {
                         "id": "bookable",
-                        "name": "Space unavailable",
-                        "color": "#e17982"
+                        "name": "Unavailable",
+                        "color": "#575757 "
                     },
                     {
                         "id": "bookable",
-                        "name": "Space not-bookable",
-                        "color": "#9db4c2"
+                        "name": "In-Use",
+                        "color": "#E17982"
                     }
                 ]
             }
