@@ -187,6 +187,7 @@
             "meet": true,
             "control": false,
             "lock_cancel": 120,
+            "search_host": true,
             "external_floors": [],
             "return_id": "",
             "fields": [
@@ -224,6 +225,15 @@
                     "required": true
                 },
                 {
+                    "id": "host",
+                    "name": "Meeting Host",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "add"
+                    },
+                    "type": "select"
+                },
+                {
                     "id": "attendees",
                     "name": "Meeting Attendees",
                     "icon": {
@@ -233,7 +243,13 @@
                     "type": "list",
                     "list_type": "users",
                     "search": true,
-                    "new_text": "external attendee"
+                    "new_text": "contact"
+                },
+                {
+                    "id": "conferencing",
+                    "name": "Add Conferencing",
+                    "description": "",
+                    "type": "select"
                 },
                 {
                     "id": "title",
@@ -256,6 +272,16 @@
                         "class": "custom-catering"
                     },
                     "type": "select"
+                },
+                {
+                    "id": "layout",
+                    "name": "Room Layout",
+                    "description": "",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "keyboard_arrow_down"
+                    },
+                    "type": "options"
                 }
             ],
             "banner": {
@@ -268,7 +294,7 @@
             "old_overlay": true,
             "control": false,
             "banner": {
-                "search": true,
+                "search": false,
                 "roles": true,
                 "src": "assets/img/banner.jpg"
             }
