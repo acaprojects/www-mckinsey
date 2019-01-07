@@ -56,8 +56,12 @@
             "visitors": true,
             "new_visitors": true,
             "edit_visitors": true,
+            "hide_visitor_bookings": true,
             "contacts": true,
             "popout": false
+        },
+        "contacts": {
+            "enabled": true
         },
         "route_settings": {
             "book": "booking"
@@ -177,6 +181,7 @@
             "recurrence": false,
             "limit": 12,
             "max_length": 480,
+            "default_length": 60,
             "min_length": 15,
             "room_select": true,
             "title_prefix": "",
