@@ -1,13 +1,13 @@
 {
-    "env": "prod",
+    "env": "dev",
     "debug": true,
     "unlicensed": false,
     "composer": {
-        "domain": "",
-        "route": "/staff",
-        "protocol": "https:",
+        "domain": "localhost:4200",
+        "route": "",
+        "protocol": "http:",
         "use_domain": true,
-        "local_login": false
+        "local_login": true
     },
     "app": {
         "title": "McKinsey & Company",
@@ -56,12 +56,8 @@
             "visitors": true,
             "new_visitors": true,
             "edit_visitors": true,
-            "hide_visitor_bookings": true,
             "contacts": true,
             "popout": false
-        },
-        "contacts": {
-            "enabled": true
         },
         "route_settings": {
             "book": "booking"
@@ -181,7 +177,6 @@
             "recurrence": true,
             "limit": 12,
             "max_length": 480,
-            "default_length": 60,
             "min_length": 15,
             "room_select": true,
             "title_prefix": "",
@@ -280,9 +275,13 @@
                 },
                 {
                     "id": "layout",
-                    "name": "Room Setup Preference",
+                    "name": "Room Layout",
                     "description": "",
-                    "type": "text"
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "keyboard_arrow_down"
+                    },
+                    "type": "options"
                 }
             ],
             "banner": {
@@ -391,5 +390,6 @@
                 ]
             }
         }
-    }
+    },
+    "mock": true
 }

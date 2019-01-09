@@ -55,7 +55,8 @@
         "/staff/assets/maps/new_york/level_61.svg",
         "/staff/assets/maps/new_york/level_62.svg",
         "/staff/assets/maps/new_york/level_63.svg",
-        "/staff/assets/maps/new_york/level_64.svg"
+        "/staff/assets/maps/new_york/level_64.svg",
+        "/staff/assets/settings.1.json"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
@@ -129,8 +130,9 @@
     "/staff/assets/maps/new_york/level_62.svg": "1aba18625807892ac3736f82b5a4304a45470fa2",
     "/staff/assets/maps/new_york/level_63.svg": "c29432111b8938dc9cc0d46fbbe1a06c65d88f97",
     "/staff/assets/maps/new_york/level_64.svg": "72f3ba5fbab882ab8ead0929dd7789411a176c86",
+    "/staff/assets/settings.1.json": "dc9014bb5a24c81e83dcad0adb77ef8edbc8b782",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "e8311884c0bbd8ac6ee176a70bb0a461ab8e6ef4"
+    "/staff/index.html": "75c921293b2f1adc71a6f73965bf3f35a4e38e1b"
   },
   "navigationUrls": [
     {
