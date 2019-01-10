@@ -270,6 +270,12 @@
                     "type": "text"
                 },
                 {
+                    "id": "bookingtype",
+                    "name": "Booking Type",
+                    "description": "",
+                    "type": "text"
+                },
+                {
                     "id": "catering",
                     "name": "Catering",
                     "description": "",
