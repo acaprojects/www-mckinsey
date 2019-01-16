@@ -251,12 +251,6 @@
                     "new_text": "contact"
                 },
                 {
-                    "id": "conferencing",
-                    "name": "Add Conferencing",
-                    "description": "",
-                    "type": "select"
-                },
-                {
                     "id": "title",
                     "name": "Meeting Subject",
                     "description": "",
