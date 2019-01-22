@@ -197,14 +197,14 @@
             "return_id": "",
             "fields": [
                 {
-                    "id": "room",
-                    "name": "Space",
+                    "key": "room",
+                    "label": "Space",
                     "icon": {
                         "class": "custom-desk"
                     },
                     "simple": true,
                     "description": "",
-                    "type": "select",
+                    "control_type": "select",
                     "conditions": {
                         "room_select": false
                     },
