@@ -178,7 +178,7 @@
         },
         "booking": {
             "min_attendees": 0,
-            "recurrence": true,
+            "recurrence": false,
             "limit": 12,
             "max_length": 480,
             "default_length": 60,
@@ -197,21 +197,6 @@
             "return_id": "",
             "fields": [
                 {
-                    "key": "room",
-                    "label": "Space",
-                    "icon": {
-                        "class": "custom-desk"
-                    },
-                    "simple": true,
-                    "description": "",
-                    "control_type": "select",
-                    "conditions": {
-                        "room_select": false
-                    },
-                    "view_edit": true,
-                    "required": true
-                },
-                {
                     "id": "date",
                     "name": "Select Date",
                     "description": "",
@@ -228,6 +213,26 @@
                     "description": "",
                     "type": "period",
                     "required": true
+                },
+                {
+                    "id": "recurrence",
+                    "name": "Recurrence",
+                    "description": "",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "event_note"
+                    },
+                    "type": "select"
+                },
+                {
+                    "id": "locations",
+                    "name": "Locations",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "add"
+                    },
+                    "no-item": "Any location",
+                    "type": "select"
                 },
                 {
                     "id": "host",
@@ -277,12 +282,6 @@
                         "class": "custom-catering"
                     },
                     "type": "select"
-                },
-                {
-                    "id": "layout",
-                    "name": "Room Setup Preference",
-                    "description": "",
-                    "type": "text"
                 }
             ],
             "banner": {
@@ -313,20 +312,20 @@
         },
         "colors": {
             "rooms": {
-                "available": "#37aabc",
-                "unavailable": "#e17982",
-                "not-bookable": "#9db4c2",
+                "available": "rgba(31,102,0, .875)",
+                "unavailable": "rgba(171,17,3, .875)",
+                "not-bookable": "rgba(73, 73, 73, .875)",
                 "pin": "#f2b36e"
             },
             "desks": {
-                "available-fill": "#37aabc",
-                "available-stroke": "#48bbcd",
-                "unavailable-fill": "#e17982",
-                "unavailable-stroke": "#f28a93",
+                "available-fill": "rgba(31,102,0, .875)",
+                "available-stroke": "#1f6600",
+                "unavailable-fill": "rgba(171,17,3, .875)",
+                "unavailable-stroke": "#AB1103",
                 "reserved-fill": "#f2b36e",
                 "reserved-stroke": "#ffc47f",
-                "not-bookable-fill": "#e6e6e6",
-                "not-bookable-stroke": "#c4c4c4"
+                "not-bookable-fill": "rgba(73, 73, 73, .875)",
+                "not-bookable-stroke": "#494949"
             }
         },
         "help": {
