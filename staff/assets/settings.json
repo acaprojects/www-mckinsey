@@ -195,6 +195,7 @@
             "search_host": true,
             "external_floors": [],
             "return_id": "",
+            "hide_timeline": true,
             "fields": [
                 {
                     "id": "date",
@@ -269,10 +270,11 @@
                     "type": "text"
                 },
                 {
-                    "id": "bookingtype",
-                    "name": "Booking Type",
+                    "id": "conferencing",
+                    "name": "Conferencing",
                     "description": "",
-                    "type": "text"
+                    "type": "toggle",
+                    "action": true
                 },
                 {
                     "id": "catering",
