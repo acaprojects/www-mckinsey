@@ -41,6 +41,7 @@
         "/staff/assets/img/lockers.svg",
         "/staff/assets/img/logo-inverse.svg",
         "/staff/assets/img/logo.svg",
+        "/staff/assets/img/mckinsey_lines.svg",
         "/staff/assets/img/pantry.svg",
         "/staff/assets/img/skyline.jpg",
         "/staff/assets/img/storage.svg",
@@ -119,6 +120,7 @@
     "/staff/assets/img/lockers.svg": "a6acc457b8fc54a99d9519a2a9f300a58903808e",
     "/staff/assets/img/logo-inverse.svg": "5a8c2f8fbe353e75941a84c6c67a6efed57ee96d",
     "/staff/assets/img/logo.svg": "b18b5c1f60356a34751d17dbecef95c0955db88d",
+    "/staff/assets/img/mckinsey_lines.svg": "0100f052bd9a21cb49d14f074d7f9ae13647bfb6",
     "/staff/assets/img/pantry.svg": "c2ec5963210f409f858ef55334467c60a05b4f4e",
     "/staff/assets/img/skyline.jpg": "c47ac628178df00b6cb24b959bc88be223eac30c",
     "/staff/assets/img/storage.svg": "06e314fdf75ea7852e958e7a759c0f933d052821",
@@ -140,7 +142,7 @@
     "/staff/assets/maps/sydney/level_36.svg": "4306f4441a2625803fc73e361b4eb4ccd192e008",
     "/staff/assets/settings.1.json": "dc9014bb5a24c81e83dcad0adb77ef8edbc8b782",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "5a9430da5ff3cb524c1795db29c64f92ddb37242"
+    "/staff/index.html": "e972bdb81c69b6c4c414f5362ecfd555226b3318"
   },
   "navigationUrls": [
     {

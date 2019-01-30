@@ -72,8 +72,8 @@
         },
         "menu": {
             "type": "sidebar",
-            "footer": "circles",
-            "named": true,
+            "footer": "bg",
+            "named": false,
             "reverse": false,
             "home": false,
             "enabled": false,
@@ -118,8 +118,6 @@
         },
         "page": {
             "titles": {
-                "": "Home",
-                "home": "Home",
                 "book": "Book Space",
                 "book/room": "Find Space",
                 "book/attendees": "Manage Attendees",
@@ -254,7 +252,7 @@
                     "type": "list",
                     "list_type": "users",
                     "search": true,
-                    "new_text": "contact"
+                    "new_text": "External Attendee"
                 },
                 {
                     "id": "title",
