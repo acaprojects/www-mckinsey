@@ -359,20 +359,20 @@
         },
         "colors": {
             "rooms": {
-                "available": "rgba(31,102,0, .875)",
-                "unavailable": "rgba(171,17,3, .875)",
-                "not-bookable": "rgba(73, 73, 73, .875)",
+                "available": "rgba(31,102,0, .7)",
+                "unavailable": "rgba(171,17,3, .70)",
+                "not-bookable": "rgba(73, 73, 72, .70)",
                 "pin": "#f2b36e"
             },
             "desks": {
-                "available-fill": "rgba(31,102,0, .875)",
+                "available-fill": "rgba(31,102,0, .70)",
                 "available-stroke": "#1f6600",
-                "unavailable-fill": "rgba(171,17,3, .875)",
+                "unavailable-fill": "rgba(171,17,3, .70)",
                 "unavailable-stroke": "#AB1103",
                 "reserved-fill": "#f2b36e",
                 "reserved-stroke": "#ffc47f",
-                "not-bookable-fill": "rgba(73, 73, 73, .875)",
-                "not-bookable-stroke": "#494949"
+                "not-bookable-fill": "rgba(73, 73, 72, .70)",
+                "not-bookable-stroke": "#494948"
             }
         },
         "help": {
@@ -422,17 +422,17 @@
                     {
                         "id": "bookable",
                         "name": "Free",
-                        "color": "#48AB61 "
+                        "color": "rgba(31,102,0, .7)"
                     },
                     {
                         "id": "bookable",
                         "name": "Unavailable",
-                        "color": "#575757 "
+                        "color": "rgba(73, 73, 72, .70)"
                     },
                     {
                         "id": "bookable",
                         "name": "In-Use",
-                        "color": "#E17982"
+                        "color": "rgba(171,17,3, .70)"
                     }
                 ]
             }
