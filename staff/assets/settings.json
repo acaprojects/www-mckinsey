@@ -207,13 +207,6 @@
                     }
                 },
                 {
-                    "id": "duration",
-                    "name": "Select Time",
-                    "description": "",
-                    "type": "period",
-                    "required": true
-                },
-                {
                     "id": "recurrence",
                     "name": "Recurrence",
                     "description": "",
@@ -222,6 +215,13 @@
                         "value": "event_note"
                     },
                     "type": "select"
+                },
+                {
+                    "id": "duration",
+                    "name": "Select Time",
+                    "description": "",
+                    "type": "period",
+                    "required": true
                 },
                 {
                     "id": "locations",
@@ -288,6 +288,53 @@
                 "enabled": true,
                 "src": "assets/img/banner2.jpg",
                 "links": []
+            }
+        },
+        "recurring_booking": {
+            "fields": {
+                "time": [
+                    {
+                        "id": "duration",
+                        "name": "Start Time",
+                        "description": "",
+                        "type": "period",
+                        "required": true
+                    }
+                ],
+                "dates": [
+                    {
+                        "id": "date",
+                        "name": "Start Date",
+                        "description": "",
+                        "type": "date",
+                        "required": true,
+                        "icon": {
+                            "class": "material-icons",
+                            "value": "keyboard_arrow_down"
+                        }
+                    },
+                    {
+                        "id": "recurr_end",
+                        "name": "End Date",
+                        "description": "",
+                        "type": "date",
+                        "required": true,
+                        "icon": {
+                            "class": "material-icons",
+                            "value": "keyboard_arrow_down"
+                        }
+                    }
+                ],
+                "location": {
+                    "id": "locations",
+                    "name": "Locations",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "add"
+                    },
+                    "no-item": "Any location",
+                    "type": "select"
+                }
             }
         },
         "explore": {
