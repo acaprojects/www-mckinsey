@@ -225,10 +225,10 @@
                 },
                 {
                     "id": "locations",
-                    "name": "Locations",
+                    "name": "Buildings",
                     "icon": {
                         "class": "material-icons",
-                        "value": "add"
+                        "value": "keyboard_arrow_down"
                     },
                     "no-item": "Any location",
                     "type": "select"
