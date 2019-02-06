@@ -20,7 +20,7 @@
             "inverse": "assets/img/logo-inverse.svg",
             "background": ""
         },
-        "topbar": false,
+        "topbar": true,
         "booking": {
             "title_prefix": ""
         },
