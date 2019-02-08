@@ -11125,7 +11125,7 @@ var SettingsService = /** @class */ (function () {
     };
     SettingsService.prototype.printVersion = function () {
         var now = moment__WEBPACK_IMPORTED_MODULE_4__();
-        var built = moment__WEBPACK_IMPORTED_MODULE_4__(1549606980000);
+        var built = moment__WEBPACK_IMPORTED_MODULE_4__(1549610340000);
         var build = now.isSame(built, 'd') ? "Today at " + built.format('h:mma') : built.format('MMM Do, YYYY | h:mma');
         this.log('SYSTEM', 'Version: 0.1.0', null, 'debug', true);
         this.log('SYSTEM', "Build: " + build, null, 'debug', true);
@@ -17932,7 +17932,7 @@ var AppShellComponent = /** @class */ (function (_super) {
                 }
             }
             if (!hasToken) {
-                window.location.href = "https://rhv.aiauat.biz/panel_login.html?continue=/outlook/&u=dT1jYXRlcmluZ0BhY2EuaW0mcD15cmVzZHRjdWZ2";
+                window.location.href = "https://roombooking-dev.intranet.mckinsey.com/panel_login.html?continue=/outlook/&u=dT1zdXBwb3J0QGFjYS5pbSZwPTdsUDQwN3dwZDM=";
             }
         }, 5000);
     };
