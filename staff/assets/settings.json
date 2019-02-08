@@ -196,92 +196,105 @@
             "hide_timeline": true,
             "fields": [
                 {
-                    "id": "date",
-                    "name": "Select Date",
-                    "description": "",
-                    "type": "date",
-                    "required": true,
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "keyboard_arrow_down"
-                    }
+                    "key": "period",
+                    "control_type": "group",
+                    "children": [
+                        {
+                            "key": "date",
+                            "label": "Date",
+                            "icon": {
+                                "class": "material-icons",
+                                "value": "event"
+                            },
+                            "simple": true,
+                            "description": "",
+                            "control_type": "custom",
+                            "required": true
+                        },
+                        {
+                            "key": "recurrence",
+                            "label": "Recurrence",
+                            "icon": {
+                                "class": "material-icons",
+                                "value": "room_service"
+                            },
+                            "description": "",
+                            "control_type": "select"
+                        }
+                    ]
                 },
                 {
-                    "id": "recurrence",
-                    "name": "Recurrence",
-                    "description": "",
+                    "key": "period",
+                    "control_type": "group",
+                    "children": [
+                        {
+                            "key": "start",
+                            "label": "Time",
+                            "icon": {
+                                "class": "material-icons",
+                                "value": "access_time"
+                            },
+                            "refs": [
+                                "date"
+                            ],
+                            "simple": true,
+                            "description": "",
+                            "control_type": "custom",
+                            "required": true
+                        },
+                        {
+                            "key": "duration",
+                            "label": "Duration",
+                            "icon": {
+                                "class": "material-icons",
+                                "value": "access_time"
+                            },
+                            "refs": [
+                                "date"
+                            ],
+                            "simple": true,
+                            "description": "",
+                            "control_type": "custom",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "key": "attendees",
+                    "label": "Attendees",
                     "icon": {
                         "class": "material-icons",
-                        "value": "event_note"
+                        "value": "people"
                     },
-                    "type": "select"
+                    "control_type": "custom"
                 },
                 {
-                    "id": "duration",
-                    "name": "Select Time",
-                    "description": "",
-                    "type": "period",
+                    "key": "title",
+                    "label": "Meeting Subject",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "local_offer"
+                    },
+                    "control_type": "text",
                     "required": true
                 },
                 {
-                    "id": "locations",
-                    "name": "Buildings",
+                    "key": "description",
+                    "label": "Meeting Notes",
                     "icon": {
                         "class": "material-icons",
-                        "value": "keyboard_arrow_down"
+                        "value": "description"
                     },
-                    "no-item": "Any location",
-                    "type": "select"
+                    "control_type": "textarea"
                 },
                 {
-                    "id": "host",
-                    "name": "Meeting Host",
+                    "key": "conferencing",
+                    "label": "Conferencing",
                     "icon": {
                         "class": "material-icons",
-                        "value": "add"
+                        "value": "description"
                     },
-                    "type": "select"
-                },
-                {
-                    "id": "attendees",
-                    "name": "Meeting Attendees",
-                    "icon": {
-                        "class": "custom-add-attendee"
-                    },
-                    "description": "",
-                    "type": "list",
-                    "list_type": "users",
-                    "search": true,
-                    "new_text": "External Attendee"
-                },
-                {
-                    "id": "title",
-                    "name": "Meeting Subject",
-                    "description": "",
-                    "type": "text",
-                    "required": true
-                },
-                {
-                    "id": "description",
-                    "name": "Meeting Notes",
-                    "description": "",
-                    "type": "text"
-                },
-                {
-                    "id": "conferencing",
-                    "name": "Conferencing",
-                    "description": "",
-                    "type": "toggle",
-                    "action": true
-                },
-                {
-                    "id": "catering",
-                    "name": "Catering",
-                    "description": "",
-                    "icon": {
-                        "class": "custom-catering"
-                    },
-                    "type": "select"
+                    "control_type": "toggle"
                 }
             ],
             "banner": {
