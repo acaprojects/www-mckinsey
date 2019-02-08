@@ -1,0 +1,682 @@
+{
+    "version": "0.2.2",
+    "build": 1547708760000,
+    "env": "dev",
+    "debug": true,
+    "composer": {
+        "domain": "",
+        "route": "/staff",
+        "protocol": "https:",
+        "use_domain": true,
+        "local_login": false
+    },
+    "app": {
+        "title": "AIA Group",
+        "name": "AIA Group",
+        "description": "AIA Group Staff Application made in Angular 5+",
+        "short_name": "AIA",
+        "code": "AIA",
+        "login": {
+            "forgot": false
+        },
+        "analytics": {
+            "enabled": false,
+            "tracking_id": ""
+        },
+        "logo": {
+            "type": "img",
+            "src": "assets/img/logo.svg",
+            "inverse": "assets/img/logo.svg",
+            "background": ""
+        },
+        "banner": {
+            "enabled": false,
+            "header": false,
+            "home": false,
+            "type": "color",
+            "full": false,
+            "src": "assets/img/caterer-03.jpg"
+        },
+        "copyright": "",
+        "routing": false,
+        "style": {
+            "popout": true
+        },
+        "orgs": false,
+        "users": {
+            "visitors": true,
+            "external": true,
+            "can_add": true,
+            "custom_orgs": true,
+            "locate": true,
+            "store": false
+        },
+        "schedule": {
+            "enabled": true,
+            "visitors": true,
+            "new_visitors": true,
+            "edit_visitors": true,
+            "hide_visitor_bookings": true,
+            "contacts": true,
+            "popout": false
+        },
+        "contacts": {
+            "enabled": true
+        },
+        "route_settings": {
+            "book": "booking"
+        },
+        "lockers": {
+            "enabled": true,
+            "simple_filters": false
+        },
+        "menu": {
+            "type": "sidebar",
+            "footer": "bg",
+            "named": false,
+            "home": true,
+            "reverse": true,
+            "color": "#596C80",
+            "list": [
+                {
+                    "id": "home",
+                    "name": "Home",
+                    "items": []
+                },
+                {
+                    "id": "logout",
+                    "name": "Logout",
+                    "items": []
+                },
+                {
+                    "id": "terms",
+                    "name": "Terms",
+                    "items": []
+                }
+            ]
+        },
+        "hide": {
+            "heading": false
+        },
+        "page": {
+            "titles": {
+                "": "Home",
+                "home": "Home",
+                "book": "Book Space",
+                "book/room": "Find Space",
+                "book/attendees": "Manage Attendees",
+                "book/results": "Booking Results",
+                "explore": "Explore",
+                "explore/spaces": "Spaces",
+                "explore/people": "People",
+                "visitor": "Book Visitor",
+                "control": "Control"
+            },
+            "info": {
+                "profile": "Welcome to your profile",
+                "schedule": "Hello {{user}}, here is your schedule for today"
+            }
+        },
+        "home": {
+            "background": "assets/img/home.png",
+            "disclaimer": ""
+        },
+        "wifi": {
+            "background": "assets/img/home.png"
+        },
+        "tiles": [
+            {
+                "id": "book",
+                "name": "Book",
+                "color": "#44586C",
+                "img": "assets/img/book.svg"
+            },
+            {
+                "id": "explore/people",
+                "name": "People",
+                "color": "#44586C",
+                "img": "assets/img/people.svg"
+            },
+            {
+                "id": "explore/spaces",
+                "name": "Spaces",
+                "color": "#44586C",
+                "img": "assets/img/spaces.svg"
+            },
+            {
+                "id": "schedule",
+                "name": "My Day",
+                "color": "#44586C",
+                "img": "assets/img/my_day.svg"
+            },
+            {
+                "id": "help",
+                "name": "Links",
+                "color": "#44586C",
+                "img": "assets/img/links.svg"
+            }
+        ],
+        "zones": {
+            "enabled": false,
+            "toggle": "room"
+        },
+        "booking": {
+            "min_attendees": 1,
+            "external_visitors": false,
+            "recurrence": false,
+            "limit": 12,
+            "max_length": 480,
+            "default_length": 60,
+            "min_length": 15,
+            "room_select": true,
+            "title_prefix": "",
+            "charge": false,
+            "terms": false,
+            "old_filters": false,
+            "privacy": false,
+            "control": false,
+            "meet": "Meeting at lounge",
+            "lock_cancel": 120,
+            "external_floors": [],
+            "return_id": "",
+            "fields": [
+                {
+                    "key": "room",
+                    "label": "Space",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "room"
+                    },
+                    "simple": true,
+                    "description": "",
+                    "control_type": "select",
+                    "conditions": {
+                        "room_select": false
+                    },
+                    "view_edit": true,
+                    "required": true
+                },
+                {
+                    "key": "attendees",
+                    "label": "Attendees",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "people"
+                    },
+                    "description": "",
+                    "control_type": "select"
+                },
+                {
+                    "key": "date",
+                    "label": "Date",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "event"
+                    },
+                    "simple": true,
+                    "description": "",
+                    "control_type": "select",
+                    "required": true
+                },
+                {
+                    "key": "period",
+                    "control_type": "group",
+                    "children": [
+                        {
+                            "key": "start",
+                            "label": "Time",
+                            "icon": {
+                                "class": "material-icons",
+                                "value": "access_time"
+                            },
+                            "simple": true,
+                            "description": "",
+                            "control_type": "select",
+                            "required": true
+                        },
+                        {
+                            "key": "duration",
+                            "label": "Duration",
+                            "icon": {
+                                "class": "material-icons",
+                                "value": "access_time"
+                            },
+                            "simple": true,
+                            "description": "",
+                            "control_type": "select",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "key": "title",
+                    "label": "Subject",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "local_offer"
+                    },
+                    "simple": true,
+                    "description": "",
+                    "control_type": "text",
+                    "required": true
+                },
+                {
+                    "key": "description",
+                    "label": "Description",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "description"
+                    },
+                    "description": "",
+                    "control_type": "text"
+                },
+                {
+                    "key": "catering",
+                    "label": "Catering",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "room_service"
+                    },
+                    "description": "",
+                    "control_type": "select"
+                }
+            ],
+            "banner": {
+                "enabled": false,
+                "links": [
+                    {
+                        "id": "book",
+                        "name": "Book Space"
+                    },
+                    {
+                        "id": "book/visitor",
+                        "name": "Book Visitor"
+                    }
+                ]
+            }
+        },
+        "explore": {
+            "old_overlay": false,
+            "cblf": false,
+            "control": false,
+            "banner": {
+                "search": false,
+                "roles": false,
+                "src": "assets/img/banner.jpg"
+            }
+        },
+        "control": {
+            "banner": {
+                "search": true,
+                "fullback": true,
+                "background": "assets/img/caterer-02.jpg"
+            }
+        },
+        "people_min_char": 0,
+        "catering": {
+            "enabled": true
+        },
+        "colors": {
+            "rooms": {
+                "available": "#317c36",
+                "unavailable": "#cd212e",
+                "not-bookable": "#e6e6e6",
+                "pin": "#ff5252"
+            },
+            "desks": {
+                "available-fill": "#8cd4da",
+                "available-stroke": "#6ab2af",
+                "unavailable-fill": "#ec9d99",
+                "unavailable-stroke": "#ca7b77",
+                "reserved-fill": "#FF9800",
+                "reserved-stroke": "#E65100",
+                "not-bookable-fill": "#e6e6e6",
+                "not-bookable-stroke": "#c4c4c4"
+            }
+        },
+        "help": {
+            "type": "",
+            "banner": {
+                "enabled": false
+            },
+            "disclaimer": "",
+            "tiles": [
+                {
+                    "name": "AV Support",
+                    "description": "",
+                    "src": "",
+                    "color": "",
+                    "link": "https://www.google.com"
+                },
+                {
+                    "name": "IT Help",
+                    "description": "",
+                    "src": "",
+                    "color": "",
+                    "link": "https://www.acaprojects.com"
+                },
+                {
+                    "name": "Emergency Contact",
+                    "description": "",
+                    "src": "",
+                    "color": "",
+                    "link": "https://www.ses.nsw.gov.au"
+                },
+                {
+                    "name": "Website",
+                    "description": "",
+                    "src": "",
+                    "color": "",
+                    "link": "https://www.acaprojects.com"
+                }
+            ]
+        },
+        "map": {
+            "simple": true,
+            "info": true,
+            "settings": true,
+            "bookings": true,
+            "keys": {
+                "general": [
+                    {
+                        "id": "lifts",
+                        "name": "Lifts",
+                        "icon": {
+                            "class": "material-icons",
+                            "value": "location_city"
+                        }
+                    },
+                    {
+                        "id": "toilets",
+                        "name": "Toilets",
+                        "icon": {
+                            "class": "material-icons",
+                            "value": "accessibility"
+                        }
+                    },
+                    {
+                        "id": "stairs",
+                        "name": "Stairs",
+                        "icon": {
+                            "class": "material-icons",
+                            "value": "trending_up"
+                        }
+                    }
+                ],
+                "room": [
+                    {
+                        "id": "bookable",
+                        "name": "Bookable",
+                        "color": "#317c36"
+                    },
+                    {
+                        "id": "in-use",
+                        "name": "In use",
+                        "color": "#cd212e"
+                    },
+                    {
+                        "id": "no-book",
+                        "name": "Not bookable",
+                        "color": "#545654"
+                    }
+                ],
+                "desk": [
+                    {
+                        "id": "bookable",
+                        "name": "Bookable",
+                        "color": "#317c36"
+                    },
+                    {
+                        "id": "in-use",
+                        "name": "In use",
+                        "color": "#cd212e"
+                    },
+                    {
+                        "id": "no-book",
+                        "name": "Not bookable",
+                        "color": "#545654"
+                    }
+                ],
+                "zone": [
+                    {
+                        "id": "low",
+                        "name": "Low Usage",
+                        "color": "#317c36"
+                    },
+                    {
+                        "id": "medium",
+                        "name": "Medium Usage",
+                        "color": "#f4a81d"
+                    },
+                    {
+                        "id": "high",
+                        "name": "High Usage",
+                        "color": "#cd212e"
+                    }
+                ]
+            }
+        }
+    },
+    "regions": {
+        "ar": {
+            "name": "Argentina",
+            "phone": "+54 341 512 2188"
+        },
+        "au": {
+            "name": "Australia",
+            "phone": "+61 2 8015 2088"
+        },
+        "at": {
+            "name": "Austria",
+            "phone": "+43 670 309 0165"
+        },
+        "bh": {
+            "name": "Bahrain",
+            "phone": "+973 1619 7601"
+        },
+        "be": {
+            "name": "Belgium",
+            "phone": "+32 2 588 4188"
+        },
+        "br": {
+            "name": "Brazil",
+            "phone": "+55 11 4680 6788"
+        },
+        "bg": {
+            "name": "Bulgaria",
+            "phone": "+359 2 492 5688"
+        },
+        "ca": {
+            "name": "Canada",
+            "phone": "+1 647 558 0588"
+        },
+        "cl": {
+            "name": "Chile",
+            "phone": "+56 23 210 9066"
+        },
+        "co": {
+            "name": "Colombia",
+            "phone": "+57 1 508 7702"
+        },
+        "hr": {
+            "name": "Croatia",
+            "phone": "+385 1300 0988"
+        },
+        "cy": {
+            "name": "Cyprus",
+            "phone": "+357 2 200 0888"
+        },
+        "cz": {
+            "name": "Czech Republic",
+            "phone": "+420 2 2888 2388"
+        },
+        "dk": {
+            "name": "Denmark",
+            "phone": "+45 89 88 37 88"
+        },
+        "do": {
+            "name": "Dominican Republic",
+            "phone": "+1 829 947 9220"
+        },
+        "sv": {
+            "name": "El Salvador",
+            "phone": "+503 2113 9088"
+        },
+        "ee": {
+            "name": "Estonia",
+            "phone": "+372 660 1699"
+        },
+        "fi": {
+            "name": "Finland",
+            "phone": "+358 3 4109 2129"
+        },
+        "fr": {
+            "name": "France",
+            "phone": "+33 1 8288 0188"
+        },
+        "ge": {
+            "name": "Georgia",
+            "phone": "+995 3224 73988"
+        },
+        "de": {
+            "name": "Germany",
+            "phone": "+49 30 3080 6188"
+        },
+        "gr": {
+            "name": "Greece",
+            "phone": "+30 211 198 4488"
+        },
+        "hk": {
+            "name": "Hong Kong, China",
+            "phone": "+852 5808 6088"
+        },
+        "hu": {
+            "name": "Hungary",
+            "phone": "+36 1 408 8456"
+        },
+        "ie": {
+            "name": "Ireland",
+            "phone": "+353 1 513 3247"
+        },
+        "il": {
+            "name": "Israel",
+            "phone": "+972 3 978 6688"
+        },
+        "it": {
+            "name": "Italy",
+            "phone": "+39 069 480 6488"
+        },
+        "jp": {
+            "name": "Japan",
+            "phone": "+81 3 4578 1488"
+        },
+        "lv": {
+            "name": "Latvia",
+            "phone": "+371 6303 1808"
+        },
+        "lt": {
+            "name": "Lithuania",
+            "phone": "+370 3799 9260"
+        },
+        "lu": {
+            "name": "Luxembourg",
+            "phone": "+352 2786 1188"
+        },
+        "my": {
+            "name": "Malaysia",
+            "phone": "+60 3 3099 2229"
+        },
+        "mt": {
+            "name": "Malta",
+            "phone": "+356 2776 1777"
+        },
+        "mx": {
+            "name": "Mexico",
+            "phone": "+52 229 910 0061"
+        },
+        "nl": {
+            "name": "Netherlands",
+            "phone": "+31 20 241 0288"
+        },
+        "nz": {
+            "name": "New Zealand",
+            "phone": "+64 4 831 8959"
+        },
+        "no": {
+            "name": "Norway",
+            "phone": "+47 2396 0588"
+        },
+        "pa": {
+            "name": "Panama",
+            "phone": "+507 833 9588"
+        },
+        "pe": {
+            "name": "Peru",
+            "phone": "+51 1 707 5788"
+        },
+        "pl": {
+            "name": "Poland",
+            "phone": "+48 22 307 3488"
+        },
+        "pt": {
+            "name": "Portugal",
+            "phone": "+351 308 804 188"
+        },
+        "pr": {
+            "name": "Puerto Rico",
+            "phone": "+1 787 945 1488"
+        },
+        "ro": {
+            "name": "Romania",
+            "phone": "+40 31 630 1088"
+        },
+        "ru": {
+            "name": "Russia",
+            "phone": "+7 495 283 9788"
+        },
+        "sg": {
+            "name": "Singapore",
+            "phone": "+65 3158 7288"
+        },
+        "sk": {
+            "name": "Slovakia",
+            "phone": "+421 233 056 888"
+        },
+        "si": {
+            "name": "Slovenia",
+            "phone": "+386 1600 3102"
+        },
+        "sa": {
+            "name": "South Africa",
+            "phone": "+27 87 550 7717"
+        },
+        "kr": {
+            "name": "South Korea",
+            "phone": "+82 2 6022 2322"
+        },
+        "es": {
+            "name": "Spain",
+            "phone": "+34 84 368 5025"
+        },
+        "se": {
+            "name": "Sweden",
+            "phone": "+46 7 6692 0434"
+        },
+        "ch": {
+            "name": "Switzerland",
+            "phone": "+41 22 518 9006"
+        },
+        "tr": {
+            "name": "Turkey",
+            "phone": "+90 216 900 1866"
+        },
+        "uk": {
+            "name": "United Kingdom",
+            "phone": "+44 203 051 2874"
+        },
+        "us": {
+            "name": "United States",
+            "phone": "+1 408 638 0968"
+        }
+    }
+}
