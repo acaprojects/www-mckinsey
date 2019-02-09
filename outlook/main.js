@@ -11126,7 +11126,7 @@ var SettingsService = /** @class */ (function () {
     };
     SettingsService.prototype.printVersion = function () {
         var now = moment__WEBPACK_IMPORTED_MODULE_4__();
-        var built = moment__WEBPACK_IMPORTED_MODULE_4__(1549713780000);
+        var built = moment__WEBPACK_IMPORTED_MODULE_4__(1549716840000);
         var build = now.isSame(built, 'd') ? "Today at " + built.format('h:mma') : built.format('MMM Do, YYYY | h:mma');
         this.log('SYSTEM', 'Version: 0.1.0', null, 'debug', true);
         this.log('SYSTEM', "Build: " + build, null, 'debug', true);
@@ -17566,11 +17566,9 @@ var HomeComponent = /** @class */ (function (_super) {
     HomeComponent.prototype.run = function () {
         return __awaiter(this, void 0, void 0, function () {
             var isInstant;
+            var _this = this;
             return __generator(this, function (_a) {
-                // this.Office.context.ui.closeContainer();
-                console.log('running!!');
                 isInstant = (this.model.meetingId === 0);
-                console.log(isInstant);
                 this.service.Zoom.register({
                     email: this.model.user,
                     start: this.model.start,
@@ -17580,6 +17578,10 @@ var HomeComponent = /** @class */ (function (_super) {
                     instant: isInstant
                 }).then(function (resp) {
                     console.log('this should return some kind of url maybe?', resp);
+                    _this.model.join_url = resp.join_url;
+                    _this.model.meeting_id = resp.id;
+                    _this.model.meeting_id = resp.id;
+                    _this.setLocation();
                 });
                 return [2 /*return*/];
             });
@@ -17617,6 +17619,7 @@ var HomeComponent = /** @class */ (function (_super) {
             console.log('this should be pmi?', resp);
             var pmi = resp.pmi;
             _this.model.pmi = pmi;
+            _this.model.user_name = resp.first_name + " " + resp.last_name;
             _this.meetingList[1] += pmi.toString().substring(0, 3) + '-' + pmi.toString().substring(3, 6) + "-" + pmi.toString().substring(6);
         });
     };
@@ -17749,11 +17752,24 @@ var HomeComponent = /** @class */ (function (_super) {
         this.model.user = Office.context.mailbox.userProfile.emailAddress;
         console.log('user 01', this.model.user);
     };
-    HomeComponent.prototype.setLocation = function (url) {
-        this.item.location.setAsync(url);
-        var html = "<strong>This is purely for Outlook interfacing demonstration purposes.</strong>";
+    HomeComponent.prototype.setLocation = function () {
+        var location = "";
+        var pin = this.model.meeting_id;
+        //add Zoom Join URL
+        location += this.model.join_url;
+        //add list of countries
+        for (var _i = 0, _a = this.model.selectedLocations; _i < _a.length; _i++) {
+            var location_2 = _a[_i];
+            location_2 += " || " + location_2.code + ",," + pin + "#";
+        }
+        //add to location field
+        this.item.location.setAsync(location);
+        //construct the body;
+        var html = "<strong>This is purely for Outlook interfacing demonstration purposes. - not real data</strong>";
         html += "<br/> <p>Join Zoom Meeting: <a href=''>https://mckinsey.zoom.us/j/1337</a> </p><p> United States: <a href=''>+1-(212)-446-7000,,1234567#</a> </p><p> United Kingdom: <a href=''>+44-(20)-7839-8040,,1234567# </a></p><p> Australia (SYD): <a href=''> +61-(2)-8273-1600,,1234567# </a></p>";
-        // this.item.body.setAsync(html, { coercionType: "html" });
+        this.item.body.setAsync(html, { coercionType: "html" });
+        //close drawer
+        this.Office.context.ui.closeContainer();
     };
     HomeComponent.prototype.isLocalStorageNameSupported = function () {
         var testKey = 'test', storage = window.localStorage;
