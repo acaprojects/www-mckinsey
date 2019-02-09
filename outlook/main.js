@@ -11126,7 +11126,7 @@ var SettingsService = /** @class */ (function () {
     };
     SettingsService.prototype.printVersion = function () {
         var now = moment__WEBPACK_IMPORTED_MODULE_4__();
-        var built = moment__WEBPACK_IMPORTED_MODULE_4__(1549711020000);
+        var built = moment__WEBPACK_IMPORTED_MODULE_4__(1549713780000);
         var build = now.isSame(built, 'd') ? "Today at " + built.format('h:mma') : built.format('MMM Do, YYYY | h:mma');
         this.log('SYSTEM', 'Version: 0.1.0', null, 'debug', true);
         this.log('SYSTEM', "Build: " + build, null, 'debug', true);
@@ -17616,7 +17616,7 @@ var HomeComponent = /** @class */ (function (_super) {
         this.service.Zoom.getId(this.model.user).then(function (resp) {
             console.log('this should be pmi?', resp);
             var pmi = resp.pmi;
-            _this.model.user.pmi = pmi;
+            _this.model.pmi = pmi;
             _this.meetingList[1] += pmi.toString().substring(0, 3) + '-' + pmi.toString().substring(3, 6) + "-" + pmi.toString().substring(6);
         });
     };
