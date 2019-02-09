@@ -58,7 +58,8 @@
             "edit_visitors": true,
             "hide_visitor_bookings": true,
             "contacts": true,
-            "popout": false
+            "popout": false,
+            "background": "assets/img/skyline.jpg"
         },
         "contacts": {
             "enabled": true
@@ -187,7 +188,7 @@
             "terms": false,
             "old_filters": false,
             "privacy": true,
-            "meet": true,
+            "meet": false,
             "control": false,
             "lock_cancel": 120,
             "search_host": true,
@@ -258,6 +259,15 @@
                             "required": true
                         }
                     ]
+                },
+                {
+                    "key": "host",
+                    "label": "Meeting Host",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "people"
+                    },
+                    "control_type": "custom"
                 },
                 {
                     "key": "attendees",
