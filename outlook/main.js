@@ -11126,7 +11126,7 @@ var SettingsService = /** @class */ (function () {
     };
     SettingsService.prototype.printVersion = function () {
         var now = moment__WEBPACK_IMPORTED_MODULE_4__();
-        var built = moment__WEBPACK_IMPORTED_MODULE_4__(1549716840000);
+        var built = moment__WEBPACK_IMPORTED_MODULE_4__(1549717800000);
         var build = now.isSame(built, 'd') ? "Today at " + built.format('h:mma') : built.format('MMM Do, YYYY | h:mma');
         this.log('SYSTEM', 'Version: 0.1.0', null, 'debug', true);
         this.log('SYSTEM', "Build: " + build, null, 'debug', true);
@@ -17580,7 +17580,6 @@ var HomeComponent = /** @class */ (function (_super) {
                     console.log('this should return some kind of url maybe?', resp);
                     _this.model.join_url = resp.join_url;
                     _this.model.meeting_id = resp.id;
-                    _this.model.meeting_id = resp.id;
                     _this.setLocation();
                 });
                 return [2 /*return*/];
@@ -17753,17 +17752,18 @@ var HomeComponent = /** @class */ (function (_super) {
         console.log('user 01', this.model.user);
     };
     HomeComponent.prototype.setLocation = function () {
-        var location = "";
+        var details = "";
         var pin = this.model.meeting_id;
         //add Zoom Join URL
-        location += this.model.join_url;
+        details += this.model.join_url;
         //add list of countries
+        console.log('selected locations: ', this.model.selectedLocations);
         for (var _i = 0, _a = this.model.selectedLocations; _i < _a.length; _i++) {
             var location_2 = _a[_i];
-            location_2 += " || " + location_2.code + ",," + pin + "#";
+            details += " || " + location_2.code.toUpperCase() + " " + location_2.phone.replace(/\s/g, "-") + ",," + pin + "#";
         }
         //add to location field
-        this.item.location.setAsync(location);
+        this.item.location.setAsync(details);
         //construct the body;
         var html = "<strong>This is purely for Outlook interfacing demonstration purposes. - not real data</strong>";
         html += "<br/> <p>Join Zoom Meeting: <a href=''>https://mckinsey.zoom.us/j/1337</a> </p><p> United States: <a href=''>+1-(212)-446-7000,,1234567#</a> </p><p> United Kingdom: <a href=''>+44-(20)-7839-8040,,1234567# </a></p><p> Australia (SYD): <a href=''> +61-(2)-8273-1600,,1234567# </a></p>";
