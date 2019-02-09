@@ -19,6 +19,7 @@
       "urls": [
         "/staff/assets/fonts/Chronicle_Display_Light.otf",
         "/staff/assets/icon/Information.svg",
+        "/staff/assets/icon/add-user.svg",
         "/staff/assets/icon/add.svg",
         "/staff/assets/icon/attendee.svg",
         "/staff/assets/icon/calendar.svg",
@@ -98,6 +99,7 @@
   "hashTable": {
     "/staff/assets/fonts/Chronicle_Display_Light.otf": "47f9ea8ccee901e15ba298c0237f968a30b91382",
     "/staff/assets/icon/Information.svg": "8de1c113605aaa98e7eb0fc80e49fab98e73d38d",
+    "/staff/assets/icon/add-user.svg": "039e19923169efe8b704535f05f3cd61af4714d7",
     "/staff/assets/icon/add.svg": "45e7e0ecf34f2e939cc50f5c07c78330c5c4ce24",
     "/staff/assets/icon/attendee.svg": "fbe58cbda8ed9368754c93c4c4936c278d1be8d1",
     "/staff/assets/icon/calendar.svg": "447bdebdaa944f9ea41cab828a59037c4f79dfe5",
@@ -142,7 +144,7 @@
     "/staff/assets/maps/sydney/level_36.svg": "71bff03d9f5a0aeb800a72ef814f803cbe98d361",
     "/staff/assets/settings.1.json": "dc9014bb5a24c81e83dcad0adb77ef8edbc8b782",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "01d1c16e05dd25feeac3097067ddb30dfce56da8"
+    "/staff/index.html": "5b9c2fc65497f5f4be3de578fb22b8765b41060b"
   },
   "navigationUrls": [
     {
