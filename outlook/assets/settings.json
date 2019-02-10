@@ -1,14 +1,14 @@
 {
     "version": "0.2.2",
     "build": 1547708760000,
-    "env": "dev",
+    "env": "prod",
     "debug": true,
     "composer": {
         "domain": "",
-        "route": "/staff",
+        "route": "/outlook",
         "protocol": "https:",
         "use_domain": true,
-        "local_login": true
+        "local_login": false
     },
     "app": {
         "title": "AIA Group",
