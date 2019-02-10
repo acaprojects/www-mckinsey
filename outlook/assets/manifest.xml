@@ -12,12 +12,12 @@
   <Id>da319e9e-0000-4880-1011-d95dd8bd6f10</Id>
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
-  <Version>1.0.0.5</Version>
+  <Version>1.0.0.7</Version>
   <ProviderName>ACA Projects</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-  <DisplayName DefaultValue="Mock Room" />
-  <Description DefaultValue="Find a room wherever you are! or aren't yet..."/>
+  <DisplayName DefaultValue="Add Conferencing" />
+  <Description DefaultValue="Add Zoom"/>
 
   <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
   <IconUrl DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/icon-32.png" />
@@ -32,6 +32,7 @@
     <AppDomain>roombooking-dev.intranet.mckinsey.com</AppDomain>
     <AppDomain>https://login.windows.net</AppDomain>
     <AppDomain>https://login.microsoftonline.com</AppDomain>
+    <AppDomain>https://mckinsey.okta.com</AppDomain>
     <AppDomain>https://ok6static.oktacdn.com</AppDomain>
     <AppDomain>https://amdc-okta02.ads.mckinsey.com</AppDomain>
   </AppDomains>
@@ -118,7 +119,7 @@
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>
         <bt:String id="customTabLabel"  DefaultValue="My Add-in Tab"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="Mock Room"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="Add Conferencing"/>
         <bt:String id="paneReadSuperTipTitle" DefaultValue="Add Zoom and Dial In options"/>
       </bt:ShortStrings>
       <bt:LongStrings>
@@ -183,7 +184,7 @@
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>
         <bt:String id="customTabLabel"  DefaultValue="My Add-in Tab"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="Mock Room"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="Add Conferencing"/>
         <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties"/>
       </bt:ShortStrings>
       <bt:LongStrings>
