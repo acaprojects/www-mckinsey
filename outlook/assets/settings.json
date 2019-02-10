@@ -8,7 +8,7 @@
         "route": "/outlook",
         "protocol": "https:",
         "use_domain": true,
-        "local_login": false
+        "local_login": true
     },
     "app": {
         "title": "AIA Group",
