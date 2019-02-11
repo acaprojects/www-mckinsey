@@ -3,6 +3,7 @@
     "build": 1547708760000,
     "env": "prod",
     "debug": true,
+    "userhash": "dT1zdXBwb3J0QGFjYS5pbSZwPTdsUDQwN3dwZDM=",
     "composer": {
         "domain": "",
         "route": "/outlook",
