@@ -267,6 +267,7 @@
                         "class": "material-icons",
                         "value": "people"
                     },
+                    "flex": true,
                     "control_type": "custom"
                 },
                 {
@@ -276,6 +277,7 @@
                         "class": "material-icons",
                         "value": "people"
                     },
+                    "flex": true,
                     "control_type": "custom"
                 },
                 {
