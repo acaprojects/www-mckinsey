@@ -39,6 +39,7 @@
         "/staff/assets/img/caterer-03.jpg",
         "/staff/assets/img/coffee.svg",
         "/staff/assets/img/home-back.jpg",
+        "/staff/assets/img/location.svg",
         "/staff/assets/img/lockers.svg",
         "/staff/assets/img/logo-inverse.svg",
         "/staff/assets/img/logo.svg",
@@ -119,6 +120,7 @@
     "/staff/assets/img/caterer-03.jpg": "c7e2b4735c10ad80492a72fd4ddfdeba85994ee6",
     "/staff/assets/img/coffee.svg": "8aae8d94029b017c4c24cb1c80423496b7d768da",
     "/staff/assets/img/home-back.jpg": "1635c5b2726dd8651eec7ca5e97218eeb48aa496",
+    "/staff/assets/img/location.svg": "94050f7b0adcd8fbb242961b71bbde6ce1d377ad",
     "/staff/assets/img/lockers.svg": "a6acc457b8fc54a99d9519a2a9f300a58903808e",
     "/staff/assets/img/logo-inverse.svg": "5a8c2f8fbe353e75941a84c6c67a6efed57ee96d",
     "/staff/assets/img/logo.svg": "b18b5c1f60356a34751d17dbecef95c0955db88d",
@@ -144,7 +146,7 @@
     "/staff/assets/maps/sydney/level_36.svg": "b170817a9a99697104834656c87abd138f536bec",
     "/staff/assets/settings.1.json": "dc9014bb5a24c81e83dcad0adb77ef8edbc8b782",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "8e6b9a6be48686728fbffd48c3214aa9b27a105e"
+    "/staff/index.html": "178ebd99f5543d72272ae43edf9ea1bcee994c18"
   },
   "navigationUrls": [
     {
