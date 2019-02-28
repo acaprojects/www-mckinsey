@@ -442,7 +442,7 @@
             ]
         },
         "map": {
-            "simple": false,
+            "simple": true,
             "info": true,
             "settings": true,
             "bookings": true,
