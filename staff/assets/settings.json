@@ -193,7 +193,7 @@
             "lock_cancel": 120,
             "search_host": true,
             "external_floors": [],
-            "return_id": "",
+            "return_id": "schedule",
             "hide_timeline": true,
             "fields": [
                 {
