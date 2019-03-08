@@ -1,5 +1,6 @@
 {
   "configVersion": 1,
+  "timestamp": 1552022157730,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -146,7 +147,7 @@
     "/staff/assets/maps/sydney/level_36.svg": "71bff03d9f5a0aeb800a72ef814f803cbe98d361",
     "/staff/assets/settings.1.json": "dc9014bb5a24c81e83dcad0adb77ef8edbc8b782",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "5dd28ed95f9c11d6764dd3b0de1f04c60eb39ab5"
+    "/staff/index.html": "a1221c4f07c9c6104e08c5c220fb54b0154be591"
   },
   "navigationUrls": [
     {
