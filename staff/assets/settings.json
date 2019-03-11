@@ -193,7 +193,7 @@
             "lock_cancel": 120,
             "search_host": true,
             "external_floors": [],
-            "return_id": "",
+            "return_id": "schedule",
             "hide_timeline": true,
             "fields": [
                 {
@@ -219,6 +219,7 @@
                                 "class": "material-icons",
                                 "value": "room_service"
                             },
+                            "simple": false,
                             "description": "",
                             "control_type": "select"
                         }
@@ -268,6 +269,7 @@
                         "value": "people"
                     },
                     "flex": true,
+                    "simple": false,
                     "control_type": "custom"
                 },
                 {
@@ -297,6 +299,7 @@
                         "class": "material-icons",
                         "value": "description"
                     },
+                    "simple": false,
                     "control_type": "textarea"
                 },
                 {
@@ -306,6 +309,7 @@
                         "class": "material-icons",
                         "value": "description"
                     },
+                    "simple": false,
                     "control_type": "toggle"
                 }
             ],
@@ -438,7 +442,7 @@
             ]
         },
         "map": {
-            "simple": true,
+            "simple": false,
             "info": true,
             "settings": true,
             "bookings": true,
