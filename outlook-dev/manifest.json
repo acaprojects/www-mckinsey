@@ -1,0 +1,15 @@
+{
+    "short_name": "AIA",
+    "name": "AIA Group",
+    "icons": [
+        {
+            "src": "assets/icon/launch.png",
+            "sizes": "196x196",
+            "type": "png"
+        }
+    ],
+    "start_url": "index.html",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "display": "standalone"
+}
