@@ -9,7 +9,7 @@
   <!--
 Version. Updates from the store only get triggered if there is a version change. 
 -->
-  <Version>1.0.0.7</Version>
+  <Version>1.0.0.8</Version>
   <ProviderName>ACA Projects</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!--
@@ -20,8 +20,8 @@ Version. Updates from the store only get triggered if there is a version change.
   <!--
  Icon for your add-in. Used on installation screens and the add-ins dialog. 
 -->
-  <IconUrl DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/hi-res-icon.png"/>
+  <IconUrl DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/assets/hi-res-icon.png"/>
   <!--
 If you plan to submit this add-in to the Office Store, uncomment the SupportUrl element below
 -->
@@ -50,7 +50,7 @@ If you plan to submit this add-in to the Office Store, uncomment the SupportUrl 
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/index.html"/>
+        <SourceLocation DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/index.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -112,13 +112,13 @@ If you plan to submit this add-in to the Office Store, uncomment the SupportUrl 
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/icon-16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/icon-32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/icon-80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/assets/icon-16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/assets/icon-32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/function-file/function-file.html"/>
-        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/index.html"/>
+        <bt:Url id="functionFile" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/function-file/function-file.html"/>
+        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>
@@ -183,13 +183,13 @@ If you plan to submit this add-in to the Office Store, uncomment the SupportUrl 
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="icon16" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/icon-16.png"/>
-          <bt:Image id="icon32" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/icon-32.png"/>
-          <bt:Image id="icon80" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/assets/icon-80.png"/>
+          <bt:Image id="icon16" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/assets/icon-16.png"/>
+          <bt:Image id="icon32" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/assets/icon-32.png"/>
+          <bt:Image id="icon80" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/assets/icon-80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="functionFile" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/function-file/function-file.html"/>
-          <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook/index.html"/>
+          <bt:Url id="functionFile" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/function-file/function-file.html"/>
+          <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://roombooking-dev.intranet.mckinsey.com/outlook-dev/index.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>
