@@ -9,14 +9,14 @@
   <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
 
   <!-- IMPORTANT! Id must be unique for your add-in, if you reuse this manifest ensure that you change this id to a new GUID. -->
-  <Id>da319e9e-0000-4880-1011-d95dd8bd6f10</Id>
+  <Id>da319e9e-1111-4880-1111-d95dd8bd6f10</Id>
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
-  <Version>1.0.0.7</Version>
+  <Version>1.0.0.8</Version>
   <ProviderName>ACA Projects</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-  <DisplayName DefaultValue="Add Conferencing" />
+  <DisplayName DefaultValue="ACA Support" />
   <Description DefaultValue="Add Zoom"/>
 
   <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
@@ -184,8 +184,8 @@
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>
         <bt:String id="customTabLabel"  DefaultValue="My Add-in Tab"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="Add Conferencing"/>
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="ACA Test"/>
+        <bt:String id="paneReadSuperTipTitle" DefaultValue="Testing OKTA Auth among other things"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane displaying all available properties. This is an example of a button that opens a task pane."/>
