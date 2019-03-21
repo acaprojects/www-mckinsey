@@ -440,10 +440,10 @@ MIT
 @angular/service-worker
 MIT
 
-@angular/forms
+@angular/core
 MIT
 
-@angular/core
+@angular/forms
 MIT
 
 core-js
