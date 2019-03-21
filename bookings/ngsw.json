@@ -1,5 +1,6 @@
 {
   "configVersion": 1,
+  "timestamp": 1553137871794,
   "index": "/bookings/index.html",
   "assetGroups": [
     {
@@ -66,7 +67,7 @@
     "/bookings/assets/img/small_down.png": "e613191a281cdc700ba019862fe6b7125e7f5637",
     "/bookings/assets/img/small_up.png": "555616ebdfd077fcda51501df3ffdb392f42510b",
     "/bookings/favicon.ico": "5459953711ed224a36cb49b93710b540ee18a79e",
-    "/bookings/index.html": "b9b18f9233c16d61bf80d51ee125a5158c70d6c8"
+    "/bookings/index.html": "57fc0746d01d5280956b6197522b6aaac1f2debd"
   },
   "navigationUrls": [
     {
