@@ -75,7 +75,7 @@
             "type": "sidebar",
             "footer": "bg",
             "named": false,
-            "reverse": false,
+            "reverse": true,
             "home": false,
             "enabled": false,
             "list": [
