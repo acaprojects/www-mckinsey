@@ -203,10 +203,6 @@
                         {
                             "key": "date",
                             "label": "Date",
-                            "icon": {
-                                "class": "material-icons",
-                                "value": "event"
-                            },
                             "simple": true,
                             "description": "",
                             "control_type": "custom",
@@ -215,10 +211,6 @@
                         {
                             "key": "recurrence",
                             "label": "Recurrence",
-                            "icon": {
-                                "class": "material-icons",
-                                "value": "room_service"
-                            },
                             "simple": false,
                             "description": "",
                             "control_type": "select"
@@ -232,10 +224,6 @@
                         {
                             "key": "start",
                             "label": "Time",
-                            "icon": {
-                                "class": "material-icons",
-                                "value": "access_time"
-                            },
                             "refs": [
                                 "date"
                             ],
@@ -247,10 +235,6 @@
                         {
                             "key": "duration",
                             "label": "Duration",
-                            "icon": {
-                                "class": "material-icons",
-                                "value": "access_time"
-                            },
                             "refs": [
                                 "date"
                             ],
@@ -264,10 +248,6 @@
                 {
                     "key": "host",
                     "label": "Meeting Host",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "people"
-                    },
                     "flex": true,
                     "simple": false,
                     "control_type": "custom"
@@ -275,42 +255,27 @@
                 {
                     "key": "attendees",
                     "label": "Attendees",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "people"
-                    },
                     "flex": true,
                     "control_type": "custom"
                 },
                 {
                     "key": "title",
                     "label": "Meeting Subject",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "local_offer"
-                    },
                     "control_type": "text",
                     "required": true
                 },
                 {
                     "key": "description",
                     "label": "Meeting Notes",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "description"
-                    },
                     "simple": false,
                     "control_type": "textarea"
                 },
                 {
                     "key": "conferencing",
                     "label": "Conferencing",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "description"
-                    },
                     "simple": false,
-                    "control_type": "toggle"
+                    "control_type": "toggle",
+                    "type": "text"
                 }
             ],
             "banner": {
