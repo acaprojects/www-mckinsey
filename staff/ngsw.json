@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1553144831144,
+  "timestamp": 1553477521040,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -72,6 +72,7 @@
         "/staff/assets/maps/london/level_07.svg",
         "/staff/assets/maps/london/level_08.svg",
         "/staff/assets/maps/london/level_8M.svg",
+        "/staff/assets/maps/london_jermyn/level_04.svg",
         "/staff/assets/maps/new_york/level_19.svg",
         "/staff/assets/maps/new_york/level_60.svg",
         "/staff/assets/maps/new_york/level_61.svg",
@@ -170,6 +171,7 @@
     "/staff/assets/maps/london/level_07.svg": "be07751e571e6518c51c4bf6fbecdef1a0d41e3f",
     "/staff/assets/maps/london/level_08.svg": "94695789115e329b2bf8e5ee90356658409499fa",
     "/staff/assets/maps/london/level_8M.svg": "2ff489cd163ca8be586ef0ad17755d31328b6c01",
+    "/staff/assets/maps/london_jermyn/level_04.svg": "1b13e85f624cc86d1d98b9a91c436cd9a32ca520",
     "/staff/assets/maps/new_york/level_19.svg": "4d7be61ea72c5d2bda9ca98a7bab89acc46c1d02",
     "/staff/assets/maps/new_york/level_60.svg": "4011bb09b8f55d85fce28f2a590df21ca0009319",
     "/staff/assets/maps/new_york/level_61.svg": "ae6e2328eddf9b8e99c707de894390c33a97df8e",
@@ -181,7 +183,7 @@
     "/staff/assets/maps/sydney/level_36.svg": "b170817a9a99697104834656c87abd138f536bec",
     "/staff/assets/settings.1.json": "dc9014bb5a24c81e83dcad0adb77ef8edbc8b782",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "019b8e73e2e2598bf2358cc174e138d3cd886b06"
+    "/staff/index.html": "ce57cc5d5ade48970e4605a9baf2160b881c0372"
   },
   "navigationUrls": [
     {
