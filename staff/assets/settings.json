@@ -188,7 +188,7 @@
             "terms": false,
             "old_filters": false,
             "privacy": true,
-            "meet": false,
+            "meet": "Book without Space",
             "control": false,
             "lock_cancel": 120,
             "search_host": true,
@@ -269,6 +269,46 @@
                     "label": "Meeting Notes",
                     "simple": false,
                     "control_type": "textarea"
+                },
+                {
+                    "key": "notify_users",
+                    "label": "Guest Notifyees",
+                    "simple": false,
+                    "hide": true,
+                    "control_type": "select"
+                },
+                {
+                    "key": "booking_type",
+                    "label": "Booking Type",
+                    "simple": false,
+                    "control_type": "dropdown",
+                    "default": "internal",
+                    "options": [
+                        {
+                            "id": "internal",
+                            "name": "Internal (default)"
+                        },
+                        {
+                            "id": "client",
+                            "name": "Client"
+                        },
+                        {
+                            "id": "external",
+                            "name": "External"
+                        },
+                        {
+                            "id": "interview",
+                            "name": "Interview"
+                        },
+                        {
+                            "id": "setup",
+                            "name": "Setup"
+                        },
+                        {
+                            "id": "training",
+                            "name": "Training"
+                        }
+                    ]
                 },
                 {
                     "key": "conferencing",
