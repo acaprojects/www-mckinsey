@@ -22,6 +22,13 @@
             "enabled": false,
             "tracking_id": ""
         },
+        "heapio": {
+            "app_id": 3540602199,
+            "force_ssl": true,
+            "secure_cookie": true,
+            "disable_text_capture": true,
+            "cookie_path": "/staff/"
+        },
         "logo": {
             "type": "img",
             "src": "assets/img/logo.svg",
