@@ -125,7 +125,7 @@
                 "book/results": "Booking Results",
                 "explore": "Explore",
                 "schedule": "View your Schedule",
-                "explore/spaces": "Spaces",
+                "explore/spaces": "Maps",
                 "explore/people": "People",
                 "visitor": "Book Visitor",
                 "control": "Control"
@@ -153,7 +153,7 @@
             },
             {
                 "id": "explore/spaces",
-                "name": "Spaces",
+                "name": "Maps",
                 "color": "",
                 "icon": {
                     "class": "custom-spaces"
@@ -188,7 +188,6 @@
             "terms": false,
             "old_filters": false,
             "privacy": true,
-            "meet": "Book without Space",
             "control": false,
             "lock_cancel": 120,
             "search_host": true,
@@ -265,12 +264,6 @@
                     "required": true
                 },
                 {
-                    "key": "description",
-                    "label": "Meeting Notes",
-                    "simple": false,
-                    "control_type": "textarea"
-                },
-                {
                     "key": "notify_users",
                     "label": "Guest Notifyees",
                     "simple": false,
@@ -316,6 +309,12 @@
                     "simple": false,
                     "control_type": "toggle",
                     "type": "text"
+                },
+                {
+                    "key": "description",
+                    "label": "Add Notes",
+                    "simple": false,
+                    "control_type": "textarea"
                 }
             ],
             "banner": {

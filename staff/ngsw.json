@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1554711202025,
+  "timestamp": 1555374540993,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -81,8 +81,7 @@
         "/staff/assets/maps/new_york/level_64.svg",
         "/staff/assets/maps/sydney/level_33.svg",
         "/staff/assets/maps/sydney/level_35.svg",
-        "/staff/assets/maps/sydney/level_36.svg",
-        "/staff/assets/settings.1.json"
+        "/staff/assets/maps/sydney/level_36.svg"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
@@ -181,9 +180,8 @@
     "/staff/assets/maps/sydney/level_33.svg": "7af9da786795dd6f39c45d5b73d6b7158cbdb7ac",
     "/staff/assets/maps/sydney/level_35.svg": "718e9b5f2b7813edb7cb91bbb5123e9eb589e706",
     "/staff/assets/maps/sydney/level_36.svg": "b170817a9a99697104834656c87abd138f536bec",
-    "/staff/assets/settings.1.json": "dc9014bb5a24c81e83dcad0adb77ef8edbc8b782",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "815d4dc0b02837e619a8ebb3b4e9a7bc9332382b"
+    "/staff/index.html": "375c26b65edd98b12dcd649b00c4c7c1f1fdebc2"
   },
   "navigationUrls": [
     {
