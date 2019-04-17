@@ -25,9 +25,9 @@
         },
         "logo": {
             "type": "img",
-            "src": "assets/img/logo.svg",
-            "inverse": "assets/img/logo-inverse.svg",
-            "background": ""
+            "src": "assets/img/logo-inverse.svg",
+            "inverse": "assets/img/logo.svg",
+            "background": "#082042"
         },
         "users": {
             "visitors": true
@@ -78,94 +78,143 @@
                 }
             ]
         },
+        "notifications": {
+            "enabled": true,
+            "list": [
+                {
+                    "id": "catering",
+                    "name": "New Bookings with Catering"
+                },
+                {
+                    "id": "parking",
+                    "name": "New Bookings with Parking"
+                },
+                {
+                    "id": "not_confirmed",
+                    "name": "Meetings with catering not confirmed with less than 48 hours to go"
+                }
+            ]
+        },
+        "day_view": {
+            "has_approvals": true
+        },
         "booking": {
             "min_attendees": 0,
             "search_host": true,
             "fields": [
                 {
-                    "id": "room",
-                    "name": "Space",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "room"
-                    },
+                    "key": "date",
+                    "label": "Date",
+                    "simple": true,
                     "description": "",
-                    "type": "select",
+                    "control_type": "custom",
                     "required": true
                 },
                 {
-                    "id": "host",
-                    "name": "Host",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "account_box"
-                    },
+                    "key": "period",
+                    "control_type": "group",
+                    "children": [
+                        {
+                            "key": "start",
+                            "label": "Time",
+                            "refs": [
+                                "date"
+                            ],
+                            "simple": true,
+                            "description": "",
+                            "control_type": "custom",
+                            "required": true
+                        },
+                        {
+                            "key": "duration",
+                            "label": "Duration",
+                            "refs": [
+                                "date"
+                            ],
+                            "simple": true,
+                            "description": "",
+                            "control_type": "custom",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "key": "host",
+                    "label": "Meeting Host",
+                    "flex": true,
+                    "simple": false,
+                    "control_type": "custom"
+                },
+                {
+                    "key": "room",
+                    "label": "Space",
                     "description": "",
-                    "type": "select",
+                    "control_type": "select",
                     "required": true
                 },
                 {
-                    "id": "attendees",
-                    "name": "Attendees",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "people"
-                    },
-                    "description": "",
-                    "type": "select"
+                    "key": "attendees",
+                    "label": "Attendees",
+                    "flex": true,
+                    "control_type": "custom"
                 },
                 {
-                    "id": "date",
-                    "name": "Date",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "event"
-                    },
-                    "description": "",
-                    "type": "select",
+                    "key": "title",
+                    "label": "Meeting Subject",
+                    "control_type": "text",
                     "required": true
                 },
                 {
-                    "id": "duration",
-                    "name": "Time",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "access_time"
-                    },
-                    "description": "",
-                    "type": "select",
-                    "required": true
+                    "key": "description",
+                    "label": "Meeting Notes",
+                    "simple": false,
+                    "control_type": "textarea"
                 },
                 {
-                    "id": "title",
-                    "name": "Subject",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "local_offer"
-                    },
-                    "description": "",
-                    "type": "text",
-                    "required": true
+                    "key": "notify_users",
+                    "label": "Guest Notifyees",
+                    "simple": false,
+                    "hide": true,
+                    "control_type": "select"
                 },
                 {
-                    "id": "description",
-                    "name": "Description",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "description"
-                    },
-                    "description": "",
-                    "type": "text"
+                    "key": "booking_type",
+                    "label": "Booking Type",
+                    "simple": false,
+                    "control_type": "dropdown",
+                    "default": "internal",
+                    "options": [
+                        {
+                            "id": "internal",
+                            "name": "Internal (default)"
+                        },
+                        {
+                            "id": "client",
+                            "name": "Client"
+                        },
+                        {
+                            "id": "external",
+                            "name": "External"
+                        },
+                        {
+                            "id": "interview",
+                            "name": "Interview"
+                        },
+                        {
+                            "id": "setup",
+                            "name": "Setup"
+                        },
+                        {
+                            "id": "training",
+                            "name": "Training"
+                        }
+                    ]
                 },
                 {
-                    "id": "notes",
-                    "name": "Notes",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "note"
-                    },
+                    "key": "notes",
+                    "label": "Private Notes",
                     "description": "",
-                    "type": "textarea"
+                    "control_type": "textarea"
                 }
             ]
         }
