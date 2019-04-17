@@ -203,7 +203,7 @@
             "hide_timeline": true,
             "fields": [
                 {
-                    "key": "period",
+                    "key": "period_group",
                     "control_type": "group",
                     "children": [
                         {
@@ -224,7 +224,7 @@
                     ]
                 },
                 {
-                    "key": "period",
+                    "key": "time_group",
                     "control_type": "group",
                     "children": [
                         {
@@ -321,7 +321,8 @@
                     "key": "description",
                     "label": "Add Notes",
                     "simple": false,
-                    "control_type": "textarea"
+                    "flex": true,
+                    "control_type": "custom"
                 }
             ],
             "banner": {
