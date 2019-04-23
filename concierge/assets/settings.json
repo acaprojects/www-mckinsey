@@ -108,11 +108,13 @@
                     "simple": true,
                     "description": "",
                     "control_type": "custom",
-                    "required": true
+                    "required": true,
+                    "no_edit": true
                 },
                 {
                     "key": "period",
                     "control_type": "group",
+                    "no_edit": true,
                     "children": [
                         {
                             "key": "start",
@@ -123,7 +125,8 @@
                             "simple": true,
                             "description": "",
                             "control_type": "custom",
-                            "required": true
+                            "required": true,
+                            "no_edit": true
                         },
                         {
                             "key": "duration",
@@ -134,7 +137,8 @@
                             "simple": true,
                             "description": "",
                             "control_type": "custom",
-                            "required": true
+                            "required": true,
+                            "no_edit": true
                         }
                     ]
                 },
@@ -143,7 +147,8 @@
                     "label": "Meeting Host",
                     "flex": true,
                     "simple": false,
-                    "control_type": "custom"
+                    "control_type": "custom",
+                    "no_edit": true
                 },
                 {
                     "key": "room",
@@ -156,26 +161,31 @@
                     "key": "attendees",
                     "label": "Attendees",
                     "flex": true,
-                    "control_type": "custom"
+                    "control_type": "custom",
+                    "no_edit": true
                 },
                 {
                     "key": "title",
                     "label": "Meeting Subject",
                     "control_type": "text",
-                    "required": true
+                    "required": true,
+                    "no_edit": true
                 },
                 {
                     "key": "description",
                     "label": "Meeting Notes",
                     "simple": false,
-                    "control_type": "textarea"
+                    "control_type": "custom",
+                    "flex": true,
+                    "no_edit": true
                 },
                 {
                     "key": "notify_users",
                     "label": "Guest Notifyees",
                     "simple": false,
                     "hide": true,
-                    "control_type": "select"
+                    "control_type": "select",
+                    "no_edit": true
                 },
                 {
                     "key": "booking_type",
@@ -183,6 +193,7 @@
                     "simple": false,
                     "control_type": "dropdown",
                     "default": "internal",
+                    "no_edit": true,
                     "options": [
                         {
                             "id": "internal",
@@ -214,7 +225,8 @@
                     "key": "notes",
                     "label": "Private Notes",
                     "description": "",
-                    "control_type": "textarea"
+                    "control_type": "custom",
+                    "flex": true
                 }
             ]
         }
