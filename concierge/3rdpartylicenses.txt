@@ -448,6 +448,9 @@ MIT
 @angular/service-worker
 MIT
 
+@tinymce/tinymce-angular
+Apache-2.0
+
 @angular/animations
 MIT
 
