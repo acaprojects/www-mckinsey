@@ -105,16 +105,13 @@
                 {
                     "key": "date",
                     "label": "Date",
-                    "simple": true,
-                    "description": "",
                     "control_type": "custom",
                     "required": true,
-                    "no_edit": true
+                    "readonly_edit": true
                 },
                 {
                     "key": "period",
                     "control_type": "group",
-                    "no_edit": true,
                     "children": [
                         {
                             "key": "start",
@@ -122,11 +119,9 @@
                             "refs": [
                                 "date"
                             ],
-                            "simple": true,
-                            "description": "",
                             "control_type": "custom",
                             "required": true,
-                            "no_edit": true
+                            "readonly_edit": true
                         },
                         {
                             "key": "duration",
@@ -134,11 +129,9 @@
                             "refs": [
                                 "date"
                             ],
-                            "simple": true,
-                            "description": "",
                             "control_type": "custom",
                             "required": true,
-                            "no_edit": true
+                            "readonly_edit": true
                         }
                     ]
                 },
@@ -146,14 +139,12 @@
                     "key": "host",
                     "label": "Meeting Host",
                     "flex": true,
-                    "simple": false,
                     "control_type": "custom",
                     "no_edit": true
                 },
                 {
                     "key": "room",
                     "label": "Space",
-                    "description": "",
                     "control_type": "select",
                     "required": true
                 },
