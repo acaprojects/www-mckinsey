@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1556251127025,
+  "timestamp": 1556497975519,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -163,17 +163,17 @@
     "/staff/assets/img/skyline.jpg": "c47ac628178df00b6cb24b959bc88be223eac30c",
     "/staff/assets/img/storage.svg": "06e314fdf75ea7852e958e7a759c0f933d052821",
     "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
-    "/staff/assets/maps/costa_rica/level_03.svg": "c2ab42aa4ee8a0714466139a4dd766546fb86e37",
-    "/staff/assets/maps/istanbul/level_28.svg": "8af552343a1fa78e4c714ffb3b551130a4079ff3",
+    "/staff/assets/maps/costa_rica/level_03.svg": "7d0d988657b69b739e57f90812a9560c251f6d5a",
+    "/staff/assets/maps/istanbul/level_28.svg": "bcb7a79e40170081d7f3f6c870a80e0893f2d1ea",
     "/staff/assets/maps/istanbul/level_29.svg": "e61eebc4a0f6096e1b5f4efe213b5b0f28a47c31",
-    "/staff/assets/maps/london/level_04.svg": "27c7cb36a0907fc37518f7b492edd869a004f8e9",
+    "/staff/assets/maps/london/level_04.svg": "59d5930fd02d0499cbcfebe2aff6bd61c36cdfa2",
     "/staff/assets/maps/london/level_05.svg": "3ff92995d9e4f4a8a8664d5ea8d3eb959eab23dc",
     "/staff/assets/maps/london/level_06.svg": "93f5817c942e7e3fc8bcdbe3c81434c0d1abcefc",
     "/staff/assets/maps/london/level_07.svg": "4682ea8bea401aa2393ef7325ae41966d62119cf",
     "/staff/assets/maps/london/level_08.svg": "94695789115e329b2bf8e5ee90356658409499fa",
     "/staff/assets/maps/london/level_8M.svg": "2ff489cd163ca8be586ef0ad17755d31328b6c01",
-    "/staff/assets/maps/london_jermyn/level_04.svg": "aa32ad53e5937b8502bd06e43b9c786cc0b4550f",
-    "/staff/assets/maps/new_york/level_19.svg": "4d7be61ea72c5d2bda9ca98a7bab89acc46c1d02",
+    "/staff/assets/maps/london_jermyn/level_04.svg": "4a6ab524bc5a9dc94af9ee5cd63b808ad3212c5f",
+    "/staff/assets/maps/new_york/level_19.svg": "40194639c26b745597f2ec437c189f487e7a8c11",
     "/staff/assets/maps/new_york/level_60.svg": "4011bb09b8f55d85fce28f2a590df21ca0009319",
     "/staff/assets/maps/new_york/level_61.svg": "ae6e2328eddf9b8e99c707de894390c33a97df8e",
     "/staff/assets/maps/new_york/level_62.svg": "44724283b9d2ae6695e86290afc701efcc4d75ba",
@@ -183,7 +183,7 @@
     "/staff/assets/maps/sydney/level_35.svg": "d2169027921c86a0faaccc9a5fdcfae5661f6481",
     "/staff/assets/maps/sydney/level_36.svg": "7493e0052f007665c15c9922b73de5b026efd895",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "67f22d600b9f3c6684f89258071da003e9ab9730"
+    "/staff/index.html": "32a203a5e295541999539511e9d710eab6072371"
   },
   "navigationUrls": [
     {
