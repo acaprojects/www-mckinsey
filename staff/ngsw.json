@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1556687916627,
+  "timestamp": 1556687948879,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -56,6 +56,7 @@
         "/staff/assets/img/home.svg",
         "/staff/assets/img/links.svg",
         "/staff/assets/img/location.svg",
+        "/staff/assets/img/location_yellow.svg",
         "/staff/assets/img/lockers.svg",
         "/staff/assets/img/logo-inverse.svg",
         "/staff/assets/img/logo.svg",
@@ -155,6 +156,7 @@
     "/staff/assets/img/home.svg": "9be7895a819836171d2c67db551b9c07bd4de1ff",
     "/staff/assets/img/links.svg": "c3cda2c4acf58059934a1f41d1067e82f265add3",
     "/staff/assets/img/location.svg": "64ad90977efb5dd94e69bd60ff56f5552fdf4693",
+    "/staff/assets/img/location_yellow.svg": "28f3d6de1927013535eddb98765675ea3e2e35a5",
     "/staff/assets/img/lockers.svg": "a6acc457b8fc54a99d9519a2a9f300a58903808e",
     "/staff/assets/img/logo-inverse.svg": "5a8c2f8fbe353e75941a84c6c67a6efed57ee96d",
     "/staff/assets/img/logo.svg": "b18b5c1f60356a34751d17dbecef95c0955db88d",
@@ -183,7 +185,7 @@
     "/staff/assets/maps/sydney/level_35.svg": "d2169027921c86a0faaccc9a5fdcfae5661f6481",
     "/staff/assets/maps/sydney/level_36.svg": "7493e0052f007665c15c9922b73de5b026efd895",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "4c22c1cbcb2d4c45b406c476957b01b79ee27a2a"
+    "/staff/index.html": "532484df9a2efd2b02c6f553a04d1ca112612cfd"
   },
   "navigationUrls": [
     {
