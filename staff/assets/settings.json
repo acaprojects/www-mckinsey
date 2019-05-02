@@ -265,6 +265,13 @@
                     "control_type": "custom"
                 },
                 {
+                    "key": "notify_user",
+                    "label": "Guest Services",
+                    "simple": false,
+                    "flex": true,
+                    "control_type": "custom"
+                },
+                {
                     "key": "title",
                     "label": "Meeting Subject",
                     "control_type": "text",
