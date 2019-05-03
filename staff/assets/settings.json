@@ -269,6 +269,9 @@
                     "label": "Guest Services",
                     "simple": false,
                     "flex": true,
+                    "refs": [
+                        "attendees"
+                    ],
                     "control_type": "custom"
                 },
                 {
