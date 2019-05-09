@@ -413,6 +413,7 @@
                 "available": "rgba(31,102,0, .7)",
                 "unavailable": "rgba(171,17,3, .70)",
                 "not-bookable": "rgba(73, 73, 72, .70)",
+                "pending": "#FF9800",
                 "pin": "#f2b36e"
             },
             "desks": {
@@ -484,6 +485,11 @@
                         "id": "bookable",
                         "name": "In-Use",
                         "color": "rgba(171,17,3, .70)"
+                    },
+                    {
+                        "id": "pending",
+                        "name": "Approval Required",
+                        "color": "#FF9800"
                     }
                 ]
             }
