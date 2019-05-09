@@ -493,6 +493,10 @@
                     }
                 ]
             }
+        },
+        "concierge": {
+            "name": "LN-Reception",
+            "email": "LN-reception@mckinsey.com"
         }
     }
 }
