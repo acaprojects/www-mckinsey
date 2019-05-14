@@ -1,15 +1,15 @@
 {
-    "version": "0.2.2",
+    "version": "1.0.0.8",
     "build": 1547708760000,
     "env": "prod",
     "debug": true,
     "userhash": "dT1zdXBwb3J0QGFjYS5pbSZwPTdsUDQwN3dwZDM=",
     "composer": {
         "domain": "",
-        "route": "/outlook",
+        "route": "/staff",
         "protocol": "https:",
         "use_domain": true,
-        "local_login": true
+        "local_login": false
     },
     "app": {
         "title": "AIA Group",
