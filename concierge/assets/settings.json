@@ -58,23 +58,6 @@
                         "class": "custom-visitor",
                         "value": ""
                     }
-                },
-                {
-                    "id": "reports",
-                    "name": "Reports",
-                    "icon": {
-                        "class": "custom-reports",
-                        "value": ""
-                    }
-                },
-                {
-                    "id": "notifications",
-                    "name": "Notifications",
-                    "icon": {
-                        "class": "material-icons",
-                        "value": "new_releases"
-                    },
-                    "count": "unread"
                 }
             ]
         },
