@@ -1,14 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>ACA</title>
-    <meta name="description" content="ACA Apps">
-  </head>
-  <body>
-    <script>
-      location.href = 'staff/index.html';
-    </script>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>ACA</title>
+        <meta name="description" content="ACA Apps" />
+    </head>
+    <body>
+        <script>
+            if (location.origin.indexOf('panels.') >= 0) {
+                location.href = 'bookings/index.html';
+            } else {
+                location.href = 'staff/index.html';
+            }
+        </script>
+    </body>
 </html>
