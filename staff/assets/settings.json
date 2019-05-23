@@ -252,11 +252,9 @@
                     ]
                 },
                 {
-                    "key": "host",
+                    "key": "host_index",
                     "label": "Meeting Host",
-                    "flex": true,
-                    "simple": false,
-                    "control_type": "custom"
+                    "control_type": "dropdown"
                 },
                 {
                     "key": "attendees",
