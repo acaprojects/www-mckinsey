@@ -94,7 +94,9 @@
                 {
                     "id": "book",
                     "name": "Book",
-                    "items": []
+                    "query": {
+                        "new": true
+                    }
                 },
                 {
                     "id": "explore",
@@ -154,6 +156,9 @@
                 "id": "book",
                 "name": "Book",
                 "color": "",
+                "query": {
+                    "new": true
+                },
                 "icon": {
                     "class": "custom-book"
                 }
