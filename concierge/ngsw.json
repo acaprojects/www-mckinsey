@@ -1,15 +1,15 @@
 {
   "configVersion": 1,
-  "timestamp": 1559094588056,
-  "index": "/concierge/index.html",
+  "timestamp": 1559604975779,
+  "index": "/staff/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/concierge/favicon.ico",
-        "/concierge/index.html"
+        "/staff/favicon.ico",
+        "/staff/index.html"
       ],
       "patterns": []
     },
@@ -18,18 +18,18 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/concierge/assets/icon/launch.png",
-        "/concierge/assets/img/carpool.jpg",
-        "/concierge/assets/img/caterer-03.jpg",
-        "/concierge/assets/img/ergonomicsupport.jpg",
-        "/concierge/assets/img/logo-inverse.svg",
-        "/concierge/assets/img/logo.svg",
-        "/concierge/assets/img/report/background.png",
-        "/concierge/assets/img/report/booking.svg",
-        "/concierge/assets/img/report/other.svg",
-        "/concierge/assets/img/report/transition.svg",
-        "/concierge/assets/img/report/visitor.svg",
-        "/concierge/assets/img/scheduleheader.jpg"
+        "/staff/assets/icon/launch.png",
+        "/staff/assets/img/carpool.jpg",
+        "/staff/assets/img/caterer-03.jpg",
+        "/staff/assets/img/ergonomicsupport.jpg",
+        "/staff/assets/img/logo-inverse.svg",
+        "/staff/assets/img/logo.svg",
+        "/staff/assets/img/report/background.png",
+        "/staff/assets/img/report/booking.svg",
+        "/staff/assets/img/report/other.svg",
+        "/staff/assets/img/report/transition.svg",
+        "/staff/assets/img/report/visitor.svg",
+        "/staff/assets/img/scheduleheader.jpg"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
@@ -41,7 +41,7 @@
     {
       "name": "settings",
       "patterns": [
-        "\\/concierge\\/assets\\/settings\\.json"
+        "\\/staff\\/assets\\/settings\\.json"
       ],
       "strategy": "freshness",
       "maxSize": 10,
@@ -63,20 +63,20 @@
     }
   ],
   "hashTable": {
-    "/concierge/assets/icon/launch.png": "98df582f92701da1badfcafff07a7be0afba0f58",
-    "/concierge/assets/img/carpool.jpg": "c886a2d6b52882e499289ef82a2e60e0acf9ad58",
-    "/concierge/assets/img/caterer-03.jpg": "c7e2b4735c10ad80492a72fd4ddfdeba85994ee6",
-    "/concierge/assets/img/ergonomicsupport.jpg": "1cf364bd2f58b1396d3330c785a5da48d240fa97",
-    "/concierge/assets/img/logo-inverse.svg": "159d4d1d708c430ea91533ad744a531c04039426",
-    "/concierge/assets/img/logo.svg": "b18b5c1f60356a34751d17dbecef95c0955db88d",
-    "/concierge/assets/img/report/background.png": "315fe05ac5a2fbb81e28d66f6b51026bdbc8072e",
-    "/concierge/assets/img/report/booking.svg": "a206bac8d8edf99f24f5aa32b2150720ae6e3848",
-    "/concierge/assets/img/report/other.svg": "e4d0deb16f491794381facc68cbd71833e785592",
-    "/concierge/assets/img/report/transition.svg": "ef230675f3eb225e091cfe3537fc3de822ea8a75",
-    "/concierge/assets/img/report/visitor.svg": "898473ff4477a600ef97ccc1df26ea67d03775ea",
-    "/concierge/assets/img/scheduleheader.jpg": "2e1be96585029edaeed9f29fb98e9aa3ba1eda14",
-    "/concierge/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/concierge/index.html": "ed4708fccaebd2e762b2658b076daf4382f2135b"
+    "/staff/assets/icon/launch.png": "98df582f92701da1badfcafff07a7be0afba0f58",
+    "/staff/assets/img/carpool.jpg": "c886a2d6b52882e499289ef82a2e60e0acf9ad58",
+    "/staff/assets/img/caterer-03.jpg": "c7e2b4735c10ad80492a72fd4ddfdeba85994ee6",
+    "/staff/assets/img/ergonomicsupport.jpg": "1cf364bd2f58b1396d3330c785a5da48d240fa97",
+    "/staff/assets/img/logo-inverse.svg": "159d4d1d708c430ea91533ad744a531c04039426",
+    "/staff/assets/img/logo.svg": "b18b5c1f60356a34751d17dbecef95c0955db88d",
+    "/staff/assets/img/report/background.png": "315fe05ac5a2fbb81e28d66f6b51026bdbc8072e",
+    "/staff/assets/img/report/booking.svg": "a206bac8d8edf99f24f5aa32b2150720ae6e3848",
+    "/staff/assets/img/report/other.svg": "e4d0deb16f491794381facc68cbd71833e785592",
+    "/staff/assets/img/report/transition.svg": "ef230675f3eb225e091cfe3537fc3de822ea8a75",
+    "/staff/assets/img/report/visitor.svg": "898473ff4477a600ef97ccc1df26ea67d03775ea",
+    "/staff/assets/img/scheduleheader.jpg": "2e1be96585029edaeed9f29fb98e9aa3ba1eda14",
+    "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
+    "/staff/index.html": "1036bca1a60ba5dc1d55ddcb45f0e0f2a1417ac1"
   },
   "navigationUrls": [
     {

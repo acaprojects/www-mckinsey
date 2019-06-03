@@ -5,7 +5,7 @@
     "debug": true,
     "composer": {
         "domain": "",
-        "route": "/concierge",
+        "route": "/staff",
         "protocol": "https:",
         "use_domain": true,
         "local_login": false
