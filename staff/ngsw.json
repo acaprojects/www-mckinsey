@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1559705806304,
+  "timestamp": 1559707196002,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -60,6 +60,7 @@
         "/staff/assets/img/lockers.svg",
         "/staff/assets/img/logo-inverse.svg",
         "/staff/assets/img/logo.svg",
+        "/staff/assets/img/mck_logo_blue.svg",
         "/staff/assets/img/mckinsey_lines.svg",
         "/staff/assets/img/pantry.svg",
         "/staff/assets/img/skyline.jpg",
@@ -159,8 +160,9 @@
     "/staff/assets/img/location.svg": "64ad90977efb5dd94e69bd60ff56f5552fdf4693",
     "/staff/assets/img/location_yellow.svg": "41d37172918c747b9577b9d343a85a186a01a18e",
     "/staff/assets/img/lockers.svg": "a6acc457b8fc54a99d9519a2a9f300a58903808e",
-    "/staff/assets/img/logo-inverse.svg": "5a8c2f8fbe353e75941a84c6c67a6efed57ee96d",
-    "/staff/assets/img/logo.svg": "b18b5c1f60356a34751d17dbecef95c0955db88d",
+    "/staff/assets/img/logo-inverse.svg": "1c96a25f61231a0f2f325be7c259df02dc67fa7b",
+    "/staff/assets/img/logo.svg": "31333281839d4feb3502ff90f90a95de725e502e",
+    "/staff/assets/img/mck_logo_blue.svg": "47be20b80308e63bbfb051cadc0203bc78ed27ce",
     "/staff/assets/img/mckinsey_lines.svg": "1dfaefcaef8b5074f44ddfc2231c76e7e8f9c746",
     "/staff/assets/img/pantry.svg": "c2ec5963210f409f858ef55334467c60a05b4f4e",
     "/staff/assets/img/skyline.jpg": "c47ac628178df00b6cb24b959bc88be223eac30c",
@@ -187,7 +189,7 @@
     "/staff/assets/maps/sydney/level_35.svg": "d2169027921c86a0faaccc9a5fdcfae5661f6481",
     "/staff/assets/maps/sydney/level_36.svg": "7493e0052f007665c15c9922b73de5b026efd895",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "9a60a9fd48c5bf5d33737fffcc8625607f64c799"
+    "/staff/index.html": "70b889f4b36486be5d6dc4e02c0bc10f867cba57"
   },
   "navigationUrls": [
     {
