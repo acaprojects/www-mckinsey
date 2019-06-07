@@ -223,6 +223,7 @@
                             "key": "recurrence",
                             "label": "Recurrence",
                             "simple": false,
+                            "no_edit": true,
                             "description": "",
                             "control_type": "select"
                         }
