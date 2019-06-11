@@ -329,7 +329,8 @@
                     "label": "Conferencing",
                     "simple": false,
                     "control_type": "toggle",
-                    "type": "text"
+                    "type": "text",
+                    "hide": true
                 },
                 {
                     "key": "description",
