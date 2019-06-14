@@ -63,7 +63,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"shell-booking-booking-module-ngfactory":"shell-booking-booking-module-ngfactory","shell-explore-explore-module-ngfactory":"shell-explore-explore-module-ngfactory","shell-new-schedule-schedule-module-ngfactory":"shell-new-schedule-schedule-module-ngfactory"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"shell-booking-booking-module":"shell-booking-booking-module","shell-explore-explore-module":"shell-explore-explore-module","shell-new-schedule-schedule-module":"shell-new-schedule-schedule-module"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
