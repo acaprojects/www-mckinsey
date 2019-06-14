@@ -1,22 +1,22 @@
 {
-    "version": "1.0.0.8",
+    "version": "1.0.0.10",
     "build": 1547708760000,
     "env": "prod",
     "debug": true,
     "userhash": "dT1zdXBwb3J0QGFjYS5pbSZwPTdsUDQwN3dwZDM=",
     "composer": {
         "domain": "",
-        "route": "/outlook",
+        "route": "/outlook-min",
         "protocol": "https:",
         "use_domain": true,
-        "local_login": false
+        "local_login": true
     },
     "app": {
-        "title": "AIA Group",
-        "name": "AIA Group",
-        "description": "AIA Group Staff Application made in Angular 5+",
-        "short_name": "AIA",
-        "code": "AIA",
+        "title": "Mck Outlook",
+        "name": "Mck Outlook",
+        "description": "Mck Outlook Application made in Angular 5+",
+        "short_name": "Mck Outlook",
+        "code": "Mck Outlook",
         "login": {
             "forgot": false
         },
@@ -679,5 +679,7 @@
             "name": "United States",
             "phone": "+1 408 638 0968"
         }
-    }
+    },
+
+    "mock": true
 }

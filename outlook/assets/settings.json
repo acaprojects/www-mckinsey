@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0.8",
+    "version": "1.0.0.10",
     "build": 1547708760000,
     "env": "prod",
     "debug": true,
@@ -9,14 +9,14 @@
         "route": "/outlook",
         "protocol": "https:",
         "use_domain": true,
-        "local_login": true
+        "local_login": false
     },
     "app": {
-        "title": "Mck Outlook",
-        "name": "Mck Outlook",
-        "description": "Mck Outlook Application made in Angular 5+",
-        "short_name": "Mck Outlook",
-        "code": "Mck Outlook",
+        "title": "AIA Group",
+        "name": "AIA Group",
+        "description": "AIA Group Staff Application made in Angular 5+",
+        "short_name": "AIA",
+        "code": "AIA",
         "login": {
             "forgot": false
         },
@@ -679,7 +679,5 @@
             "name": "United States",
             "phone": "+1 408 638 0968"
         }
-    },
-
-    "mock": true
+    }
 }
