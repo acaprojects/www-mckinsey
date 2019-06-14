@@ -1,7 +1,7 @@
 {
     "version": "1.0.0.10",
     "build": 1547708760000,
-    "env": "prod",
+    "env": "dev",
     "debug": true,
     "userhash": "dT1zdXBwb3J0QGFjYS5pbSZwPTdsUDQwN3dwZDM=",
     "composer": {
@@ -9,7 +9,7 @@
         "route": "/outlook-min",
         "protocol": "https:",
         "use_domain": true,
-        "local_login": true
+        "local_login": false
     },
     "app": {
         "title": "Mck Outlook",
