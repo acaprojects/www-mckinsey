@@ -7548,13 +7548,13 @@ var AppService = /** @class */ (function () {
         }
         this.analytics.init();
         // Initialise data services
-        this.buildings.init();
-        this.bookings.init();
+        // this.buildings.init();
+        // this.bookings.init();
         this.users.init();
-        this.rooms.init();
+        // this.rooms.init();
         // this.catering.init();
         // this.visitors.init();
-        this.lockers.init();
+        // this.lockers.init();
         this.zoom.init();
         // this.contacts.init();
         _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["NotificationComponent"].timeout(5000);
@@ -12064,7 +12064,7 @@ var SettingsService = /** @class */ (function () {
     };
     SettingsService.prototype.printVersion = function () {
         var now = moment__WEBPACK_IMPORTED_MODULE_3__();
-        var built = moment__WEBPACK_IMPORTED_MODULE_3__(1560497880000);
+        var built = moment__WEBPACK_IMPORTED_MODULE_3__(1560499260000);
         var build = now.isSame(built, 'd') ? "Today at " + built.format('h:mma') : built.format('MMM Do, YYYY | h:mma');
         this.log('SYSTEM', 'Version: 0.1.0', null, 'debug', true);
         this.log('SYSTEM', "Build: " + build, null, 'debug', true);
