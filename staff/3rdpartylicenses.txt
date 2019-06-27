@@ -400,7 +400,6 @@ THE SOFTWARE.
 @angular/cdk/scrolling
 
 @acaprojects/ngx-date-picker
-MIT
 
 dayjs
 MIT
