@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1561444782681,
+  "timestamp": 1561955978648,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -78,7 +78,7 @@
     "/staff/assets/img/report/visitor.svg": "898473ff4477a600ef97ccc1df26ea67d03775ea",
     "/staff/assets/img/scheduleheader.jpg": "2e1be96585029edaeed9f29fb98e9aa3ba1eda14",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "7e0685113b11fce663a92f818f1dfa5fcc5724ed"
+    "/staff/index.html": "c6c16bd96c9a0113c9e5e7f93adb19db90648019"
   },
   "navigationUrls": [
     {
