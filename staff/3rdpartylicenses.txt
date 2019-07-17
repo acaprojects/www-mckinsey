@@ -399,8 +399,6 @@ THE SOFTWARE.
 
 @angular/cdk/scrolling
 
-@acaprojects/ngx-date-picker
-
 dayjs
 MIT
 MIT License
@@ -425,6 +423,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+
+@acaprojects/ngx-date-picker
+
+@acaprojects/ngx-dynamic-forms
 
 moment-timezone
 MIT
@@ -460,6 +462,10 @@ ISC
 
 @tinymce/tinymce-angular
 Apache-2.0
+
+@acaprojects/ngx-custom-events
+
+@acaprojects/ngx-checkbox
 
 @angular/router
 MIT
