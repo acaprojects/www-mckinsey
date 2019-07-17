@@ -209,14 +209,14 @@
             "fields": [
                 {
                     "key": "period_group",
-                    "control_type": "group",
+                    "type": "group",
                     "children": [
                         {
                             "key": "date",
                             "label": "Date",
                             "simple": true,
                             "description": "",
-                            "control_type": "custom",
+                            "type": "custom",
                             "required": true
                         },
                         {
@@ -225,63 +225,54 @@
                             "simple": false,
                             "no_edit": true,
                             "description": "",
-                            "control_type": "select"
+                            "type": "action"
                         }
                     ]
                 },
                 {
                     "key": "time_group",
-                    "control_type": "group",
+                    "type": "group",
                     "children": [
                         {
                             "key": "start",
                             "label": "Time",
-                            "refs": [
-                                "date"
-                            ],
                             "simple": true,
                             "description": "",
-                            "control_type": "custom",
+                            "type": "custom",
                             "required": true
                         },
                         {
                             "key": "duration",
                             "label": "Duration",
-                            "refs": [
-                                "date"
-                            ],
                             "simple": true,
                             "description": "",
-                            "control_type": "custom",
+                            "type": "custom",
                             "required": true
                         }
                     ]
                 },
                 {
-                    "key": "host_index",
+                    "key": "host",
                     "label": "Meeting Host",
-                    "control_type": "dropdown"
+                    "type": "custom"
                 },
                 {
                     "key": "attendees",
                     "label": "Attendees",
                     "flex": true,
-                    "control_type": "custom"
+                    "type": "custom"
                 },
                 {
                     "key": "notify_user",
                     "label": "Guest Services",
                     "simple": false,
                     "flex": true,
-                    "refs": [
-                        "attendees"
-                    ],
-                    "control_type": "custom"
+                    "type": "custom"
                 },
                 {
                     "key": "title",
                     "label": "Meeting Subject",
-                    "control_type": "text",
+                    "type": "input",
                     "required": true
                 },
                 {
@@ -289,55 +280,96 @@
                     "label": "Guest Notifyees",
                     "simple": false,
                     "hide": true,
-                    "control_type": "select"
+                    "type": "action"
                 },
                 {
                     "key": "booking_type",
                     "label": "Booking Type",
                     "simple": false,
-                    "control_type": "dropdown",
+                    "type": "custom",
                     "default": "internal",
-                    "options": [
-                        {
-                            "id": "internal",
-                            "name": "Internal (default)"
-                        },
-                        {
-                            "id": "client",
-                            "name": "Client"
-                        },
-                        {
-                            "id": "external",
-                            "name": "External"
-                        },
-                        {
-                            "id": "interview",
-                            "name": "Interview"
-                        },
-                        {
-                            "id": "setup",
-                            "name": "Setup"
-                        },
-                        {
-                            "id": "training",
-                            "name": "Training"
-                        }
-                    ]
+                    "metadata": {
+                        "options": [
+                            {
+                                "id": "internal",
+                                "name": "Internal (default)"
+                            },
+                            {
+                                "id": "client",
+                                "name": "Client"
+                            },
+                            {
+                                "id": "external",
+                                "name": "External"
+                            },
+                            {
+                                "id": "interview",
+                                "name": "Interview"
+                            },
+                            {
+                                "id": "setup",
+                                "name": "Setup"
+                            },
+                            {
+                                "id": "training",
+                                "name": "Training"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "key": "equipment",
+                    "label": "Equipment",
+                    "flex": true,
+                    "hide": true,
+                    "type": "textarea"
+                },
+                {
+                    "key": "equipment_code",
+                    "label": "Equipment Code",
+                    "flex": true,
+                    "hide": true,
+                    "type": "input"
+                },
+                {
+                    "key": "catering_notes",
+                    "label": "Catering Notes",
+                    "flex": true,
+                    "hide": true,
+                    "type": "textarea"
+                },
+                {
+                    "key": "catering_code",
+                    "label": "Catering Code",
+                    "flex": true,
+                    "hide": true,
+                    "type": "input"
+                },
+                {
+                    "key": "needs_space",
+                    "label": "Need a meeting space?",
+                    "flex": true,
+                    "no_edit": true,
+                    "type": "checkbox"
+                },
+                {
+                    "key": "needs_catering",
+                    "label": "Need Catering?",
+                    "flex": true,
+                    "no_edit": true,
+                    "type": "checkbox"
                 },
                 {
                     "key": "conferencing",
                     "label": "Conferencing",
-                    "simple": false,
-                    "control_type": "toggle",
-                    "type": "text",
+                    "type": "toggle",
                     "hide": true
                 },
                 {
                     "key": "description",
                     "label": "Add Notes",
-                    "simple": false,
                     "flex": true,
-                    "control_type": "custom"
+                    "type": "custom"
                 }
             ],
             "banner": {

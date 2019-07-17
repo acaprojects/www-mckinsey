@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="127.117" height="147.844" viewBox="0 0 127.117 147.844">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Background08Mask" d="M63.559,137.845c-35.1,0-63.559-6.3-63.559-41.46C0,88.443,2.26,0,2.26,0H127.117V96.385C127.117,131.546,98.661,137.845,63.559,137.845Z" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect width="65.161" height="139.183" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect width="20.977" height="33.717" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect width="45.03" height="76.407" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect width="19.675" height="7.71" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-7">
+      <rect width="65.161" height="43.863" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-8">
+      <rect width="11.65" height="64.415" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Background08" transform="translate(0 40)">
+    <path id="Background08Mask-2" data-name="Background08Mask" d="M63.559,137.845c-35.1,0-63.559-6.3-63.559-41.46C0,88.443,2.26,0,2.26,0H127.117V96.385C127.117,131.546,98.661,137.845,63.559,137.845Z" transform="translate(0 0)" fill="none"/>
+    <g id="Background08-2" data-name="Background08" transform="translate(0 -40)" clip-path="url(#clip-path)">
+      <path id="Background08-3" data-name="Background08" d="M127.117,47.151c0,35.161-28.456,41.46-63.559,41.46S0,82.312,0,47.151,28.456,0,63.559,0s63.559,11.99,63.559,47.151" transform="translate(0 49.234)" fill="#e6e6e6"/>
+      <g id="Objects_InterfaceModule_Module_02" data-name="Objects/InterfaceModule/Module 02" transform="translate(25.526 33.236)">
+        <rect id="Objects_InterfaceModule_Module_02_background" data-name="Objects/InterfaceModule/Module 02 background" width="78.121" height="56.535" transform="translate(18.331 13.363)" fill="rgba(0,0,0,0)"/>
+        <g id="Web">
+          <rect id="Container" width="114.782" height="83.26" rx="8" fill="#f0f0f0"/>
+          <rect id="Background" width="56.192" height="35.291" rx="8" transform="translate(29.467 15.761)" fill="#fff"/>
+          <g id="Profile_Info" data-name="Profile Info" transform="translate(44.542 42.487)">
+            <rect id="Name" width="26.04" height="2.056" rx="1.028" fill="#e6e6e6"/>
+            <rect id="Name-2" data-name="Name" width="17.817" height="2.056" rx="1.028" transform="translate(4.112 3.426)" fill="#e6e6e6"/>
+          </g>
+          <path id="Combined_Shape" data-name="Combined Shape" d="M13.705,12.677a1.028,1.028,0,0,1,0-2.056H65.444a1.028,1.028,0,0,1,0,2.056ZM1.028,9.251a1.028,1.028,0,1,1,0-2.056h76.75a1.028,1.028,0,1,1,0,2.056ZM13.705,5.482a1.028,1.028,0,0,1,0-2.056H65.444a1.028,1.028,0,0,1,0,2.056ZM1.028,2.056A1.028,1.028,0,0,1,1.028,0h76.75a1.028,1.028,0,1,1,0,2.056Z" transform="translate(18.16 57.905)" fill="#b3b3b3"/>
+          <path id="Character_Header" data-name="Character/Header" d="M8,0h98.782a8,8,0,0,1,8,8V9.251a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8A8,8,0,0,1,8,0Z" fill="#b3b3b3"/>
+          <path id="Buttons" d="M8.223,1.37a1.371,1.371,0,1,1,1.37,1.371A1.371,1.371,0,0,1,8.223,1.37Zm-4.112,0A1.371,1.371,0,1,1,5.482,2.741,1.371,1.371,0,0,1,4.112,1.37ZM0,1.37A1.371,1.371,0,1,1,1.37,2.741,1.371,1.371,0,0,1,0,1.37Z" transform="translate(3.084 3.426)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Character__Full_Character_Male_7" data-name="Character/_Full Character/Male 7" transform="translate(29.684 27.337)" clip-path="url(#clip-path-2)">
+        <g id="Character_Head_Female_Bun" data-name="Character/Head/Female/Bun" transform="translate(6.04)" clip-path="url(#clip-path-3)">
+          <path id="Face" d="M6.735,29.467c-2.994-.2-3.332-1.03-4.207-2.366s-.051-4.7-.051-4.7c3.86,0,3.235-4.327,2.642-6.6a9.054,9.054,0,0,1-2.248-3.465c-.655.62-1.979-.216-2.452-.826a2.027,2.027,0,0,1-.4-1.489,1.279,1.279,0,0,1,.472-.885,1.305,1.305,0,0,1,.937-.182,2.121,2.121,0,0,1,.622.187C1.331,6.823.588,1.657,7.491.175c6.351-1.363,7.755,5.666,7.755,5.666a8.787,8.787,0,0,1,.2.941c.033.328.049.658.083.986A8.992,8.992,0,0,0,15.91,9.7a6.059,6.059,0,0,0,.825,1.609c.26.362.868.951.715,1.458-.092.3-.485.388-.8.359-.677-.06-1.023-.027-1.2.694a13.914,13.914,0,0,1-.252,1.545,5.192,5.192,0,0,1-.944,1.669,4.047,4.047,0,0,1-3.609,1.216,11.255,11.255,0,0,1-1.468-.263c-1.518,5.427,2.815,3.891,4.065,5.49.14,1.3.36,3.615-.688,4.792-.828.93-2.109,1.263-4.088,1.263C7.938,29.532,7.363,29.509,6.735,29.467Z" transform="translate(2.308 4.185)" fill="#d0d0d0"/>
+          <path id="Hair" d="M6.63,13.971c2.121,3.791,3.831,4.98,5.217,4.98,2.306,0,5.107-1.444,6.119-1.444a4.225,4.225,0,0,0-.368,1.127q-2.753.813-2.753,1.688a.628.628,0,0,0,.823.565,3.442,3.442,0,0,0,1.488-.565c-.842,1.42-1.488,2.149-3.36,2.149-2.75,0-4.576-1.247-5.91-4.141a19.975,19.975,0,0,0-2.67-4.292,7.849,7.849,0,0,1-.83-.71c-1.2-.453-2.078,0-2.078,1.167.039,1.81,2.344,2.459,2.877,2.025a12.428,12.428,0,0,0,2.223,3.471C2.518,19.711.031,16.118.031,11.572-.409,4.939,3.969,2.508,6.864,1.444s7.042.863,9.223,1.115q2.181.252,3.7-2.558a3.537,3.537,0,0,1,1.093,3.366c-.225,1.3-3.348,4.921-9.029,3.169A3.269,3.269,0,0,0,8.818,8.752c-.477,1.647-2.363.472-1.954,2.82a4.692,4.692,0,0,1-.234,2.4Z" fill="#051c2c"/>
+        </g>
+        <g id="Character_Legs_Standing_Pants" data-name="Character/Legs/Standing/Pants" transform="translate(1.839 62.775)" clip-path="url(#clip-path-4)">
+          <g id="Shoe" transform="translate(25.355 68.697)" clip-path="url(#clip-path-5)">
+            <path id="Skin" d="M0,1.277.131.515,4.049,0l.956,2.528L.131,2Z" transform="translate(1.307)" fill="#d0d0d0"/>
+            <path id="shoe-2" data-name="shoe" d="M1.538.026A.685.685,0,0,0,.815.595l-.7,4.14A1.22,1.22,0,0,0,0,4.8,5.559,5.559,0,0,0,.5,6.8H19.6s.522-2.468-1.1-2.666L12.48,2.7A24.69,24.69,0,0,1,7.926,1.126L6.243.353Z" transform="translate(-0.002 0.9)" fill="#f0f0f0"/>
+          </g>
+          <g id="Shoe_Copy" data-name="Shoe Copy" transform="translate(0 68.697)" clip-path="url(#clip-path-5)">
+            <path id="Skin-2" data-name="Skin" d="M0,1.277.131.515,4.049,0l.956,2.528L.131,2Z" transform="translate(1.307)" fill="#d0d0d0"/>
+            <path id="shoe-3" data-name="shoe" d="M1.538.026A.685.685,0,0,0,.815.595l-.7,4.14A1.22,1.22,0,0,0,0,4.8,5.559,5.559,0,0,0,.5,6.8H19.6s.522-2.468-1.1-2.666L12.48,2.7A24.69,24.69,0,0,1,7.926,1.126L6.243.353Z" transform="translate(-0.002 0.9)" fill="#f0f0f0"/>
+          </g>
+          <path id="Pants" d="M2.932,69.9c-.953-.008-1.907-.015-2.649,0a5.775,5.775,0,0,0,0-.827C-.5,57.917.479,37.122,1.472,24.7,1.852,19.941,2.612,5.475,3.605,0H23.589l3.546,26.5,3.359,43.082s-2.493-.018-5.042,0c0,0-3.809-20.811-8.339-38.469q-1.429-5.573-2.659-9.955c-1.038,4.781-1.931,9.213-2.352,12.077C10.982,40.863,6.826,60.51,5.581,69.9c-.313.007-.665.009-1.038.009C4.033,69.905,3.482,69.9,2.932,69.9Z" transform="translate(0.685)" fill="#051c2c"/>
+          <path id="Belt" d="M.729,0a74.076,74.076,0,0,0,10.9.927A75.409,75.409,0,0,0,22.592,0l.364,4.8a82.5,82.5,0,0,1-11.478.927A82.5,82.5,0,0,1,0,4.8Z" transform="translate(2.74 4.112)" fill="#00a9f4"/>
+        </g>
+        <g id="Character_Body_Standing_2_Shirts_Long_Sleeve" data-name="Character/Body/Standing/2 Shirts Long Sleeve" transform="translate(0 23.239)" clip-path="url(#clip-path-7)">
+          <path id="Shirt" d="M21.211,9.431c0-2.324-.155-2.955-.263-5.028a3.594,3.594,0,0,0-1.985-2.7c-.517-.349-3.882-1.832-4.538-1.7-.464.094-1.825,2.768-4,2.853C8.535,2.99,7.389,2.425,5.192.492a12.007,12.007,0,0,0-3.87,1.471c-1.015.753-.849.975-1,1.428A11.3,11.3,0,0,0,.145,7.94c.414,4.9.235,8.676.235,13.694s.087,14,.4,18.049c2.623-.137,11.447,1.873,23.146-1.213C22.868,32.079,21.211,11.755,21.211,9.431Z" transform="translate(5.627 2.465) rotate(3)" fill="#00a9f4"/>
+          <path id="Coat" d="M0,23.114,1.769,8.931a6.853,6.853,0,0,1,3.72-5.273l1.839-.925L6.76,9.7l-.467,7.356h17.7v5.162S8.421,24.261,1.133,24.744A4.9,4.9,0,0,1,0,23.114ZM25.417,8.107c-.281-2.056-.98-4.4-2.294-5.139,1.6,0,3.424.072,5.448.147,7.476.278,17.656.556,29.09-3.115l.653,4.858c-11.456,4.134-32.149,8.518-32.149,8.518S25.7,10.163,25.417,8.107Z" transform="translate(0 1.504)" fill="#1f40e6"/>
+          <path id="Arms" d="M3,21.824l-3,.288c.008-1.291.009-2.023.029-2.949l2.308-.016c2.894-.814,5.518-1.994,5.561-1.408.065.879-1.672,1.178-1.724,1.848.019,1.246,2.065,1.109,3.581,1.74s.76,1.064.245,1.205C7.923,22.289,5.605,22.007,3,21.824ZM33.861,2.879c2.419-.978,4.63-2,6.53-2.877.533-.025,1.386.153.139,1.222S37.3,2.794,37.662,3.985c.257.622,2,.369,2.211,1.225.093.379-1.108.357-2.8.335-.857-.011-1.841-.023-2.849.018Z" transform="translate(23.986 0)" fill="#d0d0d0"/>
+          <path id="Shade" d="M0,15.5H0c.082-.63.136-1.073.176-1.437,4.631-.4,10.983-1.117,18.88-2.142a4.967,4.967,0,0,1,.358,1.381C15.992,13.92.16,15.483,0,15.5Zm3.427-8.8H1.712L2.1,0h.113A25.026,25.026,0,0,1,3.427,6.694Z" transform="translate(4.581 11.851)" fill="rgba(0,0,0,0.2)"/>
+        </g>
+      </g>
+      <g id="Objects_Plants_Plant4" data-name="Objects/Plants/ Plant4" transform="translate(70.583 96.965)">
+        <rect id="Objects_Plants_Plant4_background" data-name="Objects/Plants/ Plant4 background" width="25.355" height="66.555" transform="translate(0 0.944)" fill="rgba(0,0,0,0)"/>
+        <path id="Leaf_1" data-name="Leaf 1" d="M4.415,3.765A23.4,23.4,0,0,1,7.287,15.387H6.809A23.319,23.319,0,0,0,4.643,5.246L2.3,3.688Q-1.345.927.788.1q1.8-.7,3.627,3.668Z" transform="translate(5.151 5.52)" fill="#1f40e6"/>
+        <path id="Leaf_2" data-name="Leaf 2" d="M2.53,5.1A22.951,22.951,0,0,0,.478,15.085H0A22.024,22.024,0,0,1,3.443,2.534Q5.184-.561,6.707.124q2.086.939-1.7,3.508L2.53,5.1Z" transform="translate(12.531 5.823)" fill="#051c2c"/>
+        <path id="Leaf_3" data-name="Leaf 3" d="M3.246,3.781A7.808,7.808,0,0,0,.478,10.232H0C0,6.717,1.394,4.159,4.168,2.586Q7.641-.977,9.078.369,10.74,1.927,6.315,3.141l-3.069.641Z" transform="translate(12.27 10.675)" fill="#00a9f4"/>
+        <path id="Leaf_4" data-name="Leaf 4" d="M4.474,2.876a9.266,9.266,0,0,1,1.6,1.482A10.831,10.831,0,0,1,8.21,11.22H7.732A10.374,10.374,0,0,0,5.7,4.647,10.038,10.038,0,0,0,3.855,3l-1.55-.5Q-1,1.2.435.2q1.359-.951,4.04,2.679Z" transform="translate(4.784 11.939)" fill="#b3b3b3"/>
+        <path id="Leaf_5" data-name="Leaf 5" d="M4.544,9.152a80.428,80.428,0,0,1,.7,11.755H4.761A80.1,80.1,0,0,0,4.072,9.234L1.725,5.788Q-1.71-.015,1.7,0,4.974.014,4.544,9.152Z" transform="translate(7.538 0)" fill="#d0d0d0"/>
+        <path id="Vase" d="M0,0H13.873a0,0,0,0,1,0,0V43.1a6.937,6.937,0,0,1-6.937,6.937h0A6.937,6.937,0,0,1,0,43.1V0A0,0,0,0,1,0,0Z" transform="translate(5.741 17.465)" fill="#e6e6e6"/>
+      </g>
+      <g id="Objects_Lamp_Roof_Lamp" data-name="Objects/Lamp/Roof Lamp" transform="translate(76.407 -26.04)" clip-path="url(#clip-path-8)">
+        <circle id="Lamp" cx="4.797" cy="4.797" r="4.797" transform="translate(1.028 54.821)" fill="#e6e6e6"/>
+        <rect id="Wire" width="1.713" height="47.969" transform="translate(4.797)" fill="#e6e6e6"/>
+        <path id="Lamp_Cover" data-name="Lamp Cover" d="M0,0H11.65l-.408,2.445A4.454,4.454,0,0,1,6.848,6.167H4.8A4.454,4.454,0,0,1,.408,2.445Z" fill="#b3b3b3"/>
+      </g>
+    </g>
+  </g>
+</svg>
