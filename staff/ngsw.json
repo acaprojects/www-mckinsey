@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1563514497498,
+  "timestamp": 1563763800588,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -97,11 +97,16 @@
         "/staff/assets/maps/new_york/level_62.svg",
         "/staff/assets/maps/new_york/level_63.svg",
         "/staff/assets/maps/new_york/level_64.svg",
+        "/staff/assets/maps/rio/level_01.svg",
+        "/staff/assets/maps/salvadore/level_01.svg",
         "/staff/assets/maps/san_jose/level_03.svg",
         "/staff/assets/maps/san_jose/level_04.svg",
         "/staff/assets/maps/san_jose/level_05.svg",
         "/staff/assets/maps/san_jose/level_06.svg",
         "/staff/assets/maps/san_jose/level_07.svg",
+        "/staff/assets/maps/sao_paulo/level_21.svg",
+        "/staff/assets/maps/sao_paulo/level_22.svg",
+        "/staff/assets/maps/sao_paulo/level_23.svg",
         "/staff/assets/maps/solingen/level_01.svg",
         "/staff/assets/maps/sydney/level_33.svg",
         "/staff/assets/maps/sydney/level_35.svg",
@@ -221,11 +226,16 @@
     "/staff/assets/maps/new_york/level_62.svg": "5a5c4097c7a8f4caabed3f61e1a269d9c52f6a16",
     "/staff/assets/maps/new_york/level_63.svg": "62ff88c4ef43162b0e01f081e879259c473abc8e",
     "/staff/assets/maps/new_york/level_64.svg": "2e62f7da4c9284a53f50bf36d6a531ec05720737",
+    "/staff/assets/maps/rio/level_01.svg": "dfc6c80cf917bb3fa28904e903ceb806314444e7",
+    "/staff/assets/maps/salvadore/level_01.svg": "3d7314bc617fb968c29eeae1fda18383dc5e86b7",
     "/staff/assets/maps/san_jose/level_03.svg": "5f0ada38645662c7216440ed828e2344cfa82226",
     "/staff/assets/maps/san_jose/level_04.svg": "3a5779b3094359681f929d6a7695838738b63a0e",
     "/staff/assets/maps/san_jose/level_05.svg": "2a66310afee6e0c7e8faadaac59d6e97823ab8d3",
     "/staff/assets/maps/san_jose/level_06.svg": "e43eb7f37c7feb901f39e19d0c8366ca30c100ba",
     "/staff/assets/maps/san_jose/level_07.svg": "834589aa393ea22abc0cac9ef91315bdaffc9443",
+    "/staff/assets/maps/sao_paulo/level_21.svg": "053049e8d658c56add8ed37d52b26870628ceee0",
+    "/staff/assets/maps/sao_paulo/level_22.svg": "f6e6e4c1e4cb344593d7b8edd01c9d7dfb749f16",
+    "/staff/assets/maps/sao_paulo/level_23.svg": "c3ca3076ccac84b51eb503f3f0a158e421b02876",
     "/staff/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
     "/staff/assets/maps/sydney/level_33.svg": "1bf5f1923f1ff03558e9dbb22b0526d72b836448",
     "/staff/assets/maps/sydney/level_35.svg": "6747a7aea9dfe7739b2701cc6876de17038536f2",
@@ -233,7 +243,7 @@
     "/staff/assets/maps/washington_dc/level_10.svg": "69c92c6aef4cb9979c0298da957a5d34d31a3f1d",
     "/staff/assets/maps/washington_dc/level_11.svg": "dbe171f2813a1464f40f32913cc1185864c427e9",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "fe11d53f8099c9ecbc3e1e7255927abaae095c3f"
+    "/staff/index.html": "782bfdd7fcbae3d44be2d33518c91c43810772aa"
   },
   "navigationUrls": [
     {
