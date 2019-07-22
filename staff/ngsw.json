@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1563765293013,
+  "timestamp": 1563783300814,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -220,7 +220,7 @@
     "/staff/assets/maps/london/level_08.svg": "a72869d048469d3e82f23cc9f5cc4ea83876896f",
     "/staff/assets/maps/london/level_8M.svg": "49218c1c84ebb50285ddf2f350d8f5c07716d1f0",
     "/staff/assets/maps/london_jermyn/level_04.svg": "ad07701c027f72ef6f306f1b04d3781cee7017a4",
-    "/staff/assets/maps/new_york/level_19.svg": "4abec167dc45ffe028640e9bca50a332690a2067",
+    "/staff/assets/maps/new_york/level_19.svg": "26c433cc2a2ec85d9e459cf912b794834262801f",
     "/staff/assets/maps/new_york/level_60.svg": "14069b7e1d8bc9bcba1a596cb915c1c270575a97",
     "/staff/assets/maps/new_york/level_61.svg": "71a3e703fa9c4d3790bc12e831a96449a0982036",
     "/staff/assets/maps/new_york/level_62.svg": "5a5c4097c7a8f4caabed3f61e1a269d9c52f6a16",
@@ -243,7 +243,7 @@
     "/staff/assets/maps/washington_dc/level_10.svg": "69c92c6aef4cb9979c0298da957a5d34d31a3f1d",
     "/staff/assets/maps/washington_dc/level_11.svg": "dbe171f2813a1464f40f32913cc1185864c427e9",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "bbb1a99d0f5f6e1d3d5b161cb35b3b7ad5da1377"
+    "/staff/index.html": "33045e692259a9cabdb4a533af099e62ca534f3f"
   },
   "navigationUrls": [
     {
