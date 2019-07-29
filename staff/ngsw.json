@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1564021765524,
+  "timestamp": 1564366810151,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -235,7 +235,7 @@
     "/staff/assets/maps/san_jose/level_07.svg": "834589aa393ea22abc0cac9ef91315bdaffc9443",
     "/staff/assets/maps/sao_paulo/level_21.svg": "053049e8d658c56add8ed37d52b26870628ceee0",
     "/staff/assets/maps/sao_paulo/level_22.svg": "f6e6e4c1e4cb344593d7b8edd01c9d7dfb749f16",
-    "/staff/assets/maps/sao_paulo/level_23.svg": "c3ca3076ccac84b51eb503f3f0a158e421b02876",
+    "/staff/assets/maps/sao_paulo/level_23.svg": "f0a5f4eb07c99d0347dd15d1a5d60ccf126ebf1c",
     "/staff/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
     "/staff/assets/maps/sydney/level_33.svg": "1bf5f1923f1ff03558e9dbb22b0526d72b836448",
     "/staff/assets/maps/sydney/level_35.svg": "6747a7aea9dfe7739b2701cc6876de17038536f2",
@@ -243,7 +243,7 @@
     "/staff/assets/maps/washington_dc/level_10.svg": "69c92c6aef4cb9979c0298da957a5d34d31a3f1d",
     "/staff/assets/maps/washington_dc/level_11.svg": "dbe171f2813a1464f40f32913cc1185864c427e9",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "fbcd32580fbb527654a54bd6ed0abf03acfb87ad"
+    "/staff/index.html": "8a3820d929f7044a01e1dc091e813b865ab5ac14"
   },
   "navigationUrls": [
     {
