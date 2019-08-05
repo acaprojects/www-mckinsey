@@ -247,7 +247,10 @@
                             "simple": true,
                             "description": "",
                             "type": "custom",
-                            "required": true
+                            "required": true,
+                            "metadata": {
+                                "max_duration": 480
+                            }
                         }
                     ]
                 },
