@@ -359,7 +359,6 @@
                     "key": "needs_catering",
                     "label": "Need Catering?",
                     "flex": true,
-                    "no_edit": true,
                     "type": "checkbox"
                 },
                 {
