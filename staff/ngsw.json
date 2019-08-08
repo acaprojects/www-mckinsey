@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1565161512016,
+  "timestamp": 1565222742428,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -221,11 +221,11 @@
     "/staff/assets/maps/london/level_8M.svg": "49218c1c84ebb50285ddf2f350d8f5c07716d1f0",
     "/staff/assets/maps/london_jermyn/level_04.svg": "ad07701c027f72ef6f306f1b04d3781cee7017a4",
     "/staff/assets/maps/new_york/level_19.svg": "6c1093c0ff4800819196d3f09fea74b88dc524d7",
-    "/staff/assets/maps/new_york_wtc/level_60.svg": "964eacd27fadf5701fdd1824edf2e7a25c5a6df5",
-    "/staff/assets/maps/new_york_wtc/level_61.svg": "eaa09417bdf3105b1a6783a268d631801679fb0d",
-    "/staff/assets/maps/new_york_wtc/level_62.svg": "8e3535211b61f414c72ffd9668dc67b839696142",
-    "/staff/assets/maps/new_york_wtc/level_63.svg": "b476de4add92aa6309513977e2fbca1e6e7baf8b",
-    "/staff/assets/maps/new_york_wtc/level_64.svg": "ca9649671e0fcbbee940dd5a3d5d250bfef10bdd",
+    "/staff/assets/maps/new_york_wtc/level_60.svg": "0cce7d71527a7d409ed16716e9a2907d6deb8bfa",
+    "/staff/assets/maps/new_york_wtc/level_61.svg": "6771ea40503281d5777ce95d9a98626e240c62c1",
+    "/staff/assets/maps/new_york_wtc/level_62.svg": "735ceb563cc775ff61ca51eedd1e447333787e8b",
+    "/staff/assets/maps/new_york_wtc/level_63.svg": "a5072af24af671d2df5039fba48ffd8cec355882",
+    "/staff/assets/maps/new_york_wtc/level_64.svg": "33a29032fbd59a0964cb42283ddb611901fbb2d7",
     "/staff/assets/maps/rio/level_14.svg": "7e683a61ebdc4c3c9d0b8c3f3b8b562fb6be885b",
     "/staff/assets/maps/salvador/level_12.svg": "3d7314bc617fb968c29eeae1fda18383dc5e86b7",
     "/staff/assets/maps/san_jose/level_03.svg": "5f0ada38645662c7216440ed828e2344cfa82226",
@@ -243,7 +243,7 @@
     "/staff/assets/maps/washington_dc/level_10.svg": "69c92c6aef4cb9979c0298da957a5d34d31a3f1d",
     "/staff/assets/maps/washington_dc/level_11.svg": "dbe171f2813a1464f40f32913cc1185864c427e9",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "f8f13078d663038ab045ebffd6c453e8a68b21c6"
+    "/staff/index.html": "c88a68d44acb469f4308e216629a808b1847be1b"
   },
   "navigationUrls": [
     {
