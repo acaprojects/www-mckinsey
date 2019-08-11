@@ -58,6 +58,14 @@
                         "class": "custom-visitor",
                         "value": ""
                     }
+                },
+                {
+                    "id": "catering",
+                    "name": "Catering",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "room_service"
+                    }
                 }
             ]
         },
