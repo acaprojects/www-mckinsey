@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1565232498865,
+  "timestamp": 1565512750660,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -25,6 +25,8 @@
         "/staff/assets/img/logo-inverse.svg",
         "/staff/assets/img/logo.svg",
         "/staff/assets/img/mck_logo_blue.svg",
+        "/staff/assets/img/menus.jpg",
+        "/staff/assets/img/orders.jpg",
         "/staff/assets/img/report/background.png",
         "/staff/assets/img/report/booking.svg",
         "/staff/assets/img/report/other.svg",
@@ -71,6 +73,8 @@
     "/staff/assets/img/logo-inverse.svg": "1c96a25f61231a0f2f325be7c259df02dc67fa7b",
     "/staff/assets/img/logo.svg": "31333281839d4feb3502ff90f90a95de725e502e",
     "/staff/assets/img/mck_logo_blue.svg": "47be20b80308e63bbfb051cadc0203bc78ed27ce",
+    "/staff/assets/img/menus.jpg": "6e6080aabfeed4acfbcb47c4ce546a6076b0edd0",
+    "/staff/assets/img/orders.jpg": "d444da6f6ef20ae2975da80b16fe2f751f1dcbc0",
     "/staff/assets/img/report/background.png": "315fe05ac5a2fbb81e28d66f6b51026bdbc8072e",
     "/staff/assets/img/report/booking.svg": "a206bac8d8edf99f24f5aa32b2150720ae6e3848",
     "/staff/assets/img/report/other.svg": "e4d0deb16f491794381facc68cbd71833e785592",
@@ -78,7 +82,7 @@
     "/staff/assets/img/report/visitor.svg": "898473ff4477a600ef97ccc1df26ea67d03775ea",
     "/staff/assets/img/scheduleheader.jpg": "2e1be96585029edaeed9f29fb98e9aa3ba1eda14",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "6166e8d455c44bd7fc87f232059f4465777b5704"
+    "/staff/index.html": "65a0325433874209ec0687274604d16d2e937fbd"
   },
   "navigationUrls": [
     {
