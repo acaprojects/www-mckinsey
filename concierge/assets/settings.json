@@ -204,7 +204,7 @@
                     ]
                 },
                 {
-                    "key": "notes",
+                    "key": "private_notes",
                     "label": "Private Notes",
                     "description": "",
                     "control_type": "custom",
