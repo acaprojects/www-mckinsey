@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1566173098793,
+  "timestamp": 1566259711856,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -21,11 +21,19 @@
         "/staff/assets/icon/launch.png",
         "/staff/assets/img/carpool.jpg",
         "/staff/assets/img/caterer-03.jpg",
+        "/staff/assets/img/concierge.svg",
+        "/staff/assets/img/confirmed.svg",
+        "/staff/assets/img/edit.svg",
+        "/staff/assets/img/equipment.svg",
         "/staff/assets/img/ergonomicsupport.jpg",
+        "/staff/assets/img/food-notes.svg",
+        "/staff/assets/img/location-img.svg",
+        "/staff/assets/img/location.svg",
         "/staff/assets/img/logo-inverse.svg",
         "/staff/assets/img/logo.svg",
         "/staff/assets/img/mck_logo_blue.svg",
         "/staff/assets/img/menus.jpg",
+        "/staff/assets/img/no-catering.svg",
         "/staff/assets/img/orders.jpg",
         "/staff/assets/img/report/background.png",
         "/staff/assets/img/report/booking.svg",
@@ -69,11 +77,19 @@
     "/staff/assets/icon/launch.png": "98df582f92701da1badfcafff07a7be0afba0f58",
     "/staff/assets/img/carpool.jpg": "c886a2d6b52882e499289ef82a2e60e0acf9ad58",
     "/staff/assets/img/caterer-03.jpg": "c7e2b4735c10ad80492a72fd4ddfdeba85994ee6",
+    "/staff/assets/img/concierge.svg": "c1e47bb9084a2ce32c86595768b33b38e54b88bc",
+    "/staff/assets/img/confirmed.svg": "773a4395ab76b41c12d923e3e63ebf7177173654",
+    "/staff/assets/img/edit.svg": "a192b69aab6c43ddd3103422deb07584abdeef88",
+    "/staff/assets/img/equipment.svg": "0a7bdea9011ddb790c3b7f8966d82e9468d14c72",
     "/staff/assets/img/ergonomicsupport.jpg": "1cf364bd2f58b1396d3330c785a5da48d240fa97",
+    "/staff/assets/img/food-notes.svg": "d90b7ad273bc91c145d6c98af22b96ef7e248ae1",
+    "/staff/assets/img/location-img.svg": "a0b8715f6b7a2e1cc17d3a3eb37e81ea1343588b",
+    "/staff/assets/img/location.svg": "64ad90977efb5dd94e69bd60ff56f5552fdf4693",
     "/staff/assets/img/logo-inverse.svg": "1c96a25f61231a0f2f325be7c259df02dc67fa7b",
     "/staff/assets/img/logo.svg": "31333281839d4feb3502ff90f90a95de725e502e",
     "/staff/assets/img/mck_logo_blue.svg": "47be20b80308e63bbfb051cadc0203bc78ed27ce",
     "/staff/assets/img/menus.jpg": "6e6080aabfeed4acfbcb47c4ce546a6076b0edd0",
+    "/staff/assets/img/no-catering.svg": "a046e0ab0f8668896ab84294418c96350730e781",
     "/staff/assets/img/orders.jpg": "d444da6f6ef20ae2975da80b16fe2f751f1dcbc0",
     "/staff/assets/img/report/background.png": "315fe05ac5a2fbb81e28d66f6b51026bdbc8072e",
     "/staff/assets/img/report/booking.svg": "a206bac8d8edf99f24f5aa32b2150720ae6e3848",
@@ -82,7 +98,7 @@
     "/staff/assets/img/report/visitor.svg": "898473ff4477a600ef97ccc1df26ea67d03775ea",
     "/staff/assets/img/scheduleheader.jpg": "2e1be96585029edaeed9f29fb98e9aa3ba1eda14",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "6a19e4e22186f0a4688be19d54826d110edcfbe6"
+    "/staff/index.html": "3c81fe83fc0a4b9e19544e31e0875f3b835ddef1"
   },
   "navigationUrls": [
     {
