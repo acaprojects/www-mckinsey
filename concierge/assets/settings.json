@@ -66,6 +66,14 @@
                         "class": "material-icons",
                         "value": "room_service"
                     }
+                },
+                {
+                    "id": "reports",
+                    "name": "Reports",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "warning"
+                    }
                 }
             ]
         },
