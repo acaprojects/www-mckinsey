@@ -101,30 +101,18 @@
                     "readonly_edit": true
                 },
                 {
-                    "key": "period",
-                    "control_type": "group",
-                    "children": [
-                        {
-                            "key": "start",
-                            "label": "Time",
-                            "refs": [
-                                "date"
-                            ],
-                            "control_type": "custom",
-                            "required": true,
-                            "readonly_edit": true
-                        },
-                        {
-                            "key": "duration",
-                            "label": "Duration",
-                            "refs": [
-                                "date"
-                            ],
-                            "control_type": "custom",
-                            "required": true,
-                            "readonly_edit": true
-                        }
-                    ]
+                    "key": "start",
+                    "label": "Time",
+                    "control_type": "custom",
+                    "required": true,
+                    "readonly_edit": true
+                },
+                {
+                    "key": "duration",
+                    "label": "Duration",
+                    "control_type": "custom",
+                    "required": true,
+                    "readonly_edit": true
                 },
                 {
                     "key": "host",
@@ -132,12 +120,6 @@
                     "flex": true,
                     "control_type": "custom",
                     "no_edit": true
-                },
-                {
-                    "key": "room",
-                    "label": "Space",
-                    "control_type": "select",
-                    "required": true
                 },
                 {
                     "key": "attendees",
@@ -149,16 +131,15 @@
                 {
                     "key": "title",
                     "label": "Meeting Subject",
-                    "control_type": "text",
+                    "control_type": "input",
                     "required": true,
                     "no_edit": true
                 },
                 {
-                    "key": "description",
-                    "label": "Meeting Notes",
-                    "simple": false,
-                    "control_type": "custom",
+                    "key": "needs_catering",
+                    "label": "Need Catering?",
                     "flex": true,
+                    "type": "checkbox",
                     "no_edit": true
                 },
                 {
@@ -173,42 +154,52 @@
                     "key": "booking_type",
                     "label": "Booking Type",
                     "simple": false,
-                    "control_type": "dropdown",
+                    "type": "custom",
                     "default": "internal",
-                    "no_edit": true,
-                    "options": [
-                        {
-                            "id": "internal",
-                            "name": "Internal (default)"
-                        },
-                        {
-                            "id": "client",
-                            "name": "Client"
-                        },
-                        {
-                            "id": "external",
-                            "name": "External"
-                        },
-                        {
-                            "id": "interview",
-                            "name": "Interview"
-                        },
-                        {
-                            "id": "setup",
-                            "name": "Setup"
-                        },
-                        {
-                            "id": "training",
-                            "name": "Training"
-                        }
-                    ]
+                    "metadata": {
+                        "options": [
+                            {
+                                "id": "internal",
+                                "name": "Internal (default)"
+                            },
+                            {
+                                "id": "client",
+                                "name": "Client"
+                            },
+                            {
+                                "id": "external",
+                                "name": "External"
+                            },
+                            {
+                                "id": "interview",
+                                "name": "Interview"
+                            },
+                            {
+                                "id": "setup",
+                                "name": "Setup"
+                            },
+                            {
+                                "id": "training",
+                                "name": "Training"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "key": "description",
+                    "label": "Meeting Notes",
+                    "simple": false,
+                    "control_type": "custom",
+                    "flex": true,
+                    "no_edit": true
                 },
                 {
                     "key": "private_notes",
                     "label": "Private Notes",
                     "description": "",
                     "control_type": "custom",
-                    "flex": true
+                    "flex": true,
+                    "edit_only": true
                 }
             ]
         }
