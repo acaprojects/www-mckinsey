@@ -399,8 +399,6 @@ THE SOFTWARE.
 
 @angular/cdk/scrolling
 
-@acaprojects/ngx-date-picker
-
 dayjs
 MIT
 MIT License
@@ -426,6 +424,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+@acaprojects/ngx-date-picker
+
+@acaprojects/ngx-dynamic-forms
+
 @acaprojects/ngx-composer
 MIT
 
@@ -435,14 +437,14 @@ MIT
 watch-object
 ISC
 
-@acaprojects/ngx-dynamic-forms
-
 @tinymce/tinymce-angular
 Apache-2.0
 
 @acaprojects/ngx-checkbox
 
 @acaprojects/ngx-custom-events
+
+@acaprojects/ngx-buttons
 
 @angular/router
 MIT
