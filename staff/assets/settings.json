@@ -266,13 +266,6 @@
                     "type": "custom"
                 },
                 {
-                    "key": "notify_user",
-                    "label": "Guest Services",
-                    "simple": false,
-                    "flex": true,
-                    "type": "custom"
-                },
-                {
                     "key": "title",
                     "label": "Meeting Subject",
                     "type": "input",
