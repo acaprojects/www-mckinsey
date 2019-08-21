@@ -78,7 +78,7 @@
             ]
         },
         "notifications": {
-            "enabled": true,
+            "enabled": false,
             "list": [
                 {
                     "id": "catering",
