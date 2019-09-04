@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1567602541464,
+  "timestamp": 1567608367857,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -245,7 +245,7 @@
     "/staff/assets/maps/washington_dc/level_10.svg": "297f9eabd120201b2575c4412f2551fc03a55b8d",
     "/staff/assets/maps/washington_dc/level_11.svg": "359e7770c1d16d211b0022ddf95070b6df1e41c4",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "13eedacfffd5a9779b70c72a8cb69c14efe68863"
+    "/staff/index.html": "41e53b403428a750e21acbf7ceaf96940d1cc027"
   },
   "navigationUrls": [
     {
