@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1567498401496,
+  "timestamp": 1567560424388,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -242,10 +242,10 @@
     "/staff/assets/maps/sydney/level_33.svg": "1bf5f1923f1ff03558e9dbb22b0526d72b836448",
     "/staff/assets/maps/sydney/level_35.svg": "6747a7aea9dfe7739b2701cc6876de17038536f2",
     "/staff/assets/maps/sydney/level_36.svg": "267d70d35be3c06e218bf7dbc170e56b0ae1ed5c",
-    "/staff/assets/maps/washington_dc/level_10.svg": "43801ac8759fe7a5cad3051c1b25fa90025234fa",
-    "/staff/assets/maps/washington_dc/level_11.svg": "ec44f3fa34f4362590b8d6c9845f438832288d60",
+    "/staff/assets/maps/washington_dc/level_10.svg": "297f9eabd120201b2575c4412f2551fc03a55b8d",
+    "/staff/assets/maps/washington_dc/level_11.svg": "359e7770c1d16d211b0022ddf95070b6df1e41c4",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "5da0e2c6d7153ddfd93e85e911ab91a0179d90fa"
+    "/staff/index.html": "d2b86376640e8b97cd0c69980d04aac36016cb98"
   },
   "navigationUrls": [
     {
