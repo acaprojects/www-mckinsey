@@ -1,5 +1,5 @@
 {
-    "env": "prod",
+    "env": "dev",
     "debug": true,
     "unlicensed": false,
     "composer": {
@@ -526,5 +526,6 @@
                 ]
             }
         }
-    }
+    },
+    "mock": false
 }
