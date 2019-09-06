@@ -1,11 +1,11 @@
 {
     "version": "0.15.0",
     "build": "local-dev",
-    "env": "prod",
+    "env": "dev",
     "debug": true,
     "composer": {
         "domain": "",
-        "route": "/staff",
+        "route": "/concierge",
         "protocol": "https:",
         "use_domain": true,
         "local_login": false
@@ -211,5 +211,6 @@
                 }
             ]
         }
-    }
+    },
+    "mock": false
 }
