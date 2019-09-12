@@ -137,6 +137,13 @@
                     "no_edit": true
                 },
                 {
+                    "key": "expected_attendees",
+                    "label": "Expected Attendees",
+                    "simple": false,
+                    "type": "custom",
+                    "hide": true
+                },
+                {
                     "key": "title",
                     "label": "Meeting Subject",
                     "control_type": "input",
