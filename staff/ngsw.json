@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1569815298419,
+  "timestamp": 1569911854901,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -219,7 +219,7 @@
     "/staff/assets/maps/london/level_07.svg": "38c149bdbf54aecd560485b78886c364d0a320b9",
     "/staff/assets/maps/london/level_08.svg": "121e1ab89b99d474fa3e3f536b3b52de2167fca6",
     "/staff/assets/maps/london/level_09.svg": "a16b775dd8739314da4e83bf4c08c25fc0d087ca",
-    "/staff/assets/maps/london/level_10.svg": "e03ebeb035869b0d377c5c893163524646a2da12",
+    "/staff/assets/maps/london/level_10.svg": "4f9fa43e45121bbb69e769fbad62adbe96579929",
     "/staff/assets/maps/london/level_11.svg": "92a3c84a64771b284f6a7364a1cddcd912592e12",
     "/staff/assets/maps/london_jermyn/level_04.svg": "ad07701c027f72ef6f306f1b04d3781cee7017a4",
     "/staff/assets/maps/new_york/level_19.svg": "c270d6e9e61c5d5d2c9f22ea7fb1c8296f46003f",
@@ -236,7 +236,7 @@
     "/staff/assets/maps/san_jose/level_06.svg": "e43eb7f37c7feb901f39e19d0c8366ca30c100ba",
     "/staff/assets/maps/san_jose/level_07.svg": "834589aa393ea22abc0cac9ef91315bdaffc9443",
     "/staff/assets/maps/sao_paulo/level_21.svg": "053049e8d658c56add8ed37d52b26870628ceee0",
-    "/staff/assets/maps/sao_paulo/level_22.svg": "f6e6e4c1e4cb344593d7b8edd01c9d7dfb749f16",
+    "/staff/assets/maps/sao_paulo/level_22.svg": "50449b7abb7b257fc54098f7ce2a4502a7807604",
     "/staff/assets/maps/sao_paulo/level_23.svg": "f0a5f4eb07c99d0347dd15d1a5d60ccf126ebf1c",
     "/staff/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
     "/staff/assets/maps/sydney/level_33.svg": "1bf5f1923f1ff03558e9dbb22b0526d72b836448",
@@ -245,7 +245,7 @@
     "/staff/assets/maps/washington_dc/level_10.svg": "0342b65828cded5c2fe85e4e5051f251a262b74e",
     "/staff/assets/maps/washington_dc/level_11.svg": "480c4ff023b0cc883acd5b3363934c418ae6a6cf",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "b2c730520824fcda53c920837989bd1a14b39eee"
+    "/staff/index.html": "9877ea2776f8852c835be3b416049be9d01a7106"
   },
   "navigationUrls": [
     {
