@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1569911854901,
+  "timestamp": 1569993395080,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -80,6 +80,7 @@
         "/staff/assets/img/mckinsey_lines.svg",
         "/staff/assets/img/no-catering.svg",
         "/staff/assets/img/pantry.svg",
+        "/staff/assets/img/requested.png",
         "/staff/assets/img/skyline.jpg",
         "/staff/assets/img/storage.svg",
         "/staff/assets/img/visa.svg",
@@ -210,6 +211,7 @@
     "/staff/assets/img/mckinsey_lines.svg": "1dfaefcaef8b5074f44ddfc2231c76e7e8f9c746",
     "/staff/assets/img/no-catering.svg": "a046e0ab0f8668896ab84294418c96350730e781",
     "/staff/assets/img/pantry.svg": "c2ec5963210f409f858ef55334467c60a05b4f4e",
+    "/staff/assets/img/requested.png": "7d333b734701a51196f5803e508f0cb5586e8838",
     "/staff/assets/img/skyline.jpg": "c47ac628178df00b6cb24b959bc88be223eac30c",
     "/staff/assets/img/storage.svg": "06e314fdf75ea7852e958e7a759c0f933d052821",
     "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
@@ -245,7 +247,7 @@
     "/staff/assets/maps/washington_dc/level_10.svg": "0342b65828cded5c2fe85e4e5051f251a262b74e",
     "/staff/assets/maps/washington_dc/level_11.svg": "480c4ff023b0cc883acd5b3363934c418ae6a6cf",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "9877ea2776f8852c835be3b416049be9d01a7106"
+    "/staff/index.html": "d5045515367f1acfdf428f7f3eaaae072fd822b8"
   },
   "navigationUrls": [
     {
