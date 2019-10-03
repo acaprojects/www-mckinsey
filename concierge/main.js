@@ -11424,7 +11424,7 @@ var VisitorsService = /** @class */ (function (_super) {
     VisitorsService.prototype.addFromBookings = function (bookings) {
         var list = bookings.filter(function (i) { return i.visitors; });
         var visitor_groups = list.map(function (booking) {
-            if (booking.visitors && booking.attendees && booking.state !== 'cancelled') {
+            if (booking.visitors && booking.attendees) {
                 var visitor_list = booking.attendees.filter(function (i) { return i.external; })
                     .map(function (i) {
                     return __assign({}, i, { state: booking.check_ins && booking.check_ins[i.email] ? 'accepted' : 'pending' });
@@ -17857,7 +17857,7 @@ var styles = [".search[_ngcontent-%COMP%] {\n  padding: .5em 0; }\n.search[_ngco
 /*!********************************************************!*\
   !*** ./src/app/shared/components/user-search/index.ts ***!
   \********************************************************/
-/*! exports provided: USER_SEARCH_COMPONENTS, UserSearchComponent */
+/*! exports provided: UserSearchComponent, USER_SEARCH_COMPONENTS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19321,7 +19321,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570072300000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570072336000);
 
 
 /***/ }),
