@@ -9734,7 +9734,10 @@ var CateringCategoriesService = /** @class */ (function (_super) {
         throw Error('No show endpoint for catering categories. Use catering menu service.');
     };
     CateringCategoriesService.prototype.format = function (raw) {
-        return __assign({}, raw, { parent_categories: raw.parent_categories || raw.parent, minimum_quantity: raw.minimum_quantity || raw.minimum, maximum_quantity: raw.maximum_quantity || raw.maximum });
+        var formatted = __assign({}, raw, { parent_categories: raw.parent_categories || raw.parent, minimum_quantity: raw.minimum || raw.minimum_quantity, maximum_quantity: raw.maximum || raw.maximum_quantity });
+        delete formatted.minimum;
+        delete formatted.maximum;
+        return formatted;
     };
     CateringCategoriesService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["defineInjectable"]({ factory: function CateringCategoriesService_Factory() { return new CateringCategoriesService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["inject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: CateringCategoriesService, providedIn: "root" });
     return CateringCategoriesService;
@@ -9801,7 +9804,10 @@ var CateringItemsService = /** @class */ (function (_super) {
         throw Error('No show endpoint for catering items. Use menu service.');
     };
     CateringItemsService.prototype.format = function (raw) {
-        return __assign({}, raw, { parent_categories: raw.parent_categories || raw.parent, minimum_quantity: raw.minimum || raw.minimum_quantity, maximum_quantity: raw.maximum || raw.maximum_quantity });
+        var formatted = __assign({}, raw, { parent_categories: raw.parent_categories || raw.parent, minimum_quantity: raw.minimum || raw.minimum_quantity, maximum_quantity: raw.maximum || raw.maximum_quantity });
+        delete formatted.minimum;
+        delete formatted.maximum;
+        return formatted;
     };
     CateringItemsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["defineInjectable"]({ factory: function CateringItemsService_Factory() { return new CateringItemsService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["inject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: CateringItemsService, providedIn: "root" });
     return CateringItemsService;
@@ -11424,7 +11430,7 @@ var VisitorsService = /** @class */ (function (_super) {
     VisitorsService.prototype.addFromBookings = function (bookings) {
         var list = bookings.filter(function (i) { return i.visitors; });
         var visitor_groups = list.map(function (booking) {
-            if (booking.visitors && booking.attendees) {
+            if (booking.visitors && booking.attendees && booking.state !== 'cancelled') {
                 var visitor_list = booking.attendees.filter(function (i) { return i.external; })
                     .map(function (i) {
                     return __assign({}, i, { state: booking.check_ins && booking.check_ins[i.email] ? 'accepted' : 'pending' });
@@ -17857,7 +17863,7 @@ var styles = [".search[_ngcontent-%COMP%] {\n  padding: .5em 0; }\n.search[_ngco
 /*!********************************************************!*\
   !*** ./src/app/shared/components/user-search/index.ts ***!
   \********************************************************/
-/*! exports provided: UserSearchComponent, USER_SEARCH_COMPONENTS */
+/*! exports provided: USER_SEARCH_COMPONENTS, UserSearchComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19321,7 +19327,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570072336000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570140212000);
 
 
 /***/ }),
