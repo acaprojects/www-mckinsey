@@ -151,6 +151,12 @@
                     "no_edit": true
                 },
                 {
+                    "key": "expected_attendees",
+                    "label": "Expected attendees",
+                    "hide": true,
+                    "type": "custom"
+                },
+                {
                     "key": "notify_users",
                     "label": "Guest Notifyees",
                     "simple": false,
