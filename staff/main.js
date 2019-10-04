@@ -11015,7 +11015,7 @@ var CateringMenuService = /** @class */ (function (_super) {
     };
     CateringMenuService.prototype.process = function (list) {
         var _this = this;
-        return (list || []).map(function (i) { return (__assign({}, i, { items: i.items ? _this.process(i.items) : null, from: i.available_from, to: i.available_to, maximum: i.maximum_quantity, minimum: i.minimum_quantity, notice: i.notify_host, package: i.package === 'true' || i.package === true })); });
+        return (list || []).map(function (i) { return (__assign({}, i, { items: i.items ? _this.process(i.items) : null, from: i.available_from, to: i.available_to, maximum: i.maximum_quantity, minimum: i.minimum_quantity, notice: i.notify_host, package: i.package === 'true' || i.package === true, src: i.image_path })); });
     };
     CateringMenuService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["defineInjectable"]({ factory: function CateringMenuService_Factory() { return new CateringMenuService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["inject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: CateringMenuService, providedIn: "root" });
     return CateringMenuService;
@@ -20973,7 +20973,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570072816000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570167100000);
 
 
 /***/ }),
