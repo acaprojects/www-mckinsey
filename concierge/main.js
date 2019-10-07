@@ -9236,7 +9236,7 @@ var BuildingsService = /** @class */ (function () {
         if (!this.parent) {
             return setTimeout(function () { return _this.load(); }, 500);
         }
-        var url = this.parent.endpoint + "/control/api/zones?tags=org";
+        var url = this.parent.endpoint + "/control/api/zones?tags=org&limit=1000";
         this.http.get(url).subscribe(function (response) {
             var o = response instanceof Array ? response : response.results;
             if (o && o.length > 0) {
@@ -9287,7 +9287,7 @@ var BuildingsService = /** @class */ (function () {
         if (!this.parent) {
             return setTimeout(function () { return _this.loadSpaceTypes(); }, 500);
         }
-        var url = '/control/api/zones?tags=room';
+        var url = '/control/api/zones?tags=room&limit=1000';
         this.http.get(url).subscribe(function (resp) {
             var list = resp.results;
             for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
@@ -9491,7 +9491,7 @@ var BuildingsService = /** @class */ (function () {
     BuildingsService.prototype.loadBuildings = function (tries) {
         var _this = this;
         if (tries === void 0) { tries = 0; }
-        var url = this.parent.endpoint + "/control/api/zones?tags=building";
+        var url = this.parent.endpoint + "/control/api/zones?tags=building&limit=1000";
         this.http.get(url).subscribe(function (response) {
             var blds = response instanceof Array ? response : response.results;
             for (var _i = 0, blds_1 = blds; _i < blds_1.length; _i++) {
@@ -9618,7 +9618,7 @@ var BuildingsService = /** @class */ (function () {
         if (tries > 10) {
             return;
         }
-        var url = this.parent.endpoint + "/control/api/zones?tags=level";
+        var url = this.parent.endpoint + "/control/api/zones?tags=level&limit=1000";
         var data = null;
         this.http.get(url).subscribe(function (levels) { return data = levels.results || levels; }, function (err) {
             _this.parent.log('BLD(S)', 'Error loading levels:', err, 'error');
@@ -19337,7 +19337,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570487278000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570487333000);
 
 
 /***/ }),
