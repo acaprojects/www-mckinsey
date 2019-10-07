@@ -266,6 +266,13 @@
                     "type": "custom"
                 },
                 {
+                    "key": "expected_attendees",
+                    "label": "Expected Attendees",
+                    "simple": false,
+                    "type": "custom",
+                    "hide": true
+                },
+                {
                     "key": "title",
                     "label": "Meeting Subject",
                     "type": "input",

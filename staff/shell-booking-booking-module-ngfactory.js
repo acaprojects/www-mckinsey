@@ -2614,7 +2614,12 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
                         this._service.navigate(['book', 'main', 'catering']);
                     }
                     else {
-                        this.confirmBooking();
+                        if (this.spaces && this.spaces.length > 0) {
+                            this.addEquipment().then(function () { return _this.confirmBooking(); });
+                        }
+                        else {
+                            this.confirmBooking();
+                        }
                     }
                     break;
             }
@@ -2751,10 +2756,14 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
         return new Promise(function (resolve, reject) {
             var empty = { control: { value: '' } };
             var notes = _this.form_fields.find(function (i) { return i.key === 'equipment'; });
+            var expected_attendees = _this.form_fields.find(function (i) { return i.key === 'expected_attendees'; });
+            var spaces = _this.form_fields.find(function (i) { return i.key === 'room'; });
             var cost_code = _this.form_fields.find(function (i) { return i.key === 'equipment_code'; });
             _this._service.Overlay.openModal('booking-equipment', {
                 cmp: _overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_6__["BookingEquipmentDetailsModalComponent"],
                 data: {
+                    spaces: (spaces || empty).control.value || [],
+                    expected_attendees: (expected_attendees || empty).control.value,
                     notes: (notes || empty).control.value,
                     cost_code: (cost_code || empty).control.value
                 }
@@ -2762,6 +2771,9 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
                 if (event.type === 'finish') {
                     if (notes) {
                         notes.setValue(event.data.notes);
+                    }
+                    if (expected_attendees) {
+                        expected_attendees.setValue(event.data.expected_attendees);
                     }
                     if (cost_code) {
                         cost_code.setValue(event.data.cost_code);
