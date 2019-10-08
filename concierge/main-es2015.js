@@ -3278,11 +3278,16 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
         this.model.show_dropdown = false;
         const booking = order.booking;
         booking.catering = Object.assign({}, booking.catering, { order_status: status });
+        this.model.order = this.order;
+        this.event('updated');
         this.service.Bookings.updateItem(booking.id, booking).then(() => {
+            this.model.order = this.order;
             this.event('updated');
         }, () => {
             this.service.error('Failed to update status of meeting order');
             order.status = old_status;
+            this.model.order = this.order;
+            this.event('updated');
         });
     }
     /**
@@ -17408,7 +17413,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570494149000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570576182000);
 
 
 /***/ }),
@@ -22025,22 +22030,21 @@ class WeekViewComponent extends _shared_globals_base_component__WEBPACK_IMPORTED
             if (this.model.level !== -1) {
                 zones.push(this.model.level);
             }
-            if (this.model.room_type !== -1) {
-                zones.push(this.model.room_type);
-            }
             this.service.Rooms.query({
                 zone_ids: zones.reduce((a, i) => a += a ? ',' + i : i, '')
                     || this.service.Buildings.current().id,
                 available_from: week_start.unix(),
                 available_to: week_end.unix()
-            }).then((room_list) => {
+            }).then((rooms) => {
+                const type = this.model.room_type;
+                const room_list = rooms.filter(i => type && type !== -1 ? i.zones.indexOf(type) >= 0 : true);
                 this.service.Rooms.clearTimeline(week_start.valueOf(), week_end.valueOf());
                 for (const rm of room_list) {
                     this.service.Rooms.updateTimeline(rm.id, rm.bookings);
                     for (const d of this.model.days) {
                         const time = moment__WEBPACK_IMPORTED_MODULE_3__(d.time).format('DD MMM YYYY');
                         if (rm.timeline[time]) {
-                            const timeline = rm.timeline[time].flat();
+                            const timeline = rm.timeline[time];
                             for (const bkn of timeline) {
                                 let found = false;
                                 for (const booking of d.bookings) {

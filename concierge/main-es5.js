@@ -3783,11 +3783,16 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
         this.model.show_dropdown = false;
         var booking = order.booking;
         booking.catering = __assign({}, booking.catering, { order_status: status });
+        this.model.order = this.order;
+        this.event('updated');
         this.service.Bookings.updateItem(booking.id, booking).then(function () {
+            _this.model.order = _this.order;
             _this.event('updated');
         }, function () {
             _this.service.error('Failed to update status of meeting order');
             order.status = old_status;
+            _this.model.order = _this.order;
+            _this.event('updated');
         });
     };
     /**
@@ -20747,7 +20752,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570494149000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570576182000);
 
 
 /***/ }),
@@ -26317,16 +26322,15 @@ var WeekViewComponent = /** @class */ (function (_super) {
             if (_this.model.level !== -1) {
                 zones.push(_this.model.level);
             }
-            if (_this.model.room_type !== -1) {
-                zones.push(_this.model.room_type);
-            }
             _this.service.Rooms.query({
                 zone_ids: zones.reduce(function (a, i) { return a += a ? ',' + i : i; }, '')
                     || _this.service.Buildings.current().id,
                 available_from: week_start.unix(),
                 available_to: week_end.unix()
-            }).then(function (room_list) {
+            }).then(function (rooms) {
                 var e_1, _a, e_2, _b, e_3, _c, e_4, _d, e_5, _e;
+                var type = _this.model.room_type;
+                var room_list = rooms.filter(function (i) { return type && type !== -1 ? i.zones.indexOf(type) >= 0 : true; });
                 _this.service.Rooms.clearTimeline(week_start.valueOf(), week_end.valueOf());
                 try {
                     for (var room_list_1 = __values(room_list), room_list_1_1 = room_list_1.next(); !room_list_1_1.done; room_list_1_1 = room_list_1.next()) {
@@ -26337,7 +26341,7 @@ var WeekViewComponent = /** @class */ (function (_super) {
                                 var d = _g.value;
                                 var time = moment__WEBPACK_IMPORTED_MODULE_3__(d.time).format('DD MMM YYYY');
                                 if (rm.timeline[time]) {
-                                    var timeline = rm.timeline[time].flat();
+                                    var timeline = rm.timeline[time];
                                     try {
                                         for (var timeline_1 = (e_3 = void 0, __values(timeline)), timeline_1_1 = timeline_1.next(); !timeline_1_1.done; timeline_1_1 = timeline_1.next()) {
                                             var bkn = timeline_1_1.value;
