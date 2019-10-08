@@ -1315,19 +1315,19 @@ var styles = [".orders-component[_ngcontent-%COMP%] {\n  max-height: calc(100vh 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrdersComponent", function() { return OrdersComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
-/* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/utility.class */ "./src/app/shared/utility.class.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
+/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/utility.class */ "./src/app/shared/utility.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 
 
-class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
     constructor(service, _route) {
         super();
         this.service = service;
@@ -1393,7 +1393,7 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
         this.timeout('load_order', () => {
             const bld = this.service.Buildings.current();
             if (bld) {
-                const date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.model.date).startOf('d');
+                const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.model.date).startOf('d');
                 this.display.date = date.format('DD MMM YYYY');
                 this.service.Rooms.query({
                     available_from: date.unix(),
@@ -1466,10 +1466,10 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
         const start = this.model.settings.start_hour || 6.5;
         const end = this.model.settings.end_hour || 21.5;
         // Generate times
-        const start_time = dayjs__WEBPACK_IMPORTED_MODULE_3__().hour(start % 24).minute((start % 1) * 60);
-        const end_time = dayjs__WEBPACK_IMPORTED_MODULE_3__().hour(end % 24).minute((end % 1) * 60);
+        const start_time = dayjs__WEBPACK_IMPORTED_MODULE_5__().hour(start % 24).minute((start % 1) * 60);
+        const end_time = dayjs__WEBPACK_IMPORTED_MODULE_5__().hour(end % 24).minute((end % 1) * 60);
         const length = Math.abs(Math.floor(start_time.diff(end_time, 'm')));
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.model.date || '');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.model.date || '');
         const hour = Math.floor(now.hour() + now.minute() / 60);
         this.model.now = {
             display: now.format('h:mm A'),
@@ -1477,7 +1477,7 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
             raw: now.valueOf(),
             dow: now.format('dddd'),
             offset: Math.floor(now.diff(start_time, 'm')) / length,
-            today: now.isSame(dayjs__WEBPACK_IMPORTED_MODULE_3__(), 'd'),
+            today: now.isSame(dayjs__WEBPACK_IMPORTED_MODULE_5__(), 'd'),
             active: `${hour}:00`,
         };
     }
@@ -1494,6 +1494,7 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
             }, (event) => {
                 if (event.type === 'updated') {
                     order.booking = event.data.order.booking;
+                    console.log('Order:', order);
                     const index = this.orders.findIndex(i => i.booking.icaluid === order.booking.icaluid);
                     if (index >= 0) {
                         console.log('Replaced old order');
@@ -1501,6 +1502,7 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
                         console.log('Orders:', this.orders[index]);
                     }
                     sessionStorage.removeItem('CONCIERGE.view_order');
+                    this.displayChange(this.show_selection);
                 }
                 else {
                     event.close();
@@ -1515,8 +1517,8 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
     processOrder(booking) {
         if (booking.catering && booking.room) {
             const order = booking.catering || {};
-            const kitchen = _shared_utility_class__WEBPACK_IMPORTED_MODULE_5__["Utils"].unique(order.kitchen || []).join(' + ');
-            const pantry = _shared_utility_class__WEBPACK_IMPORTED_MODULE_5__["Utils"].unique(order.pantry || []).join(' + ');
+            const kitchen = _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].unique(order.kitchen || []).join(' + ');
+            const pantry = _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].unique(order.pantry || []).join(' + ');
             const type = kitchen && pantry ? `${kitchen} + ${pantry}` : kitchen + pantry;
             const catering_order = {
                 name: booking.room.name,
