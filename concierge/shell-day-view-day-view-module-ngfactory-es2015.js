@@ -1001,8 +1001,8 @@ class DayViewSpaceEventComponent extends _shared_globals_base_component__WEBPACK
     }
     /** Number attendees expected to turn up to the event */
     get expected() {
-        const expected = this.event.expected_attendees;
-        return expected[this.event.room.id] || 0;
+        const expected = this.event.expected_attendees || {};
+        return this.event.room ? expected[this.event.room.id] || 0 : 0;
     }
     /** Whether the meeting has catering attached */
     get has_catering() {

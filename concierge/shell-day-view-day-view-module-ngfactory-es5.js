@@ -1154,8 +1154,8 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
     Object.defineProperty(DayViewSpaceEventComponent.prototype, "expected", {
         /** Number attendees expected to turn up to the event */
         get: function () {
-            var expected = this.event.expected_attendees;
-            return expected[this.event.room.id] || 0;
+            var expected = this.event.expected_attendees || {};
+            return this.event.room ? expected[this.event.room.id] || 0 : 0;
         },
         enumerable: true,
         configurable: true
