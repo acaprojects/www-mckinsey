@@ -4585,7 +4585,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     /** Number attendees expected to turn up to the event */
     get expected() {
         const expected = this.booking.expected_attendees || {};
-        return expected[this.booking.room.id] || 0;
+        return this.booking.room ? expected[this.booking.room.id] || 0 : 0;
     }
     /** Catering details for the booking */
     get charge_codes() {
@@ -17431,7 +17431,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570604136000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570615627000);
 
 
 /***/ }),

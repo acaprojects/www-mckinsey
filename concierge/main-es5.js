@@ -5324,7 +5324,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
         /** Number attendees expected to turn up to the event */
         get: function () {
             var expected = this.booking.expected_attendees || {};
-            return expected[this.booking.room.id] || 0;
+            return this.booking.room ? expected[this.booking.room.id] || 0 : 0;
         },
         enumerable: true,
         configurable: true
@@ -20763,7 +20763,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570604136000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570615627000);
 
 
 /***/ }),
