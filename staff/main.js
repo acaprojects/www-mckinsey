@@ -4728,7 +4728,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
         /** Number of attendees expected to turn up to the meeting */
         get: function () {
             var expected = this.model.booking.expected_attendees || {};
-            return Object.keys(expected).reduce(function (a, v) { return a += expected[v] || 0; }, 0);
+            return Object.keys(expected).reduce(function (a, v) { return a += parseInt(expected[v] ? "" + expected[v] : '0', 10) || 0; }, 0);
         },
         enumerable: true,
         configurable: true
@@ -21050,7 +21050,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570579153000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570580800000);
 
 
 /***/ }),
