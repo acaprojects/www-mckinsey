@@ -21026,7 +21026,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570685404000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1570691812000);
 
 
 /***/ }),
@@ -24305,7 +24305,7 @@ var BookingDetailsModalComponent = /** @class */ (function (_super) {
     Object.defineProperty(BookingDetailsModalComponent.prototype, "notes", {
         /** Private notes for spaces and equipment */
         get: function () {
-            var notes = this.model.equipment;
+            var notes = this.model.equipment || {};
             var note_list = Object.keys(notes).reduce(function (a, v) { a.push(notes[v]); return a; }, []);
             return note_list;
         },
