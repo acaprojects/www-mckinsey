@@ -2763,7 +2763,7 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
                 cmp: _overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_6__["BookingEquipmentDetailsModalComponent"],
                 data: {
                     spaces: (spaces || empty).control.value || [],
-                    expected_attendees: (expected_attendees || empty).control.value,
+                    expected_attendees: (expected_attendees || empty).control.value || {},
                     notes: (notes || empty).control.value,
                     cost_code: (cost_code || empty).control.value
                 }
@@ -2773,7 +2773,7 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
                         notes.setValue(event.data.notes);
                     }
                     if (expected_attendees) {
-                        expected_attendees.setValue(event.data.expected_attendees);
+                        expected_attendees.setValue(event.data.expected_attendees || {});
                     }
                     if (cost_code) {
                         cost_code.setValue(event.data.cost_code);
