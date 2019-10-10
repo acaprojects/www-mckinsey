@@ -1582,7 +1582,7 @@ var OrdersComponent = /** @class */ (function (_super) {
                                 for (var _c = (e_2 = void 0, __values(room.bookings)), _d = _c.next(); !_d.done; _d = _c.next()) {
                                     var booking = _d.value;
                                     if (booking.catering) {
-                                        var order = _this.processOrder(booking);
+                                        var order = _this.processOrder(__assign({}, booking, { room: room }));
                                         if (order) {
                                             _this.orders.push(order);
                                         }

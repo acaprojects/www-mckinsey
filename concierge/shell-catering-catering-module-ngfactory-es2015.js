@@ -1404,7 +1404,7 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
                     for (const room of room_list) {
                         for (const booking of room.bookings) {
                             if (booking.catering) {
-                                const order = this.processOrder(booking);
+                                const order = this.processOrder(Object.assign({}, booking, { room }));
                                 if (order) {
                                     this.orders.push(order);
                                 }
