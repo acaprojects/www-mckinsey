@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1569815568097,
+  "timestamp": 1571010613545,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -40,7 +40,9 @@
         "/concierge/assets/img/report/other.svg",
         "/concierge/assets/img/report/transition.svg",
         "/concierge/assets/img/report/visitor.svg",
-        "/concierge/assets/img/scheduleheader.jpg"
+        "/concierge/assets/img/scheduleheader.jpg",
+        "/concierge/assets/md5_worker.js",
+        "/concierge/assets/new-relic.js"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
@@ -97,8 +99,10 @@
     "/concierge/assets/img/report/transition.svg": "ef230675f3eb225e091cfe3537fc3de822ea8a75",
     "/concierge/assets/img/report/visitor.svg": "898473ff4477a600ef97ccc1df26ea67d03775ea",
     "/concierge/assets/img/scheduleheader.jpg": "2e1be96585029edaeed9f29fb98e9aa3ba1eda14",
+    "/concierge/assets/md5_worker.js": "962a46233a1ff4e2e29e1724644a05502f049658",
+    "/concierge/assets/new-relic.js": "5010feb7ede36abe3878678c9b91ceb74509b172",
     "/concierge/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/concierge/index.html": "3726a6f981f52e59c9e6865578d9ac4825d21949"
+    "/concierge/index.html": "6b9e0d79ef98d733d384b485d0ae62af9b2be0ad"
   },
   "navigationUrls": [
     {
