@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1571014370353,
+  "timestamp": 1571032900334,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -93,6 +93,7 @@
         "/staff/assets/maps/london/level_10.svg",
         "/staff/assets/maps/london/level_11.svg",
         "/staff/assets/maps/london_jermyn/level_04.svg",
+        "/staff/assets/maps/milan/level_2.svg",
         "/staff/assets/maps/milan/level_3.svg",
         "/staff/assets/maps/milan/level_4.svg",
         "/staff/assets/maps/milan/level_5.svg",
@@ -230,6 +231,7 @@
     "/staff/assets/maps/london/level_10.svg": "4f9fa43e45121bbb69e769fbad62adbe96579929",
     "/staff/assets/maps/london/level_11.svg": "92a3c84a64771b284f6a7364a1cddcd912592e12",
     "/staff/assets/maps/london_jermyn/level_04.svg": "ad07701c027f72ef6f306f1b04d3781cee7017a4",
+    "/staff/assets/maps/milan/level_2.svg": "698f83a1c8b4e141f675549f8e103862604e0281",
     "/staff/assets/maps/milan/level_3.svg": "b1cffe6baca040bdfec36781679741863936fccc",
     "/staff/assets/maps/milan/level_4.svg": "7a0e137c95365f6ba1d4f83195f48cb1754f1f1a",
     "/staff/assets/maps/milan/level_5.svg": "4b50930778a19b8dd09267b9e4d2f5df2c943cc5",
@@ -259,7 +261,7 @@
     "/staff/assets/maps/washington_dc/level_11.svg": "8e7bb6a556bfb0380b552ee2d3c941dd7eeb9f6a",
     "/staff/assets/new-relic.js": "5010feb7ede36abe3878678c9b91ceb74509b172",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "72780e12e073b5d35992298ecbfc2225d57eea98"
+    "/staff/index.html": "e9b7df000a7713f7f933d0ce34180380dbbe21e2"
   },
   "navigationUrls": [
     {
