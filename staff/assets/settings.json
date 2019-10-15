@@ -247,7 +247,6 @@
                             "simple": true,
                             "description": "",
                             "type": "custom",
-                            "required": true,
                             "metadata": {
                                 "max_duration": 480
                             }
@@ -364,6 +363,12 @@
                 {
                     "key": "conferencing",
                     "label": "Conferencing",
+                    "type": "toggle",
+                    "hide": true
+                },
+                {
+                    "key": "all_day",
+                    "label": "All Day Booking",
                     "type": "toggle",
                     "hide": true
                 },
