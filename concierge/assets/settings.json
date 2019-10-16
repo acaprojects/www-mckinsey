@@ -157,6 +157,12 @@
                     "type": "custom"
                 },
                 {
+                    "key": "all_day",
+                    "label": "All Day Booking",
+                    "hide": true,
+                    "type": "checkbox"
+                },
+                {
                     "key": "notify_users",
                     "label": "Guest Notifyees",
                     "simple": false,
