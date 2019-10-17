@@ -9516,7 +9516,13 @@ class RoomsService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseServi
     processRoom(room) {
         if (room) {
             if (room.raw_bookings) {
-                room.bookings = this.processRoomBookings(room.raw_bookings);
+                room.bookings = this.processRoomBookings(room.raw_bookings.map(i => {
+                    const room_ids = [...i.room_id];
+                    room_ids.splice(room_ids.findIndex(j => j === room.email), 1);
+                    i.room_id = [room.email, ...room_ids];
+                    return i;
+                }));
+                room.bookings.forEach(i => i.room);
                 room.next = this.nextBooking(room.bookings);
                 room.current = this.currentBooking(room.bookings);
                 room.in_use = this.checkState(room.bookings);
@@ -17457,7 +17463,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571187241000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571271847000);
 
 
 /***/ }),

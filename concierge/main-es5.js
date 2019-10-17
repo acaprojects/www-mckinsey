@@ -11167,6 +11167,26 @@ var __values = (undefined && undefined.__values) || function (o) {
         }
     };
 };
+var __read = (undefined && undefined.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (undefined && undefined.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
 
 
 
@@ -11370,7 +11390,13 @@ var RoomsService = /** @class */ (function (_super) {
     RoomsService.prototype.processRoom = function (room) {
         if (room) {
             if (room.raw_bookings) {
-                room.bookings = this.processRoomBookings(room.raw_bookings);
+                room.bookings = this.processRoomBookings(room.raw_bookings.map(function (i) {
+                    var room_ids = __spread(i.room_id);
+                    room_ids.splice(room_ids.findIndex(function (j) { return j === room.email; }), 1);
+                    i.room_id = __spread([room.email], room_ids);
+                    return i;
+                }));
+                room.bookings.forEach(function (i) { return i.room; });
                 room.next = this.nextBooking(room.bookings);
                 room.current = this.currentBooking(room.bookings);
                 room.in_use = this.checkState(room.bookings);
@@ -20780,7 +20806,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571187241000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571271847000);
 
 
 /***/ }),
