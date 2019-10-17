@@ -16152,7 +16152,7 @@ var styles = [".search[_ngcontent-%COMP%] {\n  padding: .5em 0; }\n.search[_ngco
 /*!********************************************************!*\
   !*** ./src/app/shared/components/user-search/index.ts ***!
   \********************************************************/
-/*! exports provided: UserSearchComponent, USER_SEARCH_COMPONENTS */
+/*! exports provided: USER_SEARCH_COMPONENTS, UserSearchComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17519,7 +17519,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571281683000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571290004000);
 
 
 /***/ }),
