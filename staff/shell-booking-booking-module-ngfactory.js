@@ -2796,10 +2796,12 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
         return new Promise(function (resolve, reject) {
             var empty = { control: { value: '' } };
             var notes = _this.form_fields.find(function (i) { return i.key === 'catering_notes'; });
+            var spaces = _this.form_fields.find(function (i) { return i.key === 'room'; });
             var cost_code = _this.form_fields.find(function (i) { return i.key === 'catering_code'; });
             _this._service.Overlay.openModal('booking-catering-notes', {
                 cmp: _overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_7__["BookingCateringDetailsModalComponent"],
                 data: {
+                    spaces: (spaces || empty).control.value || [],
                     notes: (notes || empty).control.value,
                     cost_code: (cost_code || empty).control.value
                 }
