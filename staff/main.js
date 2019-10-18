@@ -21100,7 +21100,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571286373000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571378637000);
 
 
 /***/ }),
