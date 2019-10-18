@@ -1672,6 +1672,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -1695,6 +1696,7 @@ var __values = (undefined && undefined.__values) || function (o) {
         }
     };
 };
+
 
 
 
@@ -1819,7 +1821,7 @@ var BookingModalComponent = /** @class */ (function (_super) {
         /** Whether booking is all day */
         get: function () {
             var field = this.form_fields.find(function (i) { return i.key === 'all_day'; });
-            return field ? false : field.control.value;
+            return field ? field.control.value : false;
         },
         enumerable: true,
         configurable: true
@@ -1994,10 +1996,15 @@ var BookingModalComponent = /** @class */ (function (_super) {
                 });
             }
         });
-        var empty = { control: { value: true } };
+        var empty = { control: { value: true, valueChanges: Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(false) } };
         var id = (this.form_fields.find(function (i) { return i.key === 'id'; }) || empty).control.value;
         var time = (this.form_fields.find(function (i) { return i.key === 'start'; }) || empty);
+        var all_day = (this.form_fields.find(function (i) { return i.key === 'all_day'; }) || empty);
         time.setDisabled(this.duration > 450);
+        this.subs.obs.all_day = all_day.control.valueChanges.subscribe(function (state) {
+            console.log('Time:', state);
+            time.setDisabled(state);
+        });
         this.id = id ? '10' : '';
     };
     /**
@@ -2014,7 +2021,7 @@ var BookingModalComponent = /** @class */ (function (_super) {
             var empty = { control: { value: true } };
             var time = (_this.form_fields.find(function (i) { return i.key === 'start'; }) || empty);
             if (time.disabled !== _this.duration > 450) {
-                time.setDisabled(!time.disabled);
+                time.setDisabled(!time.disabled || _this.all_day);
             }
         });
     };
@@ -2844,7 +2851,7 @@ var BookingFlowFindSpaceComponent = /** @class */ (function (_super) {
      */
     BookingFlowFindSpaceComponent.prototype.search = function () {
         var query = {
-            date: this.date,
+            date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_6__(this.date).startOf('d').valueOf() : this.date,
             duration: this.all_day ? 24 * 60 : this.duration,
             hide_bookings: true
         };
@@ -8775,7 +8782,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -8821,6 +8830,7 @@ var __read = (undefined && undefined.__read) || function (o, n) {
  * @Last Modified by: Alex Sorafumo
  * @Last Modified time: 2018-06-19 13:56:07
  */
+
 
 
 
@@ -9214,6 +9224,18 @@ var BookingsService = /** @class */ (function (_super) {
         // Get room associated with the booking
         var id = raw_item.locations && raw_item.locations.length > 0 ? raw_item.locations[0].uniqueId : raw_item.room_id;
         var rm = this.parent.Rooms.item(id);
+        Object.defineProperty(item, 'status', {
+            get: function () {
+                var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(item.date);
+                var end = date.add(item.duration, 'm');
+                var now = dayjs__WEBPACK_IMPORTED_MODULE_4__();
+                return now.isBefore(date, 'm')
+                    ? 'upcoming'
+                    : now.isBefore(end, 'm')
+                        ? 'in_progress'
+                        : 'expired';
+            }
+        });
         if (rm) {
             item.display.room = rm.name || raw_item.room_name;
             item.display.level = rm.level ? rm.level.name : '';
@@ -9642,7 +9664,7 @@ var BookingsService = /** @class */ (function (_super) {
         }
         return settings;
     };
-    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BookingsService, providedIn: "root" });
+    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BookingsService, providedIn: "root" });
     return BookingsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
@@ -20864,7 +20886,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571290004000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571386349000);
 
 
 /***/ }),

@@ -1521,6 +1521,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
 
 
 
@@ -1595,7 +1597,7 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
     /** Whether booking is all day */
     get all_day() {
         const field = this.form_fields.find(i => i.key === 'all_day');
-        return field ? false : field.control.value;
+        return field ? field.control.value : false;
     }
     /** Selected duration for the booking */
     get duration() {
@@ -1754,10 +1756,15 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
                 });
             }
         });
-        const empty = { control: { value: true } };
+        const empty = { control: { value: true, valueChanges: Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(false) } };
         const id = (this.form_fields.find(i => i.key === 'id') || empty).control.value;
         const time = (this.form_fields.find(i => i.key === 'start') || empty);
+        const all_day = (this.form_fields.find(i => i.key === 'all_day') || empty);
         time.setDisabled(this.duration > 450);
+        this.subs.obs.all_day = all_day.control.valueChanges.subscribe((state) => {
+            console.log('Time:', state);
+            time.setDisabled(state);
+        });
         this.id = id ? '10' : '';
     }
     /**
@@ -1773,7 +1780,7 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
             const empty = { control: { value: true } };
             const time = (this.form_fields.find(i => i.key === 'start') || empty);
             if (time.disabled !== this.duration > 450) {
-                time.setDisabled(!time.disabled);
+                time.setDisabled(!time.disabled || this.all_day);
             }
         });
     }
@@ -2486,7 +2493,7 @@ class BookingFlowFindSpaceComponent extends _shared_globals_base_component__WEBP
      */
     search() {
         const query = {
-            date: this.date,
+            date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_6__(this.date).startOf('d').valueOf() : this.date,
             duration: this.all_day ? 24 * 60 : this.duration,
             hide_bookings: true
         };
@@ -7557,13 +7564,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /*
  * @Author: Alex Sorafumo
  * @Date: 2017-06-05 12:39:28
  * @Last Modified by: Alex Sorafumo
  * @Last Modified time: 2018-06-19 13:56:07
  */
+
 
 
 
@@ -7902,6 +7912,18 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         // Get room associated with the booking
         const id = raw_item.locations && raw_item.locations.length > 0 ? raw_item.locations[0].uniqueId : raw_item.room_id;
         const rm = this.parent.Rooms.item(id);
+        Object.defineProperty(item, 'status', {
+            get: () => {
+                const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(item.date);
+                const end = date.add(item.duration, 'm');
+                const now = dayjs__WEBPACK_IMPORTED_MODULE_4__();
+                return now.isBefore(date, 'm')
+                    ? 'upcoming'
+                    : now.isBefore(end, 'm')
+                        ? 'in_progress'
+                        : 'expired';
+            }
+        });
         if (rm) {
             item.display.room = rm.name || raw_item.room_name;
             item.display.level = rm.level ? rm.level.name : '';
@@ -8242,7 +8264,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         return settings;
     }
 }
-BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BookingsService, providedIn: "root" });
+BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BookingsService, providedIn: "root" });
 
 
 /***/ }),
@@ -17519,7 +17541,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571290004000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571386349000);
 
 
 /***/ }),
