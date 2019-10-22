@@ -9823,7 +9823,7 @@ var BookingsService = /** @class */ (function (_super) {
             location_name: form.location_name,
             locations: form.locations,
             notes: [],
-            all_day: form.all_day
+            all_day: form.all_day ? date.format('YYYY-MM-DD') : false
         };
         if (request.catering && item.catering_code) {
             Object.keys(request.catering).forEach(function (k) {
@@ -21100,7 +21100,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571704158000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571712602000);
 
 
 /***/ }),
