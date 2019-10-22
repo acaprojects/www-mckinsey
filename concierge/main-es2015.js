@@ -8029,7 +8029,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             location_name: form.location_name,
             locations: form.locations,
             notes: form.notes || [],
-            all_day: form.all_day,
+            all_day: form.all_day ? date.format('YYYY-MM-DD') : false,
             concierge: true
         };
         if (request.catering && item.catering_code) {
@@ -17541,7 +17541,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571386349000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571712649000);
 
 
 /***/ }),
