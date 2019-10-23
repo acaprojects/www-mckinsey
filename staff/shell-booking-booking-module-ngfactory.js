@@ -1874,7 +1874,7 @@ var BookingMainFlowFindSpaceComponent = /** @class */ (function (_super) {
     BookingMainFlowFindSpaceComponent.prototype.search = function () {
         var _this = this;
         var query = {
-            date: this.date,
+            date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date,
             duration: this.all_day ? 24 * 60 : this.duration,
             hide_bookings: true
         };
@@ -2518,15 +2518,6 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(BookingMainFlowComponent.prototype, "all_day", {
-        /** Whether booking is all day */
-        get: function () {
-            var field = this.form_fields.find(function (i) { return i.key === 'all_day'; });
-            return !!field && field.control.value;
-        },
-        enumerable: true,
-        configurable: true
-    });
     Object.defineProperty(BookingMainFlowComponent.prototype, "recurr_end", {
         /** Timestamp of the end of the recurrence period */
         get: function () {
@@ -2569,6 +2560,15 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
                 return field.control.controls.duration.value;
             }
             return 60;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(BookingMainFlowComponent.prototype, "all_day", {
+        /** Whether booking is all day */
+        get: function () {
+            var field = this.form_fields.find(function (i) { return i.key === 'all_day'; });
+            return field ? field.control.value : false;
         },
         enumerable: true,
         configurable: true
@@ -2725,10 +2725,13 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
                 }));
             }
         });
-        var empty = { control: { value: true }, children: [] };
+        var empty = { control: { value: true, valueChanges: false }, children: [] };
         var space = (this.form_fields.find(function (i) { return i.key === 'needs_space'; }) || empty).control.value;
         var time = (this.form_fields.find(function (i) { return i.key === 'time_group'; }) || empty);
-        time.children[0].setDisabled(this.duration > 450);
+        var all_day = (this.form_fields.find(function (i) { return i.key === 'all_day'; }) || empty);
+        time.setDisabled(this.duration > 450);
+        var start = time.children.find(function (i) { return i.key === 'start'; }) || empty;
+        this.subscription('all_day_value', all_day.control.valueChanges.subscribe(function (state) { return start.setDisabled(state); }));
         var id = (this.form_fields.find(function (i) { return i.key === 'id'; }) || empty).control.value;
         this.id = id || !space ? '10' : '';
     };
@@ -2744,7 +2747,7 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
             }
             var empty = { control: { value: true }, children: [] };
             var time = (_this.form_fields.find(function (i) { return i.key === 'time_group'; }) || empty);
-            time.children[0].setDisabled(_this.duration > 450);
+            time.children[0].setDisabled(_this.duration > 450 || _this.all_day);
         }, 50);
     };
     /**
