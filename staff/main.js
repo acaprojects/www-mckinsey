@@ -9285,11 +9285,13 @@ var BaseService = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingsService", function() { return BookingsService; });
 /* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/esm5/acaprojects-ngx-composer.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./base.service */ "./src/app/services/data/base.service.ts");
-/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.service */ "./src/app/services/data/base.service.ts");
+/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -9320,6 +9322,7 @@ var __assign = (undefined && undefined.__assign) || function () {
  * @Last Modified by: Alex Sorafumo
  * @Last Modified time: 2018-06-19 13:56:07
  */
+
 
 
 
@@ -9398,23 +9401,23 @@ var BookingsService = /** @class */ (function (_super) {
         if (!room) {
             return;
         }
-        var today = moment__WEBPACK_IMPORTED_MODULE_1__();
+        var today = moment__WEBPACK_IMPORTED_MODULE_3__();
         today
             .minutes(Math.ceil(today.minutes() / 5) * 5)
             .seconds(0)
             .milliseconds(0);
-        var bookings = room.bookings.filter(function (b) { return moment__WEBPACK_IMPORTED_MODULE_1__(b.date).isSame(today, 'd'); });
+        var bookings = room.bookings.filter(function (b) { return moment__WEBPACK_IMPORTED_MODULE_3__(b.date).isSame(today, 'd'); });
         var block = this.getNextFreeBlock(bookings);
         // In case the
-        if (block && moment__WEBPACK_IMPORTED_MODULE_1__["duration"](moment__WEBPACK_IMPORTED_MODULE_1__(block.end).diff(today)).asMinutes() < 30) {
+        if (block && moment__WEBPACK_IMPORTED_MODULE_3__["duration"](moment__WEBPACK_IMPORTED_MODULE_3__(block.end).diff(today)).asMinutes() < 30) {
             block = this.getNextFreeBlock(bookings, block.end);
         }
         var start = !block || block.start < 0 ? today.valueOf() : Math.max(today.valueOf(), block.start);
-        var date = moment__WEBPACK_IMPORTED_MODULE_1__(start);
+        var date = moment__WEBPACK_IMPORTED_MODULE_3__(start);
         date.minutes(Math.ceil(date.minutes() / 5) * 5);
         var duration = 60;
         if (block && block.end >= 0) {
-            var length_1 = Math.floor(moment__WEBPACK_IMPORTED_MODULE_1__["duration"](moment__WEBPACK_IMPORTED_MODULE_1__(block.end).diff(date)).asMinutes());
+            var length_1 = Math.floor(moment__WEBPACK_IMPORTED_MODULE_3__["duration"](moment__WEBPACK_IMPORTED_MODULE_3__(block.end).diff(date)).asMinutes());
             if (length_1 < 45) {
                 duration = 30;
             }
@@ -9424,7 +9427,7 @@ var BookingsService = /** @class */ (function (_super) {
         }
         this.parent.confirm({
             title: 'Book space?',
-            message: "Book meeting room " + room.name + " at " + date.format('h:mm a') + " for " + _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].humaniseDuration(duration),
+            message: "Book meeting room " + room.name + " at " + date.format('h:mm a') + " for " + _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(duration),
             icon: 'event_available',
             accept: 'Ok',
             cancel: true
@@ -9449,7 +9452,7 @@ var BookingsService = /** @class */ (function (_super) {
             if (_this.get('new_booking').state !== 'idle') {
                 return reject('Another booking is in progress');
             }
-            var date = moment__WEBPACK_IMPORTED_MODULE_1__(item.date);
+            var date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
             _this.parent.confirm(_this.confirmSettings('add', item), function (event) {
                 if (event.type === 'Accept') {
                     _this.subjects.new_booking.next({ state: 'processing' });
@@ -9461,7 +9464,7 @@ var BookingsService = /** @class */ (function (_super) {
                             localStorage.removeItem('STAFF.booking_form');
                             localStorage.setItem('STAFF.last_booking', booking || JSON.stringify(item));
                         }
-                        _this.timeout("" + moment__WEBPACK_IMPORTED_MODULE_1__().unix(), function () { return _this.set('new_booking', { state: 'idle' }); });
+                        _this.timeout("" + moment__WEBPACK_IMPORTED_MODULE_3__().unix(), function () { return _this.set('new_booking', { state: 'idle' }); });
                     }, function (e) {
                         _this.set('new_booking', { state: 'error', value: e });
                         _this.timeout('new_error', function () { return _this.set('new_booking', { state: 'idle' }); });
@@ -9494,7 +9497,7 @@ var BookingsService = /** @class */ (function (_super) {
                         }
                         _this.parent.Rooms.replaceBooking(new_item);
                         _this.query();
-                        _this.timeout("" + moment__WEBPACK_IMPORTED_MODULE_1__().unix(), function () { return _this.set('new_booking', { state: 'idle' }); });
+                        _this.timeout("" + moment__WEBPACK_IMPORTED_MODULE_3__().unix(), function () { return _this.set('new_booking', { state: 'idle' }); });
                     }, function (e) {
                         _this.set('update_booking', { state: 'error', value: e });
                         _this.timeout('update_error', function () { return _this.set('update_booking', { state: 'idle' }); });
@@ -9531,12 +9534,12 @@ var BookingsService = /** @class */ (function (_super) {
         var conflict_count = 0;
         for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
             var bkn = list_1[_i];
-            var bkn_start = moment__WEBPACK_IMPORTED_MODULE_1__(bkn.date);
-            var bkn_end = moment__WEBPACK_IMPORTED_MODULE_1__(bkn_start).add(bkn.duration, 'm');
+            var bkn_start = moment__WEBPACK_IMPORTED_MODULE_3__(bkn.date);
+            var bkn_end = moment__WEBPACK_IMPORTED_MODULE_3__(bkn_start).add(bkn.duration, 'm');
             for (var _a = 0, comparison_1 = comparison; _a < comparison_1.length; _a++) {
                 var cmp = comparison_1[_a];
-                var cmp_start = moment__WEBPACK_IMPORTED_MODULE_1__(cmp.date);
-                var cmp_end = moment__WEBPACK_IMPORTED_MODULE_1__(cmp_start).add(cmp.duration, 'm');
+                var cmp_start = moment__WEBPACK_IMPORTED_MODULE_3__(cmp.date);
+                var cmp_end = moment__WEBPACK_IMPORTED_MODULE_3__(cmp_start).add(cmp.duration, 'm');
                 if (bkn_start.isBetween(cmp_start, cmp_end, 'm', '[)') || bkn_end.isBetween(cmp_start, cmp_end, 'm', '(]')) {
                     conflict_count++;
                     break;
@@ -9556,19 +9559,19 @@ var BookingsService = /** @class */ (function (_super) {
             return [
                 {
                     start: 0,
-                    end: moment__WEBPACK_IMPORTED_MODULE_1__()
+                    end: moment__WEBPACK_IMPORTED_MODULE_3__()
                         .startOf('m')
                         .valueOf() * 10
                 }
             ];
         }
         var slots = [];
-        var start = moment__WEBPACK_IMPORTED_MODULE_1__(0);
+        var start = moment__WEBPACK_IMPORTED_MODULE_3__(0);
         list.sort(function (a, b) { return a.date - b.date; });
         for (var _i = 0, list_2 = list; _i < list_2.length; _i++) {
             var booking = list_2[_i];
-            var bkn_start = moment__WEBPACK_IMPORTED_MODULE_1__(booking.date).subtract(booking.setup, 's');
-            var bkn_end = moment__WEBPACK_IMPORTED_MODULE_1__(booking.date)
+            var bkn_start = moment__WEBPACK_IMPORTED_MODULE_3__(booking.date).subtract(booking.setup, 's');
+            var bkn_end = moment__WEBPACK_IMPORTED_MODULE_3__(booking.date)
                 .add(booking.duration, 'm')
                 .add(booking.breakdown, 's');
             if (bkn_start.isSameOrAfter(start, 'm')) {
@@ -9581,7 +9584,7 @@ var BookingsService = /** @class */ (function (_super) {
         }
         slots.push({
             start: start.valueOf(),
-            end: moment__WEBPACK_IMPORTED_MODULE_1__()
+            end: moment__WEBPACK_IMPORTED_MODULE_3__()
                 .startOf('m')
                 .valueOf() * 10
         });
@@ -9594,17 +9597,17 @@ var BookingsService = /** @class */ (function (_super) {
      * @param time Time to check is free. Defaults to the current time
      */
     BookingsService.prototype.getNextFreeBlock = function (list, date, min_size) {
-        if (date === void 0) { date = moment__WEBPACK_IMPORTED_MODULE_1__().valueOf(); }
+        if (date === void 0) { date = moment__WEBPACK_IMPORTED_MODULE_3__().valueOf(); }
         if (min_size === void 0) { min_size = 30; }
         var slots = this.getFreeSlots(list, min_size);
-        var today = moment__WEBPACK_IMPORTED_MODULE_1__(date);
-        var time = moment__WEBPACK_IMPORTED_MODULE_1__(date)
+        var today = moment__WEBPACK_IMPORTED_MODULE_3__(date);
+        var time = moment__WEBPACK_IMPORTED_MODULE_3__(date)
             .startOf('m')
             .second(1);
         for (var _i = 0, slots_1 = slots; _i < slots_1.length; _i++) {
             var block = slots_1[_i];
-            var start = moment__WEBPACK_IMPORTED_MODULE_1__(block.start).startOf('m');
-            var end = moment__WEBPACK_IMPORTED_MODULE_1__(block.end).startOf('m');
+            var start = moment__WEBPACK_IMPORTED_MODULE_3__(block.start).startOf('m');
+            var end = moment__WEBPACK_IMPORTED_MODULE_3__(block.end).startOf('m');
             if (start.isAfter(time, 's')) {
                 return block;
             }
@@ -9623,8 +9626,8 @@ var BookingsService = /** @class */ (function (_super) {
      */
     BookingsService.prototype.processItem = function (raw_item) {
         var user = this.parent.Users.current();
-        var start = moment__WEBPACK_IMPORTED_MODULE_1__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
-        var end = moment__WEBPACK_IMPORTED_MODULE_1__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
+        var start = dayjs__WEBPACK_IMPORTED_MODULE_4__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
+        var end = dayjs__WEBPACK_IMPORTED_MODULE_4__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
         var has_end = raw_item.end_epoch * 1000 || raw_item.end || raw_item.End;
         var duration = Math.abs(start.diff(end, 'm'));
         if (raw_item.all_day) {
@@ -9635,7 +9638,7 @@ var BookingsService = /** @class */ (function (_super) {
             icaluid: raw_item.icaluid,
             title: raw_item.title || raw_item.Subject || raw_item.subject,
             date: raw_item.all_day ? start.startOf('d').valueOf() : start.valueOf(),
-            start_hours: start.hours() + start.minutes() / 60,
+            start_hours: start.hour() + start.minute() / 60,
             description: raw_item.description,
             duration: has_end ? duration || raw_item.duration : raw_item.duration,
             attendees: this.parent.Users.processList(raw_item.attendees || []),
@@ -9655,10 +9658,9 @@ var BookingsService = /** @class */ (function (_super) {
                 start: start.format('h:mma'),
                 end: has_end
                     ? end.format('h:mma')
-                    : moment__WEBPACK_IMPORTED_MODULE_1__(start)
-                        .add(raw_item.duration, 'm')
+                    : start.add(raw_item.duration, 'm')
                         .format('h:mma'),
-                duration: _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].humaniseDuration(has_end ? duration || raw_item.duration : raw_item.duration),
+                duration: _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(has_end ? duration || raw_item.duration : raw_item.duration),
                 room: raw_item.location_name
             },
             space_notes: raw_item.space_notes || {},
@@ -9693,14 +9695,14 @@ var BookingsService = /** @class */ (function (_super) {
         this.processRoom(item, raw_item);
         Object.defineProperty(item, 'status', {
             get: function () {
-                var now = moment__WEBPACK_IMPORTED_MODULE_1__();
+                var now = dayjs__WEBPACK_IMPORTED_MODULE_4__();
                 if (item._status && item._updated < now.valueOf() - 60 * 1000) {
                     item._status = null;
                 }
                 if (!item._status) {
-                    var date = moment__WEBPACK_IMPORTED_MODULE_1__(item.date);
-                    var upcoming = moment__WEBPACK_IMPORTED_MODULE_1__(date).subtract(15, 'm');
-                    var ending = moment__WEBPACK_IMPORTED_MODULE_1__(date).add(item.duration, 'm');
+                    var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(item.date);
+                    var upcoming = date.subtract(15, 'm');
+                    var ending = date.add(item.duration, 'm');
                     item._status = now.isBefore(upcoming, 'm')
                         ? 'future'
                         : now.isBefore(date, 'm')
@@ -9808,11 +9810,11 @@ var BookingsService = /** @class */ (function (_super) {
             form.room = {};
         }
         if (form.duration > 480 && form.all_day) {
-            form.date = moment__WEBPACK_IMPORTED_MODULE_1__(form.date)
+            form.date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date)
                 .startOf('d')
                 .valueOf();
         }
-        var date = moment__WEBPACK_IMPORTED_MODULE_1__(form.date).startOf('m');
+        var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('m');
         var room_id = [];
         var auto_approve = [item.state !== 'tentative'];
         if (form.room instanceof Array) {
@@ -9890,7 +9892,7 @@ var BookingsService = /** @class */ (function (_super) {
             }
         }
         var user = this.parent.Users.current();
-        var now = moment__WEBPACK_IMPORTED_MODULE_1__().startOf('s');
+        var now = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('s');
         if (item.description) {
             request.notes.push({ type: 'description', message: item.description, author: user.name, date: now.valueOf() });
         }
@@ -9949,8 +9951,8 @@ var BookingsService = /** @class */ (function (_super) {
         // Add bookings to timeline
         for (var _i = 0, list_3 = list; _i < list_3.length; _i++) {
             var item = list_3[_i];
-            var date = moment__WEBPACK_IMPORTED_MODULE_1__(item.date);
-            var end = moment__WEBPACK_IMPORTED_MODULE_1__(date).add(item.duration, 'm');
+            var date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
+            var end = moment__WEBPACK_IMPORTED_MODULE_3__(date).add(item.duration, 'm');
             for (; date.isBefore(end, 'm'); date.add(1, 'd')) {
                 var day = timeline[date.format('YYYY/MM/DD')] || [];
                 for (var _a = 0, day_1 = day; _a < day_1.length; _a++) {
@@ -9983,7 +9985,7 @@ var BookingsService = /** @class */ (function (_super) {
         var timeline = this.get('timeline') || {};
         for (var _i = 0, list_4 = list; _i < list_4.length; _i++) {
             var item = list_4[_i];
-            var date = moment__WEBPACK_IMPORTED_MODULE_1__(item.date);
+            var date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
             var day = timeline[date.format('YYYY/MM/DD')] || [];
             for (var _a = 0, day_2 = day; _a < day_2.length; _a++) {
                 var event_2 = day_2[_a];
@@ -10000,11 +10002,11 @@ var BookingsService = /** @class */ (function (_super) {
             _super.prototype.clear.call(this, fields);
         }
         else {
-            var start_1 = moment__WEBPACK_IMPORTED_MODULE_1__(fields.from).startOf('d');
-            var end_1 = moment__WEBPACK_IMPORTED_MODULE_1__(fields.to || fields.from);
+            var start_1 = moment__WEBPACK_IMPORTED_MODULE_3__(fields.from).startOf('d');
+            var end_1 = moment__WEBPACK_IMPORTED_MODULE_3__(fields.to || fields.from);
             // Clear period in list
             var list = this.get('list') || [];
-            this.set('list', list.filter(function (i) { return !moment__WEBPACK_IMPORTED_MODULE_1__(i.date).isBetween(start_1, end_1); }));
+            this.set('list', list.filter(function (i) { return !moment__WEBPACK_IMPORTED_MODULE_3__(i.date).isBetween(start_1, end_1); }));
             // Clear period in timeline
             var timeline = this.get('timeline') || {};
             for (; start_1.isBefore(end_1, 'm'); start_1.add(1, 'd')) {
@@ -10019,7 +10021,7 @@ var BookingsService = /** @class */ (function (_super) {
     BookingsService.prototype.confirmSettings = function (key, fields) {
         if (fields === void 0) { fields = {}; }
         var settings = _super.prototype.confirmSettings.call(this, key, fields);
-        var date = moment__WEBPACK_IMPORTED_MODULE_1__(fields.date || '');
+        var date = moment__WEBPACK_IMPORTED_MODULE_3__(fields.date || '');
         var user = this.parent.Users.current();
         var rm = fields.room ? (fields.room instanceof Array ? fields.room[0] : fields.room) : null;
         var room = rm ? this.parent.Rooms.item(rm.id) : { name: fields.room_name };
@@ -10034,7 +10036,7 @@ var BookingsService = /** @class */ (function (_super) {
                 else {
                     settings.message = 'Meeting ';
                 }
-                settings.message += "\n                    on the " + date.format('Do of MMMM, YYYY') + " at " + date.format('h:mma') + "<br>\n                    for " + _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].humaniseDuration(fields.duration) + "\n                ";
+                settings.message += "\n                    on the " + date.format('Do of MMMM, YYYY') + " at " + date.format('h:mma') + "<br>\n                    for " + _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(fields.duration) + "\n                ";
                 break;
             case 'delete':
                 if (fields.decline) {
@@ -10044,14 +10046,14 @@ var BookingsService = /** @class */ (function (_super) {
                 }
                 break;
             case 'update':
-                settings.message = "Change booking " + (room.name ? 'for "' + room.name + '"' : '') + "<br>\n                                    to the " + date.format('Do of MMMM, YYYY') + " at " + date.format('h:mma') + "<br>\n                                    for " + _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].humaniseDuration(fields.duration);
+                settings.message = "Change booking " + (room.name ? 'for "' + room.name + '"' : '') + "<br>\n                                    to the " + date.format('Do of MMMM, YYYY') + " at " + date.format('h:mma') + "<br>\n                                    for " + _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(fields.duration);
                 break;
         }
         return settings;
     };
-    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_4__["defineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["inject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BookingsService, providedIn: "root" });
+    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_5__["defineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["inject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BookingsService, providedIn: "root" });
     return BookingsService;
-}(_base_service__WEBPACK_IMPORTED_MODULE_2__["BaseService"]));
+}(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
 
 
@@ -21128,7 +21130,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571806617000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571812683000);
 
 
 /***/ }),
@@ -24452,7 +24454,7 @@ var BookingDetailsModalComponent = /** @class */ (function (_super) {
         var room_ids = this.spaces.map(function (i) { return i.id; }).join(',');
         var date = this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_3__(this.model.date).startOf('d').valueOf() : this.model.date;
         var duration = this.all_day ? 24 * 60 : this.model.duration || 60;
-        var now = dayjs__WEBPACK_IMPORTED_MODULE_3__();
+        var now = this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('d') : dayjs__WEBPACK_IMPORTED_MODULE_3__();
         var time = dayjs__WEBPACK_IMPORTED_MODULE_3__(date);
         if (time.isBefore(now, 'm') && now.diff(time, 'm') > 5) {
             this.service.error('Booking date and time need to be in future');
