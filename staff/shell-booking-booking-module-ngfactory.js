@@ -2399,7 +2399,7 @@ function View_BookingMainFlowComponent_1(_l) { return _angular_core__WEBPACK_IMP
 function View_BookingMainFlowComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "booking-main-flow-find-space", [], null, [[null, "event"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("event" === en)) {
         var pd_0 = (_co.progress($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_BookingMainFlowFindSpaceComponent_0"], _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_BookingMainFlowFindSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 770048, null, 0, _find_space_find_space_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowFindSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { date_field: [0, "date_field"], duration: [1, "duration"], recurr_end: [2, "recurr_end"], spaces: [3, "spaces"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.date_field; var currVal_1 = _co.duration; var currVal_2 = _co.recurr_end; var currVal_3 = _co.space_list; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); }, null); }
+    } return ad; }, _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_BookingMainFlowFindSpaceComponent_0"], _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_BookingMainFlowFindSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 770048, null, 0, _find_space_find_space_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowFindSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { date_field: [0, "date_field"], duration: [1, "duration"], all_day: [2, "all_day"], recurr_end: [3, "recurr_end"], spaces: [4, "spaces"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.date_field; var currVal_1 = _co.duration; var currVal_2 = _co.all_day; var currVal_3 = _co.recurr_end; var currVal_4 = _co.space_list; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4); }, null); }
 function View_BookingMainFlowComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "booking-main-flow-form", [], null, [[null, "event"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("event" === en)) {
         var pd_0 = (_co.progress($event) !== false);
         ad = (pd_0 && ad);
@@ -2514,6 +2514,15 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
                 return field.control.value || [];
             }
             return [];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(BookingMainFlowComponent.prototype, "all_day", {
+        /** Whether booking is all day */
+        get: function () {
+            var field = this.form_fields.find(function (i) { return i.key === 'all_day'; });
+            return !!field && field.control.value;
         },
         enumerable: true,
         configurable: true
