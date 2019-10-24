@@ -14685,6 +14685,7 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
             }
             duration.values.push({ id: 1 * 5 * 24 * 60, name: "1 Week(" + date_1.format('DD MMM') + ")" });
         }
+        duration.index = this.getIndex(this.field.getValue(), duration.values);
         return duration;
     };
     /**
@@ -14706,12 +14707,18 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
     /** Get the index of the given value i */
     CustomDurationFieldComponent.prototype.getIndex = function (value, values, name) {
         var index = values.findIndex(function (a) { return a.id === value; });
-        return index < 0 ? 0 : index;
+        if (index < 0) {
+            this.setValue(30, false);
+        }
+        return index < 0 ? values.findIndex(function (a) { return a.id === 30; }) : index;
     };
-    CustomDurationFieldComponent.prototype.setValue = function (value) {
+    CustomDurationFieldComponent.prototype.setValue = function (value, update_index) {
+        if (update_index === void 0) { update_index = true; }
         this.field.setValue(value);
         this.show = false;
-        this.index = this.getIndex(value, this.blocks);
+        if (update_index) {
+            this.index = this.getIndex(value, this.blocks);
+        }
     };
     /**
      * Update limitations on duration based off set spaces
@@ -21130,7 +21137,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571896566000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571958560000);
 
 
 /***/ }),
