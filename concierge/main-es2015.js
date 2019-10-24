@@ -15666,6 +15666,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _catering_item_list_item_list_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./catering/item-list/item-list.component */ "./src/app/shared/components/catering/item-list/item-list.component.ts");
 /* harmony import */ var _catering_item_list_list_item_list_item_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./catering/item-list/list-item/list-item.component */ "./src/app/shared/components/catering/item-list/list-item/list-item.component.ts");
 /* harmony import */ var _catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./catering/catering-order/catering-order.component */ "./src/app/shared/components/catering/catering-order/catering-order.component.ts");
+/* harmony import */ var _directives_cdk_drop_list_scroll_container_directive__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../directives/cdk-drop-list-scroll-container.directive */ "./src/app/shared/directives/cdk-drop-list-scroll-container.directive.ts");
+
 
 
 
@@ -15694,7 +15696,8 @@ const COMPONENTS = [
     _catering_category_list_category_list_component__WEBPACK_IMPORTED_MODULE_11__["CateringEditCategoryListComponent"],
     _catering_item_list_item_list_component__WEBPACK_IMPORTED_MODULE_12__["CateringEditItemListComponent"],
     _catering_item_list_list_item_list_item_component__WEBPACK_IMPORTED_MODULE_13__["CateringEditListItemComponent"],
-    _catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__["CateringEditOrderComponent"]
+    _catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__["CateringEditOrderComponent"],
+    _directives_cdk_drop_list_scroll_container_directive__WEBPACK_IMPORTED_MODULE_15__["CdkDropListScrollContainer"]
 ];
 const ENTRY_COMPONENTS = [
     ..._custom_fields__WEBPACK_IMPORTED_MODULE_8__["CUSTOM_FORM_FIELDS"]
@@ -17520,6 +17523,89 @@ var styles = [".header[_ngcontent-%COMP%] {\n  font-family: \"LarishMcKinsey\", 
 
 /***/ }),
 
+/***/ "./src/app/shared/directives/cdk-drop-list-scroll-container.directive.ts":
+/*!*******************************************************************************!*\
+  !*** ./src/app/shared/directives/cdk-drop-list-scroll-container.directive.ts ***!
+  \*******************************************************************************/
+/*! exports provided: ScrollDirection, CdkDropListScrollContainer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollDirection", function() { return ScrollDirection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CdkDropListScrollContainer", function() { return CdkDropListScrollContainer; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm2015/drag-drop.js");
+/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+
+
+
+var ScrollDirection;
+(function (ScrollDirection) {
+    ScrollDirection[ScrollDirection["NONE"] = 0] = "NONE";
+    ScrollDirection[ScrollDirection["X"] = 1] = "X";
+    ScrollDirection[ScrollDirection["Y"] = 2] = "Y";
+    ScrollDirection[ScrollDirection["BOTH"] = 3] = "BOTH";
+})(ScrollDirection || (ScrollDirection = {}));
+class CdkDropListScrollContainer extends _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+    constructor(_cdkDropList, _renderer) {
+        super();
+        this._cdkDropList = _cdkDropList;
+        this._renderer = _renderer;
+        /** Direction of scroll to determine updating the position of the drop list */
+        this.direction = ScrollDirection.X;
+        /** Last scroll position */
+        this.last_scroll = { x: 0, y: 0 };
+    }
+    ngOnChanges(changes) {
+        if (changes.scrollContainer && this.scrollContainer) {
+            this.element = this._cdkDropList.element.nativeElement.closest(this.scrollContainer);
+        }
+    }
+    ngAfterContentInit() {
+        this.subscription('drag_items', this.items.changes.subscribe((items) => {
+            const list = items.toArray();
+            list.forEach((i, index) => {
+                this.subscription(`list-item-${index}`, this._renderer.listen(i.element.nativeElement, 'mousedown', () => {
+                    this.subscription('item-dragged', this._renderer.listen('window', 'mouseup', () => this.onDrop()));
+                    this.onDrag();
+                }));
+                this.subscription(`list-item-touch-${index}`, this._renderer.listen(i.element.nativeElement, 'touchstart', () => {
+                    this.subscription('item-dragged', this._renderer.listen('window', 'touchend', () => this.onDrop()));
+                    this.onDrag();
+                }));
+            });
+        }));
+    }
+    /** Start listing for scroll events on the container */
+    onDrag() {
+        if (this.element) {
+            this.subscription('scroll', this._renderer.listen(this.element, 'scroll', () => this.updateListPosition()));
+        }
+    }
+    /** Stop listening for scroll events on the container */
+    onDrop() {
+        this.unsub('scroll');
+    }
+    /**
+     * Forcefully update the position data of the drop list
+     */
+    updateListPosition() {
+        this.timeout('update_positions', () => {
+            const scroll = { x: this.element.scrollLeft, y: this.element.scrollTop };
+            if (((this.direction === ScrollDirection.BOTH || this.direction === ScrollDirection.Y) && scroll.y !== this.last_scroll.y) ||
+                ((this.direction === ScrollDirection.BOTH || this.direction === ScrollDirection.X) && scroll.x !== this.last_scroll.x)) {
+                this._cdkDropList._dropListRef._cacheOwnPosition();
+                this._cdkDropList._dropListRef._siblings.forEach(i => (i.isReceiving() ? i._cacheOwnPosition() : null));
+            }
+            this.last_scroll = scroll;
+        }, 50);
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/app/shared/globals/application.ts":
 /*!***********************************************!*\
   !*** ./src/app/shared/globals/application.ts ***!
@@ -17540,7 +17626,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571880966000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571887176000);
 
 
 /***/ }),

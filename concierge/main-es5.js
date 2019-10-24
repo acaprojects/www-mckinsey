@@ -18652,6 +18652,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _catering_item_list_item_list_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./catering/item-list/item-list.component */ "./src/app/shared/components/catering/item-list/item-list.component.ts");
 /* harmony import */ var _catering_item_list_list_item_list_item_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./catering/item-list/list-item/list-item.component */ "./src/app/shared/components/catering/item-list/list-item/list-item.component.ts");
 /* harmony import */ var _catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./catering/catering-order/catering-order.component */ "./src/app/shared/components/catering/catering-order/catering-order.component.ts");
+/* harmony import */ var _directives_cdk_drop_list_scroll_container_directive__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../directives/cdk-drop-list-scroll-container.directive */ "./src/app/shared/directives/cdk-drop-list-scroll-container.directive.ts");
 var __read = (undefined && undefined.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;
@@ -18687,6 +18688,7 @@ var __spread = (undefined && undefined.__spread) || function () {
 
 
 
+
 var COMPONENTS = __spread([
     _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"],
     _avatar_avatar_component__WEBPACK_IMPORTED_MODULE_4__["AvatarComponent"],
@@ -18699,7 +18701,8 @@ var COMPONENTS = __spread([
     _catering_category_list_category_list_component__WEBPACK_IMPORTED_MODULE_11__["CateringEditCategoryListComponent"],
     _catering_item_list_item_list_component__WEBPACK_IMPORTED_MODULE_12__["CateringEditItemListComponent"],
     _catering_item_list_list_item_list_item_component__WEBPACK_IMPORTED_MODULE_13__["CateringEditListItemComponent"],
-    _catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__["CateringEditOrderComponent"]
+    _catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__["CateringEditOrderComponent"],
+    _directives_cdk_drop_list_scroll_container_directive__WEBPACK_IMPORTED_MODULE_15__["CdkDropListScrollContainer"]
 ]);
 var ENTRY_COMPONENTS = __spread(_custom_fields__WEBPACK_IMPORTED_MODULE_8__["CUSTOM_FORM_FIELDS"]);
 var PIPES = __spread(_pipes_time_pipe__WEBPACK_IMPORTED_MODULE_9__["TIME_PIPES"]);
@@ -20865,6 +20868,109 @@ var styles = [".header[_ngcontent-%COMP%] {\n  font-family: \"LarishMcKinsey\", 
 
 /***/ }),
 
+/***/ "./src/app/shared/directives/cdk-drop-list-scroll-container.directive.ts":
+/*!*******************************************************************************!*\
+  !*** ./src/app/shared/directives/cdk-drop-list-scroll-container.directive.ts ***!
+  \*******************************************************************************/
+/*! exports provided: ScrollDirection, CdkDropListScrollContainer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollDirection", function() { return ScrollDirection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CdkDropListScrollContainer", function() { return CdkDropListScrollContainer; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
+/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+var ScrollDirection;
+(function (ScrollDirection) {
+    ScrollDirection[ScrollDirection["NONE"] = 0] = "NONE";
+    ScrollDirection[ScrollDirection["X"] = 1] = "X";
+    ScrollDirection[ScrollDirection["Y"] = 2] = "Y";
+    ScrollDirection[ScrollDirection["BOTH"] = 3] = "BOTH";
+})(ScrollDirection || (ScrollDirection = {}));
+var CdkDropListScrollContainer = /** @class */ (function (_super) {
+    __extends(CdkDropListScrollContainer, _super);
+    function CdkDropListScrollContainer(_cdkDropList, _renderer) {
+        var _this = _super.call(this) || this;
+        _this._cdkDropList = _cdkDropList;
+        _this._renderer = _renderer;
+        /** Direction of scroll to determine updating the position of the drop list */
+        _this.direction = ScrollDirection.X;
+        /** Last scroll position */
+        _this.last_scroll = { x: 0, y: 0 };
+        return _this;
+    }
+    CdkDropListScrollContainer.prototype.ngOnChanges = function (changes) {
+        if (changes.scrollContainer && this.scrollContainer) {
+            this.element = this._cdkDropList.element.nativeElement.closest(this.scrollContainer);
+        }
+    };
+    CdkDropListScrollContainer.prototype.ngAfterContentInit = function () {
+        var _this = this;
+        this.subscription('drag_items', this.items.changes.subscribe(function (items) {
+            var list = items.toArray();
+            list.forEach(function (i, index) {
+                _this.subscription("list-item-" + index, _this._renderer.listen(i.element.nativeElement, 'mousedown', function () {
+                    _this.subscription('item-dragged', _this._renderer.listen('window', 'mouseup', function () { return _this.onDrop(); }));
+                    _this.onDrag();
+                }));
+                _this.subscription("list-item-touch-" + index, _this._renderer.listen(i.element.nativeElement, 'touchstart', function () {
+                    _this.subscription('item-dragged', _this._renderer.listen('window', 'touchend', function () { return _this.onDrop(); }));
+                    _this.onDrag();
+                }));
+            });
+        }));
+    };
+    /** Start listing for scroll events on the container */
+    CdkDropListScrollContainer.prototype.onDrag = function () {
+        var _this = this;
+        if (this.element) {
+            this.subscription('scroll', this._renderer.listen(this.element, 'scroll', function () { return _this.updateListPosition(); }));
+        }
+    };
+    /** Stop listening for scroll events on the container */
+    CdkDropListScrollContainer.prototype.onDrop = function () {
+        this.unsub('scroll');
+    };
+    /**
+     * Forcefully update the position data of the drop list
+     */
+    CdkDropListScrollContainer.prototype.updateListPosition = function () {
+        var _this = this;
+        this.timeout('update_positions', function () {
+            var scroll = { x: _this.element.scrollLeft, y: _this.element.scrollTop };
+            if (((_this.direction === ScrollDirection.BOTH || _this.direction === ScrollDirection.Y) && scroll.y !== _this.last_scroll.y) ||
+                ((_this.direction === ScrollDirection.BOTH || _this.direction === ScrollDirection.X) && scroll.x !== _this.last_scroll.x)) {
+                _this._cdkDropList._dropListRef._cacheOwnPosition();
+                _this._cdkDropList._dropListRef._siblings.forEach(function (i) { return (i.isReceiving() ? i._cacheOwnPosition() : null); });
+            }
+            _this.last_scroll = scroll;
+        }, 50);
+    };
+    return CdkDropListScrollContainer;
+}(_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/globals/application.ts":
 /*!***********************************************!*\
   !*** ./src/app/shared/globals/application.ts ***!
@@ -20885,7 +20991,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571880966000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571887176000);
 
 
 /***/ }),
