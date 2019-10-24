@@ -14666,7 +14666,7 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
             index: 0
         };
         var date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp);
-        var max_duration = this.max_length || (this.field.metadata ? this.field.metadata.max_duration || 480 : 480);
+        var max_duration = Math.min(480, this.max_length || (this.field.metadata ? this.field.metadata.max_duration || 480 : 480));
         var end = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).add(Math.max(30, max_duration) + 15, 'm');
         date.add(10, 'm');
         var dur = 10;
@@ -21130,7 +21130,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571812683000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1571896566000);
 
 
 /***/ }),
