@@ -1435,7 +1435,7 @@ function View_DayViewSpaceComponent_1(_l) { return _angular_core__WEBPACK_IMPORT
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](6144, null, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["ɵb"], null, [_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDrag"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 4866048, [[2, 4], [3, 4]], 3, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDrag"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], [3, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CDK_DROP_LIST"]], _angular_common__WEBPACK_IMPORTED_MODULE_6__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_7__["ViewportRuler"], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["DragDropRegistry"], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CDK_DRAG_CONFIG"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"]], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["DragDrop"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { started: "cdkDragStarted", released: "cdkDragReleased", moved: "cdkDragMoved" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](603979776, 7, { _handles: 1 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](335544320, 8, { _previewTemplate: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](335544320, 9, { _placeholderTemplate: 0 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 1, "day-view-space-event", [], null, [[null, "position"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("position" === en)) {
         var pd_0 = ((_co.position_list[_v.context.$implicit.id] = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, _event_event_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_DayViewSpaceEventComponent_0"], _event_event_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_DayViewSpaceEventComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 770048, null, 0, _event_event_component__WEBPACK_IMPORTED_MODULE_3__["DayViewSpaceEventComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { event: [0, "event"], space: [1, "space"], overlap: [2, "overlap"] }, { position: "position" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 1, null, View_DayViewSpaceComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, [[8, 4]], 0, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDragPreview"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 1, null, View_DayViewSpaceComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, [[9, 4]], 0, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDragPlaceholder"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_4 = (_v.context.$implicit.status !== "upcoming"); _ck(_v, 2, 0, currVal_4); var currVal_5 = _v.context.$implicit; var currVal_6 = _co.space; var currVal_7 = _co.overlap_details[_v.context.$implicit.id]; _ck(_v, 7, 0, currVal_5, currVal_6, currVal_7); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.inView !== false) ? "" : "none"); var currVal_1 = _v.context.$implicit.id; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).disabled; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2)._dragRef.isDragging(); _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3); }); }
+    } return ad; }, _event_event_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_DayViewSpaceEventComponent_0"], _event_event_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_DayViewSpaceEventComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 770048, null, 0, _event_event_component__WEBPACK_IMPORTED_MODULE_3__["DayViewSpaceEventComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { event: [0, "event"], space: [1, "space"], overlap: [2, "overlap"] }, { position: "position" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 1, null, View_DayViewSpaceComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, [[8, 4]], 0, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDragPreview"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 1, null, View_DayViewSpaceComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, [[9, 4]], 0, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDragPlaceholder"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_4 = ((_v.context.$implicit.status !== "upcoming") || (_v.context.$implicit.state === "cancelled")); _ck(_v, 2, 0, currVal_4); var currVal_5 = _v.context.$implicit; var currVal_6 = _co.space; var currVal_7 = _co.overlap_details[_v.context.$implicit.id]; _ck(_v, 7, 0, currVal_5, currVal_6, currVal_7); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.inView !== false) ? "" : "none"); var currVal_1 = _v.context.$implicit.id; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).disabled; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2)._dragRef.isDragging(); _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3); }); }
 function View_DayViewSpaceComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](402653184, 1, { view: 0 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, [[1, 0], ["view", 1]], null, 15, "div", [["cdkDropList", ""], ["cdkDropListSortingDisabled", ""], ["class", "space-display cdk-drop-list"], ["scrollContainer", "#day-view-scroll"]], [[8, "id", 0], [2, "cdk-drop-list-disabled", null], [2, "cdk-drop-list-dragging", null], [2, "cdk-drop-list-receiving", null]], [[null, "cdkDropListDropped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("cdkDropListDropped" === en)) {
         var pd_0 = (_co.drop($event) !== false);
         ad = (pd_0 && ad);
@@ -1463,7 +1463,7 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = [".space-display[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  pointer-events: auto; }\n  .space-display[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    pointer-events: none; }\n  .event-preview[_ngcontent-%COMP%] {\n  pointer-events: none; }\n  .event-placeholder[_ngcontent-%COMP%] {\n  position: absolute;\n  width: calc(100% - .5em);\n  margin: 0 .25em;\n  border: 3px dashed #969696;\n  background-color: rgba(0, 0, 0, 0.2);\n  border-radius: 4px;\n  transform: none !important;\n  z-index: 99999; }\n  .drop-zone[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  width: 100%;\n  pointer-events: none;\n  transform: none !important; }\n  .cdk-drag[_ngcontent-%COMP%] {\n  transform: none !important; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1jb25jaWVyZ2UtZGFzaGJvYXJkL3NyYy9hcHAvc2hlbGwvZGF5LXZpZXcvc3BhY2Uvc3BhY2UuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsb0JBQW9CLEVBQUE7RUFMeEI7SUFPUSxvQkFBb0IsRUFBQTtFQUk1QjtFQUNJLG9CQUFvQixFQUFBO0VBR3hCO0VBQ0ksa0JBQWtCO0VBQ2xCLHdCQUF3QjtFQUN4QixlQUFlO0VBQ2YsMEJBQTBCO0VBQzFCLG9DQUEyQjtFQUMzQixrQkFBa0I7RUFDbEIsMEJBQTBCO0VBQzFCLGNBQWMsRUFBQTtFQUdsQjtFQUNJLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osV0FBVztFQUNYLG9CQUFvQjtFQUNwQiwwQkFBMEIsRUFBQTtFQUc5QjtFQUNJLDBCQUEwQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvZGF5LXZpZXcvc3BhY2Uvc3BhY2UuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5zcGFjZS1kaXNwbGF5IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgcG9pbnRlci1ldmVudHM6IGF1dG87XG4gICAgPiAqIHtcbiAgICAgICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gICAgfVxufVxuXG4uZXZlbnQtcHJldmlldyB7XG4gICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG59XG5cbi5ldmVudC1wbGFjZWhvbGRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAuNWVtKTtcbiAgICBtYXJnaW46IDAgLjI1ZW07XG4gICAgYm9yZGVyOiAzcHggZGFzaGVkICM5Njk2OTY7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgjMDAwLCAuMik7XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xuICAgIHotaW5kZXg6IDk5OTk5O1xufVxuXG4uZHJvcC16b25lIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICAgIHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xufVxuXG4uY2RrLWRyYWcge1xuICAgIHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xufSJdfQ== */"];
+var styles = [".space-display[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  pointer-events: auto; }\n  .space-display[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    pointer-events: none; }\n  .event-preview[_ngcontent-%COMP%] {\n  pointer-events: none; }\n  .event-placeholder[_ngcontent-%COMP%] {\n  position: absolute;\n  width: calc(100% - .5em);\n  margin: 0 .25em;\n  border: 3px dashed #969696;\n  background-color: rgba(0, 0, 0, 0.2);\n  border-radius: 4px;\n  transform: none !important;\n  z-index: 99999; }\n  .drop-zone[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  width: 100%;\n  pointer-events: none;\n  transform: none !important; }\n  .cdk-drag[_ngcontent-%COMP%] {\n  transform: none !important;\n  cursor: -webkit-grab;\n  cursor: grab; }\n  .cdk-drag-disabled[_ngcontent-%COMP%] {\n  cursor: initial; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1jb25jaWVyZ2UtZGFzaGJvYXJkL3NyYy9hcHAvc2hlbGwvZGF5LXZpZXcvc3BhY2Uvc3BhY2UuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsb0JBQW9CLEVBQUE7RUFMeEI7SUFPUSxvQkFBb0IsRUFBQTtFQUk1QjtFQUNJLG9CQUFvQixFQUFBO0VBR3hCO0VBQ0ksa0JBQWtCO0VBQ2xCLHdCQUF3QjtFQUN4QixlQUFlO0VBQ2YsMEJBQTBCO0VBQzFCLG9DQUEyQjtFQUMzQixrQkFBa0I7RUFDbEIsMEJBQTBCO0VBQzFCLGNBQWMsRUFBQTtFQUdsQjtFQUNJLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osV0FBVztFQUNYLG9CQUFvQjtFQUNwQiwwQkFBMEIsRUFBQTtFQUc5QjtFQUNJLDBCQUEwQjtFQUMxQixvQkFBWTtFQUFaLFlBQVksRUFBQTtFQUdoQjtFQUNJLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2RheS12aWV3L3NwYWNlL3NwYWNlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4uc3BhY2UtZGlzcGxheSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHBvaW50ZXItZXZlbnRzOiBhdXRvO1xuICAgID4gKiB7XG4gICAgICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICAgIH1cbn1cblxuLmV2ZW50LXByZXZpZXcge1xuICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xufVxuXG4uZXZlbnQtcGxhY2Vob2xkZXIge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gLjVlbSk7XG4gICAgbWFyZ2luOiAwIC4yNWVtO1xuICAgIGJvcmRlcjogM3B4IGRhc2hlZCAjOTY5Njk2O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoIzAwMCwgLjIpO1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICB0cmFuc2Zvcm06IG5vbmUgIWltcG9ydGFudDtcbiAgICB6LWluZGV4OiA5OTk5OTtcbn1cblxuLmRyb3Atem9uZSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgICB0cmFuc2Zvcm06IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLmNkay1kcmFnIHtcbiAgICB0cmFuc2Zvcm06IG5vbmUgIWltcG9ydGFudDtcbiAgICBjdXJzb3I6IGdyYWI7XG59XG5cbi5jZGstZHJhZy1kaXNhYmxlZCB7XG4gICAgY3Vyc29yOiBpbml0aWFsO1xufSJdfQ== */"];
 
 
 
@@ -1481,9 +1481,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayViewSpaceComponent", function() { return DayViewSpaceComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
+/* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -1563,7 +1563,7 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
         /** Events to display for the active date */
         get: function () {
             var _this = this;
-            var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.date).format('DD MMM YYYY');
+            var date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).format('DD MMM YYYY');
             if (this.space) {
                 var bookings = this.space.timeline[date] || [];
                 var list = bookings.filter(function (i) {
@@ -1617,15 +1617,15 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
         events.forEach(function (i) { return _this.overlap_details[i.id] = { index: 0, total: 1 }; });
         var _loop_1 = function (bkn) {
             var e_2, _a;
-            var bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_2__(bkn.date).startOf('m');
-            var bkn_end = dayjs__WEBPACK_IMPORTED_MODULE_2__(bkn_start).add(bkn.duration, 'm').startOf('m');
+            var bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_3__(bkn.date).startOf('m');
+            var bkn_end = dayjs__WEBPACK_IMPORTED_MODULE_3__(bkn_start).add(bkn.duration, 'm').startOf('m');
             var count = 1;
             var index = 0;
             var collisions = [];
             var _loop_2 = function (cmp) {
                 if (bkn.id !== cmp.id) {
-                    var cmp_start = dayjs__WEBPACK_IMPORTED_MODULE_2__(cmp.date).startOf('m');
-                    var cmp_end = dayjs__WEBPACK_IMPORTED_MODULE_2__(cmp_start).add(cmp.duration, 'm').startOf('m');
+                    var cmp_start = dayjs__WEBPACK_IMPORTED_MODULE_3__(cmp.date).startOf('m');
+                    var cmp_end = dayjs__WEBPACK_IMPORTED_MODULE_3__(cmp_start).add(cmp.duration, 'm').startOf('m');
                     if ((bkn_start.isSame(cmp_start, 'm') || (bkn_start.isAfter(cmp_start, 'm') && bkn_start.isBefore(cmp_end, 'm'))) ||
                         (bkn_end.isSame(cmp_end, 'm') || (bkn_end.isAfter(cmp_start, 'm') && bkn_end.isBefore(cmp_end, 'm')))) {
                         count++;
@@ -1732,76 +1732,102 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
         var old_state = booking.state;
         var top = event.previousContainer.data.top;
         var new_start = Math.round(((top || 0) / 100) * 24 * 60);
-        var old_date = dayjs__WEBPACK_IMPORTED_MODULE_2__(booking.date);
+        var old_date = dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date);
         var date = old_date.startOf('d').minute(new_start);
-        var now = dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('m');
+        var now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m');
         // Prevent moving event into past
         if (now.isAfter(date, 'm')) {
             return this._service.error('Meetings cannot be moved into the past');
         }
         // Check for collisions
-        var list_without_booking = __spread(event.container.data.list).filter(function (i) { return i.icaluid !== booking.icaluid; });
-        if (this._service.Bookings.checkConflicts(list_without_booking, [__assign({}, booking, { date: date.valueOf() })])) {
-            return this._service.error('Updated meeting clashes with another');
+        booking.state = 'loading';
+        this.override_state = booking.icaluid;
+        var room = booking.room;
+        var message = "Update " + booking.organiser.name + "'s meeting in \"" + (booking.room || {}).name + "\" from " + old_date.format('h:mm A') + " to " + date.format('h:mm A');
+        var new_booking = __assign({}, booking, { date: date.valueOf() });
+        if (event.container !== event.previousContainer) { // Same room
+            room = this._service.Rooms.item(event.container.id.replace('space-col-', ''));
+            new_booking.from_room = booking.room.email;
+            message = "Move " + booking.organiser.name + "'s meeting in \"" + (booking.room || {}).name + "\" to " + room.name + " at " + date.format('h:mm A');
         }
-        if (event.container === event.previousContainer) { // Same room
-            if (!old_date.isSame(date, 'm')) {
-                this._service.confirm({
-                    title: 'Update meeting',
-                    message: "Update " + booking.organiser.name + "'s meeting in \"" + (booking.room || {}).name + "\" from " + old_date.format('h:mm A') + " to " + date.format('h:mm A'),
-                    icon: 'event_available',
-                    accept: 'Ok',
-                    cancel: true
-                }, function (event) {
-                    if (event.type === 'Accept') {
-                        booking.state = 'loading';
-                        _this.override_state = booking.icaluid;
-                        var new_booking = __assign({}, booking, { room: booking.room_list, date: date.valueOf() });
-                        _this._service.Bookings.updateItem(booking.id, new_booking).then(function (bkn) {
-                            _this._service.Rooms.removeFromTimeline(booking.room.id, booking.id);
-                            _this._service.Rooms.addToTimeline(bkn);
-                            _this.override_state = null;
-                            _this._service.success("Successfully updated meeting time from " + old_date.format('h:mm A') + " to " + date.format('h:mm A'));
-                        }, function (err) {
-                            booking.state = old_state;
-                            _this.override_state = null;
-                            return _this._service.error("Error: " + err);
-                        });
-                    }
-                    event.close();
-                });
-            }
+        // Check if booking has a change
+        if (room === booking.room && date.isSame(old_date, 'm')) {
+            booking.state = old_state;
+            this.override_state = null;
+            return;
         }
-        else { // Different room
-            var new_room_1 = this._service.Rooms.item(event.container.id.replace('space-col-', ''));
-            if (new_room_1) {
-                var message = "Move " + booking.organiser.name + "'s meeting in \"" + (booking.room || {}).name + "\" to " + new_room_1.name + " at " + date.format('h:mm A');
-                this._service.confirm({
-                    title: 'Update meeting',
-                    message: message,
-                    icon: 'event_available',
-                    accept: 'Ok',
-                    cancel: true
-                }, function (event) {
-                    if (event.type === 'Accept') {
-                        booking.state = 'loading';
-                        var room_list = booking.room_list.filter(function (i) { return i.id !== booking.room.id; });
-                        var new_booking = __assign({}, booking, { from_room: booking.room.id, room: __spread([new_room_1], room_list), date: date.valueOf() });
-                        _this._service.Bookings.updateItem(booking.id, new_booking).then(function (bkn) {
-                            _this._service.Rooms.removeFromTimeline(booking.room.id, booking.id);
-                            _this._service.Rooms.addToTimeline(bkn);
-                            _this.override_state = null;
-                            _this._service.success("Successfully moved meeting from \"" + (booking.room || {}).name + "\" to \"" + new_room_1.name + "\" at " + date.format('h:mm A'));
-                        }, function (err) {
-                            booking.state = old_state;
-                            _this.override_state = null;
-                            return _this._service.error("Error: " + err);
-                        });
-                    }
-                    event.close();
-                });
-            }
+        var room_list = __spread([room], booking.room_list.filter(function (i) { return i.id !== booking.room.id; }));
+        // Check if booking is already in the room
+        var room_count = room_list.reduce(function (a, v) { return a.add(v.id); }, new Set()).size;
+        if (room_count < room_list.length) {
+            booking.state = old_state;
+            this.override_state = null;
+            return this._service.error('The meeting is already in this room');
         }
+        new_booking.room = room_list;
+        this.checkCollisions(room_list, date.valueOf(), booking.duration, booking.icaluid).then(function () {
+            _this.moveBooking(message, new_booking).then(function (bkn) {
+                _this._service.Rooms.removeFromTimeline(booking.room.id, booking.id);
+                _this._service.Rooms.addToTimeline(bkn);
+                _this.override_state = null;
+                _this._service.success("Successfully updated meeting time from " + old_date.format('h:mm A') + " to " + date.format('h:mm A'));
+            }, function (err) {
+                booking.state = old_state;
+                _this.override_state = null;
+                if (err !== 'User cancelled') {
+                    _this._service.error("Error: " + err);
+                }
+            });
+        }, function () {
+            booking.state = old_state;
+            _this.override_state = null;
+            _this._service.error('Updated meeting time clashes with another');
+        });
+    };
+    /**
+     * Check if there are any booking collisions with the new booking time
+     * @param spaces
+     * @param date
+     * @param duration
+     */
+    DayViewSpaceComponent.prototype.checkCollisions = function (spaces, date, duration, ignore) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this._service.Rooms.available({
+                room_ids: spaces.map(function (i) { return i.id; }).join(','),
+                date: date,
+                duration: duration,
+                ignore: ignore,
+                hide_bookings: true
+            }).then(function (list) {
+                list.length === spaces.length ? resolve() : reject();
+            }, function () { return reject(); });
+        });
+    };
+    /**
+     * Update booking
+     * @param confirm_msg
+     * @param new_booking
+     */
+    DayViewSpaceComponent.prototype.moveBooking = function (confirm_msg, new_booking) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this._service.confirm({
+                title: 'Update meeting',
+                message: confirm_msg,
+                icon: 'event_available',
+                accept: 'Ok',
+                cancel: true
+            }, function (event) {
+                if (event.type === 'Accept') {
+                    _this._service.Bookings.updateItem(new_booking.id, new_booking).then(function (bkn) { return resolve(bkn); }, function (err) { return reject(err); });
+                }
+                else {
+                    reject('User cancelled');
+                }
+                event.close();
+            });
+        });
     };
     return DayViewSpaceComponent;
 }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
