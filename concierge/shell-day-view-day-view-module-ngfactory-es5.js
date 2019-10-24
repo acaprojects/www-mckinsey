@@ -644,52 +644,27 @@ __webpack_require__.r(__webpack_exports__);
 var styles_DayViewComponent = [_day_view_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
 var RenderType_DayViewComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_DayViewComponent, data: {} });
 
-function View_DayViewComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "space-header"]], [[8, "title", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "div", [["class", "details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 0, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "capacity"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, [" Capacity - ", " ", " "]))], null, function (_ck, _v) { var currVal_0 = _v.context.$implicit.long_name; _ck(_v, 0, 0, currVal_0); var currVal_1 = _v.context.$implicit.name; _ck(_v, 3, 0, currVal_1); var currVal_2 = (_v.context.$implicit.capacity || "0"); var currVal_3 = ((_v.context.$implicit.capacity === 1) ? "person" : "people"); _ck(_v, 6, 0, currVal_2, currVal_3); }); }
+function View_DayViewComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "space-header"]], [[8, "title", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "div", [["class", "details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 0, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "capacity"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, ["Capacity - ", " ", ""]))], null, function (_ck, _v) { var currVal_0 = _v.context.$implicit.long_name; _ck(_v, 0, 0, currVal_0); var currVal_1 = _v.context.$implicit.name; _ck(_v, 3, 0, currVal_1); var currVal_2 = (_v.context.$implicit.capacity || "0"); var currVal_3 = ((_v.context.$implicit.capacity === 1) ? "person" : "people"); _ck(_v, 6, 0, currVal_2, currVal_3); }); }
 function View_DayViewComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "sidebar"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "div", [["class", "space-header"]], [[8, "title", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Holding Bay"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 0, "div", [["class", "icon"]], null, null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.holding_bay.name; _ck(_v, 1, 0, currVal_0); }); }
 function View_DayViewComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "hour"], ["div", ""]], [[2, "active", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.is_today && (_v.context.$implicit.id === _co.active_hour)); _ck(_v, 1, 0, currVal_0); var currVal_1 = _v.context.$implicit.display; _ck(_v, 2, 0, currVal_1); }); }
 function View_DayViewComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "div", [["class", "line"]], null, null, null, null, null))], null, null); }
 function View_DayViewComponent_5(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["cdkDropListGroup", ""], ["class", "space"]], [[4, "min-height", null]], null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 147456, null, 0, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__["CdkDropListGroup"], [], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "day-view-space", [], null, [[null, "dragging"], [null, "inView"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("dragging" === en)) {
-        var pd_0 = ((_co.is_dragging = $event) !== false);
+        var pd_0 = (_co.dragChange($event) !== false);
         ad = (pd_0 && ad);
     } if (("inView" === en)) {
         var pd_1 = ((_co.in_view[_v.context.$implicit.id] = $event) !== false);
         ad = (pd_1 && ad);
-    } return ad; }, _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_DayViewSpaceComponent_0"], _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_DayViewSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 770048, null, 0, _space_space_component__WEBPACK_IMPORTED_MODULE_4__["DayViewSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_5__["AppService"]], { space_list: [0, "space_list"], date: [1, "date"], space: [2, "space"], scroll: [3, "scroll"], last_update: [4, "last_update"] }, { inView: "inView", dragging: "dragging" })], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.space_zones; var currVal_2 = _co.date; var currVal_3 = _v.context.$implicit; var currVal_4 = (0 - _co.scroll_left); var currVal_5 = _co.last_update; _ck(_v, 3, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.time_blocks.length * 3) + "rem"); _ck(_v, 0, 0, currVal_0); }); }
+    } return ad; }, _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_DayViewSpaceComponent_0"], _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_DayViewSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 770048, null, 0, _space_space_component__WEBPACK_IMPORTED_MODULE_4__["DayViewSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_5__["AppService"]], { space_list: [0, "space_list"], date: [1, "date"], space: [2, "space"], scroll: [3, "scroll"], scroll_top: [4, "scroll_top"], last_update: [5, "last_update"] }, { inView: "inView", dragging: "dragging" })], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.space_zones; var currVal_2 = _co.date; var currVal_3 = _v.context.$implicit; var currVal_4 = (0 - _co.scroll_left); var currVal_5 = (_co.scroll_offset - _co.scroll_top); var currVal_6 = _co.last_update; _ck(_v, 3, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.time_blocks.length * 3) + "rem"); _ck(_v, 0, 0, currVal_0); }); }
 function View_DayViewComponent_6(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "now-line"]], [[4, "top", null]], null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](1, 1), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "div", [["class", "knob"]], null, null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 0, 0, _ck(_v, 1, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 0), (((("calc(" + ((_co.now * _co.time_blocks.length) * 3)) + "rem - ") + _co.scroll_top) + "px)"))); _ck(_v, 0, 0, currVal_0); }); }
 function View_DayViewComponent_8(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "day-view-space", [], null, [[null, "dragging"], [null, "inView"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("dragging" === en)) {
-        var pd_0 = ((_co.is_dragging = $event) !== false);
+        var pd_0 = (_co.dragChange($event) !== false);
         ad = (pd_0 && ad);
     } if (("inView" === en)) {
         var pd_1 = ((_co.in_view[_co.holding_bay.id] = $event) !== false);
         ad = (pd_1 && ad);
     } return ad; }, _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_DayViewSpaceComponent_0"], _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_DayViewSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 770048, null, 0, _space_space_component__WEBPACK_IMPORTED_MODULE_4__["DayViewSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_5__["AppService"]], { date: [0, "date"], space: [1, "space"], last_update: [2, "last_update"] }, { inView: "inView", dragging: "dragging" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.date; var currVal_1 = _co.holding_bay; var currVal_2 = _co.last_update; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
 function View_DayViewComponent_7(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "sidebar"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "day-view-approvals-view", [], null, null, null, _approvals_view_approvals_view_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["View_DayViewApprovalsViewComponent_0"], _approvals_view_approvals_view_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["RenderType_DayViewApprovalsViewComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 770048, null, 0, _approvals_view_approvals_view_component__WEBPACK_IMPORTED_MODULE_8__["DayViewApprovalsViewComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_5__["AppService"]], { date: [0, "date"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.holding_bay; _ck(_v, 2, 0, currVal_0); var currVal_1 = _co.date; _ck(_v, 4, 0, currVal_1); }, null); }
-function View_DayViewComponent_9(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "auto-scroll"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "div", [["class", "top"]], null, [[null, "mouseenter"], [null, "mouseleave"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mouseenter" === en)) {
-        var pd_0 = (_co.scrollView(0, (0 - 10)) !== false);
-        ad = (pd_0 && ad);
-    } if (("mouseleave" === en)) {
-        var pd_1 = (_co.cancelScroll() !== false);
-        ad = (pd_1 && ad);
-    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "div", [["class", "left"]], null, [[null, "mouseenter"], [null, "mouseleave"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mouseenter" === en)) {
-        var pd_0 = (_co.scrollView((0 - 10), 0) !== false);
-        ad = (pd_0 && ad);
-    } if (("mouseleave" === en)) {
-        var pd_1 = (_co.cancelScroll() !== false);
-        ad = (pd_1 && ad);
-    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 0, "div", [["class", "right"]], null, [[null, "mouseenter"], [null, "mouseleave"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mouseenter" === en)) {
-        var pd_0 = (_co.scrollView((0 - 10), 0) !== false);
-        ad = (pd_0 && ad);
-    } if (("mouseleave" === en)) {
-        var pd_1 = (_co.cancelScroll() !== false);
-        ad = (pd_1 && ad);
-    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 0, "div", [["class", "bottom"]], null, [[null, "mouseenter"], [null, "mouseleave"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mouseenter" === en)) {
-        var pd_0 = (_co.scrollView(0, 10) !== false);
-        ad = (pd_0 && ad);
-    } if (("mouseleave" === en)) {
-        var pd_1 = (_co.cancelScroll() !== false);
-        ad = (pd_1 && ad);
-    } return ad; }, null, null))], null, null); }
-function View_DayViewComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_9__["SafeStylePipe"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__["DomSanitizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](402653184, 1, { scroll_area: 0 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 29, "div", [["class", "day-view"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 9, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "div", [["class", "time-blocks"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Time"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 3, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 2, "div", [["class", "group"]], [[4, "left", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 16, "div", [["class", "body"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
+function View_DayViewComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_9__["SafeStylePipe"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__["DomSanitizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](402653184, 1, { scroll_area: 0 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 27, "div", [["class", "day-view"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 9, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "div", [["class", "time-blocks"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Time"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 3, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 2, "div", [["class", "group"]], [[4, "left", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 16, "div", [["class", "body"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 14).mousestart($event) !== false);
         ad = (pd_0 && ad);
     } if (("touchstart" === en)) {
@@ -707,8 +682,11 @@ function View_DayViewComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MO
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_9__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 3, "div", [["class", "time-blocks"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](16, 0, null, null, 2, "div", [["class", "group"]], [[4, "top", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, [[1, 0], ["scroll_area", 1]], null, 6, "div", [["class", "flex content"], ["id", "day-view-scroll"]], null, [[null, "scroll"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("scroll" === en)) {
         var pd_0 = (_co.updateScroll($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](20, 0, null, null, 2, "div", [["class", "time-lines"]], [[4, "min-width", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](23, 0, null, null, 2, "div", [["class", "space-day"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](29, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](31, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.filtered_spaces; _ck(_v, 10, 0, currVal_1); var currVal_2 = _co.holding_bay; _ck(_v, 12, 0, currVal_2); var currVal_4 = _co.time_blocks; _ck(_v, 18, 0, currVal_4); var currVal_6 = _co.time_blocks; _ck(_v, 22, 0, currVal_6); var currVal_7 = _co.filtered_spaces; _ck(_v, 25, 0, currVal_7); var currVal_8 = _co.is_today; _ck(_v, 27, 0, currVal_8); var currVal_9 = _co.holding_bay; _ck(_v, 29, 0, currVal_9); var currVal_10 = _co.is_dragging; _ck(_v, 31, 0, currVal_10); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((0 - _co.scroll_left) + "px"); _ck(_v, 8, 0, currVal_0); var currVal_3 = ((0 - _co.scroll_top) + "px"); _ck(_v, 16, 0, currVal_3); var currVal_5 = ((_co.filtered_spaces.length * 15) + "rem"); _ck(_v, 20, 0, currVal_5); }); }
-function View_DayViewComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-day-view", [], null, null, null, View_DayViewComponent_0, RenderType_DayViewComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _day_view_component__WEBPACK_IMPORTED_MODULE_11__["DayViewComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_5__["AppService"], _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](20, 0, null, null, 2, "div", [["class", "time-lines"]], [[4, "min-width", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](23, 0, null, null, 2, "div", [["class", "space-day"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](29, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.filtered_spaces; _ck(_v, 10, 0, currVal_1); var currVal_2 = _co.holding_bay; _ck(_v, 12, 0, currVal_2); var currVal_4 = _co.time_blocks; _ck(_v, 18, 0, currVal_4); var currVal_6 = _co.time_blocks; _ck(_v, 22, 0, currVal_6); var currVal_7 = _co.filtered_spaces; _ck(_v, 25, 0, currVal_7); var currVal_8 = _co.is_today; _ck(_v, 27, 0, currVal_8); var currVal_9 = _co.holding_bay; _ck(_v, 29, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((0 - _co.scroll_left) + "px"); _ck(_v, 8, 0, currVal_0); var currVal_3 = ((0 - _co.scroll_top) + "px"); _ck(_v, 16, 0, currVal_3); var currVal_5 = ((_co.filtered_spaces.length * 15) + "rem"); _ck(_v, 20, 0, currVal_5); }); }
+function View_DayViewComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-day-view", [], null, [["window", "resize"]], function (_v, en, $event) { var ad = true; if (("window:resize" === en)) {
+        var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).onResize() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, View_DayViewComponent_0, RenderType_DayViewComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _day_view_component__WEBPACK_IMPORTED_MODULE_11__["DayViewComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_5__["AppService"], _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var DayViewComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-day-view", _day_view_component__WEBPACK_IMPORTED_MODULE_11__["DayViewComponent"], View_DayViewComponent_Host_0, {}, {}, []);
 
 
@@ -774,16 +752,19 @@ var __extends = (undefined && undefined.__extends) || (function () {
 var UPDATE_INTERVAL = 15;
 var DayViewComponent = /** @class */ (function (_super) {
     __extends(DayViewComponent, _super);
-    function DayViewComponent(_service, _route) {
+    function DayViewComponent(_service, _route, _renderer) {
         var _this = _super.call(this) || this;
         _this._service = _service;
         _this._route = _route;
+        _this._renderer = _renderer;
         /** List of timeblocks to display */
         _this.time_blocks = _this.generateTimeBlocks();
         /** Top value of the content scroll */
         _this.scroll_top = 0;
         /** Left value of the content scroll */
         _this.scroll_left = 0;
+        /** Offset of the scroll value when starting a drag */
+        _this.scroll_offset = 0;
         /** List of spaces to display for  */
         _this.spaces = [];
         /** List of spaces to display for  */
@@ -796,6 +777,12 @@ var DayViewComponent = /** @class */ (function (_super) {
         _this.last_update = 0;
         return _this;
     }
+    /** Update scroll box when the window is resized */
+    DayViewComponent.prototype.onResize = function () {
+        if (this.scroll_area.nativeElement) {
+            this.box = this.scroll_area.nativeElement.getBoundingClientRect();
+        }
+    };
     Object.defineProperty(DayViewComponent.prototype, "holding_bay", {
         get: function () {
             var bld = this._service.Buildings.current();
@@ -855,6 +842,9 @@ var DayViewComponent = /** @class */ (function (_super) {
                 _this.updateScroll({ target: _this.scroll_area.nativeElement });
             }
         }, 1000);
+        if (this.scroll_area.nativeElement) {
+            this.box = this.scroll_area.nativeElement.getBoundingClientRect();
+        }
     };
     Object.defineProperty(DayViewComponent.prototype, "space_zones", {
         /** List of space */
@@ -961,21 +951,18 @@ var DayViewComponent = /** @class */ (function (_super) {
      * @param y
      */
     DayViewComponent.prototype.scrollView = function (x, y) {
-        var _this = this;
         if (x || y) {
-            this.interval('auto_scroll', function () {
-                console.log('Update scroll');
-                _this.scroll_area.nativeElement.scrollTop += y || 0;
-                _this.scroll_area.nativeElement.scrollLeft += x || 0;
-                if ((y && _this.scroll_area.nativeElement.scrollTop >= _this.scroll_area.nativeElement.scrollHeight)
-                    || (x && _this.scroll_area.nativeElement.scrollLeft >= _this.scroll_area.nativeElement.scrollWidth)
-                    || (y && _this.scroll_area.nativeElement.scrollTop <= 0)
-                    || (x && _this.scroll_area.nativeElement.scrollLeft <= 0)) {
-                    console.log('Cancel scroll');
-                    _this.clearInterval('auto_scroll');
-                }
-                _this.updateScroll({ target: _this.scroll_area.nativeElement });
-            }, 50);
+            console.log('Update scroll');
+            this.scroll_area.nativeElement.scrollTop += y || 0;
+            this.scroll_area.nativeElement.scrollLeft += x || 0;
+            if ((y && this.scroll_area.nativeElement.scrollTop >= this.scroll_area.nativeElement.scrollHeight)
+                || (x && this.scroll_area.nativeElement.scrollLeft >= this.scroll_area.nativeElement.scrollWidth)
+                || (y && this.scroll_area.nativeElement.scrollTop <= 0)
+                || (x && this.scroll_area.nativeElement.scrollLeft <= 0)) {
+                console.log('Cancel scroll');
+                this.clearInterval('auto_scroll');
+            }
+            this.updateScroll({ target: this.scroll_area.nativeElement });
         }
     };
     DayViewComponent.prototype.clearSelected = function () {
@@ -984,6 +971,33 @@ var DayViewComponent = /** @class */ (function (_super) {
     DayViewComponent.prototype.cancelScroll = function () {
         console.log('Cancel scroll');
         this.clearInterval('auto_scroll');
+    };
+    DayViewComponent.prototype.dragChange = function (is_dragging) {
+        var _this = this;
+        if (is_dragging) {
+            this.scroll_offset = this.scroll_area.nativeElement.scrollTop;
+            this.subscription('listen_move', this._renderer.listen('window', 'mousemove', function (event) {
+                var position = { x: event.clientX, y: event.clientY };
+                var y = position.y > (_this.box.bottom - (_this.box.height * 0.05))
+                    ? 1
+                    : (position.y < (_this.box.top + (_this.box.height * 0.05))
+                        ? -1
+                        : 0);
+                var x = position.x > (_this.box.right - (_this.box.width * 0.05))
+                    ? 1
+                    : (position.x < (_this.box.left + (_this.box.height * 0.05))
+                        ? -1
+                        : 0);
+                _this.scrollView(x * 5, y * 5);
+                _this.interval('auto_scroll', function () { return _this.scrollView(x * 5, y * 5); }, 50);
+            }));
+            this.clearInterval('bookings');
+        }
+        else {
+            this.interval('bookings', function () { return _this.updateBookings(); }, UPDATE_INTERVAL * 1000);
+            this.clearInterval('auto_scroll');
+            this.unsub('listen_move');
+        }
     };
     return DayViewComponent;
 }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
@@ -1428,7 +1442,7 @@ function View_DayViewSpaceComponent_0(_l) { return _angular_core__WEBPACK_IMPORT
         ad = (pd_0 && ad);
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 1196032, null, 1, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDropList"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["DragDropRegistry"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"]], [3, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDropListGroup"]], [2, _angular_common__WEBPACK_IMPORTED_MODULE_6__["DOCUMENT"]], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["DragDrop"]], { connectedTo: [0, "connectedTo"], data: [1, "data"], id: [2, "id"] }, { dropped: "cdkDropListDropped" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](603979776, 2, { _draggables: 1 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](4, { top: 0, list: 1 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](256, null, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDropListGroup"], undefined, []), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CDK_DROP_LIST"], null, [_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDropList"]]), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 16777216, null, null, 5, "div", [["cdkDrag", ""], ["class", "drop-zone cdk-drag"]], [[2, "cdk-drag-disabled", null], [2, "cdk-drag-dragging", null]], null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](6144, null, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["ɵb"], null, [_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDrag"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 4866048, [[2, 4]], 3, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CdkDrag"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], [3, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CDK_DROP_LIST"]], _angular_common__WEBPACK_IMPORTED_MODULE_6__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_7__["ViewportRuler"], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["DragDropRegistry"], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["CDK_DRAG_CONFIG"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"]], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_5__["DragDrop"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](603979776, 3, { _handles: 1 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](335544320, 4, { _previewTemplate: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](335544320, 5, { _placeholderTemplate: 0 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_DayViewSpaceComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"], ngForTrackBy: [1, "ngForTrackBy"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_4 = (_co.space_list || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵEMPTY_ARRAY"]); var currVal_5 = _ck(_v, 4, 0, _co.top, _co.events); var currVal_6 = ("space-col-" + ((_co.space == null) ? null : _co.space.id)); _ck(_v, 2, 0, currVal_4, currVal_5, currVal_6); var currVal_9 = _co.events; var currVal_10 = _co.trackByFn; _ck(_v, 14, 0, currVal_9, currVal_10); }, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).id; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).disabled; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2)._dropListRef.isDragging(); var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2)._dropListRef.isReceiving(); _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).disabled; var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9)._dragRef.isDragging(); _ck(_v, 7, 0, currVal_7, currVal_8); }); }
 function View_DayViewSpaceComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "day-view-space", [], null, null, null, View_DayViewSpaceComponent_0, RenderType_DayViewSpaceComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 770048, null, 0, _space_component__WEBPACK_IMPORTED_MODULE_9__["DayViewSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
-var DayViewSpaceComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("day-view-space", _space_component__WEBPACK_IMPORTED_MODULE_9__["DayViewSpaceComponent"], View_DayViewSpaceComponent_Host_0, { space_list: "space_list", date: "date", space: "space", scroll: "scroll", last_update: "lastUpdate" }, { inView: "inView", dragging: "dragging" }, []);
+var DayViewSpaceComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("day-view-space", _space_component__WEBPACK_IMPORTED_MODULE_9__["DayViewSpaceComponent"], View_DayViewSpaceComponent_Host_0, { space_list: "space_list", date: "date", space: "space", scroll: "scroll", scroll_top: "scrollTop", last_update: "lastUpdate" }, { inView: "inView", dragging: "dragging" }, []);
 
 
 
@@ -1700,7 +1714,7 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
     DayViewSpaceComponent.prototype.updateDragTop = function (event) {
         if (event.delta.y) {
             var y = event.pointerPosition.y;
-            var top_1 = (y - this.box.top) / this.box.height;
+            var top_1 = (y - this.box.top - this.scroll_top) / this.box.height;
             var top_minutes = (Math.round((top_1 * 24 * 60) / 15) * 15) / 60;
             this.top = (top_minutes / 24) * 100;
         }
@@ -1743,7 +1757,7 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
                     if (event.type === 'Accept') {
                         booking.state = 'loading';
                         _this.override_state = booking.icaluid;
-                        var new_booking = __assign({}, booking, { date: date.valueOf() });
+                        var new_booking = __assign({}, booking, { room: booking.room_list, date: date.valueOf() });
                         _this._service.Bookings.updateItem(booking.id, new_booking).then(function (bkn) {
                             _this._service.Rooms.removeFromTimeline(booking.room.id, booking.id);
                             _this._service.Rooms.addToTimeline(bkn);
@@ -1772,7 +1786,8 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
                 }, function (event) {
                     if (event.type === 'Accept') {
                         booking.state = 'loading';
-                        var new_booking = __assign({}, booking, { from_room: booking.room.id, room: new_room_1, date: date.valueOf() });
+                        var room_list = booking.room_list.filter(function (i) { return i.id !== booking.room.id; });
+                        var new_booking = __assign({}, booking, { from_room: booking.room.id, room: __spread([new_room_1], room_list), date: date.valueOf() });
                         _this._service.Bookings.updateItem(booking.id, new_booking).then(function (bkn) {
                             _this._service.Rooms.removeFromTimeline(booking.room.id, booking.id);
                             _this._service.Rooms.addToTimeline(bkn);
