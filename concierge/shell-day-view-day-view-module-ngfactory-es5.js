@@ -1744,7 +1744,7 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
         this.override_state = booking.icaluid;
         var room = booking.room;
         var message = "Update " + booking.organiser.name + "'s meeting in \"" + (booking.room || {}).name + "\" from " + old_date.format('h:mm A') + " to " + date.format('h:mm A');
-        var new_booking = __assign({}, booking, { date: date.valueOf() });
+        var new_booking = __assign({}, booking, { old_date: booking.date, date: date.valueOf() });
         if (event.container !== event.previousContainer) { // Same room
             room = this._service.Rooms.item(event.container.id.replace('space-col-', ''));
             new_booking.from_room = booking.room.email;
@@ -1820,7 +1820,8 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
                 cancel: true
             }, function (event) {
                 if (event.type === 'Accept') {
-                    _this._service.Bookings.updateItem(new_booking.id, new_booking).then(function (bkn) { return resolve(bkn); }, function (err) { return reject(err); });
+                    _this._service.Bookings.updateItem(new_booking.id, new_booking)
+                        .then(function (bkn) { return resolve(bkn); }, function (err) { return reject(err); });
                 }
                 else {
                     reject('User cancelled');

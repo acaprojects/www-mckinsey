@@ -1477,7 +1477,7 @@ class DayViewSpaceComponent extends _shared_globals_base_component__WEBPACK_IMPO
         this.override_state = booking.icaluid;
         let room = booking.room;
         let message = `Update ${booking.organiser.name}'s meeting in "${(booking.room || {}).name}" from ${old_date.format('h:mm A')} to ${date.format('h:mm A')}`;
-        let new_booking = Object.assign({}, booking, { date: date.valueOf() });
+        let new_booking = Object.assign({}, booking, { old_date: booking.date, date: date.valueOf() });
         if (event.container !== event.previousContainer) { // Same room
             room = this._service.Rooms.item(event.container.id.replace('space-col-', ''));
             new_booking.from_room = booking.room.email;
@@ -1551,7 +1551,8 @@ class DayViewSpaceComponent extends _shared_globals_base_component__WEBPACK_IMPO
                 cancel: true
             }, (event) => {
                 if (event.type === 'Accept') {
-                    this._service.Bookings.updateItem(new_booking.id, new_booking).then((bkn) => resolve(bkn), (err) => reject(err));
+                    this._service.Bookings.updateItem(new_booking.id, new_booking)
+                        .then((bkn) => resolve(bkn), (err) => reject(err));
                 }
                 else {
                     reject('User cancelled');
