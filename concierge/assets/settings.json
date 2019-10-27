@@ -95,7 +95,8 @@
             ]
         },
         "day_view": {
-            "has_approvals": true
+            "has_approvals": true,
+            "dragdrop": false
         },
         "booking": {
             "min_attendees": 0,
