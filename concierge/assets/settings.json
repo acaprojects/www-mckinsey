@@ -95,7 +95,8 @@
             ]
         },
         "day_view": {
-            "has_approvals": true
+            "has_approvals": true,
+            "dragdrop": false
         },
         "booking": {
             "min_attendees": 0,
@@ -155,6 +156,12 @@
                     "label": "Expected attendees",
                     "hide": true,
                     "type": "custom"
+                },
+                {
+                    "key": "all_day",
+                    "label": "All Day Booking",
+                    "hide": true,
+                    "type": "checkbox"
                 },
                 {
                     "key": "notify_users",
