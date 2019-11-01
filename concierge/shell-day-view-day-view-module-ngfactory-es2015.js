@@ -691,6 +691,7 @@ class DayViewComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_
         if (!this._service.ready() || !this._service.Rooms.list(true).length) {
             return this.timeout('init', () => this.ngOnInit());
         }
+        this._service.title = 'Day View';
         // Subscribe to changes of the selected level
         this.subscription('active_level', this._service.listen('APP.level', (level_id) => {
             const zone_id = level_id === -1 ? this._service.Buildings.current().id : level_id;

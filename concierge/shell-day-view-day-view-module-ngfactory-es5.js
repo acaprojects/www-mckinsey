@@ -799,6 +799,7 @@ var DayViewComponent = /** @class */ (function (_super) {
         if (!this._service.ready() || !this._service.Rooms.list(true).length) {
             return this.timeout('init', function () { return _this.ngOnInit(); });
         }
+        this._service.title = 'Day View';
         // Subscribe to changes of the selected level
         this.subscription('active_level', this._service.listen('APP.level', function (level_id) {
             var zone_id = level_id === -1 ? _this._service.Buildings.current().id : level_id;

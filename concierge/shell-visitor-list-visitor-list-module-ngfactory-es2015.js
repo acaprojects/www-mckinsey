@@ -526,6 +526,7 @@ class VisitorListComponent extends _shared_globals_base_component__WEBPACK_IMPOR
         this.host_list = { raw: [], filtered: [] };
     }
     ngOnInit() {
+        this._service.title = 'Visitor List';
         this.subscription('building', this._service.Buildings.listen(bld => {
             if (bld) {
                 this.building = bld;

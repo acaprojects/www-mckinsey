@@ -11,11 +11,11 @@
         "local_login": false
     },
     "app": {
-        "title": "ACA Projects",
-        "name": "ACA Projects",
-        "description": "ACA Projects Staff Application made in Angular 5+",
-        "short_name": "ACA",
-        "code": "ACA",
+        "title": "McKinsey Concierge",
+        "name": "McKinsey Concierge",
+        "description": "McKinsey Concierge Application made in Angular 5+",
+        "short_name": "McKinsey",
+        "code": "McK",
         "login": {
             "forgot": false
         },
