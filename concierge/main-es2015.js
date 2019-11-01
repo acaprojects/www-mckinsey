@@ -17718,7 +17718,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572583040000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572583947000);
 
 
 /***/ }),
