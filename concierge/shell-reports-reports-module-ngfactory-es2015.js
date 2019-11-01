@@ -626,6 +626,7 @@ class AppReportsComponent extends _shared_globals_base_component__WEBPACK_IMPORT
         this.model = {};
     }
     ngOnInit() {
+        this.service.title = 'Reports';
         this.init();
     }
     init() {

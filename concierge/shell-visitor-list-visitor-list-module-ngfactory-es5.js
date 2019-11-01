@@ -628,6 +628,7 @@ var VisitorListComponent = /** @class */ (function (_super) {
     }
     VisitorListComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this._service.title = 'Visitor List';
         this.subscription('building', this._service.Buildings.listen(function (bld) {
             if (bld) {
                 _this.building = bld;

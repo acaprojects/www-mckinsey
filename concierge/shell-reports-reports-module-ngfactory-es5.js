@@ -665,6 +665,7 @@ var AppReportsComponent = /** @class */ (function (_super) {
         return _this;
     }
     AppReportsComponent.prototype.ngOnInit = function () {
+        this.service.title = 'Reports';
         this.init();
     };
     AppReportsComponent.prototype.init = function () {
