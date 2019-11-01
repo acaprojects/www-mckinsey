@@ -2623,16 +2623,21 @@ var BookingMainFlowComponent = /** @class */ (function (_super) {
                     if (space && !id) {
                         this._service.navigate(['book', 'main', 'space']);
                     }
-                    else if (space && catering) {
+                    else if (this.spaces && this.spaces.length > 0) {
+                        this.addEquipment().then(function () {
+                            if (catering) {
+                                _this._service.navigate(['book', 'main', 'catering']);
+                            }
+                            else {
+                                _this.confirmBooking();
+                            }
+                        });
+                    }
+                    else if ((space || (this.spaces && this.spaces.length)) && catering) {
                         this._service.navigate(['book', 'main', 'catering']);
                     }
                     else {
-                        if (this.spaces && this.spaces.length > 0) {
-                            this.addEquipment().then(function () { return _this.confirmBooking(); });
-                        }
-                        else {
-                            this.confirmBooking();
-                        }
+                        this.confirmBooking();
                     }
                     break;
             }
