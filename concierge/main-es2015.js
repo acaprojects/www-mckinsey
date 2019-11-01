@@ -3374,7 +3374,7 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
         const order = catering_map[this.space.id];
         if (order) {
             booking.catering = order;
-            this.service.Bookings.updateItem(booking.id, booking).then(() => {
+            this.service.Bookings.updateItem(booking.id, Object.assign({}, booking, { room: booking.room_list || [booking.room] })).then(() => {
                 this.loading = false;
                 this.edit = false;
                 this.service.success('Successfully updated catering order');
@@ -17718,7 +17718,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572584024000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572584883000);
 
 
 /***/ }),

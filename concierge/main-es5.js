@@ -3863,7 +3863,7 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
         var order = catering_map[this.space.id];
         if (order) {
             booking.catering = order;
-            this.service.Bookings.updateItem(booking.id, booking).then(function () {
+            this.service.Bookings.updateItem(booking.id, __assign({}, booking, { room: booking.room_list || [booking.room] })).then(function () {
                 _this.loading = false;
                 _this.edit = false;
                 _this.service.success('Successfully updated catering order');
@@ -21104,7 +21104,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572584024000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572584883000);
 
 
 /***/ }),
