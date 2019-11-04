@@ -8027,7 +8027,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             all_day: form.all_day ? date.format('YYYY-MM-DD') : false,
             concierge: true
         };
-        if (request.catering && item.catering_code) {
+        if (request.catering && !request.catering.items && item.catering_code) {
             Object.keys(request.catering).forEach(k => {
                 if (request.catering[k]) {
                     request.catering[k].code = item.catering_code[k];
@@ -17724,7 +17724,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572845758000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572911486000);
 
 
 /***/ }),

@@ -9356,7 +9356,7 @@ var BookingsService = /** @class */ (function (_super) {
             all_day: form.all_day ? date.format('YYYY-MM-DD') : false,
             concierge: true
         };
-        if (request.catering && item.catering_code) {
+        if (request.catering && !request.catering.items && item.catering_code) {
             Object.keys(request.catering).forEach(function (k) {
                 if (request.catering[k]) {
                     request.catering[k].code = item.catering_code[k];
@@ -21110,7 +21110,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572845758000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572911486000);
 
 
 /***/ }),
