@@ -8029,7 +8029,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         };
         if (request.catering && item.catering_code) {
             Object.keys(request.catering).forEach(k => {
-                if (typeof request.catering[k] === 'object') {
+                if (request.catering[k]) {
                     request.catering[k].code = item.catering_code[k];
                 }
             });
@@ -17724,7 +17724,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572586691000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572845758000);
 
 
 /***/ }),
