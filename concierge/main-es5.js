@@ -5332,7 +5332,10 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
         /** Catering notes for the booking */
         get: function () {
             var _this = this;
-            return (this.notes.filter(function (i) { return i.type === 'catering' && (!i.space || i.space === _this.room.id); }) || []).map(function (i) { return i.message; });
+            if (this.catering) {
+                return (this.notes.filter(function (i) { return i.type === 'catering' && (!i.space || i.space === _this.room.id); }) || []).map(function (i) { return i.message; });
+            }
+            return [];
         },
         enumerable: true,
         configurable: true
@@ -21110,7 +21113,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572911943000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572928686000);
 
 
 /***/ }),

@@ -4609,7 +4609,10 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     }
     /** Catering notes for the booking */
     get catering_notes() {
-        return (this.notes.filter(i => i.type === 'catering' && (!i.space || i.space === this.room.id)) || []).map(i => i.message);
+        if (this.catering) {
+            return (this.notes.filter(i => i.type === 'catering' && (!i.space || i.space === this.room.id)) || []).map(i => i.message);
+        }
+        return [];
     }
     /** Equipment details for the booking */
     get equipment_notes() {
@@ -17724,7 +17727,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572911943000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572928686000);
 
 
 /***/ }),
