@@ -4750,7 +4750,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
     Object.defineProperty(MeetingDetailsOverlayComponent.prototype, "space_codes", {
         /** Number of attendees expected to turn up to the meeting */
         get: function () {
-            var codes = this.model.booking.equipment_code || {};
+            var codes = this.booking.equipment_code || {};
             return codes;
         },
         enumerable: true,
@@ -9700,6 +9700,7 @@ var BookingsService = /** @class */ (function (_super) {
                 room: raw_item.location_name
             },
             space_notes: raw_item.space_notes || {},
+            equipment_code: raw_item.equipment_code || {},
             notes: raw_item.notes || [],
             state: raw_item.show_as,
             approval_status: raw_item.status,
@@ -21173,7 +21174,7 @@ var version = '0.17.0';
 /** Version number of the base application */
 var core_version = '0.17.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572928489000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572995111000);
 
 
 /***/ }),
