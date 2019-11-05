@@ -9426,7 +9426,7 @@ var BookingsService = /** @class */ (function (_super) {
             for (var rm_id in item.catering_notes) {
                 request.notes.push({
                     type: 'catering',
-                    space: (rm_id === 'default' ? room : null) || rm_id,
+                    space: (rm_id === 'default' ? room.id : null) || rm_id,
                     message: item.catering_notes[rm_id],
                     author: user.name,
                     date: now.valueOf()
@@ -21116,7 +21116,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572932601000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572994762000);
 
 
 /***/ }),
