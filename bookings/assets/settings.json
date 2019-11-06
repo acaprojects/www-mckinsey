@@ -24,9 +24,6 @@
         "booking": {
             "title_prefix": ""
         },
-        "rooms": {
-            "enabled": true
-        },
         "selection": {
             "header": "Please select a Zen Zone to start",
             "list": [
