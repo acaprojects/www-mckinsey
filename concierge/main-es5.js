@@ -3842,8 +3842,9 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
                 }
             ]);
             this.new_note = '';
+            var rooms = booking_1.room_list ? booking_1.room_list : [booking_1.room];
             this.loading_notes = true;
-            this.service.Bookings.updateItem(booking_1.id, booking_1).then(function (booking) {
+            this.service.Bookings.updateItem(booking_1.id, __assign({}, booking_1, { room: rooms })).then(function (booking) {
                 _this.model.order = __assign({}, _this.order, { booking: booking });
                 _this.event('updated');
                 _this.loading_notes = false;
@@ -21116,7 +21117,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572994762000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1573100830000);
 
 
 /***/ }),

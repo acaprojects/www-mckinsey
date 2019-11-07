@@ -3354,8 +3354,9 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
                 }
             ];
             this.new_note = '';
+            const rooms = booking.room_list ? booking.room_list : [booking.room];
             this.loading_notes = true;
-            this.service.Bookings.updateItem(booking.id, booking).then((booking) => {
+            this.service.Bookings.updateItem(booking.id, Object.assign({}, booking, { room: rooms })).then((booking) => {
                 this.model.order = Object.assign({}, this.order, { booking });
                 this.event('updated');
                 this.loading_notes = false;
@@ -16280,7 +16281,7 @@ var styles = [".search[_ngcontent-%COMP%] {\n  padding: .5em 0; }\n.search[_ngco
 /*!********************************************************!*\
   !*** ./src/app/shared/components/user-search/index.ts ***!
   \********************************************************/
-/*! exports provided: USER_SEARCH_COMPONENTS, UserSearchComponent */
+/*! exports provided: UserSearchComponent, USER_SEARCH_COMPONENTS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17730,7 +17731,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572994762000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1573100830000);
 
 
 /***/ }),
