@@ -18012,16 +18012,16 @@ var FeedbackComponent = /** @class */ (function (_super) {
         _this.service = service;
         _this.router = router;
         _this.model = {};
-        _this.timeout('Getting Title', function () { _this.updateRoute(document.title); });
+        _this.timeout('Getting Title', function () { return _this.updateRoute(document.title); }, 1000);
         router.events
             .subscribe(function (event) {
-            _this.timeout('Getting Title', function () { _this.updateRoute(document.title); });
+            _this.timeout('Getting Title', function () { return _this.updateRoute(document.title); });
         });
         return _this;
     }
     FeedbackComponent.prototype.updateRoute = function (location) {
         location = location.substr(0, location.indexOf(" |"));
-        this.model.current_page = location;
+        this.model.current_page = location || 'Day View';
     };
     return FeedbackComponent;
 }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
@@ -21117,7 +21117,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1573100830000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1573174171000);
 
 
 /***/ }),

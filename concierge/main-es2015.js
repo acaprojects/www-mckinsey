@@ -15041,15 +15041,15 @@ class FeedbackComponent extends _shared_globals_base_component__WEBPACK_IMPORTED
         this.service = service;
         this.router = router;
         this.model = {};
-        this.timeout('Getting Title', () => { this.updateRoute(document.title); });
+        this.timeout('Getting Title', () => this.updateRoute(document.title), 1000);
         router.events
             .subscribe((event) => {
-            this.timeout('Getting Title', () => { this.updateRoute(document.title); });
+            this.timeout('Getting Title', () => this.updateRoute(document.title));
         });
     }
     updateRoute(location) {
         location = location.substr(0, location.indexOf(" |"));
-        this.model.current_page = location;
+        this.model.current_page = location || 'Day View';
     }
 }
 
@@ -16281,7 +16281,7 @@ var styles = [".search[_ngcontent-%COMP%] {\n  padding: .5em 0; }\n.search[_ngco
 /*!********************************************************!*\
   !*** ./src/app/shared/components/user-search/index.ts ***!
   \********************************************************/
-/*! exports provided: UserSearchComponent, USER_SEARCH_COMPONENTS */
+/*! exports provided: USER_SEARCH_COMPONENTS, UserSearchComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17731,7 +17731,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1573100830000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1573174171000);
 
 
 /***/ }),
