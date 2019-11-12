@@ -1470,6 +1470,7 @@ var ExploreTimelineComponent = /** @class */ (function (_super) {
         start.minutes(Math.ceil(start.minutes() / 5) * 5);
         this.display_time = start.format('h:mm a');
         this.display_date = start.isSame(moment__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
+        this.display_value = start.valueOf();
         this.interval('expired', function () { return _this.generateTimelineBlocks(); }, 60 * 1000);
     };
     ExploreTimelineComponent.prototype.ngAfterViewInit = function () {
@@ -1643,12 +1644,16 @@ var ExploreTimelineComponent = /** @class */ (function (_super) {
                 .minutes(0)
                 .subtract(30, 'm');
         }
-        var diff = moment__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).diff(now, 'm');
+        var diff = moment__WEBPACK_IMPORTED_MODULE_2__(this.display_value).diff(now, 'm');
+        console.log('Time:', now.format('h:mm A'), moment__WEBPACK_IMPORTED_MODULE_2__(this.display_value).format('h:mm A'));
+        console.log('Diff:', diff);
         if (diff < 0) {
             var start = moment__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
+            start.minute(Math.ceil(start.minute() / 5) * 5);
             this.selected_time = start.valueOf();
             this.display_time = start.format('h:mm a');
             this.display_date = start.isSame(moment__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
+            this.display_value = start.valueOf();
             start.minutes(Math.ceil(start.minutes() / 5) * 5);
             this.time.emit(start.valueOf());
         }
