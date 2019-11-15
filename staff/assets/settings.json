@@ -260,6 +260,12 @@
                     "type": "custom"
                 },
                 {
+                    "key": "icaluid",
+                    "label": "Calender UID",
+                    "type": "input",
+                    "hide": true
+                },
+                {
                     "key": "attendees",
                     "label": "Attendees",
                     "flex": true,
