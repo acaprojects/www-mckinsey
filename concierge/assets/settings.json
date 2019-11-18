@@ -103,6 +103,12 @@
             "search_host": true,
             "fields": [
                 {
+                    "key": "id",
+                    "label": "ID",
+                    "control_type": "input",
+                    "hide": true
+                },
+                {
                     "key": "date",
                     "label": "Date",
                     "control_type": "custom",
@@ -134,22 +140,19 @@
                     "key": "attendees",
                     "label": "Attendees",
                     "flex": true,
-                    "control_type": "custom",
-                    "no_edit": true
+                    "control_type": "custom"
                 },
                 {
                     "key": "title",
                     "label": "Meeting Subject",
                     "control_type": "input",
-                    "required": true,
-                    "no_edit": true
+                    "required": true
                 },
                 {
                     "key": "needs_catering",
                     "label": "Need Catering?",
                     "flex": true,
-                    "type": "checkbox",
-                    "no_edit": true
+                    "type": "checkbox"
                 },
                 {
                     "key": "expected_attendees",
