@@ -1,5 +1,5 @@
 {
-    "env": "dev",
+    "env": "prod",
     "debug": true,
     "composer": {
         "domain": "",
@@ -23,6 +23,9 @@
         "topbar": false,
         "booking": {
             "title_prefix": ""
+        },
+        "rooms": {
+            "enabled": false
         },
         "selection": {
             "header": "Please select a Zen Zone to start",
