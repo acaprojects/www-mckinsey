@@ -1332,7 +1332,7 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
         /** Period that the event will occur during the day */
         get: function () {
             if (this.event && this.event.display) {
-                return this.event.display.start + " \u2013 " + this.event.display.end;
+                return this.event.display.start + " - " + this.event.display.end;
             }
             return "";
         },

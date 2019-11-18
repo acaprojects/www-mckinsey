@@ -3326,7 +3326,7 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
         this.model.form = {};
         this.model.group = 0;
         let meeting_date = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.model.order.date);
-        this.model.meeting_time = meeting_date.format("(DD MMMM YYYY) h:mma");
+        this.model.meeting_time = meeting_date.format("(DD MMMM YYYY) h:mm A");
         // Grab the catering details for the order
         const value = {};
         value[this.space.id] = this.order.booking.catering;
@@ -7559,11 +7559,11 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             expected_attendees: raw_item.expected_attendees || {},
             display: {
                 date: start.format('DD MMM YYYY'),
-                time: `${start.format('h:mma')} - ${end.format('h:mma')}`,
-                start: start.format('h:mma'),
-                start_date: start.format('DD MMM YYYY [at] h:mma'),
-                end: has_end ? end.format('h:mma') : moment__WEBPACK_IMPORTED_MODULE_3__(start).add(raw_item.duration, 'm').format('h:mma'),
-                end_date: has_end ? end.format('DD MMM YYYY [at] h:mma') : moment__WEBPACK_IMPORTED_MODULE_3__(start).add(raw_item.duration, 'm').format('DD MMM YYYY [at] h:mma'),
+                time: `${start.format('h:mm A')} - ${end.format('h:mm A')}`,
+                start: start.format('h:mm A'),
+                start_date: start.format('DD MMM YYYY [at] h:mm A'),
+                end: has_end ? end.format('h:mm A') : moment__WEBPACK_IMPORTED_MODULE_3__(start).add(raw_item.duration, 'm').format('h:mm A'),
+                end_date: has_end ? end.format('DD MMM YYYY [at] h:mm A') : moment__WEBPACK_IMPORTED_MODULE_3__(start).add(raw_item.duration, 'm').format('DD MMM YYYY [at] h:mm A'),
                 duration: _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(duration)
             }
         };
@@ -7929,7 +7929,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                     settings.message = 'Meeting ';
                 }
                 settings.message += `
-                    on the ${date.format('Do of MMMM, YYYY')} at ${date.format('h:mma')}<br>
+                    on the ${date.format('Do of MMMM, YYYY')} at ${date.format('h:mm A')}<br>
                     for ${_shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(fields.duration)}
                 `;
                 break;
@@ -7942,7 +7942,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 break;
             case 'update':
                 settings.message = `Change booking ${room.name ? 'for "' + room.name + '"' : ''}<br>
-                                    to the ${date.format('Do of MMMM, YYYY')} at ${date.format('h:mma')}<br>
+                                    to the ${date.format('Do of MMMM, YYYY')} at ${date.format('h:mm A')}<br>
                                     for ${_shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(fields.duration)}`;
                 break;
         }
@@ -10230,7 +10230,7 @@ class VisitorsService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseSe
             initials: 'VISITOR',
             date: item.date || item.arrival_epoch * 1000,
             duration: item.duration || 60,
-            arrival: date.format('h:mma'),
+            arrival: date.format('h:mm A'),
             title: item.title,
             state: group ? '' : item.visitors[0].state,
             notify_users: item.notify_users,
@@ -10238,7 +10238,7 @@ class VisitorsService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseSe
             visitors: item.visitors,
             phone: item.phone,
             display: {
-                arrival: date.format('h:mm a'),
+                arrival: date.format('h:mm A'),
                 date: date.format('ddd, MMM D'),
             }
         };
@@ -10629,7 +10629,7 @@ class SettingsService {
     }
     printVersion() {
         const now = dayjs__WEBPACK_IMPORTED_MODULE_4__();
-        const built = now.isSame(_shared_globals_application__WEBPACK_IMPORTED_MODULE_2__["build"], 'd') ? `Today at ${_shared_globals_application__WEBPACK_IMPORTED_MODULE_2__["build"].format('h:mmA')}` : _shared_globals_application__WEBPACK_IMPORTED_MODULE_2__["build"].format('D MMM YYYY, h:mmA');
+        const built = now.isSame(_shared_globals_application__WEBPACK_IMPORTED_MODULE_2__["build"], 'd') ? `Today at ${_shared_globals_application__WEBPACK_IMPORTED_MODULE_2__["build"].format('h:mm A')}` : _shared_globals_application__WEBPACK_IMPORTED_MODULE_2__["build"].format('D MMM YYYY, h:mm A');
         this.log('CORE', `${_shared_globals_application__WEBPACK_IMPORTED_MODULE_2__["core_version"]}`, null, 'debug', true);
         this.log('APP', `${_shared_globals_application__WEBPACK_IMPORTED_MODULE_2__["version"]} | Built: ${built}`, null, 'debug', true);
     }
@@ -12493,11 +12493,11 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
         const end = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).add(Math.max(30, max_duration) + 15, 'm');
         date.add(10, 'm');
         let dur = 10;
-        this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
+        this.addDuration(duration, dur, ref ? date.format('h:mm A') : '');
         dur += 5;
         date.add(5, 'm');
         for (; date.isBefore(end, 'm'); date.add(15, 'm')) {
-            this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
+            this.addDuration(duration, dur, ref ? date.format('h:mm A') : '');
             dur += 15;
         }
         // Add week duration option
@@ -13697,7 +13697,7 @@ class CustomTimeFieldComponent extends _globals_base_component__WEBPACK_IMPORTED
         }
         now = now.minute(Math.ceil(now.minute() / 5) * 5);
         if (now.minute() % 15 !== 0) {
-            time.values.push({ id: now.format('HH:mm'), name: now.format('hh:mm A') });
+            time.values.push({ id: now.format('HH:mm'), name: now.format('h:mm A') });
             now = now.minute(Math.ceil(now.minute() / 15) * 15);
         }
         if (date.isAfter(now, 'd')) {
@@ -13705,10 +13705,10 @@ class CustomTimeFieldComponent extends _globals_base_component__WEBPACK_IMPORTED
         }
         const end = dayjs__WEBPACK_IMPORTED_MODULE_7__(now).endOf('d');
         for (; now.isBefore(end, 'm'); now = now.add(15, 'm')) {
-            time.values.push({ id: now.format('HH:mm'), name: now.format('hh:mm A') });
+            time.values.push({ id: now.format('HH:mm'), name: now.format('h:mm A') });
         }
         const ts = date.format('HH:mm');
-        time.index = this.getIndex(ts, time.values, date.format('hh:mm A'));
+        time.index = this.getIndex(ts, time.values, date.format('h:mm A'));
         time.values = _utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].unique(time.values, 'id');
         return time;
     }
@@ -13750,7 +13750,7 @@ class CustomTimeFieldComponent extends _globals_base_component__WEBPACK_IMPORTED
         let date = (value ? dayjs__WEBPACK_IMPORTED_MODULE_7__(value) : dayjs__WEBPACK_IMPORTED_MODULE_7__()).hour(+parts[0]).minute(+parts[1]);
         date = date.minute(Math.round(date.minute() / 5) * 5);
         this.setValue(date.format('HH:mm'));
-        this.index = this.getIndex(date.format('HH:mm'), this.blocks, date.format('hh:mm A'));
+        this.index = this.getIndex(date.format('HH:mm'), this.blocks, date.format('h:mm A'));
     }
     checkFontSize(tries = 0) {
         if (tries > 5) {
@@ -17219,7 +17219,7 @@ class VisitorFormComponent extends _globals_base_component__WEBPACK_IMPORTED_MOD
         this.model.display = {};
         const date = moment__WEBPACK_IMPORTED_MODULE_3__(this.model.form.date);
         this.model.display.date = date.format('dddd, Do MMMM YYYY');
-        this.model.display.time = date.format('h:mm a');
+        this.model.display.time = date.format('h:mm A');
     }
     home() {
         this.service.navigate('');
@@ -17423,7 +17423,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574052042000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574052416000);
 
 
 /***/ }),
@@ -18980,7 +18980,7 @@ __webpack_require__.r(__webpack_exports__);
 */
 class ShowTimePipe {
     transform(time) {
-        return dayjs__WEBPACK_IMPORTED_MODULE_1__(time).format('h:mm a');
+        return dayjs__WEBPACK_IMPORTED_MODULE_1__(time).format('h:mm A');
     }
 }
 /**

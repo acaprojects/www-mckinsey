@@ -142,7 +142,7 @@ class VisitorListHostItemComponent extends _shared_globals_base_component__WEBPA
             this.timeout('date', () => {
                 const date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.group.date);
                 const end = date.add(this.group.duration, 'm');
-                this.time_display = this.group.all_day ? 'All Day' : `${date.format('h:mm a')} - ${end.format('h:mm a')}`;
+                this.time_display = this.group.all_day ? 'All Day' : `${date.format('h:mm A')} - ${end.format('h:mm A')}`;
             }, 10);
         }
     }

@@ -1173,7 +1173,7 @@ class DayViewSpaceEventComponent extends _shared_globals_base_component__WEBPACK
     /** Period that the event will occur during the day */
     get period() {
         if (this.event && this.event.display) {
-            return `${this.event.display.start} – ${this.event.display.end}`;
+            return `${this.event.display.start} - ${this.event.display.end}`;
         }
         return ``;
     }
