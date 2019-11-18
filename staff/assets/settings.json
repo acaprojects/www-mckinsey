@@ -6,7 +6,7 @@
         "domain": "",
         "route": "/staff",
         "protocol": "https:",
-        "use_domain": true,
+        "use_domain": false,
         "local_login": false
     },
     "app": {
@@ -258,6 +258,12 @@
                     "key": "host",
                     "label": "Meeting Host",
                     "type": "custom"
+                },
+                {
+                    "key": "icaluid",
+                    "label": "Calender UID",
+                    "type": "input",
+                    "hide": true
                 },
                 {
                     "key": "attendees",
