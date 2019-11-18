@@ -358,7 +358,7 @@ var styles_AppComponent = [_app_component_scss_ngstyle__WEBPACK_IMPORTED_MODULE_
 var RenderType_AppComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 2, styles: styles_AppComponent, data: {} });
 
 function View_AppComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "app"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 212992, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ChildrenOutletContexts"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, null)], function (_ck, _v) { _ck(_v, 2, 0); }, null); }
-function View_AppComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 16777216, null, null, 1, "app-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 49152, null, 0, _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["OverlayService"], _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_5__["UploadManager"], _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_5__["Md5Workers"], _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_6__["OAuthService"]], null, null)], null, null); }
+function View_AppComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 16777216, null, null, 1, "app-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["OverlayService"], _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_5__["UploadManager"], _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_5__["Md5Workers"], _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_6__["ComposerService"]], null, null)], null, null); }
 var AppComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-root", _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], View_AppComponent_Host_0, {}, {}, []);
 
 
@@ -400,44 +400,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm5/acaprojects-ngx-widgets.js");
 /* harmony import */ var _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-uploads */ "./node_modules/@acaprojects/ngx-uploads/fesm5/acaprojects-ngx-uploads.js");
-/* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
+/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 
 
 
 
 
-var AppComponent = /** @class */ (function () {
-    function AppComponent(view, overlay, uploads, _md5_workers, auth) {
-        this.view = view;
-        this.overlay = overlay;
-        this.uploads = uploads;
-        this._md5_workers = _md5_workers;
-        this.auth = auth;
-        this.overlay.view = view;
+
+var AppComponent = /** @class */ (function (_super) {
+    __extends(AppComponent, _super);
+    function AppComponent(view, overlay, uploads, _md5_workers, _composer) {
+        var _this = _super.call(this) || this;
+        _this.view = view;
+        _this.overlay = overlay;
+        _this.uploads = uploads;
+        _this._md5_workers = _md5_workers;
+        _this._composer = _composer;
+        _this.overlay.view = view;
         window.app_loaded = true;
-        if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production && 'serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistration()
+        if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production && 'serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .getRegistration()
                 .then(function (active) { return !active && navigator.serviceWorker.register('ngsw-worker.js'); })
                 .catch(console.error);
         }
-        this._md5_workers.setup('assets/md5_worker.js');
-        this.initUploads();
+        _this._md5_workers.setup('assets/md5_worker.js');
+        _this.initUploads();
+        return _this;
     }
     AppComponent.prototype.initUploads = function () {
         var _this = this;
-        this.auth.getAccessToken().then(function (token) {
-            if (!token) {
-                return setTimeout(function () { return _this.initUploads(); }, 300);
+        this.subscription('composer', this._composer.initialised.subscribe(function (state) {
+            if (state) {
+                _this.timeout('init_uploads', function () {
+                    var token = _this._composer.auth.token;
+                    if (!token) {
+                        return setTimeout(function () { return _this.initUploads(); }, 300);
+                    }
+                    _this.uploads.token = token;
+                    _this.uploads.autoStart = true;
+                    _this.uploads.endpoint = '/api/staff/uploads';
+                    _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_2__["UploadManager"].addProvider(_acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_2__["Amazon"]);
+                });
+                _this.unsub('composer');
             }
-            _this.uploads.token = token;
-            _this.uploads.autoStart = true;
-            _this.uploads.endpoint = '/api/staff/uploads';
-            _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_2__["UploadManager"].addProvider(_acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_2__["Amazon"]);
-        });
+        }));
     };
     return AppComponent;
-}());
+}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_5__["BaseComponent"]));
 
 
 
@@ -3842,8 +3867,9 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
                 }
             ]);
             this.new_note = '';
+            var rooms = booking_1.room_list ? booking_1.room_list : [booking_1.room];
             this.loading_notes = true;
-            this.service.Bookings.updateItem(booking_1.id, booking_1).then(function (booking) {
+            this.service.Bookings.updateItem(booking_1.id, __assign({}, booking_1, { room: rooms })).then(function (booking) {
                 _this.model.order = __assign({}, _this.order, { booking: booking });
                 _this.event('updated');
                 _this.loading_notes = false;
@@ -7303,16 +7329,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_catering_catering_categories_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./data/catering/catering-categories.service */ "./src/app/services/data/catering/catering-categories.service.ts");
 /* harmony import */ var _overlays_catering_modal_catering_modal_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../overlays/catering-modal/catering-modal.component */ "./src/app/overlays/catering-modal/catering-modal.component.ts");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __values = (undefined && undefined.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
-    if (m) return m.call(o);
-    return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-};
 
 
 
@@ -7374,14 +7390,14 @@ var __values = (undefined && undefined.__values) || function (o) {
 
 
 var AppService = /** @class */ (function () {
-    function AppService(_title, _cache, router, overlay, analytics, settings, systems, hotkeys, buildings, bookings, catering_items, catering_categories, catering_menu, comments, rooms, users, location, visitors, contacts, reports, bookingsreports) {
+    function AppService(_title, _cache, router, overlay, analytics, settings, _composer, hotkeys, buildings, bookings, catering_items, catering_categories, catering_menu, comments, rooms, users, location, visitors, contacts, reports, bookingsreports) {
         this._title = _title;
         this._cache = _cache;
         this.router = router;
         this.overlay = overlay;
         this.analytics = analytics;
         this.settings = settings;
-        this.systems = systems;
+        this._composer = _composer;
         this.hotkeys = hotkeys;
         this.buildings = buildings;
         this.bookings = bookings;
@@ -7406,11 +7422,6 @@ var AppService = /** @class */ (function () {
         this.buildings.parent = this.bookings.parent = this.rooms.parent = this.comments.parent = this;
         this.users.parent = this.analytics.parent = this.catering_items.parent = this.visitors.parent = this;
         this.location.parent = this.contacts.parent = this.catering_menu.parent = this.catering_categories.parent = this.reports.parent = this.bookingsreports.parent = this;
-        // Create subjects
-        this.subjects.system = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]('');
-        this.observers.system = this.subjects.system.asObservable();
-        this.subjects.systems = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]([]);
-        this.observers.systems = this.subjects.systems.asObservable();
         // Register modals/overlay components
         this.overlay.registerService(this);
         this.overlay.setupModal('confirm', { cmp: _overlays_confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_23__["ConfirmModalComponent"] });
@@ -7464,25 +7475,19 @@ var AppService = /** @class */ (function () {
             window.application = this;
         }
         this.model.title = this.settings.get('app.title') || 'Angular Application';
-        this.initialiseComposer();
-        if (this.users) {
-            var sub_1 = this.users.listen('state', function (state) {
-                if (state === 'available') {
-                    _this.loadSystems();
-                    sub_1.unsubscribe();
-                }
-            });
-        }
-        else {
-            this.loadSystems();
-        }
-        this.analytics.init();
-        // Initialise data services
-        this.buildings.init();
-        this.bookings.init();
-        this.users.init();
-        this.rooms.init();
-        this.visitors.init();
+        this.setupComposer();
+        var sub = this._composer.initialised.subscribe(function (state) {
+            if (state) {
+                sub.unsubscribe();
+                _this.analytics.init();
+                // Initialise data services
+                _this.buildings.init();
+                _this.bookings.init();
+                _this.users.init();
+                _this.rooms.init();
+                _this.visitors.init();
+            }
+        });
         _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_5__["NotificationComponent"].timeout(5000);
     };
     AppService.prototype.ready = function () {
@@ -7490,36 +7495,30 @@ var AppService = /** @class */ (function () {
         var app_ready = this.settings.setup && this.users.current() && this.buildings.current();
         return app_ready && (!mock || mock.is_loaded);
     };
-    AppService.prototype.initialiseComposer = function (tries) {
-        if (tries === void 0) { tries = 0; }
-        this.settings.log('SYSTEM', 'Initialising Composer...');
-        // Get domain information for configuring composer
-        var host = this.settings.get('composer.domain') || location.hostname;
-        var protocol = this.settings.get('composer.protocol') || location.protocol;
-        var port = (protocol.indexOf('https') >= 0 ? '443' : '80');
-        var url = this.settings.get('composer.use_domain') ? protocol + "//" + host : location.origin;
-        var route = this.settings.get('composer.route') || '';
-        // Generate configuration for composer
-        var config = {
-            id: 'AcaEngine',
-            scope: 'public',
-            protocol: protocol, host: host, port: port,
-            oauth_server: url + "/auth/oauth/authorize",
-            oauth_tokens: url + "/auth/token",
-            redirect_uri: "" + location.origin + route + "/oauth-resp.html",
-            api_endpoint: url + "/control/",
-            proactive: true,
-            login_local: this.settings.get('composer.local_login') || false,
-            http: true,
-        };
-        // Enable mock/development environment if the settings is defined
+    /**
+     * Initialise the composer library comms
+     */
+    AppService.prototype.setupComposer = function () {
+        this.log('SYSTEM', 'Setup up composer...');
+        // Get application settings
+        var settings = this.settings.get('composer') || {};
+        var protocol = settings.protocol || location.protocol;
+        var host = settings.domain || location.hostname;
+        var port = settings.port || location.port;
+        var url = settings.use_domain ? protocol + "//" + host + ":" + port : location.origin;
+        var route = settings.route || '';
         var mock = this.settings.get('mock');
-        if (mock) {
-            config.mock = true;
-            config.http = false;
-        }
-        // Setup/Initialise composer
-        this.systems.setup(config);
+        // Generate configuration object
+        var config = {
+            scope: 'public',
+            host: host + ":" + port,
+            auth_uri: url + "/auth/oauth/authorize",
+            token_uri: url + "/auth/token",
+            redirect_uri: "" + location.origin + route + "/oauth-resp.html",
+            handle_login: !settings.local_login,
+            mock: mock
+        };
+        this._composer.setup(config);
     };
     /**
      * Listen to changes of given property
@@ -7594,19 +7593,13 @@ var AppService = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppService.prototype, "Systems", {
-        get: function () { return this.systems; },
+    Object.defineProperty(AppService.prototype, "Bindings", {
+        get: function () { return this._composer.bindings; },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(AppService.prototype, "Hotkeys", {
         get: function () { return this.hotkeys; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AppService.prototype, "system", {
-        get: function () { return this.subjects.system.getValue(); },
-        set: function (value) { this.subjects.system.next(value); },
         enumerable: true,
         configurable: true
     });
@@ -7812,73 +7805,6 @@ var AppService = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    AppService.prototype.getSystem = function (id) {
-        var e_1, _a;
-        var system_list = this.subjects.systems.getValue();
-        if (system_list) {
-            try {
-                for (var system_list_1 = __values(system_list), system_list_1_1 = system_list_1.next(); !system_list_1_1.done; system_list_1_1 = system_list_1.next()) {
-                    var system = system_list_1_1.value;
-                    if (system.id === id) {
-                        return system;
-                    }
-                }
-            }
-            catch (e_1_1) { e_1 = { error: e_1_1 }; }
-            finally {
-                try {
-                    if (system_list_1_1 && !system_list_1_1.done && (_a = system_list_1.return)) _a.call(system_list_1);
-                }
-                finally { if (e_1) throw e_1.error; }
-            }
-        }
-        return {};
-    };
-    AppService.prototype.addSystems = function (list) {
-        var system_list = this.subjects.systems.getValue().concat(list);
-        system_list.sort(function (a, b) { return a.name.localeCompare(b.name); });
-        this.subjects.systems.next(system_list);
-    };
-    AppService.prototype.loadSystems = function (tries) {
-        var _this = this;
-        if (tries === void 0) { tries = 0; }
-        if (this.timers.system) {
-            clearTimeout(this.timers.system);
-            this.timers.system = null;
-        }
-        if (tries > 20) {
-            return;
-        }
-        var systems = this.systems.resources.get('System');
-        if (systems) {
-            tries = 0;
-            systems.get({ offset: '0', limit: 500 }).then(function (sys_list) {
-                _this.subjects.systems.next([]);
-                if (sys_list) {
-                    var count = sys_list.total;
-                    if (count > 500) {
-                        var iter = Math.ceil((count - 500) / 500);
-                        for (var i = 0; i < iter; i++) {
-                            systems.get({ offset: (i + 1) * 500, limit: 500 }).then(function (list) {
-                                if (list) {
-                                    _this.addSystems(list.results);
-                                }
-                            });
-                        }
-                    }
-                    _this.addSystems(sys_list.results);
-                }
-                else {
-                    _this.timers.system = setTimeout(function () { return _this.loadSystems(tries); }, 200 * ++tries);
-                }
-            }, function (err) {
-                _this.timers.system = setTimeout(function () { return _this.loadSystems(tries); }, 200 * ++tries);
-            });
-        }
-        else {
-            this.timers.system = setTimeout(function () { return _this.loadSystems(tries); }, 200 * ++tries);
-        }
-    };
     /**
      * Setup handler for cache change events
      */
@@ -7900,7 +7826,7 @@ var AppService = /** @class */ (function () {
             this._cache.activateUpdate().then(function () { return location.reload(true); });
         }
     };
-    AppService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵdefineInjectable"]({ factory: function AppService_Factory() { return new AppService(_angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_2__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_5__["OverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_analytics_service__WEBPACK_IMPORTED_MODULE_8__["AnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_7__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["SystemsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_hotkey_service__WEBPACK_IMPORTED_MODULE_16__["HotkeyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_buildings_service__WEBPACK_IMPORTED_MODULE_11__["BuildingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_catering_catering_items_service__WEBPACK_IMPORTED_MODULE_19__["CateringItemsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_catering_catering_categories_service__WEBPACK_IMPORTED_MODULE_35__["CateringCategoriesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_catering_catering_menu_service__WEBPACK_IMPORTED_MODULE_20__["CateringMenuService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_comments_service__WEBPACK_IMPORTED_MODULE_12__["CommentsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_rooms_service__WEBPACK_IMPORTED_MODULE_13__["RoomsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_users_service__WEBPACK_IMPORTED_MODULE_10__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_location_service__WEBPACK_IMPORTED_MODULE_17__["LocationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_visitors_service__WEBPACK_IMPORTED_MODULE_15__["VisitorsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_contacts_service__WEBPACK_IMPORTED_MODULE_18__["ContactsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_reports_service__WEBPACK_IMPORTED_MODULE_21__["ReportsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_bookingsreports_service__WEBPACK_IMPORTED_MODULE_22__["BookingsReportsService"])); }, token: AppService, providedIn: "root" });
+    AppService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵdefineInjectable"]({ factory: function AppService_Factory() { return new AppService(_angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_2__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_5__["OverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_analytics_service__WEBPACK_IMPORTED_MODULE_8__["AnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_7__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_hotkey_service__WEBPACK_IMPORTED_MODULE_16__["HotkeyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_buildings_service__WEBPACK_IMPORTED_MODULE_11__["BuildingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_catering_catering_items_service__WEBPACK_IMPORTED_MODULE_19__["CateringItemsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_catering_catering_categories_service__WEBPACK_IMPORTED_MODULE_35__["CateringCategoriesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_catering_catering_menu_service__WEBPACK_IMPORTED_MODULE_20__["CateringMenuService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_comments_service__WEBPACK_IMPORTED_MODULE_12__["CommentsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_rooms_service__WEBPACK_IMPORTED_MODULE_13__["RoomsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_users_service__WEBPACK_IMPORTED_MODULE_10__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_location_service__WEBPACK_IMPORTED_MODULE_17__["LocationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_visitors_service__WEBPACK_IMPORTED_MODULE_15__["VisitorsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_contacts_service__WEBPACK_IMPORTED_MODULE_18__["ContactsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_reports_service__WEBPACK_IMPORTED_MODULE_21__["ReportsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵinject"](_data_bookingsreports_service__WEBPACK_IMPORTED_MODULE_22__["BookingsReportsService"])); }, token: AppService, providedIn: "root" });
     return AppService;
 }());
 
@@ -8104,7 +8030,8 @@ var __values = (undefined && undefined.__values) || function (o) {
 
 var FORBIDDEN = ['model', 'observers', 'subjects'];
 var BaseService = /** @class */ (function () {
-    function BaseService() {
+    function BaseService(_composer) {
+        this._composer = _composer;
         this.parent = null;
         this.model = {};
         this.subjects = {};
@@ -8119,6 +8046,14 @@ var BaseService = /** @class */ (function () {
         this.set('map', {});
         this.set('list', []);
     }
+    Object.defineProperty(BaseService.prototype, "http", {
+        /** Http Client with composer authentication */
+        get: function () {
+            return this._composer.http;
+        },
+        enumerable: true,
+        configurable: true
+    });
     BaseService.prototype.init = function () {
         var _this = this;
         if (!this.parent || !this.parent.Settings.setup || (this.parent.Settings.get('mock') && !window.backend.is_loaded)) {
@@ -8839,9 +8774,9 @@ var __read = (undefined && undefined.__read) || function (o, n) {
 
 var BookingsService = /** @class */ (function (_super) {
     __extends(BookingsService, _super);
-    function BookingsService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function BookingsService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'booking';
         _this.model.route = '/bookings';
         _this.set('timeline', {});
@@ -9669,7 +9604,7 @@ var BookingsService = /** @class */ (function (_super) {
         }
         return settings;
     };
-    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BookingsService, providedIn: "root" });
+    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: BookingsService, providedIn: "root" });
     return BookingsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
@@ -9710,9 +9645,9 @@ var __extends = (undefined && undefined.__extends) || (function () {
 
 var BookingsReportsService = /** @class */ (function (_super) {
     __extends(BookingsReportsService, _super);
-    function BookingsReportsService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function BookingsReportsService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'bookingsreports';
         _this.model.route = '/bookingsreports';
         _this.observers.list = _this.subjects.list.asObservable();
@@ -9761,7 +9696,7 @@ var BookingsReportsService = /** @class */ (function (_super) {
         }
         return 'USD';
     };
-    BookingsReportsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function BookingsReportsService_Factory() { return new BookingsReportsService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BookingsReportsService, providedIn: "root" });
+    BookingsReportsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function BookingsReportsService_Factory() { return new BookingsReportsService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: BookingsReportsService, providedIn: "root" });
     return BookingsReportsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
@@ -9825,8 +9760,8 @@ var __spread = (undefined && undefined.__spread) || function () {
 
 
 var BuildingsService = /** @class */ (function () {
-    function BuildingsService(http) {
-        this.http = http;
+    function BuildingsService(_composer) {
+        this._composer = _composer;
         this.parent = null;
         this.default = '';
         this.data = {};
@@ -9837,6 +9772,13 @@ var BuildingsService = /** @class */ (function () {
         this.subjects.active = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](null);
         this.observers.active = this.subjects.active.asObservable();
     }
+    Object.defineProperty(BuildingsService.prototype, "http", {
+        get: function () {
+            return this._composer.http;
+        },
+        enumerable: true,
+        configurable: true
+    });
     /**
      * Initialise service
      */
@@ -10429,7 +10371,7 @@ var BuildingsService = /** @class */ (function () {
         }
         return extras;
     };
-    BuildingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function BuildingsService_Factory() { return new BuildingsService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: BuildingsService, providedIn: "root" });
+    BuildingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function BuildingsService_Factory() { return new BuildingsService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: BuildingsService, providedIn: "root" });
     return BuildingsService;
 }());
 
@@ -10480,9 +10422,9 @@ var __assign = (undefined && undefined.__assign) || function () {
 
 var CateringCategoriesService = /** @class */ (function (_super) {
     __extends(CateringCategoriesService, _super);
-    function CateringCategoriesService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function CateringCategoriesService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'catering category/group';
         _this.model.route = '/catering/category';
         return _this;
@@ -10499,7 +10441,7 @@ var CateringCategoriesService = /** @class */ (function (_super) {
         delete formatted.maximum;
         return formatted;
     };
-    CateringCategoriesService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function CateringCategoriesService_Factory() { return new CateringCategoriesService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: CateringCategoriesService, providedIn: "root" });
+    CateringCategoriesService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function CateringCategoriesService_Factory() { return new CateringCategoriesService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: CateringCategoriesService, providedIn: "root" });
     return CateringCategoriesService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
@@ -10550,9 +10492,9 @@ var __assign = (undefined && undefined.__assign) || function () {
 
 var CateringItemsService = /** @class */ (function (_super) {
     __extends(CateringItemsService, _super);
-    function CateringItemsService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function CateringItemsService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'catering item';
         _this.model.route = '/catering/item';
         return _this;
@@ -10569,7 +10511,7 @@ var CateringItemsService = /** @class */ (function (_super) {
         delete formatted.maximum;
         return formatted;
     };
-    CateringItemsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function CateringItemsService_Factory() { return new CateringItemsService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: CateringItemsService, providedIn: "root" });
+    CateringItemsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function CateringItemsService_Factory() { return new CateringItemsService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: CateringItemsService, providedIn: "root" });
     return CateringItemsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
@@ -10620,9 +10562,9 @@ var __assign = (undefined && undefined.__assign) || function () {
 
 var CateringMenuService = /** @class */ (function (_super) {
     __extends(CateringMenuService, _super);
-    function CateringMenuService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function CateringMenuService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'catering menu';
         _this.model.route = '/menu';
         return _this;
@@ -10647,7 +10589,7 @@ var CateringMenuService = /** @class */ (function (_super) {
         var _this = this;
         return (list || []).map(function (i) { return (__assign({}, i, { items: i.items ? _this.process(i.items) : null, from: i.available_from, to: i.available_to, price: i.price || i.cost, maximum: i.maximum_quantity, minimum: i.minimum_quantity, notice: i.notify_host, package: i.package === 'true' || i.package === true, src: i.image_path })); });
     };
-    CateringMenuService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function CateringMenuService_Factory() { return new CateringMenuService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: CateringMenuService, providedIn: "root" });
+    CateringMenuService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function CateringMenuService_Factory() { return new CateringMenuService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: CateringMenuService, providedIn: "root" });
     return CateringMenuService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
@@ -10681,14 +10623,21 @@ var __values = (undefined && undefined.__values) || function (o) {
 
 
 var CommentsService = /** @class */ (function () {
-    function CommentsService(http) {
-        this.http = http;
+    function CommentsService(_composer) {
+        this._composer = _composer;
         this.parent = null;
         this.model = {};
         this.timers = {};
         this.subjects = {};
         this.observers = {};
     }
+    Object.defineProperty(CommentsService.prototype, "http", {
+        get: function () {
+            return this._composer.http;
+        },
+        enumerable: true,
+        configurable: true
+    });
     CommentsService.prototype.init = function () {
         return;
     };
@@ -10905,7 +10854,7 @@ var CommentsService = /** @class */ (function () {
             finally { if (e_2) throw e_2.error; }
         }
     };
-    CommentsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ factory: function CommentsService_Factory() { return new CommentsService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: CommentsService, providedIn: "root" });
+    CommentsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ factory: function CommentsService_Factory() { return new CommentsService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: CommentsService, providedIn: "root" });
     return CommentsService;
 }());
 
@@ -10947,9 +10896,9 @@ var __extends = (undefined && undefined.__extends) || (function () {
 
 var ContactsService = /** @class */ (function (_super) {
     __extends(ContactsService, _super);
-    function ContactsService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function ContactsService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'contact';
         _this.model.route = '/contacts';
         _this.subjects.list = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]([]);
@@ -10982,7 +10931,7 @@ var ContactsService = /** @class */ (function (_super) {
         }
         return user;
     };
-    ContactsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function ContactsService_Factory() { return new ContactsService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: ContactsService, providedIn: "root" });
+    ContactsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function ContactsService_Factory() { return new ContactsService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: ContactsService, providedIn: "root" });
     return ContactsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_2__["BaseService"]));
 
@@ -11036,9 +10985,9 @@ var __values = (undefined && undefined.__values) || function (o) {
 
 var LocationService = /** @class */ (function (_super) {
     __extends(LocationService, _super);
-    function LocationService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function LocationService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'location';
         _this.model.route = '/people';
         _this.subjects.list = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]([]);
@@ -11114,7 +11063,7 @@ var LocationService = /** @class */ (function (_super) {
         }
         return item;
     };
-    LocationService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function LocationService_Factory() { return new LocationService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: LocationService, providedIn: "root" });
+    LocationService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function LocationService_Factory() { return new LocationService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: LocationService, providedIn: "root" });
     return LocationService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_2__["BaseService"]));
 
@@ -11154,9 +11103,9 @@ var __extends = (undefined && undefined.__extends) || (function () {
 
 var ReportsService = /** @class */ (function (_super) {
     __extends(ReportsService, _super);
-    function ReportsService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function ReportsService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'report';
         _this.model.route = '/reports';
         _this.observers.list = _this.subjects.list.asObservable();
@@ -11205,7 +11154,7 @@ var ReportsService = /** @class */ (function (_super) {
         }
         return 'USD';
     };
-    ReportsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function ReportsService_Factory() { return new ReportsService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: ReportsService, providedIn: "root" });
+    ReportsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function ReportsService_Factory() { return new ReportsService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: ReportsService, providedIn: "root" });
     return ReportsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
@@ -11280,9 +11229,9 @@ var __spread = (undefined && undefined.__spread) || function () {
 
 var RoomsService = /** @class */ (function (_super) {
     __extends(RoomsService, _super);
-    function RoomsService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function RoomsService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'space';
         _this.model.route = '/rooms';
         _this.set('timelines', {});
@@ -11968,7 +11917,7 @@ var RoomsService = /** @class */ (function (_super) {
     RoomsService.prototype.getRoom = function (id) {
         return this.item(id);
     };
-    RoomsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function RoomsService_Factory() { return new RoomsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: RoomsService, providedIn: "root" });
+    RoomsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function RoomsService_Factory() { return new RoomsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: RoomsService, providedIn: "root" });
     return RoomsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_2__["BaseService"]));
 
@@ -11989,11 +11938,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./base.service */ "./src/app/services/data/base.service.ts");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ts-md5/dist/md5 */ "./node_modules/ts-md5/dist/md5.js");
+/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
+/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.service */ "./src/app/services/data/base.service.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -12026,11 +11977,12 @@ var __values = (undefined && undefined.__values) || function (o) {
 
 
 
+
 var UsersService = /** @class */ (function (_super) {
     __extends(UsersService, _super);
-    function UsersService(http, http_unauth) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function UsersService(_composer, http_unauth) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.http_unauth = http_unauth;
         _this.model.name = 'user';
         _this.model.route = '/users';
@@ -12078,10 +12030,10 @@ var UsersService = /** @class */ (function (_super) {
      */
     UsersService.prototype.setToken = function (token, expiry) {
         if (!expiry) {
-            expiry = moment__WEBPACK_IMPORTED_MODULE_5__().add(7, 'd').valueOf();
+            expiry = moment__WEBPACK_IMPORTED_MODULE_6__().add(7, 'd').valueOf();
         }
         var path = "" + location.origin + (this.parent.Settings.get('composer.route') || '') + "/oauth-resp.html";
-        var client_id = this.http.hash(path);
+        var client_id = ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__["Md5"].hashStr(path);
         if (sessionStorage) {
             sessionStorage.setItem(client_id + "_access_token", token);
             sessionStorage.setItem(client_id + "_expires_at", "" + expiry);
@@ -12106,16 +12058,16 @@ var UsersService = /** @class */ (function (_super) {
         var _this = this;
         if (fields === void 0) { fields = {}; }
         this.subjects.state.next('loading');
-        var query = _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].generateQueryString(fields);
+        var query = _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].generateQueryString(fields);
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers = headers.append('Content-Type', 'application/x-www-form-urlencoded');
         this.http_unauth.post('/auth/jwt/callback', query, { headers: headers }).subscribe(function (res) {
             if (res.status >= 200 && res.status < 400) {
                 if (sessionStorage) {
-                    var clientId = _this.http.hash(location.origin + "/oauth-resp.html");
+                    var clientId = ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__["Md5"].hashStr(location.origin + "/oauth-resp.html");
                     sessionStorage.setItem(clientId + "_login", 'true');
                 }
-                _this.http.tryLogin();
+                _this._composer.auth.authorise();
             }
             else {
                 _this.subjects.state.next('invalid');
@@ -12127,10 +12079,10 @@ var UsersService = /** @class */ (function (_super) {
             }
             else {
                 if (sessionStorage) {
-                    var clientId = _this.http.hash(location.origin + "/oauth-resp.html");
+                    var clientId = ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__["Md5"].hashStr(location.origin + "/oauth-resp.html");
                     sessionStorage.setItem(clientId + "_login", 'true');
                 }
-                _this.http.tryLogin();
+                _this._composer.auth.authorise();
             }
         }, function () { return _this.load(); });
     };
@@ -12138,7 +12090,7 @@ var UsersService = /** @class */ (function (_super) {
      * Logout of user and redirect to logout URL
      */
     UsersService.prototype.logout = function () {
-        this.http.logout();
+        this._composer.auth.logout();
     };
     /**
      * Open modal to view user details
@@ -12344,9 +12296,9 @@ var UsersService = /** @class */ (function (_super) {
         }
         return member;
     };
-    UsersService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjectable"]({ factory: function UsersService_Factory() { return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); }, token: UsersService, providedIn: "root" });
+    UsersService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({ factory: function UsersService_Factory() { return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); }, token: UsersService, providedIn: "root" });
     return UsersService;
-}(_base_service__WEBPACK_IMPORTED_MODULE_4__["BaseService"]));
+}(_base_service__WEBPACK_IMPORTED_MODULE_5__["BaseService"]));
 
 
 
@@ -12432,9 +12384,9 @@ var __values = (undefined && undefined.__values) || function (o) {
 
 var VisitorsService = /** @class */ (function (_super) {
     __extends(VisitorsService, _super);
-    function VisitorsService(http) {
-        var _this = _super.call(this) || this;
-        _this.http = http;
+    function VisitorsService(_composer) {
+        var _this = _super.call(this, _composer) || this;
+        _this._composer = _composer;
         _this.model.name = 'visitor';
         _this.model.route = '/visitors';
         _this.subjects.list = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]([]);
@@ -12753,7 +12705,7 @@ var VisitorsService = /** @class */ (function (_super) {
         });
         return visitor;
     };
-    VisitorsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function VisitorsService_Factory() { return new VisitorsService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["CommsService"])); }, token: VisitorsService, providedIn: "root" });
+    VisitorsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function VisitorsService_Factory() { return new VisitorsService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: VisitorsService, providedIn: "root" });
     return VisitorsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_2__["BaseService"]));
 
@@ -18011,16 +17963,16 @@ var FeedbackComponent = /** @class */ (function (_super) {
         _this.service = service;
         _this.router = router;
         _this.model = {};
-        _this.timeout('Getting Title', function () { _this.updateRoute(document.title); });
+        _this.timeout('Getting Title', function () { return _this.updateRoute(document.title); }, 1000);
         router.events
             .subscribe(function (event) {
-            _this.timeout('Getting Title', function () { _this.updateRoute(document.title); });
+            _this.timeout('Getting Title', function () { return _this.updateRoute(document.title); });
         });
         return _this;
     }
     FeedbackComponent.prototype.updateRoute = function (location) {
         location = location.substr(0, location.indexOf(" |"));
-        this.model.current_page = location;
+        this.model.current_page = location || 'Day View';
     };
     return FeedbackComponent;
 }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
@@ -21116,7 +21068,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1572994762000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1573719631000);
 
 
 /***/ }),
@@ -21366,6 +21318,12 @@ var MockBackend = /** @class */ (function () {
             backend: {},
         };
         this.desk_id_pool = [];
+        if (!window.control) {
+            window.control = {};
+        }
+        if (!window.control.handlers && !(window.control.handlers instanceof Array)) {
+            window.control.handlers = [];
+        }
         this.log('MOCK', 'Initialising Requests');
         this.model.log = function (type, msg, args, out, color) {
             if (out === void 0) { out = 'debug'; }
@@ -21532,13 +21490,12 @@ var BaseMockBackend = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MockBookingsBackend", function() { return MockBookingsBackend; });
-/* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
-/* harmony import */ var _base_mock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.mock */ "./src/app/shared/mock/backend/base.mock.ts");
+/* harmony import */ var _base_mock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base.mock */ "./src/app/shared/mock/backend/base.mock.ts");
+/* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
 /* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(faker__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utility.class */ "./src/app/shared/utility.class.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -21562,7 +21519,6 @@ var __values = (undefined && undefined.__values) || function (o) {
         }
     };
 };
-
 
 
 
@@ -21612,7 +21568,7 @@ var MockBookingsBackend = /** @class */ (function (_super) {
                 var organizer = Math.floor(Math.random() * 23456783) % 3 === 0 ? this.model.user || {} : { name: 'Bob Jane', email: 'bob.jane@bobjanetmart.com.au' };
                 attendees.push(organizer);
                 bookings[date.format('DD/MM/YYYY')].push({
-                    id: _utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].padZero(MockBookingsBackend.count++, 4),
+                    id: _utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].padZero(MockBookingsBackend.count++, 4),
                     title: faker__WEBPACK_IMPORTED_MODULE_2__["commerce"].productName() + " Meeting",
                     start: start, end: end, attendees: attendees,
                     organizer: organizer,
@@ -21621,14 +21577,19 @@ var MockBookingsBackend = /** @class */ (function (_super) {
             }
             date.add(1, 'd');
         }
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/bookings", bookings, function (e) {
-            var list = [];
-            for (var n in e.data) {
-                if (e.data.hasOwnProperty(n)) {
-                    list = list.concat(e.data[n]);
+        window.control.handlers.push({
+            path: "/" + this.model.api_route + "/bookings",
+            metadata: bookings,
+            method: 'GET',
+            callback: function (e) {
+                var list = [];
+                for (var n in e.metadata) {
+                    if (e.metadata.hasOwnProperty(n)) {
+                        list = list.concat(e.metadata[n]);
+                    }
                 }
+                return list || [];
             }
-            return list || [];
         });
     };
     MockBookingsBackend.prototype.loadRoomBookings = function () {
@@ -21696,7 +21657,7 @@ var MockBookingsBackend = /** @class */ (function (_super) {
             start.add(Math.floor(Math.random() * 6 + 4) * 15, 'm');
             var b1e = start.toISOString();
             bookings.push({
-                id: _utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].padZero(MockBookingsBackend.count++, 4),
+                id: _utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].padZero(MockBookingsBackend.count++, 4),
                 ConferenceRoomAlias: 'cfsydinx',
                 Start: b1s,
                 End: b1e,
@@ -21716,7 +21677,7 @@ var MockBookingsBackend = /** @class */ (function (_super) {
     };
     MockBookingsBackend.count = 0;
     return MockBookingsBackend;
-}(_base_mock__WEBPACK_IMPORTED_MODULE_1__["BaseMockBackend"]));
+}(_base_mock__WEBPACK_IMPORTED_MODULE_0__["BaseMockBackend"]));
 
 
 
@@ -21732,9 +21693,8 @@ var MockBookingsBackend = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MockBuildingsBackend", function() { return MockBuildingsBackend; });
-/* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
-/* harmony import */ var _base_mock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.mock */ "./src/app/shared/mock/backend/base.mock.ts");
-/* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utility.class */ "./src/app/shared/utility.class.ts");
+/* harmony import */ var _base_mock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base.mock */ "./src/app/shared/mock/backend/base.mock.ts");
+/* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utility.class */ "./src/app/shared/utility.class.ts");
 /*
  * @Author: alex.sorafumo
  * @Date:   2017-04-03 15:50:46
@@ -21766,7 +21726,6 @@ var __values = (undefined && undefined.__values) || function (o) {
 };
 
 
-
 var MockBuildingsBackend = /** @class */ (function (_super) {
     __extends(MockBuildingsBackend, _super);
     function MockBuildingsBackend(model) {
@@ -21775,7 +21734,6 @@ var MockBuildingsBackend = /** @class */ (function (_super) {
         return _this;
     }
     MockBuildingsBackend.prototype.load = function () {
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].unregister("/control/api/zones");
         this.loadBuildings();
     };
     MockBuildingsBackend.prototype.loadBuildings = function () {
@@ -21936,12 +21894,22 @@ var MockBuildingsBackend = /** @class */ (function (_super) {
             }
         }
         // Add response for Global zone
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/zones", this.model.bld_data, function (e) { return _this.handleZone(e); });
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/control/api/zones", this.model.bld_data, function (e) { return _this.handleZone(e); });
+        window.control.handlers({
+            path: "/" + this.model.api_route + "/zones",
+            metadata: this.model.bld_data,
+            method: 'GET',
+            callback: function (e) { return _this.handleZone(e); }
+        });
+        window.control.handlers({
+            path: "/control/api/zones",
+            metadata: this.model.bld_data,
+            method: 'GET',
+            callback: function (e) { return _this.handleZone(e); }
+        });
         this.state.next(true);
     };
     MockBuildingsBackend.prototype.handleZone = function (event) {
-        if (event.fragment.type === 'org' || event.fragment.tags === 'org') {
+        if (event.query_params.type === 'org' || event.query_params.tags === 'org') {
             return [{
                     settings: {
                         discovery_info: {
@@ -21962,16 +21930,16 @@ var MockBuildingsBackend = /** @class */ (function (_super) {
                     },
                 }];
         }
-        else if (event.fragment.type === 'building' || event.fragment.tags === 'building') {
+        else if (event.query_params.type === 'building' || event.query_params.tags === 'building') {
             var blds = [];
             for (var k in this.model.bld_data) {
-                if (event.data.hasOwnProperty(k)) {
+                if (event.metadata.hasOwnProperty(k)) {
                     blds.push(this.model.bld_data[k]);
                 }
             }
             return blds;
         }
-        else if (event.fragment.type === 'level' || event.fragment.tags === 'level') {
+        else if (event.query_params.type === 'level' || event.query_params.tags === 'level') {
             return {};
         }
         return null;
@@ -21992,7 +21960,7 @@ var MockBuildingsBackend = /** @class */ (function (_super) {
                 }
                 for (var i = 1; i <= lvl.desks; i++) {
                     dm[lvl.level_id + ":desk_ids"]
-                        .push("table-" + _utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].padZero(lvl.number, 1) + "." + _utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].padZero(i, 3));
+                        .push("table-" + _utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].padZero(lvl.number, 1) + "." + _utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].padZero(i, 3));
                 }
                 setInterval(function () {
                     // Update desk state every 10 seconds
@@ -22025,7 +21993,7 @@ var MockBuildingsBackend = /** @class */ (function (_super) {
         }
     };
     return MockBuildingsBackend;
-}(_base_mock__WEBPACK_IMPORTED_MODULE_1__["BaseMockBackend"]));
+}(_base_mock__WEBPACK_IMPORTED_MODULE_0__["BaseMockBackend"]));
 
 
 
@@ -22041,8 +22009,7 @@ var MockBuildingsBackend = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MockCateringBackend", function() { return MockCateringBackend; });
-/* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /*
  * @Author: alex.sorafumo
  * @Date:   2017-04-03 15:50:46
@@ -22050,11 +22017,10 @@ __webpack_require__.r(__webpack_exports__);
  * @Last Modified time: 2018-01-24 09:02:01
  */
 
-
 var MockCateringBackend = /** @class */ (function () {
     function MockCateringBackend(model) {
         this.model = model;
-        this.state = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](false);
+        this.state = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"](false);
         this.state_obs = this.state.asObservable();
         this.init();
     }
@@ -22137,7 +22103,11 @@ var MockCateringBackend = /** @class */ (function () {
         caterers[2].title = 'Internal Catering';
         caterers[2].img_url = 'assets/img/caterer-03.jpg';
         caterers[2].description = 'The health shop everything from cold pressed juices to crunchy fresh salads';
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/caterers", caterers);
+        window.control.handlers.push({
+            path: "/" + this.model.api_route + "/caterers",
+            metadata: caterers,
+            method: 'GET'
+        });
     };
     MockCateringBackend.prototype.generateLocations = function () {
         var locations = [
@@ -22146,7 +22116,11 @@ var MockCateringBackend = /** @class */ (function () {
             'VC Meeting Room',
             'West Lounge Meeting Table'
         ];
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/caterers/locations", locations);
+        window.control.handlers.push({
+            path: "/" + this.model.api_route + "/caterers/locations",
+            metadata: locations,
+            method: 'GET'
+        });
     };
     return MockCateringBackend;
 }());
@@ -22165,10 +22139,9 @@ var MockCateringBackend = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MockRoomsBackend", function() { return MockRoomsBackend; });
-/* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
-/* harmony import */ var _base_mock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.mock */ "./src/app/shared/mock/backend/base.mock.ts");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _base_mock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base.mock */ "./src/app/shared/mock/backend/base.mock.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
 /*
  * @Author: alex.sorafumo
  * @Date:   2017-04-03 15:50:46
@@ -22198,7 +22171,6 @@ var __values = (undefined && undefined.__values) || function (o) {
         }
     };
 };
-
 
 
 var MockRoomsBackend = /** @class */ (function (_super) {
@@ -22272,77 +22244,85 @@ var MockRoomsBackend = /** @class */ (function (_super) {
             finally { if (e_1) throw e_1.error; }
         }
         this.model.rooms = rooms;
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/rooms/:id", this.model.rooms, function (event) {
-            var e_2, _a, e_3, _b;
-            if (event.params.id) {
-                if (event.fragment.available_from) {
-                    var start = moment__WEBPACK_IMPORTED_MODULE_2__(event.fragment.available_from * 1000);
-                    var end = event.fragment.available_to ? moment__WEBPACK_IMPORTED_MODULE_2__(event.fragment.available_to * 1000) : moment__WEBPACK_IMPORTED_MODULE_2__(start).add(60, 'm');
-                    var available = _this.getAvailableRooms(event.data, start.valueOf(), moment__WEBPACK_IMPORTED_MODULE_2__["duration"](end.diff(start)).asMinutes());
-                    try {
-                        for (var available_1 = __values(available), available_1_1 = available_1.next(); !available_1_1.done; available_1_1 = available_1.next()) {
-                            var rm = available_1_1.value;
-                            if (rm.id === event.params.id) {
-                                rm.available = true;
-                                return rm;
+        window.control.handlers({
+            path: "/" + this.model.api_route + "/rooms/:id",
+            metadata: this.model.rooms,
+            callback: function (event) {
+                var e_2, _a, e_3, _b;
+                if (event.route_params.id) {
+                    if (event.query_params.available_from) {
+                        var start = moment__WEBPACK_IMPORTED_MODULE_1__(+event.query_params.available_from * 1000);
+                        var end = event.query_params.available_to ? moment__WEBPACK_IMPORTED_MODULE_1__(+event.query_params.available_to * 1000) : moment__WEBPACK_IMPORTED_MODULE_1__(start).add(60, 'm');
+                        var available = _this.getAvailableRooms(event.metadata, start.valueOf(), moment__WEBPACK_IMPORTED_MODULE_1__["duration"](end.diff(start)).asMinutes());
+                        try {
+                            for (var available_1 = __values(available), available_1_1 = available_1.next(); !available_1_1.done; available_1_1 = available_1.next()) {
+                                var rm = available_1_1.value;
+                                if (rm.id === event.route_params.id) {
+                                    rm.available = true;
+                                    return rm;
+                                }
                             }
                         }
-                    }
-                    catch (e_2_1) { e_2 = { error: e_2_1 }; }
-                    finally {
-                        try {
-                            if (available_1_1 && !available_1_1.done && (_a = available_1.return)) _a.call(available_1);
+                        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                        finally {
+                            try {
+                                if (available_1_1 && !available_1_1.done && (_a = available_1.return)) _a.call(available_1);
+                            }
+                            finally { if (e_2) throw e_2.error; }
                         }
-                        finally { if (e_2) throw e_2.error; }
                     }
-                }
-                else {
-                    try {
-                        for (var _c = __values(event.data), _d = _c.next(); !_d.done; _d = _c.next()) {
-                            var rm = _d.value;
-                            if (event.params.id === rm.id) {
-                                return rm;
+                    else {
+                        try {
+                            for (var _c = __values(event.metadata), _d = _c.next(); !_d.done; _d = _c.next()) {
+                                var rm = _d.value;
+                                if (event.route_params.id === rm.id) {
+                                    return rm;
+                                }
                             }
                         }
-                    }
-                    catch (e_3_1) { e_3 = { error: e_3_1 }; }
-                    finally {
-                        try {
-                            if (_d && !_d.done && (_b = _c.return)) _b.call(_c);
+                        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                        finally {
+                            try {
+                                if (_d && !_d.done && (_b = _c.return)) _b.call(_c);
+                            }
+                            finally { if (e_3) throw e_3.error; }
                         }
-                        finally { if (e_3) throw e_3.error; }
                     }
                 }
+                return null;
             }
-            return null;
         });
         // Get bookable rooms from room list
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/rooms", this.model.rooms, function (event) {
-            var e_4, _a;
-            if (event.fragment.available_from) {
-                var start = moment__WEBPACK_IMPORTED_MODULE_2__(event.fragment.available_from * 1000);
-                var end = event.fragment.available_to ? moment__WEBPACK_IMPORTED_MODULE_2__(event.fragment.available_to * 1000) : moment__WEBPACK_IMPORTED_MODULE_2__(start).add(60, 'm');
-                return _this.getAvailableRooms(event.data, start.valueOf(), moment__WEBPACK_IMPORTED_MODULE_2__["duration"](end.diff(start)).asMinutes());
-            }
-            else {
-                var results = [];
-                try {
-                    for (var _b = __values(event.data), _c = _b.next(); !_c.done; _c = _b.next()) {
-                        var i = _c.value;
-                        if (i.bookable) {
-                            i.available = Math.floor(Math.random() * 2349873421) % 3 === 0;
-                            results.push(i);
+        window.control.handlers.push({
+            path: "/" + this.model.api_route + "/rooms",
+            metadata: this.model.rooms,
+            callback: function (event) {
+                var e_4, _a;
+                if (event.query_params.available_from) {
+                    var start = moment__WEBPACK_IMPORTED_MODULE_1__(+event.query_params.available_from * 1000);
+                    var end = event.query_params.available_to ? moment__WEBPACK_IMPORTED_MODULE_1__(+event.query_params.available_to * 1000) : moment__WEBPACK_IMPORTED_MODULE_1__(start).add(60, 'm');
+                    return _this.getAvailableRooms(event.metadata, start.valueOf(), moment__WEBPACK_IMPORTED_MODULE_1__["duration"](end.diff(start)).asMinutes());
+                }
+                else {
+                    var results = [];
+                    try {
+                        for (var _b = __values(event.metadata), _c = _b.next(); !_c.done; _c = _b.next()) {
+                            var i = _c.value;
+                            if (i.bookable) {
+                                i.available = Math.floor(Math.random() * 2349873421) % 3 === 0;
+                                results.push(i);
+                            }
                         }
                     }
-                }
-                catch (e_4_1) { e_4 = { error: e_4_1 }; }
-                finally {
-                    try {
-                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                    catch (e_4_1) { e_4 = { error: e_4_1 }; }
+                    finally {
+                        try {
+                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                        }
+                        finally { if (e_4) throw e_4.error; }
                     }
-                    finally { if (e_4) throw e_4.error; }
+                    return results;
                 }
-                return results;
             }
         });
         this.state.next(true);
@@ -22351,8 +22331,8 @@ var MockRoomsBackend = /** @class */ (function (_super) {
         var e_5, _a, e_6, _b;
         if (duration === void 0) { duration = 60; }
         var results = [];
-        var start = moment__WEBPACK_IMPORTED_MODULE_2__(start_time);
-        var end = moment__WEBPACK_IMPORTED_MODULE_2__(start).add(duration, 'm');
+        var start = moment__WEBPACK_IMPORTED_MODULE_1__(start_time);
+        var end = moment__WEBPACK_IMPORTED_MODULE_1__(start).add(duration, 'm');
         try {
             for (var list_1 = __values(list), list_1_1 = list_1.next(); !list_1_1.done; list_1_1 = list_1.next()) {
                 var rm = list_1_1.value;
@@ -22360,8 +22340,8 @@ var MockRoomsBackend = /** @class */ (function (_super) {
                 try {
                     for (var _c = (e_6 = void 0, __values(rm.settings.bookings)), _d = _c.next(); !_d.done; _d = _c.next()) {
                         var bkn = _d.value;
-                        var bkn_start = moment__WEBPACK_IMPORTED_MODULE_2__(bkn.Start);
-                        var bkn_end = moment__WEBPACK_IMPORTED_MODULE_2__(bkn.End);
+                        var bkn_start = moment__WEBPACK_IMPORTED_MODULE_1__(bkn.Start);
+                        var bkn_end = moment__WEBPACK_IMPORTED_MODULE_1__(bkn.End);
                         if (start.isBetween(bkn_start, bkn_end, 'm', '[)') || end.isBetween(bkn_start, bkn_end, 'm', '(]')) {
                             clash = true;
                         }
@@ -22391,7 +22371,7 @@ var MockRoomsBackend = /** @class */ (function (_super) {
         return results;
     };
     return MockRoomsBackend;
-}(_base_mock__WEBPACK_IMPORTED_MODULE_1__["BaseMockBackend"]));
+}(_base_mock__WEBPACK_IMPORTED_MODULE_0__["BaseMockBackend"]));
 
 
 
@@ -22407,12 +22387,11 @@ var MockRoomsBackend = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MockUsersBackend", function() { return MockUsersBackend; });
-/* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
-/* harmony import */ var _base_mock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.mock */ "./src/app/shared/mock/backend/base.mock.ts");
-/* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
-/* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(faker__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _base_mock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base.mock */ "./src/app/shared/mock/backend/base.mock.ts");
+/* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
+/* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(faker__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
 /*
  * @Author: alex.sorafumo
  * @Date:   2017-04-03 15:50:46
@@ -22445,13 +22424,11 @@ var __values = (undefined && undefined.__values) || function (o) {
 
 
 
-
 var MockUsersBackend = /** @class */ (function (_super) {
     __extends(MockUsersBackend, _super);
     function MockUsersBackend(model) {
         var _this = _super.call(this, model) || this;
         _this.model = model;
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].unregister('/control/api/users/current');
         return _this;
     }
     MockUsersBackend.prototype.load = function () {
@@ -22460,14 +22437,19 @@ var MockUsersBackend = /** @class */ (function (_super) {
         this.loadUsers();
         this.loadUser().then(function () {
             _this.state.next(true);
-            _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + _this.model.api_route + "/people/:user", _this.model.user_loc, function (event) {
-                if (event.params.user) {
-                    var id = event.params.user;
-                    if (event.data && event.data[id]) {
-                        return [event.data[id]];
+            window.control.handlers({
+                path: "/" + _this.model.api_route + "/people/:user",
+                metadata: _this.model.user_loc,
+                method: 'GET',
+                callback: function (event) {
+                    if (event.route_params.user) {
+                        var id = event.route_params.user;
+                        if (event.metadata && event.metadata[id]) {
+                            return [event.metadata[id]];
+                        }
                     }
+                    return null;
                 }
-                return null;
             });
         });
     };
@@ -22515,10 +22497,10 @@ var MockUsersBackend = /** @class */ (function (_super) {
         var e_2, _a, e_3, _b;
         this.model.users = [];
         for (var i = 0; i < 200; i++) {
-            var firstName = faker__WEBPACK_IMPORTED_MODULE_2__["name"].firstName();
-            var lastName = faker__WEBPACK_IMPORTED_MODULE_2__["name"].lastName();
+            var firstName = faker__WEBPACK_IMPORTED_MODULE_1__["name"].firstName();
+            var lastName = faker__WEBPACK_IMPORTED_MODULE_1__["name"].lastName();
             this.model.users.push({
-                department: "" + faker__WEBPACK_IMPORTED_MODULE_2__["company"].companyName(),
+                department: "" + faker__WEBPACK_IMPORTED_MODULE_1__["company"].companyName(),
                 phone: Math.floor(Math.random() * 8999 + 1000).toString(),
                 email: firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + this.model.domain,
                 name: firstName + " " + lastName,
@@ -22532,7 +22514,7 @@ var MockUsersBackend = /** @class */ (function (_super) {
                 var name_1 = _d.value;
                 var split = name_1.split(' ');
                 this.model.users.push({
-                    department: "" + faker__WEBPACK_IMPORTED_MODULE_2__["company"].companyName(),
+                    department: "" + faker__WEBPACK_IMPORTED_MODULE_1__["company"].companyName(),
                     // phone: Math.floor(Math.random() * 8999 + 1000).toString(),
                     email: split[0].toLowerCase() + "." + split[1].toLowerCase() + "@" + this.model.domain,
                     name: name_1,
@@ -22563,56 +22545,64 @@ var MockUsersBackend = /** @class */ (function (_super) {
             }
             finally { if (e_3) throw e_3.error; }
         }
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/users", this.model.users, function (e) {
-            var e_4, _a;
-            if (e.fragment.q) {
-                var q = e.fragment.q.toLowerCase();
-                var list = [];
-                try {
-                    for (var _b = __values(e.data), _c = _b.next(); !_c.done; _c = _b.next()) {
-                        var u = _c.value;
-                        if (u.email.toLowerCase().indexOf(q) >= 0 || u.name.toLowerCase().indexOf(q) >= 0) {
-                            list.push(u);
-                            if (e.fragment.limit && list.length >= +e.fragment.limit) {
-                                break;
+        window.control.handlers.push({
+            path: "/" + this.model.api_route + "/users",
+            metadata: this.model.users,
+            callback: function (e) {
+                var e_4, _a;
+                if (e.query_params.q) {
+                    var q = e.query_params.q.toLowerCase();
+                    var list = [];
+                    try {
+                        for (var _b = __values(e.metadata), _c = _b.next(); !_c.done; _c = _b.next()) {
+                            var u = _c.value;
+                            if (u.email.toLowerCase().indexOf(q) >= 0 || u.name.toLowerCase().indexOf(q) >= 0) {
+                                list.push(u);
+                                if (e.query_params.limit && list.length >= +e.query_params.limit) {
+                                    break;
+                                }
                             }
                         }
                     }
-                }
-                catch (e_4_1) { e_4 = { error: e_4_1 }; }
-                finally {
-                    try {
-                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                    catch (e_4_1) { e_4 = { error: e_4_1 }; }
+                    finally {
+                        try {
+                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                        }
+                        finally { if (e_4) throw e_4.error; }
                     }
-                    finally { if (e_4) throw e_4.error; }
+                    return list;
                 }
-                return list;
-            }
-            else {
-                return e.data;
+                else {
+                    return e.metadata;
+                }
             }
         });
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/users/:email", this.model.users, function (e) {
-            var e_5, _a;
-            if (e.params.email) {
-                try {
-                    for (var _b = __values(e.data), _c = _b.next(); !_c.done; _c = _b.next()) {
-                        var user = _c.value;
-                        if (user.email.toLowerCase().indexOf(e.params.email.toLowerCase())) {
-                            user.phone = Math.floor(Math.random() * 8999 + 1000).toString();
-                            return user;
+        window.control.handlers.push({
+            path: "/" + this.model.api_route + "/users/:email",
+            metadata: this.model.users,
+            callback: function (e) {
+                var e_5, _a;
+                if (e.route_params.email) {
+                    try {
+                        for (var _b = __values(e.metadata), _c = _b.next(); !_c.done; _c = _b.next()) {
+                            var user = _c.value;
+                            if (user.email.toLowerCase().indexOf(e.route_params.email.toLowerCase())) {
+                                user.phone = Math.floor(Math.random() * 8999 + 1000).toString();
+                                return user;
+                            }
                         }
                     }
-                }
-                catch (e_5_1) { e_5 = { error: e_5_1 }; }
-                finally {
-                    try {
-                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                    catch (e_5_1) { e_5 = { error: e_5_1 }; }
+                    finally {
+                        try {
+                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                        }
+                        finally { if (e_5) throw e_5.error; }
                     }
-                    finally { if (e_5) throw e_5.error; }
                 }
+                return null;
             }
-            return null;
         });
     };
     MockUsersBackend.prototype.loadBasicUser = function (user, tries) {
@@ -22643,7 +22633,10 @@ var MockUsersBackend = /** @class */ (function (_super) {
                 _this.generateLocationFor(data, true);
                 _this.model.user = data;
                 setTimeout(function () {
-                    _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register('/control/api/users/current', data);
+                    window.control.handlers.push({
+                        path: '/control/api/users/current',
+                        metadata: data
+                    });
                     resolve();
                 }, 20);
             });
@@ -22653,13 +22646,13 @@ var MockUsersBackend = /** @class */ (function (_super) {
     MockUsersBackend.prototype.loadVisitors = function () {
         this.model.visitors = [];
         var count = Math.floor(Math.random() * 10 + 2);
-        var time = moment__WEBPACK_IMPORTED_MODULE_3__().seconds(0).milliseconds(0).add(10, 'm');
+        var time = moment__WEBPACK_IMPORTED_MODULE_2__().seconds(0).milliseconds(0).add(10, 'm');
         time.minutes(Math.floor(time.minutes() / 5) * 5);
         for (var i = 0; i < count; i++) {
             var peeps = Math.floor(Math.random() * 3 + 1);
             var people = [];
             for (var k = 0; k < peeps; k++) {
-                var name_2 = faker__WEBPACK_IMPORTED_MODULE_2__["name"].firstName() + ' ' + faker__WEBPACK_IMPORTED_MODULE_2__["name"].lastName();
+                var name_2 = faker__WEBPACK_IMPORTED_MODULE_1__["name"].firstName() + ' ' + faker__WEBPACK_IMPORTED_MODULE_1__["name"].lastName();
                 people.push({
                     name: name_2,
                     organisation: {
@@ -22672,8 +22665,8 @@ var MockUsersBackend = /** @class */ (function (_super) {
             var visitor = {
                 id: Math.floor(Math.random() * 89999 + 10000),
                 name: "Group " + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[i],
-                host: faker__WEBPACK_IMPORTED_MODULE_2__["name"].firstName() + " " + faker__WEBPACK_IMPORTED_MODULE_2__["name"].lastName(),
-                location: faker__WEBPACK_IMPORTED_MODULE_2__["commerce"].department() + " RM",
+                host: faker__WEBPACK_IMPORTED_MODULE_1__["name"].firstName() + " " + faker__WEBPACK_IMPORTED_MODULE_1__["name"].lastName(),
+                location: faker__WEBPACK_IMPORTED_MODULE_1__["commerce"].department() + " RM",
                 group: peeps > 1,
                 visitors: people,
                 date: time.valueOf()
@@ -22681,7 +22674,10 @@ var MockUsersBackend = /** @class */ (function (_super) {
             this.model.visitors.push(visitor);
             time.add(Math.floor(Math.random() * 5) * 15 + 15, 'm');
         }
-        _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["MOCK_REQ_HANDLER"].register("/" + this.model.api_route + "/visitors", this.model.visitors);
+        window.control.handlers.push({
+            path: "/" + this.model.api_route + "/visitors",
+            metadata: this.model.visitors
+        });
     };
     MockUsersBackend.prototype.generateLocationFor = function (user, force) {
         if (force === void 0) { force = false; }
@@ -22724,7 +22720,7 @@ var MockUsersBackend = /** @class */ (function (_super) {
         }
     };
     return MockUsersBackend;
-}(_base_mock__WEBPACK_IMPORTED_MODULE_1__["BaseMockBackend"]));
+}(_base_mock__WEBPACK_IMPORTED_MODULE_0__["BaseMockBackend"]));
 
 
 
