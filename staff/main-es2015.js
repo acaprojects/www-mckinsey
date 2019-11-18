@@ -4643,7 +4643,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     }
     edit() {
         if (localStorage) {
-            localStorage.setItem('STAFF.booking_form', JSON.stringify(Object.assign({}, this.booking, { room: this.booking.room_list.map(i => (Object.assign({}, i, { boookings: [] }))) })));
+            localStorage.setItem('STAFF.booking_form', JSON.stringify(Object.assign({}, this.booking, { room: this.booking.room_list.map(i => (Object.assign({}, i, { bookings: [] }))) })));
         }
         this.service.navigate(['book']);
         this.fn.close();
@@ -19209,7 +19209,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574051613000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574051843000);
 
 
 /***/ }),
