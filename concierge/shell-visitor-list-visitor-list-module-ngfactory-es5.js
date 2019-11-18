@@ -169,7 +169,7 @@ var VisitorListHostItemComponent = /** @class */ (function (_super) {
             this.timeout('date', function () {
                 var date = dayjs__WEBPACK_IMPORTED_MODULE_3__(_this.group.date);
                 var end = date.add(_this.group.duration, 'm');
-                _this.time_display = _this.group.all_day ? 'All Day' : date.format('h:mm a') + " - " + end.format('h:mm a');
+                _this.time_display = _this.group.all_day ? 'All Day' : date.format('h:mm A') + " - " + end.format('h:mm A');
             }, 10);
         }
     };
