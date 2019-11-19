@@ -5712,7 +5712,7 @@ class RoomSelectModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTE
         this.event('Select');
     }
 }
-_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_4__["OVERLAY_REGISTER"].push({ id: 'room-select', component: RoomSelectModalComponent, data: {} });
+_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_4__["OVERLAY_REGISTER"].push({ id: 'select-room', component: RoomSelectModalComponent, data: {} });
 
 
 /***/ }),
@@ -19209,7 +19209,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574051843000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574123322000);
 
 
 /***/ }),
