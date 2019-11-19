@@ -1184,7 +1184,15 @@ class DayViewSpaceEventComponent extends _shared_globals_base_component__WEBPACK
     }
     /** Whether the meeting has catering attached */
     get has_catering() {
-        return !!(this.event && this.event.catering && this.event.catering.items && this.event.catering.items.length);
+        if (!this.event) {
+            return false;
+        }
+        const order = (this.event.catering
+            ? this.event.catering.items
+                ? this.event.catering
+                : this.event.catering[this.event.room.id]
+            : null) || {};
+        return !!(order && order.items && order.items.length);
     }
     /** View booking details */
     view() {

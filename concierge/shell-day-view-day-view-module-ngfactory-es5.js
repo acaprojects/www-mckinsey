@@ -1351,7 +1351,15 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
     Object.defineProperty(DayViewSpaceEventComponent.prototype, "has_catering", {
         /** Whether the meeting has catering attached */
         get: function () {
-            return !!(this.event && this.event.catering && this.event.catering.items && this.event.catering.items.length);
+            if (!this.event) {
+                return false;
+            }
+            var order = (this.event.catering
+                ? this.event.catering.items
+                    ? this.event.catering
+                    : this.event.catering[this.event.room.id]
+                : null) || {};
+            return !!(order && order.items && order.items.length);
         },
         enumerable: true,
         configurable: true
