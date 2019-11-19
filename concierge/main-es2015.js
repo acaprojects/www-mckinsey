@@ -3406,9 +3406,13 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
     saveOrder() {
         this.loading = true;
         const booking = this.order.booking;
-        const old_order = booking.catering;
+        const old_order = (booking.catering
+            ? booking.catering.items
+                ? booking.catering[booking.room.id]
+                : booking.catering
+            : null) || {};
         const catering_map = this.form_field.getValue();
-        const order = catering_map[this.space.id];
+        const order = catering_map;
         if (order) {
             booking.catering = order;
             this.service.Bookings.updateItem(booking.id, Object.assign({}, booking, { room: booking.room_list || [booking.room] })).then(() => {
@@ -17446,7 +17450,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574135145000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574159167000);
 
 
 /***/ }),

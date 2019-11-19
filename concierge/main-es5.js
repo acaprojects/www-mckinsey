@@ -3914,9 +3914,13 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
         var _this = this;
         this.loading = true;
         var booking = this.order.booking;
-        var old_order = booking.catering;
+        var old_order = (booking.catering
+            ? booking.catering.items
+                ? booking.catering[booking.room.id]
+                : booking.catering
+            : null) || {};
         var catering_map = this.form_field.getValue();
-        var order = catering_map[this.space.id];
+        var order = catering_map;
         if (order) {
             booking.catering = order;
             this.service.Bookings.updateItem(booking.id, __assign({}, booking, { room: booking.room_list || [booking.room] })).then(function () {
@@ -20891,7 +20895,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574135145000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574159167000);
 
 
 /***/ }),

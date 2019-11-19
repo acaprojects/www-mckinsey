@@ -1516,7 +1516,11 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
      */
     processOrder(booking) {
         if (booking.catering && booking.room) {
-            const order = booking.catering || {};
+            const order = (booking.catering
+                ? booking.catering.items
+                    ? booking.catering
+                    : booking.catering[booking.room.id]
+                : null) || {};
             const kitchen = _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].unique(order.kitchen || []).join(' + ');
             const pantry = _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].unique(order.pantry || []).join(' + ');
             const type = kitchen && pantry ? `${kitchen} + ${pantry}` : kitchen + pantry;
@@ -1527,7 +1531,7 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
                 is_external: booking.visitors,
                 room: booking.room,
                 attendee_count: (booking.attendees || []).length,
-                status: order.status || order.order_status || '',
+                status: order.status || order.order_status || 'accepted',
                 items: order.items,
                 booking,
                 is_kitchen: !!kitchen,
