@@ -1712,7 +1712,11 @@ var OrdersComponent = /** @class */ (function (_super) {
      */
     OrdersComponent.prototype.processOrder = function (booking) {
         if (booking.catering && booking.room) {
-            var order = booking.catering || {};
+            var order = (booking.catering
+                ? booking.catering.items
+                    ? booking.catering
+                    : booking.catering[booking.room.id]
+                : null) || {};
             var kitchen = _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].unique(order.kitchen || []).join(' + ');
             var pantry = _shared_utility_class__WEBPACK_IMPORTED_MODULE_4__["Utils"].unique(order.pantry || []).join(' + ');
             var type = kitchen && pantry ? kitchen + " + " + pantry : kitchen + pantry;
@@ -1723,7 +1727,7 @@ var OrdersComponent = /** @class */ (function (_super) {
                 is_external: booking.visitors,
                 room: booking.room,
                 attendee_count: (booking.attendees || []).length,
-                status: order.status || order.order_status || '',
+                status: order.status || order.order_status || 'accepted',
                 items: order.items,
                 booking: booking,
                 is_kitchen: !!kitchen,
