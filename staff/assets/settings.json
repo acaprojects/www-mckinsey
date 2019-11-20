@@ -362,6 +362,12 @@
                     "type": "checkbox"
                 },
                 {
+                    "key": "notes",
+                    "label": "Notes",
+                    "hide": true,
+                    "type": "custom"
+                },
+                {
                     "key": "needs_catering",
                     "label": "Need Catering?",
                     "flex": true,

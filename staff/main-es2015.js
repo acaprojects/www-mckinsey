@@ -4643,7 +4643,11 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     }
     edit() {
         if (localStorage) {
-            localStorage.setItem('STAFF.booking_form', JSON.stringify(Object.assign({}, this.booking, { room: this.booking.room_list.map(i => (Object.assign({}, i, { bookings: [] }))) })));
+            localStorage.setItem('STAFF.booking_form', JSON.stringify(Object.assign({}, this.booking, { equipment: this.booking.notes.filter(i => i.type === 'equipment')
+                    .reduce((a, v) => { a[v.space] = v.message; return a; }, {}), catering_notes: this.booking.notes.filter(i => i.type === 'catering')
+                    .reduce((a, v) => { a[v.space] = v.message; return a; }, {}), room: this.booking.room_list.map(i => (Object.assign({}, i, { bookings: [] }))) })));
+            localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
+            localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
         }
         this.service.navigate(['book']);
         this.fn.close();
@@ -5642,7 +5646,8 @@ class RoomSelectModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTE
     }
     initLists() {
         this.model.bld_list = this.service.Buildings.list();
-        this.model.zone = this.service.Buildings.current().id;
+        const space = this.model.select_list[0] || {};
+        this.model.zone = (space.level || {}).bld_id || this.service.Buildings.current().id;
         this.model.index = this.model.bld_list.findIndex(i => i.id === this.model.zone);
         const room_types = this.service.Buildings.organisation().space_types;
         this.model.room_types = Object.keys(room_types).map(i => ({ id: i, name: room_types[i] }));
@@ -8345,13 +8350,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /*
  * @Author: Alex Sorafumo
  * @Date: 2017-06-05 12:39:28
  * @Last Modified by: Alex Sorafumo
  * @Last Modified time: 2018-06-19 13:56:07
  */
+
 
 
 
@@ -8673,6 +8680,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             setup: raw_item.setup || 0,
             breakdown: raw_item.breakdown || 0
         };
+        item.notes.sort((a, b) => a.date - b.date);
         // Setup organiser for booking
         if (raw_item.organiser || raw_item.organizer) {
             const email = typeof raw_item.organiser === 'string'
@@ -8763,6 +8771,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                         item.room_list = [rm];
                     }
                 }
+                if (item.room_list) {
+                    item.location_name = item.room_list.map(i => i.name).join(', ') || item.location_name;
+                }
                 return rm;
             },
             set: v => {
@@ -8813,6 +8824,21 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('m');
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
+        console.log('Booking:', this.item(item.id));
+        if (item.id && localStorage && (+localStorage.getItem('STAFF.booking.date') !== item.date ||
+            +localStorage.getItem('STAFF.booking.duration') !== item.duration)) {
+            form.room.forEach(rm => {
+                const bld = this.parent.Buildings.list().find(i => i.id === rm.level.bld_id) || {};
+                const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_5__["rulesForSpace"])({
+                    user: item.host,
+                    space: rm,
+                    time: item.date,
+                    duration: item.duration || 60,
+                    rules: bld.booking_rules
+                });
+                rm.book_type = rules.auto_approve ? 'Book' : 'Request';
+            });
+        }
         if (form.room instanceof Array) {
             auto_approve = [];
             room_id = form.room.map(rm => {
@@ -8848,7 +8874,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             delegate: form.delegate || false,
             location_name: form.location_name,
             locations: form.locations,
-            notes: [],
+            notes: form.notes || [],
             all_day: form.all_day ? date.format('YYYY-MM-DD') : false
         };
         if (request.catering && item.catering_code) {
@@ -8913,6 +8939,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 });
             }
         }
+        request.notes.sort((a, b) => a.date - b.date);
         if (item.icaluid) {
             request.icaluid = item.icaluid;
         }
@@ -9047,7 +9074,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         return settings;
     }
 }
-BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: BookingsService, providedIn: "root" });
+BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: BookingsService, providedIn: "root" });
 
 
 /***/ }),
@@ -19209,7 +19236,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574123322000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574230594000);
 
 
 /***/ }),

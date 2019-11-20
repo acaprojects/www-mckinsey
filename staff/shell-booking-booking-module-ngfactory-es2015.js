@@ -527,7 +527,7 @@ class BookingMainFlowCateringOrderComponent extends _shared_globals_base_compone
         const rooms = Object.keys(orders);
         const list = rooms.map(i => {
             if (orders[i]) {
-                const room = (this._service.Rooms.item(orders[i].room_id) || { name: '', level: {} });
+                const room = (this._service.Rooms.item(orders[i].room_id || i) || { name: '', level: {} });
                 orders[i].name = room.name;
                 orders[i].symbol = this.symbol(room.level.bld_id);
                 orders[i].total = (orders[i].items || []).reduce((c, j) => c + j.amount * (j.unit_cost || j.price), 0);

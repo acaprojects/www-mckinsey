@@ -489,7 +489,7 @@ var __extends = (this && this.__extends) || (function () {
                         var rooms = Object.keys(orders);
                         var list = rooms.map(function (i) {
                             if (orders[i]) {
-                                var room = (_this._service.Rooms.item(orders[i].room_id) || { name: '', level: {} });
+                                var room = (_this._service.Rooms.item(orders[i].room_id || i) || { name: '', level: {} });
                                 orders[i].name = room.name;
                                 orders[i].symbol = _this.symbol(room.level.bld_id);
                                 orders[i].total = (orders[i].items || []).reduce(function (c, j) { return c + j.amount * (j.unit_cost || j.price); }, 0);
