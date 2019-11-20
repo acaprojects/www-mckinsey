@@ -8945,6 +8945,7 @@ var BookingsService = /** @class */ (function (_super) {
         }
         var item = {
             id: raw_item.id,
+            local_id: "" + Math.floor(Math.random() * 999999999),
             icaluid: raw_item.icaluid,
             title: raw_item.title || raw_item.Subject || raw_item.subject,
             date: raw_item.all_day ? start.hours(6).minutes(30).valueOf() : start.valueOf(),
@@ -20926,7 +20927,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574218427000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574230431000);
 
 
 /***/ }),
