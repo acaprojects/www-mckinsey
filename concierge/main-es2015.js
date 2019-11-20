@@ -1352,6 +1352,7 @@ class BookingDetailsComponent extends _shared_globals_base_component__WEBPACK_IM
             this.loading = false;
             this.success = true;
             this.event.emit(true);
+            this._service.set('CONCIERGE.latest_booking', booking);
         }, (e) => {
             this.loading = false;
             this._service.error(`Booking Error: ${e}`);
@@ -1531,12 +1532,14 @@ var BookingModalComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__[
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingModalComponent", function() { return BookingModalComponent; });
 /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
-/* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
-/* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
+/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
+/* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
 
 
 
@@ -1544,6 +1547,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["OverlayContentComponent"] {
+    ngOnDestroy() {
+        super.ngOnDestroy();
+        localStorage.removeItem('CONCIERGE.booking.filters');
+    }
     init() {
         if (!this.service.ready()) {
             return this.timeout('init', () => this.init());
@@ -1605,7 +1612,7 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
         if (field) {
             return field.control.value;
         }
-        return dayjs__WEBPACK_IMPORTED_MODULE_4__()
+        return dayjs__WEBPACK_IMPORTED_MODULE_5__()
             .startOf('m')
             .valueOf();
     }
@@ -1721,7 +1728,7 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
             this.page = 'form';
         }
         else if (event.type === 'book') {
-            this.book = dayjs__WEBPACK_IMPORTED_MODULE_4__().add(1, 'm').startOf('m').valueOf();
+            this.book = dayjs__WEBPACK_IMPORTED_MODULE_5__().add(1, 'm').startOf('m').valueOf();
         }
     }
     /**
@@ -1750,18 +1757,18 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
         else if (this.model.edit_equipment) {
             this.page = 'equipment';
         }
-        this.form_fields = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_2__["generateBookingFormMetadata"])(booking, this.service.Settings.get('app.booking.fields'), this.service);
+        this.form_fields = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["generateBookingFormMetadata"])(booking, this.service.Settings.get('app.booking.fields'), this.service);
         this.date_field = this.form_fields
             .reduce((v, i) => v.concat(i.children && i.children.length ? i.children : [i]), [])
             .find(i => i.key === 'date');
         const CUSTOM_FIELDS = ['room', 'catering', 'equipment', 'catering_notes', 'catering_code', 'equipment_code', 'id'];
         const CUSTOM_DEFAULTS = [[], {}, '', '', '', '', ''];
         CUSTOM_FIELDS.forEach((key, i) => {
-            this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"]({
+            this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
                 key,
                 label: key,
                 type: 'action',
-                format: key === 'room' ? _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatSpaces"] : null,
+                format: key === 'room' ? _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["formatSpaces"] : null,
                 hide: true,
                 value: booking[key] || CUSTOM_DEFAULTS[i]
             }));
@@ -1784,14 +1791,10 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
                 });
             }
         });
-        const empty = { control: { value: true, valueChanges: Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(false) } };
+        const empty = { control: { value: true, valueChanges: Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(false) } };
         const id = (this.form_fields.find(i => i.key === 'id') || empty).control.value;
         const time = (this.form_fields.find(i => i.key === 'start') || empty);
         const all_day = (this.form_fields.find(i => i.key === 'all_day') || empty);
-        const catering = (this.form_fields.find(i => i.key === 'needs_catering') || empty);
-        if (catering.setValue) {
-            catering.setValue(this.model.booking && (this.model.booking.catering || this.model.edit_catering));
-        }
         time.setDisabled(this.duration > 450);
         this.subs.obs.all_day = all_day.control.valueChanges.subscribe((state) => {
             time.setDisabled(state);
@@ -2492,6 +2495,10 @@ class BookingFlowFindSpaceComponent extends _shared_globals_base_component__WEBP
                 let active_locations = '';
                 if (localStorage) {
                     active_locations = localStorage.getItem('CONCIERGE.booking.filters') || '';
+                }
+                const spaces = this.spaces.control.value;
+                if (!active_locations && spaces && spaces.length) {
+                    active_locations = spaces.map(i => i.level.bld_id).join(',');
                 }
                 this.locations = this._service.Buildings.list().map(i => (Object.assign({}, i, { selected: active_locations ? active_locations.indexOf(i.id) >= 0 : i.id === bld.id })));
                 this.filter$.next(Math.floor(Math.random() * 99999));
@@ -4604,6 +4611,17 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         const date = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking.date);
         return now.isBefore(date, 'm');
     }
+    init() {
+        this.subs.obs.new_booking = this.service.listen('CONCIERGE.latest_booking', (booking) => {
+            if (booking) {
+                this.model.booking = booking;
+            }
+        });
+    }
+    ngOnDestroy() {
+        super.ngOnDestroy();
+        this.service.set('CONCIERGE.latest_booking', null);
+    }
     /**
      * Edit the catering orders of the booking
      */
@@ -4642,7 +4660,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                 booking: Object.assign({}, booking, { room: spaces.map(i => (Object.assign({}, i, { bookings: [] }))), equipment: (booking.notes || []).filter(i => i.type === 'equipment')
                         .reduce((a, v) => { a[v.space] = v.message; return a; }, {}), catering_notes: (booking.notes || []).filter(i => i.type === 'catering')
                         .sort((a, b) => b.date - a.date)
-                        .reduce((a, v) => { a[v.space] = v.message; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), equipment_code: Object.assign({}, (booking.equipment_code || {})), catering: JSON.parse(JSON.stringify(catering)) }),
+                        .reduce((a, v) => { a[v.space] = v.message; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: Object.assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -4667,7 +4685,15 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
      * Delete the active booking
      */
     deleteMeeting() {
-        this.service.Bookings.delete(this.booking.id).then(() => {
+        const start = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking.date);
+        const end = start.add(this.booking.duration, 'm');
+        this.service.Bookings.delete(this.booking.id, {
+            concierge: true,
+            host: this.booking.organiser.email,
+            icaluid: this.booking.icaluid,
+            start: start.unix(),
+            end: end.unix()
+        }).then(() => {
             this.service.success('Successfully deleted meeting');
             this.close();
         }, (e) => {
@@ -5445,7 +5471,8 @@ class SetOffsetsModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTE
             this.event('finish');
             return;
         }
-        this.service.Bookings.updateItem(this.booking.id, Object.assign({}, this.booking, { setup: this.setup_index * 5, breakdown: this.breakdown_index * 5 })).then(() => {
+        this.service.Bookings.updateItem(this.booking.id, Object.assign({}, this.booking, { setup: this.setup_index * 5, breakdown: this.breakdown_index * 5 })).then((booking) => {
+            this.service.set('CONCIERGE.latest_booking', booking);
             this.service.success('Successfully updated setup and breakdown times');
             this.event('finish');
         }, (err) => {
@@ -7813,6 +7840,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         }
         if (item.organiser) {
             request.organiser = item.organiser;
+        }
+        if (item.host) {
+            request.organiser = item.host;
         }
         if (item.notify_user) {
             request.notify_users = [item.notify_user.email];
@@ -17450,7 +17480,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574159289000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574209922000);
 
 
 /***/ }),

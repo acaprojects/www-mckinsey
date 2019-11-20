@@ -133,8 +133,7 @@
                     "key": "host",
                     "label": "Meeting Host",
                     "flex": true,
-                    "control_type": "custom",
-                    "no_edit": true
+                    "control_type": "custom"
                 },
                 {
                     "key": "attendees",

@@ -1516,6 +1516,7 @@ var BookingDetailsComponent = /** @class */ (function (_super) {
             _this.loading = false;
             _this.success = true;
             _this.event.emit(true);
+            _this._service.set('CONCIERGE.latest_booking', booking);
         }, function (e) {
             _this.loading = false;
             _this._service.error("Booking Error: " + e);
@@ -1697,12 +1698,13 @@ var BookingModalComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__[
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingModalComponent", function() { return BookingModalComponent; });
 /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm5/acaprojects-ngx-widgets.js");
-/* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
-/* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
+/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
+/* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -1732,11 +1734,16 @@ var __values = (undefined && undefined.__values) || function (o) {
 
 
 
+
 var BookingModalComponent = /** @class */ (function (_super) {
     __extends(BookingModalComponent, _super);
     function BookingModalComponent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    BookingModalComponent.prototype.ngOnDestroy = function () {
+        _super.prototype.ngOnDestroy.call(this);
+        localStorage.removeItem('CONCIERGE.booking.filters');
+    };
     BookingModalComponent.prototype.init = function () {
         var _this = this;
         if (!this.service.ready()) {
@@ -1840,7 +1847,7 @@ var BookingModalComponent = /** @class */ (function (_super) {
             if (field) {
                 return field.control.value;
             }
-            return dayjs__WEBPACK_IMPORTED_MODULE_4__()
+            return dayjs__WEBPACK_IMPORTED_MODULE_5__()
                 .startOf('m')
                 .valueOf();
         },
@@ -1979,7 +1986,7 @@ var BookingModalComponent = /** @class */ (function (_super) {
             this.page = 'form';
         }
         else if (event.type === 'book') {
-            this.book = dayjs__WEBPACK_IMPORTED_MODULE_4__().add(1, 'm').startOf('m').valueOf();
+            this.book = dayjs__WEBPACK_IMPORTED_MODULE_5__().add(1, 'm').startOf('m').valueOf();
         }
     };
     /**
@@ -2009,18 +2016,18 @@ var BookingModalComponent = /** @class */ (function (_super) {
         else if (this.model.edit_equipment) {
             this.page = 'equipment';
         }
-        this.form_fields = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_2__["generateBookingFormMetadata"])(booking, this.service.Settings.get('app.booking.fields'), this.service);
+        this.form_fields = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["generateBookingFormMetadata"])(booking, this.service.Settings.get('app.booking.fields'), this.service);
         this.date_field = this.form_fields
             .reduce(function (v, i) { return v.concat(i.children && i.children.length ? i.children : [i]); }, [])
             .find(function (i) { return i.key === 'date'; });
         var CUSTOM_FIELDS = ['room', 'catering', 'equipment', 'catering_notes', 'catering_code', 'equipment_code', 'id'];
         var CUSTOM_DEFAULTS = [[], {}, '', '', '', '', ''];
         CUSTOM_FIELDS.forEach(function (key, i) {
-            _this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"]({
+            _this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
                 key: key,
                 label: key,
                 type: 'action',
-                format: key === 'room' ? _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatSpaces"] : null,
+                format: key === 'room' ? _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["formatSpaces"] : null,
                 hide: true,
                 value: booking[key] || CUSTOM_DEFAULTS[i]
             }));
@@ -2043,14 +2050,10 @@ var BookingModalComponent = /** @class */ (function (_super) {
                 });
             }
         });
-        var empty = { control: { value: true, valueChanges: Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(false) } };
+        var empty = { control: { value: true, valueChanges: Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(false) } };
         var id = (this.form_fields.find(function (i) { return i.key === 'id'; }) || empty).control.value;
         var time = (this.form_fields.find(function (i) { return i.key === 'start'; }) || empty);
         var all_day = (this.form_fields.find(function (i) { return i.key === 'all_day'; }) || empty);
-        var catering = (this.form_fields.find(function (i) { return i.key === 'needs_catering'; }) || empty);
-        if (catering.setValue) {
-            catering.setValue(this.model.booking && (this.model.booking.catering || this.model.edit_catering));
-        }
         time.setDisabled(this.duration > 450);
         this.subs.obs.all_day = all_day.control.valueChanges.subscribe(function (state) {
             time.setDisabled(state);
@@ -2857,6 +2860,10 @@ var BookingFlowFindSpaceComponent = /** @class */ (function (_super) {
                 var active_locations_1 = '';
                 if (localStorage) {
                     active_locations_1 = localStorage.getItem('CONCIERGE.booking.filters') || '';
+                }
+                var spaces = _this.spaces.control.value;
+                if (!active_locations_1 && spaces && spaces.length) {
+                    active_locations_1 = spaces.map(function (i) { return i.level.bld_id; }).join(',');
                 }
                 _this.locations = _this._service.Buildings.list().map(function (i) { return (__assign({}, i, { selected: active_locations_1 ? active_locations_1.indexOf(i.id) >= 0 : i.id === bld.id })); });
                 _this.filter$.next(Math.floor(Math.random() * 99999));
@@ -5397,6 +5404,18 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
+    MeetingDetailsOverlayComponent.prototype.init = function () {
+        var _this = this;
+        this.subs.obs.new_booking = this.service.listen('CONCIERGE.latest_booking', function (booking) {
+            if (booking) {
+                _this.model.booking = booking;
+            }
+        });
+    };
+    MeetingDetailsOverlayComponent.prototype.ngOnDestroy = function () {
+        _super.prototype.ngOnDestroy.call(this);
+        this.service.set('CONCIERGE.latest_booking', null);
+    };
     /**
      * Edit the catering orders of the booking
      */
@@ -5435,7 +5454,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
                 booking: __assign({}, booking, { room: spaces.map(function (i) { return (__assign({}, i, { bookings: [] })); }), equipment: (booking.notes || []).filter(function (i) { return i.type === 'equipment'; })
                         .reduce(function (a, v) { a[v.space] = v.message; return a; }, {}), catering_notes: (booking.notes || []).filter(function (i) { return i.type === 'catering'; })
                         .sort(function (a, b) { return b.date - a.date; })
-                        .reduce(function (a, v) { a[v.space] = v.message; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), equipment_code: __assign({}, (booking.equipment_code || {})), catering: JSON.parse(JSON.stringify(catering)) }),
+                        .reduce(function (a, v) { a[v.space] = v.message; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -5462,7 +5481,15 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
      */
     MeetingDetailsOverlayComponent.prototype.deleteMeeting = function () {
         var _this = this;
-        this.service.Bookings.delete(this.booking.id).then(function () {
+        var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking.date);
+        var end = start.add(this.booking.duration, 'm');
+        this.service.Bookings.delete(this.booking.id, {
+            concierge: true,
+            host: this.booking.organiser.email,
+            icaluid: this.booking.icaluid,
+            start: start.unix(),
+            end: end.unix()
+        }).then(function () {
             _this.service.success('Successfully deleted meeting');
             _this.close();
         }, function (e) {
@@ -6386,7 +6413,8 @@ var SetOffsetsModalComponent = /** @class */ (function (_super) {
             this.event('finish');
             return;
         }
-        this.service.Bookings.updateItem(this.booking.id, __assign({}, this.booking, { setup: this.setup_index * 5, breakdown: this.breakdown_index * 5 })).then(function () {
+        this.service.Bookings.updateItem(this.booking.id, __assign({}, this.booking, { setup: this.setup_index * 5, breakdown: this.breakdown_index * 5 })).then(function (booking) {
+            _this.service.set('CONCIERGE.latest_booking', booking);
             _this.service.success('Successfully updated setup and breakdown times');
             _this.event('finish');
         }, function (err) {
@@ -9203,6 +9231,9 @@ var BookingsService = /** @class */ (function (_super) {
         }
         if (item.organiser) {
             request.organiser = item.organiser;
+        }
+        if (item.host) {
+            request.organiser = item.host;
         }
         if (item.notify_user) {
             request.notify_users = [item.notify_user.email];
@@ -20895,7 +20926,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574159289000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574209922000);
 
 
 /***/ }),
