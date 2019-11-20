@@ -4327,7 +4327,7 @@ class MeetingDetailsDisplayComponent extends _shared_globals_base_component__WEB
         const booking = this.booking || {};
         const notes = booking.notes || [];
         const description = notes.find(i => i.type === 'description');
-        return (description ? description.message : null) || '';
+        return (description ? description.message : null) || booking.description || '';
     }
     /** List of space names */
     get locations() {
@@ -17480,7 +17480,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574209922000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574218427000);
 
 
 /***/ }),

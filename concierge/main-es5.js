@@ -5025,7 +5025,7 @@ var MeetingDetailsDisplayComponent = /** @class */ (function (_super) {
             var booking = this.booking || {};
             var notes = booking.notes || [];
             var description = notes.find(function (i) { return i.type === 'description'; });
-            return (description ? description.message : null) || '';
+            return (description ? description.message : null) || booking.description || '';
         },
         enumerable: true,
         configurable: true
@@ -20926,7 +20926,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574209922000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574218427000);
 
 
 /***/ }),
