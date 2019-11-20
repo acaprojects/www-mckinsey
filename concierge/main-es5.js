@@ -10110,10 +10110,12 @@ var BuildingsService = /** @class */ (function () {
                     for (var id in _this.data) {
                         if (_this.data.hasOwnProperty(id) && _this.data[id].coords) {
                             var coords = _this.data[id].coords;
-                            var i_dist = _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].geodistance(coords.latitude, coords.longitude, loc.coords.latitude, loc.coords.longitude);
-                            if (i_dist < dist) {
-                                bld = _this.data[id];
-                                dist = i_dist;
+                            if (coords && coords.longitude && coords.latitude) {
+                                var i_dist = _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].geodistance(coords.latitude, coords.longitude, loc.coords.latitude, loc.coords.longitude);
+                                if (i_dist < dist) {
+                                    bld = _this.data[id];
+                                    dist = i_dist;
+                                }
                             }
                         }
                     }
@@ -10121,7 +10123,7 @@ var BuildingsService = /** @class */ (function () {
                         _this.parent.log('BLD][S', "Building set to \"" + bld.name + "\" based of geolocation");
                         _this.set(bld.id, false);
                     }
-                });
+                }, function (err) { return console.error('Failed to get geolocation.', err); });
             }
             _this.set(_this.model.user_set_building || _this.default, false);
             _this.parent.log('BLD(S)', 'Loaded building data');
@@ -20927,7 +20929,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574230431000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574233233000);
 
 
 /***/ }),
