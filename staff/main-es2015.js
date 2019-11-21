@@ -4851,7 +4851,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         const user = this.service.Users.current();
         const booking = this.model.booking;
         const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('m');
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(booking.date).add(booking.duration, 'm');
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(booking.date);
         this.is_delegate = user.delegates && user.delegates.length > 0 && !!user.delegates.find(i => i === this.model.organiser);
         return (this.model.is_organiser || this.is_delegate)
             && now.isBefore(date, 'm')
@@ -8824,7 +8824,6 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('m');
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
-        console.log('Booking:', this.item(item.id));
         if (item.id && localStorage && (+localStorage.getItem('STAFF.booking.date') !== item.date ||
             +localStorage.getItem('STAFF.booking.duration') !== item.duration)) {
             form.room.forEach(rm => {
@@ -19218,7 +19217,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574309743000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574331788000);
 
 
 /***/ }),
