@@ -1562,8 +1562,8 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
     }
     /** Form field for the list of selected spaces */
     get space_list() {
-        const index = this.form_fields.findIndex(i => i.key === 'room');
-        return index ? this.form_fields[index] : null;
+        const field = this.form_fields.find(i => i.key === 'room');
+        return field;
     }
     /** Form field for listing selected catering items */
     get catering() {
@@ -1692,8 +1692,11 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
                 default:
                     this.form_fields.forEach(i => i.control.markAsDirty());
                     if (this.valid) {
-                        if (space) {
+                        if (space && !id) {
                             this.page = 'space';
+                        }
+                        else if (space && id) {
+                            this.page = 'equipment';
                         }
                         else if (space && catering) {
                             this.page = 'catering';
@@ -1772,12 +1775,13 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
         CUSTOM_FIELDS.forEach((key, i) => {
             this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
                 key,
-                label: key,
+                label: key === 'room' ? 'Select Spaces' : key,
                 type: 'action',
                 format: key === 'room' ? _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["formatSpaces"] : null,
-                hide: true,
+                hide: !(key === 'room' && booking.id),
                 value: booking[key] || CUSTOM_DEFAULTS[i]
             }));
+            this.form_fields.sort((a, b) => a.key === 'room' ? -1 : (b.key === 'room' ? 1 : 0));
         });
         this.form_fields.forEach(i => {
             if (i.children && i.children.length) {
@@ -2502,7 +2506,7 @@ class BookingFlowFindSpaceComponent extends _shared_globals_base_component__WEBP
                 if (localStorage) {
                     active_locations = localStorage.getItem('CONCIERGE.booking.filters') || '';
                 }
-                const spaces = this.spaces.control.value;
+                const spaces = this.spaces ? this.spaces.control.value : [];
                 if (!active_locations && spaces && spaces.length) {
                     active_locations = spaces.map(i => i.level.bld_id).join(',');
                 }
@@ -2569,7 +2573,7 @@ class BookingFlowFindSpaceComponent extends _shared_globals_base_component__WEBP
      * @param list List of rooms
      */
     filter(list) {
-        const selected = this.spaces.control.value || [];
+        const selected = (this.spaces ? this.spaces.control.value : null) || [];
         return list
             .map(i => (Object.assign({}, i, { selected: !!selected.find(j => i.id === j.id) })));
     }
@@ -7740,7 +7744,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             location_name: raw_item.location_name,
             check_ins: raw_item.check_ins,
             booked_by: raw_item.booked_by,
-            booking_type: raw_item.booking_type || (raw_item.booking_type === 'internal' && raw_item.visitors) ? 'external' : 'internal',
+            booking_type: (raw_item.booking_type === 'internal' && raw_item.visitors) ? 'external' : raw_item.booking_type,
             setup: (raw_item.setup || 0) / 60,
             breakdown: (raw_item.breakdown || 0) / 60,
             equipment_notes: raw_item.equipment_notes || raw_item.equipment,
@@ -17613,7 +17617,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574375236000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574378595000);
 
 
 /***/ }),

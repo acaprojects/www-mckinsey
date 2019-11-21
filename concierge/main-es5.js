@@ -1761,8 +1761,8 @@ var BookingModalComponent = /** @class */ (function (_super) {
     Object.defineProperty(BookingModalComponent.prototype, "space_list", {
         /** Form field for the list of selected spaces */
         get: function () {
-            var index = this.form_fields.findIndex(function (i) { return i.key === 'room'; });
-            return index ? this.form_fields[index] : null;
+            var field = this.form_fields.find(function (i) { return i.key === 'room'; });
+            return field;
         },
         enumerable: true,
         configurable: true
@@ -1954,8 +1954,11 @@ var BookingModalComponent = /** @class */ (function (_super) {
                 default:
                     this.form_fields.forEach(function (i) { return i.control.markAsDirty(); });
                     if (this.valid) {
-                        if (space) {
+                        if (space && !id) {
                             this.page = 'space';
+                        }
+                        else if (space && id) {
+                            this.page = 'equipment';
                         }
                         else if (space && catering) {
                             this.page = 'catering';
@@ -2035,12 +2038,13 @@ var BookingModalComponent = /** @class */ (function (_super) {
         CUSTOM_FIELDS.forEach(function (key, i) {
             _this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
                 key: key,
-                label: key,
+                label: key === 'room' ? 'Select Spaces' : key,
                 type: 'action',
                 format: key === 'room' ? _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["formatSpaces"] : null,
-                hide: true,
+                hide: !(key === 'room' && booking.id),
                 value: booking[key] || CUSTOM_DEFAULTS[i]
             }));
+            _this.form_fields.sort(function (a, b) { return a.key === 'room' ? -1 : (b.key === 'room' ? 1 : 0); });
         });
         this.form_fields.forEach(function (i) {
             if (i.children && i.children.length) {
@@ -2871,7 +2875,7 @@ var BookingFlowFindSpaceComponent = /** @class */ (function (_super) {
                 if (localStorage) {
                     active_locations_1 = localStorage.getItem('CONCIERGE.booking.filters') || '';
                 }
-                var spaces = _this.spaces.control.value;
+                var spaces = _this.spaces ? _this.spaces.control.value : [];
                 if (!active_locations_1 && spaces && spaces.length) {
                     active_locations_1 = spaces.map(function (i) { return i.level.bld_id; }).join(',');
                 }
@@ -2950,7 +2954,7 @@ var BookingFlowFindSpaceComponent = /** @class */ (function (_super) {
      * @param list List of rooms
      */
     BookingFlowFindSpaceComponent.prototype.filter = function (list) {
-        var selected = this.spaces.control.value || [];
+        var selected = (this.spaces ? this.spaces.control.value : null) || [];
         return list
             .map(function (i) { return (__assign({}, i, { selected: !!selected.find(function (j) { return i.id === j.id; }) })); });
     };
@@ -9166,7 +9170,7 @@ var BookingsService = /** @class */ (function (_super) {
             location_name: raw_item.location_name,
             check_ins: raw_item.check_ins,
             booked_by: raw_item.booked_by,
-            booking_type: raw_item.booking_type || (raw_item.booking_type === 'internal' && raw_item.visitors) ? 'external' : 'internal',
+            booking_type: (raw_item.booking_type === 'internal' && raw_item.visitors) ? 'external' : raw_item.booking_type,
             setup: (raw_item.setup || 0) / 60,
             breakdown: (raw_item.breakdown || 0) / 60,
             equipment_notes: raw_item.equipment_notes || raw_item.equipment,
@@ -21121,7 +21125,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574375236000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574378595000);
 
 
 /***/ }),
