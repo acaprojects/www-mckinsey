@@ -1646,7 +1646,7 @@ var OrdersComponent = /** @class */ (function (_super) {
         order.status = status || '';
         this.model.show_dropdown[index] = false;
         var booking = order.booking;
-        booking.catering = __assign({}, booking.catering, { order_status: status });
+        booking.catering[booking.room.id] = __assign({}, booking.catering[booking.room.id], { order_status: status });
         this.service.Bookings.updateItem(booking.id, booking).then(function () {
         }, function () {
             _this.service.error('Failed to update status of meeting order');

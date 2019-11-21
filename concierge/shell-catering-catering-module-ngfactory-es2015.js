@@ -1451,7 +1451,7 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
         order.status = status || '';
         this.model.show_dropdown[index] = false;
         const booking = order.booking;
-        booking.catering = Object.assign({}, booking.catering, { order_status: status });
+        booking.catering[booking.room.id] = Object.assign({}, booking.catering[booking.room.id], { order_status: status });
         this.service.Bookings.updateItem(booking.id, booking).then(() => {
         }, () => {
             this.service.error('Failed to update status of meeting order');
