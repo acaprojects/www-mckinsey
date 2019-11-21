@@ -5282,7 +5282,7 @@ function View_MeetingDetailsOverlayComponent_0(_l) { return _angular_core__WEBPA
     } if (("touchrelease" === en)) {
         var pd_4 = (_co.updateOffsets() !== false);
         ad = (pd_4 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](102, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Edit Private Details"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["actions", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_5))], function (_ck, _v) { var _co = _v.component; var currVal_3 = "bottom"; var currVal_4 = "end"; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 104); var currVal_6 = false; var currVal_7 = _co.show_actions; _ck(_v, 10, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.booking; _ck(_v, 19, 0, currVal_8); var currVal_15 = ((_co.catering_order && _co.catering_order.items) && _co.catering_order.items.length); var currVal_16 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 60); _ck(_v, 59, 0, currVal_15, currVal_16); var currVal_20 = ((_co.catering_order && _co.catering_order.items) && _co.catering_order.items.length); _ck(_v, 78, 0, currVal_20); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.period; _ck(_v, 5, 0, currVal_0); var currVal_1 = _co.title; _ck(_v, 7, 0, currVal_1); var currVal_2 = !_co.can_edit; _ck(_v, 8, 0, currVal_2); var currVal_9 = !_co.can_edit; _ck(_v, 20, 0, currVal_9); var currVal_10 = ((_co.space == null) ? null : _co.space.name); _ck(_v, 31, 0, currVal_10); var currVal_11 = _co.expected; _ck(_v, 36, 0, currVal_11); var currVal_12 = (_co.code || "-"); _ck(_v, 41, 0, currVal_12); var currVal_13 = _co.space_note; _ck(_v, 46, 0, currVal_13); var currVal_14 = (!_co.can_edit && !_co.in_progress); _ck(_v, 47, 0, currVal_14); var currVal_17 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 65, 0, _ck(_v, 66, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 0), (_co.total / 100), _co.symbol)); _ck(_v, 65, 0, currVal_17); var currVal_18 = (_co.catering_order.code || "-"); _ck(_v, 71, 0, currVal_18); var currVal_19 = (_co.catering_note || "-"); _ck(_v, 76, 0, currVal_19); var currVal_21 = (!_co.can_edit && !_co.in_progress); _ck(_v, 79, 0, currVal_21); var currVal_22 = (_co.setup || "No setup"); _ck(_v, 90, 0, currVal_22); var currVal_23 = (_co.breakdown || "No breakdown"); _ck(_v, 95, 0, currVal_23); var currVal_24 = (_co.other_note || "-"); _ck(_v, 100, 0, currVal_24); }); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](102, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Edit Private Details"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["actions", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_5))], function (_ck, _v) { var _co = _v.component; var currVal_3 = "bottom"; var currVal_4 = "end"; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 104); var currVal_6 = false; var currVal_7 = _co.show_actions; _ck(_v, 10, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.booking; _ck(_v, 19, 0, currVal_8); var currVal_15 = ((_co.catering_order && _co.catering_order.items) && _co.catering_order.items.length); var currVal_16 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 60); _ck(_v, 59, 0, currVal_15, currVal_16); var currVal_20 = ((_co.catering_order && _co.catering_order.items) && _co.catering_order.items.length); _ck(_v, 78, 0, currVal_20); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.period; _ck(_v, 5, 0, currVal_0); var currVal_1 = _co.title; _ck(_v, 7, 0, currVal_1); var currVal_2 = (!_co.can_edit && !_co.in_progress); _ck(_v, 8, 0, currVal_2); var currVal_9 = !_co.can_edit; _ck(_v, 20, 0, currVal_9); var currVal_10 = ((_co.space == null) ? null : _co.space.name); _ck(_v, 31, 0, currVal_10); var currVal_11 = _co.expected; _ck(_v, 36, 0, currVal_11); var currVal_12 = (_co.code || "-"); _ck(_v, 41, 0, currVal_12); var currVal_13 = _co.space_note; _ck(_v, 46, 0, currVal_13); var currVal_14 = (!_co.can_edit && !_co.in_progress); _ck(_v, 47, 0, currVal_14); var currVal_17 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 65, 0, _ck(_v, 66, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 0), (_co.total / 100), _co.symbol)); _ck(_v, 65, 0, currVal_17); var currVal_18 = (_co.catering_order.code || "-"); _ck(_v, 71, 0, currVal_18); var currVal_19 = (_co.catering_note || "-"); _ck(_v, 76, 0, currVal_19); var currVal_21 = (!_co.can_edit && !_co.in_progress); _ck(_v, 79, 0, currVal_21); var currVal_22 = (_co.setup || "No setup"); _ck(_v, 90, 0, currVal_22); var currVal_23 = (_co.breakdown || "No breakdown"); _ck(_v, 95, 0, currVal_23); var currVal_24 = (_co.other_note || "-"); _ck(_v, 100, 0, currVal_24); }); }
 function View_MeetingDetailsOverlayComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "meeting-details-overlay", [], null, [["window", "resize"]], function (_v, en, $event) { var ad = true; if (("window:resize" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).resize() !== false);
         ad = (pd_0 && ad);
@@ -8807,6 +8807,10 @@ var __read = (undefined && undefined.__read) || function (o, n) {
     }
     return ar;
 };
+var __spread = (undefined && undefined.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
 /*
  * @Author: Alex Sorafumo
  * @Date: 2017-06-05 12:39:28
@@ -9430,6 +9434,7 @@ var BookingsService = /** @class */ (function (_super) {
         if (item.host) {
             request.organiser = item.host;
         }
+        request.attendees = _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].unique(__spread(request.attendees, [request.organiser]), 'email');
         if (item.notify_user) {
             request.notify_users = [item.notify_user.email];
         }
@@ -21110,7 +21115,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574314354000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574331726000);
 
 
 /***/ }),
