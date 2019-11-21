@@ -1697,7 +1697,7 @@ var __extends = (this && this.__extends) || (function () {
                     }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_13__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_13__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](37, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" Next "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = "options"; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 13); var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 14); var currVal_3 = _co.show; _ck(_v, 12, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.locations; _ck(_v, 17, 0, currVal_4); var currVal_5 = !_co.loading; _ck(_v, 20, 0, currVal_5); var currVal_6 = ((!_co.shown_spaces || (_co.shown_spaces.length <= 0)) || _co.loading); _ck(_v, 22, 0, currVal_6); var currVal_9 = ((!_co.spaces || !_co.spaces.control.value) || (_co.spaces.control.value.length <= 0)); _ck(_v, 37, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.is_today; _ck(_v, 25, 0, currVal_7); var currVal_8 = _co.date_display; _ck(_v, 30, 0, currVal_8); });
             }
             function View_BookingMainFlowFindSpaceComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "booking-main-flow-find-space", [], null, null, null, View_BookingMainFlowFindSpaceComponent_0, RenderType_BookingMainFlowFindSpaceComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 770048, null, 0, _find_space_component__WEBPACK_IMPORTED_MODULE_14__["BookingMainFlowFindSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_12__["AppService"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
-            var BookingMainFlowFindSpaceComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("booking-main-flow-find-space", _find_space_component__WEBPACK_IMPORTED_MODULE_14__["BookingMainFlowFindSpaceComponent"], View_BookingMainFlowFindSpaceComponent_Host_0, { date_field: "dateField", duration: "duration", all_day: "all_day", user: "user", recurr_end: "recurr_end", spaces: "spaces" }, { event: "event" }, []);
+            var BookingMainFlowFindSpaceComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("booking-main-flow-find-space", _find_space_component__WEBPACK_IMPORTED_MODULE_14__["BookingMainFlowFindSpaceComponent"], View_BookingMainFlowFindSpaceComponent_Host_0, { date_field: "dateField", duration: "duration", all_day: "all_day", catering: "catering", user: "user", recurr_end: "recurr_end", spaces: "spaces" }, { event: "event" }, []);
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/find-space/find-space.component.scss.shim.ngstyle.js": 
@@ -1784,6 +1784,9 @@ var __extends = (this && this.__extends) || (function () {
                     /** Timestamp of the currently selected date */
                     get: function () {
                         var date = this.date_field ? this.date_field.getValue() : dayjs__WEBPACK_IMPORTED_MODULE_7__().valueOf();
+                        if (this.catering) {
+                            date = dayjs__WEBPACK_IMPORTED_MODULE_7__(date).subtract(15, 'm').valueOf();
+                        }
                         if (this.duration > 480 || this.all_day) {
                             date = dayjs__WEBPACK_IMPORTED_MODULE_7__(date).startOf('d').valueOf();
                         }
@@ -1821,7 +1824,7 @@ var __extends = (this && this.__extends) || (function () {
                     var _this = this;
                     var query = {
                         date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date,
-                        duration: this.all_day ? 24 * 60 : this.duration,
+                        duration: this.all_day ? 24 * 60 : (this.duration + (this.catering ? 15 : 0)),
                         hide_bookings: true
                     };
                     var locations = this.locations.reduce(function (v, i) { i.selected ? v.push(i.id) : ''; return v; }, []);
@@ -2297,7 +2300,7 @@ var __extends = (this && this.__extends) || (function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_BookingMainFlowFindSpaceComponent_0"], _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_BookingMainFlowFindSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 770048, null, 0, _find_space_find_space_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowFindSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { date_field: [0, "date_field"], duration: [1, "duration"], all_day: [2, "all_day"], recurr_end: [3, "recurr_end"], spaces: [4, "spaces"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.date_field; var currVal_1 = _co.duration; var currVal_2 = _co.all_day; var currVal_3 = _co.recurr_end; var currVal_4 = _co.space_list; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4); }, null);
+                    }, _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_BookingMainFlowFindSpaceComponent_0"], _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_BookingMainFlowFindSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 770048, null, 0, _find_space_find_space_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowFindSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { date_field: [0, "date_field"], duration: [1, "duration"], all_day: [2, "all_day"], catering: [3, "catering"], recurr_end: [4, "recurr_end"], spaces: [5, "spaces"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.date_field; var currVal_1 = _co.duration; var currVal_2 = _co.all_day; var currVal_3 = _co.needs_catering; var currVal_4 = _co.recurr_end; var currVal_5 = _co.space_list; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); }, null);
             }
             function View_BookingMainFlowComponent_3(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "booking-main-flow-form", [], null, [[null, "event"]], function (_v, en, $event) {
@@ -2443,6 +2446,16 @@ var __extends = (this && this.__extends) || (function () {
                     get: function () {
                         var field = this.form_fields.find(function (i) { return i.key === 'all_day'; });
                         return field ? field.control.value : false;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(BookingMainFlowComponent.prototype, "needs_catering", {
+                    /** Whether the user want to add catering to their booking */
+                    get: function () {
+                        var empty = { control: { value: {} } };
+                        var catering = (this.form_fields.find(function (i) { return i.key === 'needs_catering'; }) || empty).control.value;
+                        return catering;
                     },
                     enumerable: true,
                     configurable: true
