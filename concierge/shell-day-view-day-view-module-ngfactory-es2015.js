@@ -134,7 +134,7 @@ class DayViewApprovalsViewComponent extends _shared_globals_base_component__WEBP
             // this.interval('update_meetings', () => this.updateMeetings(), 60 * 1000);
         })));
         this.getMonthlyPending();
-        this.interval('monthly_pending', () => this.getMonthlyPending(), 60 * 1000);
+        this.interval('monthly_pending', () => this.getMonthlyPending(), 10 * 60 * 1000);
     }
     ngOnChanges(changes) {
         if (changes.date) {
@@ -201,8 +201,15 @@ class DayViewApprovalsViewComponent extends _shared_globals_base_component__WEBP
         return events.sort((a, b) => a.date - b.date);
     }
     getMonthlyPending() {
-        const start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('M');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('d');
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('M');
         const end = start.endOf('M');
+        if (now.isAfter(end, 'm')) {
+            return;
+        }
+        else if (now.isAfter(start, 'm')) {
+            start = now;
+        }
         const level = this._service.get('APP.level');
         const zone_ids = (level === -1 ? null : level) || this._service.Buildings.current();
         console.log('Get Monthly:', start.format('MMMM YYYY'));

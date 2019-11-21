@@ -164,7 +164,7 @@ var DayViewApprovalsViewComponent = /** @class */ (function (_super) {
             // this.interval('update_meetings', () => this.updateMeetings(), 60 * 1000);
         })));
         this.getMonthlyPending();
-        this.interval('monthly_pending', function () { return _this.getMonthlyPending(); }, 60 * 1000);
+        this.interval('monthly_pending', function () { return _this.getMonthlyPending(); }, 10 * 60 * 1000);
     };
     DayViewApprovalsViewComponent.prototype.ngOnChanges = function (changes) {
         var _this = this;
@@ -255,8 +255,15 @@ var DayViewApprovalsViewComponent = /** @class */ (function (_super) {
     };
     DayViewApprovalsViewComponent.prototype.getMonthlyPending = function () {
         var _this = this;
+        var now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('d');
         var start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('M');
         var end = start.endOf('M');
+        if (now.isAfter(end, 'm')) {
+            return;
+        }
+        else if (now.isAfter(start, 'm')) {
+            start = now;
+        }
         var level = this._service.get('APP.level');
         var zone_ids = (level === -1 ? null : level) || this._service.Buildings.current();
         console.log('Get Monthly:', start.format('MMMM YYYY'));

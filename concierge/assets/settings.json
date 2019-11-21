@@ -213,16 +213,7 @@
                     "label": "Meeting Notes",
                     "simple": false,
                     "control_type": "custom",
-                    "flex": true,
-                    "no_edit": true
-                },
-                {
-                    "key": "private_notes",
-                    "label": "Private Notes",
-                    "description": "",
-                    "control_type": "custom",
-                    "flex": true,
-                    "edit_only": true
+                    "flex": true
                 }
             ]
         }

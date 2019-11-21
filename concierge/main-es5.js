@@ -3884,8 +3884,7 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
         this.model.form = {};
         this.model.group = 0;
         // Grab the catering details for the order
-        var value = {};
-        value[this.space.id] = this.order.booking.catering;
+        var value = this.order.booking.catering;
         // Create field for editing order details
         this.form_field = new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"]({
             key: 'catering',
@@ -3900,7 +3899,7 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
         order.status = status;
         this.model.show_dropdown = false;
         var booking = order.booking;
-        booking.catering = __assign({}, booking.catering, { order_status: status });
+        booking.catering[booking.room.id] = __assign({}, booking.catering[booking.room.id], { order_status: status });
         this.model.order = this.order;
         this.event('updated');
         this.service.Bookings.updateItem(booking.id, booking).then(function () {
@@ -5575,7 +5574,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
                         .reduce(function (a, v) {
                         a[v.space] = v.message;
                         return a;
-                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
+                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), booking_type: { id: booking.booking_type || booking.type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -9359,7 +9358,7 @@ var BookingsService = /** @class */ (function (_super) {
         }
         if (request.catering && !request.catering.items) {
             for (var rm in request.catering) {
-                if (request.catering[rm]) {
+                if (request.catering[rm] && request.catering[rm].items) {
                     var order = request.catering[rm];
                     try {
                         for (var _b = (e_6 = void 0, __values(order.items)), _c = _b.next(); !_c.done; _c = _b.next()) {
@@ -13655,7 +13654,6 @@ var CateringEditOrderComponent = /** @class */ (function (_super) {
         get: function () {
             var _this = this;
             var orders = this.catering ? this.catering.control.value : {};
-            console.log('Orders:', orders);
             var rooms = Object.keys(orders);
             var list = rooms.map(function (i) {
                 if (orders[i] && orders[i] instanceof Object) {
@@ -15495,7 +15493,7 @@ var RenderType_CustomEditorFieldComponent = _angular_core__WEBPACK_IMPORTED_MODU
 function View_CustomEditorFieldComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 7, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 6, "editor", [["toolbar", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("ngModelChange" === en)) {
         var pd_0 = (_co.field.setValue($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, _node_modules_tinymce_tinymce_angular_tinymce_tinymce_angular_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_EditorComponent_0"], _node_modules_tinymce_tinymce_angular_tinymce_tinymce_angular_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_EditorComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 4374528, null, 0, _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_3__["EditorComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]], { init: [0, "init"], toolbar: [1, "toolbar"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](4, { plugins: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_3__["EditorComponent"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, { update: "ngModelChange" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControl"]]], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_7 = _ck(_v, 4, 0, "link"); var currVal_8 = ""; _ck(_v, 3, 0, currVal_7, currVal_8); var currVal_9 = _co.field.control.value; _ck(_v, 6, 0, currVal_9); }, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPending; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); }); }
+    } return ad; }, _node_modules_tinymce_tinymce_angular_tinymce_tinymce_angular_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_EditorComponent_0"], _node_modules_tinymce_tinymce_angular_tinymce_tinymce_angular_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_EditorComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 4374528, null, 0, _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_3__["EditorComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]], { init: [0, "init"], toolbar: [1, "toolbar"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](4, { plugins: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_3__["EditorComponent"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, { update: "ngModelChange" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControl"]]], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_7 = _ck(_v, 4, 0, "link"); var currVal_8 = ""; _ck(_v, 3, 0, currVal_7, currVal_8); var currVal_9 = _co.value; _ck(_v, 6, 0, currVal_9); }, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPending; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); }); }
 function View_CustomEditorFieldComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_CustomEditorFieldComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.field; _ck(_v, 1, 0, currVal_0); }, null); }
 function View_CustomEditorFieldComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "custom-editor-field", [], null, null, null, View_CustomEditorFieldComponent_0, RenderType_CustomEditorFieldComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _editor_field_component__WEBPACK_IMPORTED_MODULE_6__["CustomEditorFieldComponent"], [_acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_7__["ADynamicFormField"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]], null, null)], null, null); }
 var CustomEditorFieldComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("custom-editor-field", _editor_field_component__WEBPACK_IMPORTED_MODULE_6__["CustomEditorFieldComponent"], View_CustomEditorFieldComponent_Host_0, {}, {}, []);
@@ -15577,6 +15575,14 @@ var CustomEditorFieldComponent = /** @class */ (function (_super) {
     Object.defineProperty(CustomEditorFieldComponent.prototype, "group", {
         get: function () {
             return this._group;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomEditorFieldComponent.prototype, "value", {
+        /** Current value of the form field */
+        get: function () {
+            return this.field.control.value;
         },
         enumerable: true,
         configurable: true
@@ -21115,7 +21121,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574331726000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574343583000);
 
 
 /***/ }),
