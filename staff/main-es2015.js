@@ -9091,15 +9091,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BuildingsService", function() { return BuildingsService; });
 /* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /*
 * @Author: Alex Sorafumo
 * @Date:   2017-05-25 16:00:37
  * @Last Modified by: Alex Sorafumo
  * @Last Modified time: 2018-07-02 16:45:34
 */
-
 
 
 
@@ -9471,29 +9469,19 @@ class BuildingsService {
                     localStorage.removeItem('STAFF.building');
                 }
             }
-            // Check user's geolocation
-            if (keys.length > 1 && 'geolocation' in navigator) {
-                navigator.geolocation.getCurrentPosition((loc) => {
-                    let bld = null;
-                    let dist = 999;
-                    for (const id in this.data) {
-                        if (this.data.hasOwnProperty(id) && this.data[id].coords) {
-                            const coords = this.data[id].coords;
-                            const i_dist = _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].geodistance(coords.latitude, coords.longitude, loc.coords.latitude, loc.coords.longitude);
-                            if (i_dist < dist) {
-                                bld = this.data[id];
-                                dist = i_dist;
-                            }
-                        }
-                    }
-                    if (bld) {
-                        this.parent.log('BLD][S', `Building set to "${bld.name}" based of geolocation`);
-                        this.set(bld.id, false);
-                    }
-                });
-            }
             this.set(this.model.user_set_building || this.default, false);
             this.parent.log('BLD(S)', 'Loaded building data');
+            // Set the default building to the user's office location
+            const user = this.parent.Users.current();
+            if (user && user.office_code) {
+                const bld = Object.keys(this.data)
+                    .map(i => this.data[i])
+                    .find((i) => i.code === user.office_code);
+                if (bld) {
+                    this.parent.log('BLD][S', `Building set to "${bld.name}" based of office location`);
+                    this.set(bld.id, false);
+                }
+            }
             setTimeout(() => this.loadLevels(), 300);
         });
     }
@@ -9568,7 +9556,7 @@ class BuildingsService {
         return extras;
     }
 }
-BuildingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function BuildingsService_Factory() { return new BuildingsService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: BuildingsService, providedIn: "root" });
+BuildingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function BuildingsService_Factory() { return new BuildingsService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: BuildingsService, providedIn: "root" });
 
 
 /***/ }),
@@ -10674,24 +10662,17 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_5__["BaseServi
             return this.set('state', 'invalid');
         }
         this.set('state', 'loading');
-        this.show('current', { control: true }).then((user) => {
+        this.show('current').then((user) => {
             if (user) {
-                this.show(user.email, {}).then((res) => {
-                    user.fmno = res.fmno;
-                    user.delegates = res.delegates;
-                    if (user.delegates && user.delegates instanceof Array) {
-                        user.delegates.forEach(i => this.show(i, { update: true }));
-                    }
-                    this.set('user', res);
-                    this.set('state', 'available');
-                    // Locate the active user
-                    if (this.parent.Settings.get('app.user.current_location')) {
+                this.set('user', user);
+                this.set('state', 'available');
+                // Locate the active user
+                if (this.parent.Settings.get('app.user.current_location')) {
+                    this.location(user.id, user.email).then(() => null, () => null);
+                    this.interval('active-location', () => {
                         this.location(user.id, user.email).then(() => null, () => null);
-                        this.interval('active-location', () => {
-                            this.location(user.id, user.email).then(() => null, () => null);
-                        }, 30 * 1000);
-                    }
-                });
+                    }, 30 * 1000);
+                }
             }
             else {
                 this.timeout('load', () => this.load(tries), 300 * ++tries);
@@ -10936,7 +10917,8 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_5__["BaseServi
             timezone: 'Australia/Brisbane',
             fmno: user.fmno,
             groups: user.groups,
-            delegates: user.delegates || []
+            delegates: user.delegates || [],
+            office_code: user.officeLocation
         };
         if (member.id) {
             member.image = user.image || `${this.parent.endpoint}/assets/users/${member.id}.png`;
@@ -19236,7 +19218,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574230594000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574309743000);
 
 
 /***/ }),
