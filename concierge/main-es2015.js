@@ -7740,7 +7740,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             location_name: raw_item.location_name,
             check_ins: raw_item.check_ins,
             booked_by: raw_item.booked_by,
-            booking_type: !raw_item.booking_type || (raw_item.booking_type === 'internal' && raw_item.visitors) ? 'external' : raw_item.booking_type,
+            booking_type: raw_item.booking_type || (raw_item.booking_type === 'internal' && raw_item.visitors) ? 'external' : 'internal',
             setup: (raw_item.setup || 0) / 60,
             breakdown: (raw_item.breakdown || 0) / 60,
             equipment_notes: raw_item.equipment_notes || raw_item.equipment,
@@ -17613,7 +17613,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574370307000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574375236000);
 
 
 /***/ }),
