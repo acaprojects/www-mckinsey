@@ -7548,12 +7548,14 @@ var AppService = /** @class */ (function (_super) {
                 _this.unsub('composer_init');
                 var init_state_1 = _this._composer.auth.is_online;
                 _this.subscription('online_state', _this._composer.auth.online_state.subscribe(function (state) {
-                    if (state !== init_state_1) {
-                        init_state_1 = state;
-                        _this.info(state
-                            ? 'Reconnected to server'
-                            : 'Connection to server lost. Limited functionality will be be available until it reconnects');
-                    }
+                    _this.timeout('online_state', function () {
+                        if (state !== init_state_1) {
+                            init_state_1 = state;
+                            _this.info(state
+                                ? 'Reconnected to server'
+                                : 'Connection to server lost. Limited functionality will be be available until it reconnects');
+                        }
+                    });
                 }));
                 _this.analytics.init();
                 // Initialise data services
@@ -21150,7 +21152,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574397099000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574398256000);
 
 
 /***/ }),
