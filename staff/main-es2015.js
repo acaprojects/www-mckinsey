@@ -19251,7 +19251,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574398810000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574404593000);
 
 
 /***/ }),
@@ -22311,7 +22311,9 @@ class BookingDetailsModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMP
         if (!this.model.catering) {
             return [];
         }
-        return Object.keys(this.model.catering).reduce((v, i) => {
+        return Object.keys(this.model.catering)
+            .filter(i => this.spaces.find(j => j.id === i))
+            .reduce((v, i) => {
             if (this.model.catering && this.model.catering[i]) {
                 this.model.catering[i].count = (this.model.catering[i].items || []).reduce((v, j) => v + (j.amount || 0), 0);
                 v.push(this.model.catering[i]);
@@ -22339,7 +22341,9 @@ class BookingDetailsModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMP
         const eq_code_list = Object.keys(equip_codes).reduce((a, v) => { a.push(equip_codes[v]); return a; }, []);
         const eq_codes = eq_code_list.join(', ');
         const catering_codes = this.model.catering_code || {};
-        const code_list = Object.keys(catering_codes).reduce((a, v) => { a.push(catering_codes[v]); return a; }, []);
+        const code_list = Object.keys(catering_codes)
+            .filter(i => this.spaces.find(j => j.id === i))
+            .reduce((a, v) => { a.push(catering_codes[v]); return a; }, []);
         const codes = code_list.join(', ');
         return `${eq_codes || 'none'} | ${codes || 'none'}`;
     }
