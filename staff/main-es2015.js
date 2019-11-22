@@ -4547,7 +4547,8 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             fields.id = this.booking.id;
             this.service.Overlay.openModal('confirm-booking', {
                 cmp: _shell_booking_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_7__["BookingDetailsModalComponent"],
-                data: fields
+                data: Object.assign({}, this.booking, fields, { catering_code: Object.keys(this.booking.catering)
+                        .reduce((a, v) => { a[v] = this.booking.catering[v].code; return a; }, {}) })
             }, event => {
                 if (event.type === 'finish') {
                     // Booking completed successfully
@@ -4556,6 +4557,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                 else if (event.type === 'close') {
                     event.close();
                 }
+                this.close();
             });
         }, 100);
     }
@@ -4656,7 +4658,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             }
         }
         if (localStorage) {
-            localStorage.setItem('STAFF.booking_form', JSON.stringify(Object.assign({}, this.booking, { room: spaces.map(i => (Object.assign({}, i, { bookings: [] }))), equipment: (booking.notes || [])
+            const data = Object.assign({}, this.booking, { room: spaces.map(i => (Object.assign({}, i, { bookings: [] }))), equipment: (booking.notes || [])
                     .filter(i => i.type === 'equipment')
                     .reduce((a, v) => {
                     a[v.space] = v.message;
@@ -4667,7 +4669,9 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                     .reduce((a, v) => {
                     a[v.space] = v.message;
                     return a;
-                }, {}), catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: { id: booking.booking_type }, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || catering.items, catering: JSON.parse(JSON.stringify(catering)), host: Object.assign({}, (booking.organiser || {})) })));
+                }, {}), catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[booking.room.id] && catering[booking.room.id].items), catering: JSON.parse(JSON.stringify(catering)), host: this.service.Users.item(booking.organiser.email) });
+            console.log('Data:', data);
+            localStorage.setItem('STAFF.booking_form', JSON.stringify(data));
             localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
             localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
         }
@@ -11983,7 +11987,7 @@ class BookingFormComponent extends _globals_base_component__WEBPACK_IMPORTED_MOD
         const options = this.getHostOptions();
         this.model.options.host_index = options;
         if (this.form.host) {
-            this.form.host_index = options.findIndex(i => i.email === this.form.host.email);
+            this.form.host_index = Math.max(0, options.findIndex(i => i.email === this.form.host.email));
         }
         this.model.formatters.conferencing = _form_formatters__WEBPACK_IMPORTED_MODULE_4__["FormFormatters"].conference(this.form.conference);
         this.model.validators.start = [_form_validators__WEBPACK_IMPORTED_MODULE_5__["FormValidators"].startTime(this.form.date)];
@@ -13107,7 +13111,7 @@ class CustomDropdownFieldComponent extends _globals_base_component__WEBPACK_IMPO
     update() {
         const value = this.field.control.value;
         if (value) {
-            this.index = this.options.findIndex(i => i === value || i.id === value.id);
+            this.index = this.options.findIndex(i => i === value || i.id === value.id || i.email === value.email);
         }
     }
 }
@@ -19247,7 +19251,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574398294000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574398810000);
 
 
 /***/ }),
