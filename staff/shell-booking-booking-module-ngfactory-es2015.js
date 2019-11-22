@@ -2399,8 +2399,9 @@ class BookingMainFlowComponent extends _shared_globals_base_component__WEBPACK_I
         const host = this.form_fields.find(i => i.key === 'host');
         if (host) {
             host.metadata = { service: this._service.Bookings, options: this.getHostOptions() };
-            host.setValue(host.getValue());
+            host.setValue(host.getValue() || booking.host);
         }
+        console.log('Host:', booking.host, host);
         this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
             key: 'id',
             type: 'action',
