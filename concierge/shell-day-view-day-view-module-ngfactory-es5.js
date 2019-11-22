@@ -1322,12 +1322,17 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
     }
     DayViewSpaceEventComponent.prototype.ngOnInit = function () { };
     Object.defineProperty(DayViewSpaceEventComponent.prototype, "type", {
-        /** Type of event */
+        /** Type of booking */
         get: function () {
-            if (this.event) {
-                return this.event.state === 'cancelled' ? 'cancelled' : this.event.booking_type;
+            if (!this.event || !this.event.booking_type) {
+                return '';
             }
-            return '';
+            if (this.event.state === 'cancelled') {
+                return 'cancelled';
+            }
+            return this.event.booking_type.id
+                ? this.event.booking_type.id
+                : (this.event.booking_type);
         },
         enumerable: true,
         configurable: true

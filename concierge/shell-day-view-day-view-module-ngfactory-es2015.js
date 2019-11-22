@@ -1167,12 +1167,17 @@ class DayViewSpaceEventComponent extends _shared_globals_base_component__WEBPACK
         this.position = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     ngOnInit() { }
-    /** Type of event */
+    /** Type of booking */
     get type() {
-        if (this.event) {
-            return this.event.state === 'cancelled' ? 'cancelled' : this.event.booking_type;
+        if (!this.event || !this.event.booking_type) {
+            return '';
         }
-        return '';
+        if (this.event.state === 'cancelled') {
+            return 'cancelled';
+        }
+        return this.event.booking_type.id
+            ? this.event.booking_type.id
+            : (this.event.booking_type);
     }
     /** Period that the event will occur during the day */
     get period() {
