@@ -4234,7 +4234,7 @@ function View_MeetingDetailsOverlayComponent_23(_l) { return _angular_core__WEBP
     } return ad; }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Edit Room Requirements"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](25, 0, null, null, 6, "div", [["class", "field catering"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](26, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Catering Order:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](28, 0, null, null, 3, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_24)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](30, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["no_catering", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_26)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](32, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](33, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Charge Code:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](35, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](36, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](37, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](38, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Requirements:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](40, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](41, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](42, 0, null, null, 3, "div", [["class", "footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](43, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
         var pd_0 = (_co.editCatering() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](44, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Edit Catering Order"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = ((_co.model.booking.status === "in_progress") || (_co.model.booking.status === "done")); _ck(_v, 23, 0, currVal_4); var currVal_5 = ((_co.catering[_v.context.$implicit.id] && _co.catering[_v.context.$implicit.id].items) && _co.catering[_v.context.$implicit.id].items.length); var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 31); _ck(_v, 30, 0, currVal_5, currVal_6); var currVal_9 = ((_co.model.booking.status === "in_progress") || (_co.model.booking.status === "done")); _ck(_v, 44, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.name; _ck(_v, 5, 0, currVal_0); var currVal_1 = (_co.equipment_notes[_v.context.$implicit.id] || "No requirements"); _ck(_v, 10, 0, currVal_1); var currVal_2 = (_co.space_codes[_v.context.$implicit.id] || "None"); _ck(_v, 15, 0, currVal_2); var currVal_3 = (_co.expected[_v.context.$implicit.id] || "0"); _ck(_v, 20, 0, currVal_3); var currVal_7 = (((_co.catering[_v.context.$implicit.id] == null) ? null : _co.catering[_v.context.$implicit.id].code) || "None"); _ck(_v, 36, 0, currVal_7); var currVal_8 = (_co.catering_notes[_v.context.$implicit.id] || "No requirements"); _ck(_v, 41, 0, currVal_8); }); }
+    } return ad; }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](44, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Edit Catering Order"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = !_co.can_edit; _ck(_v, 23, 0, currVal_4); var currVal_5 = ((_co.catering[_v.context.$implicit.id] && _co.catering[_v.context.$implicit.id].items) && _co.catering[_v.context.$implicit.id].items.length); var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 31); _ck(_v, 30, 0, currVal_5, currVal_6); var currVal_9 = !_co.can_edit; _ck(_v, 44, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.name; _ck(_v, 5, 0, currVal_0); var currVal_1 = (_co.equipment_notes[_v.context.$implicit.id] || "No requirements"); _ck(_v, 10, 0, currVal_1); var currVal_2 = (_co.space_codes[_v.context.$implicit.id] || "None"); _ck(_v, 15, 0, currVal_2); var currVal_3 = (_co.expected[_v.context.$implicit.id] || "0"); _ck(_v, 20, 0, currVal_3); var currVal_7 = (((_co.catering[_v.context.$implicit.id] == null) ? null : _co.catering[_v.context.$implicit.id].code) || "None"); _ck(_v, 36, 0, currVal_7); var currVal_8 = (_co.catering_notes[_v.context.$implicit.id] || "No requirements"); _ck(_v, 41, 0, currVal_8); }); }
 function View_MeetingDetailsOverlayComponent_22(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "other-details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_23)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.spaces; _ck(_v, 2, 0, currVal_0); }, null); }
 function View_MeetingDetailsOverlayComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, [["booking_details", 1]], null, 13, "form", [["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).onSubmit($event) !== false);
@@ -4641,15 +4641,37 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             this.manageAttendees();
         }
     }
-    edit() {
+    edit(type) {
+        const booking = this.booking;
+        const spaces = booking.room_list ? booking.room_list : booking.room ? [booking.room] : [];
+        let catering = {};
+        if (booking.catering) {
+            if (booking.catering.items) {
+                const empty = {};
+                empty[booking.room.id] = booking.catering;
+                catering = empty;
+            }
+            else {
+                catering = booking.catering;
+            }
+        }
         if (localStorage) {
-            localStorage.setItem('STAFF.booking_form', JSON.stringify(Object.assign({}, this.booking, { equipment: this.booking.notes.filter(i => i.type === 'equipment')
-                    .reduce((a, v) => { a[v.space] = v.message; return a; }, {}), catering_notes: this.booking.notes.filter(i => i.type === 'catering')
-                    .reduce((a, v) => { a[v.space] = v.message; return a; }, {}), room: this.booking.room_list.map(i => (Object.assign({}, i, { bookings: [] }))) })));
+            localStorage.setItem('STAFF.booking_form', JSON.stringify(Object.assign({}, this.booking, { room: spaces.map(i => (Object.assign({}, i, { bookings: [] }))), equipment: (booking.notes || [])
+                    .filter(i => i.type === 'equipment')
+                    .reduce((a, v) => {
+                    a[v.space] = v.message;
+                    return a;
+                }, {}), catering_notes: (booking.notes || [])
+                    .filter(i => i.type === 'catering')
+                    .sort((a, b) => b.date - a.date)
+                    .reduce((a, v) => {
+                    a[v.space] = v.message;
+                    return a;
+                }, {}), catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: { id: booking.booking_type }, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || catering.items, catering: JSON.parse(JSON.stringify(catering)), host: Object.assign({}, (booking.organiser || {})) })));
             localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
             localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
         }
-        this.service.navigate(['book']);
+        this.service.navigate(type === 'catering' ? ['book', 'main', 'catering'] : ['book'], { back: 'schedule' });
         this.fn.close();
     }
     confirmStart(checkin = false) {
@@ -4669,11 +4691,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         });
     }
     editCatering() {
-        if (localStorage) {
-            localStorage.setItem('STAFF.booking_form', JSON.stringify(Object.assign({}, this.booking, { room: this.booking.room_list.map(i => (Object.assign({}, i, { boookings: [] }))) })));
-        }
-        this.service.navigate(['book', 'main', 'catering'], { back: 'schedule' });
-        this.fn.close();
+        this.edit('catering');
     }
     editRequirements() {
         this.initForm();
@@ -19217,7 +19235,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574331788000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574383796000);
 
 
 /***/ }),
