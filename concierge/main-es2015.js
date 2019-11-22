@@ -6423,6 +6423,15 @@ class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_37_
         this.subscription('composer_init', this._composer.initialised.subscribe((state) => {
             if (state) {
                 this.unsub('composer_init');
+                let init_state = this._composer.auth.is_online;
+                this.subscription('online_state', this._composer.auth.online_state.subscribe((state) => {
+                    if (state !== init_state) {
+                        init_state = state;
+                        this.info(state
+                            ? 'Reconnected to server'
+                            : 'Connection to server lost. Limited functionality will be be available until it reconnects');
+                    }
+                }));
                 this.analytics.init();
                 // Initialise data services
                 this.buildings.init();
@@ -17629,7 +17638,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574383555000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574394623000);
 
 
 /***/ }),
