@@ -7195,7 +7195,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_menu_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./data/menu.service */ "./src/app/services/data/menu.service.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../shared/globals/base.class */ "./src/app/shared/globals/base.class.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
@@ -7239,10 +7240,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class AppService {
+
+class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_23__["BaseClass"] {
     constructor(_title, _cache, router, overlay, analytics, settings, _composer, hotkeys, lockers, buildings, bookings, 
     // private catering: CateringService,
     comments, rooms, users, visitors, location, contacts, heapio, _menu) {
+        super();
         this._title = _title;
         this._cache = _cache;
         this.router = router;
@@ -7311,24 +7314,31 @@ class AppService {
         }
         this.model.title = this.settings.get('app.title') || 'Angular Application';
         this.setupComposer();
-        const sub = this._composer.initialised.subscribe((state) => {
+        this.subscription('composer_init', this._composer.initialised.subscribe((state) => {
             if (state) {
-                setTimeout(() => {
-                    this.analytics.init();
-                    // Initialise data services
-                    this.buildings.init();
-                    this.bookings.init();
-                    this.users.init();
-                    this.rooms.init();
-                    // this.catering.init();
-                    this.visitors.init();
-                    this.lockers.init();
-                    this.contacts.init();
-                    this.initHeapIo();
-                }, 100);
-                sub.unsubscribe();
+                this.unsub('composer_init');
+                let init_state = this._composer.auth.is_online;
+                this.subscription('online_state', this._composer.auth.online_state.subscribe((state) => {
+                    if (state !== init_state) {
+                        init_state = state;
+                        this.info(state
+                            ? 'Reconnected to server'
+                            : 'Connection to server lost. Limited functionality will be be available until it reconnects');
+                    }
+                }));
+                this.analytics.init();
+                // Initialise data services
+                this.buildings.init();
+                this.bookings.init();
+                this.users.init();
+                this.rooms.init();
+                // this.catering.init();
+                this.visitors.init();
+                this.lockers.init();
+                this.contacts.init();
+                this.initHeapIo();
             }
-        });
+        }));
         _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["NotificationComponent"].timeout(5000);
     }
     ready() {
@@ -7608,7 +7618,7 @@ class AppService {
         }
     }
 }
-AppService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵdefineInjectable"]({ factory: function AppService_Factory() { return new AppService(_angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_2__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["OverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_analytics_service__WEBPACK_IMPORTED_MODULE_8__["AnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_7__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_6__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_hotkey_service__WEBPACK_IMPORTED_MODULE_16__["HotkeyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_lockers_service__WEBPACK_IMPORTED_MODULE_17__["LockersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_buildings_service__WEBPACK_IMPORTED_MODULE_11__["BuildingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_comments_service__WEBPACK_IMPORTED_MODULE_12__["CommentsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_rooms_service__WEBPACK_IMPORTED_MODULE_13__["RoomsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_users_service__WEBPACK_IMPORTED_MODULE_10__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_visitors_service__WEBPACK_IMPORTED_MODULE_15__["VisitorsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_location_service__WEBPACK_IMPORTED_MODULE_19__["LocationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_contacts_service__WEBPACK_IMPORTED_MODULE_18__["ContactsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_acaprojects_ngx_heap_io__WEBPACK_IMPORTED_MODULE_5__["HeapIoService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_menu_service__WEBPACK_IMPORTED_MODULE_20__["CateringMenuService"])); }, token: AppService, providedIn: "root" });
+AppService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵdefineInjectable"]({ factory: function AppService_Factory() { return new AppService(_angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_2__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["OverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_analytics_service__WEBPACK_IMPORTED_MODULE_8__["AnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_7__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_6__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_hotkey_service__WEBPACK_IMPORTED_MODULE_16__["HotkeyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_lockers_service__WEBPACK_IMPORTED_MODULE_17__["LockersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_buildings_service__WEBPACK_IMPORTED_MODULE_11__["BuildingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_comments_service__WEBPACK_IMPORTED_MODULE_12__["CommentsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_rooms_service__WEBPACK_IMPORTED_MODULE_13__["RoomsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_users_service__WEBPACK_IMPORTED_MODULE_10__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_visitors_service__WEBPACK_IMPORTED_MODULE_15__["VisitorsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_location_service__WEBPACK_IMPORTED_MODULE_19__["LocationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_contacts_service__WEBPACK_IMPORTED_MODULE_18__["ContactsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_acaprojects_ngx_heap_io__WEBPACK_IMPORTED_MODULE_5__["HeapIoService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_menu_service__WEBPACK_IMPORTED_MODULE_20__["CateringMenuService"])); }, token: AppService, providedIn: "root" });
 
 
 /***/ }),
@@ -19235,7 +19245,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574383796000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574391794000);
 
 
 /***/ }),
