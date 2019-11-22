@@ -1391,7 +1391,9 @@ var BookingDetailsComponent = /** @class */ (function (_super) {
         /** List of catering orders for booking */
         get: function () {
             var _this = this;
-            return Object.keys(this.form.catering).reduce(function (v, i) {
+            return Object.keys(this.form.catering)
+                .filter(function (i) { return _this.spaces.find(function (j) { return j.id === i; }); })
+                .reduce(function (v, i) {
                 if (_this.form.catering && _this.form.catering[i]) {
                     _this.form.catering[i].count = (_this.form.catering[i].items || []).reduce(function (v, j) { return v + (j.amount || 0); }, 0);
                     v.push(_this.form.catering[i]);
@@ -1431,11 +1433,14 @@ var BookingDetailsComponent = /** @class */ (function (_super) {
     Object.defineProperty(BookingDetailsComponent.prototype, "cost_codes", {
         /** Cost codes for equipment and catering */
         get: function () {
+            var _this = this;
             var equip_codes = this.form.equipment_code || {};
             var eq_code_list = Object.keys(equip_codes).reduce(function (a, v) { a.push(equip_codes[v]); return a; }, []);
             var eq_codes = eq_code_list.join(', ');
             var catering_codes = this.form.catering_code || {};
-            var code_list = Object.keys(catering_codes).reduce(function (a, v) { a.push(catering_codes[v]); return a; }, []);
+            var code_list = Object.keys(catering_codes)
+                .filter(function (i) { return _this.spaces.find(function (j) { return j.id === i; }); })
+                .reduce(function (a, v) { a.push(catering_codes[v]); return a; }, []);
             var codes = code_list.join(', ');
             return (eq_codes || 'none') + " | " + (codes || 'none');
         },
@@ -13585,7 +13590,7 @@ function View_CateringEditOrderComponent_0(_l) { return _angular_core__WEBPACK_I
         ad = (pd_3 && ad);
     } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_CateringEditOrderComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 4, "div", [["class", "info"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["*Orders are subject to a "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["48 hour limit"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" for cancellation ahead of a meeting"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_CateringEditOrderComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.order_list; _ck(_v, 8, 0, currVal_2); var currVal_3 = !_co.flow; _ck(_v, 15, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.count || "0"); var currVal_1 = ((_co.count === 1) ? "" : "s"); _ck(_v, 5, 0, currVal_0, currVal_1); }); }
 function View_CateringEditOrderComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-edit-order", [], null, null, null, View_CateringEditOrderComponent_0, RenderType_CateringEditOrderComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _catering_order_component__WEBPACK_IMPORTED_MODULE_5__["CateringEditOrderComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_6__["AppService"]], null, null)], null, null); }
-var CateringEditOrderComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-edit-order", _catering_order_component__WEBPACK_IMPORTED_MODULE_5__["CateringEditOrderComponent"], View_CateringEditOrderComponent_Host_0, { flow: "flow", catering: "catering" }, { event: "event" }, []);
+var CateringEditOrderComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-edit-order", _catering_order_component__WEBPACK_IMPORTED_MODULE_5__["CateringEditOrderComponent"], View_CateringEditOrderComponent_Host_0, { spaces: "spaces", flow: "flow", catering: "catering" }, { event: "event" }, []);
 
 
 
@@ -13686,7 +13691,9 @@ var CateringEditOrderComponent = /** @class */ (function (_super) {
             var _this = this;
             var orders = this.catering ? this.catering.control.value : {};
             var rooms = Object.keys(orders);
-            var list = rooms.map(function (i) {
+            var list = rooms
+                .filter(function (i) { return _this.spaces.find(function (j) { return j.id === i; }); })
+                .map(function (i) {
                 if (orders[i] && orders[i] instanceof Object) {
                     var room = (_this._service.Rooms.item(i) || { name: '', level: {} });
                     orders[i].name = room.name || orders[i].name;
@@ -13882,7 +13889,7 @@ function View_CateringEditComponent_0(_l) { return _angular_core__WEBPACK_IMPORT
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](26, 0, null, null, 1, "catering-edit-order", [], null, [[null, "event"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("event" === en)) {
         var pd_0 = (_co.event.emit($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["View_CateringEditOrderComponent_0"], _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["RenderType_CateringEditOrderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 180224, null, 0, _catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_13__["CateringEditOrderComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_14__["AppService"]], { flow: [0, "flow"], catering: [1, "catering"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.search_str; _ck(_v, 6, 0, currVal_7); var currVal_9 = (_co.spaces && (_co.spaces.length > 1)); _ck(_v, 17, 0, currVal_9); var currVal_10 = (_co.active_space && !_co.loading[_co.active_space.id]); var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 21); _ck(_v, 20, 0, currVal_10, currVal_11); var currVal_13 = _co.flow; var currVal_14 = _co.catering; _ck(_v, 27, 0, currVal_13, currVal_14); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPending; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_8 = !_co.search_str; _ck(_v, 12, 0, currVal_8); var currVal_12 = _co.show_order; _ck(_v, 23, 0, currVal_12); }); }
+    } return ad; }, _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["View_CateringEditOrderComponent_0"], _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["RenderType_CateringEditOrderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 180224, null, 0, _catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_13__["CateringEditOrderComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_14__["AppService"]], { spaces: [0, "spaces"], flow: [1, "flow"], catering: [2, "catering"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.search_str; _ck(_v, 6, 0, currVal_7); var currVal_9 = (_co.spaces && (_co.spaces.length > 1)); _ck(_v, 17, 0, currVal_9); var currVal_10 = (_co.active_space && !_co.loading[_co.active_space.id]); var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 21); _ck(_v, 20, 0, currVal_10, currVal_11); var currVal_13 = _co.spaces; var currVal_14 = _co.flow; var currVal_15 = _co.catering; _ck(_v, 27, 0, currVal_13, currVal_14, currVal_15); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPending; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_8 = !_co.search_str; _ck(_v, 12, 0, currVal_8); var currVal_12 = _co.show_order; _ck(_v, 23, 0, currVal_12); }); }
 function View_CateringEditComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-edit", [], null, null, null, View_CateringEditComponent_0, RenderType_CateringEditComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 704512, null, 0, _catering_component__WEBPACK_IMPORTED_MODULE_15__["CateringEditComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_14__["AppService"]], null, null)], null, null); }
 var CateringEditComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-edit", _catering_component__WEBPACK_IMPORTED_MODULE_15__["CateringEditComponent"], View_CateringEditComponent_Host_0, { id: "id", flow: "flow", spaces: "spaces", catering: "catering" }, { event: "event" }, []);
 
@@ -21152,7 +21159,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574398256000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574406553000);
 
 
 /***/ }),
