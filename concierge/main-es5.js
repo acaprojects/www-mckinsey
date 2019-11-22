@@ -5594,7 +5594,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
                         .reduce(function (a, v) {
                         a[v.space] = v.message;
                         return a;
-                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), booking_type: { id: booking.booking_type || booking.type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
+                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), booking_type: { id: this.type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -21150,7 +21150,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574394623000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574397099000);
 
 
 /***/ }),
