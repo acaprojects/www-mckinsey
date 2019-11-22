@@ -220,6 +220,18 @@
                     "simple": false,
                     "control_type": "custom",
                     "flex": true
+                },
+                {
+                    "key": "setup",
+                    "label": "Setup",
+                    "type": "input",
+                    "hide": true
+                },
+                {
+                    "key": "breakdown",
+                    "label": "Breakdown",
+                    "type": "input",
+                    "hide": true
                 }
             ]
         }
