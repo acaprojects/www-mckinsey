@@ -14470,7 +14470,7 @@ __webpack_require__.r(__webpack_exports__);
 var styles_CustomUserSearchFieldComponent = [_user_search_field_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
 var RenderType_CustomUserSearchFieldComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_CustomUserSearchFieldComponent, data: {} });
 
-function View_CustomUserSearchFieldComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "item"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
+function View_CustomUserSearchFieldComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "item"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).mousestart($event) !== false);
         ad = (pd_0 && ad);
     } if (("touchstart" === en)) {
@@ -14486,27 +14486,27 @@ function View_CustomUserSearchFieldComponent_2(_l) { return _angular_core__WEBPA
         var pd_4 = (_co.select(_v.context.$implicit) !== false);
         ad = (pd_4 && ad);
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "user-tag", [], null, null, null, _user_tag_user_tag_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_UserTagComponent_0"], _user_tag_user_tag_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_UserTagComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 573440, null, 0, _user_tag_user_tag_component__WEBPACK_IMPORTED_MODULE_4__["UserTagComponent"], [], { email: [0, "email"], model: [1, "model"] }, null)], function (_ck, _v) { var currVal_0 = true; var currVal_1 = _v.context.$implicit; _ck(_v, 3, 0, currVal_0, currVal_1); }, null); }
-function View_CustomUserSearchFieldComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "user-list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 2, null, View_CustomUserSearchFieldComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["SlicePipe"], [])], function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 3).transform(_co.filtered, 0, 30)); _ck(_v, 2, 0, currVal_0); }, null); }
-function View_CustomUserSearchFieldComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "div", [["class", "user-search"], ["widget", ""]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 9, "div", [["class", "search"], ["tooltip", ""]], null, [[null, "showChange"], [null, "mouseenter"], [null, "mouseleave"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mouseenter" === en)) {
-        var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).onEnter($event.target) !== false);
+function View_CustomUserSearchFieldComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "user-list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 2, null, View_CustomUserSearchFieldComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["SlicePipe"], [])], function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 3).transform(_co.filtered, 0, 30)); _ck(_v, 2, 0, currVal_0); }, null); }
+function View_CustomUserSearchFieldComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 9, "div", [["class", "search"], ["tooltip", ""]], null, [[null, "showChange"], [null, "mouseenter"], [null, "mouseleave"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mouseenter" === en)) {
+        var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).onEnter($event.target) !== false);
         ad = (pd_0 && ad);
     } if (("mouseleave" === en)) {
-        var pd_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).onLeave($event.target) !== false);
+        var pd_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).onLeave($event.target) !== false);
         ad = (pd_1 && ad);
     } if (("showChange" === en)) {
         var pd_2 = ((_co.show = $event) !== false);
         ad = (pd_2 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 671744, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["TooltipDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["OverlayService"]], { template: [0, "template"], triangle: [1, "triangle"], show: [2, "show"] }, { showChange: "showChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 6, "div", [["class", "searchbar"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 5, "input", [["placeholder", "Search for host..."]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "blur"], [null, "input"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("input" === en)) {
-        var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5)._handleInput($event.target.value) !== false);
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 671744, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["TooltipDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["OverlayService"]], { template: [0, "template"], triangle: [1, "triangle"], show: [2, "show"] }, { showChange: "showChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 6, "div", [["class", "searchbar"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 5, "input", [["placeholder", "Search for host..."]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "blur"], [null, "input"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("input" === en)) {
+        var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4)._handleInput($event.target.value) !== false);
         ad = (pd_0 && ad);
     } if (("blur" === en)) {
-        var pd_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).onTouched() !== false);
+        var pd_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).onTouched() !== false);
         ad = (pd_1 && ad);
     } if (("compositionstart" === en)) {
-        var pd_2 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5)._compositionStart() !== false);
+        var pd_2 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4)._compositionStart() !== false);
         ad = (pd_2 && ad);
     } if (("compositionend" === en)) {
-        var pd_3 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5)._compositionEnd($event.target.value) !== false);
+        var pd_3 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4)._compositionEnd($event.target.value) !== false);
         ad = (pd_3 && ad);
     } if (("ngModelChange" === en)) {
         var pd_4 = ((_co.search_str = $event) !== false);
@@ -14517,7 +14517,9 @@ function View_CustomUserSearchFieldComponent_0(_l) { return _angular_core__WEBPA
     } if (("blur" === en)) {
         var pd_6 = (_co.reset() !== false);
         ad = (pd_6 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["DefaultValueAccessor"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], [2, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["COMPOSITION_BUFFER_MODE"]]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["DefaultValueAccessor"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, { update: "ngModelChange" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControl"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["list", 2]], null, 0, null, View_CustomUserSearchFieldComponent_1))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 10); var currVal_1 = false; var currVal_2 = (((_co.show && _co.search_str) && _co.filtered) && (_co.filtered.length > 0)); _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2); var currVal_10 = _co.search_str; _ck(_v, 7, 0, currVal_10); }, function (_ck, _v) { var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).ngClassUntouched; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).ngClassTouched; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).ngClassPristine; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).ngClassDirty; var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).ngClassValid; var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).ngClassInvalid; var currVal_9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).ngClassPending; _ck(_v, 4, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9); }); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["DefaultValueAccessor"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], [2, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["COMPOSITION_BUFFER_MODE"]]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["DefaultValueAccessor"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, { update: "ngModelChange" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControl"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["list", 2]], null, 0, null, View_CustomUserSearchFieldComponent_2))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9); var currVal_1 = false; var currVal_2 = (((_co.show && _co.search_str) && _co.filtered) && (_co.filtered.length > 0)); _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); var currVal_10 = _co.search_str; _ck(_v, 6, 0, currVal_10); }, function (_ck, _v) { var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassUntouched; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassTouched; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPristine; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassDirty; var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassValid; var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassInvalid; var currVal_9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassPending; _ck(_v, 3, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9); }); }
+function View_CustomUserSearchFieldComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](0, null, [" ", "\n"]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.search_str; _ck(_v, 0, 0, currVal_0); }); }
+function View_CustomUserSearchFieldComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "user-search"], ["widget", ""]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_CustomUserSearchFieldComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["readonly_state", 2]], null, 0, null, View_CustomUserSearchFieldComponent_4))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !((_co.field.settings == null) ? null : _co.field.settings.readonly); var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 3); _ck(_v, 2, 0, currVal_0, currVal_1); }, null); }
 function View_CustomUserSearchFieldComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "custom-user-search-field", [], null, null, null, View_CustomUserSearchFieldComponent_0, RenderType_CustomUserSearchFieldComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _user_search_field_component__WEBPACK_IMPORTED_MODULE_7__["CustomUserSearchFieldComponent"], [_acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_8__["ADynamicFormField"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormGroup"], _services_app_service__WEBPACK_IMPORTED_MODULE_9__["AppService"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var CustomUserSearchFieldComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("custom-user-search-field", _user_search_field_component__WEBPACK_IMPORTED_MODULE_7__["CustomUserSearchFieldComponent"], View_CustomUserSearchFieldComponent_Host_0, {}, {}, []);
 
@@ -14576,9 +14578,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class CustomUserSearchFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_5__["BaseComponent"] {
-    constructor(field, group, service) {
+    constructor(_field, group, service) {
         super();
-        this.field = field;
+        this._field = _field;
         this.group = group;
         this.service = service;
         /** List of delegate emails for the current user */
@@ -14590,8 +14592,11 @@ class CustomUserSearchFieldComponent extends _globals_base_component__WEBPACK_IM
         /** Subject for changes to the search string */
         this.filter$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
     }
+    get field() {
+        return this._field;
+    }
     ngOnInit() {
-        this.subscription('control', this.field.control.valueChanges.subscribe(() => this.updateDisplay()));
+        this.subscription('control', this._field.control.valueChanges.subscribe(() => this.updateDisplay()));
         this.updateDisplay();
         this.current = this.service.Users.current();
         this.subscription('filter', this.filter$
@@ -14608,7 +14613,7 @@ class CustomUserSearchFieldComponent extends _globals_base_component__WEBPACK_IM
             this.filterResult(this.search_str);
             this.show = true;
         }));
-        this.subscription('control', this.field.control.valueChanges.subscribe(() => this.updateDisplay()));
+        this.subscription('control', this._field.control.valueChanges.subscribe(() => this.updateDisplay()));
         this.updateDisplay();
     }
     search(filter) {
@@ -14629,7 +14634,7 @@ class CustomUserSearchFieldComponent extends _globals_base_component__WEBPACK_IM
         });
     }
     updateDisplay() {
-        this.user = this.field.control.value || null;
+        this.user = this._field.control.value || null;
         if (this.user) {
             this.search_str = this.user.name;
         }
@@ -14642,7 +14647,7 @@ class CustomUserSearchFieldComponent extends _globals_base_component__WEBPACK_IM
     }
     select(user) {
         if (user) {
-            this.field.control.setValue(user);
+            this._field.control.setValue(user);
         }
         this.show = false;
     }
@@ -17648,7 +17653,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574648996000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574718690000);
 
 
 /***/ }),
@@ -19412,7 +19417,8 @@ function generateBookingFormMetadata(booking, field_data, service) {
         start: _formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatTimestamp"],
         space: _formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatSpaces"],
         room: _formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatSpaces"],
-        recurrence: _formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatRecurrence"]
+        recurrence: _formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatRecurrence"],
+        host: (control) => control.name || control
     };
     const custom_elements = _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__["CUSTOM_FIELD_REGISTER"];
     let today = dayjs__WEBPACK_IMPORTED_MODULE_5__(booking.date).startOf('m');
@@ -19443,7 +19449,7 @@ function generateBookingFormMetadata(booking, field_data, service) {
             validators: validators[field.key],
             references: field.references || field.refs,
             hide: field.hide,
-            settings: Object.assign({}, field.settings, { readonly: field.readonly }),
+            settings: Object.assign({}, field.settings, { readonly: field.readonly || (booking.id && field.readonly_edit) }),
             metadata: Object.assign({}, field.metadata, { service: service.Bookings }),
             attributes: { flex: field.flex },
             children: field.children
