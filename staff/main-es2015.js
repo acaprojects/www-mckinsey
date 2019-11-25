@@ -4387,8 +4387,9 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     }
     /** Number of attendees expected to turn up to the meeting */
     get catering_notes() {
-        const notes = (this.model.booking.notes || []).filter(i => i.type === 'catering');
-        notes.sort((a, b) => b.date - a.date);
+        const notes = (this.model.booking.notes || [])
+            .filter(i => i.type === 'catering' && i.author === this.booking.organiser.name);
+        notes.sort((a, b) => a.date - b.date);
         return notes.reduce((a, v) => { a[v.space] = v.message; return a; }, {});
     }
     /** Display string for the booking period */
@@ -4664,8 +4665,8 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                     a[v.space] = v.message;
                     return a;
                 }, {}), catering_notes: (booking.notes || [])
-                    .filter(i => i.type === 'catering')
-                    .sort((a, b) => b.date - a.date)
+                    .filter(i => i.type === 'catering' && i.author === booking.organiser.name)
+                    .sort((a, b) => a.date - b.date)
                     .reduce((a, v) => {
                     a[v.space] = v.message;
                     return a;
@@ -19251,7 +19252,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574404593000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574647765000);
 
 
 /***/ }),

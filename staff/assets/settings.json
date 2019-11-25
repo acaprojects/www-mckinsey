@@ -257,7 +257,8 @@
                 {
                     "key": "host",
                     "label": "Meeting Host",
-                    "type": "custom"
+                    "type": "custom",
+                    "no_edit": true
                 },
                 {
                     "key": "icaluid",
@@ -383,6 +384,12 @@
                     "key": "all_day",
                     "label": "All Day Booking",
                     "type": "toggle",
+                    "hide": true
+                },
+                {
+                    "key": "approval_status",
+                    "label": "Approval Status",
+                    "type": "custom",
                     "hide": true
                 },
                 {
