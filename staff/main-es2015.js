@@ -4670,7 +4670,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                     .reduce((a, v) => {
                     a[v.space] = v.message;
                     return a;
-                }, {}), catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[booking.room.id] && catering[booking.room.id].items), catering: JSON.parse(JSON.stringify(catering)), host: this.service.Users.item(booking.organiser.email) });
+                }, {}), catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: typeof booking.booking_type === 'string' ? { id: booking.booking_type } : booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[booking.room.id] && catering[booking.room.id].items), catering: JSON.parse(JSON.stringify(catering)), host: this.service.Users.item(booking.organiser.email) });
             console.log('Data:', data);
             localStorage.setItem('STAFF.booking_form', JSON.stringify(data));
             localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
@@ -4817,6 +4817,12 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         }
         // Make copy of booking data
         this.model.form = Object.assign({}, this.model.booking, { date: date.valueOf() });
+        if (this.model.form.id) {
+            delete this.model.form.id;
+        }
+        if (this.model.form.icaluid) {
+            delete this.model.form.icaluid;
+        }
         this.model.form.host =
             this.service.Users.item(this.model.booking.organiser.email)
                 || this.service.Users.current();
@@ -12036,7 +12042,7 @@ class BookingFormComponent extends _globals_base_component__WEBPACK_IMPORTED_MOD
                 break;
             case 'booking_type':
                 const value = this.form[field.key] || field.value;
-                field.value = typeof value === 'number' ? value : field.options.findIndex(i => i.id === value);
+                field.value = typeof value === 'number' ? value : field.options.findIndex(i => i.id === value || i.id === value.id);
                 break;
             default:
                 field.value = this.form[field.key] || field.value;
@@ -13089,8 +13095,8 @@ class CustomDropdownFieldComponent extends _globals_base_component__WEBPACK_IMPO
         return this._group;
     }
     ngOnInit() {
-        this.subscription('control', this.field.control.valueChanges.subscribe(() => this.update()));
-        this.timeout('init', () => this.update());
+        this.subscription("control", this.field.control.valueChanges.subscribe(() => this.update()));
+        this.timeout("init", () => this.update());
     }
     /** List of available options on the dropdown */
     get options() {
@@ -13112,7 +13118,10 @@ class CustomDropdownFieldComponent extends _globals_base_component__WEBPACK_IMPO
     update() {
         const value = this.field.control.value;
         if (value) {
-            this.index = this.options.findIndex(i => i === value || i.id === value.id || i.email === value.email);
+            this.index = this.options.findIndex(i => i === value ||
+                i.id === value ||
+                i.id === value.id ||
+                (i.email && i.email === value.email));
         }
     }
 }
@@ -19252,7 +19261,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574647765000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574719808000);
 
 
 /***/ }),
