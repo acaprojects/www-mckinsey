@@ -118,29 +118,26 @@
                     "key": "date",
                     "label": "Date",
                     "control_type": "custom",
-                    "required": true,
-                    "readonly_edit": true
+                    "required": true
                 },
                 {
                     "key": "start",
                     "label": "Time",
                     "control_type": "custom",
-                    "required": true,
-                    "readonly_edit": true
+                    "required": true
                 },
                 {
                     "key": "duration",
                     "label": "Duration",
                     "control_type": "custom",
-                    "required": true,
-                    "readonly_edit": true
+                    "required": true
                 },
                 {
                     "key": "host",
                     "label": "Meeting Host",
                     "flex": true,
                     "control_type": "custom",
-                    "no_edit": true
+                    "readonly_edit": true
                 },
                 {
                     "key": "attendees",
