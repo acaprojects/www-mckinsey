@@ -4665,7 +4665,6 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                     a[v.space] = v.message;
                     return a;
                 }, {}), catering_notes: this.catering_notes, catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: typeof booking.booking_type === 'string' ? { id: booking.booking_type } : booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[booking.room.id] && catering[booking.room.id].items), catering: JSON.parse(JSON.stringify(catering)), host: this.service.Users.item(booking.organiser.email) });
-            console.log('Data:', data);
             localStorage.setItem('STAFF.booking_form', JSON.stringify(data));
             localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
             localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
@@ -8887,7 +8886,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             const state = (item.approval_status ? item.approval_status[form.room.email] : null) || '';
             auto_approve = [form.room.book_type !== 'Request' && form.room.type !== 'Request' && state.indexOf('tentative') < 0];
         }
-        form.locations = form.room instanceof Array ? form.room.map(i => i.name).join(', ') : form.room.name;
+        form.location_name = form.room instanceof Array ? form.room.map(i => i.name).join(', ') : form.room.name;
         const request = {
             start: date.unix(),
             end: date.add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
@@ -8908,7 +8907,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             auto_approve,
             delegate: form.delegate || false,
             location_name: form.location_name,
-            locations: form.locations || '',
+            locations: form.locations,
             notes: form.notes || [],
             all_day: form.all_day ? date.format('YYYY-MM-DD') : false
         };
@@ -19262,7 +19261,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574725461000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574730346000);
 
 
 /***/ }),
