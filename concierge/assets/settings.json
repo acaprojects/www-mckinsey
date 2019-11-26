@@ -230,6 +230,18 @@
                     "label": "Breakdown",
                     "type": "input",
                     "hide": true
+                },
+                {
+                    "key": "old_date",
+                    "label": "Breakdown",
+                    "type": "input",
+                    "hide": true
+                },
+                {
+                    "key": "old_end",
+                    "label": "Breakdown",
+                    "type": "input",
+                    "hide": true
                 }
             ]
         }

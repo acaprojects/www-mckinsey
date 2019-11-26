@@ -5755,7 +5755,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
                         .reduce(function (a, v) {
                         a[v.space] = v.message;
                         return a;
-                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), booking_type: { id: this.type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
+                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: this.type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -9534,11 +9534,12 @@ var BookingsService = /** @class */ (function (_super) {
             var state = (item.approval_status ? item.approval_status[form.room.email] : null) || '';
             auto_approve = [(form.room.book_type !== 'Request' && form.room.type !== 'Request') && state.indexOf('tentative') < 0];
         }
+        console.log('Form:', form);
         var request = {
             start: date.unix(),
             old_start: Math.floor(form.old_date / 1000),
             end: date.add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
-            old_end: dayjs__WEBPACK_IMPORTED_MODULE_4__(form.old_date || form.date).add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
+            old_end: form.old_end || dayjs__WEBPACK_IMPORTED_MODULE_4__(form.old_date || form.date).add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
             room_id: room_id,
             title: form.title,
             description: form.description,
@@ -21346,7 +21347,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574731047000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574731879000);
 
 
 /***/ }),
