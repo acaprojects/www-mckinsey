@@ -7722,7 +7722,7 @@ var AppService = /** @class */ (function (_super) {
                                 ? 'Reconnected to server'
                                 : 'Connection to server lost. Limited functionality will be be available until it reconnects');
                         }
-                    });
+                    }, 1000);
                 }));
                 _this.analytics.init();
                 // Initialise data services
@@ -21347,7 +21347,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574731879000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574735044000);
 
 
 /***/ }),
