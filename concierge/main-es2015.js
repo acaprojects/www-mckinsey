@@ -7945,6 +7945,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 duration: _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(duration)
             }
         };
+        // Reset state after one request
+        states[raw_item.id] = '';
+        this.parent.set('BOOKING.states', states);
         /** Temporary solution to miscoloration with booking types not persisting. */
         let old_booking = JSON.parse(localStorage.getItem('CONCIERGE.last_booking'));
         if (old_booking && old_booking.icaluid === item.icaluid && item.booking_type !== old_booking.booking_type) {
@@ -17805,7 +17808,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574729986000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574731047000);
 
 
 /***/ }),
