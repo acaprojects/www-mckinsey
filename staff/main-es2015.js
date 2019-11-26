@@ -4824,7 +4824,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         this.model.form.start = moment__WEBPACK_IMPORTED_MODULE_5__(this.model.form.date).format('HH:mm');
         delete this.model.form.room;
         this.model.form.attendees = attendees && attendees.length > 1 ? [...(attendees.filter(i => i.email !== booking.organiser.email))] : [];
-        const room_list = room instanceof Array ? room.map(i => (Object.assign({}, i, { bookings: [] }))) : [Object.assign({}, room)];
+        const room_list = room instanceof Array ? room.map(i => (Object.assign({}, i, { bookings: [] }))) : room ? [Object.assign({}, room)] : [];
         for (const room of room_list) {
             const bld = this.service.Buildings.list().find(i => i.id === room.level.bld_id) || {};
             const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
@@ -8887,6 +8887,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             auto_approve = [form.room.book_type !== 'Request' && form.room.type !== 'Request' && state.indexOf('tentative') < 0];
         }
         form.location_name = form.room instanceof Array ? form.room.map(i => i.name).join(', ') : form.room.name;
+        if (!form.location_name) {
+            form.locations = [];
+        }
         const request = {
             start: date.unix(),
             end: date.add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
@@ -19261,7 +19264,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574730346000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574732566000);
 
 
 /***/ }),
