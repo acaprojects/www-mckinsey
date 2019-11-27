@@ -827,7 +827,11 @@ class BookingMainFlowCateringComponent extends _shared_globals_base_component__W
     get catering_allowed() {
         const now = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('m');
         const start = dayjs__WEBPACK_IMPORTED_MODULE_4__(this.date).startOf('m').second(1);
-        return now.isBefore(start.subtract(this.active_building.catering_restricted_from || 0, 'h'), 's');
+        let end = start.subtract(this.active_building.catering_restricted_from || 0, 'h');
+        if (end.format('ddd') === 'Sun' || end.format('ddd') === 'Sat') {
+            end = end.subtract(2, 'd');
+        }
+        return now.isBefore(end, 's');
     }
     /** Whether the selected room has catering */
     get has_catering() {

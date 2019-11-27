@@ -4401,7 +4401,11 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             if (space && space.level) {
                 const bld = this.service.Buildings.get(space.level.bld_id) || {};
                 const start = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.booking.date).startOf('m').second(1);
-                map[space.id] = this.can_edit && now.isBefore(start.subtract(bld.catering_restricted_from || 0, 'h'), 's');
+                let end = start.subtract(bld.catering_restricted_from || 0, 'h');
+                if (end.format('ddd') === 'Sun' || end.format('ddd') === 'Sat') {
+                    end = end.subtract(2, 'd');
+                }
+                map[space.id] = this.can_edit && now.isBefore(end, 's');
             }
         }
         return map;
@@ -19285,7 +19289,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574829543000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574831357000);
 
 
 /***/ }),
