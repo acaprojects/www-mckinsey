@@ -1,5 +1,5 @@
 {
-    "env": "prod",
+    "env": "dev",
     "debug": true,
     "composer": {
         "domain": "",
@@ -9,10 +9,10 @@
         "local_login": false
     },
     "app": {
-        "title": "Booking Panel",
-        "name": "Room Booking Panel",
-        "description": "ACA Room Booking Panel written with Angular Framework",
-        "short_name": "BOOKINGS",
+        "title": "McKinsey Booking UI",
+        "name": "McKinsey Booking UI",
+        "description": "McKinsey Booking UI written with Angular Framework",
+        "short_name": "Bookings",
         "code": "BOOK",
         "logo": {
             "type": "img",
@@ -27,43 +27,56 @@
         "rooms": {
             "enabled": false
         },
-        "selection": {
-            "header": "Please select a Zen Zone to start",
-            "list": [
+        "users": {
+            "enabled": false,
+            "search": false
+        },
+        "select": {
+            "header": "Please select a space"
+        },
+        "bookings": {
+            "fields": [
                 {
-                    "id": "sys-B0",
-                    "name": "A",
-                    "image": "assets/img/small_up.png"
+                    "key": "space",
+                    "type": "input",
+                    "label": "Space",
+                    "hide": true
                 },
                 {
-                    "id": "sys-B1",
-                    "name": "B",
-                    "image": "assets/img/large_up.png"
+                    "key": "host",
+                    "type": "custom",
+                    "label": "Host",
+                    "required": true
                 },
                 {
-                    "id": "sys-B2",
-                    "name": "C",
-                    "image": "assets/img/small_up.png"
+                    "key": "date",
+                    "type": "custom",
+                    "label": "Date",
+                    "hide": true
                 },
                 {
-                    "id": "sys-B3",
-                    "name": "D",
-                    "image": "assets/img/large_down.png"
+                    "key": "period",
+                    "type": "group",
+                    "children": [
+                        {
+                            "key": "time",
+                            "type": "custom",
+                            "label": "Start time"
+                        },
+                        {
+                            "key": "duration",
+                            "type": "custom",
+                            "label": "Duration"
+                        }
+                    ]
                 },
                 {
-                    "id": "sys-B4",
-                    "name": "E",
-                    "image": "assets/img/small_down.png"
-                },
-                {
-                    "id": "sys-B5",
-                    "name": "F",
-                    "image": "assets/img/large_down.png"
+                    "key": "title",
+                    "type": "input",
+                    "label": "Title"
                 }
             ]
         }
     },
-    "disable": {
-        "user_search": true
-    }
+    "mock": false
 }
