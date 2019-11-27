@@ -1835,8 +1835,6 @@ var __extends = (this && this.__extends) || (function () {
                             .subtract(30, 'm');
                     }
                     var diff = moment__WEBPACK_IMPORTED_MODULE_2__(this.display_value).diff(now, 'm');
-                    console.log('Time:', now.format('h:mm A'), moment__WEBPACK_IMPORTED_MODULE_2__(this.display_value).format('h:mm A'));
-                    console.log('Diff:', diff);
                     if (diff < 0) {
                         var start = moment__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
                         start.minute(Math.ceil(start.minute() / 5) * 5);
@@ -2740,21 +2738,25 @@ var __extends = (this && this.__extends) || (function () {
                         if (_this.model.info) {
                             var room = _this.model.info;
                             var today_1 = moment__WEBPACK_IMPORTED_MODULE_4__(_this.show_time).endOf('m');
-                            var bookings = room.bookings.filter(function (b) { return moment__WEBPACK_IMPORTED_MODULE_4__(b.date).isSame(today_1, 'd'); });
+                            var bookings = room.bookings.filter(function (b) { return moment__WEBPACK_IMPORTED_MODULE_4__(b.date).isSame(today_1, 'd') || b.all_day; });
                             var block = _this.service.Bookings.getNextFreeBlock(bookings, today_1.valueOf(), 2);
-                            var current = bookings.find(function (b) { return today_1.isBetween(moment__WEBPACK_IMPORTED_MODULE_4__(b.date).subtract(b.setup, 's'), moment__WEBPACK_IMPORTED_MODULE_4__(b.date).add(b.duration, 'm').add(b.breakdown, 's'), 's', '[)'); });
+                            var current = bookings.find(function (b) {
+                                var start = moment__WEBPACK_IMPORTED_MODULE_4__(b.date).subtract(b.setup, 's');
+                                var end = moment__WEBPACK_IMPORTED_MODULE_4__(b.date).add(b.duration, 'm').add(b.breakdown, 's');
+                                return today_1.isBetween(start, end, 's', '[)');
+                            });
                             var next = bookings.find(function (b) { return today_1.isBefore(moment__WEBPACK_IMPORTED_MODULE_4__(b.date), 'm'); });
                             var endOfDay = moment__WEBPACK_IMPORTED_MODULE_4__(_this.show_time).endOf('d');
                             var bld = _this.service.Buildings.current();
                             if (current && block && block.start !== -1) {
                                 _this.model.selected_time = "Booked until " + moment__WEBPACK_IMPORTED_MODULE_4__(block.start).format('h:mmA');
-                                if (current.all_day) {
+                                if (current.all_day || current.duration > 23 * 60) {
                                     _this.model.selected_time = 'Booked all day';
                                 }
                             }
                             else if (current) {
                                 _this.model.selected_time = "Booked until " + current.display.end;
-                                if (current.all_day) {
+                                if (current.all_day || current.duration > 23 * 60) {
                                     _this.model.selected_time = 'Booked all day';
                                 }
                             }
