@@ -6575,8 +6575,8 @@ class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_37_
                         if (state !== init_state) {
                             init_state = state;
                             this.info(state
-                                ? 'Reconnected to server'
-                                : 'Connection to server lost. Limited functionality will be be available until it reconnects');
+                                ? 'Reconnected to server.'
+                                : 'Connection to server lost. Limited functionality will be be available until it reconnects.');
                         }
                     }, 1000);
                 }));
@@ -17809,7 +17809,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574735044000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574829092000);
 
 
 /***/ }),
