@@ -4398,9 +4398,11 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         const spaces = this.spaces;
         const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('m');
         for (const space of spaces) {
-            const bld = this.service.Buildings.get(space.level.bld_id) || {};
-            const start = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.booking.date).startOf('m').second(1);
-            map[space.id] = this.can_edit && now.isBefore(start.subtract(bld.catering_restricted_from || 0, 'h'), 's');
+            if (space && space.level) {
+                const bld = this.service.Buildings.get(space.level.bld_id) || {};
+                const start = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.booking.date).startOf('m').second(1);
+                map[space.id] = this.can_edit && now.isBefore(start.subtract(bld.catering_restricted_from || 0, 'h'), 's');
+            }
         }
         return map;
     }
@@ -4706,6 +4708,8 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     editRequirements() {
         this.initForm();
         this.addEquipment().then(() => {
+            localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
+            localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
             this.confirmBooking();
         });
     }
@@ -19281,7 +19285,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574829035000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574829543000);
 
 
 /***/ }),
