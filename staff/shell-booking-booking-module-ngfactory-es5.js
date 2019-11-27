@@ -864,7 +864,11 @@ var __extends = (this && this.__extends) || (function () {
                     get: function () {
                         var now = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('m');
                         var start = dayjs__WEBPACK_IMPORTED_MODULE_4__(this.date).startOf('m').second(1);
-                        return now.isBefore(start.subtract(this.active_building.catering_restricted_from || 0, 'h'), 's');
+                        var end = start.subtract(this.active_building.catering_restricted_from || 0, 'h');
+                        if (end.format('ddd') === 'Sun' || end.format('ddd') === 'Sat') {
+                            end = end.subtract(2, 'd');
+                        }
+                        return now.isBefore(end, 's');
                     },
                     enumerable: true,
                     configurable: true
