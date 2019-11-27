@@ -1537,8 +1537,6 @@ class ExploreTimelineComponent extends _shared_globals_base_component__WEBPACK_I
                 .subtract(30, 'm');
         }
         const diff = moment__WEBPACK_IMPORTED_MODULE_2__(this.display_value).diff(now, 'm');
-        console.log('Time:', now.format('h:mm A'), moment__WEBPACK_IMPORTED_MODULE_2__(this.display_value).format('h:mm A'));
-        console.log('Diff:', diff);
         if (diff < 0) {
             const start = moment__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
             start.minute(Math.ceil(start.minute() / 5) * 5);
@@ -2350,21 +2348,25 @@ class ExploreComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_
             if (this.model.info) {
                 const room = this.model.info;
                 const today = moment__WEBPACK_IMPORTED_MODULE_4__(this.show_time).endOf('m');
-                const bookings = room.bookings.filter(b => moment__WEBPACK_IMPORTED_MODULE_4__(b.date).isSame(today, 'd'));
+                const bookings = room.bookings.filter(b => moment__WEBPACK_IMPORTED_MODULE_4__(b.date).isSame(today, 'd') || b.all_day);
                 const block = this.service.Bookings.getNextFreeBlock(bookings, today.valueOf(), 2);
-                const current = bookings.find(b => today.isBetween(moment__WEBPACK_IMPORTED_MODULE_4__(b.date).subtract(b.setup, 's'), moment__WEBPACK_IMPORTED_MODULE_4__(b.date).add(b.duration, 'm').add(b.breakdown, 's'), 's', '[)'));
+                const current = bookings.find(b => {
+                    const start = moment__WEBPACK_IMPORTED_MODULE_4__(b.date).subtract(b.setup, 's');
+                    const end = moment__WEBPACK_IMPORTED_MODULE_4__(b.date).add(b.duration, 'm').add(b.breakdown, 's');
+                    return today.isBetween(start, end, 's', '[)');
+                });
                 const next = bookings.find(b => today.isBefore(moment__WEBPACK_IMPORTED_MODULE_4__(b.date), 'm'));
                 const endOfDay = moment__WEBPACK_IMPORTED_MODULE_4__(this.show_time).endOf('d');
                 const bld = this.service.Buildings.current();
                 if (current && block && block.start !== -1) {
                     this.model.selected_time = `Booked until ${moment__WEBPACK_IMPORTED_MODULE_4__(block.start).format('h:mmA')}`;
-                    if (current.all_day) {
+                    if (current.all_day || current.duration > 23 * 60) {
                         this.model.selected_time = 'Booked all day';
                     }
                 }
                 else if (current) {
                     this.model.selected_time = `Booked until ${current.display.end}`;
-                    if (current.all_day) {
+                    if (current.all_day || current.duration > 23 * 60) {
                         this.model.selected_time = 'Booked all day';
                     }
                 }
