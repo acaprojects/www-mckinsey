@@ -4831,7 +4831,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         // Make copy of booking data
         this.model.form = Object.assign({}, this.model.booking, { date: date.valueOf() });
         if (this.model.form.id) {
-            delete this.model.form.id;
+            this.model.form.id = 'map-booking';
         }
         if (this.model.form.icaluid) {
             delete this.model.form.icaluid;
@@ -19289,7 +19289,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574831357000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574896491000);
 
 
 /***/ }),
