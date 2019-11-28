@@ -398,7 +398,11 @@ class ApprovalsViewEventComponent extends _shared_globals_base_component__WEBPAC
     /** Type of event */
     get type() {
         if (this.event) {
-            return this.event.state === 'cancelled' ? 'cancelled' : this.event.booking_type;
+            return this.event.state === 'cancelled'
+                ? 'cancelled'
+                : this.event.booking_type instanceof Object
+                    ? this.event.booking_type.id
+                    : this.event.booking_type;
         }
         return '';
     }
