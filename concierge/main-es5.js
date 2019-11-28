@@ -6609,7 +6609,7 @@ var PrivateDetailsModalComponent = /** @class */ (function (_super) {
     PrivateDetailsModalComponent.prototype.init = function () {
         this.setup_index = Math.round(this.setup / 5);
         this.breakdown_index = Math.round(this.breakdown / 5);
-        console.log('Durations:', this.durations, this.setup_index, this.breakdown_index);
+        this.notes = this.booking.notes.find(function (note) { return note.type === 'private'; }).message;
     };
     /**
      * Save changes to the private details
@@ -6624,7 +6624,7 @@ var PrivateDetailsModalComponent = /** @class */ (function (_super) {
             return;
         }
         var notes = __spread(this.booking.notes, [{
-                type: 'other',
+                type: 'private',
                 date: dayjs__WEBPACK_IMPORTED_MODULE_2__().valueOf(),
                 author: this.service.Users.current().name,
                 space: this.booking.room.id,
@@ -21462,7 +21462,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574920779000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574977974000);
 
 
 /***/ }),
