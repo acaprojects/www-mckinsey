@@ -380,7 +380,7 @@ var __extends = (this && this.__extends) || (function () {
                         else {
                             _this.scrollTo(scroll_id, offset, false);
                         }
-                    });
+                    }, 50);
                 };
                 ScheduleEventListComponent.prototype.view = function (item) {
                     var _this = this;
