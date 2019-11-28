@@ -11,6 +11,36 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-explore-explore-module-ngfactory"], {
         /***/ "./src/app/shell/explore/components/map-overlay/map-overlay.component.ngfactory.js": 
         /*!*****************************************************************************************!*\
@@ -559,6 +589,7 @@ var __extends = (this && this.__extends) || (function () {
                     this.model.keys.show = (this.model.keys ? false : this.model.keys);
                 };
                 ExploreMapOverlayComponent.prototype.init = function () {
+                    var e_1, _a, e_2, _b, e_3, _c;
                     var _this = this;
                     if (!this.service.Settings.setup) {
                         return setTimeout(function () { return _this.init(); }, 500);
@@ -580,30 +611,57 @@ var __extends = (this && this.__extends) || (function () {
                     }
                     // Remove keys option if there are no keys to display
                     if ((!this.model.keys.types || this.model.keys.types.length <= 0) && (!this.model.keys.list || this.model.keys.list.length <= 0)) {
-                        for (var _i = 0, _a = this.model.options; _i < _a.length; _i++) {
-                            var opt = _a[_i];
-                            if (opt.id === 'keys') {
-                                this.model.options.splice(this.model.options.indexOf(opt), 1);
-                                break;
+                        try {
+                            for (var _d = __values(this.model.options), _e = _d.next(); !_e.done; _e = _d.next()) {
+                                var opt = _e.value;
+                                if (opt.id === 'keys') {
+                                    this.model.options.splice(this.model.options.indexOf(opt), 1);
+                                    break;
+                                }
                             }
+                        }
+                        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                        finally {
+                            try {
+                                if (_e && !_e.done && (_a = _d.return)) _a.call(_d);
+                            }
+                            finally { if (e_1) throw e_1.error; }
                         }
                     }
                     if (this.model.map_settings && this.model.map_settings.settings === false) {
-                        for (var _b = 0, _c = this.model.options; _b < _c.length; _b++) {
-                            var opt = _c[_b];
-                            if (opt.id === 'settings') {
-                                this.model.options.splice(this.model.options.indexOf(opt), 1);
-                                break;
+                        try {
+                            for (var _f = __values(this.model.options), _g = _f.next(); !_g.done; _g = _f.next()) {
+                                var opt = _g.value;
+                                if (opt.id === 'settings') {
+                                    this.model.options.splice(this.model.options.indexOf(opt), 1);
+                                    break;
+                                }
                             }
+                        }
+                        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                        finally {
+                            try {
+                                if (_g && !_g.done && (_b = _f.return)) _b.call(_f);
+                            }
+                            finally { if (e_2) throw e_2.error; }
                         }
                     }
                     if (this.model.map_settings && this.model.map_settings.info === false) {
-                        for (var _d = 0, _e = this.model.options; _d < _e.length; _d++) {
-                            var opt = _e[_d];
-                            if (opt.id === 'room') {
-                                this.model.options.splice(this.model.options.indexOf(opt), 1);
-                                break;
+                        try {
+                            for (var _h = __values(this.model.options), _j = _h.next(); !_j.done; _j = _h.next()) {
+                                var opt = _j.value;
+                                if (opt.id === 'room') {
+                                    this.model.options.splice(this.model.options.indexOf(opt), 1);
+                                    break;
+                                }
                             }
+                        }
+                        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                        finally {
+                            try {
+                                if (_j && !_j.done && (_c = _h.return)) _c.call(_h);
+                            }
+                            finally { if (e_3) throw e_3.error; }
                         }
                     }
                     this.settings = { zoom: 0 };
@@ -631,13 +689,23 @@ var __extends = (this && this.__extends) || (function () {
                     }));
                 };
                 ExploreMapOverlayComponent.prototype.loadLevels = function () {
+                    var e_4, _a;
                     this.model.level = { list: [] };
                     if (this.model.bld) {
                         this.model.level.list = this.model.bld.levels;
                         this.model.level.names = [];
-                        for (var _i = 0, _a = this.model.level.list; _i < _a.length; _i++) {
-                            var lvl = _a[_i];
-                            this.model.level.names.push(lvl.name);
+                        try {
+                            for (var _b = __values(this.model.level.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var lvl = _c.value;
+                                this.model.level.names.push(lvl.name);
+                            }
+                        }
+                        catch (e_4_1) { e_4 = { error: e_4_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_4) throw e_4.error; }
                         }
                         this.setLevel(this.model.level.list[0]);
                     }
@@ -649,27 +717,47 @@ var __extends = (this && this.__extends) || (function () {
                     this.setBuilding(this.service.Buildings.current());
                 };
                 ExploreMapOverlayComponent.prototype.setBuildingByID = function (id, emit) {
+                    var e_5, _a;
                     if (emit === void 0) { emit = true; }
                     if (id && this.model.buildings && this.model.bld) {
-                        for (var _i = 0, _a = this.model.buildings.list; _i < _a.length; _i++) {
-                            var bld = _a[_i];
-                            if (bld.id === id) {
-                                this.setBuilding(bld, emit);
-                                return bld;
+                        try {
+                            for (var _b = __values(this.model.buildings.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var bld = _c.value;
+                                if (bld.id === id) {
+                                    this.setBuilding(bld, emit);
+                                    return bld;
+                                }
                             }
+                        }
+                        catch (e_5_1) { e_5 = { error: e_5_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_5) throw e_5.error; }
                         }
                     }
                     return null;
                 };
                 ExploreMapOverlayComponent.prototype.setLevelByID = function (id, emit) {
+                    var e_6, _a;
                     if (emit === void 0) { emit = true; }
                     if (id && this.model.level && this.model.level.list) {
-                        for (var _i = 0, _a = this.model.level.list; _i < _a.length; _i++) {
-                            var lvl = _a[_i];
-                            if (lvl.id === id) {
-                                this.setLevel(lvl, emit);
-                                return lvl;
+                        try {
+                            for (var _b = __values(this.model.level.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var lvl = _c.value;
+                                if (lvl.id === id) {
+                                    this.setLevel(lvl, emit);
+                                    return lvl;
+                                }
                             }
+                        }
+                        catch (e_6_1) { e_6 = { error: e_6_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_6) throw e_6.error; }
                         }
                     }
                     return null;
@@ -728,17 +816,27 @@ var __extends = (this && this.__extends) || (function () {
                     }
                 };
                 ExploreMapOverlayComponent.prototype.processRooms = function () {
+                    var e_7, _a;
                     if (this.model.rooms && this.model.rooms.list) {
                         this.model.rooms.count = 0;
                         this.model.rooms.free = 0;
-                        for (var _i = 0, _a = this.model.rooms.list; _i < _a.length; _i++) {
-                            var rm = _a[_i];
-                            if (rm.level && rm.level.id === this.model.level.active.id && rm.bookable) {
-                                this.model.rooms.count++;
-                                if (!rm.in_use) {
-                                    this.model.rooms.free++;
+                        try {
+                            for (var _b = __values(this.model.rooms.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var rm = _c.value;
+                                if (rm.level && rm.level.id === this.model.level.active.id && rm.bookable) {
+                                    this.model.rooms.count++;
+                                    if (!rm.in_use) {
+                                        this.model.rooms.free++;
+                                    }
                                 }
                             }
+                        }
+                        catch (e_7_1) { e_7 = { error: e_7_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_7) throw e_7.error; }
                         }
                         this.model.rooms.percent = (this.model.rooms.free / (this.model.rooms.count || 1)) * 100;
                     }
@@ -802,13 +900,23 @@ var __extends = (this && this.__extends) || (function () {
                     this.postSettings();
                 };
                 ExploreMapOverlayComponent.prototype.applyFilters = function () {
+                    var e_8, _a;
                     var zones = this.model.level.active.map.features;
                     var hide = [];
-                    for (var _i = 0, zones_1 = zones; _i < zones_1.length; _i++) {
-                        var z = zones_1[_i];
-                        if (!z.active) {
-                            hide.push(z.id);
+                    try {
+                        for (var zones_1 = __values(zones), zones_1_1 = zones_1.next(); !zones_1_1.done; zones_1_1 = zones_1.next()) {
+                            var z = zones_1_1.value;
+                            if (!z.active) {
+                                hide.push(z.id);
+                            }
                         }
+                    }
+                    catch (e_8_1) { e_8 = { error: e_8_1 }; }
+                    finally {
+                        try {
+                            if (zones_1_1 && !zones_1_1.done && (_a = zones_1.return)) _a.call(zones_1);
+                        }
+                        finally { if (e_8) throw e_8.error; }
                     }
                     this.service.set('EXPLORE.map.hide', hide.length === zones.length ? [] : hide);
                     this.model.show_filters = false;
@@ -1157,15 +1265,25 @@ var __extends = (this && this.__extends) || (function () {
                     this.model.inited = true;
                 };
                 ExploreSearchComponent.prototype.initRole = function () {
+                    var e_9, _a;
                     var _this = this;
                     if (this.model.role_param && this.model.role && this.model.role.list) {
-                        for (var _i = 0, _a = this.model.role.list; _i < _a.length; _i++) {
-                            var i = _a[_i];
-                            if (i.id === this.model.role_param) {
-                                this.model.role.active = this.model.role.list.indexOf(i);
-                                this.filter();
-                                break;
+                        try {
+                            for (var _b = __values(this.model.role.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var i = _c.value;
+                                if (i.id === this.model.role_param) {
+                                    this.model.role.active = this.model.role.list.indexOf(i);
+                                    this.filter();
+                                    break;
+                                }
                             }
+                        }
+                        catch (e_9_1) { e_9 = { error: e_9_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_9) throw e_9.error; }
                         }
                     }
                     else if (!this.model.role || !this.model.role.list) {
@@ -1272,18 +1390,28 @@ var __extends = (this && this.__extends) || (function () {
                 ExploreSearchComponent.prototype.filterRooms = function () {
                     var _this = this;
                     return new Promise(function (resolve) {
+                        var e_10, _a, e_11, _b;
                         var search = (_this.model.search || '').toLowerCase();
                         var list = [];
-                        for (var _i = 0, _a = _this.model.room_list; _i < _a.length; _i++) {
-                            var item = _a[_i];
-                            list.push({
-                                id: item.id,
-                                prefix: item.prefix,
-                                bookable: item.bookable,
-                                map_id: item.map_id,
-                                name: item.name,
-                                level: item.level
-                            });
+                        try {
+                            for (var _c = __values(_this.model.room_list), _d = _c.next(); !_d.done; _d = _c.next()) {
+                                var item = _d.value;
+                                list.push({
+                                    id: item.id,
+                                    prefix: item.prefix,
+                                    bookable: item.bookable,
+                                    map_id: item.map_id,
+                                    name: item.name,
+                                    level: item.level
+                                });
+                            }
+                        }
+                        catch (e_10_1) { e_10 = { error: e_10_1 }; }
+                        finally {
+                            try {
+                                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+                            }
+                            finally { if (e_10) throw e_10.error; }
                         }
                         var bld = _this.service.Buildings.current();
                         if (bld && bld.map && bld.map.searchables) {
@@ -1302,12 +1430,21 @@ var __extends = (this && this.__extends) || (function () {
                             return resolve(list);
                         }
                         var rooms = [];
-                        for (var _b = 0, list_1 = list; _b < list_1.length; _b++) {
-                            var rm = list_1[_b];
-                            if (((rm.name || '').toLowerCase().indexOf(search) >= 0 ||
-                                (rm.level && (rm.level.name || '').toLowerCase().indexOf(search) >= 0)) && rm.searchable !== false) {
-                                rooms.push(rm);
+                        try {
+                            for (var list_1 = __values(list), list_1_1 = list_1.next(); !list_1_1.done; list_1_1 = list_1.next()) {
+                                var rm = list_1_1.value;
+                                if (((rm.name || '').toLowerCase().indexOf(search) >= 0 ||
+                                    (rm.level && (rm.level.name || '').toLowerCase().indexOf(search) >= 0)) && rm.searchable !== false) {
+                                    rooms.push(rm);
+                                }
                             }
+                        }
+                        catch (e_11_1) { e_11 = { error: e_11_1 }; }
+                        finally {
+                            try {
+                                if (list_1_1 && !list_1_1.done && (_b = list_1.return)) _b.call(list_1);
+                            }
+                            finally { if (e_11) throw e_11.error; }
                         }
                         resolve(rooms);
                     });
@@ -2154,6 +2291,7 @@ var __extends = (this && this.__extends) || (function () {
                     }, 60 * 1000);
                     this.service.set('APP.swipe_disabled', true);
                     this.subscription('building', this.service.Buildings.listen(function (bld) {
+                        var e_12, _a;
                         if (bld) {
                             var active = _this.model.level ? _this.model.level.active : null;
                             _this.model.level = {};
@@ -2166,9 +2304,18 @@ var __extends = (this && this.__extends) || (function () {
                             _this.model.room_pin = null;
                             if (_this.model.level.list) {
                                 _this.model.level.names = [];
-                                for (var _i = 0, _a = _this.model.level.list; _i < _a.length; _i++) {
-                                    var level = _a[_i];
-                                    _this.model.level.names.push(level.name);
+                                try {
+                                    for (var _b = __values(_this.model.level.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                        var level = _c.value;
+                                        _this.model.level.names.push(level.name);
+                                    }
+                                }
+                                catch (e_12_1) { e_12 = { error: e_12_1 }; }
+                                finally {
+                                    try {
+                                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                                    }
+                                    finally { if (e_12) throw e_12.error; }
                                 }
                                 var lvl = null;
                                 if (active) {
@@ -2218,18 +2365,28 @@ var __extends = (this && this.__extends) || (function () {
                     this.timeout('zoom', function () { return _this.model.zoom += 1; }, 300);
                 };
                 ExploreComponent.prototype.focusOnRoom = function (id, tries) {
+                    var e_13, _a;
                     var _this = this;
                     if (tries === void 0) { tries = 0; }
                     if (tries > 10) {
                         return;
                     }
                     if (this.model.rooms && this.model.rooms.length > 0) {
-                        for (var _i = 0, _a = this.model.rooms; _i < _a.length; _i++) {
-                            var rm = _a[_i];
-                            if (rm.id === id) {
-                                this.focusSpace(rm);
-                                break;
+                        try {
+                            for (var _b = __values(this.model.rooms), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var rm = _c.value;
+                                if (rm.id === id) {
+                                    this.focusSpace(rm);
+                                    break;
+                                }
                             }
+                        }
+                        catch (e_13_1) { e_13 = { error: e_13_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_13) throw e_13.error; }
                         }
                     }
                     else {
@@ -2241,14 +2398,24 @@ var __extends = (this && this.__extends) || (function () {
                     this.timeout("toggle_" + name, function () { return _this.model[name].show = !_this.model[name].show; }, 100);
                 };
                 ExploreComponent.prototype.setLevelByID = function (id, emit) {
+                    var e_14, _a;
                     if (emit === void 0) { emit = true; }
                     if (id && this.model.level && this.model.level.list) {
-                        for (var _i = 0, _a = this.model.level.list; _i < _a.length; _i++) {
-                            var lvl = _a[_i];
-                            if (lvl.id === id) {
-                                this.setLevel(lvl, emit);
-                                return lvl;
+                        try {
+                            for (var _b = __values(this.model.level.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var lvl = _c.value;
+                                if (lvl.id === id) {
+                                    this.setLevel(lvl, emit);
+                                    return lvl;
+                                }
                             }
+                        }
+                        catch (e_14_1) { e_14 = { error: e_14_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_14) throw e_14.error; }
                         }
                     }
                     return null;
@@ -2270,12 +2437,22 @@ var __extends = (this && this.__extends) || (function () {
                     }
                 };
                 ExploreComponent.prototype.updateLevel = function () {
-                    for (var _i = 0, _a = this.model.level.list; _i < _a.length; _i++) {
-                        var lvl = _a[_i];
-                        if (this.model.map.src === lvl.map_url) {
-                            this.model.level.active = lvl;
-                            break;
+                    var e_15, _a;
+                    try {
+                        for (var _b = __values(this.model.level.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                            var lvl = _c.value;
+                            if (this.model.map.src === lvl.map_url) {
+                                this.model.level.active = lvl;
+                                break;
+                            }
                         }
+                    }
+                    catch (e_15_1) { e_15 = { error: e_15_1 }; }
+                    finally {
+                        try {
+                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                        }
+                        finally { if (e_15) throw e_15.error; }
                     }
                     this.update();
                 };
@@ -2288,10 +2465,20 @@ var __extends = (this && this.__extends) || (function () {
                     this.update();
                 };
                 ExploreComponent.prototype.updateRoomState = function () {
+                    var e_16, _a;
                     if (this.model.rooms) {
-                        for (var _i = 0, _a = this.model.rooms; _i < _a.length; _i++) {
-                            var rm = _a[_i];
-                            this.processBookings(rm, false);
+                        try {
+                            for (var _b = __values(this.model.rooms), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var rm = _c.value;
+                                this.processBookings(rm, false);
+                            }
+                        }
+                        catch (e_16_1) { e_16 = { error: e_16_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_16) throw e_16.error; }
                         }
                         this.update();
                     }
@@ -2344,6 +2531,7 @@ var __extends = (this && this.__extends) || (function () {
                 ExploreComponent.prototype.updateListeners = function () {
                     var _this = this;
                     this.timeout('update_listeners', function () {
+                        var e_17, _a, e_18, _b, e_19, _c;
                         _this.model.map.listeners = [];
                         if (_this.model.rooms && _this.model.level && _this.model.level.active && _this.model.level.active.id) {
                             var active_rooms = _this.model.rooms.filter(function (i) { return i.zones.indexOf(_this.model.level.active.id) >= 0; });
@@ -2372,9 +2560,18 @@ var __extends = (this && this.__extends) || (function () {
                                     _this.model.map.listeners.push({ id: "area-" + room.map_id + "-status", event: 'touchend', callback: callback });
                                 }
                             };
-                            for (var _i = 0, active_rooms_1 = active_rooms; _i < active_rooms_1.length; _i++) {
-                                var room = active_rooms_1[_i];
-                                _loop_1(room);
+                            try {
+                                for (var active_rooms_1 = __values(active_rooms), active_rooms_1_1 = active_rooms_1.next(); !active_rooms_1_1.done; active_rooms_1_1 = active_rooms_1.next()) {
+                                    var room = active_rooms_1_1.value;
+                                    _loop_1(room);
+                                }
+                            }
+                            catch (e_17_1) { e_17 = { error: e_17_1 }; }
+                            finally {
+                                try {
+                                    if (active_rooms_1_1 && !active_rooms_1_1.done && (_a = active_rooms_1.return)) _a.call(active_rooms_1);
+                                }
+                                finally { if (e_17) throw e_17.error; }
                             }
                         }
                         if (_this.model.desks && _this.model.desks.in_use) {
@@ -2382,17 +2579,35 @@ var __extends = (this && this.__extends) || (function () {
                                 _this.model.map.listeners.push({ id: "" + desk, event: 'mouseenter', callback: function () { return _this.setDesk(desk); } });
                                 _this.model.map.listeners.push({ id: "" + desk, event: 'mouseleave', callback: function () { return _this.setDesk(null); } });
                             };
-                            for (var _a = 0, _b = _this.model.desks.in_use; _a < _b.length; _a++) {
-                                var desk = _b[_a];
-                                _loop_2(desk);
+                            try {
+                                for (var _d = __values(_this.model.desks.in_use), _e = _d.next(); !_e.done; _e = _d.next()) {
+                                    var desk = _e.value;
+                                    _loop_2(desk);
+                                }
+                            }
+                            catch (e_18_1) { e_18 = { error: e_18_1 }; }
+                            finally {
+                                try {
+                                    if (_e && !_e.done && (_b = _d.return)) _b.call(_d);
+                                }
+                                finally { if (e_18) throw e_18.error; }
                             }
                             var _loop_3 = function (desk) {
                                 _this.model.map.listeners.push({ id: "" + desk, event: 'mouseenter', callback: function () { return _this.setDesk(desk); } });
                                 _this.model.map.listeners.push({ id: "" + desk, event: 'mouseleave', callback: function () { return _this.setDesk(null); } });
                             };
-                            for (var _c = 0, _d = (_this.model.desks.reserved || []); _c < _d.length; _c++) {
-                                var desk = _d[_c];
-                                _loop_3(desk);
+                            try {
+                                for (var _f = __values((_this.model.desks.reserved || [])), _g = _f.next(); !_g.done; _g = _f.next()) {
+                                    var desk = _g.value;
+                                    _loop_3(desk);
+                                }
+                            }
+                            catch (e_19_1) { e_19 = { error: e_19_1 }; }
+                            finally {
+                                try {
+                                    if (_g && !_g.done && (_c = _f.return)) _c.call(_f);
+                                }
+                                finally { if (e_19) throw e_19.error; }
                             }
                         }
                         _this.model.desk = null;
@@ -2428,6 +2643,7 @@ var __extends = (this && this.__extends) || (function () {
                     });
                 };
                 ExploreComponent.prototype.updateRoomStyles = function () {
+                    var e_20, _a;
                     var _this = this;
                     this.model.style.rooms = {};
                     if (!this.model.show.rooms) {
@@ -2439,33 +2655,42 @@ var __extends = (this && this.__extends) || (function () {
                     var colours = this.model.colours.rooms || {};
                     if (this.model.rooms && this.model.rooms.length > 0) {
                         var active_rooms = this.model.rooms.filter(function (i) { return i.zones.indexOf(_this.model.level.active.id) >= 0; });
-                        for (var _i = 0, active_rooms_2 = active_rooms; _i < active_rooms_2.length; _i++) {
-                            var room = active_rooms_2[_i];
-                            var color = this.model.colours.rooms['not-bookable'] || '#ccc';
-                            var block = this.service.Bookings.getNextFreeBlock(room.bookings, now.valueOf(), 2);
-                            var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_8__["rulesForSpace"])({
-                                user: this.service.Users.current(),
-                                space: room,
-                                time: now.valueOf(),
-                                duration: 60,
-                                rules: bld.booking_rules
-                            });
-                            // Check booking rules
-                            if (rules) {
-                                room.book_type = rules.auto_approve ? 'Book' : 'Request';
+                        try {
+                            for (var active_rooms_2 = __values(active_rooms), active_rooms_2_1 = active_rooms_2.next(); !active_rooms_2_1.done; active_rooms_2_1 = active_rooms_2.next()) {
+                                var room = active_rooms_2_1.value;
+                                var color = this.model.colours.rooms['not-bookable'] || '#ccc';
+                                var block = this.service.Bookings.getNextFreeBlock(room.bookings, now.valueOf(), 2);
+                                var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_8__["rulesForSpace"])({
+                                    user: this.service.Users.current(),
+                                    space: room,
+                                    time: now.valueOf(),
+                                    duration: 60,
+                                    rules: bld.booking_rules
+                                });
+                                // Check booking rules
+                                if (rules) {
+                                    room.book_type = rules.auto_approve ? 'Book' : 'Request';
+                                }
+                                var in_use = block && moment__WEBPACK_IMPORTED_MODULE_4__(block.start).isAfter(now);
+                                if (room.bookable && !rules.hide) {
+                                    color = in_use
+                                        ? colours['unavailable'] || '#E53935'
+                                        : (room.book_type === 'Request'
+                                            ? colours['pending'] || '#fbc02d'
+                                            : colours['available'] || '#4CAF50');
+                                }
+                                this.model.style.rooms["#area-" + room.map_id + "-status"] = {
+                                    fill: color,
+                                    opacity: '0.8',
+                                };
                             }
-                            var in_use = block && moment__WEBPACK_IMPORTED_MODULE_4__(block.start).isAfter(now);
-                            if (room.bookable && !rules.hide) {
-                                color = in_use
-                                    ? colours['unavailable'] || '#E53935'
-                                    : (room.book_type === 'Request'
-                                        ? colours['pending'] || '#fbc02d'
-                                        : colours['available'] || '#4CAF50');
+                        }
+                        catch (e_20_1) { e_20 = { error: e_20_1 }; }
+                        finally {
+                            try {
+                                if (active_rooms_2_1 && !active_rooms_2_1.done && (_a = active_rooms_2.return)) _a.call(active_rooms_2);
                             }
-                            this.model.style.rooms["#area-" + room.map_id + "-status"] = {
-                                fill: color,
-                                opacity: '0.8',
-                            };
+                            finally { if (e_20) throw e_20.error; }
                         }
                     }
                     else {
@@ -2473,6 +2698,7 @@ var __extends = (this && this.__extends) || (function () {
                     }
                 };
                 ExploreComponent.prototype.updateDeskStyles = function () {
+                    var e_21, _a;
                     this.model.style.desks = {};
                     var colours = this.model.colours.desks || {};
                     if (!this.model.show.desks) {
@@ -2494,28 +2720,37 @@ var __extends = (this && this.__extends) || (function () {
                         var list = this.model.desks.in_use || [];
                         var reserved = this.model.desks.reserved;
                         if (this.model.desks.list) {
-                            for (var _i = 0, _a = this.model.desks.list; _i < _a.length; _i++) {
-                                var label = _a[_i];
-                                if (label) {
-                                    var desk = "" + label;
-                                    var desk_obj = {
-                                        level: this.model.active,
-                                        id: desk,
-                                        name: "Desk " + label.split('-')[1],
-                                    };
-                                    var is_reserved = reserved && reserved.indexOf(label) >= 0;
-                                    var in_use = list && list.indexOf(label) >= 0;
-                                    var users_desk = u_desk && u_desk.connected && u_desk.desk_id === label;
-                                    this.model.style.desks["#" + desk] = {
-                                        fill: colours['available-fill'] || '#4CAF50',
-                                        stroke: colours['available-stroke'] || '#4CAF50'
-                                    };
-                                    if (in_use || is_reserved) {
-                                        var type = users_desk ? 'user' : (is_reserved ? 'reserved' : 'unavailable');
-                                        this.model.style.desks["#" + desk].fill = colours[type + "-fill"] || colours['unavailable-fill'] || '#fff';
-                                        this.model.style.desks["#" + desk].stroke = colours[type + "-stroke"] || colours['unavailable-stroke'] || '#ccc';
+                            try {
+                                for (var _b = __values(this.model.desks.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                    var label = _c.value;
+                                    if (label) {
+                                        var desk = "" + label;
+                                        var desk_obj = {
+                                            level: this.model.active,
+                                            id: desk,
+                                            name: "Desk " + label.split('-')[1],
+                                        };
+                                        var is_reserved = reserved && reserved.indexOf(label) >= 0;
+                                        var in_use = list && list.indexOf(label) >= 0;
+                                        var users_desk = u_desk && u_desk.connected && u_desk.desk_id === label;
+                                        this.model.style.desks["#" + desk] = {
+                                            fill: colours['available-fill'] || '#4CAF50',
+                                            stroke: colours['available-stroke'] || '#4CAF50'
+                                        };
+                                        if (in_use || is_reserved) {
+                                            var type = users_desk ? 'user' : (is_reserved ? 'reserved' : 'unavailable');
+                                            this.model.style.desks["#" + desk].fill = colours[type + "-fill"] || colours['unavailable-fill'] || '#fff';
+                                            this.model.style.desks["#" + desk].stroke = colours[type + "-stroke"] || colours['unavailable-stroke'] || '#ccc';
+                                        }
                                     }
                                 }
+                            }
+                            catch (e_21_1) { e_21 = { error: e_21_1 }; }
+                            finally {
+                                try {
+                                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                                }
+                                finally { if (e_21) throw e_21.error; }
                             }
                         }
                     }
@@ -2546,11 +2781,21 @@ var __extends = (this && this.__extends) || (function () {
                     }
                 };
                 ExploreComponent.prototype.updateFeatureStyles = function () {
+                    var e_22, _a;
                     this.model.style.features = {};
                     var hidden_features = this.service.get('EXPLORE.map.hide') || [];
-                    for (var _i = 0, hidden_features_1 = hidden_features; _i < hidden_features_1.length; _i++) {
-                        var id = hidden_features_1[_i];
-                        this.model.style.features["#" + id] = { opacity: '0' };
+                    try {
+                        for (var hidden_features_1 = __values(hidden_features), hidden_features_1_1 = hidden_features_1.next(); !hidden_features_1_1.done; hidden_features_1_1 = hidden_features_1.next()) {
+                            var id = hidden_features_1_1.value;
+                            this.model.style.features["#" + id] = { opacity: '0' };
+                        }
+                    }
+                    catch (e_22_1) { e_22 = { error: e_22_1 }; }
+                    finally {
+                        try {
+                            if (hidden_features_1_1 && !hidden_features_1_1.done && (_a = hidden_features_1.return)) _a.call(hidden_features_1);
+                        }
+                        finally { if (e_22) throw e_22.error; }
                     }
                 };
                 ExploreComponent.prototype.book = function (room) {
@@ -2637,6 +2882,7 @@ var __extends = (this && this.__extends) || (function () {
                     user.location = null;
                     this.model.found_user = user;
                     this.service.Users.location(user.id, user.win_id).then(function (location) {
+                        var e_23, _a, e_24, _b;
                         _this.model.found_user.location = location;
                         var found = false;
                         var bld = _this.service.Buildings.current();
@@ -2644,13 +2890,22 @@ var __extends = (this && this.__extends) || (function () {
                         if (_this.model.settings.cblf) {
                             var level = _this.service.Buildings.getLevel(location.level);
                             if (level) {
-                                for (var _i = 0, _a = (bld ? bld.levels : _this.model.level.list); _i < _a.length; _i++) {
-                                    var lvl = _a[_i];
-                                    if (level.id === lvl.id) {
-                                        _this.setLevel(lvl);
-                                        found = true;
-                                        break;
+                                try {
+                                    for (var _c = __values((bld ? bld.levels : _this.model.level.list)), _d = _c.next(); !_d.done; _d = _c.next()) {
+                                        var lvl = _d.value;
+                                        if (level.id === lvl.id) {
+                                            _this.setLevel(lvl);
+                                            found = true;
+                                            break;
+                                        }
                                     }
+                                }
+                                catch (e_23_1) { e_23 = { error: e_23_1 }; }
+                                finally {
+                                    try {
+                                        if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+                                    }
+                                    finally { if (e_23) throw e_23.error; }
                                 }
                                 // Level is in another building
                                 if (!found) {
@@ -2662,13 +2917,22 @@ var __extends = (this && this.__extends) || (function () {
                             }
                         }
                         else { // Only locate users in the current building
-                            for (var _b = 0, _c = (bld ? bld.levels : _this.model.level.list); _b < _c.length; _b++) {
-                                var lvl = _c[_b];
-                                if (location.level === lvl.id) {
-                                    _this.setLevel(lvl);
-                                    found = true;
-                                    break;
+                            try {
+                                for (var _e = __values((bld ? bld.levels : _this.model.level.list)), _f = _e.next(); !_f.done; _f = _e.next()) {
+                                    var lvl = _f.value;
+                                    if (location.level === lvl.id) {
+                                        _this.setLevel(lvl);
+                                        found = true;
+                                        break;
+                                    }
                                 }
+                            }
+                            catch (e_24_1) { e_24 = { error: e_24_1 }; }
+                            finally {
+                                try {
+                                    if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                                }
+                                finally { if (e_24) throw e_24.error; }
                             }
                         }
                         if (found) {
@@ -2690,6 +2954,7 @@ var __extends = (this && this.__extends) || (function () {
                     });
                 };
                 ExploreComponent.prototype.focusSpace = function (item) {
+                    var e_25, _a;
                     var _this = this;
                     if (!this.model || !this.model.level || !this.model.level.list || !item) {
                         return;
@@ -2697,13 +2962,22 @@ var __extends = (this && this.__extends) || (function () {
                     var focus = "" + (item.prefix === false ? '' : 'area-') + item.map_id + (item.bookable ? '-status' : '-status');
                     var lvl = item.level;
                     if (lvl) {
-                        for (var _i = 0, _a = this.model.level.list; _i < _a.length; _i++) {
-                            var level = _a[_i];
-                            if (lvl.id === level.id) {
-                                this.setLevel(level);
-                                this.timeout('focus_space', function () { return _this.model.map.focus = { id: focus, zoom: 150 }; }, 100);
-                                break;
+                        try {
+                            for (var _b = __values(this.model.level.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var level = _c.value;
+                                if (lvl.id === level.id) {
+                                    this.setLevel(level);
+                                    this.timeout('focus_space', function () { return _this.model.map.focus = { id: focus, zoom: 150 }; }, 100);
+                                    break;
+                                }
                             }
+                        }
+                        catch (e_25_1) { e_25 = { error: e_25_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_25) throw e_25.error; }
                         }
                         this.timeout('update_space', function () {
                             _this.model.found_user = null;
@@ -2856,6 +3130,7 @@ var __extends = (this && this.__extends) || (function () {
                                 zone_ids: _this.model.level.active.id,
                                 show_declined: false
                             }).then(function (rooms) {
+                                var e_26, _a;
                                 var _loop_4 = function (space) {
                                     var match = _this.model.rooms.find(function (i) { return i.id === space.id; });
                                     if (match) {
@@ -2863,14 +3138,23 @@ var __extends = (this && this.__extends) || (function () {
                                             var start = moment__WEBPACK_IMPORTED_MODULE_4__(i.date);
                                             return !start.isBetween(date_1, end_1, 'm', '[]');
                                         });
-                                        var bookings = _shared_utility_class__WEBPACK_IMPORTED_MODULE_9__["Utils"].unique((space.bookings || []).concat(old_bookings), 'id');
+                                        var bookings = _shared_utility_class__WEBPACK_IMPORTED_MODULE_9__["Utils"].unique(__spread((space.bookings || []), old_bookings), 'id');
                                         match.raw_bookings = bookings;
                                         _this.processBookings(match);
                                     }
                                 };
-                                for (var _i = 0, rooms_1 = rooms; _i < rooms_1.length; _i++) {
-                                    var space = rooms_1[_i];
-                                    _loop_4(space);
+                                try {
+                                    for (var rooms_1 = __values(rooms), rooms_1_1 = rooms_1.next(); !rooms_1_1.done; rooms_1_1 = rooms_1.next()) {
+                                        var space = rooms_1_1.value;
+                                        _loop_4(space);
+                                    }
+                                }
+                                catch (e_26_1) { e_26 = { error: e_26_1 }; }
+                                finally {
+                                    try {
+                                        if (rooms_1_1 && !rooms_1_1.done && (_a = rooms_1.return)) _a.call(rooms_1);
+                                    }
+                                    finally { if (e_26) throw e_26.error; }
                                 }
                                 _this.updateStyles();
                             });

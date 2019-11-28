@@ -11,6 +11,36 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-schedule-schedule-module-ngfactory"], {
         /***/ "./src/app/shell/schedule/event-list/event-list.component.ngfactory.js": 
         /*!*****************************************************************************!*\
@@ -148,7 +178,7 @@ var __extends = (this && this.__extends) || (function () {
                         var end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(_this.model.days, 'd');
                         var list = [];
                         for (; date.isBefore(end, 'm'); date.add(1, 'd')) {
-                            list = list.concat((timeline[date.format('YYYY/MM/DD')] || []));
+                            list = __spread(list, (timeline[date.format('YYYY/MM/DD')] || []));
                         }
                         list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].unique(list, 'order_id');
                         if (_this.user) {
@@ -188,7 +218,7 @@ var __extends = (this && this.__extends) || (function () {
                         if (!_this.user) {
                             _this.user = _this.service.Users.current();
                         }
-                        var user_list = user.delegates && user.delegates.length > 0 ? [user.email].concat(user.delegates) : [user.email];
+                        var user_list = user.delegates && user.delegates.length > 0 ? __spread([user.email], user.delegates) : [user.email];
                         _this.service.Bookings.query({
                             email: _this.user ? _this.user.email : user_list.reduce(function (a, v) { return (a ? a + ',' : a) + v; }, ''),
                             from: date.unix(), to: end.unix()
@@ -309,7 +339,7 @@ var __extends = (this && this.__extends) || (function () {
                         var end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(3, 'd').endOf('d');
                         _this.setLoading(start.valueOf(), end.valueOf());
                         var user = _this.service.Users.current();
-                        var user_list = user.delegates && user.delegates.length > 0 ? [user.email].concat(user.delegates) : [user.email];
+                        var user_list = user.delegates && user.delegates.length > 0 ? __spread([user.email], user.delegates) : [user.email];
                         _this.model.loading = true;
                         _this.service.Bookings.query({
                             email: _this.user ? _this.user.email : user_list.reduce(function (a, v) { return (a ? a + ',' : a) + v; }, ''),
@@ -337,6 +367,7 @@ var __extends = (this && this.__extends) || (function () {
                 ScheduleEventListComponent.prototype.processBookings = function () {
                     var _this = this;
                     this.timeout('process', function () {
+                        var e_1, _a;
                         var offset = _this.viewport.measureScrollOffset() % 80;
                         var scroll_id = _this.getViewLocation();
                         _this.model.list.sort(function (a, b) { return a.date - b.date; });
@@ -355,16 +386,25 @@ var __extends = (this && this.__extends) || (function () {
                                 date: date.valueOf()
                             });
                             var length = list.length;
-                            for (var _i = 0, _a = _this.model.list; _i < _a.length; _i++) {
-                                var bkn = _a[_i];
-                                if (bkn.type && bkn.type !== 'event') {
-                                    continue;
+                            try {
+                                for (var _b = (e_1 = void 0, __values(_this.model.list)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                    var bkn = _c.value;
+                                    if (bkn.type && bkn.type !== 'event') {
+                                        continue;
+                                    }
+                                    var bkn_date = moment__WEBPACK_IMPORTED_MODULE_5__(bkn.for_date || bkn.date);
+                                    if (bkn_date.isSame(date, 'd')) {
+                                        var item = Object.assign({}, bkn, { status: bkn.status, type: 'event' });
+                                        list.push(item);
+                                    }
                                 }
-                                var bkn_date = moment__WEBPACK_IMPORTED_MODULE_5__(bkn.for_date || bkn.date);
-                                if (bkn_date.isSame(date, 'd')) {
-                                    var item = Object.assign({}, bkn, { status: bkn.status, type: 'event' });
-                                    list.push(item);
+                            }
+                            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                            finally {
+                                try {
+                                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
                                 }
+                                finally { if (e_1) throw e_1.error; }
                             }
                             if (list.length === length) {
                                 list.push({ order_id: date.format('YYYY-MM-DD') + "-no-items", type: 'no-items', title: 'No events', date: date.valueOf() });
@@ -529,51 +569,70 @@ var __extends = (this && this.__extends) || (function () {
                     this.service.Visitors.view(item);
                 };
                 LockerListingsComponent.prototype.updateList = function () {
+                    var e_2, _a, e_3, _b;
                     var _this = this;
                     var bld = this.service.Buildings.current();
                     if (!bld) {
                         return this.timeout('update', function () { return _this.updateList(); });
                     }
                     var now = moment__WEBPACK_IMPORTED_MODULE_3__();
-                    for (var _i = 0, _a = (this.model.list || []); _i < _a.length; _i++) {
-                        var item = _a[_i];
-                        var expiry = moment__WEBPACK_IMPORTED_MODULE_3__(item.expiry * 1000);
-                        item.expired = now.isAfter(expiry);
-                        var remaining = moment__WEBPACK_IMPORTED_MODULE_3__["duration"](expiry.diff(now)).asDays();
-                        item.display = {
-                            expiry: expiry.format('DD MMM YYYY'),
-                            duration: remaining < 0 ? 'Expired' : Math.round(remaining)
-                        };
-                        for (var lvl in bld.lockers) {
-                            if (bld.lockers.hasOwnProperty(lvl)) {
-                                for (var section in bld.lockers[lvl]) {
-                                    if (bld.lockers[lvl].hasOwnProperty(section)) {
-                                        var section_data = bld.lockers[lvl][section];
-                                        for (var type in section_data) {
-                                            if (section_data.hasOwnProperty(type)) {
-                                                for (var _b = 0, _c = section_data[type]; _b < _c.length; _b++) {
-                                                    var row = _c[_b];
-                                                    if (row.indexOf(item.id) >= 0) {
-                                                        item.level = this.service.Buildings.getLevel(lvl).name;
-                                                        item.section = section;
+                    try {
+                        for (var _c = __values((this.model.list || [])), _d = _c.next(); !_d.done; _d = _c.next()) {
+                            var item = _d.value;
+                            var expiry = moment__WEBPACK_IMPORTED_MODULE_3__(item.expiry * 1000);
+                            item.expired = now.isAfter(expiry);
+                            var remaining = moment__WEBPACK_IMPORTED_MODULE_3__["duration"](expiry.diff(now)).asDays();
+                            item.display = {
+                                expiry: expiry.format('DD MMM YYYY'),
+                                duration: remaining < 0 ? 'Expired' : Math.round(remaining)
+                            };
+                            for (var lvl in bld.lockers) {
+                                if (bld.lockers.hasOwnProperty(lvl)) {
+                                    for (var section in bld.lockers[lvl]) {
+                                        if (bld.lockers[lvl].hasOwnProperty(section)) {
+                                            var section_data = bld.lockers[lvl][section];
+                                            for (var type in section_data) {
+                                                if (section_data.hasOwnProperty(type)) {
+                                                    try {
+                                                        for (var _e = (e_3 = void 0, __values(section_data[type])), _f = _e.next(); !_f.done; _f = _e.next()) {
+                                                            var row = _f.value;
+                                                            if (row.indexOf(item.id) >= 0) {
+                                                                item.level = this.service.Buildings.getLevel(lvl).name;
+                                                                item.section = section;
+                                                                break;
+                                                            }
+                                                        }
+                                                    }
+                                                    catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                                                    finally {
+                                                        try {
+                                                            if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                                                        }
+                                                        finally { if (e_3) throw e_3.error; }
+                                                    }
+                                                    if (item.level) {
                                                         break;
                                                     }
                                                 }
-                                                if (item.level) {
-                                                    break;
-                                                }
+                                            }
+                                            if (item.level) {
+                                                break;
                                             }
                                         }
-                                        if (item.level) {
-                                            break;
-                                        }
                                     }
-                                }
-                                if (item.level) {
-                                    break;
+                                    if (item.level) {
+                                        break;
+                                    }
                                 }
                             }
                         }
+                    }
+                    catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                    finally {
+                        try {
+                            if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+                        }
+                        finally { if (e_2) throw e_2.error; }
                     }
                     this.postCount();
                 };
@@ -675,26 +734,36 @@ var __extends = (this && this.__extends) || (function () {
                     }
                 };
                 MeetingListingsComponent.prototype.updateCheckinState = function () {
+                    var e_4, _a;
                     var now = moment__WEBPACK_IMPORTED_MODULE_2__();
-                    for (var _i = 0, _a = this.model.bookings; _i < _a.length; _i++) {
-                        var bkn = _a[_i];
-                        if (bkn.room) {
-                            var start = moment__WEBPACK_IMPORTED_MODULE_2__(bkn.date);
-                            if (this.model['last_meeting_started' + bkn.room.id]) {
-                                // Meeting checked in and current time is within the duration of meeting
-                                if (now.valueOf() >= moment__WEBPACK_IMPORTED_MODULE_2__(start).subtract(15, 'm').valueOf() && now.valueOf() <= moment__WEBPACK_IMPORTED_MODULE_2__(start).add(bkn.duration, 'm').valueOf()) {
-                                    bkn.checkin = 'done';
-                                }
-                            }
-                            else {
-                                if (now.valueOf() >= moment__WEBPACK_IMPORTED_MODULE_2__(start).subtract(15, 'm').valueOf() && now.valueOf() <= moment__WEBPACK_IMPORTED_MODULE_2__(start).add(15, 'm').valueOf()) {
-                                    bkn.checkin = 'available';
+                    try {
+                        for (var _b = __values(this.model.bookings), _c = _b.next(); !_c.done; _c = _b.next()) {
+                            var bkn = _c.value;
+                            if (bkn.room) {
+                                var start = moment__WEBPACK_IMPORTED_MODULE_2__(bkn.date);
+                                if (this.model['last_meeting_started' + bkn.room.id]) {
+                                    // Meeting checked in and current time is within the duration of meeting
+                                    if (now.valueOf() >= moment__WEBPACK_IMPORTED_MODULE_2__(start).subtract(15, 'm').valueOf() && now.valueOf() <= moment__WEBPACK_IMPORTED_MODULE_2__(start).add(bkn.duration, 'm').valueOf()) {
+                                        bkn.checkin = 'done';
+                                    }
                                 }
                                 else {
-                                    bkn.checkin = 'notavailable';
+                                    if (now.valueOf() >= moment__WEBPACK_IMPORTED_MODULE_2__(start).subtract(15, 'm').valueOf() && now.valueOf() <= moment__WEBPACK_IMPORTED_MODULE_2__(start).add(15, 'm').valueOf()) {
+                                        bkn.checkin = 'available';
+                                    }
+                                    else {
+                                        bkn.checkin = 'notavailable';
+                                    }
                                 }
                             }
                         }
+                    }
+                    catch (e_4_1) { e_4 = { error: e_4_1 }; }
+                    finally {
+                        try {
+                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                        }
+                        finally { if (e_4) throw e_4.error; }
                     }
                 };
                 MeetingListingsComponent.prototype.ngOnChanges = function (changes) {
@@ -800,33 +869,43 @@ var __extends = (this && this.__extends) || (function () {
                     this.model.show_calendar = false;
                 };
                 MeetingListingsComponent.prototype.processBookings = function () {
+                    var e_5, _a;
                     var _this = this;
                     this.model.list = [];
                     var now = moment__WEBPACK_IMPORTED_MODULE_2__();
                     var bld = this.service.Buildings.current();
                     var bookings = (this.model.bookings || []);
-                    for (var _i = 0, bookings_1 = bookings; _i < bookings_1.length; _i++) {
-                        var bkn = bookings_1[_i];
-                        var start = moment__WEBPACK_IMPORTED_MODULE_2__(bkn.date);
-                        var end = moment__WEBPACK_IMPORTED_MODULE_2__(start).add(bkn.duration, 'm');
-                        var attend_cnt = bkn.attendees ? bkn.attendees.length : 0;
-                        bkn.display = {
-                            date: start.format('MMM D'),
-                            cal: start.format('MMMM YYYY'),
-                            title: bkn.title,
-                            time: start.format('h:mma') + " - " + end.format('h:mma'),
-                            desc: (bkn.notes.find(function (i) { return i.type === 'description'; }) || { message: '' }).message,
-                            duration: bkn.display.duration,
-                            attend: attend_cnt ? attend_cnt + " Attendee" + (attend_cnt === 1 ? '' : 's') : 'No attendees'
-                        };
-                        if (bkn.room) {
-                            // get the status of last meeting for this particular room
-                            bkn.display.location = "" + bkn.room.name + (bkn.room.level ? ' - ' + bkn.room.level.name : '');
+                    try {
+                        for (var bookings_1 = __values(bookings), bookings_1_1 = bookings_1.next(); !bookings_1_1.done; bookings_1_1 = bookings_1.next()) {
+                            var bkn = bookings_1_1.value;
+                            var start = moment__WEBPACK_IMPORTED_MODULE_2__(bkn.date);
+                            var end = moment__WEBPACK_IMPORTED_MODULE_2__(start).add(bkn.duration, 'm');
+                            var attend_cnt = bkn.attendees ? bkn.attendees.length : 0;
+                            bkn.display = {
+                                date: start.format('MMM D'),
+                                cal: start.format('MMMM YYYY'),
+                                title: bkn.title,
+                                time: start.format('h:mma') + " - " + end.format('h:mma'),
+                                desc: (bkn.notes.find(function (i) { return i.type === 'description'; }) || { message: '' }).message,
+                                duration: bkn.display.duration,
+                                attend: attend_cnt ? attend_cnt + " Attendee" + (attend_cnt === 1 ? '' : 's') : 'No attendees'
+                            };
+                            if (bkn.room) {
+                                // get the status of last meeting for this particular room
+                                bkn.display.location = "" + bkn.room.name + (bkn.room.level ? ' - ' + bkn.room.level.name : '');
+                            }
+                            if (bkn.attendees && bkn.attendees.length > 0) {
+                                var len = bkn.attendees.length;
+                                bkn.display.attend = len + " Attendee" + (len > 1 ? 's' : '');
+                            }
                         }
-                        if (bkn.attendees && bkn.attendees.length > 0) {
-                            var len = bkn.attendees.length;
-                            bkn.display.attend = len + " Attendee" + (len > 1 ? 's' : '');
+                    }
+                    catch (e_5_1) { e_5 = { error: e_5_1 }; }
+                    finally {
+                        try {
+                            if (bookings_1_1 && !bookings_1_1.done && (_a = bookings_1.return)) _a.call(bookings_1);
                         }
+                        finally { if (e_5) throw e_5.error; }
                     }
                     if (this.model.bookings && this.model.bookings.length > 0) {
                         if (!this.model.bookings[0].display || !this.model.bookings[0].display.location) {
@@ -1007,10 +1086,20 @@ var __extends = (this && this.__extends) || (function () {
                     /** List of users that the current user can see the bookings of */
                     _this.users = [];
                     _this.process_list = function (dates) { return function (list) {
+                        var e_6, _a;
                         var timeline = _this.service.Bookings.get('timeline');
-                        for (var _i = 0, dates_1 = dates; _i < dates_1.length; _i++) {
-                            var d = dates_1[_i];
-                            _this.service.Bookings.clear({ from: d });
+                        try {
+                            for (var dates_1 = __values(dates), dates_1_1 = dates_1.next(); !dates_1_1.done; dates_1_1 = dates_1.next()) {
+                                var d = dates_1_1.value;
+                                _this.service.Bookings.clear({ from: d });
+                            }
+                        }
+                        catch (e_6_1) { e_6 = { error: e_6_1 }; }
+                        finally {
+                            try {
+                                if (dates_1_1 && !dates_1_1.done && (_a = dates_1.return)) _a.call(dates_1);
+                            }
+                            finally { if (e_6) throw e_6.error; }
                         }
                     }; };
                     return _this;
@@ -1020,6 +1109,7 @@ var __extends = (this && this.__extends) || (function () {
                     this.init();
                 };
                 ScheduleComponent.prototype.init = function () {
+                    var e_7, _a;
                     var _this = this;
                     if (!this.service.ready()) {
                         return setTimeout(function () { return _this.init(); }, 500);
@@ -1041,21 +1131,30 @@ var __extends = (this && this.__extends) || (function () {
                     this.model.user = this.service.Users.current();
                     this.model.host = 0;
                     this.users = [this.model.user];
-                    for (var _i = 0, _a = this.model.user.delegates; _i < _a.length; _i++) {
-                        var email = _a[_i];
-                        var user = this.service.Users.item(email);
-                        if (user) {
-                            this.users.push(user);
+                    try {
+                        for (var _b = __values(this.model.user.delegates), _c = _b.next(); !_c.done; _c = _b.next()) {
+                            var email = _c.value;
+                            var user = this.service.Users.item(email);
+                            if (user) {
+                                this.users.push(user);
+                            }
+                            else {
+                                this.service.Users.show(email).then(function (u) {
+                                    if (_this.host && u.email === _this.host) {
+                                        _this.model.host = _this.users.length;
+                                        _this.model.show_user = u;
+                                    }
+                                    _this.users.push(u);
+                                });
+                            }
                         }
-                        else {
-                            this.service.Users.show(email).then(function (u) {
-                                if (_this.host && u.email === _this.host) {
-                                    _this.model.host = _this.users.length;
-                                    _this.model.show_user = u;
-                                }
-                                _this.users.push(u);
-                            });
+                    }
+                    catch (e_7_1) { e_7 = { error: e_7_1 }; }
+                    finally {
+                        try {
+                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
                         }
+                        finally { if (e_7) throw e_7.error; }
                     }
                     this.model.lockers = this.model.user.lockers;
                     this.model.show_tooltip = false;
@@ -1111,11 +1210,21 @@ var __extends = (this && this.__extends) || (function () {
                     this.processTimeline(this.service.Bookings.get('timeline'));
                 };
                 ScheduleComponent.prototype.processTimeline = function (list) {
+                    var e_8, _a;
                     this.model.events = {};
-                    for (var _i = 0, _a = this.model.dates; _i < _a.length; _i++) {
-                        var day = _a[_i];
-                        day.count = (list ? list[day.date] || [] : []).length;
-                        this.model.events[moment__WEBPACK_IMPORTED_MODULE_5__(day.value).format('YYYY-MM-DD')] = day.count;
+                    try {
+                        for (var _b = __values(this.model.dates), _c = _b.next(); !_c.done; _c = _b.next()) {
+                            var day = _c.value;
+                            day.count = (list ? list[day.date] || [] : []).length;
+                            this.model.events[moment__WEBPACK_IMPORTED_MODULE_5__(day.value).format('YYYY-MM-DD')] = day.count;
+                        }
+                    }
+                    catch (e_8_1) { e_8 = { error: e_8_1 }; }
+                    finally {
+                        try {
+                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                        }
+                        finally { if (e_8) throw e_8.error; }
                     }
                 };
                 return ScheduleComponent;
