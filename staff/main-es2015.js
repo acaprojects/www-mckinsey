@@ -4842,6 +4842,9 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         this.model.form.needs_catering = this.item_count > 0;
         this.model.form.catering = null;
         this.model.form.start = moment__WEBPACK_IMPORTED_MODULE_5__(this.model.form.date).format('HH:mm');
+        this.model.form.equipment = (this.booking.notes || [])
+            .filter(note => note.type === 'equipment')
+            .reduce((notes, note) => { notes[note.space] = note.message; return notes; }, {});
         delete this.model.form.room;
         this.model.form.attendees = attendees && attendees.length > 1 ? [...(attendees.filter(i => i.email !== booking.organiser.email))] : [];
         const room_list = room instanceof Array ? room.map(i => (Object.assign({}, i, { bookings: [] }))) : room ? [Object.assign({}, room)] : [];
@@ -19289,7 +19292,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574901385000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574905695000);
 
 
 /***/ }),
