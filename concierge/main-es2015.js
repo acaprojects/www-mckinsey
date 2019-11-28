@@ -4899,7 +4899,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     /** Private notes for the active space */
     get other_note() {
         const booking = this.booking || {};
-        const notes = (booking.notes || []).filter(i => i.type === 'other' && i.space === this.space.id);
+        const notes = (booking.notes || []).filter(i => i.type === 'private' && i.space === this.space.id);
         const note = notes.sort((a, b) => a.date - b.date).map(i => i.message)[0];
         return note;
     }
@@ -17909,7 +17909,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574977974000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574980046000);
 
 
 /***/ }),

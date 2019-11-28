@@ -5734,7 +5734,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
         get: function () {
             var _this = this;
             var booking = this.booking || {};
-            var notes = (booking.notes || []).filter(function (i) { return i.type === 'other' && i.space === _this.space.id; });
+            var notes = (booking.notes || []).filter(function (i) { return i.type === 'private' && i.space === _this.space.id; });
             var note = notes.sort(function (a, b) { return a.date - b.date; }).map(function (i) { return i.message; })[0];
             return note;
         },
@@ -21462,7 +21462,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574977974000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574980046000);
 
 
 /***/ }),
