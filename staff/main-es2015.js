@@ -4566,7 +4566,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             fields.id = this.booking.id;
             this.service.Overlay.openModal('confirm-booking', {
                 cmp: _shell_booking_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_7__["BookingDetailsModalComponent"],
-                data: Object.assign({}, this.booking, fields, { catering_code: Object.keys(this.booking.catering)
+                data: Object.assign({}, this.booking, fields, { catering_code: Object.keys(this.booking.catering || {})
                         .reduce((a, v) => { a[v] = this.booking.catering[v].code; return a; }, {}) })
             }, event => {
                 if (event.type === 'finish') {
@@ -19292,7 +19292,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574949311000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574974677000);
 
 
 /***/ }),
