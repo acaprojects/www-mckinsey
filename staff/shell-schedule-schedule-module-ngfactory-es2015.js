@@ -363,7 +363,7 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             else {
                 this.scrollTo(scroll_id, offset, false);
             }
-        });
+        }, 50);
     }
     view(item) {
         this.model.mainIndex = this.model.bookings.indexOf(item);
