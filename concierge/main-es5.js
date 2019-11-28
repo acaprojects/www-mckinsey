@@ -3974,7 +3974,13 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
             var _this = this;
             var booking = this.order.booking || {};
             var notes = (booking.notes || []);
-            return (notes instanceof Array ? notes.filter(function (i) { return i.type === 'catering' && (!i.space || i.space === _this.space.id); }) : null) || [];
+            var list = (notes instanceof Array ? notes.filter(function (i) { return i.type === 'catering' && (!i.space || i.space === _this.space.id); }) : null) || [];
+            var now = dayjs__WEBPACK_IMPORTED_MODULE_2__();
+            list.forEach(function (note) {
+                var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(note.date);
+                note.time = date.format(date.isSame(now, 'd') ? 'h:mm A' : 'DD MMM YY');
+            });
+            return list;
         },
         enumerable: true,
         configurable: true
@@ -4064,6 +4070,7 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
                     type: 'catering',
                     date: date.valueOf(),
                     author: user.name,
+                    space: booking_1.room.id,
                     message: this.new_note,
                     time: date.format('h:mm A')
                 }
@@ -21462,7 +21469,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574981183000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574982427000);
 
 
 /***/ }),

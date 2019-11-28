@@ -3451,7 +3451,13 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
     get private_notes() {
         const booking = this.order.booking || {};
         const notes = (booking.notes || []);
-        return (notes instanceof Array ? notes.filter(i => i.type === 'catering' && (!i.space || i.space === this.space.id)) : null) || [];
+        const list = (notes instanceof Array ? notes.filter(i => i.type === 'catering' && (!i.space || i.space === this.space.id)) : null) || [];
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_2__();
+        list.forEach(note => {
+            const date = dayjs__WEBPACK_IMPORTED_MODULE_2__(note.date);
+            note.time = date.format(date.isSame(now, 'd') ? 'h:mm A' : 'DD MMM YY');
+        });
+        return list;
     }
     /** Start date and time of the meeting associated with the order */
     get time() {
@@ -3529,6 +3535,7 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
                     type: 'catering',
                     date: date.valueOf(),
                     author: user.name,
+                    space: booking.room.id,
                     message: this.new_note,
                     time: date.format('h:mm A')
                 }
@@ -17909,7 +17916,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574981183000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574982427000);
 
 
 /***/ }),
