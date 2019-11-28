@@ -5872,7 +5872,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
                         .reduce(function (a, v) {
                         a[v.space] = v.message;
                         return a;
-                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: this.type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering.items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
+                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: this.type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering[booking.room.id] && catering[booking.room.id].items, catering: JSON.parse(JSON.stringify(catering)), host: __assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -9650,7 +9650,6 @@ var BookingsService = /** @class */ (function (_super) {
             var state = (item.approval_status ? item.approval_status[form.room.email] : null) || '';
             auto_approve = [(form.room.book_type !== 'Request' && form.room.type !== 'Request') && state.indexOf('tentative') < 0];
         }
-        console.log('Form:', form);
         var request = {
             start: date.unix(),
             old_start: Math.floor(form.old_date / 1000),
@@ -9668,7 +9667,7 @@ var BookingsService = /** @class */ (function (_super) {
             catering: form.catering,
             expected_attendees: form.expected_attendees || {},
             equipment_code: form.equipment_code,
-            booking_type: (form.booking_type ? form.booking_type.id : null) || 'internal',
+            booking_type: (form.booking_type ? (form.booking_type instanceof Object ? form.booking_type.id : form.booking_type) : null) || 'internal',
             notify_users: form.notify_users,
             auto_approve: auto_approve,
             setup: (form.setup || 0) * 60,
@@ -21467,7 +21466,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574909250000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574913305000);
 
 
 /***/ }),
