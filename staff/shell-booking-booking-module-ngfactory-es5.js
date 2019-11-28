@@ -11,6 +11,36 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-booking-booking-module-ngfactory"], {
         /***/ "./src/app/shell/booking/booking.component.ngfactory.js": 
         /*!**************************************************************!*\
@@ -1084,7 +1114,7 @@ var __extends = (this && this.__extends) || (function () {
             var BookingMainFlowCateringItemListComponent = /** @class */ (function (_super) {
                 __extends(BookingMainFlowCateringItemListComponent, _super);
                 function BookingMainFlowCateringItemListComponent() {
-                    var _this = _super.apply(this, arguments) || this;
+                    var _this = _super.apply(this, __spread(arguments)) || this;
                     /** Event emitter for item listings */
                     _this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
                     /** Step value for adding catering items */
@@ -1397,22 +1427,41 @@ var __extends = (this && this.__extends) || (function () {
                     }
                 };
                 BookingMainFlowCateringListItemComponent.prototype.handleSelect = function (item) {
+                    var e_1, _a, e_2, _b;
                     if (this.item.must_select === 1) {
-                        for (var _i = 0, _a = this.item.items; _i < _a.length; _i++) {
-                            var i = _a[_i];
-                            i.selected = (item.id === i.id || item.name === i.name);
+                        try {
+                            for (var _c = __values(this.item.items), _d = _c.next(); !_d.done; _d = _c.next()) {
+                                var i = _d.value;
+                                i.selected = (item.id === i.id || item.name === i.name);
+                            }
+                        }
+                        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                        finally {
+                            try {
+                                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+                            }
+                            finally { if (e_1) throw e_1.error; }
                         }
                     }
                     else if (this.item.must_select > 1 && item.selected) {
                         var active = this.item.items.reduce(function (v, i) { return v + (i.selected ? 1 : 0); }, 0);
                         if (active > this.item.must_select) {
                             var diff = active - this.item.must_select;
-                            for (var _b = 0, _c = this.item.items; _b < _c.length; _b++) {
-                                var i = _c[_b];
-                                if (diff > 0 && i.selected && !(item.id === i.id || item.name === i.name)) {
-                                    i.selected = false;
-                                    diff--;
+                            try {
+                                for (var _e = __values(this.item.items), _f = _e.next(); !_f.done; _f = _e.next()) {
+                                    var i = _f.value;
+                                    if (diff > 0 && i.selected && !(item.id === i.id || item.name === i.name)) {
+                                        i.selected = false;
+                                        diff--;
+                                    }
                                 }
+                            }
+                            catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                            finally {
+                                try {
+                                    if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                                }
+                                finally { if (e_2) throw e_2.error; }
                             }
                         }
                     }
@@ -1423,6 +1472,7 @@ var __extends = (this && this.__extends) || (function () {
                 BookingMainFlowCateringListItemComponent.prototype.orderUpdated = function () {
                     var _this = this;
                     this.timeout('order_changed', function () {
+                        var e_3, _a;
                         if (_this.field && _this.space && _this.item) {
                             var item_map = _this.field.control.value || {};
                             if (!item_map[_this.space.id]) {
@@ -1446,9 +1496,18 @@ var __extends = (this && this.__extends) || (function () {
                                         item.amount = 0;
                                     }
                                 };
-                                for (var _i = 0, _a = _this.item.items; _i < _a.length; _i++) {
-                                    var item = _a[_i];
-                                    _loop_1(item);
+                                try {
+                                    for (var _b = __values(_this.item.items), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                        var item = _c.value;
+                                        _loop_1(item);
+                                    }
+                                }
+                                catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                                finally {
+                                    try {
+                                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                                    }
+                                    finally { if (e_3) throw e_3.error; }
                                 }
                             }
                         }
@@ -1839,6 +1898,7 @@ var __extends = (this && this.__extends) || (function () {
                  * Search for available rooms matching the set filters
                  */
                 BookingMainFlowFindSpaceComponent.prototype.search = function () {
+                    var e_4, _a;
                     var _this = this;
                     var query = {
                         date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date,
@@ -1856,9 +1916,18 @@ var __extends = (this && this.__extends) || (function () {
                         }
                     });
                     var room_list = [];
-                    for (var _i = 0, locations_1 = locations; _i < locations_1.length; _i++) {
-                        var zone = locations_1[_i];
-                        room_list = room_list.concat(this._service.Rooms.list(true, zone));
+                    try {
+                        for (var locations_1 = __values(locations), locations_1_1 = locations_1.next(); !locations_1_1.done; locations_1_1 = locations_1.next()) {
+                            var zone = locations_1_1.value;
+                            room_list = room_list.concat(this._service.Rooms.list(true, zone));
+                        }
+                    }
+                    catch (e_4_1) { e_4 = { error: e_4_1 }; }
+                    finally {
+                        try {
+                            if (locations_1_1 && !locations_1_1.done && (_a = locations_1.return)) _a.call(locations_1);
+                        }
+                        finally { if (e_4) throw e_4.error; }
                     }
                     // Filter out rooms unavailable due to booking rules
                     room_list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_8__["Utils"].unique(room_list, 'id').filter(function (room) {
@@ -2784,6 +2853,7 @@ var __extends = (this && this.__extends) || (function () {
                  * Get list of users available to select as the meeting host
                  */
                 BookingMainFlowComponent.prototype.getHostOptions = function () {
+                    var e_5, _a;
                     var _this = this;
                     var user = this._service.Users.current();
                     var list = [user];
@@ -2806,9 +2876,18 @@ var __extends = (this && this.__extends) || (function () {
                             }
                         };
                         var this_1 = this;
-                        for (var _i = 0, _a = user.delegates; _i < _a.length; _i++) {
-                            var email = _a[_i];
-                            _loop_2(email);
+                        try {
+                            for (var _b = __values(user.delegates), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                var email = _c.value;
+                                _loop_2(email);
+                            }
+                        }
+                        catch (e_5_1) { e_5 = { error: e_5_1 }; }
+                        finally {
+                            try {
+                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                            }
+                            finally { if (e_5) throw e_5.error; }
                         }
                     }
                     return list;

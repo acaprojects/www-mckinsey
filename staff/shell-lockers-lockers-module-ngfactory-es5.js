@@ -11,6 +11,36 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-lockers-lockers-module-ngfactory"], {
         /***/ "./src/app/shell/lockers/display/display.component.ngfactory.js": 
         /*!**********************************************************************!*\
@@ -222,34 +252,54 @@ var __extends = (this && this.__extends) || (function () {
                     this.updateLockersState();
                 };
                 LockerDisplayComponent.prototype.updateLockersState = function () {
+                    var e_1, _a;
                     var _this = this;
                     if (this.model.locker_list) {
                         var list = this.model.locker_list.flat();
                         var first = null;
                         var last = null;
-                        for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
-                            var id = list_1[_i];
-                            if (!first) {
-                                first = id;
+                        try {
+                            for (var list_1 = __values(list), list_1_1 = list_1.next(); !list_1_1.done; list_1_1 = list_1.next()) {
+                                var id = list_1_1.value;
+                                if (!first) {
+                                    first = id;
+                                }
+                                if (id) {
+                                    last = id;
+                                }
                             }
-                            if (id) {
-                                last = id;
+                        }
+                        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                        finally {
+                            try {
+                                if (list_1_1 && !list_1_1.done && (_a = list_1.return)) _a.call(list_1);
                             }
+                            finally { if (e_1) throw e_1.error; }
                         }
                         if (first && last) {
                             this.model.loading = true;
                             this.service.Lockers.query({ locker_from: first, locker_to: last }).then(function (lockers) {
+                                var e_2, _a;
                                 _this.model.loading = false;
                                 _this.model.locker_map = {};
-                                for (var _i = 0, lockers_1 = lockers; _i < lockers_1.length; _i++) {
-                                    var lkr = lockers_1[_i];
-                                    _this.model.locker_map[lkr.id] = {
-                                        id: lkr.id,
-                                        serial: lkr.serial,
-                                        available: lkr.available,
-                                        pin: lkr.pin,
-                                        card: lkr.card
-                                    };
+                                try {
+                                    for (var lockers_1 = __values(lockers), lockers_1_1 = lockers_1.next(); !lockers_1_1.done; lockers_1_1 = lockers_1.next()) {
+                                        var lkr = lockers_1_1.value;
+                                        _this.model.locker_map[lkr.id] = {
+                                            id: lkr.id,
+                                            serial: lkr.serial,
+                                            available: lkr.available,
+                                            pin: lkr.pin,
+                                            card: lkr.card
+                                        };
+                                    }
+                                }
+                                catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                                finally {
+                                    try {
+                                        if (lockers_1_1 && !lockers_1_1.done && (_a = lockers_1.return)) _a.call(lockers_1);
+                                    }
+                                    finally { if (e_2) throw e_2.error; }
                                 }
                             }, function () { return _this.model.loading = false; });
                         }
@@ -582,7 +632,7 @@ var __extends = (this && this.__extends) || (function () {
             var LockerOptionsComponent = /** @class */ (function (_super) {
                 __extends(LockerOptionsComponent, _super);
                 function LockerOptionsComponent() {
-                    var _this = _super.apply(this, arguments) || this;
+                    var _this = _super.apply(this, __spread(arguments)) || this;
                     _this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
                     return _this;
                 }
@@ -811,28 +861,47 @@ var __extends = (this && this.__extends) || (function () {
                     // this.model.floor = this.model.floors[0];
                 };
                 LockerSearchFiltersComponent.prototype.ngOnChanges = function (changes) {
+                    var e_3, _a, e_4, _b;
                     if (changes.filters) {
                         if (!this.filters) {
                             this.filters = {};
                         }
                         this.model.level_list = this.filters.levels || [];
                         this.model.level_names = [];
-                        for (var _i = 0, _a = this.model.level_list; _i < _a.length; _i++) {
-                            var lvl = _a[_i];
-                            if (this.filters.level && (lvl.id === this.filters.level || lvl.id === this.filters.level.id)) {
-                                this.model.level = this.model.level_list.indexOf(lvl);
+                        try {
+                            for (var _c = __values(this.model.level_list), _d = _c.next(); !_d.done; _d = _c.next()) {
+                                var lvl = _d.value;
+                                if (this.filters.level && (lvl.id === this.filters.level || lvl.id === this.filters.level.id)) {
+                                    this.model.level = this.model.level_list.indexOf(lvl);
+                                }
+                                this.model.level_names.push(lvl.name);
                             }
-                            this.model.level_names.push(lvl.name);
+                        }
+                        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                        finally {
+                            try {
+                                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+                            }
+                            finally { if (e_3) throw e_3.error; }
                         }
                         this.model.lvl = this.model.level_list[this.model.level];
                         this.model.section_list = this.filters.sections || [];
                         this.model.section = -1;
-                        for (var _b = 0, _c = this.model.section_list; _b < _c.length; _b++) {
-                            var s = _c[_b];
-                            if ((s.id && s.id === this.filters.section) || s === this.filters.section) {
-                                this.model.section = this.model.section_list.indexOf(s);
-                                break;
+                        try {
+                            for (var _e = __values(this.model.section_list), _f = _e.next(); !_f.done; _f = _e.next()) {
+                                var s = _f.value;
+                                if ((s.id && s.id === this.filters.section) || s === this.filters.section) {
+                                    this.model.section = this.model.section_list.indexOf(s);
+                                    break;
+                                }
                             }
+                        }
+                        catch (e_4_1) { e_4 = { error: e_4_1 }; }
+                        finally {
+                            try {
+                                if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                            }
+                            finally { if (e_4) throw e_4.error; }
                         }
                         this.updateDisplay();
                     }
@@ -1078,52 +1147,80 @@ var __extends = (this && this.__extends) || (function () {
                     this.subscription('route', this.route.paramMap.subscribe(function (params) {
                     }));
                     this.subscription('bld', this.service.Buildings.listen(function (bld) {
+                        var e_5, _a, e_6, _b, e_7, _c;
                         if (bld) {
                             _this.model.level_list = [];
                             _this.model.lockers = bld.lockers;
-                            for (var _i = 0, _a = bld.levels; _i < _a.length; _i++) {
-                                var lvl = _a[_i];
-                                if (_this.model.lockers[lvl.id]) {
-                                    var lvl_lockers = _this.model.lockers[lvl.id] || {};
-                                    var section_ids = Object.keys(lvl_lockers);
-                                    var sections = [];
-                                    var section_names = [];
-                                    for (var _b = 0, section_ids_1 = section_ids; _b < section_ids_1.length; _b++) {
-                                        var key = section_ids_1[_b];
-                                        var list = ((lvl_lockers[key] || {})[_this.type || 'personal'] || []).flat();
-                                        var available = 0;
-                                        var count = 0;
-                                        for (var _c = 0, list_2 = list; _c < list_2.length; _c++) {
-                                            var item = list_2[_c];
-                                            if (item) {
-                                                count++;
-                                                var i = _this.service.Lockers.get('map')[item];
-                                                if (i && i.available) {
-                                                    available++;
+                            try {
+                                for (var _d = __values(bld.levels), _e = _d.next(); !_e.done; _e = _d.next()) {
+                                    var lvl = _e.value;
+                                    if (_this.model.lockers[lvl.id]) {
+                                        var lvl_lockers = _this.model.lockers[lvl.id] || {};
+                                        var section_ids = Object.keys(lvl_lockers);
+                                        var sections = [];
+                                        var section_names = [];
+                                        try {
+                                            for (var section_ids_1 = (e_6 = void 0, __values(section_ids)), section_ids_1_1 = section_ids_1.next(); !section_ids_1_1.done; section_ids_1_1 = section_ids_1.next()) {
+                                                var key = section_ids_1_1.value;
+                                                var list = ((lvl_lockers[key] || {})[_this.type || 'personal'] || []).flat();
+                                                var available = 0;
+                                                var count = 0;
+                                                try {
+                                                    for (var list_2 = (e_7 = void 0, __values(list)), list_2_1 = list_2.next(); !list_2_1.done; list_2_1 = list_2.next()) {
+                                                        var item = list_2_1.value;
+                                                        if (item) {
+                                                            count++;
+                                                            var i = _this.service.Lockers.get('map')[item];
+                                                            if (i && i.available) {
+                                                                available++;
+                                                            }
+                                                        }
+                                                    }
                                                 }
+                                                catch (e_7_1) { e_7 = { error: e_7_1 }; }
+                                                finally {
+                                                    try {
+                                                        if (list_2_1 && !list_2_1.done && (_c = list_2.return)) _c.call(list_2);
+                                                    }
+                                                    finally { if (e_7) throw e_7.error; }
+                                                }
+                                                if (section_names.indexOf(key) < 0) {
+                                                    section_names.push(key);
+                                                }
+                                                sections.push({
+                                                    name: key,
+                                                    available: available,
+                                                    count: count
+                                                });
                                             }
                                         }
-                                        if (section_names.indexOf(key) < 0) {
-                                            section_names.push(key);
+                                        catch (e_6_1) { e_6 = { error: e_6_1 }; }
+                                        finally {
+                                            try {
+                                                if (section_ids_1_1 && !section_ids_1_1.done && (_b = section_ids_1.return)) _b.call(section_ids_1);
+                                            }
+                                            finally { if (e_6) throw e_6.error; }
                                         }
-                                        sections.push({
-                                            name: key,
-                                            available: available,
-                                            count: count
+                                        _this.model.level_list.push({
+                                            id: lvl.id,
+                                            name: lvl.name,
+                                            number: lvl.number,
+                                            lockers: _this.model.lockers[lvl.id],
+                                            sections: sections
                                         });
+                                        _this.model.filters = {
+                                            levels: _this.model.level_list,
+                                            sections: section_names
+                                        };
                                     }
-                                    _this.model.level_list.push({
-                                        id: lvl.id,
-                                        name: lvl.name,
-                                        number: lvl.number,
-                                        lockers: _this.model.lockers[lvl.id],
-                                        sections: sections
-                                    });
-                                    _this.model.filters = {
-                                        levels: _this.model.level_list,
-                                        sections: section_names
-                                    };
                                 }
+                            }
+                            catch (e_5_1) { e_5 = { error: e_5_1 }; }
+                            finally {
+                                try {
+                                    if (_e && !_e.done && (_a = _d.return)) _a.call(_d);
+                                }
+                                finally { if (e_5) throw e_5.error; }
                             }
                         }
                     }));
