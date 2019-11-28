@@ -6634,7 +6634,7 @@ var PrivateDetailsModalComponent = /** @class */ (function (_super) {
                 space: this.booking.room.id,
                 message: this.notes
             }]);
-        this.service.Bookings.updateItem(this.booking.id, __assign({}, this.booking, { notes: notes, setup: this.setup_index * 5, breakdown: this.breakdown_index * 5 })).then(function (booking) {
+        this.service.Bookings.updateItem(this.booking.id, __assign({}, this.booking, { room: this.booking.room_list || [this.booking.room], notes: notes, setup: this.setup_index * 5, breakdown: this.breakdown_index * 5 })).then(function (booking) {
             _this.service.set('CONCIERGE.latest_booking', booking);
             _this.service.success('Successfully updated private details');
             _this.event('finish');
@@ -21467,7 +21467,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574899083000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574909250000);
 
 
 /***/ }),

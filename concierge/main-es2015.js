@@ -5638,7 +5638,7 @@ class PrivateDetailsModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMP
                 space: this.booking.room.id,
                 message: this.notes
             }];
-        this.service.Bookings.updateItem(this.booking.id, Object.assign({}, this.booking, { notes, setup: this.setup_index * 5, breakdown: this.breakdown_index * 5 })).then((booking) => {
+        this.service.Bookings.updateItem(this.booking.id, Object.assign({}, this.booking, { room: this.booking.room_list || [this.booking.room], notes, setup: this.setup_index * 5, breakdown: this.breakdown_index * 5 })).then((booking) => {
             this.service.set('CONCIERGE.latest_booking', booking);
             this.service.success('Successfully updated private details');
             this.event('finish');
@@ -17914,7 +17914,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574899083000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574909250000);
 
 
 /***/ }),
