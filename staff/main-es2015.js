@@ -10359,7 +10359,7 @@ class RoomsService extends _base_service__WEBPACK_IMPORTED_MODULE_3__["BaseServi
             support_url: settings.support_url || raw_item.support_url,
             capacity: raw_item.capacity,
             zones: raw_item.zones,
-            book_type: settings.book_type || lvl.book_type || lvl.settings.book_type || '',
+            book_type: '',
             controllable: settings.controllable,
             rate: settings.cost_hour || raw_item.cost_hour,
             linked_rooms: raw_item.linked_rooms || raw_item.settings.linked_rooms,
@@ -10371,9 +10371,6 @@ class RoomsService extends _base_service__WEBPACK_IMPORTED_MODULE_3__["BaseServi
         };
         if (out.controllable !== false) {
             out.controllable = lvl.settings.controllable;
-        }
-        if (settings.bookable_by_request !== false && (settings.bookable_by_request || (lvl.settings.bookable_by_request))) {
-            out.book_type = 'Request';
         }
         if (raw_item.capacity) {
             const cap_list = this.get('capacities') || [];
@@ -10408,9 +10405,6 @@ class RoomsService extends _base_service__WEBPACK_IMPORTED_MODULE_3__["BaseServi
                     const level = this.parent.Buildings.getLevel(raw_item.zones) || { settings: {} };
                     if (!level.settings) {
                         level.settings = {};
-                    }
-                    if (settings.bookable_by_request !== false && (settings.bookable_by_request || (level.settings.bookable_by_request))) {
-                        out.book_type = 'Request';
                     }
                     return level;
                 }
@@ -19292,7 +19286,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574982363000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575007329000);
 
 
 /***/ }),
