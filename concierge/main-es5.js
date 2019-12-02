@@ -3421,8 +3421,12 @@ var BookingFlowFormComponent = /** @class */ (function (_super) {
      * @param field Form field associated with spaces
      */
     BookingFlowFormComponent.prototype.setSpaces = function (field) {
+        var dateField = this.fields.find(function (i) { return i.key === 'date'; });
+        var durationField = this.fields.find(function (i) { return i.key === 'duration'; });
         this._service.Overlay.openModal('select-room', {
             data: {
+                date: dateField.control.value,
+                duration: durationField.control.value,
                 spaces: field.getValue() || [],
                 multi: true
             }
@@ -6778,8 +6782,8 @@ var RoomSelectModalComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoomSelectModalComponent", function() { return RoomSelectModalComponent; });
 /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm5/acaprojects-ngx-widgets.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6851,7 +6855,7 @@ var RoomSelectModalComponent = /** @class */ (function (_super) {
     };
     RoomSelectModalComponent.prototype.updateList = function () {
         var _this = this;
-        var date = moment__WEBPACK_IMPORTED_MODULE_1__(this.model.date || undefined);
+        var date = dayjs__WEBPACK_IMPORTED_MODULE_1__(this.model.date || undefined);
         this.model.loading = true;
         var zones = [this.model.zone || this.service.Buildings.current().id];
         if (this.model.type !== -1) {
@@ -21469,7 +21473,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574982427000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575327713000);
 
 
 /***/ }),

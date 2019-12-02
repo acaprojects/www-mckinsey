@@ -2980,8 +2980,12 @@ class BookingFlowFormComponent extends _shared_globals_base_component__WEBPACK_I
      * @param field Form field associated with spaces
      */
     setSpaces(field) {
+        let dateField = this.fields.find(i => i.key === 'date');
+        let durationField = this.fields.find(i => i.key === 'duration');
         this._service.Overlay.openModal('select-room', {
             data: {
+                date: dateField.control.value,
+                duration: durationField.control.value,
                 spaces: field.getValue() || [],
                 multi: true
             }
@@ -5780,8 +5784,8 @@ var RoomSelectModalComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoomSelectModalComponent", function() { return RoomSelectModalComponent; });
 /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 
 
@@ -5815,7 +5819,7 @@ class RoomSelectModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTE
         this.model.type_index = 0;
     }
     updateList() {
-        const date = moment__WEBPACK_IMPORTED_MODULE_1__(this.model.date || undefined);
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_1__(this.model.date || undefined);
         this.model.loading = true;
         const zones = [this.model.zone || this.service.Buildings.current().id];
         if (this.model.type !== -1) {
@@ -17916,7 +17920,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1574982427000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575327713000);
 
 
 /***/ }),
