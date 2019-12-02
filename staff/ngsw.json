@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1573613159846,
+  "timestamp": 1575257206942,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -96,6 +96,9 @@
         "/staff/assets/maps/london/level_10.svg",
         "/staff/assets/maps/london/level_11.svg",
         "/staff/assets/maps/london_jermyn/level_04.svg",
+        "/staff/assets/maps/london_kinnaird_house/level_03.svg",
+        "/staff/assets/maps/london_kinnaird_house/level_06.svg",
+        "/staff/assets/maps/london_kinnaird_house/level_gr.svg",
         "/staff/assets/maps/milan/level_2.svg",
         "/staff/assets/maps/milan/level_3.svg",
         "/staff/assets/maps/milan/level_4.svg",
@@ -227,7 +230,7 @@
     "/staff/assets/img/skyline.jpg": "c47ac628178df00b6cb24b959bc88be223eac30c",
     "/staff/assets/img/storage.svg": "06e314fdf75ea7852e958e7a759c0f933d052821",
     "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
-    "/staff/assets/maps/bangalore_blc/level_7.svg": "b4d8daccaa38d8345f02c2eb770c7e721ad56d8e",
+    "/staff/assets/maps/bangalore_blc/level_7.svg": "846aeefd0a88b998c0914bf4d0713ef965ed98fa",
     "/staff/assets/maps/bangalore_bng/level_6.svg": "cf1e6303758fe6f3c10ffaa81b4ee8426c1f5ea2",
     "/staff/assets/maps/chengdu/level_15.svg": "151fd39bcf1604fb9a38e73f7e22d6df26d8db85",
     "/staff/assets/maps/istanbul/level_28.svg": "226a886b10e2a977968e6a38af6450da7be2e150",
@@ -239,6 +242,9 @@
     "/staff/assets/maps/london/level_10.svg": "4f9fa43e45121bbb69e769fbad62adbe96579929",
     "/staff/assets/maps/london/level_11.svg": "92a3c84a64771b284f6a7364a1cddcd912592e12",
     "/staff/assets/maps/london_jermyn/level_04.svg": "ad07701c027f72ef6f306f1b04d3781cee7017a4",
+    "/staff/assets/maps/london_kinnaird_house/level_03.svg": "d5fcb2b1d608a2ae9c8c483a3ae3f6a37b2d2387",
+    "/staff/assets/maps/london_kinnaird_house/level_06.svg": "75cf4fc23a69c22243241adef5a1ebbb37d5dc71",
+    "/staff/assets/maps/london_kinnaird_house/level_gr.svg": "7cc91289c7d4d1cb9944dfc48d47a81c5acec08f",
     "/staff/assets/maps/milan/level_2.svg": "27136036a5b7200db8c8e1cc476222411b341164",
     "/staff/assets/maps/milan/level_3.svg": "70d9f17a2a6b04326c70eb9043a5eb108ac75690",
     "/staff/assets/maps/milan/level_4.svg": "5da7dab388725b65160e14b3d893fa0d5539e899",
@@ -266,12 +272,12 @@
     "/staff/assets/maps/sydney/level_33.svg": "1bf5f1923f1ff03558e9dbb22b0526d72b836448",
     "/staff/assets/maps/sydney/level_35.svg": "6747a7aea9dfe7739b2701cc6876de17038536f2",
     "/staff/assets/maps/sydney/level_36.svg": "267d70d35be3c06e218bf7dbc170e56b0ae1ed5c",
-    "/staff/assets/maps/taipei/level_47.svg": "f0142f17fb801d5d5e0c4286f28db93a32c18696",
+    "/staff/assets/maps/taipei/level_47.svg": "637cbadc4b664d2c6df6b4a22b46d4e5c57ecc42",
     "/staff/assets/maps/washington_dc/level_10.svg": "89a3d9ffb33f94b89930d61125bdee057c5f955b",
     "/staff/assets/maps/washington_dc/level_11.svg": "8e7bb6a556bfb0380b552ee2d3c941dd7eeb9f6a",
     "/staff/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "cf824f6b6df146a0378cdcf6c4f9849043855bae"
+    "/staff/index.html": "a299d9f3a44c79f76e52039648916cec3046ac16"
   },
   "navigationUrls": [
     {

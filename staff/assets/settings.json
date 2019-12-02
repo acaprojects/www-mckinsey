@@ -6,7 +6,7 @@
         "domain": "",
         "route": "/staff",
         "protocol": "https:",
-        "use_domain": true,
+        "use_domain": false,
         "local_login": false
     },
     "app": {
@@ -257,7 +257,14 @@
                 {
                     "key": "host",
                     "label": "Meeting Host",
-                    "type": "custom"
+                    "type": "custom",
+                    "no_edit": true
+                },
+                {
+                    "key": "icaluid",
+                    "label": "Calender UID",
+                    "type": "input",
+                    "hide": true
                 },
                 {
                     "key": "attendees",
@@ -356,6 +363,12 @@
                     "type": "checkbox"
                 },
                 {
+                    "key": "notes",
+                    "label": "Notes",
+                    "hide": true,
+                    "type": "custom"
+                },
+                {
                     "key": "needs_catering",
                     "label": "Need Catering?",
                     "flex": true,
@@ -371,6 +384,12 @@
                     "key": "all_day",
                     "label": "All Day Booking",
                     "type": "toggle",
+                    "hide": true
+                },
+                {
+                    "key": "approval_status",
+                    "label": "Approval Status",
+                    "type": "custom",
                     "hide": true
                 },
                 {
