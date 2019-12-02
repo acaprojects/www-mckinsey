@@ -7,7 +7,7 @@
         "domain": "",
         "route": "/concierge",
         "protocol": "https:",
-        "use_domain": true,
+        "use_domain": false,
         "local_login": false
     },
     "app": {
@@ -103,53 +103,59 @@
             "search_host": true,
             "fields": [
                 {
+                    "key": "id",
+                    "label": "ID",
+                    "control_type": "input",
+                    "hide": true
+                },
+                {
+                    "key": "icaluid",
+                    "label": "Calendar UID",
+                    "control_type": "input",
+                    "hide": true
+                },
+                {
                     "key": "date",
                     "label": "Date",
                     "control_type": "custom",
-                    "required": true,
-                    "readonly_edit": true
+                    "required": true
                 },
                 {
                     "key": "start",
                     "label": "Time",
                     "control_type": "custom",
-                    "required": true,
-                    "readonly_edit": true
+                    "required": true
                 },
                 {
                     "key": "duration",
                     "label": "Duration",
                     "control_type": "custom",
-                    "required": true,
-                    "readonly_edit": true
+                    "required": true
                 },
                 {
                     "key": "host",
                     "label": "Meeting Host",
                     "flex": true,
                     "control_type": "custom",
-                    "no_edit": true
+                    "readonly_edit": true
                 },
                 {
                     "key": "attendees",
                     "label": "Attendees",
                     "flex": true,
-                    "control_type": "custom",
-                    "no_edit": true
+                    "control_type": "custom"
                 },
                 {
                     "key": "title",
                     "label": "Meeting Subject",
                     "control_type": "input",
-                    "required": true,
-                    "no_edit": true
+                    "required": true
                 },
                 {
                     "key": "needs_catering",
                     "label": "Need Catering?",
                     "flex": true,
-                    "type": "checkbox",
-                    "no_edit": true
+                    "type": "checkbox"
                 },
                 {
                     "key": "expected_attendees",
@@ -211,16 +217,31 @@
                     "label": "Meeting Notes",
                     "simple": false,
                     "control_type": "custom",
-                    "flex": true,
-                    "no_edit": true
+                    "flex": true
                 },
                 {
-                    "key": "private_notes",
-                    "label": "Private Notes",
-                    "description": "",
-                    "control_type": "custom",
-                    "flex": true,
-                    "edit_only": true
+                    "key": "setup",
+                    "label": "Setup",
+                    "type": "input",
+                    "hide": true
+                },
+                {
+                    "key": "breakdown",
+                    "label": "Breakdown",
+                    "type": "input",
+                    "hide": true
+                },
+                {
+                    "key": "old_date",
+                    "label": "Breakdown",
+                    "type": "input",
+                    "hide": true
+                },
+                {
+                    "key": "old_end",
+                    "label": "Breakdown",
+                    "type": "input",
+                    "hide": true
                 }
             ]
         }

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1573427031049,
+  "timestamp": 1575259540754,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -23,6 +23,8 @@
         "/concierge/assets/img/caterer-03.jpg",
         "/concierge/assets/img/concierge.svg",
         "/concierge/assets/img/confirmed.svg",
+        "/concierge/assets/img/delete-success.svg",
+        "/concierge/assets/img/delete.svg",
         "/concierge/assets/img/edit.svg",
         "/concierge/assets/img/equipment.svg",
         "/concierge/assets/img/ergonomicsupport.jpg",
@@ -81,6 +83,8 @@
     "/concierge/assets/img/caterer-03.jpg": "c7e2b4735c10ad80492a72fd4ddfdeba85994ee6",
     "/concierge/assets/img/concierge.svg": "c1e47bb9084a2ce32c86595768b33b38e54b88bc",
     "/concierge/assets/img/confirmed.svg": "773a4395ab76b41c12d923e3e63ebf7177173654",
+    "/concierge/assets/img/delete-success.svg": "5f9ad32d39d5719bd1c1ede773dec8d943df2b46",
+    "/concierge/assets/img/delete.svg": "515676b0669ccff4c1d9cbaa3fffe15d549c398d",
     "/concierge/assets/img/edit.svg": "a192b69aab6c43ddd3103422deb07584abdeef88",
     "/concierge/assets/img/equipment.svg": "0a7bdea9011ddb790c3b7f8966d82e9468d14c72",
     "/concierge/assets/img/ergonomicsupport.jpg": "1cf364bd2f58b1396d3330c785a5da48d240fa97",
@@ -102,7 +106,7 @@
     "/concierge/assets/md5_worker.js": "962a46233a1ff4e2e29e1724644a05502f049658",
     "/concierge/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/concierge/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/concierge/index.html": "0d125d38cd384c6d78a295a2e09a250c3fc64a61"
+    "/concierge/index.html": "315eea032d479dbe922c0bf59d52b27ceedba3ed"
   },
   "navigationUrls": [
     {
