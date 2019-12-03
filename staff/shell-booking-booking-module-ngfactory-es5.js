@@ -2304,8 +2304,14 @@ var __values = (this && this.__values) || function (o) {
                  * @param field Form field associated with spaces
                  */
                 BookingMainFlowFormComponent.prototype.setSpaces = function (field) {
+                    var periodField = this.fields.find(function (i) { return i.key === 'period_group'; });
+                    var dateField = periodField.children.find(function (i) { return i.key === 'date'; });
+                    var timeField = this.fields.find(function (i) { return i.key === 'time_group'; });
+                    var durationField = timeField.children.find(function (i) { return i.key === 'duration'; });
                     this._service.Overlay.openModal('select-room', {
                         data: {
+                            date: dateField.control.value,
+                            duration: durationField.control.value,
                             spaces: field.getValue() || [],
                             multi: true
                         }

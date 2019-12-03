@@ -2080,8 +2080,14 @@ class BookingMainFlowFormComponent extends _shared_globals_base_component__WEBPA
      * @param field Form field associated with spaces
      */
     setSpaces(field) {
+        let periodField = this.fields.find(i => i.key === 'period_group');
+        let dateField = periodField.children.find(i => i.key === 'date');
+        let timeField = this.fields.find(i => i.key === 'time_group');
+        let durationField = timeField.children.find(i => i.key === 'duration');
         this._service.Overlay.openModal('select-room', {
             data: {
+                date: dateField.control.value,
+                duration: durationField.control.value,
                 spaces: field.getValue() || [],
                 multi: true
             }
