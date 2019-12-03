@@ -1475,19 +1475,18 @@ var BookingDetailsComponent = /** @class */ (function (_super) {
                 duration: duration,
                 setup: setup_1,
                 breakdown: breakdown_1
-            }).then(function () {
+            }).then(function (list) {
                 _this.check = false;
                 _this.loading = false;
-                _this.sendBookingRequest();
-            }, function () {
-                _this.loading = false;
-                _this.event.emit(false);
-                if (setup_1 || breakdown_1) {
-                    _this._service.error("Selected spaces are not free at the given time(" + _this.date + " " + _this.period + ").\n                         Meetings with additional requirements or catering require a minimum buffer of 15 minutes outside the selected period.");
+                if (list.length === _this.spaces.length) {
+                    _this.sendBookingRequest();
                 }
                 else {
-                    _this._service.error("Selected spaces are not free at the given time(" + _this.date + " " + _this.period + ")");
+                    _this.showError(setup_1, breakdown_1);
                 }
+            }, function () {
+                _this.loading = false;
+                _this.showError(setup_1, breakdown_1);
             });
         }
         else {
@@ -1495,6 +1494,16 @@ var BookingDetailsComponent = /** @class */ (function (_super) {
             this.loading = false;
             this.sendBookingRequest();
         }
+    };
+    /** Error Message if not available */
+    BookingDetailsComponent.prototype.showError = function (setup, breakdown) {
+        if (setup || breakdown) {
+            this._service.error("Selected spaces are not free at the given time(" + this.date + " " + this.period + ").\n                 Meetings with additional requirements or catering require a minimum buffer of 15 minutes outside the selected period.");
+        }
+        else {
+            this._service.error("Selected spaces are not free at the given time(" + this.date + " " + this.period + ")");
+        }
+        this.event.emit(false);
     };
     /**
      * Send booking request to the server
@@ -21473,7 +21482,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575327713000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575335449000);
 
 
 /***/ }),

@@ -1321,20 +1321,18 @@ class BookingDetailsComponent extends _shared_globals_base_component__WEBPACK_IM
                 duration,
                 setup,
                 breakdown
-            }).then(() => {
+            }).then((list) => {
                 this.check = false;
                 this.loading = false;
-                this.sendBookingRequest();
-            }, () => {
-                this.loading = false;
-                this.event.emit(false);
-                if (setup || breakdown) {
-                    this._service.error(`Selected spaces are not free at the given time(${this.date} ${this.period}).
-                         Meetings with additional requirements or catering require a minimum buffer of 15 minutes outside the selected period.`);
+                if (list.length === this.spaces.length) {
+                    this.sendBookingRequest();
                 }
                 else {
-                    this._service.error(`Selected spaces are not free at the given time(${this.date} ${this.period})`);
+                    this.showError(setup, breakdown);
                 }
+            }, () => {
+                this.loading = false;
+                this.showError(setup, breakdown);
             });
         }
         else {
@@ -1342,6 +1340,17 @@ class BookingDetailsComponent extends _shared_globals_base_component__WEBPACK_IM
             this.loading = false;
             this.sendBookingRequest();
         }
+    }
+    /** Error Message if not available */
+    showError(setup, breakdown) {
+        if (setup || breakdown) {
+            this._service.error(`Selected spaces are not free at the given time(${this.date} ${this.period}).
+                 Meetings with additional requirements or catering require a minimum buffer of 15 minutes outside the selected period.`);
+        }
+        else {
+            this._service.error(`Selected spaces are not free at the given time(${this.date} ${this.period})`);
+        }
+        this.event.emit(false);
     }
     /**
      * Send booking request to the server
@@ -17920,7 +17929,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575327713000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575335449000);
 
 
 /***/ }),
