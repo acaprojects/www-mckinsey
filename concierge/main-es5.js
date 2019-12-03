@@ -1469,12 +1469,14 @@ var BookingDetailsComponent = /** @class */ (function (_super) {
         if (room_ids) {
             var setup_1 = (this.item_count > 0) || this.notes ? 15 * 60 : 0;
             var breakdown_1 = (this.item_count > 0) || this.notes ? 15 * 60 : 0;
+            var ignore = this.form.icaluid;
             this._service.Rooms.available({
                 room_ids: room_ids,
                 date: date,
                 duration: duration,
                 setup: setup_1,
-                breakdown: breakdown_1
+                breakdown: breakdown_1,
+                ignore: ignore
             }).then(function (list) {
                 _this.check = false;
                 _this.loading = false;
@@ -21482,7 +21484,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575335449000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575341912000);
 
 
 /***/ }),

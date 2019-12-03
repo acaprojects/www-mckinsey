@@ -1315,12 +1315,14 @@ class BookingDetailsComponent extends _shared_globals_base_component__WEBPACK_IM
         if (room_ids) {
             const setup = (this.item_count > 0) || this.notes ? 15 * 60 : 0;
             const breakdown = (this.item_count > 0) || this.notes ? 15 * 60 : 0;
+            const ignore = this.form.icaluid;
             this._service.Rooms.available({
                 room_ids,
                 date,
                 duration,
                 setup,
-                breakdown
+                breakdown,
+                ignore
             }).then((list) => {
                 this.check = false;
                 this.loading = false;
@@ -17929,7 +17931,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575335449000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575341912000);
 
 
 /***/ }),
