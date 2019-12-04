@@ -1448,9 +1448,7 @@ class ExploreTimelineComponent extends _shared_globals_base_component__WEBPACK_I
         this.selected_offset = Math.min(this.duration - (this.date_offset ? 0 : this.expired_length) - 30, Math.max(this.date_offset ? 30 : 0, offset));
         const now = moment__WEBPACK_IMPORTED_MODULE_2__().startOf('m');
         if (this.date_offset) {
-            now.hours(7)
-                .minutes(0)
-                .subtract(30, 'm');
+            now.hours(7).minutes(0);
         }
         const start = moment__WEBPACK_IMPORTED_MODULE_2__(now)
             .add(this.selected_offset, 'm')
@@ -1532,9 +1530,7 @@ class ExploreTimelineComponent extends _shared_globals_base_component__WEBPACK_I
     updateSelected() {
         const now = moment__WEBPACK_IMPORTED_MODULE_2__().add(this.date_offset, 'd');
         if (this.date_offset) {
-            now.hours(7)
-                .minutes(0)
-                .subtract(30, 'm');
+            now.hours(7).minutes(0);
         }
         const diff = moment__WEBPACK_IMPORTED_MODULE_2__(this.display_value).diff(now, 'm');
         if (diff < 0) {
