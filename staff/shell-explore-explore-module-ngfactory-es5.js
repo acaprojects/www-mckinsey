@@ -1881,9 +1881,7 @@ var __spread = (this && this.__spread) || function () {
                     this.selected_offset = Math.min(this.duration - (this.date_offset ? 0 : this.expired_length) - 30, Math.max(this.date_offset ? 30 : 0, offset));
                     var now = moment__WEBPACK_IMPORTED_MODULE_2__().startOf('m');
                     if (this.date_offset) {
-                        now.hours(7)
-                            .minutes(0)
-                            .subtract(30, 'm');
+                        now.hours(7).minutes(0);
                     }
                     var start = moment__WEBPACK_IMPORTED_MODULE_2__(now)
                         .add(this.selected_offset, 'm')
@@ -1967,9 +1965,7 @@ var __spread = (this && this.__spread) || function () {
                 ExploreTimelineComponent.prototype.updateSelected = function () {
                     var now = moment__WEBPACK_IMPORTED_MODULE_2__().add(this.date_offset, 'd');
                     if (this.date_offset) {
-                        now.hours(7)
-                            .minutes(0)
-                            .subtract(30, 'm');
+                        now.hours(7).minutes(0);
                     }
                     var diff = moment__WEBPACK_IMPORTED_MODULE_2__(this.display_value).diff(now, 'm');
                     if (diff < 0) {

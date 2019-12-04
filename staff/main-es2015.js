@@ -13276,6 +13276,8 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
         this._field = _field;
         this._group = _group;
         this.service = service;
+        /** Min length of a booking for the selected space */
+        this.min_length = 0;
     }
     get field() {
         return this._field;
@@ -13301,7 +13303,8 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
     ngOnInit() {
         if (this.group) {
             if (this.group.controls.room) {
-                this.subscription('room', this.group.controls.room.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(this.group.controls.room.value))
+                this.subscription('room', this.group.controls.room.valueChanges
+                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(this.group.controls.room.value))
                     .subscribe((v) => {
                     this.handleBookingRules(v);
                 }));
@@ -13337,11 +13340,18 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
         const date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp);
         const max_duration = Math.min(480, this.max_length || (this.field.metadata ? this.field.metadata.max_duration || 480 : 480));
         const end = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).add(Math.max(30, max_duration) + 15, 'm');
-        date.add(10, 'm');
-        let dur = 10;
-        this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
-        dur += 5;
-        date.add(5, 'm');
+        let dur;
+        if (this.min_length <= 10) {
+            date.add(10, 'm');
+            dur = 10;
+            this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
+            date.add(5, 'm');
+            dur += 5;
+        }
+        else {
+            date.add(this.min_length, 'm');
+            dur = this.min_length;
+        }
         for (; date.isBefore(end, 'm'); date.add(15, 'm')) {
             this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
             dur += 15;
@@ -13398,33 +13408,31 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
             const date = (this.group.controls.date ? this.group.controls.date.value : undefined);
             if (spaces instanceof Array) {
                 for (const space of spaces) {
-                    const rule_list = this.service.Buildings.get(space.level.bld_id).booking_rules;
-                    const rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
-                        user: host,
-                        space,
-                        time: date.valueOf(),
-                        duration: 5,
-                        rules: rule_list
-                    });
-                    this.max_length = Math.min(this.max_length || 999999, rules.max_length || 999999);
+                    this.checkRules({ user: host, space, time: date.valueOf() });
                 }
             }
             else {
-                const rule_list = this.service.Buildings.get(spaces.level.bld_id).booking_rules;
-                const rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
-                    user: host,
-                    space: spaces,
-                    time: date.valueOf(),
-                    duration: 5,
-                    rules: rule_list
-                });
-                this.max_length = rules.max_length || 999999;
+                this.checkRules({ user: host, space: spaces, time: date.valueOf() });
             }
             if (this.max_length === 999999) {
                 this.max_length = 0;
             }
             this.updateDisplay();
         }
+    }
+    checkRules(options) {
+        const { user, space, time } = options;
+        const rule_list = this.service.Buildings.get(space.level.bld_id).booking_rules;
+        const min_duration = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["getMinLength"])(rule_list);
+        const rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
+            user,
+            space,
+            time,
+            duration: min_duration,
+            rules: rule_list
+        });
+        this.max_length = Math.min(this.max_length || 999999, rules.max_length || 999999);
+        this.min_length = Math.max(this.min_length || 0, rules.min_length || 0);
     }
 }
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_8__["CUSTOM_FIELD_REGISTER"].duration = CustomDurationFieldComponent;
@@ -19286,7 +19294,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575332428000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575423646000);
 
 
 /***/ }),
@@ -21155,12 +21163,13 @@ win.systemData['sys-B0'] = win.control.systems['sys-B0'];
 /*!*******************************************************!*\
   !*** ./src/app/shared/utilities/booking.utilities.ts ***!
   \*******************************************************/
-/*! exports provided: rulesForSpace, durationGreaterThanOrEqual, stringToMinutes, generateBookingFormMetadata */
+/*! exports provided: rulesForSpace, getMinLength, durationGreaterThanOrEqual, stringToMinutes, generateBookingFormMetadata */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rulesForSpace", function() { return rulesForSpace; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMinLength", function() { return getMinLength; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "durationGreaterThanOrEqual", function() { return durationGreaterThanOrEqual; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stringToMinutes", function() { return stringToMinutes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateBookingFormMetadata", function() { return generateBookingFormMetadata; });
@@ -21228,6 +21237,9 @@ function rulesForSpace(options) {
                         space_rules_for_user.hide = false;
                         if (conditions.max_length) {
                             space_rules_for_user.max_length = stringToMinutes(conditions.max_length);
+                        }
+                        if (conditions.min_length) {
+                            space_rules_for_user.min_length = stringToMinutes(conditions.min_length);
                         }
                         // NOTE: use max_length in conditions instead of book_length in rules
                         // if (ruleset.book_length) {
@@ -21312,6 +21324,28 @@ function checkRules(options) {
         return matches >= count;
     }
     return false;
+}
+/**
+ * Get minimum duration from ruleset in minutes
+ * Default to 5min
+ */
+function getMinLength(rule_list) {
+    return Object.values(rule_list).reduce((min, block) => {
+        const min_block = block.reduce((min_length, el) => {
+            if (el.conditions.min_length && stringToMinutes(el.conditions.min_length) > min) {
+                return stringToMinutes(el.conditions.min_length);
+            }
+            else {
+                return min_length;
+            }
+        }, 5);
+        if (min_block > min) {
+            return min_block;
+        }
+        else {
+            return min;
+        }
+    }, 5);
 }
 /**
  * Whether the first input is greater than the last. Converts duration strings into minutes
