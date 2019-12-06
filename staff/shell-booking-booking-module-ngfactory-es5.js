@@ -2597,7 +2597,7 @@ var __values = (this && this.__values) || function (o) {
                                     else {
                                         _this.confirmBooking();
                                     }
-                                });
+                                }).catch(function () { });
                                 break;
                             default:
                                 if (space && !id) {
@@ -2611,7 +2611,7 @@ var __values = (this && this.__values) || function (o) {
                                         else {
                                             _this.confirmBooking();
                                         }
-                                    });
+                                    }).catch(function () { });
                                 }
                                 else if ((space || (this.spaces && this.spaces.length)) && catering) {
                                     this._service.navigate(['book', 'main', 'catering']);
@@ -2780,8 +2780,11 @@ var __values = (this && this.__values) || function (o) {
                                 if (cost_code) {
                                     cost_code.setValue(event.data.cost_code);
                                 }
+                                resolve();
                             }
-                            resolve();
+                            else {
+                                reject();
+                            }
                             event.close();
                         });
                     });

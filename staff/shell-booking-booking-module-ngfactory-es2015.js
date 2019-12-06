@@ -2354,7 +2354,7 @@ class BookingMainFlowComponent extends _shared_globals_base_component__WEBPACK_I
                         else {
                             this.confirmBooking();
                         }
-                    });
+                    }).catch(() => { });
                     break;
                 default:
                     if (space && !id) {
@@ -2368,7 +2368,7 @@ class BookingMainFlowComponent extends _shared_globals_base_component__WEBPACK_I
                             else {
                                 this.confirmBooking();
                             }
-                        });
+                        }).catch(() => { });
                     }
                     else if ((space || (this.spaces && this.spaces.length)) && catering) {
                         this._service.navigate(['book', 'main', 'catering']);
@@ -2534,8 +2534,11 @@ class BookingMainFlowComponent extends _shared_globals_base_component__WEBPACK_I
                     if (cost_code) {
                         cost_code.setValue(event.data.cost_code);
                     }
+                    resolve();
                 }
-                resolve();
+                else {
+                    reject();
+                }
                 event.close();
             });
         });
