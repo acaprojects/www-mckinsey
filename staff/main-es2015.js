@@ -9214,7 +9214,7 @@ class BuildingsService {
         if (!this.parent) {
             return setTimeout(() => this.load(), 500);
         }
-        const url = `${this.parent.endpoint}/control/api/zones?tags=org`;
+        const url = `${this.parent.endpoint}/control/api/zones?tags=org&limit=1000`;
         // const url = `${this.parent.endpoint}/control/api/zones`;
         this.http.get(url).subscribe((response) => {
             const o = response instanceof Array ? response : response.results;
@@ -9264,7 +9264,7 @@ class BuildingsService {
         if (!this.parent) {
             return setTimeout(() => this.loadSpaceTypes(), 500);
         }
-        const url = '/control/api/zones?tags=room';
+        const url = '/control/api/zones?tags=room&limit=1000';
         this.http.get(url).subscribe((resp) => {
             const list = resp.results;
             for (const type of list) {
@@ -9458,7 +9458,7 @@ class BuildingsService {
      * @param tries Retry count. DON'T USE
      */
     loadBuildings(tries = 0) {
-        const url = `${this.parent.endpoint}/control/api/zones?tags=building`;
+        const url = `${this.parent.endpoint}/control/api/zones?tags=building&limit=1000`;
         this.http.get(url).subscribe((response) => {
             const blds = response instanceof Array ? response : response.results;
             for (const bld of blds) {
@@ -9567,7 +9567,7 @@ class BuildingsService {
         if (tries > 10) {
             return;
         }
-        const url = `${this.parent.endpoint}/control/api/zones?tags=level`;
+        const url = `${this.parent.endpoint}/control/api/zones?tags=level&limit=1000`;
         let data = null;
         this.http.get(url).subscribe((levels) => data = levels.results || levels, (err) => {
             this.parent.log('BLD(S)', 'Error loading levels:', err, 'error');
@@ -19297,7 +19297,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575609050000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575850840000);
 
 
 /***/ }),
