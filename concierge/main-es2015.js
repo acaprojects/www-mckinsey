@@ -2257,12 +2257,13 @@ class BookingEquipmentDetailsComponent extends _shared_globals_base_component__W
         this.errors = {};
     }
     ngOnChanges(changes) {
-        console.log('Details:', this);
         if (changes.spaces && this.spaces && this.spaces.length > 0) {
             const space = this.spaces.find(i => i.id === this.active_space);
             if (!space) {
                 this.active_space = this.spaces[0].id;
+                this.initValues();
             }
+            this.clearPastValues();
         }
         if (changes.valid && this.valid) {
             this.timeout('validate', () => {
@@ -2271,6 +2272,35 @@ class BookingEquipmentDetailsComponent extends _shared_globals_base_component__W
                     : this.updateErrors();
             }, 10);
         }
+    }
+    /** Inititalise form with the first value in each object */
+    initValues() {
+        if (this.notes && !this.notes[this.active_space]) {
+            this._notes.setValue({ [this.active_space]: Object.values(this._notes.control.value)[0] });
+        }
+        if (this.cost_code && !this.cost_code[this.active_space]) {
+            this._cost_code.setValue({ [this.active_space]: Object.values(this._cost_code.control.value)[0] });
+        }
+        if (this.expected_attendees && !this.expected_attendees[this.active_space]) {
+            this._expected.setValue({ [this.active_space]: Object.values(this._expected.control.value)[0] });
+        }
+    }
+    /** Clear past values */
+    clearPastValues() {
+        const spaces_id = this.spaces.map(i => i.id);
+        Object.keys(this.expected_attendees).forEach(id => {
+            let expected_attendees = this.expected_attendees;
+            let cost_codes = this.cost_code;
+            let notes = this.notes;
+            if (!spaces_id.includes(id)) {
+                delete expected_attendees[id];
+                delete cost_codes[id];
+                delete notes[id];
+                this._notes.setValue(notes);
+                this._cost_code.setValue(cost_codes);
+                this._expected.setValue(expected_attendees);
+            }
+        });
     }
     /** Whether form has errors */
     get has_errors() {
@@ -17921,7 +17951,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575596376000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575855773000);
 
 
 /***/ }),
@@ -21837,8 +21867,10 @@ class TopbarMenuComponent extends _shared_globals_base_component__WEBPACK_IMPORT
                 this.model.show_add_user = event.url.indexOf('visitor-list') >= 0;
                 this.model.show_title = event.url.indexOf('reports') >= 0;
                 this.model.show_out = false;
-                this.legend.forEach(i => i.enabled = true);
-                this.service.set('CONCIERGE.legend', {});
+                this.service.set('CONCIERGE.legend', this.legend.reduce((m, i) => {
+                    m[i.id] = i.enabled;
+                    return m;
+                }, {}));
             }
         }));
         this.subscription('show', this.service.listen('APP.show_sidebar', (value) => this.model.show_sidebar = value));

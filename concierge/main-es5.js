@@ -2587,12 +2587,13 @@ var BookingEquipmentDetailsComponent = /** @class */ (function (_super) {
     }
     BookingEquipmentDetailsComponent.prototype.ngOnChanges = function (changes) {
         var _this = this;
-        console.log('Details:', this);
         if (changes.spaces && this.spaces && this.spaces.length > 0) {
             var space = this.spaces.find(function (i) { return i.id === _this.active_space; });
             if (!space) {
                 this.active_space = this.spaces[0].id;
+                this.initValues();
             }
+            this.clearPastValues();
         }
         if (changes.valid && this.valid) {
             this.timeout('validate', function () {
@@ -2601,6 +2602,37 @@ var BookingEquipmentDetailsComponent = /** @class */ (function (_super) {
                     : _this.updateErrors();
             }, 10);
         }
+    };
+    /** Inititalise form with the first value in each object */
+    BookingEquipmentDetailsComponent.prototype.initValues = function () {
+        var _a, _b, _c;
+        if (this.notes && !this.notes[this.active_space]) {
+            this._notes.setValue((_a = {}, _a[this.active_space] = Object.values(this._notes.control.value)[0], _a));
+        }
+        if (this.cost_code && !this.cost_code[this.active_space]) {
+            this._cost_code.setValue((_b = {}, _b[this.active_space] = Object.values(this._cost_code.control.value)[0], _b));
+        }
+        if (this.expected_attendees && !this.expected_attendees[this.active_space]) {
+            this._expected.setValue((_c = {}, _c[this.active_space] = Object.values(this._expected.control.value)[0], _c));
+        }
+    };
+    /** Clear past values */
+    BookingEquipmentDetailsComponent.prototype.clearPastValues = function () {
+        var _this = this;
+        var spaces_id = this.spaces.map(function (i) { return i.id; });
+        Object.keys(this.expected_attendees).forEach(function (id) {
+            var expected_attendees = _this.expected_attendees;
+            var cost_codes = _this.cost_code;
+            var notes = _this.notes;
+            if (!spaces_id.includes(id)) {
+                delete expected_attendees[id];
+                delete cost_codes[id];
+                delete notes[id];
+                _this._notes.setValue(notes);
+                _this._cost_code.setValue(cost_codes);
+                _this._expected.setValue(expected_attendees);
+            }
+        });
     };
     Object.defineProperty(BookingEquipmentDetailsComponent.prototype, "has_errors", {
         /** Whether form has errors */
@@ -21475,7 +21507,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575596376000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575855773000);
 
 
 /***/ }),
@@ -26247,8 +26279,10 @@ var TopbarMenuComponent = /** @class */ (function (_super) {
                 _this.model.show_add_user = event.url.indexOf('visitor-list') >= 0;
                 _this.model.show_title = event.url.indexOf('reports') >= 0;
                 _this.model.show_out = false;
-                _this.legend.forEach(function (i) { return i.enabled = true; });
-                _this.service.set('CONCIERGE.legend', {});
+                _this.service.set('CONCIERGE.legend', _this.legend.reduce(function (m, i) {
+                    m[i.id] = i.enabled;
+                    return m;
+                }, {}));
             }
         }));
         this.subscription('show', this.service.listen('APP.show_sidebar', function (value) { return _this.model.show_sidebar = value; }));
