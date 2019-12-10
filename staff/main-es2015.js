@@ -19297,7 +19297,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575892956000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576020652000);
 
 
 /***/ }),
@@ -22332,7 +22332,7 @@ class BookingDetailsModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMP
     get has_requested() {
         const spaces = this.spaces;
         return spaces.reduce((a, v) => {
-            const state = (this.model.approval_status[v.email] || '');
+            const state = this.model.approval_status ? (this.model.approval_status[v.email] || '') : '';
             return a || v.book_type === 'Request' || state.indexOf('tentative') !== -1;
         }, false);
     }
