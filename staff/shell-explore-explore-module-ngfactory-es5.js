@@ -714,7 +714,20 @@ var __spread = (this && this.__spread) || function () {
                     this.model.buildings = {};
                     this.model.buildings.list = this.service.Buildings.list() || [];
                     this.model.buildings.names = this.model.buildings.list.map(function (i) { return i.code + " - " + i.name + (i.address ? ' - ' + i.address : ''); });
-                    this.setBuilding(this.service.Buildings.current());
+                    var saved_building;
+                    if (localStorage) {
+                        var id_1 = localStorage.getItem('STAFF.map.building') || '';
+                        if (id_1) {
+                            saved_building = this.model.buildings.list.find(function (i) { return i.id === id_1; });
+                        }
+                    }
+                    ;
+                    if (saved_building) {
+                        this.setBuilding(saved_building);
+                    }
+                    else {
+                        this.setBuilding(this.service.Buildings.current());
+                    }
                 };
                 ExploreMapOverlayComponent.prototype.setBuildingByID = function (id, emit) {
                     var e_5, _a;
@@ -771,6 +784,9 @@ var __spread = (this && this.__spread) || function () {
                     this.loadLevels();
                     // this.model.system = bld.systems.desks;
                     this.model.buildings.index = this.model.buildings.list.indexOf(bld);
+                    if (localStorage) {
+                        localStorage.setItem('STAFF.map.building', bld.id);
+                    }
                     if (post) {
                         this.service.Buildings.set(bld.id, false);
                     }
