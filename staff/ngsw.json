@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1576035866156,
+  "timestamp": 1576036987091,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -234,7 +234,7 @@
     "/staff/assets/img/skyline.jpg": "c47ac628178df00b6cb24b959bc88be223eac30c",
     "/staff/assets/img/storage.svg": "06e314fdf75ea7852e958e7a759c0f933d052821",
     "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
-    "/staff/assets/maps/bangalore_blc/level_7.svg": "846aeefd0a88b998c0914bf4d0713ef965ed98fa",
+    "/staff/assets/maps/bangalore_blc/level_7.svg": "b4d8daccaa38d8345f02c2eb770c7e721ad56d8e",
     "/staff/assets/maps/bangalore_bng/level_6.svg": "cf1e6303758fe6f3c10ffaa81b4ee8426c1f5ea2",
     "/staff/assets/maps/chengdu/level_15.svg": "151fd39bcf1604fb9a38e73f7e22d6df26d8db85",
     "/staff/assets/maps/istanbul/level_28.svg": "226a886b10e2a977968e6a38af6450da7be2e150",
@@ -285,7 +285,7 @@
     "/staff/assets/maps/washington_dc/level_11.svg": "8e7bb6a556bfb0380b552ee2d3c941dd7eeb9f6a",
     "/staff/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "29c86b5fd6d7e1aa77b03f4219ea8a044263e2c2"
+    "/staff/index.html": "f1f0203dcab01761899e2c80f61a9a7e44ae46a1"
   },
   "navigationUrls": [
     {
