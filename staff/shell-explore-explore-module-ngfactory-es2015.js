@@ -451,7 +451,20 @@ class ExploreMapOverlayComponent extends _shared_globals_base_component__WEBPACK
         this.model.buildings = {};
         this.model.buildings.list = this.service.Buildings.list() || [];
         this.model.buildings.names = this.model.buildings.list.map((i) => `${i.code} - ${i.name}${i.address ? ' - ' + i.address : ''}`);
-        this.setBuilding(this.service.Buildings.current());
+        let saved_building;
+        if (localStorage) {
+            const id = localStorage.getItem('STAFF.map.building') || '';
+            if (id) {
+                saved_building = this.model.buildings.list.find(i => i.id === id);
+            }
+        }
+        ;
+        if (saved_building) {
+            this.setBuilding(saved_building);
+        }
+        else {
+            this.setBuilding(this.service.Buildings.current());
+        }
     }
     setBuildingByID(id, emit = true) {
         if (id && this.model.buildings && this.model.bld) {
@@ -483,6 +496,9 @@ class ExploreMapOverlayComponent extends _shared_globals_base_component__WEBPACK
         this.loadLevels();
         // this.model.system = bld.systems.desks;
         this.model.buildings.index = this.model.buildings.list.indexOf(bld);
+        if (localStorage) {
+            localStorage.setItem('STAFF.map.building', bld.id);
+        }
         if (post) {
             this.service.Buildings.set(bld.id, false);
         }
