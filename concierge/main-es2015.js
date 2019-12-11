@@ -8511,6 +8511,7 @@ class BookingsReportsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__[
             subject: item['Subject'] || item.subject,
             host: item['Host'] || item.organizer,
             room: item['Room'] || item.location,
+            booker: item['Booker'] || item.booked_by,
             catering_code: item['Code'],
             menu_category: item['Category'],
             menu_items: item['Item Name'],
@@ -9559,6 +9560,7 @@ class ReportsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSer
             date: (item['Date'] || '').replace(' ', 'T').replace(' ', ''),
             subject: item['Subject'] || item.subject,
             host: item['Host'] || item.organizer,
+            booker: item['Booker'] || item.booker,
             room: item['Room'] || item.location,
             catering_code: item['Code'],
             menu_category: item['Category'],
@@ -17951,7 +17953,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575942974000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576065147000);
 
 
 /***/ }),

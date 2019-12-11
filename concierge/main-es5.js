@@ -10087,6 +10087,7 @@ var BookingsReportsService = /** @class */ (function (_super) {
             subject: item['Subject'] || item.subject,
             host: item['Host'] || item.organizer,
             room: item['Room'] || item.location,
+            booker: item['Booker'] || item.booked_by,
             catering_code: item['Code'],
             menu_category: item['Category'],
             menu_items: item['Item Name'],
@@ -11536,6 +11537,7 @@ var ReportsService = /** @class */ (function (_super) {
             date: (item['Date'] || '').replace(' ', 'T').replace(' ', ''),
             subject: item['Subject'] || item.subject,
             host: item['Host'] || item.organizer,
+            booker: item['Booker'] || item.booker,
             room: item['Room'] || item.location,
             catering_code: item['Code'],
             menu_category: item['Category'],
@@ -21507,7 +21509,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1575942974000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576065147000);
 
 
 /***/ }),
