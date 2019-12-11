@@ -17953,7 +17953,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576065510000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576065824000);
 
 
 /***/ }),
@@ -21535,11 +21535,11 @@ class SidebarMenuComponent extends _shared_globals_base_component__WEBPACK_IMPOR
         if (!this.service.ready()) {
             return this.timeout('init', () => this.init);
         }
+        this.loadBuildings();
         this.model.menu = this.service.Settings.get('app.menu');
         this.subscription('notifications', this.service.Bookings.listen('notifications', (value) => this.model.unread = value));
         this.subscription('building', this.service.Buildings.listen((bld) => {
             this.building = bld;
-            this.building_list = this.service.Buildings.list() || [];
         }));
         this.interval('animate', () => this.model.animated = !this.model.animated, 2000);
     }
@@ -21552,7 +21552,23 @@ class SidebarMenuComponent extends _shared_globals_base_component__WEBPACK_IMPOR
             window.open(item.link || item.url, 'blank_');
         }
     }
+    loadBuildings() {
+        this.building_list = this.service.Buildings.list() || [];
+        let saved_building;
+        if (localStorage) {
+            const id = localStorage.getItem('CONCIERGE.building') || '';
+            if (id) {
+                saved_building = this.building_list.find(i => i.id === id);
+            }
+        }
+        if (saved_building) {
+            this.changeBuilding(saved_building);
+        }
+    }
     changeBuilding(bld) {
+        if (localStorage) {
+            localStorage.setItem('CONCIERGE.building', bld.id);
+        }
         this.service.Buildings.set(bld.id);
         this.show_list = false;
     }

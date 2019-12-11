@@ -21509,7 +21509,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576065510000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576065824000);
 
 
 /***/ }),
@@ -25901,11 +25901,11 @@ var SidebarMenuComponent = /** @class */ (function (_super) {
         if (!this.service.ready()) {
             return this.timeout('init', function () { return _this.init; });
         }
+        this.loadBuildings();
         this.model.menu = this.service.Settings.get('app.menu');
         this.subscription('notifications', this.service.Bookings.listen('notifications', function (value) { return _this.model.unread = value; }));
         this.subscription('building', this.service.Buildings.listen(function (bld) {
             _this.building = bld;
-            _this.building_list = _this.service.Buildings.list() || [];
         }));
         this.interval('animate', function () { return _this.model.animated = !_this.model.animated; }, 2000);
     };
@@ -25918,7 +25918,23 @@ var SidebarMenuComponent = /** @class */ (function (_super) {
             window.open(item.link || item.url, 'blank_');
         }
     };
+    SidebarMenuComponent.prototype.loadBuildings = function () {
+        this.building_list = this.service.Buildings.list() || [];
+        var saved_building;
+        if (localStorage) {
+            var id_1 = localStorage.getItem('CONCIERGE.building') || '';
+            if (id_1) {
+                saved_building = this.building_list.find(function (i) { return i.id === id_1; });
+            }
+        }
+        if (saved_building) {
+            this.changeBuilding(saved_building);
+        }
+    };
     SidebarMenuComponent.prototype.changeBuilding = function (bld) {
+        if (localStorage) {
+            localStorage.setItem('CONCIERGE.building', bld.id);
+        }
         this.service.Buildings.set(bld.id);
         this.show_list = false;
     };
