@@ -4677,12 +4677,13 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             }
         }
         if (localStorage) {
+            let id = booking.room ? booking.room.id : null;
             const data = Object.assign({}, this.booking, { room: spaces.map(i => (Object.assign({}, i, { bookings: [] }))), equipment: (booking.notes || [])
                     .filter(i => i.type === 'equipment')
                     .reduce((a, v) => {
                     a[v.space] = v.message;
                     return a;
-                }, {}), catering_notes: this.catering_notes, catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: typeof booking.booking_type === 'string' ? { id: booking.booking_type } : booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[booking.room.id] && catering[booking.room.id].items), catering: JSON.parse(JSON.stringify(catering)), host: this.service.Users.item(booking.organiser.email) });
+                }, {}), catering_notes: this.catering_notes, catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: typeof booking.booking_type === 'string' ? { id: booking.booking_type } : booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[id] && catering[id].items), catering: JSON.parse(JSON.stringify(catering)), host: this.service.Users.item(booking.organiser.email) });
             localStorage.setItem('STAFF.booking_form', JSON.stringify(data));
             localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
             localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
@@ -4766,10 +4767,10 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             } }, (event) => {
             if (event.type === 'Extend') {
                 this.extend_by = event.data.extend_by;
-                this.service.Bookings.update(this.booking.id, Object.assign({}, this.booking, { duration: this.booking.duration + this.extend_by })).then(() => {
+                this.service.Bookings.update(this.booking.id, Object.assign({}, this.booking, { room: this.booking.room_list, duration: this.booking.duration + this.extend_by })).then(() => {
                     this.close();
                     this.service.success('Successfully extended meeting.');
-                }, () => {
+                }, (e) => {
                     this.service.error('Error extending meeting.');
                     this.model.loading = false;
                     this.model.processing = false;
@@ -19297,7 +19298,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576099225000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576147304000);
 
 
 /***/ }),
