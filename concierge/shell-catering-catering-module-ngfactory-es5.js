@@ -1646,7 +1646,9 @@ var OrdersComponent = /** @class */ (function (_super) {
         order.status = status || '';
         this.model.show_dropdown[index] = false;
         var booking = order.booking;
-        booking.catering[booking.room.id] = __assign({}, booking.catering[booking.room.id], { order_status: status });
+        var id = order.room.id;
+        booking.catering[id] = __assign({}, booking.catering[id], { order_status: status });
+        booking.room = booking.room_list;
         this.service.Bookings.updateItem(booking.id, booking).then(function () {
         }, function () {
             _this.service.error('Failed to update status of meeting order');
@@ -1689,7 +1691,11 @@ var OrdersComponent = /** @class */ (function (_super) {
                 if (event.type === 'updated') {
                     order.booking = event.data.order.booking;
                     console.log('Order:', order);
-                    var index = _this.orders.findIndex(function (i) { return i.booking.icaluid === order.booking.icaluid; });
+                    var index = _this.orders.findIndex(function (i) {
+                        return i.booking.icaluid === order.booking.icaluid &&
+                            i.name === order.name &&
+                            i.date === order.date;
+                    });
                     if (index >= 0) {
                         console.log('Replaced old order');
                         _this.orders.splice(index, 1, order);

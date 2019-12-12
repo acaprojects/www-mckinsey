@@ -4057,8 +4057,10 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
         order.status = status;
         this.model.show_dropdown = false;
         var booking = order.booking;
-        booking.catering[booking.room.id] = __assign({}, booking.catering[booking.room.id], { order_status: status });
+        var id = order.room.id;
+        booking.catering[id] = __assign({}, booking.catering[id], { order_status: status });
         this.model.order = this.order;
+        booking.room = booking.room_list;
         this.event('updated');
         this.service.Bookings.updateItem(booking.id, booking).then(function () {
             _this.model.order = _this.order;
@@ -4104,7 +4106,7 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
             var rooms = booking_1.room_list ? booking_1.room_list : [booking_1.room];
             this.loading_notes = true;
             this.service.Bookings.updateItem(booking_1.id, __assign({}, booking_1, { room: rooms })).then(function (booking) {
-                _this.model.order = __assign({}, _this.order, { booking: booking });
+                _this.model.order.booking.notes = booking.notes;
                 _this.event('updated');
                 _this.loading_notes = false;
             }, function () {
@@ -21509,7 +21511,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576065824000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576129235000);
 
 
 /***/ }),

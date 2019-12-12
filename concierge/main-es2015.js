@@ -3524,8 +3524,10 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
         order.status = status;
         this.model.show_dropdown = false;
         const booking = order.booking;
-        booking.catering[booking.room.id] = Object.assign({}, booking.catering[booking.room.id], { order_status: status });
+        let id = order.room.id;
+        booking.catering[id] = Object.assign({}, booking.catering[id], { order_status: status });
         this.model.order = this.order;
+        booking.room = booking.room_list;
         this.event('updated');
         this.service.Bookings.updateItem(booking.id, booking).then(() => {
             this.model.order = this.order;
@@ -3571,7 +3573,7 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
             const rooms = booking.room_list ? booking.room_list : [booking.room];
             this.loading_notes = true;
             this.service.Bookings.updateItem(booking.id, Object.assign({}, booking, { room: rooms })).then((booking) => {
-                this.model.order = Object.assign({}, this.order, { booking });
+                this.model.order.booking.notes = booking.notes;
                 this.event('updated');
                 this.loading_notes = false;
             }, () => {
@@ -17953,7 +17955,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576065824000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576129235000);
 
 
 /***/ }),
