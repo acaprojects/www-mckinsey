@@ -1849,7 +1849,9 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
             }
             const empty = { control: { value: true } };
             const time = (this.form_fields.find(i => i.key === 'start') || empty);
-            time.setDisabled(this.duration > 450 || this.all_day);
+            if (time.disabled !== this.duration > 450) {
+                time.setDisabled(!time.disabled || this.all_day);
+            }
         });
     }
     /**
@@ -12953,8 +12955,6 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
         this._field = _field;
         this._group = _group;
         this.service = service;
-        /** Min length of a booking for the selected space */
-        this.min_length = 0;
     }
     get field() {
         return this._field;
@@ -12979,8 +12979,7 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
     ngOnInit() {
         if (this.group) {
             if (this.group.controls.room) {
-                this.subscription('room', this.group.controls.room.valueChanges
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(this.group.controls.room.value))
+                this.subscription('room', this.group.controls.room.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(this.group.controls.room.value))
                     .subscribe((v) => {
                     this.handleBookingRules(v);
                 }));
@@ -13005,7 +13004,6 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
             this.list_height = Math.min(times.values.length, 8);
             this.blocks = times.values;
             this.index = times.index;
-            // if (!this.field.control.value) { this.setValue(30); }
         });
     }
     generateBlocks(datestamp, ref = false) {
@@ -13014,22 +13012,15 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
             index: 0
         };
         const date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp);
-        const max_duration = Math.min(480, this.max_length || (this.field.metadata ? this.field.metadata.max_duration || 480 : 480));
+        const max_duration = this.max_length || Math.min(480, (this.field.metadata ? this.field.metadata.max_duration || 480 : 480));
         const end = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).add(Math.max(30, max_duration) + 15, 'm');
-        let dur;
-        if (this.min_length <= 10) {
-            date.add(10, 'm');
-            dur = 10;
-            this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
-            date.add(5, 'm');
-            dur += 5;
-        }
-        else {
-            date.add(this.min_length, 'm');
-            dur = this.min_length;
-        }
+        date.add(10, 'm');
+        let dur = 10;
+        this.addDuration(duration, dur, ref ? date.format('h:mm A') : '');
+        dur += 5;
+        date.add(5, 'm');
         for (; date.isBefore(end, 'm'); date.add(15, 'm')) {
-            this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
+            this.addDuration(duration, dur, ref ? date.format('h:mm A') : '');
             dur += 15;
         }
         // Add week duration option
@@ -13040,7 +13031,6 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
             }
             duration.values.push({ id: 1 * 5 * 24 * 60, name: `1 Week(${date.format('DD MMM')})` });
         }
-        duration.index = this.getIndex(this.field.getValue(), duration.values);
         return duration;
     }
     /**
@@ -13062,17 +13052,12 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
     /** Get the index of the given value i */
     getIndex(value, values, name) {
         const index = values.findIndex(a => a.id === value);
-        if (index < 0) {
-            this.setValue(30, false);
-        }
-        return index < 0 ? values.findIndex(a => a.id === 30) : index;
+        return index < 0 ? 0 : index;
     }
-    setValue(value, update_index = true) {
+    setValue(value) {
         this.field.setValue(value);
         this.show = false;
-        if (update_index) {
-            this.index = this.getIndex(value, this.blocks);
-        }
+        this.index = this.getIndex(value, this.blocks);
     }
     /**
      * Update limitations on duration based off set spaces
@@ -13084,31 +13069,33 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
             const date = (this.group.controls.date ? this.group.controls.date.value : undefined);
             if (spaces instanceof Array) {
                 for (const space of spaces) {
-                    this.checkRules({ user: host, space, time: date.valueOf() });
+                    const rule_list = this.service.Buildings.get(space.level.bld_id).booking_rules;
+                    const rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
+                        user: host,
+                        space,
+                        time: date.valueOf(),
+                        duration: 5,
+                        rules: rule_list
+                    });
+                    this.max_length = Math.min(this.max_length || 999999, rules.max_length || 999999);
                 }
             }
             else {
-                this.checkRules({ user: host, space: spaces, time: date.valueOf() });
+                const rule_list = this.service.Buildings.get(spaces.level.bld_id).booking_rules;
+                const rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
+                    user: host,
+                    space: spaces,
+                    time: date.valueOf(),
+                    duration: 5,
+                    rules: rule_list
+                });
+                this.max_length = rules.max_length || 999999;
             }
             if (this.max_length === 999999) {
                 this.max_length = 0;
             }
             this.updateDisplay();
         }
-    }
-    checkRules(options) {
-        const { user, space, time } = options;
-        const rule_list = this.service.Buildings.get(space.level.bld_id).booking_rules;
-        const min_duration = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["getMinLength"])(rule_list);
-        const rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
-            user,
-            space,
-            time,
-            duration: min_duration,
-            rules: rule_list
-        });
-        this.max_length = Math.min(this.max_length || 999999, rules.max_length || 999999);
-        this.min_length = Math.max(this.min_length || 0, rules.min_length || 0);
     }
 }
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_8__["CUSTOM_FIELD_REGISTER"].duration = CustomDurationFieldComponent;
@@ -17968,7 +17955,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576129331000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576189328000);
 
 
 /***/ }),
@@ -19549,7 +19536,7 @@ const TIME_PIPES = [
 /*!*******************************************************!*\
   !*** ./src/app/shared/utilities/booking.utilities.ts ***!
   \*******************************************************/
-/*! exports provided: rulesForSpace, durationGreaterThanOrEqual, stringToMinutes, generateBookingFormMetadata, getMinLength */
+/*! exports provided: rulesForSpace, durationGreaterThanOrEqual, stringToMinutes, generateBookingFormMetadata */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19558,7 +19545,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "durationGreaterThanOrEqual", function() { return durationGreaterThanOrEqual; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stringToMinutes", function() { return stringToMinutes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateBookingFormMetadata", function() { return generateBookingFormMetadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMinLength", function() { return getMinLength; });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _validation_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
@@ -19788,28 +19774,6 @@ function generateBookingFormMetadata(booking, field_data, service) {
         .filter(i => booking.id ? !i.no_edit : !i.edit_only)
         .map(process_field)
         .map(f => new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"](f));
-}
-/**
- * Get minimum duration from ruleset in minutes
- * Default to 5min
- */
-function getMinLength(rule_list) {
-    return Object.values(rule_list).reduce((min, block) => {
-        const min_block = block.reduce((min_length, el) => {
-            if (el.conditions.min_length && stringToMinutes(el.conditions.min_length) > min) {
-                return stringToMinutes(el.conditions.min_length);
-            }
-            else {
-                return min_length;
-            }
-        }, 5);
-        if (min_block > min) {
-            return min_block;
-        }
-        else {
-            return min;
-        }
-    }, 5);
 }
 
 

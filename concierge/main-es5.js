@@ -2115,7 +2115,9 @@ var BookingModalComponent = /** @class */ (function (_super) {
             }
             var empty = { control: { value: true } };
             var time = (_this.form_fields.find(function (i) { return i.key === 'start'; }) || empty);
-            time.setDisabled(_this.duration > 450 || _this.all_day);
+            if (time.disabled !== _this.duration > 450) {
+                time.setDisabled(!time.disabled || _this.all_day);
+            }
         });
     };
     /**
@@ -15654,8 +15656,6 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
         _this._field = _field;
         _this._group = _group;
         _this.service = service;
-        /** Min length of a booking for the selected space */
-        _this.min_length = 0;
         return _this;
     }
     Object.defineProperty(CustomDurationFieldComponent.prototype, "field", {
@@ -15694,8 +15694,7 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
         var _this = this;
         if (this.group) {
             if (this.group.controls.room) {
-                this.subscription('room', this.group.controls.room.valueChanges
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(this.group.controls.room.value))
+                this.subscription('room', this.group.controls.room.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(this.group.controls.room.value))
                     .subscribe(function (v) {
                     _this.handleBookingRules(v);
                 }));
@@ -15721,7 +15720,6 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
             _this.list_height = Math.min(times.values.length, 8);
             _this.blocks = times.values;
             _this.index = times.index;
-            // if (!this.field.control.value) { this.setValue(30); }
         });
     };
     CustomDurationFieldComponent.prototype.generateBlocks = function (datestamp, ref) {
@@ -15731,22 +15729,15 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
             index: 0
         };
         var date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp);
-        var max_duration = Math.min(480, this.max_length || (this.field.metadata ? this.field.metadata.max_duration || 480 : 480));
+        var max_duration = this.max_length || Math.min(480, (this.field.metadata ? this.field.metadata.max_duration || 480 : 480));
         var end = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).add(Math.max(30, max_duration) + 15, 'm');
-        var dur;
-        if (this.min_length <= 10) {
-            date.add(10, 'm');
-            dur = 10;
-            this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
-            date.add(5, 'm');
-            dur += 5;
-        }
-        else {
-            date.add(this.min_length, 'm');
-            dur = this.min_length;
-        }
+        date.add(10, 'm');
+        var dur = 10;
+        this.addDuration(duration, dur, ref ? date.format('h:mm A') : '');
+        dur += 5;
+        date.add(5, 'm');
         for (; date.isBefore(end, 'm'); date.add(15, 'm')) {
-            this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
+            this.addDuration(duration, dur, ref ? date.format('h:mm A') : '');
             dur += 15;
         }
         // Add week duration option
@@ -15757,7 +15748,6 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
             }
             duration.values.push({ id: 1 * 5 * 24 * 60, name: "1 Week(" + date_1.format('DD MMM') + ")" });
         }
-        duration.index = this.getIndex(this.field.getValue(), duration.values);
         return duration;
     };
     /**
@@ -15779,18 +15769,12 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
     /** Get the index of the given value i */
     CustomDurationFieldComponent.prototype.getIndex = function (value, values, name) {
         var index = values.findIndex(function (a) { return a.id === value; });
-        if (index < 0) {
-            this.setValue(30, false);
-        }
-        return index < 0 ? values.findIndex(function (a) { return a.id === 30; }) : index;
+        return index < 0 ? 0 : index;
     };
-    CustomDurationFieldComponent.prototype.setValue = function (value, update_index) {
-        if (update_index === void 0) { update_index = true; }
+    CustomDurationFieldComponent.prototype.setValue = function (value) {
         this.field.setValue(value);
         this.show = false;
-        if (update_index) {
-            this.index = this.getIndex(value, this.blocks);
-        }
+        this.index = this.getIndex(value, this.blocks);
     };
     /**
      * Update limitations on duration based off set spaces
@@ -15805,7 +15789,15 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
                 try {
                     for (var spaces_1 = __values(spaces), spaces_1_1 = spaces_1.next(); !spaces_1_1.done; spaces_1_1 = spaces_1.next()) {
                         var space = spaces_1_1.value;
-                        this.checkRules({ user: host, space: space, time: date.valueOf() });
+                        var rule_list = this.service.Buildings.get(space.level.bld_id).booking_rules;
+                        var rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
+                            user: host,
+                            space: space,
+                            time: date.valueOf(),
+                            duration: 5,
+                            rules: rule_list
+                        });
+                        this.max_length = Math.min(this.max_length || 999999, rules.max_length || 999999);
                     }
                 }
                 catch (e_1_1) { e_1 = { error: e_1_1 }; }
@@ -15817,27 +15809,21 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
                 }
             }
             else {
-                this.checkRules({ user: host, space: spaces, time: date.valueOf() });
+                var rule_list = this.service.Buildings.get(spaces.level.bld_id).booking_rules;
+                var rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
+                    user: host,
+                    space: spaces,
+                    time: date.valueOf(),
+                    duration: 5,
+                    rules: rule_list
+                });
+                this.max_length = rules.max_length || 999999;
             }
             if (this.max_length === 999999) {
                 this.max_length = 0;
             }
             this.updateDisplay();
         }
-    };
-    CustomDurationFieldComponent.prototype.checkRules = function (options) {
-        var user = options.user, space = options.space, time = options.time;
-        var rule_list = this.service.Buildings.get(space.level.bld_id).booking_rules;
-        var min_duration = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["getMinLength"])(rule_list);
-        var rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
-            user: user,
-            space: space,
-            time: time,
-            duration: min_duration,
-            rules: rule_list
-        });
-        this.max_length = Math.min(this.max_length || 999999, rules.max_length || 999999);
-        this.min_length = Math.max(this.min_length || 0, rules.min_length || 0);
     };
     return CustomDurationFieldComponent;
 }(_globals_base_component__WEBPACK_IMPORTED_MODULE_4__["BaseComponent"]));
@@ -21525,7 +21511,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576129331000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576189328000);
 
 
 /***/ }),
@@ -23483,7 +23469,7 @@ var TIME_PIPES = [
 /*!*******************************************************!*\
   !*** ./src/app/shared/utilities/booking.utilities.ts ***!
   \*******************************************************/
-/*! exports provided: rulesForSpace, durationGreaterThanOrEqual, stringToMinutes, generateBookingFormMetadata, getMinLength */
+/*! exports provided: rulesForSpace, durationGreaterThanOrEqual, stringToMinutes, generateBookingFormMetadata */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23492,7 +23478,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "durationGreaterThanOrEqual", function() { return durationGreaterThanOrEqual; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stringToMinutes", function() { return stringToMinutes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateBookingFormMetadata", function() { return generateBookingFormMetadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMinLength", function() { return getMinLength; });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _validation_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
@@ -23760,28 +23745,6 @@ function generateBookingFormMetadata(booking, field_data, service) {
         .filter(function (i) { return booking.id ? !i.no_edit : !i.edit_only; })
         .map(process_field)
         .map(function (f) { return new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"](f); });
-}
-/**
- * Get minimum duration from ruleset in minutes
- * Default to 5min
- */
-function getMinLength(rule_list) {
-    return Object.values(rule_list).reduce(function (min, block) {
-        var min_block = block.reduce(function (min_length, el) {
-            if (el.conditions.min_length && stringToMinutes(el.conditions.min_length) > min) {
-                return stringToMinutes(el.conditions.min_length);
-            }
-            else {
-                return min_length;
-            }
-        }, 5);
-        if (min_block > min) {
-            return min_block;
-        }
-        else {
-            return min;
-        }
-    }, 5);
 }
 
 
