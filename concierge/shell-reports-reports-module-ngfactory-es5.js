@@ -475,7 +475,7 @@ var ReportComponent = /** @class */ (function (_super) {
         // waiting for back end changes to accomodate report type
         if (this.model.report.id === 'bookings') {
             this._service.BookingsReports.query({
-                start_date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.start_date).unix(),
+                start_date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.start_date).startOf('d').unix(),
                 end_date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.end_date).unix(),
                 zone_ids: this.model.selected.map(function (el) { return el.id; })
             }).then(function (res) {
@@ -494,7 +494,7 @@ var ReportComponent = /** @class */ (function (_super) {
         }
         else {
             this._service.Reports.query({
-                start_date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.start_date).unix(),
+                start_date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.start_date).startOf('d').unix(),
                 end_date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.end_date).unix(),
                 zone_ids: this.model.selected.map(function (el) { return el.id; })
             }).then(function (res) {
