@@ -1451,7 +1451,9 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
         order.status = status || '';
         this.model.show_dropdown[index] = false;
         const booking = order.booking;
-        booking.catering[booking.room.id] = Object.assign({}, booking.catering[booking.room.id], { order_status: status });
+        let id = order.room.id;
+        booking.catering[id] = Object.assign({}, booking.catering[id], { order_status: status });
+        booking.room = booking.room_list;
         this.service.Bookings.updateItem(booking.id, booking).then(() => {
         }, () => {
             this.service.error('Failed to update status of meeting order');
@@ -1493,7 +1495,9 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
                 if (event.type === 'updated') {
                     order.booking = event.data.order.booking;
                     console.log('Order:', order);
-                    const index = this.orders.findIndex(i => i.booking.icaluid === order.booking.icaluid);
+                    const index = this.orders.findIndex(i => i.booking.icaluid === order.booking.icaluid &&
+                        i.name === order.name &&
+                        i.date === order.date);
                     if (index >= 0) {
                         console.log('Replaced old order');
                         this.orders.splice(index, 1, order);
