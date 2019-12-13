@@ -1897,6 +1897,13 @@ var BookingModalComponent = /** @class */ (function (_super) {
             }
             return 60;
         },
+        /** Set duration */
+        set: function (number) {
+            var field = this.form_fields.find(function (i) { return i.key === 'duration'; }) || this.form_fields.find(function (i) { return i.key === 'time_group'; });
+            if (field) {
+                field.setValue(number);
+            }
+        },
         enumerable: true,
         configurable: true
     });
@@ -2098,6 +2105,9 @@ var BookingModalComponent = /** @class */ (function (_super) {
         var all_day = (this.form_fields.find(function (i) { return i.key === 'all_day'; }) || empty);
         time.setDisabled(this.duration > 450);
         this.subs.obs.all_day = all_day.control.valueChanges.subscribe(function (state) {
+            if (!state && _this.duration === 24 * 60) {
+                _this.duration = 60;
+            }
             time.setDisabled(state);
         });
         this.id = id ? '10' : '';
@@ -2115,9 +2125,7 @@ var BookingModalComponent = /** @class */ (function (_super) {
             }
             var empty = { control: { value: true } };
             var time = (_this.form_fields.find(function (i) { return i.key === 'start'; }) || empty);
-            if (time.disabled !== _this.duration > 450) {
-                time.setDisabled(!time.disabled || _this.all_day);
-            }
+            time.setDisabled(_this.duration > 450 || _this.all_day);
         });
     };
     /**
@@ -21513,7 +21521,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576200274000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576203748000);
 
 
 /***/ }),
