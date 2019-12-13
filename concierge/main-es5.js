@@ -1897,6 +1897,12 @@ var BookingModalComponent = /** @class */ (function (_super) {
             }
             return 60;
         },
+        set: function (number) {
+            var field = this.form_fields.find(function (i) { return i.key === 'duration'; }) || this.form_fields.find(function (i) { return i.key === 'time_group'; });
+            if (field) {
+                field.setValue(number);
+            }
+        },
         enumerable: true,
         configurable: true
     });
@@ -2095,10 +2101,17 @@ var BookingModalComponent = /** @class */ (function (_super) {
         var empty = { control: { value: true, valueChanges: Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(false) } };
         var id = (this.form_fields.find(function (i) { return i.key === 'id'; }) || empty).control.value;
         var time = (this.form_fields.find(function (i) { return i.key === 'start'; }) || empty);
+        var duration = (this.form_fields.find(function (i) { return i.key === 'duration'; }) || empty);
         var all_day = (this.form_fields.find(function (i) { return i.key === 'all_day'; }) || empty);
         time.setDisabled(this.duration > 450);
         this.subs.obs.all_day = all_day.control.valueChanges.subscribe(function (state) {
-            time.setDisabled(state);
+            if (!state && _this.duration === 60 * 24) {
+                _this.duration = 60;
+            }
+            time.setDisabled(_this.duration > 450 || state);
+        });
+        this.subs.obs.duration = duration.control.valueChanges.subscribe(function (duration) {
+            time.setDisabled(duration > 450);
         });
         this.id = id ? '10' : '';
     };
@@ -2113,9 +2126,6 @@ var BookingModalComponent = /** @class */ (function (_super) {
             if (localStorage) {
                 localStorage.setItem('CONCIERGE.booking_form', JSON.stringify(form));
             }
-            var empty = { control: { value: true } };
-            var time = (_this.form_fields.find(function (i) { return i.key === 'start'; }) || empty);
-            time.setDisabled((_this.duration !== 24 * 60 && _this.duration > 450) || _this.all_day);
         });
     };
     /**
@@ -21511,7 +21521,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576205629000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576209313000);
 
 
 /***/ }),
