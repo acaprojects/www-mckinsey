@@ -1653,13 +1653,6 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
         }
         return 60;
     }
-    /** Set duration */
-    set duration(number) {
-        let field = this.form_fields.find(i => i.key === 'duration') || this.form_fields.find(i => i.key === 'time_group');
-        if (field) {
-            field.setValue(number);
-        }
-    }
     /** Whether the booking is being editing for the whole flow */
     get can_edit() {
         return !this.model.edit_catering && !this.model.edit_equipment;
@@ -1840,9 +1833,6 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
         const all_day = (this.form_fields.find(i => i.key === 'all_day') || empty);
         time.setDisabled(this.duration > 450);
         this.subs.obs.all_day = all_day.control.valueChanges.subscribe((state) => {
-            if (!state && this.duration === 24 * 60) {
-                this.duration = 60;
-            }
             time.setDisabled(state);
         });
         this.id = id ? '10' : '';
@@ -1859,7 +1849,7 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
             }
             const empty = { control: { value: true } };
             const time = (this.form_fields.find(i => i.key === 'start') || empty);
-            time.setDisabled(this.duration > 450 || this.all_day);
+            time.setDisabled((this.duration !== 24 * 60 && this.duration > 450) || this.all_day);
         });
     }
     /**
@@ -17965,7 +17955,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576203748000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576205629000);
 
 
 /***/ }),
