@@ -8729,6 +8729,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 duration: _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(has_end ? duration || raw_item.duration : raw_item.duration),
                 room: raw_item.location_name
             },
+            booked_by: raw_item.booked_by,
             space_notes: raw_item.space_notes || {},
             equipment_code: raw_item.equipment_code || {},
             notes: raw_item.notes || [],
@@ -8885,25 +8886,28 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('m');
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
-        if (item.id && localStorage && (+localStorage.getItem('STAFF.booking.date') !== item.date ||
-            +localStorage.getItem('STAFF.booking.duration') !== item.duration)) {
-            form.room.forEach(rm => {
-                const bld = this.parent.Buildings.list().find(i => i.id === rm.level.bld_id) || {};
-                const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_5__["rulesForSpace"])({
-                    user: item.host,
-                    space: rm,
-                    time: item.date,
-                    duration: item.duration || 60,
-                    rules: bld.booking_rules
+        if (localStorage) {
+            const stored_date = localStorage.getItem('STAFF.booking.date');
+            const stored_duration = localStorage.getItem('STAFF.booking.duration');
+            if (item.id && ((stored_date && +stored_date !== item.date) ||
+                (stored_duration && +stored_duration !== item.duration))) {
+                form.room.forEach(rm => {
+                    const bld = this.parent.Buildings.list().find(i => i.id === rm.level.bld_id) || {};
+                    const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_5__["rulesForSpace"])({
+                        user: item.host,
+                        space: rm,
+                        time: item.date,
+                        duration: item.duration || 60,
+                        rules: bld.booking_rules
+                    });
+                    rm.book_type = rules.auto_approve ? 'Book' : 'Request';
                 });
-                rm.book_type = rules.auto_approve ? 'Book' : 'Request';
-            });
+            }
         }
         if (form.room instanceof Array) {
             auto_approve = [];
             room_id = form.room.map(rm => {
                 const state = (item.approval_status ? item.approval_status[rm.email] : null) || '';
-                console.log('Room:', rm);
                 auto_approve.push(rm.book_type !== 'Request' && state.indexOf('tentative') === -1);
                 return rm.email || rm.id;
             });
@@ -19298,7 +19302,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576202209000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576453546000);
 
 
 /***/ }),
@@ -22339,7 +22343,7 @@ class BookingDetailsModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMP
     }
     /** Host of the booking */
     get host() {
-        return this.model.host || {};
+        return this.model.booked_by || this.model.organiser || this.model.host || this._service.Users.current();
     }
     /** Display date for the given booking */
     get date() {
