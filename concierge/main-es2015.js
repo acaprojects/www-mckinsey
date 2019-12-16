@@ -3490,7 +3490,8 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
     get private_notes() {
         const booking = this.order.booking || {};
         const notes = (booking.notes || []);
-        const list = (notes instanceof Array ? notes.filter(i => i.type === 'catering' && (!i.space || i.space === this.space.id)) : null) || [];
+        let list = (notes instanceof Array ? notes.filter(i => i.type === 'catering' && (!i.space || i.space === this.space.id)) : null) || [];
+        list = this.removeDuplicateMessages(list);
         const now = dayjs__WEBPACK_IMPORTED_MODULE_2__();
         list.forEach(note => {
             const date = dayjs__WEBPACK_IMPORTED_MODULE_2__(note.date);
@@ -3624,6 +3625,19 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
     resize() {
         super.resize();
         this.model.vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    }
+    /**
+     * Remove duplicates from the notes
+     */
+    removeDuplicateMessages(list) {
+        const output_list = [];
+        for (const item of list) {
+            const match = output_list.find(note => note.author === item.author && item.message === note.message);
+            if (!match) {
+                output_list.push(item);
+            }
+        }
+        return output_list;
     }
 }
 
@@ -17963,7 +17977,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576496403000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576538010000);
 
 
 /***/ }),

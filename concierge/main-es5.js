@@ -3968,6 +3968,16 @@ var __spread = (undefined && undefined.__spread) || function () {
     for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
     return ar;
 };
+var __values = (undefined && undefined.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
 
 
 
@@ -4012,6 +4022,7 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
             var booking = this.order.booking || {};
             var notes = (booking.notes || []);
             var list = (notes instanceof Array ? notes.filter(function (i) { return i.type === 'catering' && (!i.space || i.space === _this.space.id); }) : null) || [];
+            list = this.removeDuplicateMessages(list);
             var now = dayjs__WEBPACK_IMPORTED_MODULE_2__();
             list.forEach(function (note) {
                 var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(note.date);
@@ -4158,6 +4169,33 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
     CateringDetailsOverlayComponent.prototype.resize = function () {
         _super.prototype.resize.call(this);
         this.model.vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    };
+    /**
+     * Remove duplicates from the notes
+     */
+    CateringDetailsOverlayComponent.prototype.removeDuplicateMessages = function (list) {
+        var e_1, _a;
+        var output_list = [];
+        var _loop_1 = function (item) {
+            var match = output_list.find(function (note) { return note.author === item.author && item.message === note.message; });
+            if (!match) {
+                output_list.push(item);
+            }
+        };
+        try {
+            for (var list_1 = __values(list), list_1_1 = list_1.next(); !list_1_1.done; list_1_1 = list_1.next()) {
+                var item = list_1_1.value;
+                _loop_1(item);
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (list_1_1 && !list_1_1.done && (_a = list_1.return)) _a.call(list_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        return output_list;
     };
     return CateringDetailsOverlayComponent;
 }(_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["OverlayContentComponent"]));
@@ -21519,7 +21557,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576496403000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576538010000);
 
 
 /***/ }),
