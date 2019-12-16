@@ -3134,7 +3134,10 @@ var BookingFlowFindSpaceComponent = /** @class */ (function (_super) {
         if (this.date_field) {
             var date = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.date);
             var new_date = date.add(value, 'd');
-            if (!new_date.isBefore(dayjs__WEBPACK_IMPORTED_MODULE_6__().subtract(10, 'm'), 'm')) {
+            var now = this.duration > 23 * 60 || this.all_day
+                ? dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d')
+                : dayjs__WEBPACK_IMPORTED_MODULE_6__();
+            if (new_date.isAfter(now.subtract(10, 'm'), 'm')) {
                 this.date_field.setValue(new_date.valueOf());
                 this.filter$.next(this.date + "|" + this.duration);
             }
@@ -21521,7 +21524,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576209313000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576461062000);
 
 
 /***/ }),

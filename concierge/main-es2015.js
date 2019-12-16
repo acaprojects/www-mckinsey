@@ -2739,7 +2739,10 @@ class BookingFlowFindSpaceComponent extends _shared_globals_base_component__WEBP
         if (this.date_field) {
             const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.date);
             const new_date = date.add(value, 'd');
-            if (!new_date.isBefore(dayjs__WEBPACK_IMPORTED_MODULE_6__().subtract(10, 'm'), 'm')) {
+            const now = this.duration > 23 * 60 || this.all_day
+                ? dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d')
+                : dayjs__WEBPACK_IMPORTED_MODULE_6__();
+            if (new_date.isAfter(now.subtract(10, 'm'), 'm')) {
                 this.date_field.setValue(new_date.valueOf());
                 this.filter$.next(`${this.date}|${this.duration}`);
             }
@@ -17965,7 +17968,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576209313000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576461062000);
 
 
 /***/ }),
