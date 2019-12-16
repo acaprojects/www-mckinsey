@@ -1999,14 +1999,14 @@
 	<rect id="area-2.09-status" x="239.4" y="114.1" class="st19" width="58.3" height="43.6"/>
 	<rect id="area-2.08-status" x="472.6" y="9.5" class="st19" width="68.7" height="68.6"/>
 	<rect id="area-2.05-status" x="532" y="346" class="st19" width="112.2" height="91"/>
-	<rect id="area-2.02-status" x="410.3" y="360.2" class="st19" width="24.4" height="35.4"/>
-	<rect id="area-2.01-status" x="410.7" y="395.6" class="st19" width="24.4" height="40.6"/>
+	<rect id="area-2.07-status" x="410.3" y="360.2" class="st19" width="24.4" height="35.4"/>
+	<rect id="area-2.06-status" x="410.7" y="395.6" class="st19" width="24.4" height="40.6"/>
 	<text transform="matrix(1 0 0 1 258.7174 134.0053)" class="st5 st20 st21">2nd Floor </text>
 	<text transform="matrix(1 0 0 1 256.5174 140.0053)" class="st5 st20 st21">Team Room</text>
-	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 423.4001 427.63)" class="st5 st20 st21">Interview </text>
-	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 429.4001 425.3302)" class="st5 st20 st21">Room 1</text>
-	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 422.8002 389.3927)" class="st5 st20 st21">Interview </text>
-	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 428.8002 387.0929)" class="st5 st20 st21">Room 2</text>
+	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 423.4001 427.6301)" class="st5 st20 st21">Interview </text>
+	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 429.4001 425.3303)" class="st5 st20 st21">Room 1</text>
+	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 422.8002 389.3928)" class="st5 st20 st21">Interview </text>
+	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 428.8002 387.093)" class="st5 st20 st21">Room 2</text>
 	<text transform="matrix(1 0 0 1 490.7696 52.2001)" class="st5 st20 st21">Innovation Lab</text>
 </g>
 <g id="outline">
@@ -2075,7 +2075,7 @@
 <g id="icons">
 	<g id="stairs-4-2-2-2-2">
 		<circle class="st24" cx="378.3" cy="446.2" r="7.9"/>
-		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 391.0703 450.629)" class="st25 st26 st27">Stairs</text>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 391.0703 450.6291)" class="st25 st26 st27">Stairs</text>
 		<g id="Outline_Icons-2-2-4-2-2-2-2">
 			<line class="st28" x1="381.4" y1="449.8" x2="381.4" y2="443.5"/>
 			<polyline class="st28" points="381.4,444.6 380.3,444.6 380.3,445.7 379.2,445.7 379.2,446.8 378.1,446.8 378.1,447.9 377,447.9 
@@ -2168,7 +2168,7 @@
 <text transform="matrix(1 0 0 1 338.9345 139.7573)" class="st25 st26 st37">Room</text>
 <text transform="matrix(1 0 0 1 441.989 265.317)" class="st25 st26 st37">Open</text>
 <text transform="matrix(1 0 0 1 441.689 270.217)" class="st25 st26 st37">Office</text>
-<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 310.8486 263.3068)" class="st25 st26 st37">Common Corridor</text>
+<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 310.8486 263.3069)" class="st25 st26 st37">Common Corridor</text>
 <text transform="matrix(1 0 0 1 479.8583 90.3143)" class="st25 st26 st37">Phone</text>
 <text transform="matrix(1 0 0 1 478.7583 95.2143)" class="st25 st26 st37">Booth 2</text>
 <text transform="matrix(1 0 0 1 512.4726 89.1659)" class="st25 st26 st37">Phone</text>
