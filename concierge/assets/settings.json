@@ -238,6 +238,12 @@
                     "hide": true
                 },
                 {
+                    "key": "notes",
+                    "label": "Note list",
+                    "type": "custom",
+                    "hide": true
+                },
+                {
                     "key": "old_end",
                     "label": "Breakdown",
                     "type": "input",
