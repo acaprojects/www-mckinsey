@@ -7224,10 +7224,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_contacts_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./data/contacts.service */ "./src/app/services/data/contacts.service.ts");
 /* harmony import */ var _data_location_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./data/location.service */ "./src/app/services/data/location.service.ts");
 /* harmony import */ var _data_menu_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./data/menu.service */ "./src/app/services/data/menu.service.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
-/* harmony import */ var _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../shared/globals/base.class */ "./src/app/shared/globals/base.class.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
+/* harmony import */ var _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../shared/globals/base.class */ "./src/app/shared/globals/base.class.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
@@ -7271,8 +7270,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_23__["BaseClass"] {
+class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_22__["BaseClass"] {
     constructor(_title, _cache, router, overlay, analytics, settings, _composer, hotkeys, lockers, buildings, bookings, 
     // private catering: CateringService,
     comments, rooms, users, visitors, location, contacts, heapio, _menu) {
@@ -7604,19 +7602,29 @@ class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_23_
      * Setup handler for cache change events
      */
     setupCache() {
-        this._cache.available.subscribe((event) => {
-            const current = `current version is ${event.current.hash}`;
-            const available = `available version is ${event.available.hash}`;
-            this.settings.log('CACHE', `Update available: ${current} ${available}`);
-            this.info('Newer version of the app is available', 'Refresh', () => this.activateUpdate());
-        });
-        setInterval(() => this._cache.checkForUpdate(), 5 * 60 * 1000);
+        if (this._cache.isEnabled) {
+            this.subscription('cache_update', this._cache.available.subscribe((event) => {
+                const current = `current version is ${event.current.hash}`;
+                const available = `available version is ${event.available.hash}`;
+                this.log('CACHE', `Update available: ${current} ${available}`);
+                this.activateUpdate();
+            }));
+            this.subscription('cache_activated', this._cache.activated.subscribe(() => {
+                this.log('CACHE', `Updates activated. Reloading...`);
+                location.reload(true);
+            }));
+            setInterval(() => {
+                this.log('CACHE', `Checking for updates...`);
+                this._cache.checkForUpdate();
+            }, 5 * 60 * 1000);
+        }
     }
     /**
      * Update the cache and reload the page
      */
     activateUpdate() {
-        if (_environments_environment__WEBPACK_IMPORTED_MODULE_21__["environment"].production) {
+        if (this._cache.isEnabled) {
+            this.log('CACHE', `Activating changes to the cache...`);
             this._cache.activateUpdate().then(() => location.reload(true));
         }
     }
@@ -7644,14 +7652,14 @@ class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_23_
      * Pre-register available overlays
      */
     registerOverlays() {
-        if (_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_22__["OVERLAY_REGISTER"]) {
-            for (const overlay of _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_22__["OVERLAY_REGISTER"]) {
+        if (_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_21__["OVERLAY_REGISTER"]) {
+            for (const overlay of _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_21__["OVERLAY_REGISTER"]) {
                 this.overlay.setupModal(overlay.id, { cmp: overlay.component, name: overlay.data.name });
             }
         }
     }
 }
-AppService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵdefineInjectable"]({ factory: function AppService_Factory() { return new AppService(_angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_2__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["OverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_analytics_service__WEBPACK_IMPORTED_MODULE_8__["AnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_7__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_6__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_hotkey_service__WEBPACK_IMPORTED_MODULE_16__["HotkeyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_lockers_service__WEBPACK_IMPORTED_MODULE_17__["LockersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_buildings_service__WEBPACK_IMPORTED_MODULE_11__["BuildingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_comments_service__WEBPACK_IMPORTED_MODULE_12__["CommentsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_rooms_service__WEBPACK_IMPORTED_MODULE_13__["RoomsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_users_service__WEBPACK_IMPORTED_MODULE_10__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_visitors_service__WEBPACK_IMPORTED_MODULE_15__["VisitorsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_location_service__WEBPACK_IMPORTED_MODULE_19__["LocationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_contacts_service__WEBPACK_IMPORTED_MODULE_18__["ContactsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_acaprojects_ngx_heap_io__WEBPACK_IMPORTED_MODULE_5__["HeapIoService"]), _angular_core__WEBPACK_IMPORTED_MODULE_24__["ɵɵinject"](_data_menu_service__WEBPACK_IMPORTED_MODULE_20__["CateringMenuService"])); }, token: AppService, providedIn: "root" });
+AppService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵdefineInjectable"]({ factory: function AppService_Factory() { return new AppService(_angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_2__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["OverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_analytics_service__WEBPACK_IMPORTED_MODULE_8__["AnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_7__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_6__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_hotkey_service__WEBPACK_IMPORTED_MODULE_16__["HotkeyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_lockers_service__WEBPACK_IMPORTED_MODULE_17__["LockersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_buildings_service__WEBPACK_IMPORTED_MODULE_11__["BuildingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_comments_service__WEBPACK_IMPORTED_MODULE_12__["CommentsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_rooms_service__WEBPACK_IMPORTED_MODULE_13__["RoomsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_users_service__WEBPACK_IMPORTED_MODULE_10__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_visitors_service__WEBPACK_IMPORTED_MODULE_15__["VisitorsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_location_service__WEBPACK_IMPORTED_MODULE_19__["LocationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_contacts_service__WEBPACK_IMPORTED_MODULE_18__["ContactsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_acaprojects_ngx_heap_io__WEBPACK_IMPORTED_MODULE_5__["HeapIoService"]), _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵinject"](_data_menu_service__WEBPACK_IMPORTED_MODULE_20__["CateringMenuService"])); }, token: AppService, providedIn: "root" });
 
 
 /***/ }),
@@ -19302,7 +19310,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576509325000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576540058000);
 
 
 /***/ }),
