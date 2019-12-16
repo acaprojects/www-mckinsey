@@ -7611,7 +7611,7 @@ class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_22_
             }));
             this.subscription('cache_activated', this._cache.activated.subscribe(() => {
                 this.log('CACHE', `Updates activated. Reloading...`);
-                location.reload(true);
+                this.info('New version of the application is available.', 'Refresh', () => location.reload(true));
             }));
             setInterval(() => {
                 this.log('CACHE', `Checking for updates...`);
@@ -7625,7 +7625,9 @@ class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_22_
     activateUpdate() {
         if (this._cache.isEnabled) {
             this.log('CACHE', `Activating changes to the cache...`);
-            this._cache.activateUpdate().then(() => location.reload(true));
+            this._cache.activateUpdate().then(() => {
+                this.info('New version of the application is available.', 'Refresh', () => location.reload(true));
+            });
         }
     }
     /**
@@ -19310,7 +19312,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576540058000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576540199000);
 
 
 /***/ }),
