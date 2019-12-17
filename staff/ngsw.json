@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1576546980958,
+  "timestamp": 1576560697422,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -280,12 +280,12 @@
     "/staff/assets/maps/taipei/level_47.svg": "637cbadc4b664d2c6df6b4a22b46d4e5c57ecc42",
     "/staff/assets/maps/waltham/level_01.svg": "099fbb63860b2dcd0ff70cfd2e6d2c7be73f5b9e",
     "/staff/assets/maps/waltham/level_02.svg": "f8c46ec561e85655e24721045c094360161e4ab8",
-    "/staff/assets/maps/waltham/level_03.svg": "49c555d32f5220303f995d9cb6cae27aa245eeff",
+    "/staff/assets/maps/waltham/level_03.svg": "c4f72aac3ab51655ed7a87e5cc78d58384134592",
     "/staff/assets/maps/washington_dc/level_10.svg": "89a3d9ffb33f94b89930d61125bdee057c5f955b",
     "/staff/assets/maps/washington_dc/level_11.svg": "8e7bb6a556bfb0380b552ee2d3c941dd7eeb9f6a",
     "/staff/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "f1f40369964074492aa1977d98bc00c20c0f3915"
+    "/staff/index.html": "c9f6462c5f424d8ecef1960d6ba1f0baded019d5"
   },
   "navigationUrls": [
     {
