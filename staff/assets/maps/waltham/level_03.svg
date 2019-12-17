@@ -3519,10 +3519,6 @@
 	<g>
 		<text transform="matrix(1 0 0 1 270.492 339.5998)" class="st5 st25 st26">Cleveland </text>
 	</g>
-	<polygon id="area-3.17-status_1_" class="st24" points="518.1,276 553.3,276 553.3,285.1 547.5,285.1 547.5,311.6 518.1,311.6 	"/>
-	<text transform="matrix(1 0 0 1 529.0001 287.1811)" class="st5 st25 st26">3rd </text>
-	<text transform="matrix(1 0 0 1 519.4 293.1811)" class="st5 st25 st26">Floor Team </text>
-	<text transform="matrix(1 0 0 1 525.9247 299.2195)" class="st5 st25 st26">Room</text>
 	<rect id="area-3.15-status" x="653.3" y="141.2" class="st24" width="23.9" height="44.1"/>
 	<g>
 		<text transform="matrix(1 0 0 1 656.0483 164.5501)" class="st5 st25 st26">Harvard </text>
@@ -3532,6 +3528,13 @@
 	<g>
 		<text transform="matrix(1 0 0 1 652.3065 397.6996)" class="st5 st25 st26">Central </text>
 		<text transform="matrix(1 0 0 1 653.1065 403.6996)" class="st5 st25 st26">Square</text>
+	</g>
+	<polygon id="area-3.17-status" class="st24" points="518.1,276.2 518.1,312.7 547.5,312.7 547.5,286.4 553.3,286.4 553.3,276.8 	
+		"/>
+	<g>
+		<text transform="matrix(1 0 0 1 529.0001 287.1811)" class="st5 st25 st26">3rd </text>
+		<text transform="matrix(1 0 0 1 519.4 293.1811)" class="st5 st25 st26">Floor Team </text>
+		<text transform="matrix(1 0 0 1 525.9247 299.2195)" class="st5 st25 st26">Room</text>
 	</g>
 </g>
 <g id="skeleton">
