@@ -66,8 +66,6 @@
 	<rect x="324.4" y="334.9" class="st2" width="34.1" height="81.7"/>
 	<rect x="135" y="234.8" class="st2" width="7.1" height="18.4"/>
 	<rect x="442.2" y="279.6" class="st2" width="31" height="40"/>
-	<polygon class="st2" points="208.6,243.8 212.1,243.8 212.1,231.5 224.1,231.5 224.1,238.8 240.9,238.8 240.9,280.1 208.6,280.1 	
-		"/>
 </g>
 <g id="highlights">
 	<rect x="276.7" y="142.9" class="st3" width="22.6" height="63.9"/>
@@ -83,9 +81,9 @@
 		208.6,275.6 208.6,244 199.2,244 199.2,231.5 179.8,231.5 	"/>
 	<rect x="115.3" y="323.4" class="st3" width="17.4" height="42.4"/>
 	<rect x="133.4" y="322.9" class="st3" width="27.9" height="42.4"/>
-	<rect x="272" y="331.4" class="st3" width="24.2" height="30.8"/>
+	<rect x="272" y="346.7" class="st3" width="24.2" height="15.5"/>
 	<rect x="427.1" y="277.5" class="st3" width="15.1" height="71.6"/>
-	<rect x="2.9" y="141" class="st3" width="52.6" height="41.1"/>
+	<rect x="26.6" y="141" class="st3" width="29" height="41.1"/>
 	<polygon class="st3" points="132.8,195.8 138.4,205 139.5,206.2 139.5,211.4 188.4,211.4 188.4,202 181.9,202 163.8,170.7 
 		146,177.7 137.3,186.8 132.8,194.3 	"/>
 	<polygon class="st3" points="409.3,134.8 428.9,134.8 428.9,138.4 477,139.6 477,142.1 551.2,142.1 551.2,213.1 507.1,213.1 
@@ -102,7 +100,6 @@
 	<polygon class="st3" points="200.2,304 213.3,304 227.4,296.2 231.1,293.1 231.6,280.3 208.6,280.3 208.6,276.4 200,276.4 	"/>
 	<rect x="245.1" y="2.5" class="st3" width="27.6" height="37.3"/>
 	<rect x="343.8" y="2.5" class="st3" width="29.4" height="37.9"/>
-	<polygon class="st3" points="240.3,239.6 262.2,239.6 262.2,231.1 295.5,231.1 295.5,280.1 240.3,280.1 	"/>
 	<path class="st3" d="M281.3,317.9h14.2v-37.8h-27c0,0-1,14.9,1.3,21C272,307.3,278.3,316.4,281.3,317.9z"/>
 	<path class="st3" d="M162.2,324.4c0,0,10.6-6.3,15.8-6.8s18.1,0.3,18.1,0.3v7.6h6.5v30c0,0-3.9,4.2-13.2,5.7s-13,0.5-13,0.5v3.5
 		l-14.1,0.5v-41.3L162.2,324.4L162.2,324.4z"/>
@@ -111,6 +108,9 @@
 	<polygon class="st3" points="1.8,282.7 33.8,282.7 33.8,315.1 1.4,315.1 	"/>
 	<path class="st3" d="M281,373.3h14v42h-26.6c0,0-1.7-15.5,0.9-22.4c2.5-6.9,7-14.4,7-14.4L281,373.3z"/>
 	<rect x="115.3" y="286.9" class="st3" width="21.6" height="24.3"/>
+	<rect x="628.7" y="139.8" class="st3" width="24.6" height="44.4"/>
+	<path class="st3" d="M273.8,38.7v31.9h2.9v18.1l7.8,1.1c0,0,17.4-0.3,19.4-1.1c2.1-0.8,14.5-5.4,17.4-7.1s14.4-5.8,14.4-5.8l9-0.9
+		V36.5L273.8,38.7z"/>
 </g>
 <g id="area-3-open">
 	<g>
@@ -3492,32 +3492,47 @@
 	</g>
 </g>
 <g id="bookable_rooms_and_text">
-	<polygon id="area-3.17-status" class="st24" points="518.1,276 518.1,311.9 547.5,311.9 547.5,285.1 553.3,285.1 553.3,275.4 	"/>
-	<rect id="area-3.16-status" x="644.2" y="374.3" class="st24" width="33.9" height="42.3"/>
-	<rect id="area-3.15-status" x="652.6" y="142.1" class="st24" width="25.4" height="41.8"/>
-	<rect id="area-3.14-status" x="628.7" y="164" class="st24" width="23.9" height="19.8"/>
-	<rect id="area-3.13-status" x="628.7" y="140.6" class="st24" width="23.9" height="23.4"/>
-	<polygon id="area-3.12-status" class="st24" points="344.7,74.8 344.7,38.5 303.7,40 315.2,85.4 329,77.2 	"/>
-	<polygon id="area-3.11-status" class="st24" points="274.5,39.8 303.7,40 315.2,85.4 295.7,89.8 276.7,89.4 276.7,71 273.8,71 	"/>
-	<polygon id="area-3.10-status" class="st24" points="163.8,170.7 169,169.6 177.4,169.6 177.4,157.1 180.6,153 205.2,142.2 
-		205.2,138.6 212.3,136.7 252.9,131.9 272.8,130.6 272.8,138.6 276.7,138.6 276.7,211.4 254.9,211.4 254.9,201.6 240.3,201.6 
-		240.3,211.4 205.6,211.4 205.6,202 181.9,202 	"/>
-	<text transform="matrix(1 0 0 1 213.9065 175.5499)" class="st5 st25 st26">Boston College</text>
-	<text transform="matrix(1 0 0 1 283.1219 65.9693)" class="st5 st25 st26">Porter </text>
-	<text transform="matrix(1 0 0 1 282.7219 71.9693)" class="st5 st25 st26">Square</text>
-	<text transform="matrix(1 0 0 1 633.2565 151.5592)" class="st5 st25 st26">Davis </text>
-	<text transform="matrix(1 0 0 1 632.1565 157.5592)" class="st5 st25 st26">Square</text>
-	<text transform="matrix(1 0 0 1 629.2003 170.7427)" class="st5 st25 st26">Lechmere </text>
-	<text transform="matrix(1 0 0 1 633.2003 176.7427)" class="st5 st25 st26">Station</text>
-	<text transform="matrix(1 0 0 1 313.8183 59.1138)" class="st5 st25 st26">Cleveland </text>
-	<text transform="matrix(1 0 0 1 319.3183 65.1138)" class="st5 st25 st26">Circle</text>
-	<text transform="matrix(1 0 0 1 656.0483 164.5501)" class="st5 st25 st26">Harvard </text>
-	<text transform="matrix(1 0 0 1 657.7483 170.5501)" class="st5 st25 st26">Square</text>
-	<text transform="matrix(1 0 0 1 652.3065 397.6996)" class="st5 st25 st26">Central </text>
-	<text transform="matrix(1 0 0 1 653.1065 403.6996)" class="st5 st25 st26">Square</text>
-	<text transform="matrix(1 0 0 1 529.515 288.8112)" class="st5 st25 st26">3rd </text>
-	<text transform="matrix(1 0 0 1 519.915 294.8112)" class="st5 st25 st26">Floor Team </text>
-	<text transform="matrix(1 0 0 1 526.4397 300.8496)" class="st5 st25 st26">Room</text>
+	<path id="area-3.14-status" class="st24" d="M177.9,154.7v15.2l-13.7,1.1l17.5,31.4h24.1v9.4h34.5v-9.4h14.6v9.4h21.8v-73h-3.9
+		v-7.7c0,0-19.5-0.8-42.9,3.4c-23.5,4.1-24.7,4.5-24.7,4.5l0.1,3.8l-15.7,5.6C189.6,148.4,181.8,151.2,177.9,154.7z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 218.2501 170.1998)" class="st5 st25 st26">Lechmere </text>
+		<text transform="matrix(1 0 0 1 222.2501 176.1998)" class="st5 st25 st26">Station</text>
+	</g>
+	<polygon id="area-3.10-status" class="st24" points="212.1,231.2 224.5,231.2 224.5,237.6 240.7,237.6 240.7,279.6 208.6,279.6 
+		208.6,243.7 212.2,243.7 	"/>
+	<g>
+		<text transform="matrix(1 0 0 1 215.8406 258.2997)" class="st5 st25 st26">Boston</text>
+		<text transform="matrix(1 0 0 1 215.4406 264.2997)" class="st5 st25 st26">College</text>
+	</g>
+	<polygon id="area-3.11-status" class="st24" points="241.5,239.1 262.2,239.1 262.2,230.9 295.5,230.9 295.5,279.9 240.7,279.9 	
+		"/>
+	<g>
+		<text transform="matrix(1 0 0 1 261.0999 256.6003)" class="st5 st25 st26">Porter </text>
+		<text transform="matrix(1 0 0 1 260.7 262.6003)" class="st5 st25 st26">Square</text>
+	</g>
+	<rect id="area-3.13-status" x="2.9" y="138.4" class="st24" width="24" height="43"/>
+	<g>
+		<text transform="matrix(1 0 0 1 6.8501 161.8001)" class="st5 st25 st26">Davis </text>
+		<text transform="matrix(1 0 0 1 5.7501 167.8001)" class="st5 st25 st26">Square</text>
+	</g>
+	<rect id="area-3.12-status" x="271.6" y="332.1" class="st24" width="23.8" height="15.1"/>
+	<g>
+		<text transform="matrix(1 0 0 1 270.492 339.5998)" class="st5 st25 st26">Cleveland </text>
+	</g>
+	<polygon id="area-3.17-status_1_" class="st24" points="518.1,276 553.3,276 553.3,285.1 547.5,285.1 547.5,311.6 518.1,311.6 	"/>
+	<text transform="matrix(1 0 0 1 529.0001 287.1811)" class="st5 st25 st26">3rd </text>
+	<text transform="matrix(1 0 0 1 519.4 293.1811)" class="st5 st25 st26">Floor Team </text>
+	<text transform="matrix(1 0 0 1 525.9247 299.2195)" class="st5 st25 st26">Room</text>
+	<rect id="area-3.15-status" x="653.3" y="141.2" class="st24" width="23.9" height="44.1"/>
+	<g>
+		<text transform="matrix(1 0 0 1 656.0483 164.5501)" class="st5 st25 st26">Harvard </text>
+		<text transform="matrix(1 0 0 1 657.7483 170.5501)" class="st5 st25 st26">Square</text>
+	</g>
+	<rect id="area-3.16-status" x="643" y="374.3" class="st24" width="35.9" height="42.3"/>
+	<g>
+		<text transform="matrix(1 0 0 1 652.3065 397.6996)" class="st5 st25 st26">Central </text>
+		<text transform="matrix(1 0 0 1 653.1065 403.6996)" class="st5 st25 st26">Square</text>
+	</g>
 </g>
 <g id="skeleton">
 	<g id="walls">
@@ -3803,7 +3818,6 @@
 			<text transform="matrix(1 0 0 1 149.28 306.053)" class="st31 st32 st33">Closet</text>
 			<text transform="matrix(1 0 0 1 118.377 334.639)" class="st31 st32 st33">Phone</text>
 			<text transform="matrix(1 0 0 1 142.101 346.663)" class="st31 st32 st33">Server</text>
-			<text transform="matrix(1 0 0 1 278.842 339.229)" class="st31 st32 st33">Phone</text>
 			<g>
 				<text transform="matrix(1 0 0 1 429.239 287.504)" class="st31 st32 st33">Phone</text>
 				<text transform="matrix(1 0 0 1 433.548 291.932)" class="st31 st32 st33">1</text>
@@ -3998,7 +4012,6 @@
 	<text transform="matrix(1 0 0 1 596.2764 199.0031)" class="st31 st32 st33">Space</text>
 	<text transform="matrix(1 0 0 1 178.4388 332.9498)" class="st31 st32 st33">Office</text>
 	<text transform="matrix(1 0 0 1 178.439 351.5117)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 257.8082 261.2675)" class="st31 st32 st33">Conference</text>
 	<text transform="matrix(1 0 0 1 205.2959 291.9325)" class="st31 st32 st33">Video</text>
 	<text transform="matrix(1 0 0 1 278.8423 299.0636)" class="st31 st32 st33">Video</text>
 	<text transform="matrix(1 0 0 1 278.8418 400.7872)" class="st31 st32 st33">Video</text>
@@ -4008,8 +4021,6 @@
 	<text transform="matrix(1 0 0 1 13.3386 401.3706)" class="st31 st32 st33">Office</text>
 	<text transform="matrix(1 0 0 1 11.1599 377.2888)" class="st31 st32 st33">Office</text>
 	<text transform="matrix(1 0 0 1 13.234 300.5069)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 10.2629 162.602)" class="st31 st32 st33">Tec</text>
-	<text transform="matrix(1 0 0 1 8.4629 167.002)" class="st31 st32 st33">Room</text>
 	<text transform="matrix(1 0 0 1 253.2502 24.3679)" class="st31 st32 st33">Office</text>
 	<text transform="matrix(1 0 0 1 354.583 20.2306)" class="st31 st32 st33">Office</text>
 	<text transform="matrix(1 0 0 1 112.2207 155.6277)" class="st31 st32 st33">Quiet Area</text>
@@ -4019,5 +4030,9 @@
 	<text transform="matrix(1 0 0 1 203.8248 314.8129)" class="st31 st32 st33">Open Office</text>
 	<text transform="matrix(1 0 0 1 182.1 44.2566)" class="st31 st32 st33">Open Office</text>
 	<text transform="matrix(1 0 0 1 55.4998 234.7996)" class="st31 st32 st33">Open Office</text>
+	<text transform="matrix(1 0 0 1 321.7021 58.0999)" class="st31 st32 st33">Office</text>
+	<text transform="matrix(1 0 0 1 289.2289 67.0499)" class="st31 st32 st33">Office</text>
 </g>
+<text transform="matrix(1 0 0 1 636.3114 154.3231)" class="st31 st32 st33">Phone</text>
+<text transform="matrix(1 0 0 1 636.311 176.2)" class="st31 st32 st33">Phone</text>
 </svg>
