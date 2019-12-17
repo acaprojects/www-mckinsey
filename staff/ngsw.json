@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1576036987091,
+  "timestamp": 1576546980958,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -239,7 +239,7 @@
     "/staff/assets/maps/chengdu/level_15.svg": "151fd39bcf1604fb9a38e73f7e22d6df26d8db85",
     "/staff/assets/maps/istanbul/level_28.svg": "226a886b10e2a977968e6a38af6450da7be2e150",
     "/staff/assets/maps/istanbul/level_29.svg": "3904910929edc7b6e101f9900c9c02bc467165ef",
-    "/staff/assets/maps/lagos/level_06.svg": "d7284d57f8354ce51ed592e10051741ba3328b3a",
+    "/staff/assets/maps/lagos/level_06.svg": "13f349bfbc7eaf24c818a18ac252112f82d4fcf1",
     "/staff/assets/maps/london/level_06.svg": "368be57535135518e377d56ab82dc5ece44df251",
     "/staff/assets/maps/london/level_07.svg": "c183eaf6f025f71c64c9bd0f386cba702b7b8dfd",
     "/staff/assets/maps/london/level_08.svg": "5b233a5c00691b2bc4779ca74ca85b83339836dc",
@@ -279,13 +279,13 @@
     "/staff/assets/maps/sydney/level_36.svg": "267d70d35be3c06e218bf7dbc170e56b0ae1ed5c",
     "/staff/assets/maps/taipei/level_47.svg": "637cbadc4b664d2c6df6b4a22b46d4e5c57ecc42",
     "/staff/assets/maps/waltham/level_01.svg": "099fbb63860b2dcd0ff70cfd2e6d2c7be73f5b9e",
-    "/staff/assets/maps/waltham/level_02.svg": "e814e78c5c675fe5029a544e053be66f9c506025",
-    "/staff/assets/maps/waltham/level_03.svg": "6ede394adfba02fc2dde177fc408c06a1be06334",
+    "/staff/assets/maps/waltham/level_02.svg": "f8c46ec561e85655e24721045c094360161e4ab8",
+    "/staff/assets/maps/waltham/level_03.svg": "49c555d32f5220303f995d9cb6cae27aa245eeff",
     "/staff/assets/maps/washington_dc/level_10.svg": "89a3d9ffb33f94b89930d61125bdee057c5f955b",
     "/staff/assets/maps/washington_dc/level_11.svg": "8e7bb6a556bfb0380b552ee2d3c941dd7eeb9f6a",
     "/staff/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "f1f0203dcab01761899e2c80f61a9a7e44ae46a1"
+    "/staff/index.html": "f1f40369964074492aa1977d98bc00c20c0f3915"
   },
   "navigationUrls": [
     {
