@@ -292,13 +292,17 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             const date = items && items[middle] ? items[middle].date : undefined;
             const start = moment__WEBPACK_IMPORTED_MODULE_5__(date).subtract(3, 'd').startOf('d');
             const end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(3, 'd').endOf('d');
+            const from = start.isBefore(now, 'd') ? now.unix() : start.unix();
+            if (moment__WEBPACK_IMPORTED_MODULE_5__(from).isSameOrAfter(end)) {
+                return;
+            }
             this.setLoading(start.valueOf(), end.valueOf());
             const user = this.service.Users.current();
             const user_list = user.delegates && user.delegates.length > 0 ? [user.email, ...user.delegates] : [user.email];
             this.model.loading = true;
             this.service.Bookings.query({
                 email: this.user ? this.user.email : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
-                from: start.isBefore(now, 'd') ? now.unix() : start.unix(),
+                from,
                 to: end.unix()
             }).then((list) => {
                 this.service.Bookings.clear({ from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(), to: end.valueOf() });

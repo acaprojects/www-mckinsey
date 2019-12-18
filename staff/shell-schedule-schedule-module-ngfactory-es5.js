@@ -337,13 +337,17 @@ var __values = (this && this.__values) || function (o) {
                         var date = items && items[middle] ? items[middle].date : undefined;
                         var start = moment__WEBPACK_IMPORTED_MODULE_5__(date).subtract(3, 'd').startOf('d');
                         var end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(3, 'd').endOf('d');
+                        var from = start.isBefore(now, 'd') ? now.unix() : start.unix();
+                        if (moment__WEBPACK_IMPORTED_MODULE_5__(from).isSameOrAfter(end)) {
+                            return;
+                        }
                         _this.setLoading(start.valueOf(), end.valueOf());
                         var user = _this.service.Users.current();
                         var user_list = user.delegates && user.delegates.length > 0 ? __spread([user.email], user.delegates) : [user.email];
                         _this.model.loading = true;
                         _this.service.Bookings.query({
                             email: _this.user ? _this.user.email : user_list.reduce(function (a, v) { return (a ? a + ',' : a) + v; }, ''),
-                            from: start.isBefore(now, 'd') ? now.unix() : start.unix(),
+                            from: from,
                             to: end.unix()
                         }).then(function (list) {
                             _this.service.Bookings.clear({ from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(), to: end.valueOf() });
