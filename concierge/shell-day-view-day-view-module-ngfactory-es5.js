@@ -1379,8 +1379,7 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
     });
     /** View booking details */
     DayViewSpaceEventComponent.prototype.view = function () {
-        this._service.Bookings.view(this.event, this.space).then(function (e) {
-        }, function (_) { return null; });
+        this._service.Bookings.view(this.event, this.space).then(function (_) { return null; }, function (_) { return null; });
     };
     Object.defineProperty(DayViewSpaceEventComponent.prototype, "active", {
         /** Whether event is active */
