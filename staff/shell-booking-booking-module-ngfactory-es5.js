@@ -1929,15 +1929,17 @@ var __values = (this && this.__values) || function (o) {
                         }
                         finally { if (e_4) throw e_4.error; }
                     }
+                    var date = query.date;
+                    var duration = query.duration;
                     // Filter out rooms unavailable due to booking rules
                     room_list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_8__["Utils"].unique(room_list, 'id').filter(function (room) {
                         var bld = _this._service.Buildings.get(room.level.bld_id) || _this._service.Buildings.current() || {};
                         var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["rulesForSpace"])({
                             user: _this.user || _this._service.Users.current(),
                             space: room,
-                            time: _this.date,
+                            time: date,
                             recurr_end: _this.recurr_end || 0,
-                            duration: _this.duration,
+                            duration: duration,
                             rules: bld.booking_rules
                         });
                         room.book_type = rules.auto_approve ? 'Book' : 'Request';
@@ -1961,15 +1963,17 @@ var __values = (this && this.__values) || function (o) {
                 BookingMainFlowFindSpaceComponent.prototype.filter = function (list) {
                     var _this = this;
                     var selected = this.spaces.control.value || [];
+                    var date = this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date;
+                    var duration = this.all_day ? 24 * 60 : (this.duration + (this.catering ? 15 : 0));
                     return list
                         .filter(function (room) {
                         var bld = _this._service.Buildings.get(room.level.bld_id) || _this._service.Buildings.current() || {};
                         var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["rulesForSpace"])({
                             user: _this.user || _this._service.Users.current(),
                             space: room,
-                            time: _this.date,
+                            time: date,
                             recurr_end: _this.recurr_end || 0,
-                            duration: _this.duration,
+                            duration: duration,
                             rules: bld.booking_rules
                         });
                         room.book_type = rules.auto_approve ? 'Book' : 'Request';
