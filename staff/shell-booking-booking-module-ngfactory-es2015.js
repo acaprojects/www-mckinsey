@@ -1706,15 +1706,17 @@ class BookingMainFlowFindSpaceComponent extends _shared_globals_base_component__
         for (const zone of locations) {
             room_list = room_list.concat(this._service.Rooms.list(true, zone));
         }
+        const date = query.date;
+        const duration = query.duration;
         // Filter out rooms unavailable due to booking rules
         room_list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_8__["Utils"].unique(room_list, 'id').filter(room => {
             const bld = this._service.Buildings.get(room.level.bld_id) || this._service.Buildings.current() || {};
             const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["rulesForSpace"])({
                 user: this.user || this._service.Users.current(),
                 space: room,
-                time: this.date,
+                time: date,
                 recurr_end: this.recurr_end || 0,
-                duration: this.duration,
+                duration,
                 rules: bld.booking_rules
             });
             room.book_type = rules.auto_approve ? 'Book' : 'Request';
@@ -1737,15 +1739,17 @@ class BookingMainFlowFindSpaceComponent extends _shared_globals_base_component__
      */
     filter(list) {
         const selected = this.spaces.control.value || [];
+        const date = this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date;
+        const duration = this.all_day ? 24 * 60 : (this.duration + (this.catering ? 15 : 0));
         return list
             .filter(room => {
             const bld = this._service.Buildings.get(room.level.bld_id) || this._service.Buildings.current() || {};
             const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["rulesForSpace"])({
                 user: this.user || this._service.Users.current(),
                 space: room,
-                time: this.date,
+                time: date,
                 recurr_end: this.recurr_end || 0,
-                duration: this.duration,
+                duration,
                 rules: bld.booking_rules
             });
             room.book_type = rules.auto_approve ? 'Book' : 'Request';
