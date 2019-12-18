@@ -9280,6 +9280,7 @@ var BookingsService = /** @class */ (function (_super) {
         if (edit === void 0) { edit = false; }
         return new Promise(function (rs, rj) {
             if (_this.parent) {
+                _this.parent.set('CONCIERGE.latest_booking', item);
                 _this.parent.Overlay.openModal('meeting-details', {
                     name: 'overlay',
                     data: {
@@ -21565,7 +21566,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576639882000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576642622000);
 
 
 /***/ }),

@@ -1209,8 +1209,7 @@ class DayViewSpaceEventComponent extends _shared_globals_base_component__WEBPACK
     }
     /** View booking details */
     view() {
-        this._service.Bookings.view(this.event, this.space).then((e) => {
-        }, _ => null);
+        this._service.Bookings.view(this.event, this.space).then(_ => null, _ => null);
     }
     /** Whether event is active */
     get active() {
