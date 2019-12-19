@@ -8750,7 +8750,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             all_day: !!raw_item.all_day || duration > 12 * 60,
             catering: raw_item.catering,
             setup: raw_item.setup || 0,
-            breakdown: raw_item.breakdown || 0
+            breakdown: raw_item.breakdown || 0,
+            spaces: typeof raw_item.room_id === 'string' ? [raw_item.room_id] : raw_item.room_id
         };
         item.notes.sort((a, b) => a.date - b.date);
         // Setup organiser for booking
@@ -19312,7 +19313,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576725680000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576728116000);
 
 
 /***/ }),
