@@ -2303,44 +2303,47 @@ var __spread = (this && this.__spread) || function () {
                     }, 60 * 1000);
                     this.service.set('APP.swipe_disabled', true);
                     this.subscription('building', this.service.Buildings.listen(function (bld) {
-                        var e_12, _a;
                         if (bld) {
-                            var active = _this.model.level ? _this.model.level.active : null;
-                            _this.model.level = {};
-                            _this.model.system = bld.systems.desks;
-                            _this.model.focus_user = null;
-                            _this.model.found_room = null;
-                            _this.model.info = null;
-                            _this.model.level.list = bld.levels;
-                            _this.model.rooms = _this.service.Rooms.list();
-                            _this.model.room_pin = null;
-                            if (_this.model.level.list) {
-                                _this.model.level.names = [];
-                                try {
-                                    for (var _b = __values(_this.model.level.list), _c = _b.next(); !_c.done; _c = _b.next()) {
-                                        var level = _c.value;
-                                        _this.model.level.names.push(level.name);
-                                    }
-                                }
-                                catch (e_12_1) { e_12 = { error: e_12_1 }; }
-                                finally {
+                            _this.timeout('set_building', function () {
+                                var e_12, _a;
+                                bld = _this.service.Buildings.current();
+                                var active = _this.model.level ? _this.model.level.active : null;
+                                _this.model.level = {};
+                                _this.model.system = bld.systems.desks;
+                                _this.model.focus_user = null;
+                                _this.model.found_room = null;
+                                _this.model.info = null;
+                                _this.model.level.list = bld.levels;
+                                _this.model.rooms = _this.service.Rooms.list();
+                                _this.model.room_pin = null;
+                                if (_this.model.level.list) {
+                                    _this.model.level.names = [];
                                     try {
-                                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                                        for (var _b = __values(_this.model.level.list), _c = _b.next(); !_c.done; _c = _b.next()) {
+                                            var level = _c.value;
+                                            _this.model.level.names.push(level.name);
+                                        }
                                     }
-                                    finally { if (e_12) throw e_12.error; }
+                                    catch (e_12_1) { e_12 = { error: e_12_1 }; }
+                                    finally {
+                                        try {
+                                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                                        }
+                                        finally { if (e_12) throw e_12.error; }
+                                    }
+                                    var lvl = null;
+                                    if (active) {
+                                        lvl = _this.setLevelByID(active.id);
+                                    }
+                                    if (!lvl && _this.model.level.list.length > 0) {
+                                        _this.setLevel(_this.model.level.list[0]);
+                                    }
                                 }
-                                var lvl = null;
-                                if (active) {
-                                    lvl = _this.setLevelByID(active.id);
+                                if (_this.model.found_user) {
+                                    _this.focusUser(_this.model.found_user);
                                 }
-                                if (!lvl && _this.model.level.list.length > 0) {
-                                    _this.setLevel(_this.model.level.list[0]);
-                                }
-                            }
-                            if (_this.model.found_user) {
-                                _this.focusUser(_this.model.found_user);
-                            }
-                            _this.update();
+                                _this.update();
+                            });
                         }
                     }));
                     this.init();

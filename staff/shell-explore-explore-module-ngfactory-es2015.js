@@ -1816,32 +1816,35 @@ class ExploreComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_
         this.service.set('APP.swipe_disabled', true);
         this.subscription('building', this.service.Buildings.listen((bld) => {
             if (bld) {
-                const active = this.model.level ? this.model.level.active : null;
-                this.model.level = {};
-                this.model.system = bld.systems.desks;
-                this.model.focus_user = null;
-                this.model.found_room = null;
-                this.model.info = null;
-                this.model.level.list = bld.levels;
-                this.model.rooms = this.service.Rooms.list();
-                this.model.room_pin = null;
-                if (this.model.level.list) {
-                    this.model.level.names = [];
-                    for (const level of this.model.level.list) {
-                        this.model.level.names.push(level.name);
+                this.timeout('set_building', () => {
+                    bld = this.service.Buildings.current();
+                    const active = this.model.level ? this.model.level.active : null;
+                    this.model.level = {};
+                    this.model.system = bld.systems.desks;
+                    this.model.focus_user = null;
+                    this.model.found_room = null;
+                    this.model.info = null;
+                    this.model.level.list = bld.levels;
+                    this.model.rooms = this.service.Rooms.list();
+                    this.model.room_pin = null;
+                    if (this.model.level.list) {
+                        this.model.level.names = [];
+                        for (const level of this.model.level.list) {
+                            this.model.level.names.push(level.name);
+                        }
+                        let lvl = null;
+                        if (active) {
+                            lvl = this.setLevelByID(active.id);
+                        }
+                        if (!lvl && this.model.level.list.length > 0) {
+                            this.setLevel(this.model.level.list[0]);
+                        }
                     }
-                    let lvl = null;
-                    if (active) {
-                        lvl = this.setLevelByID(active.id);
+                    if (this.model.found_user) {
+                        this.focusUser(this.model.found_user);
                     }
-                    if (!lvl && this.model.level.list.length > 0) {
-                        this.setLevel(this.model.level.list[0]);
-                    }
-                }
-                if (this.model.found_user) {
-                    this.focusUser(this.model.found_user);
-                }
-                this.update();
+                    this.update();
+                });
             }
         }));
         this.init();
