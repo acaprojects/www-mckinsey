@@ -1844,6 +1844,7 @@ var __values = (this && this.__values) || function (o) {
                         .subscribe(function (results) {
                         _this.available_spaces = results;
                         _this.shown_spaces = _this.filter(results);
+                        _this.shown_spaces.sort(function (a, b) { return _this.sort(a, b); });
                         _this.loading = false;
                     }));
                     this.subscription('building', this._service.Buildings.listen(function (bld) {
@@ -2010,6 +2011,44 @@ var __values = (this && this.__values) || function (o) {
                             this.filter$.next(this.date + "|" + this.duration);
                         }
                     }
+                };
+                /**
+                 * Determine the sort order of the two given itemss
+                 * @param space_a
+                 * @param space_b
+                 */
+                BookingMainFlowFindSpaceComponent.prototype.sort = function (space_a, space_b) {
+                    var e_5, _a;
+                    var bld = this._service.Buildings.get(space_a.level.bld_id);
+                    var bld_b = this._service.Buildings.get(space_a.level.bld_id);
+                    if (bld && bld !== bld_b) {
+                        return (bld.name || '').localeCompare(bld_b.name || '');
+                    }
+                    var sort_order = (bld.sort_order ? __spread(bld.sort_order) : []).reverse();
+                    try {
+                        for (var sort_order_1 = __values(sort_order), sort_order_1_1 = sort_order_1.next(); !sort_order_1_1.done; sort_order_1_1 = sort_order_1.next()) {
+                            var zone_id = sort_order_1_1.value;
+                            if (zone_id === '*') {
+                                continue;
+                            }
+                            var a_has_zone = space_a.zones.indexOf(zone_id) >= 0;
+                            var b_has_zone = space_b.zones.indexOf(zone_id) >= 0;
+                            if (a_has_zone && !b_has_zone) {
+                                return 1;
+                            }
+                            else if (b_has_zone && !a_has_zone) {
+                                return -1;
+                            }
+                        }
+                    }
+                    catch (e_5_1) { e_5 = { error: e_5_1 }; }
+                    finally {
+                        try {
+                            if (sort_order_1_1 && !sort_order_1_1.done && (_a = sort_order_1.return)) _a.call(sort_order_1);
+                        }
+                        finally { if (e_5) throw e_5.error; }
+                    }
+                    return (space_a.name || '').localeCompare(space_b.name || '');
                 };
                 return BookingMainFlowFindSpaceComponent;
             }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_4__["BaseComponent"]));
@@ -2866,7 +2905,7 @@ var __values = (this && this.__values) || function (o) {
                  * Get list of users available to select as the meeting host
                  */
                 BookingMainFlowComponent.prototype.getHostOptions = function () {
-                    var e_5, _a;
+                    var e_6, _a;
                     var _this = this;
                     var user = this._service.Users.current();
                     var list = [user];
@@ -2895,12 +2934,12 @@ var __values = (this && this.__values) || function (o) {
                                 _loop_2(email);
                             }
                         }
-                        catch (e_5_1) { e_5 = { error: e_5_1 }; }
+                        catch (e_6_1) { e_6 = { error: e_6_1 }; }
                         finally {
                             try {
                                 if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
                             }
-                            finally { if (e_5) throw e_5.error; }
+                            finally { if (e_6) throw e_6.error; }
                         }
                     }
                     return list;
