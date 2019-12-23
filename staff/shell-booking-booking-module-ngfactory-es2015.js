@@ -1645,6 +1645,7 @@ class BookingMainFlowFindSpaceComponent extends _shared_globals_base_component__
             .subscribe((results) => {
             this.available_spaces = results;
             this.shown_spaces = this.filter(results);
+            this.shown_spaces.sort((a, b) => this.sort(a, b));
             this.loading = false;
         }));
         this.subscription('building', this._service.Buildings.listen((bld) => {
@@ -1786,6 +1787,33 @@ class BookingMainFlowFindSpaceComponent extends _shared_globals_base_component__
                 this.filter$.next(`${this.date}|${this.duration}`);
             }
         }
+    }
+    /**
+     * Determine the sort order of the two given itemss
+     * @param space_a
+     * @param space_b
+     */
+    sort(space_a, space_b) {
+        const bld = this._service.Buildings.get(space_a.level.bld_id);
+        const bld_b = this._service.Buildings.get(space_a.level.bld_id);
+        if (bld && bld !== bld_b) {
+            return (bld.name || '').localeCompare(bld_b.name || '');
+        }
+        const sort_order = (bld.sort_order ? [...bld.sort_order] : []).reverse();
+        for (const zone_id of sort_order) {
+            if (zone_id === '*') {
+                continue;
+            }
+            const a_has_zone = space_a.zones.indexOf(zone_id) >= 0;
+            const b_has_zone = space_b.zones.indexOf(zone_id) >= 0;
+            if (a_has_zone && !b_has_zone) {
+                return 1;
+            }
+            else if (b_has_zone && !a_has_zone) {
+                return -1;
+            }
+        }
+        return (space_a.name || '').localeCompare(space_b.name || '');
     }
 }
 

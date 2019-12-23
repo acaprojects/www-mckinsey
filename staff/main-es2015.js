@@ -9514,7 +9514,8 @@ class BuildingsService {
                             visitor_space: info.visitor_space,
                             catering_restricted_from: info.catering_restricted_from || 0,
                             reception_email: info.reception_email || bld.settings.reception_email,
-                            currency: info.currency
+                            currency: info.currency,
+                            sort_order: info.sort_order
                         };
                         Object.defineProperty(this.data[bld.id], 'orgs', {
                             get: () => {
@@ -19313,7 +19314,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576818984000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577068655000);
 
 
 /***/ }),
