@@ -2103,15 +2103,15 @@ var BookingModalComponent = /** @class */ (function (_super) {
         var time = (this.form_fields.find(function (i) { return i.key === 'start'; }) || empty);
         var duration = (this.form_fields.find(function (i) { return i.key === 'duration'; }) || empty);
         var all_day = (this.form_fields.find(function (i) { return i.key === 'all_day'; }) || empty);
-        time.setDisabled(this.duration > 450);
+        time.setDisabled(this.duration > 720);
         this.subs.obs.all_day = all_day.control.valueChanges.subscribe(function (state) {
             if (!state && _this.duration === 60 * 24) {
                 _this.duration = 60;
             }
-            time.setDisabled(_this.duration > 450 || state);
+            time.setDisabled(_this.duration > 720 || state);
         });
         this.subs.obs.duration = duration.control.valueChanges.subscribe(function (duration) {
-            time.setDisabled(duration > 450);
+            time.setDisabled(duration > 720);
         });
         this.id = id ? '10' : '';
     };
@@ -3043,7 +3043,7 @@ var BookingFlowFindSpaceComponent = /** @class */ (function (_super) {
             if (this.catering) {
                 date = dayjs__WEBPACK_IMPORTED_MODULE_6__(date).subtract(15, 'm').valueOf();
             }
-            if (this.duration > 480 || this.all_day) {
+            if (this.duration > 720 || this.all_day) {
                 date = dayjs__WEBPACK_IMPORTED_MODULE_6__(date).startOf('d').valueOf();
             }
             return date;
@@ -4626,7 +4626,7 @@ var CateringModalComponent = /** @class */ (function (_super) {
         if (room) {
             room.setValue(booking.room_list || [booking.room]);
         }
-        time.setDisabled(this.duration > 450);
+        time.setDisabled(this.duration > 720);
         this.id = id ? '10' : '';
         console.log('Booking:', booking);
         console.log('Form:', this.formToBooking());
@@ -7118,7 +7118,7 @@ var TimePeriodModalComponent = /** @class */ (function (_super) {
         this.model.display = {};
         this.model.focus = {};
         this.model.min_duration = this.service.Settings.get('app.booking.min_length') || 30;
-        this.model.max_duration = this.service.Settings.get('app.booking.max_length') || 480;
+        this.model.max_duration = this.service.Settings.get('app.booking.max_length') || 720;
         if (!this.model.duration) {
             this.model.duration = 60;
         }
@@ -9726,7 +9726,7 @@ var BookingsService = /** @class */ (function (_super) {
         if (!form.room) {
             form.room = {};
         }
-        if (form.duration > 480 || form.all_day) {
+        if (form.duration > 720 || form.all_day) {
             form.date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('d').valueOf();
         }
         var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('m');
@@ -15784,7 +15784,7 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
             index: 0
         };
         var date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp);
-        var max_duration = this.max_length || Math.min(480, (this.field.metadata ? this.field.metadata.max_duration || 480 : 480));
+        var max_duration = this.max_length || Math.min(720, (this.field.metadata ? this.field.metadata.max_duration || 720 : 720));
         var end = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).add(Math.max(30, max_duration) + 15, 'm');
         date.add(10, 'm');
         var dur = 10;
@@ -21566,7 +21566,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1576642622000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577070389000);
 
 
 /***/ }),
@@ -24049,16 +24049,16 @@ function validateStartTime(control, date, is_from) {
 }
 function buildValidateDuration(min, max) {
     if (min === void 0) { min = 10; }
-    if (max === void 0) { max = 480; }
+    if (max === void 0) { max = 720; }
     return function (c) { return validateDuration(c, min, max); };
 }
 function validateDuration(control, min, max) {
     if (min === void 0) { min = 10; }
-    if (max === void 0) { max = 480; }
+    if (max === void 0) { max = 720; }
     if (control.value < (min || 30)) {
         return { duration: HAS_ERROR, message: "Minimum booking duration is " + min + " minute" + (min === 1 ? 's' : '') };
     }
-    else if (control.value > (max || 480)) {
+    else if (control.value > (max || 720)) {
         return { length: HAS_ERROR, message: "Maximum booking duration is " + max + " minute" + (max === 1 ? 's' : '') };
     }
     return null;
