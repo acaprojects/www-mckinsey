@@ -3092,7 +3092,7 @@ class ExploreBookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMP
                 type: 'custom',
                 content: _shared_globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__["CUSTOM_FIELD_REGISTER"].duration,
                 value: Math.min(60, this.max_duration),
-                metadata: { max_duration: Math.min(480, this.max_duration) },
+                metadata: { max_duration: Math.min(720, this.max_duration) },
                 required: true
             }];
         this.form_fields = fields.map(i => new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"](i));
@@ -8889,7 +8889,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (!form.room) {
             form.room = {};
         }
-        if (form.duration > 480 && form.all_day) {
+        if (form.duration > 720 && form.all_day) {
             form.date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date)
                 .startOf('d')
                 .valueOf();
@@ -12410,12 +12410,12 @@ class FormValidators {
             return null;
         };
     }
-    static duration(min = 10, max = 480) {
+    static duration(min = 10, max = 720) {
         return (control) => {
             if (control.value < (min || 30)) {
                 return { duration: true, message: `Minimum booking duration is ${min} minute${min === 1 ? 's' : ''}` };
             }
-            else if (control.value > (max || 480)) {
+            else if (control.value > (max || 720)) {
                 return { length: true, message: `Maximum booking duration is ${max} minute${max === 1 ? 's' : ''}` };
             }
             return null;
@@ -13358,7 +13358,7 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
             index: 0
         };
         const date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp);
-        const max_duration = Math.min(480, this.max_length || (this.field.metadata ? this.field.metadata.max_duration || 480 : 480));
+        const max_duration = Math.min(720, this.max_length || (this.field.metadata ? this.field.metadata.max_duration || 720 : 720));
         const end = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).add(Math.max(30, max_duration) + 15, 'm');
         let dur;
         if (this.min_length <= 10) {
@@ -13377,7 +13377,7 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
             dur += 15;
         }
         // Add week duration option
-        if (max_duration > 450) {
+        if (max_duration > 690) {
             const date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).startOf('d').add(4, 'd');
             if ((this.field.control.value || 30) === 1 * 5 * 24 * 60) {
                 duration.index = duration.values.length;
@@ -13435,7 +13435,7 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
                 this.checkRules({ user: host, space: spaces, time: date.valueOf() });
             }
             if (this.max_length === 999999) {
-                this.max_length = 0;
+                this.max_length = 720;
             }
             this.updateDisplay();
         }
@@ -19314,7 +19314,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577068655000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577069071000);
 
 
 /***/ }),
@@ -21670,7 +21670,7 @@ function validateDuration(control, min, max) {
     if (control.value < (min || 10)) {
         return { duration: HAS_ERROR, message: `Minimum booking duration is ${min} minute${min === 1 ? 's' : ''}` };
     }
-    else if (control.value > (max || 480)) {
+    else if (control.value > (max || 720)) {
         return { length: HAS_ERROR, message: `Maximum booking duration is ${max} minute${max === 1 ? 's' : ''}` };
     }
     return null;
@@ -22242,7 +22242,7 @@ function View_BookingDetailsModalComponent_6(_l) { return _angular_core__WEBPACK
     } if (("touchrelease" === en)) {
         var pd_4 = ((_co.show_spaces = !_co.show_spaces) !== false);
         ad = (pd_4 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](29, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](30, null, [" Space", "(", ") "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](31, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](32, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](33, 0, null, null, 4, "div", [["class", "value"]], [[24, "@show", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](35, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](37, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](39, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_14)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](41, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_18)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](43, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_11 = _co.attendees; _ck(_v, 24, 0, currVal_11); var currVal_12 = _co.conferencing; _ck(_v, 26, 0, currVal_12); var currVal_18 = _co.spaces; _ck(_v, 35, 0, currVal_18); var currVal_19 = (!_co.spaces || (_co.spaces.length <= 0)); _ck(_v, 37, 0, currVal_19); var currVal_20 = _co.notes; _ck(_v, 39, 0, currVal_20); var currVal_21 = _co.catering; _ck(_v, 41, 0, currVal_21); var currVal_22 = _co.cost_codes; _ck(_v, 43, 0, currVal_22); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = "host"; _ck(_v, 1, 0, currVal_0); var currVal_1 = _co.host.name; _ck(_v, 5, 0, currVal_1); var currVal_2 = "date"; _ck(_v, 6, 0, currVal_2); var currVal_3 = _co.date; _ck(_v, 10, 0, currVal_3); var currVal_4 = "period"; _ck(_v, 11, 0, currVal_4); var currVal_5 = (_co.all_day ? "All Day" : ((_co.duration > 480) ? "1 week" : _co.period)); _ck(_v, 15, 0, currVal_5); var currVal_6 = "attendees"; _ck(_v, 16, 0, currVal_6); var currVal_7 = ((_co.attendees.length === 1) ? "" : "s"); var currVal_8 = (_co.attendees.length || "0"); _ck(_v, 19, 0, currVal_7, currVal_8); var currVal_9 = (_co.show_attendees ? "keyboard_arrow_up" : "keyboard_arrow_down"); _ck(_v, 21, 0, currVal_9); var currVal_10 = (_co.show_attendees ? "show" : "hide"); _ck(_v, 22, 0, currVal_10); var currVal_13 = "rooms"; _ck(_v, 27, 0, currVal_13); var currVal_14 = ((_co.spaces.length === 1) ? "" : "s"); var currVal_15 = (_co.spaces.length || "0"); _ck(_v, 30, 0, currVal_14, currVal_15); var currVal_16 = (_co.show_spaces ? "keyboard_arrow_up" : "keyboard_arrow_down"); _ck(_v, 32, 0, currVal_16); var currVal_17 = (_co.show_spaces ? "show" : "hide"); _ck(_v, 33, 0, currVal_17); }); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](29, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](30, null, [" Space", "(", ") "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](31, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](32, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](33, 0, null, null, 4, "div", [["class", "value"]], [[24, "@show", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](35, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](37, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](39, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_14)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](41, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_18)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](43, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_11 = _co.attendees; _ck(_v, 24, 0, currVal_11); var currVal_12 = _co.conferencing; _ck(_v, 26, 0, currVal_12); var currVal_18 = _co.spaces; _ck(_v, 35, 0, currVal_18); var currVal_19 = (!_co.spaces || (_co.spaces.length <= 0)); _ck(_v, 37, 0, currVal_19); var currVal_20 = _co.notes; _ck(_v, 39, 0, currVal_20); var currVal_21 = _co.catering; _ck(_v, 41, 0, currVal_21); var currVal_22 = _co.cost_codes; _ck(_v, 43, 0, currVal_22); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = "host"; _ck(_v, 1, 0, currVal_0); var currVal_1 = _co.host.name; _ck(_v, 5, 0, currVal_1); var currVal_2 = "date"; _ck(_v, 6, 0, currVal_2); var currVal_3 = _co.date; _ck(_v, 10, 0, currVal_3); var currVal_4 = "period"; _ck(_v, 11, 0, currVal_4); var currVal_5 = (_co.all_day ? "All Day" : ((_co.duration > 720) ? "1 week" : _co.period)); _ck(_v, 15, 0, currVal_5); var currVal_6 = "attendees"; _ck(_v, 16, 0, currVal_6); var currVal_7 = ((_co.attendees.length === 1) ? "" : "s"); var currVal_8 = (_co.attendees.length || "0"); _ck(_v, 19, 0, currVal_7, currVal_8); var currVal_9 = (_co.show_attendees ? "keyboard_arrow_up" : "keyboard_arrow_down"); _ck(_v, 21, 0, currVal_9); var currVal_10 = (_co.show_attendees ? "show" : "hide"); _ck(_v, 22, 0, currVal_10); var currVal_13 = "rooms"; _ck(_v, 27, 0, currVal_13); var currVal_14 = ((_co.spaces.length === 1) ? "" : "s"); var currVal_15 = (_co.spaces.length || "0"); _ck(_v, 30, 0, currVal_14, currVal_15); var currVal_16 = (_co.show_spaces ? "keyboard_arrow_up" : "keyboard_arrow_down"); _ck(_v, 32, 0, currVal_16); var currVal_17 = (_co.show_spaces ? "show" : "hide"); _ck(_v, 33, 0, currVal_17); }); }
 function View_BookingDetailsModalComponent_20(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
         var pd_0 = (_co.makeBooking() !== false);
         ad = (pd_0 && ad);
