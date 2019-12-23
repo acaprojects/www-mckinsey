@@ -1865,7 +1865,7 @@ var __values = (this && this.__values) || function (o) {
                         if (this.catering) {
                             date = dayjs__WEBPACK_IMPORTED_MODULE_7__(date).subtract(15, 'm').valueOf();
                         }
-                        if (this.duration > 480 || this.all_day) {
+                        if (this.duration > 720 || this.all_day) {
                             date = dayjs__WEBPACK_IMPORTED_MODULE_7__(date).startOf('d').valueOf();
                         }
                         return date;
