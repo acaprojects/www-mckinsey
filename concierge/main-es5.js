@@ -17133,7 +17133,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _utilities_validation_utilities__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../utilities/validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -17147,7 +17146,6 @@ var __extends = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-
 
 
 
@@ -17187,7 +17185,7 @@ var CustomTimeFieldComponent = /** @class */ (function (_super) {
         if (this.group) {
             if (this.group.controls.date) {
                 this.subscription('date', this.group.controls.date.valueChanges.subscribe(function (date) {
-                    var validators = [Object(_utilities_validation_utilities__WEBPACK_IMPORTED_MODULE_8__["buildValidateStartTime"])(date)];
+                    var validators = [];
                     if (_this.field.required) {
                         validators.push(_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required);
                     }
@@ -21566,7 +21564,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577071601000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577685261000);
 
 
 /***/ }),
@@ -23735,7 +23733,7 @@ function stringToMinutes(str) {
 function generateBookingFormMetadata(booking, field_data, service) {
     field_data = field_data.map(function (i) { return (__assign({}, i, { children: i.children ? i.children.map(function (i) { return (__assign({}, i)); }) : [] })); });
     var validators = {
-        date: [_validation_utilities__WEBPACK_IMPORTED_MODULE_2__["validateDate"]],
+        // date: [validateDate],
         attendees: [Object(_validation_utilities__WEBPACK_IMPORTED_MODULE_2__["buildValidateAttendees"])(booking.organiser, service.Settings.get('min_attendees'))],
         terms: [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].requiredTrue]
     };
