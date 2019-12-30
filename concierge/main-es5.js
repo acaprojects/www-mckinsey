@@ -1457,13 +1457,6 @@ var BookingDetailsComponent = /** @class */ (function (_super) {
         var room_ids = this.spaces.map(function (i) { return i.id; }).join(',');
         var date = this.form.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_2__(this.form.date).startOf('d').valueOf() : this.form.date;
         var duration = this.form.all_day ? 24 * 60 : this.form.duration || 60;
-        var now = this.form.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('d') : dayjs__WEBPACK_IMPORTED_MODULE_2__();
-        var time = dayjs__WEBPACK_IMPORTED_MODULE_2__(date);
-        if (this.can_edit && time.isBefore(now, 'm') && now.diff(time, 'm') > 5) {
-            this._service.error('Booking date and time need to be in future');
-            this.event.emit(false);
-            return;
-        }
         this.check = true;
         this.loading = true;
         if (room_ids) {
@@ -21564,7 +21557,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577690094000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577749268000);
 
 
 /***/ }),

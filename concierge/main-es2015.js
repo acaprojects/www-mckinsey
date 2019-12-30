@@ -1303,13 +1303,6 @@ class BookingDetailsComponent extends _shared_globals_base_component__WEBPACK_IM
         const room_ids = this.spaces.map(i => i.id).join(',');
         const date = this.form.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_2__(this.form.date).startOf('d').valueOf() : this.form.date;
         const duration = this.form.all_day ? 24 * 60 : this.form.duration || 60;
-        const now = this.form.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('d') : dayjs__WEBPACK_IMPORTED_MODULE_2__();
-        const time = dayjs__WEBPACK_IMPORTED_MODULE_2__(date);
-        if (this.can_edit && time.isBefore(now, 'm') && now.diff(time, 'm') > 5) {
-            this._service.error('Booking date and time need to be in future');
-            this.event.emit(false);
-            return;
-        }
         this.check = true;
         this.loading = true;
         if (room_ids) {
@@ -17984,7 +17977,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577690094000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577749268000);
 
 
 /***/ }),
