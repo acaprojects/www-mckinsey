@@ -174,6 +174,10 @@ var DayViewApprovalsViewComponent = /** @class */ (function (_super) {
             // this.interval('update_meetings', () => this.updateMeetings(), 60 * 1000);
             this.processMeetings();
             this.interval('process_meetings', function () { return _this.processMeetings(); }, 1 * 1000);
+            if (!dayjs__WEBPACK_IMPORTED_MODULE_3__(changes.date.previousValue).isSame(dayjs__WEBPACK_IMPORTED_MODULE_3__(changes.date.currentValue), 'M')) {
+                this.getMonthlyPending();
+                this.interval('monthly_pending', function () { return _this.getMonthlyPending(); }, 10 * 60 * 1000);
+            }
         }
     };
     /**
