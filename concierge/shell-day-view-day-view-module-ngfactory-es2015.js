@@ -143,6 +143,10 @@ class DayViewApprovalsViewComponent extends _shared_globals_base_component__WEBP
             // this.interval('update_meetings', () => this.updateMeetings(), 60 * 1000);
             this.processMeetings();
             this.interval('process_meetings', () => this.processMeetings(), 1 * 1000);
+            if (!dayjs__WEBPACK_IMPORTED_MODULE_3__(changes.date.previousValue).isSame(dayjs__WEBPACK_IMPORTED_MODULE_3__(changes.date.currentValue), 'M')) {
+                this.getMonthlyPending();
+                this.interval('monthly_pending', () => this.getMonthlyPending(), 10 * 60 * 1000);
+            }
         }
     }
     /**
