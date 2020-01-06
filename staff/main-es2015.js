@@ -9028,8 +9028,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (item.icaluid) {
             request.icaluid = item.icaluid;
         }
-        if (item.organiser) {
-            request.organiser = item.organiser;
+        if (item.organiser || item.host || item.booked_by) {
+            request.organiser = item.organiser || item.host || item.booked_by;
         }
         if (item.notify_user) {
             request.notify_users = [item.notify_user.email];
@@ -10121,8 +10121,8 @@ class CateringMenuService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["Ba
     constructor(_composer) {
         super(_composer);
         this._composer = _composer;
-        this.model.name = 'catering-menu';
-        this.model.route = '/menu';
+        this.model.name = "catering-menu";
+        this.model.route = "/menu";
     }
     /**
      * Convert user data to local format
@@ -10134,13 +10134,24 @@ class CateringMenuService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["Ba
             name: item.name,
             zones: item.zones,
             items: this.process(item.items),
-            package: item.package === 'true' || item.package === true,
+            package: item.package === "true" || item.package === true,
             src: item.image_path
         };
+        category.order_anytime =
+            category.order_anytime ||
+                (category.items &&
+                    category.items.reduce((anytime, item) => anytime || item.order_anytime, false));
         return category;
     }
     process(list) {
-        return (list || []).map(i => (Object.assign({}, i, { items: i.items ? this.process(i.items) : null, from: i.available_from, to: i.available_to, maximum: i.maximum_quantity, minimum: i.minimum_quantity, notice: i.notify_host, package: i.package === 'true' || i.package === true, src: i.image_path })));
+        return (list || []).map(i => {
+            const item = Object.assign({}, i, { items: i.items ? this.process(i.items) : null, from: i.available_from, to: i.available_to, maximum: i.maximum_quantity, minimum: i.minimum_quantity, notice: i.notify_host, package: i.package === "true" || i.package === true, src: i.image_path, order_anytime: Math.floor(Math.random() * 999999) % 3 === 0 });
+            item.order_anytime =
+                item.order_anytime ||
+                    (item.items &&
+                        item.items.reduce((anytime, subitem) => anytime || subitem.order_anytime, false));
+            return item;
+        });
     }
 }
 CateringMenuService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function CateringMenuService_Factory() { return new CateringMenuService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: CateringMenuService, providedIn: "root" });
@@ -19314,7 +19325,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1577071281000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1578353344000);
 
 
 /***/ }),
@@ -21457,7 +21468,7 @@ function generateBookingFormMetadata(booking, field_data, service) {
         }
     }
     return field_data
-        .filter(i => (booking.id ? !i.no_edit : true))
+        // .filter(i => (booking.id ? !i.no_edit : true))
         .map(process_field)
         .map(f => new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"](f));
 }
