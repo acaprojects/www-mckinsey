@@ -8713,7 +8713,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             id: raw_item.id,
             icaluid: raw_item.icaluid,
             title: raw_item.title || raw_item.Subject || raw_item.subject,
-            date: raw_item.all_day ? start.startOf('d').valueOf() : start.valueOf(),
+            date: start.valueOf(),
             start_hours: start.hour() + start.minute() / 60,
             description: raw_item.description,
             duration: has_end ? duration || raw_item.duration : raw_item.duration,
@@ -19325,7 +19325,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1578353344000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1578357961000);
 
 
 /***/ }),
