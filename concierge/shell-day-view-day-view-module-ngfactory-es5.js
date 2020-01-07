@@ -1416,16 +1416,9 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
             var overlap = this.overlap || { index: 0, total: 1 };
             var date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.event.date).startOf('m');
             var start = date.hour() + date.minute() / 60;
-            if (this.event.all_day) {
-                this.top = 0;
-                this.height = 100;
-                this.position.emit({ top: 0, height: 100 });
-            }
-            else {
-                this.top = (start / 24) * 100;
-                this.height = this.fixed ? (this.event.duration / 60) : ((this.event.duration / 60) / 24) * 100;
-                this.position.emit({ top: this.top, height: ((this.event.duration / 60) / 24) * 100 });
-            }
+            this.top = (start / 24) * 100;
+            this.height = this.fixed ? (this.event.duration / 60) : ((this.event.duration / 60) / 24) * 100;
+            this.position.emit({ top: this.top, height: ((this.event.duration / 60) / 24) * 100 });
             this.width = Math.min(100, 100 / overlap.total + 5);
             this.left = Math.min(100 - this.width, this.width * overlap.index - 5 * overlap.index);
             this.overflow_top = (this.event.setup ? this.event.setup / this.event.duration : -.1) * 100;
