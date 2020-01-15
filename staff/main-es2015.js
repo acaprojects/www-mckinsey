@@ -10969,7 +10969,10 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_5__["BaseServi
         if (!this.promises[name]) {
             this.promises[name] = new Promise((resolve, reject) => {
                 const url = `${this.endpoint}/${email}`;
-                this.parent.Bookings.query({ start, end, email }).then((list) => {
+                this.parent.Bookings.query({
+                    start, end, email,
+                    timezone_offset: new Date().getTimezoneOffset()
+                }).then((list) => {
                     resolve(!list || list.length <= 0);
                     this.promises[name] = null;
                 }, (err) => {
@@ -17241,7 +17244,8 @@ class UserAvailabilityComponent extends _globals_base_component__WEBPACK_IMPORTE
                 this.service.Bookings.query({
                     email: user.email,
                     from: date.hours(0).minutes(0).seconds(0).unix(),
-                    to: date.hours(23).minutes(59).seconds(59).unix()
+                    to: date.hours(23).minutes(59).seconds(59).unix(),
+                    timezone_offset: new Date().getTimezoneOffset()
                 }).then((list) => {
                     if (!this.model.events) {
                         this.model.events = {};
@@ -19325,7 +19329,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579017482000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579069237000);
 
 
 /***/ }),

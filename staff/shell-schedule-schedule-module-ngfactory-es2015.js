@@ -183,7 +183,8 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             const user_list = user.delegates && user.delegates.length > 0 ? [user.email, ...user.delegates] : [user.email];
             this.service.Bookings.query({
                 email: this.user ? this.user.email : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
-                from: date.unix(), to: end.unix()
+                from: date.unix(), to: end.unix(),
+                timezone_offset: new Date().getTimezoneOffset()
             }).then((items) => {
                 this.service.Bookings.clear({ from: date.valueOf(), to: end.valueOf() });
                 this.service.Bookings.updateList(_shared_utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].unique(items, 'icaluid'));
@@ -303,7 +304,8 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             this.service.Bookings.query({
                 email: this.user ? this.user.email : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
                 from,
-                to: end.unix()
+                to: end.unix(),
+                timezone_offset: new Date().getTimezoneOffset()
             }).then((list) => {
                 this.service.Bookings.clear({ from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(), to: end.valueOf() });
                 this.service.Bookings.updateList(list);
