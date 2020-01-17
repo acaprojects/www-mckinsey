@@ -4636,13 +4636,13 @@ class MeetingDetailsDisplayComponent extends _shared_globals_base_component__WEB
     get start() {
         const booking = this.booking || {};
         const date = dayjs__WEBPACK_IMPORTED_MODULE_1__(booking.date);
-        return (booking.all_day ? date.startOf('d') : date).format('DD MMM YYYY, h:mm A');
+        return date.format('DD MMM YYYY, h:mm A');
     }
     /** Display date for the booking */
     get end() {
         const booking = this.booking || {};
         const date = dayjs__WEBPACK_IMPORTED_MODULE_1__(booking.date).add(booking.duration, 'm');
-        return (booking.all_day ? date.startOf('d') : date).format('DD MMM YYYY, h:mm A');
+        return date.format('DD MMM YYYY, h:mm A');
     }
     /** Display string for the booking duration */
     get duration() {
@@ -8083,7 +8083,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             local_id: `${Math.floor(Math.random() * 999999999)}`,
             icaluid: raw_item.icaluid,
             title: raw_item.title || raw_item.Subject || raw_item.subject,
-            date: raw_item.all_day ? start.hours(6).minutes(30).valueOf() : start.valueOf(),
+            date: start.valueOf(),
             start_hours: start.hours() + start.minutes() / 60,
             duration: has_end ? duration || raw_item.duration : raw_item.duration,
             description: raw_item.description,
@@ -17991,7 +17991,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579230558000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579232600000);
 
 
 /***/ }),
