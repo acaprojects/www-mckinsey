@@ -5107,6 +5107,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         const end = start.add(this.booking.duration, 'm');
         this.service.Bookings.delete(this.booking.id, {
             concierge: true,
+            room_id: this.booking.room.id,
             host: this.booking.organiser.email,
             icaluid: this.booking.icaluid,
             start: start.unix(),
@@ -17982,7 +17983,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579226809000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579229773000);
 
 
 /***/ }),
