@@ -9819,26 +9819,37 @@ var BookingsService = /** @class */ (function (_super) {
         if (item.description) {
             request.notes.push({ type: 'description', message: item.description, author: user.name, date: now.valueOf() });
         }
+        console.log('Notes:', request.notes);
         if (item.equipment) {
+            var _loop_1 = function (rm_id) {
+                if (!request.notes.find(function (note) { return note.space === rm_id && item.equipment[rm_id] === note.message && note.author === user.name; })) {
+                    request.notes.push({
+                        type: 'equipment',
+                        space: rm_id,
+                        message: item.equipment[rm_id],
+                        author: user.name,
+                        date: now.valueOf()
+                    });
+                }
+            };
             for (var rm_id in item.equipment) {
-                request.notes.push({
-                    type: 'equipment',
-                    space: rm_id,
-                    message: item.equipment[rm_id],
-                    author: user.name,
-                    date: now.valueOf()
-                });
+                _loop_1(rm_id);
             }
         }
         if (item.catering_notes) {
+            var _loop_2 = function (rm_id) {
+                if (!request.notes.find(function (note) { return note.space === rm_id && item.catering_notes[rm_id] === note.message && note.author === user.name; })) {
+                    request.notes.push({
+                        type: 'catering',
+                        space: (rm_id === 'default' ? room.id : null) || rm_id,
+                        message: item.catering_notes[rm_id],
+                        author: user.name,
+                        date: now.valueOf()
+                    });
+                }
+            };
             for (var rm_id in item.catering_notes) {
-                request.notes.push({
-                    type: 'catering',
-                    space: (rm_id === 'default' ? room.id : null) || rm_id,
-                    message: item.catering_notes[rm_id],
-                    author: user.name,
-                    date: now.valueOf()
-                });
+                _loop_2(rm_id);
             }
         }
         if (item.private_notes) {
@@ -9945,7 +9956,7 @@ var BookingsService = /** @class */ (function (_super) {
     };
     BookingsService.prototype.processOverlaps = function (list) {
         var e_9, _a;
-        var _loop_1 = function (bkn) {
+        var _loop_3 = function (bkn) {
             var e_10, _a;
             var bkn_start = moment__WEBPACK_IMPORTED_MODULE_3__(bkn.date);
             var bkn_end = moment__WEBPACK_IMPORTED_MODULE_3__(bkn_start).add(bkn.duration, 'm');
@@ -9984,13 +9995,13 @@ var BookingsService = /** @class */ (function (_super) {
                 return a;
             }, []);
             if (indexes.length > 0) {
-                var _loop_2 = function (n) {
+                var _loop_4 = function (n) {
                     if (!indexes.find(function (i) { return i === n; })) {
                         index = n;
                     }
                 };
                 for (var n = 0; n < count; n++) {
-                    _loop_2(n);
+                    _loop_4(n);
                 }
             }
             bkn.overlap_count = count;
@@ -9999,7 +10010,7 @@ var BookingsService = /** @class */ (function (_super) {
         try {
             for (var list_4 = __values(list), list_4_1 = list_4.next(); !list_4_1.done; list_4_1 = list_4.next()) {
                 var bkn = list_4_1.value;
-                _loop_1(bkn);
+                _loop_3(bkn);
             }
         }
         catch (e_9_1) { e_9 = { error: e_9_1 }; }
@@ -12292,8 +12303,8 @@ var RoomsService = /** @class */ (function (_super) {
                 var bkn = bookings_5_1.value;
                 var day = moment__WEBPACK_IMPORTED_MODULE_1__(bkn.date);
                 var date_list = [day.format('DD MMM YYYY')];
-                if (bkn.duration > 24 * 60) {
-                    for (var i = 24 * 60; i < bkn.duration; i += 24 * 60) {
+                if (bkn.duration > 12 * 60) {
+                    for (var i = 12 * 60; i < bkn.duration; i += 24 * 60) {
                         day.add(1, 'd');
                         date_list.push(day.format('DD MMM YYYY'));
                     }
@@ -21557,7 +21568,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579058675000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579226809000);
 
 
 /***/ }),

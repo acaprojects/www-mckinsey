@@ -8302,26 +8302,31 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (item.description) {
             request.notes.push({ type: 'description', message: item.description, author: user.name, date: now.valueOf() });
         }
+        console.log('Notes:', request.notes);
         if (item.equipment) {
             for (const rm_id in item.equipment) {
-                request.notes.push({
-                    type: 'equipment',
-                    space: rm_id,
-                    message: item.equipment[rm_id],
-                    author: user.name,
-                    date: now.valueOf()
-                });
+                if (!request.notes.find(note => note.space === rm_id && item.equipment[rm_id] === note.message && note.author === user.name)) {
+                    request.notes.push({
+                        type: 'equipment',
+                        space: rm_id,
+                        message: item.equipment[rm_id],
+                        author: user.name,
+                        date: now.valueOf()
+                    });
+                }
             }
         }
         if (item.catering_notes) {
             for (const rm_id in item.catering_notes) {
-                request.notes.push({
-                    type: 'catering',
-                    space: (rm_id === 'default' ? room.id : null) || rm_id,
-                    message: item.catering_notes[rm_id],
-                    author: user.name,
-                    date: now.valueOf()
-                });
+                if (!request.notes.find(note => note.space === rm_id && item.catering_notes[rm_id] === note.message && note.author === user.name)) {
+                    request.notes.push({
+                        type: 'catering',
+                        space: (rm_id === 'default' ? room.id : null) || rm_id,
+                        message: item.catering_notes[rm_id],
+                        author: user.name,
+                        date: now.valueOf()
+                    });
+                }
             }
         }
         if (item.private_notes) {
@@ -10129,8 +10134,8 @@ class RoomsService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseServi
         for (const bkn of bookings) {
             const day = moment__WEBPACK_IMPORTED_MODULE_1__(bkn.date);
             const date_list = [day.format('DD MMM YYYY')];
-            if (bkn.duration > 24 * 60) {
-                for (let i = 24 * 60; i < bkn.duration; i += 24 * 60) {
+            if (bkn.duration > 12 * 60) {
+                for (let i = 12 * 60; i < bkn.duration; i += 24 * 60) {
                     day.add(1, 'd');
                     date_list.push(day.format('DD MMM YYYY'));
                 }
@@ -17977,7 +17982,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579058675000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579226809000);
 
 
 /***/ }),
