@@ -1242,6 +1242,7 @@ class DayViewSpaceEventComponent extends _shared_globals_base_component__WEBPACK
         if (this.event) {
             const overlap = this.overlap || { index: 0, total: 1 };
             const date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.event.date).startOf('m');
+            console.log('Date:', date.format('DD MMM YYYY, h:mm A'));
             const start = date.hour() + date.minute() / 60;
             this.top = (start / 24) * 100;
             this.height = this.fixed ? (this.event.duration / 60) : ((this.event.duration / 60) / 24) * 100;
