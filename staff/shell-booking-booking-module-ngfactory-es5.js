@@ -11,16 +11,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
-    if (m) return m.call(o);
-    return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-};
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;
@@ -41,7 +31,47 @@ var __spread = (this && this.__spread) || function () {
     for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
     return ar;
 };
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-booking-booking-module-ngfactory"], {
+        /***/ "./src/app/services/data/catering/catering.utilities.ts": 
+        /*!**************************************************************!*\
+          !*** ./src/app/services/data/catering/catering.utilities.ts ***!
+          \**************************************************************/
+        /*! exports provided: generateCateringOrderFormFields */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateCateringOrderFormFields", function () { return generateCateringOrderFormFields; });
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_1__);
+            function generateCateringOrderFormFields(order) {
+                var form = new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormGroup"]({
+                    items: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.items && order.items.length ? __spread(order.items) : [], [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
+                    delivery_time: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.delivery_time || dayjs__WEBPACK_IMPORTED_MODULE_1__().startOf('m').valueOf(), [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
+                    location_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.location_id || '', [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
+                    charge_code: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.charge_code || '', [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
+                    notes: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.notes || ''),
+                });
+                var _loop_1 = function (key) {
+                    form.controls[key].valueChanges.subscribe(function (value) { return order.storePendingChanges(key, value); });
+                };
+                for (var key in form.controls) {
+                    _loop_1(key);
+                }
+                return form;
+            }
+            /***/ 
+        }),
         /***/ "./src/app/shell/booking/booking.component.ngfactory.js": 
         /*!**************************************************************!*\
           !*** ./src/app/shell/booking/booking.component.ngfactory.js ***!
@@ -178,6 +208,8 @@ var __spread = (this && this.__spread) || function () {
             /* harmony import */ var _overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./overlays/catering-details/catering-details.component */ "./src/app/shell/booking/overlays/catering-details/catering-details.component.ts");
             /* harmony import */ var _overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./overlays/equipment-details/equipment-details.component */ "./src/app/shell/booking/overlays/equipment-details/equipment-details.component.ts");
             /* harmony import */ var _overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./overlays/booking-details/booking-details.component */ "./src/app/shell/booking/overlays/booking-details/booking-details.component.ts");
+            /* harmony import */ var _main_flow_catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./main-flow/catering/order-list/order-list.component */ "./src/app/shell/booking/main-flow/catering/order-list/order-list.component.ts");
+            /* harmony import */ var _main_flow_catering_order_list_item_item_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./main-flow/catering/order-list/item/item.component */ "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ts");
             var COMPONENTS = [
                 _booking_component__WEBPACK_IMPORTED_MODULE_1__["BookingComponent"],
                 _main_flow_main_flow_component__WEBPACK_IMPORTED_MODULE_2__["BookingMainFlowComponent"],
@@ -188,7 +220,9 @@ var __spread = (this && this.__spread) || function () {
                 _main_flow_catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_7__["BookingMainFlowCateringOrderComponent"],
                 _main_flow_catering_category_list_category_list_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringCategoryListComponent"],
                 _main_flow_catering_item_list_item_list_component__WEBPACK_IMPORTED_MODULE_9__["BookingMainFlowCateringItemListComponent"],
-                _main_flow_catering_item_list_list_item_list_item_component__WEBPACK_IMPORTED_MODULE_10__["BookingMainFlowCateringListItemComponent"]
+                _main_flow_catering_item_list_list_item_list_item_component__WEBPACK_IMPORTED_MODULE_10__["BookingMainFlowCateringListItemComponent"],
+                _main_flow_catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_14__["CateringOrderListComponent"],
+                _main_flow_catering_order_list_item_item_component__WEBPACK_IMPORTED_MODULE_15__["BookingCateringOrderItemComponent"]
             ];
             var BOOKING_ENTRY_COMPONENTS = [
                 _overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_12__["BookingEquipmentDetailsModalComponent"],
@@ -336,7 +370,7 @@ var __spread = (this && this.__spread) || function () {
              */
             var styles_BookingMainFlowCateringOrderComponent = [_catering_order_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
             var RenderType_BookingMainFlowCateringOrderComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_BookingMainFlowCateringOrderComponent, data: {} });
-            function View_BookingMainFlowCateringOrderComponent_2(_l) {
+            function View_BookingMainFlowCateringOrderComponent_1(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 19, "div", [["class", "item"]], [[1, "cant-order", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 5, "div", [["class", "item-details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "name"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "div", [["class", "cost"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](5, null, [" ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](6, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 12, "div", [["class", "amount"], ["title", "Ctrl + Click to add/remove 10\nShift + Click to add/remove 100"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 4, "div", [["class", "icon less"], ["click-responder", ""]], [[2, "disabled", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
@@ -393,12 +427,11 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_5 && ad);
                         }
                         return ad;
-                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_ClickResponderComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_ClickResponderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ClickResponderComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, 0, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["add"]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.exclude && _co.exclude[_v.parent.context.$implicit.room_id]) && !_v.context.$implicit.order_anytime); _ck(_v, 0, 0, currVal_0); var currVal_1 = _v.context.$implicit.name; _ck(_v, 3, 0, currVal_1); var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 5, 0, _ck(_v, 6, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent.parent, 0), ((_v.context.$implicit.amount * _v.context.$implicit.price) / 100), _v.parent.context.$implicit.symbol)); _ck(_v, 5, 0, currVal_2); var currVal_3 = (!_v.context.$implicit.amount || (_v.context.$implicit.amount < 1)); _ck(_v, 8, 0, currVal_3); var currVal_4 = _v.context.$implicit.amount; _ck(_v, 14, 0, currVal_4); var currVal_5 = (_v.context.$implicit.amount >= (_v.context.$implicit.maximum || 100)); _ck(_v, 15, 0, currVal_5); });
+                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_ClickResponderComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_ClickResponderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ClickResponderComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, 0, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["add"]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.exclude && _co.exclude[_co.order.location_id]) && !_v.context.$implicit.order_anytime); _ck(_v, 0, 0, currVal_0); var currVal_1 = _v.context.$implicit.name; _ck(_v, 3, 0, currVal_1); var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 5, 0, _ck(_v, 6, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 0), ((_v.context.$implicit.amount * _v.context.$implicit.unit_price) / 100), _co.symbol)); _ck(_v, 5, 0, currVal_2); var currVal_3 = (!_v.context.$implicit.amount || (_v.context.$implicit.amount < 1)); _ck(_v, 8, 0, currVal_3); var currVal_4 = _v.context.$implicit.amount; _ck(_v, 14, 0, currVal_4); var currVal_5 = (_v.context.$implicit.amount >= (_v.context.$implicit.maximum || 100)); _ck(_v, 15, 0, currVal_5); });
             }
-            function View_BookingMainFlowCateringOrderComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 11, "div", [["class", "rooms"]], [[1, "space-id", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "div", [["class", "name"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Deliver to:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringOrderComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 4, "div", [["class", "total"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Total:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](10, null, [" ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](11, 2)], function (_ck, _v) { var currVal_2 = (_v.context.$implicit.items || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵEMPTY_ARRAY"]); _ck(_v, 6, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = _v.context.$implicit.room_id; _ck(_v, 0, 0, currVal_0); var currVal_1 = (_v.context.$implicit.name || "Mystery Room"); _ck(_v, 4, 0, currVal_1); var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 10, 0, _ck(_v, 11, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 0), ((_v.context.$implicit.total / 100) || 0), _v.context.$implicit.symbol)); _ck(_v, 10, 0, currVal_3); }); }
-            function View_BookingMainFlowCateringOrderComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "info"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" *Orders are subject to a "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["48 hour limit"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" for cancellation ahead of a meeting\n"]))], null, null); }
+            function View_BookingMainFlowCateringOrderComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "info"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" *Orders are subject to a "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["48 hour limit"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" for cancellation ahead of a meeting\n"]))], null, null); }
             function View_BookingMainFlowCateringOrderComponent_0(_l) {
-                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["CurrencyPipe"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["LOCALE_ID"]]), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "div", [["class", "details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Order List"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [["class", "count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](5, null, [" ", " item", " selected "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 2, "div", [["class", "contents"]], [[2, "show", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringOrderComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringOrderComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 3, "div", [["class", "option"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) {
+                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["CurrencyPipe"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["LOCALE_ID"]]), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "div", [["class", "details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Order Details"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [["class", "count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](5, null, ["", " item", " selected"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 8, "div", [["class", "contents"]], [[2, "show", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 7, "div", [["class", "rooms"]], [[1, "space-id", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringOrderComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 4, "div", [["class", "total"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Total:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](13, null, [" ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](14, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringOrderComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 3, "div", [["class", "option"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
                         if (("tapped" === en)) {
@@ -406,10 +439,10 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Add to booking & continue"]))], function (_ck, _v) { var _co = _v.component; var currVal_3 = _co.order_list; _ck(_v, 8, 0, currVal_3); var currVal_4 = _co.show; _ck(_v, 10, 0, currVal_4); var currVal_5 = !_co.valid; _ck(_v, 13, 0, currVal_5); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.count || "0"); var currVal_1 = ((_co.count === 1) ? "" : "s"); _ck(_v, 5, 0, currVal_0, currVal_1); var currVal_2 = _co.show; _ck(_v, 6, 0, currVal_2); });
+                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Save order"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = (((_co.items == null) ? null : _co.items.value) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵEMPTY_ARRAY"]); _ck(_v, 9, 0, currVal_4); var currVal_6 = _co.show; _ck(_v, 16, 0, currVal_6); var currVal_7 = !_co.valid; _ck(_v, 19, 0, currVal_7); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.count || "0"); var currVal_1 = ((_co.count === 1) ? "" : "s"); _ck(_v, 5, 0, currVal_0, currVal_1); var currVal_2 = _co.show; _ck(_v, 6, 0, currVal_2); var currVal_3 = _co.order.location_id; _ck(_v, 7, 0, currVal_3); var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 13, 0, _ck(_v, 14, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 0), ((_co.total / 100) || 0), _co.symbol)); _ck(_v, 13, 0, currVal_5); });
             }
             function View_BookingMainFlowCateringOrderComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-order", [], null, null, null, View_BookingMainFlowCateringOrderComponent_0, RenderType_BookingMainFlowCateringOrderComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _catering_order_component__WEBPACK_IMPORTED_MODULE_5__["BookingMainFlowCateringOrderComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_6__["AppService"]], null, null)], null, null); }
-            var BookingMainFlowCateringOrderComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-order", _catering_order_component__WEBPACK_IMPORTED_MODULE_5__["BookingMainFlowCateringOrderComponent"], View_BookingMainFlowCateringOrderComponent_Host_0, { spaces: "spaces", catering: "catering", show: "show", step: "step", exclude: "exclude" }, { event: "event" }, []);
+            var BookingMainFlowCateringOrderComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-order", _catering_order_component__WEBPACK_IMPORTED_MODULE_5__["BookingMainFlowCateringOrderComponent"], View_BookingMainFlowCateringOrderComponent_Host_0, { spaces: "spaces", order: "order", items: "items", show: "show", step: "step", exclude: "exclude" }, { event: "event" }, []);
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/catering/catering-order/catering-order.component.scss.shim.ngstyle.js": 
@@ -440,9 +473,11 @@ var __spread = (this && this.__spread) || function () {
             __webpack_require__.r(__webpack_exports__);
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingMainFlowCateringOrderComponent", function () { return BookingMainFlowCateringOrderComponent; });
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-            /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
-            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../services/app.service */ "./src/app/services/app.service.ts");
+            /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../services/app.service */ "./src/app/services/app.service.ts");
+            /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+            /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
             var BookingMainFlowCateringOrderComponent = /** @class */ (function (_super) {
                 __extends(BookingMainFlowCateringOrderComponent, _super);
                 function BookingMainFlowCateringOrderComponent(_service) {
@@ -458,8 +493,10 @@ var __spread = (this && this.__spread) || function () {
                     /** Whether catering order is valid */
                     get: function () {
                         var _this = this;
-                        var list = this.order_list;
-                        return list.reduce(function (v, i) { return v && (i.items || []).reduce(function (v, j) { return v && _this.isValid(j); }, true); }, true);
+                        if (!this.items)
+                            return true;
+                        var list = this.items.value || [];
+                        return list.reduce(function (v, i) { return v && (i instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"] ? i.items : []).reduce(function (v, j) { return v && _this.isValid(j); }, true); }, true);
                     },
                     enumerable: true,
                     configurable: true
@@ -470,6 +507,8 @@ var __spread = (this && this.__spread) || function () {
                  */
                 BookingMainFlowCateringOrderComponent.prototype.isValid = function (item) {
                     var _this = this;
+                    if (!this.items)
+                        return true;
                     if (item.must_select && item.amount) {
                         return item.must_select <= item.items.reduce(function (v, i) { return v + (i.selected ? 1 : 0); }, 0);
                     }
@@ -481,11 +520,10 @@ var __spread = (this && this.__spread) || function () {
                 Object.defineProperty(BookingMainFlowCateringOrderComponent.prototype, "count", {
                     /** Number of total items in all room orders */
                     get: function () {
-                        var list = this.order_list;
-                        return list.reduce(function (v, i) {
-                            var count = (i.items || []).reduce(function (c, j) { return c + j.amount; }, 0);
-                            return v + count;
-                        }, 0);
+                        if (!this.items)
+                            return 0;
+                        var list = this.items.value || [];
+                        return list.reduce(function (total, item) { return total + item.amount; }, 0);
                     },
                     enumerable: true,
                     configurable: true
@@ -493,56 +531,37 @@ var __spread = (this && this.__spread) || function () {
                 Object.defineProperty(BookingMainFlowCateringOrderComponent.prototype, "total", {
                     /** Total cost for all room orders */
                     get: function () {
-                        var list = this.order_list;
-                        return list.reduce(function (v, i) { return v + i.total; }, 0);
+                        if (!this.items)
+                            return 0;
+                        var list = this.items.value || [];
+                        return list.reduce(function (total, item) { return total + item.total; }, 0);
                     },
                     enumerable: true,
                     configurable: true
                 });
-                Object.defineProperty(BookingMainFlowCateringOrderComponent.prototype, "order_list", {
-                    /** List of catering orders from the form field */
+                Object.defineProperty(BookingMainFlowCateringOrderComponent.prototype, "symbol", {
                     get: function () {
                         var _this = this;
-                        var orders = this.catering ? this.catering.control.value : {};
-                        var rooms = Object.keys(orders);
-                        var list = rooms.filter(function (i) { return _this.spaces.find(function (j) { return j.id === i; }); }).map(function (i) {
-                            if (orders[i]) {
-                                var room = (_this._service.Rooms.item(orders[i].room_id || i) || { name: '', level: {} });
-                                orders[i].name = room.name;
-                                orders[i].symbol = _this.symbol(room.level.bld_id);
-                                orders[i].total = (orders[i].items || []).reduce(function (c, j) { return c + j.amount * (j.unit_cost || j.price); }, 0);
-                            }
-                            else {
-                                orders[i] = {};
-                            }
-                            return orders[i];
-                        });
-                        return list;
+                        if (!this.order)
+                            return 'USD';
+                        var space = this._service.Rooms.list(true).find(function (room) { return room.id === _this.order.location_id; });
+                        var building = this._service.Buildings.get(space.level.bld_id) || {};
+                        return building.currency || 'USD';
                     },
                     enumerable: true,
                     configurable: true
                 });
-                BookingMainFlowCateringOrderComponent.prototype.symbol = function (bld_id) {
-                    var building = this._service.Buildings.get(bld_id) || {};
-                    return building.currency || 'USD';
-                };
                 BookingMainFlowCateringOrderComponent.prototype.change = function (item, amount) {
-                    item.amount += amount;
-                    // Check to make sure adding set the correct amount if adding to 0
-                    if (amount > 0 && item.minimum && item.amount < item.minimum) {
-                        item.amount = item.minimum;
+                    if (amount < 0) {
+                        item.removeFromOrder(amount);
                     }
-                    // Check item quantity is within bounds
-                    if (item.amount < (item.minimum || 0)) {
-                        item.amount = 0;
+                    else {
+                        item.addToOrder(amount);
                     }
-                    else if (item.amount > (item.maximum || 100)) {
-                        item.amount = (item.maximum || 100);
-                    }
-                    this.catering.setValue(this.catering.getValue());
+                    this.items.setValue(this.items.value);
                 };
                 return BookingMainFlowCateringOrderComponent;
-            }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+            }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/catering/catering.component.ngfactory.js": 
@@ -559,17 +578,17 @@ var __spread = (this && this.__spread) || function () {
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingMainFlowCateringComponentNgFactory", function () { return BookingMainFlowCateringComponentNgFactory; });
             /* harmony import */ var _catering_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./catering.component.scss.shim.ngstyle */ "./src/app/shell/booking/main-flow/catering/catering.component.scss.shim.ngstyle.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
-            /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-            /* harmony import */ var _category_list_category_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./category-list/category-list.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/category-list/category-list.component.ngfactory.js");
-            /* harmony import */ var _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./category-list/category-list.component */ "./src/app/shell/booking/main-flow/catering/category-list/category-list.component.ts");
-            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
-            /* harmony import */ var _item_list_item_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./item-list/item-list.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/item-list/item-list.component.ngfactory.js");
-            /* harmony import */ var _item_list_item_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./item-list/item-list.component */ "./src/app/shell/booking/main-flow/catering/item-list/item-list.component.ts");
-            /* harmony import */ var _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../../node_modules/@acaprojects/ngx-checkbox/acaprojects-ngx-checkbox.ngfactory */ "./node_modules/@acaprojects/ngx-checkbox/acaprojects-ngx-checkbox.ngfactory.js");
-            /* harmony import */ var _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @acaprojects/ngx-checkbox */ "./node_modules/@acaprojects/ngx-checkbox/fesm2015/acaprojects-ngx-checkbox.js");
-            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-            /* harmony import */ var _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../../../node_modules/@acaprojects/ngx-widgets/acaprojects-ngx-widgets.ngfactory */ "./node_modules/@acaprojects/ngx-widgets/acaprojects-ngx-widgets.ngfactory.js");
+            /* harmony import */ var _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/@acaprojects/ngx-widgets/acaprojects-ngx-widgets.ngfactory */ "./node_modules/@acaprojects/ngx-widgets/acaprojects-ngx-widgets.ngfactory.js");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+            /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
+            /* harmony import */ var _category_list_category_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./category-list/category-list.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/category-list/category-list.component.ngfactory.js");
+            /* harmony import */ var _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./category-list/category-list.component */ "./src/app/shell/booking/main-flow/catering/category-list/category-list.component.ts");
+            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
+            /* harmony import */ var _item_list_item_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./item-list/item-list.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/item-list/item-list.component.ngfactory.js");
+            /* harmony import */ var _item_list_item_list_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./item-list/item-list.component */ "./src/app/shell/booking/main-flow/catering/item-list/item-list.component.ts");
+            /* harmony import */ var _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../../node_modules/@acaprojects/ngx-checkbox/acaprojects-ngx-checkbox.ngfactory */ "./node_modules/@acaprojects/ngx-checkbox/acaprojects-ngx-checkbox.ngfactory.js");
+            /* harmony import */ var _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @acaprojects/ngx-checkbox */ "./node_modules/@acaprojects/ngx-checkbox/fesm2015/acaprojects-ngx-checkbox.js");
+            /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
             /* harmony import */ var _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./catering-order/catering-order.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/catering-order/catering-order.component.ngfactory.js");
             /* harmony import */ var _catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./catering-order/catering-order.component */ "./src/app/shell/booking/main-flow/catering/catering-order/catering-order.component.ts");
             /* harmony import */ var _catering_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./catering.component */ "./src/app/shell/booking/main-flow/catering/catering.component.ts");
@@ -582,33 +601,24 @@ var __spread = (this && this.__spread) || function () {
             var styles_BookingMainFlowCateringComponent = [_catering_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
             var RenderType_BookingMainFlowCateringComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_BookingMainFlowCateringComponent, data: {} });
             function View_BookingMainFlowCateringComponent_2(_l) {
-                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "room"]], [[2, "active", null], [2, "not-catered", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 12, "div", [["class", "room-list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 5, "div", [["class", "group"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Deliver to:\u00A0 "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "div", [["class", "set-space"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "dropdown", [["klass", "form"]], null, [[null, "modelChange"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
-                        if (("mousedown" === en)) {
-                            var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).mousestart($event) !== false);
+                        if (("modelChange" === en)) {
+                            var pd_0 = (_co.setSpace(_co.spaces[$event]) !== false);
                             ad = (pd_0 && ad);
                         }
-                        if (("touchstart" === en)) {
-                            var pd_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).touchstart($event) !== false);
-                            ad = (pd_1 && ad);
-                        }
-                        if (("mouseup" === en)) {
-                            var pd_2 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).mouse($event) !== false);
-                            ad = (pd_2 && ad);
-                        }
-                        if (("touchend" === en)) {
-                            var pd_3 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).touch($event) !== false);
-                            ad = (pd_3 && ad);
-                        }
-                        if (("touchrelease" === en)) {
-                            var pd_4 = (_co.setSpace(_v.context.$implicit) !== false);
-                            ad = (pd_4 && ad);
+                        return ad;
+                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_DropdownComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_DropdownComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](5120, null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["DropdownComponent"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["DropdownComponent"], [], { klass: [0, "klass"], model: [1, "model"], list: [2, "list"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 5, "div", [["class", "group"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" At:\u00A0 "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 3, "div", [["class", "set-delivery-time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 2, "dropdown", [["klass", "form"]], null, [[null, "modelChange"]], function (_v, en, $event) {
+                        var ad = true;
+                        var _co = _v.component;
+                        if (("modelChange" === en)) {
+                            var pd_0 = (((_co.order_form == null) ? null : _co.order_form.controls.delivery_time.setValue(_co.delivery_times[$event].id)) !== false);
+                            ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "name"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 0, "div", [["class", "bar"]], null, null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.active_space && (_co.active_space.id === _v.context.$implicit.id)); var currVal_1 = !_co.is_catered; _ck(_v, 0, 0, currVal_0, currVal_1); var currVal_2 = _v.context.$implicit.name; _ck(_v, 3, 0, currVal_2); });
+                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_DropdownComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_DropdownComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](5120, null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["DropdownComponent"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["DropdownComponent"], [], { klass: [0, "klass"], model: [1, "model"], list: [2, "list"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = "form"; var currVal_1 = _co.space_index; var currVal_2 = _co.spaces; _ck(_v, 6, 0, currVal_0, currVal_1, currVal_2); var currVal_3 = "form"; var currVal_4 = _co.time_index; var currVal_5 = _co.delivery_times; _ck(_v, 12, 0, currVal_3, currVal_4, currVal_5); }, null);
             }
-            function View_BookingMainFlowCateringComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "room-list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.spaces; _ck(_v, 2, 0, currVal_0); }, null); }
             function View_BookingMainFlowCateringComponent_5(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-category-list", [], null, [[null, "selected"]], function (_v, en, $event) {
                         var ad = true;
@@ -618,7 +628,7 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _category_list_category_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["View_BookingMainFlowCateringCategoryListComponent_0"], _category_list_category_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["RenderType_BookingMainFlowCateringCategoryListComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_5__["BookingMainFlowCateringCategoryListComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_6__["AppService"]], { types: [0, "types"], exclude: [1, "exclude"] }, { selected: "selected" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.menu_map[_co.active_space.id]; var currVal_1 = _co.within_exclusion_period; _ck(_v, 1, 0, currVal_0, currVal_1); }, null);
+                    }, _category_list_category_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_BookingMainFlowCateringCategoryListComponent_0"], _category_list_category_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_BookingMainFlowCateringCategoryListComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowCateringCategoryListComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_7__["AppService"]], { types: [0, "types"], exclude: [1, "exclude"] }, { selected: "selected" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.menu_map[_co.active_space.id]; var currVal_1 = _co.within_exclusion_period; _ck(_v, 1, 0, currVal_0, currVal_1); }, null);
             }
             function View_BookingMainFlowCateringComponent_6(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-item-list", [], null, [[null, "event"]], function (_v, en, $event) {
@@ -629,7 +639,7 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _item_list_item_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["View_BookingMainFlowCateringItemListComponent_0"], _item_list_item_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["RenderType_BookingMainFlowCateringItemListComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _item_list_item_list_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringItemListComponent"], [], { space: [0, "space"], category: [1, "category"], exclude: [2, "exclude"], field: [3, "field"], step: [4, "step"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.active_space; var currVal_1 = _co.category; var currVal_2 = _co.within_exclusion_period; var currVal_3 = _co.catering; var currVal_4 = _co.step; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4); }, null);
+                    }, _item_list_item_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["View_BookingMainFlowCateringItemListComponent_0"], _item_list_item_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["RenderType_BookingMainFlowCateringItemListComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _item_list_item_list_component__WEBPACK_IMPORTED_MODULE_9__["BookingMainFlowCateringItemListComponent"], [], { space: [0, "space"], category: [1, "category"], exclude: [2, "exclude"], items: [3, "items"], step: [4, "step"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.active_space; var currVal_1 = _co.category; var currVal_2 = _co.within_exclusion_period; var currVal_3 = ((_co.order_form == null) ? null : _co.order_form.controls.items); var currVal_4 = _co.step; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4); }, null);
             }
             function View_BookingMainFlowCateringComponent_8(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" Concierge will be in touch for ", " catered rooms "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.active_building.name; _ck(_v, 1, 0, currVal_0); }); }
             function View_BookingMainFlowCateringComponent_9(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Catering is "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["not available"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, [" in Converge for ", " spaces. Please contact the local office for more information. "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.active_building.name; _ck(_v, 3, 0, currVal_0); }); }
@@ -642,14 +652,13 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_9__["View_ACheckboxComponent_0"], _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_9__["RenderType_ACheckboxComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 49152, null, 0, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_10__["ACheckboxComponent"], [], { label: [0, "label"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_10__["ACheckboxComponent"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, { update: "ngModelChange" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgControl"]]], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_7 = (("Add catering to " + (_co.active_space.number || _co.active_space.name)) + "?"); _ck(_v, 2, 0, currVal_7); var currVal_8 = _co.has_catering; _ck(_v, 4, 0, currVal_8); }, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassPending; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); });
+                    }, _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_10__["View_ACheckboxComponent_0"], _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_10__["RenderType_ACheckboxComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 49152, null, 0, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_11__["ACheckboxComponent"], [], { label: [0, "label"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_11__["ACheckboxComponent"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, { update: "ngModelChange" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControl"]]], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_7 = (("Add catering to " + (_co.active_space.number || _co.active_space.name)) + "?"); _ck(_v, 2, 0, currVal_7); var currVal_8 = _co.has_catering; _ck(_v, 4, 0, currVal_8); }, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).ngClassPending; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); });
             }
-            function View_BookingMainFlowCateringComponent_7(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "div", [["class", "no-catering"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "img", [], [[8, "alt", 0], [8, "src", 4]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "p", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["no_catering", 2]], null, 0, null, View_BookingMainFlowCateringComponent_9)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.is_catered; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6); _ck(_v, 5, 0, currVal_2, currVal_3); var currVal_4 = _co.is_catered; _ck(_v, 8, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.is_catered ? "Concierge Catering" : "No Catering Available"); var currVal_1 = (_co.is_catered ? "assets/img/concierge.svg" : "assets/img/no-catering.svg"); _ck(_v, 2, 0, currVal_0, currVal_1); }); }
-            function View_BookingMainFlowCateringComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.category; _ck(_v, 2, 0, currVal_0); var currVal_1 = _co.category; _ck(_v, 4, 0, currVal_1); var currVal_2 = (_co.active_space && (!_co.menu_map[_co.active_space.id] || (_co.menu_map[_co.active_space.id].length <= 0))); _ck(_v, 6, 0, currVal_2); }, null); }
-            function View_BookingMainFlowCateringComponent_11(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [["class", "no-item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "spinner", [["color", "rgba(0,0,0, .35)"], ["type", "circle-ring"]], null, null, null, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_12__["View_SpinnerComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_12__["RenderType_SpinnerComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 770048, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["SpinnerComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { type: [0, "type"], color: [1, "color"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Loading menu data..."]))], function (_ck, _v) { var currVal_0 = "circle-ring"; var currVal_1 = "rgba(0,0,0, .35)"; _ck(_v, 3, 0, currVal_0, currVal_1); }, null); }
-            function View_BookingMainFlowCateringComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["loader", 2]], null, 0, null, View_BookingMainFlowCateringComponent_11))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.active_space && !_co.loading[_co.active_space.id]); var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 3); _ck(_v, 2, 0, currVal_0, currVal_1); }, null); }
-            function View_BookingMainFlowCateringComponent_12(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 9, "div", [["class", "no-catering margin"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 0, "img", [["alt", "No Catering Available"], ["src", "assets/img/no-catering.svg"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 6, "p", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Catering is "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["not available"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" for this booking."])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 0, "br", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](10, null, [" Catering must be ordered at least ", " hours in advance for meetings at ", ". "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.active_building.catering_restricted_from || "0"); var currVal_1 = _co.active_building.name; _ck(_v, 10, 0, currVal_0, currVal_1); }); }
-            function View_BookingMainFlowCateringComponent_0(_l) {
+            function View_BookingMainFlowCateringComponent_7(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "div", [["class", "no-catering"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "img", [], [[8, "alt", 0], [8, "src", 4]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "p", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["no_catering", 2]], null, 0, null, View_BookingMainFlowCateringComponent_9)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.is_catered; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6); _ck(_v, 5, 0, currVal_2, currVal_3); var currVal_4 = _co.is_catered; _ck(_v, 8, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.is_catered ? "Concierge Catering" : "No Catering Available"); var currVal_1 = (_co.is_catered ? "assets/img/concierge.svg" : "assets/img/no-catering.svg"); _ck(_v, 2, 0, currVal_0, currVal_1); }); }
+            function View_BookingMainFlowCateringComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.category; _ck(_v, 2, 0, currVal_0); var currVal_1 = _co.category; _ck(_v, 4, 0, currVal_1); var currVal_2 = (_co.active_space && (!_co.menu_map[_co.active_space.id] || (_co.menu_map[_co.active_space.id].length <= 0))); _ck(_v, 6, 0, currVal_2); }, null); }
+            function View_BookingMainFlowCateringComponent_11(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [["class", "no-item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "spinner", [["color", "rgba(0,0,0, .35)"], ["type", "circle-ring"]], null, null, null, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_SpinnerComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_SpinnerComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 770048, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["SpinnerComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { type: [0, "type"], color: [1, "color"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Loading menu data..."]))], function (_ck, _v) { var currVal_0 = "circle-ring"; var currVal_1 = "rgba(0,0,0, .35)"; _ck(_v, 3, 0, currVal_0, currVal_1); }, null); }
+            function View_BookingMainFlowCateringComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["loader", 2]], null, 0, null, View_BookingMainFlowCateringComponent_11))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.active_space && !_co.loading[_co.active_space.id]); var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 3); _ck(_v, 2, 0, currVal_0, currVal_1); }, null); }
+            function View_BookingMainFlowCateringComponent_1(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 33, "div", [["class", "catering"]], null, [["window", "keydown.control"], ["window", "keyup.control"], ["window", "keydown.shift"], ["window", "keyup.shift"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
@@ -694,7 +703,7 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_4 && ad);
                         }
                         return ad;
-                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["arrow_back"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 2, "div", [["class", "text"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["arrow_back"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 2, "div", [["class", "text"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
                         if (("mousedown" === en)) {
@@ -718,7 +727,7 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_4 && ad);
                         }
                         return ad;
-                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](8, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 16, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 13, "div", [["class", "search"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 5, "input", [["placeholder", "Type to search"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) {
+                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Order List"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 16, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 13, "div", [["class", "search"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 5, "input", [["placeholder", "Type to search"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
                         if (("input" === en)) {
@@ -746,7 +755,7 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_5 && ad);
                         }
                         return ad;
-                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["DefaultValueAccessor"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], [2, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["COMPOSITION_BUFFER_MODE"]]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["DefaultValueAccessor"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, { update: "ngModelChange" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgControl"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["search"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](20, 0, null, null, 3, "div", [["class", "icon"]], [[2, "disabled", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], [2, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["COMPOSITION_BUFFER_MODE"]]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, { update: "ngModelChange" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControl"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["search"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](20, 0, null, null, 3, "div", [["class", "icon"]], [[2, "disabled", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
                         if (("mousedown" === en)) {
@@ -770,7 +779,7 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_4 && ad);
                         }
                         return ad;
-                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](22, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["close"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](28, 0, null, null, 5, "div", [["class", "footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](29, 0, null, null, 4, "div", [["class", "order-list"]], [[2, "show", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](30, 0, null, null, 1, "div", [["class", "bar"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](22, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["close"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](28, 0, null, null, 5, "div", [["class", "footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](29, 0, null, null, 4, "div", [["class", "order-list"]], [[2, "show", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](30, 0, null, null, 1, "div", [["class", "bar"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
                         if (("mousedown" === en)) {
@@ -794,7 +803,7 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_4 && ad);
                         }
                         return ad;
-                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](31, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](32, 0, null, null, 1, "catering-order", [], null, [[null, "event"]], function (_v, en, $event) {
+                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](31, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](32, 0, null, null, 1, "catering-order", [], null, [[null, "event"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
                         if (("event" === en)) {
@@ -802,10 +811,12 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["View_BookingMainFlowCateringOrderComponent_0"], _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["RenderType_BookingMainFlowCateringOrderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](33, 180224, null, 0, _catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__["BookingMainFlowCateringOrderComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_6__["AppService"]], { spaces: [0, "spaces"], catering: [1, "catering"], show: [2, "show"], step: [3, "step"], exclude: [4, "exclude"] }, { event: "event" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["no_catering_allowed", 2]], null, 0, null, View_BookingMainFlowCateringComponent_12))], function (_ck, _v) { var _co = _v.component; var currVal_8 = _co.search_str; _ck(_v, 14, 0, currVal_8); var currVal_10 = (_co.spaces && (_co.spaces.length > 0)); _ck(_v, 25, 0, currVal_10); var currVal_11 = _co.catering_allowed; var currVal_12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 34); _ck(_v, 27, 0, currVal_11, currVal_12); var currVal_14 = _co.spaces; var currVal_15 = _co.catering; var currVal_16 = _co.show_order; var currVal_17 = _co.step; var currVal_18 = _co.exclusion_map; _ck(_v, 33, 0, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.id ? "Book" : "Find Space"); _ck(_v, 8, 0, currVal_0); var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassUntouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassTouched; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassPristine; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassDirty; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassValid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassInvalid; var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassPending; _ck(_v, 11, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_9 = !_co.search_str; _ck(_v, 20, 0, currVal_9); var currVal_13 = _co.show_order; _ck(_v, 29, 0, currVal_13); });
+                    }, _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["View_BookingMainFlowCateringOrderComponent_0"], _catering_order_catering_order_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["RenderType_BookingMainFlowCateringOrderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](33, 180224, null, 0, _catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_14__["BookingMainFlowCateringOrderComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_7__["AppService"]], { spaces: [0, "spaces"], order: [1, "order"], items: [2, "items"], show: [3, "show"], step: [4, "step"], exclude: [5, "exclude"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.search_str; _ck(_v, 14, 0, currVal_7); var currVal_9 = (_co.spaces && (_co.spaces.length > 0)); _ck(_v, 25, 0, currVal_9); var currVal_10 = _co.catering_allowed; var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 2); _ck(_v, 27, 0, currVal_10, currVal_11); var currVal_13 = _co.spaces; var currVal_14 = _co.order; var currVal_15 = _co.order_form.controls.items; var currVal_16 = _co.show_order; var currVal_17 = _co.step; var currVal_18 = _co.exclusion_map; _ck(_v, 33, 0, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).ngClassPending; _ck(_v, 11, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_8 = !_co.search_str; _ck(_v, 20, 0, currVal_8); var currVal_12 = _co.show_order; _ck(_v, 29, 0, currVal_12); });
             }
-            function View_BookingMainFlowCateringComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "booking-main-flow-catering", [], null, null, null, View_BookingMainFlowCateringComponent_0, RenderType_BookingMainFlowCateringComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 704512, null, 0, _catering_component__WEBPACK_IMPORTED_MODULE_15__["BookingMainFlowCateringComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_6__["AppService"]], null, null)], null, null); }
-            var BookingMainFlowCateringComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("booking-main-flow-catering", _catering_component__WEBPACK_IMPORTED_MODULE_15__["BookingMainFlowCateringComponent"], View_BookingMainFlowCateringComponent_Host_0, { id: "id", spaces: "spaces", date: "date", catering: "catering" }, { event: "event" }, []);
+            function View_BookingMainFlowCateringComponent_12(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 9, "div", [["class", "no-catering margin"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 0, "img", [["alt", "No Catering Available"], ["src", "assets/img/no-catering.svg"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 6, "p", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Catering is "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["not available"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" for this booking."])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 0, "br", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](10, null, [" Catering must be ordered at least ", " hours in advance for meetings at ", ". "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.active_building.catering_restricted_from || "0"); var currVal_1 = _co.active_building.name; _ck(_v, 10, 0, currVal_0, currVal_1); }); }
+            function View_BookingMainFlowCateringComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["no_catering_allowed", 2]], null, 0, null, View_BookingMainFlowCateringComponent_12))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.order_form; _ck(_v, 1, 0, currVal_0); }, null); }
+            function View_BookingMainFlowCateringComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "booking-main-flow-catering", [], null, null, null, View_BookingMainFlowCateringComponent_0, RenderType_BookingMainFlowCateringComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 704512, null, 0, _catering_component__WEBPACK_IMPORTED_MODULE_15__["BookingMainFlowCateringComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_7__["AppService"]], null, null)], null, null); }
+            var BookingMainFlowCateringComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("booking-main-flow-catering", _catering_component__WEBPACK_IMPORTED_MODULE_15__["BookingMainFlowCateringComponent"], View_BookingMainFlowCateringComponent_Host_0, { id: "id", spaces: "spaces", date: "date", duration: "duration", order: "order" }, { event: "event" }, []);
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/catering/catering.component.scss.shim.ngstyle.js": 
@@ -823,7 +834,7 @@ var __spread = (this && this.__spread) || function () {
              * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
              * tslint:disable
              */
-            var styles = [".catering[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  overflow: hidden; }\n.topbar[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 2.5em;\n  font-size: 1em;\n  width: 100%;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  padding: .5em; }\n.topbar[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n    margin-left: .5em; }\n.header[_ngcontent-%COMP%] {\n  width: 100%;\n  padding: .5em .5em 0; }\n.body[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  min-height: 10em;\n  flex: 1;\n  background-color: #ddd;\n  overflow: auto; }\n.search[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 768px;\n  max-width: calc(100% - 2rem);\n  margin: .5rem auto;\n  background-color: #fff;\n  border: 1px solid #ccc;\n  padding: .5rem 1rem;\n  font-size: 1.5em; }\n.search[_ngcontent-%COMP%]   .disabled[_ngcontent-%COMP%] {\n    pointer-events: none;\n    color: rgba(0, 0, 0, 0.35); }\n.search[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n    cursor: pointer; }\ninput[_ngcontent-%COMP%] {\n  font-size: .7em;\n  padding: 0;\n  margin: 0;\n  background: none;\n  outline: none;\n  box-shadow: none;\n  border: none;\n  flex: 1; }\n.icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 1.25em;\n  width: 1.25em; }\n.room-list[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 768px;\n  max-width: calc(100% - 2rem);\n  margin: 0 auto;\n  overflow: auto hidden; }\n.room[_ngcontent-%COMP%] {\n  position: relative;\n  height: 2.5em;\n  max-width: 30%;\n  transition: color 200ms;\n  margin: 0 .5em; }\n.room[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    padding: .6rem 0;\n    font-size: .9em;\n    text-align: center; }\n.room.active[_ngcontent-%COMP%] {\n    color: #1937ea; }\n.room.active[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n      opacity: 1; }\n.room[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n    left: 0;\n    right: 0;\n    bottom: 0;\n    height: 4px;\n    background-color: #1937ea;\n    opacity: 0;\n    transition: opacity 200ms; }\n.footer[_ngcontent-%COMP%] {\n  position: relative;\n  height: 2.5em;\n  z-index: 10; }\n.footer[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n    width: 2em;\n    min-height: 6px;\n    height: 6px;\n    border-radius: 3px;\n    background-color: #ddd;\n    cursor: pointer; }\n.order-list[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  width: 768px;\n  max-width: calc(100vw - 2rem);\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 1em 0 .5em;\n  border-radius: 12px 12px 0 0;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  transition: transform 200ms;\n  background-color: #fff; }\n.no-catering[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  width: 360px;\n  max-width: calc(100vw - 2rem);\n  padding: 1em 2em;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  border-radius: 8px;\n  margin: 0 auto 6em;\n  text-align: center; }\n.no-catering[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n    color: #ce1a51; }\n.no-catering[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%], .no-catering[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n    height: 6em;\n    width: 8em; }\n.no-item[_ngcontent-%COMP%] {\n  margin: 2em; }\n.no-item[_ngcontent-%COMP%]   spinner[_ngcontent-%COMP%] {\n    font-size: .8em; }\n.margin[_ngcontent-%COMP%] {\n  margin-top: 1em; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc2hhcmVkLnN0eWxlcy5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5nL21haW4tZmxvdy9jYXRlcmluZy9jYXRlcmluZy5jb21wb25lbnQuc2NzcyIsIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGVsbC9ib29raW5nL21haW4tZmxvdy9jYXRlcmluZy9jYXRlcmluZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7aUNDRWlDO0FENkNqQzs7dUJDMUN1QjtBRHVEdkI7O3NCQ3BEc0I7QUNMdEI7RUFDSSxrQkFBa0I7RUFDbEIsTUFBTTtFQUNOLE9BQU87RUFDUCxRQUFRO0VBQ1IsU0FBUztFQUNULGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsdUJBQXVCO0VBQ3ZCLHNCQUFzQjtFQUN0QixnQkFBZ0IsRUFBQTtBQUdwQjtFQUNJLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLGNBQWM7RUFDZCxXQUFXO0VBQ1gsc0JBQXNCO0VGc0J0QiwrR0FBNkY7RUVwQjdGLGFBQWEsRUFBQTtBQVJqQjtJQVdRLGlCQUFpQixFQUFBO0FBSXpCO0VBQ0ksV0FBVztFQUNYLG9CQUFvQixFQUFBO0FBR3hCO0VBQ0ksa0JBQWtCO0VBQ2xCLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsT0FBTztFQUNQLHNCQUFzQjtFQUN0QixjQUFjLEVBQUE7QUFHbEI7RUFDSSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osNEJBQTRCO0VBQzVCLGtCQUFrQjtFQUNsQixzQkFBc0I7RUFDdEIsc0JBQXNCO0VBQ3RCLG1CQUFtQjtFQUNuQixnQkFBZ0IsRUFBQTtBQVZwQjtJQWFRLG9CQUFvQjtJQUNwQiwwQkFBZ0IsRUFBQTtBQWR4QjtJQWtCUSxlQUFlLEVBQUE7QUFJdkI7RUFDSSxlQUFlO0VBQ2YsVUFBVTtFQUNWLFNBQVM7RUFDVCxnQkFBZ0I7RUFDaEIsYUFBYTtFQUNiLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osT0FBTyxFQUFBO0FBR1g7RUFDSSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QixjQUFjO0VBQ2QsYUFBYSxFQUFBO0FBR2pCO0VBQ0ksYUFBYTtFQUNiLG1CQUFtQjtFQUNuQixZQUFZO0VBQ1osNEJBQTRCO0VBQzVCLGNBQWM7RUFDZCxxQkFBcUIsRUFBQTtBQUd6QjtFQUNJLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsY0FBYztFQUNkLHVCQUF1QjtFQUN2QixjQUFjLEVBQUE7QUFMbEI7SUFRUSxtQkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLHVCQUF1QjtJQUN2QixnQkFBZ0I7SUFDaEIsZUFBZTtJQUNmLGtCQUFrQixFQUFBO0FBYjFCO0lBaUJRLGNGdEZlLEVBQUE7QUVxRXZCO01BbUJZLFVBQVUsRUFBQTtBQW5CdEI7SUFnQ1EsT0FBTztJQUNQLFFBQVE7SUFDUixTQUFTO0lBQ1QsV0FBVztJQUNYLHlCRnpHZTtJRTBHZixVQUFVO0lBQ1YseUJBQXlCLEVBQUE7QUFJakM7RUFDSSxrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLFdBQVcsRUFBQTtBQUhmO0lBTVEsVUFBVTtJQUNWLGVBQWU7SUFDZixXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLHNCQUFzQjtJQUN0QixlQUFlLEVBQUE7QUFJdkI7RUFDSSxrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQixzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLDZCQUE2QjtFQUM3QixTQUFTO0VBQ1QsU0FBUztFQUNULDJCQUEyQjtFQUMzQixtQkFBbUI7RUFDbkIsNEJBQTRCO0VGdkg1QiwrR0FBNkY7RUV5SDdGLDJCQUEyQjtFQUMzQixzQkFBc0IsRUFBQTtBQUcxQjtFQUNJLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsc0JBQXNCO0VBQ3RCLFlBQVk7RUFDWiw2QkFBNkI7RUFDN0IsZ0JBQWdCO0VBQ2hCLHNCQUFzQjtFRnBJdEIsK0dBQTZGO0VFc0k3RixrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLGtCQUFrQixFQUFBO0FBWHRCO0lBY1EsY0FBYyxFQUFBO0FBZHRCOztJQW1CUSxXQUFXO0lBQ1gsVUFBVSxFQUFBO0FBSWxCO0VBQ0ksV0FBVyxFQUFBO0FBRGY7SUFJUSxlQUFlLEVBQUE7QUFJdkI7RUFDSSxlQUFlLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9ib29raW5nL21haW4tZmxvdy9jYXRlcmluZy9jYXRlcmluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCBTaGFyZWQgR2xvYmFsIFNBU1MgVmFyaWFibGVzIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kc3VjY2VzczogIzMwOWI0MDtcbiRzdWNjZXNzLWFsdDogIzQyODVmNDtcbiRlcnJvcjogI2RiMjkxZDtcbiRwZW5kaW5nOiAjRkY5ODAwO1xuJG5ldXRyYWw6ICM3OTc5Nzk7XG4kcHJpbWUtYmx1ZS1saWdodDojMDBBREVGO1xuJHByaW1lLWJsdWUtZGFyazojMDA2NEJEO1xuJHByaW1lLWdyZWVuLWxpZ2h0OiNBMkFEMDA7XG4kcHJpbWUtZ3JleS1kaXNhYmxlOiM3Qzk0QUE7XG5cbiRiYWNrZ3JvdW5kOiAjZWNmMWY1O1xuXG4kaGVhZGVyLWhlaWdodDogNGVtO1xuJGNvbG9yLXByaW1hcnktd2lyZWZyYW1lOnJnYmEoMCwgMCwgMCwgMC42MSk7XG4kaGVhZGVyLWJnOiAjZmZmO1xuJGhlYWRlci1jb2xvcjogcmdiYSgjMDAyOTYwLCAuODcpO1xuXG4kdGlsZS1jb2xvcjogI2ZmZjtcbiR0aWxlLWJvcmRlcjogI2ZmZjtcblxuJGhlbHAtYm9yZGVyOiByZ2JhKCMwMDAsIC4yKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3Itc2Vjb25kYXJ5OiAjNDA0ODVhO1xuJGNvbG9yLXRlcm5hcnk6ICM0Mjg1RjQ7XG4kY29sb3ItcXVhdGVybmFyeTogIzdkZDZkNjtcbiRjb2xvci1xdWludGVybmFyeTogIzRjNWM2YztcbiRjb2xvci1zZXh0ZXJuYXJ5OiAjN2ZlNDNiO1xuXG4kdGltZWxpbmUtYmc6IGxpbmVhci1ncmFkaWVudCgtMTgwZGVnLCAjNEY1RjcwIDAlLCAjMEYxMjE1IDEwMCUpO1xuJHRpbWVsaW5lLWV2ZW50OiAkZXJyb3I7XG4kdGltZWxpbmUtYm9va2luZzogJGNvbG9yLXF1YXRlcm5hcnk7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3cge1xuICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoIzAwMCwgLjIpLCAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoIzAwMCwgLjEyKTtcbn1cblxuLyo9PT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBGb250IFZhcmlhYmxlcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PSovXG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJG1haW4tZm9udDogJGZvbnQtc3RhY2s7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9ICBAZWxzZSBpZiAkbWVkaWEgPT0gbGF0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAoJG1lZGlhID09IHRhYmxldC1tb2JpbGUgb3IgJG1lZGlhID09IG5vdC1kZXNrdG9wKSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8IFNoYXJlZCBHbG9iYWwgU0FTUyBWYXJpYWJsZXMgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIEZvbnQgVmFyaWFibGVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmNhdGVyaW5nIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBvdmVyZmxvdzogaGlkZGVuOyB9XG5cbi50b3BiYXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBoZWlnaHQ6IDIuNWVtO1xuICBmb250LXNpemU6IDFlbTtcbiAgd2lkdGg6IDEwMCU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbiAgcGFkZGluZzogLjVlbTsgfVxuICAudG9wYmFyIC50ZXh0IHtcbiAgICBtYXJnaW4tbGVmdDogLjVlbTsgfVxuXG4uaGVhZGVyIHtcbiAgd2lkdGg6IDEwMCU7XG4gIHBhZGRpbmc6IC41ZW0gLjVlbSAwOyB9XG5cbi5ib2R5IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMTAwJTtcbiAgbWluLWhlaWdodDogMTBlbTtcbiAgZmxleDogMTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgb3ZlcmZsb3c6IGF1dG87IH1cblxuLnNlYXJjaCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB3aWR0aDogNzY4cHg7XG4gIG1heC13aWR0aDogY2FsYygxMDAlIC0gMnJlbSk7XG4gIG1hcmdpbjogLjVyZW0gYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgcGFkZGluZzogLjVyZW0gMXJlbTtcbiAgZm9udC1zaXplOiAxLjVlbTsgfVxuICAuc2VhcmNoIC5kaXNhYmxlZCB7XG4gICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gICAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4zNSk7IH1cbiAgLnNlYXJjaCAuaWNvbiB7XG4gICAgY3Vyc29yOiBwb2ludGVyOyB9XG5cbmlucHV0IHtcbiAgZm9udC1zaXplOiAuN2VtO1xuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7XG4gIGJhY2tncm91bmQ6IG5vbmU7XG4gIG91dGxpbmU6IG5vbmU7XG4gIGJveC1zaGFkb3c6IG5vbmU7XG4gIGJvcmRlcjogbm9uZTtcbiAgZmxleDogMTsgfVxuXG4uaWNvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDEuMjVlbTtcbiAgd2lkdGg6IDEuMjVlbTsgfVxuXG4ucm9vbS1saXN0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IDc2OHB4O1xuICBtYXgtd2lkdGg6IGNhbGMoMTAwJSAtIDJyZW0pO1xuICBtYXJnaW46IDAgYXV0bztcbiAgb3ZlcmZsb3c6IGF1dG8gaGlkZGVuOyB9XG5cbi5yb29tIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDIuNWVtO1xuICBtYXgtd2lkdGg6IDMwJTtcbiAgdHJhbnNpdGlvbjogY29sb3IgMjAwbXM7XG4gIG1hcmdpbjogMCAuNWVtOyB9XG4gIC5yb29tIC5uYW1lIHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gICAgcGFkZGluZzogLjZyZW0gMDtcbiAgICBmb250LXNpemU6IC45ZW07XG4gICAgdGV4dC1hbGlnbjogY2VudGVyOyB9XG4gIC5yb29tLmFjdGl2ZSB7XG4gICAgY29sb3I6ICMxOTM3ZWE7IH1cbiAgICAucm9vbS5hY3RpdmUgLmJhciB7XG4gICAgICBvcGFjaXR5OiAxOyB9XG4gIC5yb29tIC5iYXIge1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIGhlaWdodDogNHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMxOTM3ZWE7XG4gICAgb3BhY2l0eTogMDtcbiAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zOyB9XG5cbi5mb290ZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogMi41ZW07XG4gIHotaW5kZXg6IDEwOyB9XG4gIC5mb290ZXIgLmJhciB7XG4gICAgd2lkdGg6IDJlbTtcbiAgICBtaW4taGVpZ2h0OiA2cHg7XG4gICAgaGVpZ2h0OiA2cHg7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgY3Vyc29yOiBwb2ludGVyOyB9XG5cbi5vcmRlci1saXN0IHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB3aWR0aDogNzY4cHg7XG4gIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDJyZW0pO1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDUwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xuICBwYWRkaW5nOiAxZW0gMCAuNWVtO1xuICBib3JkZXItcmFkaXVzOiAxMnB4IDEycHggMCAwO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAyMDBtcztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsgfVxuXG4ubm8tY2F0ZXJpbmcge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB3aWR0aDogMzYwcHg7XG4gIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDJyZW0pO1xuICBwYWRkaW5nOiAxZW0gMmVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG4gIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgbWFyZ2luOiAwIGF1dG8gNmVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7IH1cbiAgLm5vLWNhdGVyaW5nIHNwYW4ge1xuICAgIGNvbG9yOiAjY2UxYTUxOyB9XG4gIC5uby1jYXRlcmluZyAuaWNvbixcbiAgLm5vLWNhdGVyaW5nIGltZyB7XG4gICAgaGVpZ2h0OiA2ZW07XG4gICAgd2lkdGg6IDhlbTsgfVxuXG4ubm8taXRlbSB7XG4gIG1hcmdpbjogMmVtOyB9XG4gIC5uby1pdGVtIHNwaW5uZXIge1xuICAgIGZvbnQtc2l6ZTogLjhlbTsgfVxuXG4ubWFyZ2luIHtcbiAgbWFyZ2luLXRvcDogMWVtOyB9XG4iLCJcbkBpbXBvcnQgJ3NoYXJlZC5zdHlsZXMnO1xuXG4uY2F0ZXJpbmcge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IDA7XG4gICAgbGVmdDogMDtcbiAgICByaWdodDogMDtcbiAgICBib3R0b206IDA7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuLnRvcGJhciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGhlaWdodDogMi41ZW07XG4gICAgZm9udC1zaXplOiAxZW07XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgIHBhZGRpbmc6IC41ZW07XG5cbiAgICAudGV4dCB7XG4gICAgICAgIG1hcmdpbi1sZWZ0OiAuNWVtO1xuICAgIH1cbn1cblxuLmhlYWRlciB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogLjVlbSAuNWVtIDA7XG59XG5cbi5ib2R5IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWluLWhlaWdodDogMTBlbTtcbiAgICBmbGV4OiAxO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgb3ZlcmZsb3c6IGF1dG87XG59XG5cbi5zZWFyY2gge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICB3aWR0aDogNzY4cHg7XG4gICAgbWF4LXdpZHRoOiBjYWxjKDEwMCUgLSAycmVtKTtcbiAgICBtYXJnaW46IC41cmVtIGF1dG87XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xuICAgIHBhZGRpbmc6IC41cmVtIDFyZW07XG4gICAgZm9udC1zaXplOiAxLjVlbTtcblxuICAgIC5kaXNhYmxlZCB7XG4gICAgICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICAgICAgICBjb2xvcjogcmdiYSgjMDAwLCAuMzUpO1xuICAgIH1cblxuICAgIC5pY29uIHtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbn1cblxuaW5wdXQge1xuICAgIGZvbnQtc2l6ZTogLjdlbTtcbiAgICBwYWRkaW5nOiAwO1xuICAgIG1hcmdpbjogMDtcbiAgICBiYWNrZ3JvdW5kOiBub25lO1xuICAgIG91dGxpbmU6IG5vbmU7XG4gICAgYm94LXNoYWRvdzogbm9uZTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgZmxleDogMTtcbn1cblxuLmljb24ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDEuMjVlbTtcbiAgICB3aWR0aDogMS4yNWVtO1xufVxuXG4ucm9vbS1saXN0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgd2lkdGg6IDc2OHB4O1xuICAgIG1heC13aWR0aDogY2FsYygxMDAlIC0gMnJlbSk7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgb3ZlcmZsb3c6IGF1dG8gaGlkZGVuO1xufVxuXG4ucm9vbSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGhlaWdodDogMi41ZW07XG4gICAgbWF4LXdpZHRoOiAzMCU7XG4gICAgdHJhbnNpdGlvbjogY29sb3IgMjAwbXM7XG4gICAgbWFyZ2luOiAwIC41ZW07XG5cbiAgICAubmFtZSB7XG4gICAgICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xuICAgICAgICBwYWRkaW5nOiAuNnJlbSAwO1xuICAgICAgICBmb250LXNpemU6IC45ZW07XG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICB9XG5cbiAgICAmLmFjdGl2ZSB7XG4gICAgICAgIGNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbiAgICAgICAgLmJhciB7XG4gICAgICAgICAgICBvcGFjaXR5OiAxO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gJi5ub3QtY2F0ZXJlZCB7XG4gICAgICAgIC8vICAgICBjb2xvcjogI2NlMWE1MTtcblxuICAgICAgICAvLyAgICAgLmJhciB7XG4gICAgICAgIC8vICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2NlMWE1MTtcbiAgICAgICAgLy8gICAgIH1cbiAgICAgICAgLy8gfVxuICAgIH1cblxuICAgIC5iYXIge1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICByaWdodDogMDtcbiAgICAgICAgYm90dG9tOiAwO1xuICAgICAgICBoZWlnaHQ6IDRweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMjAwbXM7XG4gICAgfVxufVxuXG4uZm9vdGVyIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgaGVpZ2h0OiAyLjVlbTtcbiAgICB6LWluZGV4OiAxMDtcblxuICAgIC5iYXIge1xuICAgICAgICB3aWR0aDogMmVtO1xuICAgICAgICBtaW4taGVpZ2h0OiA2cHg7XG4gICAgICAgIGhlaWdodDogNnB4O1xuICAgICAgICBib3JkZXItcmFkaXVzOiAzcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG59XG5cbi5vcmRlci1saXN0IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgd2lkdGg6IDc2OHB4O1xuICAgIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDJyZW0pO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xuICAgIHBhZGRpbmc6IDFlbSAwIC41ZW07XG4gICAgYm9yZGVyLXJhZGl1czogMTJweCAxMnB4IDAgMDtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAyMDBtcztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xufVxuXG4ubm8tY2F0ZXJpbmcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHdpZHRoOiAzNjBweDtcbiAgICBtYXgtd2lkdGg6IGNhbGMoMTAwdncgLSAycmVtKTtcbiAgICBwYWRkaW5nOiAxZW0gMmVtO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcbiAgICBib3JkZXItcmFkaXVzOiA4cHg7XG4gICAgbWFyZ2luOiAwIGF1dG8gNmVtO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcblxuICAgIHNwYW4ge1xuICAgICAgICBjb2xvcjogI2NlMWE1MTtcbiAgICB9XG5cbiAgICAuaWNvbixcbiAgICBpbWcge1xuICAgICAgICBoZWlnaHQ6IDZlbTtcbiAgICAgICAgd2lkdGg6IDhlbTtcbiAgICB9XG59XG5cbi5uby1pdGVtIHtcbiAgICBtYXJnaW46IDJlbTtcblxuICAgIHNwaW5uZXIge1xuICAgICAgICBmb250LXNpemU6IC44ZW07XG4gICAgfVxufVxuXG4ubWFyZ2luIHtcbiAgICBtYXJnaW4tdG9wOiAxZW07XG59XG4iXX0= */"];
+            var styles = [".catering[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  overflow: hidden; }\n.topbar[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 2.5em;\n  font-size: 1em;\n  width: 100%;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  padding: .5em; }\n.topbar[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n    margin-left: .5em; }\n.header[_ngcontent-%COMP%] {\n  width: 100%;\n  padding: .5em .5em 0; }\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n    .header[_ngcontent-%COMP%] {\n      min-height: 9.5em; } }\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n    .header[_ngcontent-%COMP%] {\n      min-height: 9.5em; } }\n.body[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  min-height: 10em;\n  flex: 1;\n  background-color: #ddd;\n  overflow: auto; }\n.search[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 768px;\n  max-width: calc(100% - 2rem);\n  margin: .5rem auto;\n  background-color: #fff;\n  border: 1px solid #ccc;\n  padding: .5rem 1rem;\n  font-size: 1.5em; }\n.search[_ngcontent-%COMP%]   .disabled[_ngcontent-%COMP%] {\n    pointer-events: none;\n    color: rgba(0, 0, 0, 0.35); }\n.search[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n    cursor: pointer; }\ninput[_ngcontent-%COMP%] {\n  font-size: .7em;\n  padding: 0;\n  margin: 0;\n  background: none;\n  outline: none;\n  box-shadow: none;\n  border: none;\n  flex: 1; }\n.icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 1.25em;\n  width: 1.25em; }\n.room-list[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 768px;\n  max-width: calc(100% - 2rem);\n  margin: 0 auto; }\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n    .room-list[_ngcontent-%COMP%] {\n      flex-direction: column;\n      align-items: flex-start;\n      height: 2.5em; } }\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n    .room-list[_ngcontent-%COMP%] {\n      flex-direction: column;\n      align-items: flex-start;\n      height: 2.5em; } }\n.room-list[_ngcontent-%COMP%]   .group[_ngcontent-%COMP%] {\n    display: flex;\n    align-items: center;\n    padding: 0 .25em; }\n.room[_ngcontent-%COMP%] {\n  position: relative;\n  height: 2.5em;\n  max-width: 30%;\n  transition: color 200ms;\n  margin: 0 .5em; }\n.room[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    padding: .6rem 0;\n    font-size: .9em;\n    text-align: center; }\n.room.active[_ngcontent-%COMP%] {\n    color: #1937ea; }\n.room.active[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n      opacity: 1; }\n.room[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n    left: 0;\n    right: 0;\n    bottom: 0;\n    height: 4px;\n    background-color: #1937ea;\n    opacity: 0;\n    transition: opacity 200ms; }\n.footer[_ngcontent-%COMP%] {\n  position: relative;\n  height: 2.5em;\n  z-index: 10; }\n.footer[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n    width: 2em;\n    min-height: 6px;\n    height: 6px;\n    border-radius: 3px;\n    background-color: #ddd;\n    cursor: pointer; }\n.order-list[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  width: 768px;\n  max-width: calc(100vw - 2rem);\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 1em 0 .5em;\n  border-radius: 12px 12px 0 0;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  transition: transform 200ms;\n  background-color: #fff; }\n.no-catering[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  width: 360px;\n  max-width: calc(100vw - 2rem);\n  padding: 1em 2em;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  border-radius: 8px;\n  margin: 0 auto 6em;\n  text-align: center; }\n.no-catering[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n    color: #ce1a51; }\n.no-catering[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%], .no-catering[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n    height: 6em;\n    width: 8em; }\n.no-item[_ngcontent-%COMP%] {\n  margin: 2em; }\n.no-item[_ngcontent-%COMP%]   spinner[_ngcontent-%COMP%] {\n    font-size: .8em; }\n.margin[_ngcontent-%COMP%] {\n  margin-top: 1em; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc2hhcmVkLnN0eWxlcy5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5nL21haW4tZmxvdy9jYXRlcmluZy9jYXRlcmluZy5jb21wb25lbnQuc2NzcyIsIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGVsbC9ib29raW5nL21haW4tZmxvdy9jYXRlcmluZy9jYXRlcmluZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7aUNDRWlDO0FENkNqQzs7dUJDMUN1QjtBRHVEdkI7O3NCQ3BEc0I7QUNMdEI7RUFDSSxrQkFBa0I7RUFDbEIsTUFBTTtFQUNOLE9BQU87RUFDUCxRQUFRO0VBQ1IsU0FBUztFQUNULGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsdUJBQXVCO0VBQ3ZCLHNCQUFzQjtFQUN0QixnQkFBZ0IsRUFBQTtBQUdwQjtFQUNJLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLGNBQWM7RUFDZCxXQUFXO0VBQ1gsc0JBQXNCO0VGc0J0QiwrR0FBNkY7RUVwQjdGLGFBQWEsRUFBQTtBQVJqQjtJQVdRLGlCQUFpQixFQUFBO0FBSXpCO0VBQ0ksV0FBVztFQUNYLG9CQUFvQixFQUFBO0FGeUNoQjtJRTNDUjtNQUtRLGlCQUFpQixFQUFBLEVBRXhCO0FGdUNPO0lFOUNSO01BS1EsaUJBQWlCLEVBQUEsRUFFeEI7QUFFRDtFQUNJLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLE9BQU87RUFDUCxzQkFBc0I7RUFDdEIsY0FBYyxFQUFBO0FBR2xCO0VBQ0ksYUFBYTtFQUNiLG1CQUFtQjtFQUNuQix1QkFBdUI7RUFDdkIsWUFBWTtFQUNaLDRCQUE0QjtFQUM1QixrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLHNCQUFzQjtFQUN0QixtQkFBbUI7RUFDbkIsZ0JBQWdCLEVBQUE7QUFWcEI7SUFhUSxvQkFBb0I7SUFDcEIsMEJBQWdCLEVBQUE7QUFkeEI7SUFrQlEsZUFBZSxFQUFBO0FBSXZCO0VBQ0ksZUFBZTtFQUNmLFVBQVU7RUFDVixTQUFTO0VBQ1QsZ0JBQWdCO0VBQ2hCLGFBQWE7RUFDYixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLE9BQU8sRUFBQTtBQUdYO0VBQ0ksYUFBYTtFQUNiLG1CQUFtQjtFQUNuQix1QkFBdUI7RUFDdkIsY0FBYztFQUNkLGFBQWEsRUFBQTtBQUdqQjtFQUNJLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsWUFBWTtFQUNaLDRCQUE0QjtFQUM1QixjQUFjLEVBQUE7QUZyQlY7SUVnQlI7TUFRUSxzQkFBc0I7TUFDdEIsdUJBQXVCO01BQ3ZCLGFBQWEsRUFBQSxFQVFwQjtBRi9CTztJRWFSO01BUVEsc0JBQXNCO01BQ3RCLHVCQUF1QjtNQUN2QixhQUFhLEVBQUEsRUFRcEI7QUFsQkQ7SUFjUSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLGdCQUFnQixFQUFBO0FBSXhCO0VBQ0ksa0JBQWtCO0VBQ2xCLGFBQWE7RUFDYixjQUFjO0VBQ2QsdUJBQXVCO0VBQ3ZCLGNBQWMsRUFBQTtBQUxsQjtJQVFRLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsdUJBQXVCO0lBQ3ZCLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2Ysa0JBQWtCLEVBQUE7QUFiMUI7SUFpQlEsY0ZyR2UsRUFBQTtBRW9GdkI7TUFtQlksVUFBVSxFQUFBO0FBbkJ0QjtJQWdDUSxPQUFPO0lBQ1AsUUFBUTtJQUNSLFNBQVM7SUFDVCxXQUFXO0lBQ1gseUJGeEhlO0lFeUhmLFVBQVU7SUFDVix5QkFBeUIsRUFBQTtBQUlqQztFQUNJLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsV0FBVyxFQUFBO0FBSGY7SUFNUSxVQUFVO0lBQ1YsZUFBZTtJQUNmLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLGVBQWUsRUFBQTtBQUl2QjtFQUNJLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHNCQUFzQjtFQUN0QixZQUFZO0VBQ1osNkJBQTZCO0VBQzdCLFNBQVM7RUFDVCxTQUFTO0VBQ1QsMkJBQTJCO0VBQzNCLG1CQUFtQjtFQUNuQiw0QkFBNEI7RUZ0STVCLCtHQUE2RjtFRXdJN0YsMkJBQTJCO0VBQzNCLHNCQUFzQixFQUFBO0FBRzFCO0VBQ0ksYUFBYTtFQUNiLG1CQUFtQjtFQUNuQixzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLDZCQUE2QjtFQUM3QixnQkFBZ0I7RUFDaEIsc0JBQXNCO0VGbkp0QiwrR0FBNkY7RUVxSjdGLGtCQUFrQjtFQUNsQixrQkFBa0I7RUFDbEIsa0JBQWtCLEVBQUE7QUFYdEI7SUFjUSxjQUFjLEVBQUE7QUFkdEI7O0lBbUJRLFdBQVc7SUFDWCxVQUFVLEVBQUE7QUFJbEI7RUFDSSxXQUFXLEVBQUE7QUFEZjtJQUlRLGVBQWUsRUFBQTtBQUl2QjtFQUNJLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2Jvb2tpbmcvbWFpbi1mbG93L2NhdGVyaW5nL2NhdGVyaW5nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8IFNoYXJlZCBHbG9iYWwgU0FTUyBWYXJpYWJsZXMgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRzdWNjZXNzOiAjMzA5YjQwO1xuJHN1Y2Nlc3MtYWx0OiAjNDI4NWY0O1xuJGVycm9yOiAjZGIyOTFkO1xuJHBlbmRpbmc6ICNGRjk4MDA7XG4kbmV1dHJhbDogIzc5Nzk3OTtcbiRwcmltZS1ibHVlLWxpZ2h0OiMwMEFERUY7XG4kcHJpbWUtYmx1ZS1kYXJrOiMwMDY0QkQ7XG4kcHJpbWUtZ3JlZW4tbGlnaHQ6I0EyQUQwMDtcbiRwcmltZS1ncmV5LWRpc2FibGU6IzdDOTRBQTtcblxuJGJhY2tncm91bmQ6ICNlY2YxZjU7XG5cbiRoZWFkZXItaGVpZ2h0OiA0ZW07XG4kY29sb3ItcHJpbWFyeS13aXJlZnJhbWU6cmdiYSgwLCAwLCAwLCAwLjYxKTtcbiRoZWFkZXItYmc6ICNmZmY7XG4kaGVhZGVyLWNvbG9yOiByZ2JhKCMwMDI5NjAsIC44Nyk7XG5cbiR0aWxlLWNvbG9yOiAjZmZmO1xuJHRpbGUtYm9yZGVyOiAjZmZmO1xuXG4kaGVscC1ib3JkZXI6IHJnYmEoIzAwMCwgLjIpO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1zZWNvbmRhcnk6ICM0MDQ4NWE7XG4kY29sb3ItdGVybmFyeTogIzQyODVGNDtcbiRjb2xvci1xdWF0ZXJuYXJ5OiAjN2RkNmQ2O1xuJGNvbG9yLXF1aW50ZXJuYXJ5OiAjNGM1YzZjO1xuJGNvbG9yLXNleHRlcm5hcnk6ICM3ZmU0M2I7XG5cbiR0aW1lbGluZS1iZzogbGluZWFyLWdyYWRpZW50KC0xODBkZWcsICM0RjVGNzAgMCUsICMwRjEyMTUgMTAwJSk7XG4kdGltZWxpbmUtZXZlbnQ6ICRlcnJvcjtcbiR0aW1lbGluZS1ib29raW5nOiAkY29sb3ItcXVhdGVybmFyeTtcblxuQG1peGluIGhpZGUtdGV4dC1vdmVyZmxvdyB7XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG5AbWl4aW4gYm94LXNoYWRvdyB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDAgcmdiYSgjMDAwLCAuMiksIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuXG4vKj09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIEZvbnQgVmFyaWFibGVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09Ki9cblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kbWFpbi1mb250OiAkZm9udC1zdGFjaztcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgU2hhcmVkIEdsb2JhbCBTQVNTIFZhcmlhYmxlcyB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgRm9udCBWYXJpYWJsZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4uY2F0ZXJpbmcge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIG92ZXJmbG93OiBoaWRkZW47IH1cblxuLnRvcGJhciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGhlaWdodDogMi41ZW07XG4gIGZvbnQtc2l6ZTogMWVtO1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDAgcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xuICBwYWRkaW5nOiAuNWVtOyB9XG4gIC50b3BiYXIgLnRleHQge1xuICAgIG1hcmdpbi1sZWZ0OiAuNWVtOyB9XG5cbi5oZWFkZXIge1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogLjVlbSAuNWVtIDA7IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgICAuaGVhZGVyIHtcbiAgICAgIG1pbi1oZWlnaHQ6IDkuNWVtOyB9IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gICAgLmhlYWRlciB7XG4gICAgICBtaW4taGVpZ2h0OiA5LjVlbTsgfSB9XG5cbi5ib2R5IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMTAwJTtcbiAgbWluLWhlaWdodDogMTBlbTtcbiAgZmxleDogMTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgb3ZlcmZsb3c6IGF1dG87IH1cblxuLnNlYXJjaCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB3aWR0aDogNzY4cHg7XG4gIG1heC13aWR0aDogY2FsYygxMDAlIC0gMnJlbSk7XG4gIG1hcmdpbjogLjVyZW0gYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgcGFkZGluZzogLjVyZW0gMXJlbTtcbiAgZm9udC1zaXplOiAxLjVlbTsgfVxuICAuc2VhcmNoIC5kaXNhYmxlZCB7XG4gICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gICAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4zNSk7IH1cbiAgLnNlYXJjaCAuaWNvbiB7XG4gICAgY3Vyc29yOiBwb2ludGVyOyB9XG5cbmlucHV0IHtcbiAgZm9udC1zaXplOiAuN2VtO1xuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7XG4gIGJhY2tncm91bmQ6IG5vbmU7XG4gIG91dGxpbmU6IG5vbmU7XG4gIGJveC1zaGFkb3c6IG5vbmU7XG4gIGJvcmRlcjogbm9uZTtcbiAgZmxleDogMTsgfVxuXG4uaWNvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDEuMjVlbTtcbiAgd2lkdGg6IDEuMjVlbTsgfVxuXG4ucm9vbS1saXN0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IDc2OHB4O1xuICBtYXgtd2lkdGg6IGNhbGMoMTAwJSAtIDJyZW0pO1xuICBtYXJnaW46IDAgYXV0bzsgfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiA0NTBweCkge1xuICAgIC5yb29tLWxpc3Qge1xuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xuICAgICAgaGVpZ2h0OiAyLjVlbTsgfSB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICAgIC5yb29tLWxpc3Qge1xuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xuICAgICAgaGVpZ2h0OiAyLjVlbTsgfSB9XG4gIC5yb29tLWxpc3QgLmdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMCAuMjVlbTsgfVxuXG4ucm9vbSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiAyLjVlbTtcbiAgbWF4LXdpZHRoOiAzMCU7XG4gIHRyYW5zaXRpb246IGNvbG9yIDIwMG1zO1xuICBtYXJnaW46IDAgLjVlbTsgfVxuICAucm9vbSAubmFtZSB7XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xuICAgIHBhZGRpbmc6IC42cmVtIDA7XG4gICAgZm9udC1zaXplOiAuOWVtO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjsgfVxuICAucm9vbS5hY3RpdmUge1xuICAgIGNvbG9yOiAjMTkzN2VhOyB9XG4gICAgLnJvb20uYWN0aXZlIC5iYXIge1xuICAgICAgb3BhY2l0eTogMTsgfVxuICAucm9vbSAuYmFyIHtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBoZWlnaHQ6IDRweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICAgIG9wYWNpdHk6IDA7XG4gICAgdHJhbnNpdGlvbjogb3BhY2l0eSAyMDBtczsgfVxuXG4uZm9vdGVyIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDIuNWVtO1xuICB6LWluZGV4OiAxMDsgfVxuICAuZm9vdGVyIC5iYXIge1xuICAgIHdpZHRoOiAyZW07XG4gICAgbWluLWhlaWdodDogNnB4O1xuICAgIGhlaWdodDogNnB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgIGN1cnNvcjogcG9pbnRlcjsgfVxuXG4ub3JkZXItbGlzdCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgd2lkdGg6IDc2OHB4O1xuICBtYXgtd2lkdGg6IGNhbGMoMTAwdncgLSAycmVtKTtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiA1MCU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcbiAgcGFkZGluZzogMWVtIDAgLjVlbTtcbiAgYm9yZGVyLXJhZGl1czogMTJweCAxMnB4IDAgMDtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDAgcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjAwbXM7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7IH1cblxuLm5vLWNhdGVyaW5nIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgd2lkdGg6IDM2MHB4O1xuICBtYXgtd2lkdGg6IGNhbGMoMTAwdncgLSAycmVtKTtcbiAgcGFkZGluZzogMWVtIDJlbTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDAgcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG4gIG1hcmdpbjogMCBhdXRvIDZlbTtcbiAgdGV4dC1hbGlnbjogY2VudGVyOyB9XG4gIC5uby1jYXRlcmluZyBzcGFuIHtcbiAgICBjb2xvcjogI2NlMWE1MTsgfVxuICAubm8tY2F0ZXJpbmcgLmljb24sXG4gIC5uby1jYXRlcmluZyBpbWcge1xuICAgIGhlaWdodDogNmVtO1xuICAgIHdpZHRoOiA4ZW07IH1cblxuLm5vLWl0ZW0ge1xuICBtYXJnaW46IDJlbTsgfVxuICAubm8taXRlbSBzcGlubmVyIHtcbiAgICBmb250LXNpemU6IC44ZW07IH1cblxuLm1hcmdpbiB7XG4gIG1hcmdpbi10b3A6IDFlbTsgfVxuIiwiXG5AaW1wb3J0ICdzaGFyZWQuc3R5bGVzJztcblxuLmNhdGVyaW5nIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbi50b3BiYXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDIuNWVtO1xuICAgIGZvbnQtc2l6ZTogMWVtO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcbiAgICBwYWRkaW5nOiAuNWVtO1xuXG4gICAgLnRleHQge1xuICAgICAgICBtYXJnaW4tbGVmdDogLjVlbTtcbiAgICB9XG59XG5cbi5oZWFkZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBhZGRpbmc6IC41ZW0gLjVlbSAwO1xuXG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgbWluLWhlaWdodDogOS41ZW07XG4gICAgfVxufVxuXG4uYm9keSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1pbi1oZWlnaHQ6IDEwZW07XG4gICAgZmxleDogMTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgIG92ZXJmbG93OiBhdXRvO1xufVxuXG4uc2VhcmNoIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgd2lkdGg6IDc2OHB4O1xuICAgIG1heC13aWR0aDogY2FsYygxMDAlIC0gMnJlbSk7XG4gICAgbWFyZ2luOiAuNXJlbSBhdXRvO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgICBwYWRkaW5nOiAuNXJlbSAxcmVtO1xuICAgIGZvbnQtc2l6ZTogMS41ZW07XG5cbiAgICAuZGlzYWJsZWQge1xuICAgICAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgICAgICAgY29sb3I6IHJnYmEoIzAwMCwgLjM1KTtcbiAgICB9XG5cbiAgICAuaWNvbiB7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG59XG5cbmlucHV0IHtcbiAgICBmb250LXNpemU6IC43ZW07XG4gICAgcGFkZGluZzogMDtcbiAgICBtYXJnaW46IDA7XG4gICAgYmFja2dyb3VuZDogbm9uZTtcbiAgICBvdXRsaW5lOiBub25lO1xuICAgIGJveC1zaGFkb3c6IG5vbmU7XG4gICAgYm9yZGVyOiBub25lO1xuICAgIGZsZXg6IDE7XG59XG5cbi5pY29uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAxLjI1ZW07XG4gICAgd2lkdGg6IDEuMjVlbTtcbn1cblxuLnJvb20tbGlzdCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHdpZHRoOiA3NjhweDtcbiAgICBtYXgtd2lkdGg6IGNhbGMoMTAwJSAtIDJyZW0pO1xuICAgIG1hcmdpbjogMCBhdXRvO1xuXG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG4gICAgICAgIGhlaWdodDogMi41ZW07XG4gICAgfVxuXG4gICAgLmdyb3VwIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgcGFkZGluZzogMCAuMjVlbTtcbiAgICB9XG59XG5cbi5yb29tIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgaGVpZ2h0OiAyLjVlbTtcbiAgICBtYXgtd2lkdGg6IDMwJTtcbiAgICB0cmFuc2l0aW9uOiBjb2xvciAyMDBtcztcbiAgICBtYXJnaW46IDAgLjVlbTtcblxuICAgIC5uYW1lIHtcbiAgICAgICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gICAgICAgIHBhZGRpbmc6IC42cmVtIDA7XG4gICAgICAgIGZvbnQtc2l6ZTogLjllbTtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIH1cblxuICAgICYuYWN0aXZlIHtcbiAgICAgICAgY29sb3I6ICRjb2xvci1wcmltYXJ5O1xuICAgICAgICAuYmFyIHtcbiAgICAgICAgICAgIG9wYWNpdHk6IDE7XG4gICAgICAgIH1cblxuICAgICAgICAvLyAmLm5vdC1jYXRlcmVkIHtcbiAgICAgICAgLy8gICAgIGNvbG9yOiAjY2UxYTUxO1xuXG4gICAgICAgIC8vICAgICAuYmFyIHtcbiAgICAgICAgLy8gICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2UxYTUxO1xuICAgICAgICAvLyAgICAgfVxuICAgICAgICAvLyB9XG4gICAgfVxuXG4gICAgLmJhciB7XG4gICAgICAgIGxlZnQ6IDA7XG4gICAgICAgIHJpZ2h0OiAwO1xuICAgICAgICBib3R0b206IDA7XG4gICAgICAgIGhlaWdodDogNHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgdHJhbnNpdGlvbjogb3BhY2l0eSAyMDBtcztcbiAgICB9XG59XG5cbi5mb290ZXIge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBoZWlnaHQ6IDIuNWVtO1xuICAgIHotaW5kZXg6IDEwO1xuXG4gICAgLmJhciB7XG4gICAgICAgIHdpZHRoOiAyZW07XG4gICAgICAgIG1pbi1oZWlnaHQ6IDZweDtcbiAgICAgICAgaGVpZ2h0OiA2cHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbn1cblxuLm9yZGVyLWxpc3Qge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICB3aWR0aDogNzY4cHg7XG4gICAgbWF4LXdpZHRoOiBjYWxjKDEwMHZ3IC0gMnJlbSk7XG4gICAgYm90dG9tOiAwO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSk7XG4gICAgcGFkZGluZzogMWVtIDAgLjVlbTtcbiAgICBib3JkZXItcmFkaXVzOiAxMnB4IDEycHggMCAwO1xuICAgIEBpbmNsdWRlIGJveC1zaGFkb3c7XG4gICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDIwMG1zO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG5cbi5uby1jYXRlcmluZyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgd2lkdGg6IDM2MHB4O1xuICAgIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDJyZW0pO1xuICAgIHBhZGRpbmc6IDFlbSAyZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgICBtYXJnaW46IDAgYXV0byA2ZW07XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuXG4gICAgc3BhbiB7XG4gICAgICAgIGNvbG9yOiAjY2UxYTUxO1xuICAgIH1cblxuICAgIC5pY29uLFxuICAgIGltZyB7XG4gICAgICAgIGhlaWdodDogNmVtO1xuICAgICAgICB3aWR0aDogOGVtO1xuICAgIH1cbn1cblxuLm5vLWl0ZW0ge1xuICAgIG1hcmdpbjogMmVtO1xuXG4gICAgc3Bpbm5lciB7XG4gICAgICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICB9XG59XG5cbi5tYXJnaW4ge1xuICAgIG1hcmdpbi10b3A6IDFlbTtcbn1cbiJdfQ== */"];
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/catering/catering.component.ts": 
@@ -836,11 +847,13 @@ var __spread = (this && this.__spread) || function () {
             __webpack_require__.r(__webpack_exports__);
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingMainFlowCateringComponent", function () { return BookingMainFlowCateringComponent; });
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-            /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
-            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
-            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/ __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+            /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
+            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/ __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+            /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+            /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+            /* harmony import */ var _services_data_catering_catering_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/data/catering/catering.utilities */ "./src/app/services/data/catering/catering.utilities.ts");
             var BookingMainFlowCateringComponent = /** @class */ (function (_super) {
                 __extends(BookingMainFlowCateringComponent, _super);
                 function BookingMainFlowCateringComponent(_service) {
@@ -858,6 +871,22 @@ var __spread = (this && this.__spread) || function () {
                     _this.step = 1;
                     return _this;
                 }
+                Object.defineProperty(BookingMainFlowCateringComponent.prototype, "space_index", {
+                    get: function () {
+                        var _this = this;
+                        return Math.max(0, (this.spaces || []).findIndex(function (space) { return space.id === _this.order_form.controls.location_id.value; }));
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(BookingMainFlowCateringComponent.prototype, "time_index", {
+                    get: function () {
+                        var _this = this;
+                        return Math.max(0, (this.delivery_times || []).findIndex(function (block) { return block.id === _this.order_form.controls.delivery_time.value; }));
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
                 Object.defineProperty(BookingMainFlowCateringComponent.prototype, "active_building", {
                     get: function () {
                         if (this.active_space && this.active_space.level) {
@@ -900,8 +929,8 @@ var __spread = (this && this.__spread) || function () {
                     configurable: true
                 });
                 BookingMainFlowCateringComponent.prototype.isExcluded = function (restriction_time) {
-                    var now = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('m');
-                    var start = dayjs__WEBPACK_IMPORTED_MODULE_4__(this.date).startOf('m').second(1);
+                    var now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m');
+                    var start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m').second(1);
                     var end = start.subtract(restriction_time || -900, 'h');
                     if (end.format('ddd') === 'Sun' || end.format('ddd') === 'Sat') {
                         end = end.subtract(2, 'd');
@@ -913,7 +942,7 @@ var __spread = (this && this.__spread) || function () {
                         var e_1, _a;
                         var exclusions = {};
                         var building_list = this._service.Buildings.list();
-                        var _loop_1 = function (space) {
+                        var _loop_2 = function (space) {
                             var bld = building_list.find(function (bld) { return bld.id === space.level.bld_id; });
                             if (bld) {
                                 exclusions[space.id] = this_1.isExcluded(bld.catering_restricted_from);
@@ -923,7 +952,7 @@ var __spread = (this && this.__spread) || function () {
                         try {
                             for (var _b = __values(this.spaces), _c = _b.next(); !_c.done; _c = _b.next()) {
                                 var space = _c.value;
-                                _loop_1(space);
+                                _loop_2(space);
                             }
                         }
                         catch (e_1_1) { e_1 = { error: e_1_1 }; }
@@ -938,28 +967,6 @@ var __spread = (this && this.__spread) || function () {
                     enumerable: true,
                     configurable: true
                 });
-                Object.defineProperty(BookingMainFlowCateringComponent.prototype, "has_catering", {
-                    /** Whether the selected room has catering */
-                    get: function () {
-                        if (this.active_space && this.catering) {
-                            var value = this.catering.control.value;
-                            var space = value[this.active_space.id] || {};
-                            return (space ? space.has_catering : null) || false;
-                        }
-                        return false;
-                    },
-                    set: function (state) {
-                        if (this.active_space && this.catering) {
-                            var value = this.catering.control.value;
-                            var space = value[this.active_space.id] || {};
-                            space.has_catering = state;
-                            value[this.active_space.id] = space;
-                            this.catering.setValue(value);
-                        }
-                    },
-                    enumerable: true,
-                    configurable: true
-                });
                 BookingMainFlowCateringComponent.prototype.ngOnChanges = function (changes) {
                     var _this = this;
                     if (changes.spaces && this.spaces) {
@@ -968,6 +975,12 @@ var __spread = (this && this.__spread) || function () {
                         }
                         this.loadMenu();
                     }
+                    if (changes.date || changes.duration) {
+                        this.delivery_times = this.generateAvailableTimes();
+                    }
+                    if (changes.order && this.order) {
+                        this.order_form = Object(_services_data_catering_catering_utilities__WEBPACK_IMPORTED_MODULE_6__["generateCateringOrderFormFields"])(this.order);
+                    }
                 };
                 /**
                  * Load menu categories for the selected rooms
@@ -975,15 +988,15 @@ var __spread = (this && this.__spread) || function () {
                 BookingMainFlowCateringComponent.prototype.loadMenu = function () {
                     var _this = this;
                     if (this.spaces && this.spaces instanceof Array) {
-                        this.spaces.forEach(function (i) {
-                            _this.loading[i.id] = true;
-                            _this.menu_map[i.id] = null;
-                            _this._service.Menu.query({ room_id: i.id }).then(function (list) {
-                                _this.loading[i.id] = false;
-                                _this.menu_map[i.id] = list || [];
+                        this.spaces.forEach(function (space) {
+                            _this.loading[space.id] = true;
+                            _this.menu_map[space.id] = null;
+                            _this._service.Menu.query({ room_id: space.id }).then(function (list) {
+                                _this.loading[space.id] = false;
+                                _this.menu_map[space.id] = (list || []);
                             }, function () {
-                                _this.loading[i.id] = false;
-                                _this.menu_map[i.id] = [];
+                                _this.loading[space.id] = false;
+                                _this.menu_map[space.id] = [];
                             });
                         });
                     }
@@ -995,6 +1008,9 @@ var __spread = (this && this.__spread) || function () {
                 BookingMainFlowCateringComponent.prototype.setSpace = function (space) {
                     var _this = this;
                     this.category = null;
+                    this.order_form.controls.location_id.setValue(space.id);
+                    this.order_form.controls.items.setValue([]);
+                    this.order.storePendingChanges('location', space.name);
                     this.timeout('set_space', function () { return (_this.active_space = space); }, 100);
                 };
                 /**
@@ -1021,7 +1037,7 @@ var __spread = (this && this.__spread) || function () {
                                 return v;
                             }, [])
                         };
-                        this.category = list;
+                        this.category = new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](list);
                     }
                     else {
                         this.category = null;
@@ -1041,8 +1057,25 @@ var __spread = (this && this.__spread) || function () {
                 BookingMainFlowCateringComponent.prototype.updateStep = function () {
                     this.step = this.key_states.shift ? 100 : (this.key_states.control ? 10 : 1);
                 };
+                /** Generate list of available delivery times */
+                BookingMainFlowCateringComponent.prototype.generateAvailableTimes = function () {
+                    var time_list = [];
+                    if (this.date) {
+                        var start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m');
+                        var old_start = start;
+                        start = start.minute(Math.ceil(start.minute() / 5) * 5);
+                        var end = start.add(this.duration, 'm');
+                        var duration = old_start.diff(start, 'm');
+                        while (start.isBefore(end, 'm')) {
+                            time_list.push({ id: duration, name: start.format('h:mm A') });
+                            start = start.add(5, 'm');
+                            duration += 5;
+                        }
+                    }
+                    return time_list;
+                };
                 return BookingMainFlowCateringComponent;
-            }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+            }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/catering/item-list/item-list.component.ngfactory.js": 
@@ -1073,16 +1106,7 @@ var __spread = (this && this.__spread) || function () {
              */
             var styles_BookingMainFlowCateringItemListComponent = [_item_list_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
             var RenderType_BookingMainFlowCateringItemListComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_BookingMainFlowCateringItemListComponent, data: {} });
-            function View_BookingMainFlowCateringItemListComponent_2(_l) {
-                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "catering-item", [], null, [[null, "selectedChange"]], function (_v, en, $event) {
-                        var ad = true;
-                        if (("selectedChange" === en)) {
-                            var pd_0 = ((_v.context.$implicit.selected = $event) !== false);
-                            ad = (pd_0 && ad);
-                        }
-                        return ad;
-                    }, _list_item_list_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_BookingMainFlowCateringListItemComponent_0"], _list_item_list_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_BookingMainFlowCateringListItemComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _list_item_list_item_component__WEBPACK_IMPORTED_MODULE_3__["BookingMainFlowCateringListItemComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { space: [0, "space"], parent: [1, "parent"], item: [2, "item"], exclude: [3, "exclude"], field: [4, "field"], selected: [5, "selected"], step: [6, "step"] }, { selectedChange: "selectedChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space; var currVal_1 = _co.category; var currVal_2 = _v.context.$implicit; var currVal_3 = _co.exclude; var currVal_4 = _co.field; var currVal_5 = _v.context.$implicit.selected; var currVal_6 = _co.step; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); }, null);
-            }
+            function View_BookingMainFlowCateringItemListComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "catering-item", [], null, null, null, _list_item_list_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_BookingMainFlowCateringListItemComponent_0"], _list_item_list_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_BookingMainFlowCateringListItemComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _list_item_list_item_component__WEBPACK_IMPORTED_MODULE_3__["BookingMainFlowCateringListItemComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { space: [0, "space"], parent: [1, "parent"], item: [2, "item"], exclude: [3, "exclude"], items: [4, "items"], step: [5, "step"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space; var currVal_1 = _co.category; var currVal_2 = _v.context.$implicit; var currVal_3 = _co.exclude; var currVal_4 = _co.items; var currVal_5 = _co.step; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); }, null); }
             function View_BookingMainFlowCateringItemListComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringItemListComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.category.items; _ck(_v, 2, 0, currVal_0); }, null); }
             function View_BookingMainFlowCateringItemListComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [["class", "no-item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["close"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["No matching items"]))], null, null); }
             function View_BookingMainFlowCateringItemListComponent_0(_l) {
@@ -1113,7 +1137,7 @@ var __spread = (this && this.__spread) || function () {
                     }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_6__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["keyboard_arrow_left"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Categories"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringItemListComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["empty", 2]], null, 0, null, View_BookingMainFlowCateringItemListComponent_3))], function (_ck, _v) { var _co = _v.component; var currVal_1 = ((_co.category && _co.category.items) && (_co.category.items.length > 0)); var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 13); _ck(_v, 12, 0, currVal_1, currVal_2); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.category.name; _ck(_v, 3, 0, currVal_0); });
             }
             function View_BookingMainFlowCateringItemListComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-item-list", [], null, null, null, View_BookingMainFlowCateringItemListComponent_0, RenderType_BookingMainFlowCateringItemListComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _item_list_component__WEBPACK_IMPORTED_MODULE_7__["BookingMainFlowCateringItemListComponent"], [], null, null)], null, null); }
-            var BookingMainFlowCateringItemListComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-item-list", _item_list_component__WEBPACK_IMPORTED_MODULE_7__["BookingMainFlowCateringItemListComponent"], View_BookingMainFlowCateringItemListComponent_Host_0, { space: "space", category: "category", exclude: "exclude", field: "field", step: "step" }, { event: "event" }, []);
+            var BookingMainFlowCateringItemListComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-item-list", _item_list_component__WEBPACK_IMPORTED_MODULE_7__["BookingMainFlowCateringItemListComponent"], View_BookingMainFlowCateringItemListComponent_Host_0, { space: "space", category: "category", exclude: "exclude", items: "items", step: "step" }, { event: "event" }, []);
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/catering/item-list/item-list.component.scss.shim.ngstyle.js": 
@@ -1144,8 +1168,9 @@ var __spread = (this && this.__spread) || function () {
             __webpack_require__.r(__webpack_exports__);
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingMainFlowCateringItemListComponent", function () { return BookingMainFlowCateringItemListComponent; });
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-            /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+            /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+            /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
             var BookingMainFlowCateringItemListComponent = /** @class */ (function (_super) {
                 __extends(BookingMainFlowCateringItemListComponent, _super);
                 function BookingMainFlowCateringItemListComponent() {
@@ -1157,7 +1182,7 @@ var __spread = (this && this.__spread) || function () {
                     return _this;
                 }
                 return BookingMainFlowCateringItemListComponent;
-            }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+            }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/catering/item-list/list-item/list-item.component.ngfactory.js": 
@@ -1191,8 +1216,8 @@ var __spread = (this && this.__spread) || function () {
              */
             var styles_BookingMainFlowCateringListItemComponent = [_list_item_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
             var RenderType_BookingMainFlowCateringListItemComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_BookingMainFlowCateringListItemComponent, data: { "animation": [{ type: 7, name: "show", definitions: [{ type: 0, name: "show", styles: { type: 6, styles: { opacity: 1, height: "*" }, offset: null }, options: undefined }, { type: 0, name: "hide", styles: { type: 6, styles: { opacity: 0, height: 0 }, offset: null }, options: undefined }, { type: 1, expr: "show <=> hide", animation: { type: 4, styles: null, timings: "200ms" }, options: null }], options: {} }] } });
-            function View_BookingMainFlowCateringListItemComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" ", " ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](2, 2)], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 1, 0, _ck(_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 1), (_co.item.price / 100), _co.symbol)); var currVal_1 = ((((_co.item.price ? "| " : "") + _co.item.description) || (_co.item.items ? (("Selection of " + _co.item.items.length) + " items") : "")) || "No description"); _ck(_v, 1, 0, currVal_0, currVal_1); }); }
-            function View_BookingMainFlowCateringListItemComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" ", " ", " ", " ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](2, 2)], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 1, 0, _ck(_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 1), (_co.item.price / 100), _co.symbol)); var currVal_1 = (_co.item.description ? ((_co.item.price ? "| " : "") + _co.item.description) : ""); var currVal_2 = (_co.item.minimum ? (" | Minimum of " + _co.item.minimum) : ""); var currVal_3 = (_co.item.must_select ? ((" | Select " + _co.item.must_select) + " from the below options") : ""); _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3); }); }
+            function View_BookingMainFlowCateringListItemComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" ", " ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](2, 2)], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 1, 0, _ck(_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 1), (_co.item.unit_price / 100), _co.symbol)); var currVal_1 = ((((_co.item.unit_price ? "| " : "") + _co.item.description) || (_co.item.items ? (("Selection of " + _co.item.items.length) + " items") : "")) || "No description"); _ck(_v, 1, 0, currVal_0, currVal_1); }); }
+            function View_BookingMainFlowCateringListItemComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" ", " ", " ", " ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](2, 2)], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 1, 0, _ck(_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 1), (_co.item.unit_price / 100), _co.symbol)); var currVal_1 = (_co.item.description ? ((_co.item.unit_price ? "| " : "") + _co.item.description) : ""); var currVal_2 = (_co.item.minimum_quantity ? (" | Minimum of " + _co.item.minimum_quantity) : ""); var currVal_3 = (_co.item.must_select ? ((" | Select " + _co.item.must_select) + " from the below options") : ""); _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3); }); }
             function View_BookingMainFlowCateringListItemComponent_3(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 12, "div", [["class", "amount"], ["title", "Ctrl + Click to add/remove 10\nShift + Click to add/remove 100"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "div", [["class", "icon less"], ["click-responder", ""]], [[2, "disabled", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
                         var ad = true;
@@ -1250,26 +1275,22 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_5 && ad);
                         }
                         return ad;
-                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_ClickResponderComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_ClickResponderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ClickResponderComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, 0, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["add"]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (!_co.item.amount || (_co.item.amount <= 0)); _ck(_v, 1, 0, currVal_0); var currVal_1 = (_co.item.amount || "0"); _ck(_v, 7, 0, currVal_1); var currVal_2 = (_co.item.amount >= (_co.item.maximum || 100)); _ck(_v, 8, 0, currVal_2); });
+                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_ClickResponderComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_ClickResponderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ClickResponderComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, 0, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["add"]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (!_co.item.amount || (_co.item.amount <= 0)); _ck(_v, 1, 0, currVal_0); var currVal_1 = (_co.item.amount || "0"); _ck(_v, 7, 0, currVal_1); var currVal_2 = (_co.item.amount >= (_co.item.maximum_quantity || 100)); _ck(_v, 8, 0, currVal_2); });
             }
             function View_BookingMainFlowCateringListItemComponent_6(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "radio-btn", [], null, null, null, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_RadioButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_RadioButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["RadioButtonComponent"], [], { model: [0, "model"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.selected; _ck(_v, 1, 0, currVal_0); }, null); }
             function View_BookingMainFlowCateringListItemComponent_7(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "a-checkbox", [], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_4__["View_ACheckboxComponent_0"], _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_4__["RenderType_ACheckboxComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 49152, null, 0, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_5__["ACheckboxComponent"], [], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NG_VALUE_ACCESSOR"], function (p0_0) { return [p0_0]; }, [_acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_5__["ACheckboxComponent"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NG_VALUE_ACCESSOR"]]], { model: [0, "model"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControl"]]], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.selected; _ck(_v, 3, 0, currVal_7); }, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).ngClassPending; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); }); }
             function View_BookingMainFlowCateringListItemComponent_5(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "amount select"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.parent.must_select === 1); _ck(_v, 2, 0, currVal_0); var currVal_1 = (_co.parent.must_select > 1); _ck(_v, 4, 0, currVal_1); }, null); }
             function View_BookingMainFlowCateringListItemComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.item.package; _ck(_v, 1, 0, currVal_0); }, null); }
             function View_BookingMainFlowCateringListItemComponent_9(_l) {
-                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "item"]], [[2, "selection", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "catering-item", [], null, [[null, "selectedChange"]], function (_v, en, $event) {
+                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "item"]], [[2, "selection", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "catering-item", [], null, [[null, "amountChange"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
-                        if (("selectedChange" === en)) {
-                            var pd_0 = ((_v.context.$implicit.selected = $event) !== false);
+                        if (("amountChange" === en)) {
+                            var pd_0 = (_co.handleSelect(_v.context.$implicit) !== false);
                             ad = (pd_0 && ad);
                         }
-                        if (("selectedChange" === en)) {
-                            var pd_1 = (_co.handleSelect(_v.context.$implicit) !== false);
-                            ad = (pd_1 && ad);
-                        }
                         return ad;
-                    }, View_BookingMainFlowCateringListItemComponent_0, RenderType_BookingMainFlowCateringListItemComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _list_item_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringListItemComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["AppService"]], { simple: [0, "simple"], space: [1, "space"], parent: [2, "parent"], item: [3, "item"], field: [4, "field"], selected: [5, "selected"] }, { selectedChange: "selectedChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 0, "div", [["class", "bar"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_1 = true; var currVal_2 = _co.space; var currVal_3 = _co.item; var currVal_4 = _v.context.$implicit; var currVal_5 = _co.field; var currVal_6 = _v.context.$implicit.selected; _ck(_v, 2, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); }, function (_ck, _v) { var currVal_0 = (_v.context.$implicit.items && (_v.context.$implicit.items.length > 0)); _ck(_v, 0, 0, currVal_0); });
+                    }, View_BookingMainFlowCateringListItemComponent_0, RenderType_BookingMainFlowCateringListItemComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _list_item_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringListItemComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["AppService"]], { simple: [0, "simple"], space: [1, "space"], parent: [2, "parent"], item: [3, "item"], items: [4, "items"] }, { amountChange: "amountChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 0, "div", [["class", "bar"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_1 = true; var currVal_2 = _co.space; var currVal_3 = _co.item; var currVal_4 = _v.context.$implicit; var currVal_5 = _co.items; _ck(_v, 2, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); }, function (_ck, _v) { var currVal_0 = (_v.context.$implicit.items && (_v.context.$implicit.items.length > 0)); _ck(_v, 0, 0, currVal_0); });
             }
             function View_BookingMainFlowCateringListItemComponent_8(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "sub-items"]], [[24, "@show", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.item.items; _ck(_v, 2, 0, currVal_1); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show_list ? "show" : "hide"); _ck(_v, 0, 0, currVal_0); }); }
             function View_BookingMainFlowCateringListItemComponent_0(_l) {
@@ -1293,7 +1314,7 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_3 && ad);
                         }
                         if (("touchrelease" === en)) {
-                            var pd_4 = (_co.toggle() !== false);
+                            var pd_4 = (((_co.parent.must_select && !_co.item.package) ? _co.toggle() : "") !== false);
                             ad = (pd_4 && ad);
                         }
                         return ad;
@@ -1321,10 +1342,10 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_4 && ad);
                         }
                         return ad;
-                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "div", [["class", "name"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](10, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["radio_option", 2]], null, 0, null, View_BookingMainFlowCateringListItemComponent_4)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_5 = !_co.item.package; _ck(_v, 12, 0, currVal_5); var currVal_6 = _co.item.package; _ck(_v, 14, 0, currVal_6); var currVal_7 = ((!_co.parent.package && !_co.parent.must_select) && _co.item.price); var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 17); _ck(_v, 16, 0, currVal_7, currVal_8); var currVal_9 = (_co.item && _co.item.items); _ck(_v, 19, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.item == null) ? null : _co.item.id); var currVal_1 = _co.simple; var currVal_2 = (_co.exclude && !_co.item.order_anytime); _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2); var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 5, 0, _ck(_v, 6, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 0), (_co.item.src ? (("url(" + _co.item.src) + ")") : ""))); _ck(_v, 5, 0, currVal_3); var currVal_4 = _co.item.name; _ck(_v, 10, 0, currVal_4); });
+                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "div", [["class", "name"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](10, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["radio_option", 2]], null, 0, null, View_BookingMainFlowCateringListItemComponent_4)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowCateringListItemComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_5 = !_co.item.package; _ck(_v, 12, 0, currVal_5); var currVal_6 = _co.item.package; _ck(_v, 14, 0, currVal_6); var currVal_7 = ((!_co.parent.package && !_co.parent.must_select) && _co.item.unit_price); var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 17); _ck(_v, 16, 0, currVal_7, currVal_8); var currVal_9 = (_co.item && _co.item.items); _ck(_v, 19, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.item == null) ? null : _co.item.id); var currVal_1 = _co.simple; var currVal_2 = (_co.exclude && !_co.item.order_anytime); _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2); var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 5, 0, _ck(_v, 6, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 0), (_co.item.image_url ? (("url(" + _co.item.image_url) + ")") : ""))); _ck(_v, 5, 0, currVal_3); var currVal_4 = _co.item.name; _ck(_v, 10, 0, currVal_4); });
             }
             function View_BookingMainFlowCateringListItemComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-item", [], null, null, null, View_BookingMainFlowCateringListItemComponent_0, RenderType_BookingMainFlowCateringListItemComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 704512, null, 0, _list_item_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringListItemComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["AppService"]], null, null)], null, null); }
-            var BookingMainFlowCateringListItemComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-item", _list_item_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringListItemComponent"], View_BookingMainFlowCateringListItemComponent_Host_0, { simple: "simple", space: "space", parent: "parent", item: "item", exclude: "exclude", field: "field", selected: "selected", disabled: "disabled", step: "step" }, { selectedChange: "selectedChange" }, []);
+            var BookingMainFlowCateringListItemComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-item", _list_item_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringListItemComponent"], View_BookingMainFlowCateringListItemComponent_Host_0, { simple: "simple", space: "space", parent: "parent", item: "item", exclude: "exclude", items: "items", disabled: "disabled", step: "step" }, { amountChange: "amountChange" }, []);
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/catering/item-list/list-item/list-item.component.scss.shim.ngstyle.js": 
@@ -1355,9 +1376,11 @@ var __spread = (this && this.__spread) || function () {
             __webpack_require__.r(__webpack_exports__);
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingMainFlowCateringListItemComponent", function () { return BookingMainFlowCateringListItemComponent; });
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
             /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
             /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../services/app.service */ "./src/app/services/app.service.ts");
+            /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+            /* harmony import */ var _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
             var BookingMainFlowCateringListItemComponent = /** @class */ (function (_super) {
                 __extends(BookingMainFlowCateringListItemComponent, _super);
                 function BookingMainFlowCateringListItemComponent(_service) {
@@ -1366,7 +1389,7 @@ var __spread = (this && this.__spread) || function () {
                     /** Step value for adding catering items */
                     _this.step = 1;
                     /** Emitter for changes to the selected amount of the item */
-                    _this.selectedChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+                    _this.amountChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
                     return _this;
                 }
                 Object.defineProperty(BookingMainFlowCateringListItemComponent.prototype, "symbol", {
@@ -1381,175 +1404,486 @@ var __spread = (this && this.__spread) || function () {
                 });
                 BookingMainFlowCateringListItemComponent.prototype.ngOnChanges = function (changes) {
                     var _this = this;
-                    if (changes.field && this.field) {
-                        this.subscription('control', this.field.control.valueChanges.subscribe(function () { return _this.orderUpdated(); }));
+                    if (changes.items && this.items) {
+                        this.subscription('control', this.items.valueChanges.subscribe(function () { return _this.updateAmounts(); }));
                     }
                     if (changes.space && this.space) {
-                        this.orderUpdated();
+                        this.updateAmounts();
                     }
                 };
                 /**
                  * Add the given item from the catering order
                  * @param item Item to add
                  */
-                BookingMainFlowCateringListItemComponent.prototype.add = function (item) {
-                    var _this = this;
-                    if (this.field && this.space) {
-                        var item_map = this.field.control.value || {};
-                        if (!item_map[this.space.id]) {
-                            item_map[this.space.id] = { room_id: this.space.id, name: this.space.name };
+                BookingMainFlowCateringListItemComponent.prototype.add = function (new_item) {
+                    if (this.items) {
+                        var items = this.items.value || [];
+                        if (!items.find(function (item) { return item.id === new_item.id; })) {
+                            items.push(new_item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"] ? new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](new_item) : new _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_5__["CateringItem"](new_item));
                         }
-                        var item_list = item_map[this.space.id].items || [];
-                        var itm = item_list.find(function (i) { return i.id === item.id || i.name === _this.item.name; });
-                        if (itm) {
-                            if (!itm.amount) {
-                                itm.amount = 0;
-                            }
-                            itm.amount += this.step;
-                            if (itm.amount && itm.amount < (itm.minimum || 1)) {
-                                itm.amount = Math.max(itm.minimum || 1, this.step);
-                            }
-                            if (itm.amount > (itm.maximum || 100)) {
-                                itm.amount = (itm.maximum || 100);
-                            }
-                        }
-                        else {
-                            item.amount = Math.max(1, item.minimum || 1);
-                            if (item.amount > (item.maximum || 100)) {
-                                item.amount = (item.maximum || 100);
-                            }
-                            item_list.push(Object.assign({}, item));
-                        }
-                        item_map[this.space.id].items = item_list;
-                        this.field.setValue(item_map);
+                        var item = items.find(function (item) { return item.id === new_item.id; });
+                        item.addToOrder();
+                        this.items.setValue(items);
+                        this.amountChange.emit(item.amount);
                     }
                 };
                 /**
                  * Remove the given item from the catering order
                  * @param item Item to remove
                  */
-                BookingMainFlowCateringListItemComponent.prototype.remove = function (item) {
-                    if (this.field && this.space) {
-                        var item_map = this.field.control.value || {};
-                        if (!item_map[this.space.id]) {
-                            item_map[this.space.id] = { room_id: this.space.id, name: this.space.name };
-                        }
-                        var item_list = item_map[this.space.id].items || [];
-                        var itm_1 = item_list.find(function (i) { return i.id === item.id || i.name === item.name; });
-                        if (itm_1) {
-                            itm_1.amount = (itm_1.amount || 0) - this.step;
-                            if (itm_1.amount < (itm_1.minimum || 0)) {
-                                itm_1.amount = 0;
-                                item_list = item_list.filter(function (i) { return i.id !== itm_1.id; });
+                BookingMainFlowCateringListItemComponent.prototype.remove = function (existing_item) {
+                    if (this.items && this.space) {
+                        var items = this.items.value || [];
+                        var item = items.find(function (item) { return item.id === existing_item.id; });
+                        if (item) {
+                            item.removeFromOrder();
+                            if (item.amount === 0) {
+                                items.splice(items.indexOf(item), 1);
+                                this.items.setValue(items);
                             }
+                            this.updateAmounts();
+                            this.amountChange.emit(item.amount);
                         }
-                        item_map[this.space.id].items = item_list;
-                        this.field.setValue(item_map);
                     }
                 };
                 /**
-                 * Toggle the selected state of the
+                 * Toggle the activation state of the item
                  */
                 BookingMainFlowCateringListItemComponent.prototype.toggle = function () {
-                    if (this.parent && this.parent.must_select > 0) {
-                        if (this.parent.must_select === 1) {
-                            this.selected = true;
-                        }
-                        else {
-                            this.selected = !this.selected;
-                        }
-                        this.selectedChange.emit(this.selected);
+                    if (this.item.amount === 0) {
+                        this.add(this.item);
+                    }
+                    else {
+                        this.remove(this.item);
                     }
                 };
                 BookingMainFlowCateringListItemComponent.prototype.handleSelect = function (item) {
                     var e_2, _a, e_3, _b;
-                    if (this.item.must_select === 1) {
-                        try {
-                            for (var _c = __values(this.item.items), _d = _c.next(); !_d.done; _d = _c.next()) {
-                                var i = _d.value;
-                                i.selected = (item.id === i.id || item.name === i.name);
-                            }
-                        }
-                        catch (e_2_1) { e_2 = { error: e_2_1 }; }
-                        finally {
+                    if (this.item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"]) {
+                        if (this.item.must_select === 1) {
                             try {
-                                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
-                            }
-                            finally { if (e_2) throw e_2.error; }
-                        }
-                    }
-                    else if (this.item.must_select > 1 && item.selected) {
-                        var active = this.item.items.reduce(function (v, i) { return v + (i.selected ? 1 : 0); }, 0);
-                        if (active > this.item.must_select) {
-                            var diff = active - this.item.must_select;
-                            try {
-                                for (var _e = __values(this.item.items), _f = _e.next(); !_f.done; _f = _e.next()) {
-                                    var i = _f.value;
-                                    if (diff > 0 && i.selected && !(item.id === i.id || item.name === i.name)) {
-                                        i.selected = false;
-                                        diff--;
+                                for (var _c = __values(this.item.items), _d = _c.next(); !_d.done; _d = _c.next()) {
+                                    var i = _d.value;
+                                    if (i.amount === 0) {
+                                        i.addToOrder();
                                     }
                                 }
                             }
-                            catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                            catch (e_2_1) { e_2 = { error: e_2_1 }; }
                             finally {
                                 try {
-                                    if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                                    if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
                                 }
-                                finally { if (e_3) throw e_3.error; }
+                                finally { if (e_2) throw e_2.error; }
+                            }
+                        }
+                        else if (this.item.must_select > 1 && item.amount > 0) {
+                            var active = this.item.items.reduce(function (v, i) { return v + (i.amount > 0 ? 1 : 0); }, 0);
+                            if (active > this.item.must_select) {
+                                var diff = active - this.item.must_select;
+                                try {
+                                    for (var _e = __values(this.item.items), _f = _e.next(); !_f.done; _f = _e.next()) {
+                                        var i = _f.value;
+                                        if (diff > 0 && i.amount > 0 && !(item.id === i.id || item.name === i.name)) {
+                                            i.removeFromOrder(999);
+                                            diff--;
+                                        }
+                                    }
+                                }
+                                catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                                finally {
+                                    try {
+                                        if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                                    }
+                                    finally { if (e_3) throw e_3.error; }
+                                }
                             }
                         }
                     }
                 };
-                /**
-                 * Update the order amounts for the local item display
-                 */
-                BookingMainFlowCateringListItemComponent.prototype.orderUpdated = function () {
+                BookingMainFlowCateringListItemComponent.prototype.updateAmounts = function () {
                     var _this = this;
-                    this.timeout('order_changed', function () {
-                        var e_4, _a;
-                        if (_this.field && _this.space && _this.item) {
-                            var item_map = _this.field.control.value || {};
-                            if (!item_map[_this.space.id]) {
-                                item_map[_this.space.id] = { room_id: _this.space.id, name: _this.space.name };
-                            }
-                            var item_list = item_map[_this.space.id].items || [];
-                            var found = item_list.find(function (i) { return i.id === _this.item.id || i.name === _this.item.name; });
-                            if (found) {
-                                _this.item.amount = found.amount || 0;
-                            }
-                            else {
-                                _this.item.amount = 0;
-                            }
-                            if (_this.item.items) {
-                                var _loop_2 = function (item) {
-                                    var found_1 = item_list.find(function (i) { return i.id === item.id || i.name === item.name; });
-                                    if (found_1) {
-                                        item.amount = found_1.amount || 0;
-                                    }
-                                    else {
-                                        item.amount = 0;
-                                    }
-                                };
-                                try {
-                                    for (var _b = __values(_this.item.items), _c = _b.next(); !_c.done; _c = _b.next()) {
-                                        var item = _c.value;
-                                        _loop_2(item);
-                                    }
-                                }
-                                catch (e_4_1) { e_4 = { error: e_4_1 }; }
-                                finally {
-                                    try {
-                                        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                                    }
-                                    finally { if (e_4) throw e_4.error; }
-                                }
-                            }
+                    if (this.items) {
+                        var items = this.items.value || [];
+                        var item = items.find(function (item) { return _this.item.id === item.id; });
+                        if (item && item !== this.item && item.amount !== this.item.amount) {
+                            this.item.removeFromOrder(999);
+                            this.item.addToOrder(item.amount);
                         }
-                    }, 100);
+                    }
                 };
                 return BookingMainFlowCateringListItemComponent;
             }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+            /***/ 
+        }),
+        /***/ "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ngfactory.js": 
+        /*!**********************************************************************************************!*\
+          !*** ./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ngfactory.js ***!
+          \**********************************************************************************************/
+        /*! exports provided: RenderType_BookingCateringOrderItemComponent, View_BookingCateringOrderItemComponent_0, View_BookingCateringOrderItemComponent_Host_0, BookingCateringOrderItemComponentNgFactory */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderType_BookingCateringOrderItemComponent", function () { return RenderType_BookingCateringOrderItemComponent; });
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_BookingCateringOrderItemComponent_0", function () { return View_BookingCateringOrderItemComponent_0; });
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_BookingCateringOrderItemComponent_Host_0", function () { return View_BookingCateringOrderItemComponent_Host_0; });
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingCateringOrderItemComponentNgFactory", function () { return BookingCateringOrderItemComponentNgFactory; });
+            /* harmony import */ var _item_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./item.component.scss.shim.ngstyle */ "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.scss.shim.ngstyle.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
+            /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+            /* harmony import */ var _item_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./item.component */ "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ts");
+            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../services/app.service */ "./src/app/services/app.service.ts");
+            /**
+             * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+             *
+             * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+             * tslint:disable
+             */
+            var styles_BookingCateringOrderItemComponent = [_item_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
+            var RenderType_BookingCateringOrderItemComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_BookingCateringOrderItemComponent, data: {} });
+            function View_BookingCateringOrderItemComponent_1(_l) {
+                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "div", [["class", "actions"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "button", [], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+                        var ad = true;
+                        var _co = _v.component;
+                        if (("mousedown" === en)) {
+                            var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).mousestart($event) !== false);
+                            ad = (pd_0 && ad);
+                        }
+                        if (("touchstart" === en)) {
+                            var pd_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).touchstart($event) !== false);
+                            ad = (pd_1 && ad);
+                        }
+                        if (("mouseup" === en)) {
+                            var pd_2 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).mouse($event) !== false);
+                            ad = (pd_2 && ad);
+                        }
+                        if (("touchend" === en)) {
+                            var pd_3 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).touch($event) !== false);
+                            ad = (pd_3 && ad);
+                        }
+                        if (("touchrelease" === en)) {
+                            var pd_4 = (_co.edit.emit() !== false);
+                            ad = (pd_4 && ad);
+                        }
+                        return ad;
+                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["edit"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 3, "button", [], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+                        var ad = true;
+                        var _co = _v.component;
+                        if (("mousedown" === en)) {
+                            var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).mousestart($event) !== false);
+                            ad = (pd_0 && ad);
+                        }
+                        if (("touchstart" === en)) {
+                            var pd_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).touchstart($event) !== false);
+                            ad = (pd_1 && ad);
+                        }
+                        if (("mouseup" === en)) {
+                            var pd_2 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).mouse($event) !== false);
+                            ad = (pd_2 && ad);
+                        }
+                        if (("touchend" === en)) {
+                            var pd_3 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).touch($event) !== false);
+                            ad = (pd_3 && ad);
+                        }
+                        if (("touchrelease" === en)) {
+                            var pd_4 = (_co.delete.emit() !== false);
+                            ad = (pd_4 && ad);
+                        }
+                        return ad;
+                    }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["delete"]))], null, null);
+            }
+            function View_BookingCateringOrderItemComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["CurrencyPipe"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["LOCALE_ID"]]), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "delivery-time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "div", [["class", "location"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, [" ", " Item", "\n"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 2, "div", [["class", "cost"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](8, null, [" ", "\n"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](9, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingCateringOrderItemComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_5 = !_co.expired; _ck(_v, 11, 0, currVal_5); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.time; _ck(_v, 2, 0, currVal_0); var currVal_1 = _co.location; _ck(_v, 4, 0, currVal_1); var currVal_2 = (_co.count || "0"); var currVal_3 = ((_co.count === 1) ? "" : "s"); _ck(_v, 6, 0, currVal_2, currVal_3); var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 8, 0, _ck(_v, 9, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 0), (_co.total / 100), _co.symbol)); _ck(_v, 8, 0, currVal_4); }); }
+            function View_BookingCateringOrderItemComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-order-list-item", [], null, null, null, View_BookingCateringOrderItemComponent_0, RenderType_BookingCateringOrderItemComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 114688, null, 0, _item_component__WEBPACK_IMPORTED_MODULE_4__["BookingCateringOrderItemComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_5__["AppService"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+            var BookingCateringOrderItemComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-order-list-item", _item_component__WEBPACK_IMPORTED_MODULE_4__["BookingCateringOrderItemComponent"], View_BookingCateringOrderItemComponent_Host_0, { order: "order" }, { edit: "edit", delete: "delete" }, []);
+            /***/ 
+        }),
+        /***/ "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.scss.shim.ngstyle.js": 
+        /*!******************************************************************************************************!*\
+          !*** ./src/app/shell/booking/main-flow/catering/order-list/item/item.component.scss.shim.ngstyle.js ***!
+          \******************************************************************************************************/
+        /*! exports provided: styles */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function () { return styles; });
+            /**
+             * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+             *
+             * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+             * tslint:disable
+             */
+            var styles = ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 100%; }\n\ndiv[_ngcontent-%COMP%] {\n  padding: .5em; }\n\n.delivery-time[_ngcontent-%COMP%] {\n  width: 8em; }\n\n.location[_ngcontent-%COMP%] {\n  width: 6em;\n  min-width: 25%;\n  flex: 1; }\n\n.count[_ngcontent-%COMP%] {\n  width: 5.25em; }\n\n.cost[_ngcontent-%COMP%] {\n  width: 5.25em; }\n\n.actions[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 4em; }\n\nbutton[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  height: 1.5em;\n  width: 1.5em;\n  font-size: 1em;\n  border-radius: 100%;\n  border: none;\n  background: none; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGVsbC9ib29raW5nL21haW4tZmxvdy9jYXRlcmluZy9vcmRlci1saXN0L2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsV0FBVyxFQUFBOztBQUlmO0VBQ0ksYUFBYSxFQUFBOztBQUdqQjtFQUNJLFVBQ0osRUFBQTs7QUFFQTtFQUNJLFVBQVU7RUFDVixjQUFjO0VBQ2QsT0FBTyxFQUFBOztBQUdYO0VBQ0ksYUFBYSxFQUFBOztBQUdqQjtFQUNJLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLFVBQVUsRUFBQTs7QUFHZDtFQUNJLG9CQUFvQjtFQUNwQixtQkFBbUI7RUFDbkIsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixZQUFZO0VBQ1osY0FBYztFQUNkLG1CQUFtQjtFQUNuQixZQUFZO0VBQ1osZ0JBQWdCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9ib29raW5nL21haW4tZmxvdy9jYXRlcmluZy9vcmRlci1saXN0L2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG5cbn1cblxuZGl2IHtcbiAgICBwYWRkaW5nOiAuNWVtO1xufVxuXG4uZGVsaXZlcnktdGltZSB7XG4gICAgd2lkdGg6IDhlbVxufVxuXG4ubG9jYXRpb24ge1xuICAgIHdpZHRoOiA2ZW07XG4gICAgbWluLXdpZHRoOiAyNSU7XG4gICAgZmxleDogMTtcbn1cblxuLmNvdW50IHtcbiAgICB3aWR0aDogNS4yNWVtO1xufVxuXG4uY29zdCB7XG4gICAgd2lkdGg6IDUuMjVlbTtcbn1cblxuLmFjdGlvbnMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB3aWR0aDogNGVtO1xufVxuXG5idXR0b24ge1xuICAgIGRpc3BsYXk6IGlubGluZS1mbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAxLjVlbTtcbiAgICB3aWR0aDogMS41ZW07XG4gICAgZm9udC1zaXplOiAxZW07XG4gICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgYmFja2dyb3VuZDogbm9uZTtcbn0iXX0= */"];
+            /***/ 
+        }),
+        /***/ "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ts": 
+        /*!************************************************************************************!*\
+          !*** ./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ts ***!
+          \************************************************************************************/
+        /*! exports provided: BookingCateringOrderItemComponent */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingCateringOrderItemComponent", function () { return BookingCateringOrderItemComponent; });
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../services/app.service */ "./src/app/services/app.service.ts");
+            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/ __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+            var BookingCateringOrderItemComponent = /** @class */ (function () {
+                function BookingCateringOrderItemComponent(_service) {
+                    this._service = _service;
+                    /** Emitter for edit events */
+                    this.edit = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+                    /** Emitter for delete events */
+                    this.delete = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+                }
+                Object.defineProperty(BookingCateringOrderItemComponent.prototype, "expired", {
+                    get: function () {
+                        if (!this.order)
+                            return false;
+                        var time = (this.order.changes ? this.order.changes.delivery_time : null) ||
+                            this.order.delivery_time;
+                        return dayjs__WEBPACK_IMPORTED_MODULE_3__().isAfter(dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date).add(time, 'm'), 's');
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(BookingCateringOrderItemComponent.prototype, "location", {
+                    /** Display string for the delivery location of the order */
+                    get: function () {
+                        var _this = this;
+                        if (!this.order)
+                            return 'No Location';
+                        if (this.order.changes && this.order.changes.location_id) {
+                            var space = (this._service.Rooms.list(true) || []).find(function (room) { return room.id = _this.order.changes.location_id; }) || {};
+                            return space.name;
+                        }
+                        return this.order.location;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(BookingCateringOrderItemComponent.prototype, "time", {
+                    /** Display string for the set delivery time */
+                    get: function () {
+                        if (!this.order)
+                            return 'No Delivery Time';
+                        var duration = (this.order.changes ? this.order.changes.delivery_time : null) ||
+                            this.order.delivery_time;
+                        return dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date).add(duration, 'm').format('h:mm A');
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(BookingCateringOrderItemComponent.prototype, "count", {
+                    /** Number of items in the order */
+                    get: function () {
+                        if (!this.order)
+                            return 0;
+                        var items = (this.order.changes ? this.order.changes.items : null) || this.order.items;
+                        return (items || []).reduce(function (total, item) { return total + item.amount; }, 0);
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(BookingCateringOrderItemComponent.prototype, "total", {
+                    /** Total cost of the items in the order */
+                    get: function () {
+                        if (!this.order)
+                            return 0;
+                        var items = (this.order.changes ? this.order.changes.items : null) || this.order.items;
+                        return (items || []).reduce(function (total, item) { return total + item.total; }, 0);
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(BookingCateringOrderItemComponent.prototype, "symbol", {
+                    /** Current symbol for the order */
+                    get: function () {
+                        var _this = this;
+                        if (!this.order)
+                            return 'USD';
+                        var space = this._service.Rooms.list(true).find(function (room) { return room.id === _this.order.location_id; });
+                        if (!space)
+                            return 'USD';
+                        var building = this._service.Buildings.get(space.level.bld_id) || {};
+                        return building.currency || 'USD';
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                BookingCateringOrderItemComponent.prototype.ngOnInit = function () { };
+                return BookingCateringOrderItemComponent;
+            }());
+            /***/ 
+        }),
+        /***/ "./src/app/shell/booking/main-flow/catering/order-list/order-list.component.ngfactory.js": 
+        /*!***********************************************************************************************!*\
+          !*** ./src/app/shell/booking/main-flow/catering/order-list/order-list.component.ngfactory.js ***!
+          \***********************************************************************************************/
+        /*! exports provided: RenderType_CateringOrderListComponent, View_CateringOrderListComponent_0, View_CateringOrderListComponent_Host_0, CateringOrderListComponentNgFactory */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderType_CateringOrderListComponent", function () { return RenderType_CateringOrderListComponent; });
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_CateringOrderListComponent_0", function () { return View_CateringOrderListComponent_0; });
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_CateringOrderListComponent_Host_0", function () { return View_CateringOrderListComponent_Host_0; });
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringOrderListComponentNgFactory", function () { return CateringOrderListComponentNgFactory; });
+            /* harmony import */ var _order_list_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./order-list.component.scss.shim.ngstyle */ "./src/app/shell/booking/main-flow/catering/order-list/order-list.component.scss.shim.ngstyle.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _item_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./item/item.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ngfactory.js");
+            /* harmony import */ var _item_item_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./item/item.component */ "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ts");
+            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../services/app.service */ "./src/app/services/app.service.ts");
+            /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+            /* harmony import */ var _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../../node_modules/@acaprojects/ngx-widgets/acaprojects-ngx-widgets.ngfactory */ "./node_modules/@acaprojects/ngx-widgets/acaprojects-ngx-widgets.ngfactory.js");
+            /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
+            /* harmony import */ var _order_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./order-list.component */ "./src/app/shell/booking/main-flow/catering/order-list/order-list.component.ts");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /**
+             * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+             *
+             * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+             * tslint:disable
+             */
+            var styles_CateringOrderListComponent = [_order_list_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
+            var RenderType_CateringOrderListComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_CateringOrderListComponent, data: {} });
+            function View_CateringOrderListComponent_2(_l) {
+                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "order"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "catering-order-list-item", [], null, [[null, "edit"], [null, "delete"]], function (_v, en, $event) {
+                        var ad = true;
+                        var _co = _v.component;
+                        if (("edit" === en)) {
+                            var pd_0 = (_co.editOrder(_v.context.$implicit) !== false);
+                            ad = (pd_0 && ad);
+                        }
+                        if (("delete" === en)) {
+                            var pd_1 = (_co.deleteOrder(_v.context.$implicit) !== false);
+                            ad = (pd_1 && ad);
+                        }
+                        return ad;
+                    }, _item_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_BookingCateringOrderItemComponent_0"], _item_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_BookingCateringOrderItemComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 114688, null, 0, _item_item_component__WEBPACK_IMPORTED_MODULE_3__["BookingCateringOrderItemComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { order: [0, "order"] }, { edit: "edit", delete: "delete" })], function (_ck, _v) { var currVal_0 = _v.context.$implicit; _ck(_v, 2, 0, currVal_0); }, null);
+            }
+            function View_CateringOrderListComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 2, "div", [["class", "list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_CateringOrderListComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.order_list; _ck(_v, 3, 0, currVal_0); }, null); }
+            function View_CateringOrderListComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 5, "div", [["class", "no-item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["close"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["No catering orders"]))], null, null); }
+            function View_CateringOrderListComponent_0(_l) {
+                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 20, "div", [["class", "catering order-list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 19, "div", [["class", "content"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 9, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "h3", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Catering Orders"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 6, "btn", [["widget", ""]], null, [[null, "tapped"]], function (_v, en, $event) {
+                        var ad = true;
+                        var _co = _v.component;
+                        if (("tapped" === en)) {
+                            var pd_0 = (_co.addOrder() !== false);
+                            ad = (pd_0 && ad);
+                        }
+                        return ad;
+                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_6__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_6__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_7__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, 0, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["add"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, 0, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["New order"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_CateringOrderListComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 6, "div", [["class", "footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) {
+                        var ad = true;
+                        var _co = _v.component;
+                        if (("tapped" === en)) {
+                            var pd_0 = (_co.event.emit({ type: "previous" }) !== false);
+                            ad = (pd_0 && ad);
+                        }
+                        return ad;
+                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_6__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_6__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_7__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Back"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) {
+                        var ad = true;
+                        var _co = _v.component;
+                        if (("tapped" === en)) {
+                            var pd_0 = (_co.event.emit({ type: "next" }) !== false);
+                            ad = (pd_0 && ad);
+                        }
+                        return ad;
+                    }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_6__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_6__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_7__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Continue"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["empty_state", 2]], null, 0, null, View_CateringOrderListComponent_3))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.order_list && _co.order_list.length); var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 21); _ck(_v, 13, 0, currVal_0, currVal_1); }, null);
+            }
+            function View_CateringOrderListComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "booking-main-flow-catering-orders", [], null, null, null, View_CateringOrderListComponent_0, RenderType_CateringOrderListComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _order_list_component__WEBPACK_IMPORTED_MODULE_8__["CateringOrderListComponent"], [_angular_router__WEBPACK_IMPORTED_MODULE_9__["Router"]], null, null)], null, null); }
+            var CateringOrderListComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("booking-main-flow-catering-orders", _order_list_component__WEBPACK_IMPORTED_MODULE_8__["CateringOrderListComponent"], View_CateringOrderListComponent_Host_0, { catering: "catering", spaces: "spaces", date: "date" }, { active_order: "order", event: "event" }, []);
+            /***/ 
+        }),
+        /***/ "./src/app/shell/booking/main-flow/catering/order-list/order-list.component.scss.shim.ngstyle.js": 
+        /*!*******************************************************************************************************!*\
+          !*** ./src/app/shell/booking/main-flow/catering/order-list/order-list.component.scss.shim.ngstyle.js ***!
+          \*******************************************************************************************************/
+        /*! exports provided: styles */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function () { return styles; });
+            /**
+             * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+             *
+             * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+             * tslint:disable
+             */
+            var styles = [".order-list[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  margin: 1em auto;\n  width: 768px;\n  min-height: calc(100% - 2em);\n  max-width: calc(100vw - 2em);\n  background-color: #fff;\n  border-radius: 4px;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12); }\n.content[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    width: 100%; }\n.header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center; }\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n    .header[_ngcontent-%COMP%] {\n      flex-direction: column; } }\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n    .header[_ngcontent-%COMP%] {\n      flex-direction: column; } }\n.header[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    flex: 1;\n    min-width: 50%;\n    text-align: center;\n    margin-left: 8em; }\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n      .header[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n        margin-left: 0; } }\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n      .header[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n        margin-left: 0; } }\n.body[_ngcontent-%COMP%] {\n  min-height: 50vh;\n  flex: 1; }\n.footer[_ngcontent-%COMP%] {\n  padding: .5em;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n.list[_ngcontent-%COMP%] {\n  padding: .5em; }\n.order[_ngcontent-%COMP%]:nth-child(2n) {\n  background-color: rgba(0, 0, 0, 0.05);\n  border-radius: 4px; }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc2hhcmVkLnN0eWxlcy5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5nL21haW4tZmxvdy9jYXRlcmluZy9vcmRlci1saXN0L29yZGVyLWxpc3QuY29tcG9uZW50LnNjc3MiLCIvYnVpbGRzL2FjYS1lbmdpbmUvbWNraW5zZXkvbWNraW5zZXktc3RhZmYtYXBwL3NyYy9hcHAvc2hlbGwvYm9va2luZy9tYWluLWZsb3cvY2F0ZXJpbmcvb3JkZXItbGlzdC9vcmRlci1saXN0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztpQ0NFaUM7QUQ2Q2pDOzt1QkMxQ3VCO0FEdUR2Qjs7c0JDcERzQjtBQ0x0QjtFQUNJLFlBQVk7RUFDWixXQUFXO0VBQ1gsY0FBYyxFQUFBO0FBR2xCO0VBQ0ksYUFBYTtFQUNiLG1CQUFtQjtFQUNuQixzQkFBc0I7RUFDdEIsZ0JBQWdCO0VBQ2hCLFlBQVk7RUFDWiw0QkFBNEI7RUFDNUIsNEJBQTRCO0VBQzVCLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsK0dBRW9DLEVBQUE7QUFaeEM7SUFlUSxXQUFXLEVBQUE7QUFJbkI7RUFDSSxhQUFhO0VBQ2IsbUJBQW1CLEVBQUE7QUY0Q2Y7SUU5Q1I7TUFLUSxzQkFBc0IsRUFBQSxFQWE3QjtBRitCTztJRWpEUjtNQUtRLHNCQUFzQixFQUFBLEVBYTdCO0FBbEJEO0lBU1EsT0FBTztJQUNQLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsZ0JBQWdCLEVBQUE7QUZrQ2hCO01FOUNSO1FBZVksY0FBYyxFQUFBLEVBRXJCO0FGZ0NHO01FakRSO1FBZVksY0FBYyxFQUFBLEVBRXJCO0FBR0w7RUFDSSxnQkFBZ0I7RUFDaEIsT0FBTyxFQUFBO0FBR1g7RUFDSSxhQUFhO0VBQ2IsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQix1QkFBdUIsRUFBQTtBQUczQjtFQUNJLGFBQWEsRUFBQTtBQUdqQjtFQUVRLHFDQUEyQjtFQUMzQixrQkFBa0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2Jvb2tpbmcvbWFpbi1mbG93L2NhdGVyaW5nL29yZGVyLWxpc3Qvb3JkZXItbGlzdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCBTaGFyZWQgR2xvYmFsIFNBU1MgVmFyaWFibGVzIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kc3VjY2VzczogIzMwOWI0MDtcbiRzdWNjZXNzLWFsdDogIzQyODVmNDtcbiRlcnJvcjogI2RiMjkxZDtcbiRwZW5kaW5nOiAjRkY5ODAwO1xuJG5ldXRyYWw6ICM3OTc5Nzk7XG4kcHJpbWUtYmx1ZS1saWdodDojMDBBREVGO1xuJHByaW1lLWJsdWUtZGFyazojMDA2NEJEO1xuJHByaW1lLWdyZWVuLWxpZ2h0OiNBMkFEMDA7XG4kcHJpbWUtZ3JleS1kaXNhYmxlOiM3Qzk0QUE7XG5cbiRiYWNrZ3JvdW5kOiAjZWNmMWY1O1xuXG4kaGVhZGVyLWhlaWdodDogNGVtO1xuJGNvbG9yLXByaW1hcnktd2lyZWZyYW1lOnJnYmEoMCwgMCwgMCwgMC42MSk7XG4kaGVhZGVyLWJnOiAjZmZmO1xuJGhlYWRlci1jb2xvcjogcmdiYSgjMDAyOTYwLCAuODcpO1xuXG4kdGlsZS1jb2xvcjogI2ZmZjtcbiR0aWxlLWJvcmRlcjogI2ZmZjtcblxuJGhlbHAtYm9yZGVyOiByZ2JhKCMwMDAsIC4yKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3Itc2Vjb25kYXJ5OiAjNDA0ODVhO1xuJGNvbG9yLXRlcm5hcnk6ICM0Mjg1RjQ7XG4kY29sb3ItcXVhdGVybmFyeTogIzdkZDZkNjtcbiRjb2xvci1xdWludGVybmFyeTogIzRjNWM2YztcbiRjb2xvci1zZXh0ZXJuYXJ5OiAjN2ZlNDNiO1xuXG4kdGltZWxpbmUtYmc6IGxpbmVhci1ncmFkaWVudCgtMTgwZGVnLCAjNEY1RjcwIDAlLCAjMEYxMjE1IDEwMCUpO1xuJHRpbWVsaW5lLWV2ZW50OiAkZXJyb3I7XG4kdGltZWxpbmUtYm9va2luZzogJGNvbG9yLXF1YXRlcm5hcnk7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3cge1xuICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoIzAwMCwgLjIpLCAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoIzAwMCwgLjEyKTtcbn1cblxuLyo9PT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBGb250IFZhcmlhYmxlcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PSovXG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJG1haW4tZm9udDogJGZvbnQtc3RhY2s7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9ICBAZWxzZSBpZiAkbWVkaWEgPT0gbGF0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAoJG1lZGlhID09IHRhYmxldC1tb2JpbGUgb3IgJG1lZGlhID09IG5vdC1kZXNrdG9wKSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8IFNoYXJlZCBHbG9iYWwgU0FTUyBWYXJpYWJsZXMgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIEZvbnQgVmFyaWFibGVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLm9yZGVyLWxpc3Qge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBvdmVyZmxvdzogYXV0bzsgfVxuXG4uY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIG1hcmdpbjogMWVtIGF1dG87XG4gIHdpZHRoOiA3NjhweDtcbiAgbWluLWhlaWdodDogY2FsYygxMDAlIC0gMmVtKTtcbiAgbWF4LXdpZHRoOiBjYWxjKDEwMHZ3IC0gMmVtKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7IH1cbiAgLmNvbnRlbnQgPiAqIHtcbiAgICB3aWR0aDogMTAwJTsgfVxuXG4uaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjsgfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiA0NTBweCkge1xuICAgIC5oZWFkZXIge1xuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgfSB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICAgIC5oZWFkZXIge1xuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgfSB9XG4gIC5oZWFkZXIgaDMge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi1sZWZ0OiA4ZW07IH1cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiA0NTBweCkge1xuICAgICAgLmhlYWRlciBoMyB7XG4gICAgICAgIG1hcmdpbi1sZWZ0OiAwOyB9IH1cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgICAgIC5oZWFkZXIgaDMge1xuICAgICAgICBtYXJnaW4tbGVmdDogMDsgfSB9XG5cbi5ib2R5IHtcbiAgbWluLWhlaWdodDogNTB2aDtcbiAgZmxleDogMTsgfVxuXG4uZm9vdGVyIHtcbiAgcGFkZGluZzogLjVlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7IH1cblxuLmxpc3Qge1xuICBwYWRkaW5nOiAuNWVtOyB9XG5cbi5vcmRlcjpudGgtY2hpbGQoMm4pIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjA1KTtcbiAgYm9yZGVyLXJhZGl1czogNHB4OyB9XG4iLCJcbkBpbXBvcnQgJ3NoYXJlZC5zdHlsZXMnO1xuXG4ub3JkZXItbGlzdCB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG92ZXJmbG93OiBhdXRvO1xufVxuXG4uY29udGVudCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgbWFyZ2luOiAxZW0gYXV0bztcbiAgICB3aWR0aDogNzY4cHg7XG4gICAgbWluLWhlaWdodDogY2FsYygxMDAlIC0gMmVtKTtcbiAgICBtYXgtd2lkdGg6IGNhbGMoMTAwdncgLSAyZW0pO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoIzAwMCwuMiksXG4gICAgICAgICAgICAgICAgMCAxcHggMXB4IDAgcmdiYSgjMDAwLC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLC4xMik7XG5cbiAgICA+ICoge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG59XG5cbi5oZWFkZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICAgIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgfVxuXG4gICAgaDMge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBtaW4td2lkdGg6IDUwJTtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBtYXJnaW4tbGVmdDogOGVtO1xuXG4gICAgICAgIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgICAgICBtYXJnaW4tbGVmdDogMDtcbiAgICAgICAgfVxuICAgIH1cbn1cblxuLmJvZHkge1xuICAgIG1pbi1oZWlnaHQ6IDUwdmg7XG4gICAgZmxleDogMTtcbn1cblxuLmZvb3RlciB7XG4gICAgcGFkZGluZzogLjVlbTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi5saXN0IHtcbiAgICBwYWRkaW5nOiAuNWVtO1xufVxuXG4ub3JkZXIge1xuICAgICY6bnRoLWNoaWxkKDJuKSB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoIzAwMCwgLjA1KTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIH1cbn1cbiJdfQ== */"];
+            /***/ 
+        }),
+        /***/ "./src/app/shell/booking/main-flow/catering/order-list/order-list.component.ts": 
+        /*!*************************************************************************************!*\
+          !*** ./src/app/shell/booking/main-flow/catering/order-list/order-list.component.ts ***!
+          \*************************************************************************************/
+        /*! exports provided: CateringOrderListComponent */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringOrderListComponent", function () { return CateringOrderListComponent; });
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+            /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+            var CateringOrderListComponent = /** @class */ (function (_super) {
+                __extends(CateringOrderListComponent, _super);
+                function CateringOrderListComponent(_router) {
+                    var _this = _super.call(this) || this;
+                    _this._router = _router;
+                    /** Emitter for changes to the active catering order */
+                    _this.active_order = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+                    /** Emitter for user events on component */
+                    _this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+                    return _this;
+                }
+                Object.defineProperty(CateringOrderListComponent.prototype, "order_list", {
+                    /** List of orders in the current booking */
+                    get: function () {
+                        if (!this.catering)
+                            return [];
+                        return this.catering.control.value || [];
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                /**
+                 * Create new order and start editing it
+                 */
+                CateringOrderListComponent.prototype.addOrder = function () {
+                    var order = new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"]({
+                        id: "order-" + Math.floor(Math.random() * 999999999),
+                        location_id: this.spaces[0].id,
+                        location: this.spaces[0].name,
+                        booking_date: this.date,
+                        delivery_time: 0
+                    });
+                    this.active_order.emit(order);
+                    this._router.navigate(['book', 'main', 'catering'], { queryParams: { order_id: order.id } });
+                };
+                /**
+                 * Start editing the given order
+                 * @param order
+                 */
+                CateringOrderListComponent.prototype.editOrder = function (order) {
+                    var the_order = this.order_list.find(function (o) { return o.id === order.id; });
+                    this.active_order.emit(the_order);
+                    this._router.navigate(['book', 'main', 'catering']);
+                };
+                /**
+                 * Remove the given order from the catering order list
+                 * @param order
+                 */
+                CateringOrderListComponent.prototype.deleteOrder = function (order) {
+                    var order_list = this.order_list;
+                    var the_order = order_list.find(function (o) { return o.id === order.id; });
+                    order_list.splice(order_list.indexOf(the_order), 1);
+                    this.catering.control.setValue(order_list);
+                };
+                return CateringOrderListComponent;
+            }(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/find-space/find-space.component.ngfactory.js": 
@@ -1934,7 +2268,7 @@ var __spread = (this && this.__spread) || function () {
                  * Search for available rooms matching the set filters
                  */
                 BookingMainFlowFindSpaceComponent.prototype.search = function () {
-                    var e_5, _a;
+                    var e_4, _a;
                     var _this = this;
                     var query = {
                         date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date,
@@ -1958,12 +2292,12 @@ var __spread = (this && this.__spread) || function () {
                             room_list = room_list.concat(this._service.Rooms.list(true, zone));
                         }
                     }
-                    catch (e_5_1) { e_5 = { error: e_5_1 }; }
+                    catch (e_4_1) { e_4 = { error: e_4_1 }; }
                     finally {
                         try {
                             if (locations_1_1 && !locations_1_1.done && (_a = locations_1.return)) _a.call(locations_1);
                         }
-                        finally { if (e_5) throw e_5.error; }
+                        finally { if (e_4) throw e_4.error; }
                     }
                     var date = query.date;
                     var duration = query.duration;
@@ -2053,7 +2387,7 @@ var __spread = (this && this.__spread) || function () {
                  * @param space_b
                  */
                 BookingMainFlowFindSpaceComponent.prototype.sort = function (space_a, space_b) {
-                    var e_6, _a;
+                    var e_5, _a;
                     var bld = this._service.Buildings.get(space_a.level.bld_id);
                     var bld_b = this._service.Buildings.get(space_a.level.bld_id);
                     if (bld && bld !== bld_b) {
@@ -2076,12 +2410,12 @@ var __spread = (this && this.__spread) || function () {
                             }
                         }
                     }
-                    catch (e_6_1) { e_6 = { error: e_6_1 }; }
+                    catch (e_5_1) { e_5 = { error: e_5_1 }; }
                     finally {
                         try {
                             if (sort_order_1_1 && !sort_order_1_1.done && (_a = sort_order_1.return)) _a.call(sort_order_1);
                         }
-                        finally { if (e_6) throw e_6.error; }
+                        finally { if (e_5) throw e_5.error; }
                     }
                     return (space_a.name || '').localeCompare(space_b.name || '');
                 };
@@ -2433,16 +2767,18 @@ var __spread = (this && this.__spread) || function () {
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingMainFlowComponentNgFactory", function () { return BookingMainFlowComponentNgFactory; });
             /* harmony import */ var _main_flow_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main-flow.component.scss.shim.ngstyle */ "./src/app/shell/booking/main-flow/main-flow.component.scss.shim.ngstyle.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            /* harmony import */ var _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./catering/catering.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/catering.component.ngfactory.js");
-            /* harmony import */ var _catering_catering_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./catering/catering.component */ "./src/app/shell/booking/main-flow/catering/catering.component.ts");
-            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
-            /* harmony import */ var _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./find-space/find-space.component.ngfactory */ "./src/app/shell/booking/main-flow/find-space/find-space.component.ngfactory.js");
-            /* harmony import */ var _find_space_find_space_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./find-space/find-space.component */ "./src/app/shell/booking/main-flow/find-space/find-space.component.ts");
-            /* harmony import */ var _form_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form/form.component.ngfactory */ "./src/app/shell/booking/main-flow/form/form.component.ngfactory.js");
-            /* harmony import */ var _form_form_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form/form.component */ "./src/app/shell/booking/main-flow/form/form.component.ts");
-            /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-            /* harmony import */ var _main_flow_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./main-flow.component */ "./src/app/shell/booking/main-flow/main-flow.component.ts");
-            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./catering/order-list/order-list.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/order-list/order-list.component.ngfactory.js");
+            /* harmony import */ var _catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./catering/order-list/order-list.component */ "./src/app/shell/booking/main-flow/catering/order-list/order-list.component.ts");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./catering/catering.component.ngfactory */ "./src/app/shell/booking/main-flow/catering/catering.component.ngfactory.js");
+            /* harmony import */ var _catering_catering_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./catering/catering.component */ "./src/app/shell/booking/main-flow/catering/catering.component.ts");
+            /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
+            /* harmony import */ var _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./find-space/find-space.component.ngfactory */ "./src/app/shell/booking/main-flow/find-space/find-space.component.ngfactory.js");
+            /* harmony import */ var _find_space_find_space_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./find-space/find-space.component */ "./src/app/shell/booking/main-flow/find-space/find-space.component.ts");
+            /* harmony import */ var _form_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./form/form.component.ngfactory */ "./src/app/shell/booking/main-flow/form/form.component.ngfactory.js");
+            /* harmony import */ var _form_form_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./form/form.component */ "./src/app/shell/booking/main-flow/form/form.component.ts");
+            /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+            /* harmony import */ var _main_flow_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./main-flow.component */ "./src/app/shell/booking/main-flow/main-flow.component.ts");
             /**
              * @fileoverview This file was generated by the Angular template compiler. Do not edit.
              *
@@ -2452,6 +2788,21 @@ var __spread = (this && this.__spread) || function () {
             var styles_BookingMainFlowComponent = [_main_flow_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
             var RenderType_BookingMainFlowComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_BookingMainFlowComponent, data: {} });
             function View_BookingMainFlowComponent_1(_l) {
+                return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "booking-main-flow-catering-orders", [], null, [[null, "order"], [null, "event"]], function (_v, en, $event) {
+                        var ad = true;
+                        var _co = _v.component;
+                        if (("order" === en)) {
+                            var pd_0 = ((_co.order = $event) !== false);
+                            ad = (pd_0 && ad);
+                        }
+                        if (("event" === en)) {
+                            var pd_1 = (_co.progress($event) !== false);
+                            ad = (pd_1 && ad);
+                        }
+                        return ad;
+                    }, _catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_CateringOrderListComponent_0"], _catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_CateringOrderListComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_3__["CateringOrderListComponent"], [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]], { catering: [0, "catering"], spaces: [1, "spaces"], date: [2, "date"] }, { active_order: "order", event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.catering; var currVal_1 = _co.spaces; var currVal_2 = _co.date; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2); }, null);
+            }
+            function View_BookingMainFlowComponent_2(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "booking-main-flow-catering", [], null, [[null, "event"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
@@ -2460,9 +2811,9 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_BookingMainFlowCateringComponent_0"], _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_BookingMainFlowCateringComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _catering_catering_component__WEBPACK_IMPORTED_MODULE_3__["BookingMainFlowCateringComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { id: [0, "id"], spaces: [1, "spaces"], date: [2, "date"], catering: [3, "catering"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.id; var currVal_1 = _co.spaces; var currVal_2 = _co.date; var currVal_3 = _co.catering; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); }, null);
+                    }, _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_BookingMainFlowCateringComponent_0"], _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_BookingMainFlowCateringComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _catering_catering_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowCateringComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_7__["AppService"]], { id: [0, "id"], spaces: [1, "spaces"], date: [2, "date"], duration: [3, "duration"], order: [4, "order"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.id; var currVal_1 = _co.spaces; var currVal_2 = _co.date; var currVal_3 = _co.duration; var currVal_4 = _co.order; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4); }, null);
             }
-            function View_BookingMainFlowComponent_2(_l) {
+            function View_BookingMainFlowComponent_3(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "booking-main-flow-find-space", [], null, [[null, "event"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
@@ -2471,9 +2822,9 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_BookingMainFlowFindSpaceComponent_0"], _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_BookingMainFlowFindSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 770048, null, 0, _find_space_find_space_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowFindSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { date_field: [0, "date_field"], duration: [1, "duration"], all_day: [2, "all_day"], catering: [3, "catering"], recurr_end: [4, "recurr_end"], spaces: [5, "spaces"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.date_field; var currVal_1 = _co.duration; var currVal_2 = _co.all_day; var currVal_3 = _co.needs_catering; var currVal_4 = _co.recurr_end; var currVal_5 = _co.space_list; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); }, null);
+                    }, _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["View_BookingMainFlowFindSpaceComponent_0"], _find_space_find_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["RenderType_BookingMainFlowFindSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 770048, null, 0, _find_space_find_space_component__WEBPACK_IMPORTED_MODULE_9__["BookingMainFlowFindSpaceComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_7__["AppService"]], { date_field: [0, "date_field"], duration: [1, "duration"], all_day: [2, "all_day"], catering: [3, "catering"], recurr_end: [4, "recurr_end"], spaces: [5, "spaces"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.date_field; var currVal_1 = _co.duration; var currVal_2 = _co.all_day; var currVal_3 = _co.needs_catering; var currVal_4 = _co.recurr_end; var currVal_5 = _co.space_list; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); }, null);
             }
-            function View_BookingMainFlowComponent_3(_l) {
+            function View_BookingMainFlowComponent_4(_l) {
                 return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "booking-main-flow-form", [], null, [[null, "event"]], function (_v, en, $event) {
                         var ad = true;
                         var _co = _v.component;
@@ -2482,11 +2833,11 @@ var __spread = (this && this.__spread) || function () {
                             ad = (pd_0 && ad);
                         }
                         return ad;
-                    }, _form_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["View_BookingMainFlowFormComponent_0"], _form_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["RenderType_BookingMainFlowFormComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _form_form_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowFormComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], { fields: [0, "fields"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.form_fields; _ck(_v, 2, 0, currVal_0); }, null);
+                    }, _form_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["View_BookingMainFlowFormComponent_0"], _form_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["RenderType_BookingMainFlowFormComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _form_form_component__WEBPACK_IMPORTED_MODULE_11__["BookingMainFlowFormComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_7__["AppService"]], { fields: [0, "fields"] }, { event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.form_fields; _ck(_v, 2, 0, currVal_0); }, null);
             }
-            function View_BookingMainFlowComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 7, null, null, null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgSwitch"], [], { ngSwitch: [0, "ngSwitch"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgSwitchCase"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgSwitch"]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgSwitchCase"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgSwitch"]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgSwitchDefault"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgSwitch"]], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.page; _ck(_v, 1, 0, currVal_0); var currVal_1 = "catering"; _ck(_v, 3, 0, currVal_1); var currVal_2 = "space"; _ck(_v, 5, 0, currVal_2); }, null); }
-            function View_BookingMainFlowComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "booking-main-flow", [], null, null, null, View_BookingMainFlowComponent_0, RenderType_BookingMainFlowComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _main_flow_component__WEBPACK_IMPORTED_MODULE_10__["BookingMainFlowComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"], _angular_router__WEBPACK_IMPORTED_MODULE_11__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_11__["Router"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
-            var BookingMainFlowComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("booking-main-flow", _main_flow_component__WEBPACK_IMPORTED_MODULE_10__["BookingMainFlowComponent"], View_BookingMainFlowComponent_Host_0, {}, {}, []);
+            function View_BookingMainFlowComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 9, null, null, null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitch"], [], { ngSwitch: [0, "ngSwitch"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitchCase"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitch"]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitchCase"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitch"]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitchCase"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitch"]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingMainFlowComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitchDefault"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgSwitch"]], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.page; _ck(_v, 1, 0, currVal_0); var currVal_1 = "orders"; _ck(_v, 3, 0, currVal_1); var currVal_2 = "catering"; _ck(_v, 5, 0, currVal_2); var currVal_3 = "space"; _ck(_v, 7, 0, currVal_3); }, null); }
+            function View_BookingMainFlowComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "booking-main-flow", [], null, null, null, View_BookingMainFlowComponent_0, RenderType_BookingMainFlowComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _main_flow_component__WEBPACK_IMPORTED_MODULE_13__["BookingMainFlowComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_7__["AppService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+            var BookingMainFlowComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("booking-main-flow", _main_flow_component__WEBPACK_IMPORTED_MODULE_13__["BookingMainFlowComponent"], View_BookingMainFlowComponent_Host_0, {}, {}, []);
             /***/ 
         }),
         /***/ "./src/app/shell/booking/main-flow/main-flow.component.scss.shim.ngstyle.js": 
@@ -2522,12 +2873,13 @@ var __spread = (this && this.__spread) || function () {
             /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
             /* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
             /* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
-            /* harmony import */ var _overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../overlays/equipment-details/equipment-details.component */ "./src/app/shell/booking/overlays/equipment-details/equipment-details.component.ts");
-            /* harmony import */ var _overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../overlays/catering-details/catering-details.component */ "./src/app/shell/booking/overlays/catering-details/catering-details.component.ts");
-            /* harmony import */ var _overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../overlays/booking-details/booking-details.component */ "./src/app/shell/booking/overlays/booking-details/booking-details.component.ts");
-            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/ __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_9__);
-            /* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
+            /* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
+            /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+            /* harmony import */ var _overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../overlays/equipment-details/equipment-details.component */ "./src/app/shell/booking/overlays/equipment-details/equipment-details.component.ts");
+            /* harmony import */ var _overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../overlays/catering-details/catering-details.component */ "./src/app/shell/booking/overlays/catering-details/catering-details.component.ts");
+            /* harmony import */ var _overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../overlays/booking-details/booking-details.component */ "./src/app/shell/booking/overlays/booking-details/booking-details.component.ts");
+            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+            /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/ __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_11__);
             var BookingMainFlowComponent = /** @class */ (function (_super) {
                 __extends(BookingMainFlowComponent, _super);
                 function BookingMainFlowComponent(_service, _route, _router) {
@@ -2544,6 +2896,7 @@ var __spread = (this && this.__spread) || function () {
                     }
                     this.subscription('route', this._route.paramMap.subscribe(function (params) {
                         if (params.has('page')) {
+                            console.log('Page:', _this.page);
                             _this.page = params.get('page');
                         }
                     }));
@@ -2589,7 +2942,7 @@ var __spread = (this && this.__spread) || function () {
                         if (field) {
                             return field.control.value;
                         }
-                        return dayjs__WEBPACK_IMPORTED_MODULE_9__()
+                        return dayjs__WEBPACK_IMPORTED_MODULE_11__()
                             .startOf('m')
                             .valueOf();
                     },
@@ -2625,7 +2978,8 @@ var __spread = (this && this.__spread) || function () {
                     /** Whether the user want to add catering to their booking */
                     get: function () {
                         var empty = { control: { value: {} } };
-                        var catering = (this.form_fields.find(function (i) { return i.key === 'needs_catering'; }) || empty).control.value;
+                        var catering = (this.form_fields.find(function (i) { return i.key === 'needs_catering'; }) || empty)
+                            .control.value;
                         return catering;
                     },
                     enumerable: true,
@@ -2636,13 +2990,15 @@ var __spread = (this && this.__spread) || function () {
                     get: function () {
                         var empty = { control: { value: {} } };
                         var order = (this.form_fields.find(function (i) { return i.key === 'catering'; }) || empty).control.value;
-                        return order ? Object.keys(order).reduce(function (v, key) {
-                            var room_order = order[key];
-                            if (room_order && room_order.items) {
-                                v += room_order.items.reduce(function (c, i) { return c + (i.amount || 0); }, 0);
-                            }
-                            return v;
-                        }, 0) : 0;
+                        return order
+                            ? Object.keys(order).reduce(function (v, key) {
+                                var room_order = order[key];
+                                if (room_order && room_order.items) {
+                                    v += room_order.items.reduce(function (c, i) { return c + (i.amount || 0); }, 0);
+                                }
+                                return v;
+                            }, 0)
+                            : 0;
                     },
                     enumerable: true,
                     configurable: true
@@ -2653,14 +3009,36 @@ var __spread = (this && this.__spread) || function () {
                 BookingMainFlowComponent.prototype.progress = function (event) {
                     var _this = this;
                     var empty = { control: { value: true } };
-                    var catering = (this.form_fields.find(function (i) { return i.key === 'needs_catering'; }) || empty).control.value;
+                    var catering = (this.form_fields.find(function (i) { return i.key === 'needs_catering'; }) || empty).control
+                        .value;
                     var space = (this.form_fields.find(function (i) { return i.key === 'needs_space'; }) || empty).control.value;
                     var id = (this.form_fields.find(function (i) { return i.key === 'id'; }) || empty).control.value;
                     this.id = id || !space ? '10' : '';
                     if (event.type === 'next') {
                         switch (this.page) {
                             case 'catering':
-                                if (this.has_ordered > 0) {
+                                this._service.navigate(['book', 'main', 'orders']);
+                                var order_list = this.catering.getValue();
+                                var index = order_list.findIndex(function (order) { return order.id === _this.order.id; });
+                                var new_item_count = this.order.changes.items
+                                    ? this.order.changes.items.reduce(function (count, item) { return count + (item.amount || 0); }, 0)
+                                    : this.order.item_count;
+                                if (new_item_count > 0 && index < 0) {
+                                    order_list.push(new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_7__["CateringOrder"](this.order.toJSON(true)));
+                                }
+                                else {
+                                    index >= 0 && new_item_count > 0
+                                        ? order_list.splice(index, 1, new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_7__["CateringOrder"](this.order.toJSON(true)))
+                                        : index >= 0
+                                            ? order_list.splice(index, 1)
+                                            : '';
+                                }
+                                this.catering.control.setValue(order_list);
+                                break;
+                            case 'orders':
+                                var orders = this.catering.getValue();
+                                var item_count = (orders || []).reduce(function (count, order) { return count + order.item_count; }, 0);
+                                if (item_count > 0) {
                                     this.addCateringNotes().then(function () { return _this.confirmBooking(); });
                                 }
                                 else {
@@ -2668,31 +3046,35 @@ var __spread = (this && this.__spread) || function () {
                                 }
                                 break;
                             case 'space':
-                                this.addEquipment().then(function () {
+                                this.addEquipment()
+                                    .then(function () {
                                     if (catering) {
-                                        _this._service.navigate(['book', 'main', 'catering']);
+                                        _this._service.navigate(['book', 'main', 'orders']);
                                     }
                                     else {
                                         _this.confirmBooking();
                                     }
-                                }).catch(function () { });
+                                })
+                                    .catch(function () { });
                                 break;
                             default:
                                 if (space && !id) {
                                     this._service.navigate(['book', 'main', 'space']);
                                 }
                                 else if (this.spaces && this.spaces.length > 0) {
-                                    this.addEquipment().then(function () {
+                                    this.addEquipment()
+                                        .then(function () {
                                         if (catering) {
-                                            _this._service.navigate(['book', 'main', 'catering']);
+                                            _this._service.navigate(['book', 'main', 'orders']);
                                         }
                                         else {
                                             _this.confirmBooking();
                                         }
-                                    }).catch(function () { });
+                                    })
+                                        .catch(function () { });
                                 }
                                 else if ((space || (this.spaces && this.spaces.length)) && catering) {
-                                    this._service.navigate(['book', 'main', 'catering']);
+                                    this._service.navigate(['book', 'main', 'orders']);
                                 }
                                 else {
                                     this.confirmBooking();
@@ -2705,10 +3087,19 @@ var __spread = (this && this.__spread) || function () {
                             case 'catering':
                                 if (id || !space) {
                                     // Whether space selection handled on the main form
-                                    this._service.navigate(['book', 'main', 'form']);
+                                    this._service.navigate(['book', 'main', 'orders']);
                                 }
                                 else {
+                                    this._service.navigate(['book', 'main', 'orders']);
+                                }
+                                break;
+                            case 'orders':
+                                if (id || !space) {
+                                    // Whether space selection handled on the main form
                                     this._service.navigate(['book', 'main', 'space']);
+                                }
+                                else {
+                                    this._service.navigate(['book', 'main', 'form']);
                                 }
                                 break;
                             case 'space':
@@ -2744,7 +3135,6 @@ var __spread = (this && this.__spread) || function () {
                         host.metadata = { service: this._service.Bookings, options: this.getHostOptions() };
                         host.setValue(host.getValue() || booking.host);
                     }
-                    console.log('Host:', booking.host, host);
                     this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
                         key: 'id',
                         type: 'action',
@@ -2758,7 +3148,7 @@ var __spread = (this && this.__spread) || function () {
                         key: 'room',
                         label: 'Spaces',
                         type: 'action',
-                        format: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_10__["formatSpaces"],
+                        format: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_6__["formatSpaces"],
                         hide: !booking.id,
                         value: booking.room || []
                     });
@@ -2767,7 +3157,9 @@ var __spread = (this && this.__spread) || function () {
                         label: 'Catering',
                         type: 'action',
                         hide: true,
-                        value: booking.catering || {}
+                        value: ((booking.catering instanceof Array ? booking.catering : [booking.catering]) || [])
+                            .filter(function (order) { return order; })
+                            .map(function (order) { return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_7__["CateringOrder"](order); })
                     });
                     this.form_fields.unshift(this.space_list);
                     this.form_fields.push(this.catering);
@@ -2791,8 +3183,8 @@ var __spread = (this && this.__spread) || function () {
                     });
                     var empty = { control: { value: true, valueChanges: false }, children: [] };
                     var space = (this.form_fields.find(function (i) { return i.key === 'needs_space'; }) || empty).control.value;
-                    var time = (this.form_fields.find(function (i) { return i.key === 'time_group'; }) || empty);
-                    var all_day = (this.form_fields.find(function (i) { return i.key === 'all_day'; }) || empty);
+                    var time = this.form_fields.find(function (i) { return i.key === 'time_group'; }) || empty;
+                    var all_day = this.form_fields.find(function (i) { return i.key === 'all_day'; }) || empty;
                     time.setDisabled(this.duration > 450);
                     var start = time.children.find(function (i) { return i.key === 'start'; }) || empty;
                     this.subscription('all_day_value', all_day.control.valueChanges.subscribe(function (state) { return start.setDisabled(state); }));
@@ -2810,7 +3202,7 @@ var __spread = (this && this.__spread) || function () {
                             localStorage.setItem('STAFF.booking_form', JSON.stringify(form));
                         }
                         var empty = { control: { value: true }, children: [] };
-                        var time = (_this.form_fields.find(function (i) { return i.key === 'time_group'; }) || empty);
+                        var time = _this.form_fields.find(function (i) { return i.key === 'time_group'; }) || empty;
                         time.children[0].setDisabled(_this.duration > 450 || _this.all_day);
                     }, 50);
                 };
@@ -2840,7 +3232,7 @@ var __spread = (this && this.__spread) || function () {
                         var spaces = _this.form_fields.find(function (i) { return i.key === 'room'; });
                         var cost_code = _this.form_fields.find(function (i) { return i.key === 'equipment_code'; });
                         _this._service.Overlay.openModal('booking-equipment', {
-                            cmp: _overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_6__["BookingEquipmentDetailsModalComponent"],
+                            cmp: _overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_8__["BookingEquipmentDetailsModalComponent"],
                             data: {
                                 spaces: (spaces || empty).control.value || [],
                                 expected_attendees: (expected_attendees || empty).control.value || {},
@@ -2878,7 +3270,7 @@ var __spread = (this && this.__spread) || function () {
                         var spaces = _this.form_fields.find(function (i) { return i.key === 'room'; });
                         var cost_code = _this.form_fields.find(function (i) { return i.key === 'catering_code'; });
                         _this._service.Overlay.openModal('booking-catering-notes', {
-                            cmp: _overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_7__["BookingCateringDetailsModalComponent"],
+                            cmp: _overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_9__["BookingCateringDetailsModalComponent"],
                             data: {
                                 spaces: (spaces || empty).control.value || [],
                                 notes: (notes || empty).control.value,
@@ -2908,15 +3300,19 @@ var __spread = (this && this.__spread) || function () {
                     var _this = this;
                     this.timeout('confirm-booking', function () {
                         var fields = _this.formToBooking();
+                        fields.catering = fields.catering.map(function (order) { return order.toJSON(true); });
+                        console.log('Form Fields:', _this.form_fields, fields);
                         _this._service.Overlay.openModal('confirm-booking', {
-                            cmp: _overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_8__["BookingDetailsModalComponent"],
+                            cmp: _overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_10__["BookingDetailsModalComponent"],
                             data: fields
                         }, function (event) {
                             if (event.type === 'finish') {
                                 // Booking completed successfully
                                 _this.clearForm();
                                 _this._service.navigate(['schedule'], {
-                                    host: fields.host ? fields.host.email : _this._service.Users.current().email
+                                    host: fields.host
+                                        ? fields.host.email
+                                        : _this._service.Users.current().email
                                 });
                                 event.close();
                             }
@@ -2940,7 +3336,7 @@ var __spread = (this && this.__spread) || function () {
                  * Get list of users available to select as the meeting host
                  */
                 BookingMainFlowComponent.prototype.getHostOptions = function () {
-                    var e_7, _a;
+                    var e_6, _a;
                     var _this = this;
                     var user = this._service.Users.current();
                     var list = [user];
@@ -2955,7 +3351,10 @@ var __spread = (this && this.__spread) || function () {
                                     _this.timeout('update_host_options', function () {
                                         var host = _this.form_fields.find(function (i) { return i.key === 'host'; });
                                         if (host) {
-                                            host.metadata = { service: _this._service.Bookings, options: _this.getHostOptions() };
+                                            host.metadata = {
+                                                service: _this._service.Bookings,
+                                                options: _this.getHostOptions()
+                                            };
                                             host.setValue(host.getValue());
                                         }
                                     });
@@ -2969,12 +3368,12 @@ var __spread = (this && this.__spread) || function () {
                                 _loop_3(email);
                             }
                         }
-                        catch (e_7_1) { e_7 = { error: e_7_1 }; }
+                        catch (e_6_1) { e_6 = { error: e_6_1 }; }
                         finally {
                             try {
                                 if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
                             }
-                            finally { if (e_7) throw e_7.error; }
+                            finally { if (e_6) throw e_6.error; }
                         }
                     }
                     return list;
