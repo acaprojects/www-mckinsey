@@ -4225,16 +4225,18 @@ function View_MeetingDetailsOverlayComponent_17(_l) { return _angular_core__WEBP
         ad = (pd_0 && ad);
     } return ad; }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { name: [0, "name"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, 0, 1, null, View_MeetingDetailsOverlayComponent_19)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, 0, 1, null, View_MeetingDetailsOverlayComponent_20)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.form_fields; _ck(_v, 2, 0, currVal_0); var currVal_1 = !_co.model.is_booking; _ck(_v, 5, 0, currVal_1); var currVal_2 = "modal"; _ck(_v, 7, 0, currVal_2); var currVal_3 = !_co.model.is_booking; _ck(_v, 9, 0, currVal_3); var currVal_4 = _co.model.is_booking; _ck(_v, 11, 0, currVal_4); }, null); }
 function View_MeetingDetailsOverlayComponent_21(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "form"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "a-dynamic-form", [], null, null, null, _node_modules_acaprojects_ngx_dynamic_forms_acaprojects_ngx_dynamic_forms_ngfactory__WEBPACK_IMPORTED_MODULE_6__["View_ADynamicFormComponent_0"], _node_modules_acaprojects_ngx_dynamic_forms_acaprojects_ngx_dynamic_forms_ngfactory__WEBPACK_IMPORTED_MODULE_6__["RenderType_ADynamicFormComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 573440, null, 0, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_7__["ADynamicFormComponent"], [], { fields: [0, "fields"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.form_fields; _ck(_v, 2, 0, currVal_0); }, null); }
-function View_MeetingDetailsOverlayComponent_25(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["", ""]))], null, function (_ck, _v) { var currVal_0 = ((_v.context.$implicit == null) ? null : _v.context.$implicit.name); _ck(_v, 1, 0, currVal_0); }); }
-function View_MeetingDetailsOverlayComponent_24(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 7, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_25)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 4, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Total:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, ["\u00A0", ""])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](7, 2)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.catering[_v.parent.context.$implicit.id].items; _ck(_v, 2, 0, currVal_0); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 6, 0, _ck(_v, 7, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent.parent.parent.parent, 1), ((_co.catering[_v.parent.context.$implicit.id].total || 0) / 100), _co.catering[_v.parent.context.$implicit.id].symbol)); _ck(_v, 6, 0, currVal_1); }); }
-function View_MeetingDetailsOverlayComponent_26(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["No order"]))], null, null); }
-function View_MeetingDetailsOverlayComponent_23(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 45, "div", [["class", "space"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Space:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](5, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Requirements (Private Notes):"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](10, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Charge Code:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](15, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](16, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Expected Attendees:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](20, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 3, "div", [["class", "footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](22, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
+function View_MeetingDetailsOverlayComponent_26(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["on ", ""]))], null, function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.deliver_on_date; _ck(_v, 1, 0, currVal_0); }); }
+function View_MeetingDetailsOverlayComponent_27(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" ", " "]))], null, function (_ck, _v) { var currVal_0 = ((_v.context.$implicit == null) ? null : _v.context.$implicit.name); _ck(_v, 1, 0, currVal_0); }); }
+function View_MeetingDetailsOverlayComponent_25(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 12, "div", [["class", "order"]], [[1, "order-id", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "div", [["class", "delivery-time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Order for delivery "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_26)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](5, null, [" at ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_27)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 4, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Total:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](11, null, ["\u00A0 ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](12, 2)], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.booking.all_day; _ck(_v, 4, 0, currVal_1); var currVal_3 = _v.context.$implicit.items; _ck(_v, 7, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.id; _ck(_v, 0, 0, currVal_0); var currVal_2 = _v.context.$implicit.deliver_at_time; _ck(_v, 5, 0, currVal_2); var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 11, 0, _ck(_v, 12, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent.parent.parent.parent.parent, 1), ((_co.catering[_v.parent.parent.context.$implicit.id].total || 0) / 100), _co.catering[_v.parent.parent.context.$implicit.id].symbol)); _ck(_v, 11, 0, currVal_4); }); }
+function View_MeetingDetailsOverlayComponent_24(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_25)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.catering[_v.parent.context.$implicit.id]; _ck(_v, 2, 0, currVal_0); }, null); }
+function View_MeetingDetailsOverlayComponent_28(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["No order"]))], null, null); }
+function View_MeetingDetailsOverlayComponent_23(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 45, "div", [["class", "space"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Space:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](5, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Requirements (Private Notes):"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](10, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Charge Code:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](15, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](16, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Expected Attendees:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](20, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 3, "div", [["class", "footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](22, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
         var pd_0 = (_co.editRequirements() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Edit Room Requirements"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](25, 0, null, null, 6, "div", [["class", "field catering"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](26, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Catering Order:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](28, 0, null, null, 3, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_24)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](30, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["no_catering", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_26)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](32, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](33, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Charge Code:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](35, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](36, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](37, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](38, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Requirements:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](40, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](41, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](42, 0, null, null, 3, "div", [["class", "footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](43, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
+    } return ad; }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Edit Room Requirements"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](25, 0, null, null, 6, "div", [["class", "field catering"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](26, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Catering Orders:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](28, 0, null, null, 3, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_24)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](30, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["no_catering", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_28)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](32, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](33, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Charge Code:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](35, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](36, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](37, 0, null, null, 4, "div", [["class", "field"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](38, 0, null, null, 1, "div", [["class", "label"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Requirements:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](40, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](41, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](42, 0, null, null, 3, "div", [["class", "footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](43, 0, null, null, 2, "btn", [], null, [[null, "tapped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
         var pd_0 = (_co.editCatering() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](44, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Edit Catering Order"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = !_co.can_edit; _ck(_v, 23, 0, currVal_4); var currVal_5 = ((_co.catering[_v.context.$implicit.id] && _co.catering[_v.context.$implicit.id].items) && _co.catering[_v.context.$implicit.id].items.length); var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 31); _ck(_v, 30, 0, currVal_5, currVal_6); var currVal_9 = !_co.can_edit_catering[_v.context.$implicit.id]; _ck(_v, 44, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.name; _ck(_v, 5, 0, currVal_0); var currVal_1 = (_co.equipment_notes[_v.context.$implicit.id] || "No requirements"); _ck(_v, 10, 0, currVal_1); var currVal_2 = (_co.space_codes[_v.context.$implicit.id] || "None"); _ck(_v, 15, 0, currVal_2); var currVal_3 = (_co.expected[_v.context.$implicit.id] || "0"); _ck(_v, 20, 0, currVal_3); var currVal_7 = (((_co.catering[_v.context.$implicit.id] == null) ? null : _co.catering[_v.context.$implicit.id].code) || "None"); _ck(_v, 36, 0, currVal_7); var currVal_8 = (_co.catering_notes[_v.context.$implicit.id] || "No requirements"); _ck(_v, 41, 0, currVal_8); }); }
+    } return ad; }, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ButtonComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ButtonComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](44, 704512, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["ButtonComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { disabled: [0, "disabled"] }, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Edit Catering Order"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = !_co.can_edit; _ck(_v, 23, 0, currVal_4); var currVal_5 = _co.catering[_v.context.$implicit.id]; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 31); _ck(_v, 30, 0, currVal_5, currVal_6); var currVal_9 = !_co.can_edit_catering[_v.context.$implicit.id]; _ck(_v, 44, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.name; _ck(_v, 5, 0, currVal_0); var currVal_1 = (_co.equipment_notes[_v.context.$implicit.id] || "No requirements"); _ck(_v, 10, 0, currVal_1); var currVal_2 = (_co.space_codes[_v.context.$implicit.id] || "None"); _ck(_v, 15, 0, currVal_2); var currVal_3 = (_co.expected[_v.context.$implicit.id] || "0"); _ck(_v, 20, 0, currVal_3); var currVal_7 = (((_co.catering[_v.context.$implicit.id] == null) ? null : _co.catering[_v.context.$implicit.id].code) || "None"); _ck(_v, 36, 0, currVal_7); var currVal_8 = (_co.catering_notes[_v.context.$implicit.id] || "No requirements"); _ck(_v, 41, 0, currVal_8); }); }
 function View_MeetingDetailsOverlayComponent_22(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "other-details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_23)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.spaces; _ck(_v, 2, 0, currVal_0); }, null); }
 function View_MeetingDetailsOverlayComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, [["booking_details", 1]], null, 13, "form", [["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).onSubmit($event) !== false);
@@ -4243,16 +4245,16 @@ function View_MeetingDetailsOverlayComponent_4(_l) { return _angular_core__WEBPA
         var pd_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).onReset() !== false);
         ad = (pd_1 && ad);
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ɵangular_packages_forms_forms_z"], [], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 4210688, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_8__["NgForm"], [[8, null], [8, null]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ControlContainer"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_8__["NgForm"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_8__["NgControlStatusGroup"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ControlContainer"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 8, "div", [["class", "body formbody"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_17)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_21)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_22)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_7 = (((_co.model.booking && !_co.model.edit) && !_co.model.duplicate) && !_co.model.extendMeeting); _ck(_v, 7, 0, currVal_7); var currVal_8 = (!_co.model.booking || _co.model.edit); _ck(_v, 9, 0, currVal_8); var currVal_9 = (!_co.model.booking || _co.model.duplicate); _ck(_v, 11, 0, currVal_9); var currVal_10 = (((_co.model.booking && !_co.model.edit) && !_co.model.duplicate) && !_co.model.extendMeeting); _ck(_v, 13, 0, currVal_10); }, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).ngClassUntouched; var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).ngClassTouched; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).ngClassPristine; var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).ngClassDirty; var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).ngClassValid; var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).ngClassInvalid; var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).ngClassPending; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); }); }
-function View_MeetingDetailsOverlayComponent_28(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["done"]))], null, null); }
-function View_MeetingDetailsOverlayComponent_29(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["done"]))], null, null); }
-function View_MeetingDetailsOverlayComponent_30(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "spinner", [["color", "rgba(0,0,0, .2)"], ["type", "circle-ring"]], null, null, null, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_SpinnerComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_SpinnerComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 770048, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["SpinnerComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { type: [0, "type"], color: [1, "color"] }, null)], function (_ck, _v) { var currVal_0 = "circle-ring"; var currVal_1 = "rgba(0,0,0, .2)"; _ck(_v, 1, 0, currVal_0, currVal_1); }, null); }
-function View_MeetingDetailsOverlayComponent_31(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Processing request..."]))], null, null); }
-function View_MeetingDetailsOverlayComponent_32(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Updated meeting"]))], null, null); }
-function View_MeetingDetailsOverlayComponent_33(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" Successfully ", " meeting "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.model.booking && (_co.model.booking.is_organiser || _co.is_delegate)) ? "declined" : "deleted"); _ck(_v, 1, 0, currVal_0); }); }
-function View_MeetingDetailsOverlayComponent_34(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Successfully updated meeting"]))], null, null); }
-function View_MeetingDetailsOverlayComponent_35(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["Successfully extended meeting to ", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.model.newEndTime; _ck(_v, 1, 0, currVal_0); }); }
-function View_MeetingDetailsOverlayComponent_27(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 18, "div", [["center", ""], ["class", "no-item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 6, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_28)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_29)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_30)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 10, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_31)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_32)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_33)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_34)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_35)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (((!_co.model.processing && !_co.model.edit) && !_co.model.deleting) && !_co.model.extendMeeting); _ck(_v, 3, 0, currVal_0); var currVal_1 = ((!_co.model.processing && _co.model.extendMeeting) && _co.model.meetingExtended); _ck(_v, 5, 0, currVal_1); var currVal_2 = _co.model.processing; _ck(_v, 7, 0, currVal_2); var currVal_3 = _co.model.processing; _ck(_v, 10, 0, currVal_3); var currVal_4 = (!_co.model.processing && _co.model.edit); _ck(_v, 12, 0, currVal_4); var currVal_5 = (!_co.model.processing && _co.model.deleting); _ck(_v, 14, 0, currVal_5); var currVal_6 = (((!_co.model.processing && !_co.model.edit) && !_co.model.deleting) && !_co.model.extendMeeting); _ck(_v, 16, 0, currVal_6); var currVal_7 = ((!_co.model.processing && _co.model.extendMeeting) && _co.model.meetingExtended); _ck(_v, 18, 0, currVal_7); }, null); }
-function View_MeetingDetailsOverlayComponent_36(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "close"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
+function View_MeetingDetailsOverlayComponent_30(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["done"]))], null, null); }
+function View_MeetingDetailsOverlayComponent_31(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["done"]))], null, null); }
+function View_MeetingDetailsOverlayComponent_32(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "spinner", [["color", "rgba(0,0,0, .2)"], ["type", "circle-ring"]], null, null, null, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_SpinnerComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_SpinnerComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 770048, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_4__["SpinnerComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { type: [0, "type"], color: [1, "color"] }, null)], function (_ck, _v) { var currVal_0 = "circle-ring"; var currVal_1 = "rgba(0,0,0, .2)"; _ck(_v, 1, 0, currVal_0, currVal_1); }, null); }
+function View_MeetingDetailsOverlayComponent_33(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Processing request..."]))], null, null); }
+function View_MeetingDetailsOverlayComponent_34(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Updated meeting"]))], null, null); }
+function View_MeetingDetailsOverlayComponent_35(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" Successfully ", " meeting "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.model.booking && (_co.model.booking.is_organiser || _co.is_delegate)) ? "declined" : "deleted"); _ck(_v, 1, 0, currVal_0); }); }
+function View_MeetingDetailsOverlayComponent_36(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Successfully updated meeting"]))], null, null); }
+function View_MeetingDetailsOverlayComponent_37(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["Successfully extended meeting to ", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.model.newEndTime; _ck(_v, 1, 0, currVal_0); }); }
+function View_MeetingDetailsOverlayComponent_29(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 18, "div", [["center", ""], ["class", "no-item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 6, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_30)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_31)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_32)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 10, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_33)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_34)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_35)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_36)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_37)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (((!_co.model.processing && !_co.model.edit) && !_co.model.deleting) && !_co.model.extendMeeting); _ck(_v, 3, 0, currVal_0); var currVal_1 = ((!_co.model.processing && _co.model.extendMeeting) && _co.model.meetingExtended); _ck(_v, 5, 0, currVal_1); var currVal_2 = _co.model.processing; _ck(_v, 7, 0, currVal_2); var currVal_3 = _co.model.processing; _ck(_v, 10, 0, currVal_3); var currVal_4 = (!_co.model.processing && _co.model.edit); _ck(_v, 12, 0, currVal_4); var currVal_5 = (!_co.model.processing && _co.model.deleting); _ck(_v, 14, 0, currVal_5); var currVal_6 = (((!_co.model.processing && !_co.model.edit) && !_co.model.deleting) && !_co.model.extendMeeting); _ck(_v, 16, 0, currVal_6); var currVal_7 = ((!_co.model.processing && _co.model.extendMeeting) && _co.model.meetingExtended); _ck(_v, 18, 0, currVal_7); }, null); }
+function View_MeetingDetailsOverlayComponent_38(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "close"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).mousestart($event) !== false);
         ad = (pd_0 && ad);
     } if (("touchstart" === en)) {
@@ -4274,7 +4276,7 @@ function View_MeetingDetailsOverlayComponent_0(_l) { return _angular_core__WEBPA
     } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" keyboard_arrow_left "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](9, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 1, "div", [["class", "material-icons"]], [[2, "disable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.nextBooking() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" keyboard_arrow_right "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 0, "div", [["class", "line"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 4, "div", [["class", "booking-form"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_27)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_36)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.model.booking && _co.model.booking.room); _ck(_v, 4, 0, currVal_0); var currVal_4 = !_co.model.extendMeeting; _ck(_v, 14, 0, currVal_4); var currVal_5 = !_co.model.loading; _ck(_v, 17, 0, currVal_5); var currVal_6 = _co.model.loading; _ck(_v, 19, 0, currVal_6); var currVal_7 = (!_co.model.processing || !_co.model.loading); _ck(_v, 21, 0, currVal_7); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = (_co.model.booking.disableSwitch == "first"); _ck(_v, 7, 0, currVal_1); var currVal_2 = _co.model.booking.title; _ck(_v, 9, 0, currVal_2); var currVal_3 = (_co.model.booking.disableSwitch == "last"); _ck(_v, 10, 0, currVal_3); }); }
+    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" keyboard_arrow_right "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 0, "div", [["class", "line"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 4, "div", [["class", "booking-form"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_29)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_38)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.model.booking && _co.model.booking.room); _ck(_v, 4, 0, currVal_0); var currVal_4 = !_co.model.extendMeeting; _ck(_v, 14, 0, currVal_4); var currVal_5 = !_co.model.loading; _ck(_v, 17, 0, currVal_5); var currVal_6 = _co.model.loading; _ck(_v, 19, 0, currVal_6); var currVal_7 = (!_co.model.processing || !_co.model.loading); _ck(_v, 21, 0, currVal_7); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = (_co.model.booking.disableSwitch == "first"); _ck(_v, 7, 0, currVal_1); var currVal_2 = _co.model.booking.title; _ck(_v, 9, 0, currVal_2); var currVal_3 = (_co.model.booking.disableSwitch == "last"); _ck(_v, 10, 0, currVal_3); }); }
 function View_MeetingDetailsOverlayComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "meeting-details-overlay", [], null, [["window", "resize"]], function (_v, en, $event) { var ad = true; if (("window:resize" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).resize() !== false);
         ad = (pd_0 && ad);
@@ -4300,13 +4302,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
 /* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _shell_booking_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../shell/booking/overlays/booking-details/booking-details.component */ "./src/app/shell/booking/overlays/booking-details/booking-details.component.ts");
-/* harmony import */ var _shell_booking_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../shell/booking/overlays/equipment-details/equipment-details.component */ "./src/app/shell/booking/overlays/equipment-details/equipment-details.component.ts");
-/* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
+/* harmony import */ var _shell_booking_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shell/booking/overlays/booking-details/booking-details.component */ "./src/app/shell/booking/overlays/booking-details/booking-details.component.ts");
+/* harmony import */ var _shell_booking_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shell/booking/overlays/equipment-details/equipment-details.component */ "./src/app/shell/booking/overlays/equipment-details/equipment-details.component.ts");
+/* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
+/* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -4367,23 +4368,18 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     }
     /** List of catering orders for booking */
     get catering() {
-        const catering = this.booking.catering || {};
-        for (const id in catering) {
-            if (catering[id]) {
-                const order = catering[id];
-                const space = this.service.Rooms.item(id);
-                if (space) {
-                    const bld = this.service.Buildings.get(space.level.bld_id);
-                    if (bld) {
-                        order.symbol = bld.currency;
-                    }
-                }
-                if (!order.symbol) {
-                    order.symbol = 'USD';
-                }
+        const spaces = this.spaces;
+        const catering_map = {};
+        for (const space of spaces) {
+            let symbol = 'USD';
+            const bld = this.service.Buildings.get(space.level.bld_id);
+            if (bld) {
+                symbol = bld.currency;
             }
+            catering_map[space.id] = this.booking.catering.filter(order => order.location_id === space.id);
+            catering_map[space.id].forEach(order => order.symbol = symbol);
         }
-        return catering;
+        return catering_map;
     }
     /** Number of attendees expected to turn up to the meeting */
     get catering_notes() {
@@ -4396,11 +4392,11 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     get can_edit_catering() {
         const map = {};
         const spaces = this.spaces;
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('m');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_9__().startOf('m');
         for (const space of spaces) {
             if (space && space.level) {
                 const bld = this.service.Buildings.get(space.level.bld_id) || {};
-                const start = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.booking.date).startOf('m').second(1);
+                const start = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.booking.date).startOf('m').second(1);
                 let end = start.subtract(bld.catering_restricted_from || 0, 'h');
                 if (end.format('ddd') === 'Sun' || end.format('ddd') === 'Sat') {
                     end = end.subtract(2, 'd');
@@ -4565,7 +4561,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             fields.no_edit = true;
             fields.id = this.booking.id;
             this.service.Overlay.openModal('confirm-booking', {
-                cmp: _shell_booking_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_7__["BookingDetailsModalComponent"],
+                cmp: _shell_booking_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_5__["BookingDetailsModalComponent"],
                 data: Object.assign({}, this.booking, fields, { catering_code: Object.keys(this.booking.catering || {})
                         .reduce((a, v) => { a[v] = this.booking.catering[v].code; return a; }, {}) })
             }, event => {
@@ -4665,17 +4661,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     edit(type) {
         const booking = this.booking;
         const spaces = booking.room_list ? booking.room_list : booking.room ? [booking.room] : [];
-        let catering = {};
-        if (booking.catering) {
-            if (booking.catering.items) {
-                const empty = {};
-                empty[booking.room.id] = booking.catering;
-                catering = empty;
-            }
-            else {
-                catering = booking.catering;
-            }
-        }
+        let catering = booking.catering;
         if (localStorage) {
             let id = booking.room ? booking.room.id : null;
             const data = Object.assign({}, this.booking, { room: spaces.map(i => (Object.assign({}, i, { bookings: [], current: null, next: null }))), room_list: null, equipment: (booking.notes || [])
@@ -4683,12 +4669,15 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                     .reduce((a, v) => {
                     a[v.space] = v.message;
                     return a;
-                }, {}), catering_notes: this.catering_notes, catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: typeof booking.booking_type === 'string' ? { id: booking.booking_type } : booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[id] && catering[id].items), catering: JSON.parse(JSON.stringify(catering)), host: this.service.Users.item(booking.organiser.email) });
+                }, {}), catering_notes: this.catering_notes, catering_code: catering.reduce((code_map, order) => {
+                    code_map[order.location_id] = order.charge_code;
+                    return code_map;
+                }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: typeof booking.booking_type === 'string' ? { id: booking.booking_type } : booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[id] && catering[id].items), catering: catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](order)), host: this.service.Users.item(booking.organiser.email) });
             localStorage.setItem('STAFF.booking_form', JSON.stringify(data));
             localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
             localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
         }
-        this.service.navigate(type === 'catering' ? ['book', 'main', 'catering'] : ['book'], { back: 'schedule' });
+        this.service.navigate(type === 'catering' ? ['book', 'main', 'orders'] : ['book'], { back: 'schedule' });
         this.fn.close();
     }
     confirmStart(checkin = false) {
@@ -4729,7 +4718,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             const spaces = this.form_fields.find(i => i.key === 'room');
             const cost_code = this.form_fields.find(i => i.key === 'equipment_code');
             this.service.Overlay.openModal('booking-equipment', {
-                cmp: _shell_booking_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_8__["BookingEquipmentDetailsModalComponent"],
+                cmp: _shell_booking_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_6__["BookingEquipmentDetailsModalComponent"],
                 data: {
                     spaces: (spaces || empty).control.value || [...this.booking.room_list],
                     expected_attendees: (expected_attendees || empty).control.value || {},
@@ -4797,14 +4786,14 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             || (!this.is_organiser && !this.is_delegate) || !this.model.timeout) {
             return;
         }
-        const now = moment__WEBPACK_IMPORTED_MODULE_5__();
-        const booking_end = moment__WEBPACK_IMPORTED_MODULE_5__(this.model.booking.date).add(this.model.booking.duration, 'm');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_9__();
+        const booking_end = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.model.booking.date).add(this.model.booking.duration, 'm');
         // Check in is unavailable if the meeting has ended
         if (now.isAfter(booking_end, 'm')) {
             return;
         }
-        const pending_start = moment__WEBPACK_IMPORTED_MODULE_5__(this.model.booking.date).subtract(this.model.timeout || 900, 's').startOf('m');
-        const pending_end = moment__WEBPACK_IMPORTED_MODULE_5__(this.model.booking.date).add(this.model.cancel_timeout || this.model.timeout || 900, 's').startOf('m');
+        const pending_start = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.model.booking.date).subtract(this.model.timeout || 900, 's').startOf('m');
+        const pending_end = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.model.booking.date).add(this.model.cancel_timeout || this.model.timeout || 900, 's').startOf('m');
         if (this.model.booking.date <= this.model.last_meeting_started) {
             this.checkin = 'started';
         }
@@ -4826,11 +4815,11 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         const booking = this.model.booking;
         const attendees = booking.attendees;
         const room = booking.room_list;
-        const now = moment__WEBPACK_IMPORTED_MODULE_5__();
-        let date = moment__WEBPACK_IMPORTED_MODULE_5__(booking.date);
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_9__();
+        let date = dayjs__WEBPACK_IMPORTED_MODULE_9__(booking.date);
         if (date.isBefore(now, 'm')) {
-            date = moment__WEBPACK_IMPORTED_MODULE_5__().startOf('m');
-            date.minute(Math.ceil(date.minute() / 5) * 5);
+            date = dayjs__WEBPACK_IMPORTED_MODULE_9__().startOf('m');
+            date = date.minute(Math.ceil(date.minute() / 5) * 5);
         }
         // Make copy of booking data
         this.model.form = Object.assign({}, this.model.booking, { date: date.valueOf() });
@@ -4845,7 +4834,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                 || this.service.Users.current();
         this.model.form.needs_catering = this.item_count > 0;
         this.model.form.catering = null;
-        this.model.form.start = moment__WEBPACK_IMPORTED_MODULE_5__(this.model.form.date).format('HH:mm');
+        this.model.form.start = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.model.form.date).format('HH:mm');
         this.model.form.equipment = (this.booking.notes || [])
             .filter(note => note.type === 'equipment')
             .reduce((notes, note) => { notes[note.space] = note.message; return notes; }, {});
@@ -4876,15 +4865,16 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         }
     }
     checkSoon() {
-        const now = moment__WEBPACK_IMPORTED_MODULE_5__();
-        const start = moment__WEBPACK_IMPORTED_MODULE_5__(this.model.booking.date);
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_9__();
+        const start = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.model.booking.date);
         this.model.is_past = now.isAfter(start);
         // if (this.model.is_past) {
         //     this.model.edit = false;
         // }
-        const end = moment__WEBPACK_IMPORTED_MODULE_5__(start).add(this.model.booking.duration, 'm');
-        this.model.soon = now.isBetween(start.add(-(this.model.settings.pre_control || 15), 'm'), end, 'm', '[]');
-        const cancel = moment__WEBPACK_IMPORTED_MODULE_5__(start).add(-(this.service.Settings.get('app.booking.lock_cancel') || 0), 'm');
+        const end = dayjs__WEBPACK_IMPORTED_MODULE_9__(start).add(this.model.booking.duration, 'm');
+        const pre_control = start.add(-(this.model.settings.pre_control || 15), 'm');
+        this.model.soon = now.isAfter(pre_control, 's') && now.isBefore(end, 'm');
+        const cancel = dayjs__WEBPACK_IMPORTED_MODULE_9__(start).add(-(this.service.Settings.get('app.booking.lock_cancel') || 0), 'm');
         this.model.can_cancel = now.isBefore(cancel, 'm');
     }
     locate(id) {
@@ -4899,8 +4889,8 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     get can_edit() {
         const user = this.service.Users.current();
         const booking = this.model.booking;
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('m');
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(booking.date);
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_9__().startOf('m');
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_9__(booking.date);
         this.is_delegate = user.delegates && user.delegates.length > 0 && !!user.delegates.find(i => i === this.model.organiser);
         return (this.model.is_organiser || this.is_delegate)
             && now.isBefore(date, 'm')
@@ -4911,10 +4901,10 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             this.model.form = {};
         }
         if (!this.model.form.date) {
-            this.model.form.date = moment__WEBPACK_IMPORTED_MODULE_5__().seconds(0).milliseconds(0).valueOf();
+            this.model.form.date = dayjs__WEBPACK_IMPORTED_MODULE_9__().startOf('m').valueOf();
         }
         this.model.display = {};
-        const date = moment__WEBPACK_IMPORTED_MODULE_5__(this.model.form.date);
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.model.form.date);
         this.model.display.date = date.format('dddd, Do MMMM YYYY');
         this.model.display.time = date.format('h:mm a');
     }
@@ -4964,7 +4954,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         }, {});
     }
 }
-_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_9__["OVERLAY_REGISTER"].push({ id: 'meeting-details', component: MeetingDetailsOverlayComponent, data: { name: 'overlay' } });
+_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_7__["OVERLAY_REGISTER"].push({ id: 'meeting-details', component: MeetingDetailsOverlayComponent, data: { name: 'overlay' } });
 
 
 /***/ }),
@@ -8417,11 +8407,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
 /* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.service */ "./src/app/services/data/base.service.ts");
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
+/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /*
  * @Author: Alex Sorafumo
@@ -8486,23 +8476,23 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (!room) {
             return;
         }
-        const today = moment__WEBPACK_IMPORTED_MODULE_3__();
+        const today = moment__WEBPACK_IMPORTED_MODULE_4__();
         today
             .minutes(Math.ceil(today.minutes() / 5) * 5)
             .seconds(0)
             .milliseconds(0);
-        const bookings = room.bookings.filter(b => moment__WEBPACK_IMPORTED_MODULE_3__(b.date).isSame(today, 'd'));
+        const bookings = room.bookings.filter(b => moment__WEBPACK_IMPORTED_MODULE_4__(b.date).isSame(today, 'd'));
         let block = this.getNextFreeBlock(bookings);
         // In case the
-        if (block && moment__WEBPACK_IMPORTED_MODULE_3__["duration"](moment__WEBPACK_IMPORTED_MODULE_3__(block.end).diff(today)).asMinutes() < 30) {
+        if (block && moment__WEBPACK_IMPORTED_MODULE_4__["duration"](moment__WEBPACK_IMPORTED_MODULE_4__(block.end).diff(today)).asMinutes() < 30) {
             block = this.getNextFreeBlock(bookings, block.end);
         }
         const start = !block || block.start < 0 ? today.valueOf() : Math.max(today.valueOf(), block.start);
-        const date = moment__WEBPACK_IMPORTED_MODULE_3__(start);
+        const date = moment__WEBPACK_IMPORTED_MODULE_4__(start);
         date.minutes(Math.ceil(date.minutes() / 5) * 5);
         let duration = 60;
         if (block && block.end >= 0) {
-            const length = Math.floor(moment__WEBPACK_IMPORTED_MODULE_3__["duration"](moment__WEBPACK_IMPORTED_MODULE_3__(block.end).diff(date)).asMinutes());
+            const length = Math.floor(moment__WEBPACK_IMPORTED_MODULE_4__["duration"](moment__WEBPACK_IMPORTED_MODULE_4__(block.end).diff(date)).asMinutes());
             if (length < 45) {
                 duration = 30;
             }
@@ -8536,7 +8526,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             if (this.get('new_booking').state !== 'idle') {
                 return reject('Another booking is in progress');
             }
-            const date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
+            const date = moment__WEBPACK_IMPORTED_MODULE_4__(item.date);
             this.parent.confirm(this.confirmSettings('add', item), event => {
                 if (event.type === 'Accept') {
                     this.subjects.new_booking.next({ state: 'processing' });
@@ -8548,7 +8538,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                             localStorage.removeItem('STAFF.booking_form');
                             localStorage.setItem('STAFF.last_booking', booking || JSON.stringify(item));
                         }
-                        this.timeout(`${moment__WEBPACK_IMPORTED_MODULE_3__().unix()}`, () => this.set('new_booking', { state: 'idle' }));
+                        this.timeout(`${moment__WEBPACK_IMPORTED_MODULE_4__().unix()}`, () => this.set('new_booking', { state: 'idle' }));
                     }, e => {
                         this.set('new_booking', { state: 'error', value: e });
                         this.timeout('new_error', () => this.set('new_booking', { state: 'idle' }));
@@ -8580,7 +8570,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                         }
                         this.parent.Rooms.replaceBooking(new_item);
                         this.query();
-                        this.timeout(`${moment__WEBPACK_IMPORTED_MODULE_3__().unix()}`, () => this.set('new_booking', { state: 'idle' }));
+                        this.timeout(`${moment__WEBPACK_IMPORTED_MODULE_4__().unix()}`, () => this.set('new_booking', { state: 'idle' }));
                     }, e => {
                         this.set('update_booking', { state: 'error', value: e });
                         this.timeout('update_error', () => this.set('update_booking', { state: 'idle' }));
@@ -8616,11 +8606,11 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         }
         let conflict_count = 0;
         for (const bkn of list) {
-            const bkn_start = moment__WEBPACK_IMPORTED_MODULE_3__(bkn.date);
-            const bkn_end = moment__WEBPACK_IMPORTED_MODULE_3__(bkn_start).add(bkn.duration, 'm');
+            const bkn_start = moment__WEBPACK_IMPORTED_MODULE_4__(bkn.date);
+            const bkn_end = moment__WEBPACK_IMPORTED_MODULE_4__(bkn_start).add(bkn.duration, 'm');
             for (const cmp of comparison) {
-                const cmp_start = moment__WEBPACK_IMPORTED_MODULE_3__(cmp.date);
-                const cmp_end = moment__WEBPACK_IMPORTED_MODULE_3__(cmp_start).add(cmp.duration, 'm');
+                const cmp_start = moment__WEBPACK_IMPORTED_MODULE_4__(cmp.date);
+                const cmp_end = moment__WEBPACK_IMPORTED_MODULE_4__(cmp_start).add(cmp.duration, 'm');
                 if (bkn_start.isBetween(cmp_start, cmp_end, 'm', '[)') || bkn_end.isBetween(cmp_start, cmp_end, 'm', '(]')) {
                     conflict_count++;
                     break;
@@ -8639,18 +8629,18 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             return [
                 {
                     start: 0,
-                    end: moment__WEBPACK_IMPORTED_MODULE_3__()
+                    end: moment__WEBPACK_IMPORTED_MODULE_4__()
                         .startOf('m')
                         .valueOf() * 10
                 }
             ];
         }
         const slots = [];
-        let start = moment__WEBPACK_IMPORTED_MODULE_3__(0);
+        let start = moment__WEBPACK_IMPORTED_MODULE_4__(0);
         list.sort((a, b) => a.date - b.date);
         for (const booking of list) {
-            const bkn_start = moment__WEBPACK_IMPORTED_MODULE_3__(booking.date).subtract(booking.setup, 's');
-            const bkn_end = moment__WEBPACK_IMPORTED_MODULE_3__(booking.date)
+            const bkn_start = moment__WEBPACK_IMPORTED_MODULE_4__(booking.date).subtract(booking.setup, 's');
+            const bkn_end = moment__WEBPACK_IMPORTED_MODULE_4__(booking.date)
                 .add(booking.duration, 'm')
                 .add(booking.breakdown, 's');
             if (bkn_start.isSameOrAfter(start, 'm')) {
@@ -8663,7 +8653,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         }
         slots.push({
             start: start.valueOf(),
-            end: moment__WEBPACK_IMPORTED_MODULE_3__()
+            end: moment__WEBPACK_IMPORTED_MODULE_4__()
                 .startOf('m')
                 .valueOf() * 10
         });
@@ -8675,15 +8665,15 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
      * @param gap Minimum size for the available block. Defaults to `30` minutes
      * @param time Time to check is free. Defaults to the current time
      */
-    getNextFreeBlock(list, date = moment__WEBPACK_IMPORTED_MODULE_3__().valueOf(), min_size = 30) {
+    getNextFreeBlock(list, date = moment__WEBPACK_IMPORTED_MODULE_4__().valueOf(), min_size = 30) {
         const slots = this.getFreeSlots(list, min_size);
-        const today = moment__WEBPACK_IMPORTED_MODULE_3__(date);
-        const time = moment__WEBPACK_IMPORTED_MODULE_3__(date)
+        const today = moment__WEBPACK_IMPORTED_MODULE_4__(date);
+        const time = moment__WEBPACK_IMPORTED_MODULE_4__(date)
             .startOf('m')
             .second(1);
         for (const block of slots) {
-            const start = moment__WEBPACK_IMPORTED_MODULE_3__(block.start).startOf('m');
-            const end = moment__WEBPACK_IMPORTED_MODULE_3__(block.end).startOf('m');
+            const start = moment__WEBPACK_IMPORTED_MODULE_4__(block.start).startOf('m');
+            const end = moment__WEBPACK_IMPORTED_MODULE_4__(block.end).startOf('m');
             if (start.isAfter(time, 's')) {
                 return block;
             }
@@ -8702,8 +8692,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
      */
     processItem(raw_item) {
         const user = this.parent.Users.current();
-        const start = dayjs__WEBPACK_IMPORTED_MODULE_4__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
-        const end = dayjs__WEBPACK_IMPORTED_MODULE_4__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
+        const start = dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
+        const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
         const has_end = raw_item.end_epoch * 1000 || raw_item.end || raw_item.End;
         const duration = Math.abs(start.diff(end, 'm'));
         if (raw_item.all_day) {
@@ -8748,7 +8738,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             booking_type: { id: raw_item.booking_type },
             notify_users: raw_item.notify_users,
             all_day: !!raw_item.all_day || duration > 12 * 60,
-            catering: raw_item.catering,
+            catering: Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["processCateringData"])(raw_item.catering || []),
             setup: raw_item.setup || 0,
             breakdown: raw_item.breakdown || 0,
             spaces: typeof raw_item.room_id === 'string' ? [raw_item.room_id] : raw_item.room_id
@@ -8775,12 +8765,12 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         this.processRoom(item, raw_item);
         Object.defineProperty(item, 'status', {
             get: () => {
-                const now = dayjs__WEBPACK_IMPORTED_MODULE_4__();
+                const now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
                 if (item._status && item._updated < now.valueOf() - 60 * 1000) {
                     item._status = null;
                 }
                 if (!item._status) {
-                    const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(item.date);
+                    const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
                     const upcoming = date.subtract(15, 'm');
                     const ending = date.add(item.duration, 'm');
                     item._status = now.isBefore(upcoming, 'm')
@@ -8890,11 +8880,11 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             form.room = {};
         }
         if (form.duration > 720 && form.all_day) {
-            form.date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date)
+            form.date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date)
                 .startOf('d')
                 .valueOf();
         }
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('m');
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date).startOf('m');
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
         if (localStorage) {
@@ -8904,7 +8894,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 (stored_duration && +stored_duration !== item.duration))) {
                 form.room.forEach(rm => {
                     const bld = this.parent.Buildings.list().find(i => i.id === rm.level.bld_id) || {};
-                    const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_5__["rulesForSpace"])({
+                    const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
                         user: item.host,
                         space: rm,
                         time: item.date,
@@ -8932,6 +8922,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (!form.location_name) {
             form.locations = [];
         }
+        console.log('Form:', form);
         const request = {
             start: date.unix(),
             end: date.add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
@@ -8964,7 +8955,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             });
         }
         const user = this.parent.Users.current();
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('s');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_5__().startOf('s');
         if (item.equipment) {
             for (const rm_id in item.equipment) {
                 request.notes.push({
@@ -8989,37 +8980,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         }
         request.notes.sort((a, b) => a.date - b.date);
         if (request.catering) {
-            for (const rm in request.catering) {
-                if (request.catering[rm]) {
-                    const order = request.catering[rm];
-                    order.items = order.items || [];
-                    for (const group of order.items) {
-                        if (group.package && group.must_select) {
-                            // Remove unselected items from group
-                            group.items = group.items.reduce((v, i) => {
-                                if (i.selected || i.must_select > 0) {
-                                    if (i.must_select) {
-                                        // Remove unselected items from sub-group
-                                        i.items = i.items.reduce((c, j) => {
-                                            if (j.selected) {
-                                                c.push(j);
-                                            }
-                                            return c;
-                                        }, []);
-                                    }
-                                    v.push(i);
-                                }
-                                return v;
-                            }, []);
-                        }
-                    }
-                    if (order.total <= 0) {
-                        delete request.catering[rm];
-                        console.log('Notes:', [...request.notes]);
-                        request.notes = request.notes.filter(i => !(i.type === 'catering' && i.space === rm));
-                        console.log('Notes:', [...request.notes]);
-                    }
-                }
+            for (const order of request.catering) {
+                order.charge_code = item.catering_code[order.location_id];
             }
         }
         if (item.description) {
@@ -9057,8 +9019,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         const timeline = this.get('timeline') || {};
         // Add bookings to timeline
         for (const item of list) {
-            const date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
-            const end = moment__WEBPACK_IMPORTED_MODULE_3__(date).add(item.duration, 'm');
+            const date = moment__WEBPACK_IMPORTED_MODULE_4__(item.date);
+            const end = moment__WEBPACK_IMPORTED_MODULE_4__(date).add(item.duration, 'm');
             for (; date.isBefore(end, 'm'); date.add(1, 'd')) {
                 const day = timeline[date.format('YYYY/MM/DD')] || [];
                 for (const event of day) {
@@ -9089,7 +9051,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         // Also remove booking from timeline
         const timeline = this.get('timeline') || {};
         for (const item of list) {
-            const date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
+            const date = moment__WEBPACK_IMPORTED_MODULE_4__(item.date);
             const day = timeline[date.format('YYYY/MM/DD')] || [];
             for (const event of day) {
                 if ((item.id && event.id === item.id) || item.date === event.date) {
@@ -9105,11 +9067,11 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             super.clear(fields);
         }
         else {
-            const start = moment__WEBPACK_IMPORTED_MODULE_3__(fields.from).startOf('d');
-            const end = moment__WEBPACK_IMPORTED_MODULE_3__(fields.to || fields.from);
+            const start = moment__WEBPACK_IMPORTED_MODULE_4__(fields.from).startOf('d');
+            const end = moment__WEBPACK_IMPORTED_MODULE_4__(fields.to || fields.from);
             // Clear period in list
             const list = this.get('list') || [];
-            this.set('list', list.filter(i => !moment__WEBPACK_IMPORTED_MODULE_3__(i.date).isBetween(start, end)));
+            this.set('list', list.filter(i => !moment__WEBPACK_IMPORTED_MODULE_4__(i.date).isBetween(start, end)));
             // Clear period in timeline
             const timeline = this.get('timeline') || {};
             for (; start.isBefore(end, 'm'); start.add(1, 'd')) {
@@ -9123,7 +9085,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
     }
     confirmSettings(key, fields = {}) {
         const settings = super.confirmSettings(key, fields);
-        const date = moment__WEBPACK_IMPORTED_MODULE_3__(fields.date || '');
+        const date = moment__WEBPACK_IMPORTED_MODULE_4__(fields.date || '');
         const user = this.parent.Users.current();
         const rm = fields.room ? (fields.room instanceof Array ? fields.room[0] : fields.room) : null;
         const room = rm ? this.parent.Rooms.item(rm.id) : { name: fields.room_name };
@@ -9652,6 +9614,251 @@ BuildingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["�
 
 /***/ }),
 
+/***/ "./src/app/services/data/catering/catering-category.class.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/services/data/catering/catering-category.class.ts ***!
+  \*******************************************************************/
+/*! exports provided: CateringCategory */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringCategory", function() { return CateringCategory; });
+/* harmony import */ var _catering_item_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
+
+class CateringCategory extends _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"] {
+    get order_anytime() {
+        return (this._order_anytime ||
+            this.items.reduce((anytime, item) => anytime || item.order_anytime, false));
+    }
+    constructor(data) {
+        super(data);
+        this.items = (data.items || []).map(item => item.items ? new CateringCategory(item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item));
+        this.package = data.package === "true" || data.package === true;
+        this.image_url = data.image_url || data.image_path;
+        this.must_select = data.must_select;
+    }
+    /**
+     * Convert class object into plain object
+     */
+    toJSON() {
+        const obj = super.toJSON();
+        obj.items = obj.items.map((item) => item.toJSON());
+        return obj;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/services/data/catering/catering-item.class.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/services/data/catering/catering-item.class.ts ***!
+  \***************************************************************/
+/*! exports provided: CateringItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringItem", function() { return CateringItem; });
+class CateringItem {
+    constructor(data) {
+        /** Number of this item in the assoicated order */
+        this._amount = 0;
+        this.instance_id = `item-${Math.floor(Math.random() * 999999999)}`;
+        this.id = data.id;
+        this.name = data.name;
+        this.available = {
+            from_month: (data.available ? data.available.from_month : data.available_from) || -1,
+            to_month: (data.available ? data.available.to_month : data.available_to) || -1,
+        };
+        this.prior_notice = data.prior_notice || data.notice;
+        this.unit_price = data.unit_price || data.price;
+        this.minimum_quantity = Math.max(0, data.minimum_quantity || 0);
+        this.maximum_quantity = Math.max(1, data.maximum_quantity || 999);
+        this.category_ids = data.category_ids || data.categories;
+        this.allergen_info = data.allergen_info || data.allergy;
+        this._amount = data._amount || data.amount || 0;
+        this._order_anytime = data.order_anytime || false;
+    }
+    /** Number of this item in the assoicated order */
+    get amount() {
+        return this._amount || 0;
+    }
+    /** Whether item can be ordered within the time limit set by the building */
+    get order_anytime() {
+        return this._order_anytime;
+    }
+    /** Total cost of the amount of items set */
+    get total() {
+        return (this._amount * this.unit_price) || 0;
+    }
+    /**
+     * Increase amount of the item the order
+     * @param amount Amount to increase by
+     */
+    addToOrder(amount = 1) {
+        amount = Math.max(1, amount);
+        this._amount += amount;
+        if (this._amount < 0) {
+            this._amount = 0;
+        }
+        else if (this._amount < this.minimum_quantity) {
+            this._amount = this.minimum_quantity;
+        }
+        else if (this._amount > this.maximum_quantity) {
+            this._amount = this.maximum_quantity;
+        }
+    }
+    /**
+     * Decrease amount of the item the order
+     * @param amount Amount to decrease by
+     */
+    removeFromOrder(amount = 1) {
+        amount = Math.max(1, amount);
+        this._amount -= amount;
+        if (this._amount < 0) {
+            this._amount = 0;
+        }
+        else if (this._amount < this.minimum_quantity) {
+            this._amount = 0;
+        }
+    }
+    /**
+     * Convert class object into plain object
+     */
+    toJSON() {
+        const obj = Object.assign({}, this);
+        // Remove local private members
+        delete obj._changes;
+        delete obj._server_names;
+        // Convert remaining members to be public
+        const keys = Object.keys(obj);
+        for (const key of keys) {
+            if (key[0] === '_') {
+                const new_key = key.substr(1);
+                obj[new_key] = obj[key];
+                delete obj[key];
+            }
+            else if (obj[key] === undefined) {
+                delete obj[key];
+            }
+        }
+        return obj;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/services/data/catering/catering-order.class.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/services/data/catering/catering-order.class.ts ***!
+  \****************************************************************/
+/*! exports provided: CateringOrder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringOrder", function() { return CateringOrder; });
+/* harmony import */ var _catering_item_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
+/* harmony import */ var _catering_category_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+class CateringOrder {
+    constructor(data) {
+        /** Number of minutes after the start of the associated meeting to delivery the order */
+        this.booking_date = dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('m').valueOf();
+        /** Number of minutes after the start of the associated meeting to delivery the order */
+        this.delivery_time = 0;
+        /** ID of the location to deliver the items to */
+        this.location_id = '';
+        /** Display text for the location to deliver the items to */
+        this.location = '';
+        /** List of items */
+        this.items = [];
+        /** Mapping of properties to their changes */
+        this._changes = {};
+        /** Map of local property names to server ones */
+        this._server_names = {};
+        this.id = data.id;
+        this.delivery_time = data.delivery_time || 0;
+        this.booking_date = data.booking_date;
+        this.location_id = data.location_id || data.location;
+        this.location = data.location || '';
+        this.status = data.status;
+        this.charge_code = data.charge_code || data.code;
+        this.notes = data.notes;
+        this.items = (data.items || []).map(item => item.items ? new _catering_category_class__WEBPACK_IMPORTED_MODULE_1__["CateringCategory"](item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item));
+    }
+    /** Mapping of properties to their changes */
+    get changes() {
+        return Object.assign({}, this._changes) || {};
+    }
+    /** Total cost of the order */
+    get total() {
+        return this.items.reduce((total, item) => total + (item.total || 0), 0);
+    }
+    /** Total number of items in the order */
+    get item_count() {
+        return this.items.reduce((total, item) => total + (item.amount || 0), 0);
+    }
+    /** Display string for the delivery time of the order */
+    get deliver_at_time() {
+        return dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking_date).add(this.delivery_time, 'm').format('h:mm A');
+    }
+    /** Display string for the delivery date of the order */
+    get deliver_on_date() {
+        return dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking_date).add(this.delivery_time, 'm').format('DD MMM YYYY');
+    }
+    /** Whether there are any pending changes to be saved */
+    get has_changes() {
+        return !!Object.keys(this._changes);
+    }
+    /**
+     * Store pending changes for the given property
+     * @param name Property to update value
+     * @param value New value to save for property
+     */
+    storePendingChanges(name, value) {
+        this._changes[name] = value;
+    }
+    /** Clear any changes waiting to be saved */
+    clearPendingChanges() {
+        delete this._changes;
+        this._changes = {};
+    }
+    /**
+     * Convert class object into plain object
+     */
+    toJSON(with_changes = true) {
+        const obj = Object.assign({}, this);
+        // Remove local private members
+        delete obj._changes;
+        delete obj._server_names;
+        // Convert remaining members to be public
+        const keys = Object.keys(obj);
+        for (const key of keys) {
+            if (key[0] === '_') {
+                const new_key = this._server_names[key.substr(1)] || key.substr(1);
+                obj[new_key] = obj[key];
+                delete obj[key];
+            }
+            else if (obj[key] === undefined) {
+                delete obj[key];
+            }
+        }
+        obj.items = obj.items.map((item) => item.toJSON());
+        return with_changes ? Object.assign({}, obj, this._changes) : obj;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/app/services/data/comments.service.ts":
 /*!***************************************************!*\
   !*** ./src/app/services/data/comments.service.ts ***!
@@ -10112,7 +10319,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringMenuService", function() { return CateringMenuService; });
 /* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
 /* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.service */ "./src/app/services/data/base.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _catering_catering_item_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
+/* harmony import */ var _catering_catering_category_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
 
 
 
@@ -10129,32 +10340,10 @@ class CateringMenuService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["Ba
      * @param user User data
      */
     processItem(item) {
-        const category = {
-            id: item.id,
-            name: item.name,
-            zones: item.zones,
-            items: this.process(item.items),
-            package: item.package === "true" || item.package === true,
-            src: item.image_path
-        };
-        category.order_anytime =
-            category.order_anytime ||
-                (category.items &&
-                    category.items.reduce((anytime, item) => anytime || item.order_anytime, false));
-        return category;
-    }
-    process(list) {
-        return (list || []).map(i => {
-            const item = Object.assign({}, i, { items: i.items ? this.process(i.items) : null, from: i.available_from, to: i.available_to, maximum: i.maximum_quantity, minimum: i.minimum_quantity, notice: i.notify_host, package: i.package === "true" || i.package === true, src: i.image_path, order_anytime: Math.floor(Math.random() * 999999) % 3 === 0 });
-            item.order_anytime =
-                item.order_anytime ||
-                    (item.items &&
-                        item.items.reduce((anytime, subitem) => anytime || subitem.order_anytime, false));
-            return item;
-        });
+        return item.items ? new _catering_catering_category_class__WEBPACK_IMPORTED_MODULE_3__["CateringCategory"](item) : new _catering_catering_item_class__WEBPACK_IMPORTED_MODULE_2__["CateringItem"](item);
     }
 }
-CateringMenuService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function CateringMenuService_Factory() { return new CateringMenuService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: CateringMenuService, providedIn: "root" });
+CateringMenuService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function CateringMenuService_Factory() { return new CateringMenuService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: CateringMenuService, providedIn: "root" });
 
 
 /***/ }),
@@ -19329,7 +19518,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579069237000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579240418000);
 
 
 /***/ }),
@@ -21198,7 +21387,7 @@ win.systemData['sys-B0'] = win.control.systems['sys-B0'];
 /*!*******************************************************!*\
   !*** ./src/app/shared/utilities/booking.utilities.ts ***!
   \*******************************************************/
-/*! exports provided: rulesForSpace, getMinLength, durationGreaterThanOrEqual, stringToMinutes, generateBookingFormMetadata */
+/*! exports provided: rulesForSpace, getMinLength, durationGreaterThanOrEqual, stringToMinutes, generateBookingFormMetadata, processCateringData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21208,6 +21397,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "durationGreaterThanOrEqual", function() { return durationGreaterThanOrEqual; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stringToMinutes", function() { return stringToMinutes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateBookingFormMetadata", function() { return generateBookingFormMetadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "processCateringData", function() { return processCateringData; });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _validation_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
@@ -21215,6 +21405,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+
 
 
 
@@ -21475,6 +21667,16 @@ function generateBookingFormMetadata(booking, field_data, service) {
         // .filter(i => (booking.id ? !i.no_edit : true))
         .map(process_field)
         .map(f => new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"](f));
+}
+/**
+ * Process catering data from the server into the local data format
+ * @param catering
+ */
+function processCateringData(catering) {
+    if (catering instanceof Array) {
+        return catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](order));
+    }
+    return Object.keys(catering).map(loc_id => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](catering[loc_id]));
 }
 
 
