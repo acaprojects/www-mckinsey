@@ -1779,9 +1779,6 @@ class BookingModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTED_M
      */
     loadForm() {
         let booking = {};
-        if (localStorage) {
-            booking = JSON.parse(localStorage.getItem('CONCIERGE.booking_form') || '{}');
-        }
         if (Object.keys(booking).length <= 0) {
             booking = this.model.booking || {};
         }
@@ -17991,7 +17988,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579232600000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579564111000);
 
 
 /***/ }),
