@@ -1585,14 +1585,14 @@ var OrdersComponent = /** @class */ (function (_super) {
                         if (listing) {
                             listing += '\n\n';
                         }
-                        listing += item.name + "    x " + item.amount;
+                        listing += item.amount + " x    " + item.name;
                         if (item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_6__["CateringCategory"]) {
                             try {
                                 for (var _b = (e_2 = void 0, __values(item.items)), _c = _b.next(); !_c.done; _c = _b.next()) {
                                     var sub_item = _c.value;
                                     if (!sub_item.amount)
                                         continue;
-                                    listing += "\n  - " + sub_item.name + (sub_item.amount ? '    x ' + sub_item.amount : '');
+                                    listing += "\n  - " + (sub_item.amount ? '' + sub_item.amount + ' x    ' : '') + sub_item.name;
                                 }
                             }
                             catch (e_2_1) { e_2 = { error: e_2_1 }; }
