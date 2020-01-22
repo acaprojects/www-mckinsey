@@ -1409,12 +1409,12 @@ class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_M
                 if (listing) {
                     listing += '\n\n';
                 }
-                listing += `${item.name}    x ${item.amount}`;
+                listing += `${item.amount} x    ${item.name}`;
                 if (item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_6__["CateringCategory"]) {
                     for (const sub_item of item.items) {
                         if (!sub_item.amount)
                             continue;
-                        listing += `\n  - ${sub_item.name}${sub_item.amount ? '    x ' + sub_item.amount : ''}`;
+                        listing += `\n  - ${sub_item.amount ? '' + sub_item.amount + ' x    ' : ''}${sub_item.name}`;
                     }
                 }
                 return listing;
