@@ -1274,7 +1274,7 @@ function View_OrdersComponent_8(_l) { return _angular_core__WEBPACK_IMPORTED_MOD
     } if (("touchrelease" === en)) {
         var pd_4 = ((_co.model.show_dropdown[_v.parent.context.index] = !_co.model.show_dropdown[_v.parent.context.index]) !== false);
         ad = (pd_4 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "app-icon", [], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "app-icon", [], [[8, "className", 0]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).mousestart($event) !== false);
         ad = (pd_0 && ad);
     } if (("touchstart" === en)) {
@@ -1289,7 +1289,7 @@ function View_OrdersComponent_8(_l) { return _angular_core__WEBPACK_IMPORTED_MOD
     } if (("touchrelease" === en)) {
         var pd_4 = ((_co.model.show_dropdown[_v.parent.context.index] = !_co.model.show_dropdown[_v.parent.context.index]) !== false);
         ad = (pd_4 && ad);
-    } return ad; }, _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["View_IconComponent_0"], _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["RenderType_IconComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 180224, null, 0, _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_5__["IconComponent"], [], { icon: [0, "icon"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](5, { class: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" })], function (_ck, _v) { var currVal_1 = _ck(_v, 5, 0, ("custom-" + _v.parent.context.$implicit.status)); _ck(_v, 4, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.status; _ck(_v, 2, 0, currVal_0); }); }
+    } return ad; }, _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["View_IconComponent_0"], _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["RenderType_IconComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 180224, null, 0, _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_5__["IconComponent"], [], { icon: [0, "icon"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](5, { class: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" })], function (_ck, _v) { var currVal_2 = _ck(_v, 5, 0, ("custom-" + _v.parent.context.$implicit.status)); _ck(_v, 4, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.status; _ck(_v, 2, 0, currVal_0); var currVal_1 = ("status-icon " + _v.parent.context.$implicit.status); _ck(_v, 3, 0, currVal_1); }); }
 function View_OrdersComponent_10(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "item"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).mousestart($event) !== false);
         ad = (pd_0 && ad);
@@ -1467,18 +1467,18 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
         }));
         this.subscription('bld', this.service.Buildings.listen(bld => (bld ? this.loadOrders() : '')));
         this.subscription('route.query', this._route.queryParamMap.subscribe(params => {
-            if (params.has('id')) {
-                this.view_id = params.get('id');
+            if (params.has('view')) {
+                this.view_id = params.get('view');
                 let order = null;
                 let booking = null;
                 if (!order && sessionStorage) {
-                    const order_str = sessionStorage.getItem('CONCIERGE.view_order');
-                    if (order_str) {
-                        order = new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](JSON.parse(order_str));
-                    }
-                    const booking_str = sessionStorage.getItem('CONCIERGE.order_booking');
-                    if (booking_str) {
-                        booking = new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](JSON.parse(booking_str));
+                    const order_id = sessionStorage.getItem('CONCIERGE.view_order');
+                    if (order_id) {
+                        const booking_str = sessionStorage.getItem('CONCIERGE.order_booking');
+                        if (booking_str) {
+                            booking = JSON.parse(booking_str);
+                            order = booking.catering.find(an_order => an_order.id === order_id);
+                        }
                     }
                 }
                 if (order && booking) {
@@ -1517,7 +1517,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
                             }
                         }
                     }
-                    this.orders.sort((a, b) => a.booking_date - b.booking_date);
+                    this.orders.sort((a, b) => a.delivery_time - b.delivery_time || a.booking_date - b.booking_date);
                     if (this.view_id) {
                         const order = this.orders.find(i => i.booking_id === this.view_id);
                         if (order) {
@@ -1600,6 +1600,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
     }
     /** Initiate catering modal to display notes and details */
     showCateringDetails(booking, order) {
+        console.log('Show Order:', order, ' | ', booking);
         this.timeout('show catering', () => {
             if (this.model.show_dropdown.indexOf(true) > -1) {
                 return;
@@ -1639,6 +1640,10 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
             return booking.catering.map(order => {
                 order.booking = booking;
                 return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, { location: order.location || (this.service.Rooms.item(order.location_id) || { name: '' }).name }));
+            }).filter((order) => {
+                // Remove orders from other buildings
+                const location = this.service.Rooms.item(order.location_id);
+                return !location || (location.level.bld_id === this.building.id);
             });
         }
         return null;
