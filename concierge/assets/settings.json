@@ -40,7 +40,7 @@
                     "name": "Day View",
                     "icon": {
                         "class": "custom-day",
-                        "value": ""
+                        "content": ""
                     }
                 },
                 {
@@ -48,7 +48,7 @@
                     "name": "Week View",
                     "icon": {
                         "class": "material-icons",
-                        "value": "date_range"
+                        "content": "date_range"
                     }
                 },
                 {
@@ -56,7 +56,7 @@
                     "name": "Visitor List",
                     "icon": {
                         "class": "custom-visitor",
-                        "value": ""
+                        "content": ""
                     }
                 },
                 {
@@ -64,7 +64,7 @@
                     "name": "Catering",
                     "icon": {
                         "class": "material-icons",
-                        "value": "room_service"
+                        "content": "room_service"
                     }
                 },
                 {
@@ -72,7 +72,7 @@
                     "name": "Reports",
                     "icon": {
                         "class": "material-icons",
-                        "value": "warning"
+                        "content": "warning"
                     }
                 }
             ]
