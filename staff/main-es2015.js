@@ -8905,6 +8905,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                     rm.book_type = rules.auto_approve ? 'Book' : 'Request';
                 });
             }
+            localStorage.removeItem('STAFF.booking.date');
+            localStorage.removeItem('STAFF.booking.duration');
         }
         if (form.room instanceof Array) {
             auto_approve = [];
@@ -19519,7 +19521,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579759170000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579821927000);
 
 
 /***/ }),
