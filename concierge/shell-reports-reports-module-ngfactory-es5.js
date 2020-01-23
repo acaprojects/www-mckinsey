@@ -335,7 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_7__);
 var __extends = (undefined && undefined.__extends) || (function () {
@@ -557,7 +557,7 @@ var ReportComponent = /** @class */ (function (_super) {
         return 'USD';
     };
     return ReportComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_6__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_6__["BaseDirective"]));
 
 
 
@@ -644,7 +644,7 @@ var AppReportsComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["É
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppReportsComponent", function() { return AppReportsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -697,7 +697,7 @@ var AppReportsComponent = /** @class */ (function (_super) {
         }
     };
     return AppReportsComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 

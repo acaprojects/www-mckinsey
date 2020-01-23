@@ -402,7 +402,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-uploads */ "./node_modules/@acaprojects/ngx-uploads/fesm5/acaprojects-ngx-uploads.js");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -462,7 +462,7 @@ var AppComponent = /** @class */ (function (_super) {
         }));
     };
     return AppComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_5__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"]));
 
 
 
@@ -1264,7 +1264,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -1540,7 +1540,7 @@ var BookingDetailsComponent = /** @class */ (function (_super) {
         });
     };
     return BookingDetailsComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]));
 
 
 
@@ -2396,7 +2396,7 @@ var styles = ["[_nghost-%COMP%] {\n  height: 100%; }\n.catering-modal[_ngcontent
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingCateringDetailsModalComponent", function() { return BookingCateringDetailsModalComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2462,7 +2462,7 @@ var BookingCateringDetailsModalComponent = /** @class */ (function (_super) {
         configurable: true
     });
     return BookingCateringDetailsModalComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -2611,7 +2611,7 @@ var styles = ["[_nghost-%COMP%] {\n  height: 100%; }\n.equipment[_ngcontent-%COM
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingEquipmentDetailsComponent", function() { return BookingEquipmentDetailsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
@@ -2805,7 +2805,7 @@ var BookingEquipmentDetailsComponent = /** @class */ (function (_super) {
         return this._service.Buildings.get(space.level.bld_id);
     };
     return BookingEquipmentDetailsComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -3005,7 +3005,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
@@ -3195,7 +3195,7 @@ var BookingFlowFindSpaceComponent = /** @class */ (function (_super) {
         }
     };
     return BookingFlowFindSpaceComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_4__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"]));
 
 
 
@@ -3297,7 +3297,7 @@ var styles = ["[_nghost-%COMP%] {\n  width: 100%; }\n.space-item[_ngcontent-%COM
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingFlowSpaceItemComponent", function() { return BookingFlowSpaceItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3358,7 +3358,7 @@ var BookingFlowSpaceItemComponent = /** @class */ (function (_super) {
             } }, function (e) { return e.close(); });
     };
     return BookingFlowSpaceItemComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -3442,7 +3442,7 @@ var styles = [".booking-form[_ngcontent-%COMP%] {\n  overflow: auto;\n  max-heig
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingFlowFormComponent", function() { return BookingFlowFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3536,7 +3536,7 @@ var BookingFlowFormComponent = /** @class */ (function (_super) {
         });
     };
     return BookingFlowFormComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -5411,7 +5411,7 @@ var styles = [".meeting-details[_ngcontent-%COMP%] {\n  padding: 1em; }\n.field[
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MeetingDetailsDisplayComponent", function() { return MeetingDetailsDisplayComponent; });
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
@@ -5526,7 +5526,7 @@ var MeetingDetailsDisplayComponent = /** @class */ (function (_super) {
         configurable: true
     });
     return MeetingDetailsDisplayComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_0__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_0__["BaseDirective"]));
 
 
 
@@ -14377,7 +14377,7 @@ var styles = [".catering-category-list[_ngcontent-%COMP%] {\n  display: flex;\n 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditCategoryListComponent", function() { return CateringEditCategoryListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14407,7 +14407,7 @@ var CateringEditCategoryListComponent = /** @class */ (function (_super) {
         this.selected.emit(item);
     };
     return CateringEditCategoryListComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -14532,7 +14532,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditOrderComponent", function() { return CateringEditOrderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
@@ -14638,7 +14638,7 @@ var CateringEditOrderComponent = /** @class */ (function (_super) {
         this.items.setValue(this.items.value);
     };
     return CateringEditOrderComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -14861,7 +14861,7 @@ var styles = ["[_nghost-%COMP%] {\n  min-height: 24em; }\n.catering[_ngcontent-%
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditComponent", function() { return CateringEditComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 /* harmony import */ var _services_data_catering_catering_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/data/catering/catering.utilities */ "./src/app/services/data/catering/catering.utilities.ts");
@@ -15119,7 +15119,7 @@ var CateringEditComponent = /** @class */ (function (_super) {
         return time_list;
     };
     return CateringEditComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -15223,7 +15223,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditItemListComponent", function() { return CateringEditItemListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15253,7 +15253,7 @@ var CateringEditItemListComponent = /** @class */ (function (_super) {
         return _this;
     }
     return CateringEditItemListComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -15423,7 +15423,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditListItemComponent", function() { return CateringEditListItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 /* harmony import */ var _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../services/app.service */ "./src/app/services/app.service.ts");
@@ -15588,7 +15588,7 @@ var CateringEditListItemComponent = /** @class */ (function (_super) {
         }
     };
     return CateringEditListItemComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -15896,7 +15896,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15971,7 +15971,7 @@ var CateringOrderListComponent = /** @class */ (function (_super) {
         this.catering.control.setValue(order_list || []);
     };
     return CateringOrderListComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]));
 
 
 
@@ -16060,7 +16060,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomCostFieldComponent", function() { return CustomCostFieldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 var __extends = (undefined && undefined.__extends) || (function () {
@@ -16147,7 +16147,7 @@ var CustomCostFieldComponent = /** @class */ (function (_super) {
         this.field.control.setValue(value);
     };
     return CustomCostFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_3__["CUSTOM_FIELD_REGISTER"].cost = CustomCostFieldComponent;
 
@@ -16267,7 +16267,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -16329,7 +16329,7 @@ var CustomDateFieldComponent = /** @class */ (function (_super) {
         this.show_tooltip = false;
     };
     return CustomDateFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].date = CustomDateFieldComponent;
 
@@ -16424,7 +16424,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -16499,7 +16499,7 @@ var CustomDropdownFieldComponent = /** @class */ (function (_super) {
         }
     };
     return CustomDropdownFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__["CUSTOM_FIELD_REGISTER"].dropdown = CustomDropdownFieldComponent;
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__["CUSTOM_FIELD_REGISTER"].booking_type = CustomDropdownFieldComponent;
@@ -16604,7 +16604,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var _utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
@@ -16821,7 +16821,7 @@ var CustomDurationFieldComponent = /** @class */ (function (_super) {
         }
     };
     return CustomDurationFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_4__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_8__["CUSTOM_FIELD_REGISTER"].duration = CustomDurationFieldComponent;
 
@@ -16913,7 +16913,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -16964,7 +16964,7 @@ var CustomEditorFieldComponent = /** @class */ (function (_super) {
         configurable: true
     });
     return CustomEditorFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__["CUSTOM_FIELD_REGISTER"].description = CustomEditorFieldComponent;
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__["CUSTOM_FIELD_REGISTER"].notes = CustomEditorFieldComponent;
@@ -17075,7 +17075,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomGuestSettingsFieldComponent", function() { return CustomGuestSettingsFieldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -17222,7 +17222,7 @@ var CustomGuestSettingsFieldComponent = /** @class */ (function (_super) {
         this.field.control.setValue(value);
     };
     return CustomGuestSettingsFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].notify_user = CustomGuestSettingsFieldComponent;
 
@@ -17393,7 +17393,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomPreferenceFieldComponent", function() { return CustomPreferenceFieldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -17511,7 +17511,7 @@ var CustomPreferenceFieldComponent = /** @class */ (function (_super) {
         this.field.control.setValue(value);
     };
     return CustomPreferenceFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].extras = CustomPreferenceFieldComponent;
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].preferences = CustomPreferenceFieldComponent;
@@ -17670,7 +17670,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -17748,7 +17748,7 @@ var CustomRecurrenceFieldComponent = /** @class */ (function (_super) {
         this.field.control.setValue(value);
     };
     return CustomRecurrenceFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].recurrence = CustomRecurrenceFieldComponent;
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].recurr = CustomRecurrenceFieldComponent;
@@ -17860,7 +17860,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomTermsFieldComponent", function() { return CustomTermsFieldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -17913,7 +17913,7 @@ var CustomTermsFieldComponent = /** @class */ (function (_super) {
         this.field.control.setValue(value);
     };
     return CustomTermsFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].terms = CustomTermsFieldComponent;
 
@@ -18068,7 +18068,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/scrolling */ "./node_modules/@angular/cdk/esm5/scrolling.es5.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
@@ -18260,7 +18260,7 @@ var CustomTimeFieldComponent = /** @class */ (function (_super) {
         }
     };
     return CustomTimeFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_4__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].time = CustomTimeFieldComponent;
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].start = CustomTimeFieldComponent;
@@ -18474,7 +18474,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
@@ -18750,7 +18750,7 @@ var CustomUserListFieldComponent = /** @class */ (function (_super) {
         });
     };
     return CustomUserListFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_5__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_9__["CUSTOM_FIELD_REGISTER"].users = CustomUserListFieldComponent;
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_9__["CUSTOM_FIELD_REGISTER"].attendees = CustomUserListFieldComponent;
@@ -18894,7 +18894,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -19023,7 +19023,7 @@ var CustomUserSearchFieldComponent = /** @class */ (function (_super) {
         this.show = false;
     };
     return CustomUserSearchFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_5__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_8__["CUSTOM_FIELD_REGISTER"].host = CustomUserSearchFieldComponent;
 // CUSTOM_FIELD_REGISTER.host_index = CustomUserSearchFieldComponent;
@@ -19180,7 +19180,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm5/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -19316,7 +19316,7 @@ var CustomWeekFieldComponent = /** @class */ (function (_super) {
         }
     };
     return CustomWeekFieldComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]));
 
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__["CUSTOM_FIELD_REGISTER"].week = CustomWeekFieldComponent;
 
@@ -19374,7 +19374,7 @@ var FeedbackComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵc
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeedbackComponent", function() { return FeedbackComponent; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -19411,7 +19411,7 @@ var FeedbackComponent = /** @class */ (function (_super) {
         this.model.current_page = location || 'Day View';
     };
     return FeedbackComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -20018,7 +20018,7 @@ var SearchbarComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchbarComponent", function() { return SearchbarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -20109,7 +20109,7 @@ var SearchbarComponent = /** @class */ (function (_super) {
         }
     };
     return SearchbarComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -20150,7 +20150,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/esm5/tooltip.es5.js");
 /* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login */ "./src/app/shared/components/login/index.ts");
 /* harmony import */ var _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchbar/searchbar.component */ "./src/app/shared/components/searchbar/searchbar.component.ts");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _user_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./user-search */ "./src/app/shared/components/user-search/index.ts");
 /* harmony import */ var _avatar_avatar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./avatar/avatar.component */ "./src/app/shared/components/avatar/avatar.component.ts");
 /* harmony import */ var _user_tag_user_tag_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user-tag/user-tag.component */ "./src/app/shared/components/user-tag/user-tag.component.ts");
@@ -20211,7 +20211,7 @@ var MATERIAL_MODULES = [
     _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_0__["MatTooltipModule"]
 ];
 var COMPONENTS = __spread([
-    _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"],
+    _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"],
     _avatar_avatar_component__WEBPACK_IMPORTED_MODULE_5__["AvatarComponent"],
     _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_2__["SearchbarComponent"]
 ], _login__WEBPACK_IMPORTED_MODULE_1__["LOGIN_COMPONENTS"], _user_search__WEBPACK_IMPORTED_MODULE_4__["USER_SEARCH_COMPONENTS"], [
@@ -20442,7 +20442,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserFormComponent", function() { return UserFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -20752,7 +20752,7 @@ var UserFormComponent = /** @class */ (function (_super) {
         }
     };
     return UserFormComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -21033,7 +21033,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /*
 * @Author: Alex Sorafumo
 * @Date:   2017-05-17 12:49:52
@@ -21434,7 +21434,7 @@ var UserSearchListComponent = /** @class */ (function (_super) {
         }
     };
     return UserSearchListComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]));
 
 
 
@@ -22030,7 +22030,7 @@ var VisitorFormComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VisitorFormComponent", function() { return VisitorFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
@@ -22364,7 +22364,7 @@ var VisitorFormComponent = /** @class */ (function (_super) {
         }
     };
     return VisitorFormComponent;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -22405,7 +22405,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CdkDropListScrollContainer", function() { return CdkDropListScrollContainer; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22489,7 +22489,7 @@ var CdkDropListScrollContainer = /** @class */ (function (_super) {
         }, 50);
     };
     return CdkDropListScrollContainer;
-}(_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -22515,7 +22515,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579734105000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579737646000);
 
 
 /***/ }),
@@ -22541,6 +22541,29 @@ var BaseClass = /** @class */ (function () {
         /** Store for named subscription unsub callbacks */
         this._subscriptions = {};
     }
+    /**
+     * Clear all timers and subscriptions
+     */
+    BaseClass.prototype.destroy = function () {
+        // Clear local timers
+        for (var key in this._timers) {
+            if (this._timers.hasOwnProperty(key)) {
+                this.clearTimeout(key);
+            }
+        }
+        // Clear local intervals
+        for (var key in this._intervals) {
+            if (this._intervals.hasOwnProperty(key)) {
+                this.clearInterval(key);
+            }
+        }
+        // Clear local subscriptions
+        for (var key in this._subscriptions) {
+            if (this._subscriptions.hasOwnProperty(key)) {
+                this.unsub(key);
+            }
+        }
+    };
     /**
      * Creates a named timer
      * @param name Name of the timer
@@ -22625,16 +22648,16 @@ var BaseClass = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/shared/globals/base.component.ts":
+/***/ "./src/app/shared/globals/base.directive.ts":
 /*!**************************************************!*\
-  !*** ./src/app/shared/globals/base.component.ts ***!
+  !*** ./src/app/shared/globals/base.directive.ts ***!
   \**************************************************/
-/*! exports provided: BaseComponent */
+/*! exports provided: BaseDirective */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseComponent", function() { return BaseComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseDirective", function() { return BaseDirective; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _base_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.class */ "./src/app/shared/globals/base.class.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
@@ -22652,32 +22675,15 @@ var __extends = (undefined && undefined.__extends) || (function () {
 })();
 
 
-var BaseComponent = /** @class */ (function (_super) {
-    __extends(BaseComponent, _super);
-    function BaseComponent() {
+var BaseDirective = /** @class */ (function (_super) {
+    __extends(BaseDirective, _super);
+    function BaseDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    BaseComponent.prototype.ngOnDestroy = function () {
-        // Clear local timers
-        for (var key in this._timers) {
-            if (this._timers.hasOwnProperty(key)) {
-                this.clearTimeout(key);
-            }
-        }
-        // Clear local intervals
-        for (var key in this._intervals) {
-            if (this._intervals.hasOwnProperty(key)) {
-                this.clearInterval(key);
-            }
-        }
-        // Clear local subscriptions
-        for (var key in this._subscriptions) {
-            if (this._subscriptions.hasOwnProperty(key)) {
-                this.unsub(key);
-            }
-        }
+    BaseDirective.prototype.ngOnDestroy = function () {
+        this.destroy();
     };
-    return BaseComponent;
+    return BaseDirective;
 }(_base_class__WEBPACK_IMPORTED_MODULE_1__["BaseClass"]));
 
 
@@ -25652,7 +25658,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringComponent", function() { return CateringComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -25689,7 +25695,7 @@ var CateringComponent = /** @class */ (function (_super) {
         }));
     };
     return CateringComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -26910,7 +26916,7 @@ var SidebarMenuComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SidebarMenuComponent", function() { return SidebarMenuComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -26984,7 +26990,7 @@ var SidebarMenuComponent = /** @class */ (function (_super) {
         this.show_list = false;
     };
     return SidebarMenuComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -27240,7 +27246,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopbarMenuComponent", function() { return TopbarMenuComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
@@ -27484,7 +27490,7 @@ var TopbarMenuComponent = /** @class */ (function (_super) {
         });
     };
     return TopbarMenuComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -27567,7 +27573,7 @@ var AppNotificationsComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppNotificationsComponent", function() { return AppNotificationsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -27607,7 +27613,7 @@ var AppNotificationsComponent = /** @class */ (function (_super) {
         });
     };
     return AppNotificationsComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -27936,7 +27942,7 @@ var BookingListComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingListComponent", function() { return BookingListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
 var __extends = (undefined && undefined.__extends) || (function () {
@@ -27970,7 +27976,7 @@ var BookingListComponent = /** @class */ (function (_super) {
         }
     };
     return BookingListComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 
@@ -28083,7 +28089,7 @@ var WeekViewComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵc
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WeekViewComponent", function() { return WeekViewComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
@@ -28356,7 +28362,7 @@ var WeekViewComponent = /** @class */ (function (_super) {
         this.model.time = moment__WEBPACK_IMPORTED_MODULE_3__(item.time).hours(hours).minutes(minutes);
     };
     return WeekViewComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]));
 
 
 

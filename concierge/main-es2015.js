@@ -402,14 +402,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-uploads */ "./node_modules/@acaprojects/ngx-uploads/fesm2015/acaprojects-ngx-uploads.js");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 
 
 
 
 
 
-class AppComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_5__["BaseComponent"] {
+class AppComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"] {
     constructor(view, overlay, uploads, _md5_workers, _composer) {
         super();
         this.view = view;
@@ -1205,12 +1205,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 
 
 
 
-class BookingDetailsComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"] {
+class BookingDetailsComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
     constructor(_service) {
         super();
         this._service = _service;
@@ -2097,12 +2097,12 @@ var styles = ["[_nghost-%COMP%] {\n  height: 100%; }\n.catering-modal[_ngcontent
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingCateringDetailsModalComponent", function() { return BookingCateringDetailsModalComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 
 
 
-class BookingCateringDetailsModalComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class BookingCateringDetailsModalComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor() {
         super(...arguments);
         /** ID of the active space */
@@ -2286,14 +2286,14 @@ var styles = ["[_nghost-%COMP%] {\n  height: 100%; }\n.equipment[_ngcontent-%COM
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingEquipmentDetailsComponent", function() { return BookingEquipmentDetailsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 
 
 
 
-class BookingEquipmentDetailsComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class BookingEquipmentDetailsComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(_service) {
         super();
         this._service = _service;
@@ -2638,7 +2638,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
@@ -2649,7 +2649,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class BookingFlowFindSpaceComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_4__["BaseComponent"] {
+class BookingFlowFindSpaceComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"] {
     constructor(_service) {
         super();
         this._service = _service;
@@ -2889,12 +2889,12 @@ var styles = ["[_nghost-%COMP%] {\n  width: 100%; }\n.space-item[_ngcontent-%COM
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingFlowSpaceItemComponent", function() { return BookingFlowSpaceItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 
 
 
-class BookingFlowSpaceItemComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class BookingFlowSpaceItemComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(_service) {
         super();
         this._service = _service;
@@ -3012,12 +3012,12 @@ var styles = [".booking-form[_ngcontent-%COMP%] {\n  overflow: auto;\n  max-heig
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingFlowFormComponent", function() { return BookingFlowFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 
 
 
-class BookingFlowFormComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class BookingFlowFormComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(_service) {
         super();
         this._service = _service;
@@ -4670,14 +4670,14 @@ var styles = [".meeting-details[_ngcontent-%COMP%] {\n  padding: 1em; }\n.field[
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MeetingDetailsDisplayComponent", function() { return MeetingDetailsDisplayComponent; });
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
-class MeetingDetailsDisplayComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_0__["BaseComponent"] {
+class MeetingDetailsDisplayComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_0__["BaseDirective"] {
     /** Host of the booking */
     get host() {
         const booking = this.booking || {};
@@ -11762,10 +11762,10 @@ var styles = [".catering-category-list[_ngcontent-%COMP%] {\n  display: flex;\n 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditCategoryListComponent", function() { return CateringEditCategoryListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 
 
-class CateringEditCategoryListComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class CateringEditCategoryListComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor() {
         super(...arguments);
         /** Emitter for the selected category */
@@ -11900,7 +11900,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditOrderComponent", function() { return CateringEditOrderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
@@ -11910,7 +11910,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CateringEditOrderComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CateringEditOrderComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(_service) {
         super();
         this._service = _service;
@@ -12193,7 +12193,7 @@ var styles = ["[_nghost-%COMP%] {\n  min-height: 24em; }\n.catering[_ngcontent-%
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditComponent", function() { return CateringEditComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 /* harmony import */ var _services_data_catering_catering_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/data/catering/catering.utilities */ "./src/app/services/data/catering/catering.utilities.ts");
@@ -12207,7 +12207,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CateringEditComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class CateringEditComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(_service) {
         super();
         this._service = _service;
@@ -12480,13 +12480,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditItemListComponent", function() { return CateringEditItemListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 
 
 
 
-class CateringEditItemListComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CateringEditItemListComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor() {
         super(...arguments);
         /** Step value for adding catering items */
@@ -12663,7 +12663,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringEditListItemComponent", function() { return CateringEditListItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 /* harmony import */ var _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../services/app.service */ "./src/app/services/app.service.ts");
@@ -12673,7 +12673,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CateringEditListItemComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CateringEditListItemComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(_service) {
         super();
         this._service = _service;
@@ -13054,14 +13054,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 
 
 
 
 
-class CateringOrderListComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"] {
+class CateringOrderListComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
     constructor(_router) {
         super();
         this._router = _router;
@@ -13197,7 +13197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomCostFieldComponent", function() { return CustomCostFieldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 
@@ -13205,7 +13205,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomCostFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CustomCostFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(_field, _group) {
         super();
         this._field = _field;
@@ -13378,7 +13378,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -13388,7 +13388,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomDateFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"] {
+class CustomDateFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
     constructor(_field, _group) {
         super();
         this._field = _field;
@@ -13509,14 +13509,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 
 
 
 
 
-class CustomDropdownFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"] {
+class CustomDropdownFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
     constructor(_field, _group) {
         super();
         this._field = _field;
@@ -13659,7 +13659,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var _utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
@@ -13676,7 +13676,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_4__["BaseComponent"] {
+class CustomDurationFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"] {
     constructor(_field, _group, service) {
         super();
         this._field = _field;
@@ -13915,14 +13915,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 
 
 
 
 
-class CustomEditorFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"] {
+class CustomEditorFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
     constructor(_field, _group) {
         super();
         this._field = _field;
@@ -14048,7 +14048,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomGuestSettingsFieldComponent", function() { return CustomGuestSettingsFieldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -14058,7 +14058,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomGuestSettingsFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CustomGuestSettingsFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(_field, _group, service) {
         super();
         this._field = _field;
@@ -14307,7 +14307,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomPreferenceFieldComponent", function() { return CustomPreferenceFieldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -14317,7 +14317,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomPreferenceFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CustomPreferenceFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(_field, _group, service) {
         super();
         this._field = _field;
@@ -14514,7 +14514,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -14524,7 +14524,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomRecurrenceFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"] {
+class CustomRecurrenceFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
     constructor(_field, _group) {
         super();
         this._field = _field;
@@ -14678,7 +14678,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomTermsFieldComponent", function() { return CustomTermsFieldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -14688,7 +14688,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomTermsFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CustomTermsFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(_field, _group, service) {
         super();
         this._field = _field;
@@ -14861,7 +14861,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/scrolling */ "./node_modules/@angular/cdk/esm2015/scrolling.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
@@ -14874,7 +14874,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomTimeFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_4__["BaseComponent"] {
+class CustomTimeFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"] {
     constructor(_field, _group) {
         super();
         this._field = _field;
@@ -15237,7 +15237,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
@@ -15254,7 +15254,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const VALID_DOMAINS = ['@mckinsey.com', '@external.mckinsey.com', '@quantumblack.com'];
-class CustomUserListFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_5__["BaseComponent"] {
+class CustomUserListFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"] {
     constructor(_field, _group, service) {
         super();
         this._field = _field;
@@ -15591,7 +15591,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -15604,7 +15604,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomUserSearchFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_5__["BaseComponent"] {
+class CustomUserSearchFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"] {
     constructor(_field, group, service) {
         super();
         this._field = _field;
@@ -15834,7 +15834,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../globals/custom-field-register */ "./src/app/shared/globals/custom-field-register.ts");
@@ -15844,7 +15844,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CustomWeekFieldComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"] {
+class CustomWeekFieldComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
     constructor(_field, _group) {
         super();
         this._field = _field;
@@ -15979,12 +15979,12 @@ var FeedbackComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵc
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeedbackComponent", function() { return FeedbackComponent; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 
 
 
-class FeedbackComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class FeedbackComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(service, router) {
         super();
         this.service = service;
@@ -16592,10 +16592,10 @@ var SearchbarComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchbarComponent", function() { return SearchbarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 
 
-class SearchbarComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class SearchbarComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor() {
         super();
         this.dictation = true;
@@ -16705,7 +16705,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/esm2015/tooltip.js");
 /* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login */ "./src/app/shared/components/login/index.ts");
 /* harmony import */ var _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchbar/searchbar.component */ "./src/app/shared/components/searchbar/searchbar.component.ts");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _user_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./user-search */ "./src/app/shared/components/user-search/index.ts");
 /* harmony import */ var _avatar_avatar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./avatar/avatar.component */ "./src/app/shared/components/avatar/avatar.component.ts");
 /* harmony import */ var _user_tag_user_tag_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user-tag/user-tag.component */ "./src/app/shared/components/user-tag/user-tag.component.ts");
@@ -16746,7 +16746,7 @@ const MATERIAL_MODULES = [
     _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_0__["MatTooltipModule"]
 ];
 const COMPONENTS = [
-    _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"],
+    _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"],
     _avatar_avatar_component__WEBPACK_IMPORTED_MODULE_5__["AvatarComponent"],
     _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_2__["SearchbarComponent"],
     ..._login__WEBPACK_IMPORTED_MODULE_1__["LOGIN_COMPONENTS"],
@@ -16978,11 +16978,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserFormComponent", function() { return UserFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 
 
 
-class UserFormComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class UserFormComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
@@ -17488,7 +17488,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /*
 * @Author: Alex Sorafumo
 * @Date:   2017-05-17 12:49:52
@@ -17499,7 +17499,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class UserSearchListComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"] {
+class UserSearchListComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
@@ -18296,7 +18296,7 @@ var VisitorFormComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VisitorFormComponent", function() { return VisitorFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
@@ -18306,7 +18306,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class VisitorFormComponent extends _globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class VisitorFormComponent extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
@@ -18601,7 +18601,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CdkDropListScrollContainer", function() { return CdkDropListScrollContainer; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm2015/drag-drop.js");
-/* harmony import */ var _globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 
 
 
@@ -18612,7 +18612,7 @@ var ScrollDirection;
     ScrollDirection[ScrollDirection["Y"] = 2] = "Y";
     ScrollDirection[ScrollDirection["BOTH"] = 3] = "BOTH";
 })(ScrollDirection || (ScrollDirection = {}));
-class CdkDropListScrollContainer extends _globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CdkDropListScrollContainer extends _globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(_cdkDropList, _renderer) {
         super();
         this._cdkDropList = _cdkDropList;
@@ -18691,7 +18691,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579734105000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579737646000);
 
 
 /***/ }),
@@ -18716,6 +18716,29 @@ class BaseClass {
         this._intervals = {};
         /** Store for named subscription unsub callbacks */
         this._subscriptions = {};
+    }
+    /**
+     * Clear all timers and subscriptions
+     */
+    destroy() {
+        // Clear local timers
+        for (const key in this._timers) {
+            if (this._timers.hasOwnProperty(key)) {
+                this.clearTimeout(key);
+            }
+        }
+        // Clear local intervals
+        for (const key in this._intervals) {
+            if (this._intervals.hasOwnProperty(key)) {
+                this.clearInterval(key);
+            }
+        }
+        // Clear local subscriptions
+        for (const key in this._subscriptions) {
+            if (this._subscriptions.hasOwnProperty(key)) {
+                this.unsub(key);
+            }
+        }
     }
     /**
      * Creates a named timer
@@ -18796,40 +18819,23 @@ class BaseClass {
 
 /***/ }),
 
-/***/ "./src/app/shared/globals/base.component.ts":
+/***/ "./src/app/shared/globals/base.directive.ts":
 /*!**************************************************!*\
-  !*** ./src/app/shared/globals/base.component.ts ***!
+  !*** ./src/app/shared/globals/base.directive.ts ***!
   \**************************************************/
-/*! exports provided: BaseComponent */
+/*! exports provided: BaseDirective */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseComponent", function() { return BaseComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseDirective", function() { return BaseDirective; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _base_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.class */ "./src/app/shared/globals/base.class.ts");
 
 
-class BaseComponent extends _base_class__WEBPACK_IMPORTED_MODULE_1__["BaseClass"] {
+class BaseDirective extends _base_class__WEBPACK_IMPORTED_MODULE_1__["BaseClass"] {
     ngOnDestroy() {
-        // Clear local timers
-        for (const key in this._timers) {
-            if (this._timers.hasOwnProperty(key)) {
-                this.clearTimeout(key);
-            }
-        }
-        // Clear local intervals
-        for (const key in this._intervals) {
-            if (this._intervals.hasOwnProperty(key)) {
-                this.clearInterval(key);
-            }
-        }
-        // Clear local subscriptions
-        for (const key in this._subscriptions) {
-            if (this._subscriptions.hasOwnProperty(key)) {
-                this.unsub(key);
-            }
-        }
+        this.destroy();
     }
 }
 
@@ -21200,13 +21206,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringComponent", function() { return CateringComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 
 
 
 
-class CateringComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class CateringComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(_service, _route) {
         super();
         this._service = _service;
@@ -22282,12 +22288,12 @@ var SidebarMenuComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SidebarMenuComponent", function() { return SidebarMenuComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 
 
 
-class SidebarMenuComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class SidebarMenuComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
@@ -22593,7 +22599,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopbarMenuComponent", function() { return TopbarMenuComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
@@ -22602,7 +22608,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class TopbarMenuComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class TopbarMenuComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(service, router) {
         super();
         this.service = service;
@@ -22868,12 +22874,12 @@ var AppNotificationsComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppNotificationsComponent", function() { return AppNotificationsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 
 
 
-class AppNotificationsComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class AppNotificationsComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
@@ -23192,13 +23198,13 @@ var BookingListComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingListComponent", function() { return BookingListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
-class BookingListComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class BookingListComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor() {
         super(...arguments);
         this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -23322,7 +23328,7 @@ var WeekViewComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵc
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WeekViewComponent", function() { return WeekViewComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
@@ -23330,7 +23336,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class WeekViewComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class WeekViewComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
