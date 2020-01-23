@@ -376,7 +376,7 @@ var styles = [".category-item[_ngcontent-%COMP%] {\n  border-radius: 0px;\n  mar
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringCategoryItemComponent", function() { return CateringCategoryItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _overlays_group_modal_group_modal_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../overlays/group-modal/group-modal.component */ "./src/app/shell/catering/overlays/group-modal/group-modal.component.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _overlays_item_modal_item_modal_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../overlays/item-modal/item-modal.component */ "./src/app/shell/catering/overlays/item-modal/item-modal.component.ts");
@@ -387,7 +387,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CateringCategoryItemComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class CateringCategoryItemComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
@@ -753,7 +753,7 @@ var styles = [".category-list[_ngcontent-%COMP%]    > btn[_ngcontent-%COMP%] {\n
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringCategoryListComponent", function() { return CateringCategoryListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _overlays_group_modal_group_modal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../overlays/group-modal/group-modal.component */ "./src/app/shell/catering/overlays/group-modal/group-modal.component.ts");
 /* harmony import */ var _overlays_item_modal_item_modal_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../overlays/item-modal/item-modal.component */ "./src/app/shell/catering/overlays/item-modal/item-modal.component.ts");
@@ -764,7 +764,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class CateringCategoryListComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class CateringCategoryListComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
@@ -1041,14 +1041,14 @@ var styles = ["header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: cen
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenusComponent", function() { return MenusComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _overlays_category_modal_category_modal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../overlays/category-modal/category-modal.component */ "./src/app/shell/catering/overlays/category-modal/category-modal.component.ts");
 
 
 
 
-class MenusComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
+class MenusComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
     constructor(service) {
         super();
         this.service = service;
@@ -1359,7 +1359,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrdersComponent", function() { return OrdersComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
@@ -1372,7 +1372,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class OrdersComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
     constructor(service, _route) {
         super();
         this.service = service;

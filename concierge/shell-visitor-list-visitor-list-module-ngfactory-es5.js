@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VisitorListHostItemComponent", function() { return VisitorListHostItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
@@ -211,7 +211,7 @@ var VisitorListHostItemComponent = /** @class */ (function (_super) {
         });
     };
     return VisitorListHostItemComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -301,7 +301,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VisitorListItemComponent", function() { return VisitorListItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
 var __extends = (undefined && undefined.__extends) || (function () {
@@ -428,7 +428,7 @@ var VisitorListItemComponent = /** @class */ (function (_super) {
         }
     };
     return VisitorListItemComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
@@ -559,7 +559,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VisitorListComponent", function() { return VisitorListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/globals/base.component */ "./src/app/shared/globals/base.component.ts");
+/* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
@@ -752,7 +752,7 @@ var VisitorListComponent = /** @class */ (function (_super) {
         }
     };
     return VisitorListComponent;
-}(_shared_globals_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+}(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]));
 
 
 
