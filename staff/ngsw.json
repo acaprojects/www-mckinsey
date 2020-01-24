@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1576818685864,
+  "timestamp": 1579839563691,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -265,7 +265,7 @@
     "/staff/assets/maps/rome/level_5.svg": "88c9f8ec047846d7f5357f25d593d7fdf27e4b7e",
     "/staff/assets/maps/salvador/level_12.svg": "3d7314bc617fb968c29eeae1fda18383dc5e86b7",
     "/staff/assets/maps/san_jose/level_03.svg": "5f0ada38645662c7216440ed828e2344cfa82226",
-    "/staff/assets/maps/san_jose/level_04.svg": "3a5779b3094359681f929d6a7695838738b63a0e",
+    "/staff/assets/maps/san_jose/level_04.svg": "a33302f21433d5296325a76096743acfda87e69c",
     "/staff/assets/maps/san_jose/level_05.svg": "2a66310afee6e0c7e8faadaac59d6e97823ab8d3",
     "/staff/assets/maps/san_jose/level_06.svg": "e43eb7f37c7feb901f39e19d0c8366ca30c100ba",
     "/staff/assets/maps/san_jose/level_07.svg": "834589aa393ea22abc0cac9ef91315bdaffc9443",
@@ -285,7 +285,7 @@
     "/staff/assets/maps/washington_dc/level_11.svg": "8e7bb6a556bfb0380b552ee2d3c941dd7eeb9f6a",
     "/staff/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/staff/index.html": "a09b962c340ed52b6a66a315329e204cd885b7ba"
+    "/staff/index.html": "f583d15d61ba66498626868a5b5f8fb17b8b25b4"
   },
   "navigationUrls": [
     {
