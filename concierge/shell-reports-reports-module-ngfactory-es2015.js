@@ -466,6 +466,7 @@ class ReportComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
         // waiting for back end changes to accomodate report type
         if (this.model.report.id === 'bookings') {
             this._service.BookingsReports.query({
+                date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.start_date).format('YYYY-MM-DD'),
                 start_date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.start_date).startOf('d').unix(),
                 end_date: dayjs__WEBPACK_IMPORTED_MODULE_7__(this.model.end_date).unix(),
                 zone_ids: this.model.selected.map(el => el.id)

@@ -1628,8 +1628,10 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
      * @param booking Updated booking
      */
     updateOrders(booking) {
-        let new_order_list = this.processOrders(booking);
-        this.orders = this.orders.filter(order => order.booking_id !== booking.id).concat(new_order_list);
+        const new_order_list = this.processOrders(booking);
+        this.orders = this.orders
+            .filter(order => order.booking_id !== booking.id && (!order.booking || order.booking.id !== booking.id))
+            .concat(new_order_list);
     }
     /**
      * Process catering order data from given booking
@@ -1637,13 +1639,15 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
      */
     processOrders(booking) {
         if (booking.catering && booking.room) {
-            return booking.catering.map(order => {
+            return booking.catering
+                .map(order => {
                 order.booking = booking;
                 return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, { location: order.location || (this.service.Rooms.item(order.location_id) || { name: '' }).name }));
-            }).filter((order) => {
+            })
+                .filter(order => {
                 // Remove orders from other buildings
                 const location = this.service.Rooms.item(order.location_id);
-                return !location || (location.level.bld_id === this.building.id);
+                return !location || location.level.bld_id === this.building.id;
             });
         }
         return null;

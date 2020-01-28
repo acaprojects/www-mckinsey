@@ -1853,7 +1853,9 @@ var OrdersComponent = /** @class */ (function (_super) {
      */
     OrdersComponent.prototype.updateOrders = function (booking) {
         var new_order_list = this.processOrders(booking);
-        this.orders = this.orders.filter(function (order) { return order.booking_id !== booking.id; }).concat(new_order_list);
+        this.orders = this.orders
+            .filter(function (order) { return order.booking_id !== booking.id && (!order.booking || order.booking.id !== booking.id); })
+            .concat(new_order_list);
     };
     /**
      * Process catering order data from given booking
@@ -1862,13 +1864,15 @@ var OrdersComponent = /** @class */ (function (_super) {
     OrdersComponent.prototype.processOrders = function (booking) {
         var _this = this;
         if (booking.catering && booking.room) {
-            return booking.catering.map(function (order) {
+            return booking.catering
+                .map(function (order) {
                 order.booking = booking;
                 return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](__assign({}, order, { location: order.location || (_this.service.Rooms.item(order.location_id) || { name: '' }).name }));
-            }).filter(function (order) {
+            })
+                .filter(function (order) {
                 // Remove orders from other buildings
                 var location = _this.service.Rooms.item(order.location_id);
-                return !location || (location.level.bld_id === _this.building.id);
+                return !location || location.level.bld_id === _this.building.id;
             });
         }
         return null;
