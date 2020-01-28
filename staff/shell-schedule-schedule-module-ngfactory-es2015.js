@@ -361,7 +361,6 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             }
             list.forEach(bkn => {
                 const rooms = bkn.spaces || [];
-                console.log('Rooms:', bkn.title, rooms, bkn.approval_status, bkn);
                 bkn.is_declined = rooms.reduce((state, room) => state || bkn.approval_status[room] === 'declined', false);
                 bkn.is_tentative = rooms.reduce((state, room) => state || (bkn.approval_status[room] || '').indexOf('tentative') >= 0, false);
             });

@@ -2034,7 +2034,6 @@ class ExploreComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_
                 }
             }
             this.model.desk = null;
-            console.log('Listeners:', this.model.map.listeners);
             this.updateStyles();
             this.updatePointsOfInterest();
         });
