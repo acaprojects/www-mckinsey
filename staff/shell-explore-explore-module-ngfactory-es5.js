@@ -2626,7 +2626,6 @@ var __spread = (this && this.__spread) || function () {
                             }
                         }
                         _this.model.desk = null;
-                        console.log('Listeners:', _this.model.map.listeners);
                         _this.updateStyles();
                         _this.updatePointsOfInterest();
                     });

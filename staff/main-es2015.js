@@ -4379,7 +4379,6 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
             catering_map[space.id] = this.booking.catering.filter(order => order.location_id === space.id);
             catering_map[space.id].forEach(order => order.symbol = symbol);
         }
-        console.log('Catering:', this.booking.catering, catering_map);
         return catering_map;
     }
     /** Number of attendees expected to turn up to the meeting */
@@ -8889,8 +8888,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
         if (localStorage) {
-            const stored_date = localStorage.getItem('STAFF.booking.date');
-            const stored_duration = localStorage.getItem('STAFF.booking.duration');
+            const stored_date = parseInt(localStorage.getItem('STAFF.booking.date'), 10);
+            const stored_duration = parseInt(localStorage.getItem('STAFF.booking.duration'), 10);
             if (item.id && ((stored_date && +stored_date !== item.date) ||
                 (stored_duration && +stored_duration !== item.duration))) {
                 form.room.forEach(rm => {
@@ -8925,7 +8924,6 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (!form.location_name) {
             form.locations = [];
         }
-        console.log('Form:', form);
         const request = {
             start: date.unix(),
             end: date.add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
@@ -9787,6 +9785,8 @@ class CateringOrder {
         this._changes = {};
         /** Map of local property names to server ones */
         this._server_names = {};
+        /** Currency code for the location of the order */
+        this.symbol = 'USD';
         this.id = data.id;
         this.delivery_time = data.delivery_time || 0;
         this.booking_date = data.booking_date;
@@ -19521,7 +19521,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1579844798000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580187751000);
 
 
 /***/ }),
@@ -20326,7 +20326,6 @@ class MockBuildingsBackend extends _base_mock__WEBPACK_IMPORTED_MODULE_0__["Base
                 this.generateDesksForBuilding(this.model.bld_data[bld]);
             }
         }
-        console.log('Window:', window.control.handlers);
         // Add response for Global zone
         window.control.handlers.push({
             path: `/${this.model.api_route}/zones`,
@@ -22412,8 +22411,8 @@ function View_BookingDetailsModalComponent_11(_l) { return _angular_core__WEBPAC
         var pd_4 = ((_co.show_notes = !_co.show_notes) !== false);
         ad = (pd_4 && ad);
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, { event: "touchrelease" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Space notes "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](5, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 4, "div", [["class", "value"]], [[24, "@show", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_12)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_13)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_3 = _co.notes; _ck(_v, 8, 0, currVal_3); var currVal_4 = (!_co.notes || (_co.notes.length <= 0)); _ck(_v, 10, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = "notes"; _ck(_v, 0, 0, currVal_0); var currVal_1 = (_co.show_notes ? "keyboard_arrow_up" : "keyboard_arrow_down"); _ck(_v, 5, 0, currVal_1); var currVal_2 = (_co.show_notes ? "show" : "hide"); _ck(_v, 6, 0, currVal_2); }); }
-function View_BookingDetailsModalComponent_16(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "name"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 2, "div", [["class", "email"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " item", " | ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](5, 2)], null, function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.name; _ck(_v, 2, 0, currVal_0); var currVal_1 = _v.parent.context.$implicit.count; var currVal_2 = ((_v.parent.context.$implicit.count === 1) ? "" : "s"); var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 4, 2, _ck(_v, 5, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent.parent.parent.parent, 0), ((_v.parent.context.$implicit.total || 0) / 100), _v.parent.context.$implicit.symbol)); _ck(_v, 4, 0, currVal_1, currVal_2, currVal_3); }); }
-function View_BookingDetailsModalComponent_15(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_16)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var currVal_0 = _v.context.$implicit.count; _ck(_v, 2, 0, currVal_0); }, null); }
+function View_BookingDetailsModalComponent_16(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "name"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 2, "div", [["class", "email"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " item", " | ", " "])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](5, 2)], null, function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.location; _ck(_v, 2, 0, currVal_0); var currVal_1 = _v.parent.context.$implicit.item_count; var currVal_2 = ((_v.parent.context.$implicit.item_count === 1) ? "" : "s"); var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 4, 2, _ck(_v, 5, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent.parent.parent.parent, 0), ((_v.parent.context.$implicit.total || 0) / 100), _v.parent.context.$implicit.symbol)); _ck(_v, 4, 0, currVal_1, currVal_2, currVal_3); }); }
+function View_BookingDetailsModalComponent_15(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingDetailsModalComponent_16)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var currVal_0 = _v.context.$implicit.item_count; _ck(_v, 2, 0, currVal_0); }, null); }
 function View_BookingDetailsModalComponent_17(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "name"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["No catering"]))], null, null); }
 function View_BookingDetailsModalComponent_14(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "div", [["class", "field"]], [[1, "field", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "label", [["for", "catering"]], null, [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("mousedown" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).mousestart($event) !== false);
@@ -22544,6 +22543,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+
 
 
 
@@ -22625,19 +22626,11 @@ class BookingDetailsModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMP
         if (!this.model.catering) {
             return [];
         }
-        return Object.keys(this.model.catering)
-            .filter(i => this.spaces.find(j => j.id === i))
-            .reduce((v, i) => {
-            if (this.model.catering && this.model.catering[i]) {
-                this.model.catering[i].count = (this.model.catering[i].items || []).reduce((v, j) => v + (j.amount || 0), 0);
-                v.push(this.model.catering[i]);
-            }
-            return v;
-        }, []);
+        return this.model.catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](order));
     }
     /** Total number of catering items in booking */
     get item_count() {
-        return this.catering.reduce((c, i) => c + ((i.items || []).reduce((v, j) => v + (j.amount || 0), 0) || 0), 0);
+        return this.catering.reduce((count, order) => count + order.item_count, 0);
     }
     /** Private notes for spaces and equipment */
     get notes() {
@@ -22899,7 +22892,6 @@ class BookingCateringDetailsModalComponent extends _acaprojects_ngx_widgets__WEB
         return this.model.spaces;
     }
     init() {
-        console.log('Init:', this.model);
         if (!this.model.expected_attendees) {
             this.model.expected_attendees = {};
         }

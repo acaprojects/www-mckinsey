@@ -963,14 +963,23 @@ class BookingMainFlowCateringComponent extends _shared_globals_base_component__W
         const time_list = [];
         if (this.date) {
             let start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m');
+            if (start.isBefore(start.hour(7).minute(0), 'm')) {
+                start = start.hour(7).minute(0);
+            }
             const old_start = start;
             start = start.minute(Math.ceil(start.minute() / 5) * 5);
-            const end = start.add(this.duration, 'm');
+            let end = start.add(this.duration, 'm');
+            if (end.isAfter(start.hour(20).minute(0), 'm')) {
+                end = start.hour(20).minute(0);
+            }
             let duration = old_start.diff(start, 'm');
             while (start.isBefore(end, 'm')) {
                 time_list.push({ id: duration, name: start.format('h:mm A') });
                 start = start.add(5, 'm');
                 duration += 5;
+            }
+            if (time_list.length <= 0) {
+                time_list.push({ id: 0, name: 'Outside of hours' });
             }
         }
         return time_list;
@@ -2649,7 +2658,6 @@ class BookingMainFlowComponent extends _shared_globals_base_component__WEBPACK_I
         }
         this.subscription('route', this._route.paramMap.subscribe(params => {
             if (params.has('page')) {
-                console.log('Page:', this.page);
                 this.page = params.get('page');
             }
         }));
@@ -3020,7 +3028,6 @@ class BookingMainFlowComponent extends _shared_globals_base_component__WEBPACK_I
         this.timeout('confirm-booking', () => {
             const fields = this.formToBooking();
             fields.catering = fields.catering.map((order) => order.toJSON(true));
-            console.log('Form Fields:', this.form_fields, fields);
             this._service.Overlay.openModal('confirm-booking', {
                 cmp: _overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_10__["BookingDetailsModalComponent"],
                 data: fields

@@ -418,7 +418,6 @@ var __values = (this && this.__values) || function (o) {
                         }
                         list.forEach(function (bkn) {
                             var rooms = bkn.spaces || [];
-                            console.log('Rooms:', bkn.title, rooms, bkn.approval_status, bkn);
                             bkn.is_declined = rooms.reduce(function (state, room) { return state || bkn.approval_status[room] === 'declined'; }, false);
                             bkn.is_tentative = rooms.reduce(function (state, room) { return state || (bkn.approval_status[room] || '').indexOf('tentative') >= 0; }, false);
                         });
