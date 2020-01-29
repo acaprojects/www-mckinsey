@@ -1388,9 +1388,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+/* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -1436,7 +1436,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
                     listing += '\n\n';
                 }
                 listing += `${item.amount} x    ${item.name}`;
-                if (item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_6__["CateringCategory"]) {
+                if (item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_5__["CateringCategory"]) {
                     for (const sub_item of item.items) {
                         if (!sub_item.amount)
                             continue;
@@ -1499,7 +1499,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
             const bld = this.service.Buildings.current();
             if (bld) {
                 this.building = bld;
-                const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.model.date).startOf('d');
+                const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.model.date).startOf('d');
                 this.display.date = date.format('DD MMM YYYY');
                 this.service.Rooms.query({
                     available_from: date.unix(),
@@ -1517,7 +1517,11 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
                             }
                         }
                     }
-                    this.orders.sort((a, b) => a.delivery_time - b.delivery_time || a.booking_date - b.booking_date);
+                    this.orders.sort((a, b) => {
+                        const time_a = dayjs__WEBPACK_IMPORTED_MODULE_6__(a.booking_date).add(a.delivery_time, 'm').valueOf();
+                        const time_b = dayjs__WEBPACK_IMPORTED_MODULE_6__(b.booking_date).add(b.delivery_time, 'm').valueOf();
+                        return time_a - time_b;
+                    });
                     if (this.view_id) {
                         const order = this.orders.find(i => i.booking_id === this.view_id);
                         if (order) {
@@ -1579,14 +1583,14 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
         const start = this.model.settings.start_hour || 6.5;
         const end = this.model.settings.end_hour || 21.5;
         // Generate times
-        const start_time = dayjs__WEBPACK_IMPORTED_MODULE_5__()
+        const start_time = dayjs__WEBPACK_IMPORTED_MODULE_6__()
             .hour(start % 24)
             .minute((start % 1) * 60);
-        const end_time = dayjs__WEBPACK_IMPORTED_MODULE_5__()
+        const end_time = dayjs__WEBPACK_IMPORTED_MODULE_6__()
             .hour(end % 24)
             .minute((end % 1) * 60);
         const length = Math.abs(Math.floor(start_time.diff(end_time, 'm')));
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.model.date || '');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.model.date || '');
         const hour = Math.floor(now.hour() + now.minute() / 60);
         this.model.now = {
             display: now.format('h:mm A'),
@@ -1594,7 +1598,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
             raw: now.valueOf(),
             dow: now.format('dddd'),
             offset: Math.floor(now.diff(start_time, 'm')) / length,
-            today: now.isSame(dayjs__WEBPACK_IMPORTED_MODULE_5__(), 'd'),
+            today: now.isSame(dayjs__WEBPACK_IMPORTED_MODULE_6__(), 'd'),
             active: `${hour}:00`
         };
     }
@@ -1632,6 +1636,11 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
         this.orders = this.orders
             .filter(order => order.booking_id !== booking.id && (!order.booking || order.booking.id !== booking.id))
             .concat(new_order_list);
+        this.orders.sort((a, b) => {
+            const time_a = dayjs__WEBPACK_IMPORTED_MODULE_6__(a.booking_date).add(a.delivery_time, 'm').valueOf();
+            const time_b = dayjs__WEBPACK_IMPORTED_MODULE_6__(b.booking_date).add(b.delivery_time, 'm').valueOf();
+            return time_a - time_b;
+        });
     }
     /**
      * Process catering order data from given booking
