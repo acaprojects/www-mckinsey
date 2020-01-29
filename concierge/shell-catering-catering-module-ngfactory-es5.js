@@ -1503,9 +1503,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+/* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -1612,7 +1612,7 @@ var OrdersComponent = /** @class */ (function (_super) {
                             listing += '\n\n';
                         }
                         listing += item.amount + " x    " + item.name;
-                        if (item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_6__["CateringCategory"]) {
+                        if (item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_5__["CateringCategory"]) {
                             try {
                                 for (var _b = (e_2 = void 0, __values(item.items)), _c = _b.next(); !_c.done; _c = _b.next()) {
                                     var sub_item = _c.value;
@@ -1698,7 +1698,7 @@ var OrdersComponent = /** @class */ (function (_super) {
             var bld = _this.service.Buildings.current();
             if (bld) {
                 _this.building = bld;
-                var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this.model.date).startOf('d');
+                var date = dayjs__WEBPACK_IMPORTED_MODULE_6__(_this.model.date).startOf('d');
                 _this.display.date = date.format('DD MMM YYYY');
                 _this.service.Rooms.query({
                     available_from: date.unix(),
@@ -1737,7 +1737,11 @@ var OrdersComponent = /** @class */ (function (_super) {
                         }
                         finally { if (e_3) throw e_3.error; }
                     }
-                    _this.orders.sort(function (a, b) { return a.delivery_time - b.delivery_time || a.booking_date - b.booking_date; });
+                    _this.orders.sort(function (a, b) {
+                        var time_a = dayjs__WEBPACK_IMPORTED_MODULE_6__(a.booking_date).add(a.delivery_time, 'm').valueOf();
+                        var time_b = dayjs__WEBPACK_IMPORTED_MODULE_6__(b.booking_date).add(b.delivery_time, 'm').valueOf();
+                        return time_a - time_b;
+                    });
                     if (_this.view_id) {
                         var order_1 = _this.orders.find(function (i) { return i.booking_id === _this.view_id; });
                         if (order_1) {
@@ -1802,14 +1806,14 @@ var OrdersComponent = /** @class */ (function (_super) {
         var start = this.model.settings.start_hour || 6.5;
         var end = this.model.settings.end_hour || 21.5;
         // Generate times
-        var start_time = dayjs__WEBPACK_IMPORTED_MODULE_5__()
+        var start_time = dayjs__WEBPACK_IMPORTED_MODULE_6__()
             .hour(start % 24)
             .minute((start % 1) * 60);
-        var end_time = dayjs__WEBPACK_IMPORTED_MODULE_5__()
+        var end_time = dayjs__WEBPACK_IMPORTED_MODULE_6__()
             .hour(end % 24)
             .minute((end % 1) * 60);
         var length = Math.abs(Math.floor(start_time.diff(end_time, 'm')));
-        var now = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.model.date || '');
+        var now = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.model.date || '');
         var hour = Math.floor(now.hour() + now.minute() / 60);
         this.model.now = {
             display: now.format('h:mm A'),
@@ -1817,7 +1821,7 @@ var OrdersComponent = /** @class */ (function (_super) {
             raw: now.valueOf(),
             dow: now.format('dddd'),
             offset: Math.floor(now.diff(start_time, 'm')) / length,
-            today: now.isSame(dayjs__WEBPACK_IMPORTED_MODULE_5__(), 'd'),
+            today: now.isSame(dayjs__WEBPACK_IMPORTED_MODULE_6__(), 'd'),
             active: hour + ":00"
         };
     };
@@ -1856,6 +1860,11 @@ var OrdersComponent = /** @class */ (function (_super) {
         this.orders = this.orders
             .filter(function (order) { return order.booking_id !== booking.id && (!order.booking || order.booking.id !== booking.id); })
             .concat(new_order_list);
+        this.orders.sort(function (a, b) {
+            var time_a = dayjs__WEBPACK_IMPORTED_MODULE_6__(a.booking_date).add(a.delivery_time, 'm').valueOf();
+            var time_b = dayjs__WEBPACK_IMPORTED_MODULE_6__(b.booking_date).add(b.delivery_time, 'm').valueOf();
+            return time_a - time_b;
+        });
     };
     /**
      * Process catering order data from given booking
