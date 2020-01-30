@@ -484,16 +484,6 @@ var __extends = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __values = (undefined && undefined.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
-    if (m) return m.call(o);
-    return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-};
 
 
 
@@ -561,26 +551,12 @@ var ApprovalsViewEventComponent = /** @class */ (function (_super) {
     Object.defineProperty(ApprovalsViewEventComponent.prototype, "has_catering", {
         /** Whether the meeting has catering attached */
         get: function () {
-            var e_1, _a;
-            if (!this.event)
+            var _this = this;
+            if (!this.event) {
                 return false;
+            }
             var catering = this.event.catering || [];
-            try {
-                for (var catering_1 = __values(catering), catering_1_1 = catering_1.next(); !catering_1_1.done; catering_1_1 = catering_1.next()) {
-                    var order = catering_1_1.value;
-                    if (order.item_count) {
-                        return true;
-                    }
-                }
-            }
-            catch (e_1_1) { e_1 = { error: e_1_1 }; }
-            finally {
-                try {
-                    if (catering_1_1 && !catering_1_1.done && (_a = catering_1.return)) _a.call(catering_1);
-                }
-                finally { if (e_1) throw e_1.error; }
-            }
-            return false;
+            return !!catering.find(function (order) { return _this.event.room.id === order.location_id; });
         },
         enumerable: true,
         configurable: true
@@ -1465,11 +1441,12 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
     Object.defineProperty(DayViewSpaceEventComponent.prototype, "has_catering", {
         /** Whether the meeting has catering attached */
         get: function () {
+            var _this = this;
             if (!this.event) {
                 return false;
             }
-            var order = this.event.catering;
-            return !!(order && order.length);
+            var catering = this.event.catering || [];
+            return !!catering.find(function (order) { return _this.event.room.id === order.location_id; });
         },
         enumerable: true,
         configurable: true
