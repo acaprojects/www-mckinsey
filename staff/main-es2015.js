@@ -9735,6 +9735,13 @@ class CateringItem {
         return (this._amount * this.unit_price) || 0;
     }
     /**
+     * Set the amount of items
+     * @param amount New amount of items
+     */
+    setAmount(amount = 0) {
+        this._amount = Math.max(0, amount);
+    }
+    /**
      * Increase amount of the item the order
      * @param amount Amount to increase by
      */
@@ -19562,7 +19569,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580419387000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580426833000);
 
 
 /***/ }),

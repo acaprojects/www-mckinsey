@@ -1508,7 +1508,7 @@ var __values = (this && this.__values) || function (o) {
                                     for (var _e = __values(this.item.items), _f = _e.next(); !_f.done; _f = _e.next()) {
                                         var i = _f.value;
                                         if (diff > 0 && i.amount > 0 && !(item.id === i.id || item.name === i.name)) {
-                                            i.removeFromOrder(999);
+                                            this.item.setAmount(0);
                                             diff--;
                                         }
                                     }
@@ -1530,8 +1530,10 @@ var __values = (this && this.__values) || function (o) {
                         var items = this.items.value || [];
                         var item = items.find(function (item) { return _this.item.id === item.id; });
                         if (item && item !== this.item && item.amount !== this.item.amount) {
-                            this.item.removeFromOrder(999);
-                            this.item.addToOrder(item.amount);
+                            this.item.setAmount(item.amount);
+                        }
+                        else {
+                            this.item.setAmount(0);
                         }
                     }
                 };
