@@ -5481,7 +5481,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                     }, {}), catering_code: catering.reduce((map, order) => {
                         map[order.location_id] = order.charge_code;
                         return map;
-                    }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: booking.booking_type }, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering[booking.room.id] && catering[booking.room.id].items, catering: catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](order)), host: Object.assign({}, (booking.organiser || {})) }),
+                    }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: booking.booking_type }, equipment_code: Object.assign({}, (booking.equipment_code || {})), catering: catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](order)), host: Object.assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -8806,6 +8806,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             check_ins: raw_item.check_ins,
             booked_by: raw_item.booked_by,
             booking_type: raw_item.booking_type,
+            needs_catering: raw_item.needs_catering,
             setup: (raw_item.setup || 0) / 60,
             breakdown: (raw_item.breakdown || 0) / 60,
             equipment_notes: raw_item.equipment_notes || raw_item.equipment,
@@ -8923,6 +8924,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (form.duration > 720 || form.all_day) {
             form.date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('d').valueOf();
         }
+        console.log('Form:', form);
         const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('m');
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
@@ -8961,6 +8963,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             equipment_code: form.equipment_code,
             booking_type: (form.booking_type ? (form.booking_type instanceof Object ? form.booking_type.id : form.booking_type) : null) || 'internal',
             notify_users: form.notify_users,
+            needs_catering: form.needs_catering,
             auto_approve,
             setup: (form.setup || 0) * 60,
             breakdown: (form.breakdown || 0) * 60,
@@ -19919,7 +19922,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580384300000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580385418000);
 
 
 /***/ }),
