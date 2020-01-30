@@ -432,11 +432,15 @@ class ApprovalsViewEventComponent extends _shared_globals_base_directive__WEBPAC
     /** Type of event */
     get type() {
         if (this.event) {
-            return this.event.state === 'cancelled'
+            const booking_type = this.event.state === 'cancelled'
                 ? 'cancelled'
                 : this.event.booking_type instanceof Object
                     ? this.event.booking_type.id
                     : this.event.booking_type;
+            if (booking_type === 'internal' && this.event.visitors) {
+                return 'external';
+            }
+            return booking_type;
         }
         return '';
     }
@@ -1246,7 +1250,13 @@ class DayViewSpaceEventComponent extends _shared_globals_base_directive__WEBPACK
         if (this.event.state === 'cancelled') {
             return 'cancelled';
         }
-        return this.event.booking_type.id ? this.event.booking_type.id : this.event.booking_type;
+        const booking_type = this.event.booking_type.id
+            ? this.event.booking_type.id
+            : this.event.booking_type;
+        if (booking_type === 'internal' && this.event.visitors) {
+            return 'external';
+        }
+        return booking_type;
     }
     /** Period that the event will occur during the day */
     get period() {
