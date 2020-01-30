@@ -3197,7 +3197,7 @@ class BookingFlowFormComponent extends _shared_globals_base_directive__WEBPACK_I
 /*!*************************************************!*\
   !*** ./src/app/overlays/booking-modal/index.ts ***!
   \*************************************************/
-/*! exports provided: BookingModalComponent, BOOKING_MODAL_COMPONENTS */
+/*! exports provided: BOOKING_MODAL_COMPONENTS, BookingModalComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5249,6 +5249,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+
 
 
 
@@ -5395,7 +5397,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     editDetails(type) {
         const booking = this.booking || {};
         const spaces = booking.room_list ? booking.room_list : booking.room ? [booking.room] : [];
-        let catering = {};
+        let catering = [];
         if (booking.catering) {
             if (booking.catering.items) {
                 const empty = {};
@@ -5420,7 +5422,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                         .reduce((a, v) => {
                         a[v.space] = v.message;
                         return a;
-                    }, {}), catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: booking.booking_type }, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering[booking.room.id] && catering[booking.room.id].items, catering: JSON.parse(JSON.stringify(catering)), host: Object.assign({}, (booking.organiser || {})) }),
+                    }, {}), catering_code: Object.keys(catering).reduce((a, v) => { a[v] = catering[v].code; return a; }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: booking.booking_type }, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering[booking.room.id] && catering[booking.room.id].items, catering: catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](order)), host: Object.assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -19796,7 +19798,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580339088000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580347548000);
 
 
 /***/ }),
