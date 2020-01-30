@@ -11799,7 +11799,7 @@ var CateringItem = /** @class */ (function () {
         this.supplier_cost = data.supplier_cost;
         this.minimum_quantity = Math.max(0, data.minimum_quantity || 0);
         this.maximum_quantity = Math.max(1, data.maximum_quantity || 999);
-        this.category_ids = data.category_ids || data.categories;
+        this.parent_categories = data.category_ids || data.parent_categories || data.categories;
         this.order_anytime = !!data.order_anytime;
         this.image_path = data.image_path || '';
         this.out_of_stock = !!data.out_of_stock;
@@ -23831,7 +23831,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580426929000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580428211000);
 
 
 /***/ }),
