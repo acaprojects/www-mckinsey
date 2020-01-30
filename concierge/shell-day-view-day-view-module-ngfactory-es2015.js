@@ -462,15 +462,11 @@ class ApprovalsViewEventComponent extends _shared_globals_base_directive__WEBPAC
     }
     /** Whether the meeting has catering attached */
     get has_catering() {
-        if (!this.event)
+        if (!this.event) {
             return false;
-        const catering = this.event.catering || [];
-        for (const order of catering) {
-            if (order.item_count) {
-                return true;
-            }
         }
-        return false;
+        const catering = this.event.catering || [];
+        return !!catering.find(order => this.event.room.id === order.location_id);
     }
     /** View booking details */
     view() {
@@ -1275,8 +1271,8 @@ class DayViewSpaceEventComponent extends _shared_globals_base_directive__WEBPACK
         if (!this.event) {
             return false;
         }
-        const order = this.event.catering;
-        return !!(order && order.length);
+        const catering = this.event.catering || [];
+        return !!catering.find(order => this.event.room.id === order.location_id);
     }
     get order() {
         return (this.event.catering || []).find(order => order.location_id === this.space.id);
