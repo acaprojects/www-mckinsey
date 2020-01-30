@@ -9012,13 +9012,16 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             }
         }
         if (item.description) {
-            request.notes.push({
-                type: 'description',
-                message: item.description,
-                author: user.name,
-                date: now.valueOf()
-            });
+            if (item.description) {
+                request.notes.push({
+                    type: 'description',
+                    message: item.description,
+                    author: user.name,
+                    date: now.valueOf()
+                });
+            }
         }
+        request.notes = _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].unique(request.notes, 'message');
         if (item.icaluid) {
             request.icaluid = item.icaluid;
         }
@@ -19559,7 +19562,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580363572000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580418252000);
 
 
 /***/ }),
