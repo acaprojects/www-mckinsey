@@ -8443,7 +8443,10 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         this.set('update_booking', { state: 'idle' });
     }
     init() {
-        if (!this.parent || !this.parent.Rooms.list(true) || this.parent.Rooms.list(true).length <= 0 || !this.parent.ready()) {
+        if (!this.parent ||
+            !this.parent.Rooms.list(true) ||
+            this.parent.Rooms.list(true).length <= 0 ||
+            !this.parent.ready()) {
             return setTimeout(() => this.init(), 500);
         }
         if (this.parent && this.parent.Settings.get('app.schedule.enabled')) {
@@ -8465,7 +8468,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
      */
     view(item) {
         if (this.parent) {
-            this.parent.Overlay.openModal('meeting-details', { data: { booking: item } }).then((inst) => inst.subscribe(e => e.close()));
+            this.parent.Overlay.openModal('meeting-details', {
+                data: { booking: item }
+            }).then((inst) => inst.subscribe(e => e.close()));
         }
     }
     /**
@@ -8508,7 +8513,11 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             cancel: true
         }, e => {
             if (e.type === 'Accept') {
-                const booking = { date: date.valueOf(), room: { id: room.id, name: room.name }, duration: duration };
+                const booking = {
+                    date: date.valueOf(),
+                    room: { id: room.id, name: room.name },
+                    duration: duration
+                };
                 if (localStorage) {
                     localStorage.setItem('STAFF.booking_form', JSON.stringify(booking));
                 }
@@ -8611,7 +8620,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             for (const cmp of comparison) {
                 const cmp_start = moment__WEBPACK_IMPORTED_MODULE_4__(cmp.date);
                 const cmp_end = moment__WEBPACK_IMPORTED_MODULE_4__(cmp_start).add(cmp.duration, 'm');
-                if (bkn_start.isBetween(cmp_start, cmp_end, 'm', '[)') || bkn_end.isBetween(cmp_start, cmp_end, 'm', '(]')) {
+                if (bkn_start.isBetween(cmp_start, cmp_end, 'm', '[)') ||
+                    bkn_end.isBetween(cmp_start, cmp_end, 'm', '(]')) {
                     conflict_count++;
                     break;
                 }
@@ -8724,8 +8734,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 start: start.format('h:mma'),
                 end: has_end
                     ? end.format('h:mma')
-                    : start.add(raw_item.duration, 'm')
-                        .format('h:mma'),
+                    : start.add(raw_item.duration, 'm').format('h:mma'),
                 duration: _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(has_end ? duration || raw_item.duration : raw_item.duration),
                 room: raw_item.location_name
             },
@@ -8752,7 +8761,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                     ? raw_item.organizer
                     : (raw_item.organiser || raw_item.organizer || {}).email;
             // Get the organiser's details
-            item.organiser = this.parent.Users.get(email) || raw_item.organiser || raw_item.organizer;
+            item.organiser =
+                this.parent.Users.get(email) || raw_item.organiser || raw_item.organizer;
             if (item.organiser && item.organiser.email) {
                 item.organiser.email = item.organiser.email.toLowerCase();
             }
@@ -8760,7 +8770,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             item.is_organiser =
                 item.organiser &&
                     user &&
-                    (item.organiser.id === user.id || item.organiser.email.toLowerCase() === user.email.toLowerCase());
+                    (item.organiser.id === user.id ||
+                        item.organiser.email.toLowerCase() === user.email.toLowerCase());
         }
         this.processRoom(item, raw_item);
         Object.defineProperty(item, 'status', {
@@ -8797,7 +8808,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 const id = raw_item.room_id;
                 if (item.room_list && item.room_list.length > 0) {
                     rm = item.room_list[0];
-                    item.display.room = item.room_list.reduce((a, b) => (a += a ? ', ' + b.name : b.name), '') || raw_item.location_name;
+                    item.display.room =
+                        item.room_list.reduce((a, b) => (a += a ? ', ' + b.name : b.name), '') ||
+                            raw_item.location_name;
                     item.display.level = rm.level ? rm.level.name : '';
                     return rm;
                 }
@@ -8809,9 +8822,15 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 }
                 if (id instanceof Array) {
                     const rm_list = [];
-                    item.available = raw_item.status ? id.reduce((a, v) => a && raw_item.status[v] === 'accepted', true) : true;
+                    item.available = raw_item.status
+                        ? id.reduce((a, v) => a && raw_item.status[v] === 'accepted', true)
+                        : true;
                     for (const rm_id of id) {
-                        const room = this.parent.Rooms.item(rm_id) || { id: rm_id, name: rm_id, email: rm_id };
+                        const room = this.parent.Rooms.item(rm_id) || {
+                            id: rm_id,
+                            name: rm_id,
+                            email: rm_id
+                        };
                         if (room) {
                             rm_list.push(room);
                         }
@@ -8835,7 +8854,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                     }
                 }
                 if (item.room_list) {
-                    item.location_name = item.room_list.map(i => i.name).join(', ') || item.location_name;
+                    item.location_name =
+                        item.room_list.map(i => i.name).join(', ') || item.location_name;
                 }
                 return rm;
             },
@@ -8890,8 +8910,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (localStorage) {
             const stored_date = parseInt(localStorage.getItem('STAFF.booking.date'), 10);
             const stored_duration = parseInt(localStorage.getItem('STAFF.booking.duration'), 10);
-            if (item.id && ((stored_date && +stored_date !== item.date) ||
-                (stored_duration && +stored_duration !== item.duration))) {
+            if (item.id &&
+                ((stored_date && +stored_date !== item.date) ||
+                    (stored_duration && +stored_duration !== item.duration))) {
                 form.room.forEach(rm => {
                     const bld = this.parent.Buildings.list().find(i => i.id === rm.level.bld_id) || {};
                     const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
@@ -8918,9 +8939,14 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         else if (form.room && (form.room.email || form.room.id)) {
             room_id.push(form.room.email || form.room.id);
             const state = (item.approval_status ? item.approval_status[form.room.email] : null) || '';
-            auto_approve = [form.room.book_type !== 'Request' && form.room.type !== 'Request' && state.indexOf('tentative') === -1];
+            auto_approve = [
+                form.room.book_type !== 'Request' &&
+                    form.room.type !== 'Request' &&
+                    state.indexOf('tentative') === -1
+            ];
         }
-        form.location_name = form.room instanceof Array ? form.room.map(i => i.name).join(', ') : form.room.name;
+        form.location_name =
+            form.room instanceof Array ? form.room.map(i => i.name).join(', ') : form.room.name;
         if (!form.location_name) {
             form.locations = [];
         }
@@ -8937,7 +8963,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             loan_items: form.loan_items || '',
             private: form.private || false,
             parking: form.parking || false,
-            catering: form.catering,
+            catering: (form.catering || []).filter(order => (form.room instanceof Array ? form.room : [form.room]).find(room => room.id === order.location_id)),
             equipment_code: form.equipment_code,
             booking_type: (form.booking_type ? form.booking_type.id : null) || 'internal',
             notify_users: form.notify_users,
@@ -8986,7 +9012,12 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             }
         }
         if (item.description) {
-            request.notes.push({ type: 'description', message: item.description, author: user.name, date: now.valueOf() });
+            request.notes.push({
+                type: 'description',
+                message: item.description,
+                author: user.name,
+                date: now.valueOf()
+            });
         }
         if (item.icaluid) {
             request.icaluid = item.icaluid;
@@ -9088,7 +9119,11 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         const settings = super.confirmSettings(key, fields);
         const date = moment__WEBPACK_IMPORTED_MODULE_4__(fields.date || '');
         const user = this.parent.Users.current();
-        const rm = fields.room ? (fields.room instanceof Array ? fields.room[0] : fields.room) : null;
+        const rm = fields.room
+            ? fields.room instanceof Array
+                ? fields.room[0]
+                : fields.room
+            : null;
         const room = rm ? this.parent.Rooms.item(rm.id) : { name: fields.room_name };
         const bkn_type = rm && room ? rm.book_type || room.book_type : null;
         const lvl = room ? room.level : null;
@@ -9109,7 +9144,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             case 'delete':
                 if (fields.decline) {
                     settings.title = `Decline meeting`;
-                    settings.message = `Are you sure you wish to decline attendance to meeting '${fields.name || fields.title || ''}'?`;
+                    settings.message = `Are you sure you wish to decline attendance to meeting '${fields.name ||
+                        fields.title ||
+                        ''}'?`;
                     settings.icon = 'event_busy';
                 }
                 break;
@@ -19521,7 +19558,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580275598000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580348659000);
 
 
 /***/ }),
