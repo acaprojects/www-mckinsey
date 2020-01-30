@@ -1378,7 +1378,7 @@ class BookingMainFlowCateringListItemComponent extends _shared_globals_base_comp
                     let diff = active - this.item.must_select;
                     for (const i of this.item.items) {
                         if (diff > 0 && i.amount > 0 && !(item.id === i.id || item.name === i.name)) {
-                            i.removeFromOrder(999);
+                            this.item.setAmount(0);
                             diff--;
                         }
                     }
@@ -1391,8 +1391,10 @@ class BookingMainFlowCateringListItemComponent extends _shared_globals_base_comp
             const items = this.items.value || [];
             const item = items.find(item => this.item.id === item.id);
             if (item && item !== this.item && item.amount !== this.item.amount) {
-                this.item.removeFromOrder(999);
-                this.item.addToOrder(item.amount);
+                this.item.setAmount(item.amount);
+            }
+            else {
+                this.item.setAmount(0);
             }
         }
     }
