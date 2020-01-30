@@ -9673,7 +9673,6 @@ class CateringCategory extends _catering_item_class__WEBPACK_IMPORTED_MODULE_0__
         super(data);
         this.items = (data.items || []).map(item => item.items ? new CateringCategory(item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item));
         this.package = data.package === "true" || data.package === true;
-        this.image_url = data.image_url || data.image_path;
         this.must_select = data.must_select;
     }
     /**
@@ -9712,6 +9711,7 @@ class CateringItem {
         };
         this.prior_notice = data.prior_notice || data.notice;
         this.unit_price = data.unit_price || data.price;
+        this.image_url = data.image_url || data.image_path;
         this.minimum_quantity = Math.max(0, data.minimum_quantity || 0);
         this.maximum_quantity = Math.max(1, data.maximum_quantity || 999);
         this.category_ids = data.category_ids || data.categories;
@@ -9771,6 +9771,7 @@ class CateringItem {
         delete obj._changes;
         delete obj._server_names;
         // Convert remaining members to be public
+        obj.parent_categories = obj.categories;
         const keys = Object.keys(obj);
         for (const key of keys) {
             if (key[0] === '_') {
@@ -19558,7 +19559,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580348659000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580358404000);
 
 
 /***/ }),
