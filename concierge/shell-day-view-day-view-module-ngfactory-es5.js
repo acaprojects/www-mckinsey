@@ -519,11 +519,15 @@ var ApprovalsViewEventComponent = /** @class */ (function (_super) {
         /** Type of event */
         get: function () {
             if (this.event) {
-                return this.event.state === 'cancelled'
+                var booking_type = this.event.state === 'cancelled'
                     ? 'cancelled'
                     : this.event.booking_type instanceof Object
                         ? this.event.booking_type.id
                         : this.event.booking_type;
+                if (booking_type === 'internal' && this.event.visitors) {
+                    return 'external';
+                }
+                return booking_type;
             }
             return '';
         },
@@ -1427,7 +1431,13 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
             if (this.event.state === 'cancelled') {
                 return 'cancelled';
             }
-            return this.event.booking_type.id ? this.event.booking_type.id : this.event.booking_type;
+            var booking_type = this.event.booking_type.id
+                ? this.event.booking_type.id
+                : this.event.booking_type;
+            if (booking_type === 'internal' && this.event.visitors) {
+                return 'external';
+            }
+            return booking_type;
         },
         enumerable: true,
         configurable: true

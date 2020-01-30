@@ -2052,7 +2052,15 @@ var BookingModalComponent = /** @class */ (function (_super) {
         get: function () {
             var empty = { control: { value: {} } };
             var type = ((this.form_fields || []).find(function (i) { return i.key === 'booking_type'; }) || empty).control.value || '';
-            return typeof type === 'string' ? type : type.id;
+            var attendees = ((this.form_fields || []).find(function (i) { return i.key === 'attendees'; }) || empty).control.value || [];
+            var booking_type = typeof type === 'string' ? type : type.id;
+            if (attendees &&
+                attendees.length > 0 &&
+                attendees.some(function (i) { return i.external; }) &&
+                booking_type === 'internal') {
+                return 'external';
+            }
+            return booking_type;
         },
         enumerable: true,
         configurable: true
@@ -4738,7 +4746,15 @@ var CateringModalComponent = /** @class */ (function (_super) {
         get: function () {
             var empty = { control: { value: {} } };
             var type = ((this.form_fields || []).find(function (i) { return i.key === 'booking_type'; }) || empty).control.value || '';
-            return typeof type === 'string' ? type : type.id;
+            var attendees = ((this.form_fields || []).find(function (i) { return i.key === 'attendees'; }) || empty).control.value || [];
+            var booking_type = typeof type === 'string' ? type : type.id;
+            if (attendees &&
+                attendees.length > 0 &&
+                attendees.some(function (i) { return i.external; }) &&
+                booking_type === 'internal') {
+                return 'external';
+            }
+            return booking_type;
         },
         enumerable: true,
         configurable: true
@@ -6209,9 +6225,13 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
             if (this.booking.state === 'cancelled') {
                 return 'cancelled';
             }
-            return this.booking.booking_type.id
+            var booking_type = this.booking.booking_type.id
                 ? this.booking.booking_type.id
                 : (this.booking.booking_type);
+            if (booking_type === 'internal' && this.booking.visitors) {
+                return 'external';
+            }
+            return booking_type;
         },
         enumerable: true,
         configurable: true
@@ -10270,7 +10290,7 @@ var BookingsService = /** @class */ (function (_super) {
             location_name: raw_item.location_name,
             check_ins: raw_item.check_ins,
             booked_by: raw_item.booked_by,
-            booking_type: (raw_item.booking_type === 'internal' && raw_item.visitors) ? 'external' : raw_item.booking_type,
+            booking_type: raw_item.booking_type,
             setup: (raw_item.setup || 0) / 60,
             breakdown: (raw_item.breakdown || 0) / 60,
             equipment_notes: raw_item.equipment_notes || raw_item.equipment,
@@ -23648,7 +23668,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580348111000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580352664000);
 
 
 /***/ }),
