@@ -6404,17 +6404,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
     MeetingDetailsOverlayComponent.prototype.editDetails = function (type) {
         var booking = this.booking || {};
         var spaces = booking.room_list ? booking.room_list : booking.room ? [booking.room] : [];
-        var catering = [];
-        if (booking.catering) {
-            if (booking.catering.items) {
-                var empty = {};
-                empty[booking.room.id] = booking.catering;
-                catering = empty;
-            }
-            else {
-                catering = booking.catering;
-            }
-        }
+        var catering = this.catering;
         this.service.Overlay.openModal('booking-form', {
             name: 'overlay',
             data: {
@@ -6429,7 +6419,10 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
                         .reduce(function (a, v) {
                         a[v.space] = v.message;
                         return a;
-                    }, {}), catering_code: Object.keys(catering).reduce(function (a, v) { a[v] = catering[v].code; return a; }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: booking.booking_type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering[booking.room.id] && catering[booking.room.id].items, catering: catering.map(function (order) { return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](order); }), host: __assign({}, (booking.organiser || {})) }),
+                    }, {}), catering_code: catering.reduce(function (map, order) {
+                        map[order.location_id] = order.charge_code;
+                        return map;
+                    }, {}), expected_attendees: __assign({}, (booking.expected_attendees || {})), old_date: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).valueOf(), old_end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm').unix(), booking_type: { id: booking.booking_type }, equipment_code: __assign({}, (booking.equipment_code || {})), needs_catering: type !== 'equipment' && catering[booking.room.id] && catering[booking.room.id].items, catering: catering.map(function (order) { return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](order); }), host: __assign({}, (booking.organiser || {})) }),
                 edit_catering: type === 'catering',
                 edit_equipment: type === 'equipment'
             }
@@ -10564,24 +10557,28 @@ var BookingsService = /** @class */ (function (_super) {
         var now = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('s');
         if (item.equipment) {
             for (var rm_id in item.equipment) {
-                request.notes.push({
-                    type: 'equipment',
-                    space: rm_id,
-                    message: item.equipment[rm_id],
-                    author: user.name,
-                    date: now.valueOf()
-                });
+                if (item.equipment[rm_id]) {
+                    request.notes.push({
+                        type: 'equipment',
+                        space: rm_id,
+                        message: item.equipment[rm_id],
+                        author: user.name,
+                        date: now.valueOf()
+                    });
+                }
             }
         }
         if (item.catering_notes) {
             for (var rm_id in item.catering_notes) {
-                request.notes.push({
-                    type: 'catering',
-                    space: rm_id,
-                    message: item.catering_notes[rm_id],
-                    author: user.name,
-                    date: now.valueOf()
-                });
+                if (item.catering_notes[rm_id]) {
+                    request.notes.push({
+                        type: 'catering',
+                        space: rm_id,
+                        message: item.catering_notes[rm_id],
+                        author: user.name,
+                        date: now.valueOf()
+                    });
+                }
             }
         }
         request.notes.sort(function (a, b) { return a.date - b.date; });
@@ -23824,7 +23821,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580383797000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580384300000);
 
 
 /***/ }),
