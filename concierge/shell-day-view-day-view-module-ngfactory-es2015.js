@@ -1246,9 +1246,7 @@ class DayViewSpaceEventComponent extends _shared_globals_base_directive__WEBPACK
         if (this.event.state === 'cancelled') {
             return 'cancelled';
         }
-        return this.event.booking_type.id
-            ? this.event.booking_type.id
-            : (this.event.booking_type);
+        return this.event.booking_type.id ? this.event.booking_type.id : this.event.booking_type;
     }
     /** Period that the event will occur during the day */
     get period() {
@@ -1306,14 +1304,15 @@ class DayViewSpaceEventComponent extends _shared_globals_base_directive__WEBPACK
             const overlap = this.overlap || { index: 0, total: 1 };
             const shown_date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('d');
             const date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.event.date).startOf('m');
-            const start = +(date.diff(shown_date, 'h', true).toFixed(3));
-            this.top = (start / 24) * 100;
-            this.height = this.fixed ? (this.event.duration / 60) : ((this.event.duration / 60) / 24) * 100;
-            this.position.emit({ top: this.top, height: ((this.event.duration / 60) / 24) * 100 });
+            const start = +date.diff(shown_date, 'h', true).toFixed(3);
+            const duration = Math.min(this.event.duration, Math.abs(shown_date.diff(date.add(this.event.duration, 'm'), 'm')));
+            this.top = Math.max(0, (start / 24) * 100);
+            this.height = this.fixed ? duration / 60 : (duration / 60 / 24) * 100;
+            this.position.emit({ top: this.top, height: (duration / 60 / 24) * 100 });
             this.width = Math.min(100, 100 / overlap.total + 5);
             this.left = Math.min(100 - this.width, this.width * overlap.index - 5 * overlap.index);
-            this.overflow_top = (this.event.setup ? this.event.setup / this.event.duration : -.1) * 100;
-            this.overflow_bottom = (this.event.breakdown ? this.event.breakdown / this.event.duration : -.1) * 100;
+            this.overflow_top = (this.event.setup ? this.event.setup / duration : -0.1) * 100;
+            this.overflow_bottom = (this.event.breakdown ? this.event.breakdown / duration : -0.1) * 100;
         }
     }
 }
