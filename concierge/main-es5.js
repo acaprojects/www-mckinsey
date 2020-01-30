@@ -11870,6 +11870,7 @@ var CateringItem = /** @class */ (function () {
         delete obj._changes;
         delete obj._server_names;
         // Convert remaining members to be public
+        obj.price = obj.unit_price;
         var keys = Object.keys(obj);
         try {
             for (var keys_1 = __values(keys), keys_1_1 = keys_1.next(); !keys_1_1.done; keys_1_1 = keys_1.next()) {
@@ -23823,7 +23824,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580381875000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580382370000);
 
 
 /***/ }),
@@ -27650,7 +27651,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm5/acaprojects-ngx-widgets.js");
 /* harmony import */ var _acaprojects_ngx_uploads__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-uploads */ "./node_modules/@acaprojects/ngx-uploads/fesm5/acaprojects-ngx-uploads.js");
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var blob_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! blob-util */ "./node_modules/blob-util/dist/blob-util.es.js");
+/* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+/* harmony import */ var blob_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! blob-util */ "./node_modules/blob-util/dist/blob-util.es.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -27695,6 +27697,7 @@ var __spread = (undefined && undefined.__spread) || function () {
     for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
     return ar;
 };
+
 
 
 
@@ -27759,9 +27762,10 @@ var CateringGroupModalComponent = /** @class */ (function (_super) {
             this.form.zones = _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].unique(__spread(this.category.zones, [bld.id]));
             this.form.parent_categories = [this.category.id];
             this.loading = true;
+            var data = new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](this.form).toJSON();
             var request = this.form.id
-                ? this.service.CateringCategories.updateItem(this.form.id, this.form)
-                : this.service.CateringCategories.add(this.form);
+                ? this.service.CateringCategories.updateItem(this.form.id, data)
+                : this.service.CateringCategories.add(data);
             request.then(function () {
                 _this.success = true;
                 _this.timeout('close', function () { return _this.event('finish'); }, 3000);
@@ -27780,7 +27784,7 @@ var CateringGroupModalComponent = /** @class */ (function (_super) {
                 var fileReader = new FileReader();
                 fileReader.onloadend = function (e) {
                     var arrayBuffer = e.target.result;
-                    var blob = blob_util__WEBPACK_IMPORTED_MODULE_4__["arrayBufferToBlob"](arrayBuffer, 'image/png');
+                    var blob = blob_util__WEBPACK_IMPORTED_MODULE_5__["arrayBufferToBlob"](arrayBuffer, 'image/png');
                     _this._upload_manager.upload([blob], { file_name: files_1[0].name });
                     var upload = _this._upload_manager.uploads[_this._upload_manager.uploads.length - 1];
                     _this.interval('upload', function () {
@@ -28091,6 +28095,7 @@ var styles = [".item-modal[_ngcontent-%COMP%] {\n  display: flex;\n  align-items
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringItemModalComponent", function() { return CateringItemModalComponent; });
 /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm5/acaprojects-ngx-widgets.js");
+/* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -28115,6 +28120,7 @@ var __assign = (undefined && undefined.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+
 
 var CateringItemModalComponent = /** @class */ (function (_super) {
     __extends(CateringItemModalComponent, _super);
@@ -28183,9 +28189,10 @@ var CateringItemModalComponent = /** @class */ (function (_super) {
             this.form.zones = [bld.id];
             this.form.categories = [this.category.id];
             this.loading = true;
+            var data = new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_1__["CateringCategory"](this.form).toJSON();
             var request = this.form.id
-                ? this.service.CateringItems.updateItem(this.form.id, this.form)
-                : this.service.CateringItems.add(this.form);
+                ? this.service.CateringItems.updateItem(this.form.id, data)
+                : this.service.CateringItems.add(data);
             request.then(function () {
                 _this.success = true;
                 _this.timeout('close', function () { return _this.event('finish'); }, 3000);
