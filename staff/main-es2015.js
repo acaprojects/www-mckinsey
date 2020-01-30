@@ -19562,7 +19562,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580418252000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580419387000);
 
 
 /***/ }),
@@ -22711,8 +22711,8 @@ class BookingDetailsModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMP
         this.check = true;
         this.loading = true;
         if (room_ids) {
-            const setup = (this.item_count > 0) || this.notes ? 15 * 60 : 0;
-            const breakdown = (this.item_count > 0) || this.notes ? 15 * 60 : 0;
+            const setup = (this.item_count > 0) || this.notes.length ? 15 * 60 : 0;
+            const breakdown = (this.item_count > 0) || this.notes.length ? 15 * 60 : 0;
             const ignore = this.model.icaluid;
             this._service.Rooms.available({
                 room_ids,
