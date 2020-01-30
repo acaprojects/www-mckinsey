@@ -3210,7 +3210,7 @@ class BookingFlowFormComponent extends _shared_globals_base_directive__WEBPACK_I
 /*!*************************************************!*\
   !*** ./src/app/overlays/booking-modal/index.ts ***!
   \*************************************************/
-/*! exports provided: BookingModalComponent, BOOKING_MODAL_COMPONENTS */
+/*! exports provided: BOOKING_MODAL_COMPONENTS, BookingModalComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9880,6 +9880,9 @@ class CateringItem {
     get total() {
         return (this._amount * this.unit_price) || 0;
     }
+    setAmount(amount = 0) {
+        this._amount = Math.max(0, amount);
+    }
     /**
      * Increase amount of the item the order
      * @param amount Amount to increase by
@@ -13442,7 +13445,7 @@ class CateringEditListItemComponent extends _globals_base_directive__WEBPACK_IMP
     remove(existing_item) {
         if (this.items && this.space) {
             const items = this.items.value || [];
-            const item = items.find(item => item.id === existing_item.id);
+            const item = items.find(an_item => an_item.id === existing_item.id);
             if (item) {
                 item.removeFromOrder();
                 if (item.amount === 0) {
@@ -13480,7 +13483,7 @@ class CateringEditListItemComponent extends _globals_base_directive__WEBPACK_IMP
                     let diff = active - this.item.must_select;
                     for (const i of this.item.items) {
                         if (diff > 0 && i.amount > 0 && !(item.id === i.id || item.name === i.name)) {
-                            i.removeFromOrder(999);
+                            i.setAmount(0);
                             diff--;
                         }
                     }
@@ -13491,10 +13494,12 @@ class CateringEditListItemComponent extends _globals_base_directive__WEBPACK_IMP
     updateAmounts() {
         if (this.items) {
             const items = this.items.value || [];
-            const item = items.find(item => this.item.id === item.id);
+            const item = items.find(an_item => this.item.id === an_item.id);
             if (item && item !== this.item && item.amount !== this.item.amount) {
-                this.item.removeFromOrder(999);
-                this.item.addToOrder(item.amount);
+                this.item.setAmount(item.amount);
+            }
+            else {
+                this.item.setAmount(0);
             }
         }
     }
@@ -19923,7 +19928,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580420823000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580426929000);
 
 
 /***/ }),

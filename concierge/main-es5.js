@@ -11828,6 +11828,10 @@ var CateringItem = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    CateringItem.prototype.setAmount = function (amount) {
+        if (amount === void 0) { amount = 0; }
+        this._amount = Math.max(0, amount);
+    };
     /**
      * Increase amount of the item the order
      * @param amount Amount to increase by
@@ -16279,7 +16283,7 @@ var CateringEditListItemComponent = /** @class */ (function (_super) {
     CateringEditListItemComponent.prototype.remove = function (existing_item) {
         if (this.items && this.space) {
             var items = this.items.value || [];
-            var item = items.find(function (item) { return item.id === existing_item.id; });
+            var item = items.find(function (an_item) { return an_item.id === existing_item.id; });
             if (item) {
                 item.removeFromOrder();
                 if (item.amount === 0) {
@@ -16330,7 +16334,7 @@ var CateringEditListItemComponent = /** @class */ (function (_super) {
                         for (var _e = __values(this.item.items), _f = _e.next(); !_f.done; _f = _e.next()) {
                             var i = _f.value;
                             if (diff > 0 && i.amount > 0 && !(item.id === i.id || item.name === i.name)) {
-                                i.removeFromOrder(999);
+                                i.setAmount(0);
                                 diff--;
                             }
                         }
@@ -16350,10 +16354,12 @@ var CateringEditListItemComponent = /** @class */ (function (_super) {
         var _this = this;
         if (this.items) {
             var items = this.items.value || [];
-            var item = items.find(function (item) { return _this.item.id === item.id; });
+            var item = items.find(function (an_item) { return _this.item.id === an_item.id; });
             if (item && item !== this.item && item.amount !== this.item.amount) {
-                this.item.removeFromOrder(999);
-                this.item.addToOrder(item.amount);
+                this.item.setAmount(item.amount);
+            }
+            else {
+                this.item.setAmount(0);
             }
         }
     };
@@ -23825,7 +23831,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580420823000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580426929000);
 
 
 /***/ }),
