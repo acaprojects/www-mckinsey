@@ -13747,7 +13747,6 @@ class CateringOrderListComponent extends _globals_base_directive__WEBPACK_IMPORT
             delivery_time: 0
         });
         this.active_order.emit(order);
-        this._router.navigate(['book', 'main', 'catering'], { queryParams: { order_id: order.id } });
     }
     /**
      * Start editing the given order
@@ -13756,7 +13755,6 @@ class CateringOrderListComponent extends _globals_base_directive__WEBPACK_IMPORT
     editOrder(order) {
         const the_order = this.order_list.find(o => o.id === order.id);
         this.active_order.emit(the_order);
-        this._router.navigate(['book', 'main', 'catering']);
     }
     /**
      * Remove the given order from the catering order list
@@ -19798,7 +19796,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580347548000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580348111000);
 
 
 /***/ }),

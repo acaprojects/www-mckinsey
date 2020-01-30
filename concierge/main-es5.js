@@ -16617,7 +16617,6 @@ var CateringOrderListComponent = /** @class */ (function (_super) {
             delivery_time: 0
         });
         this.active_order.emit(order);
-        this._router.navigate(['book', 'main', 'catering'], { queryParams: { order_id: order.id } });
     };
     /**
      * Start editing the given order
@@ -16626,7 +16625,6 @@ var CateringOrderListComponent = /** @class */ (function (_super) {
     CateringOrderListComponent.prototype.editOrder = function (order) {
         var the_order = this.order_list.find(function (o) { return o.id === order.id; });
         this.active_order.emit(the_order);
-        this._router.navigate(['book', 'main', 'catering']);
     };
     /**
      * Remove the given order from the catering order list
@@ -23650,7 +23648,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580347548000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580348111000);
 
 
 /***/ }),
