@@ -5735,7 +5735,7 @@ var MeetingDetailsDisplayComponent = /** @class */ (function (_super) {
         /** Booker of the booking */
         get: function () {
             var booking = this.booking || {};
-            return booking.booked_by && booking.booked_by.id !== booking.organiser.id
+            return booking.booked_by && booking.booked_by.email !== booking.organiser.email
                 ? booking.booked_by
                 : null;
         },
@@ -23824,7 +23824,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580382370000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580382915000);
 
 
 /***/ }),

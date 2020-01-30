@@ -4972,7 +4972,7 @@ class MeetingDetailsDisplayComponent extends _shared_globals_base_directive__WEB
     /** Booker of the booking */
     get booked_by() {
         const booking = this.booking || {};
-        return booking.booked_by && booking.booked_by.id !== booking.organiser.id
+        return booking.booked_by && booking.booked_by.email !== booking.organiser.email
             ? booking.booked_by
             : null;
     }
@@ -19922,7 +19922,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580382370000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580382915000);
 
 
 /***/ }),
