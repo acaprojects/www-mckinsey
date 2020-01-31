@@ -3210,7 +3210,7 @@ class BookingFlowFormComponent extends _shared_globals_base_directive__WEBPACK_I
 /*!*************************************************!*\
   !*** ./src/app/overlays/booking-modal/index.ts ***!
   \*************************************************/
-/*! exports provided: BOOKING_MODAL_COMPONENTS, BookingModalComponent */
+/*! exports provided: BookingModalComponent, BOOKING_MODAL_COMPONENTS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9919,6 +9919,7 @@ class CateringItem {
      */
     toJSON() {
         const obj = Object.assign({}, this);
+        obj.categories = obj.parent_categories;
         // Remove local private members
         delete obj._changes;
         delete obj._server_names;
@@ -19928,7 +19929,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580428211000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580434334000);
 
 
 /***/ }),

@@ -11871,6 +11871,7 @@ var CateringItem = /** @class */ (function () {
     CateringItem.prototype.toJSON = function () {
         var e_1, _a;
         var obj = __assign({}, this);
+        obj.categories = obj.parent_categories;
         // Remove local private members
         delete obj._changes;
         delete obj._server_names;
@@ -23831,7 +23832,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580428211000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580434334000);
 
 
 /***/ }),
