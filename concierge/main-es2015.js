@@ -9868,6 +9868,7 @@ class CateringItem {
         this.image_path = data.image_path || '';
         this.out_of_stock = !!data.out_of_stock;
         this._amount = data._amount || data.amount || 0;
+        this.allergy = data.allergy;
     }
     get can_order_anytime() {
         return this.order_anytime;
@@ -19899,7 +19900,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580442414000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580451435000);
 
 
 /***/ }),
