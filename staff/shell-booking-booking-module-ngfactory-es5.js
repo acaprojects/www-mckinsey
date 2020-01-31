@@ -1072,7 +1072,7 @@ var __values = (this && this.__values) || function (o) {
                     if (this.date) {
                         var start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m');
                         var old_start = start;
-                        var end = start.add(this.duration, 'm');
+                        var end = start.add(this.all_day ? 24 * 60 : this.duration, 'm');
                         if (start.isBefore(start.hour(7).minute(0), 'm') || this.all_day) {
                             start = start.hour(7).minute(0);
                             var now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m');
