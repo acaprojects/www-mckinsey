@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1580178221784,
+  "timestamp": 1580456782871,
   "index": "/bookings/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/bookings/favicon.ico",
         "/bookings/index.html",
-        "/bookings/main-es2015.7832feba6feae7784343.js",
-        "/bookings/main-es5.584fbbf1ba149549334a.js",
+        "/bookings/main-es2015.88c534c802b6ab29b0f3.js",
+        "/bookings/main-es5.6a68cc6350a0e61e6ca8.js",
         "/bookings/polyfills-es2015.5728f680576ca47e99fe.js",
         "/bookings/polyfills-es5.4e06eb653a3c8a2d581f.js",
         "/bookings/runtime-es2015.858f8dd898b75fe86926.js",
@@ -179,9 +179,9 @@
     "/bookings/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/bookings/assets/settings.json": "be658daa9aeb1d29ca745bb55d593cc68f68535f",
     "/bookings/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/bookings/index.html": "001afa65de21a63ba36d48619f6419d659a636a4",
-    "/bookings/main-es2015.7832feba6feae7784343.js": "92f039d4026e53b476799e48d1e3dd06950dd7b4",
-    "/bookings/main-es5.584fbbf1ba149549334a.js": "355ed7fd01ce84d592dfa63ad242c1f2e19334f6",
+    "/bookings/index.html": "be1b03e42762635ac20ca57b7a0d300863224774",
+    "/bookings/main-es2015.88c534c802b6ab29b0f3.js": "0f9c28a67e499f847b7a5e14177cb07614f6ed1c",
+    "/bookings/main-es5.6a68cc6350a0e61e6ca8.js": "e781e417913dd61ecea01121240e6c0a0c4e5e3e",
     "/bookings/polyfills-es2015.5728f680576ca47e99fe.js": "77f974dd2b186031cfc4f4526d96db4efcd39353",
     "/bookings/polyfills-es5.4e06eb653a3c8a2d581f.js": "f84a71ef6c7a788b5fe701bf2405313d7766a66d",
     "/bookings/runtime-es2015.858f8dd898b75fe86926.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
