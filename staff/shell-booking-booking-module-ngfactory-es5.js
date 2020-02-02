@@ -2770,10 +2770,12 @@ var __values = (this && this.__values) || function (o) {
                     var dateField = periodField.children.find(function (i) { return i.key === 'date'; });
                     var timeField = this.fields.find(function (i) { return i.key === 'time_group'; });
                     var durationField = timeField.children.find(function (i) { return i.key === 'duration'; });
+                    var all_day_field = this.fields.find(function (i) { return i.key === 'all_day'; });
                     this._service.Overlay.openModal('select-room', {
                         data: {
                             date: dateField.control.value,
                             duration: durationField.control.value,
+                            all_day: all_day_field.control.value,
                             spaces: field.getValue() || [],
                             multi: true
                         }

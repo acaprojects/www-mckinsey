@@ -5652,11 +5652,11 @@ var RoomSelectModalComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoomSelectModalComponent", function() { return RoomSelectModalComponent; });
 /* harmony import */ var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-widgets */ "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
-/* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
+/* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
+/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
+/* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -5695,26 +5695,27 @@ class RoomSelectModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTE
         this.model.type_index = 0;
     }
     updateList() {
-        const date = moment__WEBPACK_IMPORTED_MODULE_1__(this.model.date || undefined);
         this.model.loading = true;
         const zones = [this.model.zone || this.service.Buildings.current().id];
         if (this.model.type !== -1) {
             zones.push(this.model.type);
         }
-        this.service.Rooms.available({
-            date: date.valueOf(),
-            duration: this.model.duration || 60,
-            zone_ids: zones.reduce((a, i) => a += a ? ',' + i : i, ''),
-            ignore: this.model.id
-        }).then((list) => {
+        const query = {
+            date: this.model.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_4__(this.model.date).startOf('d').valueOf() : this.model.date,
+            duration: this.model.all_day ? 24 * 60 : (this.model.duration + (this.model.catering ? 15 : 0)),
+            ignore: this.model.id,
+            hide_bookings: true,
+            zone_ids: zones.reduce((a, i) => a += a ? ',' + i : i, '')
+        };
+        this.service.Rooms.available(query).then((list) => {
             this.model.rooms = list.filter(i => {
                 const bld = this.service.Buildings.list().find(j => j.id === i.level.bld_id) || {};
-                const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
+                const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_2__["rulesForSpace"])({
                     user: this.model.host || this.service.Users.current(),
                     space: i,
-                    time: date.valueOf(),
+                    time: query.date,
                     recurr_end: this.model.recurr_end,
-                    duration: this.model.duration || 60,
+                    duration: query.duration,
                     rules: bld.booking_rules
                 });
                 // Check booking rules
@@ -5737,7 +5738,7 @@ class RoomSelectModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTE
             }
             item.selected = true;
             this.model.select_list.push(item);
-            this.model.select_list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].unique(this.model.select_list, 'id');
+            this.model.select_list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].unique(this.model.select_list, 'id');
         }
         else {
             this.event('Select');
@@ -5756,7 +5757,7 @@ class RoomSelectModalComponent extends _acaprojects_ngx_widgets__WEBPACK_IMPORTE
         this.event('Select');
     }
 }
-_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_4__["OVERLAY_REGISTER"].push({ id: 'select-room', component: RoomSelectModalComponent, data: {} });
+_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_3__["OVERLAY_REGISTER"].push({ id: 'select-room', component: RoomSelectModalComponent, data: {} });
 
 
 /***/ }),
@@ -12351,12 +12352,14 @@ class BookingFormComponent extends _globals_base_component__WEBPACK_IMPORTED_MOD
         }
     }
     setRoom() {
+        console.log('Form:', this.form);
         this.service.Overlay.openModal('select-room', {
             data: {
                 spaces: this.form.room ? (this.form.room instanceof Array ? this.form.room : [this.form.room]) : [],
                 date: this.form.date,
                 duration: this.form.duration,
                 host: this.form.host,
+                all_day: this.form.all_day,
                 // date: this.model.form.date,
                 // period: recurr ? recurr.period : null,
                 // end: recurr ? recurr.end : null,
@@ -19571,7 +19574,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580685607000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580686342000);
 
 
 /***/ }),
