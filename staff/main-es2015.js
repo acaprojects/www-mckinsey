@@ -8748,6 +8748,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             notify_users: raw_item.notify_users,
             all_day: !!raw_item.all_day || duration > 12 * 60,
             catering: Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["processCateringData"])(raw_item.catering || []),
+            needs_catering: raw_item.needs_catering,
             setup: raw_item.setup || 0,
             breakdown: raw_item.breakdown || 0,
             spaces: typeof raw_item.room_id === 'string' ? [raw_item.room_id] : raw_item.room_id
@@ -8971,6 +8972,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             delegate: form.delegate || false,
             location_name: form.location_name,
             locations: form.locations,
+            needs_catering: form.needs_catering,
             notes: form.notes || [],
             all_day: form.all_day ? date.format('YYYY-MM-DD') : false
         };
@@ -19569,7 +19571,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580437730000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580685607000);
 
 
 /***/ }),
