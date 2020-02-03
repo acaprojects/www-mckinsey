@@ -2910,16 +2910,111 @@
 </g>
 <g id="bookable_spaces">
 	<rect id="area-2.07-status" x="170.8" y="35.7" class="st24" width="81.5" height="79.2"/>
+	<rect id="area-2.279-status" x="893.5" y="107.5" class="st24" width="48.4" height="29.6"/>
+	<polygon id="area-2.251-status" class="st24" points="264,160.1 297.4,160.1 297.4,179.1 303.2,179.1 303.2,201.8 264,201.8 	"/>
 	<rect id="area-2.08-status" x="343" y="35.9" class="st24" width="58.7" height="67.9"/>
 	<rect id="area-2.09-status" x="401.6" y="36.4" class="st24" width="48.9" height="67.3"/>
 	<rect id="area-2.10-status" x="488.6" y="36.9" class="st24" width="49.4" height="66.9"/>
 	<polygon id="area-2.11-status" class="st24" points="445,332.3 445,349.9 437.1,349.9 437.1,388.1 486.7,390.7 486.7,332.3 	"/>
 	<polygon id="area-2.12-status" class="st24" points="489.3,331.9 537.9,331.9 537.9,397.2 488.7,397.2 488.7,390.7 486.7,390.7 
 		486.7,332.3 	"/>
-	<text transform="matrix(1 0 0 1 491.4371 71.644)" class="st6 st25 st26">Thousand Islands</text>
-	<text transform="matrix(1 0 0 1 406.3571 71.6445)" class="st6 st25 st26">Bruce Peninsula</text>
-	<text transform="matrix(1 0 0 1 361.5344 71.6443)" class="st6 st25 st26">Point Pelee</text>
-	<text transform="matrix(1 0 0 1 200.145 75.8181)" class="st6 st25 st26">Georgian Bay</text>
+	<rect id="area-2.202-status" x="867.3" y="157.4" class="st24" width="26.6" height="46.3"/>
+	<rect id="area-2.203-status" x="838.1" y="157.9" class="st24" width="29.1" height="46.3"/>
+	<rect id="area-2.213-status" x="546.7" y="146.3" class="st24" width="32.2" height="58.1"/>
+	<rect id="area-2.211-status" x="607.8" y="157.2" class="st24" width="28.4" height="46.6"/>
+	<rect id="area-2.248-status" x="342.4" y="212.1" class="st24" width="42" height="28.4"/>
+	<rect id="area-2.247-status" x="342.7" y="240.9" class="st24" width="42" height="27.6"/>
+	<rect id="area-2.245-status" x="342.4" y="288.6" class="st24" width="42" height="29.6"/>
+	<rect id="area-2.232-status" x="206.8" y="432.8" class="st24" width="30.6" height="47.3"/>
+	<rect id="area-2.231-status" x="237.1" y="432.9" class="st24" width="31.7" height="46.3"/>
+	<rect id="area-2.230-status" x="268.8" y="432.9" class="st24" width="27.8" height="47.3"/>
+	<rect id="area-2.224-status" x="410.3" y="432.8" class="st24" width="28.3" height="47.6"/>
+	<polygon id="area-2.250-status" class="st24" points="309.9,159.5 343,159.5 343,201.8 303.2,201.8 303.2,178.6 309.9,178.6 	"/>
+	<rect id="area-2.275-status" x="823.6" y="39.5" class="st24" width="27.4" height="52.6"/>
+	<rect id="area-2.276-status" x="851.6" y="39.9" class="st24" width="29.9" height="52.2"/>
+	<rect id="area-2.256-status" x="171.5" y="152.6" class="st24" width="92.5" height="49.2"/>
+	<text transform="matrix(1 0 0 1 506.3962 71.644)" class="st6 st25 st26">M266</text>
+	<text transform="matrix(1 0 0 1 491.3962 77.644)" class="st6 st25 st26">Thousand Islands</text>
+	<text transform="matrix(1 0 0 1 420.2462 71.6445)" class="st6 st25 st26">M264</text>
+	<text transform="matrix(1 0 0 1 406.9462 77.6445)" class="st6 st25 st26">Bruce Peninsula</text>
+	<text transform="matrix(1 0 0 1 368.8963 71.6443)" class="st6 st25 st26">M263</text>
+	<text transform="matrix(1 0 0 1 361.6963 77.6443)" class="st6 st25 st26">Point Pelee</text>
+	<text transform="matrix(1 0 0 1 207.9461 75.2978)" class="st6 st25 st26">M258</text>
+	<text transform="matrix(1 0 0 1 197.9461 81.2978)" class="st6 st25 st26">Georgian Bay</text>
+	<text transform="matrix(1 0 0 1 876.5354 175.7001)" class="st6 st25 st26">202</text>
+	<text transform="matrix(1 0 0 1 868.7354 181.7001)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 871.6354 187.7001)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 873.6354 193.7001)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 848.475 174.3881)" class="st6 st25 st26">203</text>
+	<text transform="matrix(1 0 0 1 840.675 180.3881)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 843.575 186.3881)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 845.575 192.3881)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 617.827 176.0999)" class="st6 st25 st26">211</text>
+	<text transform="matrix(1 0 0 1 610.027 182.0999)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 612.927 188.0999)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 614.927 194.0999)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 558.7292 176.1883)" class="st6 st25 st26">213</text>
+	<text transform="matrix(1 0 0 1 550.9292 182.1883)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 553.8292 188.1883)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 555.8292 194.1883)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 420.279 450.8001)" class="st6 st25 st26">224</text>
+	<text transform="matrix(1 0 0 1 412.479 456.8001)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 415.379 462.8001)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 417.379 468.8001)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 279.229 450.8004)" class="st6 st25 st26">230</text>
+	<text transform="matrix(1 0 0 1 271.429 456.8004)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 274.329 462.8004)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 276.329 468.8004)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 248.7312 450.801)" class="st6 st25 st26">231</text>
+	<text transform="matrix(1 0 0 1 240.9312 456.801)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 243.8312 462.801)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 245.8312 468.801)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 218.1783 450.8007)" class="st6 st25 st26">232</text>
+	<text transform="matrix(1 0 0 1 210.3783 456.8007)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 213.2783 462.8007)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 215.2783 468.8007)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 359.561 295.9721)" class="st6 st25 st26">245</text>
+	<text transform="matrix(1 0 0 1 351.761 301.9721)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 354.661 307.9721)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 356.661 313.9721)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 358.9197 246.9153)" class="st6 st25 st26">247</text>
+	<text transform="matrix(1 0 0 1 351.1197 252.9153)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 354.0197 258.9153)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 356.0197 264.9153)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 359.7496 217.7162)" class="st6 st25 st26">248</text>
+	<text transform="matrix(1 0 0 1 351.9496 223.7162)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 354.8496 229.7162)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 356.8496 235.7162)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 320.5793 174.3884)" class="st6 st25 st26">250</text>
+	<text transform="matrix(1 0 0 1 312.7793 180.3884)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 315.6793 186.3884)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 317.6793 192.3884)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 234.5293 169.7279)" class="st6 st25 st26">256</text>
+	<text transform="matrix(1 0 0 1 228.8293 175.7279)" class="st6 st25 st26">Peloton </text>
+	<text transform="matrix(1 0 0 1 876.5354 175.7001)" class="st6 st25 st26">202</text>
+	<text transform="matrix(1 0 0 1 868.7354 181.7001)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 871.6354 187.7001)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 873.6354 193.7001)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 848.475 174.3881)" class="st6 st25 st26">203</text>
+	<text transform="matrix(1 0 0 1 840.675 180.3881)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 843.575 186.3881)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 845.575 192.3881)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 862.957 58.567)" class="st6 st25 st26">276</text>
+	<text transform="matrix(1 0 0 1 855.157 64.567)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 858.0569 70.567)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 860.0569 76.567)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 834.8966 57.255)" class="st6 st25 st26">275</text>
+	<text transform="matrix(1 0 0 1 827.0966 63.255)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 829.9966 69.255)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 831.9966 75.255)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 276.5977 173.6)" class="st6 st25 st26">251</text>
+	<text transform="matrix(1 0 0 1 268.7978 179.6)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 271.6978 185.6)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 273.6978 191.6)" class="st6 st25 st26">Office</text>
+	<text transform="matrix(1 0 0 1 913.0281 115.2628)" class="st6 st25 st26">279</text>
+	<text transform="matrix(1 0 0 1 905.228 121.2628)" class="st6 st25 st26">Bookable </text>
+	<text transform="matrix(1 0 0 1 908.1281 127.2628)" class="st6 st25 st26">Private </text>
+	<text transform="matrix(1 0 0 1 910.1281 133.2628)" class="st6 st25 st26">Office</text>
 </g>
 <g id="outline">
 	<polygon class="st27" points="14.2,321.6 14.2,480.8 539.4,480.8 539.4,205.6 941.9,205.6 941.9,35.9 170.4,35.9 170.4,203.7 
@@ -3289,10 +3384,12 @@
 	<text transform="matrix(1 0 0 1 799.7527 105.918)" class="st22 st29 st30">Room</text>
 	<text transform="matrix(1 0 0 1 797.6752 128.0354)" class="st22 st29 st30">Phone</text>
 	<text transform="matrix(1 0 0 1 798.2751 133.9354)" class="st22 st29 st30">Room</text>
-	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 822.7521 133.2462)" class="st22 st29 st30">Coats</text>
+	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 822.7521 133.2458)" class="st22 st29 st30">Coats</text>
 </g>
 <polyline class="st28" points="282.2,91.2 282.2,91.2 282.2,87.1 "/>
 <line class="st28" x1="282.2" y1="102.6" x2="282.2" y2="99.4"/>
-<text transform="matrix(1 0 0 1 444.0272 364)" class="st6 st25 st26">Algonquin Park</text>
-<text transform="matrix(1 0 0 1 501.82 363.7003)" class="st6 st25 st26">Bon Echo</text>
+<text transform="matrix(1 0 0 1 457.5459 364)" class="st6 st25 st26">M218</text>
+<text transform="matrix(1 0 0 1 445.3459 370)" class="st6 st25 st26">Algonquin Park</text>
+<text transform="matrix(1 0 0 1 506.3964 363.7003)" class="st6 st25 st26">M219</text>
+<text transform="matrix(1 0 0 1 500.9964 369.7003)" class="st6 st25 st26">Bon Echo</text>
 </svg>

@@ -2002,13 +2002,13 @@
 			<path class="st10" d="M389.7,199.1l-1.6-0.3c-0.7-0.1-1.2-0.8-1.1-1.5l0.3-1.5c0.2-0.7,0.9-1.1,1.6-1l1.6,0.3
 				c0.7,0.1,1.2,0.8,1.1,1.5l-0.3,1.5C391.1,198.9,390.4,199.3,389.7,199.1z"/>
 			
-				<ellipse transform="matrix(0.2034 -0.9791 0.9791 0.2034 126.2213 533.4875)" class="st10" cx="391" cy="189.2" rx="1.2" ry="1.3"/>
+				<ellipse transform="matrix(0.2034 -0.9791 0.9791 0.2034 126.2608 533.4443)" class="st10" cx="391" cy="189.1" rx="1.2" ry="1.3"/>
 			
-				<ellipse transform="matrix(0.2034 -0.9791 0.9791 0.2034 130.0279 531.4556)" class="st10" cx="391.6" cy="185.8" rx="1.2" ry="1.3"/>
+				<ellipse transform="matrix(0.2034 -0.9791 0.9791 0.2034 129.9869 531.406)" class="st10" cx="391.6" cy="185.8" rx="1.2" ry="1.3"/>
 			
-				<ellipse transform="matrix(0.2034 -0.9791 0.9791 0.2034 134.3101 529.3668)" class="st10" cx="392.5" cy="182.1" rx="1.2" ry="1.3"/>
+				<ellipse transform="matrix(0.2034 -0.9791 0.9791 0.2034 134.2681 529.3156)" class="st10" cx="392.4" cy="182.1" rx="1.2" ry="1.3"/>
 			
-				<ellipse transform="matrix(0.2034 -0.9791 0.9791 0.2034 137.9543 527.4773)" class="st10" cx="393.1" cy="179" rx="1.2" ry="1.3"/>
+				<ellipse transform="matrix(0.2034 -0.9791 0.9791 0.2034 137.9747 527.5242)" class="st10" cx="393.2" cy="179" rx="1.2" ry="1.3"/>
 			<path class="st15" d="M415.9,333.4L415.9,333.4l3.6-3.9l0.1-0.1l0.7-0.7c0.2-0.1,0.2-0.4,0-0.5l0,0l0,0l-0.3-0.3l-2.7-3l-0.3-0.3
 				c-0.1-0.2-0.4-0.2-0.5-0.1l-0.7,0.6l0,0l-4.2,3.2l-0.1,0.1l0,0c-0.2,0.1-0.2,0.4-0.1,0.5l0,0l0.2,0.2c0,0.1,0.1,0.1,0.2,0.1
 				c0.9,1.3,2,2.5,3.2,3.6c0,0.1,0,0.1,0.1,0.2l0.2,0.2C415.4,333.4,415.7,333.4,415.9,333.4L415.9,333.4L415.9,333.4z"/>
@@ -2652,7 +2652,7 @@
 				l-1.7,0.4h-0.1c-1.3,0.2-2.5-0.7-2.8-2l0,0L920.4,101L920.4,101z"/>
 			<path class="st14" d="M922.2,98.2l2.1-0.2c1.7-0.2,3.2,0.9,3.5,2.6l0,0c0.3,1.7-0.8,3.3-2.4,3.6l-2,0.5"/>
 			
-				<rect x="391.2" y="179.6" transform="matrix(0.2093 -0.9779 0.9779 0.2093 145.6818 552.012)" class="st21" width="45.9" height="12.6"/>
+				<rect x="391.2" y="179.6" transform="matrix(0.2093 -0.9779 0.9779 0.2093 145.6784 551.9697)" class="st21" width="45.9" height="12.6"/>
 			<path class="st8" d="M99.4,407.2L99.4,407.2c0.3-0.2,0.8-0.3,1.2-0.3h13.6c0.7,0,1.2,0.1,1.2,0.3l-0.1,8l0,0
 				c-0.3,0.2-0.8,0.3-1.2,0.3h-13.6c-0.7,0-1.2-0.1-1.2-0.3L99.4,407.2L99.4,407.2z"/>
 			<path class="st9" d="M99.4,407.3L99.4,407.3c0-0.2,0.5-0.3,1.2-0.3h13.6c0.7,0,1.2,0.1,1.2,0.3l-0.1,8l0,0c0,0.2-0.5,0.3-1.2,0.3
@@ -2687,23 +2687,66 @@
 	</g>
 </g>
 <g id="bookable">
-	<polygon id="area-3.19-status" class="st23" points="490.2,368.6 537.1,368.6 537.1,435.2 487.5,435.2 487.5,368.6 	"/>
-	<rect id="area-3.15-status" x="347.2" y="75.9" class="st23" width="52.2" height="62.3"/>
-	<rect id="area-3.13-status" x="175.9" y="124.4" class="st23" width="56.3" height="41.2"/>
-	<polygon id="area-3.14-status" class="st23" points="176.1,77.4 252.5,77.4 252.5,138.9 232.9,138.9 232.9,124.4 175.9,124.4 	"/>
 	<polygon id="area-3.17-status" class="st23" points="469.5,77.2 469.5,106.4 488.6,106.4 488.6,138.2 538.2,138.2 538.2,77.2 	"/>
 	<polygon id="area-3.16-status" class="st23" points="399,78.4 399,138.2 451.5,138.2 451.5,106.7 469.5,106.7 469.5,77.2 	"/>
+	<rect id="area-3.15-status" x="347.2" y="75.9" class="st23" width="52.2" height="62.3"/>
+	<polygon id="area-3.14-status" class="st23" points="176.1,77.4 252.5,77.4 252.5,138.9 232.9,138.9 232.9,124.4 175.9,124.4 	"/>
+	<rect id="area-3.13-status" x="175.9" y="124.4" class="st23" width="56.3" height="41.2"/>
+	<polygon id="area-3.355-status" class="st23" points="177.5,197.7 204.9,197.7 204.9,235.9 175.9,235.9 175.9,197.7 	"/>
+	<polygon id="area-3.354-status" class="st23" points="206.5,197.5 234.8,197.5 234.8,235.7 204.9,235.7 204.9,197.5 	"/>
+	<polygon id="area-3.353-status" class="st23" points="237.6,197.7 265.9,197.7 265.9,235.9 236,235.9 236,197.7 	"/>
+	<polygon id="area-3.352-status" class="st23" points="268.3,179.9 309.5,179.9 309.5,235.9 265.9,235.9 265.9,179.9 	"/>
 	<rect id="area-3.20-status" x="83.2" y="405.5" class="st23" width="33.7" height="28.9"/>
-	<polygon id="area-3.18-status" class="st23" points="443.3,368.6 487.5,368.6 487.5,425.2 437.1,422.2 437.1,413.1 443.3,413.1 
+	<polygon id="area-3.331-status" class="st23" points="209.6,471.4 238.2,471.4 238.2,515.8 207.9,515.8 207.9,471.4 	"/>
+	<polygon id="area-3.19-status" class="st23" points="490.2,368.6 537.1,368.6 537.1,435.2 487.5,435.2 487.5,368.6 	"/>
+	<polygon id="area-3.18-status_1_" class="st23" points="443.3,368.6 487.5,368.6 487.5,425.2 437.1,422.2 437.1,413.1 443.3,413.1 
 		445.4,413.1 445.4,387.4 443.3,387.4 	"/>
-	<text transform="matrix(1 0 0 1 503.8279 105.0126)" class="st11 st24 st25">Abitibi </text>
-	<text transform="matrix(1 0 0 1 411.0049 106.868)" class="st11 st24 st25">Ontario</text>
-	<text transform="matrix(1 0 0 1 365.1992 106.1358)" class="st11 st24 st25">Superior</text>
-	<text transform="matrix(1 0 0 1 204.1126 98.9543)" class="st11 st24 st25">Erie</text>
-	<text transform="matrix(1 0 0 1 192.8428 142.1338)" class="st11 st24 st25">Huron</text>
-	<text transform="matrix(1 0 0 1 455.4094 396.0213)" class="st11 st24 st25">Nippising</text>
-	<text transform="matrix(1 0 0 1 88.0358 418.9899)" class="st11 st24 st25">Kawartha</text>
-	<text transform="matrix(1 0 0 1 506.808 398.8496)" class="st11 st24 st25">Simcoe</text>
+	<polygon id="area-3.308-status" class="st23" points="696.8,195 722.2,195 722.2,239.4 695.3,239.4 695.3,195 	"/>
+	<polygon id="area-3.307-status" class="st23" points="723.8,195 750.4,195 750.4,239.4 722.3,239.4 722.3,195 	"/>
+	<text transform="matrix(1 0 0 1 503.574 105.0126)" class="st11 st24 st25">M368</text>
+	<text transform="matrix(1 0 0 1 501.374 111.0126)" class="st11 st24 st25">Abitibi </text>
+	<text transform="matrix(1 0 0 1 419.656 106.868)" class="st11 st24 st25">M366</text>
+	<text transform="matrix(1 0 0 1 417.056 112.868)" class="st11 st24 st25">Ontario</text>
+	<text transform="matrix(1 0 0 1 365.9738 106.2998)" class="st11 st24 st25">M365</text>
+	<text transform="matrix(1 0 0 1 361.9738 112.2998)" class="st11 st24 st25">Superior</text>
+	<text transform="matrix(1 0 0 1 206.6714 100.3)" class="st11 st24 st25">M359</text>
+	<text transform="matrix(1 0 0 1 208.1714 106.3)" class="st11 st24 st25">Erie</text>
+	<text transform="matrix(1 0 0 1 194.5889 142.1338)" class="st11 st24 st25">M358</text>
+	<text transform="matrix(1 0 0 1 193.4889 148.1338)" class="st11 st24 st25">Huron</text>
+	<text transform="matrix(1 0 0 1 457.1555 396.0213)" class="st11 st24 st25">M317</text>
+	<text transform="matrix(1 0 0 1 452.0555 402.0213)" class="st11 st24 st25">Nippising</text>
+	<text transform="matrix(1 0 0 1 93.7819 418.9899)" class="st11 st24 st25">M335</text>
+	<text transform="matrix(1 0 0 1 88.7819 424.9899)" class="st11 st24 st25">Kawartha</text>
+	<text transform="matrix(1 0 0 1 506.5541 398.8496)" class="st11 st24 st25">M318</text>
+	<text transform="matrix(1 0 0 1 503.9541 404.8496)" class="st11 st24 st25">Simcoe</text>
+	<text transform="matrix(1 0 0 1 704.5593 211.2)" class="st11 st24 st25">308</text>
+	<text transform="matrix(1 0 0 1 696.7593 217.2)" class="st11 st24 st25">Bookable </text>
+	<text transform="matrix(1 0 0 1 699.6593 223.2)" class="st11 st24 st25">Private </text>
+	<text transform="matrix(1 0 0 1 701.6593 229.2)" class="st11 st24 st25">Office</text>
+	<text transform="matrix(1 0 0 1 733.0269 211.2001)" class="st11 st24 st25">307</text>
+	<text transform="matrix(1 0 0 1 725.2269 217.2001)" class="st11 st24 st25">Bookable </text>
+	<text transform="matrix(1 0 0 1 728.1269 223.2001)" class="st11 st24 st25">Private </text>
+	<text transform="matrix(1 0 0 1 730.1269 229.2001)" class="st11 st24 st25">Office</text>
+	<text transform="matrix(1 0 0 1 220.2128 488.1998)" class="st11 st24 st25">331</text>
+	<text transform="matrix(1 0 0 1 212.4128 494.1998)" class="st11 st24 st25">Bookable </text>
+	<text transform="matrix(1 0 0 1 215.3128 500.1998)" class="st11 st24 st25">Private </text>
+	<text transform="matrix(1 0 0 1 217.3128 506.1998)" class="st11 st24 st25">Office</text>
+	<text transform="matrix(1 0 0 1 283.5367 207.8999)" class="st11 st24 st25">352</text>
+	<text transform="matrix(1 0 0 1 275.7367 213.8999)" class="st11 st24 st25">Bookable </text>
+	<text transform="matrix(1 0 0 1 278.6367 219.8999)" class="st11 st24 st25">Private </text>
+	<text transform="matrix(1 0 0 1 280.6367 225.8999)" class="st11 st24 st25">Office</text>
+	<text transform="matrix(1 0 0 1 247.6676 207.8999)" class="st11 st24 st25">353</text>
+	<text transform="matrix(1 0 0 1 239.8676 213.8999)" class="st11 st24 st25">Bookable </text>
+	<text transform="matrix(1 0 0 1 242.7676 219.8999)" class="st11 st24 st25">Private </text>
+	<text transform="matrix(1 0 0 1 244.7676 225.8999)" class="st11 st24 st25">Office</text>
+	<text transform="matrix(1 0 0 1 215.691 207.9001)" class="st11 st24 st25">354</text>
+	<text transform="matrix(1 0 0 1 207.891 213.9001)" class="st11 st24 st25">Bookable </text>
+	<text transform="matrix(1 0 0 1 210.791 219.9001)" class="st11 st24 st25">Private </text>
+	<text transform="matrix(1 0 0 1 212.791 225.9001)" class="st11 st24 st25">Office</text>
+	<text transform="matrix(1 0 0 1 187.9293 207.9)" class="st11 st24 st25">355</text>
+	<text transform="matrix(1 0 0 1 180.1293 213.9)" class="st11 st24 st25">Bookable </text>
+	<text transform="matrix(1 0 0 1 183.0293 219.9)" class="st11 st24 st25">Private </text>
+	<text transform="matrix(1 0 0 1 185.0293 225.9)" class="st11 st24 st25">Office</text>
 </g>
 <g id="outline">
 	<polygon class="st26" points="173,75.3 173,237.3 341,237.3 341,349.3 108,349.3 108,359.7 14.1,359.7 14.1,426.2 14.1,517.8 
@@ -2897,7 +2940,7 @@
 	</g>
 	<g id="stairs-2">
 		
-			<ellipse transform="matrix(0.8222 -0.5692 0.5692 0.8222 -34.2552 325.3431)" class="st28" cx="503.6" cy="217.5" rx="10.5" ry="10.5"/>
+			<ellipse transform="matrix(0.96 -0.2799 0.2799 0.96 -40.7615 149.6696)" class="st28" cx="503.6" cy="217.5" rx="10.5" ry="10.5"/>
 		<text transform="matrix(1 0 0 1 497.866 234.183)" class="st22 st29 st32">Stairs</text>
 	</g>
 	<g id="Outline_Icons-8-2">
@@ -2969,7 +3012,7 @@
 	</g>
 	<g id="stairs-4">
 		
-			<ellipse transform="matrix(0.8222 -0.5692 0.5692 0.8222 -12.9765 318.2585)" class="st28" cx="502.9" cy="179.9" rx="10.5" ry="10.5"/>
+			<ellipse transform="matrix(0.96 -0.2799 0.2799 0.96 -30.2638 147.9712)" class="st28" cx="502.9" cy="179.9" rx="10.5" ry="10.5"/>
 		<text transform="matrix(1 0 0 1 497.223 196.53)" class="st22 st29 st32">Stairs</text>
 	</g>
 	<g id="Outline_Icons-8-4">
@@ -2983,13 +3026,13 @@
 	<text transform="matrix(1 0 0 1 498.947 418.013)" class="st22 st29 st30">MTG Lounge</text>
 	<text transform="matrix(1 0 0 1 648.1995 156.4502)" class="st22 st29 st30">Collab</text>
 	<text transform="matrix(1 0 0 1 299.555 147.086)" class="st22 st29 st30">Corr</text>
-	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 167.4332 431.4083)" class="st22 st29 st30">Coats</text>
+	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 167.4332 431.4079)" class="st22 st29 st30">Coats</text>
 	<text transform="matrix(1 0 0 1 715.8022 185.6002)" class="st22 st29 st30">Corr</text>
 	<text transform="matrix(1 0 0 1 182.322 174.986)" class="st22 st29 st30">Phone</text>
 	<text transform="matrix(1 0 0 1 208.844 173.701)" class="st22 st29 st30">Phone</text>
 	<text transform="matrix(1 0 0 1 798.0942 141.4261)" class="st22 st29 st30">Phone</text>
 	<text transform="matrix(1 0 0 1 794.1525 168.4473)" class="st22 st29 st30">Phone</text>
-	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 822.9014 170.5861)" class="st22 st29 st30">Coats</text>
+	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 822.9014 170.5857)" class="st22 st29 st30">Coats</text>
 	<text transform="matrix(1 0 0 1 355.3163 390.1844)" class="st22 st29 st30">Phone</text>
 	<text transform="matrix(1 0 0 1 345.568 223.644)" class="st22 st29 st30">Store Room</text>
 	<text transform="matrix(1 0 0 1 311.758 218.728)" class="st22 st29 st30">W</text>
@@ -3008,7 +3051,7 @@
 	<text transform="matrix(1 0 0 1 268.1038 438.6807)" class="st22 st29 st30">Collab</text>
 	<text transform="matrix(1 0 0 1 470.0457 448.4362)" class="st22 st29 st30">Collab</text>
 	<text transform="matrix(1 0 0 1 390.2461 366.6903)" class="st22 st29 st30">Corr</text>
-	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 568.142 178.9865)" class="st22 st29 st30">Coats</text>
+	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 568.142 178.9861)" class="st22 st29 st30">Coats</text>
 	<text transform="matrix(1 0 0 1 355.3161 368.6376)" class="st22 st29 st30">Phone</text>
 	<text transform="matrix(1 0 0 1 377.2258 441.7552)" class="st22 st29 st30">Coats</text>
 	<text transform="matrix(1 0 0 1 20.9879 435.3999)" class="st22 st29 st30">Corr</text>
