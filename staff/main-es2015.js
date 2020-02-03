@@ -19575,7 +19575,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580749049000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580769458000);
 
 
 /***/ }),
@@ -21531,11 +21531,15 @@ function rulesForSpace(options) {
                         if (ruleset.auto_approve !== undefined) {
                             space_rules_for_user.auto_approve = ruleset.auto_approve;
                         }
+                        break;
                     }
                     else {
                         space_rules_for_user.hide = true;
                     }
                 }
+            }
+            if (!space_rules_for_user.hide) {
+                break;
             }
         }
     }

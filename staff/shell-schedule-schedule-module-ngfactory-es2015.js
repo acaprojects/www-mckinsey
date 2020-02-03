@@ -136,8 +136,8 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
     ngOnInit() {
         this.model.days = 15;
         this.checkScroll();
-        this.items.subscribe((res) => this.model.list = res);
-        this.subscription('bookings', this.service.Bookings.listen('timeline', (timeline) => {
+        this.items.subscribe(res => (this.model.list = res));
+        this.subscription('bookings', this.service.Bookings.listen('timeline', timeline => {
             const date = moment__WEBPACK_IMPORTED_MODULE_5__().startOf('d');
             const end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(this.model.days, 'd');
             let list = [];
@@ -146,8 +146,8 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             }
             list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].unique(list, 'order_id');
             if (this.user) {
-                list = list.filter(i => i.organiser.email === this.user.email
-                    || !!i.attendees.find(j => j.email === this.user.email));
+                list = list.filter(i => i.organiser.email === this.user.email ||
+                    !!i.attendees.find(j => j.email === this.user.email));
             }
             this.model.list = list;
             this.processBookings();
@@ -180,12 +180,17 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             if (!this.user) {
                 this.user = this.service.Users.current();
             }
-            const user_list = user.delegates && user.delegates.length > 0 ? [user.email, ...user.delegates] : [user.email];
+            const user_list = user.delegates && user.delegates.length > 0
+                ? [user.email, ...user.delegates]
+                : [user.email];
             this.service.Bookings.query({
-                email: this.user ? this.user.email : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
-                from: date.unix(), to: end.unix(),
+                email: this.user
+                    ? this.user.email
+                    : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
+                from: date.unix(),
+                to: end.unix(),
                 timezone_offset: new Date().getTimezoneOffset()
-            }).then((items) => {
+            }).then(items => {
                 this.service.Bookings.clear({ from: date.valueOf(), to: end.valueOf() });
                 this.service.Bookings.updateList(_shared_utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].unique(items, 'icaluid'));
                 this.model.loading = false;
@@ -204,12 +209,15 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             const start = this.viewport.getRenderedRange().start;
             const end = this.viewport.getRenderedRange().end;
             const total = this.viewport.getDataLength();
-            const from_start = moment__WEBPACK_IMPORTED_MODULE_5__().add(this.model.from_start, 'd').format('YYYY-MM-DD');
+            const from_start = moment__WEBPACK_IMPORTED_MODULE_5__()
+                .add(this.model.from_start, 'd')
+                .format('YYYY-MM-DD');
             const items = this.items.getValue();
             if (end === total) {
                 this.atBottom();
             }
-            else if (this.model.from_start > 0 && items.indexOf(items.find(i => i.id === from_start)) > start) {
+            else if (this.model.from_start > 0 &&
+                items.indexOf(items.find(i => i.id === from_start)) > start) {
                 this.atTop();
             }
         }, 100);
@@ -254,7 +262,7 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
         if (index >= 0) {
             this.viewport.scrollToOffset(index * 80 + offset, smooth ? 'smooth' : 'auto');
         }
-        this.timeout('ignore', () => this.model.ignore = null, 1000);
+        this.timeout('ignore', () => (this.model.ignore = null), 1000);
     }
     changeDate(date) {
         const now = moment__WEBPACK_IMPORTED_MODULE_5__().startOf('d');
@@ -291,27 +299,41 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             const items = this.items.getValue();
             const middle = Math.floor((range.start + range.end) / 2);
             const date = items && items[middle] ? items[middle].date : undefined;
-            const start = moment__WEBPACK_IMPORTED_MODULE_5__(date).subtract(3, 'd').startOf('d');
-            const end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(3, 'd').endOf('d');
+            const start = moment__WEBPACK_IMPORTED_MODULE_5__(date)
+                .subtract(3, 'd')
+                .startOf('d');
+            const end = moment__WEBPACK_IMPORTED_MODULE_5__(date)
+                .add(3, 'd')
+                .endOf('d');
             const from = start.isBefore(now, 'd') ? now.unix() : start.unix();
             if (moment__WEBPACK_IMPORTED_MODULE_5__(from).isSameOrAfter(end)) {
                 return;
             }
             this.setLoading(start.valueOf(), end.valueOf());
             const user = this.service.Users.current();
-            const user_list = user.delegates && user.delegates.length > 0 ? [user.email, ...user.delegates] : [user.email];
+            const user_list = user.delegates && user.delegates.length > 0
+                ? [user.email, ...user.delegates]
+                : [user.email];
             this.model.loading = true;
             this.service.Bookings.query({
-                email: this.user ? this.user.email : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
+                email: this.user
+                    ? this.user.email
+                    : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
                 from,
                 to: end.unix(),
                 timezone_offset: new Date().getTimezoneOffset()
-            }).then((list) => {
-                this.service.Bookings.clear({ from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(), to: end.valueOf() });
+            }).then(list => {
+                this.service.Bookings.clear({
+                    from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(),
+                    to: end.valueOf()
+                });
                 this.service.Bookings.updateList(list);
                 this.model.loading = false;
                 resolve();
-            }, _ => { this.model.loading = false; reject(); });
+            }, _ => {
+                this.model.loading = false;
+                reject();
+            });
         });
     }
     setLoading(start, end) {
@@ -333,7 +355,9 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
             let list = [];
             const now = moment__WEBPACK_IMPORTED_MODULE_5__();
             const date = moment__WEBPACK_IMPORTED_MODULE_5__().startOf('d');
-            const end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(this.model.days, 'd').endOf('d');
+            const end = moment__WEBPACK_IMPORTED_MODULE_5__(date)
+                .add(this.model.days, 'd')
+                .endOf('d');
             for (; date.isSameOrBefore(end, 'd'); date.add(1, 'd')) {
                 list.push({
                     order_id: date.format('YYYY-MM-DD'),
@@ -356,13 +380,20 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
                     }
                 }
                 if (list.length === length) {
-                    list.push({ order_id: `${date.format('YYYY-MM-DD')}-no-items`, type: 'no-items', title: 'No events', date: date.valueOf() });
+                    list.push({
+                        order_id: `${date.format('YYYY-MM-DD')}-no-items`,
+                        type: 'no-items',
+                        title: 'No events',
+                        date: date.valueOf()
+                    });
                 }
             }
             list.forEach(bkn => {
                 const rooms = bkn.spaces || [];
                 bkn.is_declined = rooms.reduce((state, room) => state || bkn.approval_status[room] === 'declined', false);
-                bkn.is_tentative = rooms.reduce((state, room) => state || (bkn.approval_status[room] || '').indexOf('tentative') >= 0, false);
+                bkn.is_tentative = rooms.reduce((state, room) => state ||
+                    (bkn.approval_status[room] || '').indexOf('tentative') >= 0 ||
+                    (bkn.approval_status[room] || '').indexOf('not') >= 0, false);
             });
             list.sort((a, b) => (a.for_date || a.date) - (b.for_date || b.date));
             list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].unique(list, 'order_id');
@@ -379,23 +410,30 @@ class ScheduleEventListComponent extends _shared_globals_base_component__WEBPACK
     view(item) {
         this.model.mainIndex = this.model.bookings.indexOf(item);
         const idx = this.model.mainIndex;
-        item.disableSwitch = idx === 0 ? 'first' : (idx === this.model.bookings.length - 1 ? 'last' : 'undefined');
+        item.disableSwitch =
+            idx === 0 ? 'first' : idx === this.model.bookings.length - 1 ? 'last' : 'undefined';
         if (this.service) {
-            this.service.Overlay.openModal('meeting-details', { data: {
+            this.service.Overlay.openModal('meeting-details', {
+                data: {
                     booking: this.service.Bookings.item(item.id),
                     as_delegate: this.user && this.user.email !== this.service.Users.current().email,
                     delegate: this.user.email
-                } }, (event) => {
-                if (event.type === 'next') { // Show next booking
+                }
+            }, event => {
+                if (event.type === 'next') {
+                    // Show next booking
                     this.timeout('next_booking', () => this.nextbooking());
                 }
-                else if (event.type === 'delete') { // Delete active booking
+                else if (event.type === 'delete') {
+                    // Delete active booking
                     this.timeout('delete_booking', () => this.deletebooking());
                 }
-                else if (event.type === 'previous') { // Show previous booking
+                else if (event.type === 'previous') {
+                    // Show previous booking
                     this.timeout('previous_booking', () => this.previousbooking());
                 }
-                else if (event.type === 'check-in') { // Checkin to active booking
+                else if (event.type === 'check-in') {
+                    // Checkin to active booking
                     this.timeout('delete_booking', () => this.checkin());
                 }
                 event.close();

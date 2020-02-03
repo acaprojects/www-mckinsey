@@ -172,7 +172,7 @@ var __values = (this && this.__values) || function (o) {
                     var _this = this;
                     this.model.days = 15;
                     this.checkScroll();
-                    this.items.subscribe(function (res) { return _this.model.list = res; });
+                    this.items.subscribe(function (res) { return (_this.model.list = res); });
                     this.subscription('bookings', this.service.Bookings.listen('timeline', function (timeline) {
                         var date = moment__WEBPACK_IMPORTED_MODULE_5__().startOf('d');
                         var end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(_this.model.days, 'd');
@@ -182,8 +182,8 @@ var __values = (this && this.__values) || function (o) {
                         }
                         list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].unique(list, 'order_id');
                         if (_this.user) {
-                            list = list.filter(function (i) { return i.organiser.email === _this.user.email
-                                || !!i.attendees.find(function (j) { return j.email === _this.user.email; }); });
+                            list = list.filter(function (i) { return i.organiser.email === _this.user.email ||
+                                !!i.attendees.find(function (j) { return j.email === _this.user.email; }); });
                         }
                         _this.model.list = list;
                         _this.processBookings();
@@ -218,10 +218,14 @@ var __values = (this && this.__values) || function (o) {
                         if (!_this.user) {
                             _this.user = _this.service.Users.current();
                         }
-                        var user_list = user.delegates && user.delegates.length > 0 ? __spread([user.email], user.delegates) : [user.email];
+                        var user_list = user.delegates && user.delegates.length > 0
+                            ? __spread([user.email], user.delegates) : [user.email];
                         _this.service.Bookings.query({
-                            email: _this.user ? _this.user.email : user_list.reduce(function (a, v) { return (a ? a + ',' : a) + v; }, ''),
-                            from: date.unix(), to: end.unix(),
+                            email: _this.user
+                                ? _this.user.email
+                                : user_list.reduce(function (a, v) { return (a ? a + ',' : a) + v; }, ''),
+                            from: date.unix(),
+                            to: end.unix(),
                             timezone_offset: new Date().getTimezoneOffset()
                         }).then(function (items) {
                             _this.service.Bookings.clear({ from: date.valueOf(), to: end.valueOf() });
@@ -243,12 +247,15 @@ var __values = (this && this.__values) || function (o) {
                         var start = _this.viewport.getRenderedRange().start;
                         var end = _this.viewport.getRenderedRange().end;
                         var total = _this.viewport.getDataLength();
-                        var from_start = moment__WEBPACK_IMPORTED_MODULE_5__().add(_this.model.from_start, 'd').format('YYYY-MM-DD');
+                        var from_start = moment__WEBPACK_IMPORTED_MODULE_5__()
+                            .add(_this.model.from_start, 'd')
+                            .format('YYYY-MM-DD');
                         var items = _this.items.getValue();
                         if (end === total) {
                             _this.atBottom();
                         }
-                        else if (_this.model.from_start > 0 && items.indexOf(items.find(function (i) { return i.id === from_start; })) > start) {
+                        else if (_this.model.from_start > 0 &&
+                            items.indexOf(items.find(function (i) { return i.id === from_start; })) > start) {
                             _this.atTop();
                         }
                     }, 100);
@@ -297,7 +304,7 @@ var __values = (this && this.__values) || function (o) {
                     if (index >= 0) {
                         this.viewport.scrollToOffset(index * 80 + offset, smooth ? 'smooth' : 'auto');
                     }
-                    this.timeout('ignore', function () { return _this.model.ignore = null; }, 1000);
+                    this.timeout('ignore', function () { return (_this.model.ignore = null); }, 1000);
                 };
                 ScheduleEventListComponent.prototype.changeDate = function (date) {
                     var _this = this;
@@ -336,27 +343,40 @@ var __values = (this && this.__values) || function (o) {
                         var items = _this.items.getValue();
                         var middle = Math.floor((range.start + range.end) / 2);
                         var date = items && items[middle] ? items[middle].date : undefined;
-                        var start = moment__WEBPACK_IMPORTED_MODULE_5__(date).subtract(3, 'd').startOf('d');
-                        var end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(3, 'd').endOf('d');
+                        var start = moment__WEBPACK_IMPORTED_MODULE_5__(date)
+                            .subtract(3, 'd')
+                            .startOf('d');
+                        var end = moment__WEBPACK_IMPORTED_MODULE_5__(date)
+                            .add(3, 'd')
+                            .endOf('d');
                         var from = start.isBefore(now, 'd') ? now.unix() : start.unix();
                         if (moment__WEBPACK_IMPORTED_MODULE_5__(from).isSameOrAfter(end)) {
                             return;
                         }
                         _this.setLoading(start.valueOf(), end.valueOf());
                         var user = _this.service.Users.current();
-                        var user_list = user.delegates && user.delegates.length > 0 ? __spread([user.email], user.delegates) : [user.email];
+                        var user_list = user.delegates && user.delegates.length > 0
+                            ? __spread([user.email], user.delegates) : [user.email];
                         _this.model.loading = true;
                         _this.service.Bookings.query({
-                            email: _this.user ? _this.user.email : user_list.reduce(function (a, v) { return (a ? a + ',' : a) + v; }, ''),
+                            email: _this.user
+                                ? _this.user.email
+                                : user_list.reduce(function (a, v) { return (a ? a + ',' : a) + v; }, ''),
                             from: from,
                             to: end.unix(),
                             timezone_offset: new Date().getTimezoneOffset()
                         }).then(function (list) {
-                            _this.service.Bookings.clear({ from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(), to: end.valueOf() });
+                            _this.service.Bookings.clear({
+                                from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(),
+                                to: end.valueOf()
+                            });
                             _this.service.Bookings.updateList(list);
                             _this.model.loading = false;
                             resolve();
-                        }, function (_) { _this.model.loading = false; reject(); });
+                        }, function (_) {
+                            _this.model.loading = false;
+                            reject();
+                        });
                     });
                 };
                 ScheduleEventListComponent.prototype.setLoading = function (start, end) {
@@ -380,7 +400,9 @@ var __values = (this && this.__values) || function (o) {
                         var list = [];
                         var now = moment__WEBPACK_IMPORTED_MODULE_5__();
                         var date = moment__WEBPACK_IMPORTED_MODULE_5__().startOf('d');
-                        var end = moment__WEBPACK_IMPORTED_MODULE_5__(date).add(_this.model.days, 'd').endOf('d');
+                        var end = moment__WEBPACK_IMPORTED_MODULE_5__(date)
+                            .add(_this.model.days, 'd')
+                            .endOf('d');
                         for (; date.isSameOrBefore(end, 'd'); date.add(1, 'd')) {
                             list.push({
                                 order_id: date.format('YYYY-MM-DD'),
@@ -413,13 +435,20 @@ var __values = (this && this.__values) || function (o) {
                                 finally { if (e_1) throw e_1.error; }
                             }
                             if (list.length === length) {
-                                list.push({ order_id: date.format('YYYY-MM-DD') + "-no-items", type: 'no-items', title: 'No events', date: date.valueOf() });
+                                list.push({
+                                    order_id: date.format('YYYY-MM-DD') + "-no-items",
+                                    type: 'no-items',
+                                    title: 'No events',
+                                    date: date.valueOf()
+                                });
                             }
                         }
                         list.forEach(function (bkn) {
                             var rooms = bkn.spaces || [];
                             bkn.is_declined = rooms.reduce(function (state, room) { return state || bkn.approval_status[room] === 'declined'; }, false);
-                            bkn.is_tentative = rooms.reduce(function (state, room) { return state || (bkn.approval_status[room] || '').indexOf('tentative') >= 0; }, false);
+                            bkn.is_tentative = rooms.reduce(function (state, room) { return state ||
+                                (bkn.approval_status[room] || '').indexOf('tentative') >= 0 ||
+                                (bkn.approval_status[room] || '').indexOf('not') >= 0; }, false);
                         });
                         list.sort(function (a, b) { return (a.for_date || a.date) - (b.for_date || b.date); });
                         list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].unique(list, 'order_id');
@@ -437,23 +466,30 @@ var __values = (this && this.__values) || function (o) {
                     var _this = this;
                     this.model.mainIndex = this.model.bookings.indexOf(item);
                     var idx = this.model.mainIndex;
-                    item.disableSwitch = idx === 0 ? 'first' : (idx === this.model.bookings.length - 1 ? 'last' : 'undefined');
+                    item.disableSwitch =
+                        idx === 0 ? 'first' : idx === this.model.bookings.length - 1 ? 'last' : 'undefined';
                     if (this.service) {
-                        this.service.Overlay.openModal('meeting-details', { data: {
+                        this.service.Overlay.openModal('meeting-details', {
+                            data: {
                                 booking: this.service.Bookings.item(item.id),
                                 as_delegate: this.user && this.user.email !== this.service.Users.current().email,
                                 delegate: this.user.email
-                            } }, function (event) {
-                            if (event.type === 'next') { // Show next booking
+                            }
+                        }, function (event) {
+                            if (event.type === 'next') {
+                                // Show next booking
                                 _this.timeout('next_booking', function () { return _this.nextbooking(); });
                             }
-                            else if (event.type === 'delete') { // Delete active booking
+                            else if (event.type === 'delete') {
+                                // Delete active booking
                                 _this.timeout('delete_booking', function () { return _this.deletebooking(); });
                             }
-                            else if (event.type === 'previous') { // Show previous booking
+                            else if (event.type === 'previous') {
+                                // Show previous booking
                                 _this.timeout('previous_booking', function () { return _this.previousbooking(); });
                             }
-                            else if (event.type === 'check-in') { // Checkin to active booking
+                            else if (event.type === 'check-in') {
+                                // Checkin to active booking
                                 _this.timeout('delete_booking', function () { return _this.checkin(); });
                             }
                             event.close();
