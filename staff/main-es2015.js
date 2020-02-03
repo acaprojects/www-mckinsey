@@ -9678,7 +9678,7 @@ class CateringCategory extends _catering_item_class__WEBPACK_IMPORTED_MODULE_0__
     constructor(data) {
         super(data);
         this.items = (data.items || []).map(item => item.items ? new CateringCategory(item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item));
-        this.package = data.package === "true" || data.package === true;
+        this.package = data.package === 'true' || data.package === true;
         this.must_select = data.must_select;
     }
     /**
@@ -9724,6 +9724,7 @@ class CateringItem {
         this.allergen_info = data.allergen_info || data.allergy;
         this._amount = data._amount || data.amount || 0;
         this._order_anytime = data.order_anytime || false;
+        this.description = data.description;
     }
     /** Number of this item in the assoicated order */
     get amount() {
@@ -13637,11 +13638,11 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
         }
         // Add week duration option
         if (max_duration > 690) {
-            const date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).startOf('d').add(4, 'd');
+            const new_date = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).startOf('d').add(4, 'd');
             if ((this.field.control.value || 30) === 1 * 5 * 24 * 60) {
                 duration.index = duration.values.length;
             }
-            duration.values.push({ id: 1 * 5 * 24 * 60, name: `1 Week(${date.format('DD MMM')})` });
+            duration.values.push({ id: 1 * 5 * 24 * 60, name: `1 Week(${new_date.format('DD MMM')})` });
         }
         duration.index = this.getIndex(this.field.getValue(), duration.values);
         return duration;
@@ -13653,7 +13654,7 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
      * @param time
      */
     addDuration(duration, dur, time) {
-        let value = (s) => _utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].humaniseDuration(dur, s);
+        const value = (s) => _utility_class__WEBPACK_IMPORTED_MODULE_6__["Utils"].humaniseDuration(dur, s);
         if ((this.field.control.value || 30) === dur) {
             duration.index = duration.values.length;
         }
@@ -19574,7 +19575,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580686342000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580693161000);
 
 
 /***/ }),
@@ -21530,7 +21531,9 @@ function rulesForSpace(options) {
                         if (ruleset.auto_approve !== undefined) {
                             space_rules_for_user.auto_approve = ruleset.auto_approve;
                         }
-                        break;
+                    }
+                    else {
+                        space_rules_for_user.hide = true;
                     }
                 }
             }
