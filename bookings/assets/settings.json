@@ -10,9 +10,10 @@
     },
     "app": {
         "title": "McKinsey Booking UI",
-        "name": "McKinsey Booking UI",
+        "name": "Panel",
         "description": "McKinsey Booking UI written with Angular Framework",
         "short_name": "Bookings",
+        "show_version": true,
         "code": "BOOK",
         "logo": {
             "type": "img",
@@ -21,6 +22,7 @@
             "background": ""
         },
         "topbar": false,
+        "show_status_when_disconnected": false,
         "booking": {
             "title_prefix": ""
         },
