@@ -23804,7 +23804,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580452141000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580694513000);
 
 
 /***/ }),
@@ -28794,7 +28794,9 @@ var TopbarMenuComponent = /** @class */ (function (_super) {
             // this.model.today = today.isSame(date, 'd');
         }));
         this.model.show_breakdown = this.router.url.indexOf('day-view') >= 0;
-        this.model.show_level = this.router.url.indexOf('day-view') >= 0 || this.router.url.indexOf('week-view') >= 0;
+        this.model.show_level =
+            this.router.url.indexOf('day-view') >= 0 ||
+                this.router.url.indexOf('week-view') >= 0;
         this.subscription('level', this.service.listen('APP.level', function (id) { return _this.setLevelByID(id); }));
         this.subscription('title', this.service.listen('APP.title', function (value) { return _this.model.title = value; }));
         this.service.Buildings.listen(function (bld) {
@@ -28813,7 +28815,8 @@ var TopbarMenuComponent = /** @class */ (function (_super) {
                     _this.service.set('APP.level', _this.model.level.list[1].id);
                 }
                 var room_type_map_1 = _this.service.Buildings.organisation().space_types;
-                _this.model.room_types = Object.keys(room_type_map_1).map(function (i) { return ({ id: i, name: room_type_map_1[i] }); });
+                _this.model.room_types = Object.keys(room_type_map_1)
+                    .map(function (i) { return ({ id: i, name: room_type_map_1[i] }); });
                 _this.model.room_types.unshift({ id: -1, name: 'All Room Types' });
                 _this.model.active_room_type = 0;
             }

@@ -1714,8 +1714,11 @@ var DayViewSpaceComponent = /** @class */ (function (_super) {
                     if (_this.override_state && _this.override_state === i.icaluid) {
                         i.state = 'loading';
                     }
+                    var booking_type = i.booking_type === 'internal' && i.visitors ?
+                        'external' :
+                        i.booking_type;
                     return i.state !== 'cancelled'
-                        ? (!_this.overflow_only || i.setup || i.breakdown) && _this.legend[i.booking_type] !== false
+                        ? (!_this.overflow_only || i.setup || i.breakdown) && _this.legend[booking_type] !== false
                         : (!_this.overflow_only || i.setup || i.breakdown) && _this.legend.declined !== false;
                 });
                 return list;

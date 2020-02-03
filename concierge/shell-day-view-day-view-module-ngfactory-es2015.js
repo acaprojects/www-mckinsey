@@ -1468,8 +1468,11 @@ class DayViewSpaceComponent extends _shared_globals_base_directive__WEBPACK_IMPO
                 if (this.override_state && this.override_state === i.icaluid) {
                     i.state = 'loading';
                 }
+                const booking_type = i.booking_type === 'internal' && i.visitors ?
+                    'external' :
+                    i.booking_type;
                 return i.state !== 'cancelled'
-                    ? (!this.overflow_only || i.setup || i.breakdown) && this.legend[i.booking_type] !== false
+                    ? (!this.overflow_only || i.setup || i.breakdown) && this.legend[booking_type] !== false
                     : (!this.overflow_only || i.setup || i.breakdown) && this.legend.declined !== false;
             });
             return list;

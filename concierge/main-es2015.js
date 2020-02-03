@@ -3210,7 +3210,7 @@ class BookingFlowFormComponent extends _shared_globals_base_directive__WEBPACK_I
 /*!*************************************************!*\
   !*** ./src/app/overlays/booking-modal/index.ts ***!
   \*************************************************/
-/*! exports provided: BookingModalComponent, BOOKING_MODAL_COMPONENTS */
+/*! exports provided: BOOKING_MODAL_COMPONENTS, BookingModalComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19901,7 +19901,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580452141000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580694513000);
 
 
 /***/ }),
@@ -24034,7 +24034,9 @@ class TopbarMenuComponent extends _shared_globals_base_directive__WEBPACK_IMPORT
             // this.model.today = today.isSame(date, 'd');
         }));
         this.model.show_breakdown = this.router.url.indexOf('day-view') >= 0;
-        this.model.show_level = this.router.url.indexOf('day-view') >= 0 || this.router.url.indexOf('week-view') >= 0;
+        this.model.show_level =
+            this.router.url.indexOf('day-view') >= 0 ||
+                this.router.url.indexOf('week-view') >= 0;
         this.subscription('level', this.service.listen('APP.level', (id) => this.setLevelByID(id)));
         this.subscription('title', this.service.listen('APP.title', (value) => this.model.title = value));
         this.service.Buildings.listen((bld) => {
@@ -24053,7 +24055,8 @@ class TopbarMenuComponent extends _shared_globals_base_directive__WEBPACK_IMPORT
                     this.service.set('APP.level', this.model.level.list[1].id);
                 }
                 const room_type_map = this.service.Buildings.organisation().space_types;
-                this.model.room_types = Object.keys(room_type_map).map(i => ({ id: i, name: room_type_map[i] }));
+                this.model.room_types = Object.keys(room_type_map)
+                    .map(i => ({ id: i, name: room_type_map[i] }));
                 this.model.room_types.unshift({ id: -1, name: 'All Room Types' });
                 this.model.active_room_type = 0;
             }
