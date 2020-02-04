@@ -13556,8 +13556,6 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
         this._field = _field;
         this._group = _group;
         this.service = service;
-        /** Min length of a booking for the selected space */
-        this.min_length = 0;
     }
     get field() {
         return this._field;
@@ -13621,17 +13619,11 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
         const max_duration = Math.min(720, this.max_length || (this.field.metadata ? this.field.metadata.max_duration || 720 : 720));
         const end = moment__WEBPACK_IMPORTED_MODULE_9__(datestamp).add(Math.max(30, max_duration) + 15, 'm');
         let dur;
-        if (this.min_length <= 10) {
-            date.add(10, 'm');
-            dur = 10;
-            this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
-            date.add(5, 'm');
-            dur += 5;
-        }
-        else {
-            date.add(this.min_length, 'm');
-            dur = this.min_length;
-        }
+        date.add(10, 'm');
+        dur = 10;
+        this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
+        date.add(5, 'm');
+        dur += 5;
         for (; date.isBefore(end, 'm'); date.add(15, 'm')) {
             this.addDuration(duration, dur, ref ? date.format('hh:mm A') : '');
             dur += 15;
@@ -13703,16 +13695,14 @@ class CustomDurationFieldComponent extends _globals_base_component__WEBPACK_IMPO
     checkRules(options) {
         const { user, space, time } = options;
         const rule_list = this.service.Buildings.get(space.level.bld_id).booking_rules;
-        const min_duration = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["getMinLength"])(rule_list);
         const rules = Object(_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["rulesForSpace"])({
             user,
             space,
             time,
-            duration: min_duration,
+            duration: 5,
             rules: rule_list
         });
         this.max_length = Math.min(this.max_length || 999999, rules.max_length || 999999);
-        this.min_length = Math.max(this.min_length || 0, rules.min_length || 0);
     }
 }
 _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_8__["CUSTOM_FIELD_REGISTER"].duration = CustomDurationFieldComponent;
@@ -19575,7 +19565,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580807202000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580857729000);
 
 
 /***/ }),
@@ -21532,9 +21522,6 @@ function rulesForSpace(options) {
                             space_rules_for_user.auto_approve = ruleset.auto_approve;
                         }
                         break;
-                    }
-                    else {
-                        space_rules_for_user.hide = true;
                     }
                 }
             }
