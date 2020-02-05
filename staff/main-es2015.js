@@ -9725,6 +9725,7 @@ class CateringItem {
         this._order_anytime = data.order_anytime || false;
         this.description = data.description;
         this.must_select = data.must_select || 0;
+        this.catering_type = data.catering_type || 'pantry';
     }
     /** Number of this item in the assoicated order */
     get amount() {
@@ -19565,7 +19566,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580857729000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580864720000);
 
 
 /***/ }),
