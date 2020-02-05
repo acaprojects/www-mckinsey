@@ -1703,6 +1703,7 @@ var OrdersComponent = /** @class */ (function (_super) {
     OrdersComponent.prototype.loadOrders = function () {
         var _this = this;
         this.timeout('load_order', function () {
+            _this.loading = true;
             var bld = _this.service.Buildings.current();
             if (bld) {
                 _this.building = bld;
