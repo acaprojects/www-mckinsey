@@ -8909,12 +8909,21 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date).startOf('m');
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
+        if (form.id) {
+            if (form.room instanceof Array) {
+                form.room.forEach(room => room.book_type = 'Booking');
+            }
+            else {
+                form.room.book_type = 'Booking';
+            }
+        }
         if (localStorage) {
             const stored_date = parseInt(localStorage.getItem('STAFF.booking.date'), 10);
             const stored_duration = parseInt(localStorage.getItem('STAFF.booking.duration'), 10);
             if (item.id &&
                 ((stored_date && +stored_date !== item.date) ||
                     (stored_duration && +stored_duration !== item.duration))) {
+                console.log('Check Rules');
                 form.room.forEach(rm => {
                     const bld = this.parent.Buildings.list().find(i => i.id === rm.level.bld_id) || {};
                     const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
@@ -8934,6 +8943,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             auto_approve = [];
             room_id = form.room.map(rm => {
                 const state = (item.approval_status ? item.approval_status[rm.email] : null) || '';
+                console.log('State:', rm.email, state, rm.book_type, rm.type);
                 auto_approve.push(rm.book_type !== 'Request' && state.indexOf('tentative') === -1);
                 return rm.email || rm.id;
             });
@@ -8941,12 +8951,14 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         else if (form.room && (form.room.email || form.room.id)) {
             room_id.push(form.room.email || form.room.id);
             const state = (item.approval_status ? item.approval_status[form.room.email] : null) || '';
+            console.log('State:', form.room.email, state, form.room.book_type, form.room.type);
             auto_approve = [
                 form.room.book_type !== 'Request' &&
                     form.room.type !== 'Request' &&
                     state.indexOf('tentative') === -1
             ];
         }
+        console.log('Auto-approve:', auto_approve, room_id);
         form.location_name =
             form.room instanceof Array ? form.room.map(i => i.name).join(', ') : form.room.name;
         if (!form.location_name) {
@@ -19566,7 +19578,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580889804000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580946416000);
 
 
 /***/ }),
