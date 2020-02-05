@@ -11736,6 +11736,7 @@ var CateringCategory = /** @class */ (function (_super) {
         });
         _this.package = data.package === 'true' || data.package === true;
         _this.zones = data.zones && data.zones.length ? __spread(data.zones) : [];
+        _this.order_anytime = !!data.order_anytime && _this.package;
         return _this;
     }
     Object.defineProperty(CateringCategory.prototype, "can_order_anytime", {
@@ -11752,6 +11753,7 @@ var CateringCategory = /** @class */ (function (_super) {
     CateringCategory.prototype.toJSON = function () {
         var obj = _super.prototype.toJSON.call(this);
         obj.items = obj.items.map(function (item) { return item.toJSON(); });
+        obj.order_anytime = !!obj.order_anytime && obj.package;
         return obj;
     };
     return CateringCategory;
@@ -23873,7 +23875,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580902136000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580902988000);
 
 
 /***/ }),

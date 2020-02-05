@@ -9828,6 +9828,7 @@ class CateringCategory extends _catering_item_class__WEBPACK_IMPORTED_MODULE_0__
         this.items = (data.items || []).map(item => item.items ? new CateringCategory(item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item));
         this.package = data.package === 'true' || data.package === true;
         this.zones = data.zones && data.zones.length ? [...data.zones] : [];
+        this.order_anytime = !!data.order_anytime && this.package;
     }
     /**
      * Convert class object into plain object
@@ -9835,6 +9836,7 @@ class CateringCategory extends _catering_item_class__WEBPACK_IMPORTED_MODULE_0__
     toJSON() {
         const obj = super.toJSON();
         obj.items = obj.items.map((item) => item.toJSON());
+        obj.order_anytime = !!obj.order_anytime && obj.package;
         return obj;
     }
 }
@@ -19968,7 +19970,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580902136000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580902988000);
 
 
 /***/ }),
