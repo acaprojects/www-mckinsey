@@ -1504,6 +1504,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
      */
     loadOrders() {
         this.timeout('load_order', () => {
+            this.loading = true;
             const bld = this.service.Buildings.current();
             if (bld) {
                 this.building = bld;
