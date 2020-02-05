@@ -3214,7 +3214,7 @@ class BookingFlowFormComponent extends _shared_globals_base_directive__WEBPACK_I
 /*!*************************************************!*\
   !*** ./src/app/overlays/booking-modal/index.ts ***!
   \*************************************************/
-/*! exports provided: BOOKING_MODAL_COMPONENTS, BookingModalComponent */
+/*! exports provided: BookingModalComponent, BOOKING_MODAL_COMPONENTS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5472,7 +5472,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
     editDetails(type) {
         const booking = this.booking || {};
         const spaces = booking.room_list ? booking.room_list : booking.room ? [booking.room] : [];
-        const catering = this.catering;
+        const catering = booking.catering;
         this.service.Overlay.openModal('booking-form', {
             name: 'overlay',
             data: {
@@ -19970,7 +19970,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580903168000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580937564000);
 
 
 /***/ }),

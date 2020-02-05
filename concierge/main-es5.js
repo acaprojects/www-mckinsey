@@ -6417,7 +6417,7 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
     MeetingDetailsOverlayComponent.prototype.editDetails = function (type) {
         var booking = this.booking || {};
         var spaces = booking.room_list ? booking.room_list : booking.room ? [booking.room] : [];
-        var catering = this.catering;
+        var catering = booking.catering;
         this.service.Overlay.openModal('booking-form', {
             name: 'overlay',
             data: {
@@ -23875,7 +23875,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580903168000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580937564000);
 
 
 /***/ }),
