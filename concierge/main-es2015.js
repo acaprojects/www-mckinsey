@@ -3214,7 +3214,7 @@ class BookingFlowFormComponent extends _shared_globals_base_directive__WEBPACK_I
 /*!*************************************************!*\
   !*** ./src/app/overlays/booking-modal/index.ts ***!
   \*************************************************/
-/*! exports provided: BOOKING_MODAL_COMPONENTS, BookingModalComponent */
+/*! exports provided: BookingModalComponent, BOOKING_MODAL_COMPONENTS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3721,7 +3721,7 @@ class CateringDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_
     /** Start date and time of the meeting associated with the order */
     get time() {
         const date = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking.date);
-        return `(${date.format('DD MMMM YYYY')}) To be delivered at ${this.order.deliver_at_time}`;
+        return `(${date.format('DD MMMM YYYY')}) To be delivered at ${this.temp_order.deliver_at_time}`;
     }
     /** Booking period for the meeting associated with the order */
     get period() {
@@ -10057,7 +10057,9 @@ __webpack_require__.r(__webpack_exports__);
 class CateringOrder {
     constructor(data) {
         /** Number of minutes after the start of the associated meeting to delivery the order */
-        this.booking_date = dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('m').valueOf();
+        this.booking_date = dayjs__WEBPACK_IMPORTED_MODULE_2__()
+            .startOf('m')
+            .valueOf();
         /** Number of minutes after the start of the associated meeting to delivery the order */
         this.delivery_time = 0;
         /** ID of the location to deliver the items to */
@@ -10083,7 +10085,9 @@ class CateringOrder {
         this.notes = data.notes;
         this.kitchen = data.kitchen instanceof Array ? !!data.kitchen.length : data.kitchen;
         this.pantry = data.pantry instanceof Array ? !!data.pantry.length : data.pantry;
-        this.items = (data.items || []).map(item => item.items ? new _catering_category_class__WEBPACK_IMPORTED_MODULE_1__["CateringCategory"](item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item)).filter(item => !!item.amount);
+        this.items = (data.items || [])
+            .map(item => (item.items ? new _catering_category_class__WEBPACK_IMPORTED_MODULE_1__["CateringCategory"](item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item)))
+            .filter(item => !!item.amount);
     }
     /** Mapping of properties to their changes */
     get changes() {
@@ -10111,11 +10115,18 @@ class CateringOrder {
     }
     /** Display string for the delivery time of the order */
     get deliver_at_time() {
-        return dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking_date).add(this.delivery_time, 'm').format('h:mm A');
+        const date = this.booking ? this.booking.date : this.booking_date;
+        console.log('Date:', date);
+        return dayjs__WEBPACK_IMPORTED_MODULE_2__(date)
+            .add(this.delivery_time, 'm')
+            .format('h:mm A');
     }
     /** Display string for the delivery date of the order */
     get deliver_on_date() {
-        return dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking_date).add(this.delivery_time, 'm').format('DD MMM YYYY');
+        const date = this.booking ? this.booking.date : this.booking_date;
+        return dayjs__WEBPACK_IMPORTED_MODULE_2__(date)
+            .add(this.delivery_time, 'm')
+            .format('DD MMM YYYY');
     }
     /** Whether there are any pending changes to be saved */
     get has_changes() {
@@ -19956,7 +19967,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580877828000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580880692000);
 
 
 /***/ }),

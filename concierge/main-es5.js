@@ -4267,7 +4267,7 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
         /** Start date and time of the meeting associated with the order */
         get: function () {
             var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking.date);
-            return "(" + date.format('DD MMMM YYYY') + ") To be delivered at " + this.order.deliver_at_time;
+            return "(" + date.format('DD MMMM YYYY') + ") To be delivered at " + this.temp_order.deliver_at_time;
         },
         enumerable: true,
         configurable: true
@@ -12080,7 +12080,9 @@ var __values = (undefined && undefined.__values) || function (o) {
 var CateringOrder = /** @class */ (function () {
     function CateringOrder(data) {
         /** Number of minutes after the start of the associated meeting to delivery the order */
-        this.booking_date = dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('m').valueOf();
+        this.booking_date = dayjs__WEBPACK_IMPORTED_MODULE_2__()
+            .startOf('m')
+            .valueOf();
         /** Number of minutes after the start of the associated meeting to delivery the order */
         this.delivery_time = 0;
         /** ID of the location to deliver the items to */
@@ -12106,9 +12108,9 @@ var CateringOrder = /** @class */ (function () {
         this.notes = data.notes;
         this.kitchen = data.kitchen instanceof Array ? !!data.kitchen.length : data.kitchen;
         this.pantry = data.pantry instanceof Array ? !!data.pantry.length : data.pantry;
-        this.items = (data.items || []).map(function (item) {
-            return item.items ? new _catering_category_class__WEBPACK_IMPORTED_MODULE_1__["CateringCategory"](item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item);
-        }).filter(function (item) { return !!item.amount; });
+        this.items = (data.items || [])
+            .map(function (item) { return (item.items ? new _catering_category_class__WEBPACK_IMPORTED_MODULE_1__["CateringCategory"](item) : new _catering_item_class__WEBPACK_IMPORTED_MODULE_0__["CateringItem"](item)); })
+            .filter(function (item) { return !!item.amount; });
     }
     Object.defineProperty(CateringOrder.prototype, "changes", {
         /** Mapping of properties to their changes */
@@ -12153,7 +12155,11 @@ var CateringOrder = /** @class */ (function () {
     Object.defineProperty(CateringOrder.prototype, "deliver_at_time", {
         /** Display string for the delivery time of the order */
         get: function () {
-            return dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking_date).add(this.delivery_time, 'm').format('h:mm A');
+            var date = this.booking ? this.booking.date : this.booking_date;
+            console.log('Date:', date);
+            return dayjs__WEBPACK_IMPORTED_MODULE_2__(date)
+                .add(this.delivery_time, 'm')
+                .format('h:mm A');
         },
         enumerable: true,
         configurable: true
@@ -12161,7 +12167,10 @@ var CateringOrder = /** @class */ (function () {
     Object.defineProperty(CateringOrder.prototype, "deliver_on_date", {
         /** Display string for the delivery date of the order */
         get: function () {
-            return dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking_date).add(this.delivery_time, 'm').format('DD MMM YYYY');
+            var date = this.booking ? this.booking.date : this.booking_date;
+            return dayjs__WEBPACK_IMPORTED_MODULE_2__(date)
+                .add(this.delivery_time, 'm')
+                .format('DD MMM YYYY');
         },
         enumerable: true,
         configurable: true
@@ -23863,7 +23872,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580877828000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580880692000);
 
 
 /***/ }),
