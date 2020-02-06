@@ -1566,7 +1566,7 @@ var DayViewSpaceEventComponent = /** @class */ (function (_super) {
             var start = +date.diff(shown_date, 'h', true).toFixed(3);
             var duration = Math.min(this.event.duration, Math.abs(shown_date.diff(date.add(this.event.duration, 'm'), 'm')));
             this.top = Math.max(0, (start / 24) * 100);
-            this.height = this.fixed ? duration / 60 : (duration / 60 / 24) * 100;
+            this.height = Math.min(100 - this.top, this.fixed ? duration / 60 : (duration / 60 / 24) * 100);
             this.position.emit({ top: this.top, height: (duration / 60 / 24) * 100 });
             this.width = Math.min(100, 100 / overlap.total + 5);
             this.left = Math.min(100 - this.width, this.width * overlap.index - 5 * overlap.index);

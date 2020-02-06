@@ -3214,7 +3214,7 @@ class BookingFlowFormComponent extends _shared_globals_base_directive__WEBPACK_I
 /*!*************************************************!*\
   !*** ./src/app/overlays/booking-modal/index.ts ***!
   \*************************************************/
-/*! exports provided: BookingModalComponent, BOOKING_MODAL_COMPONENTS */
+/*! exports provided: BOOKING_MODAL_COMPONENTS, BookingModalComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19970,7 +19970,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580937564000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580956858000);
 
 
 /***/ }),
