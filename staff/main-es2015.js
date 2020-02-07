@@ -9027,7 +9027,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             }
         }
         if (item.description) {
-            if (item.description) {
+            if (item.description && !request.find(note => note.message === item.description)) {
                 request.notes.push({
                     type: 'description',
                     message: item.description,
@@ -19578,7 +19578,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580999956000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1581046201000);
 
 
 /***/ }),
