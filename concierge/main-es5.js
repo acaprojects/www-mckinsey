@@ -9277,7 +9277,9 @@ var BaseService = /** @class */ (function () {
     });
     BaseService.prototype.init = function () {
         var _this = this;
-        if (!this.parent || !this.parent.Settings.setup || (this.parent.Settings.get('mock') && !window.backend.is_loaded)) {
+        if (!this.parent ||
+            !this.parent.Settings.setup ||
+            (this.parent.Settings.get('mock') && !window.backend.is_loaded)) {
             return setTimeout(function () { return _this.init(); }, 500);
         }
         this.load();
@@ -9410,7 +9412,7 @@ var BaseService = /** @class */ (function () {
                         _this.updateList(item_list);
                     }
                     resolve(item_list);
-                    setTimeout(function () { return _this.promises[key] = null; }, 5 * 1000);
+                    setTimeout(function () { return (_this.promises[key] = null); }, 5 * 1000);
                 }, function (err) {
                     _this.promises[key] = null;
                     reject(err);
@@ -9437,7 +9439,7 @@ var BaseService = /** @class */ (function () {
                     delete fields.control;
                 }
                 var query = _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].generateQueryString(fields) || (fields ? 'complete=true' : '');
-                var url = (control ? ('/control/api' + _this.model.route) : _this.endpoint) + "/" + id + (query ? '?' + query : '');
+                var url = (control ? '/control/api' + _this.model.route : _this.endpoint) + "/" + id + (query ? '?' + query : '');
                 _this.http.get(url).subscribe(function (resp) {
                     var item = _this.processItem(resp);
                     resolve(item);
@@ -9445,7 +9447,7 @@ var BaseService = /** @class */ (function () {
                     if (fields && fields.update) {
                         _this.updateList([item]);
                     }
-                    setTimeout(function () { return _this.promises[key] = null; }, 1 * 1000);
+                    setTimeout(function () { return (_this.promises[key] = null); }, 1 * 1000);
                 }, function (err) {
                     if (!_this.failures[id]) {
                         _this.failures[id] = 0;
@@ -9469,7 +9471,10 @@ var BaseService = /** @class */ (function () {
      */
     BaseService.prototype.add = function (data) {
         var _this = this;
-        var key = "add|" + (data.id || moment__WEBPACK_IMPORTED_MODULE_2__().seconds(0).unix());
+        var key = "add|" + (data.id ||
+            moment__WEBPACK_IMPORTED_MODULE_2__()
+                .seconds(0)
+                .unix());
         if (!this.promises[key]) {
             this.promises[key] = new Promise(function (resolve, reject) {
                 var formatted_data = _this.format(data);
@@ -9479,7 +9484,7 @@ var BaseService = /** @class */ (function () {
                     resolve(item);
                     _this.parent.Analytics.event((_this.model.name || '').toUpperCase(), "created_" + _this.model.name);
                     _this.updateList([item && item.id ? item : _this.processItem(formatted_data)]);
-                    setTimeout(function () { return _this.promises[key] = null; }, 2 * 1000);
+                    setTimeout(function () { return (_this.promises[key] = null); }, 2 * 1000);
                 }, function (err) {
                     _this.parent.Analytics.event((_this.model.name || '').toUpperCase(), "create_" + _this.model.name + "_fail");
                     _this.promises[key] = null;
@@ -9529,7 +9534,10 @@ var BaseService = /** @class */ (function () {
         if (!id) {
             return new Promise(function (rs, rj) { return rj('Invalid ID given'); });
         }
-        var key = "update|" + (id || moment__WEBPACK_IMPORTED_MODULE_2__().seconds(0).unix());
+        var key = "update|" + (id ||
+            moment__WEBPACK_IMPORTED_MODULE_2__()
+                .seconds(0)
+                .unix());
         if (!this.promises[key]) {
             this.promises[key] = new Promise(function (resolve, reject) {
                 var formatted_data = _this.format(data);
@@ -9543,7 +9551,7 @@ var BaseService = /** @class */ (function () {
                     formatted_data.id = id;
                     _this.postUpdate(formatted_data, item);
                     _this.parent.Analytics.event((_this.model.name || '').toUpperCase(), "updated_" + _this.model.name);
-                    setTimeout(function () { return _this.promises[key] = null; }, 2 * 1000);
+                    setTimeout(function () { return (_this.promises[key] = null); }, 2 * 1000);
                 }, function (err) {
                     _this.promises[key] = null;
                     _this.parent.Analytics.event((_this.model.name || '').toUpperCase(), "update_" + _this.model.name + "_fail");
@@ -9578,7 +9586,7 @@ var BaseService = /** @class */ (function () {
                 }
                 _this.http.post(url, body).subscribe(function (resp) {
                     resolve(resp || {});
-                    setTimeout(function () { return _this.promises[key] = null; }, 200);
+                    setTimeout(function () { return (_this.promises[key] = null); }, 200);
                 }, function (err) {
                     _this.promises[key] = null;
                     reject(err instanceof Array ? err[0] : err);
@@ -9617,9 +9625,9 @@ var BaseService = /** @class */ (function () {
         return this.remove(id, fields);
     };
     /**
-    * Alias for the remove method when a meeting is declined by a non host
-    * @param id
-    */
+     * Alias for the remove method when a meeting is declined by a non host
+     * @param id
+     */
     BaseService.prototype.decline = function (id, fields) {
         return this.remove(id, fields);
     };
@@ -9630,7 +9638,10 @@ var BaseService = /** @class */ (function () {
     BaseService.prototype.deleteItem = function (id, fields) {
         var _this = this;
         var query = _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].generateQueryString(fields);
-        var key = "delete|" + (id || moment__WEBPACK_IMPORTED_MODULE_2__().seconds(0).unix()) + "|" + query;
+        var key = "delete|" + (id ||
+            moment__WEBPACK_IMPORTED_MODULE_2__()
+                .seconds(0)
+                .unix()) + "|" + query;
         if (!this.promises[key]) {
             this.promises[key] = new Promise(function (resolve, reject) {
                 var url = _this.endpoint + "/" + id + (query ? '?' + query : '');
@@ -9639,7 +9650,7 @@ var BaseService = /** @class */ (function () {
                     _this.removeFromList(list);
                     resolve();
                     _this.parent.Analytics.event((_this.model.name || '').toUpperCase(), "removed_" + _this.model.name);
-                    setTimeout(function () { return _this.promises[key] = null; }, 2 * 1000);
+                    setTimeout(function () { return (_this.promises[key] = null); }, 2 * 1000);
                 }, function (err) {
                     _this.promises[key] = null;
                     _this.parent.Analytics.event((_this.model.name || '').toUpperCase(), "remove_" + _this.model.name + "_fail");
@@ -9665,7 +9676,7 @@ var BaseService = /** @class */ (function () {
         var item_list = clear ? [] : this.list() || [];
         try {
             // Add any new items to the list
-            for (var _c = __values((input_list || [])), _d = _c.next(); !_d.done; _d = _c.next()) {
+            for (var _c = __values(input_list || []), _d = _c.next(); !_d.done; _d = _c.next()) {
                 var i = _d.value;
                 var input = i;
                 var found = false;
@@ -9699,7 +9710,7 @@ var BaseService = /** @class */ (function () {
             finally { if (e_2) throw e_2.error; }
         }
         // Sort list
-        item_list.sort(function (a, b) { return (a.name || '').localeCompare(b.name || ''); });
+        item_list.sort(function (a, b) { return ("" + (a.name || '')).localeCompare(b.name || ''); });
         // Store changes to the list
         this.updateHashMap(item_list);
         this.set('list', item_list);
@@ -9779,7 +9790,7 @@ var BaseService = /** @class */ (function () {
      */
     BaseService.prototype.processList = function (input_list) {
         var output_list = [];
-        for (var key in (input_list || [])) {
+        for (var key in input_list || []) {
             if (input_list.hasOwnProperty(key) && input_list[key]) {
                 var out = this.processItem(input_list[key], key);
                 if (out) {
@@ -9787,7 +9798,7 @@ var BaseService = /** @class */ (function () {
                 }
             }
         }
-        output_list.sort(function (a, b) { return (a.name || a.id || '').localeCompare(b.name || b.id || ''); });
+        output_list.sort(function (a, b) { return ("" + (a.name || a.id || '')).localeCompare(b.name || b.id || ''); });
         return output_list;
     };
     /**
@@ -9843,16 +9854,18 @@ var BaseService = /** @class */ (function () {
             accept: 'Ok',
             cancel: true
         };
-        var name = (fields.name || fields.title || '');
+        var name = fields.name || fields.title || '';
         switch (key) {
             case 'delete':
                 settings.title = "Delete " + this.model.name;
-                settings.message = "Are you sure you wish to delete " + this.model.name + " " + (name ? '\'' + name + '\'' : '') + "?";
+                settings.message = "Are you sure you wish to delete " + this.model.name + " " + (name ? "'" + name + "'" : '') + "?";
                 settings.icon = 'delete';
                 break;
             case 'decline':
                 settings.title = "Decline " + this.model.name;
-                settings.message = "Are you sure you wish to decline " + this.model.name + " '" + (fields.name || fields.title || '') + "'?";
+                settings.message = "Are you sure you wish to decline " + this.model.name + " '" + (fields.name ||
+                    fields.title ||
+                    '') + "'?";
                 settings.icon = 'decline';
                 break;
             case 'update':
@@ -23875,7 +23888,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580966562000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1581287519000);
 
 
 /***/ }),

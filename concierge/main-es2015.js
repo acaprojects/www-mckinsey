@@ -7909,7 +7909,9 @@ class BaseService {
         return this._composer.http;
     }
     init() {
-        if (!this.parent || !this.parent.Settings.setup || (this.parent.Settings.get('mock') && !window.backend.is_loaded)) {
+        if (!this.parent ||
+            !this.parent.Settings.setup ||
+            (this.parent.Settings.get('mock') && !window.backend.is_loaded)) {
             return setTimeout(() => this.init(), 500);
         }
         this.load();
@@ -8023,8 +8025,8 @@ class BaseService {
                         this.updateList(item_list);
                     }
                     resolve(item_list);
-                    setTimeout(() => this.promises[key] = null, 5 * 1000);
-                }, (err) => {
+                    setTimeout(() => (this.promises[key] = null), 5 * 1000);
+                }, err => {
                     this.promises[key] = null;
                     reject(err);
                 });
@@ -8049,7 +8051,7 @@ class BaseService {
                     delete fields.control;
                 }
                 const query = _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].generateQueryString(fields) || (fields ? 'complete=true' : '');
-                const url = `${control ? ('/control/api' + this.model.route) : this.endpoint}/${id}${query ? '?' + query : ''}`;
+                const url = `${control ? '/control/api' + this.model.route : this.endpoint}/${id}${query ? '?' + query : ''}`;
                 this.http.get(url).subscribe((resp) => {
                     const item = this.processItem(resp);
                     resolve(item);
@@ -8057,8 +8059,8 @@ class BaseService {
                     if (fields && fields.update) {
                         this.updateList([item]);
                     }
-                    setTimeout(() => this.promises[key] = null, 1 * 1000);
-                }, (err) => {
+                    setTimeout(() => (this.promises[key] = null), 1 * 1000);
+                }, err => {
                     if (!this.failures[id]) {
                         this.failures[id] = 0;
                     }
@@ -8080,7 +8082,10 @@ class BaseService {
      * @param data
      */
     add(data) {
-        const key = `add|${data.id || moment__WEBPACK_IMPORTED_MODULE_2__().seconds(0).unix()}`;
+        const key = `add|${data.id ||
+            moment__WEBPACK_IMPORTED_MODULE_2__()
+                .seconds(0)
+                .unix()}`;
         if (!this.promises[key]) {
             this.promises[key] = new Promise((resolve, reject) => {
                 const formatted_data = this.format(data);
@@ -8090,8 +8095,8 @@ class BaseService {
                     resolve(item);
                     this.parent.Analytics.event((this.model.name || '').toUpperCase(), `created_${this.model.name}`);
                     this.updateList([item && item.id ? item : this.processItem(formatted_data)]);
-                    setTimeout(() => this.promises[key] = null, 2 * 1000);
-                }, (err) => {
+                    setTimeout(() => (this.promises[key] = null), 2 * 1000);
+                }, err => {
                     this.parent.Analytics.event((this.model.name || '').toUpperCase(), `create_${this.model.name}_fail`);
                     this.promises[key] = null;
                     reject(err);
@@ -8118,9 +8123,9 @@ class BaseService {
                 return reject('Invalid ID given');
             }
             data.link = link;
-            this.parent.confirm(Object.assign({}, this.confirmSettings('update', data), { event: (event) => {
+            this.parent.confirm(Object.assign({}, this.confirmSettings('update', data), { event: event => {
                     if (event.type === 'Accept') {
-                        this.updateItem(id, data).then((d) => resolve(d), (e) => reject(e));
+                        this.updateItem(id, data).then(d => resolve(d), e => reject(e));
                     }
                     else {
                         reject('User cancelled');
@@ -8138,7 +8143,10 @@ class BaseService {
         if (!id) {
             return new Promise((rs, rj) => rj('Invalid ID given'));
         }
-        const key = `update|${id || moment__WEBPACK_IMPORTED_MODULE_2__().seconds(0).unix()}`;
+        const key = `update|${id ||
+            moment__WEBPACK_IMPORTED_MODULE_2__()
+                .seconds(0)
+                .unix()}`;
         if (!this.promises[key]) {
             this.promises[key] = new Promise((resolve, reject) => {
                 const formatted_data = this.format(data);
@@ -8152,8 +8160,8 @@ class BaseService {
                     formatted_data.id = id;
                     this.postUpdate(formatted_data, item);
                     this.parent.Analytics.event((this.model.name || '').toUpperCase(), `updated_${this.model.name}`);
-                    setTimeout(() => this.promises[key] = null, 2 * 1000);
-                }, (err) => {
+                    setTimeout(() => (this.promises[key] = null), 2 * 1000);
+                }, err => {
                     this.promises[key] = null;
                     this.parent.Analytics.event((this.model.name || '').toUpperCase(), `update_${this.model.name}_fail`);
                     reject(err);
@@ -8186,8 +8194,8 @@ class BaseService {
                 }
                 this.http.post(url, body).subscribe((resp) => {
                     resolve(resp || {});
-                    setTimeout(() => this.promises[key] = null, 200);
-                }, (err) => {
+                    setTimeout(() => (this.promises[key] = null), 200);
+                }, err => {
                     this.promises[key] = null;
                     reject(err instanceof Array ? err[0] : err);
                 });
@@ -8205,9 +8213,9 @@ class BaseService {
                 return reject('Invalid ID given');
             }
             const item = this.item(id) || {};
-            this.parent.confirm(this.confirmSettings('delete', Object.assign({}, item, { link: fields ? fields.link : '' })), (event) => {
+            this.parent.confirm(this.confirmSettings('delete', Object.assign({}, item, { link: fields ? fields.link : '' })), event => {
                 if (event.type === 'Accept') {
-                    this.deleteItem(id, fields).then((d) => resolve(d), (e) => reject(e));
+                    this.deleteItem(id, fields).then(d => resolve(d), e => reject(e));
                 }
                 else {
                     reject('User cancelled');
@@ -8224,9 +8232,9 @@ class BaseService {
         return this.remove(id, fields);
     }
     /**
-    * Alias for the remove method when a meeting is declined by a non host
-    * @param id
-    */
+     * Alias for the remove method when a meeting is declined by a non host
+     * @param id
+     */
     decline(id, fields) {
         return this.remove(id, fields);
     }
@@ -8236,7 +8244,10 @@ class BaseService {
      */
     deleteItem(id, fields) {
         const query = _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].generateQueryString(fields);
-        const key = `delete|${id || moment__WEBPACK_IMPORTED_MODULE_2__().seconds(0).unix()}|${query}`;
+        const key = `delete|${id ||
+            moment__WEBPACK_IMPORTED_MODULE_2__()
+                .seconds(0)
+                .unix()}|${query}`;
         if (!this.promises[key]) {
             this.promises[key] = new Promise((resolve, reject) => {
                 const url = `${this.endpoint}/${id}${query ? '?' + query : ''}`;
@@ -8245,8 +8256,8 @@ class BaseService {
                     this.removeFromList(list);
                     resolve();
                     this.parent.Analytics.event((this.model.name || '').toUpperCase(), `removed_${this.model.name}`);
-                    setTimeout(() => this.promises[key] = null, 2 * 1000);
-                }, (err) => {
+                    setTimeout(() => (this.promises[key] = null), 2 * 1000);
+                }, err => {
                     this.promises[key] = null;
                     this.parent.Analytics.event((this.model.name || '').toUpperCase(), `remove_${this.model.name}_fail`);
                     reject(err);
@@ -8268,7 +8279,7 @@ class BaseService {
         // Get current list
         const item_list = clear ? [] : this.list() || [];
         // Add any new items to the list
-        for (const i of (input_list || [])) {
+        for (const i of input_list || []) {
             const input = i;
             let found = false;
             for (const i2 of item_list) {
@@ -8283,7 +8294,7 @@ class BaseService {
             }
         }
         // Sort list
-        item_list.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+        item_list.sort((a, b) => `${a.name || ''}`.localeCompare(b.name || ''));
         // Store changes to the list
         this.updateHashMap(item_list);
         this.set('list', item_list);
@@ -8331,7 +8342,7 @@ class BaseService {
      */
     processList(input_list) {
         const output_list = [];
-        for (const key in (input_list || [])) {
+        for (const key in input_list || []) {
             if (input_list.hasOwnProperty(key) && input_list[key]) {
                 const out = this.processItem(input_list[key], key);
                 if (out) {
@@ -8339,7 +8350,7 @@ class BaseService {
                 }
             }
         }
-        output_list.sort((a, b) => (a.name || a.id || '').localeCompare(b.name || b.id || ''));
+        output_list.sort((a, b) => `${a.name || a.id || ''}`.localeCompare(b.name || b.id || ''));
         return output_list;
     }
     /**
@@ -8393,16 +8404,18 @@ class BaseService {
             accept: 'Ok',
             cancel: true
         };
-        const name = (fields.name || fields.title || '');
+        const name = fields.name || fields.title || '';
         switch (key) {
             case 'delete':
                 settings.title = `Delete ${this.model.name}`;
-                settings.message = `Are you sure you wish to delete ${this.model.name} ${name ? '\'' + name + '\'' : ''}?`;
+                settings.message = `Are you sure you wish to delete ${this.model.name} ${name ? "'" + name + "'" : ''}?`;
                 settings.icon = 'delete';
                 break;
             case 'decline':
                 settings.title = `Decline ${this.model.name}`;
-                settings.message = `Are you sure you wish to decline ${this.model.name} '${fields.name || fields.title || ''}'?`;
+                settings.message = `Are you sure you wish to decline ${this.model.name} '${fields.name ||
+                    fields.title ||
+                    ''}'?`;
                 settings.icon = 'decline';
                 break;
             case 'update':
@@ -19970,7 +19983,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1580966562000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1581287519000);
 
 
 /***/ }),
