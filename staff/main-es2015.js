@@ -4672,7 +4672,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                 }, {}), catering_notes: this.catering_notes, catering_code: catering.reduce((code_map, order) => {
                     code_map[order.location_id] = order.charge_code;
                     return code_map;
-                }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: typeof booking.booking_type === 'string' ? { id: booking.booking_type } : booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), needs_catering: type || (catering[id] && catering[id].items), catering: catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](order)), host: this.service.Users.item(booking.organiser.email) });
+                }, {}), expected_attendees: Object.assign({}, (booking.expected_attendees || {})), booking_type: typeof booking.booking_type === 'string' ? { id: booking.booking_type } : booking.booking_type, equipment_code: Object.assign({}, (booking.equipment_code || {})), catering: catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](order)), host: this.service.Users.item(booking.organiser.email) });
             localStorage.setItem('STAFF.booking_form', JSON.stringify(data));
             localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
             localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
@@ -4832,7 +4832,7 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
         this.model.form.host =
             this.service.Users.item(this.model.booking.organiser.email)
                 || this.service.Users.current();
-        this.model.form.needs_catering = this.item_count > 0;
+        this.model.form.needs_catering = booking.needs_catering;
         this.model.form.catering = null;
         this.model.form.start = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.model.form.date).format('HH:mm');
         this.model.form.equipment = (this.booking.notes || [])
@@ -4851,6 +4851,8 @@ class MeetingDetailsOverlayComponent extends _acaprojects_ngx_widgets__WEBPACK_I
                 rules: bld.booking_rules
             });
             room.book_type = rules.auto_approve ? 'Book' : 'Request';
+            delete room.next;
+            delete room.nextFree;
         }
         this.model.form.room = room_list;
         delete this.model.form.room_list;
@@ -19578,7 +19580,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1581050456000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1581288817000);
 
 
 /***/ }),
