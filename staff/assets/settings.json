@@ -249,7 +249,7 @@
                             "description": "",
                             "type": "custom",
                             "metadata": {
-                                "max_duration": 480
+                                "max_duration": 720
                             }
                         }
                     ]
