@@ -1,3 +1,19 @@
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-directory-directory-module-ngfactory"], {
   /***/
   "./src/app/shell/directory/directory.component.ts":
@@ -27,18 +43,28 @@
     /* harmony import */
 
 
-    var _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ../../shared/globals/base.component */
-    "./src/app/shared/globals/base.component.ts");
+    var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../../shared/globals/base.directive */
+    "./src/app/shared/globals/base.directive.ts");
 
-    class DirectoryComponent extends _shared_globals_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
-      constructor() {
-        super();
+    var DirectoryComponent =
+    /*#__PURE__*/
+    function (_shared_globals_base_) {
+      _inherits(DirectoryComponent, _shared_globals_base_);
+
+      function DirectoryComponent() {
+        _classCallCheck(this, DirectoryComponent);
+
+        return _possibleConstructorReturn(this, _getPrototypeOf(DirectoryComponent).call(this));
       }
 
-      ngOnInit() {}
+      _createClass(DirectoryComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
 
-    }
+      return DirectoryComponent;
+    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]);
     /***/
 
   },
@@ -83,175 +109,229 @@
     /* harmony import */
 
 
-    var _shared_components_room_info_room_info_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _node_modules_angular_material_snack_bar_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../../../node_modules/@angular/material/snack-bar/typings/index.ngfactory */
+    "./node_modules/@angular/material/snack-bar/typings/index.ngfactory.js");
+    /* harmony import */
+
+
+    var _node_modules_angular_material_dialog_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../../../node_modules/@angular/material/dialog/typings/index.ngfactory */
+    "./node_modules/@angular/material/dialog/typings/index.ngfactory.js");
+    /* harmony import */
+
+
+    var _shared_components_room_info_room_info_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ../../shared/components/room-info/room-info.component.ngfactory */
     "./src/app/shared/components/room-info/room-info.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_desk_info_desk_info_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _shared_components_desk_info_desk_info_component_ngfactory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ../../shared/components/desk-info/desk-info.component.ngfactory */
     "./src/app/shared/components/desk-info/desk-info.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_date_field_date_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _shared_components_custom_fields_date_field_date_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/date-field/date-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/date-field/date-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _shared_components_custom_fields_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/time-field/time-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/time-field/time-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _shared_components_custom_fields_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/duration-field/duration-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/duration-field/duration-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_user_list_field_user_list_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _shared_components_custom_fields_user_list_field_user_list_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/user-list-field/user-list-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/user-list-field/user-list-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_week_field_week_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _shared_components_custom_fields_week_field_week_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/week-field/week-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/week-field/week-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_terms_field_terms_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _shared_components_custom_fields_terms_field_terms_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/terms-field/terms-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/terms-field/terms-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_preference_field_preference_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _shared_components_custom_fields_preference_field_preference_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/preference-field/preference-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/preference-field/preference-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_cost_field_cost_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _shared_components_custom_fields_cost_field_cost_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/cost-field/cost-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/cost-field/cost-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_recurrence_field_recurrence_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _shared_components_custom_fields_recurrence_field_recurrence_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/recurrence-field/recurrence-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/recurrence-field/recurrence-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _shared_components_custom_fields_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/user-search-field/user-search-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/user-search-field/user-search-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_editor_field_editor_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _shared_components_custom_fields_editor_field_editor_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/editor-field/editor-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/editor-field/editor-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_guest_settings_field_guest_settings_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _shared_components_custom_fields_guest_settings_field_guest_settings_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/guest-settings-field/guest-settings-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/guest-settings-field/guest-settings-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_custom_fields_dropdown_field_dropdown_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _shared_components_custom_fields_dropdown_field_dropdown_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
     /*! ../../shared/components/custom-fields/dropdown-field/dropdown-field.component.ngfactory */
     "./src/app/shared/components/custom-fields/dropdown-field/dropdown-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
-    /*! @acaprojects/ngx-widgets */
-    "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
+    var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+    /*! @angular/cdk/overlay */
+    "./node_modules/@angular/cdk/esm2015/overlay.js");
     /* harmony import */
 
 
-    var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+    var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
     /*! @angular/cdk/bidi */
     "./node_modules/@angular/cdk/esm2015/bidi.js");
     /* harmony import */
 
 
-    var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    /*! @angular/material/dialog */
+    "./node_modules/@angular/material/esm2015/dialog.js");
+    /* harmony import */
+
+
+    var _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
+    /*! @acaprojects/ngx-widgets */
+    "./node_modules/@acaprojects/ngx-widgets/esm2015/acaprojects-ngx-widgets.js");
+    /* harmony import */
+
+
+    var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
     /*! @angular/cdk/platform */
     "./node_modules/@angular/cdk/esm2015/platform.js");
     /* harmony import */
 
 
-    var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
+    var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
     /*! @angular/cdk/scrolling */
     "./node_modules/@angular/cdk/esm2015/scrolling.js");
     /* harmony import */
 
 
-    var _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    var _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
     /*! @tinymce/tinymce-angular */
     "./node_modules/@tinymce/tinymce-angular/fesm2015/tinymce-tinymce-angular.js");
     /* harmony import */
 
 
-    var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
+    var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
     /*! @angular/cdk/text-field */
     "./node_modules/@angular/cdk/esm2015/text-field.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_date_picker__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
+    var _acaprojects_ngx_date_picker__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
     /*! @acaprojects/ngx-date-picker */
     "./node_modules/@acaprojects/ngx-date-picker/fesm2015/acaprojects-ngx-date-picker.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
+    var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
     "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
+    var _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(
     /*! @acaprojects/ngx-checkbox */
     "./node_modules/@acaprojects/ngx-checkbox/fesm2015/acaprojects-ngx-checkbox.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
+    var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
     /*! @acaprojects/ngx-dynamic-forms */
     "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
     /* harmony import */
 
 
-    var _shared_components_shared_module__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
+    var _angular_material_core__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
+    /*! @angular/material/core */
+    "./node_modules/@angular/material/esm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
+    /*! @angular/platform-browser */
+    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+    /* harmony import */
+
+
+    var _angular_material_button__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
+    /*! @angular/material/button */
+    "./node_modules/@angular/material/esm2015/button.js");
+    /* harmony import */
+
+
+    var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
+    /*! @angular/cdk/portal */
+    "./node_modules/@angular/cdk/esm2015/portal.js");
+    /* harmony import */
+
+
+    var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(
+    /*! @angular/material/snack-bar */
+    "./node_modules/@angular/material/esm2015/snack-bar.js");
+    /* harmony import */
+
+
+    var _shared_components_shared_module__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(
     /*! ../../shared/components/shared.module */
     "./src/app/shared/components/shared.module.ts");
     /**
@@ -263,9 +343,9 @@
 
 
     var AppDirectoryModuleNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵcmf"](_directory_module__WEBPACK_IMPORTED_MODULE_1__["AppDirectoryModule"], [], function (_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmod"]([_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵCodegenComponentFactoryResolver"], [[8, [_node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["DynamicBaseComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["OverlayContentComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["ModalComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["NotificationComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["OverlayContainerComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["TooltipComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["ɵcNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["ɵdNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["MapPinComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["MapRangeComponentNgFactory"], _shared_components_room_info_room_info_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RoomInfoComponentNgFactory"], _shared_components_desk_info_desk_info_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["DeskInfoComponentNgFactory"], _shared_components_custom_fields_date_field_date_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["CustomDateFieldComponentNgFactory"], _shared_components_custom_fields_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_6__["CustomTimeFieldComponentNgFactory"], _shared_components_custom_fields_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["CustomDurationFieldComponentNgFactory"], _shared_components_custom_fields_user_list_field_user_list_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["CustomUserListFieldComponentNgFactory"], _shared_components_custom_fields_week_field_week_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_9__["CustomWeekFieldComponentNgFactory"], _shared_components_custom_fields_terms_field_terms_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["CustomTermsFieldComponentNgFactory"], _shared_components_custom_fields_preference_field_preference_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__["CustomPreferenceFieldComponentNgFactory"], _shared_components_custom_fields_cost_field_cost_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["CustomCostFieldComponentNgFactory"], _shared_components_custom_fields_recurrence_field_recurrence_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["CustomRecurrenceFieldComponentNgFactory"], _shared_components_custom_fields_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["CustomUserSearchFieldComponentNgFactory"], _shared_components_custom_fields_editor_field_editor_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["CustomEditorFieldComponentNgFactory"], _shared_components_custom_fields_guest_settings_field_guest_settings_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__["CustomGuestSettingsFieldComponentNgFactory"], _shared_components_custom_fields_dropdown_field_dropdown_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_17__["CustomDropdownFieldComponentNgFactory"]]], [3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common__WEBPACK_IMPORTED_MODULE_18__["NgLocalization"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["NgLocaleLocalization"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_18__["ɵangular_packages_common_common_a"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_g"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_e"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_h"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_h"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_f"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HTTP_INTERCEPTORS"], function (p0_0) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmod"]([_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵCodegenComponentFactoryResolver"], [[8, [_node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["DynamicBaseComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["OverlayContentComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["ModalComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["NotificationComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["OverlayContainerComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["TooltipComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["ɵcNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["ɵdNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["MapPinComponentNgFactory"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_2__["MapRangeComponentNgFactory"], _node_modules_angular_material_snack_bar_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_3__["MatSnackBarContainerNgFactory"], _node_modules_angular_material_snack_bar_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_3__["SimpleSnackBarNgFactory"], _node_modules_angular_material_dialog_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_4__["MatDialogContainerNgFactory"], _shared_components_room_info_room_info_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RoomInfoComponentNgFactory"], _shared_components_desk_info_desk_info_component_ngfactory__WEBPACK_IMPORTED_MODULE_6__["DeskInfoComponentNgFactory"], _shared_components_custom_fields_date_field_date_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["CustomDateFieldComponentNgFactory"], _shared_components_custom_fields_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["CustomTimeFieldComponentNgFactory"], _shared_components_custom_fields_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_9__["CustomDurationFieldComponentNgFactory"], _shared_components_custom_fields_user_list_field_user_list_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["CustomUserListFieldComponentNgFactory"], _shared_components_custom_fields_week_field_week_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__["CustomWeekFieldComponentNgFactory"], _shared_components_custom_fields_terms_field_terms_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["CustomTermsFieldComponentNgFactory"], _shared_components_custom_fields_preference_field_preference_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["CustomPreferenceFieldComponentNgFactory"], _shared_components_custom_fields_cost_field_cost_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["CustomCostFieldComponentNgFactory"], _shared_components_custom_fields_recurrence_field_recurrence_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["CustomRecurrenceFieldComponentNgFactory"], _shared_components_custom_fields_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__["CustomUserSearchFieldComponentNgFactory"], _shared_components_custom_fields_editor_field_editor_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_17__["CustomEditorFieldComponentNgFactory"], _shared_components_custom_fields_guest_settings_field_guest_settings_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_18__["CustomGuestSettingsFieldComponentNgFactory"], _shared_components_custom_fields_dropdown_field_dropdown_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_19__["CustomDropdownFieldComponentNgFactory"]]], [3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common__WEBPACK_IMPORTED_MODULE_20__["NgLocalization"], _angular_common__WEBPACK_IMPORTED_MODULE_20__["NgLocaleLocalization"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_common_common_a"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_g"], [_angular_common__WEBPACK_IMPORTED_MODULE_20__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_e"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_h"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_h"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_f"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HTTP_INTERCEPTORS"], function (p0_0) {
         return [p0_0];
-      }, [_angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_d"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["XhrFactory"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_d"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpXhrBackend"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpXhrBackend"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_19__["XhrFactory"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpBackend"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpXhrBackend"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpHandler"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵHttpInterceptingHandler"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpBackend"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClient"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClient"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpHandler"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_forms_forms_o"], _angular_forms__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_forms_forms_o"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_20__["FormBuilder"], _angular_forms__WEBPACK_IMPORTED_MODULE_20__["FormBuilder"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common__WEBPACK_IMPORTED_MODULE_18__["CommonModule"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["CommonModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientXsrfModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientXsrfModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_forms_forms_d"], _angular_forms__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_forms_forms_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_20__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_20__["FormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵg"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵg"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵh"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵh"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["OverlayWidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["OverlayWidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵo"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵo"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵm"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵm"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵp"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵp"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵq"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵq"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_22__["BidiModule"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_22__["BidiModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_23__["PlatformModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_23__["PlatformModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_24__["ScrollingModule"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_24__["ScrollingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵr"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵr"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵs"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵs"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵt"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵt"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵu"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵu"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵv"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵv"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵx"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵx"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵy"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵy"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["FormControlWidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["FormControlWidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["FileDropModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["FileDropModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵba"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵba"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵz"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵz"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵbb"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵbb"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵbc"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵbc"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵbd"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵbd"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵbe"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["ɵbe"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["GeneralWidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["GeneralWidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["PageControlWidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["PageControlWidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["WidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["WidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_20__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_20__["ReactiveFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_25__["EditorModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_25__["EditorModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_26__["TextFieldModule"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_26__["TextFieldModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["DynamicFormComponentModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_21__["DynamicFormComponentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_date_picker__WEBPACK_IMPORTED_MODULE_27__["ADatePickerModule"], _acaprojects_ngx_date_picker__WEBPACK_IMPORTED_MODULE_27__["ADatePickerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_28__["ACustomEventsModule"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_28__["ACustomEventsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_29__["ACheckboxModule"], _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_29__["ACheckboxModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_30__["ADynamicFormsModule"], _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_30__["ADynamicFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_components_shared_module__WEBPACK_IMPORTED_MODULE_31__["SharedComponentModule"], _shared_components_shared_module__WEBPACK_IMPORTED_MODULE_31__["SharedComponentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _directory_module__WEBPACK_IMPORTED_MODULE_1__["AppDirectoryModule"], _directory_module__WEBPACK_IMPORTED_MODULE_1__["AppDirectoryModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_e"], "XSRF-TOKEN", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_common_http_http_f"], "X-XSRF-TOKEN", [])]);
+      }, [_angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_d"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["XhrFactory"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_d"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpXhrBackend"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpXhrBackend"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_21__["XhrFactory"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpBackend"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpXhrBackend"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpHandler"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵHttpInterceptingHandler"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpBackend"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpClient"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpClient"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpHandler"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_forms_forms_o"], _angular_forms__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_forms_forms_o"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_22__["FormBuilder"], _angular_forms__WEBPACK_IMPORTED_MODULE_22__["FormBuilder"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["Overlay"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["Overlay"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["ScrollStrategyOptions"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["OverlayContainer"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["OverlayPositionBuilder"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["OverlayKeyboardDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_common__WEBPACK_IMPORTED_MODULE_20__["DOCUMENT"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_24__["Directionality"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_20__["Location"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["ɵc"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["ɵd"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["Overlay"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MAT_DIALOG_SCROLL_STRATEGY"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["Overlay"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MatDialog"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MatDialog"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["Overlay"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_20__["Location"]], [2, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MAT_DIALOG_DEFAULT_OPTIONS"]], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MAT_DIALOG_SCROLL_STRATEGY"], [3, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MatDialog"]], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["OverlayContainer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common__WEBPACK_IMPORTED_MODULE_20__["CommonModule"], _angular_common__WEBPACK_IMPORTED_MODULE_20__["CommonModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpClientXsrfModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpClientXsrfModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpClientModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpClientModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_forms_forms_d"], _angular_forms__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_forms_forms_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_22__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_22__["FormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵg"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵg"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵh"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵh"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["OverlayWidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["OverlayWidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵo"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵo"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵm"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵm"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵp"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵp"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵq"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵq"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_24__["BidiModule"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_24__["BidiModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_27__["PlatformModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_27__["PlatformModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_28__["ScrollingModule"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_28__["ScrollingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵr"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵr"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵs"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵs"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵt"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵt"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵu"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵu"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵv"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵv"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵx"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵx"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵy"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵy"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["FormControlWidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["FormControlWidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["FileDropModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["FileDropModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵba"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵba"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵz"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵz"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵbb"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵbb"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵbc"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵbc"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵbd"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵbd"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵbe"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["ɵbe"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["GeneralWidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["GeneralWidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["PageControlWidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["PageControlWidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["WidgetsModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["WidgetsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_22__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_22__["ReactiveFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_29__["EditorModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_29__["EditorModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_30__["TextFieldModule"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_30__["TextFieldModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["DynamicFormComponentModule"], _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_26__["DynamicFormComponentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_date_picker__WEBPACK_IMPORTED_MODULE_31__["ADatePickerModule"], _acaprojects_ngx_date_picker__WEBPACK_IMPORTED_MODULE_31__["ADatePickerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_32__["ACustomEventsModule"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_32__["ACustomEventsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_33__["ACheckboxModule"], _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_33__["ACheckboxModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_34__["ADynamicFormsModule"], _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_34__["ADynamicFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_material_core__WEBPACK_IMPORTED_MODULE_35__["MatCommonModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_35__["MatCommonModule"], [[2, _angular_material_core__WEBPACK_IMPORTED_MODULE_35__["MATERIAL_SANITY_CHECKS"]], [2, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_36__["HAMMER_LOADER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_material_core__WEBPACK_IMPORTED_MODULE_35__["MatRippleModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_35__["MatRippleModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_material_button__WEBPACK_IMPORTED_MODULE_37__["MatButtonModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_37__["MatButtonModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_38__["PortalModule"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_38__["PortalModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["OverlayModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_23__["OverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_39__["MatSnackBarModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_39__["MatSnackBarModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MatDialogModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_25__["MatDialogModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_components_shared_module__WEBPACK_IMPORTED_MODULE_40__["SharedComponentModule"], _shared_components_shared_module__WEBPACK_IMPORTED_MODULE_40__["SharedComponentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _directory_module__WEBPACK_IMPORTED_MODULE_1__["AppDirectoryModule"], _directory_module__WEBPACK_IMPORTED_MODULE_1__["AppDirectoryModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_e"], "XSRF-TOKEN", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_common_http_http_f"], "X-XSRF-TOKEN", [])]);
     });
     /***/
 
@@ -303,9 +383,11 @@
     /*! ./directory.component */
     "./src/app/shell/directory/directory.component.ts");
 
-    const COMPONENTS = [_directory_component__WEBPACK_IMPORTED_MODULE_0__["DirectoryComponent"]];
+    var COMPONENTS = [_directory_component__WEBPACK_IMPORTED_MODULE_0__["DirectoryComponent"]];
 
-    class AppDirectoryModule {}
+    var AppDirectoryModule = function AppDirectoryModule() {
+      _classCallCheck(this, AppDirectoryModule);
+    };
     /***/
 
   }
