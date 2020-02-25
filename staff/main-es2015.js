@@ -19408,7 +19408,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1582598094000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1582602674000);
 
 
 /***/ }),
@@ -21899,7 +21899,7 @@ function formatDuration(duration) {
     return _utility_class__WEBPACK_IMPORTED_MODULE_1__["Utils"].humaniseDuration(duration);
 }
 /** Human readable names of applicable recurrence periods */
-const RECURRENCE_PERIODS = ['None', 'Daily', 'Weekly', 'Biweekly', 'Monthly', 'Yearly'];
+const RECURRENCE_PERIODS = ['None', 'Daily', 'Weekly', 'Biweekly', 'Monthly'];
 /**
  * Create human readable string for recurrence metadata
  * @param value
