@@ -225,8 +225,7 @@
                             "simple": false,
                             "no_edit": true,
                             "description": "",
-                            "type": "action",
-                            "hide": true
+                            "type": "action"
                         }
                     ]
                 },
