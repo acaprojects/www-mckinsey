@@ -1499,6 +1499,9 @@ class BookingMainFlowCateringListItemComponent extends _shared_globals_base_dire
         else if (this.parent && this.parent.items) {
             const items = this.items.value || [];
             const parent = items.find(an_item => this.parent.id === an_item.id);
+            if (!parent) {
+                return;
+            }
             const item = parent.items.find(an_item => an_item.id === this.item.id);
             if (item) {
                 this.item.setAmount(item.amount);

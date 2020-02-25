@@ -4052,6 +4052,10 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
               return _this17.parent.id === an_item.id;
             });
 
+            if (!parent) {
+              return;
+            }
+
             var _item = parent.items.find(function (an_item) {
               return an_item.id === _this17.item.id;
             });
