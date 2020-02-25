@@ -6409,6 +6409,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
       }, {
         key: "book",
         value: function book(room) {
+          var _this31 = this;
+
           var opened = false;
           this.timeout('opened', function () {
             return opened = true;
@@ -6449,6 +6451,22 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
               date: this.show_time
             }
           });
+
+          ref.componentInstance.event.subscribe(function (event) {
+            if (event.reason === 'done' && event.metadata === 'new') {
+              localStorage.setItem('STAFF.booking_form', JSON.stringify({
+                id: 'ad-hoc',
+                room: [Object.assign({}, room, {
+                  bookings: []
+                })],
+                date: _this31.show_time
+              }));
+
+              _this31.service.navigate(['/book']);
+
+              ref.close();
+            }
+          });
         }
       }, {
         key: "check",
@@ -6475,7 +6493,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
       }, {
         key: "focusUser",
         value: function focusUser(user) {
-          var _this31 = this;
+          var _this32 = this;
 
           if (user) {
             this.model.found_item = null;
@@ -6484,7 +6502,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
             if (user.type === 'role') {
               this.updatePointsOfInterest();
               this.service.Users.show(user.email).then(function (u) {
-                _this31.locate(u);
+                _this32.locate(u);
               }, function (err) {
                 return null;
               });
@@ -6496,19 +6514,19 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
       }, {
         key: "locate",
         value: function locate(user) {
-          var _this32 = this;
+          var _this33 = this;
 
           user.location = null;
           this.model.found_user = user;
           this.service.Users.location(user.id, user.win_id).then(function (location) {
-            _this32.model.found_user.location = location;
+            _this33.model.found_user.location = location;
             var found = false;
 
-            var bld = _this32.service.Buildings.current(); // Cross building location finding is enabled
+            var bld = _this33.service.Buildings.current(); // Cross building location finding is enabled
 
 
-            if (_this32.model.settings.cblf) {
-              var level = _this32.service.Buildings.getLevel(location.level);
+            if (_this33.model.settings.cblf) {
+              var level = _this33.service.Buildings.getLevel(location.level);
 
               if (level) {
                 var _iteratorNormalCompletion22 = true;
@@ -6516,11 +6534,11 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
                 var _iteratorError22 = undefined;
 
                 try {
-                  for (var _iterator22 = (bld ? bld.levels : _this32.model.level.list)[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
+                  for (var _iterator22 = (bld ? bld.levels : _this33.model.level.list)[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
                     var lvl = _step22.value;
 
                     if (level.id === lvl.id) {
-                      _this32.setLevel(lvl);
+                      _this33.setLevel(lvl);
 
                       found = true;
                       break;
@@ -6543,10 +6561,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
                 }
 
                 if (!found) {
-                  _this32.setLevel(level, false, true);
+                  _this33.setLevel(level, false, true);
 
-                  _this32.model.found_user.location.building = _this32.service.Buildings.get(level.bld_id);
-                  _this32.model.found_user.external = true;
+                  _this33.model.found_user.location.building = _this33.service.Buildings.get(level.bld_id);
+                  _this33.model.found_user.external = true;
                   found = true;
                 }
               }
@@ -6557,11 +6575,11 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
               var _iteratorError23 = undefined;
 
               try {
-                for (var _iterator23 = (bld ? bld.levels : _this32.model.level.list)[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
+                for (var _iterator23 = (bld ? bld.levels : _this33.model.level.list)[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
                   var _lvl = _step23.value;
 
                   if (location.level === _lvl.id) {
-                    _this32.setLevel(_lvl);
+                    _this33.setLevel(_lvl);
 
                     found = true;
                     break;
@@ -6584,7 +6602,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
             }
 
             if (found) {
-              _this32.model.map.focus = {
+              _this33.model.map.focus = {
                 coordinates: !location.fixed ? {
                   x: location.x,
                   y: location.y
@@ -6593,25 +6611,25 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
                 zoom: 0
               };
             } else {
-              _this32.model.found_user.location = null;
-              _this32.model.found_user.external = true;
+              _this33.model.found_user.location = null;
+              _this33.model.found_user.external = true;
             }
 
-            _this32.updatePointsOfInterest();
+            _this33.updatePointsOfInterest();
 
-            _this32.timeout('focus', function () {
-              return _this32.model.map.zoom = 100;
+            _this33.timeout('focus', function () {
+              return _this33.model.map.zoom = 100;
             });
           }, function (err) {
-            _this32.model.found_user.location = null;
+            _this33.model.found_user.location = null;
 
-            _this32.updatePointsOfInterest();
+            _this33.updatePointsOfInterest();
           });
         }
       }, {
         key: "focusSpace",
         value: function focusSpace(item) {
-          var _this33 = this;
+          var _this34 = this;
 
           if (!this.model || !this.model.level || !this.model.level.list || !item) {
             return;
@@ -6632,7 +6650,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
                 if (lvl.id === level.id) {
                   this.setLevel(level);
                   this.timeout('focus_space', function () {
-                    return _this33.model.map.focus = {
+                    return _this34.model.map.focus = {
                       id: focus,
                       zoom: 150
                     };
@@ -6656,10 +6674,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
             }
 
             this.timeout('update_space', function () {
-              _this33.model.found_user = null;
-              _this33.model.focus_room = item;
+              _this34.model.found_user = null;
+              _this34.model.focus_room = item;
 
-              _this33.updatePointsOfInterest();
+              _this34.updatePointsOfInterest();
             }, 20);
           }
         }
@@ -6675,25 +6693,25 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
       }, {
         key: "updatePointsOfInterest",
         value: function updatePointsOfInterest() {
-          var _this34 = this;
+          var _this35 = this;
 
           this.timeout('poi', function () {
-            _this34.model.map.poi = [];
-            _this34.model.toggle = !_this34.model.toggle;
+            _this35.model.map.poi = [];
+            _this35.model.toggle = !_this35.model.toggle;
 
-            if (_this34.model.found_user && _this34.model.found_user.location && _this34.model.found_user.location.level) {
-              if (_this34.model.found_user.location.level === _this34.model.level.active.id) {
-                var loc = _this34.model.found_user.location;
+            if (_this35.model.found_user && _this35.model.found_user.location && _this35.model.found_user.location.level) {
+              if (_this35.model.found_user.location.level === _this35.model.level.active.id) {
+                var loc = _this35.model.found_user.location;
 
-                _this34.model.map.poi.push({
-                  id: loc.map_id || "person-".concat(_this34.model.found_user.id),
+                _this35.model.map.poi.push({
+                  id: loc.map_id || "person-".concat(_this35.model.found_user.id),
                   content: loc.fixed ? _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapPinComponent"] : _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapRangeComponent"],
                   coordinates: !loc.fixed ? {
                     x: loc.x,
                     y: loc.y
                   } : null,
                   data: {
-                    text: "".concat(_this34.model.found_user.name, " is here"),
+                    text: "".concat(_this35.model.found_user.name, " is here"),
                     back: '#F44336',
                     diameter: loc.confidence * 2
                   }
@@ -6701,14 +6719,14 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
               }
             }
 
-            if (_this34.model.info) {
-              var room = _this34.model.info;
-              var today = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this34.show_time).endOf('m');
+            if (_this35.model.info) {
+              var room = _this35.model.info;
+              var today = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this35.show_time).endOf('m');
               var bookings = room.bookings.filter(function (b) {
                 return dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).isSame(today, 'd') || b.all_day;
               });
 
-              var block = _this34.service.Bookings.getNextFreeBlock(bookings, today.valueOf(), 2);
+              var block = _this35.service.Bookings.getNextFreeBlock(bookings, today.valueOf(), 2);
 
               var current = bookings.find(function (b) {
                 var start = dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).subtract(b.setup, 's');
@@ -6718,50 +6736,50 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
               var next = bookings.find(function (b) {
                 return today.isBefore(dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date), 'm');
               });
-              var endOfDay = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this34.show_time).endOf('d');
+              var endOfDay = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this35.show_time).endOf('d');
 
-              var bld = _this34.service.Buildings.current();
+              var bld = _this35.service.Buildings.current();
 
               if (current && block && block.start !== -1) {
-                _this34.model.selected_time = "Booked until ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.start).format('h:mmA'));
+                _this35.model.selected_time = "Booked until ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.start).format('h:mmA'));
 
                 if (current.all_day || current.duration > 23 * 60) {
-                  _this34.model.selected_time = 'Booked all day';
+                  _this35.model.selected_time = 'Booked all day';
                 }
               } else if (current) {
-                _this34.model.selected_time = "Booked until ".concat(current.display.end);
+                _this35.model.selected_time = "Booked until ".concat(current.display.end);
 
                 if (current.all_day || current.duration > 23 * 60) {
-                  _this34.model.selected_time = 'Booked all day';
+                  _this35.model.selected_time = 'Booked all day';
                 }
               } else if (block && block.end >= 0 && dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).isSame(endOfDay, 'm')) {
                 var end = dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end);
                 var dur = Math.floor(end.diff(today, 'm'));
-                _this34.model.selected_time = "Free until ".concat(end.format('h:mmA'));
+                _this35.model.selected_time = "Free until ".concat(end.format('h:mmA'));
 
                 if (dur < 30) {
                   if (block.end < 0 || !dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).isSame(endOfDay, 'm')) {
-                    _this34.model.selected_time += "<br>Next available at tomorrow";
+                    _this35.model.selected_time += "<br>Next available at tomorrow";
                   } else {
-                    var next_blk = _this34.service.Bookings.getNextFreeBlock(bookings, block.end);
+                    var next_blk = _this35.service.Bookings.getNextFreeBlock(bookings, block.end);
 
-                    _this34.model.selected_time += "<br>Next available at ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(next_blk.start).format('h:mmA'));
+                    _this35.model.selected_time += "<br>Next available at ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(next_blk.start).format('h:mmA'));
                   }
                 }
               } else if (!current && next && block) {
-                _this34.model.selected_time = "Free until ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).format('h:mmA'));
+                _this35.model.selected_time = "Free until ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).format('h:mmA'));
 
-                var _next_blk = _this34.service.Bookings.getNextFreeBlock(bookings, next.date);
+                var _next_blk = _this35.service.Bookings.getNextFreeBlock(bookings, next.date);
 
                 if (block.start > 0) {
-                  _this34.model.selected_time += "<br>Next available at ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(_next_blk.start).format('h:mmA'));
+                  _this35.model.selected_time += "<br>Next available at ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(_next_blk.start).format('h:mmA'));
                 }
               } else {
-                _this34.model.selected_time = "Free today";
+                _this35.model.selected_time = "Free today";
               }
 
               var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_9__["rulesForSpace"])({
-                user: _this34.service.Users.current(),
+                user: _this35.service.Users.current(),
                 space: room,
                 time: today.valueOf(),
                 duration: 60,
@@ -6769,12 +6787,12 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
               });
 
               if (!rules.auto_approve) {
-                _this34.model.selected_time += "<br>Available by request";
+                _this35.model.selected_time += "<br>Available by request";
               }
 
-              _this34.model.display = null;
+              _this35.model.display = null;
 
-              _this34.model.map.poi.push({
+              _this35.model.map.poi.push({
                 id: "area-".concat(room.map_id, "-status"),
                 content: _shared_components_room_info_room_info_component__WEBPACK_IMPORTED_MODULE_6__["RoomInfoComponent"],
                 data: {
@@ -6782,39 +6800,39 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
                     bookable: room.bookable && !rules.hide
                   }),
                   display: {
-                    time: _this34.model.selected_time
+                    time: _this35.model.selected_time
                   },
                   available: !current
                 }
               });
             }
 
-            if (_this34.model.desk) {
-              _this34.model.map.poi.push({
-                id: _this34.model.desk,
+            if (_this35.model.desk) {
+              _this35.model.map.poi.push({
+                id: _this35.model.desk,
                 content: _shared_components_desk_info_desk_info_component__WEBPACK_IMPORTED_MODULE_8__["DeskInfoComponent"],
                 data: {
-                  system: _this34.model.system,
-                  desk_id: _this34.model.desk
+                  system: _this35.model.system,
+                  desk_id: _this35.model.desk
                 }
               });
             }
 
-            if (_this34.model.focus_room && _this34.model.focus_room.level.id === _this34.model.level.active.id) {
-              var rm = _this34.model.focus_room;
+            if (_this35.model.focus_room && _this35.model.focus_room.level.id === _this35.model.level.active.id) {
+              var rm = _this35.model.focus_room;
 
-              _this34.model.map.poi.push({
+              _this35.model.map.poi.push({
                 id: "".concat(rm.prefix === false ? '' : 'area-').concat(rm.map_id).concat(rm.bookable ? '-status' : '-status'),
                 prefix: 'pin',
                 content: _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapPinComponent"],
                 data: {
-                  back: _this34.model.colours.rooms.pin || '#03A9F4',
-                  text: _this34.model.focus_room.name
+                  back: _this35.model.colours.rooms.pin || '#03A9F4',
+                  text: _this35.model.focus_room.name
                 }
               });
             }
 
-            _this34.clearTimeout('poi');
+            _this35.clearTimeout('poi');
           });
         }
       }, {
@@ -6834,20 +6852,20 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
       }, {
         key: "timeChange",
         value: function timeChange(time) {
-          var _this35 = this;
+          var _this36 = this;
 
           this.timeout('time_change', function () {
-            _this35.show_time = time;
+            _this36.show_time = time;
             var now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
 
-            if (!dayjs__WEBPACK_IMPORTED_MODULE_5__(_this35.show_time).isSame(now, 'd')) {
-              var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this35.show_time).startOf('d');
+            if (!dayjs__WEBPACK_IMPORTED_MODULE_5__(_this36.show_time).isSame(now, 'd')) {
+              var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this36.show_time).startOf('d');
               var end = dayjs__WEBPACK_IMPORTED_MODULE_5__(date).endOf('d');
 
-              _this35.service.Rooms.query({
+              _this36.service.Rooms.query({
                 from: date.unix(),
                 to: end.unix(),
-                zone_ids: _this35.model.level.active.id,
+                zone_ids: _this36.model.level.active.id,
                 show_declined: false
               }).then(function (rooms) {
                 var _iteratorNormalCompletion25 = true;
@@ -6858,7 +6876,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
                   var _loop4 = function _loop4() {
                     var space = _step25.value;
 
-                    var match = _this35.model.rooms.find(function (i) {
+                    var match = _this36.model.rooms.find(function (i) {
                       return i.id === space.id;
                     });
 
@@ -6872,7 +6890,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
                       match.raw_bookings = bookings;
 
-                      _this35.processBookings(match);
+                      _this36.processBookings(match);
                     }
                   };
 
@@ -6894,11 +6912,11 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
                   }
                 }
 
-                _this35.updateStyles();
+                _this36.updateStyles();
               });
             }
 
-            _this35.updateStyles();
+            _this36.updateStyles();
           }, 100);
         }
       }]);

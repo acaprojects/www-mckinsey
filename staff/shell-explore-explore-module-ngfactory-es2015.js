@@ -2439,6 +2439,13 @@ class ExploreComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_
                 date: this.show_time
             }
         });
+        ref.componentInstance.event.subscribe((event) => {
+            if (event.reason === 'done' && event.metadata === 'new') {
+                localStorage.setItem('STAFF.booking_form', JSON.stringify({ id: 'ad-hoc', room: [Object.assign({}, room, { bookings: [] })], date: this.show_time }));
+                this.service.navigate(['/book']);
+                ref.close();
+            }
+        });
     }
     check(e) {
         if (e.type === 'warning' && this.model.found_user && this.model.found_user.location &&
