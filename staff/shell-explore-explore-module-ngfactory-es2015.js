@@ -1762,7 +1762,7 @@ class ExploreTimelineComponent extends _shared_globals_base_directive__WEBPACK_I
         if (this.date_offset) {
             now.hour(7).minute(0);
         }
-        const diff = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.display_value).diff(now, 'm');
+        const diff = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).diff(now, 'm');
         if (diff < 0) {
             const start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
             start.minute(Math.ceil(start.minute() / 5) * 5);

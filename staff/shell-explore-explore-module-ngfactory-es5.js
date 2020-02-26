@@ -4643,7 +4643,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
             now.hour(7).minute(0);
           }
 
-          var diff = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.display_value).diff(now, 'm');
+          var diff = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).diff(now, 'm');
 
           if (diff < 0) {
             var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
