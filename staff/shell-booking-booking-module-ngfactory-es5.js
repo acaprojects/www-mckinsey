@@ -3599,7 +3599,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         _ck(_v, 2, 0, currVal_1);
       }, function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.show_list ? "show" : "hide";
+        var currVal_0 = _co.show_list || _co.item.must_select && _co.item.amount ? "show" : "hide";
 
         _ck(_v, 0, 0, currVal_0);
       });

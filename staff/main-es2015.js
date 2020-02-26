@@ -3024,8 +3024,8 @@ class ExploreBookingModalComponent extends _shared_globals_base_directive__WEBPA
      */
     addEquipment() {
         return new Promise((resolve, reject) => {
-            const empty = { control: { value: '' } };
-            const notes = this.form_fields.find(i => i.key === 'equipment');
+            const empty = { control: { value: '' }, setValue: () => null };
+            const notes = this.form_fields.find(i => i.key === 'equipment') || empty;
             const expected_attendees = this.form_fields.find(i => i.key === 'expected_attendees');
             const cost_code = this.form_fields.find(i => i.key === 'equipment_code');
             const ref = this._dialog.open(_shell_booking_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_8__["BookingEquipmentDetailsModalComponent"], {
@@ -3038,21 +3038,22 @@ class ExploreBookingModalComponent extends _shared_globals_base_directive__WEBPA
                     cost_code: (cost_code || empty).control.value
                 }
             });
-            ref.componentInstance.event.subscribe(event => {
+            this.subscription('event', ref.componentInstance.event.subscribe(event => {
                 if (event.reason === 'done') {
                     if (notes) {
-                        notes.setValue(event.data.notes);
+                        notes.setValue(ref.componentInstance.notes);
                     }
                     if (cost_code) {
-                        cost_code.setValue(event.data.cost_code);
+                        cost_code.setValue(ref.componentInstance.cost_code);
                     }
                     resolve();
                 }
                 else {
                     reject();
                 }
+                this.unsub('event');
                 ref.close();
-            });
+            }));
         });
     }
     /**
@@ -19408,7 +19409,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1582687659000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1582689276000);
 
 
 /***/ }),
