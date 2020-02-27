@@ -5411,14 +5411,20 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         return ad;
       }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, {
         event: "touchrelease"
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 5, "a-checkbox", [["class", "dark"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_ACheckboxComponent_0"], _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_ACheckboxComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 49152, null, 0, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_6__["ACheckboxComponent"], [], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NG_VALUE_ACCESSOR"], function (p0_0) {
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 5, "a-checkbox", [["klass", "dark"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_ACheckboxComponent_0"], _node_modules_acaprojects_ngx_checkbox_acaprojects_ngx_checkbox_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_ACheckboxComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 49152, null, 0, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_6__["ACheckboxComponent"], [], {
+        klass: [0, "klass"]
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NG_VALUE_ACCESSOR"], function (p0_0) {
         return [p0_0];
       }, [_acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_6__["ACheckboxComponent"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgModel"], [[8, null], [8, null], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NG_VALUE_ACCESSOR"]]], {
         model: [0, "model"]
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgControl"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 6, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 1, "div", [["class", "code"]], [[8, "title", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](11, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 1, "div", [["class", "name"]], [[8, "title", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](13, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 1, "div", [["class", "address"]], [[8, "title", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](15, null, ["", ""]))], function (_ck, _v) {
-        var currVal_7 = _v.context.$implicit.selected;
+        var currVal_7 = "dark";
 
-        _ck(_v, 6, 0, currVal_7);
+        _ck(_v, 4, 0, currVal_7);
+
+        var currVal_8 = _v.context.$implicit.selected;
+
+        _ck(_v, 6, 0, currVal_8);
       }, function (_ck, _v) {
         var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 8).ngClassUntouched;
 
@@ -5436,29 +5442,29 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
         _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
 
-        var currVal_8 = _v.context.$implicit.code;
-
-        _ck(_v, 10, 0, currVal_8);
-
         var currVal_9 = _v.context.$implicit.code;
 
-        _ck(_v, 11, 0, currVal_9);
+        _ck(_v, 10, 0, currVal_9);
 
-        var currVal_10 = _v.context.$implicit.name;
+        var currVal_10 = _v.context.$implicit.code;
 
-        _ck(_v, 12, 0, currVal_10);
+        _ck(_v, 11, 0, currVal_10);
 
         var currVal_11 = _v.context.$implicit.name;
 
-        _ck(_v, 13, 0, currVal_11);
+        _ck(_v, 12, 0, currVal_11);
 
-        var currVal_12 = _v.context.$implicit.address;
+        var currVal_12 = _v.context.$implicit.name;
 
-        _ck(_v, 14, 0, currVal_12);
+        _ck(_v, 13, 0, currVal_12);
 
         var currVal_13 = _v.context.$implicit.address;
 
-        _ck(_v, 15, 0, currVal_13);
+        _ck(_v, 14, 0, currVal_13);
+
+        var currVal_14 = _v.context.$implicit.address;
+
+        _ck(_v, 15, 0, currVal_14);
       });
     }
 
