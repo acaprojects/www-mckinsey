@@ -57,9 +57,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_1___default =
-    /*#__PURE__*/
-    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_1__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_1__);
 
     function generateCateringOrderFormFields(order) {
       var form = new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormGroup"]({
@@ -218,9 +216,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../shared/globals/base.directive */
     "./src/app/shared/globals/base.directive.ts");
 
-    var BookingComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_) {
+    var BookingComponent = /*#__PURE__*/function (_shared_globals_base_) {
       _inherits(BookingComponent, _shared_globals_base_);
 
       function BookingComponent(service) {
@@ -963,9 +959,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../../shared/globals/base.directive */
     "./src/app/shared/globals/base.directive.ts");
 
-    var BookingMainFlowCateringCategoryListComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_2) {
+    var BookingMainFlowCateringCategoryListComponent = /*#__PURE__*/function (_shared_globals_base_2) {
       _inherits(BookingMainFlowCateringCategoryListComponent, _shared_globals_base_2);
 
       function BookingMainFlowCateringCategoryListComponent(_service) {
@@ -1436,9 +1430,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
 
-    var BookingMainFlowCateringOrderComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_3) {
+    var BookingMainFlowCateringOrderComponent = /*#__PURE__*/function (_shared_globals_base_3) {
       _inherits(BookingMainFlowCateringOrderComponent, _shared_globals_base_3);
 
       function BookingMainFlowCateringOrderComponent(_service) {
@@ -2426,9 +2418,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_3___default =
-    /*#__PURE__*/
-    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
 
 
@@ -2448,9 +2438,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../services/data/catering/catering.utilities */
     "./src/app/services/data/catering/catering.utilities.ts");
 
-    var BookingMainFlowCateringComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_4) {
+    var BookingMainFlowCateringComponent = /*#__PURE__*/function (_shared_globals_base_4) {
       _inherits(BookingMainFlowCateringComponent, _shared_globals_base_4);
 
       function BookingMainFlowCateringComponent(_service) {
@@ -3087,9 +3075,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
 
-    var BookingMainFlowCateringItemListComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_5) {
+    var BookingMainFlowCateringItemListComponent = /*#__PURE__*/function (_shared_globals_base_5) {
       _inherits(BookingMainFlowCateringItemListComponent, _shared_globals_base_5);
 
       function BookingMainFlowCateringItemListComponent() {
@@ -3823,9 +3809,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../../../services/data/catering/catering-item.class */
     "./src/app/services/data/catering/catering-item.class.ts");
 
-    var BookingMainFlowCateringListItemComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_6) {
+    var BookingMainFlowCateringListItemComponent = /*#__PURE__*/function (_shared_globals_base_6) {
       _inherits(BookingMainFlowCateringListItemComponent, _shared_globals_base_6);
 
       function BookingMainFlowCateringListItemComponent(_service) {
@@ -4440,13 +4424,9 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_3___default =
-    /*#__PURE__*/
-    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
 
-    var BookingCateringOrderItemComponent =
-    /*#__PURE__*/
-    function () {
+    var BookingCateringOrderItemComponent = /*#__PURE__*/function () {
       function BookingCateringOrderItemComponent(_service) {
         _classCallCheck(this, BookingCateringOrderItemComponent);
 
@@ -5029,9 +5009,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../../services/data/catering/catering-order.class */
     "./src/app/services/data/catering/catering-order.class.ts");
 
-    var CateringOrderListComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_7) {
+    var CateringOrderListComponent = /*#__PURE__*/function (_shared_globals_base_7) {
       _inherits(CateringOrderListComponent, _shared_globals_base_7);
 
       function CateringOrderListComponent(_router) {
@@ -6025,9 +6003,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_7___default =
-    /*#__PURE__*/
-    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_7__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_7__);
     /* harmony import */
 
 
@@ -6035,9 +6011,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../shared/utility.class */
     "./src/app/shared/utility.class.ts");
 
-    var BookingMainFlowFindSpaceComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_8) {
+    var BookingMainFlowFindSpaceComponent = /*#__PURE__*/function (_shared_globals_base_8) {
       _inherits(BookingMainFlowFindSpaceComponent, _shared_globals_base_8);
 
       function BookingMainFlowFindSpaceComponent(_service) {
@@ -6753,9 +6727,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../../overlays/view-room-modal/view-room-modal.component */
     "./src/app/overlays/view-room-modal/view-room-modal.component.ts");
 
-    var BookingMainFlowSpaceItemComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_9) {
+    var BookingMainFlowSpaceItemComponent = /*#__PURE__*/function (_shared_globals_base_9) {
       _inherits(BookingMainFlowSpaceItemComponent, _shared_globals_base_9);
 
       function BookingMainFlowSpaceItemComponent(_service, _dialog) {
@@ -7121,9 +7093,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../overlays/room-select-modal/room-select-modal.component */
     "./src/app/overlays/room-select-modal/room-select-modal.component.ts");
 
-    var BookingMainFlowFormComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_10) {
+    var BookingMainFlowFormComponent = /*#__PURE__*/function (_shared_globals_base_10) {
       _inherits(BookingMainFlowFormComponent, _shared_globals_base_10);
 
       function BookingMainFlowFormComponent(_service, _dialog) {
@@ -7744,13 +7714,9 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_15___default =
-    /*#__PURE__*/
-    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_15__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_15__);
 
-    var BookingMainFlowComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_11) {
+    var BookingMainFlowComponent = /*#__PURE__*/function (_shared_globals_base_11) {
       _inherits(BookingMainFlowComponent, _shared_globals_base_11);
 
       function BookingMainFlowComponent(_service, _route, _router, _dialog) {

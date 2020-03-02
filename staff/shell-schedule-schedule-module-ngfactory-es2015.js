@@ -174,6 +174,10 @@ class ScheduleEventListComponent extends _shared_globals_base_directive__WEBPACK
     ngOnDestroy() {
         super.ngOnDestroy();
         this.clearInterval('update');
+        if (this.view_ref) {
+            this.view_ref.close();
+            this.view_ref = null;
+        }
     }
     loadBookings() {
         if (this.model.loading) {
@@ -413,9 +417,12 @@ class ScheduleEventListComponent extends _shared_globals_base_directive__WEBPACK
         }, 50);
     }
     view(item) {
+        if (this.view_ref) {
+            this.view_ref.close();
+        }
         this.model.mainIndex = this.model.bookings.indexOf(item);
         const idx = this.model.mainIndex;
-        const ref = this._dialog.open(_overlays_meeting_details_overlay_meeting_details_overlay_component__WEBPACK_IMPORTED_MODULE_8__["MeetingDetailsOverlayComponent"], {
+        this.view_ref = this._dialog.open(_overlays_meeting_details_overlay_meeting_details_overlay_component__WEBPACK_IMPORTED_MODULE_8__["MeetingDetailsOverlayComponent"], {
             maxHeight: 'auto',
             maxWidth: 'auto',
             width: 'auto',
@@ -430,7 +437,7 @@ class ScheduleEventListComponent extends _shared_globals_base_directive__WEBPACK
                 is_last: idx === this.model.bookings.length - 1
             }
         });
-        this.subscription('details-modal', ref.componentInstance.event.subscribe(event => {
+        this.subscription('details-modal', this.view_ref.componentInstance.event.subscribe(event => {
             if (event.reason === 'action') {
                 switch (event.metadata) {
                     case 'next':
@@ -442,7 +449,10 @@ class ScheduleEventListComponent extends _shared_globals_base_directive__WEBPACK
                 }
             }
         }));
-        ref.afterClosed().subscribe(() => this.unsub('details-modal'));
+        this.view_ref.afterClosed().subscribe(() => {
+            this.unsub('details-modal');
+            this.view_ref = null;
+        });
     }
     checkin() {
         const index = this.model.mainIndex;
@@ -453,20 +463,24 @@ class ScheduleEventListComponent extends _shared_globals_base_directive__WEBPACK
     }
     nextBooking() {
         const index = this.model.mainIndex;
-        if (index < this.model.bookings.length - 1) {
-            this.view(this.model.bookings[index + 1]);
+        const current_booking = this.model.bookings[index];
+        const next_booking = this.model.bookings[index + 1];
+        if (index < this.model.bookings.length - 1 && next_booking && next_booking.title) {
+            this.view(next_booking);
         }
         else {
-            this.view(this.model.bookings[index]);
+            this.view(current_booking);
         }
     }
     previousBooking() {
         const index = this.model.mainIndex;
-        if (index > 0) {
-            this.view(this.model.bookings[index - 1]);
+        const current_booking = this.model.bookings[index];
+        const previous_booking = this.model.bookings[index - 1];
+        if (index > 0 && previous_booking && previous_booking.title) {
+            this.view(previous_booking);
         }
         else {
-            this.view(this.model.bookings[index]);
+            this.view(current_booking);
         }
     }
 }

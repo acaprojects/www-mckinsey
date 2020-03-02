@@ -504,9 +504,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_6___default =
-    /*#__PURE__*/
-    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
     /* harmony import */
 
 
@@ -520,9 +518,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /*! ../../../overlays/meeting-details-overlay/meeting-details-overlay.component */
     "./src/app/overlays/meeting-details-overlay/meeting-details-overlay.component.ts");
 
-    var ScheduleEventListComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_) {
+    var ScheduleEventListComponent = /*#__PURE__*/function (_shared_globals_base_) {
       _inherits(ScheduleEventListComponent, _shared_globals_base_);
 
       function ScheduleEventListComponent(service, _dialog) {
@@ -601,6 +597,11 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
           _get(_getPrototypeOf(ScheduleEventListComponent.prototype), "ngOnDestroy", this).call(this);
 
           this.clearInterval('update');
+
+          if (this.view_ref) {
+            this.view_ref.close();
+            this.view_ref = null;
+          }
         }
       }, {
         key: "loadBookings",
@@ -970,10 +971,13 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
         value: function view(item) {
           var _this11 = this;
 
+          if (this.view_ref) {
+            this.view_ref.close();
+          }
+
           this.model.mainIndex = this.model.bookings.indexOf(item);
           var idx = this.model.mainIndex;
-
-          var ref = this._dialog.open(_overlays_meeting_details_overlay_meeting_details_overlay_component__WEBPACK_IMPORTED_MODULE_8__["MeetingDetailsOverlayComponent"], {
+          this.view_ref = this._dialog.open(_overlays_meeting_details_overlay_meeting_details_overlay_component__WEBPACK_IMPORTED_MODULE_8__["MeetingDetailsOverlayComponent"], {
             maxHeight: 'auto',
             maxWidth: 'auto',
             width: 'auto',
@@ -988,8 +992,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
               is_last: idx === this.model.bookings.length - 1
             }
           });
-
-          this.subscription('details-modal', ref.componentInstance.event.subscribe(function (event) {
+          this.subscription('details-modal', this.view_ref.componentInstance.event.subscribe(function (event) {
             if (event.reason === 'action') {
               switch (event.metadata) {
                 case 'next':
@@ -1004,8 +1007,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
               }
             }
           }));
-          ref.afterClosed().subscribe(function () {
-            return _this11.unsub('details-modal');
+          this.view_ref.afterClosed().subscribe(function () {
+            _this11.unsub('details-modal');
+
+            _this11.view_ref = null;
           });
         }
       }, {
@@ -1023,22 +1028,26 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
         key: "nextBooking",
         value: function nextBooking() {
           var index = this.model.mainIndex;
+          var current_booking = this.model.bookings[index];
+          var next_booking = this.model.bookings[index + 1];
 
-          if (index < this.model.bookings.length - 1) {
-            this.view(this.model.bookings[index + 1]);
+          if (index < this.model.bookings.length - 1 && next_booking && next_booking.title) {
+            this.view(next_booking);
           } else {
-            this.view(this.model.bookings[index]);
+            this.view(current_booking);
           }
         }
       }, {
         key: "previousBooking",
         value: function previousBooking() {
           var index = this.model.mainIndex;
+          var current_booking = this.model.bookings[index];
+          var previous_booking = this.model.bookings[index - 1];
 
-          if (index > 0) {
-            this.view(this.model.bookings[index - 1]);
+          if (index > 0 && previous_booking && previous_booking.title) {
+            this.view(previous_booking);
           } else {
-            this.view(this.model.bookings[index]);
+            this.view(current_booking);
           }
         }
       }]);
@@ -1520,9 +1529,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_5___default =
-    /*#__PURE__*/
-    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
     /*
      * @Author: Alex Sorafumo
      * @Date:   2017-05-16 14:12:48
@@ -1531,9 +1538,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
      */
 
 
-    var ScheduleComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_2) {
+    var ScheduleComponent = /*#__PURE__*/function (_shared_globals_base_2) {
       _inherits(ScheduleComponent, _shared_globals_base_2);
 
       function ScheduleComponent(service, route) {

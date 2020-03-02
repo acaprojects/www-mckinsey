@@ -47,9 +47,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /*! ../../shared/globals/base.directive */
     "./src/app/shared/globals/base.directive.ts");
 
-    var DirectoryComponent =
-    /*#__PURE__*/
-    function (_shared_globals_base_) {
+    var DirectoryComponent = /*#__PURE__*/function (_shared_globals_base_) {
       _inherits(DirectoryComponent, _shared_globals_base_);
 
       function DirectoryComponent() {
