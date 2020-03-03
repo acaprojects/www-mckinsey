@@ -6054,11 +6054,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
           }
 
           this.last_query = '';
-
-          if (this.recurr_period) {
-            this.spaces.setValue([]);
-          }
-
           this.subscription('filter', this.filter$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (_) {
             return _this23.search();
           })).subscribe(function (results) {
@@ -8032,6 +8027,13 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
                 recurr_end: 0
               });
             }
+          }));
+          this.subscription('room_value', this.space_list.control.valueChanges.subscribe(function (state) {
+            var recurrence_rooms_field = _this33.form_fields.find(function (i) {
+              return i.key === 'recurrence_rooms';
+            });
+
+            recurrence_rooms_field.setValue([]);
           }));
           var id = (this.form_fields.find(function (i) {
             return i.key === 'id';
