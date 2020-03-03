@@ -2228,9 +2228,6 @@ class BookingMainFlowFindSpaceComponent extends _shared_globals_base_directive__
             return this.timeout('init', () => this.ngOnInit());
         }
         this.last_query = '';
-        if (this.recurr_period) {
-            this.spaces.setValue([]);
-        }
         this.subscription('filter', this.filter$
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(_ => this.search()))
             .subscribe((results) => {
@@ -3294,6 +3291,10 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
                     .find(i => i.key === 'recurrence');
                 recurrence_field.setValue({ recurr_period: 0, recurr_end: 0 });
             }
+        }));
+        this.subscription('room_value', this.space_list.control.valueChanges.subscribe(state => {
+            const recurrence_rooms_field = this.form_fields.find(i => i.key === 'recurrence_rooms');
+            recurrence_rooms_field.setValue([]);
         }));
         const id = (this.form_fields.find(i => i.key === 'id') || empty).control.value;
         this.id = id || !space ? '10' : '';
