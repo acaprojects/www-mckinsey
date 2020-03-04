@@ -2441,7 +2441,11 @@ class ExploreComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_
         });
         ref.componentInstance.event.subscribe((event) => {
             if (event.reason === 'done' && event.metadata === 'new') {
-                localStorage.setItem('STAFF.booking_form', JSON.stringify({ id: 'ad-hoc', room: [Object.assign({}, room, { bookings: [] })], date: this.show_time }));
+                localStorage.setItem('STAFF.booking_form', JSON.stringify({
+                    id: 'ad-hoc',
+                    room: [Object.assign({}, room, { bookings: [], current: null, next: null, raw_bookings: [] })],
+                    date: this.show_time
+                }));
                 this.service.navigate(['/book']);
                 ref.close();
             }
