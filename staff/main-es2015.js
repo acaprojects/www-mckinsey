@@ -4519,7 +4519,10 @@ class MeetingDetailsOverlayComponent extends _shared_globals_base_directive__WEB
         const ref = this._dialog.open(_confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmModalComponent"], Object.assign({}, _confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_4__["CONFIRM_METADATA"], { data: {
                 title: 'Delete meeting',
                 icon: { type: 'icon', class: 'material-icons', content: 'delete' },
-                content: `<p>Are you sure you want to delete this meeting?</p><p>All attendees will be notified.</p>`
+                content: `
+                        <p>Are you sure you want to delete this meeting on ${this.booking.display.long_date}${this.booking.recurrence ? ' from your series' : ''}?</p>
+                        <p>All attendees will be notified.</p>
+                    `
             } }));
         this.subscription('confirm', ref.componentInstance.event.subscribe(event => {
             if (event.reason === 'done') {
@@ -4537,7 +4540,10 @@ class MeetingDetailsOverlayComponent extends _shared_globals_base_directive__WEB
         const ref = this._dialog.open(_confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmModalComponent"], Object.assign({}, _confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_4__["CONFIRM_METADATA"], { data: {
                 title: 'Delete series',
                 icon: { type: 'icon', class: 'material-icons', content: 'delete' },
-                content: `<p>Are you sure you want to delete the series?</p><p>All attendees will be notified.</p>`
+                content: `
+                        <p>All bookings in the series will be deleted. Are you sure you want to delete the series?</p>
+                        <p>All attendees will be notified.</p>
+                    `
             } }));
         this.subscription('confirm', ref.componentInstance.event.subscribe(event => {
             if (event.reason === 'done') {
@@ -8219,7 +8225,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             breakdown: raw_item.breakdown || 0,
             spaces: typeof raw_item.room_id === 'string' ? [raw_item.room_id] : raw_item.room_id,
             recurrence: raw_item.seriesMasterId && raw_item.recurrence ? {
-                period: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["RECURRENCE_PERIODS"].map(i => i.toLowerCase()).indexOf(raw_item.recurrence.pattern.type),
+                period: ['none', 'daily', 'weekly', 'biweekly', 'absoluteMonthly'].indexOf(raw_item.recurrence.pattern.type),
                 end: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.range.endDate).valueOf(),
                 start: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.range.startDate).valueOf(),
                 series_id: raw_item.seriesMasterId
@@ -19448,7 +19454,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583279643000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583283588000);
 
 
 /***/ }),
