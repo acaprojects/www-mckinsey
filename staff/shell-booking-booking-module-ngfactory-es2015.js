@@ -3282,7 +3282,13 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
         const all_day = this.form_fields.find(i => i.key === 'all_day') || empty;
         time.setDisabled(this.duration > 450);
         const start = time.children.find(i => i.key === 'start') || empty;
+        const duration = time.children.find(i => i.key === 'duration') || empty;
         this.subscription('all_day_value', all_day.control.valueChanges.subscribe(state => start.setDisabled(state)));
+        this.subscription('duration_value', duration.control.valueChanges.subscribe(state => {
+            if (state > 450) {
+                start.setDisabled(true);
+            }
+        }));
         this.subscription('date_value', this.date_field.control.valueChanges.subscribe(state => {
             if (this.recurr_end &&
                 dayjs__WEBPACK_IMPORTED_MODULE_15__(this.recurr_end).isBefore(state, 'd')) {
@@ -3308,9 +3314,6 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
             if (localStorage) {
                 localStorage.setItem('STAFF.booking_form', JSON.stringify(form));
             }
-            const empty = { control: { value: true }, children: [] };
-            const time = this.form_fields.find(i => i.key === 'time_group') || empty;
-            time.children[0].setDisabled(this.duration > 450 || this.all_day);
         }, 50);
     }
     /**

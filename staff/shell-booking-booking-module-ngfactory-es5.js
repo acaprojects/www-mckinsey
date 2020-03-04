@@ -8011,8 +8011,16 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
           var start = time.children.find(function (i) {
             return i.key === 'start';
           }) || empty;
+          var duration = time.children.find(function (i) {
+            return i.key === 'duration';
+          }) || empty;
           this.subscription('all_day_value', all_day.control.valueChanges.subscribe(function (state) {
             return start.setDisabled(state);
+          }));
+          this.subscription('duration_value', duration.control.valueChanges.subscribe(function (state) {
+            if (state > 450) {
+              start.setDisabled(true);
+            }
           }));
           this.subscription('date_value', this.date_field.control.valueChanges.subscribe(function (state) {
             if (_this33.recurr_end && dayjs__WEBPACK_IMPORTED_MODULE_15__(_this33.recurr_end).isBefore(state, 'd')) {
@@ -8055,17 +8063,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
             if (localStorage) {
               localStorage.setItem('STAFF.booking_form', JSON.stringify(form));
             }
-
-            var empty = {
-              control: {
-                value: true
-              },
-              children: []
-            };
-            var time = _this34.form_fields.find(function (i) {
-              return i.key === 'time_group';
-            }) || empty;
-            time.children[0].setDisabled(_this34.duration > 450 || _this34.all_day);
           }, 50);
         }
         /**

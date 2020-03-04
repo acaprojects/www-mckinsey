@@ -6445,7 +6445,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
               localStorage.setItem('STAFF.booking_form', JSON.stringify({
                 id: 'ad-hoc',
                 room: [Object.assign({}, room, {
-                  bookings: []
+                  bookings: [],
+                  current: null,
+                  next: null,
+                  raw_bookings: []
                 })],
                 date: _this31.show_time
               }));

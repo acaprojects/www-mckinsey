@@ -4615,7 +4615,7 @@ class MeetingDetailsOverlayComponent extends _shared_globals_base_directive__WEB
      */
     editMeeting(navigate = true) {
         const room_list = this.space_list;
-        const booking = Object.assign({}, this.booking, { host: this.booking.organiser, room: room_list.map(room => (Object.assign({}, room, { bookings: [] }))) });
+        const booking = Object.assign({}, this.booking, { host: this.booking.organiser, room: room_list.map(room => (Object.assign({}, room, { bookings: [], raw_bookings: [], next: null, current: null }))), room_list: null });
         booking.catering_notes = {};
         booking.catering_codes = {};
         for (const space of room_list) {
@@ -19454,7 +19454,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583283588000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583295380000);
 
 
 /***/ }),
