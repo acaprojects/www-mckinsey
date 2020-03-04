@@ -1661,10 +1661,10 @@ class ExploreTimelineComponent extends _shared_globals_base_directive__WEBPACK_I
                 .minute(0)
                 .subtract(30, 'm');
         }
-        const start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now)
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now)
             .add(this.selected_offset, 'm')
             .add(this.date_offset, 'd');
-        start.minute(Math.ceil(start.minute() / 5) * 5);
+        start = start.minute(Math.ceil(start.minute() / 5) * 5);
         this.selected_time = start.valueOf();
         this.display_time = start.format('h:mm a');
         this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
@@ -1680,10 +1680,10 @@ class ExploreTimelineComponent extends _shared_globals_base_directive__WEBPACK_I
         if (this.date_offset) {
             now.hour(7).minute(0);
         }
-        const start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now)
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now)
             .add(this.selected_offset, 'm')
             .add(this.date_offset, 'd');
-        start.minute(Math.ceil(start.minute() / 5) * 5);
+        start = start.minute(Math.ceil(start.minute() / 5) * 5);
         this.selected_time = start.valueOf();
         this.display_time = start.format('h:mm a');
         this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');

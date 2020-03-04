@@ -4498,7 +4498,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
           }
 
           var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).add(this.selected_offset, 'm').add(this.date_offset, 'd');
-          start.minute(Math.ceil(start.minute() / 5) * 5);
+          start = start.minute(Math.ceil(start.minute() / 5) * 5);
           this.selected_time = start.valueOf();
           this.display_time = start.format('h:mm a');
           this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
@@ -4520,7 +4520,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
           }
 
           var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).add(this.selected_offset, 'm').add(this.date_offset, 'd');
-          start.minute(Math.ceil(start.minute() / 5) * 5);
+          start = start.minute(Math.ceil(start.minute() / 5) * 5);
           this.selected_time = start.valueOf();
           this.display_time = start.format('h:mm a');
           this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
