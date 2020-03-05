@@ -8225,9 +8225,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             breakdown: raw_item.breakdown || 0,
             spaces: typeof raw_item.room_id === 'string' ? [raw_item.room_id] : raw_item.room_id,
             recurrence: raw_item.seriesMasterId && raw_item.recurrence ? {
-                period: ['none', 'daily', 'weekly', 'biweekly', 'absoluteMonthly'].indexOf(raw_item.recurrence.pattern.type),
-                end: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.range.endDate).valueOf(),
-                start: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.range.startDate).valueOf(),
+                period: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["RECURRENCE_PERIODS"].map(i => i.toLowerCase()).indexOf(raw_item.recurrence.period),
+                end: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.end * 1000).valueOf(),
+                start: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.start * 1000).valueOf(),
                 series_id: raw_item.seriesMasterId
             } : null
         };
@@ -19461,7 +19461,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583365876000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583370717000);
 
 
 /***/ }),
