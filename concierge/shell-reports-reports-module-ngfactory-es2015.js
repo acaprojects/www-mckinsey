@@ -527,7 +527,7 @@ class ReportComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
             if (output.booker) {
                 output.booker = output.booker.name;
             }
-            console.log('Output:', output.room, output.symbol);
+            output.recurrence = output.recurrence ? 'yes' : 'no';
             if (output.item_price) {
                 output.item_price = new _angular_common__WEBPACK_IMPORTED_MODULE_1__["CurrencyPipe"]('en-us').transform(output.item_price / 100, i.symbol || this.symbolForRoom(i.room_email));
             }
