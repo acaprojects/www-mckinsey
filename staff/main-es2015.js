@@ -4598,7 +4598,7 @@ class MeetingDetailsOverlayComponent extends _shared_globals_base_directive__WEB
             if (event.reason === 'done') {
                 ref.close();
                 this._service.Bookings.updateItem(this.booking.id, Object.assign({}, this.booking, { room: this.space_list.map(room => (Object.assign({}, room, { bookings: [] }))), equipment: ref.componentInstance.notes, equipment_code: ref.componentInstance.cost_code, expected_attendees: ref.componentInstance.expected_attendees })).then((booking) => {
-                    this.event = booking;
+                    this._data.booking = booking;
                     this._service.notifySuccess('Sucessfully updated meeting requirements');
                     this.loading = null;
                 }, err => {
@@ -19472,7 +19472,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583728031000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583728828000);
 
 
 /***/ }),
