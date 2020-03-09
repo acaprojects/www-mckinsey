@@ -4615,6 +4615,8 @@ class MeetingDetailsOverlayComponent extends _shared_globals_base_directive__WEB
      */
     editMeetingCatering() {
         this.editMeeting(false);
+        localStorage.setItem('STAFF.booking.date', `${this.booking.date}`);
+        localStorage.setItem('STAFF.booking.duration', `${this.booking.duration}`);
         this._service.navigate(['/book', 'main', 'orders']);
         this._dialog_ref.close();
     }
@@ -4634,6 +4636,8 @@ class MeetingDetailsOverlayComponent extends _shared_globals_base_directive__WEB
         }
         if (localStorage) {
             localStorage.setItem('STAFF.booking_form', JSON.stringify(booking));
+            localStorage.setItem('STAFF.booking.date', `${booking.date}`);
+            localStorage.setItem('STAFF.booking.duration', `${booking.duration}`);
         }
         if (navigate) {
             this._service.navigate(['/book']);
@@ -19472,7 +19476,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583728828000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583729272000);
 
 
 /***/ }),
