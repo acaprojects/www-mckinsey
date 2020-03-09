@@ -4636,7 +4636,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
           }
 
           var diff = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).diff(now, 'm');
-          console.log('Diff:', diff, this.selected_time, dayjs__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).format('h:mm A'), now.format('h:mm A'));
 
           if (diff < 0) {
             var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
