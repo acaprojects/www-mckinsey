@@ -548,13 +548,13 @@ class ApprovalsViewEventComponent extends _shared_globals_base_directive__WEBPAC
             this.event.display = {};
         }
         this.acting.emit(true);
-        this._service.confirm({
+        const ref = this._service.confirm({
             title: 'Approve Meeting',
             content: `Approve ${this.event.organiser.name || this.event.organiser}'s meeting in "${(this.event.room || {}).name}" at ${this.event.display.start} for ${this.event.display.duration} on ${this.event.display.date}`,
             icon: { type: 'icon', class: 'material-icons', content: 'event_available' },
             action: 'Ok'
-        }, event => {
-            if (event.type === 'Accept') {
+        }, (event) => {
+            if (event.reason === 'done') {
                 this.loading = true;
                 this._service.Bookings.accept(this.event.id, {
                     comment: '',
@@ -574,7 +574,7 @@ class ApprovalsViewEventComponent extends _shared_globals_base_directive__WEBPAC
                     this.loading = false;
                 });
             }
-            event.close();
+            ref.close();
         });
     }
     /**

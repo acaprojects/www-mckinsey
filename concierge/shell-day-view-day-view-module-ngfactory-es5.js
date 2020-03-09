@@ -643,13 +643,13 @@ var ApprovalsViewEventComponent = /** @class */ (function (_super) {
             this.event.display = {};
         }
         this.acting.emit(true);
-        this._service.confirm({
+        var ref = this._service.confirm({
             title: 'Approve Meeting',
             content: "Approve " + (this.event.organiser.name || this.event.organiser) + "'s meeting in \"" + (this.event.room || {}).name + "\" at " + this.event.display.start + " for " + this.event.display.duration + " on " + this.event.display.date,
             icon: { type: 'icon', class: 'material-icons', content: 'event_available' },
             action: 'Ok'
         }, function (event) {
-            if (event.type === 'Accept') {
+            if (event.reason === 'done') {
                 _this.loading = true;
                 _this._service.Bookings.accept(_this.event.id, {
                     comment: '',
@@ -669,7 +669,7 @@ var ApprovalsViewEventComponent = /** @class */ (function (_super) {
                     _this.loading = false;
                 });
             }
-            event.close();
+            ref.close();
         });
     };
     /**
