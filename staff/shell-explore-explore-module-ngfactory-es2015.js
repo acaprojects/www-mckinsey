@@ -1593,14 +1593,14 @@ class ExploreTimelineComponent extends _shared_globals_base_directive__WEBPACK_I
         this.generateTimelineBlocks();
         this.selected_offset = 0;
         this.date_offset = 0;
-        const start = dayjs__WEBPACK_IMPORTED_MODULE_2__()
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_2__()
             .add(this.selected_offset, 'm')
             .add(this.date_offset, 'd')
             .startOf('m');
-        start.minute(Math.ceil(start.minute() / 5) * 5);
+        start = start.minute(Math.ceil(start.minute() / 5) * 5);
         this.display_time = start.format('h:mm a');
         this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
-        this.display_value = start.valueOf();
+        this.selected_time = start.valueOf();
         this.interval('expired', () => this.generateTimelineBlocks(), 60 * 1000);
     }
     ngAfterViewInit() {
@@ -1760,18 +1760,18 @@ class ExploreTimelineComponent extends _shared_globals_base_directive__WEBPACK_I
      * Update the percentage of the day that has expired
      */
     updateSelected() {
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_2__().add(this.date_offset, 'd');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_2__().add(this.date_offset, 'd').startOf('m');
         if (this.date_offset) {
             now.hour(7).minute(0);
         }
         const diff = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).diff(now, 'm');
+        console.log('Diff:', diff, this.selected_time, dayjs__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).format('h:mm A'), now.format('h:mm A'));
         if (diff < 0) {
-            const start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
-            start.minute(Math.ceil(start.minute() / 5) * 5);
+            let start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
+            start = start.minute(Math.ceil(start.minute() / 5) * 5);
             this.selected_time = start.valueOf();
             this.display_time = start.format('h:mm a');
             this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
-            this.display_value = start.valueOf();
             start.minute(Math.ceil(start.minute() / 5) * 5);
             this.time.emit(start.valueOf());
         }
