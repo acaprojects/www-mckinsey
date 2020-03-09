@@ -9884,7 +9884,7 @@ class ReportsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSer
             breakdown: item.breakdown,
             is_all_day: item.isAllDay ? 'yes' : 'no',
             is_cancelled: item.isCancelled ? 'yes' : 'no',
-            recurrence: item.recurrence,
+            recurrence: item.recurrence ? 'yes' : 'no',
             notes: item.notes,
             catering: item.catering
         };
@@ -19005,7 +19005,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583474128000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583726243000);
 
 
 /***/ }),
