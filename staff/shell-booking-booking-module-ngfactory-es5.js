@@ -1,27 +1,3 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-booking-booking-module-ngfactory"], {
   /***/
   "./src/app/services/data/catering/catering.utilities.ts":
@@ -60,22 +36,16 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     var dayjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_1__);
 
     function generateCateringOrderFormFields(order) {
-      var form = new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormGroup"]({
-        items: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.items && order.items.length ? _toConsumableArray(order.items) : [], [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
+      const form = new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormGroup"]({
+        items: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.items && order.items.length ? [...order.items] : [], [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
         delivery_time: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.delivery_time || dayjs__WEBPACK_IMPORTED_MODULE_1__().startOf('m').valueOf(), [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
         location_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.location_id || '', [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
         charge_code: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.charge_code || '', [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].required]),
         notes: new _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControl"](order.notes || '')
       });
 
-      var _loop = function _loop(key) {
-        form.controls[key].valueChanges.subscribe(function (value) {
-          return order.storePendingChanges(key, value);
-        });
-      };
-
-      for (var key in form.controls) {
-        _loop(key);
+      for (const key in form.controls) {
+        form.controls[key].valueChanges.subscribe(value => order.storePendingChanges(key, value));
       }
 
       return form;
@@ -216,29 +186,18 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../shared/globals/base.directive */
     "./src/app/shared/globals/base.directive.ts");
 
-    var BookingComponent = /*#__PURE__*/function (_shared_globals_base_) {
-      _inherits(BookingComponent, _shared_globals_base_);
-
-      function BookingComponent(service) {
-        var _this;
-
-        _classCallCheck(this, BookingComponent);
-
-        _this = _possibleConstructorReturn(this, _getPrototypeOf(BookingComponent).call(this));
-        _this.service = service;
-        _this.model = {};
-        return _this;
+    class BookingComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
+      constructor(service) {
+        super();
+        this.service = service;
+        this.model = {};
       }
 
-      _createClass(BookingComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          this.service.set('BANNER.block_height', 0);
-        }
-      }]);
+      ngOnInit() {
+        this.service.set('BANNER.block_height', 0);
+      }
 
-      return BookingComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -722,12 +681,10 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ./main-flow/catering/order-list/item/item.component */
     "./src/app/shell/booking/main-flow/catering/order-list/item/item.component.ts");
 
-    var COMPONENTS = [_booking_component__WEBPACK_IMPORTED_MODULE_1__["BookingComponent"], _main_flow_main_flow_component__WEBPACK_IMPORTED_MODULE_2__["BookingMainFlowComponent"], _main_flow_form_form_component__WEBPACK_IMPORTED_MODULE_3__["BookingMainFlowFormComponent"], _main_flow_find_space_find_space_component__WEBPACK_IMPORTED_MODULE_4__["BookingMainFlowFindSpaceComponent"], _main_flow_find_space_space_item_space_item_component__WEBPACK_IMPORTED_MODULE_5__["BookingMainFlowSpaceItemComponent"], _main_flow_catering_catering_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowCateringComponent"], _main_flow_catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_7__["BookingMainFlowCateringOrderComponent"], _main_flow_catering_category_list_category_list_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringCategoryListComponent"], _main_flow_catering_item_list_item_list_component__WEBPACK_IMPORTED_MODULE_9__["BookingMainFlowCateringItemListComponent"], _main_flow_catering_item_list_list_item_list_item_component__WEBPACK_IMPORTED_MODULE_10__["BookingMainFlowCateringListItemComponent"], _main_flow_catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_16__["CateringOrderListComponent"], _main_flow_catering_order_list_item_item_component__WEBPACK_IMPORTED_MODULE_17__["BookingCateringOrderItemComponent"]];
-    var BOOKING_ENTRY_COMPONENTS = [_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_12__["BookingEquipmentDetailsModalComponent"], _overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_11__["BookingCateringDetailsModalComponent"], _overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_13__["BookingDetailsModalComponent"], _overlays_recurrence_details_recurrence_details_component__WEBPACK_IMPORTED_MODULE_14__["BookingRecurrenceDetailsModalComponent"], _overlays_recurrence_room_select_recurrence_room_select_component__WEBPACK_IMPORTED_MODULE_15__["BookingRecurrenceRoomSelectModalComponent"]];
+    const COMPONENTS = [_booking_component__WEBPACK_IMPORTED_MODULE_1__["BookingComponent"], _main_flow_main_flow_component__WEBPACK_IMPORTED_MODULE_2__["BookingMainFlowComponent"], _main_flow_form_form_component__WEBPACK_IMPORTED_MODULE_3__["BookingMainFlowFormComponent"], _main_flow_find_space_find_space_component__WEBPACK_IMPORTED_MODULE_4__["BookingMainFlowFindSpaceComponent"], _main_flow_find_space_space_item_space_item_component__WEBPACK_IMPORTED_MODULE_5__["BookingMainFlowSpaceItemComponent"], _main_flow_catering_catering_component__WEBPACK_IMPORTED_MODULE_6__["BookingMainFlowCateringComponent"], _main_flow_catering_catering_order_catering_order_component__WEBPACK_IMPORTED_MODULE_7__["BookingMainFlowCateringOrderComponent"], _main_flow_catering_category_list_category_list_component__WEBPACK_IMPORTED_MODULE_8__["BookingMainFlowCateringCategoryListComponent"], _main_flow_catering_item_list_item_list_component__WEBPACK_IMPORTED_MODULE_9__["BookingMainFlowCateringItemListComponent"], _main_flow_catering_item_list_list_item_list_item_component__WEBPACK_IMPORTED_MODULE_10__["BookingMainFlowCateringListItemComponent"], _main_flow_catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_16__["CateringOrderListComponent"], _main_flow_catering_order_list_item_item_component__WEBPACK_IMPORTED_MODULE_17__["BookingCateringOrderItemComponent"]];
+    const BOOKING_ENTRY_COMPONENTS = [_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_12__["BookingEquipmentDetailsModalComponent"], _overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_11__["BookingCateringDetailsModalComponent"], _overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_13__["BookingDetailsModalComponent"], _overlays_recurrence_details_recurrence_details_component__WEBPACK_IMPORTED_MODULE_14__["BookingRecurrenceDetailsModalComponent"], _overlays_recurrence_room_select_recurrence_room_select_component__WEBPACK_IMPORTED_MODULE_15__["BookingRecurrenceRoomSelectModalComponent"]];
 
-    var AppBookingModule = function AppBookingModule() {
-      _classCallCheck(this, AppBookingModule);
-    };
+    class AppBookingModule {}
     /***/
 
   },
@@ -971,34 +928,22 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../../shared/globals/base.directive */
     "./src/app/shared/globals/base.directive.ts");
 
-    var BookingMainFlowCateringCategoryListComponent = /*#__PURE__*/function (_shared_globals_base_2) {
-      _inherits(BookingMainFlowCateringCategoryListComponent, _shared_globals_base_2);
-
-      function BookingMainFlowCateringCategoryListComponent(_service) {
-        var _this2;
-
-        _classCallCheck(this, BookingMainFlowCateringCategoryListComponent);
-
-        _this2 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowCateringCategoryListComponent).call(this));
-        _this2._service = _service;
+    class BookingMainFlowCateringCategoryListComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
+      constructor(_service) {
+        super();
+        this._service = _service;
         /** Emitter for the selected category */
 
-        _this2.selected = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        return _this2;
+        this.selected = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
 
-      _createClass(BookingMainFlowCateringCategoryListComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {}
-      }, {
-        key: "selectItem",
-        value: function selectItem(item) {
-          this.selected.emit(item);
-        }
-      }]);
+      ngOnInit() {}
 
-      return BookingMainFlowCateringCategoryListComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]);
+      selectItem(item) {
+        this.selected.emit(item);
+      }
+
+    }
     /***/
 
   },
@@ -1442,113 +1387,83 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
 
-    var BookingMainFlowCateringOrderComponent = /*#__PURE__*/function (_shared_globals_base_3) {
-      _inherits(BookingMainFlowCateringOrderComponent, _shared_globals_base_3);
-
-      function BookingMainFlowCateringOrderComponent(_service) {
-        var _this3;
-
-        _classCallCheck(this, BookingMainFlowCateringOrderComponent);
-
-        _this3 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowCateringOrderComponent).call(this));
-        _this3._service = _service;
+    class BookingMainFlowCateringOrderComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
+      constructor(_service) {
+        super();
+        this._service = _service;
         /** Step value for adding catering items */
 
-        _this3.step = 1;
+        this.step = 1;
         /** Emitter for form events */
 
-        _this3.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        return _this3;
+        this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
       /** Whether catering order is valid */
 
 
-      _createClass(BookingMainFlowCateringOrderComponent, [{
-        key: "isValid",
-
-        /**
-         * Whether the given catering item/package is valid
-         * @param item
-         */
-        value: function isValid(item) {
-          if (!item.items) {
-            return true;
-          }
-
-          if (item.must_select && item.amount) {
-            var selected = item.items.reduce(function (v, i) {
-              return v + (i.amount ? 1 : 0);
-            }, 0);
-            return item.must_select <= selected;
-          }
-
+      get valid() {
+        if (!this.items) {
           return true;
         }
-        /** Number of total items in all room orders */
 
-      }, {
-        key: "change",
-        value: function change(item, amount) {
-          if (amount < 0) {
-            item.removeFromOrder(amount);
-          } else {
-            item.addToOrder(amount);
-          }
+        const list = this.items.value || [];
+        return list.reduce((valid, item) => valid && this.isValid(item), true);
+      }
+      /**
+       * Whether the given catering item/package is valid
+       * @param item
+       */
 
-          this.items.setValue(this.items.value);
+
+      isValid(item) {
+        if (!item.items) {
+          return true;
         }
-      }, {
-        key: "valid",
-        get: function get() {
-          var _this4 = this;
 
-          if (!this.items) {
-            return true;
-          }
-
-          var list = this.items.value || [];
-          return list.reduce(function (valid, item) {
-            return valid && _this4.isValid(item);
-          }, true);
+        if (item.must_select && item.amount) {
+          const selected = item.items.reduce((v, i) => v + (i.amount ? 1 : 0), 0);
+          return item.must_select <= selected;
         }
-      }, {
-        key: "count",
-        get: function get() {
-          if (!this.items) return 0;
-          var list = this.items.value || [];
-          return list.reduce(function (total, item) {
-            return total + item.amount;
-          }, 0);
+
+        return true;
+      }
+      /** Number of total items in all room orders */
+
+
+      get count() {
+        if (!this.items) return 0;
+        const list = this.items.value || [];
+        return list.reduce((total, item) => total + item.amount, 0);
+      }
+      /** Total cost for all room orders */
+
+
+      get total() {
+        if (!this.items) return 0;
+        const list = this.items.value || [];
+        return list.reduce((total, item) => total + item.total, 0);
+      }
+
+      get symbol() {
+        if (!this.order) return 'USD';
+
+        const space = this._service.Rooms.list(true).find(room => room.id === this.order.location_id);
+
+        const building = this._service.Buildings.get(space.level.bld_id) || {};
+        return building.currency || 'USD';
+      }
+
+      change(item, amount) {
+        if (amount < 0) {
+          item.removeFromOrder(amount);
+        } else {
+          item.addToOrder(amount);
         }
-        /** Total cost for all room orders */
 
-      }, {
-        key: "total",
-        get: function get() {
-          if (!this.items) return 0;
-          var list = this.items.value || [];
-          return list.reduce(function (total, item) {
-            return total + item.total;
-          }, 0);
-        }
-      }, {
-        key: "symbol",
-        get: function get() {
-          var _this5 = this;
+        this.items.setValue(this.items.value);
+      }
 
-          if (!this.order) return 'USD';
-
-          var space = this._service.Rooms.list(true).find(function (room) {
-            return room.id === _this5.order.location_id;
-          });
-
-          var building = this._service.Buildings.get(space.level.bld_id) || {};
-          return building.currency || 'USD';
-        }
-      }]);
-
-      return BookingMainFlowCateringOrderComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -1795,7 +1710,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     }
 
     function View_BookingMainFlowCateringComponent_3(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 12, "div", [["class", "room-list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 5, "div", [["class", "group"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Deliver to:\xA0 "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "div", [["class", "set-space"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "dropdown", [["klass", "form"]], null, [[null, "modelChange"]], function (_v, en, $event) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 12, "div", [["class", "room-list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 5, "div", [["class", "group"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Deliver to:\u00A0 "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "div", [["class", "set-space"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "dropdown", [["klass", "form"]], null, [[null, "modelChange"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -1813,7 +1728,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         list: [2, "list"]
       }, {
         modelChange: "modelChange"
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 5, "div", [["class", "group"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" At:\xA0 "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 3, "div", [["class", "set-delivery-time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 2, "dropdown", [["klass", "form"]], null, [[null, "modelChange"]], function (_v, en, $event) {
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 5, "div", [["class", "group"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" At:\u00A0 "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 3, "div", [["class", "set-delivery-time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 2, "dropdown", [["klass", "form"]], null, [[null, "modelChange"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -2450,338 +2365,262 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../services/data/catering/catering.utilities */
     "./src/app/services/data/catering/catering.utilities.ts");
 
-    var BookingMainFlowCateringComponent = /*#__PURE__*/function (_shared_globals_base_4) {
-      _inherits(BookingMainFlowCateringComponent, _shared_globals_base_4);
-
-      function BookingMainFlowCateringComponent(_service) {
-        var _this6;
-
-        _classCallCheck(this, BookingMainFlowCateringComponent);
-
-        _this6 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowCateringComponent).call(this));
-        _this6._service = _service;
+    class BookingMainFlowCateringComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
+      constructor(_service) {
+        super();
+        this._service = _service;
         /** Start time of the current booking */
 
-        _this6.all_day = false;
+        this.all_day = false;
         /** Emitter for form events */
 
-        _this6.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         /** Mapping of rooms to loading states */
 
-        _this6.loading = {};
+        this.loading = {};
         /** Mapping of room ids to available menu categories */
 
-        _this6.menu_map = {};
+        this.menu_map = {};
         /** State of modifier keys */
 
-        _this6.key_states = {
+        this.key_states = {
           shift: false,
           control: false
         };
         /** Step value for adding catering items */
 
-        _this6.step = 1;
-        return _this6;
+        this.step = 1;
       }
 
-      _createClass(BookingMainFlowCateringComponent, [{
-        key: "isExcluded",
-        value: function isExcluded(restriction_time) {
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m');
-          var start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m').second(1);
-          var end = start.subtract(restriction_time || -900, 'h');
+      get space_index() {
+        return Math.max(0, (this.spaces || []).findIndex(space => space.id === this.order_form.controls.location_id.value));
+      }
 
-          if (end.format('ddd') === 'Sun' || end.format('ddd') === 'Sat') {
-            end = end.subtract(2, 'd');
+      get time_index() {
+        return Math.max(0, (this.delivery_times || []).findIndex(block => block.id === this.order_form.controls.delivery_time.value));
+      }
+
+      get active_building() {
+        if (this.active_space && this.active_space.level) {
+          const building = this._service.Buildings.get(this.active_space.level.bld_id);
+
+          return building || {};
+        }
+
+        return {};
+      }
+      /** Whether catering can be provided if no menu is available */
+
+
+      get is_catered() {
+        return !!this.active_building.has_catering;
+      }
+      /** Whether catering is allowed for the current time */
+
+
+      get catering_allowed() {
+        if (this.delivery_times[0].id < 0) {
+          return false;
+        }
+
+        if ((this.menu_map[this.active_space.id] || []).find(category => category.order_anytime)) {
+          return true;
+        }
+
+        return !this.within_exclusion_period;
+      }
+      /** Whether booking time is within the building's exlusion period for catering  */
+
+
+      get within_exclusion_period() {
+        if (!this.active_building.catering_restricted_from) {
+          return false;
+        }
+
+        return this.isExcluded(this.active_building.catering_restricted_from);
+      }
+
+      isExcluded(restriction_time) {
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m');
+        const start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m').second(1);
+        let end = start.subtract(restriction_time || -900, 'h');
+
+        if (end.format('ddd') === 'Sun' || end.format('ddd') === 'Sat') {
+          end = end.subtract(2, 'd');
+        }
+
+        return now.isAfter(end, 's');
+      }
+
+      get exclusion_map() {
+        const exclusions = {};
+
+        const building_list = this._service.Buildings.list();
+
+        for (const space of this.spaces) {
+          const bld = building_list.find(bld => bld.id === space.level.bld_id);
+
+          if (bld) {
+            exclusions[space.id] = this.isExcluded(bld.catering_restricted_from);
+          }
+        }
+
+        return exclusions;
+      }
+
+      ngOnChanges(changes) {
+        if (changes.spaces && this.spaces) {
+          if (!this.active_space || this.spaces.findIndex(i => i.id === this.active_space.id) < 0) {
+            this.active_space = this.spaces[0];
           }
 
-          return now.isAfter(end, 's');
+          this.loadMenu();
         }
-      }, {
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          var _this7 = this;
 
-          if (changes.spaces && this.spaces) {
-            if (!this.active_space || this.spaces.findIndex(function (i) {
-              return i.id === _this7.active_space.id;
-            }) < 0) {
-              this.active_space = this.spaces[0];
+        if (changes.date || changes.duration) {
+          this.delivery_times = this.generateAvailableTimes();
+        }
+
+        if (changes.order && this.order) {
+          this.order_form = Object(_services_data_catering_catering_utilities__WEBPACK_IMPORTED_MODULE_6__["generateCateringOrderFormFields"])(this.order);
+        }
+      }
+      /**
+       * Load menu categories for the selected rooms
+       */
+
+
+      loadMenu() {
+        if (this.spaces && this.spaces instanceof Array) {
+          this.spaces.forEach(space => {
+            this.loading[space.id] = true;
+            this.menu_map[space.id] = null;
+
+            this._service.Menu.query({
+              room_id: space.id
+            }).then(list => {
+              this.loading[space.id] = false;
+              this.menu_map[space.id] = list || [];
+            }, () => {
+              this.loading[space.id] = false;
+              this.menu_map[space.id] = [];
+            });
+          });
+        }
+      }
+      /**
+       * Update the active space
+       * @param space New active space
+       */
+
+
+      setSpace(space) {
+        this.category = null;
+        this.order_form.controls.location_id.setValue(space.id);
+        this.order_form.controls.items.setValue([]);
+        this.order.storePendingChanges('location', space.name);
+        this.timeout('set_space', () => this.active_space = space, 100);
+      }
+      /**
+       * Filter category items
+       */
+
+
+      search() {
+        if (this.active_space && this.search_str) {
+          const search = this.search_str.toLowerCase();
+          const categories = this.menu_map[this.active_space.id];
+          const list = {
+            id: 'search',
+            name: 'Search results',
+            src: '',
+            package: false,
+            zones: [],
+            items: categories.reduce((v, i) => {
+              v = v.concat(i.items.filter(j => {
+                if (j.items) {
+                  return j.name.toLowerCase().indexOf(search) >= 0 || j.items.findIndex(k => k.name.toLowerCase().indexOf(search) >= 0) >= 0;
+                }
+
+                return j.name.toLowerCase().indexOf(search) >= 0;
+              }));
+              return v;
+            }, [])
+          };
+          this.category = new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](list);
+        } else {
+          this.category = null;
+        }
+      }
+      /** Enable a step modifier key */
+
+
+      enableModifer(mod) {
+        this.key_states[mod] = true;
+        this.updateStep();
+      }
+      /** Disable a step modifier key */
+
+
+      disableModifer(mod) {
+        this.key_states[mod] = false;
+        this.updateStep();
+      }
+      /** Update the increment and decrement step value */
+
+
+      updateStep() {
+        this.step = this.key_states.shift ? 100 : this.key_states.control ? 10 : 1;
+      }
+      /** Generate list of available delivery times */
+
+
+      generateAvailableTimes() {
+        const time_list = [];
+
+        if (this.date) {
+          let start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m');
+          const old_start = start;
+          let end = start.add(this.all_day ? 24 * 60 : this.duration, 'm');
+
+          if (start.isBefore(start.hour(7).minute(0), 'm') || this.all_day) {
+            start = start.hour(7).minute(0);
+            const now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m');
+
+            if (start.isBefore(now, 'm')) {
+              start = now.minute(Math.ceil(now.minute() / 5) * 5);
             }
-
-            this.loadMenu();
           }
 
-          if (changes.date || changes.duration) {
-            this.delivery_times = this.generateAvailableTimes();
+          start = start.minute(Math.ceil(start.minute() / 5) * 5);
+
+          if (end.isAfter(start.hour(20).minute(0), 'm') || this.all_day) {
+            end = start.hour(20).minute(0);
           }
 
-          if (changes.order && this.order) {
-            this.order_form = Object(_services_data_catering_catering_utilities__WEBPACK_IMPORTED_MODULE_6__["generateCateringOrderFormFields"])(this.order);
+          let duration = Math.abs(old_start.diff(start, 'm'));
+
+          while (start.isBefore(end, 'm')) {
+            time_list.push({
+              id: duration,
+              name: start.format('h:mm A')
+            });
+            start = start.add(5, 'm');
+            duration += 5;
           }
-        }
-        /**
-         * Load menu categories for the selected rooms
-         */
 
-      }, {
-        key: "loadMenu",
-        value: function loadMenu() {
-          var _this8 = this;
-
-          if (this.spaces && this.spaces instanceof Array) {
-            this.spaces.forEach(function (space) {
-              _this8.loading[space.id] = true;
-              _this8.menu_map[space.id] = null;
-
-              _this8._service.Menu.query({
-                room_id: space.id
-              }).then(function (list) {
-                _this8.loading[space.id] = false;
-                _this8.menu_map[space.id] = list || [];
-              }, function () {
-                _this8.loading[space.id] = false;
-                _this8.menu_map[space.id] = [];
-              });
+          if (time_list.length <= 0) {
+            time_list.push({
+              id: -(90 * 24 * 60),
+              name: 'Outside of hours'
             });
           }
         }
-        /**
-         * Update the active space
-         * @param space New active space
-         */
 
-      }, {
-        key: "setSpace",
-        value: function setSpace(space) {
-          var _this9 = this;
+        return time_list;
+      }
 
-          this.category = null;
-          this.order_form.controls.location_id.setValue(space.id);
-          this.order_form.controls.items.setValue([]);
-          this.order.storePendingChanges('location', space.name);
-          this.timeout('set_space', function () {
-            return _this9.active_space = space;
-          }, 100);
-        }
-        /**
-         * Filter category items
-         */
-
-      }, {
-        key: "search",
-        value: function search() {
-          if (this.active_space && this.search_str) {
-            var search = this.search_str.toLowerCase();
-            var categories = this.menu_map[this.active_space.id];
-            var list = {
-              id: 'search',
-              name: 'Search results',
-              src: '',
-              package: false,
-              zones: [],
-              items: categories.reduce(function (v, i) {
-                v = v.concat(i.items.filter(function (j) {
-                  if (j.items) {
-                    return j.name.toLowerCase().indexOf(search) >= 0 || j.items.findIndex(function (k) {
-                      return k.name.toLowerCase().indexOf(search) >= 0;
-                    }) >= 0;
-                  }
-
-                  return j.name.toLowerCase().indexOf(search) >= 0;
-                }));
-                return v;
-              }, [])
-            };
-            this.category = new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](list);
-          } else {
-            this.category = null;
-          }
-        }
-        /** Enable a step modifier key */
-
-      }, {
-        key: "enableModifer",
-        value: function enableModifer(mod) {
-          this.key_states[mod] = true;
-          this.updateStep();
-        }
-        /** Disable a step modifier key */
-
-      }, {
-        key: "disableModifer",
-        value: function disableModifer(mod) {
-          this.key_states[mod] = false;
-          this.updateStep();
-        }
-        /** Update the increment and decrement step value */
-
-      }, {
-        key: "updateStep",
-        value: function updateStep() {
-          this.step = this.key_states.shift ? 100 : this.key_states.control ? 10 : 1;
-        }
-        /** Generate list of available delivery times */
-
-      }, {
-        key: "generateAvailableTimes",
-        value: function generateAvailableTimes() {
-          var time_list = [];
-
-          if (this.date) {
-            var start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m');
-            var old_start = start;
-            var end = start.add(this.all_day ? 24 * 60 : this.duration, 'm');
-
-            if (start.isBefore(start.hour(7).minute(0), 'm') || this.all_day) {
-              start = start.hour(7).minute(0);
-              var now = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m');
-
-              if (start.isBefore(now, 'm')) {
-                start = now.minute(Math.ceil(now.minute() / 5) * 5);
-              }
-            }
-
-            start = start.minute(Math.ceil(start.minute() / 5) * 5);
-
-            if (end.isAfter(start.hour(20).minute(0), 'm') || this.all_day) {
-              end = start.hour(20).minute(0);
-            }
-
-            var duration = Math.abs(old_start.diff(start, 'm'));
-
-            while (start.isBefore(end, 'm')) {
-              time_list.push({
-                id: duration,
-                name: start.format('h:mm A')
-              });
-              start = start.add(5, 'm');
-              duration += 5;
-            }
-
-            if (time_list.length <= 0) {
-              time_list.push({
-                id: -(90 * 24 * 60),
-                name: 'Outside of hours'
-              });
-            }
-          }
-
-          return time_list;
-        }
-      }, {
-        key: "space_index",
-        get: function get() {
-          var _this10 = this;
-
-          return Math.max(0, (this.spaces || []).findIndex(function (space) {
-            return space.id === _this10.order_form.controls.location_id.value;
-          }));
-        }
-      }, {
-        key: "time_index",
-        get: function get() {
-          var _this11 = this;
-
-          return Math.max(0, (this.delivery_times || []).findIndex(function (block) {
-            return block.id === _this11.order_form.controls.delivery_time.value;
-          }));
-        }
-      }, {
-        key: "active_building",
-        get: function get() {
-          if (this.active_space && this.active_space.level) {
-            var building = this._service.Buildings.get(this.active_space.level.bld_id);
-
-            return building || {};
-          }
-
-          return {};
-        }
-        /** Whether catering can be provided if no menu is available */
-
-      }, {
-        key: "is_catered",
-        get: function get() {
-          return !!this.active_building.has_catering;
-        }
-        /** Whether catering is allowed for the current time */
-
-      }, {
-        key: "catering_allowed",
-        get: function get() {
-          if (this.delivery_times[0].id < 0) {
-            return false;
-          }
-
-          if ((this.menu_map[this.active_space.id] || []).find(function (category) {
-            return category.order_anytime;
-          })) {
-            return true;
-          }
-
-          return !this.within_exclusion_period;
-        }
-        /** Whether booking time is within the building's exlusion period for catering  */
-
-      }, {
-        key: "within_exclusion_period",
-        get: function get() {
-          if (!this.active_building.catering_restricted_from) {
-            return false;
-          }
-
-          return this.isExcluded(this.active_building.catering_restricted_from);
-        }
-      }, {
-        key: "exclusion_map",
-        get: function get() {
-          var _this12 = this;
-
-          var exclusions = {};
-
-          var building_list = this._service.Buildings.list();
-
-          var _iteratorNormalCompletion = true;
-          var _didIteratorError = false;
-          var _iteratorError = undefined;
-
-          try {
-            var _loop2 = function _loop2() {
-              var space = _step.value;
-              var bld = building_list.find(function (bld) {
-                return bld.id === space.level.bld_id;
-              });
-
-              if (bld) {
-                exclusions[space.id] = _this12.isExcluded(bld.catering_restricted_from);
-              }
-            };
-
-            for (var _iterator = this.spaces[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-              _loop2();
-            }
-          } catch (err) {
-            _didIteratorError = true;
-            _iteratorError = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion && _iterator.return != null) {
-                _iterator.return();
-              }
-            } finally {
-              if (_didIteratorError) {
-                throw _iteratorError;
-              }
-            }
-          }
-
-          return exclusions;
-        }
-      }]);
-
-      return BookingMainFlowCateringComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -3087,26 +2926,18 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
 
-    var BookingMainFlowCateringItemListComponent = /*#__PURE__*/function (_shared_globals_base_5) {
-      _inherits(BookingMainFlowCateringItemListComponent, _shared_globals_base_5);
-
-      function BookingMainFlowCateringItemListComponent() {
-        var _this13;
-
-        _classCallCheck(this, BookingMainFlowCateringItemListComponent);
-
-        _this13 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowCateringItemListComponent).apply(this, arguments));
+    class BookingMainFlowCateringItemListComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
+      constructor() {
+        super(...arguments);
         /** Step value for adding catering items */
 
-        _this13.step = 1;
+        this.step = 1;
         /** Event emitter for item listings */
 
-        _this13.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        return _this13;
+        this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
 
-      return BookingMainFlowCateringItemListComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -3821,257 +3652,167 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../../../services/data/catering/catering-item.class */
     "./src/app/services/data/catering/catering-item.class.ts");
 
-    var BookingMainFlowCateringListItemComponent = /*#__PURE__*/function (_shared_globals_base_6) {
-      _inherits(BookingMainFlowCateringListItemComponent, _shared_globals_base_6);
-
-      function BookingMainFlowCateringListItemComponent(_service) {
-        var _this14;
-
-        _classCallCheck(this, BookingMainFlowCateringListItemComponent);
-
-        _this14 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowCateringListItemComponent).call(this));
-        _this14._service = _service;
+    class BookingMainFlowCateringListItemComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
+      constructor(_service) {
+        super();
+        this._service = _service;
         /** Step value for adding catering items */
 
-        _this14.step = 1;
+        this.step = 1;
         /** Emitter for changes to the selected amount of the item */
 
-        _this14.amountChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        return _this14;
+        this.amountChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
       /** Currency code for the active space */
 
 
-      _createClass(BookingMainFlowCateringListItemComponent, [{
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          var _this15 = this;
+      get symbol() {
+        const level = this.space.level || {};
+        const building = this._service.Buildings.get(level.bld_id) || {};
+        return building.currency || 'USD';
+      }
 
-          if (changes.items && this.items) {
-            this.subscription('control', this.items.valueChanges.subscribe(function () {
-              return _this15.updateAmounts();
-            }));
-          }
-
-          if (changes.space && this.space) {
-            this.updateAmounts();
-          }
+      ngOnChanges(changes) {
+        if (changes.items && this.items) {
+          this.subscription('control', this.items.valueChanges.subscribe(() => this.updateAmounts()));
         }
-        /**
-         * Add the given item from the catering order
-         * @param item Item to add
-         */
 
-      }, {
-        key: "add",
-        value: function add(new_item) {
-          if (this.items) {
-            var items = this.items.value || [];
+        if (changes.space && this.space) {
+          this.updateAmounts();
+        }
+      }
+      /**
+       * Add the given item from the catering order
+       * @param item Item to add
+       */
 
-            if (!items.find(function (item) {
-              return item.id === new_item.id;
-            })) {
-              items.push(new_item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"] ? new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](new_item) : new _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_5__["CateringItem"](new_item));
+
+      add(new_item) {
+        if (this.items) {
+          const items = this.items.value || [];
+
+          if (!items.find(item => item.id === new_item.id)) {
+            items.push(new_item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"] ? new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](new_item) : new _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_5__["CateringItem"](new_item));
+          }
+
+          const item = items.find(item => item.id === new_item.id);
+          item.addToOrder();
+          this.items.setValue(items);
+          this.amountChange.emit(item.amount);
+        }
+      }
+      /**
+       * Remove the given item from the catering order
+       * @param item Item to remove
+       */
+
+
+      remove(existing_item) {
+        if (this.items && this.space) {
+          const items = this.items.value || [];
+          const item = items.find(item => item.id === existing_item.id);
+
+          if (item) {
+            item.removeFromOrder();
+
+            if (item.amount === 0) {
+              items.splice(items.indexOf(item), 1);
+              this.items.setValue(items);
             }
 
-            var item = items.find(function (item) {
-              return item.id === new_item.id;
-            });
-            item.addToOrder();
-            this.items.setValue(items);
+            this.updateAmounts();
             this.amountChange.emit(item.amount);
           }
         }
-        /**
-         * Remove the given item from the catering order
-         * @param item Item to remove
-         */
+      }
+      /**
+       * Toggle the activation state of the item
+       */
 
-      }, {
-        key: "remove",
-        value: function remove(existing_item) {
-          if (this.items && this.space) {
-            var items = this.items.value || [];
-            var item = items.find(function (item) {
-              return item.id === existing_item.id;
-            });
 
-            if (item) {
-              item.removeFromOrder();
+      toggle() {
+        if (this.item.amount === 0) {
+          this.add(this.item);
+        } else {
+          this.remove(this.item);
+        }
+      }
 
-              if (item.amount === 0) {
-                items.splice(items.indexOf(item), 1);
-                this.items.setValue(items);
+      handleSelect(item) {
+        if (this.item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"]) {
+          if (this.item.must_select === 1) {
+            for (const i of this.item.items) {
+              if (i.amount === 0) {
+                i.addToOrder();
               }
-
-              this.updateAmounts();
-              this.amountChange.emit(item.amount);
             }
-          }
-        }
-        /**
-         * Toggle the activation state of the item
-         */
+          } else if (this.item.must_select > 1 && item.amount > 0) {
+            const active = this.item.items.reduce((v, i) => v + (i.amount > 0 ? 1 : 0), 0);
 
-      }, {
-        key: "toggle",
-        value: function toggle() {
-          if (this.item.amount === 0) {
-            this.add(this.item);
-          } else {
-            this.remove(this.item);
-          }
-        }
-      }, {
-        key: "handleSelect",
-        value: function handleSelect(item) {
-          if (this.item instanceof _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"]) {
-            if (this.item.must_select === 1) {
-              var _iteratorNormalCompletion2 = true;
-              var _didIteratorError2 = false;
-              var _iteratorError2 = undefined;
+            if (active > this.item.must_select) {
+              let diff = active - this.item.must_select;
 
-              try {
-                for (var _iterator2 = this.item.items[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                  var i = _step2.value;
-
-                  if (i.amount === 0) {
-                    i.addToOrder();
-                  }
-                }
-              } catch (err) {
-                _didIteratorError2 = true;
-                _iteratorError2 = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-                    _iterator2.return();
-                  }
-                } finally {
-                  if (_didIteratorError2) {
-                    throw _iteratorError2;
-                  }
-                }
-              }
-            } else if (this.item.must_select > 1 && item.amount > 0) {
-              var active = this.item.items.reduce(function (v, i) {
-                return v + (i.amount > 0 ? 1 : 0);
-              }, 0);
-
-              if (active > this.item.must_select) {
-                var diff = active - this.item.must_select;
-                var _iteratorNormalCompletion3 = true;
-                var _didIteratorError3 = false;
-                var _iteratorError3 = undefined;
-
-                try {
-                  for (var _iterator3 = this.item.items[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-                    var _i = _step3.value;
-
-                    if (diff > 0 && _i.amount > 0 && !(item.id === _i.id || item.name === _i.name)) {
-                      this.item.setAmount(0);
-                      diff--;
-                    }
-                  }
-                } catch (err) {
-                  _didIteratorError3 = true;
-                  _iteratorError3 = err;
-                } finally {
-                  try {
-                    if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-                      _iterator3.return();
-                    }
-                  } finally {
-                    if (_didIteratorError3) {
-                      throw _iteratorError3;
-                    }
-                  }
+              for (const i of this.item.items) {
+                if (diff > 0 && i.amount > 0 && !(item.id === i.id || item.name === i.name)) {
+                  this.item.setAmount(0);
+                  diff--;
                 }
               }
             }
           }
         }
-      }, {
-        key: "updateSelection",
-        value: function updateSelection(toggled_item) {
-          var _this16 = this;
+      }
 
-          var items = this.items.value || [];
-          var parent = items.find(function (an_item) {
-            return _this16.parent.id === an_item.id;
-          });
-          var item = parent.items.find(function (an_item) {
-            return an_item.id === toggled_item.id;
-          });
+      updateSelection(toggled_item) {
+        const items = this.items.value || [];
+        const parent = items.find(an_item => this.parent.id === an_item.id);
+        const item = parent.items.find(an_item => an_item.id === toggled_item.id);
 
-          if (item) {
-            item.setAmount(toggled_item.amount > 0 ? 0 : 1);
-            this.item.setAmount(toggled_item.amount > 0 ? 0 : 1);
-          }
-
-          var selected = parent.items.reduce(function (count, an_item) {
-            return count + (an_item.amount ? 1 : 0);
-          }, 0);
-
-          if (selected > parent.must_select) {
-            var removed_item = parent.items.find(function (an_item) {
-              return an_item.id !== toggled_item.id;
-            });
-            removed_item.setAmount(0);
-            this.items.setValue(this.items.value);
-          }
+        if (item) {
+          item.setAmount(toggled_item.amount > 0 ? 0 : 1);
+          this.item.setAmount(toggled_item.amount > 0 ? 0 : 1);
         }
-      }, {
-        key: "updateAmounts",
-        value: function updateAmounts() {
-          var _this17 = this;
 
-          if (!this.items) {
+        const selected = parent.items.reduce((count, an_item) => count + (an_item.amount ? 1 : 0), 0);
+
+        if (selected > parent.must_select) {
+          const removed_item = parent.items.find(an_item => an_item.id !== toggled_item.id);
+          removed_item.setAmount(0);
+          this.items.setValue(this.items.value);
+        }
+      }
+
+      updateAmounts() {
+        if (!this.items) {
+          return;
+        }
+
+        if (!this.parent.must_select) {
+          const items = this.items.value || [];
+          const item = items.find(an_item => this.item.id === an_item.id);
+
+          if (item && item.amount !== this.item.amount) {
+            this.item.setAmount(item.amount);
+          } else if (!item) {
+            this.item.setAmount(0);
+          }
+        } else if (this.parent && this.parent.items) {
+          const items = this.items.value || [];
+          const parent = items.find(an_item => this.parent.id === an_item.id);
+
+          if (!parent) {
             return;
           }
 
-          if (!this.parent.must_select) {
-            var items = this.items.value || [];
-            var item = items.find(function (an_item) {
-              return _this17.item.id === an_item.id;
-            });
+          const item = parent.items.find(an_item => an_item.id === this.item.id);
 
-            if (item && item.amount !== this.item.amount) {
-              this.item.setAmount(item.amount);
-            } else if (!item) {
-              this.item.setAmount(0);
-            }
-          } else if (this.parent && this.parent.items) {
-            var _items = this.items.value || [];
-
-            var parent = _items.find(function (an_item) {
-              return _this17.parent.id === an_item.id;
-            });
-
-            if (!parent) {
-              return;
-            }
-
-            var _item = parent.items.find(function (an_item) {
-              return an_item.id === _this17.item.id;
-            });
-
-            if (_item) {
-              this.item.setAmount(_item.amount);
-            }
+          if (item) {
+            this.item.setAmount(item.amount);
           }
         }
-      }, {
-        key: "symbol",
-        get: function get() {
-          var level = this.space.level || {};
-          var building = this._service.Buildings.get(level.bld_id) || {};
-          return building.currency || 'USD';
-        }
-      }]);
+      }
 
-      return BookingMainFlowCateringListItemComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -4438,10 +4179,8 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
     var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
 
-    var BookingCateringOrderItemComponent = /*#__PURE__*/function () {
-      function BookingCateringOrderItemComponent(_service) {
-        _classCallCheck(this, BookingCateringOrderItemComponent);
-
+    class BookingCateringOrderItemComponent {
+      constructor(_service) {
         this._service = _service;
         /** Emitter for edit events */
 
@@ -4451,86 +4190,64 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         this.delete = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
 
-      _createClass(BookingCateringOrderItemComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {}
-      }, {
-        key: "expired",
-        get: function get() {
-          if (!this.order) return false;
-          var time = (this.order.changes ? this.order.changes.delivery_time : null) || this.order.delivery_time;
-          return dayjs__WEBPACK_IMPORTED_MODULE_3__().isAfter(dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date).add(time, 'm'), 's');
+      get expired() {
+        if (!this.order) return false;
+        const time = (this.order.changes ? this.order.changes.delivery_time : null) || this.order.delivery_time;
+        return dayjs__WEBPACK_IMPORTED_MODULE_3__().isAfter(dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date).add(time, 'm'), 's');
+      }
+      /** Display string for the delivery location of the order */
+
+
+      get location() {
+        if (!this.order) return 'No Location';
+
+        if (this.order.changes && this.order.changes.location_id) {
+          const space = (this._service.Rooms.list(true) || []).find(room => room.id = this.order.changes.location_id) || {};
+          return space.name;
         }
-        /** Display string for the delivery location of the order */
 
-      }, {
-        key: "location",
-        get: function get() {
-          var _this18 = this;
+        return this.order.location;
+      }
+      /** Display string for the set delivery time */
 
-          if (!this.order) return 'No Location';
 
-          if (this.order.changes && this.order.changes.location_id) {
-            var space = (this._service.Rooms.list(true) || []).find(function (room) {
-              return room.id = _this18.order.changes.location_id;
-            }) || {};
-            return space.name;
-          }
+      get time() {
+        if (!this.order) return 'No Delivery Time';
+        const duration = (this.order.changes ? this.order.changes.delivery_time : null) || this.order.delivery_time;
+        return dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date).add(duration, 'm').format('h:mm A');
+      }
+      /** Number of items in the order */
 
-          return this.order.location;
-        }
-        /** Display string for the set delivery time */
 
-      }, {
-        key: "time",
-        get: function get() {
-          if (!this.order) return 'No Delivery Time';
-          var duration = (this.order.changes ? this.order.changes.delivery_time : null) || this.order.delivery_time;
-          return dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date).add(duration, 'm').format('h:mm A');
-        }
-        /** Number of items in the order */
+      get count() {
+        if (!this.order) return 0;
+        const items = (this.order.changes ? this.order.changes.items : null) || this.order.items;
+        return (items || []).reduce((total, item) => total + item.amount, 0);
+      }
+      /** Total cost of the items in the order */
 
-      }, {
-        key: "count",
-        get: function get() {
-          if (!this.order) return 0;
-          var items = (this.order.changes ? this.order.changes.items : null) || this.order.items;
-          return (items || []).reduce(function (total, item) {
-            return total + item.amount;
-          }, 0);
-        }
-        /** Total cost of the items in the order */
 
-      }, {
-        key: "total",
-        get: function get() {
-          if (!this.order) return 0;
-          var items = (this.order.changes ? this.order.changes.items : null) || this.order.items;
-          return (items || []).reduce(function (total, item) {
-            return total + item.total;
-          }, 0);
-        }
-        /** Current symbol for the order */
+      get total() {
+        if (!this.order) return 0;
+        const items = (this.order.changes ? this.order.changes.items : null) || this.order.items;
+        return (items || []).reduce((total, item) => total + item.total, 0);
+      }
+      /** Current symbol for the order */
 
-      }, {
-        key: "symbol",
-        get: function get() {
-          var _this19 = this;
 
-          if (!this.order) return 'USD';
+      get symbol() {
+        if (!this.order) return 'USD';
 
-          var space = this._service.Rooms.list(true).find(function (room) {
-            return room.id === _this19.order.location_id;
-          });
+        const space = this._service.Rooms.list(true).find(room => room.id === this.order.location_id);
 
-          if (!space) return 'USD';
-          var building = this._service.Buildings.get(space.level.bld_id) || {};
-          return building.currency || 'USD';
-        }
-      }]);
+        if (!space) return 'USD';
+        const building = this._service.Buildings.get(space.level.bld_id) || {};
+        return building.currency || 'USD';
+      }
 
-      return BookingCateringOrderItemComponent;
-    }();
+      ngOnInit() {}
+
+    }
     /***/
 
   },
@@ -5021,110 +4738,83 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../../services/data/catering/catering-order.class */
     "./src/app/services/data/catering/catering-order.class.ts");
 
-    var CateringOrderListComponent = /*#__PURE__*/function (_shared_globals_base_7) {
-      _inherits(CateringOrderListComponent, _shared_globals_base_7);
-
-      function CateringOrderListComponent(_router) {
-        var _this20;
-
-        _classCallCheck(this, CateringOrderListComponent);
-
-        _this20 = _possibleConstructorReturn(this, _getPrototypeOf(CateringOrderListComponent).call(this));
-        _this20._router = _router;
+    class CateringOrderListComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
+      constructor(_router) {
+        super();
+        this._router = _router;
         /** Emitter for changes to the active catering order */
 
-        _this20.active_order = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.active_order = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         /** Emitter for user events on component */
 
-        _this20.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        return _this20;
+        this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
       /** List of orders in the current booking */
 
 
-      _createClass(CateringOrderListComponent, [{
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          var _this21 = this;
+      get order_list() {
+        if (!this.catering) {
+          return [];
+        }
 
-          if (changes.date && this.catering) {
-            this.catering.control.setValue(this.order_list.map(function (order) {
-              return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, {
-                booking_date: _this21.date
-              }));
-            }));
-            this.order_list.forEach(function (order) {
-              return order.error = !_this21.spaces.find(function (space) {
-                return space.id === order.location_id;
-              });
-            });
+        return this.catering.control.value || [];
+      }
+
+      ngOnChanges(changes) {
+        if (changes.date && this.catering) {
+          this.catering.control.setValue(this.order_list.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, {
+            booking_date: this.date
+          }))));
+          this.order_list.forEach(order => order.error = !this.spaces.find(space => space.id === order.location_id));
+        }
+      }
+      /**
+       * Create new order and start editing it
+       */
+
+
+      addOrder() {
+        const order = new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"]({
+          id: "order-".concat(Math.floor(Math.random() * 999999999)),
+          location_id: this.spaces[0].id,
+          location: this.spaces[0].name,
+          booking_date: this.date,
+          delivery_time: 0
+        });
+        this.active_order.emit(order);
+
+        this._router.navigate(['book', 'main', 'catering'], {
+          queryParams: {
+            order_id: order.id
           }
-        }
-        /**
-         * Create new order and start editing it
-         */
+        });
+      }
+      /**
+       * Start editing the given order
+       * @param order
+       */
 
-      }, {
-        key: "addOrder",
-        value: function addOrder() {
-          var order = new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"]({
-            id: "order-".concat(Math.floor(Math.random() * 999999999)),
-            location_id: this.spaces[0].id,
-            location: this.spaces[0].name,
-            booking_date: this.date,
-            delivery_time: 0
-          });
-          this.active_order.emit(order);
 
-          this._router.navigate(['book', 'main', 'catering'], {
-            queryParams: {
-              order_id: order.id
-            }
-          });
-        }
-        /**
-         * Start editing the given order
-         * @param order
-         */
+      editOrder(order) {
+        const the_order = this.order_list.find(o => o.id === order.id);
+        this.active_order.emit(the_order);
 
-      }, {
-        key: "editOrder",
-        value: function editOrder(order) {
-          var the_order = this.order_list.find(function (o) {
-            return o.id === order.id;
-          });
-          this.active_order.emit(the_order);
+        this._router.navigate(['book', 'main', 'catering']);
+      }
+      /**
+       * Remove the given order from the catering order list
+       * @param order
+       */
 
-          this._router.navigate(['book', 'main', 'catering']);
-        }
-        /**
-         * Remove the given order from the catering order list
-         * @param order
-         */
 
-      }, {
-        key: "deleteOrder",
-        value: function deleteOrder(order) {
-          var order_list = this.order_list;
-          var the_order = order_list.find(function (o) {
-            return o.id === order.id;
-          });
-          order_list.splice(order_list.indexOf(the_order), 1);
-          this.catering.control.setValue(order_list);
-        }
-      }, {
-        key: "order_list",
-        get: function get() {
-          if (!this.catering) {
-            return [];
-          }
+      deleteOrder(order) {
+        const order_list = this.order_list;
+        const the_order = order_list.find(o => o.id === order.id);
+        order_list.splice(order_list.indexOf(the_order), 1);
+        this.catering.control.setValue(order_list);
+      }
 
-          return this.catering.control.value || [];
-        }
-      }]);
-
-      return CateringOrderListComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -6013,363 +5703,276 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../shared/utility.class */
     "./src/app/shared/utility.class.ts");
 
-    var BookingMainFlowFindSpaceComponent = /*#__PURE__*/function (_shared_globals_base_8) {
-      _inherits(BookingMainFlowFindSpaceComponent, _shared_globals_base_8);
-
-      function BookingMainFlowFindSpaceComponent(_service) {
-        var _this22;
-
-        _classCallCheck(this, BookingMainFlowFindSpaceComponent);
-
-        _this22 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowFindSpaceComponent).call(this));
-        _this22._service = _service;
+    class BookingMainFlowFindSpaceComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"] {
+      constructor(_service) {
+        super();
+        this._service = _service;
         /** Emitter for form events */
 
-        _this22.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         /** List of available buildings to filter available rooms on */
 
-        _this22.locations = [];
+        this.locations = [];
         /** Spaces available before local filtering */
 
-        _this22.available_spaces = [];
+        this.available_spaces = [];
         /** Spaces available with the selected filters */
 
-        _this22.shown_spaces = [];
+        this.shown_spaces = [];
         /** Subject for changes filters for displaying available rooms */
 
-        _this22.filter$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this.filter$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
         /** Last query string used for searching for rooms */
 
-        _this22.last_query = '';
-        return _this22;
+        this.last_query = '';
       }
 
-      _createClass(BookingMainFlowFindSpaceComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this23 = this;
+      ngOnInit() {
+        if (!this._service.ready() || this._service.Rooms.list(true).length <= 0) {
+          return this.timeout('init', () => this.ngOnInit());
+        }
 
-          if (!this._service.ready() || this._service.Rooms.list(true).length <= 0) {
-            return this.timeout('init', function () {
-              return _this23.ngOnInit();
-            });
+        this.last_query = '';
+        this.subscription('filter', this.filter$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(_ => this.search())).subscribe(results => {
+          this.available_spaces = results;
+          this.shown_spaces = this.filter(results);
+          this.shown_spaces.sort((a, b) => this.sort(a, b));
+          this.loading = false;
+        }));
+        this.subscription('building', this._service.Buildings.listen(bld => {
+          if (bld) {
+            let active_locations = '';
+
+            if (localStorage) {
+              active_locations = localStorage.getItem('STAFF.booking.filters') || '';
+            }
+
+            this.locations = this._service.Buildings.list().map(i => Object.assign({}, i, {
+              selected: active_locations ? active_locations.indexOf(i.id) >= 0 : i.id === bld.id
+            }));
+            this.filter$.next(Math.floor(Math.random() * 99999));
+          }
+        }));
+      }
+      /** Timestamp of the currently selected date */
+
+
+      get date() {
+        let date = this.date_field ? this.date_field.getValue() : dayjs__WEBPACK_IMPORTED_MODULE_7__().valueOf();
+
+        if (this.catering) {
+          date = dayjs__WEBPACK_IMPORTED_MODULE_7__(date).subtract(15, 'm').valueOf();
+        }
+
+        if (this.duration > 720 || this.all_day) {
+          date = dayjs__WEBPACK_IMPORTED_MODULE_7__(date).startOf('d').valueOf();
+        }
+
+        return date;
+      }
+      /** Display string for the selected date */
+
+
+      get date_display() {
+        return dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).format('ddd, DD MMM YYYY');
+      }
+      /** Whether the selected date is today */
+
+
+      get is_today() {
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date);
+        return dayjs__WEBPACK_IMPORTED_MODULE_7__().isSame(date, 'd');
+      }
+
+      ngOnChanges(changes) {
+        if (changes.date_field && this.date_field || changes.duration && this.duration) {
+          this.filter$.next("".concat(this.date, "|").concat(this.duration));
+        }
+      }
+      /**
+       * Search for available rooms matching the set filters
+       */
+
+
+      search() {
+        const query = {
+          date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date,
+          duration: this.all_day ? 24 * 60 : this.duration + (this.catering ? 15 : 0),
+          hide_bookings: true
+        };
+
+        if (this.recurr_period && this.recurr_end) {
+          query.recurr_period = this.recurr_period;
+          query.recurr_end = this.recurr_end;
+        }
+
+        const locations = this.locations.reduce((v, i) => {
+          if (i.selected) {
+            v.push(i.id);
           }
 
-          this.last_query = '';
-          this.subscription('filter', this.filter$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (_) {
-            return _this23.search();
-          })).subscribe(function (results) {
-            _this23.available_spaces = results;
-            _this23.shown_spaces = _this23.filter(results);
+          return v;
+        }, []);
 
-            _this23.shown_spaces.sort(function (a, b) {
-              return _this23.sort(a, b);
-            });
-
-            _this23.loading = false;
-          }));
-          this.subscription('building', this._service.Buildings.listen(function (bld) {
-            if (bld) {
-              var active_locations = '';
-
-              if (localStorage) {
-                active_locations = localStorage.getItem('STAFF.booking.filters') || '';
-              }
-
-              _this23.locations = _this23._service.Buildings.list().map(function (i) {
-                return Object.assign({}, i, {
-                  selected: active_locations ? active_locations.indexOf(i.id) >= 0 : i.id === bld.id
-                });
-              });
-
-              _this23.filter$.next(Math.floor(Math.random() * 99999));
-            }
-          }));
+        if (locations.length <= 0) {
+          locations.push(this._service.Buildings.current().id);
         }
-        /** Timestamp of the currently selected date */
 
-      }, {
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          if (changes.date_field && this.date_field || changes.duration && this.duration) {
+        const location_list = locations.join(',');
+        this.timeout('save_filters', () => {
+          if (localStorage) {
+            localStorage.setItem('STAFF.booking.filters', location_list);
+          }
+        });
+        let room_list = [];
+
+        for (const zone of locations) {
+          room_list = room_list.concat(this._service.Rooms.list(true, zone));
+        }
+
+        const date = query.date;
+        const duration = query.duration; // Filter out rooms unavailable due to booking rules
+
+        room_list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_8__["Utils"].unique(room_list, 'id').filter(room => {
+          const bld = this._service.Buildings.get(room.level.bld_id) || this._service.Buildings.current() || {};
+          const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["rulesForSpace"])({
+            user: this.user || this._service.Users.current(),
+            space: room,
+            time: date,
+            recurr_end: this.recurr_end || 0,
+            duration,
+            rules: bld.booking_rules
+          });
+          room.book_type = rules.auto_approve ? 'Book' : 'Request';
+          return rules.hide;
+        }); // Limit number of rooms retrieved
+
+        room_list = room_list.slice(0, Math.min(100, room_list.length));
+        query.ignore_rooms = room_list.reduce((v, i) => v + (v ? ',' : '') + i.id, '');
+        query.zone_ids = location_list;
+        const query_str = JSON.stringify(query);
+
+        if (query_str !== this.last_query && this.locations && this.locations.length > 0) {
+          this.last_query = query_str;
+          this.loading = true;
+        }
+
+        return this._service.Rooms.available(query);
+      }
+      /**
+       * Filter rooms based booking rules
+       * @param list List of rooms
+       */
+
+
+      filter(list) {
+        const selected = this.spaces.control.value || [];
+        const date = this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date;
+        const duration = this.all_day ? 24 * 60 : this.duration + (this.catering ? 15 : 0);
+        return list.filter(room => {
+          const bld = this._service.Buildings.get(room.level.bld_id) || this._service.Buildings.current() || {};
+          const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["rulesForSpace"])({
+            user: this.user || this._service.Users.current(),
+            space: room,
+            time: date,
+            recurr_end: this.recurr_end || 0,
+            duration,
+            rules: bld.booking_rules
+          });
+          room.book_type = rules.auto_approve ? 'Book' : 'Request';
+          return !rules.hide;
+        }).map(i => Object.assign({}, i, {
+          selected: !!selected.find(j => i.id === j.id)
+        }));
+      }
+      /** On selection of spaces */
+
+
+      onSelectChange(space, state) {
+        if (this.recurr_period && this.recurr_end && state) {
+          this.spaces.setValue([space]);
+          this.shown_spaces = this.shown_spaces.map(i => {
+            i.selected = false;
+            return i;
+          });
+        } else {
+          this.setState(space, state);
+        }
+
+        space.selected = state;
+      }
+      /**
+       * Update the list of spaces selected for the current booking
+       * @param space Space with which it's state has changed
+       * @param state New selected state of the space
+       */
+
+
+      setState(space, state) {
+        const list = this.spaces.control.value || [];
+
+        if (state) {
+          if (list.findIndex(i => i.id === space.id) < 0) {
+            this.spaces.setValue(list.concat([space]));
+          }
+        } else {
+          this.spaces.setValue(list.filter(i => i.id !== space.id));
+        }
+      }
+      /**
+       * Update the selected date
+       * @param value Value to change the date by. 1, 0 or -1 days
+       */
+
+
+      changeDate(value) {
+        if (this.date_field) {
+          const date = dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date);
+          const new_date = date.add(value, 'd');
+
+          if (!new_date.isBefore(dayjs__WEBPACK_IMPORTED_MODULE_7__().subtract(10, 'm'), 'm')) {
+            this.date_field.setValue(new_date.valueOf());
             this.filter$.next("".concat(this.date, "|").concat(this.duration));
           }
         }
-        /**
-         * Search for available rooms matching the set filters
-         */
+      }
+      /**
+       * Determine the sort order of the two given itemss
+       * @param space_a
+       * @param space_b
+       */
 
-      }, {
-        key: "search",
-        value: function search() {
-          var _this24 = this;
 
-          var query = {
-            date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date,
-            duration: this.all_day ? 24 * 60 : this.duration + (this.catering ? 15 : 0),
-            hide_bookings: true
-          };
+      sort(space_a, space_b) {
+        const bld = this._service.Buildings.get(space_a.level.bld_id);
 
-          if (this.recurr_period && this.recurr_end) {
-            query.recurr_period = this.recurr_period;
-            query.recurr_end = this.recurr_end;
-          }
+        const bld_b = this._service.Buildings.get(space_a.level.bld_id);
 
-          var locations = this.locations.reduce(function (v, i) {
-            if (i.selected) {
-              v.push(i.id);
-            }
-
-            return v;
-          }, []);
-
-          if (locations.length <= 0) {
-            locations.push(this._service.Buildings.current().id);
-          }
-
-          var location_list = locations.join(',');
-          this.timeout('save_filters', function () {
-            if (localStorage) {
-              localStorage.setItem('STAFF.booking.filters', location_list);
-            }
-          });
-          var room_list = [];
-          var _iteratorNormalCompletion4 = true;
-          var _didIteratorError4 = false;
-          var _iteratorError4 = undefined;
-
-          try {
-            for (var _iterator4 = locations[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-              var zone = _step4.value;
-              room_list = room_list.concat(this._service.Rooms.list(true, zone));
-            }
-          } catch (err) {
-            _didIteratorError4 = true;
-            _iteratorError4 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-                _iterator4.return();
-              }
-            } finally {
-              if (_didIteratorError4) {
-                throw _iteratorError4;
-              }
-            }
-          }
-
-          var date = query.date;
-          var duration = query.duration; // Filter out rooms unavailable due to booking rules
-
-          room_list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_8__["Utils"].unique(room_list, 'id').filter(function (room) {
-            var bld = _this24._service.Buildings.get(room.level.bld_id) || _this24._service.Buildings.current() || {};
-            var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["rulesForSpace"])({
-              user: _this24.user || _this24._service.Users.current(),
-              space: room,
-              time: date,
-              recurr_end: _this24.recurr_end || 0,
-              duration: duration,
-              rules: bld.booking_rules
-            });
-            room.book_type = rules.auto_approve ? 'Book' : 'Request';
-            return rules.hide;
-          }); // Limit number of rooms retrieved
-
-          room_list = room_list.slice(0, Math.min(100, room_list.length));
-          query.ignore_rooms = room_list.reduce(function (v, i) {
-            return v + (v ? ',' : '') + i.id;
-          }, '');
-          query.zone_ids = location_list;
-          var query_str = JSON.stringify(query);
-
-          if (query_str !== this.last_query && this.locations && this.locations.length > 0) {
-            this.last_query = query_str;
-            this.loading = true;
-          }
-
-          return this._service.Rooms.available(query);
+        if (bld && bld !== bld_b) {
+          return (bld.name || '').localeCompare(bld_b.name || '');
         }
-        /**
-         * Filter rooms based booking rules
-         * @param list List of rooms
-         */
 
-      }, {
-        key: "filter",
-        value: function filter(list) {
-          var _this25 = this;
+        const sort_order = (bld.sort_order ? [...bld.sort_order] : []).reverse();
 
-          var selected = this.spaces.control.value || [];
-          var date = this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).startOf('d').valueOf() : this.date;
-          var duration = this.all_day ? 24 * 60 : this.duration + (this.catering ? 15 : 0);
-          return list.filter(function (room) {
-            var bld = _this25._service.Buildings.get(room.level.bld_id) || _this25._service.Buildings.current() || {};
-            var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["rulesForSpace"])({
-              user: _this25.user || _this25._service.Users.current(),
-              space: room,
-              time: date,
-              recurr_end: _this25.recurr_end || 0,
-              duration: duration,
-              rules: bld.booking_rules
-            });
-            room.book_type = rules.auto_approve ? 'Book' : 'Request';
-            return !rules.hide;
-          }).map(function (i) {
-            return Object.assign({}, i, {
-              selected: !!selected.find(function (j) {
-                return i.id === j.id;
-              })
-            });
-          });
-        }
-        /** On selection of spaces */
-
-      }, {
-        key: "onSelectChange",
-        value: function onSelectChange(space, state) {
-          if (this.recurr_period && this.recurr_end && state) {
-            this.spaces.setValue([space]);
-            this.shown_spaces = this.shown_spaces.map(function (i) {
-              i.selected = false;
-              return i;
-            });
-          } else {
-            this.setState(space, state);
+        for (const zone_id of sort_order) {
+          if (zone_id === '*') {
+            continue;
           }
 
-          space.selected = state;
-        }
-        /**
-         * Update the list of spaces selected for the current booking
-         * @param space Space with which it's state has changed
-         * @param state New selected state of the space
-         */
+          const a_has_zone = space_a.zones.indexOf(zone_id) >= 0;
+          const b_has_zone = space_b.zones.indexOf(zone_id) >= 0;
 
-      }, {
-        key: "setState",
-        value: function setState(space, state) {
-          var list = this.spaces.control.value || [];
-
-          if (state) {
-            if (list.findIndex(function (i) {
-              return i.id === space.id;
-            }) < 0) {
-              this.spaces.setValue(list.concat([space]));
-            }
-          } else {
-            this.spaces.setValue(list.filter(function (i) {
-              return i.id !== space.id;
-            }));
+          if (a_has_zone && !b_has_zone) {
+            return 1;
+          } else if (b_has_zone && !a_has_zone) {
+            return -1;
           }
         }
-        /**
-         * Update the selected date
-         * @param value Value to change the date by. 1, 0 or -1 days
-         */
 
-      }, {
-        key: "changeDate",
-        value: function changeDate(value) {
-          if (this.date_field) {
-            var date = dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date);
-            var new_date = date.add(value, 'd');
+        return (space_a.name || '').localeCompare(space_b.name || '');
+      }
 
-            if (!new_date.isBefore(dayjs__WEBPACK_IMPORTED_MODULE_7__().subtract(10, 'm'), 'm')) {
-              this.date_field.setValue(new_date.valueOf());
-              this.filter$.next("".concat(this.date, "|").concat(this.duration));
-            }
-          }
-        }
-        /**
-         * Determine the sort order of the two given itemss
-         * @param space_a
-         * @param space_b
-         */
-
-      }, {
-        key: "sort",
-        value: function sort(space_a, space_b) {
-          var bld = this._service.Buildings.get(space_a.level.bld_id);
-
-          var bld_b = this._service.Buildings.get(space_a.level.bld_id);
-
-          if (bld && bld !== bld_b) {
-            return (bld.name || '').localeCompare(bld_b.name || '');
-          }
-
-          var sort_order = (bld.sort_order ? _toConsumableArray(bld.sort_order) : []).reverse();
-          var _iteratorNormalCompletion5 = true;
-          var _didIteratorError5 = false;
-          var _iteratorError5 = undefined;
-
-          try {
-            for (var _iterator5 = sort_order[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-              var zone_id = _step5.value;
-
-              if (zone_id === '*') {
-                continue;
-              }
-
-              var a_has_zone = space_a.zones.indexOf(zone_id) >= 0;
-              var b_has_zone = space_b.zones.indexOf(zone_id) >= 0;
-
-              if (a_has_zone && !b_has_zone) {
-                return 1;
-              } else if (b_has_zone && !a_has_zone) {
-                return -1;
-              }
-            }
-          } catch (err) {
-            _didIteratorError5 = true;
-            _iteratorError5 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
-                _iterator5.return();
-              }
-            } finally {
-              if (_didIteratorError5) {
-                throw _iteratorError5;
-              }
-            }
-          }
-
-          return (space_a.name || '').localeCompare(space_b.name || '');
-        }
-      }, {
-        key: "date",
-        get: function get() {
-          var date = this.date_field ? this.date_field.getValue() : dayjs__WEBPACK_IMPORTED_MODULE_7__().valueOf();
-
-          if (this.catering) {
-            date = dayjs__WEBPACK_IMPORTED_MODULE_7__(date).subtract(15, 'm').valueOf();
-          }
-
-          if (this.duration > 720 || this.all_day) {
-            date = dayjs__WEBPACK_IMPORTED_MODULE_7__(date).startOf('d').valueOf();
-          }
-
-          return date;
-        }
-        /** Display string for the selected date */
-
-      }, {
-        key: "date_display",
-        get: function get() {
-          return dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date).format('ddd, DD MMM YYYY');
-        }
-        /** Whether the selected date is today */
-
-      }, {
-        key: "is_today",
-        get: function get() {
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_7__(this.date);
-          return dayjs__WEBPACK_IMPORTED_MODULE_7__().isSame(date, 'd');
-        }
-      }]);
-
-      return BookingMainFlowFindSpaceComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -6724,89 +6327,70 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../../overlays/view-room-modal/view-room-modal.component */
     "./src/app/overlays/view-room-modal/view-room-modal.component.ts");
 
-    var BookingMainFlowSpaceItemComponent = /*#__PURE__*/function (_shared_globals_base_9) {
-      _inherits(BookingMainFlowSpaceItemComponent, _shared_globals_base_9);
-
-      function BookingMainFlowSpaceItemComponent(_service, _dialog) {
-        var _this26;
-
-        _classCallCheck(this, BookingMainFlowSpaceItemComponent);
-
-        _this26 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowSpaceItemComponent).call(this));
-        _this26._service = _service;
-        _this26._dialog = _dialog;
+    class BookingMainFlowSpaceItemComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
+      constructor(_service, _dialog) {
+        super();
+        this._service = _service;
+        this._dialog = _dialog;
         /** Emitter for changes to selected state of the space */
 
-        _this26.selectedChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        return _this26;
+        this.selectedChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
 
-      _createClass(BookingMainFlowSpaceItemComponent, [{
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          var _this27 = this;
-
-          if (changes.space && this.space) {
-            this.timeout('building', function () {
-              if (_this27.space.level) {
-                _this27.building = _this27._service.Buildings.get(_this27.space.level.bld_id);
-              }
-            }, 100);
-          }
-        }
-        /** Booking type for the space */
-
-      }, {
-        key: "toggle",
-
-        /**
-         * Toggle the selected state of the space
-         */
-        value: function toggle() {
-          this.selected = !this.selected;
-          this.selectedChange.emit(this.selected);
-        }
-        /**
-         * Open modal to show the location of the space on a map
-         */
-
-      }, {
-        key: "showMap",
-        value: function showMap() {
-          this._dialog.open(_overlays_view_room_modal_view_room_modal_component__WEBPACK_IMPORTED_MODULE_4__["ViewRoomModalComponent"], {
-            data: {
-              space: this.space
+      ngOnChanges(changes) {
+        if (changes.space && this.space) {
+          this.timeout('building', () => {
+            if (this.space.level) {
+              this.building = this._service.Buildings.get(this.space.level.bld_id);
             }
-          });
+          }, 100);
         }
-      }, {
-        key: "book_type",
-        get: function get() {
-          return (this.space ? this.space.book_type : null) || 'Book';
-        }
-        /** Number of available occurences for recurrence */
+      }
+      /** Booking type for the space */
 
-      }, {
-        key: "occurences",
-        get: function get() {
-          if (this.space && this.space.recurr_available && this.space.recurr_available.length > 0) {
-            var available_count = this.space.recurr_available.filter(function (i) {
-              return i.available;
-            }).length;
 
-            if (available_count === this.space.recurr_available.length) {
-              return 'all';
-            }
+      get book_type() {
+        return (this.space ? this.space.book_type : null) || 'Book';
+      }
+      /** Number of available occurences for recurrence */
 
-            return "".concat(available_count, " of ").concat(this.space.recurr_available.length);
+
+      get occurences() {
+        if (this.space && this.space.recurr_available && this.space.recurr_available.length > 0) {
+          const available_count = this.space.recurr_available.filter(i => i.available).length;
+
+          if (available_count === this.space.recurr_available.length) {
+            return 'all';
           }
 
-          return null;
+          return "".concat(available_count, " of ").concat(this.space.recurr_available.length);
         }
-      }]);
 
-      return BookingMainFlowSpaceItemComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]);
+        return null;
+      }
+      /**
+       * Toggle the selected state of the space
+       */
+
+
+      toggle() {
+        this.selected = !this.selected;
+        this.selectedChange.emit(this.selected);
+      }
+      /**
+       * Open modal to show the location of the space on a map
+       */
+
+
+      showMap() {
+        this._dialog.open(_overlays_view_room_modal_view_room_modal_component__WEBPACK_IMPORTED_MODULE_4__["ViewRoomModalComponent"], {
+          data: {
+            space: this.space
+          }
+        });
+      }
+
+    }
     /***/
 
   },
@@ -7090,167 +6674,116 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     /*! ../../../../overlays/room-select-modal/room-select-modal.component */
     "./src/app/overlays/room-select-modal/room-select-modal.component.ts");
 
-    var BookingMainFlowFormComponent = /*#__PURE__*/function (_shared_globals_base_10) {
-      _inherits(BookingMainFlowFormComponent, _shared_globals_base_10);
-
-      function BookingMainFlowFormComponent(_service, _dialog) {
-        var _this28;
-
-        _classCallCheck(this, BookingMainFlowFormComponent);
-
-        _this28 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowFormComponent).call(this));
-        _this28._service = _service;
-        _this28._dialog = _dialog;
+    class BookingMainFlowFormComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"] {
+      constructor(_service, _dialog) {
+        super();
+        this._service = _service;
+        this._dialog = _dialog;
         /** List of fields to display on the form */
 
-        _this28.fields = [];
+        this.fields = [];
         /** Emitter for form events */
 
-        _this28.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        return _this28;
+        this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
       /** Whether the form is valid */
 
 
-      _createClass(BookingMainFlowFormComponent, [{
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          var _this29 = this;
+      get valid() {
+        return this.fields.reduce((a, v) => {
+          const valid = v.children && v.children.length > 0 ? v.children.reduce((r, i) => r && (i.isValid() || !i.required || i.disabled), true) : v.isValid() || !v.required || v.disabled;
+          return a && valid;
+        }, true);
+      }
 
-          if (changes.fields && this.fields) {
-            var find = this.fields.find(function (i) {
-              return i.key === 'recurrence' || !!(i.children && i.children.find(function (j) {
-                return j.key === 'recurrence';
-              }));
-            });
-            var field = find ? find.key === 'recurrence' ? find : find.children.find(function (j) {
-              return j.key === 'recurrence';
-            }) : null;
+      ngOnChanges(changes) {
+        if (changes.fields && this.fields) {
+          const find = this.fields.find(i => i.key === 'recurrence' || !!(i.children && i.children.find(j => j.key === 'recurrence')));
+          const field = find ? find.key === 'recurrence' ? find : find.children.find(j => j.key === 'recurrence') : null;
 
-            if (field) {
-              this.subscription('recurrence', field.action.subscribe(function () {
-                return _this29.setRecurrence(field);
-              }));
-            }
+          if (field) {
+            this.subscription('recurrence', field.action.subscribe(() => this.setRecurrence(field)));
+          }
 
-            var find_space = this.fields.find(function (i) {
-              return i.key === 'room' || !!(i.children && i.children.find(function (j) {
-                return j.key === 'room';
-              }));
-            });
-            var spaces = find_space ? find_space.key === 'room' ? find_space : find_space.children.find(function (j) {
-              return j.key === 'room';
-            }) : null;
+          const find_space = this.fields.find(i => i.key === 'room' || !!(i.children && i.children.find(j => j.key === 'room')));
+          const spaces = find_space ? find_space.key === 'room' ? find_space : find_space.children.find(j => j.key === 'room') : null;
 
-            if (spaces && !spaces.hide) {
-              this.subscription('spaces', spaces.action.subscribe(function () {
-                return _this29.setSpaces(spaces);
-              }));
-            }
+          if (spaces && !spaces.hide) {
+            this.subscription('spaces', spaces.action.subscribe(() => this.setSpaces(spaces)));
           }
         }
-      }, {
-        key: "next",
-        value: function next() {
-          this.fields.forEach(function (i) {
-            return i.control.markAsDirty();
-          });
+      }
 
-          if (this.valid) {
-            this.event.emit({
-              type: 'next'
-            });
-          } else {
-            this._service.notifyError('Some of the form fields are invalid');
+      next() {
+        this.fields.forEach(i => i.control.markAsDirty());
+
+        if (this.valid) {
+          this.event.emit({
+            type: 'next'
+          });
+        } else {
+          this._service.notifyError('Some of the form fields are invalid');
+        }
+      }
+      /**
+       * Open modal to change the selected spaces for the booking
+       * @param field Form field associated with spaces
+       */
+
+
+      setSpaces(field) {
+        let periodField = this.fields.find(i => i.key === 'period_group');
+        let dateField = periodField.children.find(i => i.key === 'date');
+        let timeField = this.fields.find(i => i.key === 'time_group');
+        let durationField = timeField.children.find(i => i.key === 'duration');
+        let all_day_field = this.fields.find(i => i.key === 'all_day');
+
+        const ref = this._dialog.open(_overlays_room_select_modal_room_select_modal_component__WEBPACK_IMPORTED_MODULE_5__["RoomSelectModalComponent"], {
+          data: {
+            date: dateField.control.value,
+            duration: durationField.control.value,
+            all_day: all_day_field.control.value,
+            spaces: field.getValue() || [],
+            multiple_spaces: true
           }
-        }
-        /**
-         * Open modal to change the selected spaces for the booking
-         * @param field Form field associated with spaces
-         */
+        });
 
-      }, {
-        key: "setSpaces",
-        value: function setSpaces(field) {
-          var periodField = this.fields.find(function (i) {
-            return i.key === 'period_group';
-          });
-          var dateField = periodField.children.find(function (i) {
-            return i.key === 'date';
-          });
-          var timeField = this.fields.find(function (i) {
-            return i.key === 'time_group';
-          });
-          var durationField = timeField.children.find(function (i) {
-            return i.key === 'duration';
-          });
-          var all_day_field = this.fields.find(function (i) {
-            return i.key === 'all_day';
-          });
+        ref.componentInstance.event.subscribe(event => {
+          if (event.reason === 'done') {
+            field.setValue(ref.componentInstance.space_list || []);
+          }
 
-          var ref = this._dialog.open(_overlays_room_select_modal_room_select_modal_component__WEBPACK_IMPORTED_MODULE_5__["RoomSelectModalComponent"], {
-            data: {
-              date: dateField.control.value,
-              duration: durationField.control.value,
-              all_day: all_day_field.control.value,
-              spaces: field.getValue() || [],
-              multiple_spaces: true
-            }
-          });
+          ref.close();
+        });
+      }
+      /**
+       * Open modal to change the recurrence options for the booking
+       * @param field Form field associated with recurrence
+       */
 
-          ref.componentInstance.event.subscribe(function (event) {
-            if (event.reason === 'done') {
-              field.setValue(ref.componentInstance.space_list || []);
-            }
 
-            ref.close();
-          });
-        }
-        /**
-         * Open modal to change the recurrence options for the booking
-         * @param field Form field associated with recurrence
-         */
+      setRecurrence(field) {
+        const date_field = this.fields.reduce((v, i) => v.concat(i.children && i.children.length ? i.children : [i]), []).find(i => i.key === 'date');
 
-      }, {
-        key: "setRecurrence",
-        value: function setRecurrence(field) {
-          var date_field = this.fields.reduce(function (v, i) {
-            return v.concat(i.children && i.children.length ? i.children : [i]);
-          }, []).find(function (i) {
-            return i.key === 'date';
-          });
+        const ref = this._dialog.open(_overlays_recurrence_modal_recurrence_modal_component__WEBPACK_IMPORTED_MODULE_4__["RecurrenceModalComponent"], {
+          data: Object.assign({}, field.getValue() || {}, {
+            date: date_field.control.value
+          })
+        });
 
-          var ref = this._dialog.open(_overlays_recurrence_modal_recurrence_modal_component__WEBPACK_IMPORTED_MODULE_4__["RecurrenceModalComponent"], {
-            data: Object.assign({}, field.getValue() || {}, {
-              date: date_field.control.value
-            })
-          });
+        ref.componentInstance.event.subscribe(event => {
+          if (event.reason === 'done') {
+            field.setValue({
+              period: ref.componentInstance.recurr_period,
+              end: ref.componentInstance.recurr_end
+            });
+          }
 
-          ref.componentInstance.event.subscribe(function (event) {
-            if (event.reason === 'done') {
-              field.setValue({
-                period: ref.componentInstance.recurr_period,
-                end: ref.componentInstance.recurr_end
-              });
-            }
+          ref.close();
+        });
+      }
 
-            ref.close();
-          });
-        }
-      }, {
-        key: "valid",
-        get: function get() {
-          return this.fields.reduce(function (a, v) {
-            var valid = v.children && v.children.length > 0 ? v.children.reduce(function (r, i) {
-              return r && (i.isValid() || !i.required || i.disabled);
-            }, true) : v.isValid() || !v.required || v.disabled;
-            return a && valid;
-          }, true);
-        }
-      }]);
-
-      return BookingMainFlowFormComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -7713,941 +7246,727 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
     var dayjs__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_15__);
 
-    var BookingMainFlowComponent = /*#__PURE__*/function (_shared_globals_base_11) {
-      _inherits(BookingMainFlowComponent, _shared_globals_base_11);
-
-      function BookingMainFlowComponent(_service, _route, _router, _dialog) {
-        var _this30;
-
-        _classCallCheck(this, BookingMainFlowComponent);
-
-        _this30 = _possibleConstructorReturn(this, _getPrototypeOf(BookingMainFlowComponent).call(this));
-        _this30._service = _service;
-        _this30._route = _route;
-        _this30._router = _router;
-        _this30._dialog = _dialog;
-        return _this30;
+    class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"] {
+      constructor(_service, _route, _router, _dialog) {
+        super();
+        this._service = _service;
+        this._route = _route;
+        this._router = _router;
+        this._dialog = _dialog;
       }
 
-      _createClass(BookingMainFlowComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this31 = this;
-
-          if (!this._service.ready()) {
-            return this.timeout('init', function () {
-              return _this31.ngOnInit();
-            });
-          }
-
-          this.subscription('route', this._route.paramMap.subscribe(function (params) {
-            if (params.has('page')) {
-              _this31.page = params.get('page');
-            }
-          }));
-          this.subscription('route_change', this._router.events.subscribe(function (event) {
-            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"] && event.url.indexOf('book') < 0) {
-              _this31.clearForm();
-            }
-          }));
-          this.loadForm();
+      ngOnInit() {
+        if (!this._service.ready()) {
+          return this.timeout('init', () => this.ngOnInit());
         }
-        /** List of selected rooms for the booking */
 
-      }, {
-        key: "progress",
-
-        /**
-         * Progress to the next step in the flow
-         */
-        value: function progress(event) {
-          var _this32 = this;
-
-          var empty = {
-            control: {
-              value: true
-            }
-          };
-          var catering = (this.form_fields.find(function (i) {
-            return i.key === 'needs_catering';
-          }) || empty).control.value;
-          var space = (this.form_fields.find(function (i) {
-            return i.key === 'needs_space';
-          }) || empty).control.value;
-          var id = (this.form_fields.find(function (i) {
-            return i.key === 'id';
-          }) || empty).control.value;
-          this.id = id || !space ? '10' : '';
-
-          if (event.type === 'next') {
-            switch (this.page) {
-              case 'catering':
-                this._service.navigate(['book', 'main', 'orders']);
-
-                var order_list = this.catering.getValue() || [];
-                var index = order_list.findIndex(function (order) {
-                  return order.id === _this32.order.id;
-                });
-                var new_item_count = this.order.changes.items ? this.order.changes.items.reduce(function (count, item) {
-                  return count + (item.amount || 0);
-                }, 0) : this.order.item_count;
-
-                if (new_item_count > 0 && index < 0) {
-                  order_list.push(new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](this.order.toJSON(true)));
-                } else {
-                  index >= 0 && new_item_count > 0 ? order_list.splice(index, 1, new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](this.order.toJSON(true))) : index >= 0 ? order_list.splice(index, 1) : '';
-                }
-
-                this.catering.control.setValue(order_list);
-                break;
-
-              case 'orders':
-                var orders = this.catering.getValue();
-                var item_count = (orders || []).reduce(function (count, order) {
-                  return count + order.item_count;
-                }, 0);
-
-                if (item_count > 0) {
-                  this.addCateringNotes().then(function () {
-                    return _this32.confirmBooking();
-                  });
-                } else {
-                  this.confirmBooking();
-                }
-
-                break;
-
-              case 'space':
-                if (this.recurr_period) {
-                  this.selectRecurrenceRooms().then(function () {
-                    return _this32.addEquipment(true);
-                  }).then(function () {
-                    return _this32.confirmBooking(false);
-                  }).catch(function () {});
-                } else {
-                  this.addEquipment().then(function () {
-                    if (catering) {
-                      _this32._service.navigate(['book', 'main', 'orders']);
-                    } else {
-                      _this32.confirmBooking();
-                    }
-                  }).catch(function () {});
-                }
-
-                break;
-
-              default:
-                if (space && !id) {
-                  this._service.navigate(['book', 'main', 'space']);
-                } else if (this.spaces && this.spaces.length > 0) {
-                  this.addEquipment().then(function () {
-                    if (catering) {
-                      _this32._service.navigate(['book', 'main', 'orders']);
-                    } else {
-                      _this32.confirmBooking();
-                    }
-                  }).catch(function () {});
-                } else if ((space || this.spaces && this.spaces.length) && catering) {
-                  this._service.navigate(['book', 'main', 'orders']);
-                } else {
-                  this.confirmBooking();
-                }
-
-                break;
-            }
-          } else if (event.type === 'previous') {
-            switch (this.page) {
-              case 'catering':
-                if (id || !space) {
-                  // Whether space selection handled on the main form
-                  this._service.navigate(['book', 'main', 'orders']);
-                } else {
-                  this._service.navigate(['book', 'main', 'orders']);
-                }
-
-                break;
-
-              case 'orders':
-                if (id || !space) {
-                  // Whether space selection handled on the main form
-                  this._service.navigate(['book', 'main', 'form']);
-                } else {
-                  this._service.navigate(['book', 'main', 'space']);
-                }
-
-                break;
-
-              case 'space':
-                this._service.navigate(['book', 'main', 'form']);
-
-                break;
-
-              default:
-                this._service.navigate(['home']);
-
-                break;
-            }
+        this.subscription('route', this._route.paramMap.subscribe(params => {
+          if (params.has('page')) {
+            this.page = params.get('page');
           }
+        }));
+        this.subscription('route_change', this._router.events.subscribe(event => {
+          if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"] && event.url.indexOf('book') < 0) {
+            this.clearForm();
+          }
+        }));
+        this.loadForm();
+      }
+      /** List of selected rooms for the booking */
+
+
+      get spaces() {
+        const field = this.form_fields.find(i => i.key === 'room');
+
+        if (field) {
+          return field.control.value || [];
         }
-        /**
-         * Clear any form data
-         */
 
-      }, {
-        key: "clearForm",
-        value: function clearForm() {
-          if (localStorage) {
-            localStorage.removeItem('STAFF.booking_form');
-          }
+        return [];
+      }
+      /** Timestamp of the end of the recurrence period */
 
-          this.loadForm();
+
+      get recurr_end() {
+        let field = this.form_fields.find(i => i.key === 'recurrence');
+
+        if (field) {
+          return (field.control.value || {
+            end: 0
+          }).end || 0;
         }
-        /**
-         * Load old form data and intialise the form
-         */
 
-      }, {
-        key: "loadForm",
-        value: function loadForm() {
-          var _this33 = this;
+        field = this.form_fields.find(i => i.key === 'period_group');
 
-          var booking = {};
+        if (field) {
+          return (field.control.controls.recurrence.value || {
+            end: 0
+          }).end || 0;
+        }
 
-          if (localStorage) {
-            booking = JSON.parse(localStorage.getItem('STAFF.booking_form') || '{}');
+        return 0;
+      }
+      /** Period of the recurrence */
+
+
+      get recurr_period() {
+        let field = this.form_fields.find(i => i.key === 'recurrence');
+
+        if (field) {
+          return (field.control.value || {
+            period: 0
+          }).period || 0;
+        }
+
+        field = this.form_fields.find(i => i.key === 'period_group');
+
+        if (field) {
+          return (field.control.controls.recurrence.value || {
+            period: 0
+          }).period || 0;
+        }
+
+        return 0;
+      }
+      /** Datetime selected for the booking */
+
+
+      get date() {
+        const field = this.date_field;
+
+        if (field) {
+          return field.control.value;
+        }
+
+        return dayjs__WEBPACK_IMPORTED_MODULE_15__().startOf('m').valueOf();
+      }
+      /** Selected duration for the booking */
+
+
+      get duration() {
+        let field = this.form_fields.find(i => i.key === 'duration');
+
+        if (field) {
+          return field.control.value;
+        }
+
+        field = this.form_fields.find(i => i.key === 'time_group');
+
+        if (field) {
+          return field.control.controls.duration.value;
+        }
+
+        return 60;
+      }
+      /** Whether booking is all day */
+
+
+      get all_day() {
+        const field = this.form_fields.find(i => i.key === 'all_day');
+        return field ? field.control.value : false;
+      }
+      /** Whether the user want to add catering to their booking */
+
+
+      get needs_catering() {
+        const empty = {
+          control: {
+            value: {}
+          }
+        };
+        const catering = (this.form_fields.find(i => i.key === 'needs_catering') || empty).control.value;
+        return catering;
+      }
+      /** Number of items in the catering order */
+
+
+      get has_ordered() {
+        const empty = {
+          control: {
+            value: {}
+          }
+        };
+        const order = (this.form_fields.find(i => i.key === 'catering') || empty).control.value;
+        return order ? Object.keys(order).reduce((v, key) => {
+          const room_order = order[key];
+
+          if (room_order && room_order.items) {
+            v += room_order.items.reduce((c, i) => c + (i.amount || 0), 0);
           }
 
-          this.form_fields = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["generateBookingFormMetadata"])(booking, this._service.Settings.get('app.booking.fields'), this._service);
-          var host = this.form_fields.find(function (i) {
-            return i.key === 'host';
-          });
+          return v;
+        }, 0) : 0;
+      }
+      /**
+       * Progress to the next step in the flow
+       */
 
-          if (host) {
-            host.metadata = {
-              service: this._service.Bookings,
-              options: this.getHostOptions()
-            };
-            host.setValue(host.getValue() || booking.host);
+
+      progress(event) {
+        const empty = {
+          control: {
+            value: true
           }
+        };
+        const catering = (this.form_fields.find(i => i.key === 'needs_catering') || empty).control.value;
+        const space = (this.form_fields.find(i => i.key === 'needs_space') || empty).control.value;
+        const id = (this.form_fields.find(i => i.key === 'id') || empty).control.value;
+        this.id = id || !space ? '10' : '';
 
-          this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
-            key: 'id',
-            type: 'action',
-            hide: true,
-            value: booking.id
-          }));
-          this.date_field = this.form_fields.reduce(function (v, i) {
-            return v.concat(i.children && i.children.length ? i.children : [i]);
-          }, []).find(function (i) {
-            return i.key === 'date';
-          });
-          this.space_list = new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
-            key: 'room',
-            label: 'Spaces',
-            type: 'action',
-            format: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_7__["formatSpaces"],
-            hide: !booking.id,
-            value: booking.room || []
-          });
-          this.catering = new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
-            key: 'catering',
-            label: 'Catering',
-            type: 'action',
-            hide: true,
-            value: ((booking.catering instanceof Array ? booking.catering : [booking.catering]) || []).filter(function (order) {
-              return order;
-            }).map(function (order) {
-              return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](order);
-            })
-          });
-          this.form_fields.unshift(this.space_list);
-          this.form_fields.push(this.catering);
-          this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
-            key: 'booked_by',
-            label: 'Booked by',
-            type: 'custom',
-            hide: true,
-            value: booking.booked_by
-          }));
-          this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
-            key: 'recurrence_rooms',
-            label: 'Recurrence rooms',
-            type: 'custom',
-            hide: true,
-            value: []
-          }));
-          this.form_fields.forEach(function (field) {
-            if (field.children && field.children.length) {
-              field.children.forEach(function (sub_field) {
-                _this33.subscription(sub_field.key, sub_field.control.valueChanges.subscribe(function (value) {
-                  if (value && sub_field.control.valid) {
-                    _this33.saveForm();
+        if (event.type === 'next') {
+          switch (this.page) {
+            case 'catering':
+              this._service.navigate(['book', 'main', 'orders']);
+
+              const order_list = this.catering.getValue() || [];
+              const index = order_list.findIndex(order => order.id === this.order.id);
+              const new_item_count = this.order.changes.items ? this.order.changes.items.reduce((count, item) => count + (item.amount || 0), 0) : this.order.item_count;
+
+              if (new_item_count > 0 && index < 0) {
+                order_list.push(new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](this.order.toJSON(true)));
+              } else {
+                index >= 0 && new_item_count > 0 ? order_list.splice(index, 1, new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](this.order.toJSON(true))) : index >= 0 ? order_list.splice(index, 1) : '';
+              }
+
+              this.catering.control.setValue(order_list);
+              break;
+
+            case 'orders':
+              const orders = this.catering.getValue();
+              const item_count = (orders || []).reduce((count, order) => count + order.item_count, 0);
+
+              if (item_count > 0) {
+                this.addCateringNotes().then(() => this.confirmBooking());
+              } else {
+                this.confirmBooking();
+              }
+
+              break;
+
+            case 'space':
+              if (this.recurr_period) {
+                this.selectRecurrenceRooms().then(() => this.addEquipment(true)).then(() => this.confirmBooking(false)).catch(() => {});
+              } else {
+                this.addEquipment().then(() => {
+                  if (catering) {
+                    this._service.navigate(['book', 'main', 'orders']);
+                  } else {
+                    this.confirmBooking();
                   }
-                }));
-              });
-            } else {
-              _this33.subscription(field.key, field.control.valueChanges.subscribe(function (value) {
-                if (value && field.control.valid) {
-                  _this33.saveForm();
+                }).catch(() => {});
+              }
+
+              break;
+
+            default:
+              if (space && !id) {
+                this._service.navigate(['book', 'main', 'space']);
+              } else if (this.spaces && this.spaces.length > 0) {
+                this.addEquipment().then(() => {
+                  if (catering) {
+                    this._service.navigate(['book', 'main', 'orders']);
+                  } else {
+                    this.confirmBooking();
+                  }
+                }).catch(() => {});
+              } else if ((space || this.spaces && this.spaces.length) && catering) {
+                this._service.navigate(['book', 'main', 'orders']);
+              } else {
+                this.confirmBooking();
+              }
+
+              break;
+          }
+        } else if (event.type === 'previous') {
+          switch (this.page) {
+            case 'catering':
+              if (id || !space) {
+                // Whether space selection handled on the main form
+                this._service.navigate(['book', 'main', 'orders']);
+              } else {
+                this._service.navigate(['book', 'main', 'orders']);
+              }
+
+              break;
+
+            case 'orders':
+              if (id || !space) {
+                // Whether space selection handled on the main form
+                this._service.navigate(['book', 'main', 'form']);
+              } else {
+                this._service.navigate(['book', 'main', 'space']);
+              }
+
+              break;
+
+            case 'space':
+              this._service.navigate(['book', 'main', 'form']);
+
+              break;
+
+            default:
+              this._service.navigate(['home']);
+
+              break;
+          }
+        }
+      }
+      /**
+       * Clear any form data
+       */
+
+
+      clearForm() {
+        if (localStorage) {
+          localStorage.removeItem('STAFF.booking_form');
+        }
+
+        this.loadForm();
+      }
+      /**
+       * Load old form data and intialise the form
+       */
+
+
+      loadForm() {
+        let booking = {};
+
+        if (localStorage) {
+          booking = JSON.parse(localStorage.getItem('STAFF.booking_form') || '{}');
+        }
+
+        this.form_fields = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["generateBookingFormMetadata"])(booking, this._service.Settings.get('app.booking.fields'), this._service);
+        const host = this.form_fields.find(i => i.key === 'host');
+
+        if (host) {
+          host.metadata = {
+            service: this._service.Bookings,
+            options: this.getHostOptions()
+          };
+          host.setValue(host.getValue() || booking.host);
+        }
+
+        this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
+          key: 'id',
+          type: 'action',
+          hide: true,
+          value: booking.id
+        }));
+        this.date_field = this.form_fields.reduce((v, i) => v.concat(i.children && i.children.length ? i.children : [i]), []).find(i => i.key === 'date');
+        this.space_list = new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
+          key: 'room',
+          label: 'Spaces',
+          type: 'action',
+          format: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_7__["formatSpaces"],
+          hide: !booking.id,
+          value: booking.room || []
+        });
+        this.catering = new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
+          key: 'catering',
+          label: 'Catering',
+          type: 'action',
+          hide: true,
+          value: ((booking.catering instanceof Array ? booking.catering : [booking.catering]) || []).filter(order => order).map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](order))
+        });
+        this.form_fields.unshift(this.space_list);
+        this.form_fields.push(this.catering);
+        this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
+          key: 'booked_by',
+          label: 'Booked by',
+          type: 'custom',
+          hide: true,
+          value: booking.booked_by
+        }));
+        this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
+          key: 'recurrence_rooms',
+          label: 'Recurrence rooms',
+          type: 'custom',
+          hide: true,
+          value: []
+        }));
+        this.form_fields.forEach(field => {
+          if (field.children && field.children.length) {
+            field.children.forEach(sub_field => {
+              this.subscription(sub_field.key, sub_field.control.valueChanges.subscribe(value => {
+                if (value && sub_field.control.valid) {
+                  this.saveForm();
                 }
               }));
+            });
+          } else {
+            this.subscription(field.key, field.control.valueChanges.subscribe(value => {
+              if (value && field.control.valid) {
+                this.saveForm();
+              }
+            }));
+          }
+        });
+        const empty = {
+          control: {
+            value: true,
+            valueChanges: false
+          },
+          children: []
+        };
+        const space = (this.form_fields.find(i => i.key === 'needs_space') || empty).control.value;
+        const time = this.form_fields.find(i => i.key === 'time_group') || empty;
+        const all_day = this.form_fields.find(i => i.key === 'all_day') || empty;
+        time.setDisabled(this.duration > 450);
+        const start = time.children.find(i => i.key === 'start') || empty;
+        const duration = time.children.find(i => i.key === 'duration') || empty;
+        this.subscription('all_day_value', all_day.control.valueChanges.subscribe(state => start.setDisabled(state)));
+        this.subscription('duration_value', duration.control.valueChanges.subscribe(state => {
+          if (state > 450) {
+            start.setDisabled(true);
+          }
+        }));
+        this.subscription('date_value', this.date_field.control.valueChanges.subscribe(state => {
+          if (this.recurr_end && dayjs__WEBPACK_IMPORTED_MODULE_15__(this.recurr_end).isBefore(state, 'd')) {
+            const recurrence_field = this.form_fields.reduce((v, i) => v.concat(i.children && i.children.length ? i.children : [i]), []).find(i => i.key === 'recurrence');
+            recurrence_field.setValue({
+              recurr_period: 0,
+              recurr_end: 0
+            });
+          }
+        }));
+        this.subscription('room_value', this.space_list.control.valueChanges.subscribe(state => {
+          const recurrence_rooms_field = this.form_fields.find(i => i.key === 'recurrence_rooms');
+          recurrence_rooms_field.setValue([]);
+        }));
+        const id = (this.form_fields.find(i => i.key === 'id') || empty).control.value;
+        this.id = id || !space ? '10' : '';
+      }
+      /**
+       * Save changes to the form data
+       */
+
+
+      saveForm() {
+        this.timeout('save_form', () => {
+          const form = this.formToBooking();
+
+          if (localStorage) {
+            localStorage.setItem('STAFF.booking_form', JSON.stringify(form));
+          }
+        }, 50);
+      }
+      /**
+       * Convert form field data to a Booking object
+       */
+
+
+      formToBooking() {
+        return this.form_fields.reduce((v, i) => {
+          if (i.children && i.children.length) {
+            i.children.forEach(j => v[j.key] = j.control.value);
+          } else {
+            v[i.key] = i.control.value;
+          }
+
+          return v;
+        }, {});
+      }
+      /** Search for available rooms matching the set filters
+       * @param data Date selected in unix ms
+      */
+
+
+      search(date) {
+        const location_list = localStorage ? localStorage.getItem('STAFF.booking.filters') : this._service.Buildings.current().id;
+        const locations = location_list.split(',');
+        let room_list = [];
+
+        for (const zone of locations) {
+          room_list = room_list.concat(this._service.Rooms.list(true, zone));
+        } // Filter out rooms unavailable due to booking rules
+
+
+        const options = {
+          user: this._service.Users.current(),
+          time: date,
+          duration: this.duration
+        };
+        room_list = this._service.Rooms.filterRulesRooms(_shared_utility_class__WEBPACK_IMPORTED_MODULE_14__["Utils"].unique(room_list, 'id'), options, true);
+        room_list = room_list.slice(0, Math.min(100, room_list.length));
+        const query = {
+          date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_15__(date).startOf('d').valueOf() : date,
+          duration: this.all_day ? 24 * 60 : this.duration + (this.needs_catering ? 15 : 0),
+          hide_bookings: true,
+          ignore_rooms: room_list.reduce((v, i) => v + (v ? ',' : '') + i.id, ''),
+          zone_ids: location_list
+        };
+        return this._service.Rooms.available(query);
+      }
+      /** Show modal for rooms selection for recurrence booking */
+
+
+      selectRecurrenceRooms() {
+        return new Promise((resolve, reject) => {
+          const empty = {
+            control: {
+              value: ''
+            }
+          };
+          const space = this.form_fields.find(i => i.key === 'room');
+          const recurrence_rooms = this.form_fields.find(i => i.key === 'recurrence_rooms');
+
+          const ref = this._dialog.open(_overlays_recurrence_details_recurrence_details_component__WEBPACK_IMPORTED_MODULE_12__["BookingRecurrenceDetailsModalComponent"], {
+            maxWidth: 'calc(100vw - 2em)',
+            width: '32em',
+            data: {
+              space: ((space || empty).control.value || [])[0],
+              recurrence_rooms: (recurrence_rooms || empty).control.value || []
             }
           });
-          var empty = {
-            control: {
-              value: true,
-              valueChanges: false
-            },
-            children: []
-          };
-          var space = (this.form_fields.find(function (i) {
-            return i.key === 'needs_space';
-          }) || empty).control.value;
-          var time = this.form_fields.find(function (i) {
-            return i.key === 'time_group';
-          }) || empty;
-          var all_day = this.form_fields.find(function (i) {
-            return i.key === 'all_day';
-          }) || empty;
-          time.setDisabled(this.duration > 450);
-          var start = time.children.find(function (i) {
-            return i.key === 'start';
-          }) || empty;
-          var duration = time.children.find(function (i) {
-            return i.key === 'duration';
-          }) || empty;
-          this.subscription('all_day_value', all_day.control.valueChanges.subscribe(function (state) {
-            return start.setDisabled(state);
-          }));
-          this.subscription('duration_value', duration.control.valueChanges.subscribe(function (state) {
-            if (state > 450) {
-              start.setDisabled(true);
-            }
-          }));
-          this.subscription('date_value', this.date_field.control.valueChanges.subscribe(function (state) {
-            if (_this33.recurr_end && dayjs__WEBPACK_IMPORTED_MODULE_15__(_this33.recurr_end).isBefore(state, 'd')) {
-              var recurrence_field = _this33.form_fields.reduce(function (v, i) {
-                return v.concat(i.children && i.children.length ? i.children : [i]);
-              }, []).find(function (i) {
-                return i.key === 'recurrence';
-              });
 
-              recurrence_field.setValue({
-                recurr_period: 0,
-                recurr_end: 0
-              });
-            }
-          }));
-          this.subscription('room_value', this.space_list.control.valueChanges.subscribe(function (state) {
-            var recurrence_rooms_field = _this33.form_fields.find(function (i) {
-              return i.key === 'recurrence_rooms';
-            });
+          ref.componentInstance.event.subscribe(event => {
+            if (event.reason === 'done') {
+              const data = ref.componentInstance.recurrence_rooms;
+              recurrence_rooms.setValue(data);
+              resolve();
+              ref.close();
+            } else if (event.reason === 'action') {
+              const {
+                item
+              } = event.metadata;
+              const date = item.date;
+              item.loading = true;
+              this.search(item.date).then(res => {
+                // Filter rooms based on booking rules
+                const options = {
+                  user: this._service.Users.current(),
+                  time: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_15__(date).startOf('d').valueOf() : date,
+                  duration: this.all_day ? 24 * 60 : this.duration + (this.needs_catering ? 15 : 0),
+                  recurr_end: this.recurr_end
+                };
 
-            recurrence_rooms_field.setValue([]);
-          }));
-          var id = (this.form_fields.find(function (i) {
-            return i.key === 'id';
-          }) || empty).control.value;
-          this.id = id || !space ? '10' : '';
-        }
-        /**
-         * Save changes to the form data
-         */
+                const list = this._service.Rooms.filterRulesRooms(res, options);
 
-      }, {
-        key: "saveForm",
-        value: function saveForm() {
-          var _this34 = this;
-
-          this.timeout('save_form', function () {
-            var form = _this34.formToBooking();
-
-            if (localStorage) {
-              localStorage.setItem('STAFF.booking_form', JSON.stringify(form));
-            }
-          }, 50);
-        }
-        /**
-         * Convert form field data to a Booking object
-         */
-
-      }, {
-        key: "formToBooking",
-        value: function formToBooking() {
-          return this.form_fields.reduce(function (v, i) {
-            if (i.children && i.children.length) {
-              i.children.forEach(function (j) {
-                return v[j.key] = j.control.value;
+                item.loading = false;
+                this.openRoomSelectModal({
+                  date,
+                  list
+                }).then(room => {
+                  ref.componentInstance.room$.next({
+                    date,
+                    room
+                  });
+                }).catch();
               });
             } else {
-              v[i.key] = i.control.value;
+              reject();
+            }
+          });
+        });
+      }
+      /** Show modal to select room in recurrence */
+
+
+      openRoomSelectModal(data) {
+        return new Promise((resolve, reject) => {
+          const ref = this._dialog.open(_overlays_recurrence_room_select_recurrence_room_select_component__WEBPACK_IMPORTED_MODULE_13__["BookingRecurrenceRoomSelectModalComponent"], {
+            maxWidth: 'calc(100vw - 2em)',
+            width: '32em',
+            data: {
+              date: data.date,
+              list: data.list
+            }
+          });
+
+          ref.componentInstance.event.subscribe(event => {
+            if (event.reason === 'done') {
+              resolve(event.metadata);
+            } else {
+              reject();
             }
 
-            return v;
-          }, {});
-        }
-        /** Search for available rooms matching the set filters
-         * @param data Date selected in unix ms
-        */
-
-      }, {
-        key: "search",
-        value: function search(date) {
-          var location_list = localStorage ? localStorage.getItem('STAFF.booking.filters') : this._service.Buildings.current().id;
-          var locations = location_list.split(',');
-          var room_list = [];
-          var _iteratorNormalCompletion6 = true;
-          var _didIteratorError6 = false;
-          var _iteratorError6 = undefined;
-
-          try {
-            for (var _iterator6 = locations[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-              var zone = _step6.value;
-              room_list = room_list.concat(this._service.Rooms.list(true, zone));
-            } // Filter out rooms unavailable due to booking rules
-
-          } catch (err) {
-            _didIteratorError6 = true;
-            _iteratorError6 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
-                _iterator6.return();
-              }
-            } finally {
-              if (_didIteratorError6) {
-                throw _iteratorError6;
-              }
-            }
-          }
-
-          var options = {
-            user: this._service.Users.current(),
-            time: date,
-            duration: this.duration
-          };
-          room_list = this._service.Rooms.filterRulesRooms(_shared_utility_class__WEBPACK_IMPORTED_MODULE_14__["Utils"].unique(room_list, 'id'), options, true);
-          room_list = room_list.slice(0, Math.min(100, room_list.length));
-          var query = {
-            date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_15__(date).startOf('d').valueOf() : date,
-            duration: this.all_day ? 24 * 60 : this.duration + (this.needs_catering ? 15 : 0),
-            hide_bookings: true,
-            ignore_rooms: room_list.reduce(function (v, i) {
-              return v + (v ? ',' : '') + i.id;
-            }, ''),
-            zone_ids: location_list
-          };
-          return this._service.Rooms.available(query);
-        }
-        /** Show modal for rooms selection for recurrence booking */
-
-      }, {
-        key: "selectRecurrenceRooms",
-        value: function selectRecurrenceRooms() {
-          var _this35 = this;
-
-          return new Promise(function (resolve, reject) {
-            var empty = {
-              control: {
-                value: ''
-              }
-            };
-
-            var space = _this35.form_fields.find(function (i) {
-              return i.key === 'room';
-            });
-
-            var recurrence_rooms = _this35.form_fields.find(function (i) {
-              return i.key === 'recurrence_rooms';
-            });
-
-            var ref = _this35._dialog.open(_overlays_recurrence_details_recurrence_details_component__WEBPACK_IMPORTED_MODULE_12__["BookingRecurrenceDetailsModalComponent"], {
-              maxWidth: 'calc(100vw - 2em)',
-              width: '32em',
-              data: {
-                space: ((space || empty).control.value || [])[0],
-                recurrence_rooms: (recurrence_rooms || empty).control.value || []
-              }
-            });
-
-            ref.componentInstance.event.subscribe(function (event) {
-              if (event.reason === 'done') {
-                var data = ref.componentInstance.recurrence_rooms;
-                recurrence_rooms.setValue(data);
-                resolve();
-                ref.close();
-              } else if (event.reason === 'action') {
-                var item = event.metadata.item;
-                var date = item.date;
-                item.loading = true;
-
-                _this35.search(item.date).then(function (res) {
-                  // Filter rooms based on booking rules
-                  var options = {
-                    user: _this35._service.Users.current(),
-                    time: _this35.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_15__(date).startOf('d').valueOf() : date,
-                    duration: _this35.all_day ? 24 * 60 : _this35.duration + (_this35.needs_catering ? 15 : 0),
-                    recurr_end: _this35.recurr_end
-                  };
-
-                  var list = _this35._service.Rooms.filterRulesRooms(res, options);
-
-                  item.loading = false;
-
-                  _this35.openRoomSelectModal({
-                    date: date,
-                    list: list
-                  }).then(function (room) {
-                    ref.componentInstance.room$.next({
-                      date: date,
-                      room: room
-                    });
-                  }).catch();
-                });
-              } else {
-                reject();
-              }
-            });
+            ref.close();
           });
-        }
-        /** Show modal to select room in recurrence */
-
-      }, {
-        key: "openRoomSelectModal",
-        value: function openRoomSelectModal(data) {
-          var _this36 = this;
-
-          return new Promise(function (resolve, reject) {
-            var ref = _this36._dialog.open(_overlays_recurrence_room_select_recurrence_room_select_component__WEBPACK_IMPORTED_MODULE_13__["BookingRecurrenceRoomSelectModalComponent"], {
-              maxWidth: 'calc(100vw - 2em)',
-              width: '32em',
-              data: {
-                date: data.date,
-                list: data.list
-              }
-            });
-
-            ref.componentInstance.event.subscribe(function (event) {
-              if (event.reason === 'done') {
-                resolve(event.metadata);
-              } else {
-                reject();
-              }
-
-              ref.close();
-            });
-          });
-        }
-        /**
-         * Show modal to user for adding equipment details to a booking
-         * @param reccurence recurrence booking
-         */
-
-      }, {
-        key: "addEquipment",
-        value: function addEquipment() {
-          var _this37 = this;
-
-          var recurrence = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-          return new Promise(function (resolve, reject) {
-            var empty = {
-              control: {
-                value: ''
-              }
-            };
-
-            var notes = _this37.form_fields.find(function (i) {
-              return i.key === 'equipment';
-            });
-
-            var expected_attendees = _this37.form_fields.find(function (i) {
-              return i.key === 'expected_attendees';
-            });
-
-            var spaces = _this37.form_fields.find(function (i) {
-              return i.key === 'room';
-            });
-
-            var cost_code = _this37.form_fields.find(function (i) {
-              return i.key === 'equipment_code';
-            });
-
-            var recurrence_rooms = _this37.form_fields.find(function (i) {
-              return i.key === 'recurrence_rooms';
-            });
-
-            var recurrence_spaces = _shared_utility_class__WEBPACK_IMPORTED_MODULE_14__["Utils"].unique(((recurrence_rooms || empty).control.value || []).map(function (i) {
-              return i.room;
-            }), 'id');
-
-            var ref = _this37._dialog.open(_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_9__["BookingEquipmentDetailsModalComponent"], {
-              maxWidth: 'calc(100vw - 2em)',
-              width: '32em',
-              data: {
-                spaces: recurrence ? recurrence_spaces : (spaces || empty).control.value || [],
-                expected_attendees: Object.assign({}, (expected_attendees || empty).control.value),
-                notes: Object.assign({}, (notes || empty).control.value),
-                cost_code: Object.assign({}, (cost_code || empty).control.value),
-                recurrence: recurrence
-              }
-            });
-
-            ref.componentInstance.event.subscribe(function (event) {
-              if (event.reason === 'done') {
-                if (notes) {
-                  notes.setValue(ref.componentInstance.notes);
-                }
-
-                if (expected_attendees) {
-                  expected_attendees.setValue(ref.componentInstance.expected_attendees || {});
-                }
-
-                if (cost_code) {
-                  cost_code.setValue(ref.componentInstance.cost_code);
-                }
-
-                resolve();
-              } else {
-                reject();
-              }
-
-              ref.close();
-            });
-          });
-        }
-        /**
-         * Show modal for adding details to catering
-         */
-
-      }, {
-        key: "addCateringNotes",
-        value: function addCateringNotes() {
-          var _this38 = this;
-
-          return new Promise(function (resolve, reject) {
-            var empty = {
-              control: {
-                value: ''
-              }
-            };
-
-            var notes = _this38.form_fields.find(function (i) {
-              return i.key === 'catering_notes';
-            });
-
-            var spaces = _this38.form_fields.find(function (i) {
-              return i.key === 'room';
-            });
-
-            var cost_code = _this38.form_fields.find(function (i) {
-              return i.key === 'catering_code';
-            });
-
-            var ref = _this38._dialog.open(_overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_10__["BookingCateringDetailsModalComponent"], {
-              maxWidth: 'calc(100vw - 2em)',
-              width: '32em',
-              data: {
-                spaces: (spaces || empty).control.value || [],
-                notes: Object.assign({}, (notes || empty).control.value),
-                cost_code: Object.assign({}, (cost_code || empty).control.value)
-              }
-            });
-
-            ref.componentInstance.event.subscribe(function (event) {
-              if (event.reason === 'done') {
-                if (notes) {
-                  notes.setValue(ref.componentInstance.notes);
-                }
-
-                if (cost_code) {
-                  cost_code.setValue(ref.componentInstance.cost_code);
-                }
-
-                resolve();
-              } else {
-                reject();
-              }
-
-              ref.close();
-            });
-          });
-        }
-        /**
-         * Open modal for confirming booking details
-         */
-
-      }, {
-        key: "confirmBooking",
-        value: function confirmBooking() {
-          var _this39 = this;
-
-          var check = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-          this.timeout('confirm-booking', function () {
-            var fields = _this39.formToBooking();
-
-            fields.catering = fields.catering.map(function (order) {
-              return order.toJSON(true);
-            });
-
-            var ref = _this39._dialog.open(_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_11__["BookingDetailsModalComponent"], {
-              data: Object.assign({}, fields, {
-                check: check
-              })
-            });
-
-            ref.componentInstance.event.subscribe(function (event) {
-              if (event.reason === 'done') {
-                // Booking completed successfully
-                _this39.clearForm();
-
-                _this39._service.navigate(['schedule'], {
-                  host: fields.host ? fields.host.email : _this39._service.Users.current().email
-                });
-
-                ref.close();
-              } else if (event.reason === 'action' && event.metadata === 'new') {
-                // User wishes to create a new booking
-                _this39.clearForm();
-
-                _this39._service.navigate(['book', 'main', 'form']);
-              } else if (event.reason === 'action' && event.metadata === 'edit') {
-                // User wishes to edit the booking
-                _this39._service.navigate(['book', 'main', 'form']);
-
-                ref.close();
-              } else {
-                ref.close();
-              }
-            });
-          }, 100);
-        }
-        /**
-         * Get list of users available to select as the meeting host
-         */
-
-      }, {
-        key: "getHostOptions",
-        value: function getHostOptions() {
-          var _this40 = this;
-
-          var user = this._service.Users.current();
-
-          var list = [user];
-
-          if (user.delegates) {
-            var _iteratorNormalCompletion7 = true;
-            var _didIteratorError7 = false;
-            var _iteratorError7 = undefined;
-
-            try {
-              var _loop3 = function _loop3() {
-                var email = _step7.value;
-
-                var delegate = _this40._service.Users.item(email);
-
-                if (delegate) {
-                  list.push(delegate);
-                } else {
-                  _this40.timeout("load_user|".concat(email), function () {
-                    return _this40._service.Users.show(email, {
-                      update: true
-                    }).then(function () {
-                      _this40.timeout('update_host_options', function () {
-                        var host = _this40.form_fields.find(function (i) {
-                          return i.key === 'host';
-                        });
-
-                        if (host) {
-                          host.metadata = {
-                            service: _this40._service.Bookings,
-                            options: _this40.getHostOptions()
-                          };
-                          host.setValue(host.getValue());
-                        }
-                      });
-                    });
-                  });
-                }
-              };
-
-              for (var _iterator7 = user.delegates[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-                _loop3();
-              }
-            } catch (err) {
-              _didIteratorError7 = true;
-              _iteratorError7 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
-                  _iterator7.return();
-                }
-              } finally {
-                if (_didIteratorError7) {
-                  throw _iteratorError7;
-                }
-              }
-            }
-          }
-
-          return list;
-        }
-      }, {
-        key: "spaces",
-        get: function get() {
-          var field = this.form_fields.find(function (i) {
-            return i.key === 'room';
-          });
-
-          if (field) {
-            return field.control.value || [];
-          }
-
-          return [];
-        }
-        /** Timestamp of the end of the recurrence period */
-
-      }, {
-        key: "recurr_end",
-        get: function get() {
-          var field = this.form_fields.find(function (i) {
-            return i.key === 'recurrence';
-          });
-
-          if (field) {
-            return (field.control.value || {
-              end: 0
-            }).end || 0;
-          }
-
-          field = this.form_fields.find(function (i) {
-            return i.key === 'period_group';
-          });
-
-          if (field) {
-            return (field.control.controls.recurrence.value || {
-              end: 0
-            }).end || 0;
-          }
-
-          return 0;
-        }
-        /** Period of the recurrence */
-
-      }, {
-        key: "recurr_period",
-        get: function get() {
-          var field = this.form_fields.find(function (i) {
-            return i.key === 'recurrence';
-          });
-
-          if (field) {
-            return (field.control.value || {
-              period: 0
-            }).period || 0;
-          }
-
-          field = this.form_fields.find(function (i) {
-            return i.key === 'period_group';
-          });
-
-          if (field) {
-            return (field.control.controls.recurrence.value || {
-              period: 0
-            }).period || 0;
-          }
-
-          return 0;
-        }
-        /** Datetime selected for the booking */
-
-      }, {
-        key: "date",
-        get: function get() {
-          var field = this.date_field;
-
-          if (field) {
-            return field.control.value;
-          }
-
-          return dayjs__WEBPACK_IMPORTED_MODULE_15__().startOf('m').valueOf();
-        }
-        /** Selected duration for the booking */
-
-      }, {
-        key: "duration",
-        get: function get() {
-          var field = this.form_fields.find(function (i) {
-            return i.key === 'duration';
-          });
-
-          if (field) {
-            return field.control.value;
-          }
-
-          field = this.form_fields.find(function (i) {
-            return i.key === 'time_group';
-          });
-
-          if (field) {
-            return field.control.controls.duration.value;
-          }
-
-          return 60;
-        }
-        /** Whether booking is all day */
-
-      }, {
-        key: "all_day",
-        get: function get() {
-          var field = this.form_fields.find(function (i) {
-            return i.key === 'all_day';
-          });
-          return field ? field.control.value : false;
-        }
-        /** Whether the user want to add catering to their booking */
-
-      }, {
-        key: "needs_catering",
-        get: function get() {
-          var empty = {
+        });
+      }
+      /**
+       * Show modal to user for adding equipment details to a booking
+       * @param reccurence recurrence booking
+       */
+
+
+      addEquipment(recurrence = false) {
+        return new Promise((resolve, reject) => {
+          const empty = {
             control: {
-              value: {}
+              value: ''
             }
           };
-          var catering = (this.form_fields.find(function (i) {
-            return i.key === 'needs_catering';
-          }) || empty).control.value;
-          return catering;
-        }
-        /** Number of items in the catering order */
+          const notes = this.form_fields.find(i => i.key === 'equipment');
+          const expected_attendees = this.form_fields.find(i => i.key === 'expected_attendees');
+          const spaces = this.form_fields.find(i => i.key === 'room');
+          const cost_code = this.form_fields.find(i => i.key === 'equipment_code');
+          const recurrence_rooms = this.form_fields.find(i => i.key === 'recurrence_rooms');
 
-      }, {
-        key: "has_ordered",
-        get: function get() {
-          var empty = {
+          const recurrence_spaces = _shared_utility_class__WEBPACK_IMPORTED_MODULE_14__["Utils"].unique(((recurrence_rooms || empty).control.value || []).map(i => i.room), 'id');
+
+          const ref = this._dialog.open(_overlays_equipment_details_equipment_details_component__WEBPACK_IMPORTED_MODULE_9__["BookingEquipmentDetailsModalComponent"], {
+            maxWidth: 'calc(100vw - 2em)',
+            width: '32em',
+            data: {
+              spaces: recurrence ? recurrence_spaces : (spaces || empty).control.value || [],
+              expected_attendees: Object.assign({}, (expected_attendees || empty).control.value),
+              notes: Object.assign({}, (notes || empty).control.value),
+              cost_code: Object.assign({}, (cost_code || empty).control.value),
+              recurrence
+            }
+          });
+
+          ref.componentInstance.event.subscribe(event => {
+            if (event.reason === 'done') {
+              if (notes) {
+                notes.setValue(ref.componentInstance.notes);
+              }
+
+              if (expected_attendees) {
+                expected_attendees.setValue(ref.componentInstance.expected_attendees || {});
+              }
+
+              if (cost_code) {
+                cost_code.setValue(ref.componentInstance.cost_code);
+              }
+
+              resolve();
+            } else {
+              reject();
+            }
+
+            ref.close();
+          });
+        });
+      }
+      /**
+       * Show modal for adding details to catering
+       */
+
+
+      addCateringNotes() {
+        return new Promise((resolve, reject) => {
+          const empty = {
             control: {
-              value: {}
+              value: ''
             }
           };
-          var order = (this.form_fields.find(function (i) {
-            return i.key === 'catering';
-          }) || empty).control.value;
-          return order ? Object.keys(order).reduce(function (v, key) {
-            var room_order = order[key];
+          const notes = this.form_fields.find(i => i.key === 'catering_notes');
+          const spaces = this.form_fields.find(i => i.key === 'room');
+          const cost_code = this.form_fields.find(i => i.key === 'catering_code');
 
-            if (room_order && room_order.items) {
-              v += room_order.items.reduce(function (c, i) {
-                return c + (i.amount || 0);
-              }, 0);
+          const ref = this._dialog.open(_overlays_catering_details_catering_details_component__WEBPACK_IMPORTED_MODULE_10__["BookingCateringDetailsModalComponent"], {
+            maxWidth: 'calc(100vw - 2em)',
+            width: '32em',
+            data: {
+              spaces: (spaces || empty).control.value || [],
+              notes: Object.assign({}, (notes || empty).control.value),
+              cost_code: Object.assign({}, (cost_code || empty).control.value)
+            }
+          });
+
+          ref.componentInstance.event.subscribe(event => {
+            if (event.reason === 'done') {
+              if (notes) {
+                notes.setValue(ref.componentInstance.notes);
+              }
+
+              if (cost_code) {
+                cost_code.setValue(ref.componentInstance.cost_code);
+              }
+
+              resolve();
+            } else {
+              reject();
             }
 
-            return v;
-          }, 0) : 0;
-        }
-      }]);
+            ref.close();
+          });
+        });
+      }
+      /**
+       * Open modal for confirming booking details
+       */
 
-      return BookingMainFlowComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"]);
+
+      confirmBooking(check = true) {
+        this.timeout('confirm-booking', () => {
+          const fields = this.formToBooking();
+          fields.catering = fields.catering.map(order => order.toJSON(true));
+
+          const ref = this._dialog.open(_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_11__["BookingDetailsModalComponent"], {
+            data: Object.assign({}, fields, {
+              check
+            })
+          });
+
+          ref.componentInstance.event.subscribe(event => {
+            if (event.reason === 'done') {
+              // Booking completed successfully
+              this.clearForm();
+
+              this._service.navigate(['schedule'], {
+                host: fields.host ? fields.host.email : this._service.Users.current().email
+              });
+
+              ref.close();
+            } else if (event.reason === 'action' && event.metadata === 'new') {
+              // User wishes to create a new booking
+              this.clearForm();
+
+              this._service.navigate(['book', 'main', 'form']);
+            } else if (event.reason === 'action' && event.metadata === 'edit') {
+              // User wishes to edit the booking
+              this._service.navigate(['book', 'main', 'form']);
+
+              ref.close();
+            } else {
+              ref.close();
+            }
+          });
+        }, 100);
+      }
+      /**
+       * Get list of users available to select as the meeting host
+       */
+
+
+      getHostOptions() {
+        const user = this._service.Users.current();
+
+        const list = [user];
+
+        if (user.delegates) {
+          for (const email of user.delegates) {
+            const delegate = this._service.Users.item(email);
+
+            if (delegate) {
+              list.push(delegate);
+            } else {
+              this.timeout("load_user|".concat(email), () => this._service.Users.show(email, {
+                update: true
+              }).then(() => {
+                this.timeout('update_host_options', () => {
+                  const host = this.form_fields.find(i => i.key === 'host');
+
+                  if (host) {
+                    host.metadata = {
+                      service: this._service.Bookings,
+                      options: this.getHostOptions()
+                    };
+                    host.setValue(host.getValue());
+                  }
+                });
+              }));
+            }
+          }
+        }
+
+        return list;
+      }
+
+    }
     /***/
 
   }

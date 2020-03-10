@@ -1,31 +1,3 @@
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
-
-function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-schedule-schedule-module-ngfactory"], {
   /***/
   "./src/app/shell/schedule/event-list/event-list.component.ngfactory.js":
@@ -518,542 +490,401 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /*! ../../../overlays/meeting-details-overlay/meeting-details-overlay.component */
     "./src/app/overlays/meeting-details-overlay/meeting-details-overlay.component.ts");
 
-    var ScheduleEventListComponent = /*#__PURE__*/function (_shared_globals_base_) {
-      _inherits(ScheduleEventListComponent, _shared_globals_base_);
-
-      function ScheduleEventListComponent(service, _dialog) {
-        var _this;
-
-        _classCallCheck(this, ScheduleEventListComponent);
-
-        _this = _possibleConstructorReturn(this, _getPrototypeOf(ScheduleEventListComponent).call(this));
-        _this.service = service;
-        _this._dialog = _dialog;
-        _this.date = dayjs__WEBPACK_IMPORTED_MODULE_6__().valueOf();
-        _this.model = {};
-        _this.items = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
-        return _this;
+    class ScheduleEventListComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
+      constructor(service, _dialog) {
+        super();
+        this.service = service;
+        this._dialog = _dialog;
+        this.date = dayjs__WEBPACK_IMPORTED_MODULE_6__().valueOf();
+        this.model = {};
+        this.items = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
       }
 
-      _createClass(ScheduleEventListComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this2 = this;
+      ngOnInit() {
+        this.model.days = 15;
+        this.checkScroll();
+        this.items.subscribe(res => this.model.list = res);
+        this.subscription('bookings', this.service.Bookings.listen('timeline', timeline => {
+          let date = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
+          const end = date.add(this.model.days, 'd');
+          let list = [];
 
-          this.model.days = 15;
-          this.checkScroll();
-          this.items.subscribe(function (res) {
-            return _this2.model.list = res;
+          for (; date.isBefore(end, 'm'); date = date.add(1, 'd')) {
+            list = [...list, ...(timeline[date.format('YYYY/MM/DD')] || [])];
+          }
+
+          list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_5__["Utils"].unique(list, 'order_id');
+
+          if (this.user) {
+            list = list.filter(i => i.organiser.email === this.user.email || !!i.attendees.find(j => j.email === this.user.email));
+          }
+
+          this.model.list = list;
+          this.processBookings();
+        }));
+        this.loadBookings();
+        this.interval('update', () => this.updateBookings(), 10 * 1000);
+      }
+
+      ngOnChanges(changes) {
+        if (changes.date) {
+          this.timeout('date_change', () => this.changeDate(this.date), 500);
+        }
+
+        if (changes.user) {
+          this.updateBookings();
+          this.interval('update', () => this.updateBookings(), 10 * 1000);
+        }
+      }
+
+      ngOnDestroy() {
+        super.ngOnDestroy();
+        this.clearInterval('update');
+
+        if (this.view_ref) {
+          this.view_ref.close();
+          this.view_ref = null;
+        }
+      }
+
+      loadBookings() {
+        if (this.model.loading) {
+          return;
+        }
+
+        return new Promise((resolve, reject) => {
+          this.model.loading = true;
+          const date = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
+          const end = date.add(Math.max(3, this.model.days), 'd');
+          const user = this.service.Users.current();
+
+          if (!this.user) {
+            this.user = this.service.Users.current();
+          }
+
+          const user_list = user.delegates && user.delegates.length > 0 ? [user.email, ...user.delegates] : [user.email];
+          this.service.Bookings.query({
+            email: this.user ? this.user.email : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
+            from: date.unix(),
+            to: end.unix(),
+            timezone_offset: new Date().getTimezoneOffset()
+          }).then(items => {
+            this.service.Bookings.clear({
+              from: date.valueOf(),
+              to: end.valueOf()
+            });
+            this.service.Bookings.updateList(_shared_utility_class__WEBPACK_IMPORTED_MODULE_5__["Utils"].unique(items, 'icaluid'));
+            this.model.loading = false;
+            resolve();
+          }, _ => {
+            this.model.loading = false;
+            reject();
           });
-          this.subscription('bookings', this.service.Bookings.listen('timeline', function (timeline) {
-            var date = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
-            var end = date.add(_this2.model.days, 'd');
-            var list = [];
+        });
+      }
 
-            for (; date.isBefore(end, 'm'); date = date.add(1, 'd')) {
-              list = [].concat(_toConsumableArray(list), _toConsumableArray(timeline[date.format('YYYY/MM/DD')] || []));
-            }
+      checkScroll() {
+        this.timeout('check_scroll', () => {
+          if (!this.viewport) {
+            return this.timeout('atBottom', () => this.checkScroll());
+          }
 
-            list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_5__["Utils"].unique(list, 'order_id');
+          const start = this.viewport.getRenderedRange().start;
+          const end = this.viewport.getRenderedRange().end;
+          const total = this.viewport.getDataLength();
+          const from_start = dayjs__WEBPACK_IMPORTED_MODULE_6__().add(this.model.from_start, 'd').format('YYYY-MM-DD');
+          const items = this.items.getValue();
 
-            if (_this2.user) {
-              list = list.filter(function (i) {
-                return i.organiser.email === _this2.user.email || !!i.attendees.find(function (j) {
-                  return j.email === _this2.user.email;
+          if (end === total) {
+            this.atBottom();
+          } else if (this.model.from_start > 0 && items.indexOf(items.find(i => i.id === from_start)) > start) {
+            this.atTop();
+          }
+        }, 100);
+      }
+
+      atBottom() {
+        if (this.model.loading) {
+          return;
+        }
+
+        this.model.days += 3;
+        this.interval('update', () => this.updateBookings(), 5 * 1000);
+        this.updateBookings();
+      }
+
+      getViewLocation() {
+        if (this.viewport) {
+          const start = Math.floor(this.viewport.measureScrollOffset() / 80);
+          const items = this.items.getValue();
+
+          if (items && items.length > 0 && start < items.length) {
+            const item = items[start];
+            return item ? item.id : null;
+          }
+        }
+
+        return null;
+      }
+
+      atTop() {
+        if (this.model.loading || this.model.from_start <= 0) {
+          return;
+        }
+
+        const range = this.viewport.getRenderedRange();
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
+        const items = this.items.getValue();
+        const middle = Math.floor((range.start + range.end) / 2);
+        const time = dayjs__WEBPACK_IMPORTED_MODULE_6__(items && items[middle] ? items[middle].date : undefined);
+        this.model.from_start = Math.floor(time.diff(now, 'd'));
+        this.updateBookings();
+      }
+
+      scrollTo(id, offset = 0, smooth = true) {
+        if (!id || this.model.ignore && id !== this.model.ignore) {
+          return;
+        }
+
+        const items = this.items.getValue();
+        const index = items.findIndex(i => i.id === id);
+
+        if (index >= 0) {
+          this.viewport.scrollToOffset(index * 80 + offset, smooth ? 'smooth' : 'auto');
+        }
+
+        this.timeout('ignore', () => this.model.ignore = null, 1000);
+      }
+
+      changeDate(date) {
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
+        const day = dayjs__WEBPACK_IMPORTED_MODULE_6__(date);
+        let time = day.subtract(3, 'd');
+
+        if (time.isBefore(now, 'd')) {
+          time = dayjs__WEBPACK_IMPORTED_MODULE_6__(now);
+        }
+
+        if (day.diff(now, 'd') < this.model.days) {
+          this.model.ignore = day.format('YYYY-MM-DD');
+          this.scrollTo(day.format('YYYY-MM-DD'));
+        } else {
+          this.model.from_start = time.diff(now, 'd');
+          this.model.days = this.model.from_start + 8;
+          this.updateBookings().then(() => {
+            this.timeout('scroll', () => this.scrollTo(day.format('YYYY-MM-DD')), 1000);
+          });
+        }
+      }
+
+      updateBookings() {
+        return new Promise((resolve, reject) => {
+          if (this.model.loading) {
+            return reject();
+          }
+
+          if (!this.viewport) {
+            return this.timeout('update_bookings', () => this.updateBookings().then(resolve, reject));
+          }
+
+          if (!this.user) {
+            this.user = this.service.Users.current();
+          }
+
+          const range = this.viewport.getRenderedRange();
+          const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
+          const items = this.items.getValue();
+          const middle = Math.floor((range.start + range.end) / 2);
+          const date = items && items[middle] ? items[middle].date : undefined;
+          const start = dayjs__WEBPACK_IMPORTED_MODULE_6__(date).subtract(3, 'd').startOf('d');
+          const end = dayjs__WEBPACK_IMPORTED_MODULE_6__(date).add(3, 'd').endOf('d');
+          const from = start.isBefore(now, 'd') ? now.unix() : start.unix();
+
+          if (dayjs__WEBPACK_IMPORTED_MODULE_6__(from).isAfter(end, 's')) {
+            return;
+          }
+
+          this.setLoading(start.valueOf(), end.valueOf());
+          const user = this.service.Users.current();
+          const user_list = user.delegates && user.delegates.length > 0 ? [user.email, ...user.delegates] : [user.email];
+          this.model.loading = true;
+          this.service.Bookings.query({
+            email: this.user ? this.user.email : user_list.reduce((a, v) => (a ? a + ',' : a) + v, ''),
+            from,
+            to: end.unix(),
+            timezone_offset: new Date().getTimezoneOffset()
+          }).then(list => {
+            this.service.Bookings.clear({
+              from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(),
+              to: end.valueOf()
+            });
+            this.service.Bookings.updateList(list);
+            this.model.loading = false;
+            resolve();
+          }, _ => {
+            this.model.loading = false;
+            reject();
+          });
+        });
+      }
+
+      setLoading(start, end) {
+        let from = dayjs__WEBPACK_IMPORTED_MODULE_6__(start);
+        const to = dayjs__WEBPACK_IMPORTED_MODULE_6__(end);
+        const items = this.items.getValue();
+
+        for (; from.isBefore(to, 'm'); from = from.add(1, 'd')) {
+          const item = items.find(i => i.id === from.format('YYYY-MM-DD'));
+
+          if (item) {
+            item.loading = true;
+          }
+        }
+      }
+
+      processBookings() {
+        this.timeout('process', () => {
+          const offset = this.viewport.measureScrollOffset() % 80;
+          const scroll_id = this.getViewLocation();
+          this.model.list.sort((a, b) => a.date - b.date);
+          let list = [];
+          const now = dayjs__WEBPACK_IMPORTED_MODULE_6__();
+          let date = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
+          const end = date.add(this.model.days, 'd').endOf('d');
+
+          for (; date.isBefore(end, 'd') || date.isSame(end, 'd'); date = date.add(1, 'd')) {
+            list.push({
+              order_id: date.format('YYYY-MM-DD'),
+              id: date.format('YYYY-MM-DD'),
+              type: 'date',
+              today: now.isSame(date, 'd'),
+              title: date.format('dddd, DD MMM'),
+              value: date.format('YYYY-MM-DD'),
+              date: date.valueOf()
+            });
+            const length = list.length;
+
+            for (const bkn of this.model.list) {
+              if (bkn.type && bkn.type !== 'event') {
+                continue;
+              }
+
+              const bkn_date = dayjs__WEBPACK_IMPORTED_MODULE_6__(bkn.for_date || bkn.date);
+
+              if (bkn_date.isSame(date, 'd')) {
+                const item = Object.assign({}, bkn, {
+                  room: bkn.room,
+                  room_list: bkn.room_list,
+                  status: bkn.status,
+                  type: 'event'
                 });
-              });
+                list.push(item);
+              }
             }
 
-            _this2.model.list = list;
-
-            _this2.processBookings();
-          }));
-          this.loadBookings();
-          this.interval('update', function () {
-            return _this2.updateBookings();
-          }, 10 * 1000);
-        }
-      }, {
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          var _this3 = this;
-
-          if (changes.date) {
-            this.timeout('date_change', function () {
-              return _this3.changeDate(_this3.date);
-            }, 500);
-          }
-
-          if (changes.user) {
-            this.updateBookings();
-            this.interval('update', function () {
-              return _this3.updateBookings();
-            }, 10 * 1000);
-          }
-        }
-      }, {
-        key: "ngOnDestroy",
-        value: function ngOnDestroy() {
-          _get(_getPrototypeOf(ScheduleEventListComponent.prototype), "ngOnDestroy", this).call(this);
-
-          this.clearInterval('update');
-
-          if (this.view_ref) {
-            this.view_ref.close();
-            this.view_ref = null;
-          }
-        }
-      }, {
-        key: "loadBookings",
-        value: function loadBookings() {
-          var _this4 = this;
-
-          if (this.model.loading) {
-            return;
-          }
-
-          return new Promise(function (resolve, reject) {
-            _this4.model.loading = true;
-            var date = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
-            var end = date.add(Math.max(3, _this4.model.days), 'd');
-
-            var user = _this4.service.Users.current();
-
-            if (!_this4.user) {
-              _this4.user = _this4.service.Users.current();
-            }
-
-            var user_list = user.delegates && user.delegates.length > 0 ? [user.email].concat(_toConsumableArray(user.delegates)) : [user.email];
-
-            _this4.service.Bookings.query({
-              email: _this4.user ? _this4.user.email : user_list.reduce(function (a, v) {
-                return (a ? a + ',' : a) + v;
-              }, ''),
-              from: date.unix(),
-              to: end.unix(),
-              timezone_offset: new Date().getTimezoneOffset()
-            }).then(function (items) {
-              _this4.service.Bookings.clear({
-                from: date.valueOf(),
-                to: end.valueOf()
-              });
-
-              _this4.service.Bookings.updateList(_shared_utility_class__WEBPACK_IMPORTED_MODULE_5__["Utils"].unique(items, 'icaluid'));
-
-              _this4.model.loading = false;
-              resolve();
-            }, function (_) {
-              _this4.model.loading = false;
-              reject();
-            });
-          });
-        }
-      }, {
-        key: "checkScroll",
-        value: function checkScroll() {
-          var _this5 = this;
-
-          this.timeout('check_scroll', function () {
-            if (!_this5.viewport) {
-              return _this5.timeout('atBottom', function () {
-                return _this5.checkScroll();
-              });
-            }
-
-            var start = _this5.viewport.getRenderedRange().start;
-
-            var end = _this5.viewport.getRenderedRange().end;
-
-            var total = _this5.viewport.getDataLength();
-
-            var from_start = dayjs__WEBPACK_IMPORTED_MODULE_6__().add(_this5.model.from_start, 'd').format('YYYY-MM-DD');
-
-            var items = _this5.items.getValue();
-
-            if (end === total) {
-              _this5.atBottom();
-            } else if (_this5.model.from_start > 0 && items.indexOf(items.find(function (i) {
-              return i.id === from_start;
-            })) > start) {
-              _this5.atTop();
-            }
-          }, 100);
-        }
-      }, {
-        key: "atBottom",
-        value: function atBottom() {
-          var _this6 = this;
-
-          if (this.model.loading) {
-            return;
-          }
-
-          this.model.days += 3;
-          this.interval('update', function () {
-            return _this6.updateBookings();
-          }, 5 * 1000);
-          this.updateBookings();
-        }
-      }, {
-        key: "getViewLocation",
-        value: function getViewLocation() {
-          if (this.viewport) {
-            var start = Math.floor(this.viewport.measureScrollOffset() / 80);
-            var items = this.items.getValue();
-
-            if (items && items.length > 0 && start < items.length) {
-              var item = items[start];
-              return item ? item.id : null;
-            }
-          }
-
-          return null;
-        }
-      }, {
-        key: "atTop",
-        value: function atTop() {
-          if (this.model.loading || this.model.from_start <= 0) {
-            return;
-          }
-
-          var range = this.viewport.getRenderedRange();
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
-          var items = this.items.getValue();
-          var middle = Math.floor((range.start + range.end) / 2);
-          var time = dayjs__WEBPACK_IMPORTED_MODULE_6__(items && items[middle] ? items[middle].date : undefined);
-          this.model.from_start = Math.floor(time.diff(now, 'd'));
-          this.updateBookings();
-        }
-      }, {
-        key: "scrollTo",
-        value: function scrollTo(id) {
-          var _this7 = this;
-
-          var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-          var smooth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-          if (!id || this.model.ignore && id !== this.model.ignore) {
-            return;
-          }
-
-          var items = this.items.getValue();
-          var index = items.findIndex(function (i) {
-            return i.id === id;
-          });
-
-          if (index >= 0) {
-            this.viewport.scrollToOffset(index * 80 + offset, smooth ? 'smooth' : 'auto');
-          }
-
-          this.timeout('ignore', function () {
-            return _this7.model.ignore = null;
-          }, 1000);
-        }
-      }, {
-        key: "changeDate",
-        value: function changeDate(date) {
-          var _this8 = this;
-
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
-          var day = dayjs__WEBPACK_IMPORTED_MODULE_6__(date);
-          var time = day.subtract(3, 'd');
-
-          if (time.isBefore(now, 'd')) {
-            time = dayjs__WEBPACK_IMPORTED_MODULE_6__(now);
-          }
-
-          if (day.diff(now, 'd') < this.model.days) {
-            this.model.ignore = day.format('YYYY-MM-DD');
-            this.scrollTo(day.format('YYYY-MM-DD'));
-          } else {
-            this.model.from_start = time.diff(now, 'd');
-            this.model.days = this.model.from_start + 8;
-            this.updateBookings().then(function () {
-              _this8.timeout('scroll', function () {
-                return _this8.scrollTo(day.format('YYYY-MM-DD'));
-              }, 1000);
-            });
-          }
-        }
-      }, {
-        key: "updateBookings",
-        value: function updateBookings() {
-          var _this9 = this;
-
-          return new Promise(function (resolve, reject) {
-            if (_this9.model.loading) {
-              return reject();
-            }
-
-            if (!_this9.viewport) {
-              return _this9.timeout('update_bookings', function () {
-                return _this9.updateBookings().then(resolve, reject);
-              });
-            }
-
-            if (!_this9.user) {
-              _this9.user = _this9.service.Users.current();
-            }
-
-            var range = _this9.viewport.getRenderedRange();
-
-            var now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
-
-            var items = _this9.items.getValue();
-
-            var middle = Math.floor((range.start + range.end) / 2);
-            var date = items && items[middle] ? items[middle].date : undefined;
-            var start = dayjs__WEBPACK_IMPORTED_MODULE_6__(date).subtract(3, 'd').startOf('d');
-            var end = dayjs__WEBPACK_IMPORTED_MODULE_6__(date).add(3, 'd').endOf('d');
-            var from = start.isBefore(now, 'd') ? now.unix() : start.unix();
-
-            if (dayjs__WEBPACK_IMPORTED_MODULE_6__(from).isAfter(end, 's')) {
-              return;
-            }
-
-            _this9.setLoading(start.valueOf(), end.valueOf());
-
-            var user = _this9.service.Users.current();
-
-            var user_list = user.delegates && user.delegates.length > 0 ? [user.email].concat(_toConsumableArray(user.delegates)) : [user.email];
-            _this9.model.loading = true;
-
-            _this9.service.Bookings.query({
-              email: _this9.user ? _this9.user.email : user_list.reduce(function (a, v) {
-                return (a ? a + ',' : a) + v;
-              }, ''),
-              from: from,
-              to: end.unix(),
-              timezone_offset: new Date().getTimezoneOffset()
-            }).then(function (list) {
-              _this9.service.Bookings.clear({
-                from: start.isBefore(now, 'd') ? now.valueOf() : start.valueOf(),
-                to: end.valueOf()
-              });
-
-              _this9.service.Bookings.updateList(list);
-
-              _this9.model.loading = false;
-              resolve();
-            }, function (_) {
-              _this9.model.loading = false;
-              reject();
-            });
-          });
-        }
-      }, {
-        key: "setLoading",
-        value: function setLoading(start, end) {
-          var from = dayjs__WEBPACK_IMPORTED_MODULE_6__(start);
-          var to = dayjs__WEBPACK_IMPORTED_MODULE_6__(end);
-          var items = this.items.getValue();
-
-          for (; from.isBefore(to, 'm'); from = from.add(1, 'd')) {
-            var item = items.find(function (i) {
-              return i.id === from.format('YYYY-MM-DD');
-            });
-
-            if (item) {
-              item.loading = true;
-            }
-          }
-        }
-      }, {
-        key: "processBookings",
-        value: function processBookings() {
-          var _this10 = this;
-
-          this.timeout('process', function () {
-            var offset = _this10.viewport.measureScrollOffset() % 80;
-
-            var scroll_id = _this10.getViewLocation();
-
-            _this10.model.list.sort(function (a, b) {
-              return a.date - b.date;
-            });
-
-            var list = [];
-            var now = dayjs__WEBPACK_IMPORTED_MODULE_6__();
-            var date = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('d');
-            var end = date.add(_this10.model.days, 'd').endOf('d');
-
-            for (; date.isBefore(end, 'd') || date.isSame(end, 'd'); date = date.add(1, 'd')) {
+            if (list.length === length) {
               list.push({
-                order_id: date.format('YYYY-MM-DD'),
-                id: date.format('YYYY-MM-DD'),
-                type: 'date',
-                today: now.isSame(date, 'd'),
-                title: date.format('dddd, DD MMM'),
-                value: date.format('YYYY-MM-DD'),
+                order_id: "".concat(date.format('YYYY-MM-DD'), "-no-items"),
+                type: 'no-items',
+                title: 'No events',
                 date: date.valueOf()
               });
-              var length = list.length;
-              var _iteratorNormalCompletion = true;
-              var _didIteratorError = false;
-              var _iteratorError = undefined;
-
-              try {
-                for (var _iterator = _this10.model.list[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                  var bkn = _step.value;
-
-                  if (bkn.type && bkn.type !== 'event') {
-                    continue;
-                  }
-
-                  var bkn_date = dayjs__WEBPACK_IMPORTED_MODULE_6__(bkn.for_date || bkn.date);
-
-                  if (bkn_date.isSame(date, 'd')) {
-                    var item = Object.assign({}, bkn, {
-                      room: bkn.room,
-                      room_list: bkn.room_list,
-                      status: bkn.status,
-                      type: 'event'
-                    });
-                    list.push(item);
-                  }
-                }
-              } catch (err) {
-                _didIteratorError = true;
-                _iteratorError = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion && _iterator.return != null) {
-                    _iterator.return();
-                  }
-                } finally {
-                  if (_didIteratorError) {
-                    throw _iteratorError;
-                  }
-                }
-              }
-
-              if (list.length === length) {
-                list.push({
-                  order_id: "".concat(date.format('YYYY-MM-DD'), "-no-items"),
-                  type: 'no-items',
-                  title: 'No events',
-                  date: date.valueOf()
-                });
-              }
             }
-
-            list.forEach(function (bkn) {
-              var rooms = bkn.spaces || [];
-              bkn.is_declined = rooms.reduce(function (state, room) {
-                return state || bkn.approval_status[room] === 'declined';
-              }, false);
-              bkn.is_tentative = rooms.reduce(function (state, room) {
-                return state || (bkn.approval_status[room] || '').indexOf('tentative') >= 0 || (bkn.approval_status[room] || '').indexOf('not') >= 0;
-              }, false);
-            });
-            list.sort(function (a, b) {
-              return (a.for_date || a.date) - (b.for_date || b.date);
-            });
-            list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_5__["Utils"].unique(list, 'order_id');
-
-            _this10.items.next(list);
-
-            _this10.model.bookings = list.filter(function (i) {
-              return i.id;
-            });
-
-            if (_this10.model.ignore && !!list.find(function (i) {
-              return i.id === _this10.model.ignore;
-            })) {
-              _this10.scrollTo(_this10.model.ignore);
-            } else {
-              _this10.scrollTo(scroll_id, offset, false);
-            }
-          }, 50);
-        }
-      }, {
-        key: "view",
-        value: function view(item) {
-          var _this11 = this;
-
-          if (this.view_ref) {
-            this.view_ref.close();
           }
 
-          this.model.mainIndex = this.model.bookings.indexOf(item);
-          var idx = this.model.mainIndex;
-          this.view_ref = this._dialog.open(_overlays_meeting_details_overlay_meeting_details_overlay_component__WEBPACK_IMPORTED_MODULE_8__["MeetingDetailsOverlayComponent"], {
-            maxHeight: 'auto',
-            maxWidth: 'auto',
-            width: 'auto',
-            height: 'auto',
-            hasBackdrop: false,
-            closeOnNavigation: true,
-            data: {
-              booking: this.service.Bookings.item(item.id),
-              as_delegate: this.user && this.user.email !== this.service.Users.current().email,
-              delegate: this.user.email,
-              is_first: idx === 0,
-              is_last: idx === this.model.bookings.length - 1
-            }
+          list.forEach(bkn => {
+            const rooms = bkn.spaces || [];
+            bkn.is_declined = rooms.reduce((state, room) => state || bkn.approval_status[room] === 'declined', false);
+            bkn.is_tentative = rooms.reduce((state, room) => state || (bkn.approval_status[room] || '').indexOf('tentative') >= 0 || (bkn.approval_status[room] || '').indexOf('not') >= 0, false);
           });
-          this.subscription('details-modal', this.view_ref.componentInstance.event.subscribe(function (event) {
-            if (event.reason === 'action') {
-              switch (event.metadata) {
-                case 'next':
-                  _this11.nextBooking();
+          list.sort((a, b) => (a.for_date || a.date) - (b.for_date || b.date));
+          list = _shared_utility_class__WEBPACK_IMPORTED_MODULE_5__["Utils"].unique(list, 'order_id');
+          this.items.next(list);
+          this.model.bookings = list.filter(i => i.id);
 
-                  break;
+          if (this.model.ignore && !!list.find(i => i.id === this.model.ignore)) {
+            this.scrollTo(this.model.ignore);
+          } else {
+            this.scrollTo(scroll_id, offset, false);
+          }
+        }, 50);
+      }
 
-                case 'previous':
-                  _this11.previousBooking();
+      view(item) {
+        if (this.view_ref) {
+          this.view_ref.close();
+        }
 
-                  break;
-              }
+        this.model.mainIndex = this.model.bookings.indexOf(item);
+        const idx = this.model.mainIndex;
+        this.view_ref = this._dialog.open(_overlays_meeting_details_overlay_meeting_details_overlay_component__WEBPACK_IMPORTED_MODULE_8__["MeetingDetailsOverlayComponent"], {
+          maxHeight: 'auto',
+          maxWidth: 'auto',
+          width: 'auto',
+          height: 'auto',
+          hasBackdrop: false,
+          closeOnNavigation: true,
+          data: {
+            booking: this.service.Bookings.item(item.id),
+            as_delegate: this.user && this.user.email !== this.service.Users.current().email,
+            delegate: this.user.email,
+            is_first: idx === 0,
+            is_last: idx === this.model.bookings.length - 1
+          }
+        });
+        this.subscription('details-modal', this.view_ref.componentInstance.event.subscribe(event => {
+          if (event.reason === 'action') {
+            switch (event.metadata) {
+              case 'next':
+                this.nextBooking();
+                break;
+
+              case 'previous':
+                this.previousBooking();
+                break;
             }
-          }));
-          this.view_ref.afterClosed().subscribe(function () {
-            _this11.unsub('details-modal');
-
-            _this11.view_ref = null;
-          });
-        }
-      }, {
-        key: "checkin",
-        value: function checkin() {
-          var index = this.model.mainIndex;
-          this.model.bookings[index].checkin = true;
-        }
-      }, {
-        key: "deletebooking",
-        value: function deletebooking() {
-          this.model.bookings.splice(this.model.mainIndex, 1);
-        }
-      }, {
-        key: "nextBooking",
-        value: function nextBooking() {
-          var index = this.model.mainIndex;
-          var current_booking = this.model.bookings[index];
-          var next_booking = this.model.bookings[index + 1];
-
-          if (index < this.model.bookings.length - 1 && next_booking && next_booking.title) {
-            this.view(next_booking);
-          } else {
-            this.view(current_booking);
           }
-        }
-      }, {
-        key: "previousBooking",
-        value: function previousBooking() {
-          var index = this.model.mainIndex;
-          var current_booking = this.model.bookings[index];
-          var previous_booking = this.model.bookings[index - 1];
+        }));
+        this.view_ref.afterClosed().subscribe(() => {
+          this.unsub('details-modal');
+          this.view_ref = null;
+        });
+      }
 
-          if (index > 0 && previous_booking && previous_booking.title) {
-            this.view(previous_booking);
-          } else {
-            this.view(current_booking);
-          }
-        }
-      }]);
+      checkin() {
+        const index = this.model.mainIndex;
+        this.model.bookings[index].checkin = true;
+      }
 
-      return ScheduleEventListComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]);
+      deletebooking() {
+        this.model.bookings.splice(this.model.mainIndex, 1);
+      }
+
+      nextBooking() {
+        const index = this.model.mainIndex;
+        const current_booking = this.model.bookings[index];
+        const next_booking = this.model.bookings[index + 1];
+
+        if (index < this.model.bookings.length - 1 && next_booking && next_booking.title) {
+          this.view(next_booking);
+        } else {
+          this.view(current_booking);
+        }
+      }
+
+      previousBooking() {
+        const index = this.model.mainIndex;
+        const current_booking = this.model.bookings[index];
+        const previous_booking = this.model.bookings[index - 1];
+
+        if (index > 0 && previous_booking && previous_booking.title) {
+          this.view(previous_booking);
+        } else {
+          this.view(current_booking);
+        }
+      }
+
+    }
     /***/
 
   },
@@ -1538,242 +1369,147 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
      */
 
 
-    var ScheduleComponent = /*#__PURE__*/function (_shared_globals_base_2) {
-      _inherits(ScheduleComponent, _shared_globals_base_2);
-
-      function ScheduleComponent(service, route) {
-        var _this12;
-
-        _classCallCheck(this, ScheduleComponent);
-
-        _this12 = _possibleConstructorReturn(this, _getPrototypeOf(ScheduleComponent).call(this));
-        _this12.service = service;
-        _this12.route = route;
-        _this12.model = {};
+    class ScheduleComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"] {
+      constructor(service, route) {
+        super();
+        this.service = service;
+        this.route = route;
+        this.model = {};
         /** List of users that the current user can see the bookings of */
 
-        _this12.users = [];
+        this.users = [];
 
-        _this12.process_list = function (dates) {
-          return function (list) {
-            var timeline = _this12.service.Bookings.get('timeline');
+        this.process_list = dates => list => {
+          const timeline = this.service.Bookings.get('timeline');
 
-            var _iteratorNormalCompletion2 = true;
-            var _didIteratorError2 = false;
-            var _iteratorError2 = undefined;
-
-            try {
-              for (var _iterator2 = dates[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                var d = _step2.value;
-
-                _this12.service.Bookings.clear({
-                  from: d
-                });
-              }
-            } catch (err) {
-              _didIteratorError2 = true;
-              _iteratorError2 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-                  _iterator2.return();
-                }
-              } finally {
-                if (_didIteratorError2) {
-                  throw _iteratorError2;
-                }
-              }
-            }
-          };
+          for (const d of dates) {
+            this.service.Bookings.clear({
+              from: d
+            });
+          }
         };
-
-        return _this12;
       }
 
-      _createClass(ScheduleComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          this.model.dates = [];
-          this.init();
+      ngOnInit() {
+        this.model.dates = [];
+        this.init();
+      }
+
+      init() {
+        if (!this.service.ready()) {
+          return setTimeout(() => this.init(), 500);
         }
-      }, {
-        key: "init",
-        value: function init() {
-          var _this13 = this;
 
-          if (!this.service.ready()) {
-            return setTimeout(function () {
-              return _this13.init();
-            }, 500);
-          }
+        this.model.day_count = this.service.Settings.get('app.schedule.length') || 14;
+        this.model.has_lockers = this.service.Settings.get('app.lockers.enabled');
+        this.model.popout = this.service.Settings.get('app.style.popout') || false;
+        this.model.settings = this.service.Settings.get('app.schedule');
 
-          this.model.day_count = this.service.Settings.get('app.schedule.length') || 14;
-          this.model.has_lockers = this.service.Settings.get('app.lockers.enabled');
-          this.model.popout = this.service.Settings.get('app.style.popout') || false;
-          this.model.settings = this.service.Settings.get('app.schedule');
-
-          if (this.model.settings.popout === false) {
-            this.model.popout = false;
-          }
-
-          this.service.set('BANNER.block_height', 0);
-          this.model.year = dayjs__WEBPACK_IMPORTED_MODULE_5__().year();
-          this.loadBookings();
-          this.model.visitorDropdown = false;
-          this.service.Analytics.screen('Schedule');
-          this.service.Analytics.page('/schedule');
-          this.model.today = dayjs__WEBPACK_IMPORTED_MODULE_5__().valueOf();
-          this.model.user = this.service.Users.current();
-          this.model.host = 0;
-          this.users = [this.model.user];
-          var _iteratorNormalCompletion3 = true;
-          var _didIteratorError3 = false;
-          var _iteratorError3 = undefined;
-
-          try {
-            for (var _iterator3 = this.model.user.delegates[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-              var email = _step3.value;
-              var user = this.service.Users.item(email);
-
-              if (user) {
-                this.users.push(user);
-              } else {
-                this.service.Users.show(email).then(function (u) {
-                  if (_this13.host && u.email === _this13.host) {
-                    _this13.model.host = _this13.users.length;
-                    _this13.model.show_user = u;
-                  }
-
-                  _this13.users.push(u);
-                });
-              }
-            }
-          } catch (err) {
-            _didIteratorError3 = true;
-            _iteratorError3 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-                _iterator3.return();
-              }
-            } finally {
-              if (_didIteratorError3) {
-                throw _iteratorError3;
-              }
-            }
-          }
-
-          this.model.lockers = this.model.user.lockers;
-          this.model.show_tooltip = false;
-          var date = this.model.date ? this.model.date.value : undefined;
-          this.model.is_today = dayjs__WEBPACK_IMPORTED_MODULE_5__().isSame(dayjs__WEBPACK_IMPORTED_MODULE_5__(date), 'd');
-          this.subscription('route', this.route.queryParamMap.subscribe(function (params) {
-            if (params.has('host')) {
-              var email = params.get('host');
-
-              var index = _this13.users.findIndex(function (i) {
-                return i.email === email;
-              });
-
-              _this13.model.host = index > 0 ? index : 0;
-              _this13.model.show_user = _this13.users[_this13.model.host];
-              _this13.host = email;
-            }
-          }));
+        if (this.model.settings.popout === false) {
+          this.model.popout = false;
         }
-      }, {
-        key: "loadBookings",
-        value: function loadBookings() {
-          var _this14 = this;
 
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_5__().startOf('d');
-          this.model.date = this.model.dates.find(function (i) {
-            return dayjs__WEBPACK_IMPORTED_MODULE_5__(i.value).isSame(date, 'd');
-          }) || {};
-          this.service.Bookings.listen("timeline", function (list) {
-            _this14.timeout('update_timeline', function () {
-              return _this14.processTimeline(list);
-            }, 100);
-          });
+        this.service.set('BANNER.block_height', 0);
+        this.model.year = dayjs__WEBPACK_IMPORTED_MODULE_5__().year();
+        this.loadBookings();
+        this.model.visitorDropdown = false;
+        this.service.Analytics.screen('Schedule');
+        this.service.Analytics.page('/schedule');
+        this.model.today = dayjs__WEBPACK_IMPORTED_MODULE_5__().valueOf();
+        this.model.user = this.service.Users.current();
+        this.model.host = 0;
+        this.users = [this.model.user];
+
+        for (const email of this.model.user.delegates) {
+          let user = this.service.Users.item(email);
+
+          if (user) {
+            this.users.push(user);
+          } else {
+            this.service.Users.show(email).then(u => {
+              if (this.host && u.email === this.host) {
+                this.model.host = this.users.length;
+                this.model.show_user = u;
+              }
+
+              this.users.push(u);
+            });
+          }
         }
-      }, {
-        key: "setDate",
-        value: function setDate(date) {
-          this.model.date = {
-            value: date
+
+        this.model.lockers = this.model.user.lockers;
+        this.model.show_tooltip = false;
+        const date = this.model.date ? this.model.date.value : undefined;
+        this.model.is_today = dayjs__WEBPACK_IMPORTED_MODULE_5__().isSame(dayjs__WEBPACK_IMPORTED_MODULE_5__(date), 'd');
+        this.subscription('route', this.route.queryParamMap.subscribe(params => {
+          if (params.has('host')) {
+            const email = params.get('host');
+            const index = this.users.findIndex(i => i.email === email);
+            this.model.host = index > 0 ? index : 0;
+            this.model.show_user = this.users[this.model.host];
+            this.host = email;
+          }
+        }));
+      }
+
+      loadBookings() {
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__().startOf('d');
+        this.model.date = this.model.dates.find(i => dayjs__WEBPACK_IMPORTED_MODULE_5__(i.value).isSame(date, 'd')) || {};
+        this.service.Bookings.listen("timeline", list => {
+          this.timeout('update_timeline', () => this.processTimeline(list), 100);
+        });
+      }
+
+      setDate(date) {
+        this.model.date = {
+          value: date
+        };
+      }
+
+      changeDate(value) {
+        const date_obj = this.model.date ? this.model.date.value : undefined;
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(date_obj);
+        date.add(value, 'd');
+        this.setDate(date.valueOf());
+      }
+
+      resetDate() {
+        this.setDate(dayjs__WEBPACK_IMPORTED_MODULE_5__().valueOf());
+      }
+
+      toggleView(e) {
+        this.model.visitorDropdown = e;
+      }
+
+      updateEvents(timestamp) {
+        this.model.dates = [];
+        let date = dayjs__WEBPACK_IMPORTED_MODULE_5__(timestamp).startOf('M');
+        const end = date.endOf('M');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
+
+        for (; date.isBefore(end, 's'); date = date.add(1, 'd')) {
+          const date_obj = {
+            count: 0,
+            display: now.isSame(date, 'd') ? 'Today' : date.format('ddd, MMM Do'),
+            date: date.format('YYYY/MM/DD'),
+            value: date.valueOf()
           };
+          this.model.dates.push(date_obj);
         }
-      }, {
-        key: "changeDate",
-        value: function changeDate(value) {
-          var date_obj = this.model.date ? this.model.date.value : undefined;
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(date_obj);
-          date.add(value, 'd');
-          this.setDate(date.valueOf());
-        }
-      }, {
-        key: "resetDate",
-        value: function resetDate() {
-          this.setDate(dayjs__WEBPACK_IMPORTED_MODULE_5__().valueOf());
-        }
-      }, {
-        key: "toggleView",
-        value: function toggleView(e) {
-          this.model.visitorDropdown = e;
-        }
-      }, {
-        key: "updateEvents",
-        value: function updateEvents(timestamp) {
-          this.model.dates = [];
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(timestamp).startOf('M');
-          var end = date.endOf('M');
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
 
-          for (; date.isBefore(end, 's'); date = date.add(1, 'd')) {
-            var date_obj = {
-              count: 0,
-              display: now.isSame(date, 'd') ? 'Today' : date.format('ddd, MMM Do'),
-              date: date.format('YYYY/MM/DD'),
-              value: date.valueOf()
-            };
-            this.model.dates.push(date_obj);
-          }
+        this.processTimeline(this.service.Bookings.get('timeline'));
+      }
 
-          this.processTimeline(this.service.Bookings.get('timeline'));
+      processTimeline(list) {
+        this.model.events = {};
+
+        for (const day of this.model.dates) {
+          day.count = (list ? list[day.date] || [] : []).length;
+          this.model.events[dayjs__WEBPACK_IMPORTED_MODULE_5__(day.value).format('YYYY-MM-DD')] = day.count;
         }
-      }, {
-        key: "processTimeline",
-        value: function processTimeline(list) {
-          this.model.events = {};
-          var _iteratorNormalCompletion4 = true;
-          var _didIteratorError4 = false;
-          var _iteratorError4 = undefined;
+      }
 
-          try {
-            for (var _iterator4 = this.model.dates[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-              var day = _step4.value;
-              day.count = (list ? list[day.date] || [] : []).length;
-              this.model.events[dayjs__WEBPACK_IMPORTED_MODULE_5__(day.value).format('YYYY-MM-DD')] = day.count;
-            }
-          } catch (err) {
-            _didIteratorError4 = true;
-            _iteratorError4 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-                _iterator4.return();
-              }
-            } finally {
-              if (_didIteratorError4) {
-                throw _iteratorError4;
-              }
-            }
-          }
-        }
-      }]);
-
-      return ScheduleComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -2151,11 +1887,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /*! ./event-list/event-list.component */
     "./src/app/shell/schedule/event-list/event-list.component.ts");
 
-    var COMPONENTS = [_schedule_component__WEBPACK_IMPORTED_MODULE_0__["ScheduleComponent"], _event_list_event_list_component__WEBPACK_IMPORTED_MODULE_1__["ScheduleEventListComponent"]];
+    const COMPONENTS = [_schedule_component__WEBPACK_IMPORTED_MODULE_0__["ScheduleComponent"], _event_list_event_list_component__WEBPACK_IMPORTED_MODULE_1__["ScheduleEventListComponent"]];
 
-    var AppScheduleModule = function AppScheduleModule() {
-      _classCallCheck(this, AppScheduleModule);
-    };
+    class AppScheduleModule {}
     /***/
 
   },
