@@ -1,27 +1,3 @@
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shell-explore-explore-module-ngfactory"], {
   /***/
   "./src/app/shell/explore/components/map-overlay/map-overlay.component.ngfactory.js":
@@ -856,7 +832,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     }
 
     function View_ExploreMapOverlayComponent_19(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Desks free"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "div", [["class", "value"]], [[2, "low", null], [2, "medium", null], [2, "high", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, ["\xA0of ", ""]))], null, function (_ck, _v) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Desks free"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "div", [["class", "value"]], [[2, "low", null], [2, "medium", null], [2, "high", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, ["\u00A0of ", ""]))], null, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.model.desks.percent > 75;
         var currVal_1 = _co.model.desks.percent > 25 && _co.model.desks.percent <= 75;
@@ -875,7 +851,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     }
 
     function View_ExploreMapOverlayComponent_20(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Spaces free"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "div", [["class", "value"]], [[2, "low", null], [2, "medium", null], [2, "high", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, ["\xA0of ", ""]))], null, function (_ck, _v) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Spaces free"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "div", [["class", "value"]], [[2, "low", null], [2, "medium", null], [2, "high", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "value"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, ["\u00A0of ", ""]))], null, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.model.rooms.percent > 75;
         var currVal_1 = _co.model.rooms.percent > 25 && _co.model.rooms.percent <= 75;
@@ -1657,678 +1633,434 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /*! ../../../../overlays/item-pick-modal/item-pick-model.component */
     "./src/app/overlays/item-pick-modal/item-pick-model.component.ts");
 
-    var ExploreMapOverlayComponent = /*#__PURE__*/function (_shared_globals_base_) {
-      _inherits(ExploreMapOverlayComponent, _shared_globals_base_);
-
-      function ExploreMapOverlayComponent(service, _dialog) {
-        var _this;
-
-        _classCallCheck(this, ExploreMapOverlayComponent);
-
-        _this = _possibleConstructorReturn(this, _getPrototypeOf(ExploreMapOverlayComponent).call(this));
-        _this.service = service;
-        _this._dialog = _dialog;
-        _this.model = {};
-        _this.settings = {};
-        return _this;
+    class ExploreMapOverlayComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
+      constructor(service, _dialog) {
+        super();
+        this.service = service;
+        this._dialog = _dialog;
+        this.model = {};
+        this.settings = {};
       }
 
-      _createClass(ExploreMapOverlayComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this2 = this;
-
-          this.service.Buildings.listen(function (bld) {
-            if (bld) {
-              _this2.model.bld = bld;
-              _this2.has_details = !!bld.booking_details;
-              _this2.model.system = bld.systems.desks;
-
-              _this2.loadLevels();
-            }
-          });
-          this.loadbuildings();
-          this.model.desks = {};
-          this.model.show = {}; // this.model.buildingidList=this.model.buildings.filter((i)=> i.name);
-
-          this.model.keys;
-          this.model.template = {
-            room: this.room_info,
-            keys: this.key_list
-          }; // this.model.options = [
-          //     { id: 'level', name: 'Level Select', large: true, icon: { class: 'material-icons', value: 'layers' }, number: true, action: 'pickLevel' },
-          //     { id: 'keys', name: 'Keys', icon: { class: 'material-icons', value: 'vpn_key' }, template: true },
-          //     { id: 'settings', name: 'Map Settings', icon: { class: 'material-icons', value: 'settings' }, action: 'updateSettings' },
-          //     { id: 'filters', name: 'Map Filters', icon: { class: 'material-icons', value: 'filter_list' }, action: 'showFilters' },
-          //     { id: 'room', name: 'Room Info', icon: { class: 'material-icons', value: 'info' }, offset: 'middle', template: true }
-          // ];
-
-          this.model.options = [{
-            id: 'building',
-            name: 'Building Select',
-            icon: {
-              class: 'material-icons',
-              value: 'location_city'
-            },
-            action: 'pickBuilding'
-          }, {
-            id: 'level',
-            name: 'Level Select',
-            large: true,
-            icon: {
-              class: 'material-icons',
-              value: 'layers'
-            },
-            number: true,
-            action: 'pickLevel'
-          }, {
-            id: 'keys',
-            name: 'Keys',
-            icon: {
-              class: 'material-icons',
-              value: 'vpn_key'
-            },
-            template: true
-          }];
-          this.model.rooms = {};
-          this.init();
-          this.setTemplates();
-        }
-      }, {
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          var _this3 = this;
-
-          if (changes.change) {
-            setTimeout(function () {
-              _this3.model.rooms.list = _this3.service.Rooms.list();
-
-              _this3.processRooms();
-            }, 100);
+      ngOnInit() {
+        this.service.Buildings.listen(bld => {
+          if (bld) {
+            this.model.bld = bld;
+            this.has_details = !!bld.booking_details;
+            this.model.system = bld.systems.desks;
+            this.loadLevels();
           }
-        }
-      }, {
-        key: "setTemplates",
-        value: function setTemplates() {
-          var _this4 = this;
+        });
+        this.loadbuildings();
+        this.model.desks = {};
+        this.model.show = {}; // this.model.buildingidList=this.model.buildings.filter((i)=> i.name);
 
-          if (!this.room_info || !this.key_list) {
-            return setTimeout(function () {
-              return _this4.setTemplates();
-            }, 500);
-          }
+        this.model.keys;
+        this.model.template = {
+          room: this.room_info,
+          keys: this.key_list
+        }; // this.model.options = [
+        //     { id: 'level', name: 'Level Select', large: true, icon: { class: 'material-icons', value: 'layers' }, number: true, action: 'pickLevel' },
+        //     { id: 'keys', name: 'Keys', icon: { class: 'material-icons', value: 'vpn_key' }, template: true },
+        //     { id: 'settings', name: 'Map Settings', icon: { class: 'material-icons', value: 'settings' }, action: 'updateSettings' },
+        //     { id: 'filters', name: 'Map Filters', icon: { class: 'material-icons', value: 'filter_list' }, action: 'showFilters' },
+        //     { id: 'room', name: 'Room Info', icon: { class: 'material-icons', value: 'info' }, offset: 'middle', template: true }
+        // ];
 
-          this.model.template.room = this.room_info;
-          this.model.template.keys = this.key_list;
-          this.subscription('explore_lvl', this.service.listen('EXPLORE.level', function (value) {
-            return _this4.setLevelByID(value, false);
-          }));
-          this.subscription('explore_search', this.service.listen('EXPLORE.search', function (value) {
-            return _this4.model.search = value;
-          }));
-        }
-      }, {
-        key: "tapWindow",
-        value: function tapWindow(e) {
-          this.model.keys.show = this.model.keys ? false : this.model.keys;
-        }
-      }, {
-        key: "init",
-        value: function init() {
-          var _this5 = this;
+        this.model.options = [{
+          id: 'building',
+          name: 'Building Select',
+          icon: {
+            class: 'material-icons',
+            value: 'location_city'
+          },
+          action: 'pickBuilding'
+        }, {
+          id: 'level',
+          name: 'Level Select',
+          large: true,
+          icon: {
+            class: 'material-icons',
+            value: 'layers'
+          },
+          number: true,
+          action: 'pickLevel'
+        }, {
+          id: 'keys',
+          name: 'Keys',
+          icon: {
+            class: 'material-icons',
+            value: 'vpn_key'
+          },
+          template: true
+        }];
+        this.model.rooms = {};
+        this.init();
+        this.setTemplates();
+      }
 
-          if (!this.service.Settings.setup) {
-            return setTimeout(function () {
-              return _this5.init();
-            }, 500);
-          }
-
-          this.model.map_settings = this.service.Settings.get('app.map') || {};
-          this.model.keys = {};
-          this.model.keys.groups = this.model.map_settings.keys || {};
-          this.model.keys.types = Object.keys(this.model.keys.groups);
-          this.model.zones = {};
-          this.model.zones.enabled = this.service.Settings.get('app.zones.enabled');
-          this.model.zones.toggle = this.service.Settings.get('app.zones.toggle');
-          this.model.settings = this.service.Settings.get('app.explore') || {};
-          this.subscription('bld', this.service.Buildings.listen(function (bld) {
-            return bld ? _this5.setBuilding(bld, false) : null;
-          }));
-
-          if (this.model.zones.enabled && this.model.zones.toggle) {
-            this.model.keys.types = [this.model.zones.toggle];
-          }
-
-          if (this.model.keys) {
-            this.model.keys.list = (this.model.keys.groups.room || []).concat(this.model.keys.groups.general || []);
-          } // Remove keys option if there are no keys to display
-
-
-          if ((!this.model.keys.types || this.model.keys.types.length <= 0) && (!this.model.keys.list || this.model.keys.list.length <= 0)) {
-            var _iteratorNormalCompletion = true;
-            var _didIteratorError = false;
-            var _iteratorError = undefined;
-
-            try {
-              for (var _iterator = this.model.options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                var opt = _step.value;
-
-                if (opt.id === 'keys') {
-                  this.model.options.splice(this.model.options.indexOf(opt), 1);
-                  break;
-                }
-              }
-            } catch (err) {
-              _didIteratorError = true;
-              _iteratorError = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion && _iterator.return != null) {
-                  _iterator.return();
-                }
-              } finally {
-                if (_didIteratorError) {
-                  throw _iteratorError;
-                }
-              }
-            }
-          }
-
-          if (this.model.map_settings && this.model.map_settings.settings === false) {
-            var _iteratorNormalCompletion2 = true;
-            var _didIteratorError2 = false;
-            var _iteratorError2 = undefined;
-
-            try {
-              for (var _iterator2 = this.model.options[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                var _opt = _step2.value;
-
-                if (_opt.id === 'settings') {
-                  this.model.options.splice(this.model.options.indexOf(_opt), 1);
-                  break;
-                }
-              }
-            } catch (err) {
-              _didIteratorError2 = true;
-              _iteratorError2 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-                  _iterator2.return();
-                }
-              } finally {
-                if (_didIteratorError2) {
-                  throw _iteratorError2;
-                }
-              }
-            }
-          }
-
-          if (this.model.map_settings && this.model.map_settings.info === false) {
-            var _iteratorNormalCompletion3 = true;
-            var _didIteratorError3 = false;
-            var _iteratorError3 = undefined;
-
-            try {
-              for (var _iterator3 = this.model.options[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-                var _opt2 = _step3.value;
-
-                if (_opt2.id === 'room') {
-                  this.model.options.splice(this.model.options.indexOf(_opt2), 1);
-                  break;
-                }
-              }
-            } catch (err) {
-              _didIteratorError3 = true;
-              _iteratorError3 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-                  _iterator3.return();
-                }
-              } finally {
-                if (_didIteratorError3) {
-                  throw _iteratorError3;
-                }
-              }
-            }
-          }
-
-          this.settings = {
-            zoom: 0
-          };
-          this.model.old = this.service.Settings.get('app.explore.old_overlay');
-          this.service.set('EXPLORE.settings', this.settings);
-          this.subscription('rooms', this.service.Rooms.listen('room_list', function () {
-            _this5.model.rooms.list = _this5.service.Rooms.list();
-
-            _this5.processRooms();
-          }));
-          this.initOld();
-        }
-      }, {
-        key: "initOld",
-        value: function initOld() {
-          var _this6 = this;
-
-          this.subscription('exp_show_dsks', this.service.listen('EXPLORE.show.desks', function (state) {
-            _this6.model.show.desks = state;
-          }));
-          this.subscription('exp_show_rms', this.service.listen('EXPLORE.show.rooms', function (state) {
-            _this6.model.show.rooms = state;
-          }));
-          this.subscription('exp_show_tms', this.service.listen('EXPLORE.show.teams', function (state) {
-            _this6.model.show.teams = state;
-          }));
-          this.subscription('exp_show_zns', this.service.listen('EXPLORE.show.zones', function (state) {
-            _this6.model.zones.show = state;
-          }));
-        }
-      }, {
-        key: "loadLevels",
-        value: function loadLevels() {
-          this.model.level = {
-            list: []
-          };
-
-          if (this.model.bld) {
-            this.model.level.list = this.model.bld.levels;
-            this.model.level.names = [];
-            var _iteratorNormalCompletion4 = true;
-            var _didIteratorError4 = false;
-            var _iteratorError4 = undefined;
-
-            try {
-              for (var _iterator4 = this.model.level.list[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-                var lvl = _step4.value;
-                this.model.level.names.push(lvl.name);
-              }
-            } catch (err) {
-              _didIteratorError4 = true;
-              _iteratorError4 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-                  _iterator4.return();
-                }
-              } finally {
-                if (_didIteratorError4) {
-                  throw _iteratorError4;
-                }
-              }
-            }
-
-            this.setLevel(this.model.level.list[0]);
-          }
-        }
-      }, {
-        key: "loadbuildings",
-        value: function loadbuildings() {
-          this.model.buildings = {};
-          this.model.buildings.list = this.service.Buildings.list() || [];
-          this.model.buildings.names = this.model.buildings.list.map(function (i) {
-            return "".concat(i.code, " - ").concat(i.name).concat(i.address ? ' - ' + i.address : '');
-          });
-          var saved_building;
-
-          if (localStorage) {
-            var id = localStorage.getItem('STAFF.map.building') || '';
-
-            if (id) {
-              saved_building = this.model.buildings.list.find(function (i) {
-                return i.id === id;
-              });
-            }
-          }
-
-          ;
-
-          if (saved_building) {
-            this.setBuilding(saved_building);
-          } else {
-            this.setBuilding(this.service.Buildings.current());
-          }
-        }
-      }, {
-        key: "setBuildingByID",
-        value: function setBuildingByID(id) {
-          var emit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-          if (id && this.model.buildings && this.model.bld) {
-            var _iteratorNormalCompletion5 = true;
-            var _didIteratorError5 = false;
-            var _iteratorError5 = undefined;
-
-            try {
-              for (var _iterator5 = this.model.buildings.list[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-                var bld = _step5.value;
-
-                if (bld.id === id) {
-                  this.setBuilding(bld, emit);
-                  return bld;
-                }
-              }
-            } catch (err) {
-              _didIteratorError5 = true;
-              _iteratorError5 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
-                  _iterator5.return();
-                }
-              } finally {
-                if (_didIteratorError5) {
-                  throw _iteratorError5;
-                }
-              }
-            }
-          }
-
-          return null;
-        }
-      }, {
-        key: "setLevelByID",
-        value: function setLevelByID(id) {
-          var emit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-          if (id && this.model.level && this.model.level.list) {
-            var _iteratorNormalCompletion6 = true;
-            var _didIteratorError6 = false;
-            var _iteratorError6 = undefined;
-
-            try {
-              for (var _iterator6 = this.model.level.list[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-                var lvl = _step6.value;
-
-                if (lvl.id === id) {
-                  this.setLevel(lvl, emit);
-                  return lvl;
-                }
-              }
-            } catch (err) {
-              _didIteratorError6 = true;
-              _iteratorError6 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
-                  _iterator6.return();
-                }
-              } finally {
-                if (_didIteratorError6) {
-                  throw _iteratorError6;
-                }
-              }
-            }
-          }
-
-          return null;
-        }
-      }, {
-        key: "setBuilding",
-        value: function setBuilding(bld) {
-          var post = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-          this.model.buildings.active = bld; //this.model.bld would hold the value of current building in picture
-
-          this.model.bld = bld;
-          this.has_details = !!bld.booking_details;
-          this.loadLevels(); // this.model.system = bld.systems.desks;
-
-          this.model.buildings.index = this.model.buildings.list.indexOf(bld);
-
-          if (localStorage) {
-            localStorage.setItem('STAFF.map.building', bld.id);
-          }
-
-          if (post) {
-            this.service.Buildings.set(bld.id, false);
-          }
-        }
-      }, {
-        key: "setLevel",
-        value: function setLevel(lvl) {
-          var emit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-          if (lvl && this.model.level && this.model.level.list && this.model.level.list.indexOf(lvl) >= 0) {
-            var previous_lvl = this.model.level.active;
-            this.model.level.active = lvl;
-            this.model.level.index = this.model.level.list.indexOf(lvl);
-
-            if (emit && (!previous_lvl || previous_lvl.id !== lvl.id)) {
-              this.service.set('EXPLORE.level', lvl.id);
-            }
-
+      ngOnChanges(changes) {
+        if (changes.change) {
+          setTimeout(() => {
+            this.model.rooms.list = this.service.Rooms.list();
             this.processRooms();
-          }
+          }, 100);
         }
-      }, {
-        key: "pickLevel",
-        value: function pickLevel() {
-          var _this7 = this;
+      }
 
-          if (this.model.level && this.model.level.list) {
-            var lvl = this.model.level.active;
-
-            var ref = this._dialog.open(_overlays_item_pick_modal_item_pick_model_component__WEBPACK_IMPORTED_MODULE_6__["ItemPickModalComponent"], {
-              maxWidth: '95vw',
-              data: {
-                name: 'Level',
-                options: this.model.level.list,
-                selected: [lvl]
-              }
-            });
-
-            ref.afterClosed().subscribe(function () {
-              _this7.setLevelByID("".concat(ref.componentInstance.selected[0].id));
-
-              _this7.model.show_menu = false;
-            });
-          }
+      setTemplates() {
+        if (!this.room_info || !this.key_list) {
+          return setTimeout(() => this.setTemplates(), 500);
         }
-      }, {
-        key: "pickBuilding",
-        value: function pickBuilding() {
-          var _this8 = this;
 
-          if (this.model.buildings) {
-            var bld = this.model.buildings.active;
+        this.model.template.room = this.room_info;
+        this.model.template.keys = this.key_list;
+        this.subscription('explore_lvl', this.service.listen('EXPLORE.level', value => this.setLevelByID(value, false)));
+        this.subscription('explore_search', this.service.listen('EXPLORE.search', value => this.model.search = value));
+      }
 
-            var ref = this._dialog.open(_overlays_item_pick_modal_item_pick_model_component__WEBPACK_IMPORTED_MODULE_6__["ItemPickModalComponent"], {
-              maxWidth: '95vw',
-              data: {
-                name: 'Building',
-                options: this.model.buildings.list,
-                selected: [bld]
-              }
-            });
+      tapWindow(e) {
+        this.model.keys.show = this.model.keys ? false : this.model.keys;
+      }
 
-            ref.afterClosed().subscribe(function () {
-              _this8.setBuildingByID("".concat(ref.componentInstance.selected[0].id));
-
-              _this8.model.show_menu = false;
-            });
-          }
+      init() {
+        if (!this.service.Settings.setup) {
+          return setTimeout(() => this.init(), 500);
         }
-      }, {
-        key: "processRooms",
-        value: function processRooms() {
-          if (this.model.rooms && this.model.rooms.list) {
-            this.model.rooms.count = 0;
-            this.model.rooms.free = 0;
-            var _iteratorNormalCompletion7 = true;
-            var _didIteratorError7 = false;
-            var _iteratorError7 = undefined;
 
-            try {
-              for (var _iterator7 = this.model.rooms.list[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-                var rm = _step7.value;
+        this.model.map_settings = this.service.Settings.get('app.map') || {};
+        this.model.keys = {};
+        this.model.keys.groups = this.model.map_settings.keys || {};
+        this.model.keys.types = Object.keys(this.model.keys.groups);
+        this.model.zones = {};
+        this.model.zones.enabled = this.service.Settings.get('app.zones.enabled');
+        this.model.zones.toggle = this.service.Settings.get('app.zones.toggle');
+        this.model.settings = this.service.Settings.get('app.explore') || {};
+        this.subscription('bld', this.service.Buildings.listen(bld => bld ? this.setBuilding(bld, false) : null));
 
-                if (rm.level && rm.level.id === this.model.level.active.id && rm.bookable) {
-                  this.model.rooms.count++;
-
-                  if (!rm.in_use) {
-                    this.model.rooms.free++;
-                  }
-                }
-              }
-            } catch (err) {
-              _didIteratorError7 = true;
-              _iteratorError7 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
-                  _iterator7.return();
-                }
-              } finally {
-                if (_didIteratorError7) {
-                  throw _iteratorError7;
-                }
-              }
-            }
-
-            this.model.rooms.percent = this.model.rooms.free / (this.model.rooms.count || 1) * 100;
-          }
-
-          if (this.model.desks) {
-            this.model.desks.percent = (this.model.desks.free || 0) / (this.model.desks.count || 1) * 100;
-          }
+        if (this.model.zones.enabled && this.model.zones.toggle) {
+          this.model.keys.types = [this.model.zones.toggle];
         }
-      }, {
-        key: "updateSettings",
-        value: function updateSettings() {
-          var _this9 = this;
 
-          var ref = this._dialog.open(_overlays_map_filter_modal_map_filter_modal_component__WEBPACK_IMPORTED_MODULE_5__["MapFilterModalComponent"], {});
+        if (this.model.keys) {
+          this.model.keys.list = (this.model.keys.groups.room || []).concat(this.model.keys.groups.general || []);
+        } // Remove keys option if there are no keys to display
 
-          ref.afterClosed().subscribe(function () {
-            _this9.model.show_menu = false;
-            _this9.model.show_filters = false;
-          });
-        }
-      }, {
-        key: "showFilters",
-        value: function showFilters() {
-          this.model.show_filters = !this.model.show_filters;
-        }
-      }, {
-        key: "updateState",
-        value: function updateState() {
-          this.service.set('EXPLORE.show.desks', this.model.show.desks);
-          this.service.set('EXPLORE.show.rooms', this.model.show.rooms);
-          this.service.set('EXPLORE.show.teams', this.model.show.teams);
 
-          if (this.model.zones) {
-            this.service.set('EXPLORE.show.zones', this.model.zones.show);
-          }
-
-          this.service.set('EXPLORE.filters', !this.service.get('EXPLORE.filters'));
-        }
-      }, {
-        key: "action",
-        value: function action(item) {
-          if (item.action && this[item.action] instanceof Function) {
-            this[item.action]();
-          }
-        }
-      }, {
-        key: "toggle",
-        value: function toggle(name) {
-          var _this10 = this;
-
-          var mobile = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-          var key = "".concat(name).concat(mobile ? '_mobile' : '');
-          setTimeout(function () {
-            if (_this10.model[name]) {
-              _this10.model[name].show = !_this10.model[name].show;
-            } else {
-              _this10.model.show[key] = !_this10.model.show[key];
-            }
-          }, 300);
-        }
-      }, {
-        key: "zoom",
-        value: function zoom(value) {
-          var zoom = Math.max(100, (this.settings.zoom || 100) * value);
-
-          if (!this.settings) {
-            this.settings = {};
-          }
-
-          this.settings.zoom = zoom;
-          this.postSettings();
-        }
-      }, {
-        key: "reset",
-        value: function reset() {
-          if (!this.settings) {
-            this.settings = {};
-          }
-
-          this.settings.zoom = 100;
-          this.settings.center = {
-            x: .5,
-            y: .5
-          };
-          this.postSettings();
-        }
-      }, {
-        key: "applyFilters",
-        value: function applyFilters() {
-          var zones = this.model.level.active.map.features;
-          var hide = [];
-          var _iteratorNormalCompletion8 = true;
-          var _didIteratorError8 = false;
-          var _iteratorError8 = undefined;
-
-          try {
-            for (var _iterator8 = zones[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
-              var z = _step8.value;
-
-              if (!z.active) {
-                hide.push(z.id);
-              }
-            }
-          } catch (err) {
-            _didIteratorError8 = true;
-            _iteratorError8 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion8 && _iterator8.return != null) {
-                _iterator8.return();
-              }
-            } finally {
-              if (_didIteratorError8) {
-                throw _iteratorError8;
-              }
+        if ((!this.model.keys.types || this.model.keys.types.length <= 0) && (!this.model.keys.list || this.model.keys.list.length <= 0)) {
+          for (const opt of this.model.options) {
+            if (opt.id === 'keys') {
+              this.model.options.splice(this.model.options.indexOf(opt), 1);
+              break;
             }
           }
-
-          this.service.set('EXPLORE.map.hide', hide.length === zones.length ? [] : hide);
-          this.model.show_filters = false;
         }
-      }, {
-        key: "postSettings",
-        value: function postSettings() {
-          this.settings = JSON.parse(JSON.stringify(this.settings));
-          this.service.set('EXPLORE.settings', this.settings);
-        }
-        /**
-         * Open booking rules modal
-         */
 
-      }, {
-        key: "viewBookingRules",
-        value: function viewBookingRules() {
-          this._dialog.open(_overlays_booking_rules_modal_booking_rules_modal_component__WEBPACK_IMPORTED_MODULE_4__["BookingRulesModalComponent"], {
+        if (this.model.map_settings && this.model.map_settings.settings === false) {
+          for (const opt of this.model.options) {
+            if (opt.id === 'settings') {
+              this.model.options.splice(this.model.options.indexOf(opt), 1);
+              break;
+            }
+          }
+        }
+
+        if (this.model.map_settings && this.model.map_settings.info === false) {
+          for (const opt of this.model.options) {
+            if (opt.id === 'room') {
+              this.model.options.splice(this.model.options.indexOf(opt), 1);
+              break;
+            }
+          }
+        }
+
+        this.settings = {
+          zoom: 0
+        };
+        this.model.old = this.service.Settings.get('app.explore.old_overlay');
+        this.service.set('EXPLORE.settings', this.settings);
+        this.subscription('rooms', this.service.Rooms.listen('room_list', () => {
+          this.model.rooms.list = this.service.Rooms.list();
+          this.processRooms();
+        }));
+        this.initOld();
+      }
+
+      initOld() {
+        this.subscription('exp_show_dsks', this.service.listen('EXPLORE.show.desks', state => {
+          this.model.show.desks = state;
+        }));
+        this.subscription('exp_show_rms', this.service.listen('EXPLORE.show.rooms', state => {
+          this.model.show.rooms = state;
+        }));
+        this.subscription('exp_show_tms', this.service.listen('EXPLORE.show.teams', state => {
+          this.model.show.teams = state;
+        }));
+        this.subscription('exp_show_zns', this.service.listen('EXPLORE.show.zones', state => {
+          this.model.zones.show = state;
+        }));
+      }
+
+      loadLevels() {
+        this.model.level = {
+          list: []
+        };
+
+        if (this.model.bld) {
+          this.model.level.list = this.model.bld.levels;
+          this.model.level.names = [];
+
+          for (const lvl of this.model.level.list) {
+            this.model.level.names.push(lvl.name);
+          }
+
+          this.setLevel(this.model.level.list[0]);
+        }
+      }
+
+      loadbuildings() {
+        this.model.buildings = {};
+        this.model.buildings.list = this.service.Buildings.list() || [];
+        this.model.buildings.names = this.model.buildings.list.map(i => "".concat(i.code, " - ").concat(i.name).concat(i.address ? ' - ' + i.address : ''));
+        let saved_building;
+
+        if (localStorage) {
+          const id = localStorage.getItem('STAFF.map.building') || '';
+
+          if (id) {
+            saved_building = this.model.buildings.list.find(i => i.id === id);
+          }
+        }
+
+        ;
+
+        if (saved_building) {
+          this.setBuilding(saved_building);
+        } else {
+          this.setBuilding(this.service.Buildings.current());
+        }
+      }
+
+      setBuildingByID(id, emit = true) {
+        if (id && this.model.buildings && this.model.bld) {
+          for (const bld of this.model.buildings.list) {
+            if (bld.id === id) {
+              this.setBuilding(bld, emit);
+              return bld;
+            }
+          }
+        }
+
+        return null;
+      }
+
+      setLevelByID(id, emit = true) {
+        if (id && this.model.level && this.model.level.list) {
+          for (const lvl of this.model.level.list) {
+            if (lvl.id === id) {
+              this.setLevel(lvl, emit);
+              return lvl;
+            }
+          }
+        }
+
+        return null;
+      }
+
+      setBuilding(bld, post = true) {
+        this.model.buildings.active = bld; //this.model.bld would hold the value of current building in picture
+
+        this.model.bld = bld;
+        this.has_details = !!bld.booking_details;
+        this.loadLevels(); // this.model.system = bld.systems.desks;
+
+        this.model.buildings.index = this.model.buildings.list.indexOf(bld);
+
+        if (localStorage) {
+          localStorage.setItem('STAFF.map.building', bld.id);
+        }
+
+        if (post) {
+          this.service.Buildings.set(bld.id, false);
+        }
+      }
+
+      setLevel(lvl, emit = true) {
+        if (lvl && this.model.level && this.model.level.list && this.model.level.list.indexOf(lvl) >= 0) {
+          const previous_lvl = this.model.level.active;
+          this.model.level.active = lvl;
+          this.model.level.index = this.model.level.list.indexOf(lvl);
+
+          if (emit && (!previous_lvl || previous_lvl.id !== lvl.id)) {
+            this.service.set('EXPLORE.level', lvl.id);
+          }
+
+          this.processRooms();
+        }
+      }
+
+      pickLevel() {
+        if (this.model.level && this.model.level.list) {
+          const lvl = this.model.level.active;
+
+          const ref = this._dialog.open(_overlays_item_pick_modal_item_pick_model_component__WEBPACK_IMPORTED_MODULE_6__["ItemPickModalComponent"], {
+            maxWidth: '95vw',
             data: {
-              building: this.model.bld,
-              from_map: true
+              name: 'Level',
+              options: this.model.level.list,
+              selected: [lvl]
             }
           });
-        }
-      }]);
 
-      return ExploreMapOverlayComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]);
+          ref.afterClosed().subscribe(() => {
+            this.setLevelByID("".concat(ref.componentInstance.selected[0].id));
+            this.model.show_menu = false;
+          });
+        }
+      }
+
+      pickBuilding() {
+        if (this.model.buildings) {
+          const bld = this.model.buildings.active;
+
+          const ref = this._dialog.open(_overlays_item_pick_modal_item_pick_model_component__WEBPACK_IMPORTED_MODULE_6__["ItemPickModalComponent"], {
+            maxWidth: '95vw',
+            data: {
+              name: 'Building',
+              options: this.model.buildings.list,
+              selected: [bld]
+            }
+          });
+
+          ref.afterClosed().subscribe(() => {
+            this.setBuildingByID("".concat(ref.componentInstance.selected[0].id));
+            this.model.show_menu = false;
+          });
+        }
+      }
+
+      processRooms() {
+        if (this.model.rooms && this.model.rooms.list) {
+          this.model.rooms.count = 0;
+          this.model.rooms.free = 0;
+
+          for (const rm of this.model.rooms.list) {
+            if (rm.level && rm.level.id === this.model.level.active.id && rm.bookable) {
+              this.model.rooms.count++;
+
+              if (!rm.in_use) {
+                this.model.rooms.free++;
+              }
+            }
+          }
+
+          this.model.rooms.percent = this.model.rooms.free / (this.model.rooms.count || 1) * 100;
+        }
+
+        if (this.model.desks) {
+          this.model.desks.percent = (this.model.desks.free || 0) / (this.model.desks.count || 1) * 100;
+        }
+      }
+
+      updateSettings() {
+        const ref = this._dialog.open(_overlays_map_filter_modal_map_filter_modal_component__WEBPACK_IMPORTED_MODULE_5__["MapFilterModalComponent"], {});
+
+        ref.afterClosed().subscribe(() => {
+          this.model.show_menu = false;
+          this.model.show_filters = false;
+        });
+      }
+
+      showFilters() {
+        this.model.show_filters = !this.model.show_filters;
+      }
+
+      updateState() {
+        this.service.set('EXPLORE.show.desks', this.model.show.desks);
+        this.service.set('EXPLORE.show.rooms', this.model.show.rooms);
+        this.service.set('EXPLORE.show.teams', this.model.show.teams);
+
+        if (this.model.zones) {
+          this.service.set('EXPLORE.show.zones', this.model.zones.show);
+        }
+
+        this.service.set('EXPLORE.filters', !this.service.get('EXPLORE.filters'));
+      }
+
+      action(item) {
+        if (item.action && this[item.action] instanceof Function) {
+          this[item.action]();
+        }
+      }
+
+      toggle(name, mobile = false) {
+        const key = "".concat(name).concat(mobile ? '_mobile' : '');
+        setTimeout(() => {
+          if (this.model[name]) {
+            this.model[name].show = !this.model[name].show;
+          } else {
+            this.model.show[key] = !this.model.show[key];
+          }
+        }, 300);
+      }
+
+      zoom(value) {
+        const zoom = Math.max(100, (this.settings.zoom || 100) * value);
+
+        if (!this.settings) {
+          this.settings = {};
+        }
+
+        this.settings.zoom = zoom;
+        this.postSettings();
+      }
+
+      reset() {
+        if (!this.settings) {
+          this.settings = {};
+        }
+
+        this.settings.zoom = 100;
+        this.settings.center = {
+          x: .5,
+          y: .5
+        };
+        this.postSettings();
+      }
+
+      applyFilters() {
+        const zones = this.model.level.active.map.features;
+        const hide = [];
+
+        for (const z of zones) {
+          if (!z.active) {
+            hide.push(z.id);
+          }
+        }
+
+        this.service.set('EXPLORE.map.hide', hide.length === zones.length ? [] : hide);
+        this.model.show_filters = false;
+      }
+
+      postSettings() {
+        this.settings = JSON.parse(JSON.stringify(this.settings));
+        this.service.set('EXPLORE.settings', this.settings);
+      }
+      /**
+       * Open booking rules modal
+       */
+
+
+      viewBookingRules() {
+        this._dialog.open(_overlays_booking_rules_modal_booking_rules_modal_component__WEBPACK_IMPORTED_MODULE_4__["BookingRulesModalComponent"], {
+          data: {
+            building: this.model.bld,
+            from_map: true
+          }
+        });
+      }
+
+    }
     /***/
 
   },
@@ -3362,520 +3094,403 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /*! ../../../../shared/globals/base.directive */
     "./src/app/shared/globals/base.directive.ts");
 
-    var ExploreSearchComponent = /*#__PURE__*/function (_shared_globals_base_2) {
-      _inherits(ExploreSearchComponent, _shared_globals_base_2);
-
-      function ExploreSearchComponent(service, route, router) {
-        var _this11;
-
-        _classCallCheck(this, ExploreSearchComponent);
-
-        _this11 = _possibleConstructorReturn(this, _getPrototypeOf(ExploreSearchComponent).call(this));
-        _this11.service = service;
-        _this11.route = route;
-        _this11.router = router;
-        _this11.item = null;
-        _this11.itemChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        _this11.model = {};
-        _this11.filtered_items = [];
-        _this11.timers = {};
-        return _this11;
+    class ExploreSearchComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"] {
+      constructor(service, route, router) {
+        super();
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.item = null;
+        this.itemChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.model = {};
+        this.filtered_items = [];
+        this.timers = {};
       }
 
-      _createClass(ExploreSearchComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this12 = this;
-
-          var win = self;
-          this.model.loaded = false;
-          this.model.speech = !!(win.SpeechRecognition || win.webkitSpeechRecognition);
-          this.model.settings = {};
-          this.subscription('users', this.service.Users.listen('user_list', function (list) {
-            _this12.model.user_list = list || [];
-
-            _this12.model.user_list.sort(function (a, b) {
-              return a.name.localeCompare(b.name);
-            });
-
-            _this12.filter();
-          }));
-          this.subscription('rooms', this.service.Rooms.listen('room_list', function () {
-            _this12.model.room_list = _this12.service.Rooms.list();
-          }));
-          this.subscription('bld', this.service.Buildings.listen(function (bld) {
-            if (bld) {
-              _this12.model.search = '';
-              _this12.model.room_list = _this12.service.Rooms.list();
-
-              _this12.filter();
-            }
-          }));
-          this.subscription('query', this.route.queryParamMap.subscribe(function (params) {
-            if (params.has('role')) {
-              _this12.model.role_param = params.get('role');
-
-              _this12.initRole();
-            }
-          }));
-          this.subscription('route', this.route.paramMap.subscribe(function (params) {
-            if (params.has('search')) {
-              _this12.model.search_type = params.get('search');
-
-              _this12.updateShow();
-
-              _this12.filter();
-            }
-          })); // Clear results when route changes
-
-          this.subscription('routing', this.router.events.subscribe(function (event) {
-            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"]) {
-              _this12.filtered_items = [];
-              _this12.model.search = '';
-
-              _this12.service.set('BANNER.block_height', 0);
-            } else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"]) {
-              _this12.updateShow();
-            }
-          }));
-          this.init();
-        }
-      }, {
-        key: "init",
-        value: function init() {
-          var _this13 = this;
-
-          var bld = this.service.Buildings.current();
-
-          if (!this.service.Settings.setup || !bld) {
-            return setTimeout(function () {
-              return _this13.init();
-            }, 500);
-          }
-
-          this.model.route = this.service.Settings.get('app.style.popout');
-          this.model.min_search = this.service.Settings.get('app.people_min_char') || 0;
-          this.model.settings = this.service.Settings.get('app.explore') || {};
-          this.model.role = {
-            details: this.service.Settings.get('app.roles'),
-            list: [],
-            active: -1
-          };
-
-          if (bld.roles) {
-            for (var role in bld.roles) {
-              if (bld.roles.hasOwnProperty(role)) {
-                this.model.role.list.push({
-                  id: role,
-                  name: role.split('-').join(' '),
-                  icon: this.model.role.details ? this.model.role.details[role] : null,
-                  users: bld.roles[role]
-                });
-              }
-            }
-          }
-
+      ngOnInit() {
+        const win = self;
+        this.model.loaded = false;
+        this.model.speech = !!(win.SpeechRecognition || win.webkitSpeechRecognition);
+        this.model.settings = {};
+        this.subscription('users', this.service.Users.listen('user_list', list => {
+          this.model.user_list = list || [];
+          this.model.user_list.sort((a, b) => a.name.localeCompare(b.name));
           this.filter();
-          this.updateShow();
-          this.model.inited = true;
-        }
-      }, {
-        key: "initRole",
-        value: function initRole() {
-          var _this14 = this;
-
-          if (this.model.role_param && this.model.role && this.model.role.list) {
-            var _iteratorNormalCompletion9 = true;
-            var _didIteratorError9 = false;
-            var _iteratorError9 = undefined;
-
-            try {
-              for (var _iterator9 = this.model.role.list[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
-                var i = _step9.value;
-
-                if (i.id === this.model.role_param) {
-                  this.model.role.active = this.model.role.list.indexOf(i);
-                  this.filter();
-                  break;
-                }
-              }
-            } catch (err) {
-              _didIteratorError9 = true;
-              _iteratorError9 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion9 && _iterator9.return != null) {
-                  _iterator9.return();
-                }
-              } finally {
-                if (_didIteratorError9) {
-                  throw _iteratorError9;
-                }
-              }
-            }
-          } else if (!this.model.role || !this.model.role.list) {
-            setTimeout(function () {
-              return _this14.initRole();
-            }, 500);
+        }));
+        this.subscription('rooms', this.service.Rooms.listen('room_list', () => {
+          this.model.room_list = this.service.Rooms.list();
+        }));
+        this.subscription('bld', this.service.Buildings.listen(bld => {
+          if (bld) {
+            this.model.search = '';
+            this.model.room_list = this.service.Rooms.list();
+            this.filter();
           }
-        }
-        /**
-         * Update list of filtered items
-         */
-
-      }, {
-        key: "filter",
-        value: function filter() {
-          var _this15 = this;
-
-          var focused = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-
-          if (!this.model.settings) {
-            return;
+        }));
+        this.subscription('query', this.route.queryParamMap.subscribe(params => {
+          if (params.has('role')) {
+            this.model.role_param = params.get('role');
+            this.initRole();
           }
+        }));
+        this.subscription('route', this.route.paramMap.subscribe(params => {
+          if (params.has('search')) {
+            this.model.search_type = params.get('search');
+            this.updateShow();
+            this.filter();
+          }
+        })); // Clear results when route changes
 
-          this.model.loading = true;
-          this.timeout('loading', function () {
-            return _this15.model.loading = false;
-          }, 310); // Prevent deselection o
-
-          if (focused && this.input && this.input.nativeElement) {
-            this.input.nativeElement.focus();
-            this.model.focus = true;
+        this.subscription('routing', this.router.events.subscribe(event => {
+          if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"]) {
+            this.filtered_items = [];
+            this.model.search = '';
+            this.service.set('BANNER.block_height', 0);
+          } else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"]) {
             this.updateShow();
           }
+        }));
+        this.init();
+      }
 
-          if (this.timers.search) {
-            clearTimeout(this.timers.search);
-            this.timers.search = null;
+      init() {
+        const bld = this.service.Buildings.current();
+
+        if (!this.service.Settings.setup || !bld) {
+          return setTimeout(() => this.init(), 500);
+        }
+
+        this.model.route = this.service.Settings.get('app.style.popout');
+        this.model.min_search = this.service.Settings.get('app.people_min_char') || 0;
+        this.model.settings = this.service.Settings.get('app.explore') || {};
+        this.model.role = {
+          details: this.service.Settings.get('app.roles'),
+          list: [],
+          active: -1
+        };
+
+        if (bld.roles) {
+          for (const role in bld.roles) {
+            if (bld.roles.hasOwnProperty(role)) {
+              this.model.role.list.push({
+                id: role,
+                name: role.split('-').join(' '),
+                icon: this.model.role.details ? this.model.role.details[role] : null,
+                users: bld.roles[role]
+              });
+            }
           }
-
-          this.timeout('filter', function () {
-            _this15.clearTimeout('loading');
-
-            _this15.model.loading = true;
-
-            if (_this15.model.search_type === 'spaces') {
-              // Only return rooms/spaces
-              _this15.filterRooms().then(function (rooms) {
-                _this15.filtered_items = rooms;
-
-                _this15.filtered_items.sort(function (a, b) {
-                  return a.name.localeCompare(b.name);
-                });
-
-                return _this15.model.loading = false;
-              });
-            } else if (_this15.model.search_type === 'people') {
-              // Only return people
-              _this15.filterUsers().then(function (users) {
-                _this15.filtered_items = users;
-                return _this15.model.loading = false;
-              });
-            } else {
-              // Return both spaces and people
-              _this15.filterUsers().then(function (users) {
-                var role = _this15.model.role;
-
-                if (role && role.active >= 0) {
-                  _this15.filtered_items = users;
-                  return _this15.model.loading = false;
-                } else {
-                  _this15.filterRooms().then(function (rooms) {
-                    _this15.filtered_items = (users || []).concat(rooms);
-
-                    _this15.filtered_items.sort(function (a, b) {
-                      return a.name.localeCompare(b.name);
-                    });
-
-                    return _this15.model.loading = false;
-                  });
-                }
-              });
-            }
-          });
         }
-        /**
-         * Promise of filtered users
-         */
 
-      }, {
-        key: "filterUsers",
-        value: function filterUsers() {
-          var _this16 = this;
+        this.filter();
+        this.updateShow();
+        this.model.inited = true;
+      }
 
-          return new Promise(function (resolve) {
-            var search = (_this16.model.search || '').toLowerCase();
-            var role = _this16.model.role;
-
-            if (search && search.length >= _this16.model.min_search || role && role.active >= 0 || !_this16.model.min_search) {
-              var users = []; // Get filtered users
-
-              if (role && role.active >= 0) {
-                users = _this16.service.Users.getFilteredUsers(search, role.list[role.active].users);
-                resolve(users);
-              } else if (!_this16.model.min_search && _this16.model.user_list && _this16.model.user_list.length > 0) {
-                users = _this16.service.Users.getFilteredUsers(search, _this16.model.user_list);
-                resolve(users);
-              } else {
-                var request_id = Math.floor(Math.random() * 899999 + 100000);
-                _this16.model.request_id = request_id;
-
-                _this16.service.Users.query({
-                  q: search,
-                  limit: 50
-                }).then(function (list) {
-                  if (request_id === _this16.model.request_id) {
-                    users = _this16.service.Users.getFilteredUsers(search, list);
-                    resolve(users);
-                  }
-                }, function () {
-                  return resolve(users);
-                });
-              }
-            } else {
-              resolve([]);
+      initRole() {
+        if (this.model.role_param && this.model.role && this.model.role.list) {
+          for (const i of this.model.role.list) {
+            if (i.id === this.model.role_param) {
+              this.model.role.active = this.model.role.list.indexOf(i);
+              this.filter();
+              break;
             }
-          });
-        }
-        /**
-         * Promise of filtered spaces
-         */
-
-      }, {
-        key: "filterRooms",
-        value: function filterRooms() {
-          var _this17 = this;
-
-          return new Promise(function (resolve) {
-            var search = (_this17.model.search || '').toLowerCase();
-            var list = [];
-            var _iteratorNormalCompletion10 = true;
-            var _didIteratorError10 = false;
-            var _iteratorError10 = undefined;
-
-            try {
-              for (var _iterator10 = _this17.model.room_list[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
-                var item = _step10.value;
-                list.push({
-                  id: item.id,
-                  prefix: item.prefix,
-                  bookable: item.bookable,
-                  map_id: item.map_id,
-                  name: item.name,
-                  level: item.level
-                });
-              }
-            } catch (err) {
-              _didIteratorError10 = true;
-              _iteratorError10 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion10 && _iterator10.return != null) {
-                  _iterator10.return();
-                }
-              } finally {
-                if (_didIteratorError10) {
-                  throw _iteratorError10;
-                }
-              }
-            }
-
-            var bld = _this17.service.Buildings.current();
-
-            if (bld && bld.map && bld.map.searchables) {
-              for (var level in bld.map.searchables) {
-                if (bld.map.searchables.hasOwnProperty(level)) {
-                  for (var name in bld.map.searchables[level]) {
-                    if (bld.map.searchables[level].hasOwnProperty(name)) {
-                      var lvl = _this17.service.Buildings.getLevel(level);
-
-                      list.push({
-                        map_id: bld.map.searchables[level][name],
-                        name: name,
-                        level: lvl,
-                        prefix: false
-                      });
-                    }
-                  }
-                }
-              }
-            }
-
-            if (!search) {
-              return resolve(list);
-            }
-
-            var rooms = [];
-
-            for (var _i = 0, _list = list; _i < _list.length; _i++) {
-              var rm = _list[_i];
-
-              if (((rm.name || '').toLowerCase().indexOf(search) >= 0 || rm.level && (rm.level.name || '').toLowerCase().indexOf(search) >= 0) && rm.searchable !== false) {
-                rooms.push(rm);
-              }
-            }
-
-            resolve(rooms);
-          });
-        }
-        /**
-         * Post item to find on map
-         * @param item Displayed item selected by the user
-         */
-
-      }, {
-        key: "find",
-        value: function find(item) {
-          this.item = item;
-          this.model.search = item.name;
-          this.model.focus = false;
-          this.model.dictate = false;
-
-          if (this.input && this.input.nativeElement) {
-            this.input.nativeElement.blur();
           }
+        } else if (!this.model.role || !this.model.role.list) {
+          setTimeout(() => this.initRole(), 500);
+        }
+      }
+      /**
+       * Update list of filtered items
+       */
 
-          this.itemChange.emit(item);
+
+      filter(focused = false) {
+        if (!this.model.settings) {
+          return;
+        }
+
+        this.model.loading = true;
+        this.timeout('loading', () => this.model.loading = false, 310); // Prevent deselection o
+
+        if (focused && this.input && this.input.nativeElement) {
+          this.input.nativeElement.focus();
+          this.model.focus = true;
           this.updateShow();
         }
-        /**
-         * Open telephone URL for item
-         * @param item Displayed item selected by the user
-         */
 
-      }, {
-        key: "call",
-        value: function call(item) {
-          item.loading = true;
-          var phone = '';
-          item.phone = -1;
+        if (this.timers.search) {
+          clearTimeout(this.timers.search);
+          this.timers.search = null;
+        }
 
-          if (!item.phone || item.phone === -1) {
-            // Load user phone number from API
-            this.service.Users.show(item.email).then(function (person) {
-              if (person && person.phone) {
-                phone = _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].removeChars(person.phone, ' ()_-');
-                location.href = "tel:".concat(phone);
-              } else {
-                item.phone = -1;
-              }
+        this.timeout('filter', () => {
+          this.clearTimeout('loading');
+          this.model.loading = true;
 
-              item.loading = false;
-            }, function () {
-              return item.phone = -1;
+          if (this.model.search_type === 'spaces') {
+            // Only return rooms/spaces
+            this.filterRooms().then(rooms => {
+              this.filtered_items = rooms;
+              this.filtered_items.sort((a, b) => a.name.localeCompare(b.name));
+              return this.model.loading = false;
+            });
+          } else if (this.model.search_type === 'people') {
+            // Only return people
+            this.filterUsers().then(users => {
+              this.filtered_items = users;
+              return this.model.loading = false;
             });
           } else {
-            phone = _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].removeChars(item.phone, ' ()_-');
-            location.href = "tel:".concat(phone);
+            // Return both spaces and people
+            this.filterUsers().then(users => {
+              const role = this.model.role;
+
+              if (role && role.active >= 0) {
+                this.filtered_items = users;
+                return this.model.loading = false;
+              } else {
+                this.filterRooms().then(rooms => {
+                  this.filtered_items = (users || []).concat(rooms);
+                  this.filtered_items.sort((a, b) => a.name.localeCompare(b.name));
+                  return this.model.loading = false;
+                });
+              }
+            });
+          }
+        });
+      }
+      /**
+       * Promise of filtered users
+       */
+
+
+      filterUsers() {
+        return new Promise(resolve => {
+          const search = (this.model.search || '').toLowerCase();
+          const role = this.model.role;
+
+          if (search && search.length >= this.model.min_search || role && role.active >= 0 || !this.model.min_search) {
+            let users = []; // Get filtered users
+
+            if (role && role.active >= 0) {
+              users = this.service.Users.getFilteredUsers(search, role.list[role.active].users);
+              resolve(users);
+            } else if (!this.model.min_search && this.model.user_list && this.model.user_list.length > 0) {
+              users = this.service.Users.getFilteredUsers(search, this.model.user_list);
+              resolve(users);
+            } else {
+              const request_id = Math.floor(Math.random() * 899999 + 100000);
+              this.model.request_id = request_id;
+              this.service.Users.query({
+                q: search,
+                limit: 50
+              }).then(list => {
+                if (request_id === this.model.request_id) {
+                  users = this.service.Users.getFilteredUsers(search, list);
+                  resolve(users);
+                }
+              }, () => resolve(users));
+            }
+          } else {
+            resolve([]);
+          }
+        });
+      }
+      /**
+       * Promise of filtered spaces
+       */
+
+
+      filterRooms() {
+        return new Promise(resolve => {
+          const search = (this.model.search || '').toLowerCase();
+          const list = [];
+
+          for (const item of this.model.room_list) {
+            list.push({
+              id: item.id,
+              prefix: item.prefix,
+              bookable: item.bookable,
+              map_id: item.map_id,
+              name: item.name,
+              level: item.level
+            });
+          }
+
+          const bld = this.service.Buildings.current();
+
+          if (bld && bld.map && bld.map.searchables) {
+            for (const level in bld.map.searchables) {
+              if (bld.map.searchables.hasOwnProperty(level)) {
+                for (const name in bld.map.searchables[level]) {
+                  if (bld.map.searchables[level].hasOwnProperty(name)) {
+                    const lvl = this.service.Buildings.getLevel(level);
+                    list.push({
+                      map_id: bld.map.searchables[level][name],
+                      name,
+                      level: lvl,
+                      prefix: false
+                    });
+                  }
+                }
+              }
+            }
+          }
+
+          if (!search) {
+            return resolve(list);
+          }
+
+          const rooms = [];
+
+          for (const rm of list) {
+            if (((rm.name || '').toLowerCase().indexOf(search) >= 0 || rm.level && (rm.level.name || '').toLowerCase().indexOf(search) >= 0) && rm.searchable !== false) {
+              rooms.push(rm);
+            }
+          }
+
+          resolve(rooms);
+        });
+      }
+      /**
+       * Post item to find on map
+       * @param item Displayed item selected by the user
+       */
+
+
+      find(item) {
+        this.item = item;
+        this.model.search = item.name;
+        this.model.focus = false;
+        this.model.dictate = false;
+
+        if (this.input && this.input.nativeElement) {
+          this.input.nativeElement.blur();
+        }
+
+        this.itemChange.emit(item);
+        this.updateShow();
+      }
+      /**
+       * Open telephone URL for item
+       * @param item Displayed item selected by the user
+       */
+
+
+      call(item) {
+        item.loading = true;
+        let phone = '';
+        item.phone = -1;
+
+        if (!item.phone || item.phone === -1) {
+          // Load user phone number from API
+          this.service.Users.show(item.email).then(person => {
+            if (person && person.phone) {
+              phone = _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].removeChars(person.phone, ' ()_-');
+              location.href = "tel:".concat(phone);
+            } else {
+              item.phone = -1;
+            }
+
             item.loading = false;
-          }
+          }, () => item.phone = -1);
+        } else {
+          phone = _shared_utility_class__WEBPACK_IMPORTED_MODULE_3__["Utils"].removeChars(item.phone, ' ()_-');
+          location.href = "tel:".concat(phone);
+          item.loading = false;
         }
-        /**
-         * Open support URL for the selected item
-         * @param item Selected item
-         */
+      }
+      /**
+       * Open support URL for the selected item
+       * @param item Selected item
+       */
 
-      }, {
-        key: "control",
-        value: function control(item) {
-          if (item.support_url) {
-            window.open(item.support_url, 'blank_');
-          }
+
+      control(item) {
+        if (item.support_url) {
+          window.open(item.support_url, 'blank_');
         }
-        /**
-         * Close the search and clear the selected item
-         */
+      }
+      /**
+       * Close the search and clear the selected item
+       */
 
-      }, {
-        key: "close",
-        value: function close() {
-          this.model.search = '';
-          this.item = null;
-          this.model.role.active = -1;
-          this.filter();
 
-          if (this.input && this.input.nativeElement) {
-            this.input.nativeElement.blur();
-          }
+      close() {
+        this.model.search = '';
+        this.item = null;
+        this.model.role.active = -1;
+        this.filter();
 
-          this.itemChange.emit(this.item);
+        if (this.input && this.input.nativeElement) {
+          this.input.nativeElement.blur();
         }
-        /**
-         * Activate dictation search
-         */
 
-      }, {
-        key: "startDictation",
-        value: function startDictation() {
-          var _this18 = this;
+        this.itemChange.emit(this.item);
+      }
+      /**
+       * Activate dictation search
+       */
 
-          if (!this.input) {
-            return;
-          }
 
-          if (this.model.recognition) {
+      startDictation() {
+        if (!this.input) {
+          return;
+        }
+
+        if (this.model.recognition) {
+          this.model.recognition.stop();
+          this.model.dictate = false;
+          this.model.recognition = null;
+          return;
+        }
+
+        const win = self;
+        const Speech = win.SpeechRecognition || win.webkitSpeechRecognition;
+
+        if (Speech) {
+          this.model.recognition = new Speech();
+          this.model.recognition.continuous = false;
+          this.model.recognition.interimResults = false;
+          this.model.recognition.lang = 'en-US';
+          this.model.recognition.start();
+          this.model.dictate = true;
+
+          this.model.recognition.onresult = e => {
+            // Update search field with dictation result
+            this.input.nativeElement.value = e.results[0][0].transcript;
+            this.model.search = e.results[0][0].transcript;
+            this.model.recognition.stop();
+            this.filter();
+            this.model.dictate = false;
+          };
+
+          this.model.recognition.onerror = e => {
             this.model.recognition.stop();
             this.model.dictate = false;
-            this.model.recognition = null;
-            return;
-          }
-
-          var win = self;
-          var Speech = win.SpeechRecognition || win.webkitSpeechRecognition;
-
-          if (Speech) {
-            this.model.recognition = new Speech();
-            this.model.recognition.continuous = false;
-            this.model.recognition.interimResults = false;
-            this.model.recognition.lang = 'en-US';
-            this.model.recognition.start();
-            this.model.dictate = true;
-
-            this.model.recognition.onresult = function (e) {
-              // Update search field with dictation result
-              _this18.input.nativeElement.value = e.results[0][0].transcript;
-              _this18.model.search = e.results[0][0].transcript;
-
-              _this18.model.recognition.stop();
-
-              _this18.filter();
-
-              _this18.model.dictate = false;
-            };
-
-            this.model.recognition.onerror = function (e) {
-              _this18.model.recognition.stop();
-
-              _this18.model.dictate = false;
-            };
-          }
+          };
         }
-      }, {
-        key: "updateShow",
-        value: function updateShow() {
-          var _this19 = this;
+      }
 
-          this.timeout('update_show', function () {
-            var people = !_this19.item && _this19.model.role.active !== -1 || _this19.model.search_type === 'people' && !_this19.item;
-            _this19.model.show = people || _this19.model.focus || _this19.model.dictate;
-            _this19.model.banner = _this19.model.settings && _this19.model.settings.banner && _this19.model.settings.banner.search;
-            var r = _this19.model.role && _this19.model.role.list && _this19.model.role.list.length > 0;
-            _this19.model.banner_roles = _this19.model.banner && _this19.model.settings.banner.roles && _this19.model.search_type !== 'spaces' && r;
+      updateShow() {
+        this.timeout('update_show', () => {
+          const people = !this.item && this.model.role.active !== -1 || this.model.search_type === 'people' && !this.item;
+          this.model.show = people || this.model.focus || this.model.dictate;
+          this.model.banner = this.model.settings && this.model.settings.banner && this.model.settings.banner.search;
+          const r = this.model.role && this.model.role.list && this.model.role.list.length > 0;
+          this.model.banner_roles = this.model.banner && this.model.settings.banner.roles && this.model.search_type !== 'spaces' && r;
 
-            if (_this19.model.show && _this19.model.banner) {
-              var h = _this19.model.banner_roles ? 6.5 : 4;
+          if (this.model.show && this.model.banner) {
+            const h = this.model.banner_roles ? 6.5 : 4;
+            this.service.set('BANNER.block_height', h);
+          } else {
+            this.service.set('BANNER.block_height', 0);
+          }
+        }, 500);
+      }
 
-              _this19.service.set('BANNER.block_height', h);
-            } else {
-              _this19.service.set('BANNER.block_height', 0);
-            }
-          }, 500);
-        }
-      }]);
-
-      return ExploreSearchComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -4371,293 +3986,255 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
     var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
 
-    var ExploreTimelineComponent = /*#__PURE__*/function (_shared_globals_base_3) {
-      _inherits(ExploreTimelineComponent, _shared_globals_base_3);
-
-      function ExploreTimelineComponent(renderer) {
-        var _this20;
-
-        _classCallCheck(this, ExploreTimelineComponent);
-
-        _this20 = _possibleConstructorReturn(this, _getPrototypeOf(ExploreTimelineComponent).call(this));
-        _this20.renderer = renderer;
+    class ExploreTimelineComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"] {
+      constructor(renderer) {
+        super();
+        this.renderer = renderer;
         /** Amount of time to display on the timeline */
 
-        _this20.duration = 12 * 60;
+        this.duration = 12 * 60;
         /** Size of each time block */
 
-        _this20.block_size = 30;
+        this.block_size = 30;
         /** Time offset in minutes which is displayed before the current time marker */
 
-        _this20.expired_length = 2 * 60;
+        this.expired_length = 2 * 60;
         /** Events occuring on the timeline */
 
-        _this20.events = [];
+        this.events = [];
         /** Emitter for changes to the selected time */
 
-        _this20.time = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.time = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         /** List of time blocks to display on the DOM */
 
-        _this20.blocks = [];
+        this.blocks = [];
         /** Offset of the selected time from the current time in minutes */
 
-        _this20.selected_offset = 0;
+        this.selected_offset = 0;
         /** Offset of the selected time from the current time in days */
 
-        _this20.date_offset = 0;
-        return _this20;
+        this.date_offset = 0;
       }
 
-      _createClass(ExploreTimelineComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this21 = this;
+      ngOnInit() {
+        this.generateTimelineBlocks();
+        this.selected_offset = 0;
+        this.date_offset = 0;
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_2__().add(this.selected_offset, 'm').add(this.date_offset, 'd').startOf('m');
+        start = start.minute(Math.ceil(start.minute() / 5) * 5);
+        this.display_time = start.format('h:mm a');
+        this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
+        this.selected_time = start.valueOf();
+        this.interval('expired', () => this.generateTimelineBlocks(), 60 * 1000);
+      }
 
-          this.generateTimelineBlocks();
-          this.selected_offset = 0;
-          this.date_offset = 0;
-          var start = dayjs__WEBPACK_IMPORTED_MODULE_2__().add(this.selected_offset, 'm').add(this.date_offset, 'd').startOf('m');
-          start = start.minute(Math.ceil(start.minute() / 5) * 5);
-          this.display_time = start.format('h:mm a');
-          this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
-          this.selected_time = start.valueOf();
-          this.interval('expired', function () {
-            return _this21.generateTimelineBlocks();
-          }, 60 * 1000);
+      ngAfterViewInit() {
+        this.resize();
+      }
+
+      ngOnDestroy() {
+        this.handleRelease();
+      }
+      /** Length of the shown timeline in minutes */
+
+
+      get length() {
+        return this.duration + this.block_size;
+      }
+      /**
+       * Generate time blocks to display
+       */
+
+
+      generateTimelineBlocks() {
+        let now = dayjs__WEBPACK_IMPORTED_MODULE_2__().add(this.date_offset, 'd').startOf('m');
+
+        if (this.date_offset) {
+          now.hour(7).minute(0);
         }
-      }, {
-        key: "ngAfterViewInit",
-        value: function ngAfterViewInit() {
-          this.resize();
+
+        now = now.minute(Math.round(now.minute() / 5) * 5);
+        const start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).subtract(this.date_offset ? 30 : this.expired_length || 120, 'm');
+        const end = start.add(this.duration || 720, 'm');
+        let date = dayjs__WEBPACK_IMPORTED_MODULE_2__(start);
+        delete this.blocks;
+        this.blocks = [];
+
+        while (date.isBefore(end, 'm')) {
+          this.blocks.push({
+            value: date.valueOf(),
+            show: date.minute() % ((this ? this.block_size : null) || 30) === 0,
+            hour: date.minute() === 0 ? date.hour() % 12 === 0 ? 12 : date.hour() % 12 : null,
+            offset: date.diff(now, 'm'),
+            in_use: false
+          });
+          date = date.add(5, 'm');
         }
-      }, {
-        key: "ngOnDestroy",
-        value: function ngOnDestroy() {
+
+        this.updateSelected();
+      }
+      /**
+       * Handle click and touch events on timeline
+       * @param event Touch or Click event on timeline
+       */
+
+
+      selectTime(event) {
+        const center = {
+          x: event instanceof MouseEvent ? event.clientX : event.touches[0].clientX,
+          y: event instanceof MouseEvent ? event.clientY : event.touches[0].clientY
+        };
+
+        if (!this.cntr_box) {
+          this.cntr_box = this.container.nativeElement.getBoundingClientRect();
+        }
+
+        const offset = this.date_offset ? 0 : this.expired_length / this.duration;
+        const percent = (center.x - this.cntr_box.left) / this.cntr_box.width - offset;
+        const length = Math.ceil((this.duration - (this.date_offset ? 0 : this.expired_length) - 30) / 5) * 5;
+        this.selected_offset = Math.min(length, Math.max(this.date_offset ? 30 : 0, this.duration * percent));
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('m');
+
+        if (this.date_offset) {
+          now.hour(7).minute(0).subtract(30, 'm');
+        }
+
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).add(this.selected_offset, 'm').add(this.date_offset, 'd');
+        start = start.minute(Math.ceil(start.minute() / 5) * 5);
+        this.selected_time = start.valueOf();
+        this.display_time = start.format('h:mm a');
+        this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
+        this.time.emit(start.startOf('m').valueOf());
+      }
+      /**
+       * Updates the selected offset
+       * @param offset New offset value
+       */
+
+
+      set(offset) {
+        this.selected_offset = Math.min(this.duration - (this.date_offset ? 0 : this.expired_length) - 30, Math.max(this.date_offset ? 30 : 0, offset));
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('m');
+
+        if (this.date_offset) {
+          now.hour(7).minute(0);
+        }
+
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).add(this.selected_offset, 'm').add(this.date_offset, 'd');
+        start = start.minute(Math.ceil(start.minute() / 5) * 5);
+        this.selected_time = start.valueOf();
+        this.display_time = start.format('h:mm a');
+        this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
+        this.time.emit(start.startOf('m').valueOf());
+      }
+      /**
+       * Change the selected date of the timeline
+       * @param offset Offset to change the select date by in number of days
+       */
+
+
+      changeDate(offset = 1) {
+        this.clearTimeout('grab');
+        this.date_offset += offset;
+        let new_offset = this.selected_offset;
+
+        if (this.date_offset === 1 && offset > 0) {
+          new_offset = this.expired_length + this.selected_offset;
+        } else if (this.date_offset === 0 && offset < 0) {
+          new_offset = this.selected_offset - this.expired_length;
+        }
+
+        this.set(new_offset);
+        this.generateTimelineBlocks();
+      }
+      /**
+       * Update bounding boxes after viewport change
+       */
+
+
+      resize() {
+        if (this.container) {
+          this.cntr_box = this.container.nativeElement.getBoundingClientRect();
+        }
+      }
+      /**
+       * Event callback for mousedown/touchstart events of the selected time elements
+       * @param event Thrown event
+       */
+
+
+      grab(event) {
+        this.timeout('grab', () => {
           this.handleRelease();
-        }
-        /** Length of the shown timeline in minutes */
-
-      }, {
-        key: "generateTimelineBlocks",
-
-        /**
-         * Generate time blocks to display
-         */
-        value: function generateTimelineBlocks() {
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_2__().add(this.date_offset, 'd').startOf('m');
-
-          if (this.date_offset) {
-            now.hour(7).minute(0);
-          }
-
-          now = now.minute(Math.round(now.minute() / 5) * 5);
-          var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).subtract(this.date_offset ? 30 : this.expired_length || 120, 'm');
-          var end = start.add(this.duration || 720, 'm');
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(start);
-          delete this.blocks;
-          this.blocks = [];
-
-          while (date.isBefore(end, 'm')) {
-            this.blocks.push({
-              value: date.valueOf(),
-              show: date.minute() % ((this ? this.block_size : null) || 30) === 0,
-              hour: date.minute() === 0 ? date.hour() % 12 === 0 ? 12 : date.hour() % 12 : null,
-              offset: date.diff(now, 'm'),
-              in_use: false
-            });
-            date = date.add(5, 'm');
-          }
-
-          this.updateSelected();
-        }
-        /**
-         * Handle click and touch events on timeline
-         * @param event Touch or Click event on timeline
-         */
-
-      }, {
-        key: "selectTime",
-        value: function selectTime(event) {
-          var center = {
-            x: event instanceof MouseEvent ? event.clientX : event.touches[0].clientX,
-            y: event instanceof MouseEvent ? event.clientY : event.touches[0].clientY
-          };
 
           if (!this.cntr_box) {
             this.cntr_box = this.container.nativeElement.getBoundingClientRect();
           }
 
-          var offset = this.date_offset ? 0 : this.expired_length / this.duration;
-          var percent = (center.x - this.cntr_box.left) / this.cntr_box.width - offset;
-          var length = Math.ceil((this.duration - (this.date_offset ? 0 : this.expired_length) - 30) / 5) * 5;
-          this.selected_offset = Math.min(length, Math.max(this.date_offset ? 30 : 0, this.duration * percent));
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('m');
-
-          if (this.date_offset) {
-            now.hour(7).minute(0).subtract(30, 'm');
+          if (event instanceof MouseEvent) {
+            this._move_listener = this.renderer.listen('window', 'mousemove', e => this.handleMove(e));
+            this._release_listener = this.renderer.listen('window', 'mouseup', _ => this.handleRelease());
+          } else {
+            this._move_listener = this.renderer.listen('window', 'touchmove', e => this.handleMove(e));
+            this._release_listener = this.renderer.listen('window', 'touchend', _ => this.handleRelease());
           }
+        }, 10);
+      }
+      /**
+       * Handle moving after grab event
+       * @param event
+       */
 
-          var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).add(this.selected_offset, 'm').add(this.date_offset, 'd');
+
+      handleMove(event) {
+        this.selectTime(event);
+      }
+      /**
+       * Handle end of grab event
+       */
+
+
+      handleRelease() {
+        if (this._move_listener) {
+          this._move_listener();
+
+          this._move_listener = null;
+        }
+
+        if (this._release_listener) {
+          this._release_listener();
+
+          this._release_listener = null;
+        }
+      }
+      /**
+       * Update the percentage of the day that has expired
+       */
+
+
+      updateSelected() {
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_2__().add(this.date_offset, 'd').startOf('m');
+
+        if (this.date_offset) {
+          now.hour(7).minute(0);
+        }
+
+        const diff = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).diff(now, 'm');
+
+        if (diff < 0) {
+          let start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
           start = start.minute(Math.ceil(start.minute() / 5) * 5);
           this.selected_time = start.valueOf();
           this.display_time = start.format('h:mm a');
           this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
-          this.time.emit(start.startOf('m').valueOf());
+          start.minute(Math.ceil(start.minute() / 5) * 5);
+          this.time.emit(start.valueOf());
         }
-        /**
-         * Updates the selected offset
-         * @param offset New offset value
-         */
 
-      }, {
-        key: "set",
-        value: function set(offset) {
-          this.selected_offset = Math.min(this.duration - (this.date_offset ? 0 : this.expired_length) - 30, Math.max(this.date_offset ? 30 : 0, offset));
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_2__().startOf('m');
+        this.selected_offset = Math.min(this.duration - (this.date_offset ? 0 : this.expired_length) - 30, Math.max(this.date_offset ? 30 : 0, diff));
+      }
 
-          if (this.date_offset) {
-            now.hour(7).minute(0);
-          }
-
-          var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).add(this.selected_offset, 'm').add(this.date_offset, 'd');
-          start = start.minute(Math.ceil(start.minute() / 5) * 5);
-          this.selected_time = start.valueOf();
-          this.display_time = start.format('h:mm a');
-          this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
-          this.time.emit(start.startOf('m').valueOf());
-        }
-        /**
-         * Change the selected date of the timeline
-         * @param offset Offset to change the select date by in number of days
-         */
-
-      }, {
-        key: "changeDate",
-        value: function changeDate() {
-          var offset = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-          this.clearTimeout('grab');
-          this.date_offset += offset;
-          var new_offset = this.selected_offset;
-
-          if (this.date_offset === 1 && offset > 0) {
-            new_offset = this.expired_length + this.selected_offset;
-          } else if (this.date_offset === 0 && offset < 0) {
-            new_offset = this.selected_offset - this.expired_length;
-          }
-
-          this.set(new_offset);
-          this.generateTimelineBlocks();
-        }
-        /**
-         * Update bounding boxes after viewport change
-         */
-
-      }, {
-        key: "resize",
-        value: function resize() {
-          if (this.container) {
-            this.cntr_box = this.container.nativeElement.getBoundingClientRect();
-          }
-        }
-        /**
-         * Event callback for mousedown/touchstart events of the selected time elements
-         * @param event Thrown event
-         */
-
-      }, {
-        key: "grab",
-        value: function grab(event) {
-          var _this22 = this;
-
-          this.timeout('grab', function () {
-            _this22.handleRelease();
-
-            if (!_this22.cntr_box) {
-              _this22.cntr_box = _this22.container.nativeElement.getBoundingClientRect();
-            }
-
-            if (event instanceof MouseEvent) {
-              _this22._move_listener = _this22.renderer.listen('window', 'mousemove', function (e) {
-                return _this22.handleMove(e);
-              });
-              _this22._release_listener = _this22.renderer.listen('window', 'mouseup', function (_) {
-                return _this22.handleRelease();
-              });
-            } else {
-              _this22._move_listener = _this22.renderer.listen('window', 'touchmove', function (e) {
-                return _this22.handleMove(e);
-              });
-              _this22._release_listener = _this22.renderer.listen('window', 'touchend', function (_) {
-                return _this22.handleRelease();
-              });
-            }
-          }, 10);
-        }
-        /**
-         * Handle moving after grab event
-         * @param event
-         */
-
-      }, {
-        key: "handleMove",
-        value: function handleMove(event) {
-          this.selectTime(event);
-        }
-        /**
-         * Handle end of grab event
-         */
-
-      }, {
-        key: "handleRelease",
-        value: function handleRelease() {
-          if (this._move_listener) {
-            this._move_listener();
-
-            this._move_listener = null;
-          }
-
-          if (this._release_listener) {
-            this._release_listener();
-
-            this._release_listener = null;
-          }
-        }
-        /**
-         * Update the percentage of the day that has expired
-         */
-
-      }, {
-        key: "updateSelected",
-        value: function updateSelected() {
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_2__().add(this.date_offset, 'd').startOf('m');
-
-          if (this.date_offset) {
-            now.hour(7).minute(0);
-          }
-
-          var diff = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.selected_time).diff(now, 'm');
-
-          if (diff < 0) {
-            var start = dayjs__WEBPACK_IMPORTED_MODULE_2__(now).startOf('m');
-            start = start.minute(Math.ceil(start.minute() / 5) * 5);
-            this.selected_time = start.valueOf();
-            this.display_time = start.format('h:mm a');
-            this.display_date = start.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd') ? 'Today' : start.format('DD MMM YYYY');
-            start.minute(Math.ceil(start.minute() / 5) * 5);
-            this.time.emit(start.valueOf());
-          }
-
-          this.selected_offset = Math.min(this.duration - (this.date_offset ? 0 : this.expired_length) - 30, Math.max(this.date_offset ? 30 : 0, diff));
-        }
-      }, {
-        key: "length",
-        get: function get() {
-          return this.duration + this.block_size;
-        }
-      }]);
-
-      return ExploreTimelineComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_1__["BaseDirective"]);
+    }
     /***/
 
   },
@@ -5199,7 +4776,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     }
 
     function View_ExploreComponent_13(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["\xA0"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["is currently not locatable"]))], null, function (_ck, _v) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["\u00A0"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["is currently not locatable"]))], null, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.model.found_user.name;
 
@@ -5208,7 +4785,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     }
 
     function View_ExploreComponent_14(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["\xA0"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["is located in another building"]))], null, function (_ck, _v) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 5, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["\u00A0"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["is located in another building"]))], null, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.model.found_user.name;
 
@@ -5481,21 +5058,15 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /*! ../../overlays/explore-booking-modal/explore-booking-modal.component */
     "./src/app/overlays/explore-booking-modal/explore-booking-modal.component.ts");
 
-    var ExploreComponent = /*#__PURE__*/function (_shared_globals_base_4) {
-      _inherits(ExploreComponent, _shared_globals_base_4);
-
-      function ExploreComponent(route, router, service, _dialog) {
-        var _this23;
-
-        _classCallCheck(this, ExploreComponent);
-
-        _this23 = _possibleConstructorReturn(this, _getPrototypeOf(ExploreComponent).call(this));
-        _this23.route = route;
-        _this23.router = router;
-        _this23.service = service;
-        _this23._dialog = _dialog;
-        _this23.model = [];
-        _this23.model.setting_list = [{
+    class ExploreComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_7__["BaseDirective"] {
+      constructor(route, router, service, _dialog) {
+        super();
+        this.route = route;
+        this.router = router;
+        this.service = service;
+        this._dialog = _dialog;
+        this.model = [];
+        this.model.setting_list = [{
           id: 'desks',
           name: 'Desks Status'
         }, {
@@ -5508,1411 +5079,934 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
           id: 'zones',
           name: 'Zones Status'
         }];
-        return _this23;
       }
 
-      _createClass(ExploreComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this24 = this;
+      ngOnInit() {
+        this.show_time = undefined;
+        this.subscription('router', this.router.events.subscribe(e => {
+          if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationStart"]) {
+            this.service.set('APP.swipe_disabled', e.url.indexOf('explore') >= 0);
+          } else if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationEnd"]) {
+            if (this.model.zones) {
+              this.model.zones.show = false;
+            }
 
-          this.show_time = undefined;
-          this.subscription('router', this.router.events.subscribe(function (e) {
-            if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationStart"]) {
-              _this24.service.set('APP.swipe_disabled', e.url.indexOf('explore') >= 0);
-            } else if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationEnd"]) {
-              if (_this24.model.zones) {
-                _this24.model.zones.show = false;
+            if (this.model.map) {
+              this.model.map.zoom = 100;
+              this.model.map.center = {
+                x: .5,
+                y: .5
+              };
+            }
+
+            this.clear();
+            this.update();
+          }
+        }));
+        this.subscription('params', this.route.paramMap.subscribe(params => {
+          if (params.has('search')) {
+            this.model.search = params.get('search');
+          }
+        }));
+        this.service.set('BANNER.block_height', 0);
+        this.subscription('query', this.route.queryParamMap.subscribe(params => {
+          if (params.has('room_id')) {
+            this.focusOnRoom(params.get('room_id'));
+          }
+
+          if (params.has('level')) {
+            this.setLevelByID(params.get('level'));
+          }
+
+          if (params.has('level_id')) {
+            this.setLevelByID(params.get('level_id'));
+          }
+
+          if (params.has('back')) {
+            this.model.back = params.get('back');
+          }
+        }));
+        this.subscription('user', this.service.Users.listen('user', item => this.model.user = item));
+        this.model.map = {};
+        this.model.show = {
+          rooms: true,
+          desks: true
+        };
+        this.model.map.poi = [];
+        this.model.desks = {};
+        this.model.zones = {};
+        this.model.settings = {};
+        this.service.set('EXPLORE.show.desks', this.model.show.desks);
+        this.service.set('EXPLORE.show.rooms', this.model.show.rooms);
+        this.subscription('exp_filter', this.service.listen('EXPLORE.filters', () => this.update()));
+        this.subscription('exp_features', this.service.listen('EXPLORE.map.hide', a => {
+          this.update();
+        }));
+        this.subscription('exp_settings', this.service.listen('EXPLORE.settings', value => this.updateSettings(value)));
+        this.subscription('exp_level', this.service.listen('EXPLORE.level', value => this.setLevelByID(value)));
+        this.model.colours = {
+          rooms: {},
+          desks: {},
+          zones: {}
+        };
+
+        if (this.model.keys) {
+          this.model.keys.show = false;
+        }
+
+        this.clear();
+        this.interval('time-update', () => {
+          this.timeChange(this.show_time);
+        }, 60 * 1000);
+        this.service.set('APP.swipe_disabled', true);
+        this.subscription('building', this.service.Buildings.listen(bld => {
+          if (bld) {
+            this.timeout('set_building', () => {
+              bld = this.service.Buildings.current();
+              const active = this.model.level ? this.model.level.active : null;
+              this.model.level = {};
+              this.model.system = bld.systems.desks;
+              this.model.focus_user = null;
+              this.model.found_room = null;
+              this.model.info = null;
+              this.model.level.list = bld.levels;
+              this.model.rooms = this.service.Rooms.list();
+              this.model.room_pin = null;
+
+              if (this.model.level.list) {
+                this.model.level.names = [];
+
+                for (const level of this.model.level.list) {
+                  this.model.level.names.push(level.name);
+                }
+
+                let lvl = null;
+
+                if (active) {
+                  lvl = this.setLevelByID(active.id);
+                }
+
+                if (!lvl && this.model.level.list.length > 0) {
+                  this.setLevel(this.model.level.list[0]);
+                }
               }
 
-              if (_this24.model.map) {
-                _this24.model.map.zoom = 100;
-                _this24.model.map.center = {
-                  x: .5,
-                  y: .5
-                };
+              if (this.model.found_user) {
+                this.focusUser(this.model.found_user);
               }
 
-              _this24.clear();
+              this.update();
+            });
+          }
+        }));
+        this.init();
+      }
 
-              _this24.update();
-            }
-          }));
-          this.subscription('params', this.route.paramMap.subscribe(function (params) {
-            if (params.has('search')) {
-              _this24.model.search = params.get('search');
-            }
-          }));
-          this.service.set('BANNER.block_height', 0);
-          this.subscription('query', this.route.queryParamMap.subscribe(function (params) {
-            if (params.has('room_id')) {
-              _this24.focusOnRoom(params.get('room_id'));
-            }
+      init() {
+        if (!this.service.ready()) {
+          this.timeout('init', () => this.init(), 500);
+        }
 
-            if (params.has('level')) {
-              _this24.setLevelByID(params.get('level'));
-            }
+        this.model.colours = {};
+        this.model.colours.rooms = this.service.Settings.get('app.colors.rooms') || {};
+        this.model.colours.desks = this.service.Settings.get('app.colors.desks') || {};
+        this.model.colours.zones = this.service.Settings.get('app.colors.zones') || {};
+        this.model.keys = this.service.Settings.get('app.map_keys') || {};
+        this.model.keys.types = Object.keys(this.model.keys);
+        this.model.zones.enabled = this.service.Settings.get('app.zones.enabled');
+        this.model.zones.toggle = this.service.Settings.get('app.zones.toggle');
+        this.model.settings = this.service.Settings.get('app.explore') || {};
+        this.model.old = this.service.Settings.get('app.explore.old_overlay');
 
-            if (params.has('level_id')) {
-              _this24.setLevelByID(params.get('level_id'));
-            }
+        if (this.model.zones.enabled && this.model.zones.toggle) {
+          this.model.keys.types = [this.model.zones.toggle];
+        }
 
-            if (params.has('back')) {
-              _this24.model.back = params.get('back');
+        if (this.model.keys) {
+          this.model.keys.list = (this.model.keys.room || []).concat(this.model.keys.general || []);
+        }
+
+        this.subscription('rooms', this.service.Rooms.listen('list', () => {
+          this.model.rooms = this.service.Rooms.list();
+          this.update();
+        }));
+        this.model.map_bookable = this.service.Settings.get('app.map.bookings');
+        this.interval('rooms', () => this.updateRoomState(), 25 * 1000);
+        this.service.Analytics.screen('Explore');
+        this.service.Analytics.page("/explore".concat(this.model.search ? '/' + this.model.search : ''));
+        this.timeout('zoom', () => this.model.zoom += 1, 300);
+      }
+
+      focusOnRoom(id, tries = 0) {
+        if (tries > 10) {
+          return;
+        }
+
+        if (this.model.rooms && this.model.rooms.length > 0) {
+          for (const rm of this.model.rooms) {
+            if (rm.id === id) {
+              this.focusSpace(rm);
+              break;
             }
-          }));
-          this.subscription('user', this.service.Users.listen('user', function (item) {
-            return _this24.model.user = item;
-          }));
-          this.model.map = {};
-          this.model.show = {
-            rooms: true,
-            desks: true
-          };
-          this.model.map.poi = [];
-          this.model.desks = {};
-          this.model.zones = {};
-          this.model.settings = {};
+          }
+        } else {
+          this.timeout('focus_room', () => this.focusOnRoom(id, tries++), 300 * tries++);
+        }
+      }
+
+      toggle(name) {
+        this.timeout("toggle_".concat(name), () => this.model[name].show = !this.model[name].show, 100);
+      }
+
+      setLevelByID(id, emit = true) {
+        if (id && this.model.level && this.model.level.list) {
+          for (const lvl of this.model.level.list) {
+            if (lvl.id === id) {
+              this.setLevel(lvl, emit);
+              return lvl;
+            }
+          }
+        }
+
+        return null;
+      }
+
+      setLevel(lvl, emit = true, force = false) {
+        if (lvl && (this.model.level && this.model.level.list && this.model.level.list.indexOf(lvl) >= 0 || force)) {
+          const previous_lvl = this.model.level.active;
+          this.model.level.active = lvl;
+          this.model.level.index = this.model.level.list.indexOf(lvl);
+          this.model.map.src = lvl.map_url;
+          this.model.room_pin = null;
+          this.model.map.focus = null;
+          this.update();
+
+          if (emit && (!previous_lvl || previous_lvl.id !== lvl.id)) {
+            this.service.set('EXPLORE.level', lvl.id);
+          }
+        }
+      }
+
+      updateLevel() {
+        for (const lvl of this.model.level.list) {
+          if (this.model.map.src === lvl.map_url) {
+            this.model.level.active = lvl;
+            break;
+          }
+        }
+
+        this.update();
+      }
+
+      updateSettings(settings) {
+        this.model.map.zoom = settings && settings.zoom !== undefined ? settings.zoom : this.model.map.zoom;
+        this.model.map.center = settings && settings.center !== undefined ? settings.center : this.model.map.center;
+
+        if (settings && settings.center) {
+          delete settings.center;
+        }
+
+        this.update();
+      }
+
+      updateRoomState() {
+        if (this.model.rooms) {
+          for (const rm of this.model.rooms) {
+            this.processBookings(rm, false);
+          }
+
+          this.update();
+        }
+      }
+
+      processBookings(room, update = true) {
+        if (room.raw_bookings) {
+          delete room.bookings;
+          this.service.Rooms.processRoom(room);
+
+          if (update) {
+            this.update();
+          }
+
+          this.model.change = !this.model.change;
+        }
+      }
+
+      updateZoom() {
+        const settings = this.service.get('EXPLORE.settings');
+        settings.zoom = this.model.map.zoom;
+        this.service.set('EXPLORE.settings', settings);
+      }
+
+      update() {
+        if (this.model.zones && this.model.show) {
+          this.model.zones.show = this.model.show.zones;
+        }
+
+        if (!this.model.show) {
+          this.model.show = {};
+        }
+
+        this.model.show.desks = this.service.get('EXPLORE.show.desks');
+        this.model.show.rooms = this.service.get('EXPLORE.show.rooms');
+        this.model.show.teams = this.service.get('EXPLORE.show.teams');
+
+        if (this.model.zones && this.model.zones.enabled) {
+          this.model.zones.show = this.service.get('EXPLORE.show.zones');
+
+          if (this.model.zones.toggle) {
+            this.model.keys.types = [this.model.zones.show ? 'zone' : this.model.zones.toggle];
+          }
+        }
+
+        this.updateListeners();
+      }
+
+      updateState() {
+        if (this.model.show) {
           this.service.set('EXPLORE.show.desks', this.model.show.desks);
           this.service.set('EXPLORE.show.rooms', this.model.show.rooms);
-          this.subscription('exp_filter', this.service.listen('EXPLORE.filters', function () {
-            return _this24.update();
-          }));
-          this.subscription('exp_features', this.service.listen('EXPLORE.map.hide', function (a) {
-            _this24.update();
-          }));
-          this.subscription('exp_settings', this.service.listen('EXPLORE.settings', function (value) {
-            return _this24.updateSettings(value);
-          }));
-          this.subscription('exp_level', this.service.listen('EXPLORE.level', function (value) {
-            return _this24.setLevelByID(value);
-          }));
-          this.model.colours = {
-            rooms: {},
-            desks: {},
-            zones: {}
-          };
+          this.service.set('EXPLORE.show.teams', this.model.show.teams);
+        }
 
-          if (this.model.keys) {
-            this.model.keys.show = false;
-          }
+        if (this.model.zones) {
+          this.service.set('EXPLORE.show.zones', this.model.zones.show);
+        }
 
-          this.clear();
-          this.interval('time-update', function () {
-            _this24.timeChange(_this24.show_time);
-          }, 60 * 1000);
-          this.service.set('APP.swipe_disabled', true);
-          this.subscription('building', this.service.Buildings.listen(function (bld) {
-            if (bld) {
-              _this24.timeout('set_building', function () {
-                bld = _this24.service.Buildings.current();
-                var active = _this24.model.level ? _this24.model.level.active : null;
-                _this24.model.level = {};
-                _this24.model.system = bld.systems.desks;
-                _this24.model.focus_user = null;
-                _this24.model.found_room = null;
-                _this24.model.info = null;
-                _this24.model.level.list = bld.levels;
-                _this24.model.rooms = _this24.service.Rooms.list();
-                _this24.model.room_pin = null;
+        this.update();
+      }
 
-                if (_this24.model.level.list) {
-                  _this24.model.level.names = [];
-                  var _iteratorNormalCompletion11 = true;
-                  var _didIteratorError11 = false;
-                  var _iteratorError11 = undefined;
+      updateListeners() {
+        this.timeout('update_listeners', () => {
+          this.model.map.listeners = [];
 
-                  try {
-                    for (var _iterator11 = _this24.model.level.list[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
-                      var level = _step11.value;
+          if (this.model.rooms && this.model.level && this.model.level.active && this.model.level.active.id) {
+            const active_rooms = this.model.rooms.filter(i => i.zones.indexOf(this.model.level.active.id) >= 0);
 
-                      _this24.model.level.names.push(level.name);
-                    }
-                  } catch (err) {
-                    _didIteratorError11 = true;
-                    _iteratorError11 = err;
-                  } finally {
-                    try {
-                      if (!_iteratorNormalCompletion11 && _iterator11.return != null) {
-                        _iterator11.return();
-                      }
-                    } finally {
-                      if (_didIteratorError11) {
-                        throw _iteratorError11;
-                      }
-                    }
-                  }
-
-                  var lvl = null;
-
-                  if (active) {
-                    lvl = _this24.setLevelByID(active.id);
-                  }
-
-                  if (!lvl && _this24.model.level.list.length > 0) {
-                    _this24.setLevel(_this24.model.level.list[0]);
-                  }
+            for (const room of active_rooms) {
+              this.model.map.listeners.push({
+                id: "area-".concat(room.map_id, "-status"),
+                event: 'mouseenter',
+                callback: () => {
+                  this.timeout('mouseenter', () => {
+                    this.model.info = room;
+                    this.updatePointsOfInterest();
+                  }, 50);
                 }
-
-                if (_this24.model.found_user) {
-                  _this24.focusUser(_this24.model.found_user);
-                }
-
-                _this24.update();
               });
-            }
-          }));
-          this.init();
-        }
-      }, {
-        key: "init",
-        value: function init() {
-          var _this25 = this;
-
-          if (!this.service.ready()) {
-            this.timeout('init', function () {
-              return _this25.init();
-            }, 500);
-          }
-
-          this.model.colours = {};
-          this.model.colours.rooms = this.service.Settings.get('app.colors.rooms') || {};
-          this.model.colours.desks = this.service.Settings.get('app.colors.desks') || {};
-          this.model.colours.zones = this.service.Settings.get('app.colors.zones') || {};
-          this.model.keys = this.service.Settings.get('app.map_keys') || {};
-          this.model.keys.types = Object.keys(this.model.keys);
-          this.model.zones.enabled = this.service.Settings.get('app.zones.enabled');
-          this.model.zones.toggle = this.service.Settings.get('app.zones.toggle');
-          this.model.settings = this.service.Settings.get('app.explore') || {};
-          this.model.old = this.service.Settings.get('app.explore.old_overlay');
-
-          if (this.model.zones.enabled && this.model.zones.toggle) {
-            this.model.keys.types = [this.model.zones.toggle];
-          }
-
-          if (this.model.keys) {
-            this.model.keys.list = (this.model.keys.room || []).concat(this.model.keys.general || []);
-          }
-
-          this.subscription('rooms', this.service.Rooms.listen('list', function () {
-            _this25.model.rooms = _this25.service.Rooms.list();
-
-            _this25.update();
-          }));
-          this.model.map_bookable = this.service.Settings.get('app.map.bookings');
-          this.interval('rooms', function () {
-            return _this25.updateRoomState();
-          }, 25 * 1000);
-          this.service.Analytics.screen('Explore');
-          this.service.Analytics.page("/explore".concat(this.model.search ? '/' + this.model.search : ''));
-          this.timeout('zoom', function () {
-            return _this25.model.zoom += 1;
-          }, 300);
-        }
-      }, {
-        key: "focusOnRoom",
-        value: function focusOnRoom(id) {
-          var _this26 = this;
-
-          var tries = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-
-          if (tries > 10) {
-            return;
-          }
-
-          if (this.model.rooms && this.model.rooms.length > 0) {
-            var _iteratorNormalCompletion12 = true;
-            var _didIteratorError12 = false;
-            var _iteratorError12 = undefined;
-
-            try {
-              for (var _iterator12 = this.model.rooms[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
-                var rm = _step12.value;
-
-                if (rm.id === id) {
-                  this.focusSpace(rm);
-                  break;
+              this.model.map.listeners.push({
+                id: "area-".concat(room.map_id, "-status"),
+                event: 'mouseleave',
+                callback: () => {
+                  this.timeout('mouseleave', () => {
+                    this.model.info = null;
+                    this.updatePointsOfInterest();
+                  }, 50);
                 }
-              }
-            } catch (err) {
-              _didIteratorError12 = true;
-              _iteratorError12 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion12 && _iterator12.return != null) {
-                  _iterator12.return();
-                }
-              } finally {
-                if (_didIteratorError12) {
-                  throw _iteratorError12;
-                }
-              }
-            }
-          } else {
-            this.timeout('focus_room', function () {
-              return _this26.focusOnRoom(id, tries++);
-            }, 300 * tries++);
-          }
-        }
-      }, {
-        key: "toggle",
-        value: function toggle(name) {
-          var _this27 = this;
-
-          this.timeout("toggle_".concat(name), function () {
-            return _this27.model[name].show = !_this27.model[name].show;
-          }, 100);
-        }
-      }, {
-        key: "setLevelByID",
-        value: function setLevelByID(id) {
-          var emit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-          if (id && this.model.level && this.model.level.list) {
-            var _iteratorNormalCompletion13 = true;
-            var _didIteratorError13 = false;
-            var _iteratorError13 = undefined;
-
-            try {
-              for (var _iterator13 = this.model.level.list[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
-                var lvl = _step13.value;
-
-                if (lvl.id === id) {
-                  this.setLevel(lvl, emit);
-                  return lvl;
-                }
-              }
-            } catch (err) {
-              _didIteratorError13 = true;
-              _iteratorError13 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion13 && _iterator13.return != null) {
-                  _iterator13.return();
-                }
-              } finally {
-                if (_didIteratorError13) {
-                  throw _iteratorError13;
-                }
-              }
-            }
-          }
-
-          return null;
-        }
-      }, {
-        key: "setLevel",
-        value: function setLevel(lvl) {
-          var emit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-          var force = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-          if (lvl && (this.model.level && this.model.level.list && this.model.level.list.indexOf(lvl) >= 0 || force)) {
-            var previous_lvl = this.model.level.active;
-            this.model.level.active = lvl;
-            this.model.level.index = this.model.level.list.indexOf(lvl);
-            this.model.map.src = lvl.map_url;
-            this.model.room_pin = null;
-            this.model.map.focus = null;
-            this.update();
-
-            if (emit && (!previous_lvl || previous_lvl.id !== lvl.id)) {
-              this.service.set('EXPLORE.level', lvl.id);
-            }
-          }
-        }
-      }, {
-        key: "updateLevel",
-        value: function updateLevel() {
-          var _iteratorNormalCompletion14 = true;
-          var _didIteratorError14 = false;
-          var _iteratorError14 = undefined;
-
-          try {
-            for (var _iterator14 = this.model.level.list[Symbol.iterator](), _step14; !(_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done); _iteratorNormalCompletion14 = true) {
-              var lvl = _step14.value;
-
-              if (this.model.map.src === lvl.map_url) {
-                this.model.level.active = lvl;
-                break;
-              }
-            }
-          } catch (err) {
-            _didIteratorError14 = true;
-            _iteratorError14 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion14 && _iterator14.return != null) {
-                _iterator14.return();
-              }
-            } finally {
-              if (_didIteratorError14) {
-                throw _iteratorError14;
-              }
-            }
-          }
-
-          this.update();
-        }
-      }, {
-        key: "updateSettings",
-        value: function updateSettings(settings) {
-          this.model.map.zoom = settings && settings.zoom !== undefined ? settings.zoom : this.model.map.zoom;
-          this.model.map.center = settings && settings.center !== undefined ? settings.center : this.model.map.center;
-
-          if (settings && settings.center) {
-            delete settings.center;
-          }
-
-          this.update();
-        }
-      }, {
-        key: "updateRoomState",
-        value: function updateRoomState() {
-          if (this.model.rooms) {
-            var _iteratorNormalCompletion15 = true;
-            var _didIteratorError15 = false;
-            var _iteratorError15 = undefined;
-
-            try {
-              for (var _iterator15 = this.model.rooms[Symbol.iterator](), _step15; !(_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done); _iteratorNormalCompletion15 = true) {
-                var rm = _step15.value;
-                this.processBookings(rm, false);
-              }
-            } catch (err) {
-              _didIteratorError15 = true;
-              _iteratorError15 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion15 && _iterator15.return != null) {
-                  _iterator15.return();
-                }
-              } finally {
-                if (_didIteratorError15) {
-                  throw _iteratorError15;
-                }
-              }
-            }
-
-            this.update();
-          }
-        }
-      }, {
-        key: "processBookings",
-        value: function processBookings(room) {
-          var update = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-          if (room.raw_bookings) {
-            delete room.bookings;
-            this.service.Rooms.processRoom(room);
-
-            if (update) {
-              this.update();
-            }
-
-            this.model.change = !this.model.change;
-          }
-        }
-      }, {
-        key: "updateZoom",
-        value: function updateZoom() {
-          var settings = this.service.get('EXPLORE.settings');
-          settings.zoom = this.model.map.zoom;
-          this.service.set('EXPLORE.settings', settings);
-        }
-      }, {
-        key: "update",
-        value: function update() {
-          if (this.model.zones && this.model.show) {
-            this.model.zones.show = this.model.show.zones;
-          }
-
-          if (!this.model.show) {
-            this.model.show = {};
-          }
-
-          this.model.show.desks = this.service.get('EXPLORE.show.desks');
-          this.model.show.rooms = this.service.get('EXPLORE.show.rooms');
-          this.model.show.teams = this.service.get('EXPLORE.show.teams');
-
-          if (this.model.zones && this.model.zones.enabled) {
-            this.model.zones.show = this.service.get('EXPLORE.show.zones');
-
-            if (this.model.zones.toggle) {
-              this.model.keys.types = [this.model.zones.show ? 'zone' : this.model.zones.toggle];
-            }
-          }
-
-          this.updateListeners();
-        }
-      }, {
-        key: "updateState",
-        value: function updateState() {
-          if (this.model.show) {
-            this.service.set('EXPLORE.show.desks', this.model.show.desks);
-            this.service.set('EXPLORE.show.rooms', this.model.show.rooms);
-            this.service.set('EXPLORE.show.teams', this.model.show.teams);
-          }
-
-          if (this.model.zones) {
-            this.service.set('EXPLORE.show.zones', this.model.zones.show);
-          }
-
-          this.update();
-        }
-      }, {
-        key: "updateListeners",
-        value: function updateListeners() {
-          var _this28 = this;
-
-          this.timeout('update_listeners', function () {
-            _this28.model.map.listeners = [];
-
-            if (_this28.model.rooms && _this28.model.level && _this28.model.level.active && _this28.model.level.active.id) {
-              var active_rooms = _this28.model.rooms.filter(function (i) {
-                return i.zones.indexOf(_this28.model.level.active.id) >= 0;
               });
 
-              var _iteratorNormalCompletion16 = true;
-              var _didIteratorError16 = false;
-              var _iteratorError16 = undefined;
-
-              try {
-                var _loop = function _loop() {
-                  var room = _step16.value;
-
-                  _this28.model.map.listeners.push({
-                    id: "area-".concat(room.map_id, "-status"),
-                    event: 'mouseenter',
-                    callback: function callback() {
-                      _this28.timeout('mouseenter', function () {
-                        _this28.model.info = room;
-
-                        _this28.updatePointsOfInterest();
-                      }, 50);
-                    }
-                  });
-
-                  _this28.model.map.listeners.push({
-                    id: "area-".concat(room.map_id, "-status"),
-                    event: 'mouseleave',
-                    callback: function callback() {
-                      _this28.timeout('mouseleave', function () {
-                        _this28.model.info = null;
-
-                        _this28.updatePointsOfInterest();
-                      }, 50);
-                    }
-                  });
-
-                  if (room.bookable) {
-                    var callback = function callback() {
-                      _this28.model.selected = null;
-                      _this28.model.display = null;
-
-                      _this28.book(room);
-                    };
-
-                    _this28.model.map.listeners.push({
-                      id: "area-".concat(room.map_id, "-status"),
-                      event: 'mouseup',
-                      callback: callback
-                    });
-
-                    _this28.model.map.listeners.push({
-                      id: "area-".concat(room.map_id, "-status"),
-                      event: 'touchend',
-                      callback: callback
-                    });
-                  }
+              if (room.bookable) {
+                const callback = () => {
+                  this.model.selected = null;
+                  this.model.display = null;
+                  this.book(room);
                 };
 
-                for (var _iterator16 = active_rooms[Symbol.iterator](), _step16; !(_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done); _iteratorNormalCompletion16 = true) {
-                  _loop();
-                }
-              } catch (err) {
-                _didIteratorError16 = true;
-                _iteratorError16 = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion16 && _iterator16.return != null) {
-                    _iterator16.return();
-                  }
-                } finally {
-                  if (_didIteratorError16) {
-                    throw _iteratorError16;
-                  }
-                }
-              }
-            }
-
-            if (_this28.model.desks && _this28.model.desks.in_use) {
-              var _iteratorNormalCompletion17 = true;
-              var _didIteratorError17 = false;
-              var _iteratorError17 = undefined;
-
-              try {
-                var _loop2 = function _loop2() {
-                  var desk = _step17.value;
-
-                  _this28.model.map.listeners.push({
-                    id: "".concat(desk),
-                    event: 'mouseenter',
-                    callback: function callback() {
-                      return _this28.setDesk(desk);
-                    }
-                  });
-
-                  _this28.model.map.listeners.push({
-                    id: "".concat(desk),
-                    event: 'mouseleave',
-                    callback: function callback() {
-                      return _this28.setDesk(null);
-                    }
-                  });
-                };
-
-                for (var _iterator17 = _this28.model.desks.in_use[Symbol.iterator](), _step17; !(_iteratorNormalCompletion17 = (_step17 = _iterator17.next()).done); _iteratorNormalCompletion17 = true) {
-                  _loop2();
-                }
-              } catch (err) {
-                _didIteratorError17 = true;
-                _iteratorError17 = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion17 && _iterator17.return != null) {
-                    _iterator17.return();
-                  }
-                } finally {
-                  if (_didIteratorError17) {
-                    throw _iteratorError17;
-                  }
-                }
-              }
-
-              var _iteratorNormalCompletion18 = true;
-              var _didIteratorError18 = false;
-              var _iteratorError18 = undefined;
-
-              try {
-                var _loop3 = function _loop3() {
-                  var desk = _step18.value;
-
-                  _this28.model.map.listeners.push({
-                    id: "".concat(desk),
-                    event: 'mouseenter',
-                    callback: function callback() {
-                      return _this28.setDesk(desk);
-                    }
-                  });
-
-                  _this28.model.map.listeners.push({
-                    id: "".concat(desk),
-                    event: 'mouseleave',
-                    callback: function callback() {
-                      return _this28.setDesk(null);
-                    }
-                  });
-                };
-
-                for (var _iterator18 = (_this28.model.desks.reserved || [])[Symbol.iterator](), _step18; !(_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done); _iteratorNormalCompletion18 = true) {
-                  _loop3();
-                }
-              } catch (err) {
-                _didIteratorError18 = true;
-                _iteratorError18 = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion18 && _iterator18.return != null) {
-                    _iterator18.return();
-                  }
-                } finally {
-                  if (_didIteratorError18) {
-                    throw _iteratorError18;
-                  }
-                }
-              }
-            }
-
-            _this28.model.desk = null;
-
-            _this28.updateStyles();
-
-            _this28.updatePointsOfInterest();
-          });
-        }
-      }, {
-        key: "setDesk",
-        value: function setDesk(desk) {
-          this.model.desk = desk;
-          this.updatePointsOfInterest();
-        }
-      }, {
-        key: "updateStyles",
-        value: function updateStyles() {
-          var _this29 = this;
-
-          this.timeout('styles', function () {
-            _this29.model.style = {};
-            _this29.model.map.styles = {};
-            _this29.model.style.general = {};
-
-            _this29.updateRoomStyles();
-
-            _this29.updateDeskStyles();
-
-            _this29.updateZoneStyles();
-
-            _this29.updateFeatureStyles();
-
-            for (var k in _this29.model.style) {
-              if (_this29.model.style.hasOwnProperty(k) && _this29.model.style[k]) {
-                for (var i in _this29.model.style[k]) {
-                  if (_this29.model.style[k].hasOwnProperty(i)) {
-                    _this29.model.map.styles[i] = _this29.model.style[k][i];
-                  }
-                }
-              }
-            }
-
-            _this29.clearTimeout('styles');
-          });
-        }
-      }, {
-        key: "updateRoomStyles",
-        value: function updateRoomStyles() {
-          var _this30 = this;
-
-          this.model.style.rooms = {};
-
-          if (!this.model.show.rooms) {
-            this.model.style.rooms["[id$=\"-status\"]"] = {
-              opacity: '0'
-            };
-            return;
-          }
-
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.show_time);
-          var bld = this.service.Buildings.current();
-          var colours = this.model.colours.rooms || {};
-
-          if (this.model.rooms && this.model.rooms.length > 0) {
-            var active_rooms = this.model.rooms.filter(function (i) {
-              return i.zones.indexOf(_this30.model.level.active.id) >= 0;
-            });
-            var _iteratorNormalCompletion19 = true;
-            var _didIteratorError19 = false;
-            var _iteratorError19 = undefined;
-
-            try {
-              for (var _iterator19 = active_rooms[Symbol.iterator](), _step19; !(_iteratorNormalCompletion19 = (_step19 = _iterator19.next()).done); _iteratorNormalCompletion19 = true) {
-                var room = _step19.value;
-                var color = this.model.colours.rooms['not-bookable'] || '#ccc';
-                var block = this.service.Bookings.getNextFreeBlock(room.bookings, now.valueOf(), 2);
-                var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_9__["rulesForSpace"])({
-                  user: this.service.Users.current(),
-                  space: room,
-                  time: now.valueOf(),
-                  duration: 60,
-                  rules: bld.booking_rules
-                }); // Check booking rules
-
-                if (rules) {
-                  room.book_type = rules.auto_approve ? 'Book' : 'Request';
-                }
-
-                var in_use = block && dayjs__WEBPACK_IMPORTED_MODULE_5__(block.start).isAfter(now);
-
-                if (room.bookable && !rules.hide) {
-                  color = in_use ? colours['unavailable'] || '#E53935' : room.book_type === 'Request' ? colours['pending'] || '#fbc02d' : colours['available'] || '#4CAF50';
-                }
-
-                this.model.style.rooms["#area-".concat(room.map_id, "-status")] = {
-                  fill: color,
-                  opacity: '0.8'
-                };
-              }
-            } catch (err) {
-              _didIteratorError19 = true;
-              _iteratorError19 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion19 && _iterator19.return != null) {
-                  _iterator19.return();
-                }
-              } finally {
-                if (_didIteratorError19) {
-                  throw _iteratorError19;
-                }
-              }
-            }
-          } else {
-            this.timeout('room_styles', function () {
-              return _this30.updateRoomStyles();
-            });
-          }
-        }
-      }, {
-        key: "updateDeskStyles",
-        value: function updateDeskStyles() {
-          this.model.style.desks = {};
-          var colours = this.model.colours.desks || {};
-
-          if (!this.model.show.desks) {
-            this.model.style.desks["[id^=\"table-\"]"] = {
-              fill: colours['not-bookable-fill'] || '#fff',
-              stroke: colours['not-bookable-stroke'] || '#ccc'
-            };
-            return;
-          }
-
-          if (this.model.found_user && this.model.found_user.location && this.model.found_user.location.fixed) {
-            var loc = this.model.found_user.location;
-            this.model.style.desks["#".concat(loc.map_id)] = {
-              fill: colours['unavailable-fill'] || '#fff',
-              stroke: colours['unavailable-stroke'] || '#ccc'
-            };
-          }
-
-          if (this.model.desks) {
-            var u_desk = this.model.desks.user;
-            var list = this.model.desks.in_use || [];
-            var reserved = this.model.desks.reserved;
-
-            if (this.model.desks.list) {
-              var _iteratorNormalCompletion20 = true;
-              var _didIteratorError20 = false;
-              var _iteratorError20 = undefined;
-
-              try {
-                for (var _iterator20 = this.model.desks.list[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
-                  var label = _step20.value;
-
-                  if (label) {
-                    var desk = "".concat(label);
-                    var desk_obj = {
-                      level: this.model.active,
-                      id: desk,
-                      name: "Desk ".concat(label.split('-')[1])
-                    };
-                    var is_reserved = reserved && reserved.indexOf(label) >= 0;
-                    var in_use = list && list.indexOf(label) >= 0;
-                    var users_desk = u_desk && u_desk.connected && u_desk.desk_id === label;
-                    this.model.style.desks["#".concat(desk)] = {
-                      fill: colours['available-fill'] || '#4CAF50',
-                      stroke: colours['available-stroke'] || '#4CAF50'
-                    };
-
-                    if (in_use || is_reserved) {
-                      var type = users_desk ? 'user' : is_reserved ? 'reserved' : 'unavailable';
-                      this.model.style.desks["#".concat(desk)].fill = colours["".concat(type, "-fill")] || colours['unavailable-fill'] || '#fff';
-                      this.model.style.desks["#".concat(desk)].stroke = colours["".concat(type, "-stroke")] || colours['unavailable-stroke'] || '#ccc';
-                    }
-                  }
-                }
-              } catch (err) {
-                _didIteratorError20 = true;
-                _iteratorError20 = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion20 && _iterator20.return != null) {
-                    _iterator20.return();
-                  }
-                } finally {
-                  if (_didIteratorError20) {
-                    throw _iteratorError20;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }, {
-        key: "updateZoneStyles",
-        value: function updateZoneStyles() {
-          this.model.style.zones = {};
-          var colors = this.model.colours.zones || {};
-          var lvl = this.model.level.active;
-
-          if (!this.model.zones || !this.model.zones.enabled || !this.model.zones.show) {
-            this.model.style.zones['#Zones'] = {
-              opacity: '0'
-            };
-          }
-
-          if (this.model.colours && this.model.level && lvl) {
-            this.model.style.zones['[id^="zone"]'] = {
-              fill: colors[lvl.defaults.zone] || colors.default || '#317c36'
-            };
-          }
-
-          if (this.model.zone_usage) {
-            for (var zone in this.model.zone_usage) {
-              if (this.model.zone_usage.hasOwnProperty(zone)) {
-                var min_percent = lvl.defaults.zone_min || 0;
-                var zone_usage = this.model.zone_usage[zone].people_count / this.model.zone_usage[zone].capacity * 100;
-                var percent = Math.max(min_percent, zone_usage);
-                var fill = percent < 40 ? colors.low || '#317c36' : percent < 75 ? colors.medium || '#f4a81d' : colors.high || '#cd212e';
-                this.model.map.styles["#".concat(zone)] = {
-                  fill: fill
-                };
-                this.model.map.styles["#".concat(zone, "-status")] = {
-                  fill: fill
-                };
-              }
-            }
-          }
-        }
-      }, {
-        key: "updateFeatureStyles",
-        value: function updateFeatureStyles() {
-          this.model.style.features = {};
-          var hidden_features = this.service.get('EXPLORE.map.hide') || [];
-          var _iteratorNormalCompletion21 = true;
-          var _didIteratorError21 = false;
-          var _iteratorError21 = undefined;
-
-          try {
-            for (var _iterator21 = hidden_features[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
-              var id = _step21.value;
-              this.model.style.features["#".concat(id)] = {
-                opacity: '0'
-              };
-            }
-          } catch (err) {
-            _didIteratorError21 = true;
-            _iteratorError21 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion21 && _iterator21.return != null) {
-                _iterator21.return();
-              }
-            } finally {
-              if (_didIteratorError21) {
-                throw _iteratorError21;
-              }
-            }
-          }
-        }
-      }, {
-        key: "book",
-        value: function book(room) {
-          var _this31 = this;
-
-          var opened = false;
-          this.timeout('opened', function () {
-            return opened = true;
-          });
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.show_time);
-          var bld = this.service.Buildings.list().find(function (i) {
-            return i.id === room.level.bld_id;
-          }) || {};
-          var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_9__["rulesForSpace"])({
-            user: this.service.Users.current(),
-            space: room,
-            time: date.valueOf(),
-            duration: 60,
-            rules: bld.booking_rules
-          }); // Check booking rules
-
-          if (rules) {
-            if (rules.hide) {
-              this.service.notifyInfo("You do not have permission to book room \"".concat(room.name, "\""));
-              return;
-            }
-
-            room.book_type = rules.auto_approve ? 'Book' : 'Request';
-          }
-
-          var current = room.bookings.find(function (booking) {
-            var day = dayjs__WEBPACK_IMPORTED_MODULE_5__(booking.date);
-            return date.isAfter(day, 's') && date.isBefore(day.add(booking.duration, 'm'), 'm');
-          });
-
-          if (current && current.all_day) {
-            return this.service.notifyInfo('The selected room is booked all day. Please select another date from the timeline and try again.');
-          }
-
-          var ref = this._dialog.open(_overlays_explore_booking_modal_explore_booking_modal_component__WEBPACK_IMPORTED_MODULE_11__["ExploreBookingModalComponent"], {
-            data: {
-              space: room,
-              date: this.show_time
-            }
-          });
-
-          ref.componentInstance.event.subscribe(function (event) {
-            if (event.reason === 'done' && event.metadata === 'new') {
-              localStorage.setItem('STAFF.booking_form', JSON.stringify({
-                id: 'ad-hoc',
-                room: [Object.assign({}, room, {
-                  bookings: [],
-                  current: null,
-                  next: null,
-                  raw_bookings: []
-                })],
-                date: _this31.show_time
-              }));
-
-              _this31.service.navigate(['/book']);
-
-              ref.close();
-            }
-          });
-        }
-      }, {
-        key: "check",
-        value: function check(e) {
-          if (e.type === 'warning' && this.model.found_user && this.model.found_user.location && this.model.found_user.location.map_id && e.msg.indexOf(this.model.found_user.location.map_id) >= 0) {
-            this.model.found_user.pin_error = true;
-          }
-        }
-      }, {
-        key: "focus",
-        value: function focus(item) {
-          this.model.map.zoom = 100;
-          this.model.map.center = {
-            x: .5,
-            y: .5
-          };
-
-          if (item.type) {
-            this.focusUser(item);
-          } else {
-            this.focusSpace(item);
-          }
-        }
-      }, {
-        key: "focusUser",
-        value: function focusUser(user) {
-          var _this32 = this;
-
-          if (user) {
-            this.model.found_item = null;
-            this.model.focus_room = null;
-
-            if (user.type === 'role') {
-              this.updatePointsOfInterest();
-              this.service.Users.show(user.email).then(function (u) {
-                _this32.locate(u);
-              }, function (err) {
-                return null;
-              });
-            } else {
-              this.locate(user);
-            }
-          }
-        }
-      }, {
-        key: "locate",
-        value: function locate(user) {
-          var _this33 = this;
-
-          user.location = null;
-          this.model.found_user = user;
-          this.service.Users.location(user.id, user.win_id).then(function (location) {
-            _this33.model.found_user.location = location;
-            var found = false;
-
-            var bld = _this33.service.Buildings.current(); // Cross building location finding is enabled
-
-
-            if (_this33.model.settings.cblf) {
-              var level = _this33.service.Buildings.getLevel(location.level);
-
-              if (level) {
-                var _iteratorNormalCompletion22 = true;
-                var _didIteratorError22 = false;
-                var _iteratorError22 = undefined;
-
-                try {
-                  for (var _iterator22 = (bld ? bld.levels : _this33.model.level.list)[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
-                    var lvl = _step22.value;
-
-                    if (level.id === lvl.id) {
-                      _this33.setLevel(lvl);
-
-                      found = true;
-                      break;
-                    }
-                  } // Level is in another building
-
-                } catch (err) {
-                  _didIteratorError22 = true;
-                  _iteratorError22 = err;
-                } finally {
-                  try {
-                    if (!_iteratorNormalCompletion22 && _iterator22.return != null) {
-                      _iterator22.return();
-                    }
-                  } finally {
-                    if (_didIteratorError22) {
-                      throw _iteratorError22;
-                    }
-                  }
-                }
-
-                if (!found) {
-                  _this33.setLevel(level, false, true);
-
-                  _this33.model.found_user.location.building = _this33.service.Buildings.get(level.bld_id);
-                  _this33.model.found_user.external = true;
-                  found = true;
-                }
-              }
-            } else {
-              // Only locate users in the current building
-              var _iteratorNormalCompletion23 = true;
-              var _didIteratorError23 = false;
-              var _iteratorError23 = undefined;
-
-              try {
-                for (var _iterator23 = (bld ? bld.levels : _this33.model.level.list)[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
-                  var _lvl = _step23.value;
-
-                  if (location.level === _lvl.id) {
-                    _this33.setLevel(_lvl);
-
-                    found = true;
-                    break;
-                  }
-                }
-              } catch (err) {
-                _didIteratorError23 = true;
-                _iteratorError23 = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion23 && _iterator23.return != null) {
-                    _iterator23.return();
-                  }
-                } finally {
-                  if (_didIteratorError23) {
-                    throw _iteratorError23;
-                  }
-                }
-              }
-            }
-
-            if (found) {
-              _this33.model.map.focus = {
-                coordinates: !location.fixed ? {
-                  x: location.x,
-                  y: location.y
-                } : null,
-                id: location.map_id,
-                zoom: 0
-              };
-            } else {
-              _this33.model.found_user.location = null;
-              _this33.model.found_user.external = true;
-            }
-
-            _this33.updatePointsOfInterest();
-
-            _this33.timeout('focus', function () {
-              return _this33.model.map.zoom = 100;
-            });
-          }, function (err) {
-            _this33.model.found_user.location = null;
-
-            _this33.updatePointsOfInterest();
-          });
-        }
-      }, {
-        key: "focusSpace",
-        value: function focusSpace(item) {
-          var _this34 = this;
-
-          if (!this.model || !this.model.level || !this.model.level.list || !item) {
-            return;
-          }
-
-          var focus = "".concat(item.prefix === false ? '' : 'area-').concat(item.map_id).concat(item.bookable ? '-status' : '-status');
-          var lvl = item.level;
-
-          if (lvl) {
-            var _iteratorNormalCompletion24 = true;
-            var _didIteratorError24 = false;
-            var _iteratorError24 = undefined;
-
-            try {
-              for (var _iterator24 = this.model.level.list[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
-                var level = _step24.value;
-
-                if (lvl.id === level.id) {
-                  this.setLevel(level);
-                  this.timeout('focus_space', function () {
-                    return _this34.model.map.focus = {
-                      id: focus,
-                      zoom: 150
-                    };
-                  }, 100);
-                  break;
-                }
-              }
-            } catch (err) {
-              _didIteratorError24 = true;
-              _iteratorError24 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion24 && _iterator24.return != null) {
-                  _iterator24.return();
-                }
-              } finally {
-                if (_didIteratorError24) {
-                  throw _iteratorError24;
-                }
-              }
-            }
-
-            this.timeout('update_space', function () {
-              _this34.model.found_user = null;
-              _this34.model.focus_room = item;
-
-              _this34.updatePointsOfInterest();
-            }, 20);
-          }
-        }
-      }, {
-        key: "clear",
-        value: function clear() {
-          this.model.found_item = null;
-          this.model.focus_room = null;
-          this.model.found_user = null;
-          this.model.info = null;
-          this.updatePointsOfInterest();
-        }
-      }, {
-        key: "updatePointsOfInterest",
-        value: function updatePointsOfInterest() {
-          var _this35 = this;
-
-          this.timeout('poi', function () {
-            _this35.model.map.poi = [];
-            _this35.model.toggle = !_this35.model.toggle;
-
-            if (_this35.model.found_user && _this35.model.found_user.location && _this35.model.found_user.location.level) {
-              if (_this35.model.found_user.location.level === _this35.model.level.active.id) {
-                var loc = _this35.model.found_user.location;
-
-                _this35.model.map.poi.push({
-                  id: loc.map_id || "person-".concat(_this35.model.found_user.id),
-                  content: loc.fixed ? _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapPinComponent"] : _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapRangeComponent"],
-                  coordinates: !loc.fixed ? {
-                    x: loc.x,
-                    y: loc.y
-                  } : null,
-                  data: {
-                    text: "".concat(_this35.model.found_user.name, " is here"),
-                    back: '#F44336',
-                    diameter: loc.confidence * 2
-                  }
+                this.model.map.listeners.push({
+                  id: "area-".concat(room.map_id, "-status"),
+                  event: 'mouseup',
+                  callback
+                });
+                this.model.map.listeners.push({
+                  id: "area-".concat(room.map_id, "-status"),
+                  event: 'touchend',
+                  callback
                 });
               }
             }
+          }
 
-            if (_this35.model.info) {
-              var room = _this35.model.info;
-              var today = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this35.show_time).endOf('m');
-              var bookings = room.bookings.filter(function (b) {
-                return dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).isSame(today, 'd') || b.all_day;
+          if (this.model.desks && this.model.desks.in_use) {
+            for (const desk of this.model.desks.in_use) {
+              this.model.map.listeners.push({
+                id: "".concat(desk),
+                event: 'mouseenter',
+                callback: () => this.setDesk(desk)
               });
-
-              var block = _this35.service.Bookings.getNextFreeBlock(bookings, today.valueOf(), 2);
-
-              var current = bookings.find(function (b) {
-                var start = dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).subtract(b.setup, 's');
-                var end = dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).add(b.duration, 'm').add(b.breakdown, 's');
-                return today.isAfter(start, 's') && today.isBefore(end, 's');
+              this.model.map.listeners.push({
+                id: "".concat(desk),
+                event: 'mouseleave',
+                callback: () => this.setDesk(null)
               });
-              var next = bookings.find(function (b) {
-                return today.isBefore(dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date), 'm');
+            }
+
+            for (const desk of this.model.desks.reserved || []) {
+              this.model.map.listeners.push({
+                id: "".concat(desk),
+                event: 'mouseenter',
+                callback: () => this.setDesk(desk)
               });
-              var endOfDay = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this35.show_time).endOf('d');
+              this.model.map.listeners.push({
+                id: "".concat(desk),
+                event: 'mouseleave',
+                callback: () => this.setDesk(null)
+              });
+            }
+          }
 
-              var bld = _this35.service.Buildings.current();
+          this.model.desk = null;
+          this.updateStyles();
+          this.updatePointsOfInterest();
+        });
+      }
 
-              if (current && block && block.start !== -1) {
-                _this35.model.selected_time = "Booked until ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.start).format('h:mmA'));
+      setDesk(desk) {
+        this.model.desk = desk;
+        this.updatePointsOfInterest();
+      }
 
-                if (current.all_day || current.duration > 23 * 60) {
-                  _this35.model.selected_time = 'Booked all day';
+      updateStyles() {
+        this.timeout('styles', () => {
+          this.model.style = {};
+          this.model.map.styles = {};
+          this.model.style.general = {};
+          this.updateRoomStyles();
+          this.updateDeskStyles();
+          this.updateZoneStyles();
+          this.updateFeatureStyles();
+
+          for (const k in this.model.style) {
+            if (this.model.style.hasOwnProperty(k) && this.model.style[k]) {
+              for (const i in this.model.style[k]) {
+                if (this.model.style[k].hasOwnProperty(i)) {
+                  this.model.map.styles[i] = this.model.style[k][i];
                 }
-              } else if (current) {
-                _this35.model.selected_time = "Booked until ".concat(current.display.end);
-
-                if (current.all_day || current.duration > 23 * 60) {
-                  _this35.model.selected_time = 'Booked all day';
-                }
-              } else if (block && block.end >= 0 && dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).isSame(endOfDay, 'm')) {
-                var end = dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end);
-                var dur = Math.floor(end.diff(today, 'm'));
-                _this35.model.selected_time = "Free until ".concat(end.format('h:mmA'));
-
-                if (dur < 30) {
-                  if (block.end < 0 || !dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).isSame(endOfDay, 'm')) {
-                    _this35.model.selected_time += "<br>Next available at tomorrow";
-                  } else {
-                    var next_blk = _this35.service.Bookings.getNextFreeBlock(bookings, block.end);
-
-                    _this35.model.selected_time += "<br>Next available at ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(next_blk.start).format('h:mmA'));
-                  }
-                }
-              } else if (!current && next && block) {
-                _this35.model.selected_time = "Free until ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).format('h:mmA'));
-
-                var _next_blk = _this35.service.Bookings.getNextFreeBlock(bookings, next.date);
-
-                if (block.start > 0) {
-                  _this35.model.selected_time += "<br>Next available at ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(_next_blk.start).format('h:mmA'));
-                }
-              } else {
-                _this35.model.selected_time = "Free today";
               }
-
-              var rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_9__["rulesForSpace"])({
-                user: _this35.service.Users.current(),
-                space: room,
-                time: today.valueOf(),
-                duration: 60,
-                rules: bld.booking_rules
-              });
-
-              if (!rules.auto_approve) {
-                _this35.model.selected_time += "<br>Available by request";
-              }
-
-              _this35.model.display = null;
-
-              _this35.model.map.poi.push({
-                id: "area-".concat(room.map_id, "-status"),
-                content: _shared_components_room_info_room_info_component__WEBPACK_IMPORTED_MODULE_6__["RoomInfoComponent"],
-                data: {
-                  room: Object.assign({}, room, {
-                    bookable: room.bookable && !rules.hide
-                  }),
-                  display: {
-                    time: _this35.model.selected_time
-                  },
-                  available: !current
-                }
-              });
             }
+          }
 
-            if (_this35.model.desk) {
-              _this35.model.map.poi.push({
-                id: _this35.model.desk,
-                content: _shared_components_desk_info_desk_info_component__WEBPACK_IMPORTED_MODULE_8__["DeskInfoComponent"],
-                data: {
-                  system: _this35.model.system,
-                  desk_id: _this35.model.desk
-                }
-              });
-            }
+          this.clearTimeout('styles');
+        });
+      }
 
-            if (_this35.model.focus_room && _this35.model.focus_room.level.id === _this35.model.level.active.id) {
-              var rm = _this35.model.focus_room;
+      updateRoomStyles() {
+        this.model.style.rooms = {};
 
-              _this35.model.map.poi.push({
-                id: "".concat(rm.prefix === false ? '' : 'area-').concat(rm.map_id).concat(rm.bookable ? '-status' : '-status'),
-                prefix: 'pin',
-                content: _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapPinComponent"],
-                data: {
-                  back: _this35.model.colours.rooms.pin || '#03A9F4',
-                  text: _this35.model.focus_room.name
-                }
-              });
-            }
-
-            _this35.clearTimeout('poi');
-          });
+        if (!this.model.show.rooms) {
+          this.model.style.rooms["[id$=\"-status\"]"] = {
+            opacity: '0'
+          };
+          return;
         }
-      }, {
-        key: "back",
-        value: function back() {
-          if (this.model.back) {
-            this.service.navigate(this.model.back);
-          } else {
-            this.service.back();
+
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.show_time);
+        const bld = this.service.Buildings.current();
+        const colours = this.model.colours.rooms || {};
+
+        if (this.model.rooms && this.model.rooms.length > 0) {
+          const active_rooms = this.model.rooms.filter(i => i.zones.indexOf(this.model.level.active.id) >= 0);
+
+          for (const room of active_rooms) {
+            let color = this.model.colours.rooms['not-bookable'] || '#ccc';
+            const block = this.service.Bookings.getNextFreeBlock(room.bookings, now.valueOf(), 2);
+            const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_9__["rulesForSpace"])({
+              user: this.service.Users.current(),
+              space: room,
+              time: now.valueOf(),
+              duration: 60,
+              rules: bld.booking_rules
+            }); // Check booking rules
+
+            if (rules) {
+              room.book_type = rules.auto_approve ? 'Book' : 'Request';
+            }
+
+            const in_use = block && dayjs__WEBPACK_IMPORTED_MODULE_5__(block.start).isAfter(now);
+
+            if (room.bookable && !rules.hide) {
+              color = in_use ? colours['unavailable'] || '#E53935' : room.book_type === 'Request' ? colours['pending'] || '#fbc02d' : colours['available'] || '#4CAF50';
+            }
+
+            this.model.style.rooms["#area-".concat(room.map_id, "-status")] = {
+              fill: color,
+              opacity: '0.8'
+            };
+          }
+        } else {
+          this.timeout('room_styles', () => this.updateRoomStyles());
+        }
+      }
+
+      updateDeskStyles() {
+        this.model.style.desks = {};
+        const colours = this.model.colours.desks || {};
+
+        if (!this.model.show.desks) {
+          this.model.style.desks["[id^=\"table-\"]"] = {
+            fill: colours['not-bookable-fill'] || '#fff',
+            stroke: colours['not-bookable-stroke'] || '#ccc'
+          };
+          return;
+        }
+
+        if (this.model.found_user && this.model.found_user.location && this.model.found_user.location.fixed) {
+          const loc = this.model.found_user.location;
+          this.model.style.desks["#".concat(loc.map_id)] = {
+            fill: colours['unavailable-fill'] || '#fff',
+            stroke: colours['unavailable-stroke'] || '#ccc'
+          };
+        }
+
+        if (this.model.desks) {
+          const u_desk = this.model.desks.user;
+          const list = this.model.desks.in_use || [];
+          const reserved = this.model.desks.reserved;
+
+          if (this.model.desks.list) {
+            for (const label of this.model.desks.list) {
+              if (label) {
+                const desk = "".concat(label);
+                const desk_obj = {
+                  level: this.model.active,
+                  id: desk,
+                  name: "Desk ".concat(label.split('-')[1])
+                };
+                const is_reserved = reserved && reserved.indexOf(label) >= 0;
+                const in_use = list && list.indexOf(label) >= 0;
+                const users_desk = u_desk && u_desk.connected && u_desk.desk_id === label;
+                this.model.style.desks["#".concat(desk)] = {
+                  fill: colours['available-fill'] || '#4CAF50',
+                  stroke: colours['available-stroke'] || '#4CAF50'
+                };
+
+                if (in_use || is_reserved) {
+                  const type = users_desk ? 'user' : is_reserved ? 'reserved' : 'unavailable';
+                  this.model.style.desks["#".concat(desk)].fill = colours["".concat(type, "-fill")] || colours['unavailable-fill'] || '#fff';
+                  this.model.style.desks["#".concat(desk)].stroke = colours["".concat(type, "-stroke")] || colours['unavailable-stroke'] || '#ccc';
+                }
+              }
+            }
           }
         }
-        /**
-         * Callback for changes to the selected time on the timeline
-         * @param time New time value
-         */
+      }
 
-      }, {
-        key: "timeChange",
-        value: function timeChange(time) {
-          var _this36 = this;
+      updateZoneStyles() {
+        this.model.style.zones = {};
+        const colors = this.model.colours.zones || {};
+        const lvl = this.model.level.active;
 
-          this.timeout('time_change', function () {
-            _this36.show_time = time;
-            var now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
+        if (!this.model.zones || !this.model.zones.enabled || !this.model.zones.show) {
+          this.model.style.zones['#Zones'] = {
+            opacity: '0'
+          };
+        }
 
-            if (!dayjs__WEBPACK_IMPORTED_MODULE_5__(_this36.show_time).isSame(now, 'd')) {
-              var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(_this36.show_time).startOf('d');
-              var end = dayjs__WEBPACK_IMPORTED_MODULE_5__(date).endOf('d');
+        if (this.model.colours && this.model.level && lvl) {
+          this.model.style.zones['[id^="zone"]'] = {
+            fill: colors[lvl.defaults.zone] || colors.default || '#317c36'
+          };
+        }
 
-              _this36.service.Rooms.query({
-                from: date.unix(),
-                to: end.unix(),
-                zone_ids: _this36.model.level.active.id,
-                show_declined: false
-              }).then(function (rooms) {
-                var _iteratorNormalCompletion25 = true;
-                var _didIteratorError25 = false;
-                var _iteratorError25 = undefined;
+        if (this.model.zone_usage) {
+          for (const zone in this.model.zone_usage) {
+            if (this.model.zone_usage.hasOwnProperty(zone)) {
+              const min_percent = lvl.defaults.zone_min || 0;
+              const zone_usage = this.model.zone_usage[zone].people_count / this.model.zone_usage[zone].capacity * 100;
+              const percent = Math.max(min_percent, zone_usage);
+              const fill = percent < 40 ? colors.low || '#317c36' : percent < 75 ? colors.medium || '#f4a81d' : colors.high || '#cd212e';
+              this.model.map.styles["#".concat(zone)] = {
+                fill
+              };
+              this.model.map.styles["#".concat(zone, "-status")] = {
+                fill
+              };
+            }
+          }
+        }
+      }
 
-                try {
-                  var _loop4 = function _loop4() {
-                    var space = _step25.value;
+      updateFeatureStyles() {
+        this.model.style.features = {};
+        const hidden_features = this.service.get('EXPLORE.map.hide') || [];
 
-                    var match = _this36.model.rooms.find(function (i) {
-                      return i.id === space.id;
-                    });
+        for (const id of hidden_features) {
+          this.model.style.features["#".concat(id)] = {
+            opacity: '0'
+          };
+        }
+      }
 
-                    if (match) {
-                      var old_bookings = (match.raw_bookings || []).filter(function (i) {
-                        var start = dayjs__WEBPACK_IMPORTED_MODULE_5__(i.date);
-                        return !start.isAfter(date, 's') && start.isBefore(end, 's');
-                      });
+      book(room) {
+        let opened = false;
+        this.timeout('opened', () => opened = true);
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.show_time);
+        const bld = this.service.Buildings.list().find(i => i.id === room.level.bld_id) || {};
+        const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_9__["rulesForSpace"])({
+          user: this.service.Users.current(),
+          space: room,
+          time: date.valueOf(),
+          duration: 60,
+          rules: bld.booking_rules
+        }); // Check booking rules
 
-                      var bookings = _shared_utility_class__WEBPACK_IMPORTED_MODULE_10__["Utils"].unique([].concat(_toConsumableArray(space.bookings || []), _toConsumableArray(old_bookings)), 'id');
+        if (rules) {
+          if (rules.hide) {
+            this.service.notifyInfo("You do not have permission to book room \"".concat(room.name, "\""));
+            return;
+          }
 
-                      match.raw_bookings = bookings;
+          room.book_type = rules.auto_approve ? 'Book' : 'Request';
+        }
 
-                      _this36.processBookings(match);
-                    }
-                  };
+        const current = room.bookings.find(booking => {
+          const day = dayjs__WEBPACK_IMPORTED_MODULE_5__(booking.date);
+          return date.isAfter(day, 's') && date.isBefore(day.add(booking.duration, 'm'), 'm');
+        });
 
-                  for (var _iterator25 = rooms[Symbol.iterator](), _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
-                    _loop4();
-                  }
-                } catch (err) {
-                  _didIteratorError25 = true;
-                  _iteratorError25 = err;
-                } finally {
-                  try {
-                    if (!_iteratorNormalCompletion25 && _iterator25.return != null) {
-                      _iterator25.return();
-                    }
-                  } finally {
-                    if (_didIteratorError25) {
-                      throw _iteratorError25;
-                    }
-                  }
+        if (current && current.all_day) {
+          return this.service.notifyInfo('The selected room is booked all day. Please select another date from the timeline and try again.');
+        }
+
+        const ref = this._dialog.open(_overlays_explore_booking_modal_explore_booking_modal_component__WEBPACK_IMPORTED_MODULE_11__["ExploreBookingModalComponent"], {
+          data: {
+            space: room,
+            date: this.show_time
+          }
+        });
+
+        ref.componentInstance.event.subscribe(event => {
+          if (event.reason === 'done' && event.metadata === 'new') {
+            localStorage.setItem('STAFF.booking_form', JSON.stringify({
+              id: 'ad-hoc',
+              room: [Object.assign({}, room, {
+                bookings: [],
+                current: null,
+                next: null,
+                raw_bookings: []
+              })],
+              date: this.show_time
+            }));
+            this.service.navigate(['/book']);
+            ref.close();
+          }
+        });
+      }
+
+      check(e) {
+        if (e.type === 'warning' && this.model.found_user && this.model.found_user.location && this.model.found_user.location.map_id && e.msg.indexOf(this.model.found_user.location.map_id) >= 0) {
+          this.model.found_user.pin_error = true;
+        }
+      }
+
+      focus(item) {
+        this.model.map.zoom = 100;
+        this.model.map.center = {
+          x: .5,
+          y: .5
+        };
+
+        if (item.type) {
+          this.focusUser(item);
+        } else {
+          this.focusSpace(item);
+        }
+      }
+
+      focusUser(user) {
+        if (user) {
+          this.model.found_item = null;
+          this.model.focus_room = null;
+
+          if (user.type === 'role') {
+            this.updatePointsOfInterest();
+            this.service.Users.show(user.email).then(u => {
+              this.locate(u);
+            }, err => null);
+          } else {
+            this.locate(user);
+          }
+        }
+      }
+
+      locate(user) {
+        user.location = null;
+        this.model.found_user = user;
+        this.service.Users.location(user.id, user.win_id).then(location => {
+          this.model.found_user.location = location;
+          let found = false;
+          const bld = this.service.Buildings.current(); // Cross building location finding is enabled
+
+          if (this.model.settings.cblf) {
+            const level = this.service.Buildings.getLevel(location.level);
+
+            if (level) {
+              for (const lvl of bld ? bld.levels : this.model.level.list) {
+                if (level.id === lvl.id) {
+                  this.setLevel(lvl);
+                  found = true;
+                  break;
                 }
+              } // Level is in another building
 
-                _this36.updateStyles();
+
+              if (!found) {
+                this.setLevel(level, false, true);
+                this.model.found_user.location.building = this.service.Buildings.get(level.bld_id);
+                this.model.found_user.external = true;
+                found = true;
+              }
+            }
+          } else {
+            // Only locate users in the current building
+            for (const lvl of bld ? bld.levels : this.model.level.list) {
+              if (location.level === lvl.id) {
+                this.setLevel(lvl);
+                found = true;
+                break;
+              }
+            }
+          }
+
+          if (found) {
+            this.model.map.focus = {
+              coordinates: !location.fixed ? {
+                x: location.x,
+                y: location.y
+              } : null,
+              id: location.map_id,
+              zoom: 0
+            };
+          } else {
+            this.model.found_user.location = null;
+            this.model.found_user.external = true;
+          }
+
+          this.updatePointsOfInterest();
+          this.timeout('focus', () => this.model.map.zoom = 100);
+        }, err => {
+          this.model.found_user.location = null;
+          this.updatePointsOfInterest();
+        });
+      }
+
+      focusSpace(item) {
+        if (!this.model || !this.model.level || !this.model.level.list || !item) {
+          return;
+        }
+
+        const focus = "".concat(item.prefix === false ? '' : 'area-').concat(item.map_id).concat(item.bookable ? '-status' : '-status');
+        const lvl = item.level;
+
+        if (lvl) {
+          for (const level of this.model.level.list) {
+            if (lvl.id === level.id) {
+              this.setLevel(level);
+              this.timeout('focus_space', () => this.model.map.focus = {
+                id: focus,
+                zoom: 150
+              }, 100);
+              break;
+            }
+          }
+
+          this.timeout('update_space', () => {
+            this.model.found_user = null;
+            this.model.focus_room = item;
+            this.updatePointsOfInterest();
+          }, 20);
+        }
+      }
+
+      clear() {
+        this.model.found_item = null;
+        this.model.focus_room = null;
+        this.model.found_user = null;
+        this.model.info = null;
+        this.updatePointsOfInterest();
+      }
+
+      updatePointsOfInterest() {
+        this.timeout('poi', () => {
+          this.model.map.poi = [];
+          this.model.toggle = !this.model.toggle;
+
+          if (this.model.found_user && this.model.found_user.location && this.model.found_user.location.level) {
+            if (this.model.found_user.location.level === this.model.level.active.id) {
+              const loc = this.model.found_user.location;
+              this.model.map.poi.push({
+                id: loc.map_id || "person-".concat(this.model.found_user.id),
+                content: loc.fixed ? _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapPinComponent"] : _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapRangeComponent"],
+                coordinates: !loc.fixed ? {
+                  x: loc.x,
+                  y: loc.y
+                } : null,
+                data: {
+                  text: "".concat(this.model.found_user.name, " is here"),
+                  back: '#F44336',
+                  diameter: loc.confidence * 2
+                }
               });
             }
+          }
 
-            _this36.updateStyles();
-          }, 100);
+          if (this.model.info) {
+            const room = this.model.info;
+            const today = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.show_time).endOf('m');
+            const bookings = room.bookings.filter(b => dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).isSame(today, 'd') || b.all_day);
+            const block = this.service.Bookings.getNextFreeBlock(bookings, today.valueOf(), 2);
+            const current = bookings.find(b => {
+              const start = dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).subtract(b.setup, 's');
+              const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).add(b.duration, 'm').add(b.breakdown, 's');
+              return today.isAfter(start, 's') && today.isBefore(end, 's');
+            });
+            const next = bookings.find(b => today.isBefore(dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date), 'm'));
+            const endOfDay = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.show_time).endOf('d');
+            const bld = this.service.Buildings.current();
+
+            if (current && block && block.start !== -1) {
+              this.model.selected_time = "Booked until ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.start).format('h:mmA'));
+
+              if (current.all_day || current.duration > 23 * 60) {
+                this.model.selected_time = 'Booked all day';
+              }
+            } else if (current) {
+              this.model.selected_time = "Booked until ".concat(current.display.end);
+
+              if (current.all_day || current.duration > 23 * 60) {
+                this.model.selected_time = 'Booked all day';
+              }
+            } else if (block && block.end >= 0 && dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).isSame(endOfDay, 'm')) {
+              const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end);
+              const dur = Math.floor(end.diff(today, 'm'));
+              this.model.selected_time = "Free until ".concat(end.format('h:mmA'));
+
+              if (dur < 30) {
+                if (block.end < 0 || !dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).isSame(endOfDay, 'm')) {
+                  this.model.selected_time += "<br>Next available at tomorrow";
+                } else {
+                  const next_blk = this.service.Bookings.getNextFreeBlock(bookings, block.end);
+                  this.model.selected_time += "<br>Next available at ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(next_blk.start).format('h:mmA'));
+                }
+              }
+            } else if (!current && next && block) {
+              this.model.selected_time = "Free until ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).format('h:mmA'));
+              const next_blk = this.service.Bookings.getNextFreeBlock(bookings, next.date);
+
+              if (block.start > 0) {
+                this.model.selected_time += "<br>Next available at ".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__(next_blk.start).format('h:mmA'));
+              }
+            } else {
+              this.model.selected_time = "Free today";
+            }
+
+            const rules = Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_9__["rulesForSpace"])({
+              user: this.service.Users.current(),
+              space: room,
+              time: today.valueOf(),
+              duration: 60,
+              rules: bld.booking_rules
+            });
+
+            if (!rules.auto_approve) {
+              this.model.selected_time += "<br>Available by request";
+            }
+
+            this.model.display = null;
+            this.model.map.poi.push({
+              id: "area-".concat(room.map_id, "-status"),
+              content: _shared_components_room_info_room_info_component__WEBPACK_IMPORTED_MODULE_6__["RoomInfoComponent"],
+              data: {
+                room: Object.assign({}, room, {
+                  bookable: room.bookable && !rules.hide
+                }),
+                display: {
+                  time: this.model.selected_time
+                },
+                available: !current
+              }
+            });
+          }
+
+          if (this.model.desk) {
+            this.model.map.poi.push({
+              id: this.model.desk,
+              content: _shared_components_desk_info_desk_info_component__WEBPACK_IMPORTED_MODULE_8__["DeskInfoComponent"],
+              data: {
+                system: this.model.system,
+                desk_id: this.model.desk
+              }
+            });
+          }
+
+          if (this.model.focus_room && this.model.focus_room.level.id === this.model.level.active.id) {
+            const rm = this.model.focus_room;
+            this.model.map.poi.push({
+              id: "".concat(rm.prefix === false ? '' : 'area-').concat(rm.map_id).concat(rm.bookable ? '-status' : '-status'),
+              prefix: 'pin',
+              content: _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_0__["MapPinComponent"],
+              data: {
+                back: this.model.colours.rooms.pin || '#03A9F4',
+                text: this.model.focus_room.name
+              }
+            });
+          }
+
+          this.clearTimeout('poi');
+        });
+      }
+
+      back() {
+        if (this.model.back) {
+          this.service.navigate(this.model.back);
+        } else {
+          this.service.back();
         }
-      }]);
+      }
+      /**
+       * Callback for changes to the selected time on the timeline
+       * @param time New time value
+       */
 
-      return ExploreComponent;
-    }(_shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_7__["BaseDirective"]);
+
+      timeChange(time) {
+        this.timeout('time_change', () => {
+          this.show_time = time;
+          const now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
+
+          if (!dayjs__WEBPACK_IMPORTED_MODULE_5__(this.show_time).isSame(now, 'd')) {
+            const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(this.show_time).startOf('d');
+            const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(date).endOf('d');
+            this.service.Rooms.query({
+              from: date.unix(),
+              to: end.unix(),
+              zone_ids: this.model.level.active.id,
+              show_declined: false
+            }).then(rooms => {
+              for (const space of rooms) {
+                const match = this.model.rooms.find(i => i.id === space.id);
+
+                if (match) {
+                  const old_bookings = (match.raw_bookings || []).filter(i => {
+                    const start = dayjs__WEBPACK_IMPORTED_MODULE_5__(i.date);
+                    return !start.isAfter(date, 's') && start.isBefore(end, 's');
+                  });
+
+                  const bookings = _shared_utility_class__WEBPACK_IMPORTED_MODULE_10__["Utils"].unique([...(space.bookings || []), ...old_bookings], 'id');
+
+                  match.raw_bookings = bookings;
+                  this.processBookings(match);
+                }
+              }
+
+              this.updateStyles();
+            });
+          }
+
+          this.updateStyles();
+        }, 100);
+      }
+
+    }
     /***/
 
   },
@@ -7296,11 +6390,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
     /*! ./components/timeline/timeline.component */
     "./src/app/shell/explore/components/timeline/timeline.component.ts");
 
-    var COMPONENTS = [_explore_component__WEBPACK_IMPORTED_MODULE_0__["ExploreComponent"], _components_map_overlay_map_overlay_component__WEBPACK_IMPORTED_MODULE_1__["ExploreMapOverlayComponent"], _components_search_search_component__WEBPACK_IMPORTED_MODULE_2__["ExploreSearchComponent"], _components_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_3__["ExploreTimelineComponent"]];
+    const COMPONENTS = [_explore_component__WEBPACK_IMPORTED_MODULE_0__["ExploreComponent"], _components_map_overlay_map_overlay_component__WEBPACK_IMPORTED_MODULE_1__["ExploreMapOverlayComponent"], _components_search_search_component__WEBPACK_IMPORTED_MODULE_2__["ExploreSearchComponent"], _components_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_3__["ExploreTimelineComponent"]];
 
-    var AppExploreModule = function AppExploreModule() {
-      _classCallCheck(this, AppExploreModule);
-    };
+    class AppExploreModule {}
     /***/
 
   },
