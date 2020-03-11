@@ -508,6 +508,7 @@ class ReportComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
             })
                 .then(res => {
                 this.report$.next(res);
+                console.log('Report:', res);
                 this.loading = false;
                 this.has_report = true;
             })
@@ -555,7 +556,8 @@ class ReportComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
      * @param email Email of the room
      */
     symbolForRoom(email) {
-        const room = this._service.Rooms.item(email);
+        const room = this._service.Rooms.item(email.toLowerCase());
+        console.log('Symbol:', email, room);
         if (room) {
             const level = room.level || {};
             const building = this._service.Buildings.get(level.bld_id);

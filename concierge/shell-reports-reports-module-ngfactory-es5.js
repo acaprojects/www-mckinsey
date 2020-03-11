@@ -529,6 +529,7 @@ var ReportComponent = /** @class */ (function (_super) {
             })
                 .then(function (res) {
                 _this.report$.next(res);
+                console.log('Report:', res);
                 _this.loading = false;
                 _this.has_report = true;
             })
@@ -577,7 +578,8 @@ var ReportComponent = /** @class */ (function (_super) {
      * @param email Email of the room
      */
     ReportComponent.prototype.symbolForRoom = function (email) {
-        var room = this._service.Rooms.item(email);
+        var room = this._service.Rooms.item(email.toLowerCase());
+        console.log('Symbol:', email, room);
         if (room) {
             var level = room.level || {};
             var building = this._service.Buildings.get(level.bld_id);
