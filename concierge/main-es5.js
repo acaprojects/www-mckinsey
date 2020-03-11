@@ -10134,7 +10134,7 @@ var BookingsReportsService = /** @class */ (function (_super) {
             breakdown: item.breakdown,
             is_all_day: item.isAllDay ? 'yes' : 'no',
             is_cancelled: item.isCancelled ? 'yes' : 'no',
-            recurrence: item.recurrence,
+            recurrence: item.recurrence ? 'yes' : 'no',
             notes: item.notes,
             catering: item.catering
         };
@@ -22798,7 +22798,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583885302000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583966446000);
 
 
 /***/ }),
