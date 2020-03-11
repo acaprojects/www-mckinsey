@@ -8170,7 +8170,7 @@ var AppService = /** @class */ (function (_super) {
         }));
         ref.afterClosed().subscribe(function () {
             if (!done) {
-                next({});
+                next({ reason: 'done' });
             }
             _this.unsub('confirm');
         });
@@ -9331,8 +9331,8 @@ var BookingsService = /** @class */ (function (_super) {
                 return reject('Another booking is in progress');
             }
             var date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
-            _this.parent.confirm(_this.confirmSettings('add', item), function (event) {
-                if (event.type === 'Accept') {
+            var ref = _this.parent.confirm(_this.confirmSettings('add', item), function (event) {
+                if (event.reason === 'done') {
                     _this.subjects.new_booking.next({ state: 'processing' });
                     _this.add(item).then(function (d) {
                         _this.set('new_booking', { state: 'success', value: d });
@@ -9352,7 +9352,7 @@ var BookingsService = /** @class */ (function (_super) {
                 else {
                     reject('Cancelled by user');
                 }
-                event.close();
+                ref.close();
             });
         });
     };
@@ -10125,7 +10125,7 @@ var BookingsReportsService = /** @class */ (function (_super) {
             quantities: item['Item Quantity'],
             item_price: item['Item Price'],
             room_email: item.room_email,
-            symbol: item.room_email ? this.symbolForRoom(item.room_email) : '',
+            symbol: this.symbolForRoom(item.room_email || ''),
             start_date: item.start,
             end_date: item.end,
             attendees: item.attendees,
@@ -12035,7 +12035,7 @@ var ReportsService = /** @class */ (function (_super) {
             quantities: item['Item Quantity'],
             item_price: item['Item Price'],
             room_email: item.room_email,
-            symbol: item.room_email ? this.symbolForRoom(item.room_email) : '',
+            symbol: this.symbolForRoom(item.room_email || ''),
             start_date: item.start,
             end_date: item.end,
             attendees: item.attendees,
@@ -22798,7 +22798,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583732058000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583885302000);
 
 
 /***/ }),

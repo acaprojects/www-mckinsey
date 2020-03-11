@@ -6905,7 +6905,7 @@ class AppService extends _shared_globals_base_class__WEBPACK_IMPORTED_MODULE_26_
         }));
         ref.afterClosed().subscribe(() => {
             if (!done) {
-                next({});
+                next({ reason: 'done' });
             }
             this.unsub('confirm');
         });
@@ -7871,8 +7871,8 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 return reject('Another booking is in progress');
             }
             const date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
-            this.parent.confirm(this.confirmSettings('add', item), (event) => {
-                if (event.type === 'Accept') {
+            const ref = this.parent.confirm(this.confirmSettings('add', item), (event) => {
+                if (event.reason === 'done') {
                     this.subjects.new_booking.next({ state: 'processing' });
                     this.add(item).then((d) => {
                         this.set('new_booking', { state: 'success', value: d });
@@ -7892,7 +7892,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                 else {
                     reject('Cancelled by user');
                 }
-                event.close();
+                ref.close();
             });
         });
     }
@@ -8510,7 +8510,7 @@ class BookingsReportsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__[
             quantities: item['Item Quantity'],
             item_price: item['Item Price'],
             room_email: item.room_email,
-            symbol: item.room_email ? this.symbolForRoom(item.room_email) : '',
+            symbol: this.symbolForRoom(item.room_email || ''),
             start_date: item.start,
             end_date: item.end,
             attendees: item.attendees,
@@ -9875,7 +9875,7 @@ class ReportsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSer
             quantities: item['Item Quantity'],
             item_price: item['Item Price'],
             room_email: item.room_email,
-            symbol: item.room_email ? this.symbolForRoom(item.room_email) : '',
+            symbol: this.symbolForRoom(item.room_email || ''),
             start_date: item.start,
             end_date: item.end,
             attendees: item.attendees,
@@ -19005,7 +19005,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583732058000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583885302000);
 
 
 /***/ }),
