@@ -4218,7 +4218,7 @@ var CateringDetailsOverlayComponent = /** @class */ (function (_super) {
             list = this.removeDuplicateMessages(list);
             var now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
             list.forEach(function (note) {
-                var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(note.date);
+                var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(note.date < dayjs__WEBPACK_IMPORTED_MODULE_5__().unix() ? note.date * 1000 : note.date);
                 note.time = date.format(date.isSame(now, 'd') ? 'h:mm A' : 'DD MMM YY');
             });
             return list;
@@ -22821,7 +22821,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583989657000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583990680000);
 
 
 /***/ }),

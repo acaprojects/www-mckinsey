@@ -3676,7 +3676,7 @@ class CateringDetailsOverlayComponent extends _shared_globals_base_directive__WE
         list = this.removeDuplicateMessages(list);
         const now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
         list.forEach(note => {
-            const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(note.date);
+            const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(note.date < dayjs__WEBPACK_IMPORTED_MODULE_5__().unix() ? note.date * 1000 : note.date);
             note.time = date.format(date.isSame(now, 'd') ? 'h:mm A' : 'DD MMM YY');
         });
         return list;
@@ -19028,7 +19028,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583989657000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583990680000);
 
 
 /***/ }),
