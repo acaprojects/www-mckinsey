@@ -4091,7 +4091,8 @@
     }
 
     var BookingCateringOrderItemComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-order-list-item", _item_component__WEBPACK_IMPORTED_MODULE_11__["BookingCateringOrderItemComponent"], View_BookingCateringOrderItemComponent_Host_0, {
-      order: "order"
+      order: "order",
+      all_day: "all_day"
     }, {
       edit: "edit",
       delete: "delete"
@@ -4182,6 +4183,9 @@
     class BookingCateringOrderItemComponent {
       constructor(_service) {
         this._service = _service;
+        /** Whether booking is all day */
+
+        this.all_day = false;
         /** Emitter for edit events */
 
         this.edit = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -4214,7 +4218,13 @@
       get time() {
         if (!this.order) return 'No Delivery Time';
         const duration = (this.order.changes ? this.order.changes.delivery_time : null) || this.order.delivery_time;
-        return dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date).add(duration, 'm').format('h:mm A');
+        let date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date);
+
+        if (this.all_day && !date.isSame(dayjs__WEBPACK_IMPORTED_MODULE_3__(), 'd')) {
+          date = date.hour(7).minute(0);
+        }
+
+        return date.add(duration, 'm').format('h:mm A');
       }
       /** Number of items in the order */
 
@@ -4418,14 +4428,17 @@
 
         return ad;
       }, _item_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_BookingCateringOrderItemComponent_0"], _item_item_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_BookingCateringOrderItemComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 114688, null, 0, _item_item_component__WEBPACK_IMPORTED_MODULE_3__["BookingCateringOrderItemComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]], {
-        order: [0, "order"]
+        order: [0, "order"],
+        all_day: [1, "all_day"]
       }, {
         edit: "edit",
         delete: "delete"
       }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "div", [["class", "error-message"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" The space associated with this booking has been removed. Unless the space is re-added this order will be removed. "]))], function (_ck, _v) {
+        var _co = _v.component;
         var currVal_1 = _v.context.$implicit;
+        var currVal_2 = _co.all_day;
 
-        _ck(_v, 2, 0, currVal_1);
+        _ck(_v, 2, 0, currVal_1, currVal_2);
       }, function (_ck, _v) {
         var currVal_0 = _v.context.$implicit.error;
 
@@ -4587,7 +4600,7 @@
         return ad;
       }, _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_6__["View_MatButton_0"], _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_6__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_7__["ɵj"], [], null, {
         event: "touchrelease"
-      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_9__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_10__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Back"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 3, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_9__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_10__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" Back "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 3, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -4648,7 +4661,8 @@
     var CateringOrderListComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("booking-main-flow-catering-orders", _order_list_component__WEBPACK_IMPORTED_MODULE_14__["CateringOrderListComponent"], View_CateringOrderListComponent_Host_0, {
       catering: "catering",
       spaces: "spaces",
-      date: "date"
+      date: "date",
+      all_day: "all_day"
     }, {
       active_order: "order",
       event: "event"
@@ -4742,6 +4756,9 @@
       constructor(_router) {
         super();
         this._router = _router;
+        /** Whether booking is all day */
+
+        this.all_day = false;
         /** Emitter for changes to the active catering order */
 
         this.active_order = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -6950,7 +6967,8 @@
       }, _catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_CateringOrderListComponent_0"], _catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_CateringOrderListComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 704512, null, 0, _catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_3__["CateringOrderListComponent"], [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]], {
         catering: [0, "catering"],
         spaces: [1, "spaces"],
-        date: [2, "date"]
+        date: [2, "date"],
+        all_day: [3, "all_day"]
       }, {
         active_order: "order",
         event: "event"
@@ -6959,8 +6977,9 @@
         var currVal_0 = _co.catering;
         var currVal_1 = _co.spaces;
         var currVal_2 = _co.date;
+        var currVal_3 = _co.all_day;
 
-        _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2);
+        _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3);
       }, null);
     }
 
