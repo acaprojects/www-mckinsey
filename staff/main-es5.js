@@ -10466,7 +10466,8 @@
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Catering Details"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "meeting-details-catering", [], null, null, null, _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["View_MeetingDetailsCateringComponent_0"], _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["RenderType_MeetingDetailsCateringComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 49152, null, 0, _catering_catering_component__WEBPACK_IMPORTED_MODULE_14__["MeetingDetailsCateringComponent"], [], {
         catering: [0, "catering"],
-        space: [1, "space"]
+        space: [1, "space"],
+        booking: [2, "booking"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 2, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null)], function (_ck, _v) {
@@ -10482,12 +10483,13 @@
 
         var currVal_3 = _co.booking.catering;
         var currVal_4 = _v.parent.context.$implicit;
+        var currVal_5 = _co.booking;
 
-        _ck(_v, 10, 0, currVal_3, currVal_4);
+        _ck(_v, 10, 0, currVal_3, currVal_4, currVal_5);
 
-        var currVal_5 = !_co.has_ended;
+        var currVal_6 = !_co.has_ended;
 
-        _ck(_v, 13, 0, currVal_5);
+        _ck(_v, 13, 0, currVal_6);
       }, null);
     }
 
@@ -11019,13 +11021,13 @@
           room_list: null
         });
         booking.catering_notes = {};
-        booking.catering_codes = {};
+        booking.catering_code = {};
 
         for (const space of room_list) {
           const note = this.booking.notes.find(a_note => a_note.type === 'catering' && a_note.space === space.id);
           booking.catering_notes[space.id] = note ? note.message : '';
           const order = this.booking.catering.find(an_order => an_order.location_id === space.id);
-          booking.catering_codes[space.id] = order ? order.charge_code : '';
+          booking.catering_code[space.id] = order ? order.charge_code : '';
         }
 
         if (localStorage) {
@@ -11292,7 +11294,7 @@
     class MeetingDetailsSpaceComponent {
       /** Latest equipment requirement notes for the active space */
       get notes() {
-        const space_notes = (this.booking.notes || []).filter(note => note.space === this.space.id);
+        const space_notes = (this.booking.notes || []).filter(note => note.type === 'equipment' && note.space === this.space.id);
         return space_notes.length ? space_notes[space_notes.length - 1].message : '<No requirements>';
       }
       /** Latest equipment charge code for the active space */
@@ -40639,7 +40641,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583971818000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583974531000);
     /***/
   },
 
