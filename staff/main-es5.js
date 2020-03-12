@@ -14121,7 +14121,7 @@
             this.checkAvailability(extension - 15);
           }
         }, err => {
-          this._service.notifyError("Error extending meeting. Error: ".concat(err.message | err));
+          this._service.notifyError("Error extending meeting. Error: ".concat(err.message || err));
 
           this._dialog.close();
         });
@@ -14145,7 +14145,7 @@
 
           this._dialog.close();
         }, err => {
-          this._service.notifyError("Error extending meeting. Error: ".concat(err.message | err));
+          this._service.notifyError("Error extending meeting. Error: ".concat(err.message || err));
         });
       }
 
@@ -40639,7 +40639,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583906820000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583971818000);
     /***/
   },
 
@@ -49026,6 +49026,11 @@
           end,
           period
         } = this._data.recurrence;
+
+        if (!period) {
+          return '';
+        }
+
         const pattern = _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_6__["RECURRENCE_PERIODS"][period];
         const date = dayjs__WEBPACK_IMPORTED_MODULE_7__(end).format('DD MMM YYYY');
         return "".concat(pattern, " until ").concat(date);
@@ -49188,7 +49193,7 @@
         }, e => {
           this.loading = false;
 
-          this._service.notifyError("Booking Error: ".concat(e));
+          this._service.notifyError('There was an error processing the booking.');
         });
       }
 
@@ -50238,7 +50243,7 @@
 
         _ck(_v, 4, 0, currVal_1, currVal_2);
 
-        var currVal_4 = _co.recurrence ? "To update headcound information, add equipment or catering, please edit individal meeting occurences in My Day." : "Would you like to add equipment to your room booking?";
+        var currVal_4 = _co.recurrence ? "To update headcount information, add equipment or catering, please edit individal meeting occurences in My Day." : "Would you like to add equipment to your room booking?";
 
         _ck(_v, 16, 0, currVal_4);
 

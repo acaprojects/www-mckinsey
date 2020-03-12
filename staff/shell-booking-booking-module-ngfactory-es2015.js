@@ -3299,7 +3299,9 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
                 const recurrence_field = this.form_fields
                     .reduce((v, i) => v.concat(i.children && i.children.length ? i.children : [i]), [])
                     .find(i => i.key === 'recurrence');
+                const recurrence_rooms_field = this.form_fields.find(i => i.key === 'recurrence_rooms');
                 recurrence_field.setValue({ recurr_period: 0, recurr_end: 0 });
+                recurrence_rooms_field.setValue([]);
             }
         }));
         this.subscription('room_value', this.space_list.control.valueChanges.subscribe(state => {

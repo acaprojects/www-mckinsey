@@ -5890,7 +5890,7 @@ class TimeExtensionModalComponent extends _shared_globals_base_directive__WEBPAC
                 this.checkAvailability(extension - 15);
             }
         }, err => {
-            this._service.notifyError(`Error extending meeting. Error: ${err.message | err}`);
+            this._service.notifyError(`Error extending meeting. Error: ${err.message || err}`);
             this._dialog.close();
         });
     }
@@ -5905,7 +5905,7 @@ class TimeExtensionModalComponent extends _shared_globals_base_directive__WEBPAC
             this.event.emit({ reason: 'done' });
             this._dialog.close();
         }, err => {
-            this._service.notifyError(`Error extending meeting. Error: ${err.message | err}`);
+            this._service.notifyError(`Error extending meeting. Error: ${err.message || err}`);
         });
     }
 }
@@ -19478,7 +19478,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583906820000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583971818000);
 
 
 /***/ }),
@@ -22841,6 +22841,9 @@ class BookingDetailsModalComponent extends _shared_globals_base_directive__WEBPA
             return '';
         }
         const { end, period } = this._data.recurrence;
+        if (!period) {
+            return '';
+        }
         const pattern = _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_6__["RECURRENCE_PERIODS"][period];
         const date = dayjs__WEBPACK_IMPORTED_MODULE_7__(end).format('DD MMM YYYY');
         return `${pattern} until ${date}`;
@@ -22988,7 +22991,7 @@ class BookingDetailsModalComponent extends _shared_globals_base_directive__WEBPA
             this.event.emit({ reason: 'action', metadata: 'new' });
         }, e => {
             this.loading = false;
-            this._service.notifyError(`Booking Error: ${e}`);
+            this._service.notifyError('There was an error processing the booking.');
         });
     }
     finish() {
@@ -23363,7 +23366,7 @@ function View_BookingEquipmentDetailsModalComponent_0(_l) { return _angular_core
     } if (("touchrelease" === en)) {
         var pd_4 = (_co.continue() !== false);
         ad = (pd_4 && ad);
-    } return ad; }, _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](44, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](45, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_7__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_8__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](46, 0, [" ", " "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.spaces; _ck(_v, 3, 0, currVal_0); var currVal_3 = _ck(_v, 9, 0, "material-icons", "close"); _ck(_v, 8, 0, currVal_3); var currVal_5 = (!_co.recurrence && _co.notes); _ck(_v, 19, 0, currVal_5); var currVal_6 = (_co.cost_code && (_co.requires_code || !_co.recurrence)); _ck(_v, 22, 0, currVal_6); var currVal_15 = "expected-attendees"; var currVal_16 = _co.expected_attendees[_co.active_space]; _ck(_v, 31, 0, currVal_15, currVal_16); var currVal_17 = _co.has_errors; _ck(_v, 39, 0, currVal_17); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).disabled || null); var currVal_2 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6)._animationMode === "NoopAnimations"); _ck(_v, 4, 0, currVal_1, currVal_2); var currVal_4 = (_co.recurrence ? "To update headcound information, add equipment or catering, please edit individal meeting occurences in My Day." : "Would you like to add equipment to your room booking?"); _ck(_v, 16, 0, currVal_4); var currVal_7 = ((_co.errors[_co.active_space] == null) ? null : _co.errors[_co.active_space].expected_attendees); _ck(_v, 23, 0, currVal_7); var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassUntouched; var currVal_9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassTouched; var currVal_10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassPristine; var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassDirty; var currVal_12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassValid; var currVal_13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassInvalid; var currVal_14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassPending; _ck(_v, 28, 0, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14); var currVal_18 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 45).disabled || null); var currVal_19 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 45)._animationMode === "NoopAnimations"); _ck(_v, 43, 0, currVal_18, currVal_19); var currVal_20 = (_co.finish ? "Book" : "Add to booking & continue"); _ck(_v, 46, 0, currVal_20); }); }
+    } return ad; }, _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](44, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_2__["ɵj"], [], null, { event: "touchrelease" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](45, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_7__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_8__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](46, 0, [" ", " "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.spaces; _ck(_v, 3, 0, currVal_0); var currVal_3 = _ck(_v, 9, 0, "material-icons", "close"); _ck(_v, 8, 0, currVal_3); var currVal_5 = (!_co.recurrence && _co.notes); _ck(_v, 19, 0, currVal_5); var currVal_6 = (_co.cost_code && (_co.requires_code || !_co.recurrence)); _ck(_v, 22, 0, currVal_6); var currVal_15 = "expected-attendees"; var currVal_16 = _co.expected_attendees[_co.active_space]; _ck(_v, 31, 0, currVal_15, currVal_16); var currVal_17 = _co.has_errors; _ck(_v, 39, 0, currVal_17); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).disabled || null); var currVal_2 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6)._animationMode === "NoopAnimations"); _ck(_v, 4, 0, currVal_1, currVal_2); var currVal_4 = (_co.recurrence ? "To update headcount information, add equipment or catering, please edit individal meeting occurences in My Day." : "Would you like to add equipment to your room booking?"); _ck(_v, 16, 0, currVal_4); var currVal_7 = ((_co.errors[_co.active_space] == null) ? null : _co.errors[_co.active_space].expected_attendees); _ck(_v, 23, 0, currVal_7); var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassUntouched; var currVal_9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassTouched; var currVal_10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassPristine; var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassDirty; var currVal_12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassValid; var currVal_13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassInvalid; var currVal_14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 33).ngClassPending; _ck(_v, 28, 0, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14); var currVal_18 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 45).disabled || null); var currVal_19 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 45)._animationMode === "NoopAnimations"); _ck(_v, 43, 0, currVal_18, currVal_19); var currVal_20 = (_co.finish ? "Book" : "Add to booking & continue"); _ck(_v, 46, 0, currVal_20); }); }
 function View_BookingEquipmentDetailsModalComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "equipment-details-modal", [], null, null, null, View_BookingEquipmentDetailsModalComponent_0, RenderType_BookingEquipmentDetailsModalComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _equipment_details_component__WEBPACK_IMPORTED_MODULE_13__["BookingEquipmentDetailsModalComponent"], [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_12__["MatDialogRef"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_12__["MAT_DIALOG_DATA"], _services_app_service__WEBPACK_IMPORTED_MODULE_14__["AppService"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var BookingEquipmentDetailsModalComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("equipment-details-modal", _equipment_details_component__WEBPACK_IMPORTED_MODULE_13__["BookingEquipmentDetailsModalComponent"], View_BookingEquipmentDetailsModalComponent_Host_0, {}, { event: "event" }, []);
 
