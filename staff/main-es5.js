@@ -11958,6 +11958,7 @@
 
       selectDate() {
         const ref = this._dialog.open(_calendar_modal_calendar_modal_component__WEBPACK_IMPORTED_MODULE_4__["CalendarModalComponent"], {
+          maxWidth: '95vw',
           data: {
             date: this.recurr_end,
             start: dayjs__WEBPACK_IMPORTED_MODULE_5__(this.date).startOf('d').valueOf(),
@@ -40629,7 +40630,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583991247000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584052470000);
     /***/
   },
 

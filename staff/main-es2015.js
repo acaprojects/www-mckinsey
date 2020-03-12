@@ -5054,15 +5054,20 @@ class RecurrenceModalComponent extends _shared_globals_base_directive__WEBPACK_I
     }
     selectDate() {
         const ref = this._dialog.open(_calendar_modal_calendar_modal_component__WEBPACK_IMPORTED_MODULE_4__["CalendarModalComponent"], {
+            maxWidth: '95vw',
             data: {
                 date: this.recurr_end,
-                start: dayjs__WEBPACK_IMPORTED_MODULE_5__(this.date).startOf('d').valueOf(),
+                start: dayjs__WEBPACK_IMPORTED_MODULE_5__(this.date)
+                    .startOf('d')
+                    .valueOf(),
                 limit: 365
             }
         });
         this.subscription('calendar', ref.componentInstance.event.subscribe((event) => {
             if (event.reason === 'done') {
-                this.recurr_end = dayjs__WEBPACK_IMPORTED_MODULE_5__(ref.componentInstance.date).endOf('d').valueOf();
+                this.recurr_end = dayjs__WEBPACK_IMPORTED_MODULE_5__(ref.componentInstance.date)
+                    .endOf('d')
+                    .valueOf();
             }
         }));
         ref.afterClosed().subscribe(() => this.unsub('calendar'));
@@ -19477,7 +19482,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583991247000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584052470000);
 
 
 /***/ }),
