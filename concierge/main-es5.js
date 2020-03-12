@@ -5374,8 +5374,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MeetingDetailsDisplayComponent", function() { return MeetingDetailsDisplayComponent; });
 /* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -5389,6 +5390,7 @@ var __extends = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+
 
 
 
@@ -5421,7 +5423,7 @@ var MeetingDetailsDisplayComponent = /** @class */ (function (_super) {
         /** Display date for the booking */
         get: function () {
             var booking = this.booking || {};
-            var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(booking.date);
+            var date = dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date);
             return date.format('DD MMM YYYY, h:mm A');
         },
         enumerable: true,
@@ -5431,7 +5433,7 @@ var MeetingDetailsDisplayComponent = /** @class */ (function (_super) {
         /** Display date for the booking */
         get: function () {
             var booking = this.booking || {};
-            var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(booking.date).add(booking.duration, 'm');
+            var date = dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.duration, 'm');
             return date.format('DD MMM YYYY, h:mm A');
         },
         enumerable: true,
@@ -5481,7 +5483,16 @@ var MeetingDetailsDisplayComponent = /** @class */ (function (_super) {
     Object.defineProperty(MeetingDetailsDisplayComponent.prototype, "recurrence", {
         /** Recurrence setting for booking */
         get: function () {
-            return 'No Recurrence';
+            if (!this.booking.recurrence) {
+                return 'No recurrence';
+            }
+            var _a = this.booking.recurrence, end = _a.end, period = _a.period;
+            if (!period) {
+                return 'No recurrence';
+            }
+            var pattern = _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_2__["RECURRENCE_PERIODS"][period];
+            var date = dayjs__WEBPACK_IMPORTED_MODULE_3__(end).format('DD MMM YYYY');
+            return pattern + " until " + date;
         },
         enumerable: true,
         configurable: true
@@ -9199,14 +9210,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acaprojects/ngx-composer */ "./node_modules/@acaprojects/ngx-composer/fesm5/acaprojects-ngx-composer.js");
 /* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.service */ "./src/app/services/data/base.service.ts");
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
-/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+/* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -9278,6 +9290,7 @@ var __spread = (undefined && undefined.__spread) || function () {
 
 
 
+
 function processCateringData(catering, start, id) {
     if (!catering) {
         return [];
@@ -9285,7 +9298,7 @@ function processCateringData(catering, start, id) {
     var catering_array = catering instanceof Array
         ? catering
         : Object.keys(catering).map(function (space_id) { return (__assign({}, catering[space_id], { location_id: space_id })); });
-    return catering_array.map(function (order) { return new _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_5__["CateringOrder"](__assign({}, order, { booking_date: start, booking_id: id })); });
+    return catering_array.map(function (order) { return new _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](__assign({}, order, { booking_date: start, booking_id: id })); });
 }
 var BookingsService = /** @class */ (function (_super) {
     __extends(BookingsService, _super);
@@ -9330,7 +9343,7 @@ var BookingsService = /** @class */ (function (_super) {
             if (_this.get('new_booking').state !== 'idle') {
                 return reject('Another booking is in progress');
             }
-            var date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
+            var date = moment__WEBPACK_IMPORTED_MODULE_4__(item.date);
             var ref = _this.parent.confirm(_this.confirmSettings('add', item), function (event) {
                 if (event.reason === 'done') {
                     _this.subjects.new_booking.next({ state: 'processing' });
@@ -9342,7 +9355,7 @@ var BookingsService = /** @class */ (function (_super) {
                             localStorage.removeItem('CONCIERGE.booking_form');
                             localStorage.setItem('CONCIERGE.last_booking', booking || JSON.stringify(item));
                         }
-                        _this.timeout("" + moment__WEBPACK_IMPORTED_MODULE_3__().unix(), function () { return _this.set('new_booking', { state: 'idle' }); });
+                        _this.timeout("" + moment__WEBPACK_IMPORTED_MODULE_4__().unix(), function () { return _this.set('new_booking', { state: 'idle' }); });
                     }, function (e) {
                         _this.set('new_booking', { state: 'error', value: e });
                         _this.timeout('new_error', function () { return _this.set('new_booking', { state: 'idle' }); });
@@ -9401,13 +9414,13 @@ var BookingsService = /** @class */ (function (_super) {
         try {
             for (var list_1 = __values(list), list_1_1 = list_1.next(); !list_1_1.done; list_1_1 = list_1.next()) {
                 var bkn = list_1_1.value;
-                var bkn_start = moment__WEBPACK_IMPORTED_MODULE_3__(bkn.date);
-                var bkn_end = moment__WEBPACK_IMPORTED_MODULE_3__(bkn_start).add(bkn.duration, 'm');
+                var bkn_start = moment__WEBPACK_IMPORTED_MODULE_4__(bkn.date);
+                var bkn_end = moment__WEBPACK_IMPORTED_MODULE_4__(bkn_start).add(bkn.duration, 'm');
                 try {
                     for (var comparison_1 = (e_2 = void 0, __values(comparison)), comparison_1_1 = comparison_1.next(); !comparison_1_1.done; comparison_1_1 = comparison_1.next()) {
                         var cmp = comparison_1_1.value;
-                        var cmp_start = moment__WEBPACK_IMPORTED_MODULE_3__(cmp.date);
-                        var cmp_end = moment__WEBPACK_IMPORTED_MODULE_3__(cmp_start).add(cmp.duration, 'm');
+                        var cmp_start = moment__WEBPACK_IMPORTED_MODULE_4__(cmp.date);
+                        var cmp_end = moment__WEBPACK_IMPORTED_MODULE_4__(cmp_start).add(cmp.duration, 'm');
                         if (bkn_start.isBetween(cmp_start, cmp_end, 'm', '[)') || bkn_end.isBetween(cmp_start, cmp_end, 'm', '(]')) {
                             conflict_count++;
                             break;
@@ -9445,14 +9458,14 @@ var BookingsService = /** @class */ (function (_super) {
         try {
             for (var list_2 = __values(list), list_2_1 = list_2.next(); !list_2_1.done; list_2_1 = list_2.next()) {
                 var bkn = list_2_1.value;
-                bkn_start = moment__WEBPACK_IMPORTED_MODULE_3__(bkn.date).seconds(0).milliseconds(0);
+                bkn_start = moment__WEBPACK_IMPORTED_MODULE_4__(bkn.date).seconds(0).milliseconds(0);
                 if (!bkn_end) {
-                    block.push({ start: moment__WEBPACK_IMPORTED_MODULE_3__(bkn_start).startOf('d').valueOf(), end: bkn_start.valueOf() });
+                    block.push({ start: moment__WEBPACK_IMPORTED_MODULE_4__(bkn_start).startOf('d').valueOf(), end: bkn_start.valueOf() });
                 }
                 else if (bkn_end.isBefore(bkn_start, 'm')) {
                     block.push({ start: bkn_end.valueOf(), end: bkn_start.valueOf() });
                 }
-                bkn_end = moment__WEBPACK_IMPORTED_MODULE_3__(bkn_start).add(bkn.duration, 'm');
+                bkn_end = moment__WEBPACK_IMPORTED_MODULE_4__(bkn_start).add(bkn.duration, 'm');
             }
         }
         catch (e_3_1) { e_3 = { error: e_3_1 }; }
@@ -9466,7 +9479,7 @@ var BookingsService = /** @class */ (function (_super) {
             block.push({ start: bkn_end.valueOf(), end: bkn_end.endOf('d').valueOf() });
         }
         else if (block.length <= 0) {
-            var today = moment__WEBPACK_IMPORTED_MODULE_3__();
+            var today = moment__WEBPACK_IMPORTED_MODULE_4__();
             block.push({ start: today.startOf('d').valueOf(), end: today.endOf('d').valueOf() });
         }
         return block;
@@ -9474,16 +9487,16 @@ var BookingsService = /** @class */ (function (_super) {
     BookingsService.prototype.getNextFreeBlock = function (list, gap, time) {
         var e_4, _a;
         if (gap === void 0) { gap = 30; }
-        if (time === void 0) { time = moment__WEBPACK_IMPORTED_MODULE_3__().valueOf(); }
+        if (time === void 0) { time = moment__WEBPACK_IMPORTED_MODULE_4__().valueOf(); }
         var blocks = this.getFreeSlots(list);
-        var now = moment__WEBPACK_IMPORTED_MODULE_3__(time);
+        var now = moment__WEBPACK_IMPORTED_MODULE_4__(time);
         var block = null;
         try {
             for (var blocks_1 = __values(blocks), blocks_1_1 = blocks_1.next(); !blocks_1_1.done; blocks_1_1 = blocks_1.next()) {
                 var blk = blocks_1_1.value;
-                var start = blk.start < 0 ? moment__WEBPACK_IMPORTED_MODULE_3__().hours(0).minutes(0) : moment__WEBPACK_IMPORTED_MODULE_3__(blk.start);
-                var end = blk.end < 0 ? moment__WEBPACK_IMPORTED_MODULE_3__().hours(23).minutes(59) : moment__WEBPACK_IMPORTED_MODULE_3__(blk.end);
-                var dur = moment__WEBPACK_IMPORTED_MODULE_3__["duration"](end.diff(start));
+                var start = blk.start < 0 ? moment__WEBPACK_IMPORTED_MODULE_4__().hours(0).minutes(0) : moment__WEBPACK_IMPORTED_MODULE_4__(blk.start);
+                var end = blk.end < 0 ? moment__WEBPACK_IMPORTED_MODULE_4__().hours(23).minutes(59) : moment__WEBPACK_IMPORTED_MODULE_4__(blk.end);
+                var dur = moment__WEBPACK_IMPORTED_MODULE_4__["duration"](end.diff(start));
                 var length_1 = Math.floor(dur.asMinutes());
                 if (!block && (now.isBetween(start, end, 'm', '[)') || now.isBefore(start, 'm')) && length_1 >= gap) {
                     block = blk;
@@ -9505,13 +9518,13 @@ var BookingsService = /** @class */ (function (_super) {
      * @param days Number of days from now
      */
     BookingsService.prototype.getNewBookings = function (days) {
-        var past = moment__WEBPACK_IMPORTED_MODULE_3__().subtract(days, 'days');
+        var past = moment__WEBPACK_IMPORTED_MODULE_4__().subtract(days, 'days');
         return this.parent.Rooms.query({
             created_from: past.unix(),
             zone_ids: this.parent.Buildings.current().id
         }).then(function (rooms) {
             return rooms.map(function (room) { return room.bookings; }).flat()
-                .sort(function (a, b) { return moment__WEBPACK_IMPORTED_MODULE_3__(a.created_date).unix() - moment__WEBPACK_IMPORTED_MODULE_3__(b.created_date).unix(); });
+                .sort(function (a, b) { return moment__WEBPACK_IMPORTED_MODULE_4__(a.created_date).unix() - moment__WEBPACK_IMPORTED_MODULE_4__(b.created_date).unix(); });
         });
     };
     /**
@@ -9519,8 +9532,8 @@ var BookingsService = /** @class */ (function (_super) {
      * @param days Number of days from now
      */
     BookingsService.prototype.getComingBookings = function (days) {
-        var now = moment__WEBPACK_IMPORTED_MODULE_3__();
-        var future = moment__WEBPACK_IMPORTED_MODULE_3__().add(days, 'days');
+        var now = moment__WEBPACK_IMPORTED_MODULE_4__();
+        var future = moment__WEBPACK_IMPORTED_MODULE_4__().add(days, 'days');
         return this.parent.Rooms.query({
             available_from: now.unix(),
             available_to: future.unix(),
@@ -9551,10 +9564,10 @@ var BookingsService = /** @class */ (function (_super) {
         });
     };
     BookingsService.prototype.processItem = function (raw_item) {
-        var now = moment__WEBPACK_IMPORTED_MODULE_3__();
+        var now = moment__WEBPACK_IMPORTED_MODULE_4__();
         var user = this.parent.Users.current();
-        var start = moment__WEBPACK_IMPORTED_MODULE_3__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
-        var end = moment__WEBPACK_IMPORTED_MODULE_3__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
+        var start = moment__WEBPACK_IMPORTED_MODULE_4__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
+        var end = moment__WEBPACK_IMPORTED_MODULE_4__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
         var has_end = raw_item.end_epoch * 1000 || raw_item.end || raw_item.End;
         var duration = Math.abs(start.diff(end, 'm'));
         var states = this.parent.get('BOOKING.states') || {};
@@ -9598,14 +9611,20 @@ var BookingsService = /** @class */ (function (_super) {
             space_notes: raw_item.space_notes || {},
             catering_code: raw_item.catering_code || (raw_item.catering ? raw_item.catering.code : ''),
             expected_attendees: raw_item.expected_attendees || {},
-            edit_counts: Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_6__["processEditList"])(raw_item.edits || {}),
+            edit_counts: Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_7__["processEditList"])(raw_item.edits || {}),
+            recurrence: raw_item.seriesMasterId && raw_item.recurrence ? {
+                period: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["RECURRENCE_PERIODS"].map(function (i) { return i.toLowerCase(); }).indexOf(raw_item.recurrence.period),
+                end: moment__WEBPACK_IMPORTED_MODULE_4__(raw_item.recurrence.end * 1000).valueOf(),
+                start: moment__WEBPACK_IMPORTED_MODULE_4__(raw_item.recurrence.start * 1000).valueOf(),
+                series_id: raw_item.seriesMasterId
+            } : null,
             display: {
                 date: start.format('DD MMM YYYY'),
                 time: start.format('h:mm A') + " - " + end.format('h:mm A'),
                 start: start.format('h:mm A'),
                 start_date: start.format('DD MMM YYYY [at] h:mm A'),
-                end: has_end ? end.format('h:mm A') : moment__WEBPACK_IMPORTED_MODULE_3__(start).add(raw_item.duration, 'm').format('h:mm A'),
-                end_date: has_end ? end.format('DD MMM YYYY [at] h:mm A') : moment__WEBPACK_IMPORTED_MODULE_3__(start).add(raw_item.duration, 'm').format('DD MMM YYYY [at] h:mm A'),
+                end: has_end ? end.format('h:mm A') : moment__WEBPACK_IMPORTED_MODULE_4__(start).add(raw_item.duration, 'm').format('h:mm A'),
+                end_date: has_end ? end.format('DD MMM YYYY [at] h:mm A') : moment__WEBPACK_IMPORTED_MODULE_4__(start).add(raw_item.duration, 'm').format('DD MMM YYYY [at] h:mm A'),
                 duration: _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__["Utils"].humaniseDuration(duration)
             }
         };
@@ -9631,9 +9650,9 @@ var BookingsService = /** @class */ (function (_super) {
         var rm = this.parent.Rooms.item(id);
         Object.defineProperty(item, 'status', {
             get: function () {
-                var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(item.date);
+                var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
                 var end = date.add(item.duration, 'm');
-                var now = dayjs__WEBPACK_IMPORTED_MODULE_4__();
+                var now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
                 return now.isBefore(date, 'm')
                     ? 'upcoming'
                     : now.isBefore(end, 'm')
@@ -9717,10 +9736,10 @@ var BookingsService = /** @class */ (function (_super) {
             form.room = {};
         }
         if (form.duration > 720 || form.all_day) {
-            form.date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('d').valueOf();
+            form.date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date).startOf('d').valueOf();
         }
         console.log('Form:', form);
-        var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(form.date).startOf('m');
+        var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date).startOf('m');
         var room_id = [];
         var auto_approve = [item.state !== 'tentative'];
         var room = null;
@@ -9743,7 +9762,7 @@ var BookingsService = /** @class */ (function (_super) {
             start: date.unix(),
             old_start: Math.floor(form.old_date / 1000),
             end: date.add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
-            old_end: form.old_end || dayjs__WEBPACK_IMPORTED_MODULE_4__(form.old_date || form.date).add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
+            old_end: form.old_end || dayjs__WEBPACK_IMPORTED_MODULE_5__(form.old_date || form.date).add(form.all_day ? 24 * 60 - 1 : form.duration, 'm').unix(),
             room_id: room_id,
             title: form.title,
             description: form.description,
@@ -9755,7 +9774,7 @@ var BookingsService = /** @class */ (function (_super) {
             parking: form.parking || false,
             catering: (form.catering || []).filter(function (order) {
                 return (form.room instanceof Array ? form.room : [form.room]).find(function (space) { return space.id === order.location_id; });
-            }).map(function (order) { return new _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_5__["CateringOrder"](order); }),
+            }).map(function (order) { return new _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](order); }),
             expected_attendees: form.expected_attendees || {},
             equipment_code: form.equipment_code,
             booking_type: (form.booking_type ? (form.booking_type instanceof Object ? form.booking_type.id : form.booking_type) : null) || 'internal',
@@ -9779,7 +9798,7 @@ var BookingsService = /** @class */ (function (_super) {
             });
         }
         var user = this.parent.Users.current();
-        var now = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('s');
+        var now = dayjs__WEBPACK_IMPORTED_MODULE_5__().startOf('s');
         if (item.equipment) {
             for (var rm_id in item.equipment) {
                 if (item.equipment[rm_id]) {
@@ -9851,7 +9870,7 @@ var BookingsService = /** @class */ (function (_super) {
         }
         if ((item.recurr && item.recurr.period) || (item.recurrence && item.recurrence.period)) {
             request.recurr = {
-                period: ['none', 'daily', 'weekly', 'biweekly', 'monthly'][item.recurr || item.recurrence.period],
+                period: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["RECURRENCE_PERIODS"].map(function (i) { return i.toLowerCase(); })[item.recurr || item.recurrence.period],
                 end: Math.floor((item.recurr_end || item.recurrence.end) / 1000)
             };
         }
@@ -9862,11 +9881,11 @@ var BookingsService = /** @class */ (function (_super) {
             _super.prototype.clear.call(this, fields);
         }
         else {
-            var start_1 = moment__WEBPACK_IMPORTED_MODULE_3__(fields.from).startOf('d');
-            var end_1 = moment__WEBPACK_IMPORTED_MODULE_3__(fields.to || fields.from);
+            var start_1 = moment__WEBPACK_IMPORTED_MODULE_4__(fields.from).startOf('d');
+            var end_1 = moment__WEBPACK_IMPORTED_MODULE_4__(fields.to || fields.from);
             // Clear period in list
             var list = this.get('list') || [];
-            this.set('list', list.filter(function (i) { return !moment__WEBPACK_IMPORTED_MODULE_3__(i.date).isBetween(start_1, end_1); }));
+            this.set('list', list.filter(function (i) { return !moment__WEBPACK_IMPORTED_MODULE_4__(i.date).isBetween(start_1, end_1); }));
             // Clear period in timeline
             var timeline = this.get('timeline') || {};
             for (; start_1.isBefore(end_1, 'm'); start_1.add(1, 'd')) {
@@ -9886,7 +9905,7 @@ var BookingsService = /** @class */ (function (_super) {
             // Add bookings to timeline
             for (var list_3 = __values(list), list_3_1 = list_3.next(); !list_3_1.done; list_3_1 = list_3.next()) {
                 var item = list_3_1.value;
-                var date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
+                var date = moment__WEBPACK_IMPORTED_MODULE_4__(item.date);
                 var day = timeline[date.format('YYYY/MM/DD')] || [];
                 try {
                     for (var day_1 = (e_8 = void 0, __values(day)), day_1_1 = day_1.next(); !day_1_1.done; day_1_1 = day_1.next()) {
@@ -9928,8 +9947,8 @@ var BookingsService = /** @class */ (function (_super) {
         var e_9, _a;
         var _loop_1 = function (bkn) {
             var e_10, _a;
-            var bkn_start = moment__WEBPACK_IMPORTED_MODULE_3__(bkn.date);
-            var bkn_end = moment__WEBPACK_IMPORTED_MODULE_3__(bkn_start).add(bkn.duration, 'm');
+            var bkn_start = moment__WEBPACK_IMPORTED_MODULE_4__(bkn.date);
+            var bkn_end = moment__WEBPACK_IMPORTED_MODULE_4__(bkn_start).add(bkn.duration, 'm');
             var count = 0;
             var index = 0;
             var collisions = [];
@@ -9937,8 +9956,8 @@ var BookingsService = /** @class */ (function (_super) {
                 for (var list_5 = (e_10 = void 0, __values(list)), list_5_1 = list_5.next(); !list_5_1.done; list_5_1 = list_5.next()) {
                     var cmp = list_5_1.value;
                     if (bkn.id !== cmp.id) {
-                        var cmp_start = moment__WEBPACK_IMPORTED_MODULE_3__(cmp.date);
-                        var cmp_end = moment__WEBPACK_IMPORTED_MODULE_3__(cmp_start).add(cmp.duration, 'm');
+                        var cmp_start = moment__WEBPACK_IMPORTED_MODULE_4__(cmp.date);
+                        var cmp_end = moment__WEBPACK_IMPORTED_MODULE_4__(cmp_start).add(cmp.duration, 'm');
                         if ((bkn_start.isBetween(cmp_start, cmp_end, 'm', '[)') ||
                             bkn_end.isBetween(cmp_start, cmp_end, 'm', '(]')) && bkn.id !== cmp.id) {
                             count++;
@@ -9999,7 +10018,7 @@ var BookingsService = /** @class */ (function (_super) {
         try {
             for (var list_6 = __values(list), list_6_1 = list_6.next(); !list_6_1.done; list_6_1 = list_6.next()) {
                 var item = list_6_1.value;
-                var date = moment__WEBPACK_IMPORTED_MODULE_3__(item.date);
+                var date = moment__WEBPACK_IMPORTED_MODULE_4__(item.date);
                 var day = timeline[date.format('YYYY/MM/DD')] || [];
                 try {
                     for (var day_2 = (e_12 = void 0, __values(day)), day_2_1 = day_2.next(); !day_2_1.done; day_2_1 = day_2.next()) {
@@ -10032,7 +10051,7 @@ var BookingsService = /** @class */ (function (_super) {
     BookingsService.prototype.confirmSettings = function (key, fields) {
         if (fields === void 0) { fields = {}; }
         var settings = _super.prototype.confirmSettings.call(this, key, fields);
-        var date = moment__WEBPACK_IMPORTED_MODULE_3__(fields.date || '');
+        var date = moment__WEBPACK_IMPORTED_MODULE_4__(fields.date || '');
         var user = this.parent.Users.current();
         var rm = fields.room ? (fields.room instanceof Array ? fields.room[0] : fields.room) : null;
         var room = rm ? this.parent.Rooms.item(rm.id) : { name: fields.room_name };
@@ -10062,7 +10081,7 @@ var BookingsService = /** @class */ (function (_super) {
         }
         return settings;
     };
-    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"])); }, token: BookingsService, providedIn: "root" });
+    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"])); }, token: BookingsService, providedIn: "root" });
     return BookingsService;
 }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseService"]));
 
@@ -22798,7 +22817,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583966446000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583976926000);
 
 
 /***/ }),
