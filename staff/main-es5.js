@@ -10082,21 +10082,21 @@
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
-    /* harmony import */
-
-
-    var _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./space/space.component.ngfactory */
     "./src/app/overlays/meeting-details-overlay/space/space.component.ngfactory.js");
     /* harmony import */
 
 
-    var _space_space_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _space_space_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./space/space.component */
     "./src/app/overlays/meeting-details-overlay/space/space.component.ts");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
     /* harmony import */
 
 
@@ -10173,69 +10173,11 @@
       data: {}
     });
 
-    function View_MeetingDetailsOverlayComponent_2(_l) {
+    function View_MeetingDetailsOverlayComponent_1(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Occurrence"]))], null, null);
     }
 
-    function View_MeetingDetailsOverlayComponent_1(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
-        var ad = true;
-        var _co = _v.component;
-
-        if ("mousedown" === en) {
-          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).mousestart($event) !== false;
-          ad = pd_0 && ad;
-        }
-
-        if ("touchstart" === en) {
-          var pd_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).touchstart($event) !== false;
-          ad = pd_1 && ad;
-        }
-
-        if ("mouseup" === en) {
-          var pd_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).mouse($event) !== false;
-          ad = pd_2 && ad;
-        }
-
-        if ("touchend" === en) {
-          var pd_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).touch($event) !== false;
-          ad = pd_3 && ad;
-        }
-
-        if ("touchrelease" === en) {
-          var pd_4 = _co.confirmDeleteMeeting() !== false;
-          ad = pd_4 && ad;
-        }
-
-        return ad;
-      }, _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_MatButton_0"], _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, {
-        event: "touchrelease"
-      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_5__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, 0, 7, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "app-icon", [], null, null, null, _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["View_IconComponent_0"], _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["RenderType_IconComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 180224, null, 0, _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_9__["IconComponent"], [], {
-        icon: [0, "icon"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](6, {
-        class: 0,
-        content: 1
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 3, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Delete "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
-        ngIf: [0, "ngIf"]
-      }, null)], function (_ck, _v) {
-        var _co = _v.component;
-
-        var currVal_2 = _ck(_v, 6, 0, "material-icons", "delete");
-
-        _ck(_v, 5, 0, currVal_2);
-
-        var currVal_3 = _co.booking == null ? null : _co.booking.recurrence;
-
-        _ck(_v, 10, 0, currVal_3);
-      }, function (_ck, _v) {
-        var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).disabled || null;
-        var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2)._animationMode === "NoopAnimations";
-
-        _ck(_v, 0, 0, currVal_0, currVal_1);
-      });
-    }
-
-    function View_MeetingDetailsOverlayComponent_3(_l) {
+    function View_MeetingDetailsOverlayComponent_2(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -10285,7 +10227,7 @@
       });
     }
 
-    function View_MeetingDetailsOverlayComponent_4(_l) {
+    function View_MeetingDetailsOverlayComponent_3(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -10335,7 +10277,7 @@
       });
     }
 
-    function View_MeetingDetailsOverlayComponent_7(_l) {
+    function View_MeetingDetailsOverlayComponent_6(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -10376,7 +10318,7 @@
       });
     }
 
-    function View_MeetingDetailsOverlayComponent_10(_l) {
+    function View_MeetingDetailsOverlayComponent_9(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -10417,7 +10359,7 @@
       });
     }
 
-    function View_MeetingDetailsOverlayComponent_11(_l) {
+    function View_MeetingDetailsOverlayComponent_10(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -10458,17 +10400,17 @@
       });
     }
 
-    function View_MeetingDetailsOverlayComponent_9(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 13, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Space Details"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "meeting-details-space", [], null, null, null, _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MeetingDetailsSpaceComponent_0"], _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MeetingDetailsSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 49152, null, 0, _space_space_component__WEBPACK_IMPORTED_MODULE_12__["MeetingDetailsSpaceComponent"], [], {
+    function View_MeetingDetailsOverlayComponent_8(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 13, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Space Details"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "meeting-details-space", [], null, null, null, _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["View_MeetingDetailsSpaceComponent_0"], _space_space_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["RenderType_MeetingDetailsSpaceComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 49152, null, 0, _space_space_component__WEBPACK_IMPORTED_MODULE_11__["MeetingDetailsSpaceComponent"], [], {
         space: [0, "space"],
         booking: [1, "booking"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Catering Details"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "meeting-details-catering", [], null, null, null, _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["View_MeetingDetailsCateringComponent_0"], _catering_catering_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["RenderType_MeetingDetailsCateringComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 49152, null, 0, _catering_catering_component__WEBPACK_IMPORTED_MODULE_14__["MeetingDetailsCateringComponent"], [], {
         catering: [0, "catering"],
         space: [1, "space"],
         booking: [2, "booking"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 2, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 2, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
@@ -10493,8 +10435,8 @@
       }, null);
     }
 
-    function View_MeetingDetailsOverlayComponent_8(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+    function View_MeetingDetailsOverlayComponent_7(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) {
         var currVal_0 = _v.context.$implicit && _v.context.$implicit.id;
@@ -10503,12 +10445,12 @@
       }, null);
     }
 
-    function View_MeetingDetailsOverlayComponent_6(_l) {
+    function View_MeetingDetailsOverlayComponent_5(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 9, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 6, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Event Details"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "meeting-details-display", [], null, null, null, _display_display_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["View_MeetingDetailsDisplayComponent_0"], _display_display_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["RenderType_MeetingDetailsDisplayComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 180224, null, 0, _display_display_component__WEBPACK_IMPORTED_MODULE_16__["MeetingDetailsDisplayComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_17__["AppService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialog"]], {
         event: [0, "event"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
         ngForOf: [0, "ngForOf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) {
         var _co = _v.component;
@@ -10526,27 +10468,27 @@
       }, null);
     }
 
-    function View_MeetingDetailsOverlayComponent_5(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "main", [["class", "custom"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+    function View_MeetingDetailsOverlayComponent_4(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "main", [["class", "custom"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"],
         ngIfElse: [1, "ngIfElse"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = !_co.edit;
 
-        var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 30);
+        var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent, 39);
 
         _ck(_v, 2, 0, currVal_0, currVal_1);
       }, null);
     }
 
-    function View_MeetingDetailsOverlayComponent_12(_l) {
+    function View_MeetingDetailsOverlayComponent_11(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "meeting-details-form", [], null, null, null, _form_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_19__["View_MeetingDetailsFormComponent_0"], _form_form_component_ngfactory__WEBPACK_IMPORTED_MODULE_19__["RenderType_MeetingDetailsFormComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 114688, null, 0, _form_form_component__WEBPACK_IMPORTED_MODULE_20__["MeetingDetailsFormComponent"], [], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
       }, null);
     }
 
-    function View_MeetingDetailsOverlayComponent_13(_l) {
+    function View_MeetingDetailsOverlayComponent_12(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "main", [["class", "custom"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 5, "div", [["class", "no-item"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "spinner", [["type", "circle-ring"]], null, null, null, _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_21__["View_SpinnerComponent_0"], _node_modules_acaprojects_ngx_widgets_acaprojects_ngx_widgets_ngfactory__WEBPACK_IMPORTED_MODULE_21__["RenderType_SpinnerComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 770048, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["SpinnerComponent"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], {
         type: [0, "type"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, ["", ""]))], function (_ck, _v) {
@@ -10562,7 +10504,7 @@
     }
 
     function View_MeetingDetailsOverlayComponent_0(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 25, "header", [["class", "custom"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 8, "div", [["class", "details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 5, "button", [["class", "fixed"], ["mat-dialog-close", ""], ["mat-icon-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null], [1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 34, "header", [["class", "custom"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 8, "div", [["class", "details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 5, "button", [["class", "fixed"], ["mat-dialog-close", ""], ["mat-icon-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null], [1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) {
         var ad = true;
 
         if ("click" === en) {
@@ -10578,31 +10520,68 @@
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](9, {
         class: 0,
         content: 1
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 15, "div", [["class", "actions"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
-        ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
-        ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 8, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 24, "div", [["class", "actions"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 10, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
         if ("mousedown" === en) {
-          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).mousestart($event) !== false;
+          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12).mousestart($event) !== false;
           ad = pd_0 && ad;
         }
 
         if ("touchstart" === en) {
-          var pd_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).touchstart($event) !== false;
+          var pd_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12).touchstart($event) !== false;
           ad = pd_1 && ad;
         }
 
         if ("mouseup" === en) {
-          var pd_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).mouse($event) !== false;
+          var pd_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12).mouse($event) !== false;
           ad = pd_2 && ad;
         }
 
         if ("touchend" === en) {
-          var pd_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 16).touch($event) !== false;
+          var pd_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12).touch($event) !== false;
+          ad = pd_3 && ad;
+        }
+
+        if ("touchrelease" === en) {
+          var pd_4 = _co.confirmDeleteMeeting() !== false;
+          ad = pd_4 && ad;
+        }
+
+        return ad;
+      }, _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_MatButton_0"], _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, {
+        event: "touchrelease"
+      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_5__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, 0, 7, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 2, "app-icon", [], null, null, null, _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["View_IconComponent_0"], _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["RenderType_IconComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 180224, null, 0, _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_9__["IconComponent"], [], {
+        icon: [0, "icon"]
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](17, {
+        class: 0,
+        content: 1
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, null, 3, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Delete "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](24, 0, null, null, 8, "button", [["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "touchrelease"], [null, "mousedown"], [null, "touchstart"], [null, "mouseup"], [null, "touchend"]], function (_v, en, $event) {
+        var ad = true;
+        var _co = _v.component;
+
+        if ("mousedown" === en) {
+          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 25).mousestart($event) !== false;
+          ad = pd_0 && ad;
+        }
+
+        if ("touchstart" === en) {
+          var pd_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 25).touchstart($event) !== false;
+          ad = pd_1 && ad;
+        }
+
+        if ("mouseup" === en) {
+          var pd_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 25).mouse($event) !== false;
+          ad = pd_2 && ad;
+        }
+
+        if ("touchend" === en) {
+          var pd_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 25).touch($event) !== false;
           ad = pd_3 && ad;
         }
 
@@ -10612,19 +10591,19 @@
         }
 
         return ad;
-      }, _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_MatButton_0"], _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, {
+      }, _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_MatButton_0"], _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_3__["ɵj"], [], null, {
         event: "touchrelease"
-      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_5__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, 0, 5, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 2, "app-icon", [], null, null, null, _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["View_IconComponent_0"], _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["RenderType_IconComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 180224, null, 0, _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_9__["IconComponent"], [], {
+      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](26, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_5__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](27, 0, null, 0, 5, "div", [["class", "flex"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](28, 0, null, null, 2, "app-icon", [], null, null, null, _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["View_IconComponent_0"], _shared_components_icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["RenderType_IconComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](29, 180224, null, 0, _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_9__["IconComponent"], [], {
         icon: [0, "icon"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](21, {
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](30, {
         class: 0,
         content: 1
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](22, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Duplicate"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](31, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Duplicate"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](34, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](26, 0, null, null, 3, "mat-dialog-content", [["class", "mat-dialog-content"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 16384, null, 0, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogContent"], [], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](29, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](35, 0, null, null, 3, "mat-dialog-content", [["class", "mat-dialog-content"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](36, 16384, null, 0, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogContent"], [], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](38, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"],
         ngIfElse: [1, "ngIfElse"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["edit_form", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_12)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["load_state", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_13))], function (_ck, _v) {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["edit_form", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_11)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["load_state", 2]], null, 0, null, View_MeetingDetailsOverlayComponent_12))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_4 = "";
 
@@ -10634,27 +10613,31 @@
 
         _ck(_v, 8, 0, currVal_5);
 
-        var currVal_6 = !_co.has_ended;
+        var currVal_8 = _ck(_v, 17, 0, "material-icons", "delete");
 
-        _ck(_v, 12, 0, currVal_6);
+        _ck(_v, 16, 0, currVal_8);
 
-        var currVal_7 = _co.booking == null ? null : _co.booking.recurrence;
+        var currVal_9 = _co.booking == null ? null : _co.booking.recurrence;
 
-        _ck(_v, 14, 0, currVal_7);
+        _ck(_v, 21, 0, currVal_9);
 
-        var currVal_10 = _ck(_v, 21, 0, "material-icons", "add");
+        var currVal_10 = _co.booking == null ? null : _co.booking.recurrence;
 
-        _ck(_v, 20, 0, currVal_10);
+        _ck(_v, 23, 0, currVal_10);
 
-        var currVal_11 = _co.in_progress && _co.has_space;
+        var currVal_13 = _ck(_v, 30, 0, "material-icons", "add");
 
-        _ck(_v, 25, 0, currVal_11);
+        _ck(_v, 29, 0, currVal_13);
 
-        var currVal_12 = !_co.loading;
+        var currVal_14 = _co.in_progress && _co.has_space;
 
-        var currVal_13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 31);
+        _ck(_v, 34, 0, currVal_14);
 
-        _ck(_v, 29, 0, currVal_12, currVal_13);
+        var currVal_15 = !_co.loading;
+
+        var currVal_16 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 40);
+
+        _ck(_v, 38, 0, currVal_15, currVal_16);
       }, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = (_co.booking == null ? null : _co.booking.title) || "<No Title>";
@@ -10667,10 +10650,15 @@
 
         _ck(_v, 4, 0, currVal_1, currVal_2, currVal_3);
 
-        var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 17).disabled || null;
-        var currVal_9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 17)._animationMode === "NoopAnimations";
+        var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 13).disabled || null;
+        var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 13)._animationMode === "NoopAnimations";
 
-        _ck(_v, 15, 0, currVal_8, currVal_9);
+        _ck(_v, 11, 0, currVal_6, currVal_7);
+
+        var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 26).disabled || null;
+        var currVal_12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 26)._animationMode === "NoopAnimations";
+
+        _ck(_v, 24, 0, currVal_11, currVal_12);
       });
     }
 
@@ -40641,7 +40629,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583977793000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1583988546000);
     /***/
   },
 
