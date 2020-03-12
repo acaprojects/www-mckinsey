@@ -3294,6 +3294,10 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
         time.setDisabled(this.duration > 450);
         const start = time.children.find(i => i.key === 'start') || empty;
         const duration = time.children.find(i => i.key === 'duration') || empty;
+        const recurrence_field = this.form_fields
+            .reduce((v, i) => v.concat(i.children && i.children.length ? i.children : [i]), [])
+            .find(i => i.key === 'recurrence');
+        const recurrence_rooms = this.form_fields.find(i => i.key === 'recurrence_rooms');
         this.subscription('all_day_value', all_day.control.valueChanges.subscribe(state => start.setDisabled(state)));
         this.subscription('duration_value', duration.control.valueChanges.subscribe(state => {
             if (state > 450) {
@@ -3303,17 +3307,16 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
         this.subscription('date_value', this.date_field.control.valueChanges.subscribe(state => {
             if (this.recurr_end &&
                 dayjs__WEBPACK_IMPORTED_MODULE_15__(this.recurr_end).isBefore(state, 'd')) {
-                const recurrence_field = this.form_fields
-                    .reduce((v, i) => v.concat(i.children && i.children.length ? i.children : [i]), [])
-                    .find(i => i.key === 'recurrence');
-                const recurrence_rooms_field = this.form_fields.find(i => i.key === 'recurrence_rooms');
                 recurrence_field.setValue({ recurr_period: 0, recurr_end: 0 });
-                recurrence_rooms_field.setValue([]);
+                recurrence_rooms.setValue([]);
             }
         }));
         this.subscription('room_value', this.space_list.control.valueChanges.subscribe(state => {
-            const recurrence_rooms_field = this.form_fields.find(i => i.key === 'recurrence_rooms');
-            recurrence_rooms_field.setValue([]);
+            recurrence_rooms.setValue([]);
+        }));
+        this.subscription('recurrence_value', recurrence_field.control.valueChanges.subscribe(state => {
+            this.space_list.setValue([]);
+            recurrence_rooms.setValue([]);
         }));
         const id = (this.form_fields.find(i => i.key === 'id') || empty).control.value;
         this.id = id || !space ? '10' : '';
