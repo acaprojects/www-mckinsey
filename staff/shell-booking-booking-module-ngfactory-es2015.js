@@ -3256,6 +3256,13 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
             value: booking.booked_by
         }));
         this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
+            key: 'catering_code',
+            label: 'Catering Codes',
+            type: 'custom',
+            hide: true,
+            value: booking.catering_code
+        }));
+        this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
             key: 'recurrence_rooms',
             label: 'Recurrence rooms',
             type: 'custom',
