@@ -3346,13 +3346,13 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
      * Convert form field data to a Booking object
      */
     formToBooking() {
-        console.warn('Form to booking');
         return this.form_fields.reduce((v, i) => {
-            console.log('Field:', i.key, i.control.value);
             if (i.children && i.children.length) {
                 i.children.forEach(j => (v[j.key] = j.control.value));
             }
-            v[i.key] = i.control.value;
+            else {
+                v[i.key] = i.control.value;
+            }
             return v;
         }, {});
     }
