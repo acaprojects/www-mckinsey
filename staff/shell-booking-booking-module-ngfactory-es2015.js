@@ -3038,7 +3038,8 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
         }
         field = this.form_fields.find(i => i.key === 'period_group');
         if (field) {
-            return (field.control.controls.recurrence.value || { period: 0 }).period || 0;
+            return ((field.control.controls.recurrence.value || { period: 0 }).period ||
+                0);
         }
         return 0;
     }
@@ -3263,13 +3264,15 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
             hide: true,
             value: booking.booked_by
         }));
-        this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
-            key: 'catering_code',
-            label: 'Catering Codes',
-            type: 'custom',
-            hide: true,
-            value: booking.catering_code
-        }));
+        if (!this.form_fields.find(i => i.key === 'catering_code')) {
+            this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
+                key: 'catering_code',
+                label: 'Catering Codes',
+                type: 'custom',
+                hide: true,
+                value: booking.catering_code || {}
+            }));
+        }
         this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
             key: 'recurrence_rooms',
             label: 'Recurrence rooms',
@@ -3313,8 +3316,7 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
             }
         }));
         this.subscription('date_value', this.date_field.control.valueChanges.subscribe(state => {
-            if (this.recurr_end &&
-                dayjs__WEBPACK_IMPORTED_MODULE_15__(this.recurr_end).isBefore(state, 'd')) {
+            if (this.recurr_end && dayjs__WEBPACK_IMPORTED_MODULE_15__(this.recurr_end).isBefore(state, 'd')) {
                 recurrence_field.setValue({ recurr_period: 0, recurr_end: 0 });
                 recurrence_rooms.setValue([]);
             }
@@ -3344,21 +3346,23 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
      * Convert form field data to a Booking object
      */
     formToBooking() {
+        console.warn('Form to booking');
         return this.form_fields.reduce((v, i) => {
+            console.log('Field:', i.key, i.control.value);
             if (i.children && i.children.length) {
                 i.children.forEach(j => (v[j.key] = j.control.value));
             }
-            else {
-                v[i.key] = i.control.value;
-            }
+            v[i.key] = i.control.value;
             return v;
         }, {});
     }
     /** Search for available rooms matching the set filters
      * @param data Date selected in unix ms
-    */
+     */
     search(date) {
-        const location_list = localStorage ? localStorage.getItem('STAFF.booking.filters') : this._service.Buildings.current().id;
+        const location_list = localStorage
+            ? localStorage.getItem('STAFF.booking.filters')
+            : this._service.Buildings.current().id;
         const locations = location_list.split(',');
         let room_list = [];
         for (const zone of locations) {
@@ -3373,8 +3377,12 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
         room_list = this._service.Rooms.filterRulesRooms(_shared_utility_class__WEBPACK_IMPORTED_MODULE_14__["Utils"].unique(room_list, 'id'), options, true);
         room_list = room_list.slice(0, Math.min(100, room_list.length));
         const query = {
-            date: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_15__(date).startOf('d').valueOf() : date,
-            duration: this.all_day ? 24 * 60 : (this.duration + (this.needs_catering ? 15 : 0)),
+            date: this.all_day
+                ? dayjs__WEBPACK_IMPORTED_MODULE_15__(date)
+                    .startOf('d')
+                    .valueOf()
+                : date,
+            duration: this.all_day ? 24 * 60 : this.duration + (this.needs_catering ? 15 : 0),
             hide_bookings: true,
             ignore_rooms: room_list.reduce((v, i) => v + (v ? ',' : '') + i.id, ''),
             zone_ids: location_list
@@ -3410,8 +3418,14 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
                         // Filter rooms based on booking rules
                         const options = {
                             user: this._service.Users.current(),
-                            time: this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_15__(date).startOf('d').valueOf() : date,
-                            duration: this.all_day ? 24 * 60 : (this.duration + (this.needs_catering ? 15 : 0)),
+                            time: this.all_day
+                                ? dayjs__WEBPACK_IMPORTED_MODULE_15__(date)
+                                    .startOf('d')
+                                    .valueOf()
+                                : date,
+                            duration: this.all_day
+                                ? 24 * 60
+                                : this.duration + (this.needs_catering ? 15 : 0),
                             recurr_end: this.recurr_end
                         };
                         const list = this._service.Rooms.filterRulesRooms(res, options);
@@ -3419,7 +3433,8 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
                         this.openRoomSelectModal({ date, list })
                             .then((room) => {
                             ref.componentInstance.room$.next({ date, room });
-                        }).catch();
+                        })
+                            .catch();
                     });
                 }
                 else {
@@ -3467,9 +3482,7 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
                 maxWidth: 'calc(100vw - 2em)',
                 width: '32em',
                 data: {
-                    spaces: recurrence ?
-                        recurrence_spaces :
-                        (spaces || empty).control.value || [],
+                    spaces: recurrence ? recurrence_spaces : (spaces || empty).control.value || [],
                     expected_attendees: Object.assign({}, (expected_attendees || empty).control.value),
                     notes: Object.assign({}, (notes || empty).control.value),
                     cost_code: Object.assign({}, (cost_code || empty).control.value),
@@ -3516,6 +3529,7 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
             });
             ref.componentInstance.event.subscribe(event => {
                 if (event.reason === 'done') {
+                    console.log('Cost Codes:', cost_code, ref.componentInstance.cost_code);
                     if (notes) {
                         notes.setValue(ref.componentInstance.notes);
                     }
@@ -3537,10 +3551,12 @@ class BookingMainFlowComponent extends _shared_globals_base_directive__WEBPACK_I
     confirmBooking(check = true) {
         this.timeout('confirm-booking', () => {
             const fields = this.formToBooking();
+            console.log('Fields:', fields.catering_code);
             fields.catering = fields.catering.map((order) => order.toJSON(true));
             const ref = this._dialog.open(_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_11__["BookingDetailsModalComponent"], {
-                data: Object.assign({}, fields, { check }),
+                data: Object.assign({}, fields, { check })
             });
+            console.log('Fields:', fields.catering_code);
             ref.componentInstance.event.subscribe(event => {
                 if (event.reason === 'done') {
                     // Booking completed successfully

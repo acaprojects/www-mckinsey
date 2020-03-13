@@ -7596,13 +7596,17 @@
           hide: true,
           value: booking.booked_by
         }));
-        this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
-          key: 'catering_code',
-          label: 'Catering Codes',
-          type: 'custom',
-          hide: true,
-          value: booking.catering_code
-        }));
+
+        if (!this.form_fields.find(i => i.key === 'catering_code')) {
+          this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
+            key: 'catering_code',
+            label: 'Catering Codes',
+            type: 'custom',
+            hide: true,
+            value: booking.catering_code || {}
+          }));
+        }
+
         this.form_fields.push(new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_2__["ADynamicFormField"]({
           key: 'recurrence_rooms',
           label: 'Recurrence rooms',
@@ -7687,19 +7691,21 @@
 
 
       formToBooking() {
+        console.warn('Form to booking');
         return this.form_fields.reduce((v, i) => {
+          console.log('Field:', i.key, i.control.value);
+
           if (i.children && i.children.length) {
             i.children.forEach(j => v[j.key] = j.control.value);
-          } else {
-            v[i.key] = i.control.value;
           }
 
+          v[i.key] = i.control.value;
           return v;
         }, {});
       }
       /** Search for available rooms matching the set filters
        * @param data Date selected in unix ms
-      */
+       */
 
 
       search(date) {
@@ -7899,6 +7905,8 @@
 
           ref.componentInstance.event.subscribe(event => {
             if (event.reason === 'done') {
+              console.log('Cost Codes:', cost_code, ref.componentInstance.cost_code);
+
               if (notes) {
                 notes.setValue(ref.componentInstance.notes);
               }
@@ -7924,6 +7932,7 @@
       confirmBooking(check = true) {
         this.timeout('confirm-booking', () => {
           const fields = this.formToBooking();
+          console.log('Fields:', fields.catering_code);
           fields.catering = fields.catering.map(order => order.toJSON(true));
 
           const ref = this._dialog.open(_overlays_booking_details_booking_details_component__WEBPACK_IMPORTED_MODULE_11__["BookingDetailsModalComponent"], {
@@ -7932,6 +7941,7 @@
             })
           });
 
+          console.log('Fields:', fields.catering_code);
           ref.componentInstance.event.subscribe(event => {
             if (event.reason === 'done') {
               // Booking completed successfully
