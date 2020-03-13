@@ -10215,15 +10215,20 @@
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](6, {
         class: 0,
         content: 1
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Delete Series"]))], function (_ck, _v) {
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](8, null, ["", " Series"]))], function (_ck, _v) {
         var currVal_2 = _ck(_v, 6, 0, "material-icons", "delete");
 
         _ck(_v, 5, 0, currVal_2);
       }, function (_ck, _v) {
+        var _co = _v.component;
         var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).disabled || null;
         var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2)._animationMode === "NoopAnimations";
 
         _ck(_v, 0, 0, currVal_0, currVal_1);
+
+        var currVal_3 = _co.can_delete ? "Delete" : "Decline";
+
+        _ck(_v, 8, 0, currVal_3);
       });
     }
 
@@ -10557,7 +10562,7 @@
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](17, {
         class: 0,
         content: 1
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, null, 3, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Delete "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, null, 3, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](19, null, ["", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_MeetingDetailsOverlayComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
@@ -10617,27 +10622,27 @@
 
         _ck(_v, 16, 0, currVal_8);
 
-        var currVal_9 = _co.booking == null ? null : _co.booking.recurrence;
-
-        _ck(_v, 21, 0, currVal_9);
-
         var currVal_10 = _co.booking == null ? null : _co.booking.recurrence;
 
-        _ck(_v, 23, 0, currVal_10);
+        _ck(_v, 21, 0, currVal_10);
 
-        var currVal_13 = _ck(_v, 30, 0, "material-icons", "add");
+        var currVal_11 = _co.booking == null ? null : _co.booking.recurrence;
 
-        _ck(_v, 29, 0, currVal_13);
+        _ck(_v, 23, 0, currVal_11);
 
-        var currVal_14 = _co.in_progress && _co.has_space;
+        var currVal_14 = _ck(_v, 30, 0, "material-icons", "add");
 
-        _ck(_v, 34, 0, currVal_14);
+        _ck(_v, 29, 0, currVal_14);
 
-        var currVal_15 = !_co.loading;
+        var currVal_15 = _co.in_progress && _co.has_space;
 
-        var currVal_16 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 40);
+        _ck(_v, 34, 0, currVal_15);
 
-        _ck(_v, 38, 0, currVal_15, currVal_16);
+        var currVal_16 = !_co.loading;
+
+        var currVal_17 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 40);
+
+        _ck(_v, 38, 0, currVal_16, currVal_17);
       }, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = (_co.booking == null ? null : _co.booking.title) || "<No Title>";
@@ -10655,10 +10660,14 @@
 
         _ck(_v, 11, 0, currVal_6, currVal_7);
 
-        var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 26).disabled || null;
-        var currVal_12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 26)._animationMode === "NoopAnimations";
+        var currVal_9 = _co.can_delete ? "Delete" : "Decline";
 
-        _ck(_v, 24, 0, currVal_11, currVal_12);
+        _ck(_v, 19, 0, currVal_9);
+
+        var currVal_12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 26).disabled || null;
+        var currVal_13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 26)._animationMode === "NoopAnimations";
+
+        _ck(_v, 24, 0, currVal_12, currVal_13);
       });
     }
 
@@ -10756,6 +10765,14 @@
 
         this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
+      /** Whether user can delete the booking */
+
+
+      get can_delete() {
+        const current = this._service.Users.current();
+
+        return this._data.as_delegate || this.booking.organiser.email === current.email;
+      }
       /** Active booking to display */
 
 
@@ -10852,13 +10869,13 @@
       confirmDeleteMeeting() {
         const ref = this._dialog.open(_confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmModalComponent"], Object.assign({}, _confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_4__["CONFIRM_METADATA"], {
           data: {
-            title: 'Delete meeting',
+            title: "".concat(this.can_delete ? 'Delete' : 'Decline', " meeting"),
             icon: {
               type: 'icon',
               class: 'material-icons',
-              content: 'delete'
+              content: "".concat(this.can_delete ? 'delete' : 'event_busy')
             },
-            content: "\n                        <p>Are you sure you want to delete this meeting on ".concat(this.booking.display.long_date).concat(this.booking.recurrence ? ' from your series' : '', "?</p>\n                        <p>All attendees will be notified.</p>\n                    ")
+            content: "\n                        <p>Are you sure you want to ".concat(this.can_delete ? 'delete' : 'decline', " this meeting on ").concat(this.booking.display.long_date).concat(this.booking.recurrence ? ' from your series' : '', "?</p>\n                        <p>All attendees will be notified.</p>\n                    ")
           }
         }));
 
@@ -10880,13 +10897,13 @@
 
         const ref = this._dialog.open(_confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmModalComponent"], Object.assign({}, _confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_4__["CONFIRM_METADATA"], {
           data: {
-            title: 'Delete series',
+            title: "".concat(this.can_delete ? 'Delete' : 'Decline', " series"),
             icon: {
               type: 'icon',
               class: 'material-icons',
-              content: 'delete'
+              content: "".concat(this.can_delete ? 'delete' : 'event_busy')
             },
-            content: "\n                        <p>All bookings in the series will be deleted. Are you sure you want to delete the series?</p>\n                        <p>All attendees will be notified.</p>\n                    "
+            content: "\n                        <p>All bookings in the series will be ".concat(this.can_delete ? 'delete' : 'decline', "d.\n                        Are you sure you want to ").concat(this.can_delete ? 'delete' : 'decline', " the series?</p>\n                        <p>All attendees will be notified.</p>\n                    ")
           }
         }));
 
@@ -11034,10 +11051,17 @@
 
 
       deleteMeeting() {
-        this.loading = 'Deleting meeting...';
+        this.loading = "".concat(this.can_delete ? 'Deleting' : 'Declining', " meeting...");
+        const query = {};
 
-        this._service.Bookings.deleteItem(this.booking.id).then(() => {
-          this._service.notifySuccess('Successfully deleted meeting.');
+        if (this._data.as_delegate) {
+          query.delegate = this._data.delegate;
+        }
+
+        console.log('Delete:', this.can_delete, query);
+
+        this._service.Bookings.deleteItem(this.booking.id, query).then(() => {
+          this._service.notifySuccess("Successfully ".concat(this.can_delete ? 'deleted' : 'declined', " meeting."));
 
           this.loading = null;
 
@@ -11045,7 +11069,7 @@
         }, err => {
           this.loading = null;
 
-          this._service.notifyError("Error deleting meeting. Error: ".concat(err.message || err));
+          this._service.notifyError("Error ".concat(this.can_delete ? 'delet' : 'declin', "ing meeting. Error: ").concat(err.message || err));
         });
       }
       /** Delete series */
@@ -11055,7 +11079,7 @@
         this.loading = 'Deleting series...';
 
         this._service.Bookings.deleteItem(this.booking.recurrence.series_id).then(() => {
-          this._service.notifySuccess('Successfully deleted series.');
+          this._service.notifySuccess("Successfully ".concat(this.can_delete ? 'deleted' : 'declined', " series."));
 
           this.loading = null;
 
@@ -11063,7 +11087,7 @@
         }, err => {
           this.loading = null;
 
-          this._service.notifyError("Error deleting series. Error: ".concat(err.message || err));
+          this._service.notifyError("Error ".concat(this.can_delete ? 'deleting' : 'declining', " series. Error: ").concat(err.message || err));
         });
       }
 
@@ -40630,7 +40654,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584062288000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584076179000);
     /***/
   },
 
