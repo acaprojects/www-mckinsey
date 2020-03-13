@@ -4020,7 +4020,7 @@ class MeetingDetailsDisplayComponent extends _shared_globals_base_directive__WEB
     get has_catering() {
         return this.event &&
             this.event.catering &&
-            this.event.catering.length >= 0;
+            this.event.catering.length > 0;
     }
     /** Display string for the event's duration */
     get duration() {
@@ -19482,7 +19482,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584052470000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584062288000);
 
 
 /***/ }),
