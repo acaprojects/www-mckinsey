@@ -13128,8 +13128,13 @@
         var _co = _v.component;
 
         if ("modelChange" === en) {
-          var pd_0 = _co.updateList() !== false;
+          var pd_0 = (_co.active_building = $event) !== false;
           ad = pd_0 && ad;
+        }
+
+        if ("modelChange" === en) {
+          var pd_1 = _co.updateList() !== false;
+          ad = pd_1 && ad;
         }
 
         return ad;
@@ -13147,8 +13152,13 @@
         var _co = _v.component;
 
         if ("modelChange" === en) {
-          var pd_0 = _co.updateList() !== false;
+          var pd_0 = (_co.active_type = $event) !== false;
           ad = pd_0 && ad;
+        }
+
+        if ("modelChange" === en) {
+          var pd_1 = _co.updateList() !== false;
+          ad = pd_1 && ad;
         }
 
         return ad;
@@ -40653,7 +40663,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584266765000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584315159000);
     /***/
   },
 
