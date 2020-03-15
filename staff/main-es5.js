@@ -18385,7 +18385,7 @@
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
 
-        if (form.id) {
+        if (form.id && form.id !== 'map-booking' && form.id !== 'ad-hoc') {
           if (form.room instanceof Array) {
             form.room.forEach(room => room.book_type = 'Booking');
           } else {
@@ -40654,7 +40654,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584105601000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584263103000);
     /***/
   },
 
@@ -48968,10 +48968,10 @@
 
 
       get has_requested() {
-        const spaces = this.recurrence_rooms ? this.recurrence_rooms.map(i => i.room) : this.spaces;
-        return spaces.reduce((a, v) => {
-          const status = this._data.approval_status ? this._data.approval_status[v.email] || '' : '';
-          return a || v.book_type === 'Request' || status.indexOf('tentative') !== -1;
+        const spaces = this.recurrence_rooms && this.recurrence_rooms.length ? this.recurrence_rooms.map(i => i.room) : this.spaces;
+        return spaces.reduce((by_request, space) => {
+          const status = this._data.approval_status ? this._data.approval_status[space.email] || '' : '';
+          return by_request || space.book_type === 'Request' || status.indexOf('tentative') !== -1;
         }, false);
       }
       /** Whether availability has to be checked */
