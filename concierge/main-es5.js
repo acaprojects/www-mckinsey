@@ -22852,7 +22852,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584314749000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584315414000);
 
 
 /***/ }),
@@ -27099,7 +27099,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CateringItemModalComponent", function() { return CateringItemModalComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/app.service */ "./src/app/services/app.service.ts");
-/* harmony import */ var _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+/* harmony import */ var _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
 /* harmony import */ var _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -27199,7 +27199,7 @@ var CateringItemModalComponent = /** @class */ (function (_super) {
             this.form.zones = [bld.id];
             this.form.categories = [this.category.id];
             this.loading = true;
-            var data = new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_2__["CateringCategory"](this.form).toJSON();
+            var data = new _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_2__["CateringItem"](this.form).toJSON();
             var request = this.form.id
                 ? this._service.CateringItems.updateItem(this.form.id, data)
                 : this._service.CateringItems.add(data);
