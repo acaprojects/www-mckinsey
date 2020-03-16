@@ -1572,6 +1572,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
                             this.showCateringDetails(booking, order);
                         }
                     }
+                    this.orders = _shared_utility_class__WEBPACK_IMPORTED_MODULE_7__["Utils"].unique(this.orders, 'id');
                     this.displayChange(this.show_selection);
                     this.loading = false;
                 }, e => {
