@@ -12696,6 +12696,9 @@ class CateringEditListItemComponent extends _globals_base_directive__WEBPACK_IMP
             }
             const item = items.find(item => item.id === new_item.id);
             item.addToOrder();
+            if (item.package && item.amount) {
+                this.show_list = true;
+            }
             this.items.setValue(items);
             this.amountChange.emit(item.amount);
         }
@@ -12712,6 +12715,7 @@ class CateringEditListItemComponent extends _globals_base_directive__WEBPACK_IMP
                 item.removeFromOrder();
                 if (item.amount === 0) {
                     items.splice(items.indexOf(item), 1);
+                    this.show_list = false;
                     this.items.setValue(items);
                 }
                 this.updateAmounts();
@@ -19056,7 +19060,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584315414000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584334921000);
 
 
 /***/ }),
@@ -22241,6 +22245,7 @@ class CateringGroupModalComponent extends _shared_globals_base_directive__WEBPAC
             this.form.parent_categories = [this.category.id];
             this.loading = true;
             const data = new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](this.form).toJSON();
+            console.log('Form:', this.form, data);
             const request = this.form.id
                 ? this._service.CateringCategories.updateItem(this.form.id, data)
                 : this._service.CateringCategories.add(data);
@@ -22614,6 +22619,7 @@ class CateringItemModalComponent extends _shared_globals_base_directive__WEBPACK
             this.form.categories = [this.category.id];
             this.loading = true;
             const data = new _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_2__["CateringItem"](this.form).toJSON();
+            console.log('Form:', this.form, data);
             const request = this.form.id
                 ? this._service.CateringItems.updateItem(this.form.id, data)
                 : this._service.CateringItems.add(data);

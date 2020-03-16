@@ -15479,6 +15479,9 @@ var CateringEditListItemComponent = /** @class */ (function (_super) {
             }
             var item = items.find(function (item) { return item.id === new_item.id; });
             item.addToOrder();
+            if (item.package && item.amount) {
+                this.show_list = true;
+            }
             this.items.setValue(items);
             this.amountChange.emit(item.amount);
         }
@@ -15495,6 +15498,7 @@ var CateringEditListItemComponent = /** @class */ (function (_super) {
                 item.removeFromOrder();
                 if (item.amount === 0) {
                     items.splice(items.indexOf(item), 1);
+                    this.show_list = false;
                     this.items.setValue(items);
                 }
                 this.updateAmounts();
@@ -22852,7 +22856,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584315414000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584334921000);
 
 
 /***/ }),
@@ -26777,6 +26781,7 @@ var CateringGroupModalComponent = /** @class */ (function (_super) {
             this.form.parent_categories = [this.category.id];
             this.loading = true;
             var data = new _services_data_catering_catering_category_class__WEBPACK_IMPORTED_MODULE_4__["CateringCategory"](this.form).toJSON();
+            console.log('Form:', this.form, data);
             var request = this.form.id
                 ? this._service.CateringCategories.updateItem(this.form.id, data)
                 : this._service.CateringCategories.add(data);
@@ -27200,6 +27205,7 @@ var CateringItemModalComponent = /** @class */ (function (_super) {
             this.form.categories = [this.category.id];
             this.loading = true;
             var data = new _services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_2__["CateringItem"](this.form).toJSON();
+            console.log('Form:', this.form, data);
             var request = this.form.id
                 ? this._service.CateringItems.updateItem(this.form.id, data)
                 : this._service.CateringItems.add(data);
