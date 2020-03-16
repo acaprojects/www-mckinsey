@@ -9076,11 +9076,19 @@
     __webpack_require__.d(__webpack_exports__, "MeetingDetailsCateringComponent", function () {
       return MeetingDetailsCateringComponent;
     });
+    /* harmony import */
+
+
+    var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ../../../services/data/catering/catering-order.class */
+    "./src/app/services/data/catering/catering-order.class.ts");
 
     class MeetingDetailsCateringComponent {
       /** List of orders for the active space */
       get orders() {
-        return (this.catering || []).filter(order => order.location_id === this.space.id);
+        return (this.catering || []).filter(order => order.location_id === this.space.id).map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_0__["CateringOrder"](Object.assign({}, order, {
+          booking_date: this.booking.date
+        })));
       }
       /** Charge code for orders in the active space */
 
@@ -40663,7 +40671,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584315159000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584340816000);
     /***/
   },
 

@@ -946,11 +946,12 @@ class BookingMainFlowCateringComponent extends _shared_globals_base_directive__W
             }
             this.loadMenu();
         }
-        if (changes.date || changes.duration) {
-            this.delivery_times = this.generateAvailableTimes();
-        }
         if (changes.order && this.order) {
             this.order_form = Object(_services_data_catering_catering_utilities__WEBPACK_IMPORTED_MODULE_6__["generateCateringOrderFormFields"])(this.order);
+        }
+        if (changes.date || changes.duration) {
+            this.delivery_times = this.generateAvailableTimes();
+            this.order_form.controls.delivery_time.setValue(this.delivery_times[0].id);
         }
     }
     /**
@@ -1031,7 +1032,10 @@ class BookingMainFlowCateringComponent extends _shared_globals_base_directive__W
         const time_list = [];
         if (this.date) {
             let start = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.date).startOf('m');
-            const old_start = start;
+            let old_start = start;
+            if (this.all_day) {
+                old_start = old_start.startOf('d');
+            }
             let end = start.add(this.all_day ? 24 * 60 : this.duration, 'm');
             if (start.isBefore(start.hour(7).minute(0), 'm') || this.all_day) {
                 start = start.hour(7).minute(0);
