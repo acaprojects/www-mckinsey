@@ -1794,6 +1794,7 @@ var OrdersComponent = /** @class */ (function (_super) {
                             _this.showCateringDetails(booking, order_1);
                         }
                     }
+                    _this.orders = _shared_utility_class__WEBPACK_IMPORTED_MODULE_7__["Utils"].unique(_this.orders, 'id');
                     _this.displayChange(_this.show_selection);
                     _this.loading = false;
                 }, function (e) {
