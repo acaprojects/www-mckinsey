@@ -7933,16 +7933,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_utility_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/utility.class */ "./src/app/shared/utility.class.ts");
 /* harmony import */ var _shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/booking.utilities */ "./src/app/shared/utilities/booking.utilities.ts");
 /* harmony import */ var _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /*
  * @Author: Alex Sorafumo
  * @Date: 2017-06-05 12:39:28
  * @Last Modified by: Alex Sorafumo
  * @Last Modified time: 2018-06-19 13:56:07
  */
+
 
 
 
@@ -7997,21 +7999,21 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (!room) {
             return;
         }
-        const today = dayjs__WEBPACK_IMPORTED_MODULE_5__();
+        const today = dayjs__WEBPACK_IMPORTED_MODULE_6__();
         today
             .minute(Math.ceil(today.minute() / 5) * 5).startOf('m');
-        const bookings = room.bookings.filter(b => dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).isSame(today, 'd'));
+        const bookings = room.bookings.filter(b => dayjs__WEBPACK_IMPORTED_MODULE_6__(b.date).isSame(today, 'd'));
         let block = this.getNextFreeBlock(bookings);
         // In case the
-        if (block && dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).diff(today, 'm') < 30) {
+        if (block && dayjs__WEBPACK_IMPORTED_MODULE_6__(block.end).diff(today, 'm') < 30) {
             block = this.getNextFreeBlock(bookings, block.end);
         }
         const start = !block || block.start < 0 ? today.valueOf() : Math.max(today.valueOf(), block.start);
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(start);
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(start);
         date.minute(Math.ceil(date.minute() / 5) * 5);
         let duration = 60;
         if (block && block.end >= 0) {
-            const length = Math.floor(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).diff(date, 'm'));
+            const length = Math.floor(dayjs__WEBPACK_IMPORTED_MODULE_6__(block.end).diff(date, 'm'));
             if (length < 45) {
                 duration = 30;
             }
@@ -8048,7 +8050,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             if (this.get('new_booking').state !== 'idle') {
                 return reject('Another booking is in progress');
             }
-            const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
+            const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(item.date);
             const ref = this.parent.confirm(this.confirmSettings('add', item), event => {
                 if (event.reason === 'done') {
                     this.subjects.new_booking.next({ state: 'processing' });
@@ -8060,7 +8062,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                             localStorage.removeItem('STAFF.booking_form');
                             localStorage.setItem('STAFF.last_booking', booking || JSON.stringify(item));
                         }
-                        this.timeout(`${dayjs__WEBPACK_IMPORTED_MODULE_5__().unix()}`, () => this.set('new_booking', { state: 'idle' }));
+                        this.timeout(`${dayjs__WEBPACK_IMPORTED_MODULE_6__().unix()}`, () => this.set('new_booking', { state: 'idle' }));
                     }, e => {
                         this.set('new_booking', { state: 'error', value: e });
                         this.timeout('new_error', () => this.set('new_booking', { state: 'idle' }));
@@ -8092,7 +8094,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
                         }
                         this.parent.Rooms.replaceBooking(new_item);
                         this.query();
-                        this.timeout(`${dayjs__WEBPACK_IMPORTED_MODULE_5__().unix()}`, () => this.set('new_booking', { state: 'idle' }));
+                        this.timeout(`${dayjs__WEBPACK_IMPORTED_MODULE_6__().unix()}`, () => this.set('new_booking', { state: 'idle' }));
                     }, e => {
                         this.set('update_booking', { state: 'error', value: e });
                         this.timeout('update_error', () => this.set('update_booking', { state: 'idle' }));
@@ -8128,10 +8130,10 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         }
         let conflict_count = 0;
         for (const bkn of list) {
-            const bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_5__(bkn.date);
+            const bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_6__(bkn.date);
             const bkn_end = bkn_start.add(bkn.duration, 'm');
             for (const cmp of comparison) {
-                const cmp_start = dayjs__WEBPACK_IMPORTED_MODULE_5__(cmp.date);
+                const cmp_start = dayjs__WEBPACK_IMPORTED_MODULE_6__(cmp.date);
                 const cmp_end = cmp_start.add(cmp.duration, 'm');
                 if ((bkn_start.isAfter(cmp_start, 's') && bkn_start.isBefore(cmp_end, 'm')) ||
                     (bkn_end.isAfter(cmp_start, 'm') && bkn_end.isBefore(cmp_end, 's'))) {
@@ -8152,18 +8154,18 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             return [
                 {
                     start: 0,
-                    end: dayjs__WEBPACK_IMPORTED_MODULE_5__()
+                    end: dayjs__WEBPACK_IMPORTED_MODULE_6__()
                         .startOf('m')
                         .valueOf() * 10
                 }
             ];
         }
         const slots = [];
-        let start = dayjs__WEBPACK_IMPORTED_MODULE_5__(0);
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_6__(0);
         list.sort((a, b) => a.date - b.date);
         for (const booking of list) {
-            const bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_5__(booking.date).subtract(booking.setup, 's');
-            const bkn_end = dayjs__WEBPACK_IMPORTED_MODULE_5__(booking.date)
+            const bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_6__(booking.date).subtract(booking.setup, 's');
+            const bkn_end = dayjs__WEBPACK_IMPORTED_MODULE_6__(booking.date)
                 .add(booking.duration, 'm')
                 .add(booking.breakdown, 's');
             if (bkn_start.isAfter(start.subtract(1, 'm'), 'm')) {
@@ -8176,7 +8178,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         }
         slots.push({
             start: start.valueOf(),
-            end: dayjs__WEBPACK_IMPORTED_MODULE_5__()
+            end: dayjs__WEBPACK_IMPORTED_MODULE_6__()
                 .startOf('m')
                 .valueOf() * 10
         });
@@ -8188,15 +8190,15 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
      * @param gap Minimum size for the available block. Defaults to `30` minutes
      * @param time Time to check is free. Defaults to the current time
      */
-    getNextFreeBlock(list, date = dayjs__WEBPACK_IMPORTED_MODULE_5__().valueOf(), min_size = 30) {
+    getNextFreeBlock(list, date = dayjs__WEBPACK_IMPORTED_MODULE_6__().valueOf(), min_size = 30) {
         const slots = this.getFreeSlots(list, min_size);
-        const today = dayjs__WEBPACK_IMPORTED_MODULE_5__(date);
+        const today = dayjs__WEBPACK_IMPORTED_MODULE_6__(date);
         const time = today
             .startOf('m')
             .second(1);
         for (const block of slots) {
-            const start = dayjs__WEBPACK_IMPORTED_MODULE_5__(block.start).startOf('m');
-            const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).startOf('m');
+            const start = dayjs__WEBPACK_IMPORTED_MODULE_6__(block.start).startOf('m');
+            const end = dayjs__WEBPACK_IMPORTED_MODULE_6__(block.end).startOf('m');
             if (start.isAfter(time, 's')) {
                 return block;
             }
@@ -8215,12 +8217,13 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
      */
     processItem(raw_item) {
         const user = this.parent.Users.current();
-        const start = dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
-        const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_6__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
+        let end = dayjs__WEBPACK_IMPORTED_MODULE_6__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
         const has_end = raw_item.end_epoch * 1000 || raw_item.end || raw_item.End;
         const duration = Math.abs(start.diff(end, 'm'));
-        if (raw_item.all_day) {
-            end.endOf('d');
+        if (raw_item.all_day || duration > 23 * 60) {
+            start = start.startOf('d');
+            end = end.endOf('d');
         }
         const item = {
             id: raw_item.id,
@@ -8260,15 +8263,15 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             booking_type: { id: raw_item.booking_type },
             notify_users: raw_item.notify_users,
             all_day: !!raw_item.all_day || duration > 12 * 60,
-            catering: Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["processCateringData"])(raw_item.catering || []),
+            catering: Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["processCateringData"])(raw_item.catering || [], start.valueOf()),
             needs_catering: raw_item.needs_catering,
             setup: raw_item.setup || 0,
             breakdown: raw_item.breakdown || 0,
             spaces: typeof raw_item.room_id === 'string' ? [raw_item.room_id] : raw_item.room_id,
             recurrence: raw_item.seriesMasterId && raw_item.recurrence ? {
                 period: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["RECURRENCE_PERIODS"].map(i => i.toLowerCase()).indexOf(raw_item.recurrence.period),
-                end: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.end * 1000).valueOf(),
-                start: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.start * 1000).valueOf(),
+                end: dayjs__WEBPACK_IMPORTED_MODULE_6__(raw_item.recurrence.end * 1000).valueOf(),
+                start: dayjs__WEBPACK_IMPORTED_MODULE_6__(raw_item.recurrence.start * 1000).valueOf(),
                 series_id: raw_item.seriesMasterId
             } : null
         };
@@ -8296,12 +8299,12 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         this.processRoom(item, raw_item);
         Object.defineProperty(item, 'status', {
             get: () => {
-                const now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
+                const now = dayjs__WEBPACK_IMPORTED_MODULE_6__();
                 if (item._status && item._updated < now.valueOf() - 60 * 1000) {
                     item._status = null;
                 }
                 if (!item._status) {
-                    const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
+                    const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(item.date);
                     const upcoming = date.subtract(15, 'm');
                     const ending = date.add(item.duration, 'm');
                     item._status = now.isBefore(upcoming, 'm')
@@ -8420,11 +8423,11 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             form.room = {};
         }
         if (form.duration > 720 && form.all_day) {
-            form.date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date)
+            form.date = dayjs__WEBPACK_IMPORTED_MODULE_6__(form.date)
                 .startOf('d')
                 .valueOf();
         }
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date).startOf('m');
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(form.date).startOf('m');
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
         if (form.id && form.id !== 'map-booking' && form.id !== 'ad-hoc') {
@@ -8495,7 +8498,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             loan_items: form.loan_items || '',
             private: form.private || false,
             parking: form.parking || false,
-            catering: (form.catering || []).filter(order => (form.room instanceof Array ? form.room : [form.room]).find(room => room.id === order.location_id)),
+            catering: (form.catering || []).filter(order => (form.room instanceof Array ? form.room : [form.room]).find(room => room.id === order.location_id)).map(i => new _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_5__["CateringOrder"](Object.assign({}, i, { booking_date: date.valueOf() }))),
             equipment_code: form.equipment_code,
             booking_type: (form.booking_type ? form.booking_type.id : null) || 'internal',
             notify_users: form.notify_users,
@@ -8509,7 +8512,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         };
         if (item.recurrence_rooms) {
             request.conflicts = (form.recurrence_rooms || [])
-                .map(i => ({ date: dayjs__WEBPACK_IMPORTED_MODULE_5__(i.date).unix(), room: i.room.email || i.room.id }))
+                .map(i => ({ date: dayjs__WEBPACK_IMPORTED_MODULE_6__(i.date).unix(), room: i.room.email || i.room.id }))
                 .filter(i => i.room !== room_id[0]);
         }
         if (request.catering && item.catering_code) {
@@ -8520,7 +8523,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             });
         }
         const user = this.parent.Users.current();
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_5__().startOf('s');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('s');
         if (item.equipment) {
             for (const rm_id of Object.keys(item.equipment)) {
                 request.notes.push({
@@ -8582,7 +8585,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         if (item.recurrence && item.recurrence.period) {
             request.recurr = {
                 period: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["RECURRENCE_PERIODS"].map(i => i.toLowerCase())[item.recurrence.period],
-                end: dayjs__WEBPACK_IMPORTED_MODULE_5__(item.recurrence.end).unix()
+                end: dayjs__WEBPACK_IMPORTED_MODULE_6__(item.recurrence.end).unix()
             };
         }
         return request;
@@ -8592,7 +8595,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         const timeline = this.get('timeline') || {};
         // Add bookings to timeline
         for (const item of list) {
-            let date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
+            let date = dayjs__WEBPACK_IMPORTED_MODULE_6__(item.date);
             const end = date.add(item.duration, 'm');
             for (; date.isBefore(end, 'm'); date = date.add(1, 'd')) {
                 const day = timeline[date.format('YYYY/MM/DD')] || [];
@@ -8624,7 +8627,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         // Also remove booking from timeline
         const timeline = this.get('timeline') || {};
         for (const item of list) {
-            const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
+            const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(item.date);
             const day = timeline[date.format('YYYY/MM/DD')] || [];
             for (const event of day) {
                 if ((item.id && event.id === item.id) || item.date === event.date) {
@@ -8640,12 +8643,12 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             super.clear(fields);
         }
         else {
-            let start = dayjs__WEBPACK_IMPORTED_MODULE_5__(fields.from).startOf('d');
-            const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(fields.to || fields.from);
+            let start = dayjs__WEBPACK_IMPORTED_MODULE_6__(fields.from).startOf('d');
+            const end = dayjs__WEBPACK_IMPORTED_MODULE_6__(fields.to || fields.from);
             // Clear period in list
             const list = this.get('list') || [];
-            this.set('list', list.filter(i => !(dayjs__WEBPACK_IMPORTED_MODULE_5__(i.date).isAfter(start.subtract(1, 's'), 's') &&
-                dayjs__WEBPACK_IMPORTED_MODULE_5__(i.date).isBefore(end, 'm'))));
+            this.set('list', list.filter(i => !(dayjs__WEBPACK_IMPORTED_MODULE_6__(i.date).isAfter(start.subtract(1, 's'), 's') &&
+                dayjs__WEBPACK_IMPORTED_MODULE_6__(i.date).isBefore(end, 'm'))));
             // Clear period in timeline
             const timeline = this.get('timeline') || {};
             for (; start.isBefore(end, 'm'); start = start.add(1, 'd')) {
@@ -8659,7 +8662,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
     }
     confirmSettings(key, fields = {}) {
         const settings = super.confirmSettings(key, fields);
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(fields.date || '');
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(fields.date || '');
         const user = this.parent.Users.current();
         const rm = fields.room
             ? fields.room instanceof Array
@@ -8701,7 +8704,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         return settings;
     }
 }
-BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"])); }, token: BookingsService, providedIn: "root" });
+BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"])); }, token: BookingsService, providedIn: "root" });
 
 
 /***/ }),
@@ -19505,7 +19508,7 @@ const version = '0.17.0';
 /** Version number of the base application */
 const core_version = '0.17.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584340816000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584411113000);
 
 
 /***/ }),
@@ -21699,13 +21702,15 @@ function checkRules(options) {
         let matches = 0;
         for (const key of Object.keys(options.rules)) {
             let counter = 0;
-            const condition = options.rules[key] instanceof Array ? options.rules[key] : [options.rules[key]];
+            const condition = options.rules[key] instanceof Array
+                ? options.rules[key]
+                : [options.rules[key]];
             switch (key) {
                 case 'group':
                 case 'groups':
                     if (options.user && options.user.groups) {
                         counter = 0;
-                        condition.forEach(i => (options.user.groups.find(j => j === i) ? counter++ : null));
+                        condition.forEach(i => options.user.groups.find(j => j === i) ? counter++ : null);
                         if (counter > 0) {
                             matches++;
                         }
@@ -21715,7 +21720,7 @@ function checkRules(options) {
                 case 'locations':
                     if (options.user && options.user.location) {
                         counter = 0;
-                        condition.forEach(i => ((options.user.location.name || '').indexOf(i) >= 0 ? counter++ : null));
+                        condition.forEach(i => (options.user.location.name || '').indexOf(i) >= 0 ? counter++ : null);
                         if (counter >= options.rules[key].length) {
                             matches++;
                         }
@@ -21804,7 +21809,9 @@ function generateBookingFormMetadata(booking, field_data, service) {
     field_data = field_data.map(i => (Object.assign({}, i, { children: i.children ? i.children.map(i => (Object.assign({}, i))) : [] })));
     const validators = {
         date: [_validation_utilities__WEBPACK_IMPORTED_MODULE_2__["validateDate"]],
-        attendees: [Object(_validation_utilities__WEBPACK_IMPORTED_MODULE_2__["buildValidateAttendees"])(booking.organiser, service.Settings.get('min_attendees'))],
+        attendees: [
+            Object(_validation_utilities__WEBPACK_IMPORTED_MODULE_2__["buildValidateAttendees"])(booking.organiser, service.Settings.get('min_attendees'))
+        ],
         terms: [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["Validators"].requiredTrue]
     };
     const formatters = {
@@ -21814,11 +21821,11 @@ function generateBookingFormMetadata(booking, field_data, service) {
         space: _formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatSpaces"],
         room: _formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatSpaces"],
         recurrence: _formatting_utilities__WEBPACK_IMPORTED_MODULE_3__["formatRecurrence"],
-        host: (host) => host ? host.name : ''
+        host: host => (host ? host.name : '')
     };
     const custom_elements = _globals_custom_field_register__WEBPACK_IMPORTED_MODULE_4__["CUSTOM_FIELD_REGISTER"];
     let today = dayjs__WEBPACK_IMPORTED_MODULE_5__(booking.date).startOf('m');
-    if (!booking.date && (today.minute() % 5) === 0) {
+    if (!booking.date && today.minute() % 5 === 0) {
         today = today.minute(today.minute() + 1);
     }
     today = today.minute(Math.ceil(today.minute() / 5) * 5);
@@ -21848,9 +21855,7 @@ function generateBookingFormMetadata(booking, field_data, service) {
             settings: Object.assign({}, field.settings, { readonly: field.readonly }),
             metadata: Object.assign({}, field.metadata, { service: service.Bookings }),
             attributes: { flex: field.flex },
-            children: field.children
-                ? field.children.map(process_field)
-                : null
+            children: field.children ? field.children.map(process_field) : null
         };
         return f;
     };
@@ -21866,20 +21871,20 @@ function generateBookingFormMetadata(booking, field_data, service) {
             host.readonly = true;
         }
     }
-    return field_data
+    return (field_data
         // .filter(i => (booking.id ? !i.no_edit : true))
         .map(process_field)
-        .map(f => new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"](f));
+        .map(f => new _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_1__["ADynamicFormField"](f)));
 }
 /**
  * Process catering data from the server into the local data format
  * @param catering
  */
-function processCateringData(catering) {
+function processCateringData(catering, date) {
     if (catering instanceof Array) {
-        return catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](order));
+        return catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](Object.assign({}, order, { booking_date: date })));
     }
-    return Object.keys(catering).map(loc_id => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](catering[loc_id]));
+    return Object.keys(catering).map(loc_id => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](Object.assign({}, catering[loc_id], { booking_date: date })));
 }
 
 
@@ -22813,12 +22818,14 @@ class BookingDetailsModalComponent extends _shared_globals_base_directive__WEBPA
      * Check that the booking has a room that isn't auto-approved and booking status is tentative
      */
     get has_requested() {
-        const spaces = this.recurrence_rooms && this.recurrence_rooms.length ? this.recurrence_rooms.map(i => i.room) : this.spaces;
+        const spaces = this.recurrence_rooms && this.recurrence_rooms.length
+            ? this.recurrence_rooms.map(i => i.room)
+            : this.spaces;
         return spaces.reduce((by_request, space) => {
             const status = this._data.approval_status
                 ? this._data.approval_status[space.email] || ''
                 : '';
-            return by_request || space.book_type === 'Request' || status.indexOf('tentative') !== -1;
+            return (by_request || space.book_type === 'Request' || status.indexOf('tentative') !== -1);
         }, false);
     }
     /** Whether availability has to be checked */
@@ -22905,7 +22912,7 @@ class BookingDetailsModalComponent extends _shared_globals_base_directive__WEBPA
         if (!this._data.catering) {
             return [];
         }
-        return this._data.catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_2__["CateringOrder"](order));
+        return this._data.catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_2__["CateringOrder"](Object.assign({}, order, { booking_date: this._data.date })));
     }
     /** Total number of catering items in booking */
     get item_count() {

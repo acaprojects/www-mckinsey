@@ -4225,11 +4225,6 @@
         if (!this.order) return 'No Delivery Time';
         const duration = (this.order.changes ? this.order.changes.delivery_time : null) || this.order.delivery_time;
         let date = dayjs__WEBPACK_IMPORTED_MODULE_3__(this.order.booking_date);
-
-        if (this.all_day && !date.isSame(dayjs__WEBPACK_IMPORTED_MODULE_3__(), 'd')) {
-          date = date.hour(7).minute(0);
-        }
-
         return date.add(duration, 'm').format('h:mm A');
       }
       /** Number of items in the order */
@@ -4757,6 +4752,16 @@
     var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../../../../../services/data/catering/catering-order.class */
     "./src/app/services/data/catering/catering-order.class.ts");
+    /* harmony import */
+
+
+    var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
+    /* harmony import */
+
+
+    var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
 
     class CateringOrderListComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"] {
       constructor(_router) {
@@ -4783,10 +4788,14 @@
         return this.catering.control.value || [];
       }
 
+      get start_time() {
+        return this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_5__(this.date).startOf('d').valueOf() : this.date;
+      }
+
       ngOnChanges(changes) {
         if (changes.date && this.catering) {
           this.catering.control.setValue(this.order_list.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, {
-            booking_date: this.date
+            booking_date: this.start_time
           }))));
           this.order_list.forEach(order => order.error = !this.spaces.find(space => space.id === order.location_id));
         }
@@ -4801,7 +4810,7 @@
           id: "order-".concat(Math.floor(Math.random() * 999999999)),
           location_id: this.spaces[0].id,
           location: this.spaces[0].name,
-          booking_date: this.date,
+          booking_date: this.start_time,
           delivery_time: 0
         });
         this.active_order.emit(order);
@@ -7591,7 +7600,9 @@
           label: 'Catering',
           type: 'action',
           hide: true,
-          value: ((booking.catering instanceof Array ? booking.catering : [booking.catering]) || []).filter(order => order).map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](order))
+          value: ((booking.catering instanceof Array ? booking.catering : [booking.catering]) || []).filter(order => order).map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_8__["CateringOrder"](Object.assign({}, order, {
+            booking_date: booking.date
+          })))
         });
         this.form_fields.unshift(this.space_list);
         this.form_fields.push(this.catering);

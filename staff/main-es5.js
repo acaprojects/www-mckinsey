@@ -17822,23 +17822,29 @@
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./catering/catering-order.class */
+    "./src/app/services/data/catering/catering-order.class.ts");
+    /* harmony import */
+
+
+    var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
     /* harmony import */
 
 
-    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/esm2015/dialog.js");
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
     /*
@@ -17902,22 +17908,22 @@
           return;
         }
 
-        const today = dayjs__WEBPACK_IMPORTED_MODULE_5__();
+        const today = dayjs__WEBPACK_IMPORTED_MODULE_6__();
         today.minute(Math.ceil(today.minute() / 5) * 5).startOf('m');
-        const bookings = room.bookings.filter(b => dayjs__WEBPACK_IMPORTED_MODULE_5__(b.date).isSame(today, 'd'));
+        const bookings = room.bookings.filter(b => dayjs__WEBPACK_IMPORTED_MODULE_6__(b.date).isSame(today, 'd'));
         let block = this.getNextFreeBlock(bookings); // In case the
 
-        if (block && dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).diff(today, 'm') < 30) {
+        if (block && dayjs__WEBPACK_IMPORTED_MODULE_6__(block.end).diff(today, 'm') < 30) {
           block = this.getNextFreeBlock(bookings, block.end);
         }
 
         const start = !block || block.start < 0 ? today.valueOf() : Math.max(today.valueOf(), block.start);
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(start);
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(start);
         date.minute(Math.ceil(date.minute() / 5) * 5);
         let duration = 60;
 
         if (block && block.end >= 0) {
-          const length = Math.floor(dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).diff(date, 'm'));
+          const length = Math.floor(dayjs__WEBPACK_IMPORTED_MODULE_6__(block.end).diff(date, 'm'));
 
           if (length < 45) {
             duration = 30;
@@ -17970,7 +17976,7 @@
             return reject('Another booking is in progress');
           }
 
-          const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
+          const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(item.date);
           const ref = this.parent.confirm(this.confirmSettings('add', item), event => {
             if (event.reason === 'done') {
               this.subjects.new_booking.next({
@@ -17989,7 +17995,7 @@
                   localStorage.setItem('STAFF.last_booking', booking || JSON.stringify(item));
                 }
 
-                this.timeout("".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__().unix()), () => this.set('new_booking', {
+                this.timeout("".concat(dayjs__WEBPACK_IMPORTED_MODULE_6__().unix()), () => this.set('new_booking', {
                   state: 'idle'
                 }));
               }, e => {
@@ -18037,7 +18043,7 @@
 
                 this.parent.Rooms.replaceBooking(new_item);
                 this.query();
-                this.timeout("".concat(dayjs__WEBPACK_IMPORTED_MODULE_5__().unix()), () => this.set('new_booking', {
+                this.timeout("".concat(dayjs__WEBPACK_IMPORTED_MODULE_6__().unix()), () => this.set('new_booking', {
                   state: 'idle'
                 }));
               }, e => {
@@ -18087,11 +18093,11 @@
         let conflict_count = 0;
 
         for (const bkn of list) {
-          const bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_5__(bkn.date);
+          const bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_6__(bkn.date);
           const bkn_end = bkn_start.add(bkn.duration, 'm');
 
           for (const cmp of comparison) {
-            const cmp_start = dayjs__WEBPACK_IMPORTED_MODULE_5__(cmp.date);
+            const cmp_start = dayjs__WEBPACK_IMPORTED_MODULE_6__(cmp.date);
             const cmp_end = cmp_start.add(cmp.duration, 'm');
 
             if (bkn_start.isAfter(cmp_start, 's') && bkn_start.isBefore(cmp_end, 'm') || bkn_end.isAfter(cmp_start, 'm') && bkn_end.isBefore(cmp_end, 's')) {
@@ -18114,17 +18120,17 @@
         if (!list) {
           return [{
             start: 0,
-            end: dayjs__WEBPACK_IMPORTED_MODULE_5__().startOf('m').valueOf() * 10
+            end: dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('m').valueOf() * 10
           }];
         }
 
         const slots = [];
-        let start = dayjs__WEBPACK_IMPORTED_MODULE_5__(0);
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_6__(0);
         list.sort((a, b) => a.date - b.date);
 
         for (const booking of list) {
-          const bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_5__(booking.date).subtract(booking.setup, 's');
-          const bkn_end = dayjs__WEBPACK_IMPORTED_MODULE_5__(booking.date).add(booking.duration, 'm').add(booking.breakdown, 's');
+          const bkn_start = dayjs__WEBPACK_IMPORTED_MODULE_6__(booking.date).subtract(booking.setup, 's');
+          const bkn_end = dayjs__WEBPACK_IMPORTED_MODULE_6__(booking.date).add(booking.duration, 'm').add(booking.breakdown, 's');
 
           if (bkn_start.isAfter(start.subtract(1, 'm'), 'm')) {
             const diff = bkn_start.diff(start, 'm');
@@ -18142,7 +18148,7 @@
 
         slots.push({
           start: start.valueOf(),
-          end: dayjs__WEBPACK_IMPORTED_MODULE_5__().startOf('m').valueOf() * 10
+          end: dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('m').valueOf() * 10
         });
         return slots;
       }
@@ -18154,14 +18160,14 @@
        */
 
 
-      getNextFreeBlock(list, date = dayjs__WEBPACK_IMPORTED_MODULE_5__().valueOf(), min_size = 30) {
+      getNextFreeBlock(list, date = dayjs__WEBPACK_IMPORTED_MODULE_6__().valueOf(), min_size = 30) {
         const slots = this.getFreeSlots(list, min_size);
-        const today = dayjs__WEBPACK_IMPORTED_MODULE_5__(date);
+        const today = dayjs__WEBPACK_IMPORTED_MODULE_6__(date);
         const time = today.startOf('m').second(1);
 
         for (const block of slots) {
-          const start = dayjs__WEBPACK_IMPORTED_MODULE_5__(block.start).startOf('m');
-          const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(block.end).startOf('m');
+          const start = dayjs__WEBPACK_IMPORTED_MODULE_6__(block.start).startOf('m');
+          const end = dayjs__WEBPACK_IMPORTED_MODULE_6__(block.end).startOf('m');
 
           if (start.isAfter(time, 's')) {
             return block;
@@ -18184,13 +18190,14 @@
 
       processItem(raw_item) {
         const user = this.parent.Users.current();
-        const start = dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
-        const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
+        let start = dayjs__WEBPACK_IMPORTED_MODULE_6__(raw_item.start_epoch * 1000 || raw_item.start || raw_item.Start || raw_item.date);
+        let end = dayjs__WEBPACK_IMPORTED_MODULE_6__(raw_item.end_epoch * 1000 || raw_item.end || raw_item.End);
         const has_end = raw_item.end_epoch * 1000 || raw_item.end || raw_item.End;
         const duration = Math.abs(start.diff(end, 'm'));
 
-        if (raw_item.all_day) {
-          end.endOf('d');
+        if (raw_item.all_day || duration > 23 * 60) {
+          start = start.startOf('d');
+          end = end.endOf('d');
         }
 
         const item = {
@@ -18232,15 +18239,15 @@
           },
           notify_users: raw_item.notify_users,
           all_day: !!raw_item.all_day || duration > 12 * 60,
-          catering: Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["processCateringData"])(raw_item.catering || []),
+          catering: Object(_shared_utilities_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["processCateringData"])(raw_item.catering || [], start.valueOf()),
           needs_catering: raw_item.needs_catering,
           setup: raw_item.setup || 0,
           breakdown: raw_item.breakdown || 0,
           spaces: typeof raw_item.room_id === 'string' ? [raw_item.room_id] : raw_item.room_id,
           recurrence: raw_item.seriesMasterId && raw_item.recurrence ? {
             period: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["RECURRENCE_PERIODS"].map(i => i.toLowerCase()).indexOf(raw_item.recurrence.period),
-            end: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.end * 1000).valueOf(),
-            start: dayjs__WEBPACK_IMPORTED_MODULE_5__(raw_item.recurrence.start * 1000).valueOf(),
+            end: dayjs__WEBPACK_IMPORTED_MODULE_6__(raw_item.recurrence.end * 1000).valueOf(),
+            start: dayjs__WEBPACK_IMPORTED_MODULE_6__(raw_item.recurrence.start * 1000).valueOf(),
             series_id: raw_item.seriesMasterId
           } : null
         };
@@ -18262,14 +18269,14 @@
         this.processRoom(item, raw_item);
         Object.defineProperty(item, 'status', {
           get: () => {
-            const now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
+            const now = dayjs__WEBPACK_IMPORTED_MODULE_6__();
 
             if (item._status && item._updated < now.valueOf() - 60 * 1000) {
               item._status = null;
             }
 
             if (!item._status) {
-              const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
+              const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(item.date);
               const upcoming = date.subtract(15, 'm');
               const ending = date.add(item.duration, 'm');
               item._status = now.isBefore(upcoming, 'm') ? 'future' : now.isBefore(date, 'm') ? 'upcoming' : now.isBefore(ending, 'm') ? 'in_progress' : 'past';
@@ -18395,10 +18402,10 @@
         }
 
         if (form.duration > 720 && form.all_day) {
-          form.date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date).startOf('d').valueOf();
+          form.date = dayjs__WEBPACK_IMPORTED_MODULE_6__(form.date).startOf('d').valueOf();
         }
 
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(form.date).startOf('m');
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(form.date).startOf('m');
         let room_id = [];
         let auto_approve = [item.state !== 'tentative'];
 
@@ -18468,7 +18475,9 @@
           loan_items: form.loan_items || '',
           private: form.private || false,
           parking: form.parking || false,
-          catering: (form.catering || []).filter(order => (form.room instanceof Array ? form.room : [form.room]).find(room => room.id === order.location_id)),
+          catering: (form.catering || []).filter(order => (form.room instanceof Array ? form.room : [form.room]).find(room => room.id === order.location_id)).map(i => new _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_5__["CateringOrder"](Object.assign({}, i, {
+            booking_date: date.valueOf()
+          }))),
           equipment_code: form.equipment_code,
           booking_type: (form.booking_type ? form.booking_type.id : null) || 'internal',
           notify_users: form.notify_users,
@@ -18483,7 +18492,7 @@
 
         if (item.recurrence_rooms) {
           request.conflicts = (form.recurrence_rooms || []).map(i => ({
-            date: dayjs__WEBPACK_IMPORTED_MODULE_5__(i.date).unix(),
+            date: dayjs__WEBPACK_IMPORTED_MODULE_6__(i.date).unix(),
             room: i.room.email || i.room.id
           })).filter(i => i.room !== room_id[0]);
         }
@@ -18497,7 +18506,7 @@
         }
 
         const user = this.parent.Users.current();
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_5__().startOf('s');
+        const now = dayjs__WEBPACK_IMPORTED_MODULE_6__().startOf('s');
 
         if (item.equipment) {
           for (const rm_id of Object.keys(item.equipment)) {
@@ -18572,7 +18581,7 @@
         if (item.recurrence && item.recurrence.period) {
           request.recurr = {
             period: _shared_utilities_formatting_utilities__WEBPACK_IMPORTED_MODULE_4__["RECURRENCE_PERIODS"].map(i => i.toLowerCase())[item.recurrence.period],
-            end: dayjs__WEBPACK_IMPORTED_MODULE_5__(item.recurrence.end).unix()
+            end: dayjs__WEBPACK_IMPORTED_MODULE_6__(item.recurrence.end).unix()
           };
         }
 
@@ -18584,7 +18593,7 @@
         const timeline = this.get('timeline') || {}; // Add bookings to timeline
 
         for (const item of list) {
-          let date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
+          let date = dayjs__WEBPACK_IMPORTED_MODULE_6__(item.date);
           const end = date.add(item.duration, 'm');
 
           for (; date.isBefore(end, 'm'); date = date.add(1, 'd')) {
@@ -18627,7 +18636,7 @@
         const timeline = this.get('timeline') || {};
 
         for (const item of list) {
-          const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(item.date);
+          const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(item.date);
           const day = timeline[date.format('YYYY/MM/DD')] || [];
 
           for (const event of day) {
@@ -18645,11 +18654,11 @@
         if (!fields || !fields.from) {
           super.clear(fields);
         } else {
-          let start = dayjs__WEBPACK_IMPORTED_MODULE_5__(fields.from).startOf('d');
-          const end = dayjs__WEBPACK_IMPORTED_MODULE_5__(fields.to || fields.from); // Clear period in list
+          let start = dayjs__WEBPACK_IMPORTED_MODULE_6__(fields.from).startOf('d');
+          const end = dayjs__WEBPACK_IMPORTED_MODULE_6__(fields.to || fields.from); // Clear period in list
 
           const list = this.get('list') || [];
-          this.set('list', list.filter(i => !(dayjs__WEBPACK_IMPORTED_MODULE_5__(i.date).isAfter(start.subtract(1, 's'), 's') && dayjs__WEBPACK_IMPORTED_MODULE_5__(i.date).isBefore(end, 'm')))); // Clear period in timeline
+          this.set('list', list.filter(i => !(dayjs__WEBPACK_IMPORTED_MODULE_6__(i.date).isAfter(start.subtract(1, 's'), 's') && dayjs__WEBPACK_IMPORTED_MODULE_6__(i.date).isBefore(end, 'm')))); // Clear period in timeline
 
           const timeline = this.get('timeline') || {};
 
@@ -18667,7 +18676,7 @@
 
       confirmSettings(key, fields = {}) {
         const settings = super.confirmSettings(key, fields);
-        const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(fields.date || '');
+        const date = dayjs__WEBPACK_IMPORTED_MODULE_6__(fields.date || '');
         const user = this.parent.Users.current();
         const rm = fields.room ? fields.room instanceof Array ? fields.room[0] : fields.room : null;
         const room = rm ? this.parent.Rooms.item(rm.id) : {
@@ -18708,9 +18717,9 @@
 
     }
 
-    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({
+    BookingsService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({
       factory: function BookingsService_Factory() {
-        return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]));
+        return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]));
       },
       token: BookingsService,
       providedIn: "root"
@@ -40671,7 +40680,7 @@
     const core_version = '0.17.0';
     /** Build time of the application */
 
-    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584340816000);
+    const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584411113000);
     /***/
   },
 
@@ -46990,12 +46999,16 @@
      */
 
 
-    function processCateringData(catering) {
+    function processCateringData(catering, date) {
       if (catering instanceof Array) {
-        return catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](order));
+        return catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](Object.assign({}, order, {
+          booking_date: date
+        })));
       }
 
-      return Object.keys(catering).map(loc_id => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](catering[loc_id]));
+      return Object.keys(catering).map(loc_id => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](Object.assign({}, catering[loc_id], {
+        booking_date: date
+      })));
     }
     /***/
 
@@ -49103,7 +49116,9 @@
           return [];
         }
 
-        return this._data.catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_2__["CateringOrder"](order));
+        return this._data.catering.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_2__["CateringOrder"](Object.assign({}, order, {
+          booking_date: this._data.date
+        })));
       }
       /** Total number of catering items in booking */
 
