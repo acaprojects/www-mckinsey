@@ -6082,10 +6082,17 @@ var MeetingDetailsOverlayComponent = /** @class */ (function (_super) {
     });
     MeetingDetailsOverlayComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.catering.forEach(function (i) { return i.booking = _this.booking; });
+        this.catering.forEach(function (i) {
+            i.booking = _this.booking;
+            i.booking_date = _this.booking.date;
+        });
         this.subscription('new_booking', this._service.listen('CONCIERGE.latest_booking', function (booking) {
             if (booking) {
                 _this._data.booking = booking;
+                _this.catering.forEach(function (i) {
+                    i.booking = _this.booking;
+                    i.booking_date = _this.booking.date;
+                });
             }
         }));
     };
@@ -11427,9 +11434,6 @@ var CateringOrder = /** @class */ (function () {
         /** Display string for the delivery time of the order */
         get: function () {
             var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking ? this.booking.date : this.booking_date);
-            if (this.booking && this.booking.all_day && !date.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd')) {
-                date = date.hour(7).minute(0);
-            }
             return date
                 .add(this.delivery_time, 'm')
                 .format('h:mm A');
@@ -22880,7 +22884,7 @@ var version = '0.4.0';
 /** Version number of the base application */
 var core_version = '0.4.0';
 /** Build time of the application */
-var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584418360000);
+var build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584420321000);
 
 
 /***/ }),

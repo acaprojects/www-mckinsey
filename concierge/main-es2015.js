@@ -5160,10 +5160,17 @@ class MeetingDetailsOverlayComponent extends _shared_globals_base_directive__WEB
         return this.booking.state !== 'cancelled';
     }
     ngOnInit() {
-        this.catering.forEach(i => i.booking = this.booking);
+        this.catering.forEach((i) => {
+            i.booking = this.booking;
+            i.booking_date = this.booking.date;
+        });
         this.subscription('new_booking', this._service.listen('CONCIERGE.latest_booking', booking => {
             if (booking) {
                 this._data.booking = booking;
+                this.catering.forEach((i) => {
+                    i.booking = this.booking;
+                    i.booking_date = this.booking.date;
+                });
             }
         }));
     }
@@ -9437,9 +9444,6 @@ class CateringOrder {
     /** Display string for the delivery time of the order */
     get deliver_at_time() {
         let date = dayjs__WEBPACK_IMPORTED_MODULE_2__(this.booking ? this.booking.date : this.booking_date);
-        if (this.booking && this.booking.all_day && !date.isSame(dayjs__WEBPACK_IMPORTED_MODULE_2__(), 'd')) {
-            date = date.hour(7).minute(0);
-        }
         return date
             .add(this.delivery_time, 'm')
             .format('h:mm A');
@@ -19076,7 +19080,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584418360000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584420321000);
 
 
 /***/ }),
