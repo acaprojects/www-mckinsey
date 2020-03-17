@@ -1558,7 +1558,7 @@ function View_BookingModalComponent_5(_l) { return _angular_core__WEBPACK_IMPORT
     } if (("event" === en)) {
         var pd_1 = (_co.progress($event) !== false);
         ad = (pd_1 && ad);
-    } return ad; }, _shared_components_catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["View_CateringOrderListComponent_0"], _shared_components_catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["RenderType_CateringOrderListComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 704512, null, 0, _shared_components_catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_16__["CateringOrderListComponent"], [_angular_router__WEBPACK_IMPORTED_MODULE_17__["Router"]], { catering: [0, "catering"], spaces: [1, "spaces"] }, { active_order: "order", event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.catering; var currVal_2 = _co.spaces; _ck(_v, 1, 0, currVal_1, currVal_2); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.id; _ck(_v, 0, 0, currVal_0); }); }
+    } return ad; }, _shared_components_catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["View_CateringOrderListComponent_0"], _shared_components_catering_order_list_order_list_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["RenderType_CateringOrderListComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 704512, null, 0, _shared_components_catering_order_list_order_list_component__WEBPACK_IMPORTED_MODULE_16__["CateringOrderListComponent"], [_angular_router__WEBPACK_IMPORTED_MODULE_17__["Router"]], { catering: [0, "catering"], spaces: [1, "spaces"], all_day: [2, "all_day"] }, { active_order: "order", event: "event" })], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.catering; var currVal_2 = _co.spaces; var currVal_3 = _co.all_day; _ck(_v, 1, 0, currVal_1, currVal_2, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.id; _ck(_v, 0, 0, currVal_0); }); }
 function View_BookingModalComponent_6(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-edit", [], null, [[null, "event"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("event" === en)) {
         _co.updateOrder(_co.active_order);
         var pd_0 = ((_co.active_order = null) !== false);
@@ -1747,6 +1747,9 @@ class BookingModalComponent extends _shared_globals_base_directive__WEBPACK_IMPO
         const field = this.form_fields.find(i => i.key === 'all_day');
         return field ? field.control.value : false;
     }
+    get start_time() {
+        return this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_8__(this.date).startOf('d').valueOf() : this.date;
+    }
     /** Selected duration for the booking */
     get duration() {
         let field = this.form_fields.find(i => i.key === 'duration');
@@ -1821,7 +1824,7 @@ class BookingModalComponent extends _shared_globals_base_directive__WEBPACK_IMPO
                 order_list.splice(index, 1);
             }
         }
-        order_list = order_list.map(an_order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](Object.assign({}, an_order, { booking_date: this.date })));
+        order_list = order_list.map(an_order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](Object.assign({}, an_order, { booking_date: this.start_time })));
         this.catering.control.setValue(order_list || []);
     }
     /**
@@ -8093,8 +8096,9 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
         const has_end = raw_item.end_epoch * 1000 || raw_item.end || raw_item.End;
         const duration = Math.abs(start.diff(end, 'm'));
         const states = this.parent.get('BOOKING.states') || {};
-        if (raw_item.all_day) {
-            end.hours(23).minute(59);
+        if (raw_item.all_day || duration > 23 * 60) {
+            start.startOf('d');
+            end.endOf('d');
         }
         const item = {
             id: raw_item.id,
@@ -8281,7 +8285,7 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseSe
             loan_items: form.loan_items || '',
             private: form.private || false,
             parking: form.parking || false,
-            catering: (form.catering || []).filter(order => (form.room instanceof Array ? form.room : [form.room]).find(space => space.id === order.location_id)).map(order => new _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](order)),
+            catering: (form.catering || []).filter(order => (form.room instanceof Array ? form.room : [form.room]).find(space => space.id === order.location_id)).map(order => new _catering_catering_order_class__WEBPACK_IMPORTED_MODULE_6__["CateringOrder"](Object.assign({}, order, { booking_date: date.valueOf() }))),
             expected_attendees: form.expected_attendees || {},
             equipment_code: form.equipment_code,
             booking_type: (form.booking_type ? (form.booking_type instanceof Object ? form.booking_type.id : form.booking_type) : null) || 'internal',
@@ -12233,11 +12237,14 @@ class CateringEditComponent extends _globals_base_directive__WEBPACK_IMPORTED_MO
             }
             this.loadMenu();
         }
-        if (changes.date || changes.duration) {
-            this.delivery_times = this.generateAvailableTimes();
-        }
         if (changes.order && this.order) {
             this.order_form = Object(_services_data_catering_catering_utilities__WEBPACK_IMPORTED_MODULE_4__["generateCateringOrderFormFields"])(this.order);
+        }
+        if (changes.date || changes.duration) {
+            this.delivery_times = this.generateAvailableTimes();
+            if (this.order_form) {
+                this.order_form.controls.delivery_time.setValue(this.delivery_times[0].id);
+            }
         }
     }
     /**
@@ -12317,7 +12324,10 @@ class CateringEditComponent extends _globals_base_directive__WEBPACK_IMPORTED_MO
         const time_list = [];
         if (this.date) {
             let start = dayjs__WEBPACK_IMPORTED_MODULE_6__(this.date).startOf('m');
-            const old_start = start;
+            let old_start = start;
+            if (this.all_day) {
+                old_start = old_start.startOf('d');
+            }
             let end = start.add(this.all_day ? 24 * 60 : this.duration, 'm');
             if (start.isBefore(start.hour(7).minute(0), 'm') || this.all_day) {
                 start = start.hour(7).minute(0);
@@ -13087,7 +13097,7 @@ function View_CateringOrderListComponent_3(_l) { return _angular_core__WEBPACK_I
     } return ad; }, _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_6__["View_MatButton_0"], _node_modules_angular_material_button_typings_index_ngfactory__WEBPACK_IMPORTED_MODULE_6__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _acaprojects_ngx_widgets__WEBPACK_IMPORTED_MODULE_7__["ɵj"], [], null, { event: "touchrelease" }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_9__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_10__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, 0, 5, "div", [["class", "contents"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 2, "app-icon", [], null, null, null, _icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["View_IconComponent_0"], _icon_icon_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["RenderType_IconComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 180224, null, 0, _icon_icon_component__WEBPACK_IMPORTED_MODULE_13__["IconComponent"], [], { icon: [0, "icon"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](13, { class: 0, content: 1 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["New order"]))], function (_ck, _v) { var currVal_2 = _ck(_v, 13, 0, "material-icons", "add"); _ck(_v, 12, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).disabled || null); var currVal_1 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9)._animationMode === "NoopAnimations"); _ck(_v, 7, 0, currVal_0, currVal_1); }); }
 function View_CateringOrderListComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "catering order-list"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 5, "div", [["class", "content"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 2, "div", [["class", "header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "h3", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Catering Orders"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_CateringOrderListComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["empty_state", 2]], null, 0, null, View_CateringOrderListComponent_3))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.order_list && _co.order_list.length); var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 7); _ck(_v, 6, 0, currVal_0, currVal_1); }, null); }
 function View_CateringOrderListComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "catering-order-list", [], null, null, null, View_CateringOrderListComponent_0, RenderType_CateringOrderListComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 704512, null, 0, _order_list_component__WEBPACK_IMPORTED_MODULE_14__["CateringOrderListComponent"], [_angular_router__WEBPACK_IMPORTED_MODULE_15__["Router"]], null, null)], null, null); }
-var CateringOrderListComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-order-list", _order_list_component__WEBPACK_IMPORTED_MODULE_14__["CateringOrderListComponent"], View_CateringOrderListComponent_Host_0, { catering: "catering", spaces: "spaces", date: "date" }, { active_order: "order", event: "event" }, []);
+var CateringOrderListComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("catering-order-list", _order_list_component__WEBPACK_IMPORTED_MODULE_14__["CateringOrderListComponent"], View_CateringOrderListComponent_Host_0, { catering: "catering", spaces: "spaces", date: "date", all_day: "all_day" }, { active_order: "order", event: "event" }, []);
 
 
 
@@ -13130,6 +13140,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _globals_base_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../globals/base.directive */ "./src/app/shared/globals/base.directive.ts");
 /* harmony import */ var _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -13144,9 +13157,12 @@ class CateringOrderListComponent extends _globals_base_directive__WEBPACK_IMPORT
         /** Emitter for user events on component */
         this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
+    get start_time() {
+        return this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_5__(this.date).startOf('d').valueOf() : this.date;
+    }
     ngOnChanges(changes) {
-        if (changes.date && this.catering) {
-            this.catering.control.setValue(this.order_list.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, { booking_date: this.date }))));
+        if (changes.date && this.catering && changes.all_day) {
+            this.catering.control.setValue(this.order_list.map(order => new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, { booking_date: this.start_time }))));
             this.order_list.forEach(order => (order.error = !this.spaces.find(space => space.id === order.location_id)));
         }
         if (changes.spaces) {
@@ -13167,7 +13183,7 @@ class CateringOrderListComponent extends _globals_base_directive__WEBPACK_IMPORT
             id: `order-${Math.floor(Math.random() * 999999999)}`,
             location_id: this.spaces[0].id,
             location: this.spaces[0].name,
-            booking_date: this.date,
+            booking_date: this.start_time,
             delivery_time: 0
         });
         this.active_order.emit(order);
@@ -19060,7 +19076,7 @@ const version = '0.4.0';
 /** Version number of the base application */
 const core_version = '0.4.0';
 /** Build time of the application */
-const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584357966000);
+const build = dayjs__WEBPACK_IMPORTED_MODULE_0__(1584416072000);
 
 
 /***/ }),
