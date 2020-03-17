@@ -1921,7 +1921,7 @@ var OrdersComponent = /** @class */ (function (_super) {
             return booking.catering
                 .map(function (order) {
                 order.booking = booking;
-                return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](__assign({}, order, { location: order.location || (_this.service.Rooms.item(order.location_id) || { name: '' }).name }));
+                return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](__assign({}, order, { booking_date: booking.date, location: order.location || (_this.service.Rooms.item(order.location_id) || { name: '' }).name }));
             })
                 .filter(function (order) {
                 // Remove orders from other buildings
