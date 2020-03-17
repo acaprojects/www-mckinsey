@@ -1607,7 +1607,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
         order.status = status || '';
         this.model.show_dropdown[index] = false;
         const booking = order.booking;
-        booking.catering.splice(booking.catering.findIndex(o => o.id === order.id), 1, new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, { status: status })));
+        booking.catering.splice(booking.catering.findIndex(o => o.id === order.id), 1, new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, { status })));
         order.loading = true;
         this.service.Bookings.updateItem(booking.id, Object.assign({}, booking, { room: booking.room_list })).then(res => {
             order.loading = false;
