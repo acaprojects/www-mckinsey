@@ -1696,7 +1696,7 @@ class OrdersComponent extends _shared_globals_base_directive__WEBPACK_IMPORTED_M
             return booking.catering
                 .map(order => {
                 order.booking = booking;
-                return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, { location: order.location || (this.service.Rooms.item(order.location_id) || { name: '' }).name }));
+                return new _services_data_catering_catering_order_class__WEBPACK_IMPORTED_MODULE_4__["CateringOrder"](Object.assign({}, order, { booking_date: booking.date, location: order.location || (this.service.Rooms.item(order.location_id) || { name: '' }).name }));
             })
                 .filter(order => {
                 // Remove orders from other buildings
