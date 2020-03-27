@@ -5,7 +5,7 @@ var settings = {
     debug: true,
     composer: {
         domain: '',
-        route: '/staff-new/',
+        route: '/staff-new',
         protocol: '',
         port: '',
         use_domain: false,
