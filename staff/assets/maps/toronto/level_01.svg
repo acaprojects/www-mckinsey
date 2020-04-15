@@ -65,8 +65,7 @@
 </g>
 <g id="background">
 	<path class="st1" d="M197.1,231.7h136.6V263h32v94h-342v193.4h490.7v16h134V458.8h43.2v-80.9h-42.8V258.2h322.9v197.7h28v12.4h83.2
-		V458h26.7V34.2H581.7l-4.1-10.9c0,0-70.2-7.1-108.3-7.3c-38.1-0.2-142.7,2.4-142.7,2.4H196.2V217l-7.5,3.8l0.4,11.1L197.1,231.7z"
-		/>
+		V458h26.7V34.2H581.7l-4.1-10.9c0,0-70.2-7.1-108.3-7.3s-142.7,2.4-142.7,2.4H196.2V217l-7.5,3.8l0.4,11.1L197.1,231.7z"/>
 </g>
 <g id="spaces">
 	<g>
@@ -1798,13 +1797,13 @@
 				<path class="st10" d="M582.8,215.2l-0.8-9c-0.1-0.8-0.3-1.5-0.5-1.5l0,0l0,0l-3.6,0.3l1,10.5L582.8,215.2z"/>
 				<path class="st10" d="M578.9,215.6l0.9,10.2l3.6-0.3c0.2,0,0.3-0.7,0.2-1.5l-0.8-8.7L578.9,215.6z"/>
 				
-					<rect x="571.7" y="216" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -17.7882 53.264)" class="st10" width="4" height="10.4"/>
+					<rect x="571.7" y="216" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -17.7891 53.2671)" class="st10" width="4" height="10.4"/>
 				
-					<rect x="570.7" y="205.5" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -16.8438 53.1248)" class="st10" width="3.9" height="10.6"/>
+					<rect x="570.7" y="205.5" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -16.8446 53.128)" class="st10" width="3.9" height="10.6"/>
 				
-					<rect x="575.6" y="215.6" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -17.7359 53.609)" class="st10" width="3.8" height="10.4"/>
+					<rect x="575.6" y="215.6" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -17.7368 53.6122)" class="st10" width="3.8" height="10.4"/>
 				
-					<rect x="574.6" y="205.2" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -16.8004 53.4748)" class="st10" width="3.8" height="10.6"/>
+					<rect x="574.6" y="205.2" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -16.8012 53.478)" class="st10" width="3.8" height="10.6"/>
 			</g>
 			<g>
 				<path class="st20" d="M583.6,207.7L583.6,207.7c-0.2-1.4,0.8-2.7,2.2-2.9l0,0l1.8-0.2c1.8-0.2,3.5,1,3.8,2.8l0,0
@@ -1852,13 +1851,13 @@
 				<path class="st10" d="M585.1,239.7l-0.8-9c-0.1-0.8-0.3-1.5-0.5-1.5l0,0l0,0l-3.6,0.3l1,10.5L585.1,239.7z"/>
 				<path class="st10" d="M581.2,240.1l0.9,10.2l3.6-0.3c0.2,0,0.3-0.7,0.2-1.5l-0.8-8.7L581.2,240.1z"/>
 				
-					<rect x="573.9" y="240.4" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -20.0052 53.5665)" class="st10" width="4" height="10.4"/>
+					<rect x="573.9" y="240.4" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -20.0062 53.5697)" class="st10" width="4" height="10.4"/>
 				
-					<rect x="573" y="230" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -19.0694 53.4368)" class="st10" width="3.9" height="10.6"/>
+					<rect x="573" y="230" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -19.0704 53.44)" class="st10" width="3.9" height="10.6"/>
 				
-					<rect x="577.9" y="240.1" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -19.9616 53.921)" class="st10" width="3.8" height="10.4"/>
+					<rect x="577.9" y="240.1" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -19.9626 53.9242)" class="st10" width="3.8" height="10.4"/>
 				
-					<rect x="576.9" y="229.6" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -19.0169 53.7864)" class="st10" width="3.8" height="10.6"/>
+					<rect x="576.9" y="229.6" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -19.0179 53.7896)" class="st10" width="3.8" height="10.6"/>
 			</g>
 			<g>
 				<path class="st20" d="M585.9,232.2L585.9,232.2c-0.2-1.4,0.8-2.7,2.2-2.9l0,0l1.8-0.2c1.8-0.2,3.5,1,3.8,2.8l0,0
@@ -1906,13 +1905,13 @@
 				<path class="st10" d="M587.6,264.9l-0.8-9c-0.1-0.8-0.3-1.5-0.5-1.5l0,0l0,0l-3.6,0.3l1,10.5L587.6,264.9z"/>
 				<path class="st10" d="M583.6,265.3l0.9,10.2l3.6-0.3c0.2,0,0.3-0.7,0.2-1.5l-0.8-8.7L583.6,265.3z"/>
 				
-					<rect x="576.4" y="265.6" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -22.2939 53.8997)" class="st10" width="4" height="10.4"/>
+					<rect x="576.4" y="265.6" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -22.295 53.9029)" class="st10" width="4" height="10.4"/>
 				
-					<rect x="575.4" y="255.2" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -21.3585 53.7609)" class="st10" width="3.9" height="10.6"/>
+					<rect x="575.4" y="255.2" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -21.3596 53.7641)" class="st10" width="3.9" height="10.6"/>
 				
-					<rect x="580.3" y="265.3" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -22.2507 54.2451)" class="st10" width="3.8" height="10.4"/>
+					<rect x="580.3" y="265.3" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -22.2518 54.2483)" class="st10" width="3.8" height="10.4"/>
 				
-					<rect x="579.4" y="254.8" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -21.3056 54.1196)" class="st10" width="3.8" height="10.6"/>
+					<rect x="579.4" y="254.8" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -21.3067 54.1228)" class="st10" width="3.8" height="10.6"/>
 			</g>
 			<g>
 				<path class="st20" d="M588.3,257.4L588.3,257.4c-0.2-1.4,0.8-2.7,2.2-2.9l0,0l1.8-0.2c1.8-0.2,3.5,1,3.8,2.8l0,0
@@ -1960,13 +1959,13 @@
 				<path class="st10" d="M589.8,289.4l-0.8-9c-0.1-0.8-0.3-1.5-0.5-1.5l0,0l0,0l-3.6,0.3l1,10.5L589.8,289.4z"/>
 				<path class="st10" d="M585.9,289.7l0.9,10.2l3.6-0.3c0.2,0,0.3-0.7,0.2-1.5l-0.8-8.7L585.9,289.7z"/>
 				
-					<rect x="578.7" y="290.1" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -24.5195 54.2117)" class="st10" width="4" height="10.4"/>
+					<rect x="578.7" y="290.1" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -24.5208 54.2149)" class="st10" width="4" height="10.4"/>
 				
-					<rect x="577.7" y="279.6" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -23.5751 54.0725)" class="st10" width="3.9" height="10.6"/>
+					<rect x="577.7" y="279.6" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -23.5763 54.0757)" class="st10" width="3.9" height="10.6"/>
 				
-					<rect x="582.6" y="289.7" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -24.4672 54.5567)" class="st10" width="3.8" height="10.4"/>
+					<rect x="582.6" y="289.7" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -24.4685 54.56)" class="st10" width="3.8" height="10.4"/>
 				
-					<rect x="581.6" y="279.3" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -23.5317 54.4225)" class="st10" width="3.8" height="10.6"/>
+					<rect x="581.6" y="279.3" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -23.5329 54.4258)" class="st10" width="3.8" height="10.6"/>
 			</g>
 			<g>
 				<path class="st20" d="M590.6,281.8L590.6,281.8c-0.2-1.4,0.8-2.7,2.2-2.9l0,0l1.8-0.2c1.8-0.2,3.5,1,3.8,2.8l0,0
@@ -2014,13 +2013,13 @@
 				<path class="st10" d="M595.2,313.6l-0.8-9c-0.1-0.8-0.3-1.5-0.5-1.5l0,0l0,0l-3.6,0.3l1,10.5L595.2,313.6z"/>
 				<path class="st10" d="M591.3,313.9l0.9,10.2l3.6-0.3c0.2,0,0.3-0.7,0.2-1.5l-0.8-8.7L591.3,313.9z"/>
 				
-					<rect x="584" y="314.3" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -26.7053 54.7962)" class="st10" width="4" height="10.4"/>
+					<rect x="584" y="314.3" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -26.7067 54.7994)" class="st10" width="4" height="10.4"/>
 				
-					<rect x="583.1" y="303.8" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -25.7604 54.6661)" class="st10" width="3.9" height="10.6"/>
+					<rect x="583.1" y="303.8" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -25.7618 54.6694)" class="st10" width="3.9" height="10.6"/>
 				
-					<rect x="587.9" y="313.9" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -26.653 55.1412)" class="st10" width="3.8" height="10.4"/>
+					<rect x="587.9" y="313.9" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -26.6544 55.1445)" class="st10" width="3.8" height="10.4"/>
 				
-					<rect x="587" y="303.5" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -25.717 55.0161)" class="st10" width="3.8" height="10.6"/>
+					<rect x="587" y="303.5" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -25.7184 55.0194)" class="st10" width="3.8" height="10.6"/>
 			</g>
 			<g>
 				<path class="st20" d="M596,306L596,306c-0.2-1.4,0.8-2.7,2.2-2.9l0,0l1.8-0.2c1.8-0.2,3.5,1,3.8,2.8l0,0
@@ -2068,13 +2067,13 @@
 				<path class="st10" d="M597.5,338l-0.8-9c-0.1-0.8-0.3-1.5-0.5-1.5l0,0l0,0l-3.6,0.3l1,10.5L597.5,338z"/>
 				<path class="st10" d="M593.5,338.4l0.9,10.2l3.6-0.3c0.2,0,0.3-0.7,0.2-1.5l-0.8-8.7L593.5,338.4z"/>
 				
-					<rect x="586.3" y="338.7" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -28.9218 55.1078)" class="st10" width="4" height="10.4"/>
+					<rect x="586.3" y="338.7" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -28.9234 55.1111)" class="st10" width="4" height="10.4"/>
 				
-					<rect x="585.3" y="328.3" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -27.9865 54.969)" class="st10" width="3.9" height="10.6"/>
+					<rect x="585.3" y="328.3" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -27.988 54.9723)" class="st10" width="3.9" height="10.6"/>
 				
-					<rect x="590.2" y="338.4" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -28.8786 55.4532)" class="st10" width="3.8" height="10.4"/>
+					<rect x="590.2" y="338.4" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -28.8802 55.4565)" class="st10" width="3.8" height="10.4"/>
 				
-					<rect x="589.2" y="328" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -27.9431 55.319)" class="st10" width="3.8" height="10.6"/>
+					<rect x="589.2" y="328" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -27.9446 55.3223)" class="st10" width="3.8" height="10.6"/>
 			</g>
 			<g>
 				<path class="st20" d="M598.2,330.5L598.2,330.5c-0.2-1.4,0.8-2.7,2.2-2.9l0,0l1.8-0.2c1.8-0.2,3.5,1,3.8,2.8l0,0
@@ -2122,13 +2121,13 @@
 				<path class="st10" d="M600.4,361.6l-0.8-9c-0.1-0.8-0.3-1.5-0.5-1.5l0,0l0,0l-3.6,0.3l1,10.5L600.4,361.6z"/>
 				<path class="st10" d="M596.4,361.9l0.9,10.2l3.6-0.3c0.2,0,0.3-0.7,0.2-1.5l-0.8-8.7L596.4,361.9z"/>
 				
-					<rect x="589.2" y="362.3" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -31.0629 55.4708)" class="st10" width="4" height="10.4"/>
+					<rect x="589.2" y="362.3" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -31.0646 55.4741)" class="st10" width="4" height="10.4"/>
 				
-					<rect x="588.2" y="351.8" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -30.1184 55.3316)" class="st10" width="3.9" height="10.6"/>
+					<rect x="588.2" y="351.8" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -30.12 55.3349)" class="st10" width="3.9" height="10.6"/>
 				
-					<rect x="593.1" y="361.9" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -31.0105 55.8158)" class="st10" width="3.8" height="10.4"/>
+					<rect x="593.1" y="361.9" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -31.0122 55.8192)" class="st10" width="3.8" height="10.4"/>
 				
-					<rect x="592.1" y="351.5" transform="matrix(0.9958 -9.123740e-02 9.123740e-02 0.9958 -30.075 55.6816)" class="st10" width="3.8" height="10.6"/>
+					<rect x="592.1" y="351.5" transform="matrix(0.9958 -9.124269e-02 9.124269e-02 0.9958 -30.0766 55.685)" class="st10" width="3.8" height="10.6"/>
 			</g>
 			<g>
 				<path class="st20" d="M601.1,354L601.1,354c-0.2-1.4,0.8-2.7,2.2-2.9l0,0l1.8-0.2c1.8-0.2,3.5,1,3.8,2.8l0,0
@@ -2911,13 +2910,13 @@
 		603.7,503.7 603.7,497.8 	"/>
 </g>
 <g id="bookable_rooms">
-	<rect id="area-1.03-status_1_" x="1033.7" y="34.6" class="st31" width="75.6" height="99.2"/>
 	<rect id="area-1.02-status" x="1052.9" y="134.9" class="st31" width="56.4" height="51.4"/>
 	<polygon id="area-1.06-status" class="st31" points="907.5,181.7 961,181.7 961,186.3 984.6,186.3 984.6,259.9 907.5,259.9 	"/>
 	<rect id="area-1.05-status" x="754.1" y="33.9" class="st31" width="148.1" height="128.8"/>
 	<polygon id="area-1.04-status" class="st31" points="641.4,32.7 641.4,68.5 634.4,68.5 634.4,161.6 754.1,161.6 754.1,33.9 	"/>
 	<polygon id="area-1.01-status" class="st31" points="975.2,333.7 1109.3,333.7 1109.3,458 1083.4,458 1083.4,470.5 999.3,470.5 
 		999.3,458.6 973.1,458.6 	"/>
+	<rect id="area-1.03-status" x="1033.6" y="33.9" class="st31" width="78.4" height="100"/>
 </g>
 <g id="outline">
 	<polyline class="st32" points="177.1,357.1 22.5,357.1 22.5,550.5 515.4,550.5 515.4,567.7 648.3,567.7 648.3,458.8 690,458.8 
@@ -3003,11 +3002,11 @@
 </g>
 <g id="icons_and_text">
 	<g id="stairs-2-2">
-		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 1024.8179 75.448)" class="st34 st35 st36">Closet</text>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 1024.8179 75.4478)" class="st34 st35 st36">Closet</text>
 	</g>
 	<g id="reception">
 		<circle class="st37" cx="1008.2" cy="263.5" r="10.3"/>
-		<text transform="matrix(1 0 0 1 997.1938 279.7801)" class="st34 st35 st36">Reception</text>
+		<text transform="matrix(1 0 0 1 997.1938 279.7802)" class="st34 st35 st36">Reception</text>
 		<g id="Outline_Icons-2-2">
 			<circle class="st38" cx="1006" cy="260.3" r="1.4"/>
 			<path class="st38" d="M1008.2,262.5h-4.3c-0.1,1.1,0.5,2.3,1.4,3v2.5h1.6v-2.5C1007.7,264.8,1008.3,263.6,1008.2,262.5z"/>
@@ -3018,8 +3017,8 @@
 	</g>
 	<g id="reception-2">
 		<circle class="st37" cx="1039.6" cy="201.6" r="10.3"/>
-		<text transform="matrix(1 0 0 1 1029.1884 217.8182)" class="st34 st35 st36">Reception</text>
-		<text transform="matrix(1 0 0 1 1031.7999 223.5247)" class="st34 st35 st36">Lounge</text>
+		<text transform="matrix(1 0 0 1 1029.1885 217.8183)" class="st34 st35 st36">Reception</text>
+		<text transform="matrix(1 0 0 1 1031.7998 223.5249)" class="st34 st35 st36">Lounge</text>
 		<path class="st39" d="M1042.4,197.6h-5c-0.5,0-0.9,0.5-0.9,0.9v1.8c-0.3,0.1-0.5,0.5-0.5,0.8l0.2,2.1c0,0.5,0.3,0.7,0.8,0.7l0,0
 			v1.4c0,0.1,0,0.2,0.2,0.2s0.2,0.1,0.3,0c0.3,0,0.6-0.1,0.6-0.3v-1.4h3.2v1.4c0,0.1,0,0.2,0.2,0.2s0.2,0.1,0.3,0
 			c0.3,0,0.6-0.1,0.6-0.3v-1.4h0.1c0.3,0,0.7-0.3,0.8-0.7l0.2-2.1c0-0.3-0.1-0.7-0.5-0.8v-1.8C1043.3,198,1042.9,197.6,1042.4,197.6
@@ -3031,7 +3030,7 @@
 			C1043.4,200.5,1043.6,200.9,1043.5,201.1L1043.5,201.1z"/>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 401.1036 52.0438)" class="st34 st35 st36">Elevator</text>
+		<text transform="matrix(1 0 0 1 401.1035 52.0439)" class="st34 st35 st36">Elevator</text>
 		<circle class="st37" cx="410.3" cy="35.8" r="10"/>
 		<path class="st40" d="M407.6,39.8v-6h2.1V40L407.6,39.8z M409.8,39.8v-6h2.1V40L409.8,39.8z M414.3,39.8h-2.4v-6.2
 			c0,0,0-0.1-0.1-0.1l0,0h-4.3c0,0-0.1,0-0.1,0.1l0,0l0,0v6.2h-1.1v-8h8V39.8z M414.4,31.6h-8.1c0,0-0.1,0-0.1,0.1l0,0l0,0v8.1
@@ -3042,7 +3041,7 @@
 	</g>
 	<g>
 		<circle class="st37" cx="931.9" cy="58.9" r="9"/>
-		<text transform="matrix(1 0 0 1 927.0856 73.2196)" class="st34 st35 st41">Stairs</text>
+		<text transform="matrix(1 0 0 1 927.0854 73.2197)" class="st34 st35 st41">Stairs</text>
 		<g id="Outline_Icons-9">
 			<line class="st42" x1="928.2" y1="62.2" x2="935" y2="62.2"/>
 			<polyline class="st42" points="933.8,62.2 933.8,61 932.6,61 932.6,59.8 931.4,59.8 931.4,58.6 930.2,58.6 930.2,57.4 
@@ -3053,14 +3052,14 @@
 		</g>
 	</g>
 	<g id="stairs-2-2_1_">
-		<text transform="matrix(1 0 0 1 930.8566 110.91)" class="st34 st35 st36">Electric</text>
+		<text transform="matrix(1 0 0 1 930.8567 110.9101)" class="st34 st35 st36">Electric</text>
 	</g>
 	<g id="stairs-2-2_2_">
-		<text transform="matrix(1 0 0 1 932.807 142.6341)" class="st34 st35 st36">IDF/AV</text>
+		<text transform="matrix(1 0 0 1 932.8071 142.6342)" class="st34 st35 st36">IDF/AV</text>
 	</g>
 	<g>
 		<g>
-			<text transform="matrix(1.0204 0 0 1 968.333 147.948)" class="st43 st35 st44"> Pantry</text>
+			<text transform="matrix(1.0204 0 0 1 968.333 147.9483)" class="st43 st35 st44"> Pantry</text>
 		</g>
 		<g>
 			<ellipse class="st37" cx="974.7" cy="134.8" rx="8.8" ry="8.7"/>
@@ -3092,18 +3091,18 @@
 		<text transform="matrix(1 0 0 1 231.6915 167.3291)" class="st34 st35 st36">Loading</text>
 	</g>
 	<g id="stairs-2-2_4_">
-		<text transform="matrix(1 0 0 1 388.6743 204.43)" class="st34 st35 st36">Service</text>
-		<text transform="matrix(1 0 0 1 391.9743 210.13)" class="st34 st35 st36">Corr</text>
+		<text transform="matrix(1 0 0 1 388.6743 204.4301)" class="st34 st35 st36">Service</text>
+		<text transform="matrix(1 0 0 1 391.9744 210.1298)" class="st34 st35 st36">Corr</text>
 	</g>
 	<g id="stairs-2-2_5_">
-		<text transform="matrix(1 0 0 1 308.4798 95.2896)" class="st34 st35 st36">Storage</text>
+		<text transform="matrix(1 0 0 1 308.4797 95.2895)" class="st34 st35 st36">Storage</text>
 	</g>
 	<g id="stairs-2-2_6_">
-		<text transform="matrix(1 0 0 1 461.2803 204.4302)" class="st34 st35 st36">Furniture</text>
-		<text transform="matrix(1 0 0 1 462.4803 210.1302)" class="st34 st35 st36">Storage</text>
+		<text transform="matrix(1 0 0 1 461.2803 204.4301)" class="st34 st35 st36">Furniture</text>
+		<text transform="matrix(1 0 0 1 462.4802 210.1303)" class="st34 st35 st36">Storage</text>
 	</g>
 	<g>
-		<text transform="matrix(-0.1028 -0.9947 0.9947 -0.1028 976.9073 118.5411)" class="st34 st35 st47">Print Point</text>
+		<text transform="matrix(-0.1028 -0.9947 0.9947 -0.1028 976.9073 118.5412)" class="st34 st35 st47">Print Point</text>
 		
 			<ellipse transform="matrix(0.9947 -0.1028 0.1028 0.9947 -6.3576 99.6385)" class="st37" cx="963.5" cy="111.5" rx="8.7" ry="8.7"/>
 		<g id="Outline_Icons-13_1_">
@@ -3123,13 +3122,13 @@
 		</g>
 	</g>
 	<g id="stairs-2-2_7_">
-		<text transform="matrix(1 0 0 1 1079.116 328.1888)" class="st34 st35 st36">Closet</text>
+		<text transform="matrix(1 0 0 1 1079.116 328.1889)" class="st34 st35 st36">Closet</text>
 		<g id="stairs-2-2_22_">
-			<text transform="matrix(1 0 0 1 1081.0502 292.0499)" class="st34 st35 st36">Entry</text>
+			<text transform="matrix(1 0 0 1 1081.0503 292.0498)" class="st34 st35 st36">Entry</text>
 		</g>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 1077.4878 261.4142)" class="st34 st35 st36">Elevator</text>
+		<text transform="matrix(1 0 0 1 1077.4878 261.414)" class="st34 st35 st36">Elevator</text>
 		<circle class="st37" cx="1086.7" cy="245.1" r="10"/>
 		<path class="st40" d="M1084,249.1v-6h2.1v6.2L1084,249.1z M1086.1,249.1v-6h2.1v6.2L1086.1,249.1z M1090.7,249.1h-2.4V243
 			c0,0,0-0.1-0.1-0.1l0,0h-4.3c0,0-0.1,0-0.1,0.1l0,0l0,0v6.2h-1.1v-8h8V249.1z M1090.8,241h-8.1c0,0-0.1,0-0.1,0.1l0,0l0,0v8.1
@@ -3141,8 +3140,8 @@
 	</g>
 	<g>
 		<circle class="st37" cx="1001.9" cy="58.4" r="9"/>
-		<text transform="matrix(1 0 0 1 996.2872 72.3998)" class="st34 st35 st48">T</text>
-		<text transform="matrix(1 0 0 1 998.4073 72.3998)" class="st34 st35 st48">oilet</text>
+		<text transform="matrix(1 0 0 1 996.2871 72.3999)" class="st34 st35 st48">T</text>
+		<text transform="matrix(1 0 0 1 998.4072 72.3999)" class="st34 st35 st48">oilet</text>
 		<g id="Outline_Icons-5_1_">
 			<path class="st49" d="M1005.1,58.6c0,0.2-0.1,0.3-0.3,0.3h-1.7v-3.7c0-0.4,0.3-0.7,0.7-0.7l0,0h0.7c0.4,0,0.7,0.3,0.7,0.7l0,0
 				l0,0l0,0l0,0L1005.1,58.6L1005.1,58.6z"/>
@@ -3153,7 +3152,7 @@
 	</g>
 	<g>
 		<circle class="st37" cx="175.1" cy="386.2" r="9"/>
-		<text transform="matrix(1 0 0 1 170.3113 400.5111)" class="st34 st35 st41">Stairs</text>
+		<text transform="matrix(1 0 0 1 170.3113 400.5112)" class="st34 st35 st41">Stairs</text>
 		<g id="Outline_Icons-9_1_">
 			<line class="st42" x1="171.4" y1="389.5" x2="178.2" y2="389.5"/>
 			<polyline class="st42" points="177,389.5 177,388.3 175.8,388.3 175.8,387.1 174.6,387.1 174.6,385.9 173.4,385.9 173.4,384.7 
@@ -3165,7 +3164,7 @@
 	</g>
 	<g>
 		<circle class="st37" cx="532.5" cy="346.7" r="9"/>
-		<text transform="matrix(1 0 0 1 527.7288 361.0115)" class="st34 st35 st41">Stairs</text>
+		<text transform="matrix(1 0 0 1 527.7288 361.0117)" class="st34 st35 st41">Stairs</text>
 		<g id="Outline_Icons-9_2_">
 			<line class="st42" x1="528.9" y1="350" x2="535.6" y2="350"/>
 			<polyline class="st42" points="534.4,350 534.4,348.8 533.2,348.8 533.2,347.6 532,347.6 532,346.4 530.9,346.4 530.9,345.2 
@@ -3176,7 +3175,7 @@
 		</g>
 	</g>
 	<g id="stairs-2-2_9_">
-		<text transform="matrix(1 0 0 1 267.2305 458.5699)" class="st34 st35 st36">Experience Studio</text>
+		<text transform="matrix(1 0 0 1 267.2305 458.5698)" class="st34 st35 st36">Experience Studio</text>
 	</g>
 	<g>
 		<text transform="matrix(1 0 0 1 598.053 464.0932)" class="st34 st35 st50">Cafe</text>
@@ -3195,13 +3194,13 @@
 		</g>
 	</g>
 	<g id="stairs-2-2_11_">
-		<text transform="matrix(1 0 0 1 510.3177 145.1777)" class="st34 st35 st36">Storage</text>
+		<text transform="matrix(1 0 0 1 510.3176 145.1777)" class="st34 st35 st36">Storage</text>
 	</g>
 	<g id="stairs-2-2_12_">
-		<text transform="matrix(1 0 0 1 466.4393 76.8591)" class="st34 st35 st36">Help Desk</text>
+		<text transform="matrix(1 0 0 1 466.4392 76.8588)" class="st34 st35 st36">Help Desk</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 542.2528 109.4017)" class="st34 st35 st36">Elevator</text>
+		<text transform="matrix(1 0 0 1 542.2529 109.4018)" class="st34 st35 st36">Elevator</text>
 		<circle class="st37" cx="551.5" cy="93.1" r="10"/>
 		<path class="st40" d="M548.7,97.1v-6h2.1v6.2L548.7,97.1z M550.9,97.1v-6h2.1v6.2L550.9,97.1z M555.5,97.1h-2.4v-6.2
 			c0,0,0-0.1-0.1-0.1l0,0h-4.3c0,0-0.1,0-0.1,0.1l0,0l0,0v6.2h-1.1v-8h8L555.5,97.1z M555.6,89h-8.1c0,0-0.1,0-0.1,0.1l0,0l0,0v8.1
@@ -3211,29 +3210,29 @@
 		<path class="st40" d="M554.2,93.9L554.2,93.9l0.3-0.3v-0.1h-0.1l-0.2,0.2l-0.2-0.2h-0.1v0.1l0,0L554.2,93.9z"/>
 	</g>
 	<g id="stairs-2-2_13_">
-		<text transform="matrix(1 0 0 1 551.2634 47.4002)" class="st34 st35 st36">Office</text>
-		<text transform="matrix(1 0 0 1 543.3634 53.1002)" class="st34 st35 st36">Services &amp; IT</text>
+		<text transform="matrix(1 0 0 1 551.2634 47.4003)" class="st34 st35 st36">Office</text>
+		<text transform="matrix(1 0 0 1 543.3633 53.1001)" class="st34 st35 st36">Services &amp; IT</text>
 	</g>
 	<g id="stairs-2-2_14_">
-		<text transform="matrix(1 0 0 1 582.1772 55.2288)" class="st34 st35 st36">Phone RM</text>
+		<text transform="matrix(1 0 0 1 582.1772 55.229)" class="st34 st35 st36">Phone RM</text>
 	</g>
 	<g id="stairs-2-2_16_">
 		<text transform="matrix(1 0 0 1 505.1069 95.8886)" class="st34 st35 st36">Vending </text>
-		<text transform="matrix(1 0 0 1 505.5069 101.5886)" class="st34 st35 st36">Machine</text>
+		<text transform="matrix(1 0 0 1 505.5068 101.5883)" class="st34 st35 st36">Machine</text>
 	</g>
 	<g id="stairs-2-2_19_">
-		<text transform="matrix(1 0 0 1 797.0687 243.769)" class="st34 st35 st36">Lounge</text>
+		<text transform="matrix(1 0 0 1 797.0688 243.769)" class="st34 st35 st36">Lounge</text>
 	</g>
 	<g id="stairs-2-2_20_">
-		<text transform="matrix(1 0 0 1 978.842 171.241)" class="st34 st35 st36">Corridor</text>
+		<text transform="matrix(1 0 0 1 978.842 171.2412)" class="st34 st35 st36">Corridor</text>
 	</g>
 	<g id="stairs-2-2_21_">
-		<text transform="matrix(1 0 0 1 406.4137 441.8967)" class="st34 st35 st36">Electric</text>
+		<text transform="matrix(1 0 0 1 406.4136 441.8967)" class="st34 st35 st36">Electric</text>
 	</g>
 	<g>
 		<circle class="st37" cx="974.5" cy="60.2" r="9"/>
-		<text transform="matrix(1 0 0 1 968.8872 74.1501)" class="st34 st35 st48">T</text>
-		<text transform="matrix(1 0 0 1 971.0073 74.1501)" class="st34 st35 st48">oilet</text>
+		<text transform="matrix(1 0 0 1 968.8872 74.1499)" class="st34 st35 st48">T</text>
+		<text transform="matrix(1 0 0 1 971.0073 74.1499)" class="st34 st35 st48">oilet</text>
 		<g id="Outline_Icons-5_6_">
 			<path class="st49" d="M977.7,60.4c0,0.2-0.1,0.3-0.3,0.3h-1.7V57c0-0.4,0.3-0.7,0.7-0.7l0,0h0.7c0.4,0,0.7,0.3,0.7,0.7l0,0l0,0
 				l0,0l0,0L977.7,60.4L977.7,60.4z"/>
@@ -3244,8 +3243,8 @@
 	</g>
 	<g>
 		<circle class="st37" cx="608.8" cy="143.8" r="9"/>
-		<text transform="matrix(1 0 0 1 603.1872 157.7999)" class="st34 st35 st48">T</text>
-		<text transform="matrix(1 0 0 1 605.3073 157.7999)" class="st34 st35 st48">oilet</text>
+		<text transform="matrix(1 0 0 1 603.1873 157.7998)" class="st34 st35 st48">T</text>
+		<text transform="matrix(1 0 0 1 605.3074 157.7998)" class="st34 st35 st48">oilet</text>
 		<g id="Outline_Icons-5_5_">
 			<path class="st49" d="M612,144c0,0.2-0.1,0.3-0.3,0.3H610v-3.7c0-0.4,0.3-0.7,0.7-0.7l0,0h0.7c0.4,0,0.7,0.3,0.7,0.7l0,0l0,0l0,0
 				l0,0L612,144L612,144z"/>
@@ -3256,8 +3255,8 @@
 	</g>
 	<g>
 		<circle class="st37" cx="594.6" cy="86" r="9"/>
-		<text transform="matrix(1 0 0 1 588.9872 99.9999)" class="st34 st35 st48">T</text>
-		<text transform="matrix(1 0 0 1 591.1073 99.9999)" class="st34 st35 st48">oilet</text>
+		<text transform="matrix(1 0 0 1 588.9873 100)" class="st34 st35 st48">T</text>
+		<text transform="matrix(1 0 0 1 591.1074 100)" class="st34 st35 st48">oilet</text>
 		<g id="Outline_Icons-5_4_">
 			<path class="st49" d="M597.8,86.2c0,0.2-0.1,0.3-0.3,0.3h-1.7v-3.7c0-0.4,0.3-0.7,0.7-0.7l0,0h0.7c0.4,0,0.7,0.3,0.7,0.7l0,0l0,0
 				l0,0l0,0L597.8,86.2L597.8,86.2z"/>
@@ -3268,8 +3267,8 @@
 	</g>
 	<g>
 		<circle class="st37" cx="395.3" cy="311.6" r="9"/>
-		<text transform="matrix(1 0 0 1 389.733 325.5782)" class="st34 st35 st48">T</text>
-		<text transform="matrix(1 0 0 1 391.853 325.5782)" class="st34 st35 st48">oilet</text>
+		<text transform="matrix(1 0 0 1 389.7329 325.5781)" class="st34 st35 st48">T</text>
+		<text transform="matrix(1 0 0 1 391.853 325.5781)" class="st34 st35 st48">oilet</text>
 		<g id="Outline_Icons-5_2_">
 			<path class="st49" d="M398.5,311.8c0,0.2-0.1,0.3-0.3,0.3h-1.7v-3.7c0-0.4,0.3-0.7,0.7-0.7l0,0h0.7c0.4,0,0.7,0.3,0.7,0.7l0,0
 				l0,0l0,0l0,0L398.5,311.8L398.5,311.8z"/>
@@ -3280,8 +3279,8 @@
 	</g>
 	<g>
 		<circle class="st37" cx="395.4" cy="375.2" r="9"/>
-		<text transform="matrix(1 0 0 1 389.8309 389.2001)" class="st34 st35 st48">T</text>
-		<text transform="matrix(1 0 0 1 391.9509 389.2001)" class="st34 st35 st48">oilet</text>
+		<text transform="matrix(1 0 0 1 389.8308 389.2002)" class="st34 st35 st48">T</text>
+		<text transform="matrix(1 0 0 1 391.9509 389.2002)" class="st34 st35 st48">oilet</text>
 		<g id="Outline_Icons-5_3_">
 			<path class="st49" d="M398.6,375.4c0,0.2-0.1,0.3-0.3,0.3h-1.7V372c0-0.4,0.3-0.7,0.7-0.7l0,0h0.7c0.4,0,0.7,0.3,0.7,0.7l0,0l0,0
 				l0,0l0,0L398.6,375.4L398.6,375.4z"/>
@@ -3291,22 +3290,22 @@
 		</g>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 1039.9451 398.4098)" class="st10 st52 st53">M103</text>
+<text transform="matrix(1 0 0 1 1039.9451 398.4096)" class="st10 st52 st53">M103</text>
 <text transform="matrix(1 0 0 1 1032.9451 406.8098)" class="st10 st52 st53">Riverdale</text>
-<text transform="matrix(1 0 0 1 935.2948 210.5999)" class="st10 st52 st53">M107</text>
-<text transform="matrix(1 0 0 1 932.3948 218.9999)" class="st10 st52 st53">Trinity </text>
-<text transform="matrix(1 0 0 1 927.2222 226.6999)" class="st10 st52 st53">Bellwoods</text>
+<text transform="matrix(1 0 0 1 935.2949 210.6001)" class="st10 st52 st53">M107</text>
+<text transform="matrix(1 0 0 1 932.3948 219)" class="st10 st52 st53">Trinity </text>
+<text transform="matrix(1 0 0 1 927.2222 226.6997)" class="st10 st52 st53">Bellwoods</text>
 <text transform="matrix(1 0 0 1 1072.6663 157.1167)" class="st10 st52 st53">M160</text>
-<text transform="matrix(1 0 0 1 1072.6663 165.5167)" class="st10 st52 st53">High </text>
-<text transform="matrix(1 0 0 1 1073.1895 173.0837)" class="st10 st52 st53">Park</text>
-<text transform="matrix(1 0 0 1 1064.2416 77.7998)" class="st10 st52 st53">M158</text>
-<text transform="matrix(1 0 0 1 1059.0416 86.1998)" class="st10 st52 st53">Christie </text>
-<text transform="matrix(1 0 0 1 1065.1119 93.8998)" class="st10 st52 st53">Pitts</text>
-<text transform="matrix(1 0 0 1 837.045 101.3002)" class="st10 st52 st53">M150</text>
+<text transform="matrix(1 0 0 1 1072.6663 165.5166)" class="st10 st52 st53">High </text>
+<text transform="matrix(1 0 0 1 1073.1895 173.0835)" class="st10 st52 st53">Park</text>
+<text transform="matrix(1 0 0 1 1064.2417 77.7998)" class="st10 st52 st53">M158</text>
+<text transform="matrix(1 0 0 1 1059.0415 86.1997)" class="st10 st52 st53">Christie </text>
+<text transform="matrix(1 0 0 1 1065.1118 93.8999)" class="st10 st52 st53">Pits</text>
+<text transform="matrix(1 0 0 1 837.0449 101.3003)" class="st10 st52 st53">M150</text>
 <text transform="matrix(1 0 0 1 828.645 109.7002)" class="st10 st52 st53">The Bluffs</text>
-<text transform="matrix(1 0 0 1 688.095 101.3001)" class="st10 st52 st53">M149</text>
-<text transform="matrix(1 0 0 1 672.495 109.7001)" class="st10 st52 st53">Hanlan’s Point</text>
-<text transform="matrix(1 0 0 1 435.9276 508.5122)" class="st10 st52 st53">118</text>
+<text transform="matrix(1 0 0 1 688.095 101.3003)" class="st10 st52 st53">M149</text>
+<text transform="matrix(1 0 0 1 672.4951 109.7002)" class="st10 st52 st53">Hanlan’s Point</text>
+<text transform="matrix(1 0 0 1 435.9277 508.5122)" class="st10 st52 st53">118</text>
 <polyline class="st33" points="754.7,83.4 763.9,96.9 754.7,102.5 763.9,117.2 754.7,126.8 763.9,136.9 754.7,144.8 755,161.1 "/>
 <polyline class="st33" points="515.1,439.9 515.1,403.3 611.3,403.3 "/>
 <line class="st33" x1="515.1" y1="438.1" x2="515.1" y2="483.4"/>
