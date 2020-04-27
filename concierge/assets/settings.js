@@ -6,7 +6,7 @@ var SETTINGS = {
     debug: true,
     composer: {
         domain: '',
-        route: '/concierge-new',
+        route: '/concierge',
         protocol: '',
         port: '',
         use_domain: false,
