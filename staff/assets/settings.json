@@ -1,0 +1,562 @@
+{
+    "env": "dev",
+    "debug": true,
+    "unlicensed": false,
+    "composer": {
+        "domain": "",
+        "route": "/staff",
+        "protocol": "https:",
+        "use_domain": false,
+        "local_login": false
+    },
+    "app": {
+        "title": "McKinsey & Company",
+        "name": "McKinsey & Company",
+        "description": "McKinsey & Company Staff Application made in Angular 5+",
+        "short_name": "McKinsey",
+        "code": "MCKINSEY",
+        "login": {
+            "forgot": false
+        },
+        "analytics": {
+            "enabled": false,
+            "tracking_id": ""
+        },
+        "heapio": {
+            "app_id": 3540602199,
+            "force_ssl": true,
+            "secure_cookie": true,
+            "disable_text_capture": true,
+            "cookie_path": "/staff/"
+        },
+        "logo": {
+            "type": "img",
+            "src": "assets/img/logo.svg",
+            "inverse": "assets/img/logo-inverse.svg",
+            "background": ""
+        },
+        "banner": {
+            "enabled": false,
+            "header": false,
+            "home": false,
+            "type": "",
+            "full": false,
+            "background": "assets/img/skyline.jpg",
+            "src": "assets/img/skyline.jpg"
+        },
+        "copyright": "Copyright 2018 ACA Projects",
+        "routing": false,
+        "style": {
+            "popout": true
+        },
+        "orgs": true,
+        "users": {
+            "visitors": true,
+            "external": true,
+            "can_add": true,
+            "custom_orgs": true,
+            "locate": true,
+            "store": false
+        },
+        "schedule": {
+            "enabled": true,
+            "visitors": true,
+            "new_visitors": true,
+            "edit_visitors": true,
+            "hide_visitor_bookings": true,
+            "contacts": true,
+            "popout": false,
+            "background": "assets/img/skyline.jpg"
+        },
+        "contacts": {
+            "enabled": true
+        },
+        "route_settings": {
+            "book": "booking"
+        },
+        "lockers": {
+            "enabled": false,
+            "simple_filters": false
+        },
+        "menu": {
+            "type": "sidebar",
+            "footer": "bg",
+            "named": false,
+            "reverse": true,
+            "home": false,
+            "enabled": false,
+            "list": [
+                {
+                    "id": "home",
+                    "name": "Home",
+                    "items": []
+                },
+                {
+                    "id": "book",
+                    "name": "Book",
+                    "query": {
+                        "new": true
+                    }
+                },
+                {
+                    "id": "explore",
+                    "name": "Explore",
+                    "items": [
+                        {
+                            "id": "explore/spaces",
+                            "name": "Spaces"
+                        }
+                    ]
+                },
+                {
+                    "id": "schedule",
+                    "name": "My Day",
+                    "items": []
+                },
+                {
+                    "id": "home",
+                    "name": "Logout",
+                    "query": {
+                        "logout": true
+                    },
+                    "items": []
+                }
+            ]
+        },
+        "hide": {
+            "heading": false
+        },
+        "page": {
+            "titles": {
+                "book": "Book Space",
+                "book/room": "Find Space",
+                "book/attendees": "Manage Attendees",
+                "book/results": "Booking Results",
+                "explore": "Explore",
+                "schedule": "View your Schedule",
+                "explore/spaces": "Maps",
+                "explore/people": "People",
+                "visitor": "Book Visitor",
+                "control": "Control"
+            },
+            "info": {
+                "profile": "Welcome to your profile",
+                "schedule": "Hello {{user}}, here is your schedule for today"
+            }
+        },
+        "home": {
+            "background": "assets/img/skyline.jpg",
+            "disclaimer": ""
+        },
+        "wifi": {
+            "background": "assets/img/skyline.jpg"
+        },
+        "tiles": [
+            {
+                "id": "book",
+                "name": "Book",
+                "color": "",
+                "query": {
+                    "new": true
+                },
+                "icon": {
+                    "class": "custom-book"
+                }
+            },
+            {
+                "id": "explore/spaces",
+                "name": "Maps",
+                "color": "",
+                "icon": {
+                    "class": "custom-spaces"
+                }
+            },
+            {
+                "id": "schedule",
+                "name": "My Day",
+                "color": "",
+                "icon": {
+                    "class": "custom-schedule"
+                }
+            }
+        ],
+        "zones": {
+            "enabled": false,
+            "toggle": "room",
+            "status": false,
+            "filters": false,
+            "infourl": "assets/icon/info.svg"
+        },
+        "booking": {
+            "min_attendees": 0,
+            "recurrence": false,
+            "limit": 12,
+            "max_length": 480,
+            "default_length": 60,
+            "min_length": 15,
+            "room_select": true,
+            "title_prefix": "",
+            "charge": false,
+            "terms": false,
+            "old_filters": false,
+            "privacy": true,
+            "control": false,
+            "lock_cancel": 120,
+            "search_host": true,
+            "external_floors": [],
+            "return_id": "schedule",
+            "hide_timeline": true,
+            "fields": [
+                {
+                    "key": "period_group",
+                    "type": "group",
+                    "children": [
+                        {
+                            "key": "date",
+                            "label": "Date",
+                            "simple": true,
+                            "description": "",
+                            "type": "custom",
+                            "required": true
+                        },
+                        {
+                            "key": "recurrence",
+                            "label": "Recurrence",
+                            "simple": false,
+                            "no_edit": true,
+                            "description": "",
+                            "type": "action"
+                        }
+                    ]
+                },
+                {
+                    "key": "time_group",
+                    "type": "group",
+                    "children": [
+                        {
+                            "key": "start",
+                            "label": "Time",
+                            "simple": true,
+                            "description": "",
+                            "type": "custom",
+                            "required": true
+                        },
+                        {
+                            "key": "duration",
+                            "label": "Duration",
+                            "simple": true,
+                            "description": "",
+                            "type": "custom",
+                            "metadata": {
+                                "max_duration": 720
+                            }
+                        }
+                    ]
+                },
+                {
+                    "key": "host",
+                    "label": "Meeting Host",
+                    "type": "custom",
+                    "no_edit": true
+                },
+                {
+                    "key": "icaluid",
+                    "label": "Calender UID",
+                    "type": "input",
+                    "hide": true
+                },
+                {
+                    "key": "attendees",
+                    "label": "Attendees",
+                    "flex": true,
+                    "type": "custom"
+                },
+                {
+                    "key": "expected_attendees",
+                    "label": "Expected Attendees",
+                    "simple": false,
+                    "type": "custom",
+                    "hide": true
+                },
+                {
+                    "key": "title",
+                    "label": "Meeting Subject",
+                    "type": "input",
+                    "required": true
+                },
+                {
+                    "key": "notify_users",
+                    "label": "Guest Notifyees",
+                    "simple": false,
+                    "hide": true,
+                    "type": "action"
+                },
+                {
+                    "key": "booking_type",
+                    "label": "Booking Type",
+                    "simple": false,
+                    "type": "custom",
+                    "default": "internal",
+                    "metadata": {
+                        "options": [
+                            {
+                                "id": "internal",
+                                "name": "Internal (default)"
+                            },
+                            {
+                                "id": "client",
+                                "name": "Client"
+                            },
+                            {
+                                "id": "external",
+                                "name": "External"
+                            },
+                            {
+                                "id": "interview",
+                                "name": "Interview"
+                            },
+                            {
+                                "id": "setup",
+                                "name": "Setup"
+                            },
+                            {
+                                "id": "training",
+                                "name": "Training"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "key": "equipment",
+                    "label": "Equipment",
+                    "flex": true,
+                    "hide": true,
+                    "type": "textarea"
+                },
+                {
+                    "key": "equipment_code",
+                    "label": "Equipment Code",
+                    "flex": true,
+                    "hide": true,
+                    "type": "input"
+                },
+                {
+                    "key": "catering_notes",
+                    "label": "Catering Notes",
+                    "flex": true,
+                    "hide": true,
+                    "type": "textarea"
+                },
+                {
+                    "key": "catering_code",
+                    "label": "Catering Code",
+                    "flex": true,
+                    "hide": true,
+                    "type": "input"
+                },
+                {
+                    "key": "needs_space",
+                    "label": "Need a meeting space?",
+                    "flex": true,
+                    "no_edit": true,
+                    "type": "checkbox"
+                },
+                {
+                    "key": "notes",
+                    "label": "Notes",
+                    "hide": true,
+                    "type": "custom"
+                },
+                {
+                    "key": "needs_catering",
+                    "label": "Need Catering?",
+                    "flex": true,
+                    "type": "checkbox"
+                },
+                {
+                    "key": "conferencing",
+                    "label": "Conferencing",
+                    "type": "toggle",
+                    "hide": true
+                },
+                {
+                    "key": "all_day",
+                    "label": "All Day Booking",
+                    "type": "toggle",
+                    "hide": true
+                },
+                {
+                    "key": "approval_status",
+                    "label": "Approval Status",
+                    "type": "custom",
+                    "hide": true
+                },
+                {
+                    "key": "description",
+                    "label": "Add Notes",
+                    "flex": true,
+                    "type": "custom"
+                }
+            ],
+            "banner": {
+                "enabled": true,
+                "src": "assets/img/banner2.jpg",
+                "links": []
+            }
+        },
+        "recurring_booking": {
+            "fields": {
+                "time": [
+                    {
+                        "id": "duration",
+                        "name": "Start Time",
+                        "description": "",
+                        "type": "period",
+                        "required": true
+                    }
+                ],
+                "dates": [
+                    {
+                        "id": "date",
+                        "name": "Start Date",
+                        "description": "",
+                        "type": "date",
+                        "required": true,
+                        "icon": {
+                            "class": "material-icons",
+                            "value": "keyboard_arrow_down"
+                        }
+                    },
+                    {
+                        "id": "recurr_end",
+                        "name": "End Date",
+                        "description": "",
+                        "type": "date",
+                        "required": true,
+                        "icon": {
+                            "class": "material-icons",
+                            "value": "keyboard_arrow_down"
+                        }
+                    }
+                ],
+                "location": {
+                    "id": "locations",
+                    "name": "Locations",
+                    "icon": {
+                        "class": "material-icons",
+                        "value": "add"
+                    },
+                    "no-item": "Any location",
+                    "type": "select"
+                }
+            }
+        },
+        "explore": {
+            "old_overlay": true,
+            "control": false,
+            "banner": {
+                "search": false,
+                "roles": true,
+                "src": "assets/img/banner.jpg"
+            }
+        },
+        "control": {
+            "banner": {
+                "search": true,
+                "fullback": true,
+                "background": "assets/img/caterer-02.jpg"
+            }
+        },
+        "people_min_char": 0,
+        "catering": {
+            "enabled": false
+        },
+        "colors": {
+            "rooms": {
+                "available": "rgba(31,102,0, .7)",
+                "unavailable": "rgba(171,17,3, .70)",
+                "not-bookable": "rgba(73, 73, 72, .70)",
+                "pending": "#FF9800",
+                "pin": "#f2b36e"
+            },
+            "desks": {
+                "available-fill": "rgba(31,102,0, .70)",
+                "available-stroke": "#1f6600",
+                "unavailable-fill": "rgba(171,17,3, .70)",
+                "unavailable-stroke": "#AB1103",
+                "reserved-fill": "#f2b36e",
+                "reserved-stroke": "#ffc47f",
+                "not-bookable-fill": "rgba(73, 73, 72, .70)",
+                "not-bookable-stroke": "#494948"
+            }
+        },
+        "help": {
+            "type": "",
+            "banner": {
+                "enabled": false
+            },
+            "disclaimer": "",
+            "tiles": [
+                {
+                    "name": "AV Support",
+                    "description": "",
+                    "src": "",
+                    "color": "",
+                    "link": "https://www.google.com"
+                },
+                {
+                    "name": "IT Help",
+                    "description": "",
+                    "src": "",
+                    "color": "",
+                    "link": "https://www.acaprojects.com"
+                },
+                {
+                    "name": "Emergency Contact",
+                    "description": "",
+                    "src": "",
+                    "color": "",
+                    "link": "https://www.ses.nsw.gov.au"
+                },
+                {
+                    "name": "Website",
+                    "description": "",
+                    "src": "",
+                    "color": "",
+                    "link": "https://www.acaprojects.com"
+                }
+            ]
+        },
+        "map": {
+            "simple": false,
+            "info": true,
+            "settings": true,
+            "bookings": true,
+            "keys": {
+                "General": [
+                    {
+                        "id": "bookable",
+                        "name": "Free",
+                        "color": "rgba(31,102,0, .7)"
+                    },
+                    {
+                        "id": "bookable",
+                        "name": "Unavailable",
+                        "color": "rgba(73, 73, 72, .70)"
+                    },
+                    {
+                        "id": "bookable",
+                        "name": "In-Use",
+                        "color": "rgba(171,17,3, .70)"
+                    },
+                    {
+                        "id": "pending",
+                        "name": "Approval Required",
+                        "color": "#FF9800"
+                    }
+                ]
+            }
+        }
+    },
+    "mock": false
+}
