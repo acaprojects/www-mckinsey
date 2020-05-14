@@ -2,17 +2,18 @@
  * ROOT SETTIGNS
  */
 var settings = {
+    env: 'staging',
     debug: true,
     composer: {
         domain: '',
-        route: '',
+        route: '/staff',
         protocol: '',
         port: '',
         use_domain: false,
         local_login: false
     },
     app: {},
-    mock: undefined
+    mock: false
 };
 /**
  * ROOT APPLICATION SETTINGS
@@ -100,12 +101,12 @@ settings.app.help = {
  */
 settings.app.booking = {
     booking_types: [
-        { display: 'Internal', value: 'internal' },
-        { display: 'Client', value: 'client' },
-        { display: 'External', value: 'external' },
-        { display: 'Setup', value: 'setup' },
-        { display: 'Training', value: 'training' },
-        { display: 'Interview', value: 'interview' }
+        { name: 'Internal', id: 'internal' },
+        { name: 'Client', id: 'client' },
+        { name: 'External', id: 'external' },
+        { name: 'Setup', id: 'setup' },
+        { name: 'Training', id: 'training' },
+        { name: 'Interview', id: 'interview' }
     ],
     show_fields: [
         'attendees',
@@ -116,7 +117,10 @@ settings.app.booking = {
         'organiser',
         'recurrence',
         'title',
-        'type'
+        'type',
+        'all_day',
+        'needs_space',
+        'has_catering'
     ],
     html_body: true,
     multiple_spaces: true,
@@ -158,6 +162,7 @@ settings.app.explore = {
     },
     can_select_building: true,
     show_legend_group_names: false,
+    show_timeline: true,
     legend: {
         General: [
             { key: 'space-available', name: 'Available' },
