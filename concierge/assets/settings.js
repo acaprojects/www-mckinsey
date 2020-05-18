@@ -2,7 +2,7 @@
  * ROOT SETTIGNS
  */
 var SETTINGS = {
-    env: 'prod',
+    env: 'staging',
     debug: true,
     composer: {
         domain: '',
