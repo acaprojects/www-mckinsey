@@ -1,3 +1,11 @@
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
 function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -857,73 +865,91 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     /* harmony import */
 
 
-    var _search_search_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var src_app_services_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! src/app/services/data/organisation/organisation.service */
+    "./src/app/services/data/organisation/organisation.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! src/app/services/data/spaces/spaces.service */
+    "./src/app/services/data/spaces/spaces.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! src/app/services/data/users/users.service */
+    "./src/app/services/data/users/users.service.ts");
+    /* harmony import */
+
+
+    var _search_search_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ../search/search.component */
     "./src/app/shell/explore/search/search.component.ts");
     /* harmony import */
 
 
-    var _status_managers_space_status_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _status_managers_space_status_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ../status-managers/space-status.component */
     "./src/app/shell/explore/status-managers/space-status.component.ts");
     /* harmony import */
 
 
-    var _status_managers_desk_status_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _status_managers_desk_status_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ../status-managers/desk-status.component */
     "./src/app/shell/explore/status-managers/desk-status.component.ts");
     /* harmony import */
 
 
-    var _shared_components_map_controls_map_controls_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _shared_components_map_controls_map_controls_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ../../../shared/components/map-controls/map-controls.component */
     "./src/app/shared/components/map-controls/map-controls.component.ts");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
     /*! @angular/material/progress-spinner */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
     /* harmony import */
 
 
-    var _zoom_controls_zoom_controls_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _zoom_controls_zoom_controls_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! ../zoom-controls/zoom-controls.component */
     "./src/app/shell/explore/zoom-controls/zoom-controls.component.ts");
     /* harmony import */
 
 
-    var _map_legend_map_legend_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _map_legend_map_legend_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
     /*! ../map-legend/map-legend.component */
     "./src/app/shell/explore/map-legend/map-legend.component.ts");
     /* harmony import */
 
 
-    var _angular_material_button__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _angular_material_button__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+    var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
     "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
     /* harmony import */
 
 
-    var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+    var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
     /*! @angular/material/progress-bar */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
     /* harmony import */
 
 
-    var _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+    var _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
     /*! ../timeline/timeline.component */
     "./src/app/shell/explore/timeline/timeline.component.ts");
 
@@ -1016,7 +1042,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
       var _super3 = _createSuper(MapViewComponent);
 
-      function MapViewComponent(_service, _route, _dialog) {
+      function MapViewComponent(_service, _route, _dialog, _org, _users, _spaces) {
         var _this4;
 
         _classCallCheck(this, MapViewComponent);
@@ -1025,6 +1051,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         _this4._service = _service;
         _this4._route = _route;
         _this4._dialog = _dialog;
+        _this4._org = _org;
+        _this4._users = _users;
+        _this4._spaces = _spaces;
         /** Center offset of the map */
 
         _this4.center = {
@@ -1064,7 +1093,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           })).subscribe(function () {
             /* istanbul ignore else */
             if (!_this5.active_level) {
-              var bld = _this5._service.Organisation.building;
+              var bld = _this5._org.building;
 
               if (bld && bld.levels.length) {
                 _this5.active_level = bld.levels[0].id;
@@ -1101,10 +1130,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "openBookingRulesModal",
         value: function openBookingRulesModal() {
-          var level = this._service.Organisation.levelWithID(this.active_level) || {
+          var level = this._org.levelWithID(this.active_level) || {
             building_id: ''
           };
-          var building = this._service.Organisation.buildings.find(function (bld) {
+          var building = this._org.buildings.find(function (bld) {
             return bld.id === level.building_id;
           }) || {};
 
@@ -1173,7 +1202,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "loadSpaceLocation",
         value: function loadSpaceLocation(space_id) {
-          var space = this._service.Spaces.find(space_id);
+          var space = this._spaces.find(space_id);
           /* istanbul ignore else */
 
 
@@ -1217,7 +1246,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
                     this.loading = true;
                     this.message = "Loading user details...";
                     _context.next = 6;
-                    return this._service.Users.show(user_email);
+                    return this._users.show(user_email);
 
                   case 6:
                     user = _context.sent;
@@ -1293,7 +1322,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "map_url",
         get: function get() {
-          var level = this._service.Organisation.levelWithID(this.active_level) || {
+          var level = this._org.levelWithID(this.active_level) || {
             map_url: ''
           };
           return level.map_url || '';
@@ -1303,10 +1332,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "has_booking_rules",
         get: function get() {
-          var level = this._service.Organisation.levelWithID(this.active_level) || {
+          var level = this._org.levelWithID(this.active_level) || {
             building_id: ''
           };
-          return !!(this._service.Organisation.buildings.find(function (bld) {
+          return !!(this._org.buildings.find(function (bld) {
             return bld.id === level.building_id;
           }) || {}).booking_details;
         }
@@ -1316,7 +1345,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }(src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_6__["BaseDirective"]);
 
     MapViewComponent.ɵfac = function MapViewComponent_Factory(t) {
-      return new (t || MapViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_5__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]));
+      return new (t || MapViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_5__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_9__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_11__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_10__["SpacesService"]));
     };
 
     MapViewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -1449,7 +1478,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.settings.show_timeline);
         }
       },
-      directives: [_search_search_component__WEBPACK_IMPORTED_MODULE_9__["ExploreSearchComponent"], _status_managers_space_status_component__WEBPACK_IMPORTED_MODULE_10__["ExploreSpaceStatusComponent"], _status_managers_desk_status_component__WEBPACK_IMPORTED_MODULE_11__["ExploreDeskStatusComponent"], _shared_components_map_controls_map_controls_component__WEBPACK_IMPORTED_MODULE_12__["MapControlsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_3__["MapComponent"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_14__["MatSpinner"], _zoom_controls_zoom_controls_component__WEBPACK_IMPORTED_MODULE_15__["ZoomControlsComponent"], _map_legend_map_legend_component__WEBPACK_IMPORTED_MODULE_16__["ExploreMapLegendComponent"], _angular_material_button__WEBPACK_IMPORTED_MODULE_17__["MatButton"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_18__["ɵb"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_19__["MatProgressBar"], _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_20__["TimelineComponent"]],
+      directives: [_search_search_component__WEBPACK_IMPORTED_MODULE_12__["ExploreSearchComponent"], _status_managers_space_status_component__WEBPACK_IMPORTED_MODULE_13__["ExploreSpaceStatusComponent"], _status_managers_desk_status_component__WEBPACK_IMPORTED_MODULE_14__["ExploreDeskStatusComponent"], _shared_components_map_controls_map_controls_component__WEBPACK_IMPORTED_MODULE_15__["MapControlsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_16__["NgIf"], _acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_3__["MapComponent"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_17__["MatSpinner"], _zoom_controls_zoom_controls_component__WEBPACK_IMPORTED_MODULE_18__["ZoomControlsComponent"], _map_legend_map_legend_component__WEBPACK_IMPORTED_MODULE_19__["ExploreMapLegendComponent"], _angular_material_button__WEBPACK_IMPORTED_MODULE_20__["MatButton"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_21__["ɵb"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_22__["MatProgressBar"], _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_23__["TimelineComponent"]],
       styles: [".map-view[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden;\n}\n.header[_ngcontent-%COMP%] {\n  width: 100%;\n  background-color: #f8f8f8;\n}\n.body[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 50%;\n  flex: 1;\n  width: 100%;\n  background-color: #f8f8f8;\n  z-index: 1;\n  overflow: hidden;\n}\na-map[_ngcontent-%COMP%] {\n  z-index: 1;\n}\n[overlay][_ngcontent-%COMP%] {\n  z-index: 10;\n}\na-map-controls[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0.5em;\n  left: 0.5em;\n}\na-zoom-controls[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0.5em;\n  right: 0.5em;\n}\na-map-legend[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0.5em;\n}\na-popout-menu[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0.5em;\n  left: 0.5em;\n  z-index: 999;\n}\n.message[_ngcontent-%COMP%] {\n  overflow: hidden;\n  position: absolute;\n  bottom: 0.5rem;\n  left: 50%;\n  transform: translateX(-50%);\n  background-color: #fff;\n  border-radius: 4px;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  max-width: 20rem;\n  z-index: 999;\n  font-size: 0.9em;\n}\n.message[_ngcontent-%COMP%]   .loading[_ngcontent-%COMP%] {\n  height: 4px;\n  width: 100%;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .message[_ngcontent-%COMP%] {\n    left: 0.5rem;\n    transform: none;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .message[_ngcontent-%COMP%] {\n    left: 0.5rem;\n    transform: none;\n  }\n}\n.message[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  padding: 0.5rem;\n}\nbutton.rules[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 7.5em;\n  left: 0.5em;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  color: #fff;\n  background-color: #ffb300;\n  z-index: 999;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  button.rules[_ngcontent-%COMP%] {\n    top: 4em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  button.rules[_ngcontent-%COMP%] {\n    top: 4em;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL3NoZWxsL2V4cGxvcmUvbWFwLXZpZXcvbWFwLXZpZXcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL2V4cGxvcmUvbWFwLXZpZXcvbWFwLXZpZXcuY29tcG9uZW50LnNjc3MiLCIvYnVpbGRzL2FjYS1lbmdpbmUvbWNraW5zZXkvbWNraW5zZXktc3RhZmYtYXBwL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy9taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFpQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUNBLGdCQUFBO0FDTUo7QURIQTtFQUNJLFdBQUE7RUFDQSx5QkFBQTtBQ01KO0FESEE7RUFDSSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxPQUFBO0VBQ0EsV0FBQTtFQUNBLHlCQUFBO0VBQ0EsVUFBQTtFQUNBLGdCQUFBO0FDTUo7QURIQTtFQUNJLFVBQUE7QUNNSjtBREhBO0VBQ0ksV0FBQTtBQ01KO0FESEE7RUFDSSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxXQUFBO0FDTUo7QURIQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7QUNNSjtBREhBO0VBQ0ksa0JBQUE7RUFDQSxTQUFBO0VBQ0EsV0FBQTtBQ01KO0FESEE7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtBQ01KO0FESEE7RUFDSSxnQkFBQTtFQUNBLGtCQUFBO0VBQ0EsY0FBQTtFQUNBLFNBQUE7RUFDQSwyQkFBQTtFQUNBLHNCQUFBO0VBQ0Esa0JBQUE7RUUvREEsaUhBQUE7RUZpRUEsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsZ0JBQUE7QUNNSjtBREpJO0VBQ0ksV0FBQTtFQUNBLFdBQUE7QUNNUjtBRnhCUTtFQ0dSO0lBbUJRLFlBQUE7SUFDQSxlQUFBO0VDTU47QUFDRjtBRjNCUTtFQ0FSO0lBbUJRLFlBQUE7SUFDQSxlQUFBO0VDWU47QUFDRjtBRFZJO0VBQ0ksZUFBQTtBQ1lSO0FEUkE7RUFDSSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxXQUFBO0VFdkZBLGlIQUFBO0VGeUZBLFdEM0ZTO0VDNEZULHlCRHRGTTtFQ3VGTixZQUFBO0FDV0o7QUZqRFE7RUMrQlI7SUFVUSxRQUFBO0VDWU47QUFDRjtBRm5EUTtFQzRCUjtJQVVRLFFBQUE7RUNpQk47QUFDRiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2V4cGxvcmUvbWFwLXZpZXcvbWFwLXZpZXcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG4kaGVhZGVyLWJhY2s6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgIzA1MUMyQywgIzA1MUMyQyA0MCUsICMwQjI0NTMgNjAlLCAjMUY0MEU2IDEwMCUpO1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG5cbkBtaXhpbiByZXNwb25kLXRvKCRtZWRpYSkge1xuICAgIEBpZiAkbWVkaWEgPT0gbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBub3QtbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSAgQGVsc2UgaWYgJG1lZGlhID09IGxhdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgKCRtZWRpYSA9PSB0YWJsZXQtbW9iaWxlIG9yICRtZWRpYSA9PSBub3QtZGVza3RvcCkge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH1cbn1cbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcbkBpbXBvcnQgJ21peGlucyc7XG5cbi5tYXAtdmlldyB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG4uaGVhZGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjhmOGY4O1xufVxuXG4uYm9keSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIG1pbi1oZWlnaHQ6IDUwJTtcbiAgICBmbGV4OiAxO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmOGY4Zjg7XG4gICAgei1pbmRleDogMTtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG5hLW1hcCB7XG4gICAgei1pbmRleDogMTtcbn1cblxuW292ZXJsYXldIHtcbiAgICB6LWluZGV4OiAxMDtcbn1cblxuYS1tYXAtY29udHJvbHMge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IC41ZW07XG4gICAgbGVmdDogLjVlbTtcbn1cblxuYS16b29tLWNvbnRyb2xzIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiAuNWVtO1xuICAgIHJpZ2h0OiAuNWVtO1xufVxuXG5hLW1hcC1sZWdlbmQge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBib3R0b206IDA7XG4gICAgbGVmdDogLjVlbTtcbn1cblxuYS1wb3BvdXQtbWVudSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogLjVlbTtcbiAgICBsZWZ0OiAuNWVtO1xuICAgIHotaW5kZXg6IDk5OTtcbn1cblxuLm1lc3NhZ2Uge1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogLjVyZW07XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgIG1heC13aWR0aDogMjByZW07XG4gICAgei1pbmRleDogOTk5O1xuICAgIGZvbnQtc2l6ZTogLjllbTtcblxuICAgIC5sb2FkaW5nIHtcbiAgICAgICAgaGVpZ2h0OiA0cHg7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cblxuICAgIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgIGxlZnQ6IC41cmVtO1xuICAgICAgICB0cmFuc2Zvcm06IG5vbmU7XG4gICAgfVxuXG4gICAgLnRleHQge1xuICAgICAgICBwYWRkaW5nOiAuNXJlbTtcbiAgICB9XG59XG5cbmJ1dHRvbi5ydWxlcyB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogNy41ZW07XG4gICAgbGVmdDogLjVlbTtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgIGNvbG9yOiAkZm9udC1saWdodDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkcGVuZGluZztcbiAgICB6LWluZGV4OiA5OTk7XG5cbiAgICBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICB0b3A6IDRlbTtcbiAgICB9XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4ubWFwLXZpZXcge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuLmhlYWRlciB7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjhmOGY4O1xufVxuXG4uYm9keSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbWluLWhlaWdodDogNTAlO1xuICBmbGV4OiAxO1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y4ZjhmODtcbiAgei1pbmRleDogMTtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuYS1tYXAge1xuICB6LWluZGV4OiAxO1xufVxuXG5bb3ZlcmxheV0ge1xuICB6LWluZGV4OiAxMDtcbn1cblxuYS1tYXAtY29udHJvbHMge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMC41ZW07XG4gIGxlZnQ6IDAuNWVtO1xufVxuXG5hLXpvb20tY29udHJvbHMge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTogMC41ZW07XG4gIHJpZ2h0OiAwLjVlbTtcbn1cblxuYS1tYXAtbGVnZW5kIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDAuNWVtO1xufVxuXG5hLXBvcG91dC1tZW51IHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDAuNWVtO1xuICBsZWZ0OiAwLjVlbTtcbiAgei1pbmRleDogOTk5O1xufVxuXG4ubWVzc2FnZSB7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwLjVyZW07XG4gIGxlZnQ6IDUwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xuICBtYXgtd2lkdGg6IDIwcmVtO1xuICB6LWluZGV4OiA5OTk7XG4gIGZvbnQtc2l6ZTogMC45ZW07XG59XG4ubWVzc2FnZSAubG9hZGluZyB7XG4gIGhlaWdodDogNHB4O1xuICB3aWR0aDogMTAwJTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5tZXNzYWdlIHtcbiAgICBsZWZ0OiAwLjVyZW07XG4gICAgdHJhbnNmb3JtOiBub25lO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgLm1lc3NhZ2Uge1xuICAgIGxlZnQ6IDAuNXJlbTtcbiAgICB0cmFuc2Zvcm06IG5vbmU7XG4gIH1cbn1cbi5tZXNzYWdlIC50ZXh0IHtcbiAgcGFkZGluZzogMC41cmVtO1xufVxuXG5idXR0b24ucnVsZXMge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogNy41ZW07XG4gIGxlZnQ6IDAuNWVtO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMHB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbiAgY29sb3I6ICNmZmY7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmIzMDA7XG4gIHotaW5kZXg6IDk5OTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIGJ1dHRvbi5ydWxlcyB7XG4gICAgdG9wOiA0ZW07XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICBidXR0b24ucnVsZXMge1xuICAgIHRvcDogNGVtO1xuICB9XG59IiwiXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuIl19 */"]
     });
     /*@__PURE__*/
@@ -1469,6 +1498,12 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
         }, {
           type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]
+        }, {
+          type: src_app_services_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_9__["OrganisationService"]
+        }, {
+          type: src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_11__["UsersService"]
+        }, {
+          type: src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_10__["SpacesService"]
         }];
       }, null);
     })();
@@ -1540,49 +1575,61 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! src/app/services/data/users/users.service */
+    "./src/app/services/data/users/users.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! src/app/services/data/spaces/spaces.service */
+    "./src/app/services/data/spaces/spaces.service.ts");
+    /* harmony import */
+
+
+    var dayjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_7___default =
+    var dayjs__WEBPACK_IMPORTED_MODULE_9___default =
     /*#__PURE__*/
-    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_7__);
+    __webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_9__);
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
     /* harmony import */
 
 
-    var _shared_components_forms_booking_form_booking_form_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _shared_components_forms_booking_form_booking_form_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ../../../../shared/components/forms/booking-form/booking-form.component */
     "./src/app/shared/components/forms/booking-form/booking-form.component.ts");
     /* harmony import */
 
 
-    var _angular_material_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _angular_material_button__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
     "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
     /* harmony import */
 
 
-    var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! @angular/material/progress-spinner */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
@@ -2018,7 +2065,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
       var _super4 = _createSuper(ExploreBookingModalComponent);
 
-      function ExploreBookingModalComponent(_dialog_ref, _data, _router, _service) {
+      function ExploreBookingModalComponent(_dialog_ref, _data, _router, _service, _users, _spaces) {
         var _this6;
 
         _classCallCheck(this, ExploreBookingModalComponent);
@@ -2028,11 +2075,13 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         _this6._data = _data;
         _this6._router = _router;
         _this6._service = _service;
+        _this6._users = _users;
+        _this6._spaces = _spaces;
         /** Form contents to display */
 
         _this6.state = 'info';
-        var date = dayjs__WEBPACK_IMPORTED_MODULE_7__(_this6._data.date);
-        _this6.booking = new src_app_services_data_bookings_booking_class__WEBPACK_IMPORTED_MODULE_3__["Booking"](_this6._service.Bookings, {
+        var date = dayjs__WEBPACK_IMPORTED_MODULE_9__(_this6._data.date);
+        _this6.booking = new src_app_services_data_bookings_booking_class__WEBPACK_IMPORTED_MODULE_3__["Booking"]({
           title: 'Ad-Hoc Booking',
           date: date.valueOf(),
           duration: 30,
@@ -2041,7 +2090,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         var status = Object(src_app_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_5__["statusFromBookings"])(_this6._data.bookings, _this6.space.bookable, _this6.space.byRequest({
           date: _this6._data.date,
           duration: 30,
-          host: _this6._service.Users.current
+          host: _this6._users.current
         }), _this6._data.date);
         _this6.available_until = status.available_until;
         return _this6;
@@ -2068,7 +2117,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
             this._dialog_ref.close();
           } else {
-            this.form = Object(src_app_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_5__["generateBookingForm"])(this.booking, this._service.Users.current, ['space_list', 'organiser', 'title', 'duration']);
+            this.form = Object(src_app_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_5__["generateBookingForm"])(this.booking, this._users.current, ['space_list', 'organiser', 'title', 'duration']);
             this.state = 'form';
           }
         }
@@ -2081,7 +2130,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           if (this.form.valid) {
             this.loading = 'Checking space availability...';
             this.checkSpaceAvailability().then(function () {
-              _this7.booking.save(true).then(function () {
+              _this7.booking.save().then(function () {
                 _this7.loading = null;
                 _this7.success = true;
 
@@ -2111,7 +2160,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
           var spaces = this.booking.changes.space_list || this.booking.space_list;
           return new Promise(function (resolve, reject) {
-            _this8._service.Spaces.available({
+            _this8._spaces.available({
               room_ids: spaces.map(function (space) {
                 return space.id;
               }).join(','),
@@ -2146,9 +2195,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         get: function get() {
           var booking = this.booking.toJSON(true);
           return this.space.byRequest({
-            date: this.booking.changes.date || this.booking.date || dayjs__WEBPACK_IMPORTED_MODULE_7__(this._data.date).valueOf(),
+            date: this.booking.changes.date || this.booking.date || dayjs__WEBPACK_IMPORTED_MODULE_9__(this._data.date).valueOf(),
             duration: this.booking.changes.duration || this.booking.duration || 30,
-            host: booking.organiser || this._service.Users.current
+            host: booking.organiser || this._users.current
           });
         }
         /** Display string for the selected date */
@@ -2156,7 +2205,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "date",
         get: function get() {
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_7__(this._data.date);
+          var date = dayjs__WEBPACK_IMPORTED_MODULE_9__(this._data.date);
           return date.format('DD MMM YYYY');
         }
         /** Display string for the selected time */
@@ -2164,7 +2213,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "time",
         get: function get() {
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_7__(this._data.date);
+          var date = dayjs__WEBPACK_IMPORTED_MODULE_9__(this._data.date);
           return date.format('h:mm A');
         }
         /** Selected space */
@@ -2179,8 +2228,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "is_now",
         get: function get() {
-          var now = dayjs__WEBPACK_IMPORTED_MODULE_7__();
-          var date = dayjs__WEBPACK_IMPORTED_MODULE_7__(this._data.date);
+          var now = dayjs__WEBPACK_IMPORTED_MODULE_9__();
+          var date = dayjs__WEBPACK_IMPORTED_MODULE_9__(this._data.date);
           return now.isSame(date, 'm') || now.isAfter(date, 'm');
         }
       }]);
@@ -2189,7 +2238,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }(src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_6__["BaseDirective"]);
 
     ExploreBookingModalComponent.ɵfac = function ExploreBookingModalComponent_Factory(t) {
-      return new (t || ExploreBookingModalComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"]));
+      return new (t || ExploreBookingModalComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_7__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_8__["SpacesService"]));
     };
 
     ExploreBookingModalComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -2212,7 +2261,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.success)("ngIfElse", _r1);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_9__["IconComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgSwitchDefault"], _shared_components_forms_booking_form_booking_form_component__WEBPACK_IMPORTED_MODULE_10__["BookingFormComponent"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogClose"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_12__["ɵb"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatSpinner"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_11__["IconComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgSwitchDefault"], _shared_components_forms_booking_form_booking_form_component__WEBPACK_IMPORTED_MODULE_12__["BookingFormComponent"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_13__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogClose"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_14__["ɵb"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_15__["MatSpinner"]],
       styles: ["[_nghost-%COMP%] {\n  max-width: 24em;\n}\nheader[_ngcontent-%COMP%] {\n  color: #fff;\n}\nheader[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\nheader.success[_ngcontent-%COMP%] {\n  background-color: #43a047;\n}\nheader.request[_ngcontent-%COMP%] {\n  background-color: #ffb300;\n}\nmain[_ngcontent-%COMP%] {\n  padding: 0 1em 0.5em;\n}\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\nbutton[_ngcontent-%COMP%] {\n  min-width: 8em;\n}\np[_ngcontent-%COMP%] {\n  margin: 0.5em 0;\n  font-size: 1.25em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL3NoZWxsL2V4cGxvcmUvb3ZlcmxheXMvYm9va2luZy1tb2RhbC9ib29raW5nLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9leHBsb3JlL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvYm9va2luZy1tb2RhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFpQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUM1Q0E7RUFDSSxlQUFBO0FDT0o7QURKQTtFQUtJLFdETlM7QUVTYjtBRFBJO0VBQ0ksaUJBQUE7QUNTUjtBREpJO0VBQ0kseUJEUEU7QUVhVjtBREhJO0VBQ0kseUJEUEU7QUVZVjtBRERBO0VBQ0ksb0JBQUE7QUNJSjtBRERBO0VBQ0ksV0FBQTtFQUNBLGtCQUFBO0FDSUo7QUREQTtFQUNJLGNBQUE7QUNJSjtBRERBO0VBQ0ksZUFBQTtFQUNBLGlCQUFBO0FDSUoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9leHBsb3JlL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvYm9va2luZy1tb2RhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcbiRoZWFkZXItYmFjazogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCAjMDUxQzJDLCAjMDUxQzJDIDQwJSwgIzBCMjQ1MyA2MCUsICMxRjQwRTYgMTAwJSk7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9ICBAZWxzZSBpZiAkbWVkaWEgPT0gbGF0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAoJG1lZGlhID09IHRhYmxldC1tb2JpbGUgb3IgJG1lZGlhID09IG5vdC1kZXNrdG9wKSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG46aG9zdCB7XG4gICAgbWF4LXdpZHRoOiAyNGVtO1xufVxuXG5oZWFkZXIge1xuICAgIHNwYW4ge1xuICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICB9XG5cbiAgICBjb2xvcjogJGZvbnQtbGlnaHQ7XG5cbiAgICAmLnN1Y2Nlc3Mge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkc3VjY2VzcztcbiAgICB9XG5cbiAgICAmLnJlcXVlc3Qge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkcGVuZGluZztcbiAgICB9XG59XG5cbm1haW4ge1xuICAgIHBhZGRpbmc6IDAgMWVtIC41ZW07XG59XG5cbmZvb3RlciB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG5idXR0b24ge1xuICAgIG1pbi13aWR0aDogOGVtO1xufVxuXG5wIHtcbiAgICBtYXJnaW46IC41ZW0gMDtcbiAgICBmb250LXNpemU6IDEuMjVlbTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0IHtcbiAgbWF4LXdpZHRoOiAyNGVtO1xufVxuXG5oZWFkZXIge1xuICBjb2xvcjogI2ZmZjtcbn1cbmhlYWRlciBzcGFuIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG5oZWFkZXIuc3VjY2VzcyB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0M2EwNDc7XG59XG5oZWFkZXIucmVxdWVzdCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmIzMDA7XG59XG5cbm1haW4ge1xuICBwYWRkaW5nOiAwIDFlbSAwLjVlbTtcbn1cblxuZm9vdGVyIHtcbiAgd2lkdGg6IDEwMCU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuYnV0dG9uIHtcbiAgbWluLXdpZHRoOiA4ZW07XG59XG5cbnAge1xuICBtYXJnaW46IDAuNWVtIDA7XG4gIGZvbnQtc2l6ZTogMS4yNWVtO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -2238,6 +2287,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
         }, {
           type: src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"]
+        }, {
+          type: src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_7__["UsersService"]
+        }, {
+          type: src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_8__["SpacesService"]
         }];
       }, null);
     })();
@@ -2291,9 +2344,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     /* harmony import */
 
 
-    var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! src/app/services/app.service */
-    "./src/app/services/app.service.ts");
+    var src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/data/users/users.service */
+    "./src/app/services/data/users/users.service.ts");
     /* harmony import */
 
 
@@ -2382,7 +2435,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
       var _super5 = _createSuper(ExploreSpaceInfoComponent);
 
-      function ExploreSpaceInfoComponent(_data, _position, _service) {
+      function ExploreSpaceInfoComponent(_data, _position, _users) {
         var _this9;
 
         _classCallCheck(this, ExploreSpaceInfoComponent);
@@ -2390,7 +2443,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         _this9 = _super5.call(this);
         _this9._data = _data;
         _this9._position = _position;
-        _this9._service = _service;
+        _this9._users = _users;
         return _this9;
       }
       /** Named position of the element location on the map */
@@ -2421,7 +2474,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           var status = Object(src_app_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["statusFromBookings"])(this.bookings, this.space.bookable, this.space.byRequest({
             date: this._data.date,
             duration: 30,
-            host: this._service.Users.current
+            host: this._users.current
           }), this._data.date);
           this.status = status.status;
           this.available_until = status.available_until;
@@ -2485,7 +2538,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }(src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]);
 
     ExploreSpaceInfoComponent.ɵfac = function ExploreSpaceInfoComponent_Factory(t) {
-      return new (t || ExploreSpaceInfoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_1__["MAP_OVERLAY_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_1__["MAP_LOCATION"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"]));
+      return new (t || ExploreSpaceInfoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_1__["MAP_OVERLAY_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_1__["MAP_LOCATION"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]));
     };
 
     ExploreSpaceInfoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -2531,7 +2584,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
             args: [_acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_1__["MAP_LOCATION"]]
           }]
         }, {
-          type: src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"]
+          type: src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]
         }];
       }, null);
     })();
@@ -2585,55 +2638,61 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     /* harmony import */
 
 
-    var src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! src/app/services/app.service */
-    "./src/app/services/app.service.ts");
-    /* harmony import */
-
-
-    var src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! src/app/shared/base.directive */
     "./src/app/shared/base.directive.ts");
     /* harmony import */
 
 
-    var src_app_services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var src_app_services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! src/app/services/data/spaces/space.class */
     "./src/app/services/data/spaces/space.class.ts");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! src/app/services/data/users/users.service */
+    "./src/app/services/data/users/users.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! src/app/services/data/spaces/spaces.service */
+    "./src/app/services/data/spaces/spaces.service.ts");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! @angular/material/autocomplete */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/autocomplete.js");
     /* harmony import */
 
 
-    var _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ../../../shared/components/icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
     /* harmony import */
 
 
-    var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! @angular/material/progress-spinner */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
     /* harmony import */
 
 
-    var _angular_material_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _angular_material_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! @angular/material/core */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
@@ -2773,13 +2832,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
       var _super6 = _createSuper(ExploreSearchComponent);
 
-      function ExploreSearchComponent(_service, _route, _router) {
+      function ExploreSearchComponent(_users, _spaces, _route, _router) {
         var _this11;
 
         _classCallCheck(this, ExploreSearchComponent);
 
         _this11 = _super6.call(this);
-        _this11._service = _service;
+        _this11._users = _users;
+        _this11._spaces = _spaces;
         _this11._route = _route;
         _this11._router = _router;
         /** Post search and filtering list of items */
@@ -2804,14 +2864,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
           this.search_results$ = this.search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(400), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function (query) {
             _this12.loading = true;
-            return query.length >= 3 ? _this12._service.Users.query({
+            return query.length >= 3 ? _this12._users.query({
               q: query.slice(0, 3),
               cache: 60 * 1000
             }) : Promise.resolve([]);
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (err) {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])([]);
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (users) {
-            var spaces = _this12._service.Spaces.filter(function (_) {
+            var spaces = _this12._spaces.filter(function (_) {
               return true;
             });
 
@@ -2863,7 +2923,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "selectOption",
         value: function selectOption(item) {
-          if (item instanceof src_app_services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_6__["Space"]) {
+          if (item instanceof src_app_services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_5__["Space"]) {
             this._router.navigate([], {
               relativeTo: this._route,
               queryParams: {
@@ -2886,10 +2946,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }]);
 
       return ExploreSearchComponent;
-    }(src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_5__["BaseDirective"]);
+    }(src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"]);
 
     ExploreSearchComponent.ɵfac = function ExploreSearchComponent_Factory(t) {
-      return new (t || ExploreSearchComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]));
+      return new (t || ExploreSearchComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_7__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]));
     };
 
     ExploreSearchComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -2938,7 +2998,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.results);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_8__["MatAutocomplete"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_9__["IconComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["DefaultValueAccessor"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_8__["MatAutocompleteTrigger"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_11__["MatSpinner"], _angular_material_core__WEBPACK_IMPORTED_MODULE_12__["MatOption"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_9__["MatAutocomplete"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_10__["IconComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["DefaultValueAccessor"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_9__["MatAutocompleteTrigger"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["NgModel"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_12__["MatSpinner"], _angular_material_core__WEBPACK_IMPORTED_MODULE_13__["MatOption"]],
       styles: [".searchbar[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  max-width: calc(100% - 1em);\n  width: calc(100% - 1em);\n  margin: 0.5em auto;\n  background-color: #fff;\n  border-radius: 2em;\n  padding: 0 0.75em;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .searchbar[_ngcontent-%COMP%] {\n    border-radius: 0;\n    box-shadow: none;\n    margin: 0;\n    width: 100%;\n    max-width: 100%;\n    padding: 0 0.5em;\n    border-bottom: 1px solid #ccc;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .searchbar[_ngcontent-%COMP%] {\n    border-radius: 0;\n    box-shadow: none;\n    margin: 0;\n    width: 100%;\n    max-width: 100%;\n    padding: 0 0.5em;\n    border-bottom: 1px solid #ccc;\n  }\n}\n.prefix[_ngcontent-%COMP%], .suffix[_ngcontent-%COMP%] {\n  font-size: 1.5em;\n  min-width: 32px;\n  min-height: 100%;\n}\n.input[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\ninput[_ngcontent-%COMP%] {\n  width: 100%;\n  font-size: 1em;\n  border: none;\n  outline: none;\n  padding: 1em 0.5em;\n  background: none;\n}\n.name[_ngcontent-%COMP%] {\n  height: 1em;\n}\n.email[_ngcontent-%COMP%] {\n  font-size: 0.6em;\n  color: rgba(0, 0, 0, 0.65);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL3NoZWxsL2V4cGxvcmUvc2VhcmNoL3NlYXJjaC5jb21wb25lbnQuc2NzcyIsIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL21peGlucy5zY3NzIiwic3JjL2FwcC9zaGVsbC9leHBsb3JlL3NlYXJjaC9zZWFyY2guY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBaUNBOztjQUFBO0FBYUE7O3NCQUFBO0FDM0NBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsMkJBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0Esc0JBQUE7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0VDSkEsaUhBQUE7QUNXSjtBSDBDUTtFQ3pEUjtJQVlRLGdCQUFBO0lBQ0EsZ0JBQUE7SUFDQSxTQUFBO0lBQ0EsV0FBQTtJQUNBLGVBQUE7SUFDQSxnQkFBQTtJQUNBLDZCQUFBO0VFT047QUFDRjtBSGtDUTtFQzVEUjtJQVlRLGdCQUFBO0lBQ0EsZ0JBQUE7SUFDQSxTQUFBO0lBQ0EsV0FBQTtJQUNBLGVBQUE7SUFDQSxnQkFBQTtJQUNBLDZCQUFBO0VFa0JOO0FBQ0Y7QUZmQTs7RUFFSSxnQkFBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtBRWtCSjtBRmRBO0VBQ0ksT0FBQTtFQUNBLGNBQUE7QUVpQko7QUZkQTtFQUNJLFdBQUE7RUFDQSxjQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0FFaUJKO0FGZEE7RUFDSSxXQUFBO0FFaUJKO0FGZEE7RUFDSSxnQkFBQTtFQUNBLDBCQUFBO0FFaUJKIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvZXhwbG9yZS9zZWFyY2gvc2VhcmNoLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuJGhlYWRlci1iYWNrOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwNTFDMkMsICMwNTFDMkMgNDAlLCAjMEIyNDUzIDYwJSwgIzFGNDBFNiAxMDAlKTtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICdtaXhpbnMnO1xuXG4uc2VhcmNoYmFyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWF4LXdpZHRoOiBjYWxjKDEwMCUgLSAxZW0pO1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAxZW0pO1xuICAgIG1hcmdpbjogLjVlbSBhdXRvO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyLXJhZGl1czogMmVtO1xuICAgIHBhZGRpbmc6IDAgLjc1ZW07XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcblxuICAgIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDA7XG4gICAgICAgIGJveC1zaGFkb3c6IG5vbmU7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIG1heC13aWR0aDogMTAwJTtcbiAgICAgICAgcGFkZGluZzogMCAuNWVtO1xuICAgICAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYztcbiAgICB9XG59XG5cbi5wcmVmaXgsXG4uc3VmZml4IHtcbiAgICBmb250LXNpemU6IDEuNWVtO1xuICAgIG1pbi13aWR0aDogMzJweDtcbiAgICBtaW4taGVpZ2h0OiAxMDAlO1xufVxuXG5cbi5pbnB1dCB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDUwJTtcbn1cblxuaW5wdXQge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGZvbnQtc2l6ZTogMWVtO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBvdXRsaW5lOiBub25lO1xuICAgIHBhZGRpbmc6IDFlbSAuNWVtO1xuICAgIGJhY2tncm91bmQ6IG5vbmU7XG59XG5cbi5uYW1lIHtcbiAgICBoZWlnaHQ6IDFlbTtcbn1cblxuLmVtYWlsIHtcbiAgICBmb250LXNpemU6IC42ZW07XG4gICAgY29sb3I6IHJnYmEoIzAwMCwgLjY1KTtcbn1cbiIsIlxuQG1peGluIGhpZGUtdGV4dC1vdmVyZmxvdyB7XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG5AbWl4aW4gYm94LXNoYWRvdygkY29sb3I6ICMwMDAsICRkZXB0aDogMSkge1xuICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAxcHggKiAoJGRlcHRoIC0gMSkgcmdiYSgjMDAwLCAuMiksXG4gICAgICAgICAgICAgICAgMCAxcHggMXB4IDAgcmdiYSgjMDAwLCAuMTQpLFxuICAgICAgICAgICAgICAgIDAgMnB4IDFweCAtMXB4IHJnYmEoIzAwMCwgLjEyKTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi5zZWFyY2hiYXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXgtd2lkdGg6IGNhbGMoMTAwJSAtIDFlbSk7XG4gIHdpZHRoOiBjYWxjKDEwMCUgLSAxZW0pO1xuICBtYXJnaW46IDAuNWVtIGF1dG87XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJvcmRlci1yYWRpdXM6IDJlbTtcbiAgcGFkZGluZzogMCAwLjc1ZW07XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgLnNlYXJjaGJhciB7XG4gICAgYm9yZGVyLXJhZGl1czogMDtcbiAgICBib3gtc2hhZG93OiBub25lO1xuICAgIG1hcmdpbjogMDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogMCAwLjVlbTtcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYztcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gIC5zZWFyY2hiYXIge1xuICAgIGJvcmRlci1yYWRpdXM6IDA7XG4gICAgYm94LXNoYWRvdzogbm9uZTtcbiAgICBtYXJnaW46IDA7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWF4LXdpZHRoOiAxMDAlO1xuICAgIHBhZGRpbmc6IDAgMC41ZW07XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gIH1cbn1cblxuLnByZWZpeCxcbi5zdWZmaXgge1xuICBmb250LXNpemU6IDEuNWVtO1xuICBtaW4td2lkdGg6IDMycHg7XG4gIG1pbi1oZWlnaHQ6IDEwMCU7XG59XG5cbi5pbnB1dCB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNTAlO1xufVxuXG5pbnB1dCB7XG4gIHdpZHRoOiAxMDAlO1xuICBmb250LXNpemU6IDFlbTtcbiAgYm9yZGVyOiBub25lO1xuICBvdXRsaW5lOiBub25lO1xuICBwYWRkaW5nOiAxZW0gMC41ZW07XG4gIGJhY2tncm91bmQ6IG5vbmU7XG59XG5cbi5uYW1lIHtcbiAgaGVpZ2h0OiAxZW07XG59XG5cbi5lbWFpbCB7XG4gIGZvbnQtc2l6ZTogMC42ZW07XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNjUpO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -2953,7 +3013,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         }]
       }], function () {
         return [{
-          type: src_app_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"]
+          type: src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]
+        }, {
+          type: src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_7__["SpacesService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]
         }, {
@@ -3027,13 +3089,19 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var src_app_services_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/data/organisation/organisation.service */
+    "./src/app/services/data/organisation/organisation.service.ts");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @placeos/composer */
     "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
@@ -3200,13 +3268,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
       var _super7 = _createSuper(ExploreDeskStatusComponent);
 
-      function ExploreDeskStatusComponent(_service) {
+      function ExploreDeskStatusComponent(_service, _org) {
         var _this13;
 
         _classCallCheck(this, ExploreDeskStatusComponent);
 
         _this13 = _super7.call(this);
         _this13._service = _service;
+        _this13._org = _org;
         /** Emitter for changes to the desk status */
 
         _this13.status = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -3285,13 +3354,13 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "loadDesks",
         value: function loadDesks() {
-          var level = this._service.Organisation.levelWithID(this.zone);
+          var level = this._org.levelWithID(this.zone);
 
           if (!level) {
             return;
           }
 
-          var building = this._service.Organisation.buildings.find(function (bld) {
+          var building = this._org.buildings.find(function (bld) {
             return bld.id === level.building_id;
           });
 
@@ -3313,7 +3382,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }(src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_3__["BaseDirective"]);
 
     ExploreDeskStatusComponent.ɵfac = function ExploreDeskStatusComponent_Factory(t) {
-      return new (t || ExploreDeskStatusComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_2__["ApplicationService"]));
+      return new (t || ExploreDeskStatusComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_2__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_4__["OrganisationService"]));
     };
 
     ExploreDeskStatusComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -3347,7 +3416,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.system_id);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _placeos_composer__WEBPACK_IMPORTED_MODULE_5__["BindingDirective"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _placeos_composer__WEBPACK_IMPORTED_MODULE_6__["BindingDirective"]],
       encapsulation: 2
     });
     /*@__PURE__*/
@@ -3362,6 +3431,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }], function () {
         return [{
           type: src_app_services_app_service__WEBPACK_IMPORTED_MODULE_2__["ApplicationService"]
+        }, {
+          type: src_app_services_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_4__["OrganisationService"]
         }];
       }, {
         zone: [{
@@ -3461,13 +3532,25 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! src/app/services/data/spaces/spaces.service */
+    "./src/app/services/data/spaces/spaces.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! src/app/services/data/users/users.service */
+    "./src/app/services/data/users/users.service.ts");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! @placeos/composer */
     "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
@@ -3526,13 +3609,15 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
       var _super8 = _createSuper(ExploreSpaceStatusComponent);
 
-      function ExploreSpaceStatusComponent(_service, _dialog) {
+      function ExploreSpaceStatusComponent(_service, _users, _spaces, _dialog) {
         var _this16;
 
         _classCallCheck(this, ExploreSpaceStatusComponent);
 
         _this16 = _super8.call(this);
         _this16._service = _service;
+        _this16._users = _users;
+        _this16._spaces = _spaces;
         _this16._dialog = _dialog;
         /** Emitter for changes to the space status */
 
@@ -3567,7 +3652,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           })).subscribe(function () {
             _this17.colour_map = _this17._service.setting('app.explore.colors') || {};
 
-            _this17.subscription('spaces', _this17._service.Spaces.listen('list').subscribe(function () {
+            _this17.subscription('spaces', _this17._spaces.listen('list').subscribe(function () {
               return _this17.loadSpaces();
             }));
 
@@ -3661,7 +3746,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           var options = {
             date: dayjs__WEBPACK_IMPORTED_MODULE_6__(this.date).valueOf(),
             duration: 30,
-            host: this._service.Users.current
+            host: this._users.current
           };
           var rules = space.rulesFor(options);
 
@@ -3686,7 +3771,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
           this.timeout("space-".concat(space.id), function () {
             var bookings = (data || []).map(function (bkn_data) {
-              return new src_app_services_data_bookings_booking_class__WEBPACK_IMPORTED_MODULE_4__["Booking"](_this19._service.Bookings, Object.assign(Object.assign({}, bkn_data), {
+              return new src_app_services_data_bookings_booking_class__WEBPACK_IMPORTED_MODULE_4__["Booking"](Object.assign(Object.assign({}, bkn_data), {
                 room_ids: [space.id]
               }));
             });
@@ -3712,7 +3797,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           this.timeout('update_spaces', function () {
             var date = dayjs__WEBPACK_IMPORTED_MODULE_6__(_this20.date).startOf('d');
 
-            _this20._service.Spaces.query({
+            _this20._spaces.query({
               from: date.unix(),
               to: date.endOf('d').unix(),
               show_declined: false,
@@ -3720,7 +3805,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
               cache: 10 * 1000
             }).then(function (spaces) {
               spaces.forEach(function (space) {
-                return _this20.processSpaceBookings(space, space.bookings);
+                return _this20.processSpaceBookings(space, _toConsumableArray(space.bookings));
               });
             });
           }, 50);
@@ -3734,7 +3819,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         value: function loadSpaces() {
           var _this21 = this;
 
-          this.space_list = this._service.Spaces.filter(function (space) {
+          this.space_list = this._spaces.filter(function (space) {
             return space.zones.indexOf(_this21.zone) >= 0;
           });
           var listeners = [];
@@ -3850,7 +3935,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }(src_app_shared_base_directive__WEBPACK_IMPORTED_MODULE_2__["BaseDirective"]);
 
     ExploreSpaceStatusComponent.ɵfac = function ExploreSpaceStatusComponent_Factory(t) {
-      return new (t || ExploreSpaceStatusComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]));
+      return new (t || ExploreSpaceStatusComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_10__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_9__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]));
     };
 
     ExploreSpaceStatusComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -3884,7 +3969,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.space_list && ctx.is_today);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"], _placeos_composer__WEBPACK_IMPORTED_MODULE_10__["BindingDirective"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _placeos_composer__WEBPACK_IMPORTED_MODULE_12__["BindingDirective"]],
       encapsulation: 2
     });
     /*@__PURE__*/
@@ -3899,6 +3984,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }], function () {
         return [{
           type: src_app_services_app_service__WEBPACK_IMPORTED_MODULE_3__["ApplicationService"]
+        }, {
+          type: src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_10__["UsersService"]
+        }, {
+          type: src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_9__["SpacesService"]
         }, {
           type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]
         }];
