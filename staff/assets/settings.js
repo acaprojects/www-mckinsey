@@ -73,7 +73,7 @@ settings.app.home = {
         },
         {
             name: 'Maps',
-            route: '/explore/all',
+            route: '/explore/space',
             icon: {
                 type: 'icon',
                 class: 'custom-spaces'

@@ -1,5 +1,15 @@
-function _templateObject75() {
+function _templateObject76() {
   var data = _taggedTemplateLiteral([":Booking equipment charge code label\u241Fd181914632c7b56e8f04862f2c80c6443b9d7b6b\u241F2414153601168568330: Charge Code", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN:"]);
+
+  _templateObject76 = function _templateObject76() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject75() {
+  var data = _taggedTemplateLiteral([":Booking equipment headcount error\u241F589a096de30ed078299324313251a2954db2d108\u241F5210342041579185233: Headcount Estimate is required "]);
 
   _templateObject75 = function _templateObject75() {
     return data;
@@ -9,7 +19,7 @@ function _templateObject75() {
 }
 
 function _templateObject74() {
-  var data = _taggedTemplateLiteral([":Booking equipment headcount error\u241F589a096de30ed078299324313251a2954db2d108\u241F5210342041579185233: Headcount Estimate is required "]);
+  var data = _taggedTemplateLiteral([":Booking equipment headcount hint\u241F846bd0b59f10e63c96bf58335c6412e3a30489f6\u241F3544114030507981593:", ":START_TAG_SPAN:Note:", ":CLOSE_TAG_SPAN: This estimate is used to calculate catering and/or assign rooms. Please keep updated of any changes. "]);
 
   _templateObject74 = function _templateObject74() {
     return data;
@@ -19,7 +29,7 @@ function _templateObject74() {
 }
 
 function _templateObject73() {
-  var data = _taggedTemplateLiteral([":Booking equipment headcount hint\u241F846bd0b59f10e63c96bf58335c6412e3a30489f6\u241F3544114030507981593:", ":START_TAG_SPAN:Note:", ":CLOSE_TAG_SPAN: This estimate is used to calculate catering and/or assign rooms. Please keep updated of any changes. "]);
+  var data = _taggedTemplateLiteral([":\u241F2c57003da9b2ba8552315b80b4166a9c5afb0ea6\u241F5616907402275895341:e.g. 12"]);
 
   _templateObject73 = function _templateObject73() {
     return data;
@@ -29,7 +39,7 @@ function _templateObject73() {
 }
 
 function _templateObject72() {
-  var data = _taggedTemplateLiteral([":\u241F2c57003da9b2ba8552315b80b4166a9c5afb0ea6\u241F5616907402275895341:e.g. 12"]);
+  var data = _taggedTemplateLiteral([":Booking equipment headcount label\u241Fdd2f89994de5e828afa61f1ed97e371caa7b3dbc\u241F5102944251832692522: Headcount Estimate", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN:"]);
 
   _templateObject72 = function _templateObject72() {
     return data;
@@ -39,7 +49,7 @@ function _templateObject72() {
 }
 
 function _templateObject71() {
-  var data = _taggedTemplateLiteral([":Booking equipment headcount label\u241Fdd2f89994de5e828afa61f1ed97e371caa7b3dbc\u241F5102944251832692522: Headcount Estimate", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN:"]);
+  var data = _taggedTemplateLiteral([":Booking equipment charge code error\u241F4f760d1a2cab17d0ce19d5d0301fed983c524fee\u241F987760363308336949: Charge Code is required "]);
 
   _templateObject71 = function _templateObject71() {
     return data;
@@ -49,7 +59,7 @@ function _templateObject71() {
 }
 
 function _templateObject70() {
-  var data = _taggedTemplateLiteral([":Booking equipment charge code error\u241F4f760d1a2cab17d0ce19d5d0301fed983c524fee\u241F987760363308336949: Charge Code is required "]);
+  var data = _taggedTemplateLiteral([":Booking equipment charge code hint\u241F046f5c78709ec452cfbeb9686c8bfa3db894d340\u241F8265889124285934711:", ":START_TAG_SPAN:Note:", ":CLOSE_TAG_SPAN: Your booking will be confirmed before you are charged. "]);
 
   _templateObject70 = function _templateObject70() {
     return data;
@@ -59,7 +69,7 @@ function _templateObject70() {
 }
 
 function _templateObject69() {
-  var data = _taggedTemplateLiteral([":Booking equipment charge code hint\u241F046f5c78709ec452cfbeb9686c8bfa3db894d340\u241F8265889124285934711:", ":START_TAG_SPAN:Note:", ":CLOSE_TAG_SPAN: Your booking will be confirmed before you are charged. "]);
+  var data = _taggedTemplateLiteral([":\u241F95984e0af2c6fdc0c7a9e4ad9b413fd969a5324a\u241F4704310930093496744:Charge Code"]);
 
   _templateObject69 = function _templateObject69() {
     return data;
@@ -69,7 +79,7 @@ function _templateObject69() {
 }
 
 function _templateObject68() {
-  var data = _taggedTemplateLiteral([":\u241F95984e0af2c6fdc0c7a9e4ad9b413fd969a5324a\u241F4704310930093496744:Charge Code"]);
+  var data = _taggedTemplateLiteral([":\u241Ff7bdd304a99c014dc0fff3af941e6a9d968371db\u241F4048193419886450033:Add notes here..."]);
 
   _templateObject68 = function _templateObject68() {
     return data;
@@ -79,7 +89,7 @@ function _templateObject68() {
 }
 
 function _templateObject67() {
-  var data = _taggedTemplateLiteral([":\u241Ff7bdd304a99c014dc0fff3af941e6a9d968371db\u241F4048193419886450033:Add notes here..."]);
+  var data = _taggedTemplateLiteral([":Booking equipment notes label\u241F0cbf46013d6c87c7c45575b227b194b908a6747a\u241F5201419736696236077: (eg - particular room configurations or specific equipment etc) Additional requests are handled in confidence "]);
 
   _templateObject67 = function _templateObject67() {
     return data;
@@ -89,7 +99,7 @@ function _templateObject67() {
 }
 
 function _templateObject66() {
-  var data = _taggedTemplateLiteral([":Booking equipment notes label\u241F0cbf46013d6c87c7c45575b227b194b908a6747a\u241F5201419736696236077: (eg - particular room configurations or specific equipment etc) Additional requests are handled in confidence "]);
+  var data = _taggedTemplateLiteral([":Booking equipment information\u241Fa55c5f03908fc53b36e37e5bfdfb8b5df4903a83\u241F8241212734369180516: Would you like to add equipment to your booking's spaces? "]);
 
   _templateObject66 = function _templateObject66() {
     return data;
@@ -99,7 +109,7 @@ function _templateObject66() {
 }
 
 function _templateObject65() {
-  var data = _taggedTemplateLiteral([":Booking equipment information\u241Fa55c5f03908fc53b36e37e5bfdfb8b5df4903a83\u241F8241212734369180516: Would you like to add equipment to your booking's spaces? "]);
+  var data = _taggedTemplateLiteral([":Booking confirm view schedule action\u241Ff189ee78fa6d9a0db216e417b141ffa3f5519d1c\u241F1413519670657341546: My Day "]);
 
   _templateObject65 = function _templateObject65() {
     return data;
@@ -109,7 +119,7 @@ function _templateObject65() {
 }
 
 function _templateObject64() {
-  var data = _taggedTemplateLiteral([":Booking confirm view schedule action\u241Ff189ee78fa6d9a0db216e417b141ffa3f5519d1c\u241F1413519670657341546: My Day "]);
+  var data = _taggedTemplateLiteral([":Booking confirm another booking action\u241F7f7dcf998007abdfd4138005e60f188cc9cb8850\u241F1580025293451525048: New Booking "]);
 
   _templateObject64 = function _templateObject64() {
     return data;
@@ -119,7 +129,7 @@ function _templateObject64() {
 }
 
 function _templateObject63() {
-  var data = _taggedTemplateLiteral([":Booking confirm another booking action\u241F7f7dcf998007abdfd4138005e60f188cc9cb8850\u241F1580025293451525048: New Booking "]);
+  var data = _taggedTemplateLiteral([":Booking confirm save action\u241F80a2dd545e7d96f3efd4d3db03de37201069434a\u241F1165399958799107715: Save "]);
 
   _templateObject63 = function _templateObject63() {
     return data;
@@ -129,7 +139,7 @@ function _templateObject63() {
 }
 
 function _templateObject62() {
-  var data = _taggedTemplateLiteral([":Booking confirm save action\u241F80a2dd545e7d96f3efd4d3db03de37201069434a\u241F1165399958799107715: Save "]);
+  var data = _taggedTemplateLiteral([":Booking confirm edit action\u241F5a137bd79e5d69334da508e464fa45befd6552a8\u241F8928700388210119199: Edit "]);
 
   _templateObject62 = function _templateObject62() {
     return data;
@@ -139,7 +149,7 @@ function _templateObject62() {
 }
 
 function _templateObject61() {
-  var data = _taggedTemplateLiteral([":Booking confirm edit action\u241F5a137bd79e5d69334da508e464fa45befd6552a8\u241F8928700388210119199: Edit "]);
+  var data = _taggedTemplateLiteral([":Booking confirm changes label\u241Ffd2f05341f8c07e47ef93c32eabeef3138c0f5e4\u241F8132965743901393201: * - changed fields "]);
 
   _templateObject61 = function _templateObject61() {
     return data;
@@ -149,7 +159,7 @@ function _templateObject61() {
 }
 
 function _templateObject60() {
-  var data = _taggedTemplateLiteral([":Booking confirm changes label\u241Ffd2f05341f8c07e47ef93c32eabeef3138c0f5e4\u241F8132965743901393201: * - changed fields "]);
+  var data = _taggedTemplateLiteral([":Booking confirm catering show more label\u241F3f4719e759ad13b1b92e6d87d819117757c3983a\u241F3466073991578612589: ", ":INTERPOLATION: Orders "]);
 
   _templateObject60 = function _templateObject60() {
     return data;
@@ -159,7 +169,7 @@ function _templateObject60() {
 }
 
 function _templateObject59() {
-  var data = _taggedTemplateLiteral([":Booking confirm catering show more label\u241F3f4719e759ad13b1b92e6d87d819117757c3983a\u241F3466073991578612589: ", ":INTERPOLATION: Orders "]);
+  var data = _taggedTemplateLiteral([":Booking confirm catering label\u241F485cfbcd10a6bb9bb0453b4046a753368f4ef7ec\u241F891186954219992843:Catering Orders(", ":INTERPOLATION:)", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
 
   _templateObject59 = function _templateObject59() {
     return data;
@@ -169,7 +179,7 @@ function _templateObject59() {
 }
 
 function _templateObject58() {
-  var data = _taggedTemplateLiteral([":Booking confirm catering label\u241F485cfbcd10a6bb9bb0453b4046a753368f4ef7ec\u241F891186954219992843:Catering Orders(", ":INTERPOLATION:)", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
+  var data = _taggedTemplateLiteral([":Booking confirm notes label\u241F4d3f166237ca7e6d9b260745ed3e76c5556789b3\u241F540938333290013732:Notes", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
 
   _templateObject58 = function _templateObject58() {
     return data;
@@ -179,7 +189,7 @@ function _templateObject58() {
 }
 
 function _templateObject57() {
-  var data = _taggedTemplateLiteral([":Booking confirm notes label\u241F4d3f166237ca7e6d9b260745ed3e76c5556789b3\u241F540938333290013732:Notes", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
+  var data = _taggedTemplateLiteral([":Booking confirm attendees show more label\u241Fab4b5129456429630f3a67b5abf9a662609ec789\u241F7907178250261775463: ", ":INTERPOLATION: Attendees "]);
 
   _templateObject57 = function _templateObject57() {
     return data;
@@ -189,7 +199,7 @@ function _templateObject57() {
 }
 
 function _templateObject56() {
-  var data = _taggedTemplateLiteral([":Booking confirm attendees show more label\u241Fab4b5129456429630f3a67b5abf9a662609ec789\u241F7907178250261775463: ", ":INTERPOLATION: Attendees "]);
+  var data = _taggedTemplateLiteral([":Booking confirm attendees empty label\u241F56e603836b228705dc2283e1ee8f0cb091458424\u241F5049681746747497062:<No Attendees>"]);
 
   _templateObject56 = function _templateObject56() {
     return data;
@@ -199,7 +209,7 @@ function _templateObject56() {
 }
 
 function _templateObject55() {
-  var data = _taggedTemplateLiteral([":Booking confirm attendees empty label\u241F56e603836b228705dc2283e1ee8f0cb091458424\u241F5049681746747497062:<No Attendees>"]);
+  var data = _taggedTemplateLiteral([":Booking confirm attendees label\u241F8b2315a1990276fdd3c5bbe6cb08935a530e6bc0\u241F1174008998682416937:Attendees(", ":INTERPOLATION:)", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
 
   _templateObject55 = function _templateObject55() {
     return data;
@@ -209,7 +219,7 @@ function _templateObject55() {
 }
 
 function _templateObject54() {
-  var data = _taggedTemplateLiteral([":Booking confirm attendees label\u241F8b2315a1990276fdd3c5bbe6cb08935a530e6bc0\u241F1174008998682416937:Attendees(", ":INTERPOLATION:)", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
+  var data = _taggedTemplateLiteral([":Booking confirm host label\u241F7553d72376057144a36f3de0dc201f7d92768c3b\u241F2475261750484702536:Host", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
 
   _templateObject54 = function _templateObject54() {
     return data;
@@ -219,7 +229,7 @@ function _templateObject54() {
 }
 
 function _templateObject53() {
-  var data = _taggedTemplateLiteral([":Booking confirm host label\u241F7553d72376057144a36f3de0dc201f7d92768c3b\u241F2475261750484702536:Host", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
+  var data = _taggedTemplateLiteral([":Booking confirm locations show more label\u241Fe1445945e7bcf282e790d7b804042029aaa8f0c8\u241F3001470728706631588: ", ":INTERPOLATION: Locations "]);
 
   _templateObject53 = function _templateObject53() {
     return data;
@@ -229,7 +239,7 @@ function _templateObject53() {
 }
 
 function _templateObject52() {
-  var data = _taggedTemplateLiteral([":Booking confirm locations show more label\u241Fe1445945e7bcf282e790d7b804042029aaa8f0c8\u241F3001470728706631588: ", ":INTERPOLATION: Locations "]);
+  var data = _taggedTemplateLiteral([":Booking confirm locations empty label\u241F955e79e777badd032a1f9da3195761109500d9fc\u241F696494791287488752: No Locations "]);
 
   _templateObject52 = function _templateObject52() {
     return data;
@@ -239,7 +249,7 @@ function _templateObject52() {
 }
 
 function _templateObject51() {
-  var data = _taggedTemplateLiteral([":Booking confirm locations empty label\u241F955e79e777badd032a1f9da3195761109500d9fc\u241F696494791287488752: No Locations "]);
+  var data = _taggedTemplateLiteral([":Booking confirm locations label\u241F978b2ce47abcfe0a8bdeb162e464c9f64d3a5db4\u241F2333646421526828979:Locations(", ":INTERPOLATION:)", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
 
   _templateObject51 = function _templateObject51() {
     return data;
@@ -249,7 +259,7 @@ function _templateObject51() {
 }
 
 function _templateObject50() {
-  var data = _taggedTemplateLiteral([":Booking confirm locations label\u241F978b2ce47abcfe0a8bdeb162e464c9f64d3a5db4\u241F2333646421526828979:Locations(", ":INTERPOLATION:)", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
+  var data = _taggedTemplateLiteral([":Booking Confirm Recurrence label\u241F75fcde128aa2e4000cae2929e50ad46a39f98aa3\u241F8453350239613118105: Recurrence", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN:: "]);
 
   _templateObject50 = function _templateObject50() {
     return data;
@@ -2889,7 +2899,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var the_space = this._spaces.find(space.id) || space;
 
             this._dialog.open(_view_room_modal_view_room_modal_component__WEBPACK_IMPORTED_MODULE_2__["ViewRoomModalComponent"], {
-              width: '32em',
+              width: 'auto',
+              height: 'auto',
               maxWidth: '95vw',
               maxHeight: '95vh',
               data: {
@@ -4259,7 +4270,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]],
       decls: 21,
       vars: 10,
-      consts: [[1, "custom"], [1, "details"], [1, "text"], ["mat-icon-button", "", "mat-dialog-close", "", 1, "fixed"], [3, "icon"], [1, "actions"], ["mat-button", "", 3, "touchrelease", 4, "ngIf"], ["mat-button", "", 3, "touchrelease"], [1, "flex"], ["class", "custom", 4, "ngIf", "ngIfElse"], ["edit_form", ""], ["load_state", ""], [4, "ngIf"], [4, "ngIf", "ngIfElse"], [1, "card"], [1, "header"], [3, "event"], ["class", "flex", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["class", "card", 4, "ngIf"], [3, "booking", "space"], [3, "catering", "space"], [1, "no-item"], [1, "icon"], ["diameter", "32"]],
+      consts: [[1, "custom"], [1, "details"], [1, "text"], ["mat-icon-button", "", "mat-dialog-close", "", 1, "fixed"], [3, "icon"], [1, "actions"], ["mat-button", "", 3, "touchrelease", 4, "ngIf"], ["mat-button", "", 3, "touchrelease"], [1, "flex"], ["class", "custom", 4, "ngIf", "ngIfElse"], ["edit_form", ""], ["load_state", ""], [4, "ngIf"], [4, "ngIf", "ngIfElse"], [1, "card"], [1, "header"], [3, "event"], ["class", "flex", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["class", "card", 4, "ngIf"], [3, "booking", "space"], [3, "catering", "space"], [1, "info-block"], [1, "icon"], ["diameter", "32"]],
       template: function MeetingDetailsOverlayComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "header", 0);
@@ -7097,7 +7108,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/material/progress-spinner */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
-    function ViewRoomModalComponent_div_7_Template(rf, ctx) {
+    function ViewRoomModalComponent_div_8_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 4);
 
@@ -7154,6 +7165,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Emitter for user action on the modal */
 
         _this24.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        _this24.features = [];
+        _this24.features = [_this24.focus_feature];
         return _this24;
       }
       /** Space to show the location of on the map */
@@ -7169,13 +7182,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         get: function get() {
           return this.space.level;
         }
-        /**  */
-
-      }, {
-        key: "features",
-        get: function get() {
-          return [this.focus_feature];
-        }
         /** Point on map to focus on */
 
       }, {
@@ -7187,7 +7193,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           return {
-            id: "".concat(this.space.map_id),
+            id: "area-".concat(this.space.map_id, "-status"),
             coordinates: null,
             content: _acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_2__["MapPinComponent"],
             data: {
@@ -7217,7 +7223,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         event: "event"
       },
       features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]],
-      decls: 8,
+      decls: 9,
       vars: 4,
       consts: [["mat-dialog-title", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], ["class", "body", 4, "ngIf"], [1, "body"], [3, "src", "features"], ["diameter", "64"], [1, "level"]],
       template: function ViewRoomModalComponent_Template(rf, ctx) {
@@ -7244,7 +7250,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, ViewRoomModalComponent_div_7_Template, 5, 3, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "mat-dialog-content");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, ViewRoomModalComponent_div_8_Template, 5, 3, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
@@ -7256,13 +7266,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("icon", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c0));
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.level);
         }
       },
-      directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogClose"], _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_5__["IconComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_2__["MapComponent"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatSpinner"]],
-      styles: [".body[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 65vh;\n  width: 95vmin;\n}\n.icon[_ngcontent-%COMP%] {\n  height: 1.2em;\n  width: 1.2em;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 2em;\n}\n.content[_ngcontent-%COMP%] {\n  width: 16rem;\n  text-align: center;\n  font-size: 0.8em;\n}\n.level[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0.5em;\n  right: 0.5em;\n  padding: 0.25em 1.5em;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 1.1em;\n  height: 2em;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\napp-icon[_ngcontent-%COMP%] {\n  transition: font-size 200ms;\n}\na-map[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 100%;\n  z-index: 0;\n  pointer-events: none;\n}\n.close[_ngcontent-%COMP%] {\n  font-size: 1em;\n  cursor: pointer;\n}\n.close[_ngcontent-%COMP%]:hover   app-icon[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n}\nbutton[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 1rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL292ZXJsYXlzL3ZpZXctcm9vbS1tb2RhbC92aWV3LXJvb20tbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL3ZpZXctcm9vbS1tb2RhbC92aWV3LXJvb20tbW9kYWwuY29tcG9uZW50LnNjc3MiLCIvYnVpbGRzL2FjYS1lbmdpbmUvbWNraW5zZXkvbWNraW5zZXktc3RhZmYtYXBwL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy9taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFpQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7QUNNSjtBREhBO0VBQ0ksYUFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGNBQUE7QUNNSjtBREhBO0VBQ0ksWUFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7QUNNSjtBREhBO0VBQ0ksa0JBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtFQUNBLHFCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxvQkFBQTtFQUNBLFdBQUE7RUFDQSxzQkFBQTtFRTlCQSxpSEFBQTtBRHFDSjtBREhBO0VBQ0ksMkJBQUE7QUNNSjtBREhBO0VBQ0ksWUFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0Esb0JBQUE7QUNNSjtBREhBO0VBQ0ksY0FBQTtFQUNBLGVBQUE7QUNNSjtBREhRO0VBQ0ksZ0JBQUE7QUNLWjtBREFBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxlQUFBO0FDR0oiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy92aWV3LXJvb20tbW9kYWwvdmlldy1yb29tLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuJGhlYWRlci1iYWNrOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwNTFDMkMsICMwNTFDMkMgNDAlLCAjMEIyNDUzIDYwJSwgIzFGNDBFNiAxMDAlKTtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICdtaXhpbnMnO1xuXG4uYm9keSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGhlaWdodDogNjV2aDtcbiAgICB3aWR0aDogOTV2bWluO1xufVxuXG4uaWNvbiB7XG4gICAgaGVpZ2h0OiAxLjJlbTtcbiAgICB3aWR0aDogMS4yZW07XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGZvbnQtc2l6ZTogMmVtO1xufVxuXG4uY29udGVudCB7XG4gICAgd2lkdGg6IDE2cmVtO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBmb250LXNpemU6IC44ZW07XG59XG5cbi5sZXZlbCB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogLjVlbTtcbiAgICByaWdodDogLjVlbTtcbiAgICBwYWRkaW5nOiAuMjVlbSAxLjVlbTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYm9yZGVyLXJhZGl1czogMS4xZW07XG4gICAgaGVpZ2h0OiAyZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xufVxuXG5hcHAtaWNvbiB7XG4gICAgdHJhbnNpdGlvbjogZm9udC1zaXplIDIwMG1zO1xufVxuXG5hLW1hcCB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHotaW5kZXg6IDA7XG4gICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG59XG5cbi5jbG9zZSB7XG4gICAgZm9udC1zaXplOiAxZW07XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuXG4gICAgJjpob3ZlciB7XG4gICAgICAgIGFwcC1pY29uIHtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICAgICAgfVxuICAgIH1cbn1cblxuYnV0dG9uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAxcmVtO1xufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmJvZHkge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGhlaWdodDogNjV2aDtcbiAgd2lkdGg6IDk1dm1pbjtcbn1cblxuLmljb24ge1xuICBoZWlnaHQ6IDEuMmVtO1xuICB3aWR0aDogMS4yZW07XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmb250LXNpemU6IDJlbTtcbn1cblxuLmNvbnRlbnQge1xuICB3aWR0aDogMTZyZW07XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC1zaXplOiAwLjhlbTtcbn1cblxuLmxldmVsIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDAuNWVtO1xuICByaWdodDogMC41ZW07XG4gIHBhZGRpbmc6IDAuMjVlbSAxLjVlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDEuMWVtO1xuICBoZWlnaHQ6IDJlbTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDBweCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG59XG5cbmFwcC1pY29uIHtcbiAgdHJhbnNpdGlvbjogZm9udC1zaXplIDIwMG1zO1xufVxuXG5hLW1hcCB7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDA7XG4gIHBvaW50ZXItZXZlbnRzOiBub25lO1xufVxuXG4uY2xvc2Uge1xuICBmb250LXNpemU6IDFlbTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmNsb3NlOmhvdmVyIGFwcC1pY29uIHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbn1cblxuYnV0dG9uIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMXJlbTtcbn0iLCJcbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3coJGNvbG9yOiAjMDAwLCAkZGVwdGg6IDEpIHtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMXB4ICogKCRkZXB0aCAtIDEpIHJnYmEoIzAwMCwgLjIpLFxuICAgICAgICAgICAgICAgIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSxcbiAgICAgICAgICAgICAgICAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsIC4xMik7XG59XG4iXX0= */"]
+      directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogClose"], _shared_components_icon_icon_component__WEBPACK_IMPORTED_MODULE_5__["IconComponent"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _acaprojects_ngx_interactive_map__WEBPACK_IMPORTED_MODULE_2__["MapComponent"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatSpinner"]],
+      styles: [".body[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 65vh;\n  width: 95vmin;\n  overflow: hidden;\n}\n.icon[_ngcontent-%COMP%] {\n  height: 1.2em;\n  width: 1.2em;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 2em;\n}\n.content[_ngcontent-%COMP%] {\n  width: 16rem;\n  text-align: center;\n  font-size: 0.8em;\n}\n.level[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0.5em;\n  right: 0.5em;\n  padding: 0.25em 1.5em;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 1.1em;\n  height: 2em;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\napp-icon[_ngcontent-%COMP%] {\n  transition: font-size 200ms;\n}\na-map[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 100%;\n  z-index: 0;\n  pointer-events: none;\n}\n.close[_ngcontent-%COMP%] {\n  font-size: 1em;\n  cursor: pointer;\n}\n.close[_ngcontent-%COMP%]:hover   app-icon[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n}\nbutton[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 1rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL292ZXJsYXlzL3ZpZXctcm9vbS1tb2RhbC92aWV3LXJvb20tbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL3ZpZXctcm9vbS1tb2RhbC92aWV3LXJvb20tbW9kYWwuY29tcG9uZW50LnNjc3MiLCIvYnVpbGRzL2FjYS1lbmdpbmUvbWNraW5zZXkvbWNraW5zZXktc3RhZmYtYXBwL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy9taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFpQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7RUFDQSxnQkFBQTtBQ01KO0FESEE7RUFDSSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsY0FBQTtBQ01KO0FESEE7RUFDSSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSxnQkFBQTtBQ01KO0FESEE7RUFDSSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxZQUFBO0VBQ0EscUJBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLG9CQUFBO0VBQ0EsV0FBQTtFQUNBLHNCQUFBO0VFL0JBLGlIQUFBO0FEc0NKO0FESEE7RUFDSSwyQkFBQTtBQ01KO0FESEE7RUFDSSxZQUFBO0VBQ0EsV0FBQTtFQUNBLFVBQUE7RUFDQSxvQkFBQTtBQ01KO0FESEE7RUFDSSxjQUFBO0VBQ0EsZUFBQTtBQ01KO0FESFE7RUFDSSxnQkFBQTtBQ0taO0FEQUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGVBQUE7QUNHSiIsImZpbGUiOiJzcmMvYXBwL292ZXJsYXlzL3ZpZXctcm9vbS1tb2RhbC92aWV3LXJvb20tbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG4kaGVhZGVyLWJhY2s6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgIzA1MUMyQywgIzA1MUMyQyA0MCUsICMwQjI0NTMgNjAlLCAjMUY0MEU2IDEwMCUpO1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG5cbkBtaXhpbiByZXNwb25kLXRvKCRtZWRpYSkge1xuICAgIEBpZiAkbWVkaWEgPT0gbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBub3QtbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSAgQGVsc2UgaWYgJG1lZGlhID09IGxhdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgKCRtZWRpYSA9PSB0YWJsZXQtbW9iaWxlIG9yICRtZWRpYSA9PSBub3QtZGVza3RvcCkge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH1cbn1cbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcbkBpbXBvcnQgJ21peGlucyc7XG5cbi5ib2R5IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgaGVpZ2h0OiA2NXZoO1xuICAgIHdpZHRoOiA5NXZtaW47XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuLmljb24ge1xuICAgIGhlaWdodDogMS4yZW07XG4gICAgd2lkdGg6IDEuMmVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDJlbTtcbn1cblxuLmNvbnRlbnQge1xuICAgIHdpZHRoOiAxNnJlbTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAuOGVtO1xufVxuXG4ubGV2ZWwge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IC41ZW07XG4gICAgcmlnaHQ6IC41ZW07XG4gICAgcGFkZGluZzogLjI1ZW0gMS41ZW07XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGJvcmRlci1yYWRpdXM6IDEuMWVtO1xuICAgIGhlaWdodDogMmVtO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcbn1cblxuYXBwLWljb24ge1xuICAgIHRyYW5zaXRpb246IGZvbnQtc2l6ZSAyMDBtcztcbn1cblxuYS1tYXAge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICB6LWluZGV4OiAwO1xuICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xufVxuXG4uY2xvc2Uge1xuICAgIGZvbnQtc2l6ZTogMWVtO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcblxuICAgICY6aG92ZXIge1xuICAgICAgICBhcHAtaWNvbiB7XG4gICAgICAgICAgICBmb250LXNpemU6IC44ZW07XG4gICAgICAgIH1cbiAgICB9XG59XG5cbmJ1dHRvbiB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGZvbnQtc2l6ZTogMXJlbTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi5ib2R5IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBoZWlnaHQ6IDY1dmg7XG4gIHdpZHRoOiA5NXZtaW47XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbi5pY29uIHtcbiAgaGVpZ2h0OiAxLjJlbTtcbiAgd2lkdGg6IDEuMmVtO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZm9udC1zaXplOiAyZW07XG59XG5cbi5jb250ZW50IHtcbiAgd2lkdGg6IDE2cmVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG59XG5cbi5sZXZlbCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwLjVlbTtcbiAgcmlnaHQ6IDAuNWVtO1xuICBwYWRkaW5nOiAwLjI1ZW0gMS41ZW07XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBib3JkZXItcmFkaXVzOiAxLjFlbTtcbiAgaGVpZ2h0OiAyZW07XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xufVxuXG5hcHAtaWNvbiB7XG4gIHRyYW5zaXRpb246IGZvbnQtc2l6ZSAyMDBtcztcbn1cblxuYS1tYXAge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICB6LWluZGV4OiAwO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cblxuLmNsb3NlIHtcbiAgZm9udC1zaXplOiAxZW07XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbi5jbG9zZTpob3ZlciBhcHAtaWNvbiB7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG59XG5cbmJ1dHRvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmb250LXNpemU6IDFyZW07XG59IiwiXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuIl19 */"]
     });
     /*@__PURE__*/
 
@@ -8938,10 +8948,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this42.all_day = raw_data.all_day || _this42.duration > 23 * 60;
         _this42.setup = raw_data.setup || 0;
         _this42.breakdown = raw_data.breakdown || 0;
-        _this42.recurrence = raw_data.recurrence ? Object.assign(Object.assign({}, raw_data.recurrence), {
-          start: raw_data.recurrence.start,
-          end: raw_data.recurrence.end
-        }) : {};
+        _this42.recurrence = raw_data.recurrence || raw_data.recurr || {};
 
         if (_this42.recurrence.end && _this42.recurrence.end < new Date().getTime()) {
           _this42.recurrence = Object.assign(Object.assign({}, _this42.recurrence), {
@@ -9096,6 +9103,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             data.from_room = this.space ? this.space.email : '';
           }
 
+          data.recurr = data.recurrence;
+          data.booking_type = data.type;
+          delete data.type;
+          delete data.recurrence;
           delete data.space_list;
           delete data.date;
           delete data.duration;
@@ -15353,19 +15364,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           while (time <= max) {
             blocks.push({
               id: time,
-              name: "".concat(Object(src_app_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_3__["humaniseDuration"])(time)).concat(date ? ' (' + date.add(time, 'm').format('h:mm A') + ')' : '')
+              name: date ? "".concat(date.add(time, 'm').format('h:mm A'), " (").concat(Object(src_app_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_3__["humaniseDuration"])(time), ")") : "".concat(Object(src_app_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_3__["humaniseDuration"])(time))
             });
             time += step;
           }
 
-          blocks.push({
-            id: 8 * 60,
-            name: '8 hours'
-          });
-          blocks.push({
-            id: 12 * 60,
-            name: '12 hours'
-          });
           blocks.push({
             id: 7 * 24 * 60,
             name: '1 week'
@@ -17630,79 +17633,73 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-    /*! src/app/services/data/spaces/spaces.service */
-    "./src/app/services/data/spaces/spaces.service.ts");
-    /* harmony import */
-
-
-    var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _custom_fields_action_field_action_field_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _custom_fields_action_field_action_field_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ../../custom-fields/action-field/action-field.component */
     "./src/app/shared/components/custom-fields/action-field/action-field.component.ts");
     /* harmony import */
 
 
-    var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! @angular/material/form-field */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
     /* harmony import */
 
 
-    var _angular_material_input__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _angular_material_input__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! @angular/material/input */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
     /* harmony import */
 
 
-    var _custom_fields_date_field_date_field_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+    var _custom_fields_date_field_date_field_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
     /*! ../../custom-fields/date-field/date-field.component */
     "./src/app/shared/components/custom-fields/date-field/date-field.component.ts");
     /* harmony import */
 
 
-    var _custom_fields_time_field_time_field_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+    var _custom_fields_time_field_time_field_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! ../../custom-fields/time-field/time-field.component */
     "./src/app/shared/components/custom-fields/time-field/time-field.component.ts");
     /* harmony import */
 
 
-    var _custom_fields_duration_field_duration_field_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+    var _custom_fields_duration_field_duration_field_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
     /*! ../../custom-fields/duration-field/duration-field.component */
     "./src/app/shared/components/custom-fields/duration-field/duration-field.component.ts");
     /* harmony import */
 
 
-    var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+    var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
     /*! @angular/material/checkbox */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
     /* harmony import */
 
 
-    var _angular_material_select__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+    var _angular_material_select__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
     /*! @angular/material/select */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
     /* harmony import */
 
 
-    var _angular_material_core__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+    var _angular_material_core__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
     /*! @angular/material/core */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
     /* harmony import */
 
 
-    var _custom_fields_user_list_field_user_list_field_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
+    var _custom_fields_user_list_field_user_list_field_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
     /*! ../../custom-fields/user-list-field/user-list-field.component */
     "./src/app/shared/components/custom-fields/user-list-field/user-list-field.component.ts");
     /* harmony import */
 
 
-    var _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    var _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
     /*! @tinymce/tinymce-angular */
     "./node_modules/@tinymce/tinymce-angular/__ivy_ngcc__/fesm2015/tinymce-tinymce-angular.js");
 
@@ -17931,8 +17928,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       I18N_13 = $localize(_templateObject15());
     }
 
+    var _c15 = function _c15() {
+      return {
+        standalone: true
+      };
+    };
+
     function BookingFormComponent_div_0_div_7_Template(rf, ctx) {
       if (rf & 1) {
+        var _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 16);
@@ -17941,7 +17946,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "a-time-field", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a-time-field", 17);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function BookingFormComponent_div_0_div_7_Template_a_time_field_ngModelChange_3_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r19);
+
+          var ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          return ctx_r18.form.controls.date.setValue($event);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -17951,39 +17966,49 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx_r5.form.controls.all_day == null ? null : ctx_r5.form.controls.all_day.value);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx_r5.form.controls.all_day == null ? null : ctx_r5.form.controls.all_day.value)("ngModel", ctx_r5.form.controls.date.value)("ngModelOptions", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c15));
       }
     }
 
-    var I18N_15;
+    var I18N_16;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form duration label
        */
-      var MSG_EXTERNAL_569785428576811345$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___16 = goog.getMsg("Duration: ");
-      I18N_15 = MSG_EXTERNAL_569785428576811345$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___16;
+      var MSG_EXTERNAL_569785428576811345$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___17 = goog.getMsg("Duration: ");
+      I18N_16 = MSG_EXTERNAL_569785428576811345$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___17;
     } else {
-      I18N_15 = $localize(_templateObject16());
+      I18N_16 = $localize(_templateObject16());
     }
 
-    var I18N_17;
+    var I18N_18;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form all day label
        */
-      var MSG_EXTERNAL_2273485223670571993$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____18 = goog.getMsg("All day booking");
-      I18N_17 = MSG_EXTERNAL_2273485223670571993$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____18;
+      var MSG_EXTERNAL_2273485223670571993$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____19 = goog.getMsg("All day booking");
+      I18N_18 = MSG_EXTERNAL_2273485223670571993$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____19;
     } else {
-      I18N_17 = $localize(_templateObject17());
+      I18N_18 = $localize(_templateObject17());
     }
 
     function BookingFormComponent_div_0_div_8_mat_checkbox_4_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-checkbox", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-checkbox", 23);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_18);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
+
+    function BookingFormComponent_div_0_div_8_div_6_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 24);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Duration is invalid. End time must be in the future ");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -17997,7 +18022,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "label", 19);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](3, I18N_15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](3, I18N_16);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -18006,6 +18031,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "a-duration-field", 21);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, BookingFormComponent_div_0_div_8_div_6_Template, 2, 0, "div", 22);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -18019,25 +18046,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx_r6.form.controls.all_day == null ? null : ctx_r6.form.controls.all_day.value)("time", ctx_r6.form.controls.date == null ? null : ctx_r6.form.controls.date.value);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("max", 720)("disabled", ctx_r6.form.controls.all_day == null ? null : ctx_r6.form.controls.all_day.value)("time", ctx_r6.form.controls.date == null ? null : ctx_r6.form.controls.date.value);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r6.form.controls.duration.touched && ctx_r6.form.controls.duration.invalid);
       }
     }
 
-    var I18N_19;
+    var I18N_20;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form organiser label
        */
-      var MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___20 = goog.getMsg("Host: ");
-      I18N_19 = MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___20;
+      var MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___21 = goog.getMsg("Host: ");
+      I18N_20 = MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___21;
     } else {
-      I18N_19 = $localize(_templateObject18());
+      I18N_20 = $localize(_templateObject18());
     }
 
     function BookingFormComponent_div_0_div_9_mat_option_5_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 28);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -18045,13 +18076,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var user_r20 = ctx.$implicit;
+        var user_r23 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", user_r20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", user_r23);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r20.name || user_r20.email, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r23.name || user_r23.email, " ");
       }
     }
 
@@ -18059,17 +18090,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 25);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_20);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-form-field", 9);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-select", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-select", 26);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, BookingFormComponent_div_0_div_9_mat_option_5_Template, 2, 2, "mat-option", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, BookingFormComponent_div_0_div_9_mat_option_5_Template, 2, 2, "mat-option", 27);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -18091,38 +18122,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_21;
+    var I18N_22;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form attendees label
        */
-      var MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___22 = goog.getMsg("Attendees: ");
-      I18N_21 = MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___22;
+      var MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___23 = goog.getMsg("Attendees: ");
+      I18N_22 = MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___23;
     } else {
-      I18N_21 = $localize(_templateObject19());
+      I18N_22 = $localize(_templateObject19());
     }
 
     function BookingFormComponent_div_0_div_10_Template(rf, ctx) {
       if (rf & 1) {
-        var _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 29);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_22);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a-user-list-field", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a-user-list-field", 30);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("newUser", function BookingFormComponent_div_0_div_10_Template_a_user_list_field_newUser_3_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r25);
 
-          var ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-          return ctx_r21.openNewUserModal();
+          return ctx_r24.openNewUserModal();
         });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -18131,21 +18162,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_23;
+    var I18N_24;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form booking type label
        */
-      var MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___24 = goog.getMsg("Booking Type: ");
-      I18N_23 = MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___24;
+      var MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___25 = goog.getMsg("Booking Type: ");
+      I18N_24 = MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___25;
     } else {
-      I18N_23 = $localize(_templateObject20());
+      I18N_24 = $localize(_templateObject20());
     }
 
     function BookingFormComponent_div_0_div_11_mat_option_5_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 28);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -18153,13 +18184,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var type_r24 = ctx.$implicit;
+        var type_r27 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", type_r24.id);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", type_r27.id);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", type_r24.name, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", type_r27.name, " ");
       }
     }
 
@@ -18167,17 +18198,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 31);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_24);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-form-field", 9);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-select", 30);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-select", 32);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, BookingFormComponent_div_0_div_11_mat_option_5_Template, 2, 2, "mat-option", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, BookingFormComponent_div_0_div_11_mat_option_5_Template, 2, 2, "mat-option", 27);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -18195,25 +18226,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_25;
+    var I18N_26;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form need space label
        */
-      var MSG_EXTERNAL_5057818150057639935$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___26 = goog.getMsg("Need a meeting space?");
-      I18N_25 = MSG_EXTERNAL_5057818150057639935$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___26;
+      var MSG_EXTERNAL_5057818150057639935$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___27 = goog.getMsg("Need a meeting space?");
+      I18N_26 = MSG_EXTERNAL_5057818150057639935$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___27;
     } else {
-      I18N_25 = $localize(_templateObject21());
+      I18N_26 = $localize(_templateObject21());
     }
 
     function BookingFormComponent_div_0_div_12_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-checkbox", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-checkbox", 33);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_26);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -18221,25 +18252,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_27;
+    var I18N_28;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form need catering label
        */
-      var MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___28 = goog.getMsg(" Need catering? ");
-      I18N_27 = MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___28;
+      var MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___29 = goog.getMsg(" Need catering? ");
+      I18N_28 = MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___29;
     } else {
-      I18N_27 = $localize(_templateObject22());
+      I18N_28 = $localize(_templateObject22());
     }
 
     function BookingFormComponent_div_0_div_13_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-checkbox", 32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-checkbox", 34);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_28);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -18255,36 +18286,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_29;
+    var I18N_30;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form notes label
        */
-      var MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___30 = goog.getMsg("Notes: ");
-      I18N_29 = MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___30;
+      var MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___31 = goog.getMsg("Notes: ");
+      I18N_30 = MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___31;
     } else {
-      I18N_29 = $localize(_templateObject23());
+      I18N_30 = $localize(_templateObject23());
     }
 
-    var I18N_31;
+    var I18N_32;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      var MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____32 = goog.getMsg("Meeting Description");
-      I18N_31 = MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____32;
+      var MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____33 = goog.getMsg("Meeting Description");
+      I18N_32 = MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____33;
     } else {
-      I18N_31 = $localize(_templateObject24());
+      I18N_32 = $localize(_templateObject24());
     }
 
-    var _c33 = ["placeholder", I18N_31];
+    var _c34 = ["placeholder", I18N_32];
 
     function BookingFormComponent_div_0_div_14_mat_form_field_3_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 36);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 38);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "textarea", 37);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "textarea", 39);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nAttributes"](2, _c33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nAttributes"](2, _c34);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -18294,7 +18325,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingFormComponent_div_0_div_14_ng_template_4_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "editor", 38);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "editor", 40);
       }
     }
 
@@ -18302,27 +18333,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 35);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_30);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, BookingFormComponent_div_0_div_14_mat_form_field_3_Template, 3, 0, "mat-form-field", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, BookingFormComponent_div_0_div_14_mat_form_field_3_Template, 3, 0, "mat-form-field", 36);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, BookingFormComponent_div_0_div_14_ng_template_4_Template, 1, 0, "ng-template", null, 35, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, BookingFormComponent_div_0_div_14_ng_template_4_Template, 1, 0, "ng-template", null, 37, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
 
       if (rf & 2) {
-        var _r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](5);
+        var _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](5);
 
         var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx_r12.use_html)("ngIfElse", _r26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx_r12.use_html)("ngIfElse", _r29);
       }
     }
 
@@ -18344,9 +18375,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 4);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, BookingFormComponent_div_0_div_7_Template, 4, 1, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, BookingFormComponent_div_0_div_7_Template, 4, 4, "div", 2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, BookingFormComponent_div_0_div_8_Template, 6, 3, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, BookingFormComponent_div_0_div_8_Template, 7, 5, "div", 2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -18427,7 +18458,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super33 = _createSuper(BookingFormComponent);
 
-      function BookingFormComponent(_service, _users, _spaces, _dialog) {
+      function BookingFormComponent(_service, _users, _dialog) {
         var _this86;
 
         _classCallCheck(this, BookingFormComponent);
@@ -18435,7 +18466,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this86 = _super33.call(this);
         _this86._service = _service;
         _this86._users = _users;
-        _this86._spaces = _spaces;
         _this86._dialog = _dialog;
         /** List of available users to host bookings */
 
@@ -18600,7 +18630,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }(_base_directive__WEBPACK_IMPORTED_MODULE_4__["BaseDirective"]);
 
     BookingFormComponent.ɵfac = function BookingFormComponent_Factory(t) {
-      return new (t || BookingFormComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_5__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_12__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_13__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]));
+      return new (t || BookingFormComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_app_service__WEBPACK_IMPORTED_MODULE_5__["ApplicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_12__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]));
     };
 
     BookingFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -18612,7 +18642,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]],
       decls: 1,
       vars: 1,
-      consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "group", "date"], [1, "group", "time"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["for", "date"], ["name", "date", "formControlName", "date"], ["for", "recurrence"], ["name", "recurrence", 3, "placeholder", "onAction"], ["for", "start-time"], ["name", "start-time", "formControlName", "date", 3, "disabled"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "disabled", "time"], ["formControlName", "all_day"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser", 3, "placeholder"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], ["formControlName", "needs_space"], ["formControlName", "has_catering", 3, "disabled"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]],
+      consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "group", "date"], [1, "group", "time"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["for", "date"], ["name", "date", "formControlName", "date"], ["for", "recurrence"], ["name", "recurrence", 3, "placeholder", "onAction"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time"], ["class", "error info", 4, "ngIf"], ["formControlName", "all_day"], [1, "error", "info"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser", 3, "placeholder"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], ["formControlName", "needs_space"], ["formControlName", "has_catering", 3, "disabled"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]],
       template: function BookingFormComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, BookingFormComponent_div_0_Template, 15, 13, "div", 0);
@@ -18622,8 +18652,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.form);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_14__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _custom_fields_action_field_action_field_component__WEBPACK_IMPORTED_MODULE_15__["ActionFieldComponent"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_16__["MatFormField"], _angular_material_input__WEBPACK_IMPORTED_MODULE_17__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_16__["MatError"], _custom_fields_date_field_date_field_component__WEBPACK_IMPORTED_MODULE_18__["DateFieldComponent"], _custom_fields_time_field_time_field_component__WEBPACK_IMPORTED_MODULE_19__["TimeFieldComponent"], _custom_fields_duration_field_duration_field_component__WEBPACK_IMPORTED_MODULE_20__["DurationFieldComponent"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_21__["MatCheckbox"], _angular_material_select__WEBPACK_IMPORTED_MODULE_22__["MatSelect"], _angular_common__WEBPACK_IMPORTED_MODULE_14__["NgForOf"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatOption"], _custom_fields_user_list_field_user_list_field_component__WEBPACK_IMPORTED_MODULE_24__["UserListFieldComponent"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_25__["EditorComponent"]],
-      styles: ["label[_ngcontent-%COMP%] {\n  min-width: 100%;\n  margin-top: 1.25em;\n  margin-right: 1em;\n  font-weight: bold;\n  font-size: 0.8em;\n  width: 100%;\n  margin-top: 0;\n  margin-bottom: 0.5em;\n}\nlabel[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #ffb300;\n}\nlabel.error[_ngcontent-%COMP%] {\n  color: #e53935;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.label-group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 100%;\n}\n.label-group[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  min-width: 1px;\n  flex: 1;\n}\n.label-group[_ngcontent-%COMP%]   mat-checkbox[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  min-width: 8em;\n  flex: 0;\n  margin: 0;\n}\nmat-form-field[_ngcontent-%COMP%], a-date-field[_ngcontent-%COMP%], an-action-field[_ngcontent-%COMP%], editor[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  mat-form-field[_ngcontent-%COMP%], a-date-field[_ngcontent-%COMP%], an-action-field[_ngcontent-%COMP%], editor[_ngcontent-%COMP%] {\n    min-width: 16em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  mat-form-field[_ngcontent-%COMP%], a-date-field[_ngcontent-%COMP%], an-action-field[_ngcontent-%COMP%], editor[_ngcontent-%COMP%] {\n    min-width: 16em;\n  }\n}\nmat-checkbox[_ngcontent-%COMP%] {\n  margin-bottom: 1em;\n}\n.group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  min-width: 18em;\n  flex: 1;\n  margin: 0.5em;\n}\n.group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%]:first-child {\n  margin-left: 0;\n}\n.group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%]:last-child {\n  margin-right: 0;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL2Zvcm1zL2Jvb2tpbmctZm9ybS9ib29raW5nLWZvcm0uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL2Zvcm1zL2Jvb2tpbmctZm9ybS9ib29raW5nLWZvcm0uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBaUNBOztjQUFBO0FBYUE7O3NCQUFBO0FDNUNBO0VBQ0ksZUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBRUksV0FBQTtFQUNBLGFBQUE7RUFDQSxvQkFBQTtBQ01SO0FESEk7RUFDSSxjREpFO0FFU1Y7QURGSTtFQUNJLGNESkE7QUVRUjtBREFBO0VBQ0ksYUFBQTtFQUdJLGVBQUE7QUNDUjtBREdBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtBQ0FKO0FERUk7RUFDSSxjQUFBO0VBQ0EsT0FBQTtBQ0FSO0FER0k7RUFDSSxnQkFBQTtFQUNBLGNBQUE7RUFDQSxPQUFBO0VBQ0EsU0FBQTtBQ0RSO0FES0E7Ozs7RUFJSSxPQUFBO0VBQ0EsY0FBQTtBQ0ZKO0FGUVE7RUNYUjs7OztJQVFRLGVBQUE7RUNFTjtBQUNGO0FGR1E7RUNkUjs7OztJQVFRLGVBQUE7RUNVTjtBQUNGO0FEUEE7RUFDSSxrQkFBQTtBQ1VKO0FETkE7RUFDSSxhQUFBO0VBQ0EsZUFBQTtBQ1NKO0FEUkk7RUFDSSxlQUFBO0VBQ0EsT0FBQTtFQUNBLGFBQUE7QUNVUjtBRFRRO0VBQ0ksY0FBQTtBQ1daO0FEVFE7RUFDSSxlQUFBO0FDV1o7QUY1QlE7RUNTSjtJQVlRLFNBQUE7RUNXVjtBQUNGO0FGOUJRO0VDTUo7SUFZUSxTQUFBO0VDZ0JWO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy9mb3Jtcy9ib29raW5nLWZvcm0vYm9va2luZy1mb3JtLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuJGhlYWRlci1iYWNrOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwNTFDMkMsICMwNTFDMkMgNDAlLCAjMEIyNDUzIDYwJSwgIzFGNDBFNiAxMDAlKTtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbmxhYmVsIHtcbiAgICBtaW4td2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luLXRvcDogMS4yNWVtO1xuICAgIG1hcmdpbi1yaWdodDogMWVtO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICAvLyBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbWFyZ2luLXRvcDogMDtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogLjVlbTtcbiAgICAvLyB9XG5cbiAgICBzcGFuIHtcbiAgICAgICAgY29sb3I6ICRwZW5kaW5nO1xuICAgIH1cblxuICAgICYuZXJyb3Ige1xuICAgICAgICBjb2xvcjogJGVycm9yO1xuICAgIH1cbn1cblxuLmZpZWxkIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuXG4gICAgLy8gQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgZmxleC13cmFwOiB3cmFwO1xuICAgIC8vIH1cbn1cblxuLmxhYmVsLWdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG5cbiAgICBsYWJlbCB7XG4gICAgICAgIG1pbi13aWR0aDogMXB4O1xuICAgICAgICBmbGV4OiAxO1xuICAgIH1cblxuICAgIG1hdC1jaGVja2JveCB7XG4gICAgICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICAgICAgbWluLXdpZHRoOiA4ZW07XG4gICAgICAgIGZsZXg6IDA7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICB9XG59XG5cbm1hdC1mb3JtLWZpZWxkLFxuYS1kYXRlLWZpZWxkLFxuYW4tYWN0aW9uLWZpZWxkLFxuZWRpdG9yIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogNTAlO1xuXG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgbWluLXdpZHRoOiAxNmVtO1xuICAgIH1cbn1cblxubWF0LWNoZWNrYm94IHtcbiAgICBtYXJnaW4tYm90dG9tOiAxZW07XG59XG5cblxuLmdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICA+ICoge1xuICAgICAgICBtaW4td2lkdGg6IDE4ZW07XG4gICAgICAgIGZsZXg6IDE7XG4gICAgICAgIG1hcmdpbjogLjVlbTtcbiAgICAgICAgJjpmaXJzdC1jaGlsZCB7XG4gICAgICAgICAgICBtYXJnaW4tbGVmdDogMDtcbiAgICAgICAgfVxuICAgICAgICAmOmxhc3QtY2hpbGQge1xuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiAwO1xuICAgICAgICB9XG5cbiAgICAgICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgfVxuICAgIH1cblxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xubGFiZWwge1xuICBtaW4td2lkdGg6IDEwMCU7XG4gIG1hcmdpbi10b3A6IDEuMjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAxZW07XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBmb250LXNpemU6IDAuOGVtO1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLXRvcDogMDtcbiAgbWFyZ2luLWJvdHRvbTogMC41ZW07XG59XG5sYWJlbCBzcGFuIHtcbiAgY29sb3I6ICNmZmIzMDA7XG59XG5sYWJlbC5lcnJvciB7XG4gIGNvbG9yOiAjZTUzOTM1O1xufVxuXG4uZmllbGQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5sYWJlbC1ncm91cCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmxhYmVsLWdyb3VwIGxhYmVsIHtcbiAgbWluLXdpZHRoOiAxcHg7XG4gIGZsZXg6IDE7XG59XG4ubGFiZWwtZ3JvdXAgbWF0LWNoZWNrYm94IHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgbWluLXdpZHRoOiA4ZW07XG4gIGZsZXg6IDA7XG4gIG1hcmdpbjogMDtcbn1cblxubWF0LWZvcm0tZmllbGQsXG5hLWRhdGUtZmllbGQsXG5hbi1hY3Rpb24tZmllbGQsXG5lZGl0b3Ige1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDUwJTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIG1hdC1mb3JtLWZpZWxkLFxuYS1kYXRlLWZpZWxkLFxuYW4tYWN0aW9uLWZpZWxkLFxuZWRpdG9yIHtcbiAgICBtaW4td2lkdGg6IDE2ZW07XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICBtYXQtZm9ybS1maWVsZCxcbmEtZGF0ZS1maWVsZCxcbmFuLWFjdGlvbi1maWVsZCxcbmVkaXRvciB7XG4gICAgbWluLXdpZHRoOiAxNmVtO1xuICB9XG59XG5cbm1hdC1jaGVja2JveCB7XG4gIG1hcmdpbi1ib3R0b206IDFlbTtcbn1cblxuLmdyb3VwIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xufVxuLmdyb3VwID4gKiB7XG4gIG1pbi13aWR0aDogMThlbTtcbiAgZmxleDogMTtcbiAgbWFyZ2luOiAwLjVlbTtcbn1cbi5ncm91cCA+ICo6Zmlyc3QtY2hpbGQge1xuICBtYXJnaW4tbGVmdDogMDtcbn1cbi5ncm91cCA+ICo6bGFzdC1jaGlsZCB7XG4gIG1hcmdpbi1yaWdodDogMDtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5ncm91cCA+ICoge1xuICAgIG1hcmdpbjogMDtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gIC5ncm91cCA+ICoge1xuICAgIG1hcmdpbjogMDtcbiAgfVxufSJdfQ== */"]
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _custom_fields_action_field_action_field_component__WEBPACK_IMPORTED_MODULE_14__["ActionFieldComponent"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatFormField"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatError"], _custom_fields_date_field_date_field_component__WEBPACK_IMPORTED_MODULE_17__["DateFieldComponent"], _custom_fields_time_field_time_field_component__WEBPACK_IMPORTED_MODULE_18__["TimeFieldComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgModel"], _custom_fields_duration_field_duration_field_component__WEBPACK_IMPORTED_MODULE_19__["DurationFieldComponent"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_20__["MatCheckbox"], _angular_material_select__WEBPACK_IMPORTED_MODULE_21__["MatSelect"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgForOf"], _angular_material_core__WEBPACK_IMPORTED_MODULE_22__["MatOption"], _custom_fields_user_list_field_user_list_field_component__WEBPACK_IMPORTED_MODULE_23__["UserListFieldComponent"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_24__["EditorComponent"]],
+      styles: ["label[_ngcontent-%COMP%] {\n  min-width: 100%;\n  margin-top: 1.25em;\n  margin-right: 1em;\n  font-weight: bold;\n  font-size: 0.8em;\n  width: 100%;\n  margin-top: 0;\n  margin-bottom: 0.5em;\n}\nlabel[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #ffb300;\n}\nlabel.error[_ngcontent-%COMP%] {\n  color: #e53935;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.info[_ngcontent-%COMP%] {\n  font-size: 0.7em;\n  color: #e53935;\n  font-weight: 400;\n  margin-top: -1.75em;\n  margin-left: 1em;\n}\n.label-group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 100%;\n}\n.label-group[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  min-width: 1px;\n  flex: 1;\n}\n.label-group[_ngcontent-%COMP%]   mat-checkbox[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  min-width: 8em;\n  flex: 0;\n  margin: 0;\n}\nmat-form-field[_ngcontent-%COMP%], a-date-field[_ngcontent-%COMP%], an-action-field[_ngcontent-%COMP%], editor[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  mat-form-field[_ngcontent-%COMP%], a-date-field[_ngcontent-%COMP%], an-action-field[_ngcontent-%COMP%], editor[_ngcontent-%COMP%] {\n    min-width: 16em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  mat-form-field[_ngcontent-%COMP%], a-date-field[_ngcontent-%COMP%], an-action-field[_ngcontent-%COMP%], editor[_ngcontent-%COMP%] {\n    min-width: 16em;\n  }\n}\nmat-checkbox[_ngcontent-%COMP%] {\n  margin-bottom: 1em;\n}\n.group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  min-width: 18em;\n  flex: 1;\n  margin: 0.5em;\n}\n.group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%]:first-child {\n  margin-left: 0;\n}\n.group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%]:last-child {\n  margin-right: 0;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .group[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL2Zvcm1zL2Jvb2tpbmctZm9ybS9ib29raW5nLWZvcm0uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL2Zvcm1zL2Jvb2tpbmctZm9ybS9ib29raW5nLWZvcm0uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBaUNBOztjQUFBO0FBYUE7O3NCQUFBO0FDNUNBO0VBQ0ksZUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBRUksV0FBQTtFQUNBLGFBQUE7RUFDQSxvQkFBQTtBQ01SO0FESEk7RUFDSSxjREpFO0FFU1Y7QURGSTtFQUNJLGNESkE7QUVRUjtBREFBO0VBQ0ksYUFBQTtFQUdJLGVBQUE7QUNDUjtBREdBO0VBQ0ksZ0JBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtFQUNBLGdCQUFBO0FDQUo7QURHQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFdBQUE7QUNBSjtBREVJO0VBQ0ksY0FBQTtFQUNBLE9BQUE7QUNBUjtBREdJO0VBQ0ksZ0JBQUE7RUFDQSxjQUFBO0VBQ0EsT0FBQTtFQUNBLFNBQUE7QUNEUjtBREtBOzs7O0VBSUksT0FBQTtFQUNBLGNBQUE7QUNGSjtBRkFRO0VDSFI7Ozs7SUFRUSxlQUFBO0VDRU47QUFDRjtBRkxRO0VDTlI7Ozs7SUFRUSxlQUFBO0VDVU47QUFDRjtBRFBBO0VBQ0ksa0JBQUE7QUNVSjtBRE5BO0VBQ0ksYUFBQTtFQUNBLGVBQUE7QUNTSjtBRFJJO0VBQ0ksZUFBQTtFQUNBLE9BQUE7RUFDQSxhQUFBO0FDVVI7QURUUTtFQUNJLGNBQUE7QUNXWjtBRFRRO0VBQ0ksZUFBQTtBQ1daO0FGcENRO0VDaUJKO0lBWVEsU0FBQTtFQ1dWO0FBQ0Y7QUZ0Q1E7RUNjSjtJQVlRLFNBQUE7RUNnQlY7QUFDRiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL2Zvcm1zL2Jvb2tpbmctZm9ybS9ib29raW5nLWZvcm0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG4kaGVhZGVyLWJhY2s6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgIzA1MUMyQywgIzA1MUMyQyA0MCUsICMwQjI0NTMgNjAlLCAjMUY0MEU2IDEwMCUpO1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG5cbkBtaXhpbiByZXNwb25kLXRvKCRtZWRpYSkge1xuICAgIEBpZiAkbWVkaWEgPT0gbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBub3QtbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSAgQGVsc2UgaWYgJG1lZGlhID09IGxhdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgKCRtZWRpYSA9PSB0YWJsZXQtbW9iaWxlIG9yICRtZWRpYSA9PSBub3QtZGVza3RvcCkge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH1cbn1cbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxubGFiZWwge1xuICAgIG1pbi13aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tdG9wOiAxLjI1ZW07XG4gICAgbWFyZ2luLXJpZ2h0OiAxZW07XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIC8vIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBtYXJnaW4tdG9wOiAwO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAuNWVtO1xuICAgIC8vIH1cblxuICAgIHNwYW4ge1xuICAgICAgICBjb2xvcjogJHBlbmRpbmc7XG4gICAgfVxuXG4gICAgJi5lcnJvciB7XG4gICAgICAgIGNvbG9yOiAkZXJyb3I7XG4gICAgfVxufVxuXG4uZmllbGQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG5cbiAgICAvLyBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICBmbGV4LXdyYXA6IHdyYXA7XG4gICAgLy8gfVxufVxuXG4uaW5mbyB7XG4gICAgZm9udC1zaXplOiAwLjdlbTtcbiAgICBjb2xvcjogI2U1MzkzNTtcbiAgICBmb250LXdlaWdodDogNDAwO1xuICAgIG1hcmdpbi10b3A6IC0xLjc1ZW07XG4gICAgbWFyZ2luLWxlZnQ6IDFlbTtcbn1cblxuLmxhYmVsLWdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG5cbiAgICBsYWJlbCB7XG4gICAgICAgIG1pbi13aWR0aDogMXB4O1xuICAgICAgICBmbGV4OiAxO1xuICAgIH1cblxuICAgIG1hdC1jaGVja2JveCB7XG4gICAgICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICAgICAgbWluLXdpZHRoOiA4ZW07XG4gICAgICAgIGZsZXg6IDA7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICB9XG59XG5cbm1hdC1mb3JtLWZpZWxkLFxuYS1kYXRlLWZpZWxkLFxuYW4tYWN0aW9uLWZpZWxkLFxuZWRpdG9yIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogNTAlO1xuXG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgbWluLXdpZHRoOiAxNmVtO1xuICAgIH1cbn1cblxubWF0LWNoZWNrYm94IHtcbiAgICBtYXJnaW4tYm90dG9tOiAxZW07XG59XG5cblxuLmdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICA+ICoge1xuICAgICAgICBtaW4td2lkdGg6IDE4ZW07XG4gICAgICAgIGZsZXg6IDE7XG4gICAgICAgIG1hcmdpbjogLjVlbTtcbiAgICAgICAgJjpmaXJzdC1jaGlsZCB7XG4gICAgICAgICAgICBtYXJnaW4tbGVmdDogMDtcbiAgICAgICAgfVxuICAgICAgICAmOmxhc3QtY2hpbGQge1xuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiAwO1xuICAgICAgICB9XG5cbiAgICAgICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgfVxuICAgIH1cblxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xubGFiZWwge1xuICBtaW4td2lkdGg6IDEwMCU7XG4gIG1hcmdpbi10b3A6IDEuMjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAxZW07XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBmb250LXNpemU6IDAuOGVtO1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLXRvcDogMDtcbiAgbWFyZ2luLWJvdHRvbTogMC41ZW07XG59XG5sYWJlbCBzcGFuIHtcbiAgY29sb3I6ICNmZmIzMDA7XG59XG5sYWJlbC5lcnJvciB7XG4gIGNvbG9yOiAjZTUzOTM1O1xufVxuXG4uZmllbGQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5pbmZvIHtcbiAgZm9udC1zaXplOiAwLjdlbTtcbiAgY29sb3I6ICNlNTM5MzU7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG4gIG1hcmdpbi10b3A6IC0xLjc1ZW07XG4gIG1hcmdpbi1sZWZ0OiAxZW07XG59XG5cbi5sYWJlbC1ncm91cCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmxhYmVsLWdyb3VwIGxhYmVsIHtcbiAgbWluLXdpZHRoOiAxcHg7XG4gIGZsZXg6IDE7XG59XG4ubGFiZWwtZ3JvdXAgbWF0LWNoZWNrYm94IHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgbWluLXdpZHRoOiA4ZW07XG4gIGZsZXg6IDA7XG4gIG1hcmdpbjogMDtcbn1cblxubWF0LWZvcm0tZmllbGQsXG5hLWRhdGUtZmllbGQsXG5hbi1hY3Rpb24tZmllbGQsXG5lZGl0b3Ige1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDUwJTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIG1hdC1mb3JtLWZpZWxkLFxuYS1kYXRlLWZpZWxkLFxuYW4tYWN0aW9uLWZpZWxkLFxuZWRpdG9yIHtcbiAgICBtaW4td2lkdGg6IDE2ZW07XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICBtYXQtZm9ybS1maWVsZCxcbmEtZGF0ZS1maWVsZCxcbmFuLWFjdGlvbi1maWVsZCxcbmVkaXRvciB7XG4gICAgbWluLXdpZHRoOiAxNmVtO1xuICB9XG59XG5cbm1hdC1jaGVja2JveCB7XG4gIG1hcmdpbi1ib3R0b206IDFlbTtcbn1cblxuLmdyb3VwIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xufVxuLmdyb3VwID4gKiB7XG4gIG1pbi13aWR0aDogMThlbTtcbiAgZmxleDogMTtcbiAgbWFyZ2luOiAwLjVlbTtcbn1cbi5ncm91cCA+ICo6Zmlyc3QtY2hpbGQge1xuICBtYXJnaW4tbGVmdDogMDtcbn1cbi5ncm91cCA+ICo6bGFzdC1jaGlsZCB7XG4gIG1hcmdpbi1yaWdodDogMDtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5ncm91cCA+ICoge1xuICAgIG1hcmdpbjogMDtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gIC5ncm91cCA+ICoge1xuICAgIG1hcmdpbjogMDtcbiAgfVxufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -18640,8 +18670,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: src_app_services_app_service__WEBPACK_IMPORTED_MODULE_5__["ApplicationService"]
         }, {
           type: src_app_services_data_users_users_service__WEBPACK_IMPORTED_MODULE_12__["UsersService"]
-        }, {
-          type: src_app_services_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_13__["SpacesService"]
         }, {
           type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]
         }];
@@ -24357,7 +24385,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_span_10_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 27);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_12);
 
@@ -24379,7 +24407,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_11_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 28);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_14);
 
@@ -24462,23 +24490,84 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
+    var I18N_19;
+
+    if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
+      /**
+       * @desc Booking Confirm Recurrence label
+       */
+      var MSG_EXTERNAL_8453350239613118105$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS____20 = goog.getMsg(" Recurrence{$startTagSpan}*{$closeTagSpan}: ", {
+        "startTagSpan": "\uFFFD*3:1\uFFFD\uFFFD#1:1\uFFFD",
+        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*3:1\uFFFD"
+      });
+      I18N_19 = MSG_EXTERNAL_8453350239613118105$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS____20;
+    } else {
+      I18N_19 = $localize(_templateObject50(), "\uFFFD*3:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*3:1\uFFFD");
+    }
+
+    function BookingConfirmComponent_mat_dialog_content_0_div_30_span_3_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](0, I18N_19, 1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
+      }
+    }
+
+    function BookingConfirmComponent_mat_dialog_content_0_div_30_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 29);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](2, I18N_19);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, BookingConfirmComponent_mat_dialog_content_0_div_30_span_3_Template, 2, 0, "span", 1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r12.changes.date);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx_r12.recurrence_period, " from ", ctx_r12.recurrence_range, "");
+      }
+    }
+
     var I18N_5;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking confirm locations label
        */
-      var MSG_EXTERNAL_2333646421526828979$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___19 = goog.getMsg("Locations({$interpolation}){$startTagSpan}*{$closeTagSpan}:", {
+      var MSG_EXTERNAL_2333646421526828979$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___21 = goog.getMsg("Locations({$interpolation}){$startTagSpan}*{$closeTagSpan}:", {
         "interpolation": "\uFFFD0\uFFFD",
-        "startTagSpan": "\uFFFD*33:1\uFFFD\uFFFD#1:1\uFFFD",
-        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*33:1\uFFFD"
+        "startTagSpan": "\uFFFD*34:1\uFFFD\uFFFD#1:1\uFFFD",
+        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*34:1\uFFFD"
       });
-      I18N_5 = MSG_EXTERNAL_2333646421526828979$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___19;
+      I18N_5 = MSG_EXTERNAL_2333646421526828979$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___21;
     } else {
-      I18N_5 = $localize(_templateObject50(), "\uFFFD0\uFFFD", "\uFFFD*33:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*33:1\uFFFD");
+      I18N_5 = $localize(_templateObject51(), "\uFFFD0\uFFFD", "\uFFFD*34:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*34:1\uFFFD");
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_33_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_34_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](0, I18N_5, 1);
 
@@ -24488,9 +24577,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_36_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_37_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 30);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 8);
 
@@ -24502,35 +24591,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r26 = ctx.$implicit;
+        var item_r28 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", item_r26 == null ? null : item_r26.name);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", item_r28 == null ? null : item_r28.name);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r26 == null ? null : item_r26.name);
-      }
-    }
-
-    var I18N_20;
-
-    if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      /**
-       * @desc Booking confirm locations empty label
-       */
-      var MSG_EXTERNAL_696494791287488752$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___21 = goog.getMsg(" No Locations ");
-      I18N_20 = MSG_EXTERNAL_696494791287488752$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___21;
-    } else {
-      I18N_20 = $localize(_templateObject51());
-    }
-
-    function BookingConfirmComponent_mat_dialog_content_0_div_37_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 29);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_20);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r28 == null ? null : item_r28.name);
       }
     }
 
@@ -24538,41 +24605,63 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
-       * @desc Booking confirm locations show more label
+       * @desc Booking confirm locations empty label
        */
-      var MSG_EXTERNAL_3001470728706631588$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___23 = goog.getMsg(" {$interpolation} Locations ", {
-        "interpolation": "\uFFFD0\uFFFD"
-      });
-      I18N_22 = MSG_EXTERNAL_3001470728706631588$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___23;
+      var MSG_EXTERNAL_696494791287488752$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___23 = goog.getMsg(" No Locations ");
+      I18N_22 = MSG_EXTERNAL_696494791287488752$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___23;
     } else {
-      I18N_22 = $localize(_templateObject52(), "\uFFFD0\uFFFD");
+      I18N_22 = $localize(_templateObject52());
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_button_38_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_38_Template(rf, ctx) {
       if (rf & 1) {
-        var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 30);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_38_Template_button_touchrelease_0_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r28);
-
-          var ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-
-          return ctx_r27.show_locations = !ctx_r27.show_locations;
-        });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 31);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_22);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
+    }
+
+    var I18N_24;
+
+    if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
+      /**
+       * @desc Booking confirm locations show more label
+       */
+      var MSG_EXTERNAL_3001470728706631588$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___25 = goog.getMsg(" {$interpolation} Locations ", {
+        "interpolation": "\uFFFD0\uFFFD"
+      });
+      I18N_24 = MSG_EXTERNAL_3001470728706631588$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___25;
+    } else {
+      I18N_24 = $localize(_templateObject53(), "\uFFFD0\uFFFD");
+    }
+
+    function BookingConfirmComponent_mat_dialog_content_0_button_39_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 32);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_39_Template_button_touchrelease_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r30);
+
+          var ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          return ctx_r29.show_locations = !ctx_r29.show_locations;
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_24);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
 
       if (rf & 2) {
-        var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+        var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r15.show_locations ? "Hide" : "Show");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r16.show_locations ? "Hide" : "Show");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](1);
       }
@@ -24584,16 +24673,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Booking confirm host label
        */
-      var MSG_EXTERNAL_2475261750484702536$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___24 = goog.getMsg("Host{$startTagSpan}*{$closeTagSpan}:", {
-        "startTagSpan": "\uFFFD*42:1\uFFFD\uFFFD#1:1\uFFFD",
-        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*42:1\uFFFD"
+      var MSG_EXTERNAL_2475261750484702536$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___26 = goog.getMsg("Host{$startTagSpan}*{$closeTagSpan}:", {
+        "startTagSpan": "\uFFFD*43:1\uFFFD\uFFFD#1:1\uFFFD",
+        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*43:1\uFFFD"
       });
-      I18N_6 = MSG_EXTERNAL_2475261750484702536$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___24;
+      I18N_6 = MSG_EXTERNAL_2475261750484702536$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___26;
     } else {
-      I18N_6 = $localize(_templateObject53(), "\uFFFD*42:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*42:1\uFFFD");
+      I18N_6 = $localize(_templateObject54(), "\uFFFD*43:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*43:1\uFFFD");
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_42_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_43_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](0, I18N_6, 1);
 
@@ -24609,17 +24698,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Booking confirm attendees label
        */
-      var MSG_EXTERNAL_1174008998682416937$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___25 = goog.getMsg("Attendees({$interpolation}){$startTagSpan}*{$closeTagSpan}:", {
+      var MSG_EXTERNAL_1174008998682416937$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___27 = goog.getMsg("Attendees({$interpolation}){$startTagSpan}*{$closeTagSpan}:", {
         "interpolation": "\uFFFD0\uFFFD",
-        "startTagSpan": "\uFFFD*48:1\uFFFD\uFFFD#1:1\uFFFD",
-        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*48:1\uFFFD"
+        "startTagSpan": "\uFFFD*49:1\uFFFD\uFFFD#1:1\uFFFD",
+        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*49:1\uFFFD"
       });
-      I18N_7 = MSG_EXTERNAL_1174008998682416937$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___25;
+      I18N_7 = MSG_EXTERNAL_1174008998682416937$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___27;
     } else {
-      I18N_7 = $localize(_templateObject54(), "\uFFFD0\uFFFD", "\uFFFD*48:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*48:1\uFFFD");
+      I18N_7 = $localize(_templateObject55(), "\uFFFD0\uFFFD", "\uFFFD*49:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*49:1\uFFFD");
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_48_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_49_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](0, I18N_7, 1);
 
@@ -24629,33 +24718,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_26;
+    var I18N_28;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking confirm attendees empty label
        */
-      var MSG_EXTERNAL_5049681746747497062$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___27 = goog.getMsg("<No Attendees>");
-      I18N_26 = MSG_EXTERNAL_5049681746747497062$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___27;
+      var MSG_EXTERNAL_5049681746747497062$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___29 = goog.getMsg("<No Attendees>");
+      I18N_28 = MSG_EXTERNAL_5049681746747497062$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___29;
     } else {
-      I18N_26 = $localize(_templateObject55());
+      I18N_28 = $localize(_templateObject56());
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_50_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_51_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_28);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_52_div_4_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_53_div_4_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 35);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 36);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
 
@@ -24665,33 +24754,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+        var item_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
 
-        var ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", "mailto:" + item_r29.email + "?subject=" + ctx_r30.booking.title, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        var ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r29.email);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", "mailto:" + item_r31.email + "?subject=" + ctx_r32.booking.title, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r31.email);
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_52_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_53_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 30);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 8);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 33);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, BookingConfirmComponent_mat_dialog_content_0_div_52_div_4_Template, 3, 2, "div", 32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, BookingConfirmComponent_mat_dialog_content_0_div_53_div_4_Template, 3, 2, "div", 34);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -24699,59 +24788,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r29 = ctx.$implicit;
+        var item_r31 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", (item_r29 == null ? null : item_r29.name) + ((item_r29 == null ? null : item_r29.email) ? "\n" + item_r29.email : ""));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", (item_r31 == null ? null : item_r31.name) + ((item_r31 == null ? null : item_r31.email) ? "\n" + item_r31.email : ""));
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r29.name);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r31.name);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", item_r29.email);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", item_r31.email);
       }
     }
 
-    var I18N_28;
+    var I18N_30;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking confirm attendees show more label
        */
-      var MSG_EXTERNAL_7907178250261775463$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___29 = goog.getMsg(" {$interpolation} Attendees ", {
+      var MSG_EXTERNAL_7907178250261775463$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___31 = goog.getMsg(" {$interpolation} Attendees ", {
         "interpolation": "\uFFFD0\uFFFD"
       });
-      I18N_28 = MSG_EXTERNAL_7907178250261775463$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___29;
+      I18N_30 = MSG_EXTERNAL_7907178250261775463$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___31;
     } else {
-      I18N_28 = $localize(_templateObject56(), "\uFFFD0\uFFFD");
+      I18N_30 = $localize(_templateObject57(), "\uFFFD0\uFFFD");
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_button_53_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_button_54_Template(rf, ctx) {
       if (rf & 1) {
-        var _r33 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r35 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 30);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 32);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_53_Template_button_touchrelease_0_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_54_Template_button_touchrelease_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r35);
 
-          var ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          var ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-          return ctx_r32.show_attendees = !ctx_r32.show_attendees;
+          return ctx_r34.show_attendees = !ctx_r34.show_attendees;
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_30);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
 
       if (rf & 2) {
-        var ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+        var ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r20.show_attendees ? "Hide" : "Show");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r21.show_attendees ? "Hide" : "Show");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](1);
       }
@@ -24763,16 +24852,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Booking confirm notes label
        */
-      var MSG_EXTERNAL_540938333290013732$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___30 = goog.getMsg("Notes{$startTagSpan}*{$closeTagSpan}:", {
-        "startTagSpan": "\uFFFD*57:1\uFFFD\uFFFD#1:1\uFFFD",
-        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*57:1\uFFFD"
+      var MSG_EXTERNAL_540938333290013732$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___32 = goog.getMsg("Notes{$startTagSpan}*{$closeTagSpan}:", {
+        "startTagSpan": "\uFFFD*58:1\uFFFD\uFFFD#1:1\uFFFD",
+        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*58:1\uFFFD"
       });
-      I18N_8 = MSG_EXTERNAL_540938333290013732$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___30;
+      I18N_8 = MSG_EXTERNAL_540938333290013732$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___32;
     } else {
-      I18N_8 = $localize(_templateObject57(), "\uFFFD*57:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*57:1\uFFFD");
+      I18N_8 = $localize(_templateObject58(), "\uFFFD*58:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*58:1\uFFFD");
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_57_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_58_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](0, I18N_8, 1);
 
@@ -24788,17 +24877,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Booking confirm catering label
        */
-      var MSG_EXTERNAL_891186954219992843$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___31 = goog.getMsg("Catering Orders({$interpolation}){$startTagSpan}*{$closeTagSpan}:", {
+      var MSG_EXTERNAL_891186954219992843$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___33 = goog.getMsg("Catering Orders({$interpolation}){$startTagSpan}*{$closeTagSpan}:", {
         "interpolation": "\uFFFD0\uFFFD",
-        "startTagSpan": "\uFFFD*62:1\uFFFD\uFFFD#1:1\uFFFD",
-        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*62:1\uFFFD"
+        "startTagSpan": "\uFFFD*63:1\uFFFD\uFFFD#1:1\uFFFD",
+        "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*63:1\uFFFD"
       });
-      I18N_9 = MSG_EXTERNAL_891186954219992843$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___31;
+      I18N_9 = MSG_EXTERNAL_891186954219992843$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___33;
     } else {
-      I18N_9 = $localize(_templateObject58(), "\uFFFD0\uFFFD", "\uFFFD*62:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*62:1\uFFFD");
+      I18N_9 = $localize(_templateObject59(), "\uFFFD0\uFFFD", "\uFFFD*63:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*63:1\uFFFD");
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_62_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_63_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](0, I18N_9, 1);
 
@@ -24808,19 +24897,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_65_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_66_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 31);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 8);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 33);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 35);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
 
@@ -24834,59 +24923,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var order_r34 = ctx.$implicit;
+        var order_r36 = ctx.$implicit;
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](order_r34.location || "<Removed>");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](order_r36.location || "<Removed>");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate3"](" ", order_r34.item_count, " item", order_r34.item_count === 1 ? "" : "", " | ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](6, 4, order_r34.total / 100, order_r34.symbol), " ");
-      }
-    }
-
-    var I18N_32;
-
-    if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      /**
-       * @desc Booking confirm catering show more label
-       */
-      var MSG_EXTERNAL_3466073991578612589$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___33 = goog.getMsg(" {$interpolation} Orders ", {
-        "interpolation": "\uFFFD0\uFFFD"
-      });
-      I18N_32 = MSG_EXTERNAL_3466073991578612589$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___33;
-    } else {
-      I18N_32 = $localize(_templateObject59(), "\uFFFD0\uFFFD");
-    }
-
-    function BookingConfirmComponent_mat_dialog_content_0_button_66_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r36 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 30);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_66_Template_button_touchrelease_0_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r36);
-
-          var ctx_r35 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-
-          return ctx_r35.show_orders = !ctx_r35.show_orders;
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_32);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r24.show_attendees ? "Hide" : "Show");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate3"](" ", order_r36.item_count, " item", order_r36.item_count === 1 ? "" : "", " | ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](6, 4, order_r36.total / 100, order_r36.symbol), " ");
       }
     }
 
@@ -24894,25 +24939,69 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
-       * @desc Booking confirm changes label
+       * @desc Booking confirm catering show more label
        */
-      var MSG_EXTERNAL_8132965743901393201$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___35 = goog.getMsg(" * - changed fields ");
-      I18N_34 = MSG_EXTERNAL_8132965743901393201$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___35;
+      var MSG_EXTERNAL_3466073991578612589$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___35 = goog.getMsg(" {$interpolation} Orders ", {
+        "interpolation": "\uFFFD0\uFFFD"
+      });
+      I18N_34 = MSG_EXTERNAL_3466073991578612589$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___35;
     } else {
-      I18N_34 = $localize(_templateObject60());
+      I18N_34 = $localize(_templateObject60(), "\uFFFD0\uFFFD");
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_67_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_button_67_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 27);
+        var _r38 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 32);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_67_Template_button_touchrelease_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r38);
+
+          var ctx_r37 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          return ctx_r37.show_orders = !ctx_r37.show_orders;
+        });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_34);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
+
+      if (rf & 2) {
+        var ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r25.show_attendees ? "Hide" : "Show");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](1);
+      }
     }
 
-    var _c36 = function _c36() {
+    var I18N_36;
+
+    if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
+      /**
+       * @desc Booking confirm changes label
+       */
+      var MSG_EXTERNAL_8132965743901393201$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___37 = goog.getMsg(" * - changed fields ");
+      I18N_36 = MSG_EXTERNAL_8132965743901393201$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___37;
+    } else {
+      I18N_36 = $localize(_templateObject61());
+    }
+
+    function BookingConfirmComponent_mat_dialog_content_0_div_68_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 28);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_36);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
+
+    var _c38 = function _c38() {
       return {
         type: "icon",
         "class": "material-icons",
@@ -25014,125 +25103,127 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](30, BookingConfirmComponent_mat_dialog_content_0_div_30_Template, 6, 3, "div", 15);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 16);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](32, I18N_5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "label");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](33, BookingConfirmComponent_mat_dialog_content_0_span_33_Template, 2, 0, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](33, I18N_5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 12);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 16);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](36, BookingConfirmComponent_mat_dialog_content_0_div_36_Template, 3, 2, "div", 17);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](37, BookingConfirmComponent_mat_dialog_content_0_div_37_Template, 2, 0, "div", 18);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](38, BookingConfirmComponent_mat_dialog_content_0_button_38_Template, 2, 1, "button", 19);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 20);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "label");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](41, I18N_6);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](42, BookingConfirmComponent_mat_dialog_content_0_span_42_Template, 2, 0, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, BookingConfirmComponent_mat_dialog_content_0_span_34_Template, 2, 0, "span", 1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 12);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 17);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](37, BookingConfirmComponent_mat_dialog_content_0_div_37_Template, 3, 2, "div", 18);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](38, BookingConfirmComponent_mat_dialog_content_0_div_38_Template, 2, 0, "div", 19);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](39, BookingConfirmComponent_mat_dialog_content_0_button_39_Template, 2, 1, "button", 20);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 21);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "label");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](47, I18N_7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](42, I18N_6);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](48, BookingConfirmComponent_mat_dialog_content_0_span_48_Template, 2, 0, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](43, BookingConfirmComponent_mat_dialog_content_0_span_43_Template, 2, 0, "span", 1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "div", 12);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](50, BookingConfirmComponent_mat_dialog_content_0_span_50_Template, 2, 0, "span", 1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 16);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](52, BookingConfirmComponent_mat_dialog_content_0_div_52_Template, 5, 3, "div", 17);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](53, BookingConfirmComponent_mat_dialog_content_0_button_53_Template, 2, 1, "button", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "div", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 22);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "label");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](56, I18N_8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](48, I18N_7);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](57, BookingConfirmComponent_mat_dialog_content_0_span_57_Template, 2, 0, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](49, BookingConfirmComponent_mat_dialog_content_0_span_49_Template, 2, 0, "span", 1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](58, "div", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "div", 12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](51, BookingConfirmComponent_mat_dialog_content_0_span_51_Template, 2, 0, "span", 1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "div", 17);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](53, BookingConfirmComponent_mat_dialog_content_0_div_53_Template, 5, 3, "div", 18);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](54, BookingConfirmComponent_mat_dialog_content_0_button_54_Template, 2, 1, "button", 20);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](61, I18N_9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](62, BookingConfirmComponent_mat_dialog_content_0_span_62_Template, 2, 0, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "div", 23);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "label");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](57, I18N_8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](58, BookingConfirmComponent_mat_dialog_content_0_span_58_Template, 2, 0, "span", 1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "div", 12);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "div", 16);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](65, BookingConfirmComponent_mat_dialog_content_0_div_65_Template, 7, 7, "div", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](59, "div", 24);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](66, BookingConfirmComponent_mat_dialog_content_0_button_66_Template, 2, 1, "button", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "div", 25);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "label");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](62, I18N_9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](63, BookingConfirmComponent_mat_dialog_content_0_span_63_Template, 2, 0, "span", 1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "div", 12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "div", 17);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](66, BookingConfirmComponent_mat_dialog_content_0_div_66_Template, 7, 7, "div", 26);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](67, BookingConfirmComponent_mat_dialog_content_0_button_67_Template, 2, 1, "button", 20);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](67, BookingConfirmComponent_mat_dialog_content_0_div_67_Template, 2, 0, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](68, BookingConfirmComponent_mat_dialog_content_0_div_68_Template, 2, 0, "div", 10);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -25144,7 +25235,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("icon", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](36, _c36));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("icon", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](37, _c38));
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -25186,13 +25277,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.duration);
 
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.recurrence_range);
+
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.changes.location);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r0.spaces.length || "0");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](33);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -25224,7 +25319,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r0.attendees.length || "0");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](47);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](48);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -25256,7 +25351,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nExp"](ctx_r0.catering.length || "0");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](61);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nApply"](62);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -25276,53 +25371,53 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_37;
+    var I18N_39;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking confirm edit action
        */
-      var MSG_EXTERNAL_8928700388210119199$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___38 = goog.getMsg(" Edit ");
-      I18N_37 = MSG_EXTERNAL_8928700388210119199$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___38;
+      var MSG_EXTERNAL_8928700388210119199$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___40 = goog.getMsg(" Edit ");
+      I18N_39 = MSG_EXTERNAL_8928700388210119199$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___40;
     } else {
-      I18N_37 = $localize(_templateObject61());
+      I18N_39 = $localize(_templateObject62());
     }
 
-    var I18N_39;
+    var I18N_41;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking confirm save action
        */
-      var MSG_EXTERNAL_1165399958799107715$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___40 = goog.getMsg(" Save ");
-      I18N_39 = MSG_EXTERNAL_1165399958799107715$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___40;
+      var MSG_EXTERNAL_1165399958799107715$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___42 = goog.getMsg(" Save ");
+      I18N_41 = MSG_EXTERNAL_1165399958799107715$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS___42;
     } else {
-      I18N_39 = $localize(_templateObject62());
+      I18N_41 = $localize(_templateObject63());
     }
 
     function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template(rf, ctx) {
       if (rf & 1) {
-        var _r39 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r41 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 35);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 37);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_37);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](2, I18N_39);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "button", 36);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "button", 38);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("tapped", function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template_button_tapped_3_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r41);
 
-          var ctx_r38 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          var ctx_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-          return ctx_r38.saveChanges();
+          return ctx_r40.saveChanges();
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](4, I18N_39);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](4, I18N_41);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -25358,11 +25453,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "main");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 37);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 39);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 38);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 40);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "mat-spinner", 39);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "mat-spinner", 41);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -25386,51 +25481,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_41;
+    var I18N_43;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking confirm another booking action
        */
-      var MSG_EXTERNAL_1580025293451525048$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS__42 = goog.getMsg(" New Booking ");
-      I18N_41 = MSG_EXTERNAL_1580025293451525048$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS__42;
+      var MSG_EXTERNAL_1580025293451525048$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS__44 = goog.getMsg(" New Booking ");
+      I18N_43 = MSG_EXTERNAL_1580025293451525048$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS__44;
     } else {
-      I18N_41 = $localize(_templateObject63());
+      I18N_43 = $localize(_templateObject64());
     }
 
-    var I18N_43;
+    var I18N_45;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking confirm view schedule action
        */
-      var MSG_EXTERNAL_1413519670657341546$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS__44 = goog.getMsg(" My Day ");
-      I18N_43 = MSG_EXTERNAL_1413519670657341546$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS__44;
+      var MSG_EXTERNAL_1413519670657341546$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS__46 = goog.getMsg(" My Day ");
+      I18N_45 = MSG_EXTERNAL_1413519670657341546$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_BOOKING_CONFIRM_BOOKING_CONFIRM_COMPONENT_TS__46;
     } else {
-      I18N_43 = $localize(_templateObject64());
+      I18N_45 = $localize(_templateObject65());
     }
 
     function BookingConfirmComponent_ng_template_4_Template(rf, ctx) {
       if (rf & 1) {
-        var _r41 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r43 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 40);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 42);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("tapped", function BookingConfirmComponent_ng_template_4_Template_button_tapped_0_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r41);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r43);
 
-          var ctx_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          var ctx_r42 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          return ctx_r40.newBooking();
+          return ctx_r42.newBooking();
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](1, I18N_43);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 43);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](3, I18N_43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18n"](3, I18N_45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -25621,6 +25716,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var duration_value = this.booking.changes.duration || this.booking.duration;
           return Object(src_app_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_5__["humaniseDuration"])(duration_value);
         }
+        /** Reccurence Range */
+
+      }, {
+        key: "recurrence_range",
+        get: function get() {
+          if (!this.booking || !this.booking.recurrence || !this.booking.recurrence.period) {
+            return '';
+          }
+
+          var start = dayjs__WEBPACK_IMPORTED_MODULE_10__(this.booking.recurrence.start).format('MMMM DD, YYYY');
+          var end = dayjs__WEBPACK_IMPORTED_MODULE_10__(this.booking.recurrence.end).format('MMMM DD, YYYY');
+          return "".concat(start, " until ").concat(end);
+        }
+      }, {
+        key: "recurrence_period",
+        get: function get() {
+          if (!this.booking || !this.booking.recurrence) {
+            return '';
+          }
+
+          return this.booking.recurrence.period;
+        }
         /** List of spaces associated with the event */
 
       }, {
@@ -25716,10 +25833,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]],
       decls: 6,
       vars: 3,
-      consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["name", "attendees", 1, "field"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], ["class", "list-item", 4, "ngFor", "ngForOf"], [1, "request"], [1, "info"], [1, "list-item", 3, "title"], [1, "list-item"], [1, "show", 3, "touchrelease"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "tapped"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "name", "new", 1, "inverse", 3, "tapped"], ["button", "", "mat-button", "", "mat-dialog-close", "", "name", "to-schedule"]],
+      consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["class", "field", "name", "recurrence", 4, "ngIf"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["name", "attendees", 1, "field"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], ["class", "list-item", 4, "ngFor", "ngForOf"], [1, "request"], [1, "info"], ["name", "recurrence", 1, "field"], [1, "list-item", 3, "title"], [1, "list-item"], [1, "show", 3, "touchrelease"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "tapped"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "name", "new", 1, "inverse", 3, "tapped"], ["button", "", "mat-button", "", "mat-dialog-close", "", "name", "to-schedule"]],
       template: function BookingConfirmComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, BookingConfirmComponent_mat_dialog_content_0_Template, 68, 37, "mat-dialog-content", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, BookingConfirmComponent_mat_dialog_content_0_Template, 69, 38, "mat-dialog-content", 0);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, BookingConfirmComponent_mat_dialog_actions_1_Template, 3, 2, "mat-dialog-actions", 1);
 
@@ -25896,7 +26013,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var MSG_EXTERNAL_8241212734369180516$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_2 = goog.getMsg(" Would you like to add equipment to your booking's spaces? ");
       I18N_1 = MSG_EXTERNAL_8241212734369180516$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_2;
     } else {
-      I18N_1 = $localize(_templateObject65());
+      I18N_1 = $localize(_templateObject66());
     }
 
     function RequirementDetailsModalComponent_mat_tab_3_ng_template_1_Template(rf, ctx) {
@@ -25940,7 +26057,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var MSG_EXTERNAL_5201419736696236077$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__4 = goog.getMsg(" (eg - particular room configurations or specific equipment etc) Additional requests are handled in confidence ");
       I18N_3 = MSG_EXTERNAL_5201419736696236077$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__4;
     } else {
-      I18N_3 = $localize(_templateObject66());
+      I18N_3 = $localize(_templateObject67());
     }
 
     var I18N_5;
@@ -25949,7 +26066,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var MSG_EXTERNAL_4048193419886450033$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__6 = goog.getMsg("Add notes here...");
       I18N_5 = MSG_EXTERNAL_4048193419886450033$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__6;
     } else {
-      I18N_5 = $localize(_templateObject67());
+      I18N_5 = $localize(_templateObject68());
     }
 
     var _c7 = ["placeholder", I18N_5];
@@ -25959,7 +26076,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var MSG_EXTERNAL_4704310930093496744$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__10 = goog.getMsg("Charge Code");
       I18N_9 = MSG_EXTERNAL_4704310930093496744$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__10;
     } else {
-      I18N_9 = $localize(_templateObject68());
+      I18N_9 = $localize(_templateObject69());
     }
 
     var _c11 = ["placeholder", I18N_9];
@@ -25975,7 +26092,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
       I18N_12 = MSG_EXTERNAL_8265889124285934711$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__13;
     } else {
-      I18N_12 = $localize(_templateObject69(), "\uFFFD#17\uFFFD", "\uFFFD/#17\uFFFD");
+      I18N_12 = $localize(_templateObject70(), "\uFFFD#17\uFFFD", "\uFFFD/#17\uFFFD");
     }
 
     var I18N_14;
@@ -25987,7 +26104,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var MSG_EXTERNAL_987760363308336949$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__15 = goog.getMsg(" Charge Code is required ");
       I18N_14 = MSG_EXTERNAL_987760363308336949$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__15;
     } else {
-      I18N_14 = $localize(_templateObject70());
+      I18N_14 = $localize(_templateObject71());
     }
 
     var I18N_16;
@@ -26002,7 +26119,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
       I18N_16 = MSG_EXTERNAL_5102944251832692522$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__17;
     } else {
-      I18N_16 = $localize(_templateObject71(), "\uFFFD#23\uFFFD", "\uFFFD/#23\uFFFD");
+      I18N_16 = $localize(_templateObject72(), "\uFFFD#23\uFFFD", "\uFFFD/#23\uFFFD");
     }
 
     var I18N_18;
@@ -26011,7 +26128,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var MSG_EXTERNAL_5616907402275895341$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__19 = goog.getMsg("e.g. 12");
       I18N_18 = MSG_EXTERNAL_5616907402275895341$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__19;
     } else {
-      I18N_18 = $localize(_templateObject72());
+      I18N_18 = $localize(_templateObject73());
     }
 
     var _c20 = ["placeholder", I18N_18];
@@ -26027,7 +26144,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
       I18N_21 = MSG_EXTERNAL_3544114030507981593$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__22;
     } else {
-      I18N_21 = $localize(_templateObject73(), "\uFFFD#29\uFFFD", "\uFFFD/#29\uFFFD");
+      I18N_21 = $localize(_templateObject74(), "\uFFFD#29\uFFFD", "\uFFFD/#29\uFFFD");
     }
 
     var I18N_23;
@@ -26039,7 +26156,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var MSG_EXTERNAL_5210342041579185233$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__24 = goog.getMsg(" Headcount Estimate is required ");
       I18N_23 = MSG_EXTERNAL_5210342041579185233$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__24;
     } else {
-      I18N_23 = $localize(_templateObject74());
+      I18N_23 = $localize(_templateObject75());
     }
 
     var I18N_8;
@@ -26054,7 +26171,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
       I18N_8 = MSG_EXTERNAL_2414153601168568330$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___25;
     } else {
-      I18N_8 = $localize(_templateObject75(), "\uFFFD*11:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*11:1\uFFFD");
+      I18N_8 = $localize(_templateObject76(), "\uFFFD*11:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*11:1\uFFFD");
     }
 
     function RequirementDetailsModalComponent_form_13_span_11_Template(rf, ctx) {
