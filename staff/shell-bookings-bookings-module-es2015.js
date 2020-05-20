@@ -5885,7 +5885,7 @@ class CateringMenuItemComponent extends src_app_shared_base_directive__WEBPACK_I
             else {
                 const amount = this.item.amount;
                 this.item.setAmount(value);
-                if (this.item.package && amount < value) {
+                if (this.item.package && amount < value && this.item.items.length) {
                     this.selectPackageOptions().then((confirmed_item) => {
                         list.push(new src_app_services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_5__["CateringItem"](confirmed_item));
                         this.field.setValue(list.filter((an_item) => an_item.amount));
@@ -6334,6 +6334,7 @@ class BookingCateringOrderDetailsComponent extends src_app_shared_base_directive
         }
     }
     initForm() {
+        console.log('Order:', this.order);
         this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
             id: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.order.id),
             booking_date: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_11__(this.date).startOf('d').valueOf() : this.date),
@@ -6348,6 +6349,7 @@ class BookingCateringOrderDetailsComponent extends src_app_shared_base_directive
             if (!this.available_times.find((time) => time.id === this.form.controls.start.value)) {
                 this.form.controls.start.setValue(this.available_times[0].id);
             }
+            this.form.controls.items.setValue([]);
             this.loadMenu();
         }));
         this.generateAvailableTimes();
@@ -6380,7 +6382,6 @@ class BookingCateringOrderDetailsComponent extends src_app_shared_base_directive
         if (!space) {
             return;
         }
-        this.form.controls.items.setValue([]);
         this.loading = true;
         this._menu.query({ room_id: space.id }).then((list) => {
             this.loading = false;

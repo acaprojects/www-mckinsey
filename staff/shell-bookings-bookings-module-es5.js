@@ -8275,7 +8275,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
               var amount = this.item.amount;
               this.item.setAmount(value);
 
-              if (this.item["package"] && amount < value) {
+              if (this.item["package"] && amount < value && this.item.items.length) {
                 this.selectPackageOptions().then(function (confirmed_item) {
                   list.push(new src_app_services_data_catering_catering_item_class__WEBPACK_IMPORTED_MODULE_5__["CateringItem"](confirmed_item));
 
@@ -9089,6 +9089,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         value: function initForm() {
           var _this19 = this;
 
+          console.log('Order:', this.order);
           this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
             id: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.order.id),
             booking_date: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.all_day ? dayjs__WEBPACK_IMPORTED_MODULE_11__(this.date).startOf('d').valueOf() : this.date),
@@ -9109,6 +9110,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
             })) {
               _this19.form.controls.start.setValue(_this19.available_times[0].id);
             }
+
+            _this19.form.controls.items.setValue([]);
 
             _this19.loadMenu();
           }));
@@ -9159,7 +9162,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
             return;
           }
 
-          this.form.controls.items.setValue([]);
           this.loading = true;
 
           this._menu.query({
