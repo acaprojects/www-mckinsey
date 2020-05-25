@@ -12739,13 +12739,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../shared/utilities/general.utilities */
     "./src/app/shared/utilities/general.utilities.ts");
 
-    var application_1 = __webpack_require__(
-    /*! ../shared/globals/application */
-    "./src/app/shared/globals/application.ts");
-
     var base_class_1 = __webpack_require__(
     /*! ../shared/base.class */
     "./src/app/shared/base.class.ts");
+
+    var version_1 = __webpack_require__(
+    /*! src/environments/version */
+    "./src/environments/version.ts");
 
     var dayjs = __webpack_require__(
     /*! dayjs */
@@ -12787,11 +12787,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _this68._app_name = 'PlaceOS';
         var now = dayjs();
-        var built = now.isSame(application_1.build, 'd') ? "Today at ".concat(application_1.build.format('h:mmA')) : application_1.build.format('D MMM YYYY, h:mmA');
+        var build = dayjs(version_1.VERSION.time);
+        var built = now.isSame(build, 'd') ? "Today at ".concat(build.format('h:mmA')) : build.format('D MMM YYYY, h:mmA');
 
-        _this68.log('CORE', "".concat(application_1.core_version), null, 'debug', true);
+        _this68.log('CORE', "".concat(version_1.VERSION.core_version), null, 'debug', true);
 
-        _this68.log('APP', "".concat(application_1.version, " | Built: ").concat(built), null, 'debug', true);
+        _this68.log('APP', "".concat(version_1.VERSION.version, " - ").concat(version_1.VERSION.hash, " | Built: ").concat(built), null, 'debug', true);
 
         _this68.init();
 
@@ -19524,38 +19525,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       opacity: 0,
       height: 0
     })), animations_1.transition('show <=> hide', animations_1.animate('200ms ease-in'))]);
-    /***/
-  },
-
-  /***/
-  "./src/app/shared/globals/application.ts":
-  /*!***********************************************!*\
-    !*** ./src/app/shared/globals/application.ts ***!
-    \***********************************************/
-
-  /*! no static exports found */
-
-  /***/
-  function srcAppSharedGlobalsApplicationTs(module, exports, __webpack_require__) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-
-    var dayjs = __webpack_require__(
-    /*! dayjs */
-    "./node_modules/dayjs/dayjs.min.js");
-    /** Version number of the application */
-
-
-    exports.version = 'local-dev';
-    /** Version number of the base application */
-
-    exports.core_version = '1.0.0';
-    /** Build time of the application */
-
-    exports.build = dayjs();
     /***/
   },
 
@@ -38409,6 +38378,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.environment = {
       production: true
     };
+    /***/
+  },
+
+  /***/
+  "./src/environments/version.ts":
+  /*!*************************************!*\
+    !*** ./src/environments/version.ts ***!
+    \*************************************/
+
+  /*! no static exports found */
+
+  /***/
+  function srcEnvironmentsVersionTs(module, exports, __webpack_require__) {
+    "use strict";
+
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    }); // IMPORTANT: THIS FILE IS AUTO GENERATED! DO NOT MANUALLY EDIT OR CHECKIN!
+
+    /* tslint:disable */
+
+    exports.VERSION = {
+      "dirty": false,
+      "raw": "f74edea",
+      "hash": "f74edea",
+      "distance": null,
+      "tag": null,
+      "semver": null,
+      "suffix": "f74edea",
+      "semverString": null,
+      "version": "0.0.0",
+      "core_version": "1.0.0",
+      "time": 1590388269134
+    };
+    /* tslint:enable */
+
     /***/
   },
 

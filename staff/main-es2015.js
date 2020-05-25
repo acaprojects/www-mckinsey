@@ -6486,8 +6486,8 @@ const tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const http_1 = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 const general_utilities_1 = __webpack_require__(/*! ../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const application_1 = __webpack_require__(/*! ../shared/globals/application */ "./src/app/shared/globals/application.ts");
 const base_class_1 = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
+const version_1 = __webpack_require__(/*! src/environments/version */ "./src/environments/version.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
@@ -6502,9 +6502,10 @@ class SettingsService extends base_class_1.BaseClass {
         /** Name of the application */
         this._app_name = 'PlaceOS';
         const now = dayjs();
-        const built = now.isSame(application_1.build, 'd') ? `Today at ${application_1.build.format('h:mmA')}` : application_1.build.format('D MMM YYYY, h:mmA');
-        this.log('CORE', `${application_1.core_version}`, null, 'debug', true);
-        this.log('APP', `${application_1.version} | Built: ${built}`, null, 'debug', true);
+        const build = dayjs(version_1.VERSION.time);
+        const built = now.isSame(build, 'd') ? `Today at ${build.format('h:mmA')}` : build.format('D MMM YYYY, h:mmA');
+        this.log('CORE', `${version_1.VERSION.core_version}`, null, 'debug', true);
+        this.log('APP', `${version_1.VERSION.version} - ${version_1.VERSION.hash} | Built: ${built}`, null, 'debug', true);
         this.init();
     }
     /**
@@ -10278,27 +10279,6 @@ exports.ANIMATION_SHOW_CONTRACT_EXPAND = animations_1.trigger('show', [
     animations_1.state('hide', animations_1.style({ opacity: 0, height: 0 })),
     animations_1.transition('show <=> hide', animations_1.animate('200ms ease-in'))
 ]);
-
-
-/***/ }),
-
-/***/ "./src/app/shared/globals/application.ts":
-/*!***********************************************!*\
-  !*** ./src/app/shared/globals/application.ts ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/** Version number of the application */
-exports.version = 'local-dev';
-/** Version number of the base application */
-exports.core_version = '1.0.0';
-/** Build time of the application */
-exports.build = dayjs();
 
 
 /***/ }),
@@ -21319,6 +21299,36 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.environment = {
     production: true
 };
+
+
+/***/ }),
+
+/***/ "./src/environments/version.ts":
+/*!*************************************!*\
+  !*** ./src/environments/version.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// IMPORTANT: THIS FILE IS AUTO GENERATED! DO NOT MANUALLY EDIT OR CHECKIN!
+/* tslint:disable */
+exports.VERSION = {
+    "dirty": false,
+    "raw": "f74edea",
+    "hash": "f74edea",
+    "distance": null,
+    "tag": null,
+    "semver": null,
+    "suffix": "f74edea",
+    "semverString": null,
+    "version": "0.0.0",
+    "core_version": "1.0.0",
+    "time": 1590388269134
+};
+/* tslint:enable */
 
 
 /***/ }),
