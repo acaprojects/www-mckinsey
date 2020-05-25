@@ -19207,41 +19207,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     !*** ./src/polyfills.ts ***!
     \**************************/
 
-  /*! no exports provided */
+  /*! no static exports found */
 
   /***/
-  function srcPolyfillsTs(module, __webpack_exports__, __webpack_require__) {
+  function srcPolyfillsTs(module, exports, __webpack_require__) {
     "use strict";
 
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony import */
-
-
-    var _angular_localize_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @angular/localize/init */
-    "./node_modules/@angular/localize/fesm2015/init.js");
-    /* harmony import */
-
-
-    var _angular_localize_init__WEBPACK_IMPORTED_MODULE_0___default =
-    /*#__PURE__*/
-    __webpack_require__.n(_angular_localize_init__WEBPACK_IMPORTED_MODULE_0__);
-    /* harmony import */
-
-
-    var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! zone.js/dist/zone */
-    "./node_modules/zone.js/dist/zone-evergreen.js");
-    /* harmony import */
-
-
-    var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_1___default =
-    /*#__PURE__*/
-    __webpack_require__.n(zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_1__);
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
     /***************************************************************************************************
      * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
      */
 
+    __webpack_require__(
+    /*! @angular/localize/init */
+    "./node_modules/@angular/localize/fesm2015/init.js");
     /**
      * This file includes polyfills needed by Angular and is loaded before the app.
      * You can add your own extra polyfills to this file.
@@ -19299,7 +19280,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /***************************************************************************************************
      * Zone JS is required by default for Angular itself.
      */
-    // Included with Angular CLI.
+
+
+    __webpack_require__(
+    /*! zone.js/dist/zone */
+    "./node_modules/zone.js/dist/zone-evergreen.js"); // Included with Angular CLI.
 
     /***************************************************************************************************
      * APPLICATION IMPORTS
