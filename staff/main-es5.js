@@ -8269,7 +8269,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var date = dayjs(data.date);
           data.start = date.unix();
           data.end = date.add(data.duration || 60, 'm').unix();
-          data.auto_approve = this.space_list.map(function (space) {
+          data.auto_approve = data.space_list.map(function (space) {
             return !_this43.id || _this43.changes.date || _this43.changes.duration ? !space || !space.byRequest({
               date: data.date,
               duration: data.duration,

@@ -4125,7 +4125,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         const date = dayjs(data.date);
         data.start = date.unix();
         data.end = date.add(data.duration || 60, 'm').unix();
-        data.auto_approve = this.space_list
+        data.auto_approve = data.space_list
             .map((space) => {
             return !this.id || this.changes.date || this.changes.duration
                 ? !space ||
