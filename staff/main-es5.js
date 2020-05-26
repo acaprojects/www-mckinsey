@@ -7540,13 +7540,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function filter() {
           var predicate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this._list_filter;
           var list = this.get('list') || [];
-          return list.reduce(function (a, i) {
-            if (predicate(i)) {
-              a.push(i);
-            }
-
-            return a;
-          }, []);
+          return list.filter(function (_) {
+            return predicate(_);
+          });
         }
         /**
          * Get item with the given id from the loaded items
@@ -7558,9 +7554,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function find() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
           var list = this.get('list') || [];
-          id = id.toLowerCase();
           return list.find(function (i) {
-            return i.id === id || i.email.toLowerCase() === id;
+            return i.id === id || i.email.toLowerCase() === id.toLowerCase();
           });
         }
         /**
@@ -8270,7 +8265,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           data.start = date.unix();
           data.end = date.add(data.duration || 60, 'm').unix();
           data.auto_approve = data.space_list.map(function (space) {
-            return !_this43.id || _this43.changes.date || _this43.changes.duration ? !space || !space.byRequest({
+            return !_this43.id || _this43.changes.date || _this43.changes.duration ? !space || space instanceof space_class_1.Space && !space.byRequest({
               date: data.date,
               duration: data.duration,
               host: data.organiser
@@ -9630,8 +9625,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.booking = data.booking;
         this.delivery_time = data.delivery_time || data.start || 0;
         this.booking_date = data.booking_date;
-        this.location_id = data.location_id || data.location;
-        this.location = data.location || '';
+        this.location_id = data.location_id || data.location || (data.space ? data.space.id : '') || '';
+        this.location = data.location || (data.space ? data.space.name : '') || '';
         this.status = data.status || 'accepted';
         this.charge_code = data.charge_code || data.code;
         this.notes = data.notes;
@@ -10724,7 +10719,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     if (user_service) {
                       user_service.listen('current_user').pipe(operators_1.first(function (_) {
-                        return !!_.location;
+                        return _ && !!_.location;
                       })).subscribe(function (user) {
                         if (user) {
                           var building = _this52.buildings.find(function (bld) {
@@ -11001,10 +10996,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ServiceManager, null, [{
         key: "setService",
         value: function setService(type, service) {
-          ServiceManager._service_list.push({
-            provideFor: type,
-            useValue: service
+          if (window.debug) {
+            window.ServiceManager = this._service_list;
+          }
+
+          var index = ServiceManager._service_list.findIndex(function (provider) {
+            return provider.provideFor === type;
           });
+
+          if (index >= 0) {
+            ServiceManager._service_list.splice(index, 1, {
+              provideFor: type,
+              useValue: service
+            });
+          } else {
+            ServiceManager._service_list.push({
+              provideFor: type,
+              useValue: service
+            });
+          }
         }
         /** Get the services used to handle data model requests */
 
@@ -11203,7 +11213,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return new Space(Object.assign(Object.assign({}, this), {
             id: null,
             email: null,
-            _bookings: []
+            bookings: []
           }));
         }
         /**
@@ -27412,7 +27422,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.form = new forms_1.FormGroup({
             id: new forms_1.FormControl(this.order.id),
             booking_date: new forms_1.FormControl(this.all_day ? dayjs(this.date).startOf('d').valueOf() : this.date),
-            space: new forms_1.FormControl(this._spaces.find(this.order.location_id) || this.space_list[0]),
+            space: new forms_1.FormControl((this.order.location_id ? this._spaces.find(this.order.location_id) : null) || this.space_list[0]),
             location_id: new forms_1.FormControl(this.order.location_id || this.space_list[0].id),
             start: new forms_1.FormControl(this.order.delivery_time || this.available_times[0].id),
             items: new forms_1.FormControl(this.order.items.map(function (item) {
@@ -38401,16 +38411,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "f74edea",
-      "hash": "f74edea",
+      "raw": "36d08f8",
+      "hash": "36d08f8",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "f74edea",
+      "suffix": "36d08f8",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1590388269134
+      "time": 1590462668695
     };
     /* tslint:enable */
 

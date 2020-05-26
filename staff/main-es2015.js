@@ -3586,12 +3586,7 @@ class BaseAPIService extends base_class_1.BaseClass {
      */
     filter(predicate = this._list_filter) {
         const list = this.get('list') || [];
-        return list.reduce((a, i) => {
-            if (predicate(i)) {
-                a.push(i);
-            }
-            return a;
-        }, []);
+        return list.filter(_ => predicate(_));
     }
     /**
      * Get item with the given id from the loaded items
@@ -3599,8 +3594,7 @@ class BaseAPIService extends base_class_1.BaseClass {
      */
     find(id = '') {
         const list = this.get('list') || [];
-        id = id.toLowerCase();
-        return list.find((i) => i.id === id || i.email.toLowerCase() === id);
+        return list.find((i) => i.id === id || i.email.toLowerCase() === id.toLowerCase());
     }
     /**
      * Query the index of the API route associated with this service
@@ -3937,11 +3931,11 @@ class Booking extends base_api_class_1.BaseDataClass {
         this.date = start.valueOf();
         this.duration =
             raw_data.duration ||
-                dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
+                dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') ||
+                60;
         this.body =
             // (raw_data.body instanceof Object ? raw_data.body.content : raw_data.body) ||
-            raw_data.description ||
-                '';
+            raw_data.description || '';
         this.type =
             raw_data.booking_type ||
                 raw_data.type ||
@@ -3949,7 +3943,8 @@ class Booking extends base_api_class_1.BaseDataClass {
                 'internal';
         this.has_catering = !!raw_data.has_catering;
         this.attendees = (raw_data.attendees || raw_data._attendees || []).map((i) => new user_class_1.User(i));
-        this.organiser = (raw_data.organiser ? new user_class_1.User(raw_data.organiser) : user_class_1.User.active_user) || new user_class_1.User();
+        this.organiser =
+            (raw_data.organiser ? new user_class_1.User(raw_data.organiser) : user_class_1.User.active_user) || new user_class_1.User();
         this.creator = raw_data.creator ? new user_class_1.User(raw_data.creator) : this.organiser;
         this._location = raw_data.location_name || raw_data.location || '';
         this.all_day = raw_data.all_day || this.duration > 23 * 60;
@@ -3988,12 +3983,12 @@ class Booking extends base_api_class_1.BaseDataClass {
         const space_ids = general_utilities_1.unique(raw_data.room_ids || raw_data.room_id || raw_data._space_list || []);
         const space_service = service_manager_class_1.ServiceManager.serviceFor(space_class_1.Space);
         if (space_service) {
-            this.space_list = space_ids.map(id => {
+            this.space_list = space_ids.map((id) => {
                 return space_service.find(id) || new space_class_1.Space({ id, name: id, email: id });
             });
         }
         else {
-            this.space_list = space_ids.map(id => new space_class_1.Space({ id, name: id, email: id }));
+            this.space_list = space_ids.map((id) => new space_class_1.Space({ id, name: id, email: id }));
         }
         if (raw_data.show_as && raw_data.show_as === 'cancelled') {
             this.space_list.forEach((space) => (this.approval_status[space.email] = 'declined'));
@@ -4091,7 +4086,9 @@ class Booking extends base_api_class_1.BaseDataClass {
     }
     /** Display value for the location of the booking */
     get location() {
-        return this.space_list.map(space => space.name).join(', ') || this._location || 'No location set';
+        return (this.space_list.map((space) => space.name).join(', ') ||
+            this._location ||
+            'No location set');
     }
     /** Display value for the level of the first space in the booking */
     get level() {
@@ -4125,19 +4122,21 @@ class Booking extends base_api_class_1.BaseDataClass {
         const date = dayjs(data.date);
         data.start = date.unix();
         data.end = date.add(data.duration || 60, 'm').unix();
-        data.auto_approve = data.space_list
-            .map((space) => {
+        data.auto_approve = data.space_list.map((space) => {
             return !this.id || this.changes.date || this.changes.duration
                 ? !space ||
-                    !space.byRequest({
-                        date: data.date,
-                        duration: data.duration,
-                        host: data.organiser,
-                    })
+                    (space instanceof space_class_1.Space &&
+                        !space.byRequest({
+                            date: data.date,
+                            duration: data.duration,
+                            host: data.organiser,
+                        }))
                 : (this.approval_status[space.email] || '').indexOf('tentative') < 0;
         });
         if (data.body && !data.notes.find((note) => note.message === data.body)) {
-            data.notes.filter(note => note.type !== 'description').push({
+            data.notes
+                .filter((note) => note.type !== 'description')
+                .push({
                 type: 'description',
                 message: data.body,
                 author: this.creator.email,
@@ -4147,7 +4146,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         }
         data.attendees = general_utilities_1.unique([data.organiser].concat(data.attendees), 'email');
         data.notify_users = [data.organiser.email];
-        data.room_ids = data.space_list.map(space => space.email);
+        data.room_ids = data.space_list.map((space) => space.email);
         data.old_date = this.date;
         if (data.id) {
             data.from_room = this.space ? this.space.email : '';
@@ -4916,8 +4915,8 @@ class CateringOrder {
         this.booking = data.booking;
         this.delivery_time = data.delivery_time || data.start || 0;
         this.booking_date = data.booking_date;
-        this.location_id = data.location_id || data.location;
-        this.location = data.location || '';
+        this.location_id = data.location_id || data.location || (data.space ? data.space.id : '') || '';
+        this.location = data.location || (data.space ? data.space.name : '') || '';
         this.status = data.status || 'accepted';
         this.charge_code = data.charge_code || data.code;
         this.notes = data.notes;
@@ -5494,7 +5493,7 @@ class OrganisationService extends base_service_1.BaseAPIService {
             if (user_service) {
                 user_service
                     .listen('current_user')
-                    .pipe(operators_1.first((_) => !!_.location))
+                    .pipe(operators_1.first(_ => _ && !!_.location))
                     .subscribe((user) => {
                     if (user) {
                         const building = this.buildings.find((bld) => bld.code === user.location);
@@ -5585,7 +5584,16 @@ class ServiceManager {
     }
     /** Set the services used to handle data model requests */
     static setService(type, service) {
-        ServiceManager._service_list.push({ provideFor: type, useValue: service });
+        if (window.debug) {
+            window.ServiceManager = this._service_list;
+        }
+        const index = ServiceManager._service_list.findIndex(provider => provider.provideFor === type);
+        if (index >= 0) {
+            ServiceManager._service_list.splice(index, 1, { provideFor: type, useValue: service });
+        }
+        else {
+            ServiceManager._service_list.push({ provideFor: type, useValue: service });
+        }
     }
     /** Get the services used to handle data model requests */
     static serviceFor(type) {
@@ -5741,7 +5749,7 @@ class Space extends base_api_class_1.BaseDataClass {
      * Make a copy of this object without identification data
      */
     duplicate() {
-        return new Space(Object.assign(Object.assign({}, this), { id: null, email: null, _bookings: [] }));
+        return new Space(Object.assign(Object.assign({}, this), { id: null, email: null, bookings: [] }));
     }
     /**
      * Generate the booking rules for space with given options
@@ -15272,7 +15280,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         this.form = new forms_1.FormGroup({
             id: new forms_1.FormControl(this.order.id),
             booking_date: new forms_1.FormControl(this.all_day ? dayjs(this.date).startOf('d').valueOf() : this.date),
-            space: new forms_1.FormControl(this._spaces.find(this.order.location_id) || this.space_list[0]),
+            space: new forms_1.FormControl((this.order.location_id ? this._spaces.find(this.order.location_id) : null) || this.space_list[0]),
             location_id: new forms_1.FormControl(this.order.location_id || this.space_list[0].id),
             start: new forms_1.FormControl(this.order.delivery_time || this.available_times[0].id),
             items: new forms_1.FormControl(this.order.items.map((item) => new catering_item_class_1.CateringItem(item))),
@@ -21317,16 +21325,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f74edea",
-    "hash": "f74edea",
+    "raw": "36d08f8",
+    "hash": "36d08f8",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f74edea",
+    "suffix": "36d08f8",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1590388269134
+    "time": 1590462668695
 };
 /* tslint:enable */
 
