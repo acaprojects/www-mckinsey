@@ -45,11 +45,11 @@
 	.st39{fill:none;}
 </style>
 <g id="shadow">
-	<polygon class="st0" points="211.5,212 211.5,468.9 438.9,468.9 438.9,448.1 654.1,448.1 654.1,114.2 549.6,114.2 549.6,6.6 
+	<polygon class="st0" points="211.5,212 211.5,468.9 438.9,468.9 438.9,448.1 654.1,448.1 654.1,114.2 549.6,114.2 549.6,6.6
 		12,6.6 12,212 	"/>
 </g>
 <g id="background">
-	<polygon class="st1" points="208.5,208.7 208.5,457 432.3,457 432.3,437 644.2,437 644.2,114.1 541.4,114.1 541.4,10.1 12,10.1 
+	<polygon class="st1" points="208.5,208.7 208.5,457 432.3,457 432.3,437 644.2,437 644.2,114.1 541.4,114.1 541.4,10.1 12,10.1
 		12,208.7 	"/>
 </g>
 <g id="spaces">
@@ -66,9 +66,9 @@
 	<rect x="435.1" y="360.3" class="st3" width="96.6" height="76.6"/>
 	<rect x="244.6" y="377.5" class="st2" width="51.8" height="27.3"/>
 	<rect x="208.6" y="354.8" class="st2" width="36" height="50"/>
-	<polygon class="st2" points="209.9,329.8 209.9,354.2 244.6,354.2 244.6,377.5 285.9,377.5 285.9,353.6 297.7,353.6 297.7,337.1 
+	<polygon class="st2" points="209.9,329.8 209.9,354.2 244.6,354.2 244.6,377.5 285.9,377.5 285.9,353.6 297.7,353.6 297.7,337.1
 		276.9,337.1 276.9,329.8 	"/>
-	<polygon class="st3" points="208.5,225.6 208.5,330.6 276.9,330.6 276.9,318.2 297.7,318.2 297.7,230.1 290.7,230.1 290.7,218.6 
+	<polygon class="st3" points="208.5,225.6 208.5,330.6 276.9,330.6 276.9,318.2 297.7,318.2 297.7,230.1 290.7,230.1 290.7,218.6
 		209.9,218.6 	"/>
 	<rect x="93.5" y="183.7" class="st2" width="116.3" height="23.3"/>
 	<rect x="11.8" y="183.5" class="st2" width="58.2" height="23.3"/>
@@ -1999,9 +1999,9 @@
 <g id="bookable_spaces">
 	<rect id="area-2.11-status" x="472.6" y="9.5" class="st19" width="68.7" height="68.6"/>
 	<rect id="area-2.10-status" x="239.4" y="114.1" class="st19" width="58.3" height="43.6"/>
-	<rect id="area-2.09-status_1_" x="410.3" y="360.2" class="st19" width="24.4" height="35.4"/>
-	<rect id="area-2.08-status_1_" x="410.7" y="395.6" class="st19" width="24.4" height="40.6"/>
-	<rect id="area-2.07-status_1_" x="532" y="346" class="st19" width="112.2" height="91"/>
+	<rect id="area-2.09-status" x="410.3" y="360.2" class="st19" width="24.4" height="35.4"/>
+	<rect id="area-2.08-status" x="410.7" y="395.6" class="st19" width="24.4" height="40.6"/>
+	<rect id="area-2.07-status" x="532" y="346" class="st19" width="112.2" height="91"/>
 	<text transform="matrix(1 0 0 1 255.5916 133.6254)" class="st20"><tspan x="0" y="0" class="st5 st21 st22">WCH-213-C</tspan><tspan x="-4.2" y="6" class="st5 st21 st22">Innovation Lab</tspan></text>
 	<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 417.5004 388.3999)" class="st20"><tspan x="0" y="0" class="st5 st21 st22">WCH-202</tspan><tspan x="-0.6" y="6" class="st5 st21 st22">Interview </tspan><tspan x="1.8" y="12" class="st5 st21 st22">Room 1</tspan></text>
 	<text transform="matrix(1 0 0 1 493.9378 38.3498)" class="st20"><tspan x="0" y="0" class="st5 st21 st22">WCH-215-C</tspan><tspan x="-0.7" y="6" class="st5 st21 st22">Team Room</tspan></text>
@@ -2076,7 +2076,7 @@
 		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 391.0703 450.6289)" class="st26 st27 st28">Stairs</text>
 		<g id="Outline_Icons-2-2-4-2-2-2-2">
 			<line class="st29" x1="381.4" y1="449.8" x2="381.4" y2="443.5"/>
-			<polyline class="st29" points="381.4,444.6 380.3,444.6 380.3,445.7 379.2,445.7 379.2,446.8 378.1,446.8 378.1,447.9 377,447.9 
+			<polyline class="st29" points="381.4,444.6 380.3,444.6 380.3,445.7 379.2,445.7 379.2,446.8 378.1,446.8 378.1,447.9 377,447.9
 				377,449.8 			"/>
 			<line class="st29" x1="375.2" y1="446.5" x2="378.6" y2="443.1"/>
 			<polyline class="st29" points="376.6,446.5 375.2,446.5 375.2,445.1 			"/>
@@ -2108,7 +2108,7 @@
 		<text transform="matrix(1 0 0 1 231.0566 209.2637)" class="st26 st27 st28">Stairs</text>
 		<g id="Outline_Icons-2-2-4-2-2-2-2_1_">
 			<line class="st29" x1="231.9" y1="199.6" x2="238.2" y2="199.6"/>
-			<polyline class="st29" points="237.1,199.6 237.1,198.5 236,198.5 236,197.4 234.9,197.4 234.9,196.3 233.8,196.3 233.8,195.2 
+			<polyline class="st29" points="237.1,199.6 237.1,198.5 236,198.5 236,197.4 234.9,197.4 234.9,196.3 233.8,196.3 233.8,195.2
 				231.9,195.2 			"/>
 			<line class="st29" x1="235.2" y1="193.4" x2="238.6" y2="196.8"/>
 			<polyline class="st29" points="235.2,194.7 235.2,193.4 236.6,193.4 			"/>
