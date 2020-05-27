@@ -30,26 +30,28 @@
 	.st24{opacity:0.74;fill:#575757;enable-background:new    ;}
 	.st25{font-family:'Arial-BoldMT';}
 	.st26{font-size:5px;}
-	.st27{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
-	.st28{fill:none;stroke:#EBEBED;stroke-width:2;stroke-miterlimit:10;}
-	.st29{fill:none;stroke:#EBF2F2;stroke-width:5;stroke-miterlimit:10;}
-	.st30{fill:#EBF2F2;}
-	.st31{fill:#646B6D;}
-	.st32{font-family:'ArialMT';}
-	.st33{font-size:3.69px;}
-	.st34{fill:none;stroke:#7A8E93;stroke-width:0.306;stroke-miterlimit:10;}
-	.st35{fill:none;stroke:#7A8E93;stroke-width:0.256;stroke-linecap:round;stroke-linejoin:round;}
-	.st36{font-size:3.682px;}
-	.st37{fill:#7A8E93;stroke:#7A8E93;stroke-width:0.131;stroke-miterlimit:10;}
-	.st38{font-size:3.766px;}
-	.st39{fill:none;stroke:#7A8E93;stroke-width:0.316;stroke-miterlimit:10;}
-	.st40{font-size:3.604px;}
-	.st41{fill:none;stroke:#7A8E93;stroke-width:0.298;stroke-miterlimit:10;}
-	.st42{fill:none;stroke:#7A8E93;stroke-width:0.316;stroke-linecap:round;stroke-linejoin:round;}
-	.st43{font-size:3.695px;}
-	.st44{fill:none;stroke:#7A8E93;stroke-width:0.296;stroke-linecap:round;stroke-linejoin:round;}
-	.st45{font-size:3.786px;}
-	.st46{fill:none;stroke:#7A8E93;stroke-width:0.314;stroke-miterlimit:10;}
+	.st27{font-size:3px;}
+	.st28{font-size:4px;}
+	.st29{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st30{fill:none;stroke:#EBEBED;stroke-width:2;stroke-miterlimit:10;}
+	.st31{fill:none;stroke:#EBF2F2;stroke-width:5;stroke-miterlimit:10;}
+	.st32{fill:#EBF2F2;}
+	.st33{fill:#646B6D;}
+	.st34{font-family:'ArialMT';}
+	.st35{font-size:3.69px;}
+	.st36{fill:none;stroke:#7A8E93;stroke-width:0.306;stroke-miterlimit:10;}
+	.st37{fill:none;stroke:#7A8E93;stroke-width:0.256;stroke-linecap:round;stroke-linejoin:round;}
+	.st38{font-size:3.682px;}
+	.st39{fill:#7A8E93;stroke:#7A8E93;stroke-width:0.131;stroke-miterlimit:10;}
+	.st40{font-size:3.766px;}
+	.st41{fill:none;stroke:#7A8E93;stroke-width:0.316;stroke-miterlimit:10;}
+	.st42{font-size:3.604px;}
+	.st43{fill:none;stroke:#7A8E93;stroke-width:0.298;stroke-miterlimit:10;}
+	.st44{fill:none;stroke:#7A8E93;stroke-width:0.316;stroke-linecap:round;stroke-linejoin:round;}
+	.st45{font-size:3.695px;}
+	.st46{fill:none;stroke:#7A8E93;stroke-width:0.296;stroke-linecap:round;stroke-linejoin:round;}
+	.st47{font-size:3.786px;}
+	.st48{fill:none;stroke:#7A8E93;stroke-width:0.314;stroke-miterlimit:10;}
 </style>
 <title>Walham_Level_3</title>
 <g id="bkd">
@@ -3495,150 +3497,159 @@
 	<path id="area-3.14-status" class="st24" d="M177.9,154.7v15.2l-13.7,1.1l17.5,31.4h24.1v9.4h34.5v-9.4h14.6v9.4h21.8v-73h-3.9
 		v-7.7c0,0-19.5-0.8-42.9,3.4c-23.5,4.1-24.7,4.5-24.7,4.5l0.1,3.8l-15.7,5.6C189.6,148.4,181.8,151.2,177.9,154.7z"/>
 	<g>
-		<text transform="matrix(1 0 0 1 218.2501 170.1998)" class="st5 st25 st26">Lechmere </text>
-		<text transform="matrix(1 0 0 1 222.2501 176.1998)" class="st5 st25 st26">Station</text>
+		<text transform="matrix(1 0 0 1 215.1494 169.5501)" class="st5 st25 st26">WCH-323-C</text>
+		<text transform="matrix(1 0 0 1 207.7494 175.5501)" class="st5 st25 st26">Lechmere Station</text>
 	</g>
 	<polygon id="area-3.10-status" class="st24" points="212.1,231.2 224.5,231.2 224.5,237.6 240.7,237.6 240.7,279.6 208.6,279.6 
 		208.6,243.7 212.2,243.7 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 215.8406 258.2997)" class="st5 st25 st26">Boston</text>
-		<text transform="matrix(1 0 0 1 215.4406 264.2997)" class="st5 st25 st26">College</text>
+		<text transform="matrix(1 0 0 1 217.6028 251.5995)" class="st5 st25 st26">WCH</text>
+		<text transform="matrix(1 0 0 1 215.5028 257.5995)" class="st5 st25 st26">303-TT</text>
+		<text transform="matrix(1 0 0 1 214.3028 263.5995)" class="st5 st25 st26">Boston </text>
+		<text transform="matrix(1 0 0 1 214.5028 269.5995)" class="st5 st25 st26">College</text>
 	</g>
 	<polygon id="area-3.11-status" class="st24" points="241.5,239.1 262.2,239.1 262.2,230.9 295.5,230.9 295.5,279.9 240.7,279.9 	
 		"/>
 	<g>
-		<text transform="matrix(1 0 0 1 261.0999 256.6003)" class="st5 st25 st26">Porter </text>
-		<text transform="matrix(1 0 0 1 260.7 262.6003)" class="st5 st25 st26">Square</text>
+		<text transform="matrix(1 0 0 1 256.8795 256.3997)" class="st5 st25 st26">WCH-305-C</text>
+		<text transform="matrix(1 0 0 1 253.9795 262.3997)" class="st5 st25 st26">Porter Square</text>
 	</g>
 	<rect id="area-3.13-status" x="2.9" y="138.4" class="st24" width="24" height="43"/>
-	<g>
-		<text transform="matrix(1 0 0 1 6.8501 161.8001)" class="st5 st25 st26">Davis </text>
-		<text transform="matrix(1 0 0 1 5.7501 167.8001)" class="st5 st25 st26">Square</text>
-	</g>
 	<rect id="area-3.12-status" x="271.6" y="332.1" class="st24" width="23.8" height="15.1"/>
 	<g>
-		<text transform="matrix(1 0 0 1 270.492 339.5998)" class="st5 st25 st26">Cleveland </text>
+		<text transform="matrix(1 0 0 1 274.1833 337.3002)" class="st5 st25 st27">WCH-306-TT</text>
+		<text transform="matrix(1 0 0 1 275.5833 340.9002)" class="st5 st25 st27">Cleveland </text>
 	</g>
 	<rect id="area-3.15-status" x="653.3" y="141.2" class="st24" width="23.9" height="44.1"/>
 	<g>
-		<text transform="matrix(1 0 0 1 656.0483 164.5501)" class="st5 st25 st26">Harvard </text>
-		<text transform="matrix(1 0 0 1 657.7483 170.5501)" class="st5 st25 st26">Square</text>
+		<text transform="matrix(1 0 0 1 659.2797 154.3231)" class="st5 st25 st26">WCH</text>
+		<text transform="matrix(1 0 0 1 657.5797 160.3231)" class="st5 st25 st26">-330-C</text>
+		<text transform="matrix(1 0 0 1 655.0797 166.3231)" class="st5 st25 st26">Harvard </text>
+		<text transform="matrix(1 0 0 1 656.7797 172.3231)" class="st5 st25 st26">Square</text>
 	</g>
 	<rect id="area-3.16-status" x="643" y="374.3" class="st24" width="35.9" height="42.3"/>
 	<g>
-		<text transform="matrix(1 0 0 1 652.3065 397.6996)" class="st5 st25 st26">Central </text>
-		<text transform="matrix(1 0 0 1 653.1065 403.6996)" class="st5 st25 st26">Square</text>
+		<text transform="matrix(1 0 0 1 647.2876 391.2237)" class="st5 st25 st26">WCH-335-C</text>
+		<text transform="matrix(1 0 0 1 651.5876 397.2237)" class="st5 st25 st26">Central </text>
+		<text transform="matrix(1 0 0 1 652.3876 403.2237)" class="st5 st25 st26">Square</text>
 	</g>
 	<polygon id="area-3.17-status" class="st24" points="518.1,276.2 518.1,312.7 547.5,312.7 547.5,286.4 553.3,286.4 553.3,276.8 	
 		"/>
 	<g>
-		<text transform="matrix(1 0 0 1 529.0001 287.1811)" class="st5 st25 st26">3rd </text>
-		<text transform="matrix(1 0 0 1 519.4 293.1811)" class="st5 st25 st26">Floor Team </text>
-		<text transform="matrix(1 0 0 1 525.9247 299.2195)" class="st5 st25 st26">Room</text>
+		<text transform="matrix(1 0 0 1 528.0234 284.9997)" class="st5 st25 st28">WCH</text>
+		<text transform="matrix(1 0 0 1 527.3234 289.7997)" class="st5 st25 st28">338-C</text>
+		<text transform="matrix(1 0 0 1 527.2234 294.5997)" class="st5 st25 st28">Floor </text>
+		<text transform="matrix(1 0 0 1 527.0234 299.3997)" class="st5 st25 st28">Team </text>
+		<text transform="matrix(1 0 0 1 527.1234 304.1997)" class="st5 st25 st28">Room</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 10.5001 154.3232)" class="st5 st25 st26">WCH</text>
+		<text transform="matrix(1 0 0 1 8.4001 160.3232)" class="st5 st25 st26">319-C</text>
+		<text transform="matrix(1 0 0 1 9.2001 166.3232)" class="st5 st25 st26">Davis</text>
 	</g>
 </g>
 <g id="skeleton">
 	<g id="walls">
-		<line class="st27" x1="272.7" y1="39.8" x2="254.9" y2="39.8"/>
-		<polyline class="st27" points="245.1,4.5 245.1,40 247.3,40 		"/>
-		<polyline class="st27" points="276.7,78.2 276.7,71.3 273.8,71.3 273.8,38 		"/>
-		<line class="st27" x1="344.7" y1="55.2" x2="344.7" y2="36.5"/>
-		<path class="st27" d="M344.7,62.9v12c0,0-13,0.3-22.7,6.3l-6.8,4.2"/>
-		<path class="st27" d="M276.7,86.4v3c12.8,1.1,25.7-0.1,38-3.7l-11-45.7"/>
-		<polyline class="st27" points="345.3,40.4 373.2,40.4 373.2,17 		"/>
-		<line class="st27" x1="373.2" y1="8.6" x2="373.2" y2="3.4"/>
-		<polyline class="st27" points="276.7,127.7 276.7,211.4 254.9,211.4 254.9,201.3 		"/>
-		<path class="st27" d="M276.7,138.6h-3.9v-7.9c0,0-51.2,2.3-67.6,7.9v3.6c0,0-21.5,6.4-27.2,13.2v2.7"/>
-		<path class="st27" d="M177.4,166v3.5H169c0,0-27,3.7-36.3,24.7l1.3,2.8"/>
-		<polyline class="st27" points="137.6,204.2 139.5,206.2 139.5,211.6 111.4,211.6 111.4,220.5 		"/>
-		<polyline class="st27" points="139.5,211.4 188.9,211.4 188.9,201.6 		"/>
-		<polyline class="st27" points="111.4,228.6 111.4,286.4 134.2,286.4 134.2,231.5 131.9,231.5 		"/>
-		<line class="st27" x1="123.9" y1="231.5" x2="112.2" y2="231.5"/>
-		<polyline class="st27" points="134.8,235.7 141.6,235.7 141.6,253.2 134.2,253.2 		"/>
-		<polyline class="st27" points="141.6,237.9 141.6,231 162.4,231 162.4,234.4 		"/>
-		<line class="st27" x1="162.4" y1="243.1" x2="162.4" y2="245.3"/>
-		<line class="st27" x1="150.5" y1="245.3" x2="191" y2="245.3"/>
-		<line class="st27" x1="179.8" y1="243.1" x2="179.8" y2="244.8"/>
-		<line class="st27" x1="170.8" y1="246.1" x2="170.8" y2="276.1"/>
-		<polyline class="st27" points="134.8,276.1 208.6,276.1 208.6,244 200.3,244 200.3,231.5 		"/>
-		<polyline class="st27" points="203.5,231.5 179.8,231.5 179.8,235.1 		"/>
-		<polyline class="st27" points="208.6,244 212.3,244 212.3,231.5 		"/>
-		<line class="st27" x1="210.1" y1="231.5" x2="214.3" y2="231.5"/>
-		<line class="st27" x1="212.1" y1="231.5" x2="226.1" y2="231.5"/>
-		<polyline class="st27" points="224.1,232.5 224.1,237.9 240.3,237.9 240.3,231.5 238.2,231.5 		"/>
-		<polyline class="st27" points="248.2,239.6 240.3,239.6 240.3,237.9 		"/>
-		<polyline class="st27" points="240.3,237.9 240.3,280.3 208.6,280.3 208.6,276.1 		"/>
-		<polyline class="st27" points="115.3,287.5 115.3,311.2 136.9,311.2 136.9,306.7 		"/>
-		<polyline class="st27" points="134.2,286.4 137.6,286.4 137.6,298.3 		"/>
-		<line class="st27" x1="143.5" y1="296.6" x2="138.1" y2="296.6"/>
-		<polyline class="st27" points="149.5,296.6 161.5,296.6 161.5,276.1 		"/>
-		<polyline class="st27" points="152.1,308.2 152.1,311.2 161.5,311.2 161.5,291 		"/>
-		<line class="st27" x1="152.1" y1="300.5" x2="152.1" y2="296.6"/>
-		<path class="st27" d="M170.8,308.1h4.7v-3.9h23.9c0,0,16.8,3.3,30-9.9h1.8v-3.7"/>
-		<line class="st27" x1="199" y1="275.6" x2="199" y2="304.2"/>
-		<line class="st27" x1="231.6" y1="280.3" x2="231.6" y2="282.6"/>
-		<line class="st27" x1="256.7" y1="239.6" x2="265.1" y2="239.6"/>
-		<polyline class="st27" points="262.2,239.2 262.2,231.1 295.5,231.1 295.5,416.6 		"/>
-		<polyline class="st27" points="199.2,202 205.8,202 205.8,211.4 240.3,211.4 240.3,202 244.9,202 		"/>
-		<line class="st27" x1="252.9" y1="202" x2="259.1" y2="202"/>
-		<polyline class="st27" points="164.2,170.6 181.7,202 191,202 		"/>
-		<path class="st27" d="M276.7,119.2v-3.4c0,0,12.2-8.7,35.3-7.9c0,0,18.9,0.9,28.8,8.4v3.3"/>
-		<polyline class="st27" points="340.8,127.2 340.8,142.1 409.4,142.1 409.4,205.4 416.2,205.4 		"/>
-		<polyline class="st27" points="423.6,205.4 427.7,205.4 427.7,213.5 483.8,213.5 		"/>
-		<polyline class="st27" points="477.2,213.5 477.2,206.1 496.6,206.1 		"/>
-		<polyline class="st27" points="504.5,206.1 506.4,206.1 506.4,213.5 565.4,213.5 565.4,206.1 		"/>
-		<line class="st27" x1="564.7" y1="222.9" x2="564.7" y2="231.6"/>
-		<polyline class="st27" points="340.8,142.1 318.1,142.1 318.1,205.4 409.4,205.4 		"/>
-		<polyline class="st27" points="276.7,142.9 299.3,142.9 299.3,206.7 294.7,206.7 		"/>
-		<line class="st27" x1="281.4" y1="206.7" x2="276.7" y2="206.7"/>
-		<line class="st27" x1="561.9" y1="231.6" x2="600.9" y2="231.6"/>
-		<polyline class="st27" points="523.9,234.8 523.9,231.6 553.3,231.6 553.3,285.1 575.4,285.1 575.4,231.6 		"/>
-		<polyline class="st27" points="505.7,235.1 505.7,231 471.3,231 		"/>
-		<polyline class="st27" points="463.1,231 445.7,231 445.7,279.6 477.2,279.6 477.2,231 		"/>
-		<polyline class="st27" points="494.1,245.5 515.3,245.5 534.9,245.5 		"/>
-		<line class="st27" x1="514.9" y1="276" x2="514.9" y2="245.5"/>
-		<line class="st27" x1="505.7" y1="243.2" x2="505.7" y2="245"/>
-		<line class="st27" x1="523.9" y1="243.2" x2="523.9" y2="246.1"/>
-		<line class="st27" x1="477.2" y1="276" x2="553.3" y2="276"/>
-		<polyline class="st27" points="575.8,261.9 600.9,261.9 600.9,241 		"/>
-		<line class="st27" x1="575.4" y1="322.3" x2="575.4" y2="285.1"/>
-		<polyline class="st27" points="557.1,322.3 600.9,322.3 600.9,301.6 		"/>
-		<polyline class="st27" points="576.3,292 600.9,292 600.9,271.8 		"/>
-		<line class="st27" x1="600.9" y1="294.4" x2="600.9" y2="292"/>
-		<polyline class="st27" points="571.2,323 571.2,348.1 600.9,348.1 600.9,331.1 		"/>
-		<line class="st27" x1="561.9" y1="348.1" x2="574.5" y2="348.1"/>
-		<polyline class="st27" points="554,285.1 547.5,285.1 547.5,348.1 550.3,348.1 		"/>
-		<line class="st27" x1="518.1" y1="348.1" x2="549.1" y2="348.1"/>
-		<line class="st27" x1="518.1" y1="339.1" x2="518.1" y2="308.6"/>
-		<line class="st27" x1="547.5" y1="311.9" x2="518.1" y2="311.9"/>
-		<line class="st27" x1="518.1" y1="302.6" x2="518.1" y2="276"/>
-		<line class="st27" x1="503.4" y1="300.5" x2="473.7" y2="300.5"/>
-		<polyline class="st27" points="473,280.1 473,349.2 503,349.2 503,347.3 		"/>
-		<line class="st27" x1="503.4" y1="339.1" x2="503.4" y2="310"/>
-		<line class="st27" x1="472.9" y1="324.2" x2="503.3" y2="324.2"/>
-		<polyline class="st27" points="473,318.9 441.6,318.9 441.6,279.6 451.7,279.6 		"/>
-		<polyline class="st27" points="441.6,279.6 441.6,277.5 426.9,277.5 426.9,288.5 		"/>
-		<line class="st27" x1="426.9" y1="296.6" x2="426.9" y2="308.6"/>
-		<line class="st27" x1="441.3" y1="298.4" x2="427.1" y2="298.4"/>
-		<line class="st27" x1="426.9" y1="317.3" x2="426.9" y2="338.5"/>
-		<line class="st27" x1="443.8" y1="318.9" x2="427" y2="318.9"/>
-		<line class="st27" x1="441.4" y1="348.5" x2="441.6" y2="318.9"/>
-		<polyline class="st27" points="426.7,346.8 426.7,348.9 463.6,348.9 		"/>
-		<line class="st27" x1="432.5" y1="239.8" x2="445.7" y2="239.8"/>
-		<line class="st27" x1="423.6" y1="250.6" x2="423.6" y2="261.2"/>
-		<line class="st27" x1="402.2" y1="252.1" x2="423.6" y2="252.1"/>
-		<polyline class="st27" points="425,239.8 423.1,239.8 423.1,231 402.2,231 402.2,252.1 402.2,260.8 353.2,260.8 353.2,232.2 
+		<line class="st29" x1="272.7" y1="39.8" x2="254.9" y2="39.8"/>
+		<polyline class="st29" points="245.1,4.5 245.1,40 247.3,40 		"/>
+		<polyline class="st29" points="276.7,78.2 276.7,71.3 273.8,71.3 273.8,38 		"/>
+		<line class="st29" x1="344.7" y1="55.2" x2="344.7" y2="36.5"/>
+		<path class="st29" d="M344.7,62.9v12c0,0-13,0.3-22.7,6.3l-6.8,4.2"/>
+		<path class="st29" d="M276.7,86.4v3c12.8,1.1,25.7-0.1,38-3.7l-11-45.7"/>
+		<polyline class="st29" points="345.3,40.4 373.2,40.4 373.2,17 		"/>
+		<line class="st29" x1="373.2" y1="8.6" x2="373.2" y2="3.4"/>
+		<polyline class="st29" points="276.7,127.7 276.7,211.4 254.9,211.4 254.9,201.3 		"/>
+		<path class="st29" d="M276.7,138.6h-3.9v-7.9c0,0-51.2,2.3-67.6,7.9v3.6c0,0-21.5,6.4-27.2,13.2v2.7"/>
+		<path class="st29" d="M177.4,166v3.5H169c0,0-27,3.7-36.3,24.7l1.3,2.8"/>
+		<polyline class="st29" points="137.6,204.2 139.5,206.2 139.5,211.6 111.4,211.6 111.4,220.5 		"/>
+		<polyline class="st29" points="139.5,211.4 188.9,211.4 188.9,201.6 		"/>
+		<polyline class="st29" points="111.4,228.6 111.4,286.4 134.2,286.4 134.2,231.5 131.9,231.5 		"/>
+		<line class="st29" x1="123.9" y1="231.5" x2="112.2" y2="231.5"/>
+		<polyline class="st29" points="134.8,235.7 141.6,235.7 141.6,253.2 134.2,253.2 		"/>
+		<polyline class="st29" points="141.6,237.9 141.6,231 162.4,231 162.4,234.4 		"/>
+		<line class="st29" x1="162.4" y1="243.1" x2="162.4" y2="245.3"/>
+		<line class="st29" x1="150.5" y1="245.3" x2="191" y2="245.3"/>
+		<line class="st29" x1="179.8" y1="243.1" x2="179.8" y2="244.8"/>
+		<line class="st29" x1="170.8" y1="246.1" x2="170.8" y2="276.1"/>
+		<polyline class="st29" points="134.8,276.1 208.6,276.1 208.6,244 200.3,244 200.3,231.5 		"/>
+		<polyline class="st29" points="203.5,231.5 179.8,231.5 179.8,235.1 		"/>
+		<polyline class="st29" points="208.6,244 212.3,244 212.3,231.5 		"/>
+		<line class="st29" x1="210.1" y1="231.5" x2="214.3" y2="231.5"/>
+		<line class="st29" x1="212.1" y1="231.5" x2="226.1" y2="231.5"/>
+		<polyline class="st29" points="224.1,232.5 224.1,237.9 240.3,237.9 240.3,231.5 238.2,231.5 		"/>
+		<polyline class="st29" points="248.2,239.6 240.3,239.6 240.3,237.9 		"/>
+		<polyline class="st29" points="240.3,237.9 240.3,280.3 208.6,280.3 208.6,276.1 		"/>
+		<polyline class="st29" points="115.3,287.5 115.3,311.2 136.9,311.2 136.9,306.7 		"/>
+		<polyline class="st29" points="134.2,286.4 137.6,286.4 137.6,298.3 		"/>
+		<line class="st29" x1="143.5" y1="296.6" x2="138.1" y2="296.6"/>
+		<polyline class="st29" points="149.5,296.6 161.5,296.6 161.5,276.1 		"/>
+		<polyline class="st29" points="152.1,308.2 152.1,311.2 161.5,311.2 161.5,291 		"/>
+		<line class="st29" x1="152.1" y1="300.5" x2="152.1" y2="296.6"/>
+		<path class="st29" d="M170.8,308.1h4.7v-3.9h23.9c0,0,16.8,3.3,30-9.9h1.8v-3.7"/>
+		<line class="st29" x1="199" y1="275.6" x2="199" y2="304.2"/>
+		<line class="st29" x1="231.6" y1="280.3" x2="231.6" y2="282.6"/>
+		<line class="st29" x1="256.7" y1="239.6" x2="265.1" y2="239.6"/>
+		<polyline class="st29" points="262.2,239.2 262.2,231.1 295.5,231.1 295.5,416.6 		"/>
+		<polyline class="st29" points="199.2,202 205.8,202 205.8,211.4 240.3,211.4 240.3,202 244.9,202 		"/>
+		<line class="st29" x1="252.9" y1="202" x2="259.1" y2="202"/>
+		<polyline class="st29" points="164.2,170.6 181.7,202 191,202 		"/>
+		<path class="st29" d="M276.7,119.2v-3.4c0,0,12.2-8.7,35.3-7.9c0,0,18.9,0.9,28.8,8.4v3.3"/>
+		<polyline class="st29" points="340.8,127.2 340.8,142.1 409.4,142.1 409.4,205.4 416.2,205.4 		"/>
+		<polyline class="st29" points="423.6,205.4 427.7,205.4 427.7,213.5 483.8,213.5 		"/>
+		<polyline class="st29" points="477.2,213.5 477.2,206.1 496.6,206.1 		"/>
+		<polyline class="st29" points="504.5,206.1 506.4,206.1 506.4,213.5 565.4,213.5 565.4,206.1 		"/>
+		<line class="st29" x1="564.7" y1="222.9" x2="564.7" y2="231.6"/>
+		<polyline class="st29" points="340.8,142.1 318.1,142.1 318.1,205.4 409.4,205.4 		"/>
+		<polyline class="st29" points="276.7,142.9 299.3,142.9 299.3,206.7 294.7,206.7 		"/>
+		<line class="st29" x1="281.4" y1="206.7" x2="276.7" y2="206.7"/>
+		<line class="st29" x1="561.9" y1="231.6" x2="600.9" y2="231.6"/>
+		<polyline class="st29" points="523.9,234.8 523.9,231.6 553.3,231.6 553.3,285.1 575.4,285.1 575.4,231.6 		"/>
+		<polyline class="st29" points="505.7,235.1 505.7,231 471.3,231 		"/>
+		<polyline class="st29" points="463.1,231 445.7,231 445.7,279.6 477.2,279.6 477.2,231 		"/>
+		<polyline class="st29" points="494.1,245.5 515.3,245.5 534.9,245.5 		"/>
+		<line class="st29" x1="514.9" y1="276" x2="514.9" y2="245.5"/>
+		<line class="st29" x1="505.7" y1="243.2" x2="505.7" y2="245"/>
+		<line class="st29" x1="523.9" y1="243.2" x2="523.9" y2="246.1"/>
+		<line class="st29" x1="477.2" y1="276" x2="553.3" y2="276"/>
+		<polyline class="st29" points="575.8,261.9 600.9,261.9 600.9,241 		"/>
+		<line class="st29" x1="575.4" y1="322.3" x2="575.4" y2="285.1"/>
+		<polyline class="st29" points="557.1,322.3 600.9,322.3 600.9,301.6 		"/>
+		<polyline class="st29" points="576.3,292 600.9,292 600.9,271.8 		"/>
+		<line class="st29" x1="600.9" y1="294.4" x2="600.9" y2="292"/>
+		<polyline class="st29" points="571.2,323 571.2,348.1 600.9,348.1 600.9,331.1 		"/>
+		<line class="st29" x1="561.9" y1="348.1" x2="574.5" y2="348.1"/>
+		<polyline class="st29" points="554,285.1 547.5,285.1 547.5,348.1 550.3,348.1 		"/>
+		<line class="st29" x1="518.1" y1="348.1" x2="549.1" y2="348.1"/>
+		<line class="st29" x1="518.1" y1="339.1" x2="518.1" y2="308.6"/>
+		<line class="st29" x1="547.5" y1="311.9" x2="518.1" y2="311.9"/>
+		<line class="st29" x1="518.1" y1="302.6" x2="518.1" y2="276"/>
+		<line class="st29" x1="503.4" y1="300.5" x2="473.7" y2="300.5"/>
+		<polyline class="st29" points="473,280.1 473,349.2 503,349.2 503,347.3 		"/>
+		<line class="st29" x1="503.4" y1="339.1" x2="503.4" y2="310"/>
+		<line class="st29" x1="472.9" y1="324.2" x2="503.3" y2="324.2"/>
+		<polyline class="st29" points="473,318.9 441.6,318.9 441.6,279.6 451.7,279.6 		"/>
+		<polyline class="st29" points="441.6,279.6 441.6,277.5 426.9,277.5 426.9,288.5 		"/>
+		<line class="st29" x1="426.9" y1="296.6" x2="426.9" y2="308.6"/>
+		<line class="st29" x1="441.3" y1="298.4" x2="427.1" y2="298.4"/>
+		<line class="st29" x1="426.9" y1="317.3" x2="426.9" y2="338.5"/>
+		<line class="st29" x1="443.8" y1="318.9" x2="427" y2="318.9"/>
+		<line class="st29" x1="441.4" y1="348.5" x2="441.6" y2="318.9"/>
+		<polyline class="st29" points="426.7,346.8 426.7,348.9 463.6,348.9 		"/>
+		<line class="st29" x1="432.5" y1="239.8" x2="445.7" y2="239.8"/>
+		<line class="st29" x1="423.6" y1="250.6" x2="423.6" y2="261.2"/>
+		<line class="st29" x1="402.2" y1="252.1" x2="423.6" y2="252.1"/>
+		<polyline class="st29" points="425,239.8 423.1,239.8 423.1,231 402.2,231 402.2,252.1 402.2,260.8 353.2,260.8 353.2,232.2 
 			324,232.2 324,335.1 357.3,335.1 357.7,417.2 		"/>
-		<line class="st27" x1="324" y1="335.1" x2="324" y2="414.9"/>
-		<line class="st27" x1="250.6" y1="280.1" x2="295.5" y2="280.1"/>
-		<path class="st27" d="M284.9,317.9h-3.6c0,0-16.7-13.1-12.7-37.6"/>
-		<line class="st27" x1="292.5" y1="317.9" x2="295.5" y2="317.9"/>
-		<polyline class="st27" points="163.4,365.9 132.7,365.9 132.7,322.7 		"/>
-		<polyline class="st27" points="141.5,322.7 161.5,322.7 161.5,366.2 		"/>
-		<line class="st27" x1="132.2" y1="344.3" x2="115.3" y2="344.3"/>
-		<polyline class="st27" points="123.3,323.4 115.3,323.4 115.3,365.4 122.9,365.4 		"/>
-		<line class="st28" x1="99.2" y1="326" x2="99.2" y2="359.6"/>
-		<line class="st28" x1="99.2" y1="316.4" x2="99.2" y2="298.6"/>
+		<line class="st29" x1="324" y1="335.1" x2="324" y2="414.9"/>
+		<line class="st29" x1="250.6" y1="280.1" x2="295.5" y2="280.1"/>
+		<path class="st29" d="M284.9,317.9h-3.6c0,0-16.7-13.1-12.7-37.6"/>
+		<line class="st29" x1="292.5" y1="317.9" x2="295.5" y2="317.9"/>
+		<polyline class="st29" points="163.4,365.9 132.7,365.9 132.7,322.7 		"/>
+		<polyline class="st29" points="141.5,322.7 161.5,322.7 161.5,366.2 		"/>
+		<line class="st29" x1="132.2" y1="344.3" x2="115.3" y2="344.3"/>
+		<polyline class="st29" points="123.3,323.4 115.3,323.4 115.3,365.4 122.9,365.4 		"/>
+		<line class="st30" x1="99.2" y1="326" x2="99.2" y2="359.6"/>
+		<line class="st30" x1="99.2" y1="316.4" x2="99.2" y2="298.6"/>
 		<rect x="65.9" y="247.7" class="st4" width="32.1" height="15.3"/>
 		<path class="st12" d="M4.2,248.6V264h9v8.9c0,0.3,0.2,0.5,0.5,0.5l0,0h4.4c0.3,0,0.5-0.2,0.5-0.5V264h10.3v8.9
 			c0,0.3,0.2,0.5,0.5,0.5l0,0h4.4c0.3,0,0.5-0.2,0.5-0.5V264h10.4v8.9c0,0.3,0.2,0.5,0.5,0.5l0,0h4.4c0.3,0,0.5-0.2,0.5-0.5V264
@@ -3734,308 +3745,308 @@
 			c1.4,0,2.5,1.1,2.6,2.5v1.4l0,0C90.6,245.6,89.7,246.5,88.5,246.6C88.6,246.6,88.6,246.6,88.5,246.6L88.5,246.6
 			C88.6,246.6,88.6,246.6,88.5,246.6z"/>
 		<path class="st11" d="M85.2,244.7l0.1-1.7c0.1-1.4,1.3-2.5,2.6-2.4l0,0c1.4,0,2.5,1.1,2.6,2.5l0.1,1.7"/>
-		<line class="st28" x1="99.2" y1="272.8" x2="99.2" y2="238.5"/>
-		<line class="st28" x1="99.2" y1="229.7" x2="99.2" y2="195.8"/>
-		<polyline class="st27" points="12.2,182.1 55.5,182.1 55.5,180.7 		"/>
-		<polyline class="st27" points="55.5,172 55.5,162.6 55.5,153.2 		"/>
-		<line class="st27" x1="26.6" y1="163.2" x2="55.5" y2="163.2"/>
-		<line class="st27" x1="26.6" y1="141.6" x2="26.6" y2="182.1"/>
-		<polyline class="st28" points="68.7,183.1 68.7,165.6 117.4,165.6 117.4,183.1 		"/>
-		<polyline class="st27" points="13.1,315.6 33.8,315.6 33.8,282.9 4.7,282.9 		"/>
-		<line class="st28" x1="99.2" y1="368.9" x2="99.2" y2="402.8"/>
-		<path class="st27" d="M4.7,387.9h31.8c0,0-2.9-20.9-10.7-27.7H12.2"/>
-		<path class="st27" d="M36.5,397.7c0,0-2.1,15.6-5.6,17.2"/>
-		<path class="st27" d="M202.5,331.1V326H196v-8.1c0,0-26.1-2.7-34.5,8.1"/>
-		<polyline class="st27" points="161.5,341 202.5,341 202.5,339.2 		"/>
-		<path class="st27" d="M202.5,340.1v15.4c0,0-8.5,7.8-26.2,6.2v3.5h-5.5"/>
-		<polyline class="st27" points="295.5,331.1 272,331.1 272,334.2 		"/>
-		<polyline class="st27" points="271.9,341 271.9,346.3 271.9,351.6 		"/>
-		<line class="st27" x1="295" y1="346.3" x2="271.9" y2="346.3"/>
-		<polyline class="st27" points="272,358.8 272,362.3 295,362.3 		"/>
-		<line class="st27" x1="292.7" y1="373.3" x2="295.5" y2="373.3"/>
-		<path class="st27" d="M284.8,373.3H281c0,0-18,15.1-12.1,42"/>
-		<polyline class="st27" points="324.4,276.4 354.3,276.4 354.3,274.2 		"/>
-		<line class="st27" x1="354.3" y1="266.1" x2="354.3" y2="260.3"/>
-		<line class="st27" x1="354.3" y1="281.8" x2="354.3" y2="275.3"/>
-		<line class="st27" x1="354.3" y1="290" x2="354.3" y2="307.1"/>
-		<line class="st27" x1="324" y1="305.2" x2="353.8" y2="305.2"/>
-		<line class="st27" x1="354.3" y1="315.1" x2="354.3" y2="335.1"/>
-		<line class="st28" x1="414.6" y1="326.7" x2="414.6" y2="350.2"/>
-		<line class="st28" x1="414" y1="314.7" x2="414" y2="275.3"/>
-		<line class="st28" x1="447.3" y1="364.2" x2="459.2" y2="364.2"/>
-		<line class="st28" x1="470.9" y1="364.2" x2="504.7" y2="364.2"/>
-		<line class="st28" x1="513.6" y1="364.2" x2="548.1" y2="364.2"/>
-		<line class="st28" x1="557.1" y1="364.2" x2="591.8" y2="364.2"/>
-		<line class="st28" x1="600.9" y1="380.1" x2="634" y2="380.1"/>
-		<polyline class="st27" points="669.4,374.3 643.1,374.3 643.1,416.6 		"/>
-		<line class="st28" x1="614.9" y1="326" x2="614.9" y2="350.6"/>
-		<line class="st28" x1="614.9" y1="316.2" x2="614.9" y2="292"/>
-		<line class="st28" x1="614.9" y1="263.7" x2="614.9" y2="239.6"/>
-		<line class="st28" x1="614.9" y1="230.4" x2="614.9" y2="207.3"/>
-		<polyline class="st27" points="628.7,173.6 628.7,183.9 669.4,183.9 		"/>
-		<line class="st27" x1="653" y1="142.6" x2="653" y2="183.9"/>
-		<line class="st27" x1="652.6" y1="164" x2="628.7" y2="164"/>
-		<line class="st27" x1="628.7" y1="166.3" x2="628.7" y2="152.9"/>
-		<line class="st27" x1="628.7" y1="145.1" x2="628.7" y2="142.6"/>
-		<polyline class="st27" points="409.4,144.8 409.4,134.8 428.9,134.8 428.9,143.5 424.8,146.6 		"/>
-		<line class="st27" x1="477.4" y1="139.3" x2="428.2" y2="139.3"/>
-		<polyline class="st27" points="419.2,151.7 415.7,155 410.3,155 		"/>
-		<polyline class="st27" points="383.8,134.8 381.4,134.8 376.4,142.1 		"/>
-		<line class="st27" x1="551.3" y1="142.1" x2="551.3" y2="213.5"/>
-		<line class="st27" x1="503" y1="290.1" x2="503" y2="276"/>
+		<line class="st30" x1="99.2" y1="272.8" x2="99.2" y2="238.5"/>
+		<line class="st30" x1="99.2" y1="229.7" x2="99.2" y2="195.8"/>
+		<polyline class="st29" points="12.2,182.1 55.5,182.1 55.5,180.7 		"/>
+		<polyline class="st29" points="55.5,172 55.5,162.6 55.5,153.2 		"/>
+		<line class="st29" x1="26.6" y1="163.2" x2="55.5" y2="163.2"/>
+		<line class="st29" x1="26.6" y1="141.6" x2="26.6" y2="182.1"/>
+		<polyline class="st30" points="68.7,183.1 68.7,165.6 117.4,165.6 117.4,183.1 		"/>
+		<polyline class="st29" points="13.1,315.6 33.8,315.6 33.8,282.9 4.7,282.9 		"/>
+		<line class="st30" x1="99.2" y1="368.9" x2="99.2" y2="402.8"/>
+		<path class="st29" d="M4.7,387.9h31.8c0,0-2.9-20.9-10.7-27.7H12.2"/>
+		<path class="st29" d="M36.5,397.7c0,0-2.1,15.6-5.6,17.2"/>
+		<path class="st29" d="M202.5,331.1V326H196v-8.1c0,0-26.1-2.7-34.5,8.1"/>
+		<polyline class="st29" points="161.5,341 202.5,341 202.5,339.2 		"/>
+		<path class="st29" d="M202.5,340.1v15.4c0,0-8.5,7.8-26.2,6.2v3.5h-5.5"/>
+		<polyline class="st29" points="295.5,331.1 272,331.1 272,334.2 		"/>
+		<polyline class="st29" points="271.9,341 271.9,346.3 271.9,351.6 		"/>
+		<line class="st29" x1="295" y1="346.3" x2="271.9" y2="346.3"/>
+		<polyline class="st29" points="272,358.8 272,362.3 295,362.3 		"/>
+		<line class="st29" x1="292.7" y1="373.3" x2="295.5" y2="373.3"/>
+		<path class="st29" d="M284.8,373.3H281c0,0-18,15.1-12.1,42"/>
+		<polyline class="st29" points="324.4,276.4 354.3,276.4 354.3,274.2 		"/>
+		<line class="st29" x1="354.3" y1="266.1" x2="354.3" y2="260.3"/>
+		<line class="st29" x1="354.3" y1="281.8" x2="354.3" y2="275.3"/>
+		<line class="st29" x1="354.3" y1="290" x2="354.3" y2="307.1"/>
+		<line class="st29" x1="324" y1="305.2" x2="353.8" y2="305.2"/>
+		<line class="st29" x1="354.3" y1="315.1" x2="354.3" y2="335.1"/>
+		<line class="st30" x1="414.6" y1="326.7" x2="414.6" y2="350.2"/>
+		<line class="st30" x1="414" y1="314.7" x2="414" y2="275.3"/>
+		<line class="st30" x1="447.3" y1="364.2" x2="459.2" y2="364.2"/>
+		<line class="st30" x1="470.9" y1="364.2" x2="504.7" y2="364.2"/>
+		<line class="st30" x1="513.6" y1="364.2" x2="548.1" y2="364.2"/>
+		<line class="st30" x1="557.1" y1="364.2" x2="591.8" y2="364.2"/>
+		<line class="st30" x1="600.9" y1="380.1" x2="634" y2="380.1"/>
+		<polyline class="st29" points="669.4,374.3 643.1,374.3 643.1,416.6 		"/>
+		<line class="st30" x1="614.9" y1="326" x2="614.9" y2="350.6"/>
+		<line class="st30" x1="614.9" y1="316.2" x2="614.9" y2="292"/>
+		<line class="st30" x1="614.9" y1="263.7" x2="614.9" y2="239.6"/>
+		<line class="st30" x1="614.9" y1="230.4" x2="614.9" y2="207.3"/>
+		<polyline class="st29" points="628.7,173.6 628.7,183.9 669.4,183.9 		"/>
+		<line class="st29" x1="653" y1="142.6" x2="653" y2="183.9"/>
+		<line class="st29" x1="652.6" y1="164" x2="628.7" y2="164"/>
+		<line class="st29" x1="628.7" y1="166.3" x2="628.7" y2="152.9"/>
+		<line class="st29" x1="628.7" y1="145.1" x2="628.7" y2="142.6"/>
+		<polyline class="st29" points="409.4,144.8 409.4,134.8 428.9,134.8 428.9,143.5 424.8,146.6 		"/>
+		<line class="st29" x1="477.4" y1="139.3" x2="428.2" y2="139.3"/>
+		<polyline class="st29" points="419.2,151.7 415.7,155 410.3,155 		"/>
+		<polyline class="st29" points="383.8,134.8 381.4,134.8 376.4,142.1 		"/>
+		<line class="st29" x1="551.3" y1="142.1" x2="551.3" y2="213.5"/>
+		<line class="st29" x1="503" y1="290.1" x2="503" y2="276"/>
 	</g>
 	<g id="outline-2">
-		<polygon class="st29" points="139.5,2.5 274.8,2.5 274.8,38.5 342,38.5 343.8,38.5 343.8,2.5 478.4,2.5 478.4,140.6 679,140.6 
+		<polygon class="st31" points="139.5,2.5 274.8,2.5 274.8,38.5 342,38.5 343.8,38.5 343.8,2.5 478.4,2.5 478.4,140.6 679,140.6 
 			679,416.6 2.5,416.6 2.5,139.6 139.6,139.6 		"/>
 	</g>
 </g>
 <g id="icons_and_text">
 	<g id="signage">
 		<g id="stairs-4-2-2-2">
-			<circle class="st30" cx="288.3" cy="174.6" r="8"/>
-			<text transform="matrix(1 0 0 1 283.814 187.479)" class="st31 st32 st33">Stairs</text>
+			<circle class="st32" cx="288.3" cy="174.6" r="8"/>
+			<text transform="matrix(1 0 0 1 283.814 187.479)" class="st33 st34 st35">Stairs</text>
 			<g id="Outline_Icons-2-2-4-2-2-2">
-				<line class="st34" x1="284.7" y1="177.7" x2="291" y2="177.7"/>
-				<polyline class="st34" points="289.9,177.7 289.9,176.6 288.8,176.6 288.8,175.5 287.7,175.5 287.7,174.4 286.6,174.4 
+				<line class="st36" x1="284.7" y1="177.7" x2="291" y2="177.7"/>
+				<polyline class="st36" points="289.9,177.7 289.9,176.6 288.8,176.6 288.8,175.5 287.7,175.5 287.7,174.4 286.6,174.4 
 					286.6,173.4 284.7,173.4 				"/>
-				<line class="st34" x1="288" y1="171.4" x2="291.4" y2="174.9"/>
-				<polyline class="st34" points="288,172.8 288,171.4 289.4,171.4 				"/>
-				<polyline class="st34" points="291.4,173.5 291.4,174.9 290.1,174.9 				"/>
+				<line class="st36" x1="288" y1="171.4" x2="291.4" y2="174.9"/>
+				<polyline class="st36" points="288,172.8 288,171.4 289.4,171.4 				"/>
+				<polyline class="st36" points="291.4,173.5 291.4,174.9 290.1,174.9 				"/>
 			</g>
 		</g>
 		<g id="stairs-4-2-2-2-2">
-			<circle class="st30" cx="564.7" cy="257.9" r="8"/>
-			<text transform="matrix(1 0 0 1 560.214 270.76)" class="st31 st32 st33">Stairs</text>
+			<circle class="st32" cx="564.7" cy="257.9" r="8"/>
+			<text transform="matrix(1 0 0 1 560.214 270.76)" class="st33 st34 st35">Stairs</text>
 			<g id="Outline_Icons-2-2-4-2-2-2-2">
-				<line class="st34" x1="561.1" y1="261" x2="567.4" y2="261"/>
-				<polyline class="st34" points="566.3,261 566.3,259.9 565.2,259.9 565.2,258.8 564.1,258.8 564.1,257.7 563,257.7 563,256.6 
+				<line class="st36" x1="561.1" y1="261" x2="567.4" y2="261"/>
+				<polyline class="st36" points="566.3,261 566.3,259.9 565.2,259.9 565.2,258.8 564.1,258.8 564.1,257.7 563,257.7 563,256.6 
 					561.1,256.6 				"/>
-				<line class="st34" x1="564.4" y1="254.7" x2="567.8" y2="258.2"/>
-				<polyline class="st34" points="564.4,256.1 564.4,254.7 565.8,254.7 				"/>
-				<polyline class="st34" points="567.8,256.8 567.8,258.2 566.5,258.2 				"/>
+				<line class="st36" x1="564.4" y1="254.7" x2="567.8" y2="258.2"/>
+				<polyline class="st36" points="564.4,256.1 564.4,254.7 565.8,254.7 				"/>
+				<polyline class="st36" points="567.8,256.8 567.8,258.2 566.5,258.2 				"/>
 			</g>
 		</g>
 		<g id="stairs-4-2-2-2-3">
-			<circle class="st30" cx="122.9" cy="261.1" r="8"/>
-			<text transform="matrix(1 0 0 1 118.422 273.95)" class="st31 st32 st33">Stairs</text>
-			<text transform="matrix(1 0 0 1 149.28 306.053)" class="st31 st32 st33">Closet</text>
-			<text transform="matrix(1 0 0 1 118.377 334.639)" class="st31 st32 st33">Phone</text>
-			<text transform="matrix(1 0 0 1 142.101 346.663)" class="st31 st32 st33">Server</text>
+			<circle class="st32" cx="122.9" cy="261.1" r="8"/>
+			<text transform="matrix(1 0 0 1 118.422 273.95)" class="st33 st34 st35">Stairs</text>
+			<text transform="matrix(1 0 0 1 149.28 306.053)" class="st33 st34 st35">Closet</text>
+			<text transform="matrix(1 0 0 1 118.377 334.639)" class="st33 st34 st35">Phone</text>
+			<text transform="matrix(1 0 0 1 142.101 346.663)" class="st33 st34 st35">Server</text>
 			<g>
-				<text transform="matrix(1 0 0 1 429.239 287.504)" class="st31 st32 st33">Phone</text>
-				<text transform="matrix(1 0 0 1 433.548 291.932)" class="st31 st32 st33">1</text>
+				<text transform="matrix(1 0 0 1 429.239 287.504)" class="st33 st34 st35">Phone</text>
+				<text transform="matrix(1 0 0 1 433.548 291.932)" class="st33 st34 st35">1</text>
 			</g>
 			<g>
-				<text transform="matrix(1 0 0 1 429.07 307.638)" class="st31 st32 st33">Phone</text>
-				<text transform="matrix(1 0 0 1 433.379 312.066)" class="st31 st32 st33">2</text>
+				<text transform="matrix(1 0 0 1 429.07 307.638)" class="st33 st34 st35">Phone</text>
+				<text transform="matrix(1 0 0 1 433.379 312.066)" class="st33 st34 st35">2</text>
 			</g>
 			<g>
-				<text transform="matrix(1 0 0 1 429.071 335.185)" class="st31 st32 st33">Phone</text>
-				<text transform="matrix(1 0 0 1 433.38 339.613)" class="st31 st32 st33">3</text>
+				<text transform="matrix(1 0 0 1 429.071 335.185)" class="st33 st34 st35">Phone</text>
+				<text transform="matrix(1 0 0 1 433.38 339.613)" class="st33 st34 st35">3</text>
 			</g>
-			<text transform="matrix(1 0 0 1 278.842 355.731)" class="st31 st32 st33">Phone</text>
-			<text transform="matrix(1 0 0 1 36.08 173.743)" class="st31 st32 st33">Phone</text>
-			<text transform="matrix(1 0 0 1 36.08 154.323)" class="st31 st32 st33">Phone</text>
-			<text transform="matrix(1 0 0 1 118.297 356.92)" class="st31 st32 st33">Phone</text>
+			<text transform="matrix(1 0 0 1 278.842 355.731)" class="st33 st34 st35">Phone</text>
+			<text transform="matrix(1 0 0 1 36.08 173.743)" class="st33 st34 st35">Phone</text>
+			<text transform="matrix(1 0 0 1 36.08 154.323)" class="st33 st34 st35">Phone</text>
+			<text transform="matrix(1 0 0 1 118.297 356.92)" class="st33 st34 st35">Phone</text>
 			<g id="Outline_Icons-2-2-4-2-2-2-3">
-				<line class="st34" x1="119.3" y1="264.2" x2="125.6" y2="264.2"/>
-				<polyline class="st34" points="124.5,264.2 124.5,263.1 123.4,263.1 123.4,262 122.3,262 122.3,260.9 121.2,260.9 121.2,259.8 
+				<line class="st36" x1="119.3" y1="264.2" x2="125.6" y2="264.2"/>
+				<polyline class="st36" points="124.5,264.2 124.5,263.1 123.4,263.1 123.4,262 122.3,262 122.3,260.9 121.2,260.9 121.2,259.8 
 					119.3,259.8 				"/>
-				<line class="st34" x1="122.6" y1="257.9" x2="126" y2="261.3"/>
-				<polyline class="st34" points="122.6,259.3 122.6,257.9 124,257.9 				"/>
-				<polyline class="st34" points="126,260 126,261.3 124.7,261.3 				"/>
+				<line class="st36" x1="122.6" y1="257.9" x2="126" y2="261.3"/>
+				<polyline class="st36" points="122.6,259.3 122.6,257.9 124,257.9 				"/>
+				<polyline class="st36" points="126,260 126,261.3 124.7,261.3 				"/>
 			</g>
-			<circle class="st30" cx="149.5" cy="285" r="8"/>
-			<text transform="matrix(1 0 0 1 143.089 295.91)" class="st31 st32 st33">Shower</text>
+			<circle class="st32" cx="149.5" cy="285" r="8"/>
+			<text transform="matrix(1 0 0 1 143.089 295.91)" class="st33 st34 st35">Shower</text>
 			<g id="Outline_Icons">
-				<path class="st35" d="M148.4,283.6v-0.2c0-1.1,0.9-1.9,1.9-1.9c1.1,0,1.9,0.9,1.9,1.9v2.8"/>
-				<path class="st35" d="M149.8,285c0-0.8-0.6-1.4-1.4-1.4c-0.8,0-1.4,0.6-1.4,1.4v0.3h2.8L149.8,285L149.8,285z"/>
-				<line class="st35" x1="148.4" y1="287.2" x2="148.4" y2="286.5"/>
-				<line class="st35" x1="148.4" y1="289.3" x2="148.4" y2="288.6"/>
-				<line class="st35" x1="149.7" y1="287.2" x2="149.6" y2="286.5"/>
-				<line class="st35" x1="150" y1="289.3" x2="149.9" y2="288.6"/>
-				<line class="st35" x1="147.1" y1="287.2" x2="147.2" y2="286.5"/>
-				<line class="st35" x1="146.8" y1="289.3" x2="146.9" y2="288.6"/>
+				<path class="st37" d="M148.4,283.6v-0.2c0-1.1,0.9-1.9,1.9-1.9c1.1,0,1.9,0.9,1.9,1.9v2.8"/>
+				<path class="st37" d="M149.8,285c0-0.8-0.6-1.4-1.4-1.4c-0.8,0-1.4,0.6-1.4,1.4v0.3h2.8L149.8,285L149.8,285z"/>
+				<line class="st37" x1="148.4" y1="287.2" x2="148.4" y2="286.5"/>
+				<line class="st37" x1="148.4" y1="289.3" x2="148.4" y2="288.6"/>
+				<line class="st37" x1="149.7" y1="287.2" x2="149.6" y2="286.5"/>
+				<line class="st37" x1="150" y1="289.3" x2="149.9" y2="288.6"/>
+				<line class="st37" x1="147.1" y1="287.2" x2="147.2" y2="286.5"/>
+				<line class="st37" x1="146.8" y1="289.3" x2="146.9" y2="288.6"/>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 370.101 256.473)" class="st31 st32 st36">Elevator x2</text>
-		<text transform="matrix(1 0 0 1 408.466 242.045)" class="st31 st32 st36">Snack</text>
-		<circle class="st30" cx="378.9" cy="243.7" r="7.9"/>
-		<path class="st37" d="M376.7,246.9V242h1.6v4.8L376.7,246.9z M378.5,246.9V242h1.6v4.8L378.5,246.9z M382.1,246.9h-1.9V242
+		<text transform="matrix(1 0 0 1 370.101 256.473)" class="st33 st34 st38">Elevator x2</text>
+		<text transform="matrix(1 0 0 1 408.466 242.045)" class="st33 st34 st38">Snack</text>
+		<circle class="st32" cx="378.9" cy="243.7" r="7.9"/>
+		<path class="st39" d="M376.7,246.9V242h1.6v4.8L376.7,246.9z M378.5,246.9V242h1.6v4.8L378.5,246.9z M382.1,246.9h-1.9V242
 			c0,0,0-0.1-0.1-0.1h-3.4c0,0-0.1,0-0.1,0.1l0,0v4.9h-0.9v-6.3h6.3L382.1,246.9z M382.1,240.4h-6.4c0,0-0.1,0-0.1,0.1l0,0v6.4
 			c0,0,0,0.1,0.1,0.1h6.4c0,0,0.1,0,0.1-0.1l0,0L382.1,240.4C382.2,240.4,382.2,240.4,382.1,240.4L382.1,240.4z"/>
-		<path class="st37" d="M377.9,241.3h1h0.1v-0.1L377.9,241.3C377.9,241.2,377.9,241.2,377.9,241.3
+		<path class="st39" d="M377.9,241.3h1h0.1v-0.1L377.9,241.3C377.9,241.2,377.9,241.2,377.9,241.3
 			C377.8,241.3,377.9,241.3,377.9,241.3z"/>
-		<path class="st37" d="M380.9,244l0.2-0.2l0.2,0.2h0.1l0,0v-0.1l-0.3-0.3H381l0,0l-0.3,0.3C380.8,243.9,380.8,243.9,380.9,244
+		<path class="st39" d="M380.9,244l0.2-0.2l0.2,0.2h0.1l0,0v-0.1l-0.3-0.3H381l0,0l-0.3,0.3C380.8,243.9,380.8,243.9,380.9,244
 			L380.9,244L380.9,244L380.9,244L380.9,244z"/>
-		<path class="st37" d="M381.1,244.7L381.1,244.7C381.2,244.8,381.2,244.8,381.1,244.7l0.3-0.3v-0.1l0,0h-0.1l0,0l0,0l-0.2,0.2
+		<path class="st39" d="M381.1,244.7L381.1,244.7C381.2,244.8,381.2,244.8,381.1,244.7l0.3-0.3v-0.1l0,0h-0.1l0,0l0,0l-0.2,0.2
 			l-0.2-0.2h-0.1v0.1l0,0L381.1,244.7z"/>
 		<g id="Male">
-			<circle class="st30" cx="188.8" cy="258.9" r="8.2"/>
+			<circle class="st32" cx="188.8" cy="258.9" r="8.2"/>
 			<g>
-				<text transform="matrix(1 0 0 1 179.778 271.588)" class="st31 st32 st38">Male</text>
-				<text transform="matrix(1 0 0 1 188.918 271.588)" class="st31 st32 st38">T</text>
-				<text transform="matrix(1 0 0 1 190.801 271.588)" class="st31 st32 st38">oilets</text>
+				<text transform="matrix(1 0 0 1 179.778 271.588)" class="st33 st34 st40">Male</text>
+				<text transform="matrix(1 0 0 1 188.918 271.588)" class="st33 st34 st40">T</text>
+				<text transform="matrix(1 0 0 1 190.801 271.588)" class="st33 st34 st40">oilets</text>
 			</g>
-			<circle class="st39" cx="188.8" cy="256.4" r="1.2"/>
-			<path class="st39" d="M190.8,258.3h-3.9c-0.1,1,0.4,2.1,1.2,2.7v2.3h1.4V261C190.4,260.4,190.9,259.4,190.8,258.3z"/>
+			<circle class="st41" cx="188.8" cy="256.4" r="1.2"/>
+			<path class="st41" d="M190.8,258.3h-3.9c-0.1,1,0.4,2.1,1.2,2.7v2.3h1.4V261C190.4,260.4,190.9,259.4,190.8,258.3z"/>
 		</g>
 		<g id="Female">
-			<circle class="st30" cx="154.1" cy="259.1" r="7.8"/>
+			<circle class="st32" cx="154.1" cy="259.1" r="7.8"/>
 			<g>
-				<text transform="matrix(1 0 0 1 142.101 271.878)" class="st31 st32 st40">Female</text>
-				<text transform="matrix(1 0 0 1 155.053 271.878)" class="st31 st32 st40">T</text>
-				<text transform="matrix(1 0 0 1 156.855 271.878)" class="st31 st32 st40">oilets</text>
+				<text transform="matrix(1 0 0 1 142.101 271.878)" class="st33 st34 st42">Female</text>
+				<text transform="matrix(1 0 0 1 155.053 271.878)" class="st33 st34 st42">T</text>
+				<text transform="matrix(1 0 0 1 156.855 271.878)" class="st33 st34 st42">oilets</text>
 			</g>
-			<circle class="st41" cx="154" cy="256.5" r="1.1"/>
-			<path class="st41" d="M154,258.1c-1,0-1.8,1.5-1.8,3.1h1.1v1.6h1.3v-1.6h1.1C155.8,259.6,155,258.1,154,258.1z"/>
+			<circle class="st43" cx="154" cy="256.5" r="1.1"/>
+			<path class="st43" d="M154,258.1c-1,0-1.8,1.5-1.8,3.1h1.1v1.6h1.3v-1.6h1.1C155.8,259.6,155,258.1,154,258.1z"/>
 		</g>
 		<g id="Female-2">
-			<circle class="st30" cx="158.9" cy="191.4" r="7.8"/>
-			<text transform="matrix(1 0 0 1 149.89 204.173)" class="st31 st32 st40">Mail Room</text>
-			<path class="st41" d="M155.7,189.6l3.2,3.1l3.2-3.1 M159.9,191.6l2.1,2.2 M155.7,193.8l2.1-2.2"/>
-			<path class="st41" d="M155.7,189.6h6.4v4.2h-6.4V189.6z"/>
+			<circle class="st32" cx="158.9" cy="191.4" r="7.8"/>
+			<text transform="matrix(1 0 0 1 149.89 204.173)" class="st33 st34 st42">Mail Room</text>
+			<path class="st43" d="M155.7,189.6l3.2,3.1l3.2-3.1 M159.9,191.6l2.1,2.2 M155.7,193.8l2.1-2.2"/>
+			<path class="st43" d="M155.7,189.6h6.4v4.2h-6.4V189.6z"/>
 		</g>
 		<g id="Male-2">
-			<circle class="st30" cx="497" cy="259" r="8.2"/>
+			<circle class="st32" cx="497" cy="259" r="8.2"/>
 			<g>
-				<text transform="matrix(1 0 0 1 487.977 271.609)" class="st31 st32 st38">Male</text>
-				<text transform="matrix(1 0 0 1 497.117 271.609)" class="st31 st32 st38">T</text>
-				<text transform="matrix(1 0 0 1 499 271.609)" class="st31 st32 st38">oilets</text>
+				<text transform="matrix(1 0 0 1 487.977 271.609)" class="st33 st34 st40">Male</text>
+				<text transform="matrix(1 0 0 1 497.117 271.609)" class="st33 st34 st40">T</text>
+				<text transform="matrix(1 0 0 1 499 271.609)" class="st33 st34 st40">oilets</text>
 			</g>
-			<circle class="st39" cx="497" cy="256.4" r="1.2"/>
-			<path class="st39" d="M499,258.3h-3.9c-0.1,1,0.4,2.1,1.2,2.7v2.3h1.4V261C498.6,260.4,499.1,259.4,499,258.3z"/>
+			<circle class="st41" cx="497" cy="256.4" r="1.2"/>
+			<path class="st41" d="M499,258.3h-3.9c-0.1,1,0.4,2.1,1.2,2.7v2.3h1.4V261C498.6,260.4,499.1,259.4,499,258.3z"/>
 		</g>
 		<g id="Male-2-2">
-			<circle class="st30" cx="435.5" cy="256.6" r="8.2"/>
+			<circle class="st32" cx="435.5" cy="256.6" r="8.2"/>
 			<g>
-				<text transform="matrix(1 0 0 1 430.702 268.725)" class="st31 st32 st38">Closet</text>
+				<text transform="matrix(1 0 0 1 430.702 268.725)" class="st33 st34 st40">Closet</text>
 			</g>
-			<path class="st42" d="M437,253.9c0-0.6-0.5-1.2-1.1-1.2s-1.2,0.5-1.2,1.1c0,0.5,0.4,1,0.9,1.1v0.9l-4,2.3v0.9h8.6v-0.9l-3-1.6"/>
+			<path class="st44" d="M437,253.9c0-0.6-0.5-1.2-1.1-1.2s-1.2,0.5-1.2,1.1c0,0.5,0.4,1,0.9,1.1v0.9l-4,2.3v0.9h8.6v-0.9l-3-1.6"/>
 		</g>
 		<g id="Male-2-3">
-			<circle class="st30" cx="561.5" cy="333.1" r="8.2"/>
+			<circle class="st32" cx="561.5" cy="333.1" r="8.2"/>
 			<g>
-				<text transform="matrix(1 0 0 1 556.712 345.235)" class="st31 st32 st38">Closet</text>
+				<text transform="matrix(1 0 0 1 556.712 345.235)" class="st33 st34 st40">Closet</text>
 			</g>
-			<path class="st42" d="M563,330.4c0-0.6-0.5-1.2-1.1-1.2s-1.2,0.5-1.2,1.1c0,0.5,0.4,1,0.9,1.1v0.9l-4,2.3v0.9h8.6v-0.9l-3-1.6"/>
+			<path class="st44" d="M563,330.4c0-0.6-0.5-1.2-1.1-1.2s-1.2,0.5-1.2,1.1c0,0.5,0.4,1,0.9,1.1v0.9l-4,2.3v0.9h8.6v-0.9l-3-1.6"/>
 		</g>
 		<g id="Male-2-4">
-			<circle class="st30" cx="561.9" cy="300.7" r="8.2"/>
+			<circle class="st32" cx="561.9" cy="300.7" r="8.2"/>
 			<g>
-				<text transform="matrix(1 0 0 1 555.128 313.237)" class="st31 st32 st38">I</text>
-				<text transform="matrix(1 0 0 1 556.174 313.237)" class="st31 st32 st38">T</text>
-				<text transform="matrix(1 0 0 1 558.407 313.237)" class="st31 st32 st38"> Room</text>
+				<text transform="matrix(1 0 0 1 555.128 313.237)" class="st33 st34 st40">I</text>
+				<text transform="matrix(1 0 0 1 556.174 313.237)" class="st33 st34 st40">T</text>
+				<text transform="matrix(1 0 0 1 558.407 313.237)" class="st33 st34 st40"> Room</text>
 			</g>
-			<polyline class="st42" points="560.2,298.8 560.2,297.5 563.6,297.5 563.6,298.8 			"/>
-			<line class="st42" x1="561.2" y1="298.8" x2="561.2" y2="298.3"/>
-			<line class="st42" x1="562.7" y1="298.8" x2="562.7" y2="298.3"/>
-			<path class="st42" d="M563.4,304.4h-2.9v-1.6l-0.9-0.9c-0.2-0.2-0.3-0.4-0.3-0.7v-1.9h5.3v1.9c0,0.3-0.1,0.5-0.3,0.7l-0.9,0.9
+			<polyline class="st44" points="560.2,298.8 560.2,297.5 563.6,297.5 563.6,298.8 			"/>
+			<line class="st44" x1="561.2" y1="298.8" x2="561.2" y2="298.3"/>
+			<line class="st44" x1="562.7" y1="298.8" x2="562.7" y2="298.3"/>
+			<path class="st44" d="M563.4,304.4h-2.9v-1.6l-0.9-0.9c-0.2-0.2-0.3-0.4-0.3-0.7v-1.9h5.3v1.9c0,0.3-0.1,0.5-0.3,0.7l-0.9,0.9
 				L563.4,304.4z"/>
 		</g>
 		<g id="Male-3">
 			<g id="Coffee-2-2">
-				<text transform="matrix(1 0 0 1 458.758 184.212)" class="st31 st32 st43">Cafe</text>
-				<text transform="matrix(1 0 0 1 413.133 143.245)" class="st31 st32 st43">Supply</text>
-				<text transform="matrix(1 0 0 1 389.437 138.438)" class="st31 st32 st43">Closet</text>
-				<circle class="st30" cx="463" cy="171.8" r="8"/>
-				<path class="st44" d="M465.9,171.1c0.5-0.1,0.9,0.3,1,0.7c0,0.1,0,0.2,0,0.2c0,1.1-1.4,1.2-1.4,1.2"/>
-				<path class="st44" d="M464.1,167.9c0.2,0.2,0.2,0.5,0,0.7l0,0c-0.2,0.2-0.1,0.5,0,0.7"/>
-				<path class="st44" d="M462.9,167.9c0.2,0.2,0.2,0.5,0,0.7l0,0c-0.2,0.2-0.1,0.5,0,0.7"/>
-				<path class="st44" d="M461.6,167.9c0.2,0.2,0.2,0.5,0,0.7l0,0c-0.1,0.2-0.1,0.5,0,0.7"/>
-				<path class="st44" d="M464.5,175h-2.8c-0.7,0-1.3-0.2-1.9-0.6h6.6C465.8,174.8,465.2,175.1,464.5,175z"/>
-				<path class="st44" d="M464.3,174.3c0.6-0.4,1-1,1.1-1.7l0.3-2.1h-5.5l0.3,2.1c0.1,0.7,0.6,1.3,1.1,1.7"/>
+				<text transform="matrix(1 0 0 1 458.758 184.212)" class="st33 st34 st45">Cafe</text>
+				<text transform="matrix(1 0 0 1 413.133 143.245)" class="st33 st34 st45">Supply</text>
+				<text transform="matrix(1 0 0 1 389.437 138.438)" class="st33 st34 st45">Closet</text>
+				<circle class="st32" cx="463" cy="171.8" r="8"/>
+				<path class="st46" d="M465.9,171.1c0.5-0.1,0.9,0.3,1,0.7c0,0.1,0,0.2,0,0.2c0,1.1-1.4,1.2-1.4,1.2"/>
+				<path class="st46" d="M464.1,167.9c0.2,0.2,0.2,0.5,0,0.7l0,0c-0.2,0.2-0.1,0.5,0,0.7"/>
+				<path class="st46" d="M462.9,167.9c0.2,0.2,0.2,0.5,0,0.7l0,0c-0.2,0.2-0.1,0.5,0,0.7"/>
+				<path class="st46" d="M461.6,167.9c0.2,0.2,0.2,0.5,0,0.7l0,0c-0.1,0.2-0.1,0.5,0,0.7"/>
+				<path class="st46" d="M464.5,175h-2.8c-0.7,0-1.3-0.2-1.9-0.6h6.6C465.8,174.8,465.2,175.1,464.5,175z"/>
+				<path class="st46" d="M464.3,174.3c0.6-0.4,1-1,1.1-1.7l0.3-2.1h-5.5l0.3,2.1c0.1,0.7,0.6,1.3,1.1,1.7"/>
 			</g>
 		</g>
 		<g id="Female-3">
-			<circle class="st30" cx="535.2" cy="258.3" r="7.8"/>
+			<circle class="st32" cx="535.2" cy="258.3" r="7.8"/>
 			<g>
-				<text transform="matrix(1 0 0 1 523.214 271.048)" class="st31 st32 st40">Female</text>
-				<text transform="matrix(1 0 0 1 536.166 271.048)" class="st31 st32 st40">T</text>
-				<text transform="matrix(1 0 0 1 537.968 271.048)" class="st31 st32 st40">oilets</text>
+				<text transform="matrix(1 0 0 1 523.214 271.048)" class="st33 st34 st42">Female</text>
+				<text transform="matrix(1 0 0 1 536.166 271.048)" class="st33 st34 st42">T</text>
+				<text transform="matrix(1 0 0 1 537.968 271.048)" class="st33 st34 st42">oilets</text>
 			</g>
-			<circle class="st41" cx="535.2" cy="255.7" r="1.1"/>
-			<path class="st41" d="M535.2,257.3c-1,0-1.8,1.5-1.8,3.1h1.1v1.6h1.3v-1.6h1.1C536.9,258.8,536.1,257.3,535.2,257.3z"/>
+			<circle class="st43" cx="535.2" cy="255.7" r="1.1"/>
+			<path class="st43" d="M535.2,257.3c-1,0-1.8,1.5-1.8,3.1h1.1v1.6h1.3v-1.6h1.1C536.9,258.8,536.1,257.3,535.2,257.3z"/>
 		</g>
 		<g id="Elevator-3-5">
 			<g id="elevator-7-4">
-				<text transform="matrix(1 0 0 1 357.143 111.48)" class="st31 st32 st45">Reception</text>
-				<circle class="st30" cx="365.4" cy="99.1" r="8.2"/>
+				<text transform="matrix(1 0 0 1 357.143 111.48)" class="st33 st34 st47">Reception</text>
+				<circle class="st32" cx="365.4" cy="99.1" r="8.2"/>
 				<g id="Outline_Icons-2">
-					<path class="st46" d="M365.1,97.3v0.5l-1.1,0.3c-0.2,0.1-0.4,0.3-0.4,0.5v0.2"/>
-					<path class="st46" d="M366.1,97.3v0.5l1.1,0.3c0.2,0.1,0.4,0.3,0.4,0.5v0.2"/>
-					<ellipse class="st46" cx="365.6" cy="96.3" rx="0.9" ry="1.1"/>
-					<path class="st46" d="M366.6,96.2C366.5,96.2,366.5,96.2,366.6,96.2c-0.4,0.1-0.7-0.1-0.8-0.4c-0.2,0.2-0.4,0.4-0.7,0.4
+					<path class="st48" d="M365.1,97.3v0.5l-1.1,0.3c-0.2,0.1-0.4,0.3-0.4,0.5v0.2"/>
+					<path class="st48" d="M366.1,97.3v0.5l1.1,0.3c0.2,0.1,0.4,0.3,0.4,0.5v0.2"/>
+					<ellipse class="st48" cx="365.6" cy="96.3" rx="0.9" ry="1.1"/>
+					<path class="st48" d="M366.6,96.2C366.5,96.2,366.5,96.2,366.6,96.2c-0.4,0.1-0.7-0.1-0.8-0.4c-0.2,0.2-0.4,0.4-0.7,0.4
 						c-0.1,0-0.3,0-0.4-0.1"/>
-					<rect x="361.7" y="98.8" class="st46" width="7.5" height="2.6"/>
-					<line class="st46" x1="362.7" y1="101.4" x2="362.7" y2="102.7"/>
-					<line class="st46" x1="368.2" y1="101.4" x2="368.2" y2="102.7"/>
+					<rect x="361.7" y="98.8" class="st48" width="7.5" height="2.6"/>
+					<line class="st48" x1="362.7" y1="101.4" x2="362.7" y2="102.7"/>
+					<line class="st48" x1="368.2" y1="101.4" x2="368.2" y2="102.7"/>
 				</g>
 			</g>
 		</g>
 		<g id="Elevator-3-5-2">
 			<g id="elevator-7-4-2">
 				<g>
-					<text transform="matrix(1 0 0 1 414.362 127.063)" class="st31 st32 st45">Casual</text>
-					<text transform="matrix(1 0 0 1 427.197 127.063)" class="st31 st32 st45">W</text>
-					<text transform="matrix(1 0 0 1 430.702 127.063)" class="st31 st32 st45">ork</text>
-					<text transform="matrix(1 0 0 1 419.795 131.606)" class="st31 st32 st45">Space</text>
+					<text transform="matrix(1 0 0 1 414.362 127.063)" class="st33 st34 st47">Casual</text>
+					<text transform="matrix(1 0 0 1 427.197 127.063)" class="st33 st34 st47">W</text>
+					<text transform="matrix(1 0 0 1 430.702 127.063)" class="st33 st34 st47">ork</text>
+					<text transform="matrix(1 0 0 1 419.795 131.606)" class="st33 st34 st47">Space</text>
 				</g>
-				<circle class="st30" cx="425.5" cy="114.7" r="8.2"/>
+				<circle class="st32" cx="425.5" cy="114.7" r="8.2"/>
 			</g>
 			<g id="Outline_Icons-2-2">
-				<line class="st46" x1="421.5" y1="116.7" x2="421.5" y2="117.6"/>
-				<line class="st46" x1="429.2" y1="116.7" x2="429.2" y2="117.6"/>
-				<path class="st46" d="M420.7,114.3v1.6c0,0.4,0.4,0.8,0.8,0.8h7.7c0.4,0,0.8-0.4,0.8-0.8l0,0v-1.6"/>
-				<path class="st46" d="M428.8,114.3v0.4c0,0.2-0.2,0.4-0.4,0.4l0,0h-6.1c-0.2,0-0.4-0.2-0.4-0.4l0,0v-0.4"/>
-				<path class="st46" d="M429.2,113.7v-0.2c0-0.9-0.7-1.6-1.6-1.6h-4.5c-0.9,0-1.6,0.7-1.6,1.6l0,0v0.2"/>
-				<path class="st46" d="M420.7,114.3c0-0.3,0.3-0.6,0.6-0.6s0.6,0.3,0.6,0.6l0,0l0,0"/>
-				<path class="st46" d="M430,114.3c0-0.3-0.3-0.6-0.6-0.6s-0.6,0.3-0.6,0.6l0,0l0,0"/>
-				<line class="st46" x1="425.2" y1="111.9" x2="425.2" y2="115.1"/>
+				<line class="st48" x1="421.5" y1="116.7" x2="421.5" y2="117.6"/>
+				<line class="st48" x1="429.2" y1="116.7" x2="429.2" y2="117.6"/>
+				<path class="st48" d="M420.7,114.3v1.6c0,0.4,0.4,0.8,0.8,0.8h7.7c0.4,0,0.8-0.4,0.8-0.8l0,0v-1.6"/>
+				<path class="st48" d="M428.8,114.3v0.4c0,0.2-0.2,0.4-0.4,0.4l0,0h-6.1c-0.2,0-0.4-0.2-0.4-0.4l0,0v-0.4"/>
+				<path class="st48" d="M429.2,113.7v-0.2c0-0.9-0.7-1.6-1.6-1.6h-4.5c-0.9,0-1.6,0.7-1.6,1.6l0,0v0.2"/>
+				<path class="st48" d="M420.7,114.3c0-0.3,0.3-0.6,0.6-0.6s0.6,0.3,0.6,0.6l0,0l0,0"/>
+				<path class="st48" d="M430,114.3c0-0.3-0.3-0.6-0.6-0.6s-0.6,0.3-0.6,0.6l0,0l0,0"/>
+				<line class="st48" x1="425.2" y1="111.9" x2="425.2" y2="115.1"/>
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 582.1049 258.8198)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 582.1046 289.3196)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 582.1733 319.8913)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 581.8298 327.3248)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 530.838 326.0979)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 489.0434 341.3719)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 488.3165 306.0534)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 489.3741 288.8113)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 456.3397 333.8268)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 333.9675 271.8784)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 335.7055 312.3687)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 340.7755 291.9324)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 380.8071 321.125)" class="st31 st32 st33">Open Office</text>
-	<text transform="matrix(1 0 0 1 415.0231 404.2774)" class="st31 st32 st33">Open Office</text>
-	<text transform="matrix(1 0 0 1 603.8786 370.5504)" class="st31 st32 st33">Open Office</text>
-	<text transform="matrix(1 0 0 1 615.4698 279.6126)" class="st31 st32 st33">Open Office</text>
-	<text transform="matrix(1 0 0 1 590.9764 194.6031)" class="st31 st32 st33">Casual Work</text>
-	<text transform="matrix(1 0 0 1 596.2764 199.0031)" class="st31 st32 st33">Space</text>
-	<text transform="matrix(1 0 0 1 178.4388 332.9498)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 178.439 351.5117)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 205.2959 291.9325)" class="st31 st32 st33">Video</text>
-	<text transform="matrix(1 0 0 1 278.8423 299.0636)" class="st31 st32 st33">Video</text>
-	<text transform="matrix(1 0 0 1 278.8418 400.7872)" class="st31 st32 st33">Video</text>
-	<text transform="matrix(1 0 0 1 116.4571 300.5069)" class="st31 st32 st33">Quiet</text>
-	<text transform="matrix(1 0 0 1 115.9571 304.9069)" class="st31 st32 st33">Room</text>
-	<text transform="matrix(1 0 0 1 173.3398 291.9318)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 13.3386 401.3706)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 11.1599 377.2888)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 13.234 300.5069)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 253.2502 24.3679)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 354.583 20.2306)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 112.2207 155.6277)" class="st31 st32 st33">Quiet Area</text>
-	<text transform="matrix(1 0 0 1 301.6902 123.7976)" class="st31 st32 st33">Primary</text>
-	<text transform="matrix(1 0 0 1 299.5902 128.1976)" class="st31 st32 st33">Enterance</text>
-	<text transform="matrix(1 0 0 1 170.5765 389.7487)" class="st31 st32 st33">Open Office</text>
-	<text transform="matrix(1 0 0 1 203.8248 314.8129)" class="st31 st32 st33">Open Office</text>
-	<text transform="matrix(1 0 0 1 182.1 44.2566)" class="st31 st32 st33">Open Office</text>
-	<text transform="matrix(1 0 0 1 55.4998 234.7996)" class="st31 st32 st33">Open Office</text>
-	<text transform="matrix(1 0 0 1 321.7021 58.0999)" class="st31 st32 st33">Office</text>
-	<text transform="matrix(1 0 0 1 289.2289 67.0499)" class="st31 st32 st33">Office</text>
+	<text transform="matrix(1 0 0 1 582.1049 258.8198)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 582.1046 289.3196)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 582.1733 319.8913)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 581.8298 327.3248)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 530.838 326.0979)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 489.0434 341.3719)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 488.3165 306.0534)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 489.3741 288.8113)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 456.3397 333.8268)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 333.9675 271.8784)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 335.7055 312.3687)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 340.7755 291.9324)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 380.8071 321.125)" class="st33 st34 st35">Open Office</text>
+	<text transform="matrix(1 0 0 1 415.0231 404.2774)" class="st33 st34 st35">Open Office</text>
+	<text transform="matrix(1 0 0 1 603.8786 370.5504)" class="st33 st34 st35">Open Office</text>
+	<text transform="matrix(1 0 0 1 615.4698 279.6126)" class="st33 st34 st35">Open Office</text>
+	<text transform="matrix(1 0 0 1 590.9764 194.6031)" class="st33 st34 st35">Casual Work</text>
+	<text transform="matrix(1 0 0 1 596.2764 199.0031)" class="st33 st34 st35">Space</text>
+	<text transform="matrix(1 0 0 1 178.4388 332.9498)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 178.439 351.5117)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 205.2959 291.9325)" class="st33 st34 st35">Video</text>
+	<text transform="matrix(1 0 0 1 278.8423 299.0636)" class="st33 st34 st35">Video</text>
+	<text transform="matrix(1 0 0 1 278.8418 400.7872)" class="st33 st34 st35">Video</text>
+	<text transform="matrix(1 0 0 1 116.4571 300.5069)" class="st33 st34 st35">Quiet</text>
+	<text transform="matrix(1 0 0 1 115.9571 304.9069)" class="st33 st34 st35">Room</text>
+	<text transform="matrix(1 0 0 1 173.3398 291.9318)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 13.3386 401.3706)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 11.1599 377.2888)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 13.234 300.5069)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 253.2502 24.3679)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 354.583 20.2306)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 112.2207 155.6277)" class="st33 st34 st35">Quiet Area</text>
+	<text transform="matrix(1 0 0 1 301.6902 123.7976)" class="st33 st34 st35">Primary</text>
+	<text transform="matrix(1 0 0 1 299.5902 128.1976)" class="st33 st34 st35">Enterance</text>
+	<text transform="matrix(1 0 0 1 170.5765 389.7487)" class="st33 st34 st35">Open Office</text>
+	<text transform="matrix(1 0 0 1 203.8248 314.8129)" class="st33 st34 st35">Open Office</text>
+	<text transform="matrix(1 0 0 1 182.1 44.2566)" class="st33 st34 st35">Open Office</text>
+	<text transform="matrix(1 0 0 1 55.4998 234.7996)" class="st33 st34 st35">Open Office</text>
+	<text transform="matrix(1 0 0 1 321.7021 58.0999)" class="st33 st34 st35">Office</text>
+	<text transform="matrix(1 0 0 1 289.2289 67.0499)" class="st33 st34 st35">Office</text>
 </g>
-<text transform="matrix(1 0 0 1 636.3114 154.3231)" class="st31 st32 st33">Phone</text>
-<text transform="matrix(1 0 0 1 636.311 176.2)" class="st31 st32 st33">Phone</text>
+<text transform="matrix(1 0 0 1 636.3114 154.3231)" class="st33 st34 st35">Phone</text>
+<text transform="matrix(1 0 0 1 636.311 176.2)" class="st33 st34 st35">Phone</text>
 </svg>
