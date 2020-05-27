@@ -18207,6 +18207,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _this82.space_ids.forEach(function (id) {
             return _this82.approval_status[id] = 'declined';
           });
+        }
+
+        if (raw_data.show_as && raw_data.show_as === 'tentative') {
+          _this82.space_ids.forEach(function (id) {
+            return _this82.approval_status[id] = 'tentative';
+          });
         } // Add attendees and organiser to service data
 
 

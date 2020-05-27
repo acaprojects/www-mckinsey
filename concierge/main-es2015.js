@@ -8564,6 +8564,9 @@ class Booking extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClas
         if (raw_data.show_as && raw_data.show_as === 'cancelled') {
             this.space_ids.forEach((id) => (this.approval_status[id] = 'declined'));
         }
+        if (raw_data.show_as && raw_data.show_as === 'tentative') {
+            this.space_ids.forEach((id) => (this.approval_status[id] = 'tentative'));
+        }
         // Add attendees and organiser to service data
         if (this._service.parent && this._service.parent.Users) {
             if (raw_data.attendees) {
