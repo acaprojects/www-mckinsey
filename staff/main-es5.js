@@ -39,7 +39,7 @@ function _templateObject120() {
 }
 
 function _templateObject119() {
-  var data = _taggedTemplateLiteral([":Booking form cancel action\u241Fcda31dbd724cf5f4fa7a4274d9120651490c8a8c\u241F8890553633144307762:Back"]);
+  var data = _taggedTemplateLiteral([":Booking form cancel action\u241F07cc110238d037fe80098e0f9b7f162124eb0a11\u241F454897612769798863: Back "]);
 
   _templateObject119 = function _templateObject119() {
     return data;
@@ -49,7 +49,7 @@ function _templateObject119() {
 }
 
 function _templateObject118() {
-  var data = _taggedTemplateLiteral([":Booking form continue action\u241Ff732c304c7433e5a83ffcd862c3dce709a0f4982\u241F3885497195825665706:Next"]);
+  var data = _taggedTemplateLiteral([":Booking form continue action\u241F39494c73fcb8affcef6b03a8c7e52f8c789b2d1d\u241F6609643060537118464: Next "]);
 
   _templateObject118 = function _templateObject118() {
     return data;
@@ -59,7 +59,7 @@ function _templateObject118() {
 }
 
 function _templateObject117() {
-  var data = _taggedTemplateLiteral([":Booking form header\u241Fbd532c9813cc0577fcc3ff32640a61afef2bf40a\u241F6464057252608386690:New Booking"]);
+  var data = _taggedTemplateLiteral([":Booking form header\u241F5c95251c03c7e80ac3fea3c89450b8501dc8eb77\u241F3431798880971694133: ", ":INTERPOLATION: Booking "]);
 
   _templateObject117 = function _templateObject117() {
     return data;
@@ -1319,11 +1319,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var shell_component_1 = __webpack_require__(
     /*! ./shell/shell.component */
@@ -1335,11 +1335,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var routes = [{
       path: '',
@@ -1462,7 +1462,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var general_utilities_1 = __webpack_require__(
     /*! ./shared/utilities/general.utilities */
@@ -1486,7 +1486,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! ./services/app.service */
@@ -1506,7 +1506,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var AppComponent = function AppComponent(_app, _org, _spaces, _bookings) {
       _classCallCheck(this, AppComponent);
@@ -1590,27 +1590,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var platform_browser_1 = __webpack_require__(
     /*! @angular/platform-browser */
-    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+    "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 
     var animations_1 = __webpack_require__(
     /*! @angular/platform-browser/animations */
-    "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+    "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var http_1 = __webpack_require__(
     /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var core_2 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     __webpack_require__(
     /*! ./shared/mocks */
@@ -1618,7 +1618,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var app_routing_module_1 = __webpack_require__(
     /*! ./app-routing.module */
@@ -1630,7 +1630,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var service_worker_1 = __webpack_require__(
     /*! @angular/service-worker */
-    "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
+    "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
 
     var environment_1 = __webpack_require__(
     /*! ../environments/environment */
@@ -1654,11 +1654,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/service-worker */
-    "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
+    "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -1733,11 +1733,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -1745,19 +1745,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i3 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var _c0 = ["content"];
 
@@ -2141,11 +2141,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -2153,15 +2153,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i3 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
@@ -2169,15 +2169,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i5 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     function ConfirmModalComponent_div_4_app_icon_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -2434,7 +2434,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var space_class_1 = __webpack_require__(
     /*! src/app/services/data/spaces/space.class */
@@ -2446,15 +2446,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i2 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     function MeetingDetailsCateringComponent_div_0_div_6_div_7_Template(rf, ctx) {
       if (rf & 1) {
@@ -2611,14 +2611,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         get: function get() {
           var _this5 = this;
 
-          if (!this.booking) {
-            return '<No notes>';
-          }
-
-          var note_list = this.booking.notes.filter(function (note) {
+          var the_note = this.booking.notes.find(function (note) {
             return note.type === 'catering' && note.space === _this5.space.id;
           });
-          return note_list.length > 0 ? note_list[0].message : '<No notes>';
+          return the_note ? the_note.message : '<No notes>';
         }
         /** Charge code for orders in the active space */
 
@@ -2706,11 +2702,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var view_room_modal_component_1 = __webpack_require__(
     /*! ../../view-room-modal/view-room-modal.component */
@@ -2742,7 +2738,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/spaces/spaces.service */
@@ -2754,19 +2750,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i6 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     function MeetingDetailsDisplayComponent_div_11_Template(rf, ctx) {
       if (rf & 1) {
@@ -3390,15 +3386,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -3438,11 +3434,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -3458,11 +3454,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i7 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
@@ -3470,11 +3466,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i8 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i9 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i10 = __webpack_require__(
     /*! ./display/display.component */
@@ -3490,7 +3486,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i13 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     function MeetingDetailsOverlayComponent_button_7_span_5_Template(rf, ctx) {
       if (rf & 1) {
@@ -3668,7 +3664,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", !ctx_r21.has_ended);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("catering", ctx_r21.booking.catering)("space", space_r20);
+        i0.ɵɵproperty("catering", ctx_r21.booking.catering)("booking", ctx_r21.booking)("space", space_r20);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", !ctx_r21.has_ended);
       }
@@ -3677,7 +3673,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function MeetingDetailsOverlayComponent_main_16_ng_container_1_ng_container_6_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, MeetingDetailsOverlayComponent_main_16_ng_container_1_ng_container_6_div_1_Template, 10, 6, "div", 19);
+        i0.ɵɵtemplate(1, MeetingDetailsOverlayComponent_main_16_ng_container_1_ng_container_6_div_1_Template, 10, 7, "div", 19);
         i0.ɵɵelementContainerEnd();
       }
 
@@ -3997,8 +3993,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this14 = this;
 
           this.loading = 'Deleting meeting...';
+          console.log('As delegate:', this._data);
 
-          this._bookings["delete"](this.booking.id).then(function () {
+          this._bookings["delete"](this.booking.id, this._data.as_delegate ? {
+            delegate: this._data.delegate
+          } : {}).then(function () {
             _this14._service.notifySuccess('Successfully deleted meeting.');
 
             _this14.loading = null;
@@ -4019,7 +4018,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.loading = 'Deleting series...';
 
-          this._bookings["delete"](this.booking.recurrence.series_id).then(function () {
+          this._bookings["delete"](this.booking.recurrence.series_id, this._data.as_delegate ? {
+            delegate: this._data.delegate
+          } : {}).then(function () {
             _this15._service.notifySuccess('Successfully deleted series.');
 
             _this15.loading = null;
@@ -4138,7 +4139,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 21,
       vars: 10,
-      consts: [[1, "custom"], [1, "details"], [1, "text"], ["mat-icon-button", "", "mat-dialog-close", "", 1, "fixed"], [3, "icon"], [1, "actions"], ["mat-button", "", 3, "touchrelease", 4, "ngIf"], ["mat-button", "", 3, "touchrelease"], [1, "flex"], ["class", "custom", 4, "ngIf", "ngIfElse"], ["edit_form", ""], ["load_state", ""], [4, "ngIf"], [4, "ngIf", "ngIfElse"], [1, "card"], [1, "header"], [3, "event"], ["class", "flex", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["class", "card", 4, "ngIf"], [3, "booking", "space"], [3, "catering", "space"], [1, "info-block"], [1, "icon"], ["diameter", "32"]],
+      consts: [[1, "custom"], [1, "details"], [1, "text"], ["mat-icon-button", "", "mat-dialog-close", "", 1, "fixed"], [3, "icon"], [1, "actions"], ["mat-button", "", 3, "touchrelease", 4, "ngIf"], ["mat-button", "", 3, "touchrelease"], [1, "flex"], ["class", "custom", 4, "ngIf", "ngIfElse"], ["edit_form", ""], ["load_state", ""], [4, "ngIf"], [4, "ngIf", "ngIfElse"], [1, "card"], [1, "header"], [3, "event"], ["class", "flex", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["class", "card", 4, "ngIf"], [3, "booking", "space"], [3, "catering", "booking", "space"], [1, "info-block"], [1, "icon"], ["diameter", "32"]],
       template: function MeetingDetailsOverlayComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "header", 0);
@@ -4254,7 +4255,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var booking_class_1 = __webpack_require__(
     /*! src/app/services/data/bookings/booking.class */
@@ -4266,11 +4267,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     function MeetingDetailsSpaceComponent_div_0_Template(rf, ctx) {
       if (rf & 1) {
@@ -4431,11 +4432,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -4455,11 +4456,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -4467,11 +4468,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i5 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
@@ -4483,11 +4484,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var _c0 = function _c0() {
       return {
@@ -4698,15 +4699,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var common_1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var shared_module_1 = __webpack_require__(
     /*! ../shared/shared.module */
@@ -4762,7 +4763,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var OVERLAYS = [confirm_modal_component_1.ConfirmModalComponent, view_room_modal_component_1.ViewRoomModalComponent, booking_confirm_component_1.BookingConfirmComponent, new_user_modal_component_1.NewUserModalComponent, booking_rules_modal_component_1.BookingRulesModalComponent, meeting_details_overlay_component_1.MeetingDetailsOverlayComponent, time_extension_component_1.TimeExtensionModalComponent, recurrence_modal_component_1.RecurrenceModalComponent];
 
@@ -4823,15 +4824,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -4839,15 +4840,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i3 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
@@ -4855,23 +4856,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i7 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var i9 = __webpack_require__(
     /*! ../../shared/components/custom-fields/date-field/date-field.component */
@@ -4879,11 +4880,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i10 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i11 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     function RecurrenceModalComponent_main_6_form_1_div_1_mat_option_5_Template(rf, ctx) {
       if (rf & 1) {
@@ -5205,11 +5206,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var rxjs_1 = __webpack_require__(
     /*! rxjs */
@@ -5237,7 +5238,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
@@ -5249,11 +5250,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i5 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
@@ -5261,31 +5262,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i7 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i9 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var i10 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i11 = __webpack_require__(
     /*! @angular/material/tooltip */
-    "./node_modules/@angular/material/fesm2015/tooltip.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tooltip.js");
 
     var i12 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     function SpaceSelectModalComponent_ng_container_8_mat_form_field_1_mat_option_3_Template(rf, ctx) {
       if (rf & 1) {
@@ -5427,7 +5428,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var ctx_r26 = i0.ɵɵnextContext(3);
           return ctx_r26.multiple ? ctx_r26.addSpace(space_r25) : ctx_r26.save([space_r25]);
         });
-        i0.ɵɵtext(12, " Select ");
+        i0.ɵɵtext(12);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -5441,18 +5442,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate(space_r25.level.name);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(6, _c0));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(7, _c0));
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate(space_r25.capacity || "0");
         i0.ɵɵadvance(2);
         i0.ɵɵclassProp("request", ctx_r24.request_map[space_r25.id]);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", ctx_r24.request_map[space_r25.id] ? "Request" : "Select", " ");
       }
     }
 
     function SpaceSelectModalComponent_ng_container_10_ng_container_1_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, SpaceSelectModalComponent_ng_container_10_ng_container_1_div_1_Template, 13, 7, "div", 17);
+        i0.ɵɵtemplate(1, SpaceSelectModalComponent_ng_container_10_ng_container_1_div_1_Template, 13, 8, "div", 17);
         i0.ɵɵelementContainerEnd();
       }
 
@@ -5952,7 +5955,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [i3.MatButton, i4.MatDialogClose, i5.IconComponent, i4.MatDialogContent, i6.NgIf, i7.MatFormField, i8.MatSelect, i6.NgForOf, i9.MatOption, i10.ɵb, i11.MatTooltip, i12.MatSpinner],
-      styles: [".heading[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n}\nmat-form-field[_ngcontent-%COMP%] {\n  width: calc(100% - 1em);\n  height: 3.5em;\n  margin: 0 auto;\n}\nmain[_ngcontent-%COMP%] {\n  display: flex;\n}\n.block[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  width: 24em;\n  height: 65vh;\n}\n.block[_ngcontent-%COMP%]:first-child {\n  border-right: 1px solid #ccc;\n}\n.list[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  min-height: 50%;\n  width: 100%;\n  overflow: hidden auto;\n  border-top: 1px solid #ccc;\n}\n.item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.5em;\n  border-bottom: 1px solid #ccc;\n}\n.item[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 1.5em;\n  width: 1.5em;\n  border-radius: 100%;\n  font-size: 1.5em;\n  margin-right: 0.4em;\n  background-color: #1937ea;\n  color: #fff;\n}\n.item[_ngcontent-%COMP%]   .icon.request[_ngcontent-%COMP%] {\n  background-color: #ffb300;\n}\n.name[_ngcontent-%COMP%] {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.info[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n}\n.details[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 8em;\n}\n.info-block[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  height: 3em;\n  width: 3em;\n}\nbutton.request[_ngcontent-%COMP%] {\n  background-color: #ffb300;\n  border-color: #ffb300;\n}\nh3[_ngcontent-%COMP%] {\n  text-align: center;\n  width: 100%;\n  border-bottom: 1px solid #ccc;\n  margin: 0;\n  padding: 0.5em 0;\n}\n.capacity[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.5em;\n}\nfooter[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n  width: 100%;\n  text-align: center;\n  padding: 0.5em;\n}\n.selected[_ngcontent-%COMP%] {\n  transition: transform 200ms;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .selected[_ngcontent-%COMP%] {\n    position: absolute;\n    background-color: #fff;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    transform: translateX(100%);\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .selected[_ngcontent-%COMP%] {\n    position: absolute;\n    background-color: #fff;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    transform: translateX(100%);\n  }\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .selected.show[_ngcontent-%COMP%] {\n    transform: translateX(0%);\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .selected.show[_ngcontent-%COMP%] {\n    transform: translateX(0%);\n  }\n}\n.selected[_ngcontent-%COMP%]   .close[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  right: 0.25em;\n}\n.selected[_ngcontent-%COMP%]   .tag[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0.5em;\n  left: 0;\n  transform: translateX(-100%);\n  padding: 0.5em 0 0.5em 0.5em;\n  overflow: hidden;\n}\n.selected[_ngcontent-%COMP%]   .tag[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  background-color: #fff;\n  border-radius: 4px 0 0 4px;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL292ZXJsYXlzL3NwYWNlLXNlbGVjdC1tb2RhbC9zcGFjZS1zZWxlY3QtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL3NwYWNlLXNlbGVjdC1tb2RhbC9zcGFjZS1zZWxlY3QtbW9kYWwuY29tcG9uZW50LnNjc3MiLCIvYnVpbGRzL2FjYS1lbmdpbmUvbWNraW5zZXkvbWNraW5zZXktc3RhZmYtYXBwL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy9taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFpQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxPQUFBO0VBQ0EsY0FBQTtBQ01KO0FESEE7RUFDSSxrQkFBQTtFQUNBLGdCQUFBO0FDTUo7QURIQTtFQUNJLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLGNBQUE7QUNNSjtBREhBO0VBQ0ksYUFBQTtBQ01KO0FESEE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDTUo7QURMSTtFQUNJLDRCQUFBO0FDT1I7QURIQTtFQUNJLGtCQUFBO0VBQ0EsT0FBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EscUJBQUE7RUFDQSwwQkFBQTtBQ01KO0FESEE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxjQUFBO0VBQ0EsNkJBQUE7QUNNSjtBREpJO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtFQUNBLHlCRHZDUTtFQ3dDUixXQUFBO0FDTVI7QURMUTtFQUNJLHlCRGxERjtBRXlEVjtBREZBO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLHVCQUFBO0FDS0o7QURGQTtFQUNJLGdCQUFBO0FDS0o7QURGQTtFQUNJLE9BQUE7RUFDQSxjQUFBO0FDS0o7QURESTtFQUNJLFdBQUE7RUFDQSxVQUFBO0FDSVI7QURDSTtFQUNJLHlCRC9FRTtFQ2dGRixxQkRoRkU7QUVrRlY7QURFQTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLDZCQUFBO0VBQ0EsU0FBQTtFQUNBLGdCQUFBO0FDQ0o7QURFQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGNBQUE7QUNDSjtBREVBO0VBQ0ksMEJBQUE7RUFDQSxXQUFBO0VBQ0Esa0JBQUE7RUFDQSxjQUFBO0FDQ0o7QURFQTtFQUNJLDJCQUFBO0FDQ0o7QUYxRFE7RUN3RFI7SUFHUSxrQkFBQTtJQUNBLHNCQUFBO0lBQ0EsTUFBQTtJQUNBLFNBQUE7SUFDQSxRQUFBO0lBQ0EsMkJBQUE7RUNHTjtBQUNGO0FGakVRO0VDcURSO0lBR1Esa0JBQUE7SUFDQSxzQkFBQTtJQUNBLE1BQUE7SUFDQSxTQUFBO0lBQ0EsUUFBQTtJQUNBLDJCQUFBO0VDYU47QUFDRjtBRjlFUTtFQ21FSjtJQUVRLHlCQUFBO0VDYVY7QUFDRjtBRmhGUTtFQ2dFSjtJQUVRLHlCQUFBO0VDa0JWO0FBQ0Y7QURmSTtFQUNJLGtCQUFBO0VBQ0EsTUFBQTtFQUNBLGFBQUE7QUNpQlI7QURkSTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLE9BQUE7RUFDQSw0QkFBQTtFQUNBLDRCQUFBO0VBQ0EsZ0JBQUE7QUNnQlI7QURkUTtFQUNJLHNCQUFBO0VBQ0EsMEJBQUE7RUU5SVIsaUhBQUE7QUQrSkoiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy9zcGFjZS1zZWxlY3QtbW9kYWwvc3BhY2Utc2VsZWN0LW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuJGhlYWRlci1iYWNrOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwNTFDMkMsICMwNTFDMkMgNDAlLCAjMEIyNDUzIDYwJSwgIzFGNDBFNiAxMDAlKTtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICdtaXhpbnMnO1xuXG4uaGVhZGluZyB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDUwJTtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxubWF0LWZvcm0tZmllbGQge1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAxZW0pO1xuICAgIGhlaWdodDogMy41ZW07XG4gICAgbWFyZ2luOiAwIGF1dG87XG59XG5cbm1haW4ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG59XG5cbi5ibG9jayB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgd2lkdGg6IDI0ZW07XG4gICAgaGVpZ2h0OiA2NXZoO1xuICAgICY6Zmlyc3QtY2hpbGQge1xuICAgICAgICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjY2NjO1xuICAgIH1cbn1cblxuLmxpc3Qge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi1oZWlnaHQ6IDUwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBvdmVyZmxvdzogaGlkZGVuIGF1dG87XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbi5pdGVtIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogLjVlbTtcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYztcblxuICAgIC5pY29uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIGhlaWdodDogMS41ZW07XG4gICAgICAgIHdpZHRoOiAxLjVlbTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICAgICAgZm9udC1zaXplOiAxLjVlbTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAuNGVtO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgICYucmVxdWVzdCB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkcGVuZGluZztcbiAgICAgICAgfVxuICAgIH1cbn1cblxuLm5hbWUge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuLmluZm8ge1xuICAgIGZvbnQtc2l6ZTogLjhlbTtcbn1cblxuLmRldGFpbHMge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA4ZW07XG59XG5cbi5pbmZvLWJsb2NrIHtcbiAgICAuaWNvbiB7XG4gICAgICAgIGhlaWdodDogM2VtO1xuICAgICAgICB3aWR0aDogM2VtO1xuICAgIH1cbn1cblxuYnV0dG9uIHtcbiAgICAmLnJlcXVlc3Qge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkcGVuZGluZztcbiAgICAgICAgYm9yZGVyLWNvbG9yOiAkcGVuZGluZztcbiAgICB9XG59XG5cbmgzIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gICAgbWFyZ2luOiAwO1xuICAgIHBhZGRpbmc6IC41ZW0gMDtcbn1cblxuLmNhcGFjaXR5IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogLjVlbTtcbn1cblxuZm9vdGVyIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgcGFkZGluZzogLjVlbTtcbn1cblxuLnNlbGVjdGVkIHtcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjAwbXM7XG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgICAgICB0b3A6IDA7XG4gICAgICAgIGJvdHRvbTogMDtcbiAgICAgICAgcmlnaHQ6IDA7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxMDAlKTtcbiAgICB9XG5cbiAgICAmLnNob3cge1xuICAgICAgICBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDAlKTtcbiAgICAgICAgfVxuICAgIH1cblxuICAgIC5jbG9zZSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICByaWdodDogLjI1ZW07XG4gICAgfVxuXG4gICAgLnRhZyB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgYm90dG9tOiAuNWVtO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTEwMCUpO1xuICAgICAgICBwYWRkaW5nOiAuNWVtIDAgLjVlbSAuNWVtO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgICAgIGJ1dHRvbiB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4IDAgMCA0cHg7XG4gICAgICAgICAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmhlYWRpbmcge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDUwJTtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG5tYXQtZm9ybS1maWVsZCB7XG4gIHdpZHRoOiBjYWxjKDEwMCUgLSAxZW0pO1xuICBoZWlnaHQ6IDMuNWVtO1xuICBtYXJnaW46IDAgYXV0bztcbn1cblxubWFpbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG5cbi5ibG9jayB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHdpZHRoOiAyNGVtO1xuICBoZWlnaHQ6IDY1dmg7XG59XG4uYmxvY2s6Zmlyc3QtY2hpbGQge1xuICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjY2NjO1xufVxuXG4ubGlzdCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZmxleDogMTtcbiAgbWluLWhlaWdodDogNTAlO1xuICB3aWR0aDogMTAwJTtcbiAgb3ZlcmZsb3c6IGhpZGRlbiBhdXRvO1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbn1cblxuLml0ZW0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG59XG4uaXRlbSAuaWNvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDEuNWVtO1xuICB3aWR0aDogMS41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gIGZvbnQtc2l6ZTogMS41ZW07XG4gIG1hcmdpbi1yaWdodDogMC40ZW07XG4gIGJhY2tncm91bmQtY29sb3I6ICMxOTM3ZWE7XG4gIGNvbG9yOiAjZmZmO1xufVxuLml0ZW0gLmljb24ucmVxdWVzdCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmIzMDA7XG59XG5cbi5uYW1lIHtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbi5pbmZvIHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbn1cblxuLmRldGFpbHMge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDhlbTtcbn1cblxuLmluZm8tYmxvY2sgLmljb24ge1xuICBoZWlnaHQ6IDNlbTtcbiAgd2lkdGg6IDNlbTtcbn1cblxuYnV0dG9uLnJlcXVlc3Qge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZiMzAwO1xuICBib3JkZXItY29sb3I6ICNmZmIzMDA7XG59XG5cbmgzIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB3aWR0aDogMTAwJTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMC41ZW0gMDtcbn1cblxuLmNhcGFjaXR5IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcGFkZGluZzogMC41ZW07XG59XG5cbmZvb3RlciB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjY2NjO1xuICB3aWR0aDogMTAwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVlbTtcbn1cblxuLnNlbGVjdGVkIHtcbiAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDIwMG1zO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgLnNlbGVjdGVkIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICB0b3A6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxMDAlKTtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gIC5zZWxlY3RlZCB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgdG9wOiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICByaWdodDogMDtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMTAwJSk7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5zZWxlY3RlZC5zaG93IHtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMCUpO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgLnNlbGVjdGVkLnNob3cge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgwJSk7XG4gIH1cbn1cbi5zZWxlY3RlZCAuY2xvc2Uge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgcmlnaHQ6IDAuMjVlbTtcbn1cbi5zZWxlY3RlZCAudGFnIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDAuNWVtO1xuICBsZWZ0OiAwO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTEwMCUpO1xuICBwYWRkaW5nOiAwLjVlbSAwIDAuNWVtIDAuNWVtO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuLnNlbGVjdGVkIC50YWcgYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyLXJhZGl1czogNHB4IDAgMCA0cHg7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xufSIsIlxuQG1peGluIGhpZGUtdGV4dC1vdmVyZmxvdyB7XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG5AbWl4aW4gYm94LXNoYWRvdygkY29sb3I6ICMwMDAsICRkZXB0aDogMSkge1xuICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAxcHggKiAoJGRlcHRoIC0gMSkgcmdiYSgjMDAwLCAuMiksXG4gICAgICAgICAgICAgICAgMCAxcHggMXB4IDAgcmdiYSgjMDAwLCAuMTQpLFxuICAgICAgICAgICAgICAgIDAgMnB4IDFweCAtMXB4IHJnYmEoIzAwMCwgLjEyKTtcbn1cbiJdfQ== */"]
+      styles: [".heading[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n}\nmat-form-field[_ngcontent-%COMP%] {\n  width: calc(100% - 1em);\n  height: 3.5em;\n  margin: 0 auto;\n}\nmain[_ngcontent-%COMP%] {\n  display: flex;\n}\n.block[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  width: 24em;\n  height: 65vh;\n}\n.block[_ngcontent-%COMP%]:first-child {\n  border-right: 1px solid #ccc;\n}\n.list[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  min-height: 50%;\n  width: 100%;\n  overflow: hidden auto;\n  border-top: 1px solid #ccc;\n}\n.item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.5em;\n  border-bottom: 1px solid #ccc;\n}\n.item[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 1.5em;\n  width: 1.5em;\n  border-radius: 100%;\n  font-size: 1.5em;\n  margin-right: 0.4em;\n  background-color: #1937ea;\n  color: #fff;\n}\n.item[_ngcontent-%COMP%]   .icon.request[_ngcontent-%COMP%] {\n  background-color: #ffb300;\n}\n.name[_ngcontent-%COMP%] {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.info[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n}\n.details[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 8em;\n}\n.info-block[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  height: 3em;\n  width: 3em;\n}\nbutton.request[_ngcontent-%COMP%] {\n  background-color: #ffb300;\n  border-color: #ffb300;\n}\n.actions[_ngcontent-%COMP%]   button[mat-button][_ngcontent-%COMP%] {\n  min-width: 6.5em;\n}\nh3[_ngcontent-%COMP%] {\n  text-align: center;\n  width: 100%;\n  border-bottom: 1px solid #ccc;\n  margin: 0;\n  padding: 0.5em 0;\n}\n.capacity[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.5em;\n}\nfooter[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n  width: 100%;\n  text-align: center;\n  padding: 0.5em;\n}\n.selected[_ngcontent-%COMP%] {\n  transition: transform 200ms;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .selected[_ngcontent-%COMP%] {\n    position: absolute;\n    background-color: #fff;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    transform: translateX(100%);\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .selected[_ngcontent-%COMP%] {\n    position: absolute;\n    background-color: #fff;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    transform: translateX(100%);\n  }\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .selected.show[_ngcontent-%COMP%] {\n    transform: translateX(0%);\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .selected.show[_ngcontent-%COMP%] {\n    transform: translateX(0%);\n  }\n}\n.selected[_ngcontent-%COMP%]   .close[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  right: 0.25em;\n}\n.selected[_ngcontent-%COMP%]   .tag[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0.5em;\n  left: 0;\n  transform: translateX(-100%);\n  padding: 0.5em 0 0.5em 0.5em;\n  overflow: hidden;\n}\n.selected[_ngcontent-%COMP%]   .tag[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  background-color: #fff;\n  border-radius: 4px 0 0 4px;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL292ZXJsYXlzL3NwYWNlLXNlbGVjdC1tb2RhbC9zcGFjZS1zZWxlY3QtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL3NwYWNlLXNlbGVjdC1tb2RhbC9zcGFjZS1zZWxlY3QtbW9kYWwuY29tcG9uZW50LnNjc3MiLCIvYnVpbGRzL2FjYS1lbmdpbmUvbWNraW5zZXkvbWNraW5zZXktc3RhZmYtYXBwL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy9taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFpQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxPQUFBO0VBQ0EsY0FBQTtBQ01KO0FESEE7RUFDSSxrQkFBQTtFQUNBLGdCQUFBO0FDTUo7QURIQTtFQUNJLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLGNBQUE7QUNNSjtBREhBO0VBQ0ksYUFBQTtBQ01KO0FESEE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDTUo7QURMSTtFQUNJLDRCQUFBO0FDT1I7QURIQTtFQUNJLGtCQUFBO0VBQ0EsT0FBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EscUJBQUE7RUFDQSwwQkFBQTtBQ01KO0FESEE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxjQUFBO0VBQ0EsNkJBQUE7QUNNSjtBREpJO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtFQUNBLHlCRHZDUTtFQ3dDUixXQUFBO0FDTVI7QURMUTtFQUNJLHlCRGxERjtBRXlEVjtBREZBO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLHVCQUFBO0FDS0o7QURGQTtFQUNJLGdCQUFBO0FDS0o7QURGQTtFQUNJLE9BQUE7RUFDQSxjQUFBO0FDS0o7QURESTtFQUNJLFdBQUE7RUFDQSxVQUFBO0FDSVI7QURDSTtFQUNJLHlCRC9FRTtFQ2dGRixxQkRoRkU7QUVrRlY7QURHSTtFQUNJLGdCQUFBO0FDQVI7QURJQTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLDZCQUFBO0VBQ0EsU0FBQTtFQUNBLGdCQUFBO0FDREo7QURJQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGNBQUE7QUNESjtBRElBO0VBQ0ksMEJBQUE7RUFDQSxXQUFBO0VBQ0Esa0JBQUE7RUFDQSxjQUFBO0FDREo7QURJQTtFQUNJLDJCQUFBO0FDREo7QUY5RFE7RUM4RFI7SUFHUSxrQkFBQTtJQUNBLHNCQUFBO0lBQ0EsTUFBQTtJQUNBLFNBQUE7SUFDQSxRQUFBO0lBQ0EsMkJBQUE7RUNDTjtBQUNGO0FGckVRO0VDMkRSO0lBR1Esa0JBQUE7SUFDQSxzQkFBQTtJQUNBLE1BQUE7SUFDQSxTQUFBO0lBQ0EsUUFBQTtJQUNBLDJCQUFBO0VDV047QUFDRjtBRmxGUTtFQ3lFSjtJQUVRLHlCQUFBO0VDV1Y7QUFDRjtBRnBGUTtFQ3NFSjtJQUVRLHlCQUFBO0VDZ0JWO0FBQ0Y7QURiSTtFQUNJLGtCQUFBO0VBQ0EsTUFBQTtFQUNBLGFBQUE7QUNlUjtBRFpJO0VBQ0ksa0JBQUE7RUFDQSxhQUFBO0VBQ0EsT0FBQTtFQUNBLDRCQUFBO0VBQ0EsNEJBQUE7RUFDQSxnQkFBQTtBQ2NSO0FEWlE7RUFDSSxzQkFBQTtFQUNBLDBCQUFBO0VFcEpSLGlIQUFBO0FEbUtKIiwiZmlsZSI6InNyYy9hcHAvb3ZlcmxheXMvc3BhY2Utc2VsZWN0LW1vZGFsL3NwYWNlLXNlbGVjdC1tb2RhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcbiRoZWFkZXItYmFjazogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCAjMDUxQzJDLCAjMDUxQzJDIDQwJSwgIzBCMjQ1MyA2MCUsICMxRjQwRTYgMTAwJSk7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9ICBAZWxzZSBpZiAkbWVkaWEgPT0gbGF0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAoJG1lZGlhID09IHRhYmxldC1tb2JpbGUgb3IgJG1lZGlhID09IG5vdC1kZXNrdG9wKSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuQGltcG9ydCAnbWl4aW5zJztcblxuLmhlYWRpbmcge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudCB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbm1hdC1mb3JtLWZpZWxkIHtcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gMWVtKTtcbiAgICBoZWlnaHQ6IDMuNWVtO1xuICAgIG1hcmdpbjogMCBhdXRvO1xufVxuXG5tYWluIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xufVxuXG4uYmxvY2sge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHdpZHRoOiAyNGVtO1xuICAgIGhlaWdodDogNjV2aDtcbiAgICAmOmZpcnN0LWNoaWxkIHtcbiAgICAgICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2NjYztcbiAgICB9XG59XG5cbi5saXN0IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZmxleDogMTtcbiAgICBtaW4taGVpZ2h0OiA1MCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbiBhdXRvO1xuICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCAjY2NjO1xufVxuXG4uaXRlbSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmc6IC41ZW07XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG5cbiAgICAuaWNvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBoZWlnaHQ6IDEuNWVtO1xuICAgICAgICB3aWR0aDogMS41ZW07XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIGZvbnQtc2l6ZTogMS41ZW07XG4gICAgICAgIG1hcmdpbi1yaWdodDogLjRlbTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICAmLnJlcXVlc3Qge1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHBlbmRpbmc7XG4gICAgICAgIH1cbiAgICB9XG59XG5cbi5uYW1lIHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbi5pbmZvIHtcbiAgICBmb250LXNpemU6IC44ZW07XG59XG5cbi5kZXRhaWxzIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogOGVtO1xufVxuXG4uaW5mby1ibG9jayB7XG4gICAgLmljb24ge1xuICAgICAgICBoZWlnaHQ6IDNlbTtcbiAgICAgICAgd2lkdGg6IDNlbTtcbiAgICB9XG59XG5cbmJ1dHRvbiB7XG4gICAgJi5yZXF1ZXN0IHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHBlbmRpbmc7XG4gICAgICAgIGJvcmRlci1jb2xvcjogJHBlbmRpbmc7XG4gICAgfVxufVxuXG4uYWN0aW9ucyB7XG4gICAgYnV0dG9uW21hdC1idXR0b25dIHtcbiAgICAgICAgbWluLXdpZHRoOiA2LjVlbTtcbiAgICB9XG59XG5cbmgzIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gICAgbWFyZ2luOiAwO1xuICAgIHBhZGRpbmc6IC41ZW0gMDtcbn1cblxuLmNhcGFjaXR5IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogLjVlbTtcbn1cblxuZm9vdGVyIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgcGFkZGluZzogLjVlbTtcbn1cblxuLnNlbGVjdGVkIHtcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjAwbXM7XG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgICAgICB0b3A6IDA7XG4gICAgICAgIGJvdHRvbTogMDtcbiAgICAgICAgcmlnaHQ6IDA7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxMDAlKTtcbiAgICB9XG5cbiAgICAmLnNob3cge1xuICAgICAgICBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDAlKTtcbiAgICAgICAgfVxuICAgIH1cblxuICAgIC5jbG9zZSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICByaWdodDogLjI1ZW07XG4gICAgfVxuXG4gICAgLnRhZyB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgYm90dG9tOiAuNWVtO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTEwMCUpO1xuICAgICAgICBwYWRkaW5nOiAuNWVtIDAgLjVlbSAuNWVtO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgICAgIGJ1dHRvbiB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4IDAgMCA0cHg7XG4gICAgICAgICAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmhlYWRpbmcge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDUwJTtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG5tYXQtZm9ybS1maWVsZCB7XG4gIHdpZHRoOiBjYWxjKDEwMCUgLSAxZW0pO1xuICBoZWlnaHQ6IDMuNWVtO1xuICBtYXJnaW46IDAgYXV0bztcbn1cblxubWFpbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG5cbi5ibG9jayB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHdpZHRoOiAyNGVtO1xuICBoZWlnaHQ6IDY1dmg7XG59XG4uYmxvY2s6Zmlyc3QtY2hpbGQge1xuICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjY2NjO1xufVxuXG4ubGlzdCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZmxleDogMTtcbiAgbWluLWhlaWdodDogNTAlO1xuICB3aWR0aDogMTAwJTtcbiAgb3ZlcmZsb3c6IGhpZGRlbiBhdXRvO1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbn1cblxuLml0ZW0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG59XG4uaXRlbSAuaWNvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDEuNWVtO1xuICB3aWR0aDogMS41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gIGZvbnQtc2l6ZTogMS41ZW07XG4gIG1hcmdpbi1yaWdodDogMC40ZW07XG4gIGJhY2tncm91bmQtY29sb3I6ICMxOTM3ZWE7XG4gIGNvbG9yOiAjZmZmO1xufVxuLml0ZW0gLmljb24ucmVxdWVzdCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmIzMDA7XG59XG5cbi5uYW1lIHtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbi5pbmZvIHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbn1cblxuLmRldGFpbHMge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDhlbTtcbn1cblxuLmluZm8tYmxvY2sgLmljb24ge1xuICBoZWlnaHQ6IDNlbTtcbiAgd2lkdGg6IDNlbTtcbn1cblxuYnV0dG9uLnJlcXVlc3Qge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZiMzAwO1xuICBib3JkZXItY29sb3I6ICNmZmIzMDA7XG59XG5cbi5hY3Rpb25zIGJ1dHRvblttYXQtYnV0dG9uXSB7XG4gIG1pbi13aWR0aDogNi41ZW07XG59XG5cbmgzIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB3aWR0aDogMTAwJTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMC41ZW0gMDtcbn1cblxuLmNhcGFjaXR5IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcGFkZGluZzogMC41ZW07XG59XG5cbmZvb3RlciB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjY2NjO1xuICB3aWR0aDogMTAwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVlbTtcbn1cblxuLnNlbGVjdGVkIHtcbiAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDIwMG1zO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgLnNlbGVjdGVkIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICB0b3A6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxMDAlKTtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gIC5zZWxlY3RlZCB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgdG9wOiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICByaWdodDogMDtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMTAwJSk7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5zZWxlY3RlZC5zaG93IHtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMCUpO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgLnNlbGVjdGVkLnNob3cge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgwJSk7XG4gIH1cbn1cbi5zZWxlY3RlZCAuY2xvc2Uge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgcmlnaHQ6IDAuMjVlbTtcbn1cbi5zZWxlY3RlZCAudGFnIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDAuNWVtO1xuICBsZWZ0OiAwO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTEwMCUpO1xuICBwYWRkaW5nOiAwLjVlbSAwIDAuNWVtIDAuNWVtO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuLnNlbGVjdGVkIC50YWcgYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyLXJhZGl1czogNHB4IDAgMCA0cHg7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xufSIsIlxuQG1peGluIGhpZGUtdGV4dC1vdmVyZmxvdyB7XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG5AbWl4aW4gYm94LXNoYWRvdygkY29sb3I6ICMwMDAsICRkZXB0aDogMSkge1xuICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAxcHggKiAoJGRlcHRoIC0gMSkgcmdiYSgjMDAwLCAuMiksXG4gICAgICAgICAgICAgICAgMCAxcHggMXB4IDAgcmdiYSgjMDAwLCAuMTQpLFxuICAgICAgICAgICAgICAgIDAgMnB4IDFweCAtMXB4IHJnYmEoIzAwMCwgLjEyKTtcbn1cbiJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -6004,11 +6007,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -6028,11 +6031,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -6044,7 +6047,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i5 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
@@ -6052,11 +6055,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i7 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     function TimeExtensionModalComponent_ng_container_7_button_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -6363,15 +6366,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var ngx_interactive_map_1 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var base_directive_1 = __webpack_require__(
     /*! ../../shared/base.directive */
@@ -6379,15 +6382,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i3 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
@@ -6395,15 +6398,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     function ViewRoomModalComponent_div_8_Template(rf, ctx) {
       if (rf & 1) {
@@ -6590,19 +6593,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var platform_browser_1 = __webpack_require__(
     /*! @angular/platform-browser */
-    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+    "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 
     var service_worker_1 = __webpack_require__(
     /*! @angular/service-worker */
-    "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
+    "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
 
     var snack_bar_1 = __webpack_require__(
     /*! @angular/material/snack-bar */
-    "./node_modules/@angular/material/fesm2015/snack-bar.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -6610,11 +6613,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var ngx_heap_io_1 = __webpack_require__(
     /*! @acaprojects/ngx-heap-io */
-    "./node_modules/@acaprojects/ngx-heap-io/fesm2015/acaprojects-ngx-heap-io.js");
+    "./node_modules/@acaprojects/ngx-heap-io/__ivy_ngcc__/fesm2015/acaprojects-ngx-heap-io.js");
 
     var rxjs_1 = __webpack_require__(
     /*! rxjs */
@@ -6634,15 +6637,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/platform-browser */
-    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+    "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 
     var i2 = __webpack_require__(
     /*! @angular/service-worker */
-    "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
+    "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
 
     var i3 = __webpack_require__(
     /*! ./settings.service */
@@ -6654,15 +6657,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/snack-bar */
-    "./node_modules/@angular/material/fesm2015/snack-bar.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
 
     var i7 = __webpack_require__(
     /*! @acaprojects/ngx-heap-io */
-    "./node_modules/@acaprojects/ngx-heap-io/fesm2015/acaprojects-ngx-heap-io.js");
+    "./node_modules/@acaprojects/ngx-heap-io/__ivy_ngcc__/fesm2015/acaprojects-ngx-heap-io.js");
 
     var ApplicationService =
     /*#__PURE__*/
@@ -7907,12 +7910,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function _delete(id) {
           var _this41 = this;
 
+          var q = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
           var key = "delete|".concat(id);
           /* istanbul ignore else */
 
           if (!this._promises[key]) {
             this._promises[key] = new Promise(function (resolve, reject) {
-              var url = "".concat(_this41.route(), "/").concat(id);
+              var query = api_utilities_1.toQueryString(q);
+              var url = "".concat(_this41.route(), "/").concat(id).concat(query ? '?' + query : '');
 
               _this41.http["delete"](url).subscribe(function (_) {
                 return null;
@@ -8143,8 +8148,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super13 = _createSuper(Booking);
 
-      function Booking(raw_data) {
+      function Booking() {
         var _this42;
+
+        var raw_data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
         _classCallCheck(this, Booking);
 
@@ -8154,8 +8161,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this42._display = {};
         _this42.icaluid = raw_data.icaluid || _this42.id || '';
         _this42.title = raw_data.title || raw_data.subject || raw_data.Subject || '';
-        var start = dayjs(raw_data.date || raw_data.start_epoch * 1000 || raw_data.start * 1000 || raw_data.Start);
-        _this42.date = start.valueOf();
+        var time = raw_data.date || raw_data.start_epoch * 1000 || raw_data.start * 1000 || raw_data.Start;
+        var start = dayjs(time).startOf('m');
+        _this42.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
         _this42.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
         _this42.body = // (raw_data.body instanceof Object ? raw_data.body.content : raw_data.body) ||
         raw_data.description || '';
@@ -8289,7 +8297,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var data = _get(_getPrototypeOf(Booking.prototype), "toJSON", this).call(this, with_changes);
 
           var date = dayjs(data.date);
-          data.start = date.unix();
+          data.start = data.all_day ? date.startOf('d').unix() : date.unix();
           data.end = date.add(data.duration || 60, 'm').unix();
           data.auto_approve = data.space_list.map(function (space) {
             return !_this43.id || _this43.changes.date || _this43.changes.duration ? !space || space instanceof space_class_1.Space && !space.byRequest({
@@ -8545,7 +8553,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var rxjs_1 = __webpack_require__(
     /*! rxjs */
@@ -9152,11 +9160,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var base_service_1 = __webpack_require__(
     /*! ../base.service */
@@ -9172,11 +9180,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var BookingsService =
     /*#__PURE__*/
@@ -9505,11 +9513,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var catering_item_class_1 = __webpack_require__(
     /*! ./catering-item.class */
@@ -9525,11 +9533,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var CateringMenuService =
     /*#__PURE__*/
@@ -9650,7 +9658,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this._server_names = {};
         this.id = data.id || "order-".concat(Math.floor(Math.random() * 999999999));
         this.booking = data.booking;
-        this.delivery_time = data.delivery_time || data.start || 0;
+        this.delivery_time = typeof data.delivery_time === 'number' ? data.delivery_time : 0;
         this.booking_date = data.booking_date;
         this.location_id = data.location_id || data.location || (data.space ? data.space.id : '') || '';
         this.location = data.location || (data.space ? data.space.name : '') || '';
@@ -10041,6 +10049,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this48.catering_restricted_from = raw_data.catering_restricted_from || disc_info.catering_restricted_from || settings.catering_restricted_from || 0;
         _this48.currency = raw_data.currency || disc_info.currency || settings.currency || 'USD';
         _this48.required = raw_data.required || disc_info.required || settings.required || {};
+
+        if (disc_info.requires_equipment_code) {
+          _this48.required.equipment_code = true;
+        }
+
+        if (disc_info.requires_expected_attendees) {
+          _this48.required.expected_attendees = true;
+        }
+
         _this48.timezone = raw_data.timezone || disc_info.timezone || settings.timezone || '';
         _this48.has_catering = raw_data.has_catering || disc_info.has_catering || settings.has_catering || false;
         _this48.holding_bay = raw_data.holding_bay || disc_info.holding_bay || settings.holding_bay || '';
@@ -10400,11 +10417,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var base_service_1 = __webpack_require__(
     /*! ../base.service */
@@ -10440,11 +10457,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var i2 = __webpack_require__(
     /*! ../../app.service */
@@ -11491,11 +11508,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -11531,11 +11548,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var i2 = __webpack_require__(
     /*! ../organisation/organisation.service */
@@ -11948,7 +11965,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var rxjs_1 = __webpack_require__(
     /*! rxjs */
@@ -12067,19 +12084,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var common_1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var http_1 = __webpack_require__(
     /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -12115,19 +12132,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var i2 = __webpack_require__(
     /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! ../../app.service */
@@ -12487,7 +12504,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var rxjs_1 = __webpack_require__(
     /*! rxjs */
@@ -12499,7 +12516,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
     /** List of keys that cannot be in a combination by themselves or with each other */
 
 
@@ -12764,11 +12781,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var http_1 = __webpack_require__(
     /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
     var general_utilities_1 = __webpack_require__(
     /*! ../shared/utilities/general.utilities */
@@ -12788,11 +12805,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
     var SettingsService =
     /*#__PURE__*/
@@ -13254,7 +13271,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var base_class_1 = __webpack_require__(
     /*! ./base.class */
@@ -13262,7 +13279,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var BaseDirective =
     /*#__PURE__*/
@@ -13331,7 +13348,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -13339,7 +13356,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! ../../icon/icon.component */
@@ -13488,23 +13505,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i2 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i3 = __webpack_require__(
     /*! ../../icon/icon.component */
@@ -13761,11 +13778,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -13777,15 +13794,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var menu_1 = __webpack_require__(
     /*! @angular/material/menu */
-    "./node_modules/@angular/material/fesm2015/menu.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/menu */
-    "./node_modules/@angular/material/fesm2015/menu.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 
     var i2 = __webpack_require__(
     /*! ../../icon/icon.component */
@@ -13793,11 +13810,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @acaprojects/ngx-date-picker */
-    "./node_modules/@acaprojects/ngx-date-picker/fesm2015/acaprojects-ngx-date-picker.js");
+    "./node_modules/@acaprojects/ngx-date-picker/__ivy_ngcc__/fesm2015/acaprojects-ngx-date-picker.js");
 
     var i4 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var _c0 = function _c0(a2) {
       return {
@@ -14097,11 +14114,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -14117,23 +14134,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i2 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     function DurationFieldComponent_mat_option_4_Template(rf, ctx) {
       if (rf & 1) {
@@ -14380,15 +14397,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var select_1 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -14404,15 +14421,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var i2 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i3 = __webpack_require__(
     /*! ../../icon/icon.component */
@@ -14420,19 +14437,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i7 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var _c0 = ["select"];
 
@@ -14797,11 +14814,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var rxjs_1 = __webpack_require__(
     /*! rxjs */
@@ -14833,7 +14850,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -14845,19 +14862,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var i5 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/autocomplete */
-    "./node_modules/@angular/material/fesm2015/autocomplete.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/autocomplete.js");
 
     var i7 = __webpack_require__(
     /*! ../../icon/icon.component */
@@ -14865,23 +14882,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i8 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i9 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var i10 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i11 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i12 = __webpack_require__(
     /*! @angular/material/chips */
-    "./node_modules/@angular/material/fesm2015/chips.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/chips.js");
 
     var I18N_0;
 
@@ -15414,11 +15431,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var rxjs_1 = __webpack_require__(
     /*! rxjs */
@@ -15442,7 +15459,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/users/users.service */
@@ -15450,19 +15467,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i3 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var i4 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/autocomplete */
-    "./node_modules/@angular/material/fesm2015/autocomplete.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/autocomplete.js");
 
     var i6 = __webpack_require__(
     /*! ../../icon/icon.component */
@@ -15470,15 +15487,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i9 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var I18N_0;
 
@@ -15765,11 +15782,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var base_directive_1 = __webpack_require__(
     /*! ../../base.directive */
@@ -15777,11 +15794,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i2 = __webpack_require__(
     /*! ../icon/icon.component */
@@ -15923,7 +15940,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -15939,7 +15956,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -15947,11 +15964,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i3 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i4 = __webpack_require__(
     /*! ../icon/icon.component */
@@ -15959,7 +15976,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     var _c0 = function _c0(a0) {
       return [a0];
@@ -16147,15 +16164,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -16199,7 +16216,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -16211,15 +16228,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i6 = __webpack_require__(
     /*! ../../custom-fields/action-field/action-field.component */
@@ -16227,11 +16244,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var i9 = __webpack_require__(
     /*! ../../custom-fields/date-field/date-field.component */
@@ -16247,15 +16264,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i12 = __webpack_require__(
     /*! @angular/material/checkbox */
-    "./node_modules/@angular/material/fesm2015/checkbox.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
 
     var i13 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i14 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var i15 = __webpack_require__(
     /*! ../../custom-fields/user-list-field/user-list-field.component */
@@ -16263,7 +16280,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i16 = __webpack_require__(
     /*! @tinymce/tinymce-angular */
-    "./node_modules/@tinymce/tinymce-angular/fesm2015/tinymce-tinymce-angular.js");
+    "./node_modules/@tinymce/tinymce-angular/__ivy_ngcc__/fesm2015/tinymce-tinymce-angular.js");
 
     var I18N_0;
 
@@ -17094,31 +17111,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i2 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i3 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var I18N_0;
 
@@ -17392,7 +17409,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var base_directive_1 = __webpack_require__(
     /*! ../../base.directive */
@@ -17400,15 +17417,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i2 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     function IconComponent_div_0_i_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -17538,11 +17555,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -17562,7 +17579,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -17574,35 +17591,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var i7 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i8 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i9 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i10 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     function LoginComponent_i_5_Template(rf, ctx) {
       if (rf & 1) {
@@ -17964,11 +17981,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -17988,11 +18005,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i2 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -18004,32 +18021,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i7 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
-    function MapControlsComponent_mat_form_field_1_mat_option_2_Template(rf, ctx) {
+    function MapControlsComponent_mat_form_field_1_mat_option_4_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 6);
-        i0.ɵɵtext(1);
+        i0.ɵɵelementStart(1, "div", 7);
+        i0.ɵɵelementStart(2, "div", 8);
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "div", 9);
+        i0.ɵɵtext(5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(6, "div", 10);
+        i0.ɵɵtext(7);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
         var bld_r3 = ctx.$implicit;
         i0.ɵɵproperty("value", bld_r3.id);
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", bld_r3.name, " ");
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate(bld_r3.code);
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(bld_r3.name);
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(bld_r3.address);
       }
     }
 
@@ -18044,7 +18075,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var ctx_r4 = i0.ɵɵnextContext();
           return ctx_r4.setBuilding($event);
         });
-        i0.ɵɵtemplate(2, MapControlsComponent_mat_form_field_1_mat_option_2_Template, 2, 2, "mat-option", 4);
+        i0.ɵɵelementStart(2, "mat-select-trigger");
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(4, MapControlsComponent_mat_form_field_1_mat_option_4_Template, 8, 4, "mat-option", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
@@ -18053,6 +18087,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("value", ctx_r0.building);
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate2(" ", ctx_r0.building_details.code, " - ", ctx_r0.building_details.name, " ");
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngForOf", ctx_r0.building_list);
       }
@@ -18093,6 +18129,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Emitter for changes to the active level */
 
         _this94.levelChange = new core_1.EventEmitter();
+        /** Details of the active building */
+
+        _this94.building_details = _this94._org.building;
         /** List of available buildings */
 
         _this94.building_list = [];
@@ -18108,7 +18147,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this95 = this;
 
           this._org.listen('buildings').pipe(operators_1.first(function (_) {
-            console.log('First:', _);
             return !!_ && !!_.length;
           })).subscribe(function () {
             _this95.subscription('route.query', _this95._route.queryParamMap.subscribe(function (params) {
@@ -18128,7 +18166,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }));
 
-            console.log('Buildings:', _this95._org.buildings);
             _this95.building_list = _this95._org.buildings;
 
             _this95.timeout('check_building', function () {
@@ -18149,11 +18186,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var building = this._org.buildings.find(function (bld) {
             return bld.id === bld_id;
           });
-
-          console.log('Set building:', bld_id, building);
           /* istanbul ignore else */
 
+
           if (building) {
+            this.building_details = building;
             this.building = bld_id;
             this.level_list = building.levels;
             /* istanbul ignore else */
@@ -18208,11 +18245,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 5,
       vars: 3,
-      consts: [[1, "map-controls"], ["class", "map", "appearance", "outline", 4, "ngIf"], ["appearance", "outline", 1, "map"], ["name", "level", 3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "building", 3, "value", "valueChange"], [3, "value"]],
+      consts: [[1, "map-controls"], ["class", "map", "appearance", "outline", 4, "ngIf"], ["appearance", "outline", 1, "map"], ["name", "level", 3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "building", 3, "value", "valueChange"], [3, "value"], [1, "building-name"], [1, "code"], [1, "name"], [1, "address"]],
       template: function MapControlsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
-          i0.ɵɵtemplate(1, MapControlsComponent_mat_form_field_1_Template, 3, 2, "mat-form-field", 1);
+          i0.ɵɵtemplate(1, MapControlsComponent_mat_form_field_1_Template, 5, 4, "mat-form-field", 1);
           i0.ɵɵelementStart(2, "mat-form-field", 2);
           i0.ɵɵelementStart(3, "mat-select", 3);
           i0.ɵɵlistener("valueChange", function MapControlsComponent_Template_mat_select_valueChange_3_listener($event) {
@@ -18235,8 +18272,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngForOf", ctx.level_list);
         }
       },
-      directives: [i4.NgIf, i5.MatFormField, i6.MatSelect, i4.NgForOf, i7.MatOption],
-      styles: [".map-controls[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .map-controls[_ngcontent-%COMP%] {\n    flex-direction: row;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .map-controls[_ngcontent-%COMP%] {\n    flex-direction: row;\n  }\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  mat-form-field[_ngcontent-%COMP%]:nth-child(2) {\n    margin-left: 0.5em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  mat-form-field[_ngcontent-%COMP%]:nth-child(2) {\n    margin-left: 0.5em;\n  }\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  mat-form-field[_ngcontent-%COMP%] {\n    width: calc(50vw - .75em);\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  mat-form-field[_ngcontent-%COMP%] {\n    width: calc(50vw - .75em);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL21hcC1jb250cm9scy9tYXAtY29udHJvbHMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL21hcC1jb250cm9scy9tYXAtY29udHJvbHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBaUNBOztjQUFBO0FBYUE7O3NCQUFBO0FDNUNBO0VBQ0ksYUFBQTtFQUNBLHNCQUFBO0FDT0o7QUZpRFE7RUMxRFI7SUFLUSxtQkFBQTtFQ1FOO0FBQ0Y7QUYrQ1E7RUM3RFI7SUFLUSxtQkFBQTtFQ2FOO0FBQ0Y7QUZ1Q1E7RUNoREo7SUFFUSxrQkFBQTtFQ1lWO0FBQ0Y7QUZvQ1E7RUNuREo7SUFFUSxrQkFBQTtFQ2lCVjtBQUNGO0FGNEJRO0VDakRSO0lBT1EseUJBQUE7RUNrQk47QUFDRjtBRjBCUTtFQ3BEUjtJQU9RLHlCQUFBO0VDdUJOO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy9tYXAtY29udHJvbHMvbWFwLWNvbnRyb2xzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuJGhlYWRlci1iYWNrOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwNTFDMkMsICMwNTFDMkMgNDAlLCAjMEIyNDUzIDYwJSwgIzFGNDBFNiAxMDAlKTtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbi5tYXAtY29udHJvbHMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcblxuICAgIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gICAgfVxufVxuXG5tYXQtZm9ybS1maWVsZCB7XG4gICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICAgICAgbWFyZ2luLWxlZnQ6IC41ZW07XG4gICAgICAgIH1cbiAgICB9XG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgd2lkdGg6IGNhbGMoNTB2dyAtIC43NWVtKTtcbiAgICB9XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4ubWFwLWNvbnRyb2xzIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5tYXAtY29udHJvbHMge1xuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICAubWFwLWNvbnRyb2xzIHtcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICB9XG59XG5cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIG1hdC1mb3JtLWZpZWxkOm50aC1jaGlsZCgyKSB7XG4gICAgbWFyZ2luLWxlZnQ6IDAuNWVtO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgbWF0LWZvcm0tZmllbGQ6bnRoLWNoaWxkKDIpIHtcbiAgICBtYXJnaW4tbGVmdDogMC41ZW07XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIG1hdC1mb3JtLWZpZWxkIHtcbiAgICB3aWR0aDogY2FsYyg1MHZ3IC0gLjc1ZW0pO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgbWF0LWZvcm0tZmllbGQge1xuICAgIHdpZHRoOiBjYWxjKDUwdncgLSAuNzVlbSk7XG4gIH1cbn0iXX0= */"]
+      directives: [i4.NgIf, i5.MatFormField, i6.MatSelect, i4.NgForOf, i6.MatSelectTrigger, i7.MatOption],
+      styles: [".map-controls[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .map-controls[_ngcontent-%COMP%] {\n    flex-direction: row;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .map-controls[_ngcontent-%COMP%] {\n    flex-direction: row;\n  }\n}\n.building-name[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  max-width: 100%;\n}\n.building-name[_ngcontent-%COMP%]   .code[_ngcontent-%COMP%] {\n  width: 4em;\n  font-size: 0.75em;\n  font-weight: 500;\n}\n.building-name[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n  width: 9em;\n}\n.building-name[_ngcontent-%COMP%]   .address[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 6em;\n  max-width: 50vw;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  mat-form-field[_ngcontent-%COMP%]:nth-child(2) {\n    margin-left: 0.5em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  mat-form-field[_ngcontent-%COMP%]:nth-child(2) {\n    margin-left: 0.5em;\n  }\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  mat-form-field[_ngcontent-%COMP%] {\n    width: calc(50vw - .75em);\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  mat-form-field[_ngcontent-%COMP%] {\n    width: calc(50vw - .75em);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9idWlsZHMvYWNhLWVuZ2luZS9tY2tpbnNleS9tY2tpbnNleS1zdGFmZi1hcHAvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2J1aWxkcy9hY2EtZW5naW5lL21ja2luc2V5L21ja2luc2V5LXN0YWZmLWFwcC9zcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL21hcC1jb250cm9scy9tYXAtY29udHJvbHMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL21hcC1jb250cm9scy9tYXAtY29udHJvbHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBaUNBOztjQUFBO0FBYUE7O3NCQUFBO0FDNUNBO0VBQ0ksYUFBQTtFQUNBLHNCQUFBO0FDT0o7QUZpRFE7RUMxRFI7SUFLUSxtQkFBQTtFQ1FOO0FBQ0Y7QUYrQ1E7RUM3RFI7SUFLUSxtQkFBQTtFQ2FOO0FBQ0Y7QURWQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGVBQUE7QUNhSjtBRFhJO0VBQ0ksVUFBQTtFQUNBLGlCQUFBO0VBQ0EsZ0JBQUE7QUNhUjtBRFZJO0VBQ0ksVUFBQTtBQ1lSO0FEVEk7RUFDSSxPQUFBO0VBQ0EsY0FBQTtFQUNBLGVBQUE7RUFDQSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsdUJBQUE7QUNXUjtBRmlCUTtFQ3ZCSjtJQUVRLGtCQUFBO0VDU1Y7QUFDRjtBRmNRO0VDMUJKO0lBRVEsa0JBQUE7RUNjVjtBQUNGO0FGTVE7RUN4QlI7SUFPUSx5QkFBQTtFQ2VOO0FBQ0Y7QUZJUTtFQzNCUjtJQU9RLHlCQUFBO0VDb0JOO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy9tYXAtY29udHJvbHMvbWFwLWNvbnRyb2xzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuJGhlYWRlci1iYWNrOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwNTFDMkMsICMwNTFDMkMgNDAlLCAjMEIyNDUzIDYwJSwgIzFGNDBFNiAxMDAlKTtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbi5tYXAtY29udHJvbHMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcblxuICAgIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gICAgfVxufVxuXG4uYnVpbGRpbmctbmFtZSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIG1heC13aWR0aDogMTAwJTtcblxuICAgIC5jb2RlIHtcbiAgICAgICAgd2lkdGg6IDRlbTtcbiAgICAgICAgZm9udC1zaXplOiAuNzVlbTtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICB9XG5cbiAgICAubmFtZSB7XG4gICAgICAgIHdpZHRoOiA5ZW07XG4gICAgfVxuXG4gICAgLmFkZHJlc3Mge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBtaW4td2lkdGg6IDZlbTtcbiAgICAgICAgbWF4LXdpZHRoOiA1MHZ3O1xuICAgICAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbiAgICB9XG59XG5cbm1hdC1mb3JtLWZpZWxkIHtcbiAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgICAgICBtYXJnaW4tbGVmdDogLjVlbTtcbiAgICAgICAgfVxuICAgIH1cbiAgICBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICB3aWR0aDogY2FsYyg1MHZ3IC0gLjc1ZW0pO1xuICAgIH1cbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi5tYXAtY29udHJvbHMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgLm1hcC1jb250cm9scyB7XG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gIC5tYXAtY29udHJvbHMge1xuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIH1cbn1cblxuLmJ1aWxkaW5nLW5hbWUge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXgtd2lkdGg6IDEwMCU7XG59XG4uYnVpbGRpbmctbmFtZSAuY29kZSB7XG4gIHdpZHRoOiA0ZW07XG4gIGZvbnQtc2l6ZTogMC43NWVtO1xuICBmb250LXdlaWdodDogNTAwO1xufVxuLmJ1aWxkaW5nLW5hbWUgLm5hbWUge1xuICB3aWR0aDogOWVtO1xufVxuLmJ1aWxkaW5nLW5hbWUgLmFkZHJlc3Mge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDZlbTtcbiAgbWF4LXdpZHRoOiA1MHZ3O1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgbWF0LWZvcm0tZmllbGQ6bnRoLWNoaWxkKDIpIHtcbiAgICBtYXJnaW4tbGVmdDogMC41ZW07XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICBtYXQtZm9ybS1maWVsZDpudGgtY2hpbGQoMikge1xuICAgIG1hcmdpbi1sZWZ0OiAwLjVlbTtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgbWF0LWZvcm0tZmllbGQge1xuICAgIHdpZHRoOiBjYWxjKDUwdncgLSAuNzVlbSk7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICBtYXQtZm9ybS1maWVsZCB7XG4gICAgd2lkdGg6IGNhbGMoNTB2dyAtIC43NWVtKTtcbiAgfVxufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -18292,7 +18329,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var app_service_1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -18308,7 +18345,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -18316,11 +18353,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i3 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i4 = __webpack_require__(
     /*! ../icon/icon.component */
@@ -18328,15 +18365,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i7 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     var _c0 = function _c0(a0) {
       return [a0];
@@ -18691,7 +18728,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var base_directive_1 = __webpack_require__(
     /*! ../../base.directive */
@@ -18699,19 +18736,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i2 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i3 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i4 = __webpack_require__(
     /*! ../icon/icon.component */
@@ -18872,7 +18909,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var base_directive_1 = __webpack_require__(
     /*! ../../base.directive */
@@ -18880,7 +18917,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! ../icon/icon.component */
@@ -18888,15 +18925,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var _c0 = ["input"];
 
@@ -19083,7 +19120,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -19099,11 +19136,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -19111,11 +19148,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i3 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i4 = __webpack_require__(
     /*! ../icon/icon.component */
@@ -19123,11 +19160,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     function TopbarHeaderComponent_div_7_i_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -19355,7 +19392,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var user_class_1 = __webpack_require__(
     /*! src/app/services/data/users/user.class */
@@ -19363,15 +19400,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i2 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     function UserAvatarComponent_div_0_div_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -19506,7 +19543,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var animations_1 = __webpack_require__(
     /*! @angular/animations */
-    "./node_modules/@angular/animations/fesm2015/animations.js");
+    "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js");
 
     exports.ANIMATION_SHOW_ENTER_LEAVE = animations_1.trigger('show', [animations_1.transition(':enter', [animations_1.style({
       opacity: 0,
@@ -20792,111 +20829,111 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var common_1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var tinymce_angular_1 = __webpack_require__(
     /*! @tinymce/tinymce-angular */
-    "./node_modules/@tinymce/tinymce-angular/fesm2015/tinymce-tinymce-angular.js");
+    "./node_modules/@tinymce/tinymce-angular/__ivy_ngcc__/fesm2015/tinymce-tinymce-angular.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var scrolling_1 = __webpack_require__(
     /*! @angular/cdk/scrolling */
-    "./node_modules/@angular/cdk/fesm2015/scrolling.js");
+    "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js");
 
     var button_1 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var snack_bar_1 = __webpack_require__(
     /*! @angular/material/snack-bar */
-    "./node_modules/@angular/material/fesm2015/snack-bar.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var form_field_1 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var input_1 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var progress_spinner_1 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var progress_bar_1 = __webpack_require__(
     /*! @angular/material/progress-bar */
-    "./node_modules/@angular/material/fesm2015/progress-bar.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
 
     var autocomplete_1 = __webpack_require__(
     /*! @angular/material/autocomplete */
-    "./node_modules/@angular/material/fesm2015/autocomplete.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/autocomplete.js");
 
     var select_1 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var chips_1 = __webpack_require__(
     /*! @angular/material/chips */
-    "./node_modules/@angular/material/fesm2015/chips.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/chips.js");
 
     var core_2 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var menu_1 = __webpack_require__(
     /*! @angular/material/menu */
-    "./node_modules/@angular/material/fesm2015/menu.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 
     var checkbox_1 = __webpack_require__(
     /*! @angular/material/checkbox */
-    "./node_modules/@angular/material/fesm2015/checkbox.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
 
     var tooltip_1 = __webpack_require__(
     /*! @angular/material/tooltip */
-    "./node_modules/@angular/material/fesm2015/tooltip.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tooltip.js");
 
     var radio_1 = __webpack_require__(
     /*! @angular/material/radio */
-    "./node_modules/@angular/material/fesm2015/radio.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/radio.js");
 
     var tabs_1 = __webpack_require__(
     /*! @angular/material/tabs */
-    "./node_modules/@angular/material/fesm2015/tabs.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js");
 
     var ngx_pipes_1 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     var ngx_interactive_map_1 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var ngx_custom_events_1 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var ngx_date_picker_1 = __webpack_require__(
     /*! @acaprojects/ngx-date-picker */
-    "./node_modules/@acaprojects/ngx-date-picker/fesm2015/acaprojects-ngx-date-picker.js");
+    "./node_modules/@acaprojects/ngx-date-picker/__ivy_ngcc__/fesm2015/acaprojects-ngx-date-picker.js");
 
     var base_directive_1 = __webpack_require__(
     /*! ./base.directive */
@@ -20980,7 +21017,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var COMPONENTS = [base_directive_1.BaseDirective, login_component_1.LoginComponent, icon_component_1.IconComponent, topbar_header_component_1.TopbarHeaderComponent, overlay_menu_component_1.OverlayMenuComponent, footer_menu_component_1.FooterMenuComponent, searchbar_component_1.SearchbarComponent, user_avatar_component_1.UserAvatarComponent, user_form_component_1.UserFormComponent, booking_form_component_1.BookingFormComponent, map_controls_component_1.MapControlsComponent, popout_menu_component_1.PopoutMenuComponent, feedback_component_1.FeedbackComponent];
     var ENTRY_COMPONENT = [date_field_component_1.DateFieldComponent, action_field_component_1.ActionFieldComponent, time_field_component_1.TimeFieldComponent, duration_field_component_1.DurationFieldComponent, user_search_field_component_1.UserSearchFieldComponent, user_list_field_component_1.UserListFieldComponent, counter_component_1.CounterComponent];
@@ -21816,11 +21853,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var app_service_1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -21832,7 +21869,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -21840,7 +21877,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     function BookingsComponent_booking_desk_flow_5_Template(rf, ctx) {
       if (rf & 1) {
@@ -21995,23 +22032,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var common_1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var bookings_component_1 = __webpack_require__(
     /*! ./bookings.component */
@@ -22087,27 +22124,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i2 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i3 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var i4 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i5 = __webpack_require__(
     /*! @acaprojects/ngx-date-picker */
-    "./node_modules/@acaprojects/ngx-date-picker/fesm2015/acaprojects-ngx-date-picker.js");
+    "./node_modules/@acaprojects/ngx-date-picker/__ivy_ngcc__/fesm2015/acaprojects-ngx-date-picker.js");
 
     var i6 = __webpack_require__(
     /*! ../../shared/base.directive */
@@ -22191,91 +22228,91 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i26 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i27 = __webpack_require__(
     /*! @angular/cdk/bidi */
-    "./node_modules/@angular/cdk/fesm2015/bidi.js");
+    "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/bidi.js");
 
     var i28 = __webpack_require__(
     /*! @angular/material/snack-bar */
-    "./node_modules/@angular/material/fesm2015/snack-bar.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
 
     var i29 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i30 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i31 = __webpack_require__(
     /*! @angular/cdk/text-field */
-    "./node_modules/@angular/cdk/fesm2015/text-field.js");
+    "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/text-field.js");
 
     var i32 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var i33 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i34 = __webpack_require__(
     /*! @angular/material/progress-bar */
-    "./node_modules/@angular/material/fesm2015/progress-bar.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
 
     var i35 = __webpack_require__(
     /*! @angular/material/autocomplete */
-    "./node_modules/@angular/material/fesm2015/autocomplete.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/autocomplete.js");
 
     var i36 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var i37 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i38 = __webpack_require__(
     /*! @angular/material/chips */
-    "./node_modules/@angular/material/fesm2015/chips.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/chips.js");
 
     var i39 = __webpack_require__(
     /*! @angular/material/menu */
-    "./node_modules/@angular/material/fesm2015/menu.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 
     var i40 = __webpack_require__(
     /*! @angular/material/checkbox */
-    "./node_modules/@angular/material/fesm2015/checkbox.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
 
     var i41 = __webpack_require__(
     /*! @angular/material/tooltip */
-    "./node_modules/@angular/material/fesm2015/tooltip.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tooltip.js");
 
     var i42 = __webpack_require__(
     /*! @angular/material/radio */
-    "./node_modules/@angular/material/fesm2015/radio.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/radio.js");
 
     var i43 = __webpack_require__(
     /*! @angular/material/tabs */
-    "./node_modules/@angular/material/fesm2015/tabs.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js");
 
     var i44 = __webpack_require__(
     /*! @angular/cdk/scrolling */
-    "./node_modules/@angular/cdk/fesm2015/scrolling.js");
+    "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js");
 
     var i45 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i46 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var i47 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     var ROUTES = [{
       path: ':flow',
@@ -22344,15 +22381,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -22392,11 +22429,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -22416,15 +22453,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i7 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i9 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -22432,11 +22469,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i10 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i11 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var I18N_0;
 
@@ -23508,7 +23545,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           var start = dayjs(this.booking.recurrence.start).format('MMMM DD, YYYY');
-          var end = dayjs(this.booking.recurrence.end).format('MMMM DD, YYYY');
+          var end = dayjs(this.booking.recurrence.end * 1000).format('MMMM DD, YYYY');
           return "".concat(start, " until ").concat(end);
         }
       }, {
@@ -23698,11 +23735,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var catering_item_class_1 = __webpack_require__(
     /*! src/app/services/data/catering/catering-item.class */
@@ -23726,7 +23763,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -23738,11 +23775,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i5 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -23750,11 +23787,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i7 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i8 = __webpack_require__(
     /*! ../../space-flow/catering/order-details/item/item.component */
@@ -24045,15 +24082,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var catering_order_class_1 = __webpack_require__(
     /*! src/app/services/data/catering/catering-order.class */
@@ -24069,7 +24106,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/users/users.service */
@@ -24077,19 +24114,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/material/tabs */
-    "./node_modules/@angular/material/fesm2015/tabs.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js");
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i6 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -24097,19 +24134,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i8 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i9 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i10 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var _c0 = ["content"];
     var I18N_1;
@@ -24569,23 +24606,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i2 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i3 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -24593,23 +24630,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/radio */
-    "./node_modules/@angular/material/fesm2015/radio.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/radio.js");
 
     var i7 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/checkbox */
-    "./node_modules/@angular/material/fesm2015/checkbox.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
 
     var I18N_0;
 
@@ -24796,7 +24833,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     function checkItemRequirements(category) {
-      var items = category.items;
+      var items = category.items || [];
       return category.must_select >= items.length ? items.reduce(function (valid, item) {
         return valid && checkItemRequirements(item);
       }, true) : items.reduce(function (amount, item) {
@@ -24994,11 +25031,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var space_select_modal_component_1 = __webpack_require__(
     /*! src/app/overlays/space-select-modal/space-select-modal.component */
@@ -25022,11 +25059,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! src/app/services/data/spaces/spaces.service */
@@ -25034,7 +25071,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i4 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -25042,11 +25079,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var I18N_0;
 
@@ -25368,15 +25405,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var organisation_service_1 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
@@ -25392,7 +25429,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
@@ -25404,19 +25441,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/tabs */
-    "./node_modules/@angular/material/fesm2015/tabs.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js");
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i7 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -25424,19 +25461,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i8 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i9 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i10 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i11 = __webpack_require__(
     /*! @angular/material/input */
-    "./node_modules/@angular/material/fesm2015/input.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
     var _c0 = ["content"];
     var I18N_1;
@@ -25800,11 +25837,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return bld.id === space.level.building_id;
               });
 
+              console.log('Space:', space.name, building.name, building.required);
               _this122.needs_charge_code[space.id] = building.required.equipment_code;
               _this122.form[space.id] = new forms_1.FormGroup({
                 notes: new forms_1.FormControl(_this122.notes[space.id] || ''),
                 code: new forms_1.FormControl(_this122.codes[space.id] || '', building.required.equipment_code ? [forms_1.Validators.required] : []),
-                head_count: new forms_1.FormControl(_this122.head_counts[space.id] || '', [forms_1.Validators.required])
+                head_count: new forms_1.FormControl(_this122.head_counts[space.id] || '', building.required.expected_attendees ? [forms_1.Validators.required] : [])
               });
             };
 
@@ -25988,11 +26026,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var catering_order_class_1 = __webpack_require__(
     /*! ../../../../services/data/catering/catering-order.class */
@@ -26004,11 +26042,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i2 = __webpack_require__(
     /*! ./order-list/order-list.component */
@@ -26221,11 +26259,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var catering_category_class_1 = __webpack_require__(
     /*! src/app/services/data/catering/catering-category.class */
@@ -26233,15 +26271,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i2 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i3 = __webpack_require__(
     /*! ../../../../../../shared/components/icon/icon.component */
@@ -26249,7 +26287,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! ../item/item.component */
@@ -26452,15 +26490,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var catering_category_class_1 = __webpack_require__(
     /*! src/app/services/data/catering/catering-category.class */
@@ -26488,7 +26526,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -26496,23 +26534,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/tooltip */
-    "./node_modules/@angular/material/fesm2015/tooltip.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tooltip.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i6 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i7 = __webpack_require__(
     /*! ../../../../../../shared/components/custom-fields/counter/counter.component */
@@ -26520,7 +26558,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i8 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i9 = __webpack_require__(
     /*! ../../../../../../shared/components/icon/icon.component */
@@ -26842,7 +26880,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var amount = this.item.amount;
               this.item.setAmount(value);
 
-              if (this.item["package"] && amount < value && this.item.items.length) {
+              if (this.item["package"] && amount < value && this.item.items && this.item.items.length && this.item.must_select < this.item.items.length) {
                 this.selectPackageOptions().then(function (confirmed_item) {
                   list.push(new catering_item_class_1.CateringItem(confirmed_item));
 
@@ -27032,15 +27070,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var catering_order_class_1 = __webpack_require__(
     /*! ../../../../../services/data/catering/catering-order.class */
@@ -27084,7 +27122,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
@@ -27100,39 +27138,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i7 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i8 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i9 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i10 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i11 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var i12 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i13 = __webpack_require__(
     /*! ./category/category.component */
@@ -27197,7 +27235,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var space_r10 = ctx.$implicit;
-        i0.ɵɵproperty("value", space_r10);
+        i0.ɵɵproperty("value", space_r10.id);
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", space_r10.name, " ");
       }
@@ -27483,8 +27521,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(BookingCateringOrderDetailsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.loadMenu();
-          this.generateAvailableTimes();
+          this.initForm();
         }
       }, {
         key: "ngOnChanges",
@@ -27497,9 +27534,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /* istanbul ignore else */
 
             if (this.form && !this.available_times.find(function (time) {
-              return time.id === _this129.form.controls.start.value;
+              return time.id === _this129.form.controls.delivery_time.value;
             })) {
-              this.form.controls.start.setValue(this.available_times[0].id);
+              this.form.controls.delivery_time.setValue(this.available_times[0].id);
             }
           }
           /* istanbul ignore else */
@@ -27507,8 +27544,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (changes.space_list) {
             /* istanbul ignore else */
-            if (this.form && this.space_list && !this.form.controls.space.value) {
-              this.form.controls.space.setValue(this.space_list[0]);
+            if (this.form && this.space_list && !this.form.controls.location_id.value) {
+              this.form.controls.location_id.setValue(this.space_list[0].id);
             }
           }
           /* istanbul ignore else */
@@ -27523,25 +27560,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function initForm() {
           var _this130 = this;
 
+          this.loadMenu();
           this.form = new forms_1.FormGroup({
             id: new forms_1.FormControl(this.order.id),
             booking_date: new forms_1.FormControl(this.all_day ? dayjs(this.date).startOf('d').valueOf() : this.date),
-            space: new forms_1.FormControl((this.order.location_id ? this._spaces.find(this.order.location_id) : null) || this.space_list[0]),
             location_id: new forms_1.FormControl(this.order.location_id || this.space_list[0].id),
-            start: new forms_1.FormControl(this.order.delivery_time || this.available_times[0].id),
+            delivery_time: new forms_1.FormControl(this.order.delivery_time || this.available_times[0].id),
             items: new forms_1.FormControl(this.order.items.map(function (item) {
               return new catering_item_class_1.CateringItem(item);
             }))
           });
-          this.subscription('space_change', this.form.controls.space.valueChanges.subscribe(function (space) {
-            _this130.form.controls.location_id.setValue(space.id);
-
+          this.generateAvailableTimes();
+          this.subscription('space_change', this.form.controls.location_id.valueChanges.subscribe(function () {
             _this130.generateAvailableTimes();
 
             if (!_this130.available_times.find(function (time) {
-              return time.id === _this130.form.controls.start.value;
+              return time.id === _this130.form.controls.delivery_time.value;
             })) {
-              _this130.form.controls.start.setValue(_this130.available_times[0].id);
+              _this130.form.controls.delivery_time.setValue(_this130.available_times[0].id);
             }
 
             _this130.form.controls.items.setValue([]);
@@ -27550,9 +27586,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
 
           if (this.form && !this.available_times.find(function (time) {
-            return time.id === _this130.form.controls.start.value;
+            return time.id === _this130.form.controls.delivery_time.value;
           })) {
-            this.form.controls.start.setValue(this.available_times[0].id);
+            this.form.controls.delivery_time.setValue(this.available_times[0].id);
           }
         }
       }, {
@@ -27587,7 +27623,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadMenu() {
           var _this132 = this;
 
-          var space = this.form ? this.form.controls.space.value : null;
+          var space = this.form ? this.form.controls.location_id.value : '';
           /* istanbul ignore else */
 
           if (!space) {
@@ -27597,7 +27633,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.loading = true;
 
           this._menu.query({
-            room_id: space.id
+            room_id: space
           }).then(function (list) {
             _this132.loading = false;
             _this132.category_list = list.map(function (i) {
@@ -27648,9 +27684,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             start = start.startOf('d');
           }
 
+          if (start.isBefore(dayjs(), 'm')) {
+            var now = dayjs();
+            start = now.minute(Math.ceil(now.minute() / 5) * 5);
+          }
+
           var end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
           var building_time = spacetime_1["default"](start.toDate());
-          var space = this.form ? this.form.controls.space.value : null;
+          var space_id = this.form ? this.form.controls.location_id.value : '';
+
+          var space = this._spaces.find(space_id);
 
           if (space) {
             var building = this._org.buildings.find(function (bld) {
@@ -27693,12 +27736,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         get: function get() {
           var form_controls = (this.form || {
             controls: {
-              space: {
+              location_id: {
                 value: ''
               }
             }
           }).controls;
-          var space = form_controls.space.value || {
+          var space = this._spaces.find(form_controls.location_id.value) || {
             level: {}
           };
           return this._org.buildings.find(function (bld) {
@@ -27728,7 +27771,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "out_of_hours",
         get: function get() {
-          return this.form.controls.start.value < 0;
+          return this.form.controls.delivery_time.value < 0;
         }
         /** Whether booking is with the restricted ordering period */
 
@@ -27782,7 +27825,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 14,
       vars: 5,
-      consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", 1, "inverse", 3, "tapped"], ["mat-button", "", "name", "confirm", 3, "disabled", "tapped"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "space"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "start"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "tapped", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "tapped"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], ["class", "bold", 4, "ngIf"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "category", "symbol", "items", "disabled", "close"]],
+      consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", 1, "inverse", 3, "tapped"], ["mat-button", "", "name", "confirm", 3, "disabled", "tapped"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "location_id"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "delivery_time"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "tapped", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "tapped"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], ["class", "bold", 4, "ngIf"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "category", "symbol", "items", "disabled", "close"]],
       template: function BookingCateringOrderDetailsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -27888,7 +27931,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var catering_order_class_1 = __webpack_require__(
     /*! src/app/services/data/catering/catering-order.class */
@@ -27908,7 +27951,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/spaces/spaces.service */
@@ -27920,11 +27963,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i4 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i5 = __webpack_require__(
     /*! ../../../../../../shared/components/icon/icon.component */
@@ -27932,7 +27975,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var I18N_0;
 
@@ -28200,11 +28243,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var dayjs = __webpack_require__(
     /*! dayjs */
@@ -28212,19 +28255,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i2 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i3 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i4 = __webpack_require__(
     /*! ./item/item.component */
@@ -28591,11 +28634,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -28619,7 +28662,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
@@ -28627,19 +28670,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i3 = __webpack_require__(
     /*! @angular/material/menu */
-    "./node_modules/@angular/material/fesm2015/menu.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i5 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i6 = __webpack_require__(
     /*! ../../../../../shared/components/icon/icon.component */
@@ -28647,11 +28690,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @angular/material/chips */
-    "./node_modules/@angular/material/fesm2015/chips.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/chips.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/checkbox */
-    "./node_modules/@angular/material/fesm2015/checkbox.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
 
     var I18N_0;
 
@@ -28920,7 +28963,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.locations.splice(this.locations.findIndex(function (id) {
             return building.id === id;
           }), 1);
-          this.locationsChange.emit(this.locations);
+          this.locationsChange.emit(_toConsumableArray(this.locations));
           this.storeLocations();
         }
       }, {
@@ -29070,11 +29113,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -29102,7 +29145,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -29122,19 +29165,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i7 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i8 = __webpack_require__(
     /*! @angular/cdk/scrolling */
-    "./node_modules/@angular/cdk/fesm2015/scrolling.js");
+    "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js");
 
     var i9 = __webpack_require__(
     /*! ./item/item.component */
@@ -29142,7 +29185,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i10 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i11 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -29645,15 +29688,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var space_class_1 = __webpack_require__(
     /*! src/app/services/data/spaces/space.class */
@@ -29685,7 +29728,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -29701,11 +29744,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! ../../../../../shared/components/icon/icon.component */
@@ -29713,11 +29756,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i8 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var I18N_0;
 
@@ -29896,7 +29939,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function selectSpace() {
           var _this141 = this;
 
-          if (!this.space.recurr_available || this.availability === 'all' || this.selected) {
+          if (!this.space.recurr_available || !this.space.recurr_available.length || this.selected) {
             this.select.emit();
           } else {
             var ref = this._dialog.open(recurrence_spaces_modal_component_1.RecurrenceSpacesModalComponent, {
@@ -30113,23 +30156,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i2 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i3 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -30137,7 +30180,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i5 = __webpack_require__(
     /*! ../../../../shared/components/forms/booking-form/booking-form.component */
@@ -30145,7 +30188,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var _c0 = ["container"];
     var I18N_1;
@@ -30154,10 +30197,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Booking form header
        */
-      var MSG_EXTERNAL_6464057252608386690$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS_2 = goog.getMsg("New Booking");
-      I18N_1 = MSG_EXTERNAL_6464057252608386690$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS_2;
+      var MSG_EXTERNAL_3431798880971694133$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS_2 = goog.getMsg(" {$interpolation} Booking ", {
+        "interpolation": "\uFFFD0\uFFFD"
+      });
+      I18N_1 = MSG_EXTERNAL_3431798880971694133$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS_2;
     } else {
-      I18N_1 = $localize(_templateObject117());
+      I18N_1 = $localize(_templateObject117(), "\uFFFD0\uFFFD");
     }
 
     var I18N_3;
@@ -30166,8 +30211,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Booking form continue action
        */
-      var MSG_EXTERNAL_3885497195825665706$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS_4 = goog.getMsg("Next");
-      I18N_3 = MSG_EXTERNAL_3885497195825665706$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS_4;
+      var MSG_EXTERNAL_6609643060537118464$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS_4 = goog.getMsg(" Next ");
+      I18N_3 = MSG_EXTERNAL_6609643060537118464$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS_4;
     } else {
       I18N_3 = $localize(_templateObject118());
     }
@@ -30178,8 +30223,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Booking form cancel action
        */
-      var MSG_EXTERNAL_8890553633144307762$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS__6 = goog.getMsg("Back");
-      I18N_5 = MSG_EXTERNAL_8890553633144307762$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS__6;
+      var MSG_EXTERNAL_454897612769798863$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS__6 = goog.getMsg(" Back ");
+      I18N_5 = MSG_EXTERNAL_454897612769798863$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_FORM_FORM_COMPONENT_TS__6;
     } else {
       I18N_5 = $localize(_templateObject119());
     }
@@ -30293,7 +30338,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         event: "event"
       },
       decls: 14,
-      vars: 5,
+      vars: 6,
       consts: [[1, "booking-form"], ["container", ""], [1, "header"], ["mat-icon-button", "", "name", "reset", 3, "tapped"], [3, "icon"], [3, "formGroup", "ngSubmit"], [1, "body"], [3, "form"], [1, "footer"], ["mat-button", "", "type", "button", "name", "return", "class", "inverse", 3, "tapped", 4, "ngIf"], ["mat-button", "", "type", "submit", "name", "next"], ["mat-button", "", "type", "button", "name", "return", 1, "inverse", 3, "tapped"]],
       template: function BookingSpaceFlowFormComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -30327,8 +30372,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         if (rf & 2) {
-          i0.ɵɵadvance(6);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(4, _c7));
+          i0.ɵɵadvance(4);
+          i0.ɵɵi18nExp(ctx.form.controls.id && ctx.form.controls.id.value ? "Edit" : "New");
+          i0.ɵɵi18nApply(4);
+          i0.ɵɵadvance(2);
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(5, _c7));
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("formGroup", ctx.form);
           i0.ɵɵadvance(2);
@@ -30390,11 +30438,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -30414,7 +30462,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var booking_confirm_component_1 = __webpack_require__(
     /*! ../overlays/booking-confirm/booking-confirm.component */
@@ -30442,7 +30490,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -30458,15 +30506,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i6 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i7 = __webpack_require__(
     /*! ./find-space/find-space.component */
@@ -30980,7 +31028,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var app_service_1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -30992,7 +31040,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -31126,27 +31174,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var common_1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var ngx_interactive_map_1 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var explore_component_1 = __webpack_require__(
     /*! ./explore.component */
@@ -31194,11 +31242,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var ROUTES = [{
       path: '',
@@ -31263,7 +31311,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -31283,7 +31331,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -31291,11 +31339,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i3 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i4 = __webpack_require__(
     /*! ../../../shared/components/icon/icon.component */
@@ -31573,15 +31621,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var ngx_interactive_map_1 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -31597,11 +31645,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ngx_interactive_map_2 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var booking_rules_modal_component_1 = __webpack_require__(
     /*! src/app/overlays/booking-rules-modal/booking-rules-modal.component */
@@ -31621,7 +31669,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -31629,11 +31677,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i3 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i4 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
@@ -31665,15 +31713,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i11 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i12 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var i13 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i14 = __webpack_require__(
     /*! ../zoom-controls/zoom-controls.component */
@@ -31685,15 +31733,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i16 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i17 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i18 = __webpack_require__(
     /*! @angular/material/progress-bar */
-    "./node_modules/@angular/material/fesm2015/progress-bar.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
 
     var i19 = __webpack_require__(
     /*! ../timeline/timeline.component */
@@ -32213,15 +32261,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var booking_class_1 = __webpack_require__(
     /*! src/app/services/data/bookings/booking.class */
@@ -32253,15 +32301,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i3 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -32277,7 +32325,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i7 = __webpack_require__(
     /*! ../../../../shared/components/icon/icon.component */
@@ -32289,15 +32337,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i9 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i10 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i11 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var _c0 = function _c0() {
       return {
@@ -32861,11 +32909,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var ngx_interactive_map_1 = __webpack_require__(
     /*! @acaprojects/ngx-interactive-map */
-    "./node_modules/@acaprojects/ngx-interactive-map/fesm2015/acaprojects-ngx-interactive-map.js");
+    "./node_modules/@acaprojects/ngx-interactive-map/__ivy_ngcc__/fesm2015/acaprojects-ngx-interactive-map.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -32881,7 +32929,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/users/users.service */
@@ -32889,7 +32937,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     function ExploreSpaceInfoComponent_div_0_div_8_Template(rf, ctx) {
       if (rf & 1) {
@@ -33122,11 +33170,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -33158,7 +33206,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/users/users.service */
@@ -33170,15 +33218,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @angular/material/autocomplete */
-    "./node_modules/@angular/material/fesm2015/autocomplete.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/autocomplete.js");
 
     var i6 = __webpack_require__(
     /*! ../../../shared/components/icon/icon.component */
@@ -33186,15 +33234,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i8 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i9 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var _c0 = ["input"];
 
@@ -33529,7 +33577,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -33549,7 +33597,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -33561,11 +33609,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var _c0 = ["desk-status", ""];
 
@@ -33873,11 +33921,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -33917,7 +33965,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -33933,15 +33981,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var _c0 = ["space-status", ""];
 
@@ -34416,7 +34464,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -34432,19 +34480,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i2 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i3 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i4 = __webpack_require__(
     /*! ../../../shared/components/icon/icon.component */
@@ -34456,7 +34504,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i7 = __webpack_require__(
     /*! ../../../shared/components/custom-fields/time-field/time-field.component */
@@ -34843,19 +34891,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i2 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i3 = __webpack_require__(
     /*! ../../../shared/components/icon/icon.component */
@@ -35046,7 +35094,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -35062,7 +35110,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -35074,7 +35122,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! ../../shared/components/overlay-menu/overlay-menu.component */
@@ -35086,7 +35134,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i6 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     function HomeComponent_div_6_a_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -35315,19 +35363,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var menu_1 = __webpack_require__(
     /*! @angular/material/menu */
-    "./node_modules/@angular/material/fesm2015/menu.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 
     var scrolling_1 = __webpack_require__(
     /*! @angular/cdk/scrolling */
-    "./node_modules/@angular/cdk/fesm2015/scrolling.js");
+    "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -35363,7 +35411,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/users/users.service */
@@ -35379,19 +35427,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i7 = __webpack_require__(
     /*! @angular/material/menu */
-    "./node_modules/@angular/material/fesm2015/menu.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 
     var i8 = __webpack_require__(
     /*! ../../../shared/components/icon/icon.component */
@@ -35399,31 +35447,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i9 = __webpack_require__(
     /*! @angular/cdk/scrolling */
-    "./node_modules/@angular/cdk/fesm2015/scrolling.js");
+    "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js");
 
     var i10 = __webpack_require__(
     /*! @acaprojects/ngx-date-picker */
-    "./node_modules/@acaprojects/ngx-date-picker/fesm2015/acaprojects-ngx-date-picker.js");
+    "./node_modules/@acaprojects/ngx-date-picker/__ivy_ngcc__/fesm2015/acaprojects-ngx-date-picker.js");
 
     var i11 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i12 = __webpack_require__(
     /*! @angular/material/form-field */
-    "./node_modules/@angular/material/fesm2015/form-field.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
     var i13 = __webpack_require__(
     /*! @angular/material/select */
-    "./node_modules/@angular/material/fesm2015/select.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
     var i14 = __webpack_require__(
     /*! @angular/material/core */
-    "./node_modules/@angular/material/fesm2015/core.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
     var i15 = __webpack_require__(
     /*! @angular/material/progress-bar */
-    "./node_modules/@angular/material/fesm2015/progress-bar.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
 
     var i16 = __webpack_require__(
     /*! ./list-item/list-item.component */
@@ -35936,11 +35984,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -35968,11 +36016,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i2 = __webpack_require__(
     /*! src/app/services/data/users/users.service */
@@ -35980,11 +36028,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     function ScheduleEventListItemComponent_ng_container_0_div_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -36131,8 +36179,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               closeOnNavigation: true,
               data: {
                 booking: this.event,
-                as_delegate: this._users.current.email === (this.user || {}).email,
-                delegate: this.user.email,
+                as_delegate: this._users.current.email !== (this.user || {}).email,
+                delegate: this.user ? this.user.email : '',
                 is_first: false,
                 is_last: false
               }
@@ -36295,11 +36343,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -36311,11 +36359,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i2 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -36327,7 +36375,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! ../../shared/components/footer-menu/footer-menu.component */
@@ -36584,27 +36632,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var common_1 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var forms_1 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var scrolling_1 = __webpack_require__(
     /*! @angular/cdk/scrolling */
-    "./node_modules/@angular/cdk/fesm2015/scrolling.js");
+    "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var composer_1 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var schedule_routes_1 = __webpack_require__(
     /*! ./schedule.routes */
@@ -36640,11 +36688,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var ScheduleModule = function ScheduleModule() {
       _classCallCheck(this, ScheduleModule);
@@ -36737,15 +36785,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -36773,7 +36821,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/data/users/users.service */
@@ -36781,27 +36829,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i2 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i3 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
     var i6 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     var i7 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var _c0 = function _c0(a0) {
       return [a0];
@@ -37503,11 +37551,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var dialog_1 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -37535,7 +37583,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -37547,15 +37595,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/material/dialog */
-    "./node_modules/@angular/material/fesm2015/dialog.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i4 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i5 = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var i6 = __webpack_require__(
     /*! ../../../../shared/components/forms/booking-form/booking-form.component */
@@ -37563,11 +37611,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i8 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
-    "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+    "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
     function EventEditComponent_form_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -37804,11 +37852,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var router_1 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
@@ -37824,7 +37872,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! src/app/services/app.service */
@@ -37836,19 +37884,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i4 = __webpack_require__(
     /*! @angular/material/button */
-    "./node_modules/@angular/material/fesm2015/button.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
     var i5 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i6 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i7 = __webpack_require__(
     /*! ./event-details/event-details.component */
@@ -38191,7 +38239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var operators_1 = __webpack_require__(
     /*! rxjs/operators */
@@ -38211,7 +38259,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i0 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
     /*! ../services/app.service */
@@ -38223,7 +38271,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i3 = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
     /*! ../shared/components/feedback/feedback.component */
@@ -38231,7 +38279,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i5 = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i6 = __webpack_require__(
     /*! ../shared/components/login/login.component */
@@ -38239,11 +38287,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var i7 = __webpack_require__(
     /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/fesm2015/progress-spinner.js");
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
     var i8 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
-    "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
     function ShellWrapperComponent_div_1_Template(rf, ctx) {
       if (rf & 1) {
@@ -38549,16 +38597,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "7904236",
-      "hash": "7904236",
+      "raw": "004168f",
+      "hash": "004168f",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "7904236",
+      "suffix": "004168f",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1591005019528
+      "time": 1591144442418
     };
     /* tslint:enable */
 
@@ -38583,7 +38631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var core_1 = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var environment_1 = __webpack_require__(
     /*! ./environments/environment */
@@ -38595,7 +38643,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var __NgCli_bootstrap_2 = __webpack_require__(
     /*! @angular/platform-browser */
-    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+    "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 
     if (environment_1.environment.production) {
       core_1.enableProdMode();
