@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1591144580295,
+  "timestamp": 1591264956531,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -431,9 +431,9 @@
     "/staff/assets/maps/toronto/level_01.svg": "9feb6bdc703bcaf084cafea98ba563c5c305e521",
     "/staff/assets/maps/toronto/level_02.svg": "7ff5ea5a0cb283c98edfd5d563c4819f098821ac",
     "/staff/assets/maps/toronto/level_03.svg": "4a65a6c429c2c4b4809e529ebecfe8f93fd6e956",
-    "/staff/assets/maps/waltham/level_01.svg": "3f6003d3fb8fca68bf6cd595d95b211637bc9f05",
-    "/staff/assets/maps/waltham/level_02.svg": "ce304629547c7aa582aedf0c38616041c9947078",
-    "/staff/assets/maps/waltham/level_03.svg": "62cb44d5214f095f012beefa43e2ff6be79ebc5d",
+    "/staff/assets/maps/waltham/level_01.svg": "e8b48cc8caa6b44f3012a377212e32b9592d3449",
+    "/staff/assets/maps/waltham/level_02.svg": "950092a95c570eb8fba34d3a518a4a569e428aa9",
+    "/staff/assets/maps/waltham/level_03.svg": "cb2215a2a2c1f60768318e43dfd826b744cf980d",
     "/staff/assets/maps/warsaw/level_05.svg": "9c382f2cb8caacca690a987e15d25920fed8e6bf",
     "/staff/assets/maps/washington_dc/level_10.svg": "89a3d9ffb33f94b89930d61125bdee057c5f955b",
     "/staff/assets/maps/washington_dc/level_11.svg": "8e7bb6a556bfb0380b552ee2d3c941dd7eeb9f6a",
@@ -444,8 +444,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "d0afe2c5dd61ff8e959c508768a452e22a049949",
-    "/staff/main-es5.js": "f9abac93359f90b45ad08a068b6d102f606aae0b",
+    "/staff/main-es2015.js": "1326fc931b54c07fbcf536c9d9f23fc984916641",
+    "/staff/main-es5.js": "7c588b2e610e8b2fa12174ab9a8f5c41fc2adf49",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "2b0ddf22eaa4a80300e3fd4f5640d61b40b32360",
     "/staff/polyfills-es5.js": "27ded3ece273cc4b4656e2e197230d363ce3f09d",
