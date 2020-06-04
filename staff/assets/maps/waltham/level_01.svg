@@ -31,29 +31,28 @@
 	.st25{fill:#7DCFE2;stroke:#53C5F1;stroke-width:0.734;stroke-linecap:round;stroke-linejoin:round;}
 	.st26{fill:#4FAFC6;stroke:#5798A3;stroke-width:0.587;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;}
 	.st27{opacity:0.1;fill:#353C3D;enable-background:new    ;}
-	.st28{fill:#4FAFC6;stroke:#5798A3;stroke-width:0.587;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9988;}
-	.st29{fill:#4E9FB9;stroke:#4A90A0;stroke-width:0.291;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9994;}
-	.st30{fill:#4FAFC6;stroke:#5798A3;stroke-width:0.587;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9994;}
+	.st28{fill:#4FAFC6;stroke:#5798A3;stroke-width:0.587;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9986;}
+	.st29{fill:#4E9FB9;stroke:#4A90A0;stroke-width:0.291;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9993;}
+	.st30{fill:#4FAFC6;stroke:#5798A3;stroke-width:0.587;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9993;}
 	.st31{fill:#4FAFC6;stroke:#5798A3;stroke-width:0.587;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9997;}
 	.st32{fill:#4E9FB9;stroke:#4A90A0;stroke-width:0.242;stroke-linecap:round;stroke-linejoin:round;}
 	.st33{fill:none;stroke:#4A90A0;stroke-linecap:round;stroke-linejoin:round;}
 	.st34{fill:#EFF7F9;}
 	.st35{opacity:8.000000e-02;fill:#101010;enable-background:new    ;}
 	.st36{opacity:0.65;fill:#575757;enable-background:new    ;}
-	.st37{enable-background:new    ;}
-	.st38{font-family:'Arial-BoldMT';}
-	.st39{font-size:5px;}
-	.st40{fill:none;stroke:#EBF2F2;stroke-width:5;stroke-miterlimit:10;}
-	.st41{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
-	.st42{fill:#EBF2F2;}
-	.st43{fill:none;stroke:#7A8E93;stroke-width:0.498;stroke-miterlimit:10;}
-	.st44{fill:none;stroke:#7A8E93;stroke-width:0.564;stroke-miterlimit:10;}
-	.st45{font-size:5.951px;}
-	.st46{fill:none;stroke:#7A8E93;stroke-width:0.499;stroke-linecap:round;stroke-linejoin:round;}
-	.st47{font-size:6.122px;}
-	.st48{fill:none;stroke:#7A8E93;stroke-width:0.29;stroke-miterlimit:10;}
-	.st49{font-size:6.267px;}
-	.st50{fill:none;stroke:#7A8E93;stroke-width:0.39;stroke-miterlimit:10;}
+	.st37{font-family:'Arial-BoldMT';}
+	.st38{font-size:5px;}
+	.st39{fill:none;stroke:#EBF2F2;stroke-width:5;stroke-miterlimit:10;}
+	.st40{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st41{fill:#EBF2F2;}
+	.st42{fill:none;stroke:#7A8E93;stroke-width:0.498;stroke-miterlimit:10;}
+	.st43{fill:none;stroke:#7A8E93;stroke-width:0.564;stroke-miterlimit:10;}
+	.st44{font-size:5.951px;}
+	.st45{fill:none;stroke:#7A8E93;stroke-width:0.499;stroke-linecap:round;stroke-linejoin:round;}
+	.st46{font-size:6.122px;}
+	.st47{fill:none;stroke:#7A8E93;stroke-width:0.29;stroke-miterlimit:10;}
+	.st48{font-size:6.267px;}
+	.st49{fill:none;stroke:#7A8E93;stroke-width:0.39;stroke-miterlimit:10;}
 </style>
 <title>Walham_L1</title>
 <g id="shadow">
@@ -179,22 +178,22 @@
 		C495,409.5,494.3,407.4,493.4,406.7z"/>
 	<path class="st18" d="M525.8,406.8L525.8,406.8v10.8c-0.7-0.5-1.2-1.3-1.5-2.1c-0.4-1.1-0.6-2.2-0.6-3.3
 		C523.7,409.6,524.6,407.5,525.8,406.8z"/>
-	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -136.1774 397.5828)" class="st22" cx="492.5" cy="390.8" rx="1.6" ry="4.6"/>
+	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -136.1786 397.5817)" class="st22" cx="492.5" cy="390.8" rx="1.6" ry="4.6"/>
 	<path class="st23" d="M503.2,383.5c1,1.3,0.8,3.1-0.4,4.2l-6.6,5.3c-1.3,1-3.1,0.8-4.2-0.4l-1.5-1.8l-0.1-0.2l-0.1-0.2l-0.9-1
 		c-0.9-1.1-1.2-2.5-0.9-3.9c-0.3-1.3,0.9-3.5,3.1-5.3c2.5-2.1,5.3-2.7,6.2-1.6l0.1,0.2c1.1,0.3,2,0.8,2.7,1.6L503.2,383.5z"/>
 	<path class="st24" d="M503.7,384c1,1.3,0.8,3.1-0.4,4.2l-6.6,5.3c-1.3,1-3.1,0.8-4.2-0.4l-1.5-1.8l-0.1-0.2l-0.1-0.2l-0.9-1
 		c-0.9-1.1-1.2-2.5-0.9-3.9c-0.3-1.3,0.9-3.5,3.1-5.3c2.5-2.1,5.3-2.7,6.2-1.6l0.1,0.2c1.1,0.3,2,0.8,2.7,1.6L503.7,384z"/>
 	<path class="st25" d="M491,384.1l4-3.2c2-1.6,4.9-1.3,6.5,0.7l2.5,3.1c1,1.3,0.8,3.1-0.4,4.2l-6.6,5.3c-1.3,1-3.1,0.8-4.2-0.4
 		l-2.5-3.1c-1.6-1.9-1.4-4.7,0.4-6.3C490.8,384.2,490.9,384.2,491,384.1L491,384.1z"/>
-	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -129.7807 401.6243)" class="st26" cx="501.4" cy="383.8" rx="1.6" ry="4.6"/>
-	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -136.0556 397.5364)" class="st26" cx="492.5" cy="390.6" rx="1.6" ry="4.6"/>
+	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -129.7796 401.6235)" class="st26" cx="501.4" cy="383.8" rx="1.6" ry="4.6"/>
+	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -136.0525 397.534)" class="st26" cx="492.5" cy="390.6" rx="1.6" ry="4.6"/>
 	<path class="st27" d="M502.1,384.1c1.3,1.7,1.9,3.3,1.4,3.8s-2.1-0.5-3.4-2.1c-0.5-0.6-0.9-1.3-1.3-2c-0.6,1-1.3,1.9-2.2,2.6
 		c-1,0.9-2.3,1.5-3.6,1.7c0.7,0.5,1.3,1.1,1.8,1.8c1.3,1.7,1.9,3.3,1.4,3.8s-2.1-0.5-3.4-2.1s-1.9-3.3-1.4-3.8h0.1l0,0
 		c-0.7-1,0.3-3.1,2.4-4.7s4.4-2.2,5.2-1.3l0.2,0.4C499.7,382,500.9,382.8,502.1,384.1z"/>
 	
-		<ellipse transform="matrix(0.7763 -0.6303 0.6303 0.7763 -131.3939 397.0593)" class="st28" cx="493.8" cy="383.7" rx="5.8" ry="2.6"/>
+		<ellipse transform="matrix(0.7763 -0.6303 0.6303 0.7763 -131.4001 397.0658)" class="st28" cx="493.8" cy="383.7" rx="5.8" ry="2.6"/>
 	
-		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -111.1684 528.3248)" class="st29" cx="517.3" cy="384.7" rx="4.6" ry="1.6"/>
+		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -111.1731 528.3098)" class="st29" cx="517.3" cy="384.7" rx="4.6" ry="1.6"/>
 	<path class="st23" d="M526.4,394c-1.1,1.2-2.9,1.4-4.2,0.3l-6.4-5.5c-1.2-1.1-1.4-2.9-0.3-4.2l1.5-1.8l0.2-0.1l0.2-0.1l0.8-1
 		c0.9-1.1,2.3-1.7,3.7-1.6c1.2-0.6,3.6,0.2,5.8,2.1c2.5,2.1,3.7,4.7,2.7,5.8l-0.2,0.1c-0.1,1.1-0.4,2.1-1.1,3L526.4,394z"/>
 	<path class="st24" d="M526,394.5c-1.1,1.2-2.9,1.4-4.2,0.3l-6.4-5.5c-1.2-1.1-1.4-2.9-0.3-4.2l1.5-1.8l0.2-0.1l0.2-0.1l0.8-1
@@ -202,36 +201,36 @@
 	<path class="st25" d="M523.6,382.1l3.8,3.3c1.9,1.7,2.2,4.6,0.5,6.6l-2.6,3c-1.1,1.2-2.9,1.4-4.2,0.3l-6.4-5.5
 		c-1.2-1.1-1.4-2.9-0.3-4.2l2.6-3c1.5-1.9,4.4-2.3,6.3-0.7C523.4,382,523.5,382,523.6,382.1L523.6,382.1z"/>
 	
-		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -113.9831 537.3661)" class="st30" cx="525.7" cy="392.3" rx="4.6" ry="1.6"/>
+		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -113.9912 537.3736)" class="st30" cx="525.7" cy="392.3" rx="4.6" ry="1.6"/>
 	
-		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -111.193 528.4157)" class="st30" cx="517.4" cy="384.8" rx="4.6" ry="1.6"/>
+		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -111.1929 528.4262)" class="st30" cx="517.4" cy="384.8" rx="4.6" ry="1.6"/>
 	<path class="st27" d="M525.5,393c-1.4,1.6-2.9,2.5-3.5,2.1s0.1-2.1,1.4-3.7c0.5-0.6,1.1-1.2,1.8-1.6c-1.1-0.4-2.1-1-3-1.7
 		c-1.1-0.9-1.9-2-2.4-3.2c-0.3,0.8-0.8,1.5-1.4,2.1c-1.4,1.6-2.9,2.5-3.5,2s0.1-2.1,1.4-3.7s2.9-2.5,3.5-2.1l0.1,0.1l0,0
 		c0.8-0.9,3.1-0.2,5.1,1.5s3,3.9,2.2,4.8l-0.3,0.2C527.2,390.3,526.6,391.6,525.5,393z"/>
 	
-		<ellipse transform="matrix(0.649 -0.7608 0.7608 0.649 -108.7006 533.9594)" class="st31" cx="524.3" cy="384.8" rx="2.6" ry="5.8"/>
+		<ellipse transform="matrix(0.649 -0.7608 0.7608 0.649 -108.7173 533.9731)" class="st31" cx="524.3" cy="384.8" rx="2.6" ry="5.8"/>
 	
-		<ellipse transform="matrix(0.8222 -0.5692 0.5692 0.8222 -135.572 360.6176)" class="st21" cx="509.4" cy="397.3" rx="6.7" ry="6.7"/>
+		<ellipse transform="matrix(0.9028 -0.4301 0.4301 0.9028 -121.3746 257.7539)" class="st21" cx="509.4" cy="397.3" rx="6.7" ry="6.7"/>
 	
-		<ellipse transform="matrix(0.8222 -0.5692 0.5692 0.8222 -135.2874 360.5287)" class="st21" cx="509.4" cy="396.8" rx="6.7" ry="6.7"/>
+		<ellipse transform="matrix(0.9028 -0.4301 0.4301 0.9028 -121.1595 257.7053)" class="st21" cx="509.4" cy="396.8" rx="6.7" ry="6.7"/>
 	
-		<ellipse transform="matrix(0.8222 -0.5692 0.5692 0.8222 -134.9459 360.422)" class="st21" cx="509.4" cy="396.2" rx="6.7" ry="6.7"/>
-	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -148.3141 363.1602)" class="st22" cx="437.9" cy="390.7" rx="1.6" ry="4.6"/>
+		<ellipse transform="matrix(0.9028 -0.4301 0.4301 0.9028 -120.9015 257.647)" class="st21" cx="509.4" cy="396.2" rx="6.7" ry="6.7"/>
+	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -148.3124 363.1597)" class="st22" cx="437.9" cy="390.7" rx="1.6" ry="4.6"/>
 	<path class="st23" d="M448.6,383.4c1,1.3,0.8,3.1-0.4,4.2l-6.6,5.3c-1.3,1-3.1,0.8-4.2-0.4l-1.5-1.8l-0.1-0.2l-0.1-0.2l-0.9-1
 		c-0.9-1.1-1.2-2.5-0.9-3.9c-0.3-1.3,0.9-3.5,3.1-5.3c2.5-2.1,5.3-2.7,6.2-1.6l0.1,0.2c1.1,0.3,2,0.8,2.7,1.6L448.6,383.4z"/>
 	<path class="st24" d="M449.1,383.9c1,1.3,0.8,3.1-0.4,4.2l-6.6,5.3c-1.3,1-3.1,0.8-4.2-0.4l-1.5-1.8l-0.1-0.2l-0.1-0.2l-0.9-1
 		c-0.9-1.1-1.2-2.5-0.9-3.9c-0.3-1.3,0.9-3.5,3.1-5.3c2.5-2.1,5.3-2.7,6.2-1.6l0.1,0.2c1.1,0.3,2,0.8,2.7,1.6L449.1,383.9z"/>
 	<path class="st25" d="M436.4,384l4-3.2c2-1.6,4.9-1.3,6.5,0.7l2.5,3.1c1,1.3,0.8,3.1-0.4,4.2l-6.6,5.3c-1.3,1-3.1,0.8-4.2-0.4
 		l-2.5-3.1c-1.6-1.9-1.4-4.7,0.4-6.3C436.2,384.2,436.3,384.1,436.4,384L436.4,384z"/>
-	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -141.9174 367.2018)" class="st26" cx="446.8" cy="383.7" rx="1.6" ry="4.6"/>
-	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -148.2509 363.1403)" class="st26" cx="437.9" cy="390.6" rx="1.6" ry="4.6"/>
+	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -141.9135 367.2015)" class="st26" cx="446.8" cy="383.7" rx="1.6" ry="4.6"/>
+	<ellipse transform="matrix(0.7766 -0.63 0.63 0.7766 -148.2509 363.138)" class="st26" cx="437.9" cy="390.6" rx="1.6" ry="4.6"/>
 	<path class="st27" d="M447.5,384.1c1.3,1.7,1.9,3.3,1.4,3.8s-2.1-0.5-3.4-2.1c-0.5-0.6-0.9-1.3-1.3-2c-0.6,1-1.3,1.9-2.2,2.6
 		c-1,0.9-2.3,1.5-3.6,1.7c0.7,0.5,1.3,1.1,1.8,1.8c1.3,1.7,1.9,3.3,1.4,3.8s-2.1-0.5-3.4-2.1s-1.9-3.3-1.4-3.8h0.1l0,0
 		c-0.7-1,0.3-3.1,2.4-4.7s4.4-2.2,5.2-1.3l0.2,0.4C445.1,381.9,446.3,382.8,447.5,384.1z"/>
 	
-		<ellipse transform="matrix(0.7763 -0.6303 0.6303 0.7763 -143.5941 362.7118)" class="st28" cx="439.3" cy="383.7" rx="5.8" ry="2.6"/>
+		<ellipse transform="matrix(0.7763 -0.6303 0.6303 0.7763 -143.5944 362.7086)" class="st28" cx="439.3" cy="383.7" rx="5.8" ry="2.6"/>
 	
-		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -130.3347 486.6223)" class="st29" cx="462.5" cy="384.6" rx="4.6" ry="1.6"/>
+		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -130.329 486.5828)" class="st29" cx="462.5" cy="384.6" rx="4.6" ry="1.6"/>
 	<path class="st23" d="M471.8,393.9c-1.1,1.2-2.9,1.4-4.2,0.3l-6.4-5.5c-1.2-1.1-1.4-2.9-0.3-4.2l1.5-1.8l0.2-0.1l0.2-0.1l0.8-1
 		c0.9-1.1,2.3-1.7,3.7-1.6c1.2-0.6,3.6,0.2,5.8,2.1c2.5,2.1,3.7,4.7,2.7,5.8l-0.2,0.1c-0.1,1.1-0.4,2.1-1.1,3L471.8,393.9z"/>
 	<path class="st24" d="M471.4,394.5c-1.1,1.2-2.9,1.4-4.2,0.3l-6.4-5.5c-1.2-1.1-1.4-2.9-0.3-4.2l1.5-1.8l0.2-0.1l0.2-0.1l0.8-1
@@ -239,14 +238,14 @@
 	<path class="st25" d="M469,382.1l3.8,3.3c1.9,1.7,2.2,4.6,0.5,6.6l-2.6,3c-1.1,1.2-2.9,1.4-4.2,0.3l-6.4-5.5
 		c-1.2-1.1-1.4-2.9-0.3-4.2l2.6-3c1.5-1.9,4.4-2.3,6.3-0.7C468.8,381.9,468.9,382,469,382.1L469,382.1z"/>
 	
-		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -133.0668 495.8058)" class="st30" cx="471.1" cy="392.2" rx="4.6" ry="1.6"/>
+		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -133.0651 495.8048)" class="st30" cx="471.1" cy="392.2" rx="4.6" ry="1.6"/>
 	
-		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -130.2769 486.8553)" class="st30" cx="462.8" cy="384.7" rx="4.6" ry="1.6"/>
+		<ellipse transform="matrix(0.6493 -0.7605 0.7605 0.6493 -130.2668 486.8572)" class="st30" cx="462.8" cy="384.7" rx="4.6" ry="1.6"/>
 	<path class="st27" d="M470.9,392.9c-1.4,1.6-2.9,2.5-3.5,2.1s0.1-2.1,1.4-3.7c0.5-0.6,1.1-1.2,1.8-1.6c-1.1-0.4-2.1-1-3-1.7
 		c-1.1-0.9-1.9-2-2.4-3.2c-0.3,0.8-0.8,1.5-1.4,2.1c-1.4,1.6-2.9,2.5-3.5,2s0.1-2.1,1.4-3.7s2.9-2.5,3.5-2.1l0.1,0.1l0,0
 		c0.8-0.9,3.1-0.2,5.1,1.5s3,3.9,2.2,4.8l-0.3,0.2C472.6,390.2,472,391.6,470.9,392.9z"/>
 	
-		<ellipse transform="matrix(0.649 -0.7608 0.7608 0.649 -127.9456 492.5207)" class="st31" cx="469.8" cy="384.9" rx="2.6" ry="5.8"/>
+		<ellipse transform="matrix(0.649 -0.7608 0.7608 0.649 -127.9293 492.5114)" class="st31" cx="469.8" cy="384.9" rx="2.6" ry="5.8"/>
 	<path class="st7" d="M452.7,202.9v0.7c0,3.6-2.9,6.5-6.5,6.5l0,0l0,0c-3.6,0-6.5-2.9-6.5-6.5l0,0v-0.7c0-3.6,2.9-6.5,6.5-6.5l0,0
 		l0,0c3.5-0.1,6.4,2.7,6.5,6.2C452.7,202.7,452.7,202.8,452.7,202.9z"/>
 	<path class="st16" d="M453.6,202.9v0.7c0,3.6-2.9,6.5-6.5,6.5l0,0l0,0c-3.6,0-6.5-2.9-6.5-6.5l0,0v-0.7c0-3.6,2.9-6.5,6.5-6.5l0,0
@@ -764,94 +763,98 @@
 <g id="bookable_spaces">
 	<rect id="area-1.06-status" x="420.9" y="118.3" class="st36" width="103.9" height="67.7"/>
 	<rect id="area-1.05-status" x="421.2" y="6.3" class="st36" width="147.5" height="111.7"/>
-	<polygon id="area-1.04-status" class="st36" points="257.9,275.7 257.9,336.9 251.5,336.9 251.5,348.1 321.1,348.1 321.1,276.2 	
+	<polygon id="area-1.110-status" class="st36" points="257.9,275.7 257.9,336.9 251.5,336.9 251.5,348.1 321.1,348.1 321.1,276.2 	
 		"/>
-	<rect id="area-1.03-status" x="320.9" y="276.2" class="st36" width="68.7" height="108"/>
-	<rect id="area-1.02-status" x="127.3" y="558.4" class="st36" width="42.1" height="61.1"/>
-	<rect id="area-1.01-status" x="169.5" y="558.4" class="st36" width="48.7" height="62.2"/>
-	<text transform="matrix(1 0 0 1 341.5851 322.9969)" class="st37"><tspan x="0" y="0" class="st9 st38 st39">WCH-109-C</tspan><tspan x="-0.7" y="6" class="st9 st38 st39">Team Room</tspan></text>
-	<text transform="matrix(1 0 0 1 276.2999 313.1501)" class="st37"><tspan x="0" y="0" class="st9 st38 st39">WCH-110-C</tspan><tspan x="0" y="6" class="st9 st38 st39">Park Street</tspan></text>
-	<text transform="matrix(1 0 0 1 180.2378 587.4863)" class="st37"><tspan x="0" y="0" class="st9 st38 st39">WCH-114-C</tspan><tspan x="2.4" y="6" class="st9 st38 st39">Riverside</tspan></text>
-	<text transform="matrix(1 0 0 1 134.7377 587.4866)" class="st37"><tspan x="0" y="0" class="st9 st38 st39">WCH-115-C</tspan><tspan x="-1.1" y="6" class="st9 st38 st39">Heath Street</tspan></text>
-	<text transform="matrix(1 0 0 1 461.9381 152.15)" class="st9 st38 st39">Downtown</text>
-	<text transform="matrix(1 0 0 1 463.7381 158.15)" class="st9 st38 st39">Crossing</text>
-	<text transform="matrix(1 0 0 1 470.2451 59.0997)" class="st9 st38 st39">Copley Square</text>
+	<rect id="area-1.109-status" x="320.9" y="276.2" class="st36" width="68.7" height="108"/>
+	<rect id="area-1.115-status" x="127.3" y="558.4" class="st36" width="42.1" height="61.1"/>
+	<rect id="area-1.114-status" x="169.5" y="558.4" class="st36" width="48.7" height="62.2"/>
+	<text transform="matrix(1 0 0 1 341.5851 322.9969)" class="st9 st37 st38">WCH-109-C</text>
+	<text transform="matrix(1 0 0 1 340.8851 328.9969)" class="st9 st37 st38">Team Room</text>
+	<text transform="matrix(1 0 0 1 276.2999 313.1501)" class="st9 st37 st38">WCH-110-C</text>
+	<text transform="matrix(1 0 0 1 276.2999 319.1501)" class="st9 st37 st38">Park Street</text>
+	<text transform="matrix(1 0 0 1 180.2378 587.4863)" class="st9 st37 st38">WCH-114-C</text>
+	<text transform="matrix(1 0 0 1 182.6378 593.4863)" class="st9 st37 st38">Riverside</text>
+	<text transform="matrix(1 0 0 1 134.7377 587.4866)" class="st9 st37 st38">WCH-115-C</text>
+	<text transform="matrix(1 0 0 1 133.6377 593.4866)" class="st9 st37 st38">Heath Street</text>
+	<text transform="matrix(1 0 0 1 461.9381 152.15)" class="st9 st37 st38">Downtown</text>
+	<text transform="matrix(1 0 0 1 463.7381 158.15)" class="st9 st37 st38">Crossing</text>
+	<text transform="matrix(1 0 0 1 470.2451 59.0997)" class="st9 st37 st38">Copley Square</text>
 </g>
 <g id="outline">
-	<polyline class="st40" points="217.3,453.1 217.3,620.6 22.5,620.6 22.5,140.8 154,140.8 154,5.7 568.7,5.7 568.7,82.5 612.6,82.5 
+	<polyline class="st39" points="217.3,453.1 217.3,620.6 22.5,620.6 22.5,140.8 154,140.8 154,5.7 568.7,5.7 568.7,82.5 612.6,82.5 
 		612.6,39.2 618.1,39.2 	"/>
-	<polyline class="st40" points="210.7,620.6 642.2,620.6 642.2,39.3 637,39.3 	"/>
-	<line class="st40" x1="568.7" y1="82.5" x2="568.7" y2="240.5"/>
-	<polyline class="st40" points="568.7,259.1 568.7,430.6 550.1,430.6 	"/>
-	<polyline class="st40" points="530.7,430.6 217.3,430.6 217.3,434.5 	"/>
-	<line class="st41" x1="568.7" y1="118" x2="550.1" y2="118"/>
-	<line class="st41" x1="420.8" y1="5.7" x2="420.8" y2="97.7"/>
-	<polyline class="st41" points="420.8,164.2 420.8,111.3 420.8,118 524.4,118 524.4,164.2 	"/>
-	<polyline class="st41" points="524.4,181.5 524.4,186 420.8,186 420.8,181.5 420.8,259.1 	"/>
-	<line class="st41" x1="524.4" y1="186" x2="524.4" y2="217.5"/>
-	<polyline class="st41" points="420.8,275.7 420.8,296.3 436.9,296.3 	"/>
-	<line class="st41" x1="407.3" y1="430.6" x2="407.3" y2="411.6"/>
-	<polyline class="st41" points="407.3,396.2 407.3,384.2 321.3,384.2 321.3,275.7 321.3,430.6 	"/>
-	<polyline class="st41" points="321.3,275.7 276.3,275.7 370.5,275.7 	"/>
-	<line class="st41" x1="261.6" y1="275.7" x2="254.1" y2="275.7"/>
-	<polyline class="st41" points="257.9,276.2 257.9,336.9 210.7,336.9 210.7,276.2 238,276.2 	"/>
-	<line class="st41" x1="251.5" y1="336.9" x2="251.5" y2="404.1"/>
-	<line class="st41" x1="251.5" y1="418.9" x2="251.5" y2="430.6"/>
-	<line class="st41" x1="251.5" y1="348.1" x2="321.3" y2="348.1"/>
-	<polyline class="st41" points="389.6,384.2 389.6,275.7 393.4,275.7 386.1,275.7 	"/>
-	<polyline class="st41" points="360.7,247.5 389.7,247.5 389.7,164.2 	"/>
-	<polyline class="st41" points="389.7,149.6 389.7,144.3 276.3,144.3 	"/>
-	<polyline class="st41" points="342.3,144.3 342.3,247.5 346.1,247.5 337.4,247.5 	"/>
-	<polyline class="st41" points="389.7,189.4 209.1,189.4 209.1,164.2 209.1,228.4 	"/>
-	<polyline class="st41" points="323.4,247.5 209.7,247.5 209.7,243.6 	"/>
-	<polyline class="st41" points="257.9,189.4 257.9,144.3 261.6,144.3 209.1,144.3 209.1,148.2 	"/>
-	<line class="st41" x1="22.5" y1="558.4" x2="36.8" y2="558.4"/>
-	<line class="st41" x1="52.6" y1="558.4" x2="107.5" y2="558.4"/>
-	<line class="st41" x1="85.8" y1="558.4" x2="85.8" y2="620.6"/>
-	<line class="st41" x1="123.8" y1="558.4" x2="131.7" y2="558.4"/>
-	<line class="st41" x1="127.3" y1="558.4" x2="127.3" y2="620.6"/>
-	<polyline class="st41" points="146.9,558.4 169.5,558.4 169.5,547.1 169.5,619.5 	"/>
-	<line class="st41" x1="169.5" y1="558.4" x2="191.1" y2="558.4"/>
-	<line class="st41" x1="205.8" y1="558.4" x2="217.3" y2="558.4"/>
-	<line class="st41" x1="289.5" y1="247.5" x2="289.5" y2="189.4"/>
+	<polyline class="st39" points="210.7,620.6 642.2,620.6 642.2,39.3 637,39.3 	"/>
+	<line class="st39" x1="568.7" y1="82.5" x2="568.7" y2="240.5"/>
+	<polyline class="st39" points="568.7,259.1 568.7,430.6 550.1,430.6 	"/>
+	<polyline class="st39" points="530.7,430.6 217.3,430.6 217.3,434.5 	"/>
+	<line class="st40" x1="568.7" y1="118" x2="550.1" y2="118"/>
+	<line class="st40" x1="420.8" y1="5.7" x2="420.8" y2="97.7"/>
+	<polyline class="st40" points="420.8,164.2 420.8,111.3 420.8,118 524.4,118 524.4,164.2 	"/>
+	<polyline class="st40" points="524.4,181.5 524.4,186 420.8,186 420.8,181.5 420.8,259.1 	"/>
+	<line class="st40" x1="524.4" y1="186" x2="524.4" y2="217.5"/>
+	<polyline class="st40" points="420.8,275.7 420.8,296.3 436.9,296.3 	"/>
+	<line class="st40" x1="407.3" y1="430.6" x2="407.3" y2="411.6"/>
+	<polyline class="st40" points="407.3,396.2 407.3,384.2 321.3,384.2 321.3,275.7 321.3,430.6 	"/>
+	<polyline class="st40" points="321.3,275.7 276.3,275.7 370.5,275.7 	"/>
+	<line class="st40" x1="261.6" y1="275.7" x2="254.1" y2="275.7"/>
+	<polyline class="st40" points="257.9,276.2 257.9,336.9 210.7,336.9 210.7,276.2 238,276.2 	"/>
+	<line class="st40" x1="251.5" y1="336.9" x2="251.5" y2="404.1"/>
+	<line class="st40" x1="251.5" y1="418.9" x2="251.5" y2="430.6"/>
+	<line class="st40" x1="251.5" y1="348.1" x2="321.3" y2="348.1"/>
+	<polyline class="st40" points="389.6,384.2 389.6,275.7 393.4,275.7 386.1,275.7 	"/>
+	<polyline class="st40" points="360.7,247.5 389.7,247.5 389.7,164.2 	"/>
+	<polyline class="st40" points="389.7,149.6 389.7,144.3 276.3,144.3 	"/>
+	<polyline class="st40" points="342.3,144.3 342.3,247.5 346.1,247.5 337.4,247.5 	"/>
+	<polyline class="st40" points="389.7,189.4 209.1,189.4 209.1,164.2 209.1,228.4 	"/>
+	<polyline class="st40" points="323.4,247.5 209.7,247.5 209.7,243.6 	"/>
+	<polyline class="st40" points="257.9,189.4 257.9,144.3 261.6,144.3 209.1,144.3 209.1,148.2 	"/>
+	<line class="st40" x1="22.5" y1="558.4" x2="36.8" y2="558.4"/>
+	<line class="st40" x1="52.6" y1="558.4" x2="107.5" y2="558.4"/>
+	<line class="st40" x1="85.8" y1="558.4" x2="85.8" y2="620.6"/>
+	<line class="st40" x1="123.8" y1="558.4" x2="131.7" y2="558.4"/>
+	<line class="st40" x1="127.3" y1="558.4" x2="127.3" y2="620.6"/>
+	<polyline class="st40" points="146.9,558.4 169.5,558.4 169.5,547.1 169.5,619.5 	"/>
+	<line class="st40" x1="169.5" y1="558.4" x2="191.1" y2="558.4"/>
+	<line class="st40" x1="205.8" y1="558.4" x2="217.3" y2="558.4"/>
+	<line class="st40" x1="289.5" y1="247.5" x2="289.5" y2="189.4"/>
 </g>
 <g id="icons_and_text">
 	<text transform="matrix(1 0 0 1 613.148 463.598)" class="st4 st5 st6">Loby</text>
-	<circle class="st42" cx="590.6" cy="340.7" r="13.1"/>
+	<circle class="st41" cx="590.6" cy="340.7" r="13.1"/>
 	<text transform="matrix(1 0 0 1 583.731 361.343)" class="st4 st5 st6">Stairs</text>
 	<g id="Outline_Icons-2-2">
-		<line class="st43" x1="584.8" y1="345.8" x2="595" y2="345.8"/>
-		<polyline class="st43" points="593.2,345.8 593.2,344 591.4,344 591.4,342.3 589.7,342.3 589.7,340.5 587.9,340.5 587.9,338.7 
+		<line class="st42" x1="584.8" y1="345.8" x2="595" y2="345.8"/>
+		<polyline class="st42" points="593.2,345.8 593.2,344 591.4,344 591.4,342.3 589.7,342.3 589.7,340.5 587.9,340.5 587.9,338.7 
 			584.8,338.7 		"/>
-		<line class="st43" x1="590.1" y1="335.6" x2="595.7" y2="341.2"/>
-		<polyline class="st43" points="590.1,337.8 590.1,335.6 592.3,335.6 		"/>
-		<polyline class="st43" points="595.7,339 595.7,341.2 593.5,341.2 		"/>
+		<line class="st42" x1="590.1" y1="335.6" x2="595.7" y2="341.2"/>
+		<polyline class="st42" points="590.1,337.8 590.1,335.6 592.3,335.6 		"/>
+		<polyline class="st42" points="595.7,339 595.7,341.2 593.5,341.2 		"/>
 	</g>
 	<g id="reception">
-		<circle class="st42" cx="510.2" cy="240.6" r="13.3"/>
+		<circle class="st41" cx="510.2" cy="240.6" r="13.3"/>
 		<text transform="matrix(1 0 0 1 496.935 260.656)" class="st4 st5 st6">Reception</text>
 		<g id="Outline_Icons-2">
-			<circle class="st44" cx="507.3" cy="236.5" r="1.8"/>
-			<path class="st44" d="M510.1,239.3h-5.6c-0.2,1.5,0.5,3,1.8,3.8v3.3h2v-3.3C509.5,242.3,510.2,240.8,510.1,239.3z"/>
-			<line class="st44" x1="509.7" y1="241.4" x2="515.9" y2="241.4"/>
-			<circle class="st44" cx="513.1" cy="236.8" r="1.3"/>
-			<path class="st44" d="M510.8,241.4c0-1.3,1-2.3,2.3-2.3s2.3,1,2.3,2.3l0,0l0,0"/>
+			<circle class="st43" cx="507.3" cy="236.5" r="1.8"/>
+			<path class="st43" d="M510.1,239.3h-5.6c-0.2,1.5,0.5,3,1.8,3.8v3.3h2v-3.3C509.5,242.3,510.2,240.8,510.1,239.3z"/>
+			<line class="st43" x1="509.7" y1="241.4" x2="515.9" y2="241.4"/>
+			<circle class="st43" cx="513.1" cy="236.8" r="1.3"/>
+			<path class="st43" d="M510.8,241.4c0-1.3,1-2.3,2.3-2.3s2.3,1,2.3,2.3l0,0l0,0"/>
 		</g>
 	</g>
 	<g id="Work_cafe">
-		<circle class="st42" cx="548.2" cy="371.8" r="12.9"/>
-		<text transform="matrix(1 0 0 1 533.964 392.106)" class="st4 st5 st45">Co</text>
-		<text transform="matrix(1 0 0 1 541.571 392.106)" class="st4 st5 st45">f</text>
-		<text transform="matrix(1 0 0 1 543.117 392.106)" class="st4 st5 st45">fee Bar</text>
+		<circle class="st41" cx="548.2" cy="371.8" r="12.9"/>
+		<text transform="matrix(1 0 0 1 533.964 392.106)" class="st4 st5 st44">Co</text>
+		<text transform="matrix(1 0 0 1 541.571 392.106)" class="st4 st5 st44">f</text>
+		<text transform="matrix(1 0 0 1 543.117 392.106)" class="st4 st5 st44">fee Bar</text>
 	</g>
 	<g id="Outline_Icons-12">
-		<path class="st46" d="M550.6,374h1.1c0.8-0.2,1.4-0.9,1.3-1.8c-0.1-0.7-0.6-1.2-1.3-1.3h-1.1"/>
-		<line class="st46" x1="543.3" y1="376.6" x2="553.3" y2="376.6"/>
-		<path class="st46" d="M547.5,369.3c0,0,1.5-1.1,1.5-1.9c0-0.9-1.2-1.2-1.5-0.1c-0.3-1.1-1.5-0.8-1.5,0.1
+		<path class="st45" d="M550.6,374h1.1c0.8-0.2,1.4-0.9,1.3-1.8c-0.1-0.7-0.6-1.2-1.3-1.3h-1.1"/>
+		<line class="st45" x1="543.3" y1="376.6" x2="553.3" y2="376.6"/>
+		<path class="st45" d="M547.5,369.3c0,0,1.5-1.1,1.5-1.9c0-0.9-1.2-1.2-1.5-0.1c-0.3-1.1-1.5-0.8-1.5,0.1
 			C545.9,368.2,547.5,369.3,547.5,369.3z"/>
-		<path class="st46" d="M550.7,373.3c0,1.8-1.4,3.3-3.2,3.3l0,0c-1.7,0.1-3.2-1.3-3.3-3v-0.1l0,0v-3h6.5V373.3z"/>
+		<path class="st45" d="M550.7,373.3c0,1.8-1.4,3.3-3.2,3.3l0,0c-1.7,0.1-3.2-1.3-3.3-3v-0.1l0,0v-3h6.5V373.3z"/>
 	</g>
-	<rect x="570.1" y="260.9" class="st41" width="39.9" height="169.7"/>
+	<rect x="570.1" y="260.9" class="st40" width="39.9" height="169.7"/>
 	<text transform="matrix(1 0 0 1 613.146 175.237)" class="st4 st5 st6">Loby</text>
 	<text transform="matrix(1 0 0 1 426.171 539.237)" class="st4 st5 st6">Hall</text>
 	<text transform="matrix(1 0 0 1 357.978 166.382)" class="st4 st5 st6">Focus</text>
@@ -870,30 +873,30 @@
 	<text transform="matrix(1 0 0 1 232.861 310.551)" class="st4 st5 st6">fice</text>
 	<text transform="matrix(1 0 0 1 349.806 405.406)" class="st4 st5 st6">Server</text>
 	<text transform="matrix(1 0 0 1 350.642 412.632)" class="st4 st5 st6">Room</text>
-	<circle class="st42" cx="286" cy="381" r="13"/>
-	<text transform="matrix(1 0 0 1 277.068 399.891)" class="st4 st5 st47">Unisex</text>
-	<text transform="matrix(1 0 0 1 279.282 407.229)" class="st4 st5 st47">T</text>
-	<text transform="matrix(1 0 0 1 282.351 407.229)" class="st4 st5 st47">oilet</text>
+	<circle class="st41" cx="286" cy="381" r="13"/>
+	<text transform="matrix(1 0 0 1 277.068 399.891)" class="st4 st5 st46">Unisex</text>
+	<text transform="matrix(1 0 0 1 279.282 407.229)" class="st4 st5 st46">T</text>
+	<text transform="matrix(1 0 0 1 282.351 407.229)" class="st4 st5 st46">oilet</text>
 	<g id="Outline_Icons-5-2">
-		<path class="st48" d="M290.5,381.3c0,0.2-0.1,0.4-0.3,0.4h-0.1h-2.5v-5.4c0-0.5,0.4-1,1-1l0,0h1c0.5,0,1,0.4,1,1l0,0l0,0
+		<path class="st47" d="M290.5,381.3c0,0.2-0.1,0.4-0.3,0.4h-0.1h-2.5v-5.4c0-0.5,0.4-1,1-1l0,0h1c0.5,0,1,0.4,1,1l0,0l0,0
 			L290.5,381.3L290.5,381.3z"/>
-		<path class="st48" d="M283.8,386.7h4.9v-2.9l1.4-1v-1h-8.4c-0.2,1.2,0.7,2.3,1.9,2.4c0.1,0,0.1,0,0.2,0h0.1L283.8,386.7z"/>
-		<rect x="281.2" y="380.9" class="st48" width="6.4" height="1"/>
-		<circle class="st48" cx="289.4" cy="377.1" r="0.4"/>
+		<path class="st47" d="M283.8,386.7h4.9v-2.9l1.4-1v-1h-8.4c-0.2,1.2,0.7,2.3,1.9,2.4c0.1,0,0.1,0,0.2,0h0.1L283.8,386.7z"/>
+		<rect x="281.2" y="380.9" class="st47" width="6.4" height="1"/>
+		<circle class="st47" cx="289.4" cy="377.1" r="0.4"/>
 	</g>
-	<text transform="matrix(1 0 0 1 282.385 183.058)" class="st4 st5 st49">Print Point</text>
-	<circle class="st42" cx="295.5" cy="163.3" r="13.6"/>
+	<text transform="matrix(1 0 0 1 282.385 183.058)" class="st4 st5 st48">Print Point</text>
+	<circle class="st41" cx="295.5" cy="163.3" r="13.6"/>
 	<g id="Outline_Icons-13">
 		<g id="Outline_Icons-14">
-			<path class="st50" d="M292.4,166H291c-0.5,0-0.9-0.4-0.9-0.9v-3c0-0.5,0.4-0.9,0.9-0.9h9.2c0.5,0,0.9,0.4,0.9,0.9v3
+			<path class="st49" d="M292.4,166H291c-0.5,0-0.9-0.4-0.9-0.9v-3c0-0.5,0.4-0.9,0.9-0.9h9.2c0.5,0,0.9,0.4,0.9,0.9v3
 				c0,0.5-0.4,0.9-0.9,0.9h-1.4"/>
-			<polyline class="st50" points="292.4,160.2 292.4,158.1 297.2,158.1 298.7,159.7 298.7,160.2 			"/>
-			<rect x="292.4" y="164.4" class="st50" width="6.3" height="3.9"/>
-			<circle class="st50" cx="291.5" cy="162.5" r="0.5"/>
-			<line class="st50" x1="293.3" y1="165.5" x2="297.7" y2="165.5"/>
-			<line class="st50" x1="293.3" y1="166.4" x2="297.7" y2="166.4"/>
-			<line class="st50" x1="293.3" y1="167.4" x2="297.7" y2="167.4"/>
-			<polyline class="st50" points="297.2,158.1 297.2,159.7 298.7,159.7 			"/>
+			<polyline class="st49" points="292.4,160.2 292.4,158.1 297.2,158.1 298.7,159.7 298.7,160.2 			"/>
+			<rect x="292.4" y="164.4" class="st49" width="6.3" height="3.9"/>
+			<circle class="st49" cx="291.5" cy="162.5" r="0.5"/>
+			<line class="st49" x1="293.3" y1="165.5" x2="297.7" y2="165.5"/>
+			<line class="st49" x1="293.3" y1="166.4" x2="297.7" y2="166.4"/>
+			<line class="st49" x1="293.3" y1="167.4" x2="297.7" y2="167.4"/>
+			<polyline class="st49" points="297.2,158.1 297.2,159.7 298.7,159.7 			"/>
 		</g>
 	</g>
 	<text transform="matrix(1 0 0 1 226.5292 164.245)" class="st4 st5 st6">Focus</text>
