@@ -16702,7 +16702,8 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
             default:
                 this.form.markAsDirty();
                 if (!this.form.controls.needs_space ||
-                    (this.form.controls.needs_space.value && (!space_list || !space_list.length || !this.form.controls.id.value))) {
+                    (this.form.controls.needs_space.value &&
+                        (!space_list || !space_list.length || !this.form.controls.id.value))) {
                     this.navigate('search');
                 }
                 else {
@@ -16818,11 +16819,15 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
     confirmBooking() {
         /* istanbul ignore else */
         if (this.form.valid) {
+            const value = this.form.value;
             const dialog_ref = this._dialog.open(booking_confirm_component_1.BookingConfirmComponent, {
                 width: '32em',
                 maxWidth: '95vw',
                 maxHeight: '95vh',
-                data: { old_booking: this.booking, booking: new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), this.form.value)) },
+                data: {
+                    old_booking: this.booking,
+                    booking: new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), value), { room_ids: value.space_list.map((space) => space.id) })),
+                },
             });
             dialog_ref.componentInstance.event.subscribe((event) => {
                 /* istanbul ignore else */
@@ -21070,16 +21075,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "b97d2f6",
-    "hash": "b97d2f6",
+    "raw": "bcc8b78",
+    "hash": "bcc8b78",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b97d2f6",
+    "suffix": "bcc8b78",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1591671539928
+    "time": 1591673356443
 };
 /* tslint:enable */
 
