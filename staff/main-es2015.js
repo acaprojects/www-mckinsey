@@ -819,6 +819,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const view_room_modal_component_1 = __webpack_require__(/*! ../../view-room-modal/view-room-modal.component */ "./src/app/overlays/view-room-modal/view-room-modal.component.ts");
+const formatting_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
 const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
@@ -838,36 +839,29 @@ function MeetingDetailsDisplayComponent_div_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(2, "Reccurrence:");
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "div", 2);
-    i0.ɵɵelementStart(4, "div");
-    i0.ɵɵtext(5);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(6, "div", 17);
-    i0.ɵɵtext(7);
-    i0.ɵɵelementEnd();
+    i0.ɵɵtext(4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(5);
-    i0.ɵɵtextInterpolate(ctx_r0.recurrence_range);
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(ctx_r0.recurrence_period);
+    i0.ɵɵadvance(4);
+    i0.ɵɵtextInterpolate1(" ", ctx_r0.recurrence, " ");
 } }
 function MeetingDetailsDisplayComponent_div_22_button_6_Template(rf, ctx) { if (rf & 1) {
     const _r11 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 20);
+    i0.ɵɵelementStart(0, "button", 19);
     i0.ɵɵlistener("touchrelease", function MeetingDetailsDisplayComponent_div_22_button_6_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r11); const item_r7 = i0.ɵɵnextContext().$implicit; const ctx_r9 = i0.ɵɵnextContext(); return ctx_r9.locate(item_r7); });
     i0.ɵɵtext(1, " Map ");
     i0.ɵɵelementEnd();
 } }
 function MeetingDetailsDisplayComponent_div_22_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 18);
+    i0.ɵɵelementStart(0, "div", 17);
     i0.ɵɵelementStart(1, "div");
-    i0.ɵɵelementStart(2, "div", 19);
+    i0.ɵɵelementStart(2, "div", 18);
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "div", 19);
+    i0.ɵɵelementStart(4, "div", 18);
     i0.ɵɵtext(5);
     i0.ɵɵelementEnd();
     i0.ɵɵtemplate(6, MeetingDetailsDisplayComponent_div_22_button_6_Template, 2, 0, "button", 10);
@@ -886,13 +880,13 @@ function MeetingDetailsDisplayComponent_div_22_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵproperty("ngIf", item_r7 == null ? null : item_r7.map_id);
 } }
 function MeetingDetailsDisplayComponent_div_23_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 21);
+    i0.ɵɵelementStart(0, "div", 20);
     i0.ɵɵtext(1, "No Location");
     i0.ɵɵelementEnd();
 } }
 function MeetingDetailsDisplayComponent_button_24_Template(rf, ctx) { if (rf & 1) {
     const _r13 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 20);
+    i0.ɵɵelementStart(0, "button", 19);
     i0.ɵɵlistener("touchrelease", function MeetingDetailsDisplayComponent_button_24_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r13); const ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.show_locations = !ctx_r12.show_locations; });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
@@ -902,8 +896,8 @@ function MeetingDetailsDisplayComponent_button_24_Template(rf, ctx) { if (rf & 1
     i0.ɵɵtextInterpolate1(" ", ctx_r3.show_locations ? "Hide" : "Show", " Locations ");
 } }
 function MeetingDetailsDisplayComponent_div_35_div_7_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 24);
-    i0.ɵɵelementStart(1, "a", 25);
+    i0.ɵɵelementStart(0, "div", 23);
+    i0.ɵɵelementStart(1, "a", 24);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -916,17 +910,17 @@ function MeetingDetailsDisplayComponent_div_35_div_7_Template(rf, ctx) { if (rf 
     i0.ɵɵtextInterpolate(item_r14.email);
 } }
 function MeetingDetailsDisplayComponent_div_35_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 18);
+    i0.ɵɵelementStart(0, "div", 17);
     i0.ɵɵelementStart(1, "div");
-    i0.ɵɵelementStart(2, "div", 19);
+    i0.ɵɵelementStart(2, "div", 18);
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "div", 19);
-    i0.ɵɵelementStart(5, "div", 22);
+    i0.ɵɵelementStart(4, "div", 18);
+    i0.ɵɵelementStart(5, "div", 21);
     i0.ɵɵtext(6);
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(7, MeetingDetailsDisplayComponent_div_35_div_7_Template, 3, 2, "div", 23);
+    i0.ɵɵtemplate(7, MeetingDetailsDisplayComponent_div_35_div_7_Template, 3, 2, "div", 22);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -944,7 +938,7 @@ function MeetingDetailsDisplayComponent_div_35_Template(rf, ctx) { if (rf & 1) {
 } }
 function MeetingDetailsDisplayComponent_button_36_Template(rf, ctx) { if (rf & 1) {
     const _r18 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 20);
+    i0.ɵɵelementStart(0, "button", 19);
     i0.ɵɵlistener("touchrelease", function MeetingDetailsDisplayComponent_button_36_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r18); const ctx_r17 = i0.ɵɵnextContext(); return ctx_r17.show_attendees = !ctx_r17.show_attendees; });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
@@ -954,7 +948,7 @@ function MeetingDetailsDisplayComponent_button_36_Template(rf, ctx) { if (rf & 1
     i0.ɵɵtextInterpolate1(" ", ctx_r5.show_attendees ? "Hide" : "Show", " Attendees ");
 } }
 function MeetingDetailsDisplayComponent_div_42_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 26);
+    i0.ɵɵelementStart(0, "div", 25);
     i0.ɵɵelementStart(1, "label");
     i0.ɵɵtext(2, "Catered:");
     i0.ɵɵelementEnd();
@@ -1038,20 +1032,9 @@ class MeetingDetailsDisplayComponent extends base_directive_1.BaseDirective {
         }
         return this.event.organiser || this._users.current;
     }
-    /** Reccurence Range */
-    get recurrence_range() {
-        if (!this.event || !this.event.recurrence || !this.event.recurrence.period) {
-            return '';
-        }
-        const start = dayjs(this.event.recurrence.start * 1000).format('MMMM DD, YYYY');
-        const end = dayjs(this.event.recurrence.end * 1000).format('MMMM DD, YYYY');
-        return `${start} - ${end}`;
-    }
-    get recurrence_period() {
-        if (!this.event || !this.event.recurrence) {
-            return '';
-        }
-        return this.event.recurrence.period;
+    /** Display string for the recurrence value of the booking */
+    get recurrence() {
+        return formatting_utilities_1.formatRecurrence(this.event.recurrence);
     }
     /** Whether the user is allowed to edit the event */
     get can_edit() {
@@ -1134,7 +1117,7 @@ class MeetingDetailsDisplayComponent extends base_directive_1.BaseDirective {
 }
 exports.MeetingDetailsDisplayComponent = MeetingDetailsDisplayComponent;
 MeetingDetailsDisplayComponent.ɵfac = function MeetingDetailsDisplayComponent_Factory(t) { return new (t || MeetingDetailsDisplayComponent)(i0.ɵɵdirectiveInject(i1.SpacesService), i0.ɵɵdirectiveInject(i2.UsersService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
-MeetingDetailsDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetailsDisplayComponent, selectors: [["meeting-details-display"]], inputs: { event: "event" }, outputs: { on_event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 43, vars: 20, consts: [[1, "event-details"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["class", "field", "name", "recurrence", 4, "ngIf"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["name", "attendees", 1, "field", "multi"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["class", "field", "name", "catering", 4, "ngIf"], ["name", "recurrence", 1, "field"], [1, "period"], [1, "list-item", 3, "title"], [1, "text"], [1, "show", 3, "touchrelease"], [1, "list-item"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["name", "catering", 1, "field"]], template: function MeetingDetailsDisplayComponent_Template(rf, ctx) { if (rf & 1) {
+MeetingDetailsDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetailsDisplayComponent, selectors: [["meeting-details-display"]], inputs: { event: "event" }, outputs: { on_event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 43, vars: 20, consts: [[1, "event-details"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["class", "field", "name", "recurrence", 4, "ngIf"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["name", "attendees", 1, "field", "multi"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["class", "field", "name", "catering", 4, "ngIf"], ["name", "recurrence", 1, "field"], [1, "list-item", 3, "title"], [1, "text"], [1, "show", 3, "touchrelease"], [1, "list-item"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["name", "catering", 1, "field"]], template: function MeetingDetailsDisplayComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "label");
@@ -1152,7 +1135,7 @@ MeetingDetailsDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDet
         i0.ɵɵtext(10);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(11, MeetingDetailsDisplayComponent_div_11_Template, 8, 2, "div", 4);
+        i0.ɵɵtemplate(11, MeetingDetailsDisplayComponent_div_11_Template, 5, 1, "div", 4);
         i0.ɵɵelementStart(12, "div", 5);
         i0.ɵɵelementStart(13, "label");
         i0.ɵɵtext(14, "Duration:");
@@ -1207,7 +1190,7 @@ MeetingDetailsDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDet
         i0.ɵɵadvance(5);
         i0.ɵɵtextInterpolate(ctx.when);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx.recurrence_range);
+        i0.ɵɵproperty("ngIf", ctx.event.recurrence && ctx.event.recurrence.period !== "none");
         i0.ɵɵadvance(5);
         i0.ɵɵtextInterpolate(ctx.duration);
         i0.ɵɵadvance(3);
@@ -8289,7 +8272,7 @@ const user_class_1 = __webpack_require__(/*! src/app/services/data/users/user.cl
 const space_select_modal_component_1 = __webpack_require__(/*! src/app/overlays/space-select-modal/space-select-modal.component */ "./src/app/overlays/space-select-modal/space-select-modal.component.ts");
 const recurrence_modal_component_1 = __webpack_require__(/*! src/app/overlays/recurrence-modal/recurrence-modal.component */ "./src/app/overlays/recurrence-modal/recurrence-modal.component.ts");
 const users_service_1 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const formatting_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
@@ -8772,15 +8755,7 @@ class BookingFormComponent extends base_directive_1.BaseDirective {
         const recurrence = this.form.controls.recurrence
             ? this.form.controls.recurrence.value
             : null;
-        const periods = ['None', 'Daily', 'Weekly', 'Biweekly', 'Monthly'];
-        if (!recurrence || !recurrence.period || recurrence.period >= periods.length) {
-            return 'No recurrence';
-        }
-        const period = typeof recurrence.period === 'string' ? recurrence.period : periods[recurrence.period];
-        const end = recurrence.end
-            ? `until ${dayjs(recurrence.end).format('DD MMM YYYY')}`
-            : 'forever';
-        return `${period} ${end}`;
+        return formatting_utilities_1.formatRecurrence(recurrence);
     }
     /** Whether notes and description should use the HTML editor */
     get use_html() {
@@ -11418,6 +11393,138 @@ exports.toQueryString = toQueryString;
 
 /***/ }),
 
+/***/ "./src/app/shared/utilities/formatting.utilities.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/shared/utilities/formatting.utilities.ts ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const general_utilities_1 = __webpack_require__(/*! ./general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+// attendees: FormFormatters.attendees(user),
+// date: FormFormatters.date,
+// room: FormFormatters.space,
+// recurrence: FormFormatters.recurrence
+/**
+ * Get function to create formatted string for a list of users with a host
+ * @param host Host user
+ */
+function formatAttendeesWithHost(host) {
+    return (l) => formatAttendees(l, host);
+}
+exports.formatAttendeesWithHost = formatAttendeesWithHost;
+/**
+ * Create formatted string from a list of users
+ * @param list List of users
+ * @param host Owner of the list of users
+ */
+function formatAttendees(list, host) {
+    let attendee_str = '';
+    if (list && list.length > 0) {
+        const users = [...list];
+        if (host) {
+            const result = users.find(a => a.email === host.email);
+            if (result) {
+                users.splice(users.indexOf(result), 1);
+            }
+        }
+        const length = users.length + (host ? 1 : 0);
+        attendee_str = `${length} Attendee${length === 1 ? '' : 's'}; ${host ? host.name : ''}`;
+        for (const item of users) {
+            if (attendee_str) {
+                attendee_str += ', ';
+            }
+            attendee_str += item.name;
+        }
+        attendee_str = attendee_str.replace('; ,', ';');
+    }
+    return attendee_str;
+}
+exports.formatAttendees = formatAttendees;
+/**
+ * Create date formatted string for given date
+ * @param date Date to format
+ */
+function formatDate(date) {
+    return dayjs(date).format('DD MMMM YYYY');
+}
+exports.formatDate = formatDate;
+/**
+ * Create time formatted string for given date
+ * @param date Date to format
+ */
+function formatTime(date) {
+    return dayjs(date).format('h:mm A');
+}
+exports.formatTime = formatTime;
+/**
+ * Create formatted string for a period of given duration
+ * @param duration Period duration in minutes
+ */
+function formatPeriodWithDuration(duration) {
+    return (t) => formatPeriod(t, duration);
+}
+exports.formatPeriodWithDuration = formatPeriodWithDuration;
+/**
+ * Create formatted string for a period of given duration
+ * @param timestamp Start hours and minutes of the period in the format `HH:mm`
+ * @param duration Period duration in minutes
+ */
+function formatPeriod(timestamp, duration = 60) {
+    const parts = timestamp.split(':');
+    const date = dayjs().hour(+parts[0]).minute(+parts[1]);
+    return `${date.format('h:mm A')} - ${date.add(duration, 'm').format('h:mm A')} (${general_utilities_1.humaniseDuration(duration)})`;
+}
+exports.formatPeriod = formatPeriod;
+/**
+ * Create formatted human readable string for a given duration
+ * @param duration Duration in minutes
+ */
+function formatDuration(duration) {
+    return general_utilities_1.humaniseDuration(duration);
+}
+exports.formatDuration = formatDuration;
+/** Human readable names of applicable recurrence periods */
+exports.RECURRENCE_PERIODS = ['None', 'Daily', 'Weekly', 'Monthly', 'Yearly'];
+/**
+ * Create human readable string for recurrence metadata
+ * @param value
+ */
+function formatRecurrence(value) {
+    if (!value || !value.period || value.period >= exports.RECURRENCE_PERIODS.length) {
+        return 'No recurrence';
+    }
+    let period = typeof value.period === 'string' ? value.period : exports.RECURRENCE_PERIODS[value.period];
+    period = `${period[0].toUpperCase()}${period.substr(1)}`;
+    const end = value.end ? `until ${dayjs(value.end * 1000).format('DD MMM YYYY')}` : 'forever';
+    return `${period} ${end}`;
+}
+exports.formatRecurrence = formatRecurrence;
+/**
+ * Create human readable string for a room or list of rooms
+ * @param list List of spaces/rooms
+ */
+function formatSpaces(list) {
+    if (!list || (list instanceof Array && list.length <= 0)) {
+        return 'No selected space';
+    }
+    if (list instanceof Array) {
+        return list.length === 1 ? list[0].name : `${list.length} Space${list.length !== 1 ? 's' : ''}`;
+    }
+    else {
+        const capacity = list.capacity ? '(' + list.capacity + ' ' + (list.capacity === 1 ? 'person' : 'people') + ')' : '';
+        return `${list.name} ${capacity}`;
+    }
+}
+exports.formatSpaces = formatSpaces;
+
+
+/***/ }),
+
 /***/ "./src/app/shared/utilities/general.utilities.ts":
 /*!*******************************************************!*\
   !*** ./src/app/shared/utilities/general.utilities.ts ***!
@@ -12173,6 +12280,7 @@ const users_service_1 = __webpack_require__(/*! src/app/services/data/users/user
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const formatting_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
@@ -12220,102 +12328,107 @@ function BookingConfirmComponent_mat_dialog_content_0_span_35_Template(rf, ctx) 
     i0.ɵɵtext(1, "*");
     i0.ɵɵelementEnd();
 } }
-function BookingConfirmComponent_mat_dialog_content_0_div_39_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_span_42_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span");
+    i0.ɵɵtext(1, "*");
+    i0.ɵɵelementEnd();
+} }
+function BookingConfirmComponent_mat_dialog_content_0_div_46_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 28);
     i0.ɵɵelementStart(1, "div", 8);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r26 = ctx.$implicit;
-    i0.ɵɵproperty("title", item_r26 == null ? null : item_r26.name);
+    const item_r27 = ctx.$implicit;
+    i0.ɵɵproperty("title", item_r27 == null ? null : item_r27.name);
     i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(item_r26 == null ? null : item_r26.name);
+    i0.ɵɵtextInterpolate(item_r27 == null ? null : item_r27.name);
 } }
-function BookingConfirmComponent_mat_dialog_content_0_div_40_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_div_47_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 29);
     i0.ɵɵtext(1, "No Locations");
     i0.ɵɵelementEnd();
 } }
-function BookingConfirmComponent_mat_dialog_content_0_button_41_Template(rf, ctx) { if (rf & 1) {
-    const _r28 = i0.ɵɵgetCurrentView();
+function BookingConfirmComponent_mat_dialog_content_0_button_48_Template(rf, ctx) { if (rf & 1) {
+    const _r29 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "button", 30);
-    i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_41_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r28); const ctx_r27 = i0.ɵɵnextContext(2); return ctx_r27.show_locations = !ctx_r27.show_locations; });
+    i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_48_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r29); const ctx_r28 = i0.ɵɵnextContext(2); return ctx_r28.show_locations = !ctx_r28.show_locations; });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r15 = i0.ɵɵnextContext(2);
+    const ctx_r16 = i0.ɵɵnextContext(2);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", ctx_r15.show_locations ? "Hide" : "Show", " Locations ");
-} }
-function BookingConfirmComponent_mat_dialog_content_0_span_45_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "span");
-    i0.ɵɵtext(1, "*");
-    i0.ɵɵelementEnd();
+    i0.ɵɵtextInterpolate1(" ", ctx_r16.show_locations ? "Hide" : "Show", " Locations ");
 } }
 function BookingConfirmComponent_mat_dialog_content_0_span_52_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "span");
     i0.ɵɵtext(1, "*");
     i0.ɵɵelementEnd();
 } }
-function BookingConfirmComponent_mat_dialog_content_0_span_55_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_span_59_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span");
+    i0.ɵɵtext(1, "*");
+    i0.ɵɵelementEnd();
+} }
+function BookingConfirmComponent_mat_dialog_content_0_span_62_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "span");
     i0.ɵɵtext(1, "<No Attendees>");
     i0.ɵɵelementEnd();
 } }
-function BookingConfirmComponent_mat_dialog_content_0_div_57_div_4_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_div_64_div_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 33);
     i0.ɵɵelementStart(1, "a", 34);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r29 = i0.ɵɵnextContext().$implicit;
-    const ctx_r30 = i0.ɵɵnextContext(2);
+    const item_r30 = i0.ɵɵnextContext().$implicit;
+    const ctx_r31 = i0.ɵɵnextContext(2);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("href", "mailto:" + item_r29.email + "?subject=" + ctx_r30.booking.title, i0.ɵɵsanitizeUrl);
+    i0.ɵɵproperty("href", "mailto:" + item_r30.email + "?subject=" + ctx_r31.booking.title, i0.ɵɵsanitizeUrl);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate(item_r29.email);
+    i0.ɵɵtextInterpolate(item_r30.email);
 } }
-function BookingConfirmComponent_mat_dialog_content_0_div_57_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_div_64_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 28);
     i0.ɵɵelementStart(1, "div", 8);
     i0.ɵɵelementStart(2, "div", 31);
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_57_div_4_Template, 3, 2, "div", 32);
+    i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_64_div_4_Template, 3, 2, "div", 32);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r29 = ctx.$implicit;
-    i0.ɵɵproperty("title", (item_r29 == null ? null : item_r29.name) + ((item_r29 == null ? null : item_r29.email) ? "\n" + item_r29.email : ""));
+    const item_r30 = ctx.$implicit;
+    i0.ɵɵproperty("title", (item_r30 == null ? null : item_r30.name) + ((item_r30 == null ? null : item_r30.email) ? "\n" + item_r30.email : ""));
     i0.ɵɵadvance(3);
-    i0.ɵɵtextInterpolate(item_r29.name);
+    i0.ɵɵtextInterpolate(item_r30.name);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", item_r29.email);
+    i0.ɵɵproperty("ngIf", item_r30.email);
 } }
-function BookingConfirmComponent_mat_dialog_content_0_button_58_Template(rf, ctx) { if (rf & 1) {
-    const _r33 = i0.ɵɵgetCurrentView();
+function BookingConfirmComponent_mat_dialog_content_0_button_65_Template(rf, ctx) { if (rf & 1) {
+    const _r34 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "button", 30);
-    i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_58_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r33); const ctx_r32 = i0.ɵɵnextContext(2); return ctx_r32.show_attendees = !ctx_r32.show_attendees; });
+    i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_65_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r34); const ctx_r33 = i0.ɵɵnextContext(2); return ctx_r33.show_attendees = !ctx_r33.show_attendees; });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r20 = i0.ɵɵnextContext(2);
+    const ctx_r21 = i0.ɵɵnextContext(2);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", ctx_r20.show_attendees ? "Hide" : "Show", " Attendees ");
+    i0.ɵɵtextInterpolate1(" ", ctx_r21.show_attendees ? "Hide" : "Show", " Attendees ");
 } }
-function BookingConfirmComponent_mat_dialog_content_0_span_62_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_span_69_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "span");
     i0.ɵɵtext(1, "*");
     i0.ɵɵelementEnd();
 } }
-function BookingConfirmComponent_mat_dialog_content_0_span_68_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_span_75_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "span");
     i0.ɵɵtext(1, "*");
     i0.ɵɵelementEnd();
 } }
-function BookingConfirmComponent_mat_dialog_content_0_div_72_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_div_79_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 29);
     i0.ɵɵelementStart(1, "div", 8);
     i0.ɵɵelementStart(2, "div", 31);
@@ -12328,24 +12441,24 @@ function BookingConfirmComponent_mat_dialog_content_0_div_72_Template(rf, ctx) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const order_r34 = ctx.$implicit;
+    const order_r35 = ctx.$implicit;
     i0.ɵɵadvance(3);
-    i0.ɵɵtextInterpolate(order_r34.location || "<Removed>");
+    i0.ɵɵtextInterpolate(order_r35.location || "<Removed>");
     i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate3(" ", order_r34.item_count, " item", order_r34.item_count === 1 ? "" : "", " | ", i0.ɵɵpipeBind2(6, 4, order_r34.total / 100, order_r34.symbol), " ");
+    i0.ɵɵtextInterpolate3(" ", order_r35.item_count, " item", order_r35.item_count === 1 ? "" : "", " | ", i0.ɵɵpipeBind2(6, 4, order_r35.total / 100, order_r35.symbol), " ");
 } }
-function BookingConfirmComponent_mat_dialog_content_0_button_73_Template(rf, ctx) { if (rf & 1) {
-    const _r36 = i0.ɵɵgetCurrentView();
+function BookingConfirmComponent_mat_dialog_content_0_button_80_Template(rf, ctx) { if (rf & 1) {
+    const _r37 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "button", 30);
-    i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_73_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r36); const ctx_r35 = i0.ɵɵnextContext(2); return ctx_r35.show_orders = !ctx_r35.show_orders; });
+    i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_80_Template_button_touchrelease_0_listener() { i0.ɵɵrestoreView(_r37); const ctx_r36 = i0.ɵɵnextContext(2); return ctx_r36.show_orders = !ctx_r36.show_orders; });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r24 = i0.ɵɵnextContext(2);
+    const ctx_r25 = i0.ɵɵnextContext(2);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", ctx_r24.show_orders ? "Hide" : "Show", " Catering orders ");
+    i0.ɵɵtextInterpolate1(" ", ctx_r25.show_orders ? "Hide" : "Show", " Catering orders ");
 } }
-function BookingConfirmComponent_mat_dialog_content_0_div_74_Template(rf, ctx) { if (rf & 1) {
+function BookingConfirmComponent_mat_dialog_content_0_div_81_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 27);
     i0.ɵɵtext(1, " * - changed fields ");
     i0.ɵɵelementEnd();
@@ -12386,9 +12499,9 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
     i0.ɵɵtext(24);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(25, "div", 14);
+    i0.ɵɵelementStart(25, "div", 13);
     i0.ɵɵelementStart(26, "label");
-    i0.ɵɵtext(27, "Duration");
+    i0.ɵɵtext(27, "Recurrence");
     i0.ɵɵtemplate(28, BookingConfirmComponent_mat_dialog_content_0_span_28_Template, 2, 0, "span", 1);
     i0.ɵɵtext(29, ":");
     i0.ɵɵelementEnd();
@@ -12396,72 +12509,82 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
     i0.ɵɵtext(31);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(32, "div", 15);
+    i0.ɵɵelementStart(32, "div", 14);
     i0.ɵɵelementStart(33, "label");
-    i0.ɵɵtext(34);
+    i0.ɵɵtext(34, "Duration");
     i0.ɵɵtemplate(35, BookingConfirmComponent_mat_dialog_content_0_span_35_Template, 2, 0, "span", 1);
     i0.ɵɵtext(36, ":");
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(37, "div", 12);
-    i0.ɵɵelementStart(38, "div", 16);
-    i0.ɵɵtemplate(39, BookingConfirmComponent_mat_dialog_content_0_div_39_Template, 3, 2, "div", 17);
-    i0.ɵɵtemplate(40, BookingConfirmComponent_mat_dialog_content_0_div_40_Template, 2, 0, "div", 18);
-    i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(41, BookingConfirmComponent_mat_dialog_content_0_button_41_Template, 2, 1, "button", 19);
+    i0.ɵɵtext(38);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(42, "div", 20);
-    i0.ɵɵelementStart(43, "label");
-    i0.ɵɵtext(44, "Host");
-    i0.ɵɵtemplate(45, BookingConfirmComponent_mat_dialog_content_0_span_45_Template, 2, 0, "span", 1);
-    i0.ɵɵtext(46, ":");
+    i0.ɵɵelementStart(39, "div", 15);
+    i0.ɵɵelementStart(40, "label");
+    i0.ɵɵtext(41);
+    i0.ɵɵtemplate(42, BookingConfirmComponent_mat_dialog_content_0_span_42_Template, 2, 0, "span", 1);
+    i0.ɵɵtext(43, ":");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(47, "div", 12);
-    i0.ɵɵtext(48);
+    i0.ɵɵelementStart(44, "div", 12);
+    i0.ɵɵelementStart(45, "div", 16);
+    i0.ɵɵtemplate(46, BookingConfirmComponent_mat_dialog_content_0_div_46_Template, 3, 2, "div", 17);
+    i0.ɵɵtemplate(47, BookingConfirmComponent_mat_dialog_content_0_div_47_Template, 2, 0, "div", 18);
+    i0.ɵɵelementEnd();
+    i0.ɵɵtemplate(48, BookingConfirmComponent_mat_dialog_content_0_button_48_Template, 2, 1, "button", 19);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(49, "div", 21);
+    i0.ɵɵelementStart(49, "div", 20);
     i0.ɵɵelementStart(50, "label");
-    i0.ɵɵtext(51);
+    i0.ɵɵtext(51, "Host");
     i0.ɵɵtemplate(52, BookingConfirmComponent_mat_dialog_content_0_span_52_Template, 2, 0, "span", 1);
     i0.ɵɵtext(53, ":");
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(54, "div", 12);
-    i0.ɵɵtemplate(55, BookingConfirmComponent_mat_dialog_content_0_span_55_Template, 2, 0, "span", 1);
-    i0.ɵɵelementStart(56, "div", 16);
-    i0.ɵɵtemplate(57, BookingConfirmComponent_mat_dialog_content_0_div_57_Template, 5, 3, "div", 17);
-    i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(58, BookingConfirmComponent_mat_dialog_content_0_button_58_Template, 2, 1, "button", 19);
+    i0.ɵɵtext(55);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(59, "div", 22);
-    i0.ɵɵelementStart(60, "label");
-    i0.ɵɵtext(61, "Notes");
+    i0.ɵɵelementStart(56, "div", 21);
+    i0.ɵɵelementStart(57, "label");
+    i0.ɵɵtext(58);
+    i0.ɵɵtemplate(59, BookingConfirmComponent_mat_dialog_content_0_span_59_Template, 2, 0, "span", 1);
+    i0.ɵɵtext(60, ":");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(61, "div", 12);
     i0.ɵɵtemplate(62, BookingConfirmComponent_mat_dialog_content_0_span_62_Template, 2, 0, "span", 1);
-    i0.ɵɵtext(63, ":");
+    i0.ɵɵelementStart(63, "div", 16);
+    i0.ɵɵtemplate(64, BookingConfirmComponent_mat_dialog_content_0_div_64_Template, 5, 3, "div", 17);
     i0.ɵɵelementEnd();
-    i0.ɵɵelement(64, "div", 23);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(65, "div", 24);
-    i0.ɵɵelementStart(66, "label");
-    i0.ɵɵtext(67);
-    i0.ɵɵtemplate(68, BookingConfirmComponent_mat_dialog_content_0_span_68_Template, 2, 0, "span", 1);
-    i0.ɵɵtext(69, ":");
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(70, "div", 12);
-    i0.ɵɵelementStart(71, "div", 16);
-    i0.ɵɵtemplate(72, BookingConfirmComponent_mat_dialog_content_0_div_72_Template, 7, 7, "div", 25);
-    i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(73, BookingConfirmComponent_mat_dialog_content_0_button_73_Template, 2, 1, "button", 19);
+    i0.ɵɵtemplate(65, BookingConfirmComponent_mat_dialog_content_0_button_65_Template, 2, 1, "button", 19);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(74, BookingConfirmComponent_mat_dialog_content_0_div_74_Template, 2, 0, "div", 10);
+    i0.ɵɵelementStart(66, "div", 22);
+    i0.ɵɵelementStart(67, "label");
+    i0.ɵɵtext(68, "Notes");
+    i0.ɵɵtemplate(69, BookingConfirmComponent_mat_dialog_content_0_span_69_Template, 2, 0, "span", 1);
+    i0.ɵɵtext(70, ":");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelement(71, "div", 23);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(72, "div", 24);
+    i0.ɵɵelementStart(73, "label");
+    i0.ɵɵtext(74);
+    i0.ɵɵtemplate(75, BookingConfirmComponent_mat_dialog_content_0_span_75_Template, 2, 0, "span", 1);
+    i0.ɵɵtext(76, ":");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(77, "div", 12);
+    i0.ɵɵelementStart(78, "div", 16);
+    i0.ɵɵtemplate(79, BookingConfirmComponent_mat_dialog_content_0_div_79_Template, 7, 7, "div", 25);
+    i0.ɵɵelementEnd();
+    i0.ɵɵtemplate(80, BookingConfirmComponent_mat_dialog_content_0_button_80_Template, 2, 1, "button", 19);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵtemplate(81, BookingConfirmComponent_mat_dialog_content_0_div_81_Template, 2, 0, "div", 10);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
     i0.ɵɵadvance(3);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(36, _c0));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(38, _c0));
     i0.ɵɵadvance(2);
     i0.ɵɵproperty("src", ctx_r0.success ? ctx_r0.is_request ? "assets/img/requested.svg" : "assets/img/confirmed.svg" : "assets/img/edit.svg", i0.ɵɵsanitizeUrl);
     i0.ɵɵadvance(3);
@@ -12478,6 +12601,10 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
     i0.ɵɵproperty("ngIf", ctx_r0.changes.date);
     i0.ɵɵadvance(3);
     i0.ɵɵtextInterpolate(ctx_r0.when);
+    i0.ɵɵadvance(4);
+    i0.ɵɵproperty("ngIf", ctx_r0.changes.recurrence);
+    i0.ɵɵadvance(3);
+    i0.ɵɵtextInterpolate(ctx_r0.recurrence);
     i0.ɵɵadvance(4);
     i0.ɵɵproperty("ngIf", ctx_r0.changes.duration);
     i0.ɵɵadvance(3);
@@ -12528,13 +12655,13 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
     i0.ɵɵproperty("ngIf", ctx_r0.booking == null ? null : ctx_r0.booking.id);
 } }
 function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template(rf, ctx) { if (rf & 1) {
-    const _r39 = i0.ɵɵgetCurrentView();
+    const _r40 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementContainerStart(0);
     i0.ɵɵelementStart(1, "button", 35);
     i0.ɵɵtext(2, "Edit");
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "button", 36);
-    i0.ɵɵlistener("tapped", function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template_button_tapped_3_listener() { i0.ɵɵrestoreView(_r39); const ctx_r38 = i0.ɵɵnextContext(2); return ctx_r38.saveChanges(); });
+    i0.ɵɵlistener("tapped", function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template_button_tapped_3_listener() { i0.ɵɵrestoreView(_r40); const ctx_r39 = i0.ɵɵnextContext(2); return ctx_r39.saveChanges(); });
     i0.ɵɵtext(4, "Save");
     i0.ɵɵelementEnd();
     i0.ɵɵelementContainerEnd();
@@ -12568,9 +12695,9 @@ function BookingConfirmComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", ctx_r3.loading, " ");
 } }
 function BookingConfirmComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-    const _r41 = i0.ɵɵgetCurrentView();
+    const _r42 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "button", 40);
-    i0.ɵɵlistener("tapped", function BookingConfirmComponent_ng_template_4_Template_button_tapped_0_listener() { i0.ɵɵrestoreView(_r41); const ctx_r40 = i0.ɵɵnextContext(); return ctx_r40.newBooking(); });
+    i0.ɵɵlistener("tapped", function BookingConfirmComponent_ng_template_4_Template_button_tapped_0_listener() { i0.ɵɵrestoreView(_r42); const ctx_r41 = i0.ɵɵnextContext(); return ctx_r41.newBooking(); });
     i0.ɵɵtext(1, "New Booking");
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(2, "button", 41);
@@ -12630,10 +12757,14 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
             }
         }
     }
+    /** Display string for the recurrence value of the booking */
+    get recurrence() {
+        return formatting_utilities_1.formatRecurrence(this.booking.recurrence);
+    }
     /** Display string for the event's duration */
     get duration() {
         const duration_value = this.booking.duration;
-        return general_utilities_1.humaniseDuration(duration_value);
+        return this.booking.all_day ? 'All Day' : general_utilities_1.humaniseDuration(duration_value);
     }
     /** List of spaces associated with the event */
     get spaces() {
@@ -12732,7 +12863,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
 exports.BookingConfirmComponent = BookingConfirmComponent;
 BookingConfirmComponent.ɵfac = function BookingConfirmComponent_Factory(t) { return new (t || BookingConfirmComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.UsersService), i0.ɵɵdirectiveInject(i3.OrganisationService), i0.ɵɵdirectiveInject(i4.SpacesService), i0.ɵɵdirectiveInject(i5.Router), i0.ɵɵdirectiveInject(i6.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
 BookingConfirmComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingConfirmComponent, selectors: [["a-booking-confirm-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 6, vars: 3, consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["name", "attendees", 1, "field"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], ["class", "list-item", 4, "ngFor", "ngForOf"], [1, "request"], [1, "info"], [1, "list-item", 3, "title"], [1, "list-item"], [1, "show", 3, "touchrelease"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "tapped"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "name", "new", 1, "inverse", 3, "tapped"], ["mat-button", "", "mat-dialog-close", ""]], template: function BookingConfirmComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 75, 37, "mat-dialog-content", 0);
+        i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 82, 39, "mat-dialog-content", 0);
         i0.ɵɵtemplate(1, BookingConfirmComponent_mat_dialog_actions_1_Template, 3, 2, "mat-dialog-actions", 1);
         i0.ɵɵtemplate(2, BookingConfirmComponent_ng_template_2_Template, 6, 1, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
         i0.ɵɵtemplate(4, BookingConfirmComponent_ng_template_4_Template, 4, 0, "ng-template", null, 3, i0.ɵɵtemplateRefExtractor);
@@ -21075,16 +21206,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "bcc8b78",
-    "hash": "bcc8b78",
+    "raw": "9635a18",
+    "hash": "9635a18",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "bcc8b78",
+    "suffix": "9635a18",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1591673356443
+    "time": 1591689995697
 };
 /* tslint:enable */
 
