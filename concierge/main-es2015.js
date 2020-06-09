@@ -7202,7 +7202,10 @@ class ApplicationService extends base_class_1.BaseClass {
         this.set('system', null);
         this.set('title', 'Home');
         this.set('loading', {});
+        this.set('APP.breakdown', false);
+        this.set('CONCIERGE.legend', {});
         this.set('CONCIERGE.pending_bookings', {});
+        this.set('CONCIERGE.day_view.viewing', null);
         this._app_ref.isStable.pipe(operators_1.first((_) => _)).subscribe(() => {
             this._zone.run(() => {
                 this._stable = true;
@@ -8757,7 +8760,7 @@ class BookingsService extends base_service_1.BaseAPIService {
         this._composer = _composer;
         service_manager_class_1.ServiceManager.setService(booking_class_1.Booking, this);
         this._name = 'Bookings';
-        this._api_route = 'bookings';
+        this._api_route = '/bookings';
         this._compare = (a, b) => !(a.id || '').localeCompare(b.id) || !(a.icaluid || '').localeCompare(b.icaluid);
     }
     accept(id, fields) {
@@ -9068,7 +9071,7 @@ class CateringMenuService extends base_service_1.BaseAPIService {
         super(_composer);
         this._composer = _composer;
         this._name = 'Catering Menu';
-        this._api_route = 'menu';
+        this._api_route = '/menu';
     }
     /**
      * Convert user data to local format
@@ -9577,7 +9580,7 @@ class OrganisationService extends base_service_1.BaseAPIService {
         service_manager_class_1.ServiceManager.setService(organisation_class_1.Organisation, this);
         service_manager_class_1.ServiceManager.setService(building_class_1.Building, this);
         this._name = 'Organisation';
-        this._api_route = 'zones';
+        this._api_route = '/zones';
         this.set('buildings', []);
         this.set('active_building', null);
         this._users.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
@@ -10192,13 +10195,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const composer_1 = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
+const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const base_service_1 = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
 const space_class_1 = __webpack_require__(/*! ./space.class */ "./src/app/services/data/spaces/space.class.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const space_utilities_1 = __webpack_require__(/*! ./space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
 const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 const organisation_service_1 = __webpack_require__(/*! ../organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const app_service_1 = __webpack_require__(/*! ../../app.service */ "./src/app/services/app.service.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 const i2 = __webpack_require__(/*! ../organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
@@ -10211,12 +10215,13 @@ class SpacesService extends base_service_1.BaseAPIService {
         this._service = _service;
         service_manager_class_1.ServiceManager.setService(space_class_1.Space, this);
         this._name = 'Space';
-        this._api_route = 'rooms';
+        this._api_route = '/rooms';
         this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
         this._list_filter = (a) => {
             const bld = this._org.building;
             return a.level.building_id === bld.id;
         };
+        this._composer.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
     }
     /**
      * Get available spaces
@@ -10507,9 +10512,10 @@ class UsersService extends base_service_1.BaseAPIService {
         this.uhttp = uhttp;
         this.location = location;
         this._service = _service;
+        console.log('Initialised Users');
         service_manager_class_1.ServiceManager.setService(user_class_1.User, this);
         this._name = 'Users';
-        this._api_route = 'users';
+        this._api_route = '/users';
         this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
         this.set('current_user', new user_class_1.User({ id: 'local_user', name: 'Local User' }));
         this._composer.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
@@ -10596,6 +10602,7 @@ class UsersService extends base_service_1.BaseAPIService {
             this.show('current').then((current_user) => {
                 this.set('status', 'available');
                 this.set('current_user', current_user);
+                this._initialised.next(true);
                 if (this._service && this._service.setting('app.user.grab_api_details')) {
                     this.show(current_user.email).then((user) => {
                         this.set('current_user', user);
@@ -20040,7 +20047,7 @@ class DayViewComponent extends base_directive_1.BaseDirective {
         ];
     }
     ngOnInit() {
-        this._service.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
+        this._org.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
             this.legend = this.legend_keys.map(item => `${item.id}`);
             this.subscription('route.params', this._route.paramMap.subscribe((params) => {
                 /* istanbul ignore else */
@@ -21100,6 +21107,8 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
     }
     ngOnInit() {
         this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
+            const zone_id = !this.level ? this._org.building.id : this.level;
+            this.spaces = this._spaces.filter((_) => _.zones.indexOf(zone_id) >= 0);
             this.init();
             this.initSpaces();
             // Update time
@@ -21115,7 +21124,7 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
             this.interval('bookings', () => this.updateBookings(), UPDATE_INTERVAL * 1000);
         }
         /* istanbul ignore else */
-        if (changes.level) {
+        if (changes.level && this._org.building) {
             const zone_id = !this.level ? this._org.building.id : this.level;
             this.spaces = this._spaces.filter((_) => _.zones.indexOf(zone_id) >= 0);
             this.initSpaces();
@@ -21329,6 +21338,7 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
             (!holding_bay || i.id !== holding_bay.id) &&
             i.bookable);
         this.filtered_spaces.sort((a, b) => a.name.localeCompare(b.name));
+        console.log('Init spaces');
     }
 }
 exports.DayViewTimelineComponent = DayViewTimelineComponent;

@@ -13840,7 +13840,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _this63.set('loading', {});
 
+        _this63.set('APP.breakdown', false);
+
+        _this63.set('CONCIERGE.legend', {});
+
         _this63.set('CONCIERGE.pending_bookings', {});
+
+        _this63.set('CONCIERGE.day_view.viewing', null);
 
         _this63._app_ref.isStable.pipe(operators_1.first(function (_) {
           return _;
@@ -16251,7 +16257,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this82._composer = _composer;
         service_manager_class_1.ServiceManager.setService(booking_class_1.Booking, _assertThisInitialized(_this82));
         _this82._name = 'Bookings';
-        _this82._api_route = 'bookings';
+        _this82._api_route = '/bookings';
 
         _this82._compare = function (a, b) {
           return !(a.id || '').localeCompare(b.id) || !(a.icaluid || '').localeCompare(b.icaluid);
@@ -16839,7 +16845,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this86 = _super26.call(this, _composer);
         _this86._composer = _composer;
         _this86._name = 'Catering Menu';
-        _this86._api_route = 'menu';
+        _this86._api_route = '/menu';
         return _this86;
       }
       /**
@@ -17758,7 +17764,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         service_manager_class_1.ServiceManager.setService(organisation_class_1.Organisation, _assertThisInitialized(_this91));
         service_manager_class_1.ServiceManager.setService(building_class_1.Building, _assertThisInitialized(_this91));
         _this91._name = 'Organisation';
-        _this91._api_route = 'zones';
+        _this91._api_route = '/zones';
 
         _this91.set('buildings', []);
 
@@ -19094,6 +19100,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @placeos/composer */
     "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 
+    var operators_1 = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+
     var base_service_1 = __webpack_require__(
     /*! ../base.service */
     "./src/app/services/data/base.service.ts");
@@ -19101,10 +19111,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var space_class_1 = __webpack_require__(
     /*! ./space.class */
     "./src/app/services/data/spaces/space.class.ts");
-
-    var dayjs = __webpack_require__(
-    /*! dayjs */
-    "./node_modules/dayjs/dayjs.min.js");
 
     var space_utilities_1 = __webpack_require__(
     /*! ./space.utilities */
@@ -19121,6 +19127,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var app_service_1 = __webpack_require__(
     /*! ../../app.service */
     "./src/app/services/app.service.ts");
+
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
@@ -19156,7 +19166,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this97._service = _service;
         service_manager_class_1.ServiceManager.setService(space_class_1.Space, _assertThisInitialized(_this97));
         _this97._name = 'Space';
-        _this97._api_route = 'rooms';
+        _this97._api_route = '/rooms';
 
         _this97._compare = function (a, b) {
           return !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
@@ -19166,6 +19176,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var bld = _this97._org.building;
           return a.level.building_id === bld.id;
         };
+
+        _this97._composer.initialised.pipe(operators_1.first(function (_) {
+          return _;
+        })).subscribe(function () {
+          return _this97.init();
+        });
 
         return _this97;
       }
@@ -19711,9 +19727,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this103.uhttp = uhttp;
         _this103.location = location;
         _this103._service = _service;
+        console.log('Initialised Users');
         service_manager_class_1.ServiceManager.setService(user_class_1.User, _assertThisInitialized(_this103));
         _this103._name = 'Users';
-        _this103._api_route = 'users';
+        _this103._api_route = '/users';
 
         _this103._compare = function (a, b) {
           return !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
@@ -19862,6 +19879,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this105.set('status', 'available');
 
               _this105.set('current_user', current_user);
+
+              _this105._initialised.next(true);
 
               if (_this105._service && _this105._service.setting('app.user.grab_api_details')) {
                 _this105.show(current_user.email).then(function (user) {
@@ -36307,7 +36326,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this182 = this;
 
-          this._service.initialised.pipe(operators_1.first(function (_) {
+          this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
             _this182.legend = _this182.legend_keys.map(function (item) {
@@ -38221,6 +38240,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
+            var zone_id = !_this195.level ? _this195._org.building.id : _this195.level;
+            _this195.spaces = _this195._spaces.filter(function (_) {
+              return _.zones.indexOf(zone_id) >= 0;
+            });
+
             _this195.init();
 
             _this195.initSpaces(); // Update time
@@ -38249,7 +38273,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
 
 
-          if (changes.level) {
+          if (changes.level && this._org.building) {
             var zone_id = !this.level ? this._org.building.id : this.level;
             this.spaces = this._spaces.filter(function (_) {
               return _.zones.indexOf(zone_id) >= 0;
@@ -38537,6 +38561,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.filtered_spaces.sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
+          console.log('Init spaces');
         }
       }, {
         key: "legend_map",
