@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1591698304749,
+  "timestamp": 1591718766688,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -426,9 +426,9 @@
     "/staff/assets/maps/san_jose/level_06.svg": "8a4e4de5a21d4b58b5a9f7814e53ef70b3911264",
     "/staff/assets/maps/san_jose/level_07.svg": "207444074ba070edbe702d34897c7f7fd7ca9bea",
     "/staff/assets/maps/san_jose/level_08.svg": "6ad9e0dac445005030cb5d9bb375f6bee055abfb",
-    "/staff/assets/maps/sao_paulo/level_21.svg": "d27cfcd60157be362b986714da4bf7921ed7f417",
-    "/staff/assets/maps/sao_paulo/level_22.svg": "50449b7abb7b257fc54098f7ce2a4502a7807604",
-    "/staff/assets/maps/sao_paulo/level_23.svg": "f0a5f4eb07c99d0347dd15d1a5d60ccf126ebf1c",
+    "/staff/assets/maps/sao_paulo/level_21.svg": "6600de1dea0cf9fe50b5d35acfe23cffec78690b",
+    "/staff/assets/maps/sao_paulo/level_22.svg": "2198bf0a6d3d0c5d19f81c9c3926a9b8b3ca62fe",
+    "/staff/assets/maps/sao_paulo/level_23.svg": "ae30c0c0da0f4d5cd8bcfd716922beb03d0e9e2a",
     "/staff/assets/maps/shanghai/level_20.svg": "f4b140b88d674ed2048fd56f142f393ce7a7e0d8",
     "/staff/assets/maps/shanghai/level_21.svg": "4c291700372317db761b03d38fa0465405e55403",
     "/staff/assets/maps/shanghai/level_22.svg": "e0592b902a9d975617be9629924b91db8421a0ea",
@@ -458,8 +458,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "130336e8f8efe8d1f3464bfb66852ab2a6c0ff83",
-    "/staff/main-es5.js": "4c6a1268e51b78546805efa162605a5aa2238f3b",
+    "/staff/main-es2015.js": "fe216d8acba67de84e9653605a40d3468bb92afd",
+    "/staff/main-es5.js": "9112ccbe63ea9bb5337fd50a7a3a1dfa135ac7ff",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
