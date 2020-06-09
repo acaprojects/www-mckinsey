@@ -29721,10 +29721,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/spaces/spaces.service */
     "./src/app/services/data/spaces/spaces.service.ts");
 
-    var users_service_1 = __webpack_require__(
-    /*! src/app/services/data/users/users.service */
-    "./src/app/services/data/users/users.service.ts");
-
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -29738,30 +29734,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/app/services/data/spaces/spaces.service.ts");
 
     var i3 = __webpack_require__(
-    /*! src/app/services/data/users/users.service */
-    "./src/app/services/data/users/users.service.ts");
-
-    var i4 = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
-    var i5 = __webpack_require__(
+    var i4 = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
-    var i6 = __webpack_require__(
+    var i5 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i7 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! ./find-space/find-space.component */
     "./src/app/shell/bookings/space-flow/find-space/find-space.component.ts");
 
-    var i8 = __webpack_require__(
+    var i7 = __webpack_require__(
     /*! ./catering/catering.component */
     "./src/app/shell/bookings/space-flow/catering/catering.component.ts");
 
-    var i9 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! ./form/form.component */
     "./src/app/shell/bookings/space-flow/form/form.component.ts");
 
@@ -29871,7 +29863,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super51 = _createSuper(BookingSpaceFlowComponent);
 
-      function BookingSpaceFlowComponent(_service, _spaces, _users, _route, _router, _dialog) {
+      function BookingSpaceFlowComponent(_service, _spaces, _route, _router, _dialog) {
         var _this143;
 
         _classCallCheck(this, BookingSpaceFlowComponent);
@@ -29879,7 +29871,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this143 = _super51.call(this);
         _this143._service = _service;
         _this143._spaces = _spaces;
-        _this143._users = _users;
         _this143._route = _route;
         _this143._router = _router;
         _this143._dialog = _dialog;
@@ -29963,6 +29954,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               break;
 
             default:
+              this.form.markAsDirty();
+
               if (!this.form.controls.needs_space || this.form.controls.needs_space.value && (!space_list || !space_list.length || !this.form.controls.id.value)) {
                 this.navigate('search');
               } else {
@@ -30131,21 +30124,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this148 = this;
 
           /* istanbul ignore else */
-          if (!this.form.dirty) {
-            this._service.notifyInfo('No changes have been made to booking');
-
-            return;
-          }
-          /* istanbul ignore else */
-
-
           if (this.form.valid) {
             var dialog_ref = this._dialog.open(booking_confirm_component_1.BookingConfirmComponent, {
               width: '32em',
               maxWidth: '95vw',
               maxHeight: '95vh',
               data: {
-                booking: this.booking
+                old_booking: this.booking,
+                booking: new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), this.form.value))
               }
             });
 
@@ -30170,7 +30156,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.BookingSpaceFlowComponent = BookingSpaceFlowComponent;
 
     BookingSpaceFlowComponent.ɵfac = function BookingSpaceFlowComponent_Factory(t) {
-      return new (t || BookingSpaceFlowComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.UsersService), i0.ɵɵdirectiveInject(i4.ActivatedRoute), i0.ɵɵdirectiveInject(i4.Router), i0.ɵɵdirectiveInject(i5.MatDialog));
+      return new (t || BookingSpaceFlowComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.ActivatedRoute), i0.ɵɵdirectiveInject(i3.Router), i0.ɵɵdirectiveInject(i4.MatDialog));
     };
 
     BookingSpaceFlowComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -30200,7 +30186,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngSwitchCase", "catering");
         }
       },
-      directives: [i6.NgSwitch, i6.NgSwitchCase, i6.NgSwitchDefault, i6.NgIf, i7.BookingFindSpaceComponent, i8.BookingCateringComponent, i9.BookingSpaceFlowFormComponent],
+      directives: [i5.NgSwitch, i5.NgSwitchCase, i5.NgSwitchDefault, i5.NgIf, i6.BookingFindSpaceComponent, i7.BookingCateringComponent, i8.BookingSpaceFlowFormComponent],
       styles: [".space-flow[_ngcontent-%COMP%] {\n  height: 100%;\n  overflow: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9zcGFjZS1mbG93LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5ncy9zcGFjZS1mbG93L3NwYWNlLWZsb3cuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0VBQ0EsY0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9zcGFjZS1mbG93LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNwYWNlLWZsb3cge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBvdmVyZmxvdzogYXV0bztcbn0iLCIuc3BhY2UtZmxvdyB7XG4gIGhlaWdodDogMTAwJTtcbiAgb3ZlcmZsb3c6IGF1dG87XG59Il19 */"]
     });
     /*@__PURE__*/
@@ -30219,13 +30205,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           type: i2.SpacesService
         }, {
-          type: i3.UsersService
+          type: i3.ActivatedRoute
         }, {
-          type: i4.ActivatedRoute
+          type: i3.Router
         }, {
-          type: i4.Router
-        }, {
-          type: i5.MatDialog
+          type: i4.MatDialog
         }];
       }, null);
     })();
@@ -37823,16 +37807,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "04be26a",
-      "hash": "04be26a",
+      "raw": "b97d2f6",
+      "hash": "b97d2f6",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "04be26a",
+      "suffix": "b97d2f6",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1591416320934
+      "time": 1591671539928
     };
     /* tslint:enable */
 

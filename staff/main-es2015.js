@@ -16562,17 +16562,15 @@ const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rx
 const requirement_details_modal_component_1 = __webpack_require__(/*! ../overlays/requirement-details-modal/requirement-details-modal.component */ "./src/app/shell/bookings/overlays/requirement-details-modal/requirement-details-modal.component.ts");
 const catering_details_modal_component_1 = __webpack_require__(/*! ../overlays/catering-details-modal/catering-details-modal.component */ "./src/app/shell/bookings/overlays/catering-details-modal/catering-details-modal.component.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
-const users_service_1 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
-const i3 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
-const i4 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-const i5 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
-const i6 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-const i7 = __webpack_require__(/*! ./find-space/find-space.component */ "./src/app/shell/bookings/space-flow/find-space/find-space.component.ts");
-const i8 = __webpack_require__(/*! ./catering/catering.component */ "./src/app/shell/bookings/space-flow/catering/catering.component.ts");
-const i9 = __webpack_require__(/*! ./form/form.component */ "./src/app/shell/bookings/space-flow/form/form.component.ts");
+const i3 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+const i4 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+const i5 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+const i6 = __webpack_require__(/*! ./find-space/find-space.component */ "./src/app/shell/bookings/space-flow/find-space/find-space.component.ts");
+const i7 = __webpack_require__(/*! ./catering/catering.component */ "./src/app/shell/bookings/space-flow/catering/catering.component.ts");
+const i8 = __webpack_require__(/*! ./form/form.component */ "./src/app/shell/bookings/space-flow/form/form.component.ts");
 function BookingSpaceFlowComponent_ng_container_2_booking_find_space_1_Template(rf, ctx) { if (rf & 1) {
     const _r5 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "booking-find-space", 5);
@@ -16628,11 +16626,10 @@ function BookingSpaceFlowComponent_ng_container_4_Template(rf, ctx) { if (rf & 1
     i0.ɵɵproperty("ngIf", ctx_r2.form);
 } }
 class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
-    constructor(_service, _spaces, _users, _route, _router, _dialog) {
+    constructor(_service, _spaces, _route, _router, _dialog) {
         super();
         this._service = _service;
         this._spaces = _spaces;
-        this._users = _users;
         this._route = _route;
         this._router = _router;
         this._dialog = _dialog;
@@ -16703,6 +16700,7 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
                 }
                 break;
             default:
+                this.form.markAsDirty();
                 if (!this.form.controls.needs_space ||
                     (this.form.controls.needs_space.value && (!space_list || !space_list.length || !this.form.controls.id.value))) {
                     this.navigate('search');
@@ -16819,17 +16817,12 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
      */
     confirmBooking() {
         /* istanbul ignore else */
-        if (!this.form.dirty) {
-            this._service.notifyInfo('No changes have been made to booking');
-            return;
-        }
-        /* istanbul ignore else */
         if (this.form.valid) {
             const dialog_ref = this._dialog.open(booking_confirm_component_1.BookingConfirmComponent, {
                 width: '32em',
                 maxWidth: '95vw',
                 maxHeight: '95vh',
-                data: { booking: this.booking },
+                data: { old_booking: this.booking, booking: new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), this.form.value)) },
             });
             dialog_ref.componentInstance.event.subscribe((event) => {
                 /* istanbul ignore else */
@@ -16841,7 +16834,7 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
     }
 }
 exports.BookingSpaceFlowComponent = BookingSpaceFlowComponent;
-BookingSpaceFlowComponent.ɵfac = function BookingSpaceFlowComponent_Factory(t) { return new (t || BookingSpaceFlowComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.UsersService), i0.ɵɵdirectiveInject(i4.ActivatedRoute), i0.ɵɵdirectiveInject(i4.Router), i0.ɵɵdirectiveInject(i5.MatDialog)); };
+BookingSpaceFlowComponent.ɵfac = function BookingSpaceFlowComponent_Factory(t) { return new (t || BookingSpaceFlowComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.ActivatedRoute), i0.ɵɵdirectiveInject(i3.Router), i0.ɵɵdirectiveInject(i4.MatDialog)); };
 BookingSpaceFlowComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingSpaceFlowComponent, selectors: [["booking-space-flow"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 5, vars: 3, consts: [[1, "space-flow"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [3, "spaces", "form", "event", 4, "ngIf"], [3, "spaces", "form", "event"], [3, "form", "event", 4, "ngIf"], [3, "form", "event"]], template: function BookingSpaceFlowComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementContainerStart(1, 1);
@@ -16857,7 +16850,7 @@ BookingSpaceFlowComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingSpaceFlo
         i0.ɵɵproperty("ngSwitchCase", "search");
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngSwitchCase", "catering");
-    } }, directives: [i6.NgSwitch, i6.NgSwitchCase, i6.NgSwitchDefault, i6.NgIf, i7.BookingFindSpaceComponent, i8.BookingCateringComponent, i9.BookingSpaceFlowFormComponent], styles: [".space-flow[_ngcontent-%COMP%] {\n  height: 100%;\n  overflow: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9zcGFjZS1mbG93LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5ncy9zcGFjZS1mbG93L3NwYWNlLWZsb3cuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0VBQ0EsY0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9zcGFjZS1mbG93LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNwYWNlLWZsb3cge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBvdmVyZmxvdzogYXV0bztcbn0iLCIuc3BhY2UtZmxvdyB7XG4gIGhlaWdodDogMTAwJTtcbiAgb3ZlcmZsb3c6IGF1dG87XG59Il19 */"] });
+    } }, directives: [i5.NgSwitch, i5.NgSwitchCase, i5.NgSwitchDefault, i5.NgIf, i6.BookingFindSpaceComponent, i7.BookingCateringComponent, i8.BookingSpaceFlowFormComponent], styles: [".space-flow[_ngcontent-%COMP%] {\n  height: 100%;\n  overflow: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9zcGFjZS1mbG93LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5ncy9zcGFjZS1mbG93L3NwYWNlLWZsb3cuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0VBQ0EsY0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9zcGFjZS1mbG93LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNwYWNlLWZsb3cge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBvdmVyZmxvdzogYXV0bztcbn0iLCIuc3BhY2UtZmxvdyB7XG4gIGhlaWdodDogMTAwJTtcbiAgb3ZlcmZsb3c6IGF1dG87XG59Il19 */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BookingSpaceFlowComponent, [{
         type: core_1.Component,
         args: [{
@@ -16865,7 +16858,7 @@ BookingSpaceFlowComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingSpaceFlo
                 templateUrl: './space-flow.component.html',
                 styleUrls: ['./space-flow.component.scss'],
             }]
-    }], function () { return [{ type: i1.ApplicationService }, { type: i2.SpacesService }, { type: i3.UsersService }, { type: i4.ActivatedRoute }, { type: i4.Router }, { type: i5.MatDialog }]; }, null); })();
+    }], function () { return [{ type: i1.ApplicationService }, { type: i2.SpacesService }, { type: i3.ActivatedRoute }, { type: i3.Router }, { type: i4.MatDialog }]; }, null); })();
 
 
 /***/ }),
@@ -21077,16 +21070,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "04be26a",
-    "hash": "04be26a",
+    "raw": "b97d2f6",
+    "hash": "b97d2f6",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "04be26a",
+    "suffix": "b97d2f6",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1591416320934
+    "time": 1591671539928
 };
 /* tslint:enable */
 
