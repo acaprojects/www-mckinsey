@@ -689,12 +689,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
     }
     /** Whether booking needs to be accepted */
     get is_request() {
-        const options = {
-            date: this.booking.date,
-            duration: this.booking.duration,
-            host: this.organiser
-        };
-        return this.spaces.reduce((request, space) => request || space.byRequest(options), false);
+        return false; // Bookings are always approved in concierge
     }
     /** Booking to confirm changes to */
     get old_booking() {
@@ -7804,7 +7799,7 @@ class BaseAPIService extends base_class_1.BaseClass {
                 const query = api_utilities_1.toQueryString(query_params);
                 const url = `${this.route(query_params.engine)}${query ? '?' + query : ''}`;
                 let result = null;
-                this.http.post(url, form_data).subscribe((d) => (result = this.process(d)), (e) => {
+                this.http.post(url, Object.assign(Object.assign({}, form_data), { concierge: true })).subscribe((d) => (result = this.process(d)), (e) => {
                     reject(e);
                     this.analyticsEvent(`create-${this._name.toLowerCase()}-failed`);
                     this._promises.new_item = null;
@@ -7831,7 +7826,7 @@ class BaseAPIService extends base_class_1.BaseClass {
         /* istanbul ignore else */
         if (!this._promises[key]) {
             this._promises[key] = new Promise((resolve, reject) => {
-                const post_data = Object.assign(Object.assign({}, form_data), { id, _task: task_name });
+                const post_data = Object.assign(Object.assign({}, form_data), { id, _task: task_name, concierge: true });
                 const url = `${this.route()}/${id}/${task_name}`;
                 let result;
                 const request = method === 'post'

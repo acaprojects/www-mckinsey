@@ -2209,14 +2209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "is_request",
         get: function get() {
-          var options = {
-            date: this.booking.date,
-            duration: this.booking.duration,
-            host: this.organiser
-          };
-          return this.spaces.reduce(function (request, space) {
-            return request || space.byRequest(options);
-          }, false);
+          return false; // Bookings are always approved in concierge
         }
         /** Booking to confirm changes to */
 
@@ -14781,7 +14774,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var url = "".concat(_this75.route(query_params.engine)).concat(query ? '?' + query : '');
               var result = null;
 
-              _this75.http.post(url, form_data).subscribe(function (d) {
+              _this75.http.post(url, Object.assign(Object.assign({}, form_data), {
+                concierge: true
+              })).subscribe(function (d) {
                 return result = _this75.process(d);
               }, function (e) {
                 reject(e);
@@ -14828,7 +14823,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this._promises[key] = new Promise(function (resolve, reject) {
               var post_data = Object.assign(Object.assign({}, form_data), {
                 id: id,
-                _task: task_name
+                _task: task_name,
+                concierge: true
               });
               var url = "".concat(_this76.route(), "/").concat(id, "/").concat(task_name);
               var result;
