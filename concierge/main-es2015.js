@@ -5045,11 +5045,11 @@ function MeetingDetailsRequirementsComponent_div_2_Template(rf, ctx) { if (rf & 
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
     i0.ɵɵadvance(5);
-    i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.space == null ? null : ctx_r0.booking.space.name) || ctx_r0.booking.space_ids[0], " ");
+    i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.space == null ? null : ctx_r0.booking.space.name) || ctx_r0.booking.space_list[0], " ");
     i0.ɵɵadvance(5);
-    i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.expected_attendees || i0.ɵɵpureFunction0(4, _c0))[(ctx_r0.booking.space == null ? null : ctx_r0.booking.space.id) || ctx_r0.booking.space_ids[0]] || "0", " ");
+    i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.expected_attendees || i0.ɵɵpureFunction0(4, _c0))[(ctx_r0.booking.space == null ? null : ctx_r0.booking.space.id) || ctx_r0.booking.space_list[0]] || "0", " ");
     i0.ɵɵadvance(5);
-    i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.equipment_codes || i0.ɵɵpureFunction0(5, _c0))[(ctx_r0.booking.space == null ? null : ctx_r0.booking.space.id) || ctx_r0.booking.space_ids[0]] || "<No Charge Code>", " ");
+    i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.equipment_codes || i0.ɵɵpureFunction0(5, _c0))[(ctx_r0.booking.space == null ? null : ctx_r0.booking.space.id) || ctx_r0.booking.space_list[0]] || "<No Charge Code>", " ");
     i0.ɵɵadvance(5);
     i0.ɵɵtextInterpolate1(" ", ctx_r0.notes, " ");
 } }
@@ -20021,7 +20021,7 @@ class DayViewComponent extends base_directive_1.BaseDirective {
         this._route = _route;
         /** ID of the currently selected level */
         this.active_level = '';
-        /** ID of the currently selected level */
+        /** ID of the currently selected type */
         this.active_type = '';
         /** List of levels available for the active building */
         this.levels = [];
@@ -20606,9 +20606,9 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
                 }
                 return event.declined
                     ? (!this.overflow_only || event.setup || event.breakdown) &&
-                        this.legend.declined !== false
+                        this.legend.declined
                     : (!this.overflow_only || event.setup || event.breakdown) &&
-                        this.legend[event.type] !== false;
+                        this.legend[event.type];
             });
             return list;
         }
@@ -21125,7 +21125,7 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
             this.interval('bookings', () => this.updateBookings(), UPDATE_INTERVAL * 1000);
         }
         /* istanbul ignore else */
-        if (changes.room_type) {
+        if (changes.space_type) {
             this.initSpaces();
         }
     }

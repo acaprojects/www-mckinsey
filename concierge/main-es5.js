@@ -9962,11 +9962,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.space == null ? null : ctx_r0.booking.space.name) || ctx_r0.booking.space_ids[0], " ");
+        i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.space == null ? null : ctx_r0.booking.space.name) || ctx_r0.booking.space_list[0], " ");
         i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.expected_attendees || i0.ɵɵpureFunction0(4, _c0))[(ctx_r0.booking.space == null ? null : ctx_r0.booking.space.id) || ctx_r0.booking.space_ids[0]] || "0", " ");
+        i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.expected_attendees || i0.ɵɵpureFunction0(4, _c0))[(ctx_r0.booking.space == null ? null : ctx_r0.booking.space.id) || ctx_r0.booking.space_list[0]] || "0", " ");
         i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.equipment_codes || i0.ɵɵpureFunction0(5, _c0))[(ctx_r0.booking.space == null ? null : ctx_r0.booking.space.id) || ctx_r0.booking.space_ids[0]] || "<No Charge Code>", " ");
+        i0.ɵɵtextInterpolate1(" ", (ctx_r0.booking.equipment_codes || i0.ɵɵpureFunction0(5, _c0))[(ctx_r0.booking.space == null ? null : ctx_r0.booking.space.id) || ctx_r0.booking.space_list[0]] || "<No Charge Code>", " ");
         i0.ɵɵadvance(5);
         i0.ɵɵtextInterpolate1(" ", ctx_r0.notes, " ");
       }
@@ -36273,7 +36273,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** ID of the currently selected level */
 
         _this181.active_level = '';
-        /** ID of the currently selected level */
+        /** ID of the currently selected type */
 
         _this181.active_type = '';
         /** List of levels available for the active building */
@@ -37730,7 +37730,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _this193.loading[event.id] = true;
               }
 
-              return event.declined ? (!_this193.overflow_only || event.setup || event.breakdown) && _this193.legend.declined !== false : (!_this193.overflow_only || event.setup || event.breakdown) && _this193.legend[event.type] !== false;
+              return event.declined ? (!_this193.overflow_only || event.setup || event.breakdown) && _this193.legend.declined : (!_this193.overflow_only || event.setup || event.breakdown) && _this193.legend[event.type];
             });
             return list;
           }
@@ -38281,7 +38281,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
 
 
-          if (changes.room_type) {
+          if (changes.space_type) {
             this.initSpaces();
           }
         }
