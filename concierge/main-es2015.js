@@ -3515,17 +3515,19 @@ const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_mod
 const catering_item_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
+const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
-const i2 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
-const i3 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
-const i4 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
-const i5 = __webpack_require__(/*! ../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
-const i6 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-const i7 = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
-const i8 = __webpack_require__(/*! ../booking-modal/catering/order-details/item/item.component */ "./src/app/overlays/booking-modal/catering/order-details/item/item.component.ts");
+const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
+const i3 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
+const i4 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+const i5 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+const i6 = __webpack_require__(/*! ../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
+const i7 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+const i8 = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
+const i9 = __webpack_require__(/*! ../booking-modal/catering/order-details/item/item.component */ "./src/app/overlays/booking-modal/catering/order-details/item/item.component.ts");
 var I18N_0;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
@@ -3557,9 +3559,10 @@ function BookingCateringConfirmModalComponent_a_catering_order_item_15_Template(
 } }
 const _c4 = function () { return { class: "material-icons", content: "close" }; };
 class BookingCateringConfirmModalComponent extends base_directive_1.BaseDirective {
-    constructor(_service, _org, _dialog_ref, _data) {
+    constructor(_service, _spaces, _org, _dialog_ref, _data) {
         super();
         this._service = _service;
+        this._spaces = _spaces;
         this._org = _org;
         this._dialog_ref = _dialog_ref;
         this._data = _data;
@@ -3574,9 +3577,8 @@ class BookingCateringConfirmModalComponent extends base_directive_1.BaseDirectiv
     }
     /** Space selected for delivery */
     get space() {
-        return this._data.form && this._data.form.controls.space
-            ? this._data.form.controls.space.value
-            : {};
+        var _a, _b, _c;
+        return this._spaces.find((_c = (_b = (_a = this._data.form) === null || _a === void 0 ? void 0 : _a.controls) === null || _b === void 0 ? void 0 : _b.location_id) === null || _c === void 0 ? void 0 : _c.value);
     }
     /** Delivery time for the order */
     get delivery_time() {
@@ -3614,7 +3616,7 @@ class BookingCateringConfirmModalComponent extends base_directive_1.BaseDirectiv
     }
 }
 exports.BookingCateringConfirmModalComponent = BookingCateringConfirmModalComponent;
-BookingCateringConfirmModalComponent.ɵfac = function BookingCateringConfirmModalComponent_Factory(t) { return new (t || BookingCateringConfirmModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
+BookingCateringConfirmModalComponent.ɵfac = function BookingCateringConfirmModalComponent_Factory(t) { return new (t || BookingCateringConfirmModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.OrganisationService), i0.ɵɵdirectiveInject(i4.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
 BookingCateringConfirmModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingCateringConfirmModalComponent, selectors: [["a-catering-confirm-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 26, vars: 9, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [1, "list"], [3, "field", "subitem", "item", "symbol", 4, "ngFor", "ngForOf"], [1, "total"], [1, "value"], ["mat-button", "", 3, "tapped"], [3, "field", "subitem", "item", "symbol"]], template: function BookingCateringConfirmModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
@@ -3662,14 +3664,14 @@ BookingCateringConfirmModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: Book
         i0.ɵɵadvance(4);
         i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(8, _c4));
         i0.ɵɵadvance(6);
-        i0.ɵɵtextInterpolate(ctx.space.name || "<Unset>");
+        i0.ɵɵtextInterpolate((ctx.space == null ? null : ctx.space.name) || "<Unset>");
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate(ctx.delivery_time);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngForOf", ctx.item_list);
         i0.ɵɵadvance(5);
         i0.ɵɵtextInterpolate(i0.ɵɵpipeBind2(21, 5, ctx.order_cost / 100, ctx.symbol));
-    } }, directives: [i4.MatButton, i3.MatDialogClose, i5.IconComponent, i3.MatDialogContent, i6.NgForOf, i3.MatDialogActions, i7.ɵb, i8.CateringMenuItemComponent], pipes: [i6.CurrencyPipe], styles: [".heading[_ngcontent-%COMP%] {\n  flex: 1;\n}\n\n.details[_ngcontent-%COMP%] {\n  padding: 1em;\n  text-align: center;\n}\n\n.details[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  font-weight: 400;\n}\n\n.list[_ngcontent-%COMP%] {\n  height: 50vh;\n  overflow: auto;\n}\n\n.total[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  padding: 0.5em 1em;\n}\n\n.total[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  font-weight: 500;\n  margin-right: 1.5em;\n}\n\nmat-dialog-actions[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n}\n\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9vdmVybGF5cy9jYXRlcmluZy1jb25maXJtLW1vZGFsL2NhdGVyaW5nLWNvbmZpcm0tbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL2NhdGVyaW5nLWNvbmZpcm0tbW9kYWwvY2F0ZXJpbmctY29uZmlybS1tb2RhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLE9BQUE7QUNBSjs7QURHQTtFQUNJLFlBQUE7RUFDQSxrQkFBQTtBQ0FKOztBREVJO0VBQ0ksZ0JBQUE7QUNBUjs7QURJQTtFQUNJLFlBQUE7RUFDQSxjQUFBO0FDREo7O0FES0E7RUFDSSwwQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7QUNGSjs7QURJSTtFQUNJLGdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtBQ0ZSOztBRE1BO0VBQ0ksMEJBQUE7QUNISjs7QURNQTtFQUNJLFdBQUE7RUFDQSxrQkFBQTtBQ0hKIiwiZmlsZSI6InNyYy9hcHAvb3ZlcmxheXMvY2F0ZXJpbmctY29uZmlybS1tb2RhbC9jYXRlcmluZy1jb25maXJtLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4uaGVhZGluZyB7XG4gICAgZmxleDogMTtcbn1cblxuLmRldGFpbHMge1xuICAgIHBhZGRpbmc6IDFlbTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgICBzcGFuIHtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICB9XG59XG5cbi5saXN0IHtcbiAgICBoZWlnaHQ6IDUwdmg7XG4gICAgb3ZlcmZsb3c6IGF1dG87XG59XG5cblxuLnRvdGFsIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgICBwYWRkaW5nOiAuNWVtIDFlbTtcblxuICAgIGxhYmVsIHtcbiAgICAgICAgZm9udC1zaXplOiAuOGVtO1xuICAgICAgICBmb250LXdlaWdodDogNTAwO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEuNWVtO1xuICAgIH1cbn1cblxubWF0LWRpYWxvZy1hY3Rpb25zIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbn1cblxuZm9vdGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iLCIuaGVhZGluZyB7XG4gIGZsZXg6IDE7XG59XG5cbi5kZXRhaWxzIHtcbiAgcGFkZGluZzogMWVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4uZGV0YWlscyBzcGFuIHtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbn1cblxuLmxpc3Qge1xuICBoZWlnaHQ6IDUwdmg7XG4gIG92ZXJmbG93OiBhdXRvO1xufVxuXG4udG90YWwge1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgcGFkZGluZzogMC41ZW0gMWVtO1xufVxuLnRvdGFsIGxhYmVsIHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgbWFyZ2luLXJpZ2h0OiAxLjVlbTtcbn1cblxubWF0LWRpYWxvZy1hY3Rpb25zIHtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbmZvb3RlciB7XG4gIHdpZHRoOiAxMDAlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59Il19 */"] });
+    } }, directives: [i5.MatButton, i4.MatDialogClose, i6.IconComponent, i4.MatDialogContent, i7.NgForOf, i4.MatDialogActions, i8.ɵb, i9.CateringMenuItemComponent], pipes: [i7.CurrencyPipe], styles: [".heading[_ngcontent-%COMP%] {\n  flex: 1;\n}\n\n.details[_ngcontent-%COMP%] {\n  padding: 1em;\n  text-align: center;\n}\n\n.details[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  font-weight: 400;\n}\n\n.list[_ngcontent-%COMP%] {\n  height: 50vh;\n  overflow: auto;\n}\n\n.total[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  padding: 0.5em 1em;\n}\n\n.total[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  font-weight: 500;\n  margin-right: 1.5em;\n}\n\nmat-dialog-actions[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n}\n\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9vdmVybGF5cy9jYXRlcmluZy1jb25maXJtLW1vZGFsL2NhdGVyaW5nLWNvbmZpcm0tbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL2NhdGVyaW5nLWNvbmZpcm0tbW9kYWwvY2F0ZXJpbmctY29uZmlybS1tb2RhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLE9BQUE7QUNBSjs7QURHQTtFQUNJLFlBQUE7RUFDQSxrQkFBQTtBQ0FKOztBREVJO0VBQ0ksZ0JBQUE7QUNBUjs7QURJQTtFQUNJLFlBQUE7RUFDQSxjQUFBO0FDREo7O0FES0E7RUFDSSwwQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7QUNGSjs7QURJSTtFQUNJLGdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtBQ0ZSOztBRE1BO0VBQ0ksMEJBQUE7QUNISjs7QURNQTtFQUNJLFdBQUE7RUFDQSxrQkFBQTtBQ0hKIiwiZmlsZSI6InNyYy9hcHAvb3ZlcmxheXMvY2F0ZXJpbmctY29uZmlybS1tb2RhbC9jYXRlcmluZy1jb25maXJtLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4uaGVhZGluZyB7XG4gICAgZmxleDogMTtcbn1cblxuLmRldGFpbHMge1xuICAgIHBhZGRpbmc6IDFlbTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgICBzcGFuIHtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICB9XG59XG5cbi5saXN0IHtcbiAgICBoZWlnaHQ6IDUwdmg7XG4gICAgb3ZlcmZsb3c6IGF1dG87XG59XG5cblxuLnRvdGFsIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgICBwYWRkaW5nOiAuNWVtIDFlbTtcblxuICAgIGxhYmVsIHtcbiAgICAgICAgZm9udC1zaXplOiAuOGVtO1xuICAgICAgICBmb250LXdlaWdodDogNTAwO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEuNWVtO1xuICAgIH1cbn1cblxubWF0LWRpYWxvZy1hY3Rpb25zIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbn1cblxuZm9vdGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iLCIuaGVhZGluZyB7XG4gIGZsZXg6IDE7XG59XG5cbi5kZXRhaWxzIHtcbiAgcGFkZGluZzogMWVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4uZGV0YWlscyBzcGFuIHtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbn1cblxuLmxpc3Qge1xuICBoZWlnaHQ6IDUwdmg7XG4gIG92ZXJmbG93OiBhdXRvO1xufVxuXG4udG90YWwge1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgcGFkZGluZzogMC41ZW0gMWVtO1xufVxuLnRvdGFsIGxhYmVsIHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgbWFyZ2luLXJpZ2h0OiAxLjVlbTtcbn1cblxubWF0LWRpYWxvZy1hY3Rpb25zIHtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbmZvb3RlciB7XG4gIHdpZHRoOiAxMDAlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59Il19 */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BookingCateringConfirmModalComponent, [{
         type: core_1.Component,
         args: [{
@@ -3677,7 +3679,7 @@ BookingCateringConfirmModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: Book
                 templateUrl: './catering-confirm-modal.component.html',
                 styleUrls: ['./catering-confirm-modal.component.scss'],
             }]
-    }], function () { return [{ type: i1.ApplicationService }, { type: i2.OrganisationService }, { type: i3.MatDialogRef }, { type: undefined, decorators: [{
+    }], function () { return [{ type: i1.ApplicationService }, { type: i2.SpacesService }, { type: i3.OrganisationService }, { type: i4.MatDialogRef }, { type: undefined, decorators: [{
                 type: core_1.Inject,
                 args: [dialog_1.MAT_DIALOG_DATA]
             }] }]; }, { event: [{
@@ -6645,9 +6647,10 @@ class RequirementDetailsModalComponent {
     }
     /** Generate form fields for each space */
     generateFormFields() {
+        var _a, _b;
         for (const space of this.space_list) {
             const building = this._org.buildings.find(bld => bld.id === space.level.building_id);
-            this.needs_charge_code[space.id] = building ? building.required.equipment_code : false;
+            this.needs_charge_code[space.id] = ((_b = (_a = building) === null || _a === void 0 ? void 0 : _a.required) === null || _b === void 0 ? void 0 : _b.equipment_code) || false;
             this.form[space.id] = new forms_1.FormGroup({
                 notes: new forms_1.FormControl(this.notes[space.id] || ''),
                 code: new forms_1.FormControl(this.codes[space.id] || '', this.needs_charge_code[space.id] ? [forms_1.Validators.required] : []),
@@ -9372,6 +9375,12 @@ class Building extends base_api_class_1.BaseDataClass {
         this.catering_restricted_from = raw_data.catering_restricted_from || disc_info.catering_restricted_from || settings.catering_restricted_from || 0;
         this.currency = raw_data.currency || disc_info.currency || settings.currency || 'USD';
         this.required = raw_data.required || disc_info.required || settings.required || {};
+        if (disc_info.requires_equipment_code) {
+            this.required.equipment_code = true;
+        }
+        if (disc_info.requires_expected_attendees) {
+            this.required.expected_attendees = true;
+        }
         this.timezone = raw_data.timezone || disc_info.timezone || settings.timezone || '';
         this.has_catering = raw_data.has_catering || disc_info.has_catering || settings.has_catering || false;
         this.holding_bay = raw_data.holding_bay || disc_info.holding_bay || settings.holding_bay || '';
