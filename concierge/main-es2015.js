@@ -8155,10 +8155,12 @@ class Booking extends base_api_class_1.BaseDataClass {
     }
     /** Whether booking is tentative */
     get tentative() {
-        for (const space of this.space_list) {
-            if (this.approval_status[space.email] &&
-                this.approval_status[space.email].indexOf('tentative') >= 0) {
-                return true;
+        if (!this.declined) {
+            for (const space of this.space_list) {
+                if (this.approval_status[space.email] &&
+                    this.approval_status[space.email].indexOf('tentative') >= 0) {
+                    return true;
+                }
             }
         }
         return false;
@@ -8333,7 +8335,7 @@ const DURATION_MAP = {
     minutes: MINUTE,
 };
 let BOOKING_COUNT = 0;
-let BOOKING_DATE = dayjs().hour(6).minute(0).subtract(1, 'd').startOf('m');
+let BOOKING_DATE = dayjs().hour(6).minute(0).subtract(10, 'd').startOf('m');
 /**
  * Set the initial time used for generating mock bookings
  * @param time New initial time as ms from UTC epoch
@@ -8354,7 +8356,7 @@ function generateMockBooking(override = {}) {
     BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
     return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(Math.random() * 5 + 2))
             .fill(0)
-            .map((i) => user_utilities_1.generateMockUser(override.users)), organiser: user_utilities_1.generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, catering: [], room_ids: [] }, override);
+            .map((i) => user_utilities_1.generateMockUser(override.users)), organiser: user_utilities_1.generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)], setup: Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5), breakdown: Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5), status: {}, catering: [], room_ids: [] }, override);
 }
 exports.generateMockBooking = generateMockBooking;
 /**
@@ -8828,7 +8830,7 @@ class CateringCategoriesService extends base_service_1.BaseAPIService {
         return new catering_category_class_1.CateringCategory(raw_item);
     }
     format(item) {
-        return item instanceof catering_category_class_1.CateringCategory ? item.toJSON() : item;
+        return Object.assign({}, item);
     }
 }
 exports.CateringCategoriesService = CateringCategoriesService;
@@ -10076,16 +10078,8 @@ class Space extends base_api_class_1.BaseDataClass {
      * @param date Date to filter bookings on
      */
     bookingsFor(date) {
-        if (date) {
-            const day = dayjs(date);
-            return this.bookings.filter((i) => {
-                const start = dayjs(i.date);
-                return start.isSame(day, 'd');
-            });
-        }
-        else {
-            return this.bookings;
-        }
+        const day = dayjs(date);
+        return this.bookings.filter((i) => dayjs(i.date).isSame(day, 'd'));
     }
     /**
      * Whether the space is available.
@@ -10234,7 +10228,7 @@ class SpacesService extends base_service_1.BaseAPIService {
             const bld = this._org.building;
             return a.level.building_id === bld.id;
         };
-        this._composer.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
+        this._org.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
     }
     /**
      * Get available spaces
@@ -14556,58 +14550,74 @@ const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.j
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
-exports.MOCK_BOOKINGS = Array(200)
+exports.MOCK_BOOKINGS = Array(1000)
     .fill(0)
-    .map(i => {
-    const rooms = general_utilities_1.unique(Array(general_utilities_1.randomInt(4))
+    .map((i) => {
+    const rooms = general_utilities_1.unique(Array(general_utilities_1.randomInt(3, 1))
         .fill(0)
-        .map(i => spaces_mock_1.MOCK_SPACES[Math.floor(Math.random() * spaces_mock_1.MOCK_SPACES.length)]), 'id');
+        .map((i) => spaces_mock_1.MOCK_SPACES[Math.floor(Math.random() * spaces_mock_1.MOCK_SPACES.length)]), 'id');
     // Set the organiser with the generated user list
-    const organiser = general_utilities_1.randomInt(9999) % 10 === 0 ? users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1] : users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)];
+    const organiser = general_utilities_1.randomInt(9999) % 10 === 0
+        ? users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1]
+        : users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)];
     // Set the attendees with the generated user list
-    const attendees = general_utilities_1.unique(Array(general_utilities_1.randomInt(20))
+    const attendees = general_utilities_1.unique(Array(general_utilities_1.randomInt(10))
         .fill(0)
-        .map(i => users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)]), 'email');
-    return booking_utilities_1.generateMockBooking({
+        .map((i) => users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)]), 'email');
+    const guests = general_utilities_1.unique(Array(general_utilities_1.randomInt(10))
+        .fill(0)
+        .map((i) => users_mock_1.MOCK_CONTACTS[general_utilities_1.randomInt(users_mock_1.MOCK_CONTACTS.length)]), 'email');
+    const booking_data = booking_utilities_1.generateMockBooking({
         organiser,
-        attendees,
-        room_ids: rooms.map(i => i.email)
+        attendees: attendees.concat(guests),
+        room_ids: rooms.map((i) => i.email),
     });
+    for (const space of rooms) {
+        booking_data.status[space.email] = ['approved', 'tentative', 'declined'][general_utilities_1.randomInt(3)];
+    }
+    return booking_data;
 });
-spaces_mock_1.MOCK_SPACES.forEach(i => i.bookings = exports.MOCK_BOOKINGS.filter(j => j.room_ids.indexOf(i.email) >= 0));
+spaces_mock_1.MOCK_SPACES.forEach((i) => (i.bookings = exports.MOCK_BOOKINGS.filter((j) => j.room_ids.indexOf(i.email) >= 0)));
 // Handler for bookings index
 window.control.handlers.push({
     path: `${common_mock_1.API}/bookings`,
     metadata: exports.MOCK_BOOKINGS,
     method: 'GET',
-    callback: event => {
+    callback: (event) => {
         const user = users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1];
         let data = !event.query_params.email
-            ? exports.MOCK_BOOKINGS.filter(i => i.organiser.email === user.email || i.organiser === user.email || i.attendees.reduce((a, v) => a || v.email === user.email, false))
-            : exports.MOCK_BOOKINGS.filter(i => i.organiser.email === event.query_params.email ||
+            ? exports.MOCK_BOOKINGS.filter((i) => i.organiser.email === user.email ||
+                i.organiser === user.email ||
+                i.attendees.reduce((a, v) => a || v.email === user.email, false))
+            : exports.MOCK_BOOKINGS.filter((i) => i.organiser.email === event.query_params.email ||
                 i.organiser === event.query_params.email ||
                 i.attendees.reduce((a, v) => a || v.email === event.query_params.email, false));
         // Filter bookings between a given period
         if (event.query_params.from) {
             const start = dayjs(+event.query_params.from * 1000);
-            const end = event.query_params.to ? dayjs(+event.query_params.to * 1000).endOf('m') : start.endOf('d');
-            data = data.filter(i => {
-                const bkn_start = dayjs(i.start_epoch * 1000).startOf('m').second(1);
-                const bkn_end = dayjs(i.end_epoch * 1000);
-                return (bkn_start.isAfter(start, 's') && bkn_start.isBefore(end, 'm')) || (bkn_end.isAfter(start, 'm') && bkn_end.isBefore(end, 's'));
+            const end = event.query_params.to
+                ? dayjs(+event.query_params.to * 1000).endOf('m')
+                : start.endOf('d');
+            data = data.filter((i) => {
+                const bkn_start = dayjs(i.start_epoch * 1000 || i.start * 1000)
+                    .startOf('m')
+                    .second(1);
+                const bkn_end = dayjs(i.end_epoch * 1000 || i.end * 1000);
+                return ((bkn_start.isAfter(start, 's') && bkn_start.isBefore(end, 'm')) ||
+                    (bkn_end.isAfter(start, 'm') && bkn_end.isBefore(end, 's')));
             });
         }
         return data;
-    }
+    },
 });
 // Handler for bookings show
 window.control.handlers.push({
     path: `${common_mock_1.API}/bookings/:id`,
     metadata: exports.MOCK_BOOKINGS,
     method: 'GET',
-    callback: event => {
+    callback: (event) => {
         if (event.route_params.id) {
-            const booking = exports.MOCK_BOOKINGS.find(i => i.id === event.route_params.id || i.icaluid === event.route_params.id);
+            const booking = exports.MOCK_BOOKINGS.find((i) => i.id === event.route_params.id || i.icaluid === event.route_params.id);
             if (booking) {
                 return booking;
             }
@@ -14618,7 +14628,7 @@ window.control.handlers.push({
         else {
             throw { status: 400, message: 'Invalid booking ID' };
         }
-    }
+    },
 });
 // Handler for new bookings
 window.control.handlers.push({
@@ -14629,26 +14639,38 @@ window.control.handlers.push({
         if (event.body) {
             event.body.id = `bkn-${general_utilities_1.randomInt(9999999)}`;
             event.body.icaluid = `ical-${event.body.id}`;
+            event.body.approval_status = {};
+            for (let i = 0; i < event.body.room_ids.length; i++) {
+                event.body.approval_status[event.body.room_ids[i]] = event.body.auto_approve[i]
+                    ? 'approved'
+                    : 'tentative';
+            }
             exports.MOCK_BOOKINGS.push(event.body);
-            spaces_mock_1.MOCK_SPACES.forEach(space => space.bookings = exports.MOCK_BOOKINGS.filter(booking => booking.room_ids.indexOf(space.email) >= 0));
+            spaces_mock_1.MOCK_SPACES.forEach((space) => (space.bookings = exports.MOCK_BOOKINGS.filter((booking) => booking.room_ids.indexOf(space.email) >= 0)));
             return event.body;
         }
         else {
             throw { status: 500, message: 'Invalid booking data' };
         }
-    }
+    },
 });
-// Handler for updating exisiting bookings
+// Handler for updating existing bookings
 window.control.handlers.push({
     path: `${common_mock_1.API}/bookings/:id`,
     metadata: exports.MOCK_BOOKINGS,
     method: 'PUT',
     callback: (event) => {
         if (event.route_params.id) {
-            const index = exports.MOCK_BOOKINGS.findIndex(i => i.id === event.route_params.id || i.icaluid === event.route_params.id);
+            const index = exports.MOCK_BOOKINGS.findIndex((i) => i.id === event.route_params.id || i.icaluid === event.route_params.id);
             if (index >= 0) {
+                event.body.approval_status = {};
+                for (let i = 0; i < event.body.room_ids.length; i++) {
+                    event.body.approval_status[event.body.room_ids[i]] = event.body.auto_approve[i]
+                        ? 'approved'
+                        : 'tentative';
+                }
                 exports.MOCK_BOOKINGS[index] = event.body;
-                spaces_mock_1.MOCK_SPACES.forEach(i => i.bookings = exports.MOCK_BOOKINGS.filter(j => (j.room_ids).indexOf(i.email) >= 0));
+                spaces_mock_1.MOCK_SPACES.forEach((i) => (i.bookings = exports.MOCK_BOOKINGS.filter((j) => j.room_ids.indexOf(i.email) >= 0)));
                 return event.body;
             }
             else {
@@ -14657,7 +14679,7 @@ window.control.handlers.push({
         }
         else
             throw { status: 500, message: 'Invalid booking ID' };
-    }
+    },
 });
 // Handler for deleting exisiting bookings
 window.control.handlers.push({
@@ -14666,10 +14688,10 @@ window.control.handlers.push({
     method: 'DELETE',
     callback: (event) => {
         if (event.route_params.id) {
-            const index = exports.MOCK_BOOKINGS.findIndex(i => i.id === event.route_params.id || i.icaluid === event.route_params.id);
+            const index = exports.MOCK_BOOKINGS.findIndex((i) => i.id === event.route_params.id || i.icaluid === event.route_params.id);
             if (index >= 0) {
                 exports.MOCK_BOOKINGS.splice(index, 1);
-                spaces_mock_1.MOCK_SPACES.forEach(i => i.bookings = exports.MOCK_BOOKINGS.filter(j => j.room_ids.indexOf(i.email) >= 0));
+                spaces_mock_1.MOCK_SPACES.forEach((i) => (i.bookings = exports.MOCK_BOOKINGS.filter((j) => j.room_ids.indexOf(i.email) >= 0)));
             }
             else {
                 throw { status: 404, message: 'Booking not found' };
@@ -14677,7 +14699,7 @@ window.control.handlers.push({
         }
         else
             throw { status: 500, message: 'Invalid booking ID' };
-    }
+    },
 });
 
 
@@ -14698,117 +14720,414 @@ const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
-exports.MOCK_BUILDINGS = [{
+exports.MOCK_BUILDINGS = [
+    {
         id: 'zone_bld-01',
         zone_id: 'zone_bld-01',
         name: 'Sydney',
         settings: {
             discovery_info: {
+                code: 'SYD',
                 timezone: 'Australia/Sydney',
-                phone: {
-                    emergency: '0412345678',
-                    av_help: '0412345678',
-                    concierge: '0412345678'
-                },
-                locations: {},
-                desk_tracking: 'sys-B0',
-                systems: {
-                    desk_bookings: 'sys-B0'
-                },
-                messaging: 'sys-B0',
-                features: [],
-                catering: {},
                 neighbourhoods: {
                     'zone_lvl-01': {
-                        'Test Searchable': 'Device_Bench'
-                    }
+                        'Test Searchable': 'Device_Bench',
+                    },
                 },
-                visitor_space: 'sydney-10.05@acaprojects.com',
+                visitor_space: `sydney-01.02@${common_mock_1.DOMAIN}`,
+                booking_rules: {
+                    'zone_lvl-33': [
+                        {
+                            conditions: {
+                                is_before: '60 days',
+                                max_length: '1 week',
+                            },
+                            rules: {
+                                auto_approve: false,
+                            },
+                        },
+                    ],
+                    'zone_lvl-35': [
+                        {
+                            conditions: {},
+                            rules: {
+                                auto_approve: false,
+                            },
+                        },
+                    ],
+                    'zone_lvl-36': [
+                        {
+                            conditions: {},
+                            rules: {
+                                auto_approve: true,
+                            },
+                        },
+                    ],
+                },
                 levels: [
                     {
-                        level_id: 'zone_lvl-01',
-                        level_name: 'Level 1',
+                        level_id: 'zone_lvl-33',
+                        level_name: 'Level 33',
                         number: 1,
-                        map_url: 'assets/maps/level_01.svg',
+                        map_url: 'assets/maps/sydney/level_33.svg',
                         floor_type: 'staff',
-                        settings: {
-                            map_features: [
-                                { id: 'Device_Bench', name: 'Device Bench' },
-                                { id: 'people', name: 'People' }
-                            ]
-                        },
-                        desks: 6,
                     },
                     {
-                        level_id: 'zone_lvl-02',
-                        level_name: 'Level 2',
+                        level_id: 'zone_lvl-35',
+                        level_name: 'Level 35',
                         number: 2,
-                        map_url: 'assets/maps/level_02.svg',
+                        map_url: 'assets/maps/sydney/level_35.svg',
                         floor_type: 'client',
-                        book_type: 'Request',
-                        desks: 6,
                     },
                     {
-                        level_id: 'zone_lvl-03',
-                        level_name: 'Level 3',
-                        number: 3,
-                        map_url: 'assets/maps/level_03.svg',
-                        floor_type: 'staff',
-                        desks: 6,
+                        level_id: 'zone_lvl-36',
+                        level_name: 'Level 36',
+                        number: 2,
+                        map_url: 'assets/maps/sydney/level_36.svg',
+                        floor_type: 'client',
                     },
-                    {
-                        level_id: 'zone_lvl-10',
-                        level_name: 'Level 10',
-                        number: 10,
-                        map_url: 'assets/maps/level_10.svg',
-                        floor_type: 'staff',
-                        desks: 186,
-                    }
-                ],
-                roles: {
-                    'fire-warden': [
-                        { name: 'Alex Sorafumo', email: `alex.sorafumo@${common_mock_1.DOMAIN}`, phone: '0412345678' },
-                        { name: 'Bob Jane', email: `bob.jane@${common_mock_1.DOMAIN}`, phone: '0423456789' },
-                        { name: 'Rupert', email: `rupert@${common_mock_1.DOMAIN}`, phone: '0434567890' }
-                    ],
-                    'first-aider': [
-                        { name: 'Ben Hoad', email: `ben.hoad@${common_mock_1.DOMAIN}`, phone: '0412345678' },
-                        { name: 'Kim Burgess', email: `kim.burgess@${common_mock_1.DOMAIN}`, phone: '0423456789' },
-                        { name: 'Mr Pop', email: `mr.pop@${common_mock_1.DOMAIN}`, phone: '0434567890' }
-                    ]
-                },
-                extras: [
-                    { extra_id: 'VidConf', extra_name: 'Video Conference' },
-                    { extra_id: 'AV', extra_name: 'AV' },
-                    { extra_id: 'presentation', extra_name: 'Wireless Presentation' },
-                    { extra_id: 'phone', extra_name: 'Conference Phone' },
-                ],
-                loan_items: [
-                    { extra_id: 'ConfKit', extra_name: 'Conference Kit' },
-                    { extra_id: 'Chairs', extra_name: 'Chairs' },
                 ],
             },
         },
-    }];
+    },
+    {
+        id: 'zone_bld-02',
+        zone_id: 'zone_bld-02',
+        name: 'London Post',
+        settings: {
+            discovery_info: {
+                code: 'LON',
+                timezone: 'Europe/London',
+                visitor_space: `london-01.02@${common_mock_1.DOMAIN}`,
+                holding_bay: `11.10@${common_mock_1.DOMAIN}`,
+                levels: [
+                    {
+                        level_id: 'zone_lvl-10',
+                        level_name: 'Level 10',
+                        number: 1,
+                        map_url: 'assets/maps/london/level_10.svg',
+                        floor_type: 'staff',
+                    },
+                    {
+                        level_id: 'zone_lvl-11',
+                        level_name: 'Level 11',
+                        number: 11,
+                        map_url: 'assets/maps/london/level_11.svg',
+                        floor_type: 'client',
+                    },
+                ],
+            },
+        },
+    },
+];
 exports.MOCK_BUILDINGS.push(Object.assign(Object.assign({}, exports.MOCK_BUILDINGS[0]), { name: 'London' }));
 organisation_mock_1.MOCK_ORG[0].discovery_info.buildings = exports.MOCK_BUILDINGS;
-setTimeout(() => {
-    window.control.handlers.push({
-        path: '/api/engine/v2/zones',
-        metadata: exports.MOCK_BUILDINGS,
-        callback: (event) => {
-            if (event.query_params.tags === 'building') {
-                return { total: exports.MOCK_BUILDINGS.length, results: exports.MOCK_BUILDINGS };
+// setTimeout(() => {
+window.control.handlers.push({
+    path: '/api/engine/v2/zones',
+    metadata: exports.MOCK_BUILDINGS,
+    callback: (event) => {
+        if (event.query_params.tags === 'building') {
+            return { total: exports.MOCK_BUILDINGS.length, results: exports.MOCK_BUILDINGS };
+        }
+        else if (event.query_params.tags === 'org') {
+            return { total: organisation_mock_1.MOCK_ORG.length, results: organisation_mock_1.MOCK_ORG };
+        }
+        else if (event.query_params.tags === 'level') {
+            return { total: 0, results: [] };
+        }
+    },
+});
+// });
+
+
+/***/ }),
+
+/***/ "./src/app/shared/mocks/api/catering-menu.mock.ts":
+/*!********************************************************!*\
+  !*** ./src/app/shared/mocks/api/catering-menu.mock.ts ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
+const general_utilities_1 = __webpack_require__(/*! ../../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+const MOCK_MENU = {
+    'zone_bld-01': [
+        {
+            id: 'snacks',
+            name: 'Snacks',
+            zones: ['zone_bld-01'],
+            items: [
+                { id: 'pretzels', name: 'Pretzels', price: 200, zones: ['zone_bld-01'], parent_categories: ['snacks'] },
+                { id: 'cashews', name: 'Cashew', price: 400, zones: ['zone_bld-01'], parent_categories: ['snacks'] },
+                { id: 'almonds', name: 'Almonds', price: 200, zones: ['zone_bld-01'], parent_categories: ['snacks'] },
+                {
+                    id: 'chips',
+                    name: 'Chips',
+                    description: 'Pick 1',
+                    must_select: 1,
+                    package: true,
+                    price: 1000, zones: ['zone_bld-01'],
+                    parent_categories: ['snacks'],
+                    items: [
+                        { id: 'cheezels', name: 'Cheezels', zones: ['zone_bld-01'], parent_categories: ['chips'] },
+                        { id: 'smiths_orginal', name: 'Smiths Orginal', zones: ['zone_bld-01'], parent_categories: ['chips'] },
+                        { id: 'smiths_chicken', name: 'Smiths Chicken', zones: ['zone_bld-01'], parent_categories: ['chips'] },
+                        { id: 'layz_orginal', name: 'Layz Orginal', zones: ['zone_bld-01'], parent_categories: ['chips'] },
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'refresh',
+            name: 'Refreshments', zones: ['zone_bld-01'],
+            items: [
+                {
+                    id: 'drinks',
+                    name: 'Drink Package',
+                    description: 'Pick 3 types of drinks',
+                    must_select: 3,
+                    package: true,
+                    price: 1000, zones: ['zone_bld-01'],
+                    parent_categories: ['refresh'],
+                    items: [
+                        { id: 'pepsi', name: 'Pepsi', parent_categories: ['drinks'] },
+                        { id: 'solo', name: 'Solo', parent_categories: ['drinks'] },
+                        { id: 'fanta', name: 'Fanta', parent_categories: ['drinks'] },
+                        { id: 'coke_zero', name: 'Coke Zero', parent_categories: ['drinks'] },
+                    ],
+                },
+                { id: 'pepsi', name: 'Pepsi', price: 80, parent_categories: ['refresh'] },
+                { id: 'solo', name: 'Solo', price: 80, parent_categories: ['refresh'] },
+                { id: 'fanta', name: 'Fanta', price: 80, parent_categories: ['refresh'] },
+                { id: 'coke_zero', name: 'Coke Zero', price: 80, parent_categories: ['refresh'] },
+            ],
+        },
+    ],
+    'zone_bld-02': [
+        {
+            id: 'snacks',
+            name: 'Snacks',
+            items: [
+                { id: 'pretzels', name: 'Pretzels', price: 200 },
+                { id: 'cashews', name: 'Cashew', price: 400 },
+                { id: 'almonds', name: 'Almonds', price: 200 },
+                {
+                    id: 'chips',
+                    name: 'Chips',
+                    description: 'Pick 1',
+                    must_select: 1,
+                    package: true,
+                    price: 1000,
+                    items: [
+                        { id: 'cheezels', name: 'Cheezels' },
+                        { id: 'smiths_orginal', name: 'Smiths Orginal' },
+                        { id: 'smiths_chicken', name: 'Smiths Chicken' },
+                        { id: 'layz_orginal', name: 'Layz Orginal' },
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'refresh',
+            name: 'Refreshments',
+            items: [
+                { id: 'pepsi', name: 'Pepsi', price: 80 },
+                { id: 'solo', name: 'Solo', price: 80 },
+                { id: 'fanta', name: 'Fanta', price: 80 },
+                { id: 'coke_zero', name: 'Coke Zero', price: 80 },
+                {
+                    id: 'drinks',
+                    name: 'Drink Package',
+                    description: 'Pick 3 types of drinks',
+                    must_select: 3,
+                    package: true,
+                    price: 1000,
+                    items: [
+                        { id: 'pepsi', name: 'Pepsi' },
+                        { id: 'solo', name: 'Solo' },
+                        { id: 'fanta', name: 'Fanta' },
+                        { id: 'coke_zero', name: 'Coke Zero' },
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'dinner',
+            name: 'Dinner',
+            items: [
+                {
+                    id: 'Schnitzel',
+                    name: 'Chicken Schnitzel',
+                    description: 'With a side of chips or salad',
+                    price: 1200,
+                    must_select: 1,
+                    items: [
+                        { item: 'chips', name: 'Chips' },
+                        { item: 'salad', name: 'Salad' },
+                    ],
+                },
+            ],
+        },
+    ],
+};
+// Handler for bookings show
+window.control.handlers.push({
+    path: `${common_mock_1.API}/menu`,
+    metadata: [],
+    method: 'GET',
+    callback: (event) => {
+        if (event.query_params.zone_id) {
+            return MOCK_MENU[event.query_params.zone_id] || [];
+        }
+        throw { status: 400, message: 'Invalid room ID' };
+    },
+});
+// Handler for bookings show
+window.control.handlers.push({
+    path: `${common_mock_1.API}/catering/item`,
+    metadata: [],
+    method: 'POST',
+    callback: (event) => {
+        if (event.body) {
+            event.body.id = `category-${general_utilities_1.randomInt(99999999)}`;
+            const item = event.body;
+            for (const zone of item.zones) {
+                if (!MOCK_MENU[zone]) {
+                    MOCK_MENU[zone] = [];
+                }
+                if (item.parent_categories && item.parent_categories.length) {
+                    const parent = MOCK_MENU[zone].find(cat => cat.id === item.parent_categories[0]);
+                    if (parent) {
+                        parent.items.push(item);
+                    }
+                    else {
+                        for (const category of MOCK_MENU[zone]) {
+                            const parent = category.items.find(cat => cat.id === item.parent_categories[0]);
+                            if (parent) {
+                                parent.items.push(item);
+                                return item;
+                            }
+                        }
+                        throw { status: 400, message: `Unable to find parent category with id "${item.parent_categories[0]}"` };
+                    }
+                }
+                else {
+                    throw { status: 400, message: `Items require a parent category` };
+                }
             }
-            else if (event.query_params.tags === 'org') {
-                return { total: organisation_mock_1.MOCK_ORG.length, results: organisation_mock_1.MOCK_ORG };
+            return item;
+        }
+        throw { status: 400, message: 'No contents for item' };
+    },
+});
+// Handler for bookings show
+window.control.handlers.push({
+    path: `${common_mock_1.API}/catering/item/:id`,
+    metadata: [],
+    method: 'PUT',
+    callback: (event) => {
+        if (event.body && event.route_params.id) {
+            const category = event.body;
+            for (const zone of category.zones) {
+                if (!MOCK_MENU[zone]) {
+                    MOCK_MENU[zone] = [];
+                }
+                const parent = findParent(event.route_params.id, MOCK_MENU[zone]);
+                if (parent) {
+                    parent.items.splice(parent.items.findIndex(itm => itm.id === category.id), 1, category);
+                }
+                else {
+                    throw { status: 400, message: `Unable to find item with ID "${event.route_params.id}"` };
+                }
             }
-            else if (event.query_params.tags === 'level') {
-                return { total: 0, results: [] };
+            return category;
+        }
+        throw { status: 400, message: 'No contents for item' };
+    },
+});
+// Handler for bookings show
+window.control.handlers.push({
+    path: `${common_mock_1.API}/catering/category`,
+    metadata: [],
+    method: 'POST',
+    callback: (event) => {
+        if (event.body) {
+            event.body.id = `category-${general_utilities_1.randomInt(99999999)}`;
+            const category = event.body;
+            for (const zone of category.zones) {
+                if (!MOCK_MENU[zone]) {
+                    MOCK_MENU[zone] = [];
+                }
+                if (category.parent_categories && category.parent_categories.length) {
+                    const parent = MOCK_MENU[zone].find(cat => cat.id === category.parent_categories[0]);
+                    if (parent) {
+                        parent.items.push(category);
+                    }
+                    else {
+                        throw { status: 400, message: `Unable to find parent category with id "${category.parent_categories[0]}"` };
+                    }
+                }
+                else {
+                    MOCK_MENU[zone].push(category);
+                }
+            }
+            return category;
+        }
+        throw { status: 400, message: 'No contents for category' };
+    },
+});
+// Handler for bookings show
+window.control.handlers.push({
+    path: `${common_mock_1.API}/catering/category/:id`,
+    metadata: [],
+    method: 'PUT',
+    callback: (event) => {
+        if (event.body && event.route_params.id) {
+            const category = event.body;
+            console.log('Body:', category);
+            for (const zone of category.zones) {
+                if (!MOCK_MENU[zone]) {
+                    MOCK_MENU[zone] = [];
+                }
+                const index = MOCK_MENU[zone].findIndex((itm) => itm.id === category.id);
+                if (index < 0) {
+                    const parent = findParent(event.route_params.id, MOCK_MENU[zone]);
+                    if (parent) {
+                        parent.items.splice(parent.items.findIndex(itm => itm.id === category.id), 1, category);
+                    }
+                    else {
+                        throw { status: 400, message: `Unable to find category with ID "${event.route_params.id}"` };
+                    }
+                }
+                else {
+                    MOCK_MENU[zone].splice(index, 1, category);
+                }
+            }
+            return category;
+        }
+        throw { status: 400, message: 'No contents for category' };
+    },
+});
+function findParent(id, list) {
+    for (const category of list) {
+        const found = category.items.find((item) => item.id === id);
+        if (found) {
+            return category;
+        }
+        else {
+            const parent = findParent(id, category.items);
+            if (parent) {
+                return parent;
             }
         }
-    });
-});
+    }
+    return null;
+}
 
 
 /***/ }),
@@ -14916,13 +15235,16 @@ window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
 exports.MOCK_SPACES = [
-    { id: '1.01', name: 'Meeting', zones: ['zone_bld-01', 'zone_lvl-01'] },
-    { id: '1.02', name: 'Collaboration', zones: ['zone_bld-01', 'zone_lvl-01'] },
-    { id: '1.03', name: 'Team Meeting', zones: ['zone_bld-01', 'zone_lvl-01'] },
-    { id: '1.04', name: 'Pod', zones: ['zone_bld-01', 'zone_lvl-01'] },
-    { id: '1.05', name: 'IT Support', zones: ['zone_bld-01', 'zone_lvl-01'] }
+    { id: '35.06', name: 'SYD-35-Durack-internal-05-DV', zones: ['zone_bld-01', 'zone_lvl-35'], bookable: true },
+    { id: '36.08', name: 'SYD-36-Trickett-internal-05-DV', zones: ['zone_bld-01', 'zone_lvl-36'], bookable: true },
+    { id: '33.02', name: 'SYD-33West-Wedding Cake-10V', zones: ['zone_bld-01', 'zone_lvl-33'], bookable: false },
+    { id: '33.03', name: 'SYD-33West-Pinchgut-05DV', zones: ['zone_bld-01', 'zone_lvl-33'], bookable: true },
+    { id: '10.02', name: 'LON-10-10_02_Village_green', zones: ['zone_bld-02', 'zone_lvl-10'] },
+    { id: '10.47', name: 'LON-10-EC10_10_47_Gallery', zones: ['zone_bld-02', 'zone_lvl-10'] },
+    { id: '11.07', name: 'LON-11-EC11_11_07_Client', zones: ['zone_bld-02', 'zone_lvl-11'] },
+    { id: '11.10', name: 'LON-11-EC11_11_10_Client', zones: ['zone_bld-02', 'zone_lvl-11'] }
 ].map((space_data) => {
-    const space = space_utilities_1.generateMockSpace(Object.assign(Object.assign({}, space_data), { map_id: `area-${space_data.id}-status`, id: `sys_rm-${space_data.id}`, name: `${space_data.name} ${space_data.id}` }));
+    const space = space_utilities_1.generateMockSpace(Object.assign(Object.assign({ bookable: true }, space_data), { map_id: `${space_data.id}`, id: `sys_rm-${space_data.id}`, email: `${space_data.id}@${common_mock_1.DOMAIN}`, name: `${space_data.name}` }));
     window.control.systems[space.id] = {
         Bookings: [
             {
@@ -15006,7 +15328,7 @@ window.control.handlers = window.control.handlers || [];
 exports.MOCK_USERS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
     .map(i => user_utilities_1.generateMockUser());
 exports.MOCK_CONTACTS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
-    .map(i => user_utilities_1.generateMockUser({ visitor: true }));
+    .map(i => user_utilities_1.generateMockUser({ external: true }));
 exports.PREDEFINED_USERS = [
     'Jonathan McFarlane',
     'Stephen Von Takach',
@@ -15042,11 +15364,6 @@ window.control.handlers.push({
         return exports.MOCK_USERS;
     }
 });
-// Add handler for current user
-window.control.handlers.push({
-    path: `/api/engine/v2/users/current`,
-    metadata: exports.MOCK_USERS[exports.MOCK_USERS.length - 1],
-});
 // Add handler for users show
 window.control.handlers.push({
     path: `${common_mock_1.API}/users/:id`,
@@ -15055,6 +15372,9 @@ window.control.handlers.push({
         const user = exports.MOCK_USERS.find(i => i.id === event.route_params.id || i.name === event.route_params.id || i.email === event.route_params.id);
         if (user) {
             return user;
+        }
+        else if (event.route_params.id === 'current') {
+            return exports.MOCK_USERS[exports.MOCK_USERS.length - 1];
         }
         throw { status: 404, message: 'User not found' };
     }
@@ -15106,6 +15426,9 @@ __webpack_require__(/*! ./api/users.mock */ "./src/app/shared/mocks/api/users.mo
 __webpack_require__(/*! ./api/spaces.mock */ "./src/app/shared/mocks/api/spaces.mock.ts");
 __webpack_require__(/*! ./api/bookings.mock */ "./src/app/shared/mocks/api/bookings.mock.ts");
 __webpack_require__(/*! ./api/locations.mock */ "./src/app/shared/mocks/api/locations.mock.ts");
+__webpack_require__(/*! ./api/catering-menu.mock */ "./src/app/shared/mocks/api/catering-menu.mock.ts");
+const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
+faker.seed(2560);
 window.control = window.control || {};
 window.control.systems = Object.assign(Object.assign({}, window.control.systems), { ['sys-B0']: systems_mock_1.createSystem('sys-B0') }) || {};
 window.control.handlers = window.control.handlers || [];
@@ -19319,6 +19642,7 @@ const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ ".
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
+const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
@@ -19407,12 +19731,21 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
         return date.format('DD MMM YYYY');
     }
     ngOnInit() {
+        this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
+    }
+    init() {
+        this.events = [];
+        const building = this._org.building;
+        this.space_list = this._spaces
+            .filter((space) => space.zones.indexOf(this.level === '' ? building.id : this.level) >= 0)
+            .map((i) => i.id);
+        this.processMeetings();
         this.getMonthlyPending();
         this.interval('monthly_pending', () => this.getMonthlyPending(), 10 * 60 * 1000);
     }
     ngOnChanges(changes) {
         /* istanbul ignore else */
-        if (changes.date) {
+        if (changes.date && this.date !== changes.date.previousValue) {
             this.events = [];
             this.updateMeetings();
             // this.interval('update_meetings', () => this.updateMeetings(), 60 * 1000);
@@ -19425,11 +19758,7 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
             }
         }
         if (changes.level) {
-            this.events = [];
-            const building = this._org.building;
-            this.space_list = this._spaces.filter((space) => space.zones.indexOf(this.level === '' ? building.id : this.level) >= 0).map((i) => i.name);
-            this.processMeetings();
-            this.getMonthlyPending();
+            this.init();
         }
     }
     /* istanbul ignore next */
@@ -19447,11 +19776,13 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
         const end = time.endOf('d');
         this.loading = true;
         const building = this._org.building;
-        this._spaces.query({
+        this._spaces
+            .query({
             zone_ids: this.level || building.id,
             available_from: time.unix(),
             available_to: end.unix(),
-        }).then((room_list) => {
+        })
+            .then((room_list) => {
             this.space_list = room_list.map((i) => i.id);
             this.processMeetings();
             this.loading = false;
@@ -19473,10 +19804,10 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
     process(date) {
         let events = [];
         for (const id of this.space_list) {
-            const rm = this._spaces.find(id);
+            const space = this._spaces.find(id);
             /* istanbul ignore else */
-            if (rm) {
-                events = events.concat(rm.bookingsFor(date).filter((booking) => booking.tentative));
+            if (space) {
+                events = events.concat(space.bookingsFor(date).filter((booking) => booking.tentative));
             }
         }
         return events.sort((a, b) => a.date - b.date);
@@ -19493,11 +19824,13 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
             start = now;
         }
         const building = this._org.building;
-        this._spaces.query({
+        this._spaces
+            .query({
             zone_ids: this.level || building.id,
             available_from: start.unix(),
             available_to: end.unix(),
-        }).then((_) => {
+        })
+            .then((_) => {
             const pending_list = this._service.get('CONCIERGE.pending_bookings') || {};
             for (let date = start; date.isBefore(end, 'm'); date = date.add(1, 'd')) {
                 const events = this.process(date.valueOf());
@@ -19521,7 +19854,7 @@ DayViewApprovalsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewApproval
         i0.ɵɵproperty("ngIf", ctx.events && ctx.events.length)("ngIfElse", _r2);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx.loading);
-    } }, directives: [i4.NgIf, i4.NgForOf, i5.DayViewApprovalsEventComponent, i6.MatSpinner], styles: [".approvals-view[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden auto;\n  background-color: #eee;\n}\n\n.no-item[_ngcontent-%COMP%] {\n  font-size: 0.7em;\n}\n\n.date[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 100%;\n  margin: 0.5em 0;\n}\n\n.bar[_ngcontent-%COMP%] {\n  height: 1px;\n  min-width: 1px;\n  flex: 1;\n  background-color: #707070;\n}\n\n.display[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0.5em 1.5em;\n  height: 1.5em;\n  border-radius: 0.8em;\n  background-color: #707070;\n  color: #fff;\n  font-size: 0.8em;\n}\n\n.load-state[_ngcontent-%COMP%] {\n  position: absolute;\n  left: 50%;\n  bottom: 4px;\n  transform: translateX(-50%);\n  background-color: #fff;\n  z-index: 999;\n  border-radius: 4px;\n  height: 3em;\n  width: 3em;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n\n.load-state[_ngcontent-%COMP%]   spinner[_ngcontent-%COMP%] {\n  font-size: 0.4em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC9kYXktdmlldy9hcHByb3ZhbHMtdmlldy9hcHByb3ZhbHMtdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvZGF5LXZpZXcvYXBwcm92YWxzLXZpZXcvYXBwcm92YWxzLXZpZXcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxxQkFBQTtFQUNBLHNCQUFBO0FDQUo7O0FER0E7RUFDSSxnQkFBQTtBQ0FKOztBREdBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtFQUNBLGVBQUE7QUNBSjs7QURHQTtFQUNJLFdBQUE7RUFDQSxjQUFBO0VBQ0EsT0FBQTtFQUNBLHlCQUFBO0FDQUo7O0FER0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLG9CQUFBO0VBQ0EsYUFBQTtFQUNBLG9CQUFBO0VBQ0EseUJBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7QUNBSjs7QURHQTtFQUNJLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFdBQUE7RUFDQSwyQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFVBQUE7RUFDQSwrR0FBQTtBQ0FKOztBREVJO0VBQ0ksZ0JBQUE7QUNBUiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2RheS12aWV3L2FwcHJvdmFscy12aWV3L2FwcHJvdmFscy12aWV3LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4uYXBwcm92YWxzLXZpZXcgIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIG92ZXJmbG93OiBoaWRkZW4gYXV0bztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWVlO1xufVxuXG4ubm8taXRlbSB7XG4gICAgZm9udC1zaXplOiAuN2VtO1xufVxuXG4uZGF0ZSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1hcmdpbjogLjVlbSAwO1xufVxuXG4uYmFyIHtcbiAgICBoZWlnaHQ6IDFweDtcbiAgICBtaW4td2lkdGg6IDFweDtcbiAgICBmbGV4OiAxO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM3MDcwNzA7XG59XG5cbi5kaXNwbGF5IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgcGFkZGluZzogLjVlbSAxLjVlbTtcbiAgICBoZWlnaHQ6IDEuNWVtO1xuICAgIGJvcmRlci1yYWRpdXM6IC44ZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzcwNzA3MDtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBmb250LXNpemU6IC44ZW1cbn1cblxuLmxvYWQtc3RhdGUge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgYm90dG9tOiA0cHg7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgei1pbmRleDogOTk5O1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBoZWlnaHQ6IDNlbTtcbiAgICB3aWR0aDogM2VtO1xuICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoIzAwMCwuMiksIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsLjEyKTtcblxuICAgIHNwaW5uZXIge1xuICAgICAgICBmb250LXNpemU6IC40ZW07XG4gICAgfVxufVxuIiwiLmFwcHJvdmFscy12aWV3IHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIG92ZXJmbG93OiBoaWRkZW4gYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VlZTtcbn1cblxuLm5vLWl0ZW0ge1xuICBmb250LXNpemU6IDAuN2VtO1xufVxuXG4uZGF0ZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDAuNWVtIDA7XG59XG5cbi5iYXIge1xuICBoZWlnaHQ6IDFweDtcbiAgbWluLXdpZHRoOiAxcHg7XG4gIGZsZXg6IDE7XG4gIGJhY2tncm91bmQtY29sb3I6ICM3MDcwNzA7XG59XG5cbi5kaXNwbGF5IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHBhZGRpbmc6IDAuNWVtIDEuNWVtO1xuICBoZWlnaHQ6IDEuNWVtO1xuICBib3JkZXItcmFkaXVzOiAwLjhlbTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzcwNzA3MDtcbiAgY29sb3I6ICNmZmY7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG59XG5cbi5sb2FkLXN0YXRlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiA1MCU7XG4gIGJvdHRvbTogNHB4O1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSk7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIHotaW5kZXg6IDk5OTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBoZWlnaHQ6IDNlbTtcbiAgd2lkdGg6IDNlbTtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDAgcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xufVxuLmxvYWQtc3RhdGUgc3Bpbm5lciB7XG4gIGZvbnQtc2l6ZTogMC40ZW07XG59Il19 */"] });
+    } }, directives: [i4.NgIf, i4.NgForOf, i5.DayViewApprovalsEventComponent, i6.MatSpinner], styles: [".approvals-view[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden auto;\n  background-color: #eee;\n  z-index: 10;\n}\n\n.no-item[_ngcontent-%COMP%] {\n  font-size: 0.7em;\n}\n\n.date[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 100%;\n  margin: 0.5em 0;\n}\n\n.bar[_ngcontent-%COMP%] {\n  height: 1px;\n  min-width: 1px;\n  flex: 1;\n  background-color: #707070;\n}\n\n.display[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0.5em 1.5em;\n  height: 1.5em;\n  border-radius: 0.8em;\n  background-color: #707070;\n  color: #fff;\n  font-size: 0.8em;\n}\n\n.load-state[_ngcontent-%COMP%] {\n  position: absolute;\n  left: 50%;\n  bottom: 4px;\n  transform: translateX(-50%);\n  background-color: #fff;\n  z-index: 999;\n  border-radius: 4px;\n  height: 3em;\n  width: 3em;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n\n.load-state[_ngcontent-%COMP%]   spinner[_ngcontent-%COMP%] {\n  font-size: 0.4em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC9kYXktdmlldy9hcHByb3ZhbHMtdmlldy9hcHByb3ZhbHMtdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvZGF5LXZpZXcvYXBwcm92YWxzLXZpZXcvYXBwcm92YWxzLXZpZXcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxxQkFBQTtFQUNBLHNCQUFBO0VBQ0EsV0FBQTtBQ0FKOztBREdBO0VBQ0ksZ0JBQUE7QUNBSjs7QURHQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0FDQUo7O0FER0E7RUFDSSxXQUFBO0VBQ0EsY0FBQTtFQUNBLE9BQUE7RUFDQSx5QkFBQTtBQ0FKOztBREdBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxvQkFBQTtFQUNBLGFBQUE7RUFDQSxvQkFBQTtFQUNBLHlCQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0FDQUo7O0FER0E7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxXQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsK0dBQUE7QUNBSjs7QURFSTtFQUNJLGdCQUFBO0FDQVIiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9kYXktdmlldy9hcHByb3ZhbHMtdmlldy9hcHByb3ZhbHMtdmlldy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmFwcHJvdmFscy12aWV3ICB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBvdmVyZmxvdzogaGlkZGVuIGF1dG87XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VlZTtcbiAgICB6LWluZGV4OiAxMDtcbn1cblxuLm5vLWl0ZW0ge1xuICAgIGZvbnQtc2l6ZTogLjdlbTtcbn1cblxuLmRhdGUge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW46IC41ZW0gMDtcbn1cblxuLmJhciB7XG4gICAgaGVpZ2h0OiAxcHg7XG4gICAgbWluLXdpZHRoOiAxcHg7XG4gICAgZmxleDogMTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNzA3MDcwO1xufVxuXG4uZGlzcGxheSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHBhZGRpbmc6IC41ZW0gMS41ZW07XG4gICAgaGVpZ2h0OiAxLjVlbTtcbiAgICBib3JkZXItcmFkaXVzOiAuOGVtO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM3MDcwNzA7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgZm9udC1zaXplOiAuOGVtXG59XG5cbi5sb2FkLXN0YXRlIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgbGVmdDogNTAlO1xuICAgIGJvdHRvbTogNHB4O1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIHotaW5kZXg6IDk5OTtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgaGVpZ2h0OiAzZW07XG4gICAgd2lkdGg6IDNlbTtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKCMwMDAsLjIpLCAwIDFweCAxcHggMCByZ2JhKCMwMDAsLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLC4xMik7XG5cbiAgICBzcGlubmVyIHtcbiAgICAgICAgZm9udC1zaXplOiAuNGVtO1xuICAgIH1cbn1cbiIsIi5hcHByb3ZhbHMtdmlldyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgYm90dG9tOiAwO1xuICBvdmVyZmxvdzogaGlkZGVuIGF1dG87XG4gIGJhY2tncm91bmQtY29sb3I6ICNlZWU7XG4gIHotaW5kZXg6IDEwO1xufVxuXG4ubm8taXRlbSB7XG4gIGZvbnQtc2l6ZTogMC43ZW07XG59XG5cbi5kYXRlIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbjogMC41ZW0gMDtcbn1cblxuLmJhciB7XG4gIGhlaWdodDogMXB4O1xuICBtaW4td2lkdGg6IDFweDtcbiAgZmxleDogMTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzcwNzA3MDtcbn1cblxuLmRpc3BsYXkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgcGFkZGluZzogMC41ZW0gMS41ZW07XG4gIGhlaWdodDogMS41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDAuOGVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNzA3MDcwO1xuICBjb2xvcjogI2ZmZjtcbiAgZm9udC1zaXplOiAwLjhlbTtcbn1cblxuLmxvYWQtc3RhdGUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDUwJTtcbiAgYm90dG9tOiA0cHg7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgei1pbmRleDogOTk5O1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGhlaWdodDogM2VtO1xuICB3aWR0aDogM2VtO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG59XG4ubG9hZC1zdGF0ZSBzcGlubmVyIHtcbiAgZm9udC1zaXplOiAwLjRlbTtcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DayViewApprovalsComponent, [{
         type: core_1.Component,
         args: [{
@@ -20014,7 +20347,7 @@ function DayViewComponent_mat_form_field_6_mat_option_2_Template(rf, ctx) { if (
 function DayViewComponent_mat_form_field_6_Template(rf, ctx) { if (rf & 1) {
     const _r11 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "mat-form-field", 5);
-    i0.ɵɵelementStart(1, "mat-select", 10);
+    i0.ɵɵelementStart(1, "mat-select", 12);
     i0.ɵɵlistener("ngModelChange", function DayViewComponent_mat_form_field_6_Template_mat_select_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r11); const ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.active_type = $event; });
     i0.ɵɵtemplate(2, DayViewComponent_mat_form_field_6_mat_option_2_Template, 2, 2, "mat-option", 7);
     i0.ɵɵelementEnd();
@@ -20028,12 +20361,12 @@ function DayViewComponent_mat_form_field_6_Template(rf, ctx) { if (rf & 1) {
 } }
 function DayViewComponent_mat_option_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-option", 11);
-    i0.ɵɵelementStart(1, "div", 12);
-    i0.ɵɵelementStart(2, "div", 13);
+    i0.ɵɵelementStart(1, "div", 13);
+    i0.ɵɵelementStart(2, "div", 14);
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "div", 14);
-    i0.ɵɵelement(5, "div", 15);
+    i0.ɵɵelementStart(4, "div", 15);
+    i0.ɵɵelement(5, "div", 16);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -20118,7 +20451,7 @@ class DayViewComponent extends base_directive_1.BaseDirective {
 }
 exports.DayViewComponent = DayViewComponent;
 DayViewComponent.ɵfac = function DayViewComponent_Factory(t) { return new (t || DayViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService), i0.ɵɵdirectiveInject(i3.OrganisationService), i0.ɵɵdirectiveInject(i4.MatDialog), i0.ɵɵdirectiveInject(i5.Router), i0.ɵɵdirectiveInject(i5.ActivatedRoute)); };
-DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, selectors: [["a-day-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 16, vars: 13, consts: [[1, "day-view"], [1, "group"], [3, "date", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], ["multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "legend", "overflow_only", "space_type"], [3, "ngModel", "ngModelChange"], [3, "value"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"]], template: function DayViewComponent_Template(rf, ctx) { if (rf & 1) {
+DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, selectors: [["a-day-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 16, vars: 13, consts: [[1, "day-view"], [1, "group"], [3, "date", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "legend", "overflow_only", "space_type"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"]], template: function DayViewComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "a-sidebar");
         i0.ɵɵelementStart(2, "div", 1);
@@ -20248,8 +20581,8 @@ const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_mod
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const space_class_1 = __webpack_require__(/*! src/app/services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const meeting_details_modal_component_1 = __webpack_require__(/*! src/app/overlays/meeting-details-modal/meeting-details-modal.component */ "./src/app/overlays/meeting-details-modal/meeting-details-modal.component.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
@@ -20400,6 +20733,17 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
         this._router = _router;
         /** Emitter for the current position of the event within the timeline */
         this.position = new core_1.EventEmitter();
+        /** Whether to hide the event */
+        this.hide = false;
+    }
+    /**  */
+    get should_display() {
+        const date = dayjs(this.date);
+        const start = dayjs(this.event.date);
+        const end = start.add(this.event.duration, 'm');
+        return (date.isSame(start, 'd') ||
+            date.isSame(end, 'd') ||
+            (date.isAfter(start, 'd') && date.isBefore(end, 'd')));
     }
     /** Type of booking */
     get type() {
@@ -20447,6 +20791,7 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
         /* istanbul ignore else */
         if (changes.event || changes.overlap || changes.date) {
             this.calculatePosition();
+            this.hide = !this.should_display;
         }
     }
     /**
@@ -20491,7 +20836,7 @@ DayViewSpaceEventComponent.ɵfac = function DayViewSpaceEventComponent_Factory(t
 DayViewSpaceEventComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewSpaceEventComponent, selectors: [["day-view-space-event"]], inputs: { event: "event", date: "date", space: "space", fixed: "fixed", overlap: "overlap", loading: "loading" }, outputs: { position: "position" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "event-container", 3, "id", "fixed", "inactive", "top", "left", "width", "height", 4, "ngIf"], [1, "event-container", 3, "id"], [3, "tapped"], [1, "header"], [1, "text"], [1, "handle"], [3, "icon", 4, "ngIf"], ["diameter", "16", 4, "ngIf"], [1, "body"], [1, "field", "host"], [1, "label"], [1, "value", 3, "title"], ["class", "field booked-by", 4, "ngIf"], [1, "field"], [1, "value"], ["class", "field", 3, "title", 4, "ngIf"], ["class", "field", 4, "ngIf"], ["class", "catering-icon", "mat-icon-button", "", "name", "view-catering", 3, "tapped", 4, "ngIf"], [3, "icon"], ["diameter", "16"], [1, "field", "booked-by"], [1, "field", 3, "title"], ["mat-icon-button", "", "name", "view-catering", 1, "catering-icon", 3, "tapped"]], template: function DayViewSpaceEventComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, DayViewSpaceEventComponent_div_0_Template, 25, 37, "div", 0);
     } if (rf & 2) {
-        i0.ɵɵproperty("ngIf", ctx.event);
+        i0.ɵɵproperty("ngIf", ctx.event && !ctx.hide);
     } }, directives: [i4.NgIf, i5.ɵb, i6.IconComponent, i7.MatSpinner, i8.MatButton], styles: [".event-container[_ngcontent-%COMP%] {\n  position: absolute;\n  pointer-events: auto;\n  transition: -webkit-filter 200ms;\n  transition: filter 200ms;\n  transition: filter 200ms, -webkit-filter 200ms;\n}\n.event-container[_ngcontent-%COMP%]:hover {\n  -webkit-filter: none;\n          filter: none;\n}\n.event-container[_ngcontent-%COMP%]:hover   .catering-icon[_ngcontent-%COMP%] {\n  z-index: 999;\n}\n.event-container[_ngcontent-%COMP%]:hover   .event[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n  bottom: auto;\n  min-height: 100%;\n  left: 5px;\n  right: 5px;\n}\n.event-container[_ngcontent-%COMP%]:hover   .event.low[_ngcontent-%COMP%] {\n  bottom: 0;\n  top: auto;\n}\n.event-container.fixed[_ngcontent-%COMP%]:hover   .event[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n  top: 0;\n  left: 1px;\n  right: 1px;\n  bottom: 0;\n}\n.overflow[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 2px;\n  left: 2px;\n  right: 2px;\n  bottom: 2px;\n  border-radius: 4px;\n  background-color: rgba(31, 64, 230, 0.2);\n}\n.overflow.internal[_ngcontent-%COMP%] {\n  background-color: rgba(230, 159, 199, 0.2);\n}\n.overflow.external[_ngcontent-%COMP%] {\n  background-color: rgba(140, 90, 200, 0.2);\n}\n.overflow.training[_ngcontent-%COMP%] {\n  background-color: rgba(240, 231, 0, 0.2);\n}\n.overflow.interview[_ngcontent-%COMP%] {\n  background-color: rgba(52, 141, 2, 0.2);\n}\n.overflow.setup[_ngcontent-%COMP%] {\n  background-color: rgba(211, 47, 47, 0.2);\n}\n.overflow.cancelled[_ngcontent-%COMP%] {\n  background-color: rgba(97, 114, 136, 0.2);\n}\n.event[_ngcontent-%COMP%] {\n  position: absolute;\n  overflow: hidden;\n  top: 0;\n  left: 1px;\n  right: 1px;\n  bottom: 0;\n  border-radius: 4px;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  transition: bottom 200ms, top 200ms, left 200ms, right 200ms;\n  border: 1px solid #1F40E6;\n  border-color: #1F40E6;\n}\n.event[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: #1F40E6;\n}\n.event[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  background-color: rgba(31, 64, 230, 0.2);\n}\n.event.pending[_ngcontent-%COMP%] {\n  border-color: rgba(31, 64, 230, 0.4);\n}\n.event.pending[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: rgba(31, 64, 230, 0.4);\n}\n.event.internal[_ngcontent-%COMP%] {\n  border-color: #E69FC7;\n}\n.event.internal[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: #E69FC7;\n}\n.event.internal[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  background-color: rgba(230, 159, 199, 0.2);\n}\n.event.internal.pending[_ngcontent-%COMP%] {\n  border-color: rgba(230, 159, 199, 0.4);\n}\n.event.internal.pending[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: rgba(230, 159, 199, 0.4);\n}\n.event.external[_ngcontent-%COMP%] {\n  border-color: #8C5AC8;\n}\n.event.external[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: #8C5AC8;\n}\n.event.external[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  background-color: rgba(140, 90, 200, 0.2);\n}\n.event.external.pending[_ngcontent-%COMP%] {\n  border-color: rgba(140, 90, 200, 0.4);\n}\n.event.external.pending[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: rgba(140, 90, 200, 0.4);\n}\n.event.training[_ngcontent-%COMP%] {\n  border-color: #F0E700;\n}\n.event.training[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: #F0E700;\n}\n.event.training[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  background-color: rgba(240, 231, 0, 0.2);\n}\n.event.training.pending[_ngcontent-%COMP%] {\n  border-color: rgba(240, 231, 0, 0.4);\n}\n.event.training.pending[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: rgba(240, 231, 0, 0.4);\n}\n.event.interview[_ngcontent-%COMP%] {\n  border-color: #348D02;\n}\n.event.interview[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: #348D02;\n}\n.event.interview[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  background-color: rgba(52, 141, 2, 0.2);\n}\n.event.interview.pending[_ngcontent-%COMP%] {\n  border-color: rgba(52, 141, 2, 0.4);\n}\n.event.interview.pending[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: rgba(52, 141, 2, 0.4);\n}\n.event.setup[_ngcontent-%COMP%] {\n  border-color: #d32f2f;\n}\n.event.setup[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: #d32f2f;\n}\n.event.setup[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  background-color: rgba(211, 47, 47, 0.2);\n}\n.event.setup.pending[_ngcontent-%COMP%] {\n  border-color: rgba(211, 47, 47, 0.4);\n}\n.event.setup.pending[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: rgba(211, 47, 47, 0.4);\n}\n.event.cancelled[_ngcontent-%COMP%] {\n  border-color: #617288;\n}\n.event.cancelled[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: #617288;\n}\n.event.cancelled[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  background-color: rgba(97, 114, 136, 0.2);\n}\n.event.cancelled.pending[_ngcontent-%COMP%] {\n  border-color: rgba(97, 114, 136, 0.4);\n}\n.event.cancelled.pending[_ngcontent-%COMP%]   .handle[_ngcontent-%COMP%] {\n  background-color: rgba(97, 114, 136, 0.4);\n}\n.inactive[_ngcontent-%COMP%] {\n  -webkit-filter: blur(1px) grayscale(80%);\n          filter: blur(1px) grayscale(80%);\n}\n.header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 1.5em;\n}\n.header[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  padding: 1em;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  flex: 1;\n  min-width: 50%;\n}\n.handle[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 1.8em;\n  background-color: #1F40E6;\n  color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.body[_ngcontent-%COMP%] {\n  padding: 1em;\n  font-size: 0.8em;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  margin-bottom: 0.5em;\n}\n.field[_ngcontent-%COMP%]:last-child {\n  margin: none;\n}\n.host[_ngcontent-%COMP%]   .value[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n.catering-icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  bottom: -4px;\n  right: 4px;\n  height: 2.5em;\n  width: 2.5em;\n  background-color: #fff;\n  border: 1px solid #ccc;\n  z-index: 100;\n  font-size: 0.6em;\n}\nspinner[_ngcontent-%COMP%] {\n  font-size: 0.3em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hlbGwvZGF5LXZpZXcvc3BhY2UvZXZlbnQvZXZlbnQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL2RheS12aWV3L3NwYWNlL2V2ZW50L2V2ZW50LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQTdDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMvQkE7O3NCQUFBO0FDYUE7RUFDSSxrQkFBQTtFQUNBLG9CQUFBO0VBQ0EsZ0NBQUE7RUFBQSx3QkFBQTtFQUFBLDhDQUFBO0FDTko7QURRSTtFQUNJLG9CQUFBO1VBQUEsWUFBQTtBQ05SO0FET1E7RUFDSSxZQUFBO0FDTFo7QURRUTtFQUNJLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUNOWjtBRFFZO0VBQ0ksU0FBQTtFQUNBLFNBQUE7QUNOaEI7QURjWTtFQUNJLHVCQUFBO0VBQ0EsTUFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0VBQ0EsU0FBQTtBQ1poQjtBRG1CQTtFQUNJLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0VBQ0EsV0FBQTtFQUNBLGtCQUFBO0VBakRBLHdDQUFBO0FDa0NKO0FEbUJJO0VBckRBLDBDQUFBO0FDcUNKO0FEb0JJO0VBekRBLHlDQUFBO0FDd0NKO0FEcUJJO0VBN0RBLHdDQUFBO0FDMkNKO0FEc0JJO0VBakVBLHVDQUFBO0FDOENKO0FEdUJJO0VBckVBLHdDQUFBO0FDaURKO0FEd0JJO0VBekVBLHlDQUFBO0FDb0RKO0FEMEJBO0VBQ0ksa0JBQUE7RUFDQSxnQkFBQTtFQUNBLE1BQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtFQUNBLFNBQUE7RUFDQSxrQkFBQTtFQUNBLHNCQUFBO0VBQ0EsK0dBQUE7RUFDQSw0REFBQTtFQUNBLHlCQUFBO0VBN0dBLHFCQStHcUI7QUN4QnpCO0FEckZJO0VBQ0kseUJBNEdpQjtBQ3JCekI7QURwRkk7RUFDSSx3Q0FBQTtBQ3NGUjtBRG5GSTtFQUNJLG9DQUFBO0FDcUZSO0FEbkZRO0VBQ0ksd0NBQUE7QUNxRlo7QURjSTtFQWpIQSxxQkFrSHlCO0FDWjdCO0FEcEdJO0VBQ0kseUJBK0dxQjtBQ1Q3QjtBRG5HSTtFQUNJLDBDQUFBO0FDcUdSO0FEbEdJO0VBQ0ksc0NBQUE7QUNvR1I7QURsR1E7RUFDSSwwQ0FBQTtBQ29HWjtBREdJO0VBckhBLHFCQXNIeUI7QUNEN0I7QURuSEk7RUFDSSx5QkFtSHFCO0FDRTdCO0FEbEhJO0VBQ0kseUNBQUE7QUNvSFI7QURqSEk7RUFDSSxxQ0FBQTtBQ21IUjtBRGpIUTtFQUNJLHlDQUFBO0FDbUhaO0FEUkk7RUF6SEEscUJBMEh5QjtBQ1U3QjtBRGxJSTtFQUNJLHlCQXVIcUI7QUNhN0I7QURqSUk7RUFDSSx3Q0FBQTtBQ21JUjtBRGhJSTtFQUNJLG9DQUFBO0FDa0lSO0FEaElRO0VBQ0ksd0NBQUE7QUNrSVo7QURuQkk7RUE3SEEscUJBOEh5QjtBQ3FCN0I7QURqSkk7RUFDSSx5QkEySHFCO0FDd0I3QjtBRGhKSTtFQUNJLHVDQUFBO0FDa0pSO0FEL0lJO0VBQ0ksbUNBQUE7QUNpSlI7QUQvSVE7RUFDSSx1Q0FBQTtBQ2lKWjtBRDlCSTtFQWpJQSxxQkFrSXlCO0FDZ0M3QjtBRGhLSTtFQUNJLHlCQStIcUI7QUNtQzdCO0FEL0pJO0VBQ0ksd0NBQUE7QUNpS1I7QUQ5Skk7RUFDSSxvQ0FBQTtBQ2dLUjtBRDlKUTtFQUNJLHdDQUFBO0FDZ0taO0FEekNJO0VBcklBLHFCQXNJeUI7QUMyQzdCO0FEL0tJO0VBQ0kseUJBbUlxQjtBQzhDN0I7QUQ5S0k7RUFDSSx5Q0FBQTtBQ2dMUjtBRDdLSTtFQUNJLHFDQUFBO0FDK0tSO0FEN0tRO0VBQ0kseUNBQUE7QUMrS1o7QURuREE7RUFDSSx3Q0FBQTtVQUFBLGdDQUFBO0FDc0RKO0FEbkRBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsYUFBQTtBQ3NESjtBRHBESTtFQUNJLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSx1QkFBQTtFQUNBLE9BQUE7RUFDQSxjQUFBO0FDc0RSO0FEbERBO0VBQ0ksWUFBQTtFQUNBLFlBQUE7RUFDQSx5QkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQ3FESjtBRGxEQTtFQUNJLFlBQUE7RUFDQSxnQkFBQTtBQ3FESjtBRGxEQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLG9CQUFBO0FDcURKO0FEbkRJO0VBQ0ksWUFBQTtBQ3FEUjtBRGpEQTtFQUNJLGtCQUFBO0FDb0RKO0FEakRBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxzQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0FDb0RKO0FEakRBO0VBQ0ksZ0JBQUE7QUNvREoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9kYXktdmlldy9zcGFjZS9ldmVudC9ldmVudC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9ICBAZWxzZSBpZiAkbWVkaWEgPT0gbGF0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAoJG1lZGlhID09IHRhYmxldC1tb2JpbGUgb3IgJG1lZGlhID09IG5vdC1kZXNrdG9wKSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuQGltcG9ydCAnbWl4aW5zJztcblxuQG1peGluIGJsb2NrLWNvbG9yKCRjb2xvcikge1xuICAgIGJvcmRlci1jb2xvcjogJGNvbG9yO1xuXG4gICAgLmhhbmRsZSB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICRjb2xvcjtcbiAgICB9XG5cbiAgICAuaGVhZGVyIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgkY29sb3IsIC4yKTtcbiAgICB9XG5cbiAgICAmLnBlbmRpbmcge1xuICAgICAgICBib3JkZXItY29sb3I6IHJnYmEoJGNvbG9yLCAuNCk7XG5cbiAgICAgICAgLmhhbmRsZSB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCRjb2xvciwgLjQpO1xuICAgICAgICB9XG4gICAgfVxufVxuXG5AbWl4aW4gb3ZlcmZsb3ctY29sb3IoJGNvbG9yKSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgkY29sb3IsIC4yKTtcbn1cblxuLmV2ZW50LWNvbnRhaW5lciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHBvaW50ZXItZXZlbnRzOiBhdXRvO1xuICAgIHRyYW5zaXRpb246IGZpbHRlciAyMDBtcztcblxuICAgICY6aG92ZXIge1xuICAgICAgICBmaWx0ZXI6IG5vbmU7XG4gICAgICAgIC5jYXRlcmluZy1pY29uIHtcbiAgICAgICAgICAgIHotaW5kZXg6IDk5OTtcbiAgICAgICAgfVxuXG4gICAgICAgIC5ldmVudCB7XG4gICAgICAgICAgICB6LWluZGV4OiA5OTkgIWltcG9ydGFudDtcbiAgICAgICAgICAgIGJvdHRvbTogYXV0bztcbiAgICAgICAgICAgIG1pbi1oZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgICBsZWZ0OiA1cHg7XG4gICAgICAgICAgICByaWdodDogNXB4O1xuXG4gICAgICAgICAgICAmLmxvdyB7XG4gICAgICAgICAgICAgICAgYm90dG9tOiAwO1xuICAgICAgICAgICAgICAgIHRvcDogYXV0bztcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cblxuICAgICYuZml4ZWQge1xuICAgICAgICAmOmhvdmVyIHtcblxuICAgICAgICAgICAgLmV2ZW50IHtcbiAgICAgICAgICAgICAgICB6LWluZGV4OiA5OTkgIWltcG9ydGFudDtcbiAgICAgICAgICAgICAgICB0b3A6IDA7XG4gICAgICAgICAgICAgICAgbGVmdDogMXB4O1xuICAgICAgICAgICAgICAgIHJpZ2h0OiAxcHg7XG4gICAgICAgICAgICAgICAgYm90dG9tOiAwO1xuXG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG59XG5cbi5vdmVyZmxvdyB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMnB4O1xuICAgIGxlZnQ6IDJweDtcbiAgICByaWdodDogMnB4O1xuICAgIGJvdHRvbTogMnB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcblxuICAgIEBpbmNsdWRlIG92ZXJmbG93LWNvbG9yKCMxRjQwRTYpO1xuXG4gICAgJi5pbnRlcm5hbCB7XG4gICAgICAgIEBpbmNsdWRlIG92ZXJmbG93LWNvbG9yKCNFNjlGQzcpO1xuICAgIH1cblxuICAgICYuZXh0ZXJuYWwge1xuICAgICAgICBAaW5jbHVkZSBvdmVyZmxvdy1jb2xvcigjOEM1QUM4KTtcbiAgICB9XG5cbiAgICAmLnRyYWluaW5nIHtcbiAgICAgICAgQGluY2x1ZGUgb3ZlcmZsb3ctY29sb3IoI0YwRTcwMCk7XG4gICAgfVxuXG4gICAgJi5pbnRlcnZpZXcge1xuICAgICAgICBAaW5jbHVkZSBvdmVyZmxvdy1jb2xvcigjMzQ4RDAyKTtcbiAgICB9XG5cbiAgICAmLnNldHVwIHtcbiAgICAgICAgQGluY2x1ZGUgb3ZlcmZsb3ctY29sb3IoI2QzMmYyZik7XG4gICAgfVxuXG4gICAgJi5jYW5jZWxsZWQge1xuICAgICAgICBAaW5jbHVkZSBvdmVyZmxvdy1jb2xvcigjNjE3Mjg4KTtcbiAgICB9XG59XG5cbi5ldmVudCB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDFweDtcbiAgICByaWdodDogMXB4O1xuICAgIGJvdHRvbTogMDtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKDAsIDAsIDAsIC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIC4xMik7XG4gICAgdHJhbnNpdGlvbjogYm90dG9tIDIwMG1zLCB0b3AgMjAwbXMsIGxlZnQgMjAwbXMsIHJpZ2h0IDIwMG1zO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICMxRjQwRTY7XG5cbiAgICBAaW5jbHVkZSBibG9jay1jb2xvcigjMUY0MEU2KTtcblxuICAgICYuaW50ZXJuYWwge1xuICAgICAgICBAaW5jbHVkZSBibG9jay1jb2xvcigjRTY5RkM3KTtcbiAgICB9XG5cbiAgICAmLmV4dGVybmFsIHtcbiAgICAgICAgQGluY2x1ZGUgYmxvY2stY29sb3IoIzhDNUFDOCk7XG4gICAgfVxuXG4gICAgJi50cmFpbmluZyB7XG4gICAgICAgIEBpbmNsdWRlIGJsb2NrLWNvbG9yKCNGMEU3MDApO1xuICAgIH1cblxuICAgICYuaW50ZXJ2aWV3IHtcbiAgICAgICAgQGluY2x1ZGUgYmxvY2stY29sb3IoIzM0OEQwMik7XG4gICAgfVxuXG4gICAgJi5zZXR1cCB7XG4gICAgICAgIEBpbmNsdWRlIGJsb2NrLWNvbG9yKCNkMzJmMmYpO1xuICAgIH1cblxuICAgICYuY2FuY2VsbGVkIHtcbiAgICAgICAgQGluY2x1ZGUgYmxvY2stY29sb3IoIzYxNzI4OCk7XG4gICAgfVxufVxuXG4uaW5hY3RpdmUge1xuICAgIGZpbHRlcjogYmx1cigxcHgpIGdyYXlzY2FsZSg4MCUpO1xufVxuXG4uaGVhZGVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAxLjVlbTtcblxuICAgIC50ZXh0IHtcbiAgICAgICAgZm9udC1zaXplOiAuOGVtO1xuICAgICAgICBwYWRkaW5nOiAxZW07XG4gICAgICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBtaW4td2lkdGg6IDUwJTtcbiAgICB9XG59XG5cbi5oYW5kbGUge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMS44ZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzFGNDBFNjtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi5ib2R5IHtcbiAgICBwYWRkaW5nOiAxZW07XG4gICAgZm9udC1zaXplOiAuOGVtO1xufVxuXG4uZmllbGQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBtYXJnaW4tYm90dG9tOiAuNWVtO1xuXG4gICAgJjpsYXN0LWNoaWxkIHtcbiAgICAgICAgbWFyZ2luOiBub25lO1xuICAgIH1cbn1cblxuLmhvc3QgLnZhbHVlIHtcbiAgICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbi5jYXRlcmluZy1pY29uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogLTRweDtcbiAgICByaWdodDogNHB4O1xuICAgIGhlaWdodDogMi41ZW07XG4gICAgd2lkdGg6IDIuNWVtO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgICB6LWluZGV4OiAxMDA7XG4gICAgZm9udC1zaXplOiAuNmVtO1xufVxuXG5zcGlubmVyIHtcbiAgICBmb250LXNpemU6IC4zZW07XG59XG5cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmV2ZW50LWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcG9pbnRlci1ldmVudHM6IGF1dG87XG4gIHRyYW5zaXRpb246IGZpbHRlciAyMDBtcztcbn1cbi5ldmVudC1jb250YWluZXI6aG92ZXIge1xuICBmaWx0ZXI6IG5vbmU7XG59XG4uZXZlbnQtY29udGFpbmVyOmhvdmVyIC5jYXRlcmluZy1pY29uIHtcbiAgei1pbmRleDogOTk5O1xufVxuLmV2ZW50LWNvbnRhaW5lcjpob3ZlciAuZXZlbnQge1xuICB6LWluZGV4OiA5OTkgIWltcG9ydGFudDtcbiAgYm90dG9tOiBhdXRvO1xuICBtaW4taGVpZ2h0OiAxMDAlO1xuICBsZWZ0OiA1cHg7XG4gIHJpZ2h0OiA1cHg7XG59XG4uZXZlbnQtY29udGFpbmVyOmhvdmVyIC5ldmVudC5sb3cge1xuICBib3R0b206IDA7XG4gIHRvcDogYXV0bztcbn1cbi5ldmVudC1jb250YWluZXIuZml4ZWQ6aG92ZXIgLmV2ZW50IHtcbiAgei1pbmRleDogOTk5ICFpbXBvcnRhbnQ7XG4gIHRvcDogMDtcbiAgbGVmdDogMXB4O1xuICByaWdodDogMXB4O1xuICBib3R0b206IDA7XG59XG5cbi5vdmVyZmxvdyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAycHg7XG4gIGxlZnQ6IDJweDtcbiAgcmlnaHQ6IDJweDtcbiAgYm90dG9tOiAycHg7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgzMSwgNjQsIDIzMCwgMC4yKTtcbn1cbi5vdmVyZmxvdy5pbnRlcm5hbCB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjMwLCAxNTksIDE5OSwgMC4yKTtcbn1cbi5vdmVyZmxvdy5leHRlcm5hbCB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMTQwLCA5MCwgMjAwLCAwLjIpO1xufVxuLm92ZXJmbG93LnRyYWluaW5nIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNDAsIDIzMSwgMCwgMC4yKTtcbn1cbi5vdmVyZmxvdy5pbnRlcnZpZXcge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDUyLCAxNDEsIDIsIDAuMik7XG59XG4ub3ZlcmZsb3cuc2V0dXAge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDIxMSwgNDcsIDQ3LCAwLjIpO1xufVxuLm92ZXJmbG93LmNhbmNlbGxlZCB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoOTcsIDExNCwgMTM2LCAwLjIpO1xufVxuXG4uZXZlbnQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHRvcDogMDtcbiAgbGVmdDogMXB4O1xuICByaWdodDogMXB4O1xuICBib3R0b206IDA7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDAgcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xuICB0cmFuc2l0aW9uOiBib3R0b20gMjAwbXMsIHRvcCAyMDBtcywgbGVmdCAyMDBtcywgcmlnaHQgMjAwbXM7XG4gIGJvcmRlcjogMXB4IHNvbGlkICMxRjQwRTY7XG4gIGJvcmRlci1jb2xvcjogIzFGNDBFNjtcbn1cbi5ldmVudCAuaGFuZGxlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzFGNDBFNjtcbn1cbi5ldmVudCAuaGVhZGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgzMSwgNjQsIDIzMCwgMC4yKTtcbn1cbi5ldmVudC5wZW5kaW5nIHtcbiAgYm9yZGVyLWNvbG9yOiByZ2JhKDMxLCA2NCwgMjMwLCAwLjQpO1xufVxuLmV2ZW50LnBlbmRpbmcgLmhhbmRsZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMzEsIDY0LCAyMzAsIDAuNCk7XG59XG4uZXZlbnQuaW50ZXJuYWwge1xuICBib3JkZXItY29sb3I6ICNFNjlGQzc7XG59XG4uZXZlbnQuaW50ZXJuYWwgLmhhbmRsZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNFNjlGQzc7XG59XG4uZXZlbnQuaW50ZXJuYWwgLmhlYWRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjMwLCAxNTksIDE5OSwgMC4yKTtcbn1cbi5ldmVudC5pbnRlcm5hbC5wZW5kaW5nIHtcbiAgYm9yZGVyLWNvbG9yOiByZ2JhKDIzMCwgMTU5LCAxOTksIDAuNCk7XG59XG4uZXZlbnQuaW50ZXJuYWwucGVuZGluZyAuaGFuZGxlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyMzAsIDE1OSwgMTk5LCAwLjQpO1xufVxuLmV2ZW50LmV4dGVybmFsIHtcbiAgYm9yZGVyLWNvbG9yOiAjOEM1QUM4O1xufVxuLmV2ZW50LmV4dGVybmFsIC5oYW5kbGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOEM1QUM4O1xufVxuLmV2ZW50LmV4dGVybmFsIC5oZWFkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDE0MCwgOTAsIDIwMCwgMC4yKTtcbn1cbi5ldmVudC5leHRlcm5hbC5wZW5kaW5nIHtcbiAgYm9yZGVyLWNvbG9yOiByZ2JhKDE0MCwgOTAsIDIwMCwgMC40KTtcbn1cbi5ldmVudC5leHRlcm5hbC5wZW5kaW5nIC5oYW5kbGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDE0MCwgOTAsIDIwMCwgMC40KTtcbn1cbi5ldmVudC50cmFpbmluZyB7XG4gIGJvcmRlci1jb2xvcjogI0YwRTcwMDtcbn1cbi5ldmVudC50cmFpbmluZyAuaGFuZGxlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0YwRTcwMDtcbn1cbi5ldmVudC50cmFpbmluZyAuaGVhZGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNDAsIDIzMSwgMCwgMC4yKTtcbn1cbi5ldmVudC50cmFpbmluZy5wZW5kaW5nIHtcbiAgYm9yZGVyLWNvbG9yOiByZ2JhKDI0MCwgMjMxLCAwLCAwLjQpO1xufVxuLmV2ZW50LnRyYWluaW5nLnBlbmRpbmcgLmhhbmRsZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjQwLCAyMzEsIDAsIDAuNCk7XG59XG4uZXZlbnQuaW50ZXJ2aWV3IHtcbiAgYm9yZGVyLWNvbG9yOiAjMzQ4RDAyO1xufVxuLmV2ZW50LmludGVydmlldyAuaGFuZGxlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzM0OEQwMjtcbn1cbi5ldmVudC5pbnRlcnZpZXcgLmhlYWRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoNTIsIDE0MSwgMiwgMC4yKTtcbn1cbi5ldmVudC5pbnRlcnZpZXcucGVuZGluZyB7XG4gIGJvcmRlci1jb2xvcjogcmdiYSg1MiwgMTQxLCAyLCAwLjQpO1xufVxuLmV2ZW50LmludGVydmlldy5wZW5kaW5nIC5oYW5kbGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDUyLCAxNDEsIDIsIDAuNCk7XG59XG4uZXZlbnQuc2V0dXAge1xuICBib3JkZXItY29sb3I6ICNkMzJmMmY7XG59XG4uZXZlbnQuc2V0dXAgLmhhbmRsZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNkMzJmMmY7XG59XG4uZXZlbnQuc2V0dXAgLmhlYWRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjExLCA0NywgNDcsIDAuMik7XG59XG4uZXZlbnQuc2V0dXAucGVuZGluZyB7XG4gIGJvcmRlci1jb2xvcjogcmdiYSgyMTEsIDQ3LCA0NywgMC40KTtcbn1cbi5ldmVudC5zZXR1cC5wZW5kaW5nIC5oYW5kbGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDIxMSwgNDcsIDQ3LCAwLjQpO1xufVxuLmV2ZW50LmNhbmNlbGxlZCB7XG4gIGJvcmRlci1jb2xvcjogIzYxNzI4ODtcbn1cbi5ldmVudC5jYW5jZWxsZWQgLmhhbmRsZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM2MTcyODg7XG59XG4uZXZlbnQuY2FuY2VsbGVkIC5oZWFkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDk3LCAxMTQsIDEzNiwgMC4yKTtcbn1cbi5ldmVudC5jYW5jZWxsZWQucGVuZGluZyB7XG4gIGJvcmRlci1jb2xvcjogcmdiYSg5NywgMTE0LCAxMzYsIDAuNCk7XG59XG4uZXZlbnQuY2FuY2VsbGVkLnBlbmRpbmcgLmhhbmRsZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoOTcsIDExNCwgMTM2LCAwLjQpO1xufVxuXG4uaW5hY3RpdmUge1xuICBmaWx0ZXI6IGJsdXIoMXB4KSBncmF5c2NhbGUoODAlKTtcbn1cblxuLmhlYWRlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGhlaWdodDogMS41ZW07XG59XG4uaGVhZGVyIC50ZXh0IHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgcGFkZGluZzogMWVtO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiA1MCU7XG59XG5cbi5oYW5kbGUge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxLjhlbTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzFGNDBFNjtcbiAgY29sb3I6ICNmZmY7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG4uYm9keSB7XG4gIHBhZGRpbmc6IDFlbTtcbiAgZm9udC1zaXplOiAwLjhlbTtcbn1cblxuLmZpZWxkIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWFyZ2luLWJvdHRvbTogMC41ZW07XG59XG4uZmllbGQ6bGFzdC1jaGlsZCB7XG4gIG1hcmdpbjogbm9uZTtcbn1cblxuLmhvc3QgLnZhbHVlIHtcbiAgZm9udC1zdHlsZTogaXRhbGljO1xufVxuXG4uY2F0ZXJpbmctaWNvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTogLTRweDtcbiAgcmlnaHQ6IDRweDtcbiAgaGVpZ2h0OiAyLjVlbTtcbiAgd2lkdGg6IDIuNWVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xuICB6LWluZGV4OiAxMDA7XG4gIGZvbnQtc2l6ZTogMC42ZW07XG59XG5cbnNwaW5uZXIge1xuICBmb250LXNpemU6IDAuM2VtO1xufSJdfQ== */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DayViewSpaceEventComponent, [{
         type: core_1.Component,
@@ -20630,9 +20975,9 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
                 }
                 return event.declined
                     ? (!this.overflow_only || event.setup || event.breakdown) &&
-                        this.legend.declined
+                        this.legend.declined !== false
                     : (!this.overflow_only || event.setup || event.breakdown) &&
-                        this.legend[event.type];
+                        this.legend[event.type] !== false;
             });
             return list;
         }
@@ -20934,9 +21279,9 @@ const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive *
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const meeting_details_modal_component_1 = __webpack_require__(/*! src/app/overlays/meeting-details-modal/meeting-details-modal.component */ "./src/app/overlays/meeting-details-modal/meeting-details-modal.component.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
@@ -21124,13 +21469,15 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
     }
     ngOnInit() {
         this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
-            const zone_id = !this.level ? this._org.building.id : this.level;
-            this.spaces = this._spaces.filter((_) => _.zones.indexOf(zone_id) >= 0);
-            this.init();
-            this.initSpaces();
-            // Update time
-            this.updateTime();
-            this.interval('time', () => this.updateTime(), 15 * 1000);
+            this._org.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
+                const zone_id = !this.level ? this._org.building.id : this.level;
+                this.spaces = this._spaces.filter((_) => _.zones.indexOf(zone_id) >= 0);
+                this.init();
+                this.initSpaces();
+                // Update time
+                this.updateTime();
+                this.interval('time', () => this.updateTime(), 15 * 1000);
+            });
         });
     }
     ngOnChanges(changes) {
@@ -23105,7 +23452,7 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
         return -1;
     }
     ngOnInit() {
-        this._org.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
+        this._spaces.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
             this.initBookings();
             this.subscription('building', this._org.listen('active_building').subscribe(_ => this.search$.next(`${this.date}|${_.id}`)));
             this.interval('update_bookings', () => this.search$.next(`${this.date}|${dayjs().unix()}`), 30 * 1000);
