@@ -38385,7 +38385,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _this194.loading[event.id] = true;
               }
 
-              return event.declined ? (!_this194.overflow_only || event.setup || event.breakdown) && _this194.legend.declined !== false : (!_this194.overflow_only || event.setup || event.breakdown) && _this194.legend[event.type] !== false;
+              return event.declined ? (!_this194.overflow_only || event.setup || event.breakdown) && _this194.legend.declined : (!_this194.overflow_only || event.setup || event.breakdown) && _this194.legend[event.type];
             });
             return list;
           }

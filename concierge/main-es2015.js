@@ -20975,9 +20975,9 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
                 }
                 return event.declined
                     ? (!this.overflow_only || event.setup || event.breakdown) &&
-                        this.legend.declined !== false
+                        this.legend.declined
                     : (!this.overflow_only || event.setup || event.breakdown) &&
-                        this.legend[event.type] !== false;
+                        this.legend[event.type];
             });
             return list;
         }
