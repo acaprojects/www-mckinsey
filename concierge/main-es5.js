@@ -2661,6 +2661,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toNextFlowStep",
         value: function toNextFlowStep(event) {
+          var _a, _b;
+
           var space_list = this.form.controls.space_list.value;
 
           switch (event.step) {
@@ -2691,7 +2693,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               break;
 
             case 'form':
-              this.navigate('search');
+              if (((_a = space_list) === null || _a === void 0 ? void 0 : _a.length) && ((_b = this.booking) === null || _b === void 0 ? void 0 : _b.id)) {
+                this.openEquipmentDetailsModal();
+              } else {
+                this.navigate('search');
+              }
+
               break;
           }
         }
@@ -13222,24 +13229,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var space_r25 = ctx.$implicit;
-        var ctx_r24 = i0.ɵɵnextContext(3);
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate(space_r25.name);
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate(space_r25.level.name);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(6, _c0));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(4, _c0));
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate(space_r25.capacity || "0");
-        i0.ɵɵadvance(2);
-        i0.ɵɵclassProp("request", ctx_r24.request_map[space_r25.id]);
       }
     }
 
     function SpaceSelectModalComponent_ng_container_10_ng_container_1_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, SpaceSelectModalComponent_ng_container_10_ng_container_1_div_1_Template, 13, 7, "div", 17);
+        i0.ɵɵtemplate(1, SpaceSelectModalComponent_ng_container_10_ng_container_1_div_1_Template, 13, 5, "div", 17);
         i0.ɵɵelementContainerEnd();
       }
 
