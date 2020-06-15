@@ -9167,6 +9167,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
+    var booking_class_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/booking.class */
+    "./src/app/services/data/bookings/booking.class.ts");
+
     var app_service_1 = __webpack_require__(
     /*! src/app/services/app.service */
     "./src/app/services/app.service.ts");
@@ -9296,10 +9300,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "div", 15);
         i0.ɵɵelementStart(4, "meeting-details-requirements", 17);
-        i0.ɵɵlistener("loading", function MeetingDetailsModalComponent_main_9_Template_meeting_details_requirements_loading_4_listener($event) {
+        i0.ɵɵlistener("event", function MeetingDetailsModalComponent_main_9_Template_meeting_details_requirements_event_4_listener($event) {
           i0.ɵɵrestoreView(_r7);
           var ctx_r6 = i0.ɵɵnextContext();
-          return ctx_r6.setLoading($event);
+          return ctx_r6.updateRequirements($event);
         });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -9528,6 +9532,52 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, _callee, this);
           }));
         }
+        /** Update booking requirements */
+
+      }, {
+        key: "updateRequirements",
+        value: function updateRequirements(form) {
+          return tslib_1.__awaiter(this, void 0, void 0,
+          /*#__PURE__*/
+          regeneratorRuntime.mark(function _callee2() {
+            var _this46 = this;
+
+            var value, booking, new_booking;
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    this.setLoading('Updating requirements...');
+                    value = form.value;
+                    booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), value), {
+                      room_ids: value.space_list.map(function (space) {
+                        return space.id;
+                      })
+                    }));
+                    _context2.next = 5;
+                    return booking.save()["catch"](function (err) {
+                      _this46._service.notifyError("Error updating requirements. Error: ".concat(err.message || err));
+                    });
+
+                  case 5:
+                    new_booking = _context2.sent;
+
+                    if (new_booking) {
+                      this._data.booking = new_booking;
+
+                      this._service.notifySuccess('Successfully updated requirements');
+                    }
+
+                    this.setLoading(null);
+
+                  case 8:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, this);
+          }));
+        }
       }, {
         key: "booking",
         get: function get() {
@@ -9560,7 +9610,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 26,
       vars: 18,
-      consts: [[1, "time"], [1, "heading"], [1, "actions"], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor", 4, "ngIf"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["appMenu", "matMenu"], ["mat-menu-item", "", "name", "accept", 3, "tapped"], [1, "group"], [3, "icon"], ["mat-menu-item", "", "name", "decline", 3, "tapped"], ["mat-menu-item", "", "name", "delete", 3, "tapped"], ["load_state", ""], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor"], ["mat-icon-button", "", "mat-dialog-close", ""], [1, "block"], [3, "booking"], [3, "booking", "loading"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], [1, "text"]],
+      consts: [[1, "time"], [1, "heading"], [1, "actions"], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor", 4, "ngIf"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["appMenu", "matMenu"], ["mat-menu-item", "", "name", "accept", 3, "tapped"], [1, "group"], [3, "icon"], ["mat-menu-item", "", "name", "decline", 3, "tapped"], ["mat-menu-item", "", "name", "delete", 3, "tapped"], ["load_state", ""], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor"], ["mat-icon-button", "", "mat-dialog-close", ""], [1, "block"], [3, "booking"], [3, "booking", "event"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], [1, "text"]],
       template: function MeetingDetailsModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "header");
@@ -10008,20 +10058,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super12 = _createSuper(MeetingDetailsRequirementsComponent);
 
       function MeetingDetailsRequirementsComponent(_dialog, _service) {
-        var _this46;
+        var _this47;
 
         _classCallCheck(this, MeetingDetailsRequirementsComponent);
 
-        _this46 = _super12.call(this);
-        _this46._dialog = _dialog;
-        _this46._service = _service;
+        _this47 = _super12.call(this);
+        _this47._dialog = _dialog;
+        _this47._service = _service;
         /** Emitter for changes to the booking */
 
-        _this46.bookingChange = new core_1.EventEmitter();
-        /** Emitter for changes to the loading state */
+        _this47.bookingChange = new core_1.EventEmitter();
+        /** Emitter for updating booking */
 
-        _this46.loading = new core_1.EventEmitter();
-        return _this46;
+        _this47.event = new core_1.EventEmitter();
+        return _this47;
       }
       /** Requirement notes */
 
@@ -10031,7 +10081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         /** Open modal for adding equipment requirements to booking */
         value: function openEquipmentDetailsModal() {
-          var _this47 = this;
+          var _this48 = this;
 
           var form = booking_utilities_1.generateBookingForm(this.booking, ['space_list']);
 
@@ -10048,44 +10098,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
 
           this.subscription('modal_events', ref.componentInstance.event.subscribe(function (event) {
-            return tslib_1.__awaiter(_this47, void 0, void 0,
+            return tslib_1.__awaiter(_this48, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee2() {
-              var _this48 = this;
-
-              var new_booking;
-              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+            regeneratorRuntime.mark(function _callee3() {
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
                 while (1) {
-                  switch (_context2.prev = _context2.next) {
+                  switch (_context3.prev = _context3.next) {
                     case 0:
-                      if (!(event.reason === 'done')) {
-                        _context2.next = 8;
-                        break;
-                      }
-
-                      ref.close();
-                      this.loading.emit('Updating requirements...');
-                      _context2.next = 5;
-                      return this.booking.save()["catch"](function (err) {
-                        _this48._service.notifyError("Error updating requirements. Error: ".concat(err.message || err));
-                      });
-
-                    case 5:
-                      new_booking = _context2.sent;
-                      this.loading.emit(null);
                       /* istanbul ignore else */
-
-                      if (new_booking) {
-                        this.booking = new_booking;
-                        this.bookingChange.emit(new_booking);
+                      if (event.reason === 'done') {
+                        ref.close();
+                        this.event.emit(form);
                       }
 
-                    case 8:
+                    case 1:
                     case "end":
-                      return _context2.stop();
+                      return _context3.stop();
                   }
                 }
-              }, _callee2, this);
+              }, _callee3, this);
             }));
           }));
         }
@@ -10125,7 +10156,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       outputs: {
         bookingChange: "bookingChange",
-        loading: "loading"
+        event: "event"
       },
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 4,
@@ -10173,7 +10204,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         bookingChange: [{
           type: core_1.Output
         }],
-        loading: [{
+        event: [{
           type: core_1.Output
         }]
       });
@@ -14967,7 +14998,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var url = "".concat(_this78.route(query_params.engine), "/").concat(id).concat(query ? '?' + query : '');
               var result = null;
 
-              _this78.http.put(url, form_data).subscribe(function (d) {
+              _this78.http.put(url, Object.assign(Object.assign({}, form_data), {
+                concierge: true
+              })).subscribe(function (d) {
                 return result = _this78.process(d);
               }, function (e) {
                 reject(e);
@@ -15060,16 +15093,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function load() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee3() {
-            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          regeneratorRuntime.mark(function _callee4() {
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
               while (1) {
-                switch (_context3.prev = _context3.next) {
+                switch (_context4.prev = _context4.next) {
                   case 0:
                   case "end":
-                    return _context3.stop();
+                    return _context4.stop();
                 }
               }
-            }, _callee3);
+            }, _callee4);
           }));
         }
         /**
@@ -17432,19 +17465,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function save() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee4() {
-            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+          regeneratorRuntime.mark(function _callee5() {
+            return regeneratorRuntime.wrap(function _callee5$(_context5) {
               while (1) {
-                switch (_context4.prev = _context4.next) {
+                switch (_context5.prev = _context5.next) {
                   case 0:
                     throw new Error('Building objects are readonly and cannot be changed');
 
                   case 1:
                   case "end":
-                    return _context4.stop();
+                    return _context5.stop();
                 }
               }
-            }, _callee4);
+            }, _callee5);
           }));
         }
         /**
@@ -17456,19 +17489,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function _delete() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee5() {
-            return regeneratorRuntime.wrap(function _callee5$(_context5) {
+          regeneratorRuntime.mark(function _callee6() {
+            return regeneratorRuntime.wrap(function _callee6$(_context6) {
               while (1) {
-                switch (_context5.prev = _context5.next) {
+                switch (_context6.prev = _context6.next) {
                   case 0:
                     throw new Error('Building objects are readonly and cannot be deleted');
 
                   case 1:
                   case "end":
-                    return _context5.stop();
+                    return _context6.stop();
                 }
               }
-            }, _callee5);
+            }, _callee6);
           }));
         }
       }, {
@@ -17657,19 +17690,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function save() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee6() {
-            return regeneratorRuntime.wrap(function _callee6$(_context6) {
+          regeneratorRuntime.mark(function _callee7() {
+            return regeneratorRuntime.wrap(function _callee7$(_context7) {
               while (1) {
-                switch (_context6.prev = _context6.next) {
+                switch (_context7.prev = _context7.next) {
                   case 0:
                     throw new Error('Organisation objects are readonly and cannot be changed');
 
                   case 1:
                   case "end":
-                    return _context6.stop();
+                    return _context7.stop();
                 }
               }
-            }, _callee6);
+            }, _callee7);
           }));
         }
         /**
@@ -17681,19 +17714,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function _delete() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee7() {
-            return regeneratorRuntime.wrap(function _callee7$(_context7) {
+          regeneratorRuntime.mark(function _callee8() {
+            return regeneratorRuntime.wrap(function _callee8$(_context8) {
               while (1) {
-                switch (_context7.prev = _context7.next) {
+                switch (_context8.prev = _context8.next) {
                   case 0:
                     throw new Error('Organisation objects are readonly and cannot be deleted');
 
                   case 1:
                   case "end":
-                    return _context7.stop();
+                    return _context8.stop();
                 }
               }
-            }, _callee7);
+            }, _callee8);
           }));
         }
       }, {
@@ -17829,19 +17862,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function add(form_data, query_params) {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee8() {
-            return regeneratorRuntime.wrap(function _callee8$(_context8) {
+          regeneratorRuntime.mark(function _callee9() {
+            return regeneratorRuntime.wrap(function _callee9$(_context9) {
               while (1) {
-                switch (_context8.prev = _context8.next) {
+                switch (_context9.prev = _context9.next) {
                   case 0:
                     throw new Error('Add is not available on the organisation service');
 
                   case 1:
                   case "end":
-                    return _context8.stop();
+                    return _context9.stop();
                 }
               }
-            }, _callee8);
+            }, _callee9);
           }));
         }
         /**
@@ -17853,19 +17886,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function update(id, form_data, query_params) {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee9() {
-            return regeneratorRuntime.wrap(function _callee9$(_context9) {
+          regeneratorRuntime.mark(function _callee10() {
+            return regeneratorRuntime.wrap(function _callee10$(_context10) {
               while (1) {
-                switch (_context9.prev = _context9.next) {
+                switch (_context10.prev = _context10.next) {
                   case 0:
                     throw new Error('Update is not available on the organisation service');
 
                   case 1:
                   case "end":
-                    return _context9.stop();
+                    return _context10.stop();
                 }
               }
-            }, _callee9);
+            }, _callee10);
           }));
         }
         /**
@@ -17877,19 +17910,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function _delete(id) {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee10() {
-            return regeneratorRuntime.wrap(function _callee10$(_context10) {
+          regeneratorRuntime.mark(function _callee11() {
+            return regeneratorRuntime.wrap(function _callee11$(_context11) {
               while (1) {
-                switch (_context10.prev = _context10.next) {
+                switch (_context11.prev = _context11.next) {
                   case 0:
                     throw new Error('Delete is not available on the organisation service');
 
                   case 1:
                   case "end":
-                    return _context10.stop();
+                    return _context11.stop();
                 }
               }
-            }, _callee10);
+            }, _callee11);
           }));
         }
         /**
@@ -18001,11 +18034,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function load() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee11() {
+          regeneratorRuntime.mark(function _callee12() {
             var loading, user, building;
-            return regeneratorRuntime.wrap(function _callee11$(_context11) {
+            return regeneratorRuntime.wrap(function _callee12$(_context12) {
               while (1) {
-                switch (_context11.prev = _context11.next) {
+                switch (_context12.prev = _context12.next) {
                   case 0:
                     /* istanbul ignore else */
                     if (localStorage) {
@@ -18017,7 +18050,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       message: 'Loading organisation data',
                       state: 'loading'
                     };
-                    _context11.next = 5;
+                    _context12.next = 5;
                     return this.loadOrganisation();
 
                   case 5:
@@ -18032,7 +18065,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     this._service.set('loading', loading);
 
-                    _context11.next = 10;
+                    _context12.next = 10;
                     return this.loadBuildings();
 
                   case 10:
@@ -18047,7 +18080,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     this._service.set('loading', loading);
 
-                    _context11.next = 15;
+                    _context12.next = 15;
                     return this.loadLevels();
 
                   case 15:
@@ -18065,7 +18098,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     this._service.set('loading', loading);
 
-                    _context11.next = 21;
+                    _context12.next = 21;
                     return this.loadSpaceTypes();
 
                   case 21:
@@ -18094,10 +18127,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 25:
                   case "end":
-                    return _context11.stop();
+                    return _context12.stop();
                 }
               }
-            }, _callee11, this);
+            }, _callee12, this);
           }));
         }
         /**
@@ -18109,29 +18142,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadOrganisation() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee12() {
+          regeneratorRuntime.mark(function _callee13() {
             var org_data;
-            return regeneratorRuntime.wrap(function _callee12$(_context12) {
+            return regeneratorRuntime.wrap(function _callee13$(_context13) {
               while (1) {
-                switch (_context12.prev = _context12.next) {
+                switch (_context13.prev = _context13.next) {
                   case 0:
-                    _context12.next = 2;
+                    _context13.next = 2;
                     return this.query({
                       tags: 'org',
                       engine: true
                     });
 
                   case 2:
-                    org_data = _context12.sent;
+                    org_data = _context13.sent;
                     this._organisation = new organisation_class_1.Organisation(org_data[0]);
                     this.set('organisation', this._organisation);
 
                   case 5:
                   case "end":
-                    return _context12.stop();
+                    return _context13.stop();
                 }
               }
-            }, _callee12, this);
+            }, _callee13, this);
           }));
         }
         /**
@@ -18143,13 +18176,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadBuildings() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee13() {
+          regeneratorRuntime.mark(function _callee14() {
             var bld_data, buildings;
-            return regeneratorRuntime.wrap(function _callee13$(_context13) {
+            return regeneratorRuntime.wrap(function _callee14$(_context14) {
               while (1) {
-                switch (_context13.prev = _context13.next) {
+                switch (_context14.prev = _context14.next) {
                   case 0:
-                    _context13.next = 2;
+                    _context14.next = 2;
                     return this.query({
                       tags: 'building',
                       engine: true,
@@ -18157,7 +18190,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     });
 
                   case 2:
-                    bld_data = _context13.sent;
+                    bld_data = _context14.sent;
                     buildings = bld_data.map(function (i) {
                       return new building_class_1.Building(i);
                     });
@@ -18170,10 +18203,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context13.stop();
+                    return _context14.stop();
                 }
               }
-            }, _callee13, this);
+            }, _callee14, this);
           }));
         }
         /**
@@ -18185,20 +18218,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadLevels() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee14() {
+          regeneratorRuntime.mark(function _callee15() {
             var lvl_data, levels;
-            return regeneratorRuntime.wrap(function _callee14$(_context14) {
+            return regeneratorRuntime.wrap(function _callee15$(_context15) {
               while (1) {
-                switch (_context14.prev = _context14.next) {
+                switch (_context15.prev = _context15.next) {
                   case 0:
-                    _context14.next = 2;
+                    _context15.next = 2;
                     return this.query({
                       tags: 'level',
                       engine: true
                     });
 
                   case 2:
-                    lvl_data = _context14.sent;
+                    lvl_data = _context15.sent;
                     levels = lvl_data.map(function (i) {
                       return new level_class_1.BuildingLevel(i);
                     });
@@ -18206,10 +18239,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 5:
                   case "end":
-                    return _context14.stop();
+                    return _context15.stop();
                 }
               }
-            }, _callee14, this);
+            }, _callee15, this);
           }));
         }
         /**
@@ -18221,20 +18254,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadSpaceTypes() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee15() {
+          regeneratorRuntime.mark(function _callee16() {
             var type_data, types;
-            return regeneratorRuntime.wrap(function _callee15$(_context15) {
+            return regeneratorRuntime.wrap(function _callee16$(_context16) {
               while (1) {
-                switch (_context15.prev = _context15.next) {
+                switch (_context16.prev = _context16.next) {
                   case 0:
-                    _context15.next = 2;
+                    _context16.next = 2;
                     return this.query({
                       tags: 'room',
                       engine: true
                     });
 
                   case 2:
-                    type_data = _context15.sent;
+                    type_data = _context16.sent;
                     types = type_data.map(function (i) {
                       return {
                         id: i.id,
@@ -18245,10 +18278,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 5:
                   case "end":
-                    return _context15.stop();
+                    return _context16.stop();
                 }
               }
-            }, _callee15, this);
+            }, _callee16, this);
           }));
         }
       }, {
@@ -19285,13 +19318,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function load() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee16() {
+          regeneratorRuntime.mark(function _callee17() {
             var _this99 = this;
 
             var loading;
-            return regeneratorRuntime.wrap(function _callee16$(_context16) {
+            return regeneratorRuntime.wrap(function _callee17$(_context17) {
               while (1) {
-                switch (_context16.prev = _context16.next) {
+                switch (_context17.prev = _context17.next) {
                   case 0:
                     loading = this._service.get('loading') || {};
 
@@ -19304,7 +19337,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       this._service.set('loading', loading);
                     }
 
-                    _context16.next = 4;
+                    _context17.next = 4;
                     return this.query()["catch"](function () {
                       loading.spaces = {
                         message: 'Loading space data',
@@ -19324,10 +19357,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context16.stop();
+                    return _context17.stop();
                 }
               }
-            }, _callee16, this);
+            }, _callee17, this);
           }));
         }
         /**
@@ -19974,21 +20007,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadDelegates() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee17() {
+          regeneratorRuntime.mark(function _callee18() {
             var delegates, promises, _iterator20, _step20, email, list;
 
-            return regeneratorRuntime.wrap(function _callee17$(_context17) {
+            return regeneratorRuntime.wrap(function _callee18$(_context18) {
               while (1) {
-                switch (_context17.prev = _context17.next) {
+                switch (_context18.prev = _context18.next) {
                   case 0:
                     delegates = this.current.delegates;
 
                     if (!(!delegates || !delegates.length)) {
-                      _context17.next = 3;
+                      _context18.next = 3;
                       break;
                     }
 
-                    return _context17.abrupt("return", []);
+                    return _context18.abrupt("return", []);
 
                   case 3:
                     promises = [];
@@ -20005,21 +20038,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       _iterator20.f();
                     }
 
-                    _context17.next = 8;
+                    _context18.next = 8;
                     return Promise.all(promises);
 
                   case 8:
-                    list = _context17.sent;
+                    list = _context18.sent;
                     this.set('delegates', list);
                     this.set('list', general_utilities_1.unique((this.get('list') || []).concat(list)));
-                    return _context17.abrupt("return", list);
+                    return _context18.abrupt("return", list);
 
                   case 12:
                   case "end":
-                    return _context17.stop();
+                    return _context18.stop();
                 }
               }
-            }, _callee17, this);
+            }, _callee18, this);
           }));
         }
         /**
@@ -20457,12 +20490,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function init() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee18() {
-            return regeneratorRuntime.wrap(function _callee18$(_context18) {
+          regeneratorRuntime.mark(function _callee19() {
+            return regeneratorRuntime.wrap(function _callee19$(_context19) {
               while (1) {
-                switch (_context18.prev = _context18.next) {
+                switch (_context19.prev = _context19.next) {
                   case 0:
-                    _context18.next = 2;
+                    _context19.next = 2;
                     return this.loadFromFile('api');
 
                   case 2:
@@ -20480,10 +20513,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context18.stop();
+                    return _context19.stop();
                 }
               }
-            }, _callee18, this);
+            }, _callee19, this);
           }));
         }
         /** Whether settings service has initialised */
@@ -20553,31 +20586,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var tries = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee19() {
+          regeneratorRuntime.mark(function _callee20() {
             var _this109 = this;
 
             var file_name, key;
-            return regeneratorRuntime.wrap(function _callee19$(_context19) {
+            return regeneratorRuntime.wrap(function _callee20$(_context20) {
               while (1) {
-                switch (_context19.prev = _context19.next) {
+                switch (_context20.prev = _context20.next) {
                   case 0:
                     if (!(file !== 'assets/settings.json' && tries > 5)) {
-                      _context19.next = 2;
+                      _context20.next = 2;
                       break;
                     }
 
-                    return _context19.abrupt("return", Promise.resolve());
+                    return _context20.abrupt("return", Promise.resolve());
 
                   case 2:
                     file_name = file.split('/')[file.split('/').length - 1]; // Check if data has been loaded into the global space
 
                     if (!(window[file_name] instanceof Object)) {
-                      _context19.next = 6;
+                      _context20.next = 6;
                       break;
                     }
 
                     this._settings[name] = Object.assign(Object.assign({}, this._settings[name] || {}), window[file_name]);
-                    return _context19.abrupt("return", Promise.resolve());
+                    return _context20.abrupt("return", Promise.resolve());
 
                   case 6:
                     key = "load|".concat(name, "|").concat(file);
@@ -20602,14 +20635,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       });
                     }
 
-                    return _context19.abrupt("return", this._promises[key]);
+                    return _context20.abrupt("return", this._promises[key]);
 
                   case 9:
                   case "end":
-                    return _context19.stop();
+                    return _context20.stop();
                 }
               }
-            }, _callee19, this);
+            }, _callee20, this);
           }));
         }
       }, {
@@ -32119,19 +32152,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function updateStatus() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee20() {
+          regeneratorRuntime.mark(function _callee21() {
             var _this152 = this;
 
             var booking, catering, new_booking;
-            return regeneratorRuntime.wrap(function _callee20$(_context20) {
+            return regeneratorRuntime.wrap(function _callee21$(_context21) {
               while (1) {
-                switch (_context20.prev = _context20.next) {
+                switch (_context21.prev = _context21.next) {
                   case 0:
                     booking = this.order.booking;
                     /* istanbul ignore else */
 
                     if (!booking) {
-                      _context20.next = 9;
+                      _context21.next = 9;
                       break;
                     }
 
@@ -32145,7 +32178,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking), {
                       catering: catering
                     }));
-                    _context20.next = 8;
+                    _context21.next = 8;
                     return new_booking.save()["catch"](function (err) {
                       _this152._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
 
@@ -32157,10 +32190,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 9:
                   case "end":
-                    return _context20.stop();
+                    return _context21.stop();
                 }
               }
-            }, _callee20, this);
+            }, _callee21, this);
           }));
         }
         /** Open modal to view catering order details */
@@ -34925,16 +34958,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function addNote() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee21() {
+          regeneratorRuntime.mark(function _callee22() {
             var _this166 = this;
 
             var user, notes, date, new_notes, pending_booking, new_booking;
-            return regeneratorRuntime.wrap(function _callee21$(_context21) {
+            return regeneratorRuntime.wrap(function _callee22$(_context22) {
               while (1) {
-                switch (_context21.prev = _context21.next) {
+                switch (_context22.prev = _context22.next) {
                   case 0:
                     if (!(this.booking && this.new_note)) {
-                      _context21.next = 15;
+                      _context22.next = 15;
                       break;
                     }
 
@@ -34954,7 +34987,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       notes: new_notes
                     }));
                     this.loading = true;
-                    _context21.next = 9;
+                    _context22.next = 9;
                     return pending_booking.save()["catch"](function (err) {
                       _this166._service.notifyError("Failed to add note to order meeting. Error: ".concat(err.message || err));
 
@@ -34963,7 +34996,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     });
 
                   case 9:
-                    new_booking = _context21.sent;
+                    new_booking = _context22.sent;
                     this.booking = new_booking;
                     this.order.booking = new_booking;
                     this.bookingChange.emit(new_booking);
@@ -34972,10 +35005,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 15:
                   case "end":
-                    return _context21.stop();
+                    return _context22.stop();
                 }
               }
-            }, _callee21, this);
+            }, _callee22, this);
           }));
         }
       }, {
@@ -35373,19 +35406,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function updateStatus() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee22() {
+          regeneratorRuntime.mark(function _callee23() {
             var _this169 = this;
 
             var booking, catering, new_booking, updated_booking;
-            return regeneratorRuntime.wrap(function _callee22$(_context22) {
+            return regeneratorRuntime.wrap(function _callee23$(_context23) {
               while (1) {
-                switch (_context22.prev = _context22.next) {
+                switch (_context23.prev = _context23.next) {
                   case 0:
                     booking = this._data.booking;
                     /* istanbul ignore else */
 
                     if (!booking) {
-                      _context22.next = 11;
+                      _context23.next = 11;
                       break;
                     }
 
@@ -35399,7 +35432,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking), {
                       catering: catering
                     }));
-                    _context22.next = 8;
+                    _context23.next = 8;
                     return new_booking.save()["catch"](function (err) {
                       _this169._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
 
@@ -35407,7 +35440,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     });
 
                   case 8:
-                    updated_booking = _context22.sent;
+                    updated_booking = _context23.sent;
 
                     if (updated_booking) {
                       this.booking = updated_booking;
@@ -35417,10 +35450,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 11:
                   case "end":
-                    return _context22.stop();
+                    return _context23.stop();
                 }
               }
-            }, _callee22, this);
+            }, _callee23, this);
           }));
         }
       }, {

@@ -4632,6 +4632,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const confirm_modal_component_1 = __webpack_require__(/*! ../confirm-modal/confirm-modal.component */ "./src/app/overlays/confirm-modal/confirm-modal.component.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
@@ -4679,7 +4680,7 @@ function MeetingDetailsModalComponent_main_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "div", 15);
     i0.ɵɵelementStart(4, "meeting-details-requirements", 17);
-    i0.ɵɵlistener("loading", function MeetingDetailsModalComponent_main_9_Template_meeting_details_requirements_loading_4_listener($event) { i0.ɵɵrestoreView(_r7); const ctx_r6 = i0.ɵɵnextContext(); return ctx_r6.setLoading($event); });
+    i0.ɵɵlistener("event", function MeetingDetailsModalComponent_main_9_Template_meeting_details_requirements_event_4_listener($event) { i0.ɵɵrestoreView(_r7); const ctx_r6 = i0.ɵɵnextContext(); return ctx_r6.updateRequirements($event); });
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(5, "div", 15);
@@ -4802,10 +4803,26 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
             this._dialog_ref.close();
         });
     }
+    /** Update booking requirements */
+    updateRequirements(form) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            this.setLoading('Updating requirements...');
+            const value = form.value;
+            const booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), value), { room_ids: value.space_list.map((space) => space.id) }));
+            const new_booking = yield booking.save().catch((err) => {
+                this._service.notifyError(`Error updating requirements. Error: ${err.message || err}`);
+            });
+            if (new_booking) {
+                this._data.booking = new_booking;
+                this._service.notifySuccess('Successfully updated requirements');
+            }
+            this.setLoading(null);
+        });
+    }
 }
 exports.MeetingDetailsModalComponent = MeetingDetailsModalComponent;
 MeetingDetailsModalComponent.ɵfac = function MeetingDetailsModalComponent_Factory(t) { return new (t || MeetingDetailsModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService), i0.ɵɵdirectiveInject(i3.MatDialogRef), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-MeetingDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetailsModalComponent, selectors: [["a-meeting-details-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 26, vars: 18, consts: [[1, "time"], [1, "heading"], [1, "actions"], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor", 4, "ngIf"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["appMenu", "matMenu"], ["mat-menu-item", "", "name", "accept", 3, "tapped"], [1, "group"], [3, "icon"], ["mat-menu-item", "", "name", "decline", 3, "tapped"], ["mat-menu-item", "", "name", "delete", 3, "tapped"], ["load_state", ""], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor"], ["mat-icon-button", "", "mat-dialog-close", ""], [1, "block"], [3, "booking"], [3, "booking", "loading"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function MeetingDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
+MeetingDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetailsModalComponent, selectors: [["a-meeting-details-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 26, vars: 18, consts: [[1, "time"], [1, "heading"], [1, "actions"], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor", 4, "ngIf"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["appMenu", "matMenu"], ["mat-menu-item", "", "name", "accept", 3, "tapped"], [1, "group"], [3, "icon"], ["mat-menu-item", "", "name", "decline", 3, "tapped"], ["mat-menu-item", "", "name", "delete", 3, "tapped"], ["load_state", ""], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor"], ["mat-icon-button", "", "mat-dialog-close", ""], [1, "block"], [3, "booking"], [3, "booking", "event"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function MeetingDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2);
@@ -5070,8 +5087,8 @@ class MeetingDetailsRequirementsComponent extends base_directive_1.BaseDirective
         this._service = _service;
         /** Emitter for changes to the booking */
         this.bookingChange = new core_1.EventEmitter();
-        /** Emitter for changes to the loading state */
-        this.loading = new core_1.EventEmitter();
+        /** Emitter for updating booking */
+        this.event = new core_1.EventEmitter();
     }
     /** Requirement notes */
     get notes() {
@@ -5100,23 +5117,14 @@ class MeetingDetailsRequirementsComponent extends base_directive_1.BaseDirective
             /* istanbul ignore else */
             if (event.reason === 'done') {
                 ref.close();
-                this.loading.emit('Updating requirements...');
-                const new_booking = yield this.booking.save().catch((err) => {
-                    this._service.notifyError(`Error updating requirements. Error: ${err.message || err}`);
-                });
-                this.loading.emit(null);
-                /* istanbul ignore else */
-                if (new_booking) {
-                    this.booking = new_booking;
-                    this.bookingChange.emit(new_booking);
-                }
+                this.event.emit(form);
             }
         })));
     }
 }
 exports.MeetingDetailsRequirementsComponent = MeetingDetailsRequirementsComponent;
 MeetingDetailsRequirementsComponent.ɵfac = function MeetingDetailsRequirementsComponent_Factory(t) { return new (t || MeetingDetailsRequirementsComponent)(i0.ɵɵdirectiveInject(i1.MatDialog), i0.ɵɵdirectiveInject(i2.ApplicationService)); };
-MeetingDetailsRequirementsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetailsRequirementsComponent, selectors: [["meeting-details-requirements"]], inputs: { booking: "booking" }, outputs: { bookingChange: "bookingChange", loading: "loading" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 4, vars: 2, consts: [[1, "heading"], ["class", "content", 4, "ngIf"], ["class", "footer", "mat-button", "", 3, "tapped", 4, "ngIf"], [1, "content"], [1, "field"], ["for", "location"], ["name", "location", 1, "value"], ["for", "expected"], ["name", "expected", 1, "value"], ["for", "charge-code"], ["name", "charge-code", 1, "value"], ["for", "notes"], ["name", "notes", 1, "value"], ["mat-button", "", 1, "footer", 3, "tapped"]], template: function MeetingDetailsRequirementsComponent_Template(rf, ctx) { if (rf & 1) {
+MeetingDetailsRequirementsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetailsRequirementsComponent, selectors: [["meeting-details-requirements"]], inputs: { booking: "booking" }, outputs: { bookingChange: "bookingChange", event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 4, vars: 2, consts: [[1, "heading"], ["class", "content", 4, "ngIf"], ["class", "footer", "mat-button", "", 3, "tapped", 4, "ngIf"], [1, "content"], [1, "field"], ["for", "location"], ["name", "location", 1, "value"], ["for", "expected"], ["name", "expected", 1, "value"], ["for", "charge-code"], ["name", "charge-code", 1, "value"], ["for", "notes"], ["name", "notes", 1, "value"], ["mat-button", "", 1, "footer", 3, "tapped"]], template: function MeetingDetailsRequirementsComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtext(1, " Room Requirements\n");
         i0.ɵɵelementEnd();
@@ -5139,7 +5147,7 @@ MeetingDetailsRequirementsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: Meeti
             type: core_1.Input
         }], bookingChange: [{
             type: core_1.Output
-        }], loading: [{
+        }], event: [{
             type: core_1.Output
         }] }); })();
 
@@ -7906,7 +7914,7 @@ class BaseAPIService extends base_class_1.BaseClass {
                 const query = api_utilities_1.toQueryString(Object.assign(Object.assign({}, query_params), { concierge: true }));
                 const url = `${this.route(query_params.engine)}/${id}${query ? '?' + query : ''}`;
                 let result = null;
-                this.http.put(url, form_data).subscribe((d) => (result = this.process(d)), (e) => {
+                this.http.put(url, Object.assign(Object.assign({}, form_data), { concierge: true })).subscribe((d) => (result = this.process(d)), (e) => {
                     reject(e);
                     this.analyticsEvent(`update-${this._name.toLowerCase()}-failed`, id);
                     this._promises[key] = null;
