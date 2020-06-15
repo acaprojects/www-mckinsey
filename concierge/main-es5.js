@@ -22451,6 +22451,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (show_past || date.isAfter(now, 'd')) {
             date = date.startOf('d');
+          } else if (date.isAfter(now, 'm')) {
+            date = now;
           }
 
           date = date.minute(Math.ceil(date.minute() / step) * step);

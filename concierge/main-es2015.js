@@ -11935,6 +11935,9 @@ class TimeFieldComponent extends base_directive_1.BaseDirective {
         if (show_past || date.isAfter(now, 'd')) {
             date = date.startOf('d');
         }
+        else if (date.isAfter(now, 'm')) {
+            date = now;
+        }
         date = date.minute(Math.ceil(date.minute() / step) * step);
         const end = date.endOf('d');
         // Add options for the rest of the day
