@@ -14254,6 +14254,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (show_past || date.isAfter(now, 'd')) {
             date = date.startOf('d');
+          } else if (date.isAfter(now), 'm') {
+            date = now;
           }
 
           date = date.minute(Math.ceil(date.minute() / step) * step);
@@ -38051,16 +38053,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "1d45388",
-      "hash": "1d45388",
+      "raw": "ec03db9",
+      "hash": "ec03db9",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "1d45388",
+      "suffix": "ec03db9",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1591854972143
+      "time": 1592182384564
     };
     /* tslint:enable */
 
