@@ -1621,9 +1621,13 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     }
     /** Delete the meeting */
     deleteMeeting() {
+        var _a;
         this.loading = 'Deleting meeting...';
         this._bookings
-            .delete(this.booking.id, this._data.as_delegate ? { delegate: this._data.delegate } : {})
+            .delete(this.booking.id, {
+            delegate: this._data.as_delegate ? this._data.delegate : null,
+            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id
+        })
             .then(() => {
             this._service.notifySuccess('Successfully deleted meeting.');
             this.loading = null;
@@ -1635,9 +1639,13 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     }
     /** Delete series */
     deleteSeries() {
+        var _a;
         this.loading = 'Deleting series...';
         this._bookings
-            .delete(this.booking.recurrence.series_id, this._data.as_delegate ? { delegate: this._data.delegate } : {})
+            .delete(this.booking.recurrence.series_id, {
+            delegate: this._data.as_delegate ? this._data.delegate : null,
+            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id
+        })
             .then(() => {
             this._service.notifySuccess('Successfully deleted series.');
             this.loading = null;
@@ -3778,8 +3786,12 @@ class BaseAPIService extends base_class_1.BaseClass {
             this._promises[key] = new Promise((resolve, reject) => {
                 const query = api_utilities_1.toQueryString(q);
                 const url = `${this.route()}/${id}${query ? '?' + query : ''}`;
-                this.http.delete(url).subscribe((_) => null, (e) => reject(e), () => {
+                this.http.delete(url).subscribe((_) => null, (e) => {
+                    reject(e);
+                    this._promises[key] = null;
+                }, () => {
                     this.set('list', this.removeItem(this.get('list'), { id }));
+                    this._promises[key] = null;
                     resolve();
                 });
             });
@@ -21231,16 +21243,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "ec03db9",
-    "hash": "ec03db9",
+    "raw": "73f7cab",
+    "hash": "73f7cab",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "ec03db9",
+    "suffix": "73f7cab",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1592182384564
+    "time": 1592195256915
 };
 /* tslint:enable */
 

@@ -3742,11 +3742,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function deleteMeeting() {
           var _this14 = this;
 
+          var _a;
+
           this.loading = 'Deleting meeting...';
 
-          this._bookings["delete"](this.booking.id, this._data.as_delegate ? {
-            delegate: this._data.delegate
-          } : {}).then(function () {
+          this._bookings["delete"](this.booking.id, {
+            delegate: this._data.as_delegate ? this._data.delegate : null,
+            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id
+          }).then(function () {
             _this14._service.notifySuccess('Successfully deleted meeting.');
 
             _this14.loading = null;
@@ -3765,11 +3768,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function deleteSeries() {
           var _this15 = this;
 
+          var _a;
+
           this.loading = 'Deleting series...';
 
-          this._bookings["delete"](this.booking.recurrence.series_id, this._data.as_delegate ? {
-            delegate: this._data.delegate
-          } : {}).then(function () {
+          this._bookings["delete"](this.booking.recurrence.series_id, {
+            delegate: this._data.as_delegate ? this._data.delegate : null,
+            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id
+          }).then(function () {
             _this15._service.notifySuccess('Successfully deleted series.');
 
             _this15.loading = null;
@@ -7594,12 +7600,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this41.http["delete"](url).subscribe(function (_) {
                 return null;
               }, function (e) {
-                return reject(e);
+                reject(e);
+                _this41._promises[key] = null;
               }, function () {
                 _this41.set('list', _this41.removeItem(_this41.get('list'), {
                   id: id
                 }));
 
+                _this41._promises[key] = null;
                 resolve();
               });
             });
@@ -38053,16 +38061,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "ec03db9",
-      "hash": "ec03db9",
+      "raw": "73f7cab",
+      "hash": "73f7cab",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "ec03db9",
+      "suffix": "73f7cab",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1592182384564
+      "time": 1592195256915
     };
     /* tslint:enable */
 
