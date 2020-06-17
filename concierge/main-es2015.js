@@ -4392,7 +4392,7 @@ function MeetingDetailsDisplayComponent_div_2_div_11_Template(rf, ctx) { if (rf 
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r2 = i0.ɵɵnextContext(2);
-    i0.ɵɵclassProp("edited", true);
+    i0.ɵɵclassProp("edited", ctx_r2.edited.organiser);
     i0.ɵɵadvance(4);
     i0.ɵɵtextInterpolate1(" ", (ctx_r2.booking.creator == null ? null : ctx_r2.booking.creator.name) || ctx_r2.booking.creator.email, " ");
     i0.ɵɵadvance(2);
@@ -4506,27 +4506,27 @@ function MeetingDetailsDisplayComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", ctx_r0.booking.creator && ctx_r0.booking.creator.email !== ctx_r0.booking.organiser.email);
     i0.ɵɵadvance(1);
-    i0.ɵɵclassProp("edited", false);
+    i0.ɵɵclassProp("edited", ctx_r0.edited.room_id);
     i0.ɵɵadvance(4);
     i0.ɵɵtextInterpolate1(" ", ctx_r0.location, " ");
     i0.ɵɵadvance(1);
-    i0.ɵɵclassProp("edited", false);
+    i0.ɵɵclassProp("edited", ctx_r0.edited.start_epoch);
     i0.ɵɵadvance(4);
     i0.ɵɵtextInterpolate1(" ", ctx_r0.start_time, " ");
     i0.ɵɵadvance(1);
-    i0.ɵɵclassProp("edited", false);
+    i0.ɵɵclassProp("edited", ctx_r0.edited.end_epoch);
     i0.ɵɵadvance(4);
     i0.ɵɵtextInterpolate1(" ", ctx_r0.end_time, " ");
     i0.ɵɵadvance(1);
-    i0.ɵɵclassProp("edited", false);
+    i0.ɵɵclassProp("edited", ctx_r0.edited.duration);
     i0.ɵɵadvance(4);
     i0.ɵɵtextInterpolate1(" ", ctx_r0.duration, " ");
     i0.ɵɵadvance(1);
-    i0.ɵɵclassProp("edited", false);
+    i0.ɵɵclassProp("edited", ctx_r0.edited.recurr);
     i0.ɵɵadvance(4);
     i0.ɵɵtextInterpolate1(" ", ctx_r0.recurrence, " ");
     i0.ɵɵadvance(1);
-    i0.ɵɵclassProp("edited", false);
+    i0.ɵɵclassProp("edited", ctx_r0.edited.attendees);
     i0.ɵɵadvance(4);
     i0.ɵɵtextInterpolate1(" ", ctx_r0.attendees, " ");
     i0.ɵɵadvance(1);
@@ -4546,6 +4546,8 @@ function MeetingDetailsDisplayComponent_button_3_Template(rf, ctx) { if (rf & 1)
 class MeetingDetailsDisplayComponent {
     constructor(_dialog) {
         this._dialog = _dialog;
+        /** Mapping of edited fields */
+        this.edited = {};
     }
     /** Display string for the locations in the booking */
     get location() {
@@ -4583,6 +4585,11 @@ class MeetingDetailsDisplayComponent {
     /** Whether booking has been declined or ended */
     get expired() {
         return this.booking.status === 'done' || this.booking.declined;
+    }
+    ngOnInit() {
+        Object.values(this.booking.edits || []).forEach(i => {
+            this.edited[i] = true;
+        });
     }
     editMeeting() {
         this._dialog.open(booking_modal_component_1.BookingModalComponent, {
@@ -8135,10 +8142,12 @@ class Booking extends base_api_class_1.BaseDataClass {
             this.space_list.forEach((space) => (this.approval_status[space.email] = 'declined'));
         }
         this.catering = (raw_data.catering instanceof Array ? raw_data.catering : []).map((i) => new catering_order_class_1.CateringOrder(i));
-        this.edits =
-            raw_data.edits instanceof Array
-                ? raw_data.edits
-                : general_utilities_1.unique(general_utilities_1.flatten(Object.keys(raw_data.edits || {}).map((i) => raw_data.edits[i])));
+        const edited_fields = Array.isArray(raw_data.edits)
+            ? raw_data.edits
+            : general_utilities_1.unique(general_utilities_1.flatten(Object.keys(raw_data.edits || {}).map(room => {
+                return general_utilities_1.flatten(Object.values(raw_data.edits[room]));
+            })));
+        this.edits = edited_fields;
     }
     /** Service for managing Bookings */
     get _service() {
