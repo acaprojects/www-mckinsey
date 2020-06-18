@@ -23815,7 +23815,7 @@ VisitorsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorsComponent, sele
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("date", ctx.date)("show_add_item", ctx.has_visitor_space);
+        i0.ɵɵproperty("date", ctx.date)("show_add_item", false);
         i0.ɵɵadvance(2);
         i0.ɵɵclassProp("rounded", true);
         i0.ɵɵadvance(1);
