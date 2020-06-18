@@ -6998,9 +6998,19 @@ class DateFieldComponent extends base_directive_1.BaseDirective {
      * @param new_value New value to set on the form field
      */
     setValue(new_value) {
-        this.date = new_value;
+        // Keep hours and minutes of the old date
+        const old_date = dayjs(this.date);
+        let new_date = dayjs(new_value)
+            .hour(old_date.hour())
+            .minute(old_date.minute())
+            .valueOf();
+        // Check that new date is before from
+        if (new_date < this.from) {
+            new_date = this.from;
+        }
+        this.date = new_date;
         if (this._onChange) {
-            this._onChange(new_value);
+            this._onChange(new_date);
         }
         this.show_tooltip = false;
     }
@@ -8289,6 +8299,7 @@ const user_class_1 = __webpack_require__(/*! src/app/services/data/users/user.cl
 const space_select_modal_component_1 = __webpack_require__(/*! src/app/overlays/space-select-modal/space-select-modal.component */ "./src/app/overlays/space-select-modal/space-select-modal.component.ts");
 const recurrence_modal_component_1 = __webpack_require__(/*! src/app/overlays/recurrence-modal/recurrence-modal.component */ "./src/app/overlays/recurrence-modal/recurrence-modal.component.ts");
 const users_service_1 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const formatting_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/formatting.utilities */ "./src/app/shared/utilities/formatting.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
@@ -8408,6 +8419,10 @@ function BookingFormComponent_div_0_div_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
     i0.ɵɵelement(3, "a-date-field", 26);
     i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r3 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(3);
+    i0.ɵɵproperty("from", ctx_r3.from_date);
 } }
 var I18N_11;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -8709,7 +8724,7 @@ function BookingFormComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtemplate(1, BookingFormComponent_div_0_div_1_Template, 4, 1, "div", 2);
     i0.ɵɵtemplate(2, BookingFormComponent_div_0_div_2_Template, 8, 3, "div", 3);
     i0.ɵɵelementStart(3, "div", 4);
-    i0.ɵɵtemplate(4, BookingFormComponent_div_0_div_4_Template, 4, 0, "div", 5);
+    i0.ɵɵtemplate(4, BookingFormComponent_div_0_div_4_Template, 4, 1, "div", 5);
     i0.ɵɵtemplate(5, BookingFormComponent_div_0_div_5_Template, 4, 1, "div", 6);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(6, "div", 7);
@@ -8759,6 +8774,8 @@ class BookingFormComponent extends base_directive_1.BaseDirective {
         this._dialog = _dialog;
         /** List of available users to host bookings */
         this.user_list = [];
+        /** From date input for date field */
+        this.from_date = dayjs().minute(Math.ceil(dayjs().minute() / 5) * 5).valueOf();
     }
     ngOnInit() {
         this._users.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
@@ -8862,7 +8879,7 @@ class BookingFormComponent extends base_directive_1.BaseDirective {
 }
 exports.BookingFormComponent = BookingFormComponent;
 BookingFormComponent.ɵfac = function BookingFormComponent_Factory(t) { return new (t || BookingFormComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.UsersService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
-BookingFormComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFormComponent, selectors: [["a-booking-form"]], inputs: { form: "form" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], ["class", "field", "name", "title", 4, "ngIf"], [1, "group", "date"], ["class", "field", "name", "date", 4, "ngIf"], ["class", "field", "name", "recurrence", 4, "ngIf"], [1, "group", "time"], ["class", "field", "name", "start-time", 4, "ngIf"], ["class", "field", "name", "duration", 4, "ngIf"], ["class", "field", "name", "organiser", 4, "ngIf"], ["class", "field", "name", "attendees", 4, "ngIf"], ["class", "field", "name", "booking-type", 4, "ngIf"], ["class", "field", "name", "need-space", 4, "ngIf"], ["class", "field", "name", "has-catering", 4, "ngIf"], ["class", "field", "name", "body", 4, "ngIf"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["name", "title", 1, "field"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["name", "date", 1, "field"], ["for", "date"], ["name", "date", "formControlName", "date"], ["name", "recurrence", 1, "field"], ["for", "recurrence"], ["name", "recurrence", 3, "placeholder", "onAction"], ["name", "start-time", 1, "field"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], ["name", "duration", 1, "field"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time"], ["formControlName", "all_day"], ["name", "organiser", 1, "field"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser", 3, "placeholder"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["name", "attendees", 1, "field"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["name", "booking-type", 1, "field"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], ["name", "need-space", 1, "field"], ["formControlName", "needs_space"], ["name", "has-catering", 1, "field"], ["formControlName", "has_catering", 3, "disabled"], ["name", "body", 1, "field"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]], template: function BookingFormComponent_Template(rf, ctx) { if (rf & 1) {
+BookingFormComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFormComponent, selectors: [["a-booking-form"]], inputs: { form: "form" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], ["class", "field", "name", "title", 4, "ngIf"], [1, "group", "date"], ["class", "field", "name", "date", 4, "ngIf"], ["class", "field", "name", "recurrence", 4, "ngIf"], [1, "group", "time"], ["class", "field", "name", "start-time", 4, "ngIf"], ["class", "field", "name", "duration", 4, "ngIf"], ["class", "field", "name", "organiser", 4, "ngIf"], ["class", "field", "name", "attendees", 4, "ngIf"], ["class", "field", "name", "booking-type", 4, "ngIf"], ["class", "field", "name", "need-space", 4, "ngIf"], ["class", "field", "name", "has-catering", 4, "ngIf"], ["class", "field", "name", "body", 4, "ngIf"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["name", "title", 1, "field"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["name", "date", 1, "field"], ["for", "date"], ["name", "date", "formControlName", "date", 3, "from"], ["name", "recurrence", 1, "field"], ["for", "recurrence"], ["name", "recurrence", 3, "placeholder", "onAction"], ["name", "start-time", 1, "field"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], ["name", "duration", 1, "field"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time"], ["formControlName", "all_day"], ["name", "organiser", 1, "field"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser", 3, "placeholder"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["name", "attendees", 1, "field"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["name", "booking-type", 1, "field"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], ["name", "need-space", 1, "field"], ["formControlName", "needs_space"], ["name", "has-catering", 1, "field"], ["formControlName", "has_catering", 3, "disabled"], ["name", "body", 1, "field"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]], template: function BookingFormComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, BookingFormComponent_div_0_Template, 15, 13, "div", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.form);
@@ -21220,16 +21237,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "309e3c6",
-    "hash": "309e3c6",
+    "raw": "efbddcf",
+    "hash": "efbddcf",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "309e3c6",
+    "suffix": "efbddcf",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1592275073988
+    "time": 1592444880623
 };
 /* tslint:enable */
 

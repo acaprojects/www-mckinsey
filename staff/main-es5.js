@@ -13488,10 +13488,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "setValue",
         value: function setValue(new_value) {
-          this.date = new_value;
+          // Keep hours and minutes of the old date
+          var old_date = dayjs(this.date);
+          var new_date = dayjs(new_value).hour(old_date.hour()).minute(old_date.minute()).valueOf(); // Check that new date is before from
+
+          if (new_date < this.from) {
+            new_date = this.from;
+          }
+
+          this.date = new_date;
 
           if (this._onChange) {
-            this._onChange(new_value);
+            this._onChange(new_date);
           }
 
           this.show_tooltip = false;
@@ -15829,6 +15837,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/users/users.service */
     "./src/app/services/data/users/users.service.ts");
 
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
+
     var formatting_utilities_1 = __webpack_require__(
     /*! src/app/shared/utilities/formatting.utilities */
     "./src/app/shared/utilities/formatting.utilities.ts");
@@ -16029,6 +16041,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelement(3, "a-date-field", 26);
         i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r3 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("from", ctx_r3.from_date);
       }
     }
 
@@ -16432,7 +16450,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵtemplate(1, BookingFormComponent_div_0_div_1_Template, 4, 1, "div", 2);
         i0.ɵɵtemplate(2, BookingFormComponent_div_0_div_2_Template, 8, 3, "div", 3);
         i0.ɵɵelementStart(3, "div", 4);
-        i0.ɵɵtemplate(4, BookingFormComponent_div_0_div_4_Template, 4, 0, "div", 5);
+        i0.ɵɵtemplate(4, BookingFormComponent_div_0_div_4_Template, 4, 1, "div", 5);
         i0.ɵɵtemplate(5, BookingFormComponent_div_0_div_5_Template, 4, 1, "div", 6);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(6, "div", 7);
@@ -16497,6 +16515,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** List of available users to host bookings */
 
         _this86.user_list = [];
+        /** From date input for date field */
+
+        _this86.from_date = dayjs().minute(Math.ceil(dayjs().minute() / 5) * 5).valueOf();
         return _this86;
       }
 
@@ -16662,7 +16683,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 1,
       vars: 1,
-      consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], ["class", "field", "name", "title", 4, "ngIf"], [1, "group", "date"], ["class", "field", "name", "date", 4, "ngIf"], ["class", "field", "name", "recurrence", 4, "ngIf"], [1, "group", "time"], ["class", "field", "name", "start-time", 4, "ngIf"], ["class", "field", "name", "duration", 4, "ngIf"], ["class", "field", "name", "organiser", 4, "ngIf"], ["class", "field", "name", "attendees", 4, "ngIf"], ["class", "field", "name", "booking-type", 4, "ngIf"], ["class", "field", "name", "need-space", 4, "ngIf"], ["class", "field", "name", "has-catering", 4, "ngIf"], ["class", "field", "name", "body", 4, "ngIf"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["name", "title", 1, "field"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["name", "date", 1, "field"], ["for", "date"], ["name", "date", "formControlName", "date"], ["name", "recurrence", 1, "field"], ["for", "recurrence"], ["name", "recurrence", 3, "placeholder", "onAction"], ["name", "start-time", 1, "field"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], ["name", "duration", 1, "field"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time"], ["formControlName", "all_day"], ["name", "organiser", 1, "field"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser", 3, "placeholder"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["name", "attendees", 1, "field"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["name", "booking-type", 1, "field"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], ["name", "need-space", 1, "field"], ["formControlName", "needs_space"], ["name", "has-catering", 1, "field"], ["formControlName", "has_catering", 3, "disabled"], ["name", "body", 1, "field"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]],
+      consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], ["class", "field", "name", "title", 4, "ngIf"], [1, "group", "date"], ["class", "field", "name", "date", 4, "ngIf"], ["class", "field", "name", "recurrence", 4, "ngIf"], [1, "group", "time"], ["class", "field", "name", "start-time", 4, "ngIf"], ["class", "field", "name", "duration", 4, "ngIf"], ["class", "field", "name", "organiser", 4, "ngIf"], ["class", "field", "name", "attendees", 4, "ngIf"], ["class", "field", "name", "booking-type", 4, "ngIf"], ["class", "field", "name", "need-space", 4, "ngIf"], ["class", "field", "name", "has-catering", 4, "ngIf"], ["class", "field", "name", "body", 4, "ngIf"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["name", "title", 1, "field"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["name", "date", 1, "field"], ["for", "date"], ["name", "date", "formControlName", "date", 3, "from"], ["name", "recurrence", 1, "field"], ["for", "recurrence"], ["name", "recurrence", 3, "placeholder", "onAction"], ["name", "start-time", 1, "field"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], ["name", "duration", 1, "field"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time"], ["formControlName", "all_day"], ["name", "organiser", 1, "field"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser", 3, "placeholder"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["name", "attendees", 1, "field"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["name", "booking-type", 1, "field"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], ["name", "need-space", 1, "field"], ["formControlName", "needs_space"], ["name", "has-catering", 1, "field"], ["formControlName", "has_catering", 3, "disabled"], ["name", "body", 1, "field"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]],
       template: function BookingFormComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, BookingFormComponent_div_0_Template, 15, 13, "div", 0);
@@ -38021,16 +38042,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "309e3c6",
-      "hash": "309e3c6",
+      "raw": "efbddcf",
+      "hash": "efbddcf",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "309e3c6",
+      "suffix": "efbddcf",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1592275073988
+      "time": 1592444880623
     };
     /* tslint:enable */
 
