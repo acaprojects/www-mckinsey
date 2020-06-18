@@ -13759,6 +13759,7 @@ function RecurrenceSpacesModalComponent_div_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate(item_r1.date_string);
     i0.ɵɵadvance(2);
     i0.ɵɵclassProp("request", item_r1.is_request)("inverse", !item_r1.available && !item_r1.replaced_by);
+    i0.ɵɵproperty("title", item_r1.replaced_by || (item_r1.available ? ctx_r0.space.name : "Room Name"));
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate1(" ", item_r1.replaced_by || (item_r1.available ? ctx_r0.space.name : "Find Room"), " ");
 } }
@@ -13853,7 +13854,7 @@ class RecurrenceSpacesModalComponent extends base_directive_1.BaseDirective {
 }
 exports.RecurrenceSpacesModalComponent = RecurrenceSpacesModalComponent;
 RecurrenceSpacesModalComponent.ɵfac = function RecurrenceSpacesModalComponent_Factory(t) { return new (t || RecurrenceSpacesModalComponent)(i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA), i0.ɵɵdirectiveInject(i1.MatDialog), i0.ɵɵdirectiveInject(i2.SpacesService)); };
-RecurrenceSpacesModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: RecurrenceSpacesModalComponent, selectors: [["a-recurrence-spaces-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 14, vars: 5, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "info"], ["class", "item", 4, "ngFor", "ngForOf"], ["mat-button", "", 3, "disabled", "tapped"], [1, "item"], [1, "date"], [1, "action"], ["mat-button", "", 3, "tapped"], [1, "content"]], template: function RecurrenceSpacesModalComponent_Template(rf, ctx) { if (rf & 1) {
+RecurrenceSpacesModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: RecurrenceSpacesModalComponent, selectors: [["a-recurrence-spaces-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 14, vars: 5, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "info"], ["class", "item", 4, "ngFor", "ngForOf"], ["mat-button", "", 3, "disabled", "tapped"], [1, "item"], [1, "date"], [1, "action"], ["mat-button", "", 3, "title", "tapped"], [1, "content"]], template: function RecurrenceSpacesModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵi18n(2, I18N_0);
@@ -13867,7 +13868,7 @@ RecurrenceSpacesModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: Recurrence
         i0.ɵɵelementStart(7, "div", 3);
         i0.ɵɵi18n(8, I18N_2);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(9, RecurrenceSpacesModalComponent_div_9_Template, 7, 6, "div", 4);
+        i0.ɵɵtemplate(9, RecurrenceSpacesModalComponent_div_9_Template, 7, 7, "div", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(10, "mat-dialog-actions");
@@ -21256,16 +21257,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f626632",
-    "hash": "f626632",
+    "raw": "441aae4",
+    "hash": "441aae4",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f626632",
+    "suffix": "441aae4",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1592460213895
+    "time": 1592461734137
 };
 /* tslint:enable */
 
