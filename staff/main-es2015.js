@@ -16858,6 +16858,7 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
         }
     }
     toNextFlowStep(event) {
+        var _a;
         const space_list = this.form.controls.space_list.value;
         switch (event.step) {
             case 'search':
@@ -16895,6 +16896,9 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
                     (this.form.controls.needs_space.value &&
                         (!space_list || !space_list.length || !this.form.controls.id.value))) {
                     this.navigate('search');
+                }
+                else if ((_a = this.form.controls.id) === null || _a === void 0 ? void 0 : _a.value) {
+                    this.openEquipmentDetailsModal();
                 }
                 else {
                     this.confirmBooking();
@@ -21257,16 +21261,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "441aae4",
-    "hash": "441aae4",
+    "raw": "4da0078",
+    "hash": "4da0078",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "441aae4",
+    "suffix": "4da0078",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1592461734137
+    "time": 1592535111118
 };
 /* tslint:enable */
 
