@@ -3926,7 +3926,7 @@ class Booking extends base_api_class_1.BaseDataClass {
                 60;
         this.body =
             // (raw_data.body instanceof Object ? raw_data.body.content : raw_data.body) ||
-            raw_data.description || '';
+            raw_data.description || (typeof raw_data.body === 'string' ? raw_data.body : '');
         this.type =
             raw_data.booking_type ||
                 raw_data.type ||
@@ -4118,9 +4118,9 @@ class Booking extends base_api_class_1.BaseDataClass {
                 : (this.approval_status[space.email] || '').indexOf('tentative') < 0;
         });
         if (data.body && !data.notes.find((note) => note.message === data.body)) {
-            data.notes
-                .filter((note) => note.type !== 'description')
-                .push({
+            data.notes = data.notes
+                .filter((note) => note.type !== 'description');
+            data.notes.push({
                 type: 'description',
                 message: data.body,
                 author: this.creator.email,
@@ -21270,16 +21270,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "b4da715",
-    "hash": "b4da715",
+    "raw": "2634e31",
+    "hash": "2634e31",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b4da715",
+    "suffix": "2634e31",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1592546913986
+    "time": 1592551418720
 };
 /* tslint:enable */
 

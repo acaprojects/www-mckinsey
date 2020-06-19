@@ -7855,7 +7855,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this42.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
         _this42.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
         _this42.body = // (raw_data.body instanceof Object ? raw_data.body.content : raw_data.body) ||
-        raw_data.description || '';
+        raw_data.description || (typeof raw_data.body === 'string' ? raw_data.body : '');
         _this42.type = raw_data.booking_type || raw_data.type || (raw_data.visitors ? 'external' : null) || 'internal';
         _this42.has_catering = !!raw_data.has_catering;
         _this42.attendees = (raw_data.attendees || raw_data._attendees || []).map(function (i) {
@@ -7989,9 +7989,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (data.body && !data.notes.find(function (note) {
             return note.message === data.body;
           })) {
-            data.notes.filter(function (note) {
+            data.notes = data.notes.filter(function (note) {
               return note.type !== 'description';
-            }).push({
+            });
+            data.notes.push({
               type: 'description',
               message: data.body,
               author: this.creator.email,
@@ -38072,16 +38073,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "b4da715",
-      "hash": "b4da715",
+      "raw": "2634e31",
+      "hash": "2634e31",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "b4da715",
+      "suffix": "2634e31",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1592546913986
+      "time": 1592551418720
     };
     /* tslint:enable */
 
