@@ -17989,19 +17989,6 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
         this._spaces = _spaces;
         /** Form contents to display */
         this.state = 'info';
-        const date = dayjs(this._data.date);
-        this.booking = new booking_class_1.Booking({
-            title: 'Ad-Hoc Booking',
-            date: date.valueOf(),
-            duration: 30,
-            room_ids: [this._data.space.id]
-        });
-        const status = booking_utilities_1.statusFromBookings(this._data.bookings, this.space.bookable, this.space.byRequest({
-            date: this._data.date,
-            duration: 30,
-            host: this._users.current
-        }), this._data.date);
-        this.available_until = status.available_until;
     }
     get is_requesting() {
         const booking = this.booking.toJSON();
@@ -18031,6 +18018,21 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
         const date = dayjs(this._data.date);
         return Math.abs(now.diff(date, 'm')) < 5;
     }
+    ngOnInit() {
+        const date = dayjs(this._data.date);
+        this.booking = new booking_class_1.Booking({
+            title: 'Ad-Hoc Booking',
+            date: date.valueOf(),
+            duration: 30,
+            room_ids: [this._data.space.id]
+        });
+        const status = booking_utilities_1.statusFromBookings(this._data.bookings, this.space.bookable, this.space.byRequest({
+            date: this._data.date,
+            duration: 30,
+            host: this._users.current
+        }), this._data.date);
+        this.available_until = status.available_until;
+    }
     /**
      * Move onto the next step of the booking flow
      */
@@ -18056,7 +18058,7 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
         if (this.form.valid) {
             this.loading = 'Checking space availability...';
             this.checkSpaceAvailability().then(() => {
-                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), this.form.value));
+                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), this.form.value), { room_ids: [this._data.space.id] }));
                 new_booking.save().then(() => {
                     this.loading = null;
                     this.success = true;
@@ -21268,16 +21270,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "b5e148e",
-    "hash": "b5e148e",
+    "raw": "b4da715",
+    "hash": "b4da715",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b5e148e",
+    "suffix": "b4da715",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1592545555189
+    "time": 1592546913986
 };
 /* tslint:enable */
 

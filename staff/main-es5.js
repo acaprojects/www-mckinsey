@@ -32160,28 +32160,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Form contents to display */
 
         _this155.state = 'info';
-        var date = dayjs(_this155._data.date);
-        _this155.booking = new booking_class_1.Booking({
-          title: 'Ad-Hoc Booking',
-          date: date.valueOf(),
-          duration: 30,
-          room_ids: [_this155._data.space.id]
-        });
-        var status = booking_utilities_1.statusFromBookings(_this155._data.bookings, _this155.space.bookable, _this155.space.byRequest({
-          date: _this155._data.date,
-          duration: 30,
-          host: _this155._users.current
-        }), _this155._data.date);
-        _this155.available_until = status.available_until;
         return _this155;
       }
 
       _createClass(ExploreBookingModalComponent, [{
-        key: "next",
-
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var date = dayjs(this._data.date);
+          this.booking = new booking_class_1.Booking({
+            title: 'Ad-Hoc Booking',
+            date: date.valueOf(),
+            duration: 30,
+            room_ids: [this._data.space.id]
+          });
+          var status = booking_utilities_1.statusFromBookings(this._data.bookings, this.space.bookable, this.space.byRequest({
+            date: this._data.date,
+            duration: 30,
+            host: this._users.current
+          }), this._data.date);
+          this.available_until = status.available_until;
+        }
         /**
          * Move onto the next step of the booking flow
          */
+
+      }, {
+        key: "next",
         value: function next() {
           if (!this.is_now) {
             var booking = this.booking.toJSON();
@@ -32210,7 +32214,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (this.form.valid) {
             this.loading = 'Checking space availability...';
             this.checkSpaceAvailability().then(function () {
-              var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this156.booking), _this156.form.value));
+              var new_booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, _this156.booking), _this156.form.value), {
+                room_ids: [_this156._data.space.id]
+              }));
               new_booking.save().then(function () {
                 _this156.loading = null;
                 _this156.success = true;
@@ -38066,16 +38072,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "b5e148e",
-      "hash": "b5e148e",
+      "raw": "b4da715",
+      "hash": "b4da715",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "b5e148e",
+      "suffix": "b4da715",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1592545555189
+      "time": 1592546913986
     };
     /* tslint:enable */
 
