@@ -8485,6 +8485,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       } else {
         fields.date.setValidators([forms_1.Validators.required, isFuture]);
+        fields.date.updateValueAndValidity();
       }
 
       var simplified_fields = ['id', 'space_list', 'space_ids', 'notes', 'equipment_codes', 'expected_attendees'].concat(_toConsumableArray(use_fields)).reduce(function (map, key) {
@@ -8521,9 +8522,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function isFuture(control) {
       var now = dayjs().startOf('m');
-      now = now.minute(Math.floor(now.minute() / 5) * 5);
       var date = dayjs(control.value);
-      return date.isBefore(now, 's') ? {
+      return date.isBefore(now.subtract(5, 'm'), 's') ? {
         date: 'Date needs to be in the future'
       } : null;
     }
@@ -29768,6 +29768,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "next",
         value: function next() {
           this.form.markAllAsTouched();
+          this.form.controls.date.updateValueAndValidity();
           /* istanbul ignore else */
 
           if (this.form.valid) {
@@ -38059,16 +38060,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "4da0078",
-      "hash": "4da0078",
+      "raw": "000574d",
+      "hash": "000574d",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "4da0078",
+      "suffix": "000574d",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1592535111118
+      "time": 1592541263329
     };
     /* tslint:enable */
 

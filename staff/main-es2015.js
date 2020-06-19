@@ -4322,6 +4322,7 @@ function generateBookingForm(booking, use_fields) {
     }
     else {
         fields.date.setValidators([forms_1.Validators.required, isFuture]);
+        fields.date.updateValueAndValidity();
     }
     const simplified_fields = [
         'id',
@@ -4360,10 +4361,11 @@ exports.generateBookingForm = generateBookingForm;
  * @param control Control to check value
  */
 function isFuture(control) {
-    let now = dayjs().startOf('m');
-    now = now.minute(Math.floor(now.minute() / 5) * 5);
+    const now = dayjs().startOf('m');
     const date = dayjs(control.value);
-    return date.isBefore(now, 's') ? { date: 'Date needs to be in the future' } : null;
+    return date.isBefore(now.subtract(5, 'm'), 's') ?
+        { date: 'Date needs to be in the future' } :
+        null;
 }
 exports.isFuture = isFuture;
 /**
@@ -16644,6 +16646,7 @@ class BookingSpaceFlowFormComponent {
     /** Move flow to next step */
     next() {
         this.form.markAllAsTouched();
+        this.form.controls.date.updateValueAndValidity();
         /* istanbul ignore else */
         if (this.form.valid) {
             this.event.emit({ type: 'next', step: 'form' });
@@ -21261,16 +21264,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "4da0078",
-    "hash": "4da0078",
+    "raw": "000574d",
+    "hash": "000574d",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "4da0078",
+    "suffix": "000574d",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1592535111118
+    "time": 1592541263329
 };
 /* tslint:enable */
 
