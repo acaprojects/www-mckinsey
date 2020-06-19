@@ -8078,6 +8078,8 @@ class Booking extends base_api_class_1.BaseDataClass {
             raw_data.duration ||
                 dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') ||
                 60;
+        this.old_start = raw_data.old_start || dayjs(this.date).unix();
+        this.old_end = raw_data.old_end || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
         this.body =
             // (raw_data.body instanceof Object ? raw_data.body.content : raw_data.body) ||
             raw_data.description || '';
@@ -8300,7 +8302,6 @@ class Booking extends base_api_class_1.BaseDataClass {
         data.attendees = general_utilities_1.unique([data.organiser].concat(data.attendees), 'email');
         data.notify_users = [data.organiser.email];
         data.room_ids = data.space_list.map((space) => space.email);
-        data.old_date = this.date;
         if (data.id) {
             data.from_room = this.space ? this.space.email : '';
         }

@@ -15304,6 +15304,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var start = dayjs(time).startOf('m');
         _this81.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
         _this81.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
+        _this81.old_start = raw_data.old_start || dayjs(_this81.date).unix();
+        _this81.old_end = raw_data.old_end || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
         _this81.body = // (raw_data.body instanceof Object ? raw_data.body.content : raw_data.body) ||
         raw_data.description || '';
         _this81.type = raw_data.booking_type || raw_data.type || (raw_data.visitors ? 'external' : null) || 'internal';
@@ -15471,7 +15473,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           data.room_ids = data.space_list.map(function (space) {
             return space.email;
           });
-          data.old_date = this.date;
 
           if (data.id) {
             data.from_room = this.space ? this.space.email : '';
