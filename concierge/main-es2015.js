@@ -8082,7 +8082,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         this.old_end = raw_data.old_end || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
         this.body =
             // (raw_data.body instanceof Object ? raw_data.body.content : raw_data.body) ||
-            raw_data.description || '';
+            raw_data.description || (typeof raw_data.body === 'string' ? raw_data.body : '');
         this.type =
             raw_data.booking_type ||
                 raw_data.type ||
@@ -8289,9 +8289,8 @@ class Booking extends base_api_class_1.BaseDataClass {
                 : (this.approval_status[space.email] || '').indexOf('tentative') < 0;
         });
         if (data.body && !data.notes.find((note) => note.message === data.body)) {
-            data.notes
-                .filter((note) => note.type !== 'description')
-                .push({
+            data.notes = data.notes.filter((note) => note.type !== 'description');
+            data.notes.push({
                 type: 'description',
                 message: data.body,
                 author: this.creator.email,
