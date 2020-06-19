@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1592551669339,
+  "timestamp": 1592559009389,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -445,7 +445,7 @@
     "/staff/assets/maps/toronto/level_01.svg": "9feb6bdc703bcaf084cafea98ba563c5c305e521",
     "/staff/assets/maps/toronto/level_02.svg": "7ff5ea5a0cb283c98edfd5d563c4819f098821ac",
     "/staff/assets/maps/toronto/level_03.svg": "4a65a6c429c2c4b4809e529ebecfe8f93fd6e956",
-    "/staff/assets/maps/waltham/level_01.svg": "e8b48cc8caa6b44f3012a377212e32b9592d3449",
+    "/staff/assets/maps/waltham/level_01.svg": "f590a9f93b8cc84e1e5bd2027b512efde4fd5feb",
     "/staff/assets/maps/waltham/level_02.svg": "950092a95c570eb8fba34d3a518a4a569e428aa9",
     "/staff/assets/maps/waltham/level_03.svg": "cb2215a2a2c1f60768318e43dfd826b744cf980d",
     "/staff/assets/maps/warsaw/level_05.svg": "9c382f2cb8caacca690a987e15d25920fed8e6bf",
@@ -458,8 +458,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "bcdb8114a36c5ff7b0c84597bb6fc291b40f0207",
-    "/staff/main-es5.js": "6894a024ba219d1d15013ca1b724fffa7ce31497",
+    "/staff/main-es2015.js": "00f7fa967757c1be7d062eb7b51974ebafba623d",
+    "/staff/main-es5.js": "46f60274ae7c1a333d39ecfdb6a2c700158207dd",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
