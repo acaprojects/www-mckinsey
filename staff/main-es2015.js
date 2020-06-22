@@ -15288,15 +15288,11 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
     }
     generateStartAndEndTimes() {
         let start = dayjs(this.date);
-        /* istanbul ignore else */
-        if (this.all_day) {
-            start = start.startOf('d');
-        }
         if (start.isBefore(dayjs(), 'm')) {
             const now = dayjs();
             start = now.minute(Math.ceil(now.minute() / 5) * 5);
         }
-        let end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
+        let end = start.add(this.duration, 'm');
         let building_time = spacetime_1.default(start.toDate());
         const space_id = this.form ? this.form.controls.location_id.value : '';
         const space = this._spaces.find(space_id);
@@ -15307,8 +15303,8 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
             }
         }
         building_time = building_time.hour(7);
-        const as_dayjs = dayjs(building_time.toLocalDate());
-        if (start.isBefore(as_dayjs, 'm')) {
+        const as_dayjs = dayjs(building_time.toLocalDate()).minute(0);
+        if (this.all_day || start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
             end = start.add(13, 'h');
         }
@@ -21270,16 +21266,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "5545ab5",
-    "hash": "5545ab5",
+    "raw": "c76cf2a",
+    "hash": "c76cf2a",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "5545ab5",
+    "suffix": "c76cf2a",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1592558740141
+    "time": 1592787724507
 };
 /* tslint:enable */
 
