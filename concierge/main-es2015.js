@@ -21347,7 +21347,7 @@ function DayViewTimelineComponent_div_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const item_r9 = ctx.$implicit;
-    i0.ɵɵproperty("title", item_r9.long_name);
+    i0.ɵɵproperty("title", item_r9.name);
     i0.ɵɵadvance(3);
     i0.ɵɵtextInterpolate(item_r9.name);
     i0.ɵɵadvance(3);

@@ -38729,7 +38729,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var item_r9 = ctx.$implicit;
-        i0.ɵɵproperty("title", item_r9.long_name);
+        i0.ɵɵproperty("title", item_r9.name);
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate(item_r9.name);
         i0.ɵɵadvance(3);
