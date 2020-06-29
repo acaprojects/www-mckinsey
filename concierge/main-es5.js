@@ -3404,7 +3404,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [i1.MatButton, i2.ɵb, i3.IconComponent, i4.NgIf, i4.NgForOf, i5.CateringMenuItemComponent],
-      styles: [".header[_ngcontent-%COMP%] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  width: 100%;\n  background-color: #fff;\n  border-bottom: 1px solid #ccc;\n  padding: 0.5em;\n  z-index: 1;\n}\n.header[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 640px;\n  max-width: 100vw;\n  margin: auto;\n}\n.header[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n  flex: 1;\n  text-align: center;\n  margin-right: 3em;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.item[_ngcontent-%COMP%] {\n  position: relative;\n  width: 640px;\n  margin: 0.5em auto;\n  background-color: #fff;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  overflow: hidden;\n  max-width: calc(100vw - 1em);\n  z-index: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvb3ZlcmxheXMvYm9va2luZy1tb2RhbC9jYXRlcmluZy9vcmRlci1kZXRhaWxzL2NhdGVnb3J5L2NhdGVnb3J5LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9vdmVybGF5cy9ib29raW5nLW1vZGFsL2NhdGVyaW5nL29yZGVyLWRldGFpbHMvY2F0ZWdvcnkvY2F0ZWdvcnkuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FBN0NBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQy9CQTs7c0JBQUE7QUNYQTtFQUNJLHdCQUFBO0VBQUEsZ0JBQUE7RUFDQSxNQUFBO0VBQ0EsV0FBQTtFQUNBLHNCQUFBO0VBQ0EsNkJBQUE7RUFDQSxjQUFBO0VBQ0EsVUFBQTtBQ2tCSjtBRGhCSTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7QUNrQlI7QURmSTtFQUNJLE9BQUE7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLHVCQUFBO0FDaUJSO0FEYkE7RUFDSSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLHNCQUFBO0VBQ0Esc0JBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBQ0EsNEJBQUE7RUFDQSxVQUFBO0FDZ0JKIiwiZmlsZSI6InNyYy9hcHAvb3ZlcmxheXMvYm9va2luZy1tb2RhbC9jYXRlcmluZy9vcmRlci1kZXRhaWxzL2NhdGVnb3J5L2NhdGVnb3J5LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3coJGNvbG9yOiAjMDAwLCAkZGVwdGg6IDEpIHtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMXB4ICogKCRkZXB0aCAtIDEpIHJnYmEoIzAwMCwgLjIpLFxuICAgICAgICAgICAgICAgIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSxcbiAgICAgICAgICAgICAgICAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsIC4xMik7XG59XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICdtaXhpbnMnO1xuXG4uaGVhZGVyIHtcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xuICAgIHRvcDogMDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO1xuICAgIHBhZGRpbmc6IC41ZW07XG4gICAgei1pbmRleDogMTtcblxuICAgIC5jb250ZW50IHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDY0MHB4O1xuICAgICAgICBtYXgtd2lkdGg6IDEwMHZ3O1xuICAgICAgICBtYXJnaW46IGF1dG87XG4gICAgfVxuXG4gICAgLm5hbWUge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgIG1hcmdpbi1yaWdodDogM2VtO1xuICAgICAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbiAgICB9XG59XG5cbi5pdGVtIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IDY0MHB4O1xuICAgIG1hcmdpbjogLjVlbSBhdXRvO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICBtYXgtd2lkdGg6IGNhbGMoMTAwdncgLSAxZW0pO1xuICAgIHotaW5kZXg6IDA7XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi5oZWFkZXIge1xuICBwb3NpdGlvbjogc3RpY2t5O1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYztcbiAgcGFkZGluZzogMC41ZW07XG4gIHotaW5kZXg6IDE7XG59XG4uaGVhZGVyIC5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IDY0MHB4O1xuICBtYXgtd2lkdGg6IDEwMHZ3O1xuICBtYXJnaW46IGF1dG87XG59XG4uaGVhZGVyIC5uYW1lIHtcbiAgZmxleDogMTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXJnaW4tcmlnaHQ6IDNlbTtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbi5pdGVtIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogNjQwcHg7XG4gIG1hcmdpbjogMC41ZW0gYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBtYXgtd2lkdGg6IGNhbGMoMTAwdncgLSAxZW0pO1xuICB6LWluZGV4OiAwO1xufSJdfQ== */"]
+      styles: [".header[_ngcontent-%COMP%] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  width: 100%;\n  background-color: #fff;\n  border-bottom: 1px solid #ccc;\n  padding: 0.5em;\n  z-index: 1;\n}\n.header[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 640px;\n  max-width: 100%;\n  max-height: 2.5em;\n  margin: auto;\n}\n.header[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n  flex: 1;\n  text-align: center;\n  margin-right: 3em;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.item[_ngcontent-%COMP%] {\n  position: relative;\n  width: 640px;\n  margin: 0.5em auto;\n  background-color: #fff;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  overflow: hidden;\n  max-width: calc(100% - 1em);\n  z-index: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvb3ZlcmxheXMvYm9va2luZy1tb2RhbC9jYXRlcmluZy9vcmRlci1kZXRhaWxzL2NhdGVnb3J5L2NhdGVnb3J5LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9vdmVybGF5cy9ib29raW5nLW1vZGFsL2NhdGVyaW5nL29yZGVyLWRldGFpbHMvY2F0ZWdvcnkvY2F0ZWdvcnkuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FBN0NBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQy9CQTs7c0JBQUE7QUNYQTtFQUNJLHdCQUFBO0VBQUEsZ0JBQUE7RUFDQSxNQUFBO0VBQ0EsV0FBQTtFQUNBLHNCQUFBO0VBQ0EsNkJBQUE7RUFDQSxjQUFBO0VBQ0EsVUFBQTtBQ2tCSjtBRGhCSTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxZQUFBO0FDa0JSO0FEZkk7RUFDSSxPQUFBO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSx1QkFBQTtBQ2lCUjtBRGJBO0VBQ0ksa0JBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSxzQkFBQTtFQUNBLHNCQUFBO0VBQ0Esa0JBQUE7RUFDQSxnQkFBQTtFQUNBLDJCQUFBO0VBQ0EsVUFBQTtBQ2dCSiIsImZpbGUiOiJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9jYXRlZ29yeS9jYXRlZ29yeS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9ICBAZWxzZSBpZiAkbWVkaWEgPT0gbGF0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAoJG1lZGlhID09IHRhYmxldC1tb2JpbGUgb3IgJG1lZGlhID09IG5vdC1kZXNrdG9wKSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuQGltcG9ydCAnbWl4aW5zJztcblxuLmhlYWRlciB7XG4gICAgcG9zaXRpb246IHN0aWNreTtcbiAgICB0b3A6IDA7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYztcbiAgICBwYWRkaW5nOiAuNWVtO1xuICAgIHotaW5kZXg6IDE7XG5cbiAgICAuY29udGVudCB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiA2NDBweDtcbiAgICAgICAgbWF4LXdpZHRoOiAxMDAlO1xuICAgICAgICBtYXgtaGVpZ2h0OiAyLjVlbTtcbiAgICAgICAgbWFyZ2luOiBhdXRvO1xuICAgIH1cblxuICAgIC5uYW1lIHtcbiAgICAgICAgZmxleDogMTtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDNlbTtcbiAgICAgICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gICAgfVxufVxuXG4uaXRlbSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiA2NDBweDtcbiAgICBtYXJnaW46IC41ZW0gYXV0bztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgbWF4LXdpZHRoOiBjYWxjKDEwMCUgLSAxZW0pO1xuICAgIHotaW5kZXg6IDA7XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi5oZWFkZXIge1xuICBwb3NpdGlvbjogc3RpY2t5O1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYztcbiAgcGFkZGluZzogMC41ZW07XG4gIHotaW5kZXg6IDE7XG59XG4uaGVhZGVyIC5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IDY0MHB4O1xuICBtYXgtd2lkdGg6IDEwMCU7XG4gIG1heC1oZWlnaHQ6IDIuNWVtO1xuICBtYXJnaW46IGF1dG87XG59XG4uaGVhZGVyIC5uYW1lIHtcbiAgZmxleDogMTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXJnaW4tcmlnaHQ6IDNlbTtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbi5pdGVtIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogNjQwcHg7XG4gIG1hcmdpbjogMC41ZW0gYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBtYXgtd2lkdGg6IGNhbGMoMTAwJSAtIDFlbSk7XG4gIHotaW5kZXg6IDA7XG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -4080,10 +4080,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
-    var spaces_service_1 = __webpack_require__(
-    /*! src/app/services/data/spaces/spaces.service */
-    "./src/app/services/data/spaces/spaces.service.ts");
-
     var catering_menu_service_1 = __webpack_require__(
     /*! src/app/services/data/catering/catering-menu.service */
     "./src/app/services/data/catering/catering-menu.service.ts");
@@ -4093,54 +4089,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
-    /*! src/app/services/data/spaces/spaces.service */
-    "./src/app/services/data/spaces/spaces.service.ts");
-
-    var i2 = __webpack_require__(
     /*! src/app/services/data/catering/catering-menu.service */
     "./src/app/services/data/catering/catering-menu.service.ts");
 
-    var i3 = __webpack_require__(
+    var i2 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
-    var i4 = __webpack_require__(
+    var i3 = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
-    var i5 = __webpack_require__(
+    var i4 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i6 = __webpack_require__(
+    var i5 = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
-    var i7 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
     "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
-    var i8 = __webpack_require__(
+    var i7 = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
-    var i9 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! @angular/material/form-field */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
-    var i10 = __webpack_require__(
+    var i9 = __webpack_require__(
     /*! @angular/material/select */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
-    var i11 = __webpack_require__(
+    var i10 = __webpack_require__(
     /*! @angular/material/core */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
-    var i12 = __webpack_require__(
+    var i11 = __webpack_require__(
     /*! @angular/material/progress-spinner */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
-    var i13 = __webpack_require__(
+    var i12 = __webpack_require__(
     /*! ./category/category.component */
     "./src/app/overlays/booking-modal/catering/order-details/category/category.component.ts");
 
@@ -4462,13 +4454,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super5 = _createSuper(BookingCateringOrderDetailsComponent);
 
-      function BookingCateringOrderDetailsComponent(_spaces, _menu, _org, _dialog) {
+      function BookingCateringOrderDetailsComponent(_menu, _org, _dialog) {
         var _this19;
 
         _classCallCheck(this, BookingCateringOrderDetailsComponent);
 
         _this19 = _super5.call(this);
-        _this19._spaces = _spaces;
         _this19._menu = _menu;
         _this19._org = _org;
         _this19._dialog = _dialog;
@@ -4556,6 +4547,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           })) {
             this.form.controls.delivery_time.setValue(this.available_times[0].id);
           }
+
+          console.log('Order:', this.order);
+          console.log('Form:', this.form);
         }
       }, {
         key: "confirmOrder",
@@ -4590,7 +4584,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this23 = this;
 
           var space = this.form.controls.location_id.value;
-          this.form.controls.items.setValue([]);
+
+          if (!this.hide_details) {
+            this.form.controls.items.setValue([]);
+          }
+
           this.loading = true;
 
           this._menu.query({
@@ -4757,7 +4755,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.BookingCateringOrderDetailsComponent = BookingCateringOrderDetailsComponent;
 
     BookingCateringOrderDetailsComponent.ɵfac = function BookingCateringOrderDetailsComponent_Factory(t) {
-      return new (t || BookingCateringOrderDetailsComponent)(i0.ɵɵdirectiveInject(i1.SpacesService), i0.ɵɵdirectiveInject(i2.CateringMenuService), i0.ɵɵdirectiveInject(i3.OrganisationService), i0.ɵɵdirectiveInject(i4.MatDialog));
+      return new (t || BookingCateringOrderDetailsComponent)(i0.ɵɵdirectiveInject(i1.CateringMenuService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog));
     };
 
     BookingCateringOrderDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -4768,14 +4766,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         date: "date",
         duration: "duration",
         space_list: "space_list",
-        all_day: "all_day"
+        all_day: "all_day",
+        hide_details: "hide_details",
+        compact: "compact"
       },
       outputs: {
         event: "event"
       },
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 14,
-      vars: 5,
+      vars: 7,
       consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", 1, "inverse", 3, "tapped"], ["mat-button", "", "name", "confirm", 3, "disabled", "tapped"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "location_id"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "delivery_time"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "tapped", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "tapped"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], ["class", "bold", 4, "ngIf"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "category", "symbol", "items", "disabled", "close"]],
       template: function BookingCateringOrderDetailsComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -4805,8 +4805,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (rf & 2) {
           var _r4 = i0.ɵɵreference(11);
 
+          i0.ɵɵclassProp("compact", ctx.compact);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("ngIf", ctx.form);
+          i0.ɵɵproperty("ngIf", ctx.form && !ctx.hide_details);
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngIf", !ctx.loading)("ngIfElse", _r4);
           i0.ɵɵadvance(4);
@@ -4816,8 +4817,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵi18nApply(7);
         }
       },
-      directives: [i5.NgIf, i6.MatButton, i7.ɵb, i8.ɵangular_packages_forms_forms_y, i8.NgControlStatusGroup, i8.FormGroupDirective, i9.MatFormField, i10.MatSelect, i8.NgControlStatus, i8.FormControlName, i5.NgForOf, i11.MatOption, i12.MatSpinner, i13.CateringMenuCategoryComponent],
-      styles: ["[_nghost-%COMP%] {\n  height: 100%;\n}\n.order-details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n  margin: auto;\n  max-width: 100vw;\n  min-height: 65vh;\n}\n.header[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  width: 100%;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  z-index: 99;\n}\n.body[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  width: 100%;\n  min-height: 50%;\n  overflow: hidden auto;\n}\n.footer[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n  border-top: 1px solid #ccc;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n.footer[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  min-width: 8em;\n  margin: 0.5em;\n}\nform[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.field[_ngcontent-%COMP%] {\n  margin: 0 0.5em;\n  max-height: 3.5em;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .field[_ngcontent-%COMP%] {\n    max-height: 4.75em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .field[_ngcontent-%COMP%] {\n    max-height: 4.75em;\n  }\n}\n.contents[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  max-width: 768px;\n  margin: auto;\n}\n.category[_ngcontent-%COMP%] {\n  position: relative;\n  background-position: center;\n  background-size: cover;\n  height: 11em;\n  width: 11em;\n  margin: 1em;\n  border-radius: 4px;\n  border: none;\n  padding: 0;\n  background-color: #fff;\n  transition: box-shadow 200ms;\n}\n.category[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n.category[_ngcontent-%COMP%]   .overlay[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.35);\n  border-radius: 4px;\n}\n.category[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 99;\n  max-width: 9em;\n  white-space: normal;\n  line-height: 1.25em;\n  margin: 0;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  mat-form-field[_ngcontent-%COMP%] {\n    width: 11.75em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  mat-form-field[_ngcontent-%COMP%] {\n    width: 11.75em;\n  }\n}\nlabel[_ngcontent-%COMP%] {\n  font-weight: 500;\n  font-size: 0.8em;\n  margin-right: 0.75em;\n}\n.empty-state[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  background-color: #fff;\n  border-radius: 4px;\n  padding: 1em;\n  max-width: calc(100vw - 2em);\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n.empty-state[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #ce1a51;\n}\n.empty-state[_ngcontent-%COMP%]   .bold[_ngcontent-%COMP%] {\n  font-weight: 400;\n}\n.empty-state[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  height: 6em;\n  width: 8em;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  text-align: center;\n  max-width: 24em;\n}\n.info-block[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  height: 2.5em;\n  width: 2.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvb3ZlcmxheXMvYm9va2luZy1tb2RhbC9jYXRlcmluZy9vcmRlci1kZXRhaWxzL29yZGVyLWRldGFpbHMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9vcmRlci1kZXRhaWxzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQTdDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMvQkE7O3NCQUFBO0FDWEE7RUFDSSxZQUFBO0FDa0JKO0FEZkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsZ0JBQUE7QUNrQko7QURmQTtFQUNJLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxXQUFBO0VBQ0Esc0JBQUE7RURmQSxpSEFBQTtFQ2lCQSxXQUFBO0FDa0JKO0FEZkE7RUFDSSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsZUFBQTtFQUNBLHFCQUFBO0FDa0JKO0FEZkE7RUFDSSxXQUFBO0VBQ0Esa0JBQUE7RUFDQSwwQkFBQTtFQUNBLHNCQUFBO0VEaENBLGlIQUFBO0FFbURKO0FEaEJJO0VBQ0ksY0FBQTtFQUNBLGFBQUE7QUNrQlI7QURkQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ2lCSjtBRGRBO0VBQ0ksZUFBQTtFQUNBLGlCQUFBO0FDaUJKO0FGdERRO0VDbUNSO0lBS1Esa0JBQUE7RUNrQk47QUFDRjtBRnhEUTtFQ2dDUjtJQUtRLGtCQUFBO0VDdUJOO0FBQ0Y7QURwQkE7RUFDSSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0FDdUJKO0FEcEJBO0VBQ0ksa0JBQUE7RUFDQSwyQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0VBQ0EsVUFBQTtFQUNBLHNCQUFBO0VBQ0EsNEJBQUE7QUN1Qko7QURyQkk7RUQ1RUEsaUhBQUE7QUVvR0o7QURwQkk7RUFDSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxxQ0FBQTtFQUNBLGtCQUFBO0FDc0JSO0FEbkJJO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUNBLGdDQUFBO0VBQ0EsV0FBQTtFQUNBLGNBQUE7RUFDQSxtQkFBQTtFQUNBLG1CQUFBO0VBQ0EsU0FBQTtBQ3FCUjtBRjdHUTtFQzRGUjtJQUVRLGNBQUE7RUNvQk47QUFDRjtBRmhIUTtFQ3lGUjtJQUVRLGNBQUE7RUN5Qk47QUFDRjtBRHRCQTtFQUNJLGdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxvQkFBQTtBQ3lCSjtBRHRCQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0Esc0JBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSw0QkFBQTtFRDFIQSxpSEFBQTtBRW9KSjtBRHZCSTtFQUNJLGNBQUE7QUN5QlI7QUR0Qkk7RUFDSSxnQkFBQTtBQ3dCUjtBRHJCSTtFQUNJLFdBQUE7RUFDQSxVQUFBO0FDdUJSO0FEcEJJO0VBQ0ksa0JBQUE7RUFDQSxlQUFBO0FDc0JSO0FEakJJO0VBQ0ksYUFBQTtFQUNBLFlBQUE7QUNvQlIiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy9ib29raW5nLW1vZGFsL2NhdGVyaW5nL29yZGVyLWRldGFpbHMvb3JkZXItZGV0YWlscy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9ICBAZWxzZSBpZiAkbWVkaWEgPT0gbGF0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAoJG1lZGlhID09IHRhYmxldC1tb2JpbGUgb3IgJG1lZGlhID09IG5vdC1kZXNrdG9wKSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuQGltcG9ydCAnbWl4aW5zJztcblxuOmhvc3Qge1xuICAgIGhlaWdodDogMTAwJTtcbn1cblxuLm9yZGVyLWRldGFpbHMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW46IGF1dG87XG4gICAgbWF4LXdpZHRoOiAxMDB2dztcbiAgICBtaW4taGVpZ2h0OiA2NXZoO1xufVxuXG4uaGVhZGVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIEBpbmNsdWRlIGJveC1zaGFkb3c7XG4gICAgei1pbmRleDogOTk7XG59XG5cbi5ib2R5IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtaW4taGVpZ2h0OiA1MCU7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbiBhdXRvO1xufVxuXG4uZm9vdGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuXG4gICAgYnV0dG9uIHtcbiAgICAgICAgbWluLXdpZHRoOiA4ZW07XG4gICAgICAgIG1hcmdpbjouNWVtO1xuICAgIH1cbn1cblxuZm9ybSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uZmllbGQge1xuICAgIG1hcmdpbjogMCAuNWVtO1xuICAgIG1heC1oZWlnaHQ6IDMuNWVtO1xuXG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgbWF4LWhlaWdodDogNC43NWVtO1xuICAgIH1cbn1cblxuLmNvbnRlbnRzIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICBtYXgtd2lkdGg6IDc2OHB4O1xuICAgIG1hcmdpbjogYXV0bztcbn1cblxuLmNhdGVnb3J5IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgaGVpZ2h0OiAxMWVtO1xuICAgIHdpZHRoOiAxMWVtO1xuICAgIG1hcmdpbjogMWVtO1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgcGFkZGluZzogMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIHRyYW5zaXRpb246IGJveC1zaGFkb3cgMjAwbXM7XG5cbiAgICAmOmhvdmVyIHtcbiAgICAgICAgQGluY2x1ZGUgYm94LXNoYWRvdztcbiAgICB9XG5cbiAgICAub3ZlcmxheSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICByaWdodDogMDtcbiAgICAgICAgYm90dG9tOiAwO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCMwMDAsIC4zNSk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICB9XG5cbiAgICAubmFtZSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA1MCU7XG4gICAgICAgIGxlZnQ6IDUwJTtcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgICAgIHotaW5kZXg6IDk5O1xuICAgICAgICBtYXgtd2lkdGg6IDllbTtcbiAgICAgICAgd2hpdGUtc3BhY2U6IG5vcm1hbDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDEuMjVlbTtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgIH1cbn1cblxubWF0LWZvcm0tZmllbGQge1xuICAgIEBpbmNsdWRlIHJlc3BvbmQtdG8obW9iaWxlKSB7XG4gICAgICAgIHdpZHRoOiAxMS43NWVtO1xuICAgIH1cbn1cblxubGFiZWwge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIG1hcmdpbi1yaWdodDogLjc1ZW07XG59XG5cbi5lbXB0eS1zdGF0ZSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgcGFkZGluZzogMWVtO1xuICAgIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDJlbSk7XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcblxuICAgIHNwYW4ge1xuICAgICAgICBjb2xvcjogI2NlMWE1MTtcbiAgICB9XG5cbiAgICAuYm9sZCB7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgfVxuXG4gICAgaW1nIHtcbiAgICAgICAgaGVpZ2h0OiA2ZW07XG4gICAgICAgIHdpZHRoOiA4ZW07XG4gICAgfVxuXG4gICAgcCB7XG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgbWF4LXdpZHRoOiAyNGVtO1xuICAgIH1cbn1cblxuLmluZm8tYmxvY2sge1xuICAgIC5pY29uIHtcbiAgICAgICAgaGVpZ2h0OiAyLjVlbTtcbiAgICAgICAgd2lkdGg6IDIuNWVtO1xuICAgIH1cbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuOmhvc3Qge1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5vcmRlci1kZXRhaWxzIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiBhdXRvO1xuICBtYXgtd2lkdGg6IDEwMHZ3O1xuICBtaW4taGVpZ2h0OiA2NXZoO1xufVxuXG4uaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMHB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbiAgei1pbmRleDogOTk7XG59XG5cbi5ib2R5IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBmbGV4OiAxO1xuICB3aWR0aDogMTAwJTtcbiAgbWluLWhlaWdodDogNTAlO1xuICBvdmVyZmxvdzogaGlkZGVuIGF1dG87XG59XG5cbi5mb290ZXIge1xuICB3aWR0aDogMTAwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDBweCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG59XG4uZm9vdGVyIGJ1dHRvbiB7XG4gIG1pbi13aWR0aDogOGVtO1xuICBtYXJnaW46IDAuNWVtO1xufVxuXG5mb3JtIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmZpZWxkIHtcbiAgbWFyZ2luOiAwIDAuNWVtO1xuICBtYXgtaGVpZ2h0OiAzLjVlbTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5maWVsZCB7XG4gICAgbWF4LWhlaWdodDogNC43NWVtO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgLmZpZWxkIHtcbiAgICBtYXgtaGVpZ2h0OiA0Ljc1ZW07XG4gIH1cbn1cblxuLmNvbnRlbnRzIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgbWF4LXdpZHRoOiA3NjhweDtcbiAgbWFyZ2luOiBhdXRvO1xufVxuXG4uY2F0ZWdvcnkge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgaGVpZ2h0OiAxMWVtO1xuICB3aWR0aDogMTFlbTtcbiAgbWFyZ2luOiAxZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYm9yZGVyOiBub25lO1xuICBwYWRkaW5nOiAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICB0cmFuc2l0aW9uOiBib3gtc2hhZG93IDIwMG1zO1xufVxuLmNhdGVnb3J5OmhvdmVyIHtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDBweCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG59XG4uY2F0ZWdvcnkgLm92ZXJsYXkge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjM1KTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xufVxuLmNhdGVnb3J5IC5uYW1lIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogNTAlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgei1pbmRleDogOTk7XG4gIG1heC13aWR0aDogOWVtO1xuICB3aGl0ZS1zcGFjZTogbm9ybWFsO1xuICBsaW5lLWhlaWdodDogMS4yNWVtO1xuICBtYXJnaW46IDA7XG59XG5cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIG1hdC1mb3JtLWZpZWxkIHtcbiAgICB3aWR0aDogMTEuNzVlbTtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gIG1hdC1mb3JtLWZpZWxkIHtcbiAgICB3aWR0aDogMTEuNzVlbTtcbiAgfVxufVxuXG5sYWJlbCB7XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIG1hcmdpbi1yaWdodDogMC43NWVtO1xufVxuXG4uZW1wdHktc3RhdGUge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIHBhZGRpbmc6IDFlbTtcbiAgbWF4LXdpZHRoOiBjYWxjKDEwMHZ3IC0gMmVtKTtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDBweCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG59XG4uZW1wdHktc3RhdGUgc3BhbiB7XG4gIGNvbG9yOiAjY2UxYTUxO1xufVxuLmVtcHR5LXN0YXRlIC5ib2xkIHtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbn1cbi5lbXB0eS1zdGF0ZSBpbWcge1xuICBoZWlnaHQ6IDZlbTtcbiAgd2lkdGg6IDhlbTtcbn1cbi5lbXB0eS1zdGF0ZSBwIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXgtd2lkdGg6IDI0ZW07XG59XG5cbi5pbmZvLWJsb2NrIC5pY29uIHtcbiAgaGVpZ2h0OiAyLjVlbTtcbiAgd2lkdGg6IDIuNWVtO1xufSJdfQ== */"]
+      directives: [i4.NgIf, i5.MatButton, i6.ɵb, i7.ɵangular_packages_forms_forms_y, i7.NgControlStatusGroup, i7.FormGroupDirective, i8.MatFormField, i9.MatSelect, i7.NgControlStatus, i7.FormControlName, i4.NgForOf, i10.MatOption, i11.MatSpinner, i12.CateringMenuCategoryComponent],
+      styles: ["[_nghost-%COMP%] {\n  height: 100%;\n}\n.order-details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n  margin: auto;\n  max-width: 100vw;\n  min-height: 65vh;\n}\n.order-details.compact[_ngcontent-%COMP%] {\n  font-size: 0.75rem;\n  min-height: 16em;\n}\n.header[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  width: 100%;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  z-index: 99;\n}\n.body[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  width: 100%;\n  min-height: 50%;\n  overflow: hidden auto;\n}\n.footer[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n  border-top: 1px solid #ccc;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n.footer[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  min-width: 8em;\n  margin: 0.5em;\n}\nform[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.field[_ngcontent-%COMP%] {\n  margin: 0 0.5em;\n  max-height: 3.5em;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .field[_ngcontent-%COMP%] {\n    max-height: 4.75em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .field[_ngcontent-%COMP%] {\n    max-height: 4.75em;\n  }\n}\n.contents[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  max-width: 768px;\n  margin: auto;\n}\n.category[_ngcontent-%COMP%] {\n  position: relative;\n  background-position: center;\n  background-size: cover;\n  height: 10em;\n  width: 10em;\n  margin: 1em;\n  border-radius: 4px;\n  font-size: 1em;\n  border: none;\n  padding: 0;\n  background-color: #fff;\n  transition: box-shadow 200ms;\n}\n.category[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n.category[_ngcontent-%COMP%]   .overlay[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.35);\n  border-radius: 4px;\n}\n.category[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 99;\n  max-width: 9em;\n  white-space: normal;\n  line-height: 1.25em;\n  margin: 0;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  mat-form-field[_ngcontent-%COMP%] {\n    width: 11.75em;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  mat-form-field[_ngcontent-%COMP%] {\n    width: 11.75em;\n  }\n}\nlabel[_ngcontent-%COMP%] {\n  font-weight: 500;\n  font-size: 0.8em;\n  margin-right: 0.75em;\n}\n.empty-state[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  background-color: #fff;\n  border-radius: 4px;\n  padding: 1em;\n  max-width: calc(100vw - 2em);\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n.empty-state[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #ce1a51;\n}\n.empty-state[_ngcontent-%COMP%]   .bold[_ngcontent-%COMP%] {\n  font-weight: 400;\n}\n.empty-state[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  height: 6em;\n  width: 8em;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  text-align: center;\n  max-width: 24em;\n}\n.info-block[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  height: 2.5em;\n  width: 2.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvb3ZlcmxheXMvYm9va2luZy1tb2RhbC9jYXRlcmluZy9vcmRlci1kZXRhaWxzL29yZGVyLWRldGFpbHMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9vcmRlci1kZXRhaWxzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQTdDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMvQkE7O3NCQUFBO0FDWEE7RUFDSSxZQUFBO0FDa0JKO0FEZkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsZ0JBQUE7QUNrQko7QURoQkk7RUFDSSxrQkFBQTtFQUNBLGdCQUFBO0FDa0JSO0FEZEE7RUFDSSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0EsV0FBQTtFQUNBLHNCQUFBO0VEcEJBLGlIQUFBO0VDc0JBLFdBQUE7QUNpQko7QURkQTtFQUNJLGtCQUFBO0VBQ0EsT0FBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EscUJBQUE7QUNpQko7QURkQTtFQUNJLFdBQUE7RUFDQSxrQkFBQTtFQUNBLDBCQUFBO0VBQ0Esc0JBQUE7RURyQ0EsaUhBQUE7QUV1REo7QURmSTtFQUNJLGNBQUE7RUFDQSxhQUFBO0FDaUJSO0FEYkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7QUNnQko7QURiQTtFQUNJLGVBQUE7RUFDQSxpQkFBQTtBQ2dCSjtBRjFEUTtFQ3dDUjtJQUtRLGtCQUFBO0VDaUJOO0FBQ0Y7QUY1RFE7RUNxQ1I7SUFLUSxrQkFBQTtFQ3NCTjtBQUNGO0FEbkJBO0VBQ0ksYUFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtBQ3NCSjtBRG5CQTtFQUNJLGtCQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtFQUNBLGtCQUFBO0VBQ0EsY0FBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0VBQ0Esc0JBQUE7RUFDQSw0QkFBQTtBQ3NCSjtBRHBCSTtFRGxGQSxpSEFBQTtBRXlHSjtBRG5CSTtFQUNJLGtCQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUNBLHFDQUFBO0VBQ0Esa0JBQUE7QUNxQlI7QURsQkk7RUFDSSxrQkFBQTtFQUNBLFFBQUE7RUFDQSxTQUFBO0VBQ0EsZ0NBQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7RUFDQSxTQUFBO0FDb0JSO0FGbEhRO0VDa0dSO0lBRVEsY0FBQTtFQ21CTjtBQUNGO0FGckhRO0VDK0ZSO0lBRVEsY0FBQTtFQ3dCTjtBQUNGO0FEckJBO0VBQ0ksZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLG9CQUFBO0FDd0JKO0FEckJBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLDRCQUFBO0VEaElBLGlIQUFBO0FFeUpKO0FEdEJJO0VBQ0ksY0FBQTtBQ3dCUjtBRHJCSTtFQUNJLGdCQUFBO0FDdUJSO0FEcEJJO0VBQ0ksV0FBQTtFQUNBLFVBQUE7QUNzQlI7QURuQkk7RUFDSSxrQkFBQTtFQUNBLGVBQUE7QUNxQlI7QURoQkk7RUFDSSxhQUFBO0VBQ0EsWUFBQTtBQ21CUiIsImZpbGUiOiJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9vcmRlci1kZXRhaWxzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3coJGNvbG9yOiAjMDAwLCAkZGVwdGg6IDEpIHtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMXB4ICogKCRkZXB0aCAtIDEpIHJnYmEoIzAwMCwgLjIpLFxuICAgICAgICAgICAgICAgIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSxcbiAgICAgICAgICAgICAgICAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsIC4xMik7XG59XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICdtaXhpbnMnO1xuXG46aG9zdCB7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuXG4ub3JkZXItZGV0YWlscyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1hcmdpbjogYXV0bztcbiAgICBtYXgtd2lkdGg6IDEwMHZ3O1xuICAgIG1pbi1oZWlnaHQ6IDY1dmg7XG5cbiAgICAmLmNvbXBhY3Qge1xuICAgICAgICBmb250LXNpemU6IC43NXJlbTtcbiAgICAgICAgbWluLWhlaWdodDogMTZlbTtcbiAgICB9XG59XG5cbi5oZWFkZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcbiAgICB6LWluZGV4OiA5OTtcbn1cblxuLmJvZHkge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBmbGV4OiAxO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1pbi1oZWlnaHQ6IDUwJTtcbiAgICBvdmVyZmxvdzogaGlkZGVuIGF1dG87XG59XG5cbi5mb290ZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIEBpbmNsdWRlIGJveC1zaGFkb3c7XG5cbiAgICBidXR0b24ge1xuICAgICAgICBtaW4td2lkdGg6IDhlbTtcbiAgICAgICAgbWFyZ2luOi41ZW07XG4gICAgfVxufVxuXG5mb3JtIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5maWVsZCB7XG4gICAgbWFyZ2luOiAwIC41ZW07XG4gICAgbWF4LWhlaWdodDogMy41ZW07XG5cbiAgICBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICBtYXgtaGVpZ2h0OiA0Ljc1ZW07XG4gICAgfVxufVxuXG4uY29udGVudHMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgZmxleC13cmFwOiB3cmFwO1xuICAgIG1heC13aWR0aDogNzY4cHg7XG4gICAgbWFyZ2luOiBhdXRvO1xufVxuXG4uY2F0ZWdvcnkge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBoZWlnaHQ6IDEwZW07XG4gICAgd2lkdGg6IDEwZW07XG4gICAgbWFyZ2luOiAxZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGZvbnQtc2l6ZTogMWVtO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBwYWRkaW5nOiAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgdHJhbnNpdGlvbjogYm94LXNoYWRvdyAyMDBtcztcblxuICAgICY6aG92ZXIge1xuICAgICAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgIH1cblxuICAgIC5vdmVybGF5IHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDA7XG4gICAgICAgIGxlZnQ6IDA7XG4gICAgICAgIHJpZ2h0OiAwO1xuICAgICAgICBib3R0b206IDA7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoIzAwMCwgLjM1KTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIH1cblxuICAgIC5uYW1lIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDUwJTtcbiAgICAgICAgbGVmdDogNTAlO1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICAgICAgei1pbmRleDogOTk7XG4gICAgICAgIG1heC13aWR0aDogOWVtO1xuICAgICAgICB3aGl0ZS1zcGFjZTogbm9ybWFsO1xuICAgICAgICBsaW5lLWhlaWdodDogMS4yNWVtO1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgfVxufVxuXG5tYXQtZm9ybS1maWVsZCB7XG4gICAgQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgd2lkdGg6IDExLjc1ZW07XG4gICAgfVxufVxuXG5sYWJlbCB7XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgbWFyZ2luLXJpZ2h0OiAuNzVlbTtcbn1cblxuLmVtcHR5LXN0YXRlIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBwYWRkaW5nOiAxZW07XG4gICAgbWF4LXdpZHRoOiBjYWxjKDEwMHZ3IC0gMmVtKTtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuXG4gICAgc3BhbiB7XG4gICAgICAgIGNvbG9yOiAjY2UxYTUxO1xuICAgIH1cblxuICAgIC5ib2xkIHtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICB9XG5cbiAgICBpbWcge1xuICAgICAgICBoZWlnaHQ6IDZlbTtcbiAgICAgICAgd2lkdGg6IDhlbTtcbiAgICB9XG5cbiAgICBwIHtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBtYXgtd2lkdGg6IDI0ZW07XG4gICAgfVxufVxuXG4uaW5mby1ibG9jayB7XG4gICAgLmljb24ge1xuICAgICAgICBoZWlnaHQ6IDIuNWVtO1xuICAgICAgICB3aWR0aDogMi41ZW07XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG46aG9zdCB7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLm9yZGVyLWRldGFpbHMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IGF1dG87XG4gIG1heC13aWR0aDogMTAwdnc7XG4gIG1pbi1oZWlnaHQ6IDY1dmg7XG59XG4ub3JkZXItZGV0YWlscy5jb21wYWN0IHtcbiAgZm9udC1zaXplOiAwLjc1cmVtO1xuICBtaW4taGVpZ2h0OiAxNmVtO1xufVxuXG4uaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMHB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbiAgei1pbmRleDogOTk7XG59XG5cbi5ib2R5IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBmbGV4OiAxO1xuICB3aWR0aDogMTAwJTtcbiAgbWluLWhlaWdodDogNTAlO1xuICBvdmVyZmxvdzogaGlkZGVuIGF1dG87XG59XG5cbi5mb290ZXIge1xuICB3aWR0aDogMTAwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDBweCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG59XG4uZm9vdGVyIGJ1dHRvbiB7XG4gIG1pbi13aWR0aDogOGVtO1xuICBtYXJnaW46IDAuNWVtO1xufVxuXG5mb3JtIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmZpZWxkIHtcbiAgbWFyZ2luOiAwIDAuNWVtO1xuICBtYXgtaGVpZ2h0OiAzLjVlbTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5maWVsZCB7XG4gICAgbWF4LWhlaWdodDogNC43NWVtO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgLmZpZWxkIHtcbiAgICBtYXgtaGVpZ2h0OiA0Ljc1ZW07XG4gIH1cbn1cblxuLmNvbnRlbnRzIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgbWF4LXdpZHRoOiA3NjhweDtcbiAgbWFyZ2luOiBhdXRvO1xufVxuXG4uY2F0ZWdvcnkge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgaGVpZ2h0OiAxMGVtO1xuICB3aWR0aDogMTBlbTtcbiAgbWFyZ2luOiAxZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgZm9udC1zaXplOiAxZW07XG4gIGJvcmRlcjogbm9uZTtcbiAgcGFkZGluZzogMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgdHJhbnNpdGlvbjogYm94LXNoYWRvdyAyMDBtcztcbn1cbi5jYXRlZ29yeTpob3ZlciB7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xufVxuLmNhdGVnb3J5IC5vdmVybGF5IHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4zNSk7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbn1cbi5jYXRlZ29yeSAubmFtZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA1MCU7XG4gIGxlZnQ6IDUwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gIHotaW5kZXg6IDk5O1xuICBtYXgtd2lkdGg6IDllbTtcbiAgd2hpdGUtc3BhY2U6IG5vcm1hbDtcbiAgbGluZS1oZWlnaHQ6IDEuMjVlbTtcbiAgbWFyZ2luOiAwO1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiA0NTBweCkge1xuICBtYXQtZm9ybS1maWVsZCB7XG4gICAgd2lkdGg6IDExLjc1ZW07XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xuICBtYXQtZm9ybS1maWVsZCB7XG4gICAgd2lkdGg6IDExLjc1ZW07XG4gIH1cbn1cblxubGFiZWwge1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXNpemU6IDAuOGVtO1xuICBtYXJnaW4tcmlnaHQ6IDAuNzVlbTtcbn1cblxuLmVtcHR5LXN0YXRlIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBwYWRkaW5nOiAxZW07XG4gIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDJlbSk7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xufVxuLmVtcHR5LXN0YXRlIHNwYW4ge1xuICBjb2xvcjogI2NlMWE1MTtcbn1cbi5lbXB0eS1zdGF0ZSAuYm9sZCB7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG4uZW1wdHktc3RhdGUgaW1nIHtcbiAgaGVpZ2h0OiA2ZW07XG4gIHdpZHRoOiA4ZW07XG59XG4uZW1wdHktc3RhdGUgcCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbWF4LXdpZHRoOiAyNGVtO1xufVxuXG4uaW5mby1ibG9jayAuaWNvbiB7XG4gIGhlaWdodDogMi41ZW07XG4gIHdpZHRoOiAyLjVlbTtcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -4831,13 +4832,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [{
-          type: i1.SpacesService
+          type: i1.CateringMenuService
         }, {
-          type: i2.CateringMenuService
+          type: i2.OrganisationService
         }, {
-          type: i3.OrganisationService
-        }, {
-          type: i4.MatDialog
+          type: i3.MatDialog
         }];
       }, {
         order: [{
@@ -4853,6 +4852,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: core_1.Input
         }],
         all_day: [{
+          type: core_1.Input
+        }],
+        hide_details: [{
+          type: core_1.Input
+        }],
+        compact: [{
           type: core_1.Input
         }],
         event: [{
@@ -9434,11 +9439,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function acceptMeeting() {
           var _this44 = this;
 
+          var _a;
+
           this.setLoading('Accepting meeting...');
+          var event = this.booking.toJSON();
 
           this._bookings.accept(this.booking.id, {
-            comment: '',
-            room_id: this.booking.space.id
+            concierge: true,
+            host: this.booking.organiser.email,
+            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id,
+            icaluid: this.booking.icaluid,
+            start: event.start,
+            end: event.end
           }).then(function () {
             _this44._service.notifySuccess('Meeting approved.');
 
@@ -10810,7 +10822,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @acaprojects/ngx-pipes */
     "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
-    var OVERLAYS = [confirm_modal_component_1.ConfirmModalComponent, new_user_modal_component_1.NewUserModalComponent, space_select_modal_component_1.SpaceSelectModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, meeting_details_modal_component_1.MeetingDetailsModalComponent, private_details_modal_component_1.PrivateDetailsModalComponent, booking_modal_component_1.BookingModalComponent, requirement_details_modal_component_1.RequirementDetailsModalComponent];
+    var OVERLAYS = [confirm_modal_component_1.ConfirmModalComponent, new_user_modal_component_1.NewUserModalComponent, space_select_modal_component_1.SpaceSelectModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, meeting_details_modal_component_1.MeetingDetailsModalComponent, private_details_modal_component_1.PrivateDetailsModalComponent, booking_modal_component_1.BookingModalComponent, requirement_details_modal_component_1.RequirementDetailsModalComponent, order_details_component_1.BookingCateringOrderDetailsComponent];
 
     var SharedOverlaysModule = function SharedOverlaysModule() {
       _classCallCheck(this, SharedOverlaysModule);
@@ -10829,9 +10841,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SharedOverlaysModule, {
-        declarations: [confirm_modal_component_1.ConfirmModalComponent, new_user_modal_component_1.NewUserModalComponent, space_select_modal_component_1.SpaceSelectModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, meeting_details_modal_component_1.MeetingDetailsModalComponent, private_details_modal_component_1.PrivateDetailsModalComponent, booking_modal_component_1.BookingModalComponent, requirement_details_modal_component_1.RequirementDetailsModalComponent, details_component_1.MeetingDetailsDisplayComponent, requirements_component_1.MeetingDetailsRequirementsComponent, catering_component_1.MeetingCateringDetailsComponent, private_details_component_1.MeetingPrivateDetailsComponent, recurrence_spaces_modal_component_1.RecurrenceSpacesModalComponent, package_options_modal_component_1.PackageOptionsModalComponent, catering_details_modal_component_1.CateringDetailsModalComponent, catering_confirm_modal_component_1.BookingCateringConfirmModalComponent, booking_confirm_component_1.BookingConfirmComponent, form_component_1.BookingSpaceFlowFormComponent, catering_component_2.BookingCateringComponent, find_space_component_1.BookingFindSpaceComponent, filters_component_1.BookingSpaceFiltersComponent, item_component_1.BookingSpaceItemComponent, catering_component_2.BookingCateringComponent, order_details_component_1.BookingCateringOrderDetailsComponent, order_list_component_1.BookingCateringOrderListComponent, item_component_2.CateringOrderListItemComponent, category_component_1.CateringMenuCategoryComponent, item_component_3.CateringMenuItemComponent],
+        declarations: [confirm_modal_component_1.ConfirmModalComponent, new_user_modal_component_1.NewUserModalComponent, space_select_modal_component_1.SpaceSelectModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, meeting_details_modal_component_1.MeetingDetailsModalComponent, private_details_modal_component_1.PrivateDetailsModalComponent, booking_modal_component_1.BookingModalComponent, requirement_details_modal_component_1.RequirementDetailsModalComponent, order_details_component_1.BookingCateringOrderDetailsComponent, details_component_1.MeetingDetailsDisplayComponent, requirements_component_1.MeetingDetailsRequirementsComponent, catering_component_1.MeetingCateringDetailsComponent, private_details_component_1.MeetingPrivateDetailsComponent, recurrence_spaces_modal_component_1.RecurrenceSpacesModalComponent, package_options_modal_component_1.PackageOptionsModalComponent, catering_details_modal_component_1.CateringDetailsModalComponent, catering_confirm_modal_component_1.BookingCateringConfirmModalComponent, booking_confirm_component_1.BookingConfirmComponent, form_component_1.BookingSpaceFlowFormComponent, catering_component_2.BookingCateringComponent, find_space_component_1.BookingFindSpaceComponent, filters_component_1.BookingSpaceFiltersComponent, item_component_1.BookingSpaceItemComponent, catering_component_2.BookingCateringComponent, order_list_component_1.BookingCateringOrderListComponent, item_component_2.CateringOrderListItemComponent, category_component_1.CateringMenuCategoryComponent, item_component_3.CateringMenuItemComponent],
         imports: [common_1.CommonModule, shared_module_1.SharedContentModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, i1.RouterModule],
-        exports: [confirm_modal_component_1.ConfirmModalComponent, new_user_modal_component_1.NewUserModalComponent, space_select_modal_component_1.SpaceSelectModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, meeting_details_modal_component_1.MeetingDetailsModalComponent, private_details_modal_component_1.PrivateDetailsModalComponent, booking_modal_component_1.BookingModalComponent, requirement_details_modal_component_1.RequirementDetailsModalComponent]
+        exports: [confirm_modal_component_1.ConfirmModalComponent, new_user_modal_component_1.NewUserModalComponent, space_select_modal_component_1.SpaceSelectModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, meeting_details_modal_component_1.MeetingDetailsModalComponent, private_details_modal_component_1.PrivateDetailsModalComponent, booking_modal_component_1.BookingModalComponent, requirement_details_modal_component_1.RequirementDetailsModalComponent, order_details_component_1.BookingCateringOrderDetailsComponent]
       });
     })();
     /*@__PURE__*/
@@ -10841,14 +10853,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       i0.ɵsetClassMetadata(SharedOverlaysModule, [{
         type: core_1.NgModule,
         args: [{
-          declarations: [].concat(OVERLAYS, [details_component_1.MeetingDetailsDisplayComponent, requirements_component_1.MeetingDetailsRequirementsComponent, catering_component_1.MeetingCateringDetailsComponent, private_details_component_1.MeetingPrivateDetailsComponent, recurrence_spaces_modal_component_1.RecurrenceSpacesModalComponent, package_options_modal_component_1.PackageOptionsModalComponent, catering_details_modal_component_1.CateringDetailsModalComponent, catering_confirm_modal_component_1.BookingCateringConfirmModalComponent, booking_confirm_component_1.BookingConfirmComponent, form_component_1.BookingSpaceFlowFormComponent, catering_component_2.BookingCateringComponent, find_space_component_1.BookingFindSpaceComponent, filters_component_1.BookingSpaceFiltersComponent, item_component_1.BookingSpaceItemComponent, catering_component_2.BookingCateringComponent, order_details_component_1.BookingCateringOrderDetailsComponent, order_list_component_1.BookingCateringOrderListComponent, item_component_2.CateringOrderListItemComponent, category_component_1.CateringMenuCategoryComponent, item_component_3.CateringMenuItemComponent]),
+          declarations: [].concat(OVERLAYS, [details_component_1.MeetingDetailsDisplayComponent, requirements_component_1.MeetingDetailsRequirementsComponent, catering_component_1.MeetingCateringDetailsComponent, private_details_component_1.MeetingPrivateDetailsComponent, recurrence_spaces_modal_component_1.RecurrenceSpacesModalComponent, package_options_modal_component_1.PackageOptionsModalComponent, catering_details_modal_component_1.CateringDetailsModalComponent, catering_confirm_modal_component_1.BookingCateringConfirmModalComponent, booking_confirm_component_1.BookingConfirmComponent, form_component_1.BookingSpaceFlowFormComponent, catering_component_2.BookingCateringComponent, find_space_component_1.BookingFindSpaceComponent, filters_component_1.BookingSpaceFiltersComponent, item_component_1.BookingSpaceItemComponent, catering_component_2.BookingCateringComponent, order_list_component_1.BookingCateringOrderListComponent, item_component_2.CateringOrderListItemComponent, category_component_1.CateringMenuCategoryComponent, item_component_3.CateringMenuItemComponent]),
           imports: [common_1.CommonModule, shared_module_1.SharedContentModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild([])],
           exports: [].concat(OVERLAYS)
         }]
       }], null, null);
     })();
 
-    i0.ɵɵsetComponentScope(booking_modal_component_1.BookingModalComponent, [i2.NgClass, i2.NgComponentOutlet, i2.NgForOf, i2.NgIf, i2.NgTemplateOutlet, i2.NgStyle, i2.NgSwitch, i2.NgSwitchCase, i2.NgSwitchDefault, i2.NgPlural, i2.NgPluralCase, i3.ɵa, i3.ɵb, i4.ADatePickerComponent, i5.BaseDirective, i6.LoginComponent, i7.IconComponent, i8.ActionIconComponent, i9.TopbarHeaderComponent, i10.SearchbarComponent, i11.UserAvatarComponent, i12.UserFormComponent, i13.BookingFormComponent, i14.PopoutMenuComponent, i15.FeedbackComponent, i16.SidebarComponent, i17.CdkDropListScrollContainer, i18.DateFieldComponent, i19.ActionFieldComponent, i20.TimeFieldComponent, i21.DurationFieldComponent, i22.UserSearchFieldComponent, i23.UserListFieldComponent, i24.CounterComponent, i25.MatButton, i25.MatAnchor, i26.Dir, i27.MatSnackBarContainer, i28.MatDialogContainer, i28.MatDialogClose, i28.MatDialogTitle, i28.MatDialogContent, i28.MatDialogActions, i29.MatError, i29.MatFormField, i29.MatHint, i29.MatLabel, i29.MatPlaceholder, i29.MatPrefix, i29.MatSuffix, i30.CdkAutofill, i30.CdkTextareaAutosize, i31.MatInput, i31.MatTextareaAutosize, i32.MatProgressSpinner, i32.MatSpinner, i33.MatProgressBar, i34.MatAutocomplete, i35.MatOption, i35.MatOptgroup, i34.MatAutocompleteTrigger, i34.MatAutocompleteOrigin, i36.MatSelect, i36.MatSelectTrigger, i37.MatChipList, i37.MatChip, i37.MatChipInput, i37.MatChipRemove, i37.MatChipAvatar, i37.MatChipTrailingIcon, i35.MatRipple, i38._MatMenu, i38.MatMenuItem, i38.MatMenuTrigger, i38.MatMenuContent, i39.MatCheckbox, i39.MatCheckboxRequiredValidator, i40.MatTooltip, i40.TooltipComponent, i41.MatRadioGroup, i41.MatRadioButton, i42.MatTabGroup, i42.MatTabLabel, i42.MatTab, i42.MatTabNav, i42.MatTabLink, i42.MatTabContent, i43.MatSlideToggleRequiredValidator, i43.MatSlideToggle, i44.CdkFixedSizeVirtualScroll, i44.CdkScrollable, i44.CdkVirtualForOf, i44.CdkVirtualScrollViewport, i45.CdkDropList, i45.CdkDropListGroup, i45.CdkDrag, i45.CdkDragHandle, i45.CdkDragPreview, i45.CdkDragPlaceholder, i46.CdkTable, i46.CdkRowDef, i46.CdkCellDef, i46.CdkCellOutlet, i46.CdkHeaderCellDef, i46.CdkFooterCellDef, i46.CdkColumnDef, i46.CdkCell, i46.CdkRow, i46.CdkHeaderCell, i46.CdkFooterCell, i46.CdkHeaderRow, i46.CdkHeaderRowDef, i46.CdkFooterRow, i46.CdkFooterRowDef, i46.DataRowOutlet, i46.HeaderRowOutlet, i46.FooterRowOutlet, i46.CdkTextColumn, i47.ɵangular_packages_forms_forms_y, i47.NgSelectOption, i47.ɵangular_packages_forms_forms_x, i47.DefaultValueAccessor, i47.NumberValueAccessor, i47.RangeValueAccessor, i47.CheckboxControlValueAccessor, i47.SelectControlValueAccessor, i47.SelectMultipleControlValueAccessor, i47.RadioControlValueAccessor, i47.NgControlStatus, i47.NgControlStatusGroup, i47.RequiredValidator, i47.MinLengthValidator, i47.MaxLengthValidator, i47.PatternValidator, i47.CheckboxRequiredValidator, i47.EmailValidator, i47.NgModel, i47.NgModelGroup, i47.NgForm, i47.FormControlDirective, i47.FormGroupDirective, i47.FormControlName, i47.FormGroupName, i47.FormArrayName, i1.RouterOutlet, i1.RouterLink, i1.RouterLinkWithHref, i1.RouterLinkActive, i1.ɵangular_packages_router_router_l, confirm_modal_component_1.ConfirmModalComponent, new_user_modal_component_1.NewUserModalComponent, space_select_modal_component_1.SpaceSelectModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, meeting_details_modal_component_1.MeetingDetailsModalComponent, private_details_modal_component_1.PrivateDetailsModalComponent, booking_modal_component_1.BookingModalComponent, requirement_details_modal_component_1.RequirementDetailsModalComponent, details_component_1.MeetingDetailsDisplayComponent, requirements_component_1.MeetingDetailsRequirementsComponent, catering_component_1.MeetingCateringDetailsComponent, private_details_component_1.MeetingPrivateDetailsComponent, recurrence_spaces_modal_component_1.RecurrenceSpacesModalComponent, package_options_modal_component_1.PackageOptionsModalComponent, catering_details_modal_component_1.CateringDetailsModalComponent, catering_confirm_modal_component_1.BookingCateringConfirmModalComponent, booking_confirm_component_1.BookingConfirmComponent, form_component_1.BookingSpaceFlowFormComponent, catering_component_2.BookingCateringComponent, find_space_component_1.BookingFindSpaceComponent, filters_component_1.BookingSpaceFiltersComponent, item_component_1.BookingSpaceItemComponent, order_details_component_1.BookingCateringOrderDetailsComponent, order_list_component_1.BookingCateringOrderListComponent, item_component_2.CateringOrderListItemComponent, category_component_1.CateringMenuCategoryComponent, item_component_3.CateringMenuItemComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i48.ɵa, i48.ɵb]);
+    i0.ɵɵsetComponentScope(booking_modal_component_1.BookingModalComponent, [i2.NgClass, i2.NgComponentOutlet, i2.NgForOf, i2.NgIf, i2.NgTemplateOutlet, i2.NgStyle, i2.NgSwitch, i2.NgSwitchCase, i2.NgSwitchDefault, i2.NgPlural, i2.NgPluralCase, i3.ɵa, i3.ɵb, i4.ADatePickerComponent, i5.BaseDirective, i6.LoginComponent, i7.IconComponent, i8.ActionIconComponent, i9.TopbarHeaderComponent, i10.SearchbarComponent, i11.UserAvatarComponent, i12.UserFormComponent, i13.BookingFormComponent, i14.PopoutMenuComponent, i15.FeedbackComponent, i16.SidebarComponent, i17.CdkDropListScrollContainer, i18.DateFieldComponent, i19.ActionFieldComponent, i20.TimeFieldComponent, i21.DurationFieldComponent, i22.UserSearchFieldComponent, i23.UserListFieldComponent, i24.CounterComponent, i25.MatButton, i25.MatAnchor, i26.Dir, i27.MatSnackBarContainer, i28.MatDialogContainer, i28.MatDialogClose, i28.MatDialogTitle, i28.MatDialogContent, i28.MatDialogActions, i29.MatError, i29.MatFormField, i29.MatHint, i29.MatLabel, i29.MatPlaceholder, i29.MatPrefix, i29.MatSuffix, i30.CdkAutofill, i30.CdkTextareaAutosize, i31.MatInput, i31.MatTextareaAutosize, i32.MatProgressSpinner, i32.MatSpinner, i33.MatProgressBar, i34.MatAutocomplete, i35.MatOption, i35.MatOptgroup, i34.MatAutocompleteTrigger, i34.MatAutocompleteOrigin, i36.MatSelect, i36.MatSelectTrigger, i37.MatChipList, i37.MatChip, i37.MatChipInput, i37.MatChipRemove, i37.MatChipAvatar, i37.MatChipTrailingIcon, i35.MatRipple, i38._MatMenu, i38.MatMenuItem, i38.MatMenuTrigger, i38.MatMenuContent, i39.MatCheckbox, i39.MatCheckboxRequiredValidator, i40.MatTooltip, i40.TooltipComponent, i41.MatRadioGroup, i41.MatRadioButton, i42.MatTabGroup, i42.MatTabLabel, i42.MatTab, i42.MatTabNav, i42.MatTabLink, i42.MatTabContent, i43.MatSlideToggleRequiredValidator, i43.MatSlideToggle, i44.CdkFixedSizeVirtualScroll, i44.CdkScrollable, i44.CdkVirtualForOf, i44.CdkVirtualScrollViewport, i45.CdkDropList, i45.CdkDropListGroup, i45.CdkDrag, i45.CdkDragHandle, i45.CdkDragPreview, i45.CdkDragPlaceholder, i46.CdkTable, i46.CdkRowDef, i46.CdkCellDef, i46.CdkCellOutlet, i46.CdkHeaderCellDef, i46.CdkFooterCellDef, i46.CdkColumnDef, i46.CdkCell, i46.CdkRow, i46.CdkHeaderCell, i46.CdkFooterCell, i46.CdkHeaderRow, i46.CdkHeaderRowDef, i46.CdkFooterRow, i46.CdkFooterRowDef, i46.DataRowOutlet, i46.HeaderRowOutlet, i46.FooterRowOutlet, i46.CdkTextColumn, i47.ɵangular_packages_forms_forms_y, i47.NgSelectOption, i47.ɵangular_packages_forms_forms_x, i47.DefaultValueAccessor, i47.NumberValueAccessor, i47.RangeValueAccessor, i47.CheckboxControlValueAccessor, i47.SelectControlValueAccessor, i47.SelectMultipleControlValueAccessor, i47.RadioControlValueAccessor, i47.NgControlStatus, i47.NgControlStatusGroup, i47.RequiredValidator, i47.MinLengthValidator, i47.MaxLengthValidator, i47.PatternValidator, i47.CheckboxRequiredValidator, i47.EmailValidator, i47.NgModel, i47.NgModelGroup, i47.NgForm, i47.FormControlDirective, i47.FormGroupDirective, i47.FormControlName, i47.FormGroupName, i47.FormArrayName, i1.RouterOutlet, i1.RouterLink, i1.RouterLinkWithHref, i1.RouterLinkActive, i1.ɵangular_packages_router_router_l, confirm_modal_component_1.ConfirmModalComponent, new_user_modal_component_1.NewUserModalComponent, space_select_modal_component_1.SpaceSelectModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, meeting_details_modal_component_1.MeetingDetailsModalComponent, private_details_modal_component_1.PrivateDetailsModalComponent, booking_modal_component_1.BookingModalComponent, requirement_details_modal_component_1.RequirementDetailsModalComponent, order_details_component_1.BookingCateringOrderDetailsComponent, details_component_1.MeetingDetailsDisplayComponent, requirements_component_1.MeetingDetailsRequirementsComponent, catering_component_1.MeetingCateringDetailsComponent, private_details_component_1.MeetingPrivateDetailsComponent, recurrence_spaces_modal_component_1.RecurrenceSpacesModalComponent, package_options_modal_component_1.PackageOptionsModalComponent, catering_details_modal_component_1.CateringDetailsModalComponent, catering_confirm_modal_component_1.BookingCateringConfirmModalComponent, booking_confirm_component_1.BookingConfirmComponent, form_component_1.BookingSpaceFlowFormComponent, catering_component_2.BookingCateringComponent, find_space_component_1.BookingFindSpaceComponent, filters_component_1.BookingSpaceFiltersComponent, item_component_1.BookingSpaceItemComponent, order_list_component_1.BookingCateringOrderListComponent, item_component_2.CateringOrderListItemComponent, category_component_1.CateringMenuCategoryComponent, item_component_3.CateringMenuItemComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i48.ɵa, i48.ɵb]);
     /***/
   },
 
@@ -15425,8 +15437,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _a;
 
           if (this.id) {
+            var json = this.toJSON();
             return this._service["delete"](this.id, {
-              room_id: (_a = this.space) === null || _a === void 0 ? void 0 : _a.id
+              concierge: true,
+              host: this.organiser.email,
+              room_id: (_a = this.space) === null || _a === void 0 ? void 0 : _a.id,
+              icaluid: this.icaluid,
+              start: json.start,
+              end: json.end
             });
           }
         }
@@ -16374,6 +16392,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "decline",
         value: function decline(id, fields) {
           return this.task(id, 'concierge_decline', fields);
+        }
+        /**
+         * Save changes to the booking
+         * @param booking Booking update or add to the database
+         */
+
+      }, {
+        key: "save",
+        value: function save(booking) {
+          return booking.id ? this.update(booking.id, booking.toJSON()) : this.add(booking.toJSON());
+        }
+        /**
+         * Checkin atteendee of a booking
+         * @param id ID of the booking
+         * @param fields Fields associated with the booking and attendee
+         */
+
+      }, {
+        key: "checkin",
+        value: function checkin(id, fields) {
+          return this.task(id, 'checkin', fields);
         }
       }, {
         key: "process",
@@ -26562,7 +26601,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [i2.NgIf, i3.MatButton, i4.ɵb, i5.IconComponent, i6.MatMenuTrigger, i6._MatMenu, i6.MatMenuItem, i7.ADatePickerComponent, i8.NgControlStatus, i8.NgModel],
-      styles: [".topbar-header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 3.5em;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  border-bottom: 1px solid #ccc;\n}\n.topbar-header[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  display: none;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex: 1;\n  min-width: 50%;\n}\n.date[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.picker[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  overflow: hidden;\n  height: 2.5em;\n  margin: 0 0.5em;\n}\n.picker[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  border-radius: 0;\n}\n.picker[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-left: 1px solid #ccc;\n  border-right: 1px solid #ccc;\n  padding: 0 0.5em;\n  height: 100%;\n  width: 8em;\n}\n.calendar[_ngcontent-%COMP%] {\n  height: 3.5em;\n  width: 3.5em;\n  border-left: 1px solid #ccc;\n  border-radius: 0;\n}\n.calendar[aria-expanded][_ngcontent-%COMP%] {\n  color: #1937ea;\n}\n.calendar[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  font-size: 2em;\n}\n.date-picker[_ngcontent-%COMP%] {\n  height: 26.5em;\n}\n.date-picker[_ngcontent-%COMP%]:hover {\n  background: none;\n}\n.add-item[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  font-size: 1.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvdG9wYmFyLWhlYWRlci90b3BiYXItaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy90b3BiYXItaGVhZGVyL3RvcGJhci1oZWFkZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FBN0NBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQy9CQTs7c0JBQUE7QUNYQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLCtHQUFBO0VBR0EsNkJBQUE7QUNnQko7QURkSTtFQUNJLGFBQUE7QUNnQlI7QURaQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLE9BQUE7RUFDQSxjQUFBO0FDZUo7QURaQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ2VKO0FEWkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxhQUFBO0VBQ0EsZUFBQTtBQ2VKO0FEYkk7RUFDSSxnQkFBQTtBQ2VSO0FEWkk7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLDJCQUFBO0VBQ0EsNEJBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0FDY1I7QURWQTtFQUNJLGFBQUE7RUFDQSxZQUFBO0VBQ0EsMkJBQUE7RUFDQSxnQkFBQTtBQ2FKO0FEWEk7RUFDSSxjRjNDUTtBR3dEaEI7QURWSTtFQUNJLGNBQUE7QUNZUjtBRFJBO0VBQ0ksY0FBQTtBQ1dKO0FEVkk7RUFDSSxnQkFBQTtBQ1lSO0FEUEk7RUFDSSxnQkFBQTtBQ1VSIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvdG9wYmFyLWhlYWRlci90b3BiYXItaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3coJGNvbG9yOiAjMDAwLCAkZGVwdGg6IDEpIHtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMXB4ICogKCRkZXB0aCAtIDEpIHJnYmEoIzAwMCwgLjIpLFxuICAgICAgICAgICAgICAgIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSxcbiAgICAgICAgICAgICAgICAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsIC4xMik7XG59XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICdtaXhpbnMnO1xuXG4udG9wYmFyLWhlYWRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGhlaWdodDogMy41ZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO1xuXG4gICAgLmljb24ge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH1cbn1cblxuLmNvbnRlbnQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogNTAlO1xufVxuXG4uZGF0ZSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucGlja2VyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICBoZWlnaHQ6IDIuNWVtO1xuICAgIG1hcmdpbjogMCAuNWVtO1xuXG4gICAgYnV0dG9uIHtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMDtcbiAgICB9XG5cbiAgICAudGV4dCB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjY2M7XG4gICAgICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICNjY2M7XG4gICAgICAgIHBhZGRpbmc6IDAgLjVlbTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICB3aWR0aDogOGVtO1xuICAgIH1cbn1cblxuLmNhbGVuZGFyIHtcbiAgICBoZWlnaHQ6IDMuNWVtO1xuICAgIHdpZHRoOiAzLjVlbTtcbiAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjY2M7XG4gICAgYm9yZGVyLXJhZGl1czogMDtcblxuICAgICZbYXJpYS1leHBhbmRlZF0ge1xuICAgICAgICBjb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgfVxuXG4gICAgYXBwLWljb24ge1xuICAgICAgICBmb250LXNpemU6IDJlbTtcbiAgICB9XG59XG5cbi5kYXRlLXBpY2tlciB7XG4gICAgaGVpZ2h0OiAyNi41ZW07XG4gICAgJjpob3ZlciB7XG4gICAgICAgIGJhY2tncm91bmQ6IG5vbmU7XG4gICAgfVxufVxuXG4uYWRkLWl0ZW0ge1xuICAgIGkge1xuICAgICAgICBmb250LXNpemU6IDEuNWVtO1xuICAgIH1cbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLnRvcGJhci1oZWFkZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBoZWlnaHQ6IDMuNWVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO1xufVxuLnRvcGJhci1oZWFkZXIgLmljb24ge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4uY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNTAlO1xufVxuXG4uZGF0ZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5waWNrZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGhlaWdodDogMi41ZW07XG4gIG1hcmdpbjogMCAwLjVlbTtcbn1cbi5waWNrZXIgYnV0dG9uIHtcbiAgYm9yZGVyLXJhZGl1czogMDtcbn1cbi5waWNrZXIgLnRleHQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYm9yZGVyLWxlZnQ6IDFweCBzb2xpZCAjY2NjO1xuICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjY2NjO1xuICBwYWRkaW5nOiAwIDAuNWVtO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiA4ZW07XG59XG5cbi5jYWxlbmRhciB7XG4gIGhlaWdodDogMy41ZW07XG4gIHdpZHRoOiAzLjVlbTtcbiAgYm9yZGVyLWxlZnQ6IDFweCBzb2xpZCAjY2NjO1xuICBib3JkZXItcmFkaXVzOiAwO1xufVxuLmNhbGVuZGFyW2FyaWEtZXhwYW5kZWRdIHtcbiAgY29sb3I6ICMxOTM3ZWE7XG59XG4uY2FsZW5kYXIgYXBwLWljb24ge1xuICBmb250LXNpemU6IDJlbTtcbn1cblxuLmRhdGUtcGlja2VyIHtcbiAgaGVpZ2h0OiAyNi41ZW07XG59XG4uZGF0ZS1waWNrZXI6aG92ZXIge1xuICBiYWNrZ3JvdW5kOiBub25lO1xufVxuXG4uYWRkLWl0ZW0gaSB7XG4gIGZvbnQtc2l6ZTogMS41ZW07XG59Il19 */"]
+      styles: [".topbar-header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 3.5em;\n  background-color: #fff;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  border-bottom: 1px solid #ccc;\n}\n.topbar-header[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  display: none;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex: 1;\n  min-width: 50%;\n}\n.date[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.picker[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  overflow: hidden;\n  height: 2.5em;\n  margin: 0 0.5em;\n}\n.picker[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  border-radius: 0;\n}\n.picker[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-left: 1px solid #ccc;\n  border-right: 1px solid #ccc;\n  padding: 0 0.5em;\n  height: 100%;\n  width: 8em;\n}\n.calendar[_ngcontent-%COMP%] {\n  height: 3.5em;\n  width: 3.5em;\n  border-left: 1px solid #ccc;\n  border-radius: 0;\n}\n.calendar[aria-expanded][_ngcontent-%COMP%] {\n  color: #1937ea;\n}\n.calendar[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  font-size: 2em;\n}\n.date-picker[_ngcontent-%COMP%] {\n  height: 26.5em;\n}\n.date-picker[_ngcontent-%COMP%]:hover {\n  background: none;\n}\n.add-item[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  font-size: 1.5em;\n}\n.add-item[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  box-shadow: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvdG9wYmFyLWhlYWRlci90b3BiYXItaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy90b3BiYXItaGVhZGVyL3RvcGJhci1oZWFkZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FBN0NBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQy9CQTs7c0JBQUE7QUNYQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLCtHQUFBO0VBR0EsNkJBQUE7QUNnQko7QURkSTtFQUNJLGFBQUE7QUNnQlI7QURaQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLE9BQUE7RUFDQSxjQUFBO0FDZUo7QURaQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ2VKO0FEWkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxhQUFBO0VBQ0EsZUFBQTtBQ2VKO0FEYkk7RUFDSSxnQkFBQTtBQ2VSO0FEWkk7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLDJCQUFBO0VBQ0EsNEJBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0FDY1I7QURWQTtFQUNJLGFBQUE7RUFDQSxZQUFBO0VBQ0EsMkJBQUE7RUFDQSxnQkFBQTtBQ2FKO0FEWEk7RUFDSSxjRjNDUTtBR3dEaEI7QURWSTtFQUNJLGNBQUE7QUNZUjtBRFJBO0VBQ0ksY0FBQTtBQ1dKO0FEVkk7RUFDSSxnQkFBQTtBQ1lSO0FEUEk7RUFDSSxnQkFBQTtBQ1VSO0FEUEk7RUFDSSxnQkFBQTtBQ1NSIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvdG9wYmFyLWhlYWRlci90b3BiYXItaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3coJGNvbG9yOiAjMDAwLCAkZGVwdGg6IDEpIHtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMXB4ICogKCRkZXB0aCAtIDEpIHJnYmEoIzAwMCwgLjIpLFxuICAgICAgICAgICAgICAgIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSxcbiAgICAgICAgICAgICAgICAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsIC4xMik7XG59XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICdtaXhpbnMnO1xuXG4udG9wYmFyLWhlYWRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGhlaWdodDogMy41ZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO1xuXG4gICAgLmljb24ge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH1cbn1cblxuLmNvbnRlbnQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogNTAlO1xufVxuXG4uZGF0ZSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucGlja2VyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICBoZWlnaHQ6IDIuNWVtO1xuICAgIG1hcmdpbjogMCAuNWVtO1xuXG4gICAgYnV0dG9uIHtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMDtcbiAgICB9XG5cbiAgICAudGV4dCB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjY2M7XG4gICAgICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICNjY2M7XG4gICAgICAgIHBhZGRpbmc6IDAgLjVlbTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICB3aWR0aDogOGVtO1xuICAgIH1cbn1cblxuLmNhbGVuZGFyIHtcbiAgICBoZWlnaHQ6IDMuNWVtO1xuICAgIHdpZHRoOiAzLjVlbTtcbiAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjY2M7XG4gICAgYm9yZGVyLXJhZGl1czogMDtcblxuICAgICZbYXJpYS1leHBhbmRlZF0ge1xuICAgICAgICBjb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgfVxuXG4gICAgYXBwLWljb24ge1xuICAgICAgICBmb250LXNpemU6IDJlbTtcbiAgICB9XG59XG5cbi5kYXRlLXBpY2tlciB7XG4gICAgaGVpZ2h0OiAyNi41ZW07XG4gICAgJjpob3ZlciB7XG4gICAgICAgIGJhY2tncm91bmQ6IG5vbmU7XG4gICAgfVxufVxuXG4uYWRkLWl0ZW0ge1xuICAgIGkge1xuICAgICAgICBmb250LXNpemU6IDEuNWVtO1xuICAgIH1cblxuICAgIGJ1dHRvbiB7XG4gICAgICAgIGJveC1zaGFkb3c6IG5vbmU7XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4udG9wYmFyLWhlYWRlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGhlaWdodDogMy41ZW07XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG59XG4udG9wYmFyLWhlYWRlciAuaWNvbiB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiA1MCU7XG59XG5cbi5kYXRlIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLnBpY2tlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgaGVpZ2h0OiAyLjVlbTtcbiAgbWFyZ2luOiAwIDAuNWVtO1xufVxuLnBpY2tlciBidXR0b24ge1xuICBib3JkZXItcmFkaXVzOiAwO1xufVxuLnBpY2tlciAudGV4dCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjY2M7XG4gIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICNjY2M7XG4gIHBhZGRpbmc6IDAgMC41ZW07XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDhlbTtcbn1cblxuLmNhbGVuZGFyIHtcbiAgaGVpZ2h0OiAzLjVlbTtcbiAgd2lkdGg6IDMuNWVtO1xuICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjY2M7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG59XG4uY2FsZW5kYXJbYXJpYS1leHBhbmRlZF0ge1xuICBjb2xvcjogIzE5MzdlYTtcbn1cbi5jYWxlbmRhciBhcHAtaWNvbiB7XG4gIGZvbnQtc2l6ZTogMmVtO1xufVxuXG4uZGF0ZS1waWNrZXIge1xuICBoZWlnaHQ6IDI2LjVlbTtcbn1cbi5kYXRlLXBpY2tlcjpob3ZlciB7XG4gIGJhY2tncm91bmQ6IG5vbmU7XG59XG5cbi5hZGQtaXRlbSBpIHtcbiAgZm9udC1zaXplOiAxLjVlbTtcbn1cbi5hZGQtaXRlbSBidXR0b24ge1xuICBib3gtc2hhZG93OiBub25lO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -30301,6 +30340,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/shared/shared.module */
     "./src/app/shared/shared.module.ts");
 
+    var overlays_module_1 = __webpack_require__(
+    /*! src/app/overlays/overlays.module */
+    "./src/app/overlays/overlays.module.ts");
+
     var orders_component_1 = __webpack_require__(
     /*! ./orders/orders.component */
     "./src/app/shell/catering/orders/orders.component.ts");
@@ -30542,6 +30585,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/table.js");
 
     var i48 = __webpack_require__(
+    /*! ../../overlays/confirm-modal/confirm-modal.component */
+    "./src/app/overlays/confirm-modal/confirm-modal.component.ts");
+
+    var i49 = __webpack_require__(
+    /*! ../../overlays/new-user-modal/new-user-modal.component */
+    "./src/app/overlays/new-user-modal/new-user-modal.component.ts");
+
+    var i50 = __webpack_require__(
+    /*! ../../overlays/space-select-modal/space-select-modal.component */
+    "./src/app/overlays/space-select-modal/space-select-modal.component.ts");
+
+    var i51 = __webpack_require__(
+    /*! ../../overlays/recurrence-modal/recurrence-modal.component */
+    "./src/app/overlays/recurrence-modal/recurrence-modal.component.ts");
+
+    var i52 = __webpack_require__(
+    /*! ../../overlays/meeting-details-modal/meeting-details-modal.component */
+    "./src/app/overlays/meeting-details-modal/meeting-details-modal.component.ts");
+
+    var i53 = __webpack_require__(
+    /*! ../../overlays/private-details-modal/private-details-modal.component */
+    "./src/app/overlays/private-details-modal/private-details-modal.component.ts");
+
+    var i54 = __webpack_require__(
+    /*! ../../overlays/booking-modal/booking-modal.component */
+    "./src/app/overlays/booking-modal/booking-modal.component.ts");
+
+    var i55 = __webpack_require__(
+    /*! ../../overlays/requirement-details-modal/requirement-details-modal.component */
+    "./src/app/overlays/requirement-details-modal/requirement-details-modal.component.ts");
+
+    var i56 = __webpack_require__(
+    /*! ../../overlays/booking-modal/catering/order-details/order-details.component */
+    "./src/app/overlays/booking-modal/catering/order-details/order-details.component.ts");
+
+    var i57 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
     "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
@@ -30568,13 +30647,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       factory: function CateringModule_Factory(t) {
         return new (t || CateringModule)();
       },
-      imports: [[common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule]]
+      imports: [[common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule, overlays_module_1.SharedOverlaysModule]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CateringModule, {
         declarations: [catering_component_1.CateringComponent, orders_component_1.CateringOrdersComponent, menu_component_1.CateringMenuComponent, item_list_component_1.CateringMenuItemListComponent, item_component_1.CateringMenuItemComponent, category_modal_component_1.CateringCategoryModalComponent, group_modal_component_1.CateringGroupModalComponent, item_modal_component_1.CateringItemModalComponent, item_component_2.CateringOrdersItemComponent, order_details_modal_component_1.OrderDetailsModalComponent, items_component_1.OrderDetailsItemsComponent, booking_details_component_1.OrderBookingDetailsComponent, messages_component_1.OrderDetailsNotesComponent],
-        imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, i1.RouterModule, shared_module_1.SharedContentModule]
+        imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, i1.RouterModule, shared_module_1.SharedContentModule, overlays_module_1.SharedOverlaysModule]
       });
     })();
     /*@__PURE__*/
@@ -30585,12 +30664,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: core_1.NgModule,
         args: [{
           declarations: [catering_component_1.CateringComponent, orders_component_1.CateringOrdersComponent, menu_component_1.CateringMenuComponent, item_list_component_1.CateringMenuItemListComponent, item_component_1.CateringMenuItemComponent, category_modal_component_1.CateringCategoryModalComponent, group_modal_component_1.CateringGroupModalComponent, item_modal_component_1.CateringItemModalComponent, item_component_2.CateringOrdersItemComponent, order_details_modal_component_1.OrderDetailsModalComponent, items_component_1.OrderDetailsItemsComponent, booking_details_component_1.OrderBookingDetailsComponent, messages_component_1.OrderDetailsNotesComponent],
-          imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule]
+          imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule, overlays_module_1.SharedOverlaysModule]
         }]
       }], null, null);
     })();
 
-    i0.ɵɵsetComponentScope(item_list_component_1.CateringMenuItemListComponent, [i2.NgClass, i2.NgComponentOutlet, i2.NgForOf, i2.NgIf, i2.NgTemplateOutlet, i2.NgStyle, i2.NgSwitch, i2.NgSwitchCase, i2.NgSwitchDefault, i2.NgPlural, i2.NgPluralCase, i3.ɵangular_packages_forms_forms_y, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i3.DefaultValueAccessor, i3.NumberValueAccessor, i3.RangeValueAccessor, i3.CheckboxControlValueAccessor, i3.SelectControlValueAccessor, i3.SelectMultipleControlValueAccessor, i3.RadioControlValueAccessor, i3.NgControlStatus, i3.NgControlStatusGroup, i3.RequiredValidator, i3.MinLengthValidator, i3.MaxLengthValidator, i3.PatternValidator, i3.CheckboxRequiredValidator, i3.EmailValidator, i3.NgModel, i3.NgModelGroup, i3.NgForm, i3.FormControlDirective, i3.FormGroupDirective, i3.FormControlName, i3.FormGroupName, i3.FormArrayName, i1.RouterOutlet, i1.RouterLink, i1.RouterLinkWithHref, i1.RouterLinkActive, i1.ɵangular_packages_router_router_l, i4.ɵa, i4.ɵb, i5.ADatePickerComponent, i6.BaseDirective, i7.LoginComponent, i8.IconComponent, i9.ActionIconComponent, i10.TopbarHeaderComponent, i11.SearchbarComponent, i12.UserAvatarComponent, i13.UserFormComponent, i14.BookingFormComponent, i15.PopoutMenuComponent, i16.FeedbackComponent, i17.SidebarComponent, i18.CdkDropListScrollContainer, i19.DateFieldComponent, i20.ActionFieldComponent, i21.TimeFieldComponent, i22.DurationFieldComponent, i23.UserSearchFieldComponent, i24.UserListFieldComponent, i25.CounterComponent, i26.MatButton, i26.MatAnchor, i27.Dir, i28.MatSnackBarContainer, i29.MatDialogContainer, i29.MatDialogClose, i29.MatDialogTitle, i29.MatDialogContent, i29.MatDialogActions, i30.MatError, i30.MatFormField, i30.MatHint, i30.MatLabel, i30.MatPlaceholder, i30.MatPrefix, i30.MatSuffix, i31.CdkAutofill, i31.CdkTextareaAutosize, i32.MatInput, i32.MatTextareaAutosize, i33.MatProgressSpinner, i33.MatSpinner, i34.MatProgressBar, i35.MatAutocomplete, i36.MatOption, i36.MatOptgroup, i35.MatAutocompleteTrigger, i35.MatAutocompleteOrigin, i37.MatSelect, i37.MatSelectTrigger, i38.MatChipList, i38.MatChip, i38.MatChipInput, i38.MatChipRemove, i38.MatChipAvatar, i38.MatChipTrailingIcon, i36.MatRipple, i39._MatMenu, i39.MatMenuItem, i39.MatMenuTrigger, i39.MatMenuContent, i40.MatCheckbox, i40.MatCheckboxRequiredValidator, i41.MatTooltip, i41.TooltipComponent, i42.MatRadioGroup, i42.MatRadioButton, i43.MatTabGroup, i43.MatTabLabel, i43.MatTab, i43.MatTabNav, i43.MatTabLink, i43.MatTabContent, i44.MatSlideToggleRequiredValidator, i44.MatSlideToggle, i45.CdkFixedSizeVirtualScroll, i45.CdkScrollable, i45.CdkVirtualForOf, i45.CdkVirtualScrollViewport, i46.CdkDropList, i46.CdkDropListGroup, i46.CdkDrag, i46.CdkDragHandle, i46.CdkDragPreview, i46.CdkDragPlaceholder, i47.CdkTable, i47.CdkRowDef, i47.CdkCellDef, i47.CdkCellOutlet, i47.CdkHeaderCellDef, i47.CdkFooterCellDef, i47.CdkColumnDef, i47.CdkCell, i47.CdkRow, i47.CdkHeaderCell, i47.CdkFooterCell, i47.CdkHeaderRow, i47.CdkHeaderRowDef, i47.CdkFooterRow, i47.CdkFooterRowDef, i47.DataRowOutlet, i47.HeaderRowOutlet, i47.FooterRowOutlet, i47.CdkTextColumn, catering_component_1.CateringComponent, orders_component_1.CateringOrdersComponent, menu_component_1.CateringMenuComponent, item_list_component_1.CateringMenuItemListComponent, item_component_1.CateringMenuItemComponent, category_modal_component_1.CateringCategoryModalComponent, group_modal_component_1.CateringGroupModalComponent, item_modal_component_1.CateringItemModalComponent, item_component_2.CateringOrdersItemComponent, order_details_modal_component_1.OrderDetailsModalComponent, items_component_1.OrderDetailsItemsComponent, booking_details_component_1.OrderBookingDetailsComponent, messages_component_1.OrderDetailsNotesComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i48.ɵa, i48.ɵb]);
+    i0.ɵɵsetComponentScope(item_list_component_1.CateringMenuItemListComponent, [i2.NgClass, i2.NgComponentOutlet, i2.NgForOf, i2.NgIf, i2.NgTemplateOutlet, i2.NgStyle, i2.NgSwitch, i2.NgSwitchCase, i2.NgSwitchDefault, i2.NgPlural, i2.NgPluralCase, i3.ɵangular_packages_forms_forms_y, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i3.DefaultValueAccessor, i3.NumberValueAccessor, i3.RangeValueAccessor, i3.CheckboxControlValueAccessor, i3.SelectControlValueAccessor, i3.SelectMultipleControlValueAccessor, i3.RadioControlValueAccessor, i3.NgControlStatus, i3.NgControlStatusGroup, i3.RequiredValidator, i3.MinLengthValidator, i3.MaxLengthValidator, i3.PatternValidator, i3.CheckboxRequiredValidator, i3.EmailValidator, i3.NgModel, i3.NgModelGroup, i3.NgForm, i3.FormControlDirective, i3.FormGroupDirective, i3.FormControlName, i3.FormGroupName, i3.FormArrayName, i1.RouterOutlet, i1.RouterLink, i1.RouterLinkWithHref, i1.RouterLinkActive, i1.ɵangular_packages_router_router_l, i4.ɵa, i4.ɵb, i5.ADatePickerComponent, i6.BaseDirective, i7.LoginComponent, i8.IconComponent, i9.ActionIconComponent, i10.TopbarHeaderComponent, i11.SearchbarComponent, i12.UserAvatarComponent, i13.UserFormComponent, i14.BookingFormComponent, i15.PopoutMenuComponent, i16.FeedbackComponent, i17.SidebarComponent, i18.CdkDropListScrollContainer, i19.DateFieldComponent, i20.ActionFieldComponent, i21.TimeFieldComponent, i22.DurationFieldComponent, i23.UserSearchFieldComponent, i24.UserListFieldComponent, i25.CounterComponent, i26.MatButton, i26.MatAnchor, i27.Dir, i28.MatSnackBarContainer, i29.MatDialogContainer, i29.MatDialogClose, i29.MatDialogTitle, i29.MatDialogContent, i29.MatDialogActions, i30.MatError, i30.MatFormField, i30.MatHint, i30.MatLabel, i30.MatPlaceholder, i30.MatPrefix, i30.MatSuffix, i31.CdkAutofill, i31.CdkTextareaAutosize, i32.MatInput, i32.MatTextareaAutosize, i33.MatProgressSpinner, i33.MatSpinner, i34.MatProgressBar, i35.MatAutocomplete, i36.MatOption, i36.MatOptgroup, i35.MatAutocompleteTrigger, i35.MatAutocompleteOrigin, i37.MatSelect, i37.MatSelectTrigger, i38.MatChipList, i38.MatChip, i38.MatChipInput, i38.MatChipRemove, i38.MatChipAvatar, i38.MatChipTrailingIcon, i36.MatRipple, i39._MatMenu, i39.MatMenuItem, i39.MatMenuTrigger, i39.MatMenuContent, i40.MatCheckbox, i40.MatCheckboxRequiredValidator, i41.MatTooltip, i41.TooltipComponent, i42.MatRadioGroup, i42.MatRadioButton, i43.MatTabGroup, i43.MatTabLabel, i43.MatTab, i43.MatTabNav, i43.MatTabLink, i43.MatTabContent, i44.MatSlideToggleRequiredValidator, i44.MatSlideToggle, i45.CdkFixedSizeVirtualScroll, i45.CdkScrollable, i45.CdkVirtualForOf, i45.CdkVirtualScrollViewport, i46.CdkDropList, i46.CdkDropListGroup, i46.CdkDrag, i46.CdkDragHandle, i46.CdkDragPreview, i46.CdkDragPlaceholder, i47.CdkTable, i47.CdkRowDef, i47.CdkCellDef, i47.CdkCellOutlet, i47.CdkHeaderCellDef, i47.CdkFooterCellDef, i47.CdkColumnDef, i47.CdkCell, i47.CdkRow, i47.CdkHeaderCell, i47.CdkFooterCell, i47.CdkHeaderRow, i47.CdkHeaderRowDef, i47.CdkFooterRow, i47.CdkFooterRowDef, i47.DataRowOutlet, i47.HeaderRowOutlet, i47.FooterRowOutlet, i47.CdkTextColumn, i48.ConfirmModalComponent, i49.NewUserModalComponent, i50.SpaceSelectModalComponent, i51.RecurrenceModalComponent, i52.MeetingDetailsModalComponent, i53.PrivateDetailsModalComponent, i54.BookingModalComponent, i55.RequirementDetailsModalComponent, i56.BookingCateringOrderDetailsComponent, catering_component_1.CateringComponent, orders_component_1.CateringOrdersComponent, menu_component_1.CateringMenuComponent, item_list_component_1.CateringMenuItemListComponent, item_component_1.CateringMenuItemComponent, category_modal_component_1.CateringCategoryModalComponent, group_modal_component_1.CateringGroupModalComponent, item_modal_component_1.CateringItemModalComponent, item_component_2.CateringOrdersItemComponent, order_details_modal_component_1.OrderDetailsModalComponent, items_component_1.OrderDetailsItemsComponent, booking_details_component_1.OrderBookingDetailsComponent, messages_component_1.OrderDetailsNotesComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i57.ɵa, i57.ɵb]);
     /***/
   },
 
@@ -34558,6 +34637,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       value: true
     });
 
+    var tslib_1 = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
     var core_1 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -34570,126 +34653,222 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/catering/catering-order.class */
     "./src/app/services/data/catering/catering-order.class.ts");
 
+    var app_service_1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
+    var bookings_service_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/bookings.service */
+    "./src/app/services/data/bookings/bookings.service.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
+    var i2 = __webpack_require__(
+    /*! src/app/services/data/bookings/bookings.service */
+    "./src/app/services/data/bookings/bookings.service.ts");
+
+    var i3 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i2 = __webpack_require__(
+    var i4 = __webpack_require__(
+    /*! ../../../../../overlays/booking-modal/catering/order-details/order-details.component */
+    "./src/app/overlays/booking-modal/catering/order-details/order-details.component.ts");
+
+    var i5 = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
-    var i3 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! ../../../../../shared/components/icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
 
-    function OrderDetailsItemsComponent_ng_container_3_div_1_ng_container_6_div_1_ng_container_3_div_1_Template(rf, ctx) {
+    var i7 = __webpack_require__(
+    /*! @angular/material/progress-spinner */
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
+
+    function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_ng_container_3_div_1_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 12);
-        i0.ɵɵelementStart(1, "div", 8);
+        i0.ɵɵelementStart(0, "div", 15);
+        i0.ɵɵelementStart(1, "div", 11);
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var sub_sub_item_r10 = ctx.$implicit;
+        var sub_sub_item_r16 = ctx.$implicit;
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(sub_sub_item_r10.name);
+        i0.ɵɵtextInterpolate(sub_sub_item_r16.name);
       }
     }
 
-    function OrderDetailsItemsComponent_ng_container_3_div_1_ng_container_6_div_1_ng_container_3_Template(rf, ctx) {
+    function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_ng_container_3_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, OrderDetailsItemsComponent_ng_container_3_div_1_ng_container_6_div_1_ng_container_3_div_1_Template, 3, 1, "div", 11);
+        i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_ng_container_3_div_1_Template, 3, 1, "div", 14);
         i0.ɵɵelementContainerEnd();
       }
 
       if (rf & 2) {
-        var sub_item_r7 = i0.ɵɵnextContext().$implicit;
+        var sub_item_r13 = i0.ɵɵnextContext().$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", sub_item_r7.items);
+        i0.ɵɵproperty("ngForOf", sub_item_r13.items);
       }
     }
 
-    function OrderDetailsItemsComponent_ng_container_3_div_1_ng_container_6_div_1_Template(rf, ctx) {
+    function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 12);
-        i0.ɵɵelementStart(1, "div", 8);
+        i0.ɵɵelementStart(0, "div", 15);
+        i0.ɵɵelementStart(1, "div", 11);
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(3, OrderDetailsItemsComponent_ng_container_3_div_1_ng_container_6_div_1_ng_container_3_Template, 2, 1, "ng-container", 10);
+        i0.ɵɵtemplate(3, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_ng_container_3_Template, 2, 1, "ng-container", 13);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var sub_item_r7 = ctx.$implicit;
+        var sub_item_r13 = ctx.$implicit;
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(sub_item_r7.name);
+        i0.ɵɵtextInterpolate(sub_item_r13.name);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", sub_item_r7.items);
+        i0.ɵɵproperty("ngIf", sub_item_r13.items);
       }
     }
 
-    function OrderDetailsItemsComponent_ng_container_3_div_1_ng_container_6_Template(rf, ctx) {
+    function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, OrderDetailsItemsComponent_ng_container_3_div_1_ng_container_6_div_1_Template, 4, 2, "div", 11);
+        i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_Template, 4, 2, "div", 14);
         i0.ɵɵelementContainerEnd();
       }
 
       if (rf & 2) {
-        var item_r4 = i0.ɵɵnextContext().$implicit;
+        var item_r10 = i0.ɵɵnextContext().$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", item_r4.items);
+        i0.ɵɵproperty("ngForOf", item_r10.items);
       }
     }
 
-    function OrderDetailsItemsComponent_ng_container_3_div_1_Template(rf, ctx) {
+    function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 6);
-        i0.ɵɵelementStart(1, "div", 7);
-        i0.ɵɵelementStart(2, "div", 8);
+        i0.ɵɵelementStart(0, "div", 9);
+        i0.ɵɵelementStart(1, "div", 10);
+        i0.ɵɵelementStart(2, "div", 11);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 9);
+        i0.ɵɵelementStart(4, "div", 12);
         i0.ɵɵtext(5);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(6, OrderDetailsItemsComponent_ng_container_3_div_1_ng_container_6_Template, 2, 1, "ng-container", 10);
+        i0.ɵɵtemplate(6, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_Template, 2, 1, "ng-container", 13);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var item_r4 = ctx.$implicit;
+        var item_r10 = ctx.$implicit;
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate(item_r4.name);
+        i0.ɵɵtextInterpolate(item_r10.name);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("x", item_r4.amount, "");
+        i0.ɵɵtextInterpolate1("x", item_r10.amount, "");
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", item_r4.items);
+        i0.ɵɵproperty("ngIf", item_r10.items);
       }
     }
 
-    function OrderDetailsItemsComponent_ng_container_3_Template(rf, ctx) {
+    function OrderDetailsItemsComponent_div_2_ng_container_1_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, OrderDetailsItemsComponent_ng_container_3_div_1_Template, 7, 3, "div", 5);
+        i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_Template, 7, 3, "div", 8);
         i0.ɵɵelementContainerEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r8 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngForOf", ctx_r8.items);
+      }
+    }
+
+    function OrderDetailsItemsComponent_div_2_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 6);
+        i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_Template, 2, 1, "ng-container", 7);
+        i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
         var ctx_r0 = i0.ɵɵnextContext();
+
+        var _r4 = i0.ɵɵreference(7);
+
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r0.items);
+        i0.ɵɵproperty("ngIf", ctx_r0.items && ctx_r0.items.length)("ngIfElse", _r4);
       }
     }
 
-    var _c0 = function _c0() {
+    var _c0 = function _c0(a0) {
+      return [a0];
+    };
+
+    function OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r21 = i0.ɵɵgetCurrentView();
+
+        i0.ɵɵelementStart(0, "a-catering-order-details", 18);
+        i0.ɵɵlistener("event", function OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template_a_catering_order_details_event_0_listener($event) {
+          i0.ɵɵrestoreView(_r21);
+          var ctx_r20 = i0.ɵɵnextContext(2);
+          return $event ? ctx_r20.handleOrderEvent($event) : ctx_r20.editing = false;
+        });
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r19 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("space_list", i0.ɵɵpureFunction1(7, _c0, ctx_r19.booking.space))("order", ctx_r19.order)("date", ctx_r19.booking.date)("duration", ctx_r19.booking.duration)("all_day", ctx_r19.booking.all_day)("hide_details", true)("compact", true);
+      }
+    }
+
+    function OrderDetailsItemsComponent_ng_template_3_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 16);
+        i0.ɵɵtemplate(1, OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template, 1, 9, "a-catering-order-details", 17);
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r2 = i0.ɵɵnextContext();
+
+        var _r6 = i0.ɵɵreference(9);
+
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx_r2.loading)("ngIfElse", _r6);
+      }
+    }
+
+    function OrderDetailsItemsComponent_button_5_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r23 = i0.ɵɵgetCurrentView();
+
+        i0.ɵɵelementStart(0, "button", 19);
+        i0.ɵɵlistener("click", function OrderDetailsItemsComponent_button_5_Template_button_click_0_listener() {
+          i0.ɵɵrestoreView(_r23);
+          var ctx_r22 = i0.ɵɵnextContext();
+          return ctx_r22.editOrder();
+        });
+        i0.ɵɵtext(1, " Edit Order\n");
+        i0.ɵɵelementEnd();
+      }
+    }
+
+    var _c1 = function _c1() {
       return {
         "class": "material-icons",
         content: "close"
@@ -34698,11 +34877,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function OrderDetailsItemsComponent_ng_template_6_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 13);
-        i0.ɵɵelementStart(1, "div", 14);
-        i0.ɵɵelement(2, "app-icon", 15);
+        i0.ɵɵelementStart(0, "div", 20);
+        i0.ɵɵelementStart(1, "div", 21);
+        i0.ɵɵelement(2, "app-icon", 22);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "div", 16);
+        i0.ɵɵelementStart(3, "div", 23);
         i0.ɵɵtext(4, " No items in order ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -34710,21 +34889,101 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(1, _c0));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(1, _c1));
+      }
+    }
+
+    function OrderDetailsItemsComponent_ng_template_8_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 20);
+        i0.ɵɵelementStart(1, "div", 21);
+        i0.ɵɵelement(2, "mat-spinner", 24);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "div", 23);
+        i0.ɵɵtext(4, " Updating order ");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
       }
     }
 
     var OrderDetailsItemsComponent =
     /*#__PURE__*/
     function () {
-      function OrderDetailsItemsComponent() {
+      function OrderDetailsItemsComponent(_service, _bookings) {
         _classCallCheck(this, OrderDetailsItemsComponent);
+
+        this._service = _service;
+        this._bookings = _bookings;
       }
+      /** List of items in the order */
+
 
       _createClass(OrderDetailsItemsComponent, [{
-        key: "items",
+        key: "editOrder",
+        value: function editOrder() {
+          this.editing = true;
+        }
+        /** Handle changes to catering order */
 
-        /** List of items in the order */
+      }, {
+        key: "handleOrderEvent",
+        value: function handleOrderEvent(order) {
+          return tslib_1.__awaiter(this, void 0, void 0,
+          /*#__PURE__*/
+          regeneratorRuntime.mark(function _callee22() {
+            var _this167 = this;
+
+            var orders, index, new_booking, booking;
+            return regeneratorRuntime.wrap(function _callee22$(_context22) {
+              while (1) {
+                switch (_context22.prev = _context22.next) {
+                  case 0:
+                    if (!order) {
+                      _context22.next = 11;
+                      break;
+                    }
+
+                    orders = _toConsumableArray(this.booking.catering);
+                    index = orders.findIndex(function (an_order) {
+                      return order.id === an_order.id;
+                    });
+
+                    if (index < 0) {
+                      orders.push(order);
+                    } else {
+                      orders.splice(index, 1, order);
+                    }
+
+                    this.loading = true;
+                    new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), {
+                      catering: orders
+                    }));
+                    _context22.next = 8;
+                    return this._bookings.save(new_booking)["catch"](function (err) {
+                      return _this167._service.notifyError("Error unable to update order. Error: ".concat(err.message || err));
+                    });
+
+                  case 8:
+                    booking = _context22.sent;
+
+                    if (booking) {
+                      this.booking = booking;
+                      this.order = order;
+                      this.editing = false;
+                    }
+
+                    this.loading = false;
+
+                  case 11:
+                  case "end":
+                    return _context22.stop();
+                }
+              }
+            }, _callee22, this);
+          }));
+        }
+      }, {
+        key: "items",
         get: function get() {
           return this.order.items || [];
         }
@@ -34736,7 +34995,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.OrderDetailsItemsComponent = OrderDetailsItemsComponent;
 
     OrderDetailsItemsComponent.ɵfac = function OrderDetailsItemsComponent_Factory(t) {
-      return new (t || OrderDetailsItemsComponent)();
+      return new (t || OrderDetailsItemsComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService));
     };
 
     OrderDetailsItemsComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -34746,32 +35005,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         booking: "booking",
         order: "order"
       },
-      decls: 8,
-      vars: 2,
-      consts: [[1, "heading"], [1, "content"], [4, "ngIf", "ngIfElse"], ["mat-button", "", 1, "footer"], ["empty_state", ""], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "amount"], [4, "ngIf"], ["class", "sub-item", 4, "ngFor", "ngForOf"], [1, "sub-item"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"]],
+      decls: 10,
+      vars: 4,
+      consts: [[1, "heading"], ["class", "content padded", 4, "ngIf", "ngIfElse"], ["edit_state", ""], ["class", "footer", "mat-button", "", 3, "click", 4, "ngIf"], ["empty_state", ""], ["load_state", ""], [1, "content", "padded"], [4, "ngIf", "ngIfElse"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "amount"], [4, "ngIf"], ["class", "sub-item", 4, "ngFor", "ngForOf"], [1, "sub-item"], [1, "content"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event", 4, "ngIf", "ngIfElse"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event"], ["mat-button", "", 1, "footer", 3, "click"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"], ["diameter", "32"]],
       template: function OrderDetailsItemsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
-          i0.ɵɵtext(1, " Order Details\n");
+          i0.ɵɵtext(1);
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(2, "div", 1);
-          i0.ɵɵtemplate(3, OrderDetailsItemsComponent_ng_container_3_Template, 2, 1, "ng-container", 2);
-          i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(4, "button", 3);
-          i0.ɵɵtext(5, " Edit Order\n");
-          i0.ɵɵelementEnd();
+          i0.ɵɵtemplate(2, OrderDetailsItemsComponent_div_2_Template, 2, 2, "div", 1);
+          i0.ɵɵtemplate(3, OrderDetailsItemsComponent_ng_template_3_Template, 2, 2, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
+          i0.ɵɵtemplate(5, OrderDetailsItemsComponent_button_5_Template, 2, 0, "button", 3);
           i0.ɵɵtemplate(6, OrderDetailsItemsComponent_ng_template_6_Template, 5, 2, "ng-template", null, 4, i0.ɵɵtemplateRefExtractor);
+          i0.ɵɵtemplate(8, OrderDetailsItemsComponent_ng_template_8_Template, 5, 0, "ng-template", null, 5, i0.ɵɵtemplateRefExtractor);
         }
 
         if (rf & 2) {
-          var _r1 = i0.ɵɵreference(7);
+          var _r1 = i0.ɵɵreference(4);
 
+          i0.ɵɵadvance(1);
+          i0.ɵɵtextInterpolate1(" ", ctx.editing ? "Edit Order" : "Order Details", "\n");
+          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("ngIf", !ctx.editing)("ngIfElse", _r1);
           i0.ɵɵadvance(3);
-          i0.ɵɵproperty("ngIf", ctx.items && ctx.items.length)("ngIfElse", _r1);
+          i0.ɵɵproperty("ngIf", !ctx.editing);
         }
       },
-      directives: [i1.NgIf, i2.MatButton, i1.NgForOf, i3.IconComponent],
-      styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n}\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.heading[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 1em;\n  font-weight: 500;\n  background-color: #ccc;\n}\n.content[_ngcontent-%COMP%] {\n  flex: 1;\n  min-height: 50%;\n  overflow: auto;\n  padding: 0.5em 0.5em;\n}\n.item[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  border-radius: 4px;\n  transition: background-color 200ms;\n  padding: 0.5em;\n}\n.item[_ngcontent-%COMP%]:hover {\n  background-color: #f0f0f0;\n}\n.sub-item[_ngcontent-%COMP%] {\n  padding: 0.5em 1em 0;\n  font-size: 0.75rem;\n}\n.details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.name[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n.name[_ngcontent-%COMP%]:hover {\n  white-space: initial;\n}\n.amount[_ngcontent-%COMP%] {\n  margin-left: 1em;\n}\n.footer[_ngcontent-%COMP%] {\n  width: 100%;\n  border-radius: 0;\n  padding: 0.35em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL2l0ZW1zL2l0ZW1zLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL2l0ZW1zL2l0ZW1zLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtBQ0FKO0FEQ0k7RUFDSSxXQUFBO0FDQ1I7QURHQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0Esc0JBQUE7QUNBSjtBREdBO0VBQ0ksT0FBQTtFQUNBLGVBQUE7RUFDQSxjQUFBO0VBQ0Esb0JBQUE7QUNBSjtBREdBO0VBQ0ksZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLGtDQUFBO0VBQ0EsY0FBQTtBQ0FKO0FERUk7RUFDSSx5QkFBQTtBQ0FSO0FESUE7RUFDSSxvQkFBQTtFQUNBLGtCQUFBO0FDREo7QURNQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ0hKO0FETUE7RUFDSSxPQUFBO0VBQ0EsY0FBQTtFQUNBLGdCQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQ0hKO0FESUk7RUFDSSxvQkFBQTtBQ0ZSO0FETUE7RUFDSSxnQkFBQTtBQ0hKO0FETUE7RUFDSSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0FDSEoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL2l0ZW1zL2l0ZW1zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG46aG9zdCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgID4gKiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbn1cblxuLmhlYWRpbmcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAxZW07XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2NjO1xufVxuXG4uY29udGVudCB7XG4gICAgZmxleDogMTtcbiAgICBtaW4taGVpZ2h0OiA1MCU7XG4gICAgb3ZlcmZsb3c6IGF1dG87XG4gICAgcGFkZGluZzogLjVlbSAuNWVtO1xufVxuXG4uaXRlbSB7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDIwMG1zO1xuICAgIHBhZGRpbmc6IC41ZW07XG5cbiAgICAmOmhvdmVyIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcbiAgICB9XG59XG5cbi5zdWItaXRlbSB7XG4gICAgcGFkZGluZzogLjVlbSAxZW0gMDtcbiAgICBmb250LXNpemU6IC43NXJlbTtcblxuXG59XG5cbi5kZXRhaWxzIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5uYW1lIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogNTAlO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbiAgICAmOmhvdmVyIHtcbiAgICAgICAgd2hpdGUtc3BhY2U6IGluaXRpYWw7XG4gICAgfVxufVxuXG4uYW1vdW50IHtcbiAgICBtYXJnaW4tbGVmdDogMWVtO1xufVxuXG4uZm9vdGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuICAgIHBhZGRpbmc6IC4zNWVtO1xufVxuIiwiOmhvc3Qge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xufVxuOmhvc3QgPiAqIHtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5oZWFkaW5nIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHBhZGRpbmc6IDFlbTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NjYztcbn1cblxuLmNvbnRlbnQge1xuICBmbGV4OiAxO1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIG92ZXJmbG93OiBhdXRvO1xuICBwYWRkaW5nOiAwLjVlbSAwLjVlbTtcbn1cblxuLml0ZW0ge1xuICBmb250LXNpemU6IDAuOGVtO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMjAwbXM7XG4gIHBhZGRpbmc6IDAuNWVtO1xufVxuLml0ZW06aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjBmMGYwO1xufVxuXG4uc3ViLWl0ZW0ge1xuICBwYWRkaW5nOiAwLjVlbSAxZW0gMDtcbiAgZm9udC1zaXplOiAwLjc1cmVtO1xufVxuXG4uZGV0YWlscyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5uYW1lIHtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiA1MCU7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuLm5hbWU6aG92ZXIge1xuICB3aGl0ZS1zcGFjZTogaW5pdGlhbDtcbn1cblxuLmFtb3VudCB7XG4gIG1hcmdpbi1sZWZ0OiAxZW07XG59XG5cbi5mb290ZXIge1xuICB3aWR0aDogMTAwJTtcbiAgYm9yZGVyLXJhZGl1czogMDtcbiAgcGFkZGluZzogMC4zNWVtO1xufSJdfQ== */"]
+      directives: [i3.NgIf, i3.NgForOf, i4.BookingCateringOrderDetailsComponent, i5.MatButton, i6.IconComponent, i7.MatSpinner],
+      styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n}\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.heading[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 1em;\n  font-weight: 500;\n  background-color: #ccc;\n}\n.content[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  min-height: 50%;\n  overflow: auto;\n}\n.padded[_ngcontent-%COMP%] {\n  padding: 0.5em 0.5em;\n}\n.item[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  border-radius: 4px;\n  transition: background-color 200ms;\n  padding: 0.5em;\n}\n.item[_ngcontent-%COMP%]:hover {\n  background-color: #f0f0f0;\n}\n.sub-item[_ngcontent-%COMP%] {\n  padding: 0.5em 1em 0;\n  font-size: 0.75rem;\n}\n.details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.name[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n.name[_ngcontent-%COMP%]:hover {\n  white-space: initial;\n}\n.amount[_ngcontent-%COMP%] {\n  margin-left: 1em;\n}\n.footer[_ngcontent-%COMP%] {\n  width: 100%;\n  border-radius: 0;\n  padding: 0.35em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL2l0ZW1zL2l0ZW1zLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL2l0ZW1zL2l0ZW1zLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtBQ0FKO0FEQ0k7RUFDSSxXQUFBO0FDQ1I7QURHQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0Esc0JBQUE7QUNBSjtBREdBO0VBQ0ksa0JBQUE7RUFDQSxPQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7QUNBSjtBREdBO0VBQ0ksb0JBQUE7QUNBSjtBREdBO0VBQ0ksZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLGtDQUFBO0VBQ0EsY0FBQTtBQ0FKO0FERUk7RUFDSSx5QkFBQTtBQ0FSO0FESUE7RUFDSSxvQkFBQTtFQUNBLGtCQUFBO0FDREo7QURNQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ0hKO0FETUE7RUFDSSxPQUFBO0VBQ0EsY0FBQTtFQUNBLGdCQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQ0hKO0FESUk7RUFDSSxvQkFBQTtBQ0ZSO0FETUE7RUFDSSxnQkFBQTtBQ0hKO0FETUE7RUFDSSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0FDSEoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL2l0ZW1zL2l0ZW1zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG46aG9zdCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgID4gKiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbn1cblxuLmhlYWRpbmcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAxZW07XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2NjO1xufVxuXG4uY29udGVudCB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGZsZXg6IDE7XG4gICAgbWluLWhlaWdodDogNTAlO1xuICAgIG92ZXJmbG93OiBhdXRvO1xufVxuXG4ucGFkZGVkIHtcbiAgICBwYWRkaW5nOiAuNWVtIC41ZW07XG59XG5cbi5pdGVtIHtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMjAwbXM7XG4gICAgcGFkZGluZzogLjVlbTtcblxuICAgICY6aG92ZXIge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjBmMGYwO1xuICAgIH1cbn1cblxuLnN1Yi1pdGVtIHtcbiAgICBwYWRkaW5nOiAuNWVtIDFlbSAwO1xuICAgIGZvbnQtc2l6ZTogLjc1cmVtO1xuXG5cbn1cblxuLmRldGFpbHMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLm5hbWUge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xuICAgICY6aG92ZXIge1xuICAgICAgICB3aGl0ZS1zcGFjZTogaW5pdGlhbDtcbiAgICB9XG59XG5cbi5hbW91bnQge1xuICAgIG1hcmdpbi1sZWZ0OiAxZW07XG59XG5cbi5mb290ZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1yYWRpdXM6IDA7XG4gICAgcGFkZGluZzogLjM1ZW07XG59XG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG46aG9zdCA+ICoge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmhlYWRpbmcge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgcGFkZGluZzogMWVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2NjO1xufVxuXG4uY29udGVudCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZmxleDogMTtcbiAgbWluLWhlaWdodDogNTAlO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLnBhZGRlZCB7XG4gIHBhZGRpbmc6IDAuNWVtIDAuNWVtO1xufVxuXG4uaXRlbSB7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciAyMDBtcztcbiAgcGFkZGluZzogMC41ZW07XG59XG4uaXRlbTpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmMGYwZjA7XG59XG5cbi5zdWItaXRlbSB7XG4gIHBhZGRpbmc6IDAuNWVtIDFlbSAwO1xuICBmb250LXNpemU6IDAuNzVyZW07XG59XG5cbi5kZXRhaWxzIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLm5hbWUge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDUwJTtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG4ubmFtZTpob3ZlciB7XG4gIHdoaXRlLXNwYWNlOiBpbml0aWFsO1xufVxuXG4uYW1vdW50IHtcbiAgbWFyZ2luLWxlZnQ6IDFlbTtcbn1cblxuLmZvb3RlciB7XG4gIHdpZHRoOiAxMDAlO1xuICBib3JkZXItcmFkaXVzOiAwO1xuICBwYWRkaW5nOiAwLjM1ZW07XG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -34783,7 +35044,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           templateUrl: './items.component.html',
           styleUrls: ['./items.component.scss']
         }]
-      }], null, {
+      }], function () {
+        return [{
+          type: i1.ApplicationService
+        }, {
+          type: i2.BookingsService
+        }];
+      }, {
         booking: [{
           type: core_1.Input
         }],
@@ -34994,16 +35261,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function addNote() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee22() {
-            var _this167 = this;
+          regeneratorRuntime.mark(function _callee23() {
+            var _this168 = this;
 
             var user, notes, date, new_notes, pending_booking, new_booking;
-            return regeneratorRuntime.wrap(function _callee22$(_context22) {
+            return regeneratorRuntime.wrap(function _callee23$(_context23) {
               while (1) {
-                switch (_context22.prev = _context22.next) {
+                switch (_context23.prev = _context23.next) {
                   case 0:
                     if (!(this.booking && this.new_note)) {
-                      _context22.next = 15;
+                      _context23.next = 15;
                       break;
                     }
 
@@ -35023,16 +35290,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       notes: new_notes
                     }));
                     this.loading = true;
-                    _context22.next = 9;
+                    _context23.next = 9;
                     return pending_booking.save()["catch"](function (err) {
-                      _this167._service.notifyError("Failed to add note to order meeting. Error: ".concat(err.message || err));
+                      _this168._service.notifyError("Failed to add note to order meeting. Error: ".concat(err.message || err));
 
-                      _this167.loading = false;
+                      _this168.loading = false;
                       throw err;
                     });
 
                   case 9:
-                    new_booking = _context22.sent;
+                    new_booking = _context23.sent;
                     this.booking = new_booking;
                     this.order.booking = new_booking;
                     this.bookingChange.emit(new_booking);
@@ -35041,19 +35308,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 15:
                   case "end":
-                    return _context22.stop();
+                    return _context23.stop();
                 }
               }
-            }, _callee22, this);
+            }, _callee23, this);
           }));
         }
       }, {
         key: "notes",
         get: function get() {
-          var _this168 = this;
+          var _this169 = this;
 
           var notes = this.booking.notes.filter(function (note) {
-            return note.type === 'catering' && note.space === _this168.order.location_id && (!note.order_id || note.order_id === _this168.order.id);
+            return note.type === 'catering' && note.space === _this169.order.location_id && (!note.order_id || note.order_id === _this169.order.id);
           });
           notes.forEach(function (note) {
             note.time = dayjs(note.date).format('DD MMM, h:mm A');
@@ -35129,7 +35396,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [i3.NgIf, i4.MatFormField, i5.MatInput, i6.DefaultValueAccessor, i6.NgControlStatus, i6.NgModel, i7.MatButton, i4.MatSuffix, i8.ɵb, i9.IconComponent, i3.NgForOf, i10.MatSpinner],
-      styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n}\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.heading[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 1em;\n  font-weight: 500;\n  background-color: #ccc;\n}\n.content[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  min-height: 50%;\n  overflow: auto;\n  padding: 0.5em 1em;\n}\n.note[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  margin: 0.5em 0;\n}\n.note[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  font-weight: 500;\n  padding-bottom: 0.25em;\n  border-bottom: 1px solid #f0f0f0;\n}\n.details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  color: rgba(0, 0, 0, 0.6);\n  margin-top: 0.25em;\n  font-size: 0.9em;\n}\n.details[_ngcontent-%COMP%]   .fill[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 1px;\n}\n.footer[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  border-radius: 0;\n  border-top: 1px solid #ccc;\n}\n.footer[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  transform: translateY(0.25em);\n}\nmat-form-field[_ngcontent-%COMP%] {\n  height: 3.25em;\n  width: 100%;\n  padding: 0 0.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL21lc3NhZ2VzL21lc3NhZ2VzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL21lc3NhZ2VzL21lc3NhZ2VzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtBQ0FKO0FEQ0k7RUFDSSxXQUFBO0FDQ1I7QURHQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0Esc0JBQUE7QUNBSjtBREdBO0VBQ0ksa0JBQUE7RUFDQSxPQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtBQ0FKO0FER0E7RUFDSSxnQkFBQTtFQUNBLGVBQUE7QUNBSjtBREVJO0VBQ0ksZ0JBQUE7RUFDQSxzQkFBQTtFQUNBLGdDQUFBO0FDQVI7QURJQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxnQkFBQTtBQ0RKO0FER0k7RUFDSSxPQUFBO0VBQ0EsY0FBQTtBQ0RSO0FES0E7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxnQkFBQTtFQUNBLDBCQUFBO0FDRko7QURJSTtFQUNJLDZCQUFBO0FDRlI7QURNQTtFQUNJLGNBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7QUNISiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2NhdGVyaW5nL292ZXJsYXlzL29yZGVyLWRldGFpbHMtbW9kYWwvbWVzc2FnZXMvbWVzc2FnZXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbjpob3N0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgPiAqIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgfVxufVxuXG4uaGVhZGluZyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHBhZGRpbmc6IDFlbTtcbiAgICBmb250LXdlaWdodDogNTAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG59XG5cbi5jb250ZW50IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZmxleDogMTtcbiAgICBtaW4taGVpZ2h0OiA1MCU7XG4gICAgb3ZlcmZsb3c6IGF1dG87XG4gICAgcGFkZGluZzogLjVlbSAxZW07XG59XG5cbi5ub3RlIHtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgbWFyZ2luOiAuNWVtIDA7XG5cbiAgICAudGV4dCB7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gICAgICAgIHBhZGRpbmctYm90dG9tOiAuMjVlbTtcbiAgICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNmMGYwZjA7XG4gICAgfVxufVxuXG4uZGV0YWlscyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGNvbG9yOiByZ2JhKCMwMDAsIC42KTtcbiAgICBtYXJnaW4tdG9wOiAuMjVlbTtcbiAgICBmb250LXNpemU6IC45ZW07XG5cbiAgICAuZmlsbCB7XG4gICAgICAgIGZsZXg6IDE7XG4gICAgICAgIG1pbi13aWR0aDogMXB4O1xuICAgIH1cbn1cblxuLmZvb3RlciB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1yYWRpdXM6IDA7XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG5cbiAgICBidXR0b24ge1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLjI1ZW0pO1xuICAgIH1cbn1cblxubWF0LWZvcm0tZmllbGQge1xuICAgIGhlaWdodDogMy4yNWVtO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBhZGRpbmc6IDAgLjVlbTtcbn1cbiIsIjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbn1cbjpob3N0ID4gKiB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uaGVhZGluZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBwYWRkaW5nOiAxZW07XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG59XG5cbi5jb250ZW50IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBmbGV4OiAxO1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIG92ZXJmbG93OiBhdXRvO1xuICBwYWRkaW5nOiAwLjVlbSAxZW07XG59XG5cbi5ub3RlIHtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgbWFyZ2luOiAwLjVlbSAwO1xufVxuLm5vdGUgLnRleHQge1xuICBmb250LXdlaWdodDogNTAwO1xuICBwYWRkaW5nLWJvdHRvbTogMC4yNWVtO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2YwZjBmMDtcbn1cblxuLmRldGFpbHMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjYpO1xuICBtYXJnaW4tdG9wOiAwLjI1ZW07XG4gIGZvbnQtc2l6ZTogMC45ZW07XG59XG4uZGV0YWlscyAuZmlsbCB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMXB4O1xufVxuXG4uZm9vdGVyIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMTAwJTtcbiAgYm9yZGVyLXJhZGl1czogMDtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG4uZm9vdGVyIGJ1dHRvbiB7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwLjI1ZW0pO1xufVxuXG5tYXQtZm9ybS1maWVsZCB7XG4gIGhlaWdodDogMy4yNWVtO1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogMCAwLjVlbTtcbn0iXX0= */"]
+      styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n}\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.heading[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 1em;\n  font-weight: 500;\n  background-color: #ccc;\n}\n.content[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  min-height: 50%;\n  overflow: auto;\n  padding: 0.5em 1em;\n}\n.note[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  margin: 0.5em 0;\n}\n.note[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  font-weight: 500;\n  padding-bottom: 0.25em;\n  border-bottom: 1px solid #f0f0f0;\n}\n.details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  color: rgba(0, 0, 0, 0.6);\n  margin-top: 0.25em;\n  font-size: 0.9em;\n}\n.details[_ngcontent-%COMP%]   .fill[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 1px;\n}\n.footer[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  border-radius: 0;\n  border-top: 1px solid #ccc;\n}\n.footer[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  transform: translateY(0.25em);\n}\nmat-form-field[_ngcontent-%COMP%] {\n  height: 3.25em;\n  width: 100%;\n  padding: 0 0.5em;\n}\ninput[_ngcontent-%COMP%] {\n  top: -0.5em;\n  position: relative;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL21lc3NhZ2VzL21lc3NhZ2VzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL21lc3NhZ2VzL21lc3NhZ2VzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtBQ0FKO0FEQ0k7RUFDSSxXQUFBO0FDQ1I7QURHQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0Esc0JBQUE7QUNBSjtBREdBO0VBQ0ksa0JBQUE7RUFDQSxPQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtBQ0FKO0FER0E7RUFDSSxnQkFBQTtFQUNBLGVBQUE7QUNBSjtBREVJO0VBQ0ksZ0JBQUE7RUFDQSxzQkFBQTtFQUNBLGdDQUFBO0FDQVI7QURJQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxnQkFBQTtBQ0RKO0FER0k7RUFDSSxPQUFBO0VBQ0EsY0FBQTtBQ0RSO0FES0E7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxnQkFBQTtFQUNBLDBCQUFBO0FDRko7QURJSTtFQUNJLDZCQUFBO0FDRlI7QURNQTtFQUNJLGNBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7QUNISjtBRE1BO0VBQ0ksV0FBQTtFQUNBLGtCQUFBO0FDSEoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL21lc3NhZ2VzL21lc3NhZ2VzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG46aG9zdCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgID4gKiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbn1cblxuLmhlYWRpbmcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAxZW07XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2NjO1xufVxuXG4uY29udGVudCB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGZsZXg6IDE7XG4gICAgbWluLWhlaWdodDogNTAlO1xuICAgIG92ZXJmbG93OiBhdXRvO1xuICAgIHBhZGRpbmc6IC41ZW0gMWVtO1xufVxuXG4ubm90ZSB7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIG1hcmdpbjogLjVlbSAwO1xuXG4gICAgLnRleHQge1xuICAgICAgICBmb250LXdlaWdodDogNTAwO1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogLjI1ZW07XG4gICAgICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZjBmMGYwO1xuICAgIH1cbn1cblxuLmRldGFpbHMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBjb2xvcjogcmdiYSgjMDAwLCAuNik7XG4gICAgbWFyZ2luLXRvcDogLjI1ZW07XG4gICAgZm9udC1zaXplOiAuOWVtO1xuXG4gICAgLmZpbGwge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBtaW4td2lkdGg6IDFweDtcbiAgICB9XG59XG5cbi5mb290ZXIge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCAjY2NjO1xuXG4gICAgYnV0dG9uIHtcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC4yNWVtKTtcbiAgICB9XG59XG5cbm1hdC1mb3JtLWZpZWxkIHtcbiAgICBoZWlnaHQ6IDMuMjVlbTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBwYWRkaW5nOiAwIC41ZW07XG59XG5cbmlucHV0IHtcbiAgICB0b3A6IC0wLjVlbTtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG46aG9zdCA+ICoge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmhlYWRpbmcge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgcGFkZGluZzogMWVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2NjO1xufVxuXG4uY29udGVudCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZmxleDogMTtcbiAgbWluLWhlaWdodDogNTAlO1xuICBvdmVyZmxvdzogYXV0bztcbiAgcGFkZGluZzogMC41ZW0gMWVtO1xufVxuXG4ubm90ZSB7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIG1hcmdpbjogMC41ZW0gMDtcbn1cbi5ub3RlIC50ZXh0IHtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgcGFkZGluZy1ib3R0b206IDAuMjVlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNmMGYwZjA7XG59XG5cbi5kZXRhaWxzIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42KTtcbiAgbWFyZ2luLXRvcDogMC4yNWVtO1xuICBmb250LXNpemU6IDAuOWVtO1xufVxuLmRldGFpbHMgLmZpbGwge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDFweDtcbn1cblxuLmZvb3RlciB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjY2NjO1xufVxuLmZvb3RlciBidXR0b24ge1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMC4yNWVtKTtcbn1cblxubWF0LWZvcm0tZmllbGQge1xuICBoZWlnaHQ6IDMuMjVlbTtcbiAgd2lkdGg6IDEwMCU7XG4gIHBhZGRpbmc6IDAgMC41ZW07XG59XG5cbmlucHV0IHtcbiAgdG9wOiAtMC41ZW07XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -35376,20 +35643,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super59 = _createSuper(OrderDetailsModalComponent);
 
       function OrderDetailsModalComponent(_service, _spaces, _data) {
-        var _this169;
+        var _this170;
 
         _classCallCheck(this, OrderDetailsModalComponent);
 
-        _this169 = _super59.call(this);
-        _this169._service = _service;
-        _this169._spaces = _spaces;
-        _this169._data = _data;
+        _this170 = _super59.call(this);
+        _this170._service = _service;
+        _this170._spaces = _spaces;
+        _this170._data = _data;
         /** Emitter for user action on the modal */
 
-        _this169.event = new core_1.EventEmitter();
+        _this170.event = new core_1.EventEmitter();
         /** List of available order statuses */
 
-        _this169.statuses = [{
+        _this170.statuses = [{
           id: 'accepted',
           name: 'Accepted',
           icon: {
@@ -35425,7 +35692,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           },
           colour: '#747474'
         }];
-        return _this169;
+        return _this170;
       }
       /** Active booking to display */
 
@@ -35442,41 +35709,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function updateStatus() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee23() {
-            var _this170 = this;
+          regeneratorRuntime.mark(function _callee24() {
+            var _this171 = this;
 
             var booking, catering, new_booking, updated_booking;
-            return regeneratorRuntime.wrap(function _callee23$(_context23) {
+            return regeneratorRuntime.wrap(function _callee24$(_context24) {
               while (1) {
-                switch (_context23.prev = _context23.next) {
+                switch (_context24.prev = _context24.next) {
                   case 0:
                     booking = this._data.booking;
                     /* istanbul ignore else */
 
                     if (!booking) {
-                      _context23.next = 11;
+                      _context24.next = 11;
                       break;
                     }
 
                     this.loading = true;
                     catering = _toConsumableArray(booking.catering);
                     catering.splice(catering.findIndex(function (order) {
-                      return order.id === _this170._data.order.id;
+                      return order.id === _this171._data.order.id;
                     }), 1, new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, this._data.order), {
                       status: this.active_status
                     })));
                     new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking), {
                       catering: catering
                     }));
-                    _context23.next = 8;
+                    _context24.next = 8;
                     return new_booking.save()["catch"](function (err) {
-                      _this170._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
+                      _this171._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
 
-                      _this170.active_status = _this170._data.order.status;
+                      _this171.active_status = _this171._data.order.status;
                     });
 
                   case 8:
-                    updated_booking = _context23.sent;
+                    updated_booking = _context24.sent;
 
                     if (updated_booking) {
                       this.booking = updated_booking;
@@ -35486,10 +35753,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 11:
                   case "end":
-                    return _context23.stop();
+                    return _context24.stop();
                 }
               }
-            }, _callee23, this);
+            }, _callee24, this);
           }));
         }
       }, {
@@ -35512,10 +35779,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "status_details",
         get: function get() {
-          var _this171 = this;
+          var _this172 = this;
 
           return this.statuses.find(function (status) {
-            return status.id === _this171.active_status;
+            return status.id === _this172.active_status;
           });
         }
         /** Space associated with the order */
@@ -35804,21 +36071,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super60 = _createSuper(DayViewApprovalsComponent);
 
       function DayViewApprovalsComponent(_service, _org, _spaces) {
-        var _this172;
+        var _this173;
 
         _classCallCheck(this, DayViewApprovalsComponent);
 
-        _this172 = _super60.call(this);
-        _this172._service = _service;
-        _this172._org = _org;
-        _this172._spaces = _spaces;
+        _this173 = _super60.call(this);
+        _this173._service = _service;
+        _this173._org = _org;
+        _this173._spaces = _spaces;
         /** List of bookings that are pending approval */
 
-        _this172.events = [];
+        _this173.events = [];
         /** List of spaces to check for pending approvals */
 
-        _this172.space_list = [];
-        return _this172;
+        _this173.space_list = [];
+        return _this173;
       }
       /** Display value for the active date */
 
@@ -35826,36 +36093,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DayViewApprovalsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this173 = this;
+          var _this174 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            return _this173.init();
+            return _this174.init();
           });
         }
       }, {
         key: "init",
         value: function init() {
-          var _this174 = this;
+          var _this175 = this;
 
           this.events = [];
           var building = this._org.building;
           this.space_list = this._spaces.filter(function (space) {
-            return space.zones.indexOf(_this174.level === '' ? building.id : _this174.level) >= 0;
+            return space.zones.indexOf(_this175.level === '' ? building.id : _this175.level) >= 0;
           }).map(function (i) {
             return i.id;
           });
           this.processMeetings();
           this.getMonthlyPending();
           this.interval('monthly_pending', function () {
-            return _this174.getMonthlyPending();
+            return _this175.getMonthlyPending();
           }, 10 * 60 * 1000);
         }
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this175 = this;
+          var _this176 = this;
 
           /* istanbul ignore else */
           if (changes.date && this.date !== changes.date.previousValue) {
@@ -35864,14 +36131,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             this.processMeetings();
             this.interval('process_meetings', function () {
-              return _this175.processMeetings();
+              return _this176.processMeetings();
             }, 1 * 1000);
             /* istanbul ignore else */
 
             if (!dayjs(changes.date.previousValue).isSame(dayjs(changes.date.currentValue), 'M')) {
               this.getMonthlyPending();
               this.interval('monthly_pending', function () {
-                return _this175.getMonthlyPending();
+                return _this176.getMonthlyPending();
               }, 10 * 60 * 1000);
             }
           }
@@ -35898,7 +36165,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateMeetings",
         value: function updateMeetings() {
-          var _this176 = this;
+          var _this177 = this;
 
           var time = dayjs(this.date).startOf('d');
           var end = time.endOf('d');
@@ -35910,13 +36177,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             available_from: time.unix(),
             available_to: end.unix()
           }).then(function (room_list) {
-            _this176.space_list = room_list.map(function (i) {
+            _this177.space_list = room_list.map(function (i) {
               return i.id;
             });
 
-            _this176.processMeetings();
+            _this177.processMeetings();
 
-            _this176.loading = false;
+            _this177.loading = false;
           });
         }
         /**
@@ -35972,7 +36239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getMonthlyPending",
         value: function getMonthlyPending() {
-          var _this177 = this;
+          var _this178 = this;
 
           var now = dayjs().startOf('d');
           var start = dayjs(this.date).startOf('M');
@@ -35992,15 +36259,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             available_from: start.unix(),
             available_to: end.unix()
           }).then(function (_) {
-            var pending_list = _this177._service.get('CONCIERGE.pending_bookings') || {};
+            var pending_list = _this178._service.get('CONCIERGE.pending_bookings') || {};
 
             for (var date = start; date.isBefore(end, 'm'); date = date.add(1, 'd')) {
-              var events = _this177.process(date.valueOf());
+              var events = _this178.process(date.valueOf());
 
               pending_list[date.format('YYYY-MM-DD')] = events.length;
             }
 
-            _this177._service.set('CONCIERGE.pending_bookings', pending_list);
+            _this178._service.set('CONCIERGE.pending_bookings', pending_list);
           });
         }
       }, {
@@ -36466,18 +36733,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super61 = _createSuper(DayViewApprovalsEventComponent);
 
       function DayViewApprovalsEventComponent(_service, _bookings, _dialog) {
-        var _this178;
+        var _this179;
 
         _classCallCheck(this, DayViewApprovalsEventComponent);
 
-        _this178 = _super61.call(this);
-        _this178._service = _service;
-        _this178._bookings = _bookings;
-        _this178._dialog = _dialog;
+        _this179 = _super61.call(this);
+        _this179._service = _service;
+        _this179._bookings = _bookings;
+        _this179._dialog = _dialog;
         /** Event emitter for event actions */
 
-        _this178.acting = new core_1.EventEmitter();
-        return _this178;
+        _this179.acting = new core_1.EventEmitter();
+        return _this179;
       }
 
       _createClass(DayViewApprovalsEventComponent, [{
@@ -36485,16 +36752,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         /** View booking details */
         value: function view() {
-          var _this179 = this;
+          var _this180 = this;
 
           this.timeout('view', function () {
-            _this179._dialog.open(meeting_details_modal_component_1.MeetingDetailsModalComponent, {
+            _this180._dialog.open(meeting_details_modal_component_1.MeetingDetailsModalComponent, {
               data: {
-                booking: _this179.event
+                booking: _this180.event
               }
             });
 
-            _this179._service.set('CONCIERGE.day_view.viewing', _this179.event);
+            _this180._service.set('CONCIERGE.day_view.viewing', _this180.event);
           }, 50);
         }
         /**
@@ -36504,7 +36771,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "accept",
         value: function accept() {
-          var _this180 = this;
+          var _this181 = this;
 
           this.acting.emit(true);
 
@@ -36522,30 +36789,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
 
           ref.componentInstance.event.subscribe(function (event) {
+            var _a;
             /* istanbul ignore else */
+
+
             if (event.reason === 'done') {
-              _this180.loading = true;
+              _this181.loading = true;
 
-              _this180._bookings.accept(_this180.event.id, {
-                comment: '',
-                room_id: _this180.event.space.id
+              var _event = _this181.event.toJSON();
+
+              _this181._bookings.accept(_this181.event.id, {
+                concierge: true,
+                host: _this181.event.organiser.email,
+                room_id: (_a = _this181.event.space) === null || _a === void 0 ? void 0 : _a.id,
+                icaluid: _this181.event.icaluid,
+                start: _event.start,
+                end: _event.end
               }).then(function () {
-                _this180._service.notifySuccess('Meeting approved.');
+                _this181._service.notifySuccess('Meeting approved.');
 
-                _this180.event.approval_status[_this180.event.space.id] = 'accepted';
-                STATES[_this180.event.id] = 'accepted';
+                _this181.event.approval_status[_this181.event.space.id] = 'accepted';
+                STATES[_this181.event.id] = 'accepted';
 
-                _this180._service.set('BOOKING.states', STATES);
+                _this181._service.set('BOOKING.states', STATES);
 
-                _this180.loading = false;
+                _this181.loading = false;
 
-                _this180.acting.emit(false);
+                _this181.acting.emit(false);
               }, function () {
-                _this180.acting.emit(false);
+                _this181.acting.emit(false);
 
-                _this180._service.notifyError('Error approving meeting.');
+                _this181._service.notifyError('Error approving meeting.');
 
-                _this180.loading = false;
+                _this181.loading = false;
               });
             }
 
@@ -36559,7 +36835,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "decline",
         value: function decline() {
-          var _this181 = this;
+          var _this182 = this;
 
           this.acting.emit(true);
 
@@ -36579,11 +36855,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           ref.componentInstance.event.subscribe(function (event) {
             /* istanbul ignore else */
             if (event.reason === 'done') {
-              _this181.loading = true;
-              var booking = _this181.event;
-              _this181.loading = true;
+              _this182.loading = true;
+              var booking = _this182.event;
+              _this182.loading = true;
 
-              _this181._bookings.decline(booking.id, {
+              _this182._bookings.decline(booking.id, {
                 booking_id: booking.id,
                 organiser: booking.organiser.email,
                 icaluid: booking.icaluid,
@@ -36591,22 +36867,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 end: Math.floor(booking.date / 1000) + booking.duration * 60,
                 room_id: booking.space.id
               }).then(function () {
-                _this181._service.notifySuccess('Meeting declined.');
+                _this182._service.notifySuccess('Meeting declined.');
 
-                _this181.event.approval_status[booking.space.id] = 'declined';
-                STATES[_this181.event.id] = 'declined';
+                _this182.event.approval_status[booking.space.id] = 'declined';
+                STATES[_this182.event.id] = 'declined';
 
-                _this181._service.set('BOOKING.states', STATES);
+                _this182._service.set('BOOKING.states', STATES);
 
-                _this181.loading = false;
+                _this182.loading = false;
 
-                _this181.acting.emit(false);
+                _this182.acting.emit(false);
               }, function () {
-                _this181.acting.emit(false);
+                _this182.acting.emit(false);
 
-                _this181._service.notifyError('Error declining meeting.');
+                _this182._service.notifyError('Error declining meeting.');
 
-                _this181.loading = false;
+                _this182.loading = false;
               });
             }
 
@@ -36644,11 +36920,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "has_catering",
         get: function get() {
-          var _this182 = this;
+          var _this183 = this;
 
           var catering = this.event.catering;
           return !!catering.find(function (order) {
-            return _this182.event.space.id === order.location_id;
+            return _this183.event.space.id === order.location_id;
           });
         }
       }]);
@@ -36978,35 +37254,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super62 = _createSuper(DayViewComponent);
 
       function DayViewComponent(_service, _bookings, _org, _dialog, _router, _route) {
-        var _this183;
+        var _this184;
 
         _classCallCheck(this, DayViewComponent);
 
-        _this183 = _super62.call(this);
-        _this183._service = _service;
-        _this183._bookings = _bookings;
-        _this183._org = _org;
-        _this183._dialog = _dialog;
-        _this183._router = _router;
-        _this183._route = _route;
+        _this184 = _super62.call(this);
+        _this184._service = _service;
+        _this184._bookings = _bookings;
+        _this184._org = _org;
+        _this184._dialog = _dialog;
+        _this184._router = _router;
+        _this184._route = _route;
         /** ID of the currently selected level */
 
-        _this183.active_level = '';
+        _this184.active_level = '';
         /** ID of the currently selected type */
 
-        _this183.active_type = '';
+        _this184.active_type = '';
         /** List of levels available for the active building */
 
-        _this183.levels = [];
+        _this184.levels = [];
         /** List of space types available for the active building */
 
-        _this183.space_types = [];
+        _this184.space_types = [];
         /** List of legend keys to show */
 
-        _this183.legend = [];
+        _this184.legend = [];
         /** List of available legend keys */
 
-        _this183.legend_keys = [{
+        _this184.legend_keys = [{
           name: 'Internal',
           id: 'internal',
           color: '#E69FC7'
@@ -37031,68 +37307,68 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           id: 'interview',
           color: '#348D02'
         }];
-        return _this183;
+        return _this184;
       }
 
       _createClass(DayViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this184 = this;
+          var _this185 = this;
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this184.legend = _this184.legend_keys.map(function (item) {
+            _this185.legend = _this185.legend_keys.map(function (item) {
               return "".concat(item.id);
             });
 
-            _this184.subscription('route.params', _this184._route.paramMap.subscribe(function (params) {
+            _this185.subscription('route.params', _this185._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this184.active_level !== params.get('level')) {
-                var level = _this184._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this185.active_level !== params.get('level')) {
+                var level = _this185._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this184._org.buildings.find(function (bld) {
+                  var building = _this185._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this184.active_level = level.id;
-                    _this184._org.building = building;
+                    _this185.active_level = level.id;
+                    _this185._org.building = building;
                   }
                 }
               }
             }));
 
-            _this184.subscription('building', _this184._org.listen('active_building').subscribe(function () {
-              var building = _this184._org.building;
+            _this185.subscription('building', _this185._org.listen('active_building').subscribe(function () {
+              var building = _this185._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this184.active_level;
+                return lvl.id === _this185.active_level;
               })) {
-                _this184.active_level = building.levels[0].id;
+                _this185.active_level = building.levels[0].id;
 
-                _this184.updateLevel();
+                _this185.updateLevel();
               }
 
-              _this184.levels = [{
+              _this185.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
 
-              _this184.levels.sort(function (a, b) {
+              _this185.levels.sort(function (a, b) {
                 return a.name.localeCompare(b.name);
               });
 
-              _this184.space_types = [{
+              _this185.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this184._org.space_types);
+              }].concat(_this185._org.space_types);
             }));
           });
         }
@@ -37612,21 +37888,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super63 = _createSuper(DayViewSpaceEventComponent);
 
       function DayViewSpaceEventComponent(_service, _dialog, _router) {
-        var _this185;
+        var _this186;
 
         _classCallCheck(this, DayViewSpaceEventComponent);
 
-        _this185 = _super63.call(this);
-        _this185._service = _service;
-        _this185._dialog = _dialog;
-        _this185._router = _router;
+        _this186 = _super63.call(this);
+        _this186._service = _service;
+        _this186._dialog = _dialog;
+        _this186._router = _router;
         /** Emitter for the current position of the event within the timeline */
 
-        _this185.position = new core_1.EventEmitter();
+        _this186.position = new core_1.EventEmitter();
         /** Whether to hide the event */
 
-        _this185.hide = false;
-        return _this185;
+        _this186.hide = false;
+        return _this186;
       }
       /**  */
 
@@ -37756,10 +38032,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "order",
         get: function get() {
-          var _this186 = this;
+          var _this187 = this;
 
           return this.event.catering.find(function (order) {
-            return order.location_id === _this186.space.id;
+            return order.location_id === _this187.space.id;
           });
         }
       }, {
@@ -38052,36 +38328,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super64 = _createSuper(DayViewSpaceComponent);
 
       function DayViewSpaceComponent(_service, _spaces, _dialog) {
-        var _this187;
+        var _this188;
 
         _classCallCheck(this, DayViewSpaceComponent);
 
-        _this187 = _super64.call(this);
-        _this187._service = _service;
-        _this187._spaces = _spaces;
-        _this187._dialog = _dialog;
+        _this188 = _super64.call(this);
+        _this188._service = _service;
+        _this188._spaces = _spaces;
+        _this188._dialog = _dialog;
         /** Mapping of whether to show events with a given legend id */
 
-        _this187.legend = {};
+        _this188.legend = {};
         /** Emitter for whether the space column is in view */
 
-        _this187.inView = new core_1.EventEmitter();
+        _this188.inView = new core_1.EventEmitter();
         /** Emitter for whether an event is being dragged */
 
-        _this187.dragging = new core_1.EventEmitter();
+        _this188.dragging = new core_1.EventEmitter();
         /** Mapping of event IDs to overlap details */
 
-        _this187.overlap_details = {};
+        _this188.overlap_details = {};
         /** Mapping of positions of event in the day */
 
-        _this187.position_list = {};
+        _this188.position_list = {};
         /** Map of bookings to whether they are loading */
 
-        _this187.loading = {};
+        _this188.loading = {};
         /** Settings for day view */
 
-        _this187.settings = {};
-        return _this187;
+        _this188.settings = {};
+        return _this188;
       }
       /** Events to display for the active date */
 
@@ -38089,26 +38365,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DayViewSpaceComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this188 = this;
+          var _this189 = this;
 
           this._service.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this188.settings = _this188._service.setting('app.day_view') || {};
+            _this189.settings = _this189._service.setting('app.day_view') || {};
 
-            _this188.subscription('breakdown', _this188._service.listen('APP.breakdown').subscribe(function (state) {
-              _this188.overflow_only = state;
+            _this189.subscription('breakdown', _this189._service.listen('APP.breakdown').subscribe(function (state) {
+              _this189.overflow_only = state;
             }));
 
-            _this188.subscription('legend', _this188._service.listen('CONCIERGE.legend').subscribe(function (state) {
-              _this188.legend = state || {};
+            _this189.subscription('legend', _this189._service.listen('CONCIERGE.legend').subscribe(function (state) {
+              _this189.legend = state || {};
             }));
           });
         }
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this189 = this;
+          var _this190 = this;
 
           /* istanbul ignore else */
           if (changes.scroll) {
@@ -38119,7 +38395,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (changes.last_update) {
             this.timeout('update_overlaps', function () {
-              return _this189.calculateOverlaps();
+              return _this190.calculateOverlaps();
             }, 1000);
           }
         }
@@ -38141,13 +38417,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "calculateOverlaps",
         value: function calculateOverlaps() {
-          var _this190 = this;
+          var _this191 = this;
 
           var events = this.events.sort(function (a, b) {
             return a.date - b.date || a.duration - b.duration || (a.title || '').localeCompare(b.title || '');
           });
           events.forEach(function (i) {
-            return _this190.overlap_details[i.id] = {
+            return _this191.overlap_details[i.id] = {
               index: 0,
               total: 1
             };
@@ -38203,7 +38479,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _iterator46.f();
               }
 
-              _this190.overlap_details[bkn.id] = {
+              _this191.overlap_details[bkn.id] = {
                 index: Math.max(0, index),
                 total: count
               };
@@ -38249,10 +38525,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "endDrag",
         value: function endDrag() {
-          var _this191 = this;
+          var _this192 = this;
 
           this.timeout('end_drag', function () {
-            return _this191.top = 0;
+            return _this192.top = 0;
           }, 10);
           this.dragging.emit(false);
         }
@@ -38281,7 +38557,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "drop",
         value: function drop(event) {
-          var _this192 = this;
+          var _this193 = this;
 
           var id = event.item.element.nativeElement.id;
           var booking = event.previousContainer.data.list.find(function (i) {
@@ -38349,15 +38625,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             })
           }));
           this.checkCollisions(room_list, date.valueOf(), new_booking.duration, new_booking.icaluid).then(function () {
-            _this192.moveBooking(message, new_booking).then(function (_) {
-              _this192.override_state = null;
+            _this193.moveBooking(message, new_booking).then(function (_) {
+              _this193.override_state = null;
 
-              _this192._service.notifySuccess(success);
+              _this193._service.notifySuccess(success);
             }, function (err) {
-              return _this192.handleDropError(new_booking.id, "Error: ".concat(err));
+              return _this193.handleDropError(new_booking.id, "Error: ".concat(err));
             });
           }, function () {
-            return _this192.handleDropError(new_booking.id, 'Updated meeting time clashes with another');
+            return _this193.handleDropError(new_booking.id, 'Updated meeting time clashes with another');
           });
         }
         /**
@@ -38370,10 +38646,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "checkCollisions",
         value: function checkCollisions(spaces, date, duration, ignore) {
-          var _this193 = this;
+          var _this194 = this;
 
           return new Promise(function (resolve, reject) {
-            _this193._spaces.available({
+            _this194._spaces.available({
               room_ids: spaces.map(function (i) {
                 return i.id;
               }).join(','),
@@ -38411,10 +38687,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "moveBooking",
         value: function moveBooking(confirm_msg, new_booking) {
-          var _this194 = this;
+          var _this195 = this;
 
           return new Promise(function (resolve, reject) {
-            var ref = _this194._dialog.open(confirm_modal_component_1.ConfirmModalComponent, {
+            var ref = _this195._dialog.open(confirm_modal_component_1.ConfirmModalComponent, {
               data: {
                 title: 'Update meeting',
                 content: confirm_msg,
@@ -38427,7 +38703,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             });
 
-            _this194.subscription('confirm', ref.componentInstance.event.subscribe(function (event) {
+            _this195.subscription('confirm', ref.componentInstance.event.subscribe(function (event) {
               /* istanbul ignore else */
               if (event.reason === 'done') {
                 new_booking.save().then(function (bkn) {
@@ -38444,17 +38720,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "events",
         get: function get() {
-          var _this195 = this;
+          var _this196 = this;
 
           /* istanbul ignore else */
           if (this.space) {
             var bookings = this.space.bookingsFor(this.date);
             var list = bookings.filter(function (event) {
-              if (_this195.override_state && _this195.override_state === event.icaluid) {
-                _this195.loading[event.id] = true;
+              if (_this196.override_state && _this196.override_state === event.icaluid) {
+                _this196.loading[event.id] = true;
               }
 
-              return event.declined ? (!_this195.overflow_only || event.setup || event.breakdown) && _this195.legend.declined : (!_this195.overflow_only || event.setup || event.breakdown) && _this195.legend[event.type];
+              return event.declined ? (!_this196.overflow_only || event.setup || event.breakdown) && _this196.legend.declined : (!_this196.overflow_only || event.setup || event.breakdown) && _this196.legend[event.type];
             });
             return list;
           }
@@ -38894,51 +39170,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super65 = _createSuper(DayViewTimelineComponent);
 
       function DayViewTimelineComponent(_service, _spaces, _org, _route, _renderer, _dialog) {
-        var _this196;
+        var _this197;
 
         _classCallCheck(this, DayViewTimelineComponent);
 
-        _this196 = _super65.call(this);
-        _this196._service = _service;
-        _this196._spaces = _spaces;
-        _this196._org = _org;
-        _this196._route = _route;
-        _this196._renderer = _renderer;
-        _this196._dialog = _dialog;
+        _this197 = _super65.call(this);
+        _this197._service = _service;
+        _this197._spaces = _spaces;
+        _this197._org = _org;
+        _this197._route = _route;
+        _this197._renderer = _renderer;
+        _this197._dialog = _dialog;
         /** List of shown legend items */
 
-        _this196.legend = [];
+        _this197.legend = [];
         /** List of timeblocks to display */
 
-        _this196.time_blocks = _this196.generateTimeBlocks();
+        _this197.time_blocks = _this197.generateTimeBlocks();
         /** Top value of the content scroll */
 
-        _this196.scroll_top = 0;
+        _this197.scroll_top = 0;
         /** Left value of the content scroll */
 
-        _this196.scroll_left = 0;
+        _this197.scroll_left = 0;
         /** Offset of the scroll value when starting a drag */
 
-        _this196.scroll_offset = 0;
+        _this197.scroll_offset = 0;
         /** List of spaces to display for  */
 
-        _this196.spaces = [];
+        _this197.spaces = [];
         /** List of spaces to display for  */
 
-        _this196.filtered_spaces = [];
+        _this197.filtered_spaces = [];
         /** Mapping of space ids to whether they are in view */
 
-        _this196.in_view = {};
+        _this197.in_view = {};
         /** Mapping of spaces loading booking date */
 
-        _this196.loading_space = {};
+        _this197.loading_space = {};
         /** Last update time for the space bookings */
 
-        _this196.last_update = 0;
+        _this197.last_update = 0;
         /** Whether to show the holding bay */
 
-        _this196.show_holding_bay = true;
-        return _this196;
+        _this197.show_holding_bay = true;
+        return _this197;
       }
       /** Update scroll box when the window is resized */
 
@@ -38953,28 +39229,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this197 = this;
+          var _this198 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this197._org.initialised.pipe(operators_1.first(function (_) {
+            _this198._org.initialised.pipe(operators_1.first(function (_) {
               return _;
             })).subscribe(function () {
-              var zone_id = !_this197.level ? _this197._org.building.id : _this197.level;
-              _this197.spaces = _this197._spaces.filter(function (_) {
+              var zone_id = !_this198.level ? _this198._org.building.id : _this198.level;
+              _this198.spaces = _this198._spaces.filter(function (_) {
                 return _.zones.indexOf(zone_id) >= 0;
               });
 
-              _this197.init();
+              _this198.init();
 
-              _this197.initSpaces(); // Update time
+              _this198.initSpaces(); // Update time
 
 
-              _this197.updateTime();
+              _this198.updateTime();
 
-              _this197.interval('time', function () {
-                return _this197.updateTime();
+              _this198.interval('time', function () {
+                return _this198.updateTime();
               }, 15 * 1000);
             });
           });
@@ -38982,14 +39258,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this198 = this;
+          var _this199 = this;
 
           /* istanbul ignore else */
           if (changes.date) {
             this.is_today = dayjs().isSame(dayjs(this.date), 'd');
             this.updateBookings();
             this.interval('bookings', function () {
-              return _this198.updateBookings();
+              return _this199.updateBookings();
             }, UPDATE_INTERVAL * 1000);
           }
           /* istanbul ignore else */
@@ -39003,7 +39279,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.initSpaces();
             this.updateBookings();
             this.interval('bookings', function () {
-              return _this198.updateBookings();
+              return _this199.updateBookings();
             }, UPDATE_INTERVAL * 1000);
           }
           /* istanbul ignore else */
@@ -39016,24 +39292,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "init",
         value: function init() {
-          var _this199 = this;
+          var _this200 = this;
 
           this._service.title = 'Day View';
           this.subscription('viewing', this._service.listen('CONCIERGE.day_view.viewing').subscribe(function (event) {
-            return _this199.scrollIntoView(event);
+            return _this200.scrollIntoView(event);
           })); // Subscribe to route query changes
 
           this.subscription('route.query', this._route.queryParamMap.subscribe(function (params) {
             /* istanbul ignore else */
             if (params.has('view')) {
-              _this199.view_id = params.get('view');
+              _this200.view_id = params.get('view');
               var details = localStorage.getItem('CONCIERGE.view_booking');
               /* istanbul ignore else */
 
               if (details) {
                 var booking = new booking_class_1.Booking(JSON.parse(details));
 
-                _this199.view(booking);
+                _this200.view(booking);
 
                 localStorage.removeItem('CONCIERGE.view_booking');
               }
@@ -39042,13 +39318,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.updateBookings();
           this.interval('bookings', function () {
-            return _this199.updateBookings();
+            return _this200.updateBookings();
           }, UPDATE_INTERVAL * 1000);
           this.interval('scroll', function () {
             /* istanbul ignore else */
-            if (_this199.scroll_area && _this199.scroll_area.nativeElement) {
-              _this199.updateScroll({
-                target: _this199.scroll_area.nativeElement
+            if (_this200.scroll_area && _this200.scroll_area.nativeElement) {
+              _this200.updateScroll({
+                target: _this200.scroll_area.nativeElement
               });
             }
           }, 1000);
@@ -39102,15 +39378,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateBookings",
         value: function updateBookings() {
-          var _this200 = this;
+          var _this201 = this;
 
           var visible_rooms = this.spaces.filter(function (i) {
-            return _this200.in_view[i.id] !== false;
+            return _this201.in_view[i.id] !== false;
           });
 
           if (visible_rooms.length) {
             visible_rooms.forEach(function (rm) {
-              return _this200.loading_space[rm.id] = true;
+              return _this201.loading_space[rm.id] = true;
             });
             var time = dayjs(this.date).startOf('d');
             var end = time.endOf('d');
@@ -39137,18 +39413,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }).then(function (room_list) {
               room_list.forEach(function (rm) {
                 /* istanbul ignore else */
-                if (_this200.view_id) {
+                if (_this201.view_id) {
                   var booking = rm.bookings.find(function (i) {
-                    return i.id === _this200.view_id;
+                    return i.id === _this201.view_id;
                   });
                   /* istanbul ignore else */
 
                   if (booking) {
-                    _this200.view(booking);
+                    _this201.view(booking);
                   }
                 }
 
-                var space = _this200.filtered_spaces.find(function (space) {
+                var space = _this201.filtered_spaces.find(function (space) {
                   return space.id === rm.id;
                 });
                 /* istanbul ignore else */
@@ -39158,12 +39434,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   space.bookings = rm.bookings;
                 }
               });
-              delete _this200.loading_space;
-              _this200.last_update = dayjs().valueOf();
-              _this200.loading_space = {};
-              _this200.loading = false;
+              delete _this201.loading_space;
+              _this201.last_update = dayjs().valueOf();
+              _this201.loading_space = {};
+              _this201.loading = false;
             }, function () {
-              return _this200.loading = false;
+              return _this201.loading = false;
             });
           }
         }
@@ -39243,7 +39519,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "dragChange",
         value: function dragChange(is_dragging) {
-          var _this201 = this;
+          var _this202 = this;
 
           if (is_dragging) {
             this.scroll_offset = this.scroll_area.nativeElement.scrollTop;
@@ -39252,19 +39528,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 x: event.clientX,
                 y: event.clientY
               };
-              var y = position.y > _this201.box.bottom - _this201.box.height * 0.05 ? 1 : position.y < _this201.box.top + _this201.box.height * 0.05 ? -1 : 0;
-              var x = position.x > _this201.box.right - _this201.box.width * 0.05 ? 1 : position.x < _this201.box.left + _this201.box.height * 0.05 ? -1 : 0;
+              var y = position.y > _this202.box.bottom - _this202.box.height * 0.05 ? 1 : position.y < _this202.box.top + _this202.box.height * 0.05 ? -1 : 0;
+              var x = position.x > _this202.box.right - _this202.box.width * 0.05 ? 1 : position.x < _this202.box.left + _this202.box.height * 0.05 ? -1 : 0;
 
-              _this201.scrollView(x * 5, y * 5);
+              _this202.scrollView(x * 5, y * 5);
 
-              _this201.interval('auto_scroll', function () {
-                return _this201.scrollView(x * 10, y * 10);
+              _this202.interval('auto_scroll', function () {
+                return _this202.scrollView(x * 10, y * 10);
               }, 10);
             }));
             this.clearInterval('bookings');
           } else {
             this.interval('bookings', function () {
-              return _this201.updateBookings();
+              return _this202.updateBookings();
             }, UPDATE_INTERVAL * 1000);
             this.cancelScroll();
             this.unsub('listen_move');
@@ -39273,11 +39549,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initSpaces",
         value: function initSpaces() {
-          var _this202 = this;
+          var _this203 = this;
 
           var holding_bay = this.holding_bay;
           this.filtered_spaces = this.spaces.filter(function (i) {
-            return (!_this202.space_type || i.zones.indexOf(_this202.space_type) >= 0) && (!holding_bay || i.id !== holding_bay.id) && i.bookable;
+            return (!_this203.space_type || i.zones.indexOf(_this203.space_type) >= 0) && (!holding_bay || i.id !== holding_bay.id) && i.bookable;
           });
           this.filtered_spaces.sort(function (a, b) {
             return a.name.localeCompare(b.name);
@@ -39295,10 +39571,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "is_loading",
         get: function get() {
-          var _this203 = this;
+          var _this204 = this;
 
           return this.loading || Object.keys(this.loading_space).reduce(function (loading, key) {
-            return loading || _this203.loading_space[key];
+            return loading || _this204.loading_space[key];
           }, false);
         }
       }, {
@@ -39782,12 +40058,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ReportDisplayComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this204 = this;
+          var _this205 = this;
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this204.locations = [_this204._org.building];
+            _this205.locations = [_this205._org.building];
           });
         }
       }, {
@@ -39805,7 +40081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "generateReport",
         value: function generateReport() {
-          var _this205 = this;
+          var _this206 = this;
 
           /* istanbul ignore else */
           if (this.report) {
@@ -39820,14 +40096,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return i.id;
               }).join(',')
             }).then(function (report) {
-              _this205.loading = false;
-              _this205.report_data = new report_class_1.Report(Object.assign(Object.assign({}, report), {
-                type: _this205.report.id
+              _this206.loading = false;
+              _this206.report_data = new report_class_1.Report(Object.assign(Object.assign({}, report), {
+                type: _this206.report.id
               }));
             }, function (err) {
-              _this205.loading = false;
+              _this206.loading = false;
 
-              _this205._service.notifyError("Error generating report. Error: ".concat(err.message || err));
+              _this206._service.notifyError("Error generating report. Error: ".concat(err.message || err));
             });
           }
         }
@@ -40075,12 +40351,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ReportTableComponent, [{
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this206 = this;
+          var _this207 = this;
 
           /* istanbul ignore else */
           if (changes.list && this.list && this.list.length) {
             this.fields = Object.keys(this.list[0]).filter(function (i) {
-              return _this206.details.hide_fields.indexOf(i) < 0;
+              return _this207.details.hide_fields.indexOf(i) < 0;
             });
           }
         }
@@ -40323,16 +40599,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super66 = _createSuper(ReportsComponent);
 
       function ReportsComponent(_route, _router) {
-        var _this207;
+        var _this208;
 
         _classCallCheck(this, ReportsComponent);
 
-        _this207 = _super66.call(this);
-        _this207._route = _route;
-        _this207._router = _router;
+        _this208 = _super66.call(this);
+        _this208._route = _route;
+        _this208._router = _router;
         /** List of available reports to display */
 
-        _this207.reports = [{
+        _this208.reports = [{
           id: 'bookings',
           name: 'Aggregate Bookings Report',
           short_name: 'Bookings',
@@ -40354,17 +40630,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             content: 'room_service'
           }
         }];
-        return _this207;
+        return _this208;
       }
 
       _createClass(ReportsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this208 = this;
+          var _this209 = this;
 
           this.subscription('route.params', this._route.paramMap.subscribe(function (params) {
             if (params.has('report')) {
-              _this208.active_report = params.get('report');
+              _this209.active_report = params.get('report');
             }
           }));
         }
@@ -40376,10 +40652,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "the_report",
         get: function get() {
-          var _this209 = this;
+          var _this210 = this;
 
           return this.reports.find(function (report) {
-            return report.id === _this209.active_report;
+            return report.id === _this210.active_report;
           });
         }
       }]);
@@ -40951,14 +41227,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super67 = _createSuper(ShellWrapperComponent);
 
       function ShellWrapperComponent(_service, _users) {
-        var _this210;
+        var _this211;
 
         _classCallCheck(this, ShellWrapperComponent);
 
-        _this210 = _super67.call(this);
-        _this210._service = _service;
-        _this210._users = _users;
-        return _this210;
+        _this211 = _super67.call(this);
+        _this211._service = _service;
+        _this211._users = _users;
+        return _this211;
       }
       /** Whether the user needs to login */
 
@@ -40966,16 +41242,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShellWrapperComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this211 = this;
+          var _this212 = this;
 
           this.subscription('loading', this._service.listen('loading').subscribe(function (loading) {
-            _this211.loading_state = loading;
+            _this212.loading_state = loading;
           }));
 
           this._service.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this211.logo = _this211._service.setting('app.logo_dark') || {
+            _this212.logo = _this212._service.setting('app.logo_dark') || {
               type: 'icon'
             };
           });
@@ -41343,7 +41619,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function addVisitor() {
           var list = this.form.controls.attendees.value;
           list.push(new user_class_1.User({
-            visitor: true
+            visitor: true,
+            email: "".concat(Math.floor(Math.random() * 99999), "@guest.mckinsey.com")
           }));
           this.form.controls.attendees.setValue(list);
           this.form.markAsDirty();
@@ -41571,16 +41848,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super68 = _createSuper(VisitorFormComponent);
 
       function VisitorFormComponent(_service) {
-        var _this212;
+        var _this213;
 
         _classCallCheck(this, VisitorFormComponent);
 
-        _this212 = _super68.call(this);
-        _this212._service = _service;
+        _this213 = _super68.call(this);
+        _this213._service = _service;
         /** Emitter for changes to the person */
 
-        _this212.personChange = new core_1.EventEmitter();
-        return _this212;
+        _this213.personChange = new core_1.EventEmitter();
+        return _this213;
       }
 
       _createClass(VisitorFormComponent, [{
@@ -41881,20 +42158,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super69 = _createSuper(VisitorsFormModalComponent);
 
       function VisitorsFormModalComponent(_service, _bookings, _dialog_ref, _dialog, _data) {
-        var _this213;
+        var _this214;
 
         _classCallCheck(this, VisitorsFormModalComponent);
 
-        _this213 = _super69.call(this);
-        _this213._service = _service;
-        _this213._bookings = _bookings;
-        _this213._dialog_ref = _dialog_ref;
-        _this213._dialog = _dialog;
-        _this213._data = _data;
+        _this214 = _super69.call(this);
+        _this214._service = _service;
+        _this214._bookings = _bookings;
+        _this214._dialog_ref = _dialog_ref;
+        _this214._dialog = _dialog;
+        _this214._data = _data;
         /** Emitter for user action on the modal */
 
-        _this213.event = new core_1.EventEmitter();
-        return _this213;
+        _this214.event = new core_1.EventEmitter();
+        return _this214;
       }
       /** Visitor booking data */
 
@@ -41916,7 +42193,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this214 = this;
+          var _this215 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -41935,24 +42212,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /* istanbul ignore else */
             if (event.reason === 'done') {
               /* istanbul ignore else */
-              if (_this214.booking.id) {
-                _this214.loading = 'Deleting visitor booking...';
-                _this214._dialog_ref.disableClose = true;
+              if (_this215.booking.id) {
+                _this215.loading = 'Deleting visitor booking...';
+                _this215._dialog_ref.disableClose = true;
 
-                _this214.booking["delete"]().then(function () {
-                  _this214.event.emit({
+                _this215.booking["delete"]().then(function () {
+                  _this215.event.emit({
                     reason: 'done'
                   });
 
-                  _this214._service.notifySuccess('Successfully removed visitors.');
+                  _this215._service.notifySuccess('Successfully removed visitors.');
 
-                  _this214._dialog_ref.close();
+                  _this215._dialog_ref.close();
                 }, function (err) {
-                  _this214.loading = null;
+                  _this215.loading = null;
 
-                  _this214._service.notifyError("Failed to remove visitors. Error: ".concat(err.message || err));
+                  _this215._service.notifyError("Failed to remove visitors. Error: ".concat(err.message || err));
 
-                  _this214._dialog_ref.disableClose = false;
+                  _this215._dialog_ref.disableClose = false;
                 });
               }
             }
@@ -41965,33 +42242,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "save",
         value: function save() {
-          var _this215 = this;
+          var _this216 = this;
 
           this.timeout('save', function () {
-            _this215.loading = 'Saving visitor booking...';
+            _this216.loading = 'Saving visitor booking...';
 
-            _this215.form.markAllAsTouched();
+            _this216.form.markAllAsTouched();
 
-            _this215._dialog_ref.disableClose = true;
+            _this216._dialog_ref.disableClose = true;
             /* istanbul ignore else */
 
-            if (_this215.form.dirty && _this215.form.valid) {
-              var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this215.booking), _this215.form.value));
+            if (_this216.form.dirty && _this216.form.valid) {
+              var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this216.booking), _this216.form.value));
               new_booking.save().then(function (bkn) {
-                _this215.event.emit({
+                _this216.event.emit({
                   reason: 'done',
                   metadata: bkn
                 });
 
-                _this215._service.notifySuccess(_this215.booking.id ? 'Successfully updated visitors.' : 'Successfully added visitors.');
+                _this216._service.notifySuccess(_this216.booking.id ? 'Successfully updated visitors.' : 'Successfully added visitors.');
 
-                _this215._dialog_ref.close();
+                _this216._dialog_ref.close();
               }, function (err) {
-                _this215.loading = null;
+                _this216.loading = null;
 
-                _this215._service.notifyError("Failed to ".concat(_this215.booking.id ? 'update' : 'add', " visitors. Error: ").concat(err.message || err));
+                _this216._service.notifyError("Failed to ".concat(_this216.booking.id ? 'update' : 'add', " visitors. Error: ").concat(err.message || err));
 
-                _this215._dialog_ref.disableClose = false;
+                _this216._dialog_ref.disableClose = false;
               });
             }
           });
@@ -42116,6 +42393,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
+    var dialog_1 = __webpack_require__(
+    /*! @angular/material/dialog */
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+
     var booking_class_1 = __webpack_require__(
     /*! src/app/services/data/bookings/booking.class */
     "./src/app/services/data/bookings/booking.class.ts");
@@ -42127,10 +42408,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var visitors_form_modal_component_1 = __webpack_require__(
     /*! ../../overlays/visitors-form-modal/visitors-form-modal.component */
     "./src/app/shell/visitors/overlays/visitors-form-modal/visitors-form-modal.component.ts");
-
-    var dialog_1 = __webpack_require__(
-    /*! @angular/material/dialog */
-    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
@@ -42199,7 +42476,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function VisitorBookingItemComponent_div_0_a_visitor_31_Template(rf, ctx) {
+    function VisitorBookingItemComponent_div_0_a_visitor_32_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelement(0, "a-visitor", 22);
       }
@@ -42221,25 +42498,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _c1 = function _c1() {
       return {
         "class": "material-icons",
-        content: "mail"
+        content: "call"
       };
     };
 
     var _c2 = function _c2() {
       return {
         "class": "material-icons",
-        content: "event_available"
+        content: "mail"
       };
     };
 
     var _c3 = function _c3() {
       return {
         "class": "material-icons",
+        content: "event_available"
+      };
+    };
+
+    var _c4 = function _c4() {
+      return {
+        "class": "material-icons",
         content: "edit"
       };
     };
 
-    var _c4 = function _c4(a1) {
+    var _c5 = function _c5(a1) {
       return {
         "class": "material-icons",
         content: a1
@@ -42261,11 +42545,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(7, "div", 7);
         i0.ɵɵelementStart(8, "div", 8);
-        i0.ɵɵtext(9, "S");
+        i0.ɵɵtext(9);
+        i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(10, "div", 9);
         i0.ɵɵtext(11);
-        i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(12, "div", 10);
         i0.ɵɵtext(13);
@@ -42274,39 +42558,40 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵtext(15);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(16, "div", 12);
-        i0.ɵɵtext(17);
+        i0.ɵɵelementStart(17, "a", 13);
+        i0.ɵɵpipe(18, "safe");
+        i0.ɵɵelement(19, "action-icon", 4);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(18, "div", 13);
-        i0.ɵɵelementStart(19, "a", 14);
-        i0.ɵɵpipe(20, "safe");
-        i0.ɵɵelement(21, "action-icon", 4);
+        i0.ɵɵelementStart(20, "a", 14);
+        i0.ɵɵpipe(21, "safe");
+        i0.ɵɵelement(22, "action-icon", 4);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(22, "button", 15);
-        i0.ɵɵelement(23, "action-icon", 4);
+        i0.ɵɵelementStart(23, "button", 15);
+        i0.ɵɵelement(24, "action-icon", 4);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(24, "button", 16);
-        i0.ɵɵlistener("tapped", function VisitorBookingItemComponent_div_0_Template_button_tapped_24_listener() {
+        i0.ɵɵelementStart(25, "button", 16);
+        i0.ɵɵlistener("tapped", function VisitorBookingItemComponent_div_0_Template_button_tapped_25_listener() {
           i0.ɵɵrestoreView(_r6);
           var ctx_r5 = i0.ɵɵnextContext();
           return ctx_r5.openEditModal();
         });
-        i0.ɵɵelement(25, "action-icon", 4);
+        i0.ɵɵelement(26, "action-icon", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(26, "div", 17);
-        i0.ɵɵelementStart(27, "button", 18);
-        i0.ɵɵlistener("tapped", function VisitorBookingItemComponent_div_0_Template_button_tapped_27_listener() {
+        i0.ɵɵelementStart(27, "div", 17);
+        i0.ɵɵelementStart(28, "button", 18);
+        i0.ɵɵlistener("tapped", function VisitorBookingItemComponent_div_0_Template_button_tapped_28_listener() {
           i0.ɵɵrestoreView(_r6);
           var ctx_r7 = i0.ɵɵnextContext();
           return ctx_r7.show_attendees = !ctx_r7.show_attendees;
         });
-        i0.ɵɵelement(28, "app-icon", 4);
+        i0.ɵɵelement(29, "app-icon", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(29, "div", 19);
-        i0.ɵɵelement(30, "div", 20);
-        i0.ɵɵtemplate(31, VisitorBookingItemComponent_div_0_a_visitor_31_Template, 1, 3, "a-visitor", 21);
+        i0.ɵɵelementStart(30, "div", 19);
+        i0.ɵɵelement(31, "div", 20);
+        i0.ɵɵtemplate(32, VisitorBookingItemComponent_div_0_a_visitor_32_Template, 1, 3, "a-visitor", 21);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
@@ -42316,14 +42601,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵclassProp("showing", ctx_r0.show_attendees);
         i0.ɵɵadvance(1);
         i0.ɵɵclassProp("blur", ctx_r0.search);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(21, _c0));
+        i0.ɵɵadvance(1);
+        i0.ɵɵclassProp("upcoming", ctx_r0.upcoming)("all-checked-in", ctx_r0.checked_in);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(31, _c0));
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", !ctx_r0.event.all_day);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.event.all_day);
-        i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate((ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name) || ctx_r0.event.organiser_email);
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate(ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name);
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate(ctx_r0.event.title);
         i0.ɵɵadvance(2);
@@ -42331,15 +42618,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate(ctx_r0.status);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("href", i0.ɵɵpipeBind2(20, 18, ctx_r0.mail_url, "url"), i0.ɵɵsanitizeUrl);
+        i0.ɵɵproperty("disabled", !ctx_r0.event.organiser.phone)("href", i0.ɵɵpipeBind2(18, 25, "tel:" + ctx_r0.event.organiser.phone, "url"), i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(22, _c1));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(32, _c1));
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("href", i0.ɵɵpipeBind2(21, 28, ctx_r0.mail_url, "url"), i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(23, _c2));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(33, _c2));
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(24, _c3));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(34, _c3));
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(35, _c4));
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(25, _c4, ctx_r0.show_attendees ? "keyboard_arrow_down" : "keyboard_arrow_right"));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(36, _c5, ctx_r0.show_attendees ? "keyboard_arrow_down" : "keyboard_arrow_right"));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("@show", ctx_r0.show_attendees ? "show" : "hide");
         i0.ɵɵadvance(2);
@@ -42354,33 +42645,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, VisitorBookingItemComponent);
 
         this._dialog = _dialog;
+        /** Whether all the attendees have checked in */
+
+        this.checked_in = false;
       }
-      /** Display string for checkin statuses of all attendees */
+      /** Whether event will start soon or has started */
 
 
       _createClass(VisitorBookingItemComponent, [{
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
-          /* istanbul ignore else */
-          if (changes.search) {
-            this.show_attendees = !!this.search;
-          }
-        }
-      }, {
-        key: "openEditModal",
-        value: function openEditModal() {
-          this._dialog.open(visitors_form_modal_component_1.VisitorsFormModalComponent, {
-            data: {
-              booking: this.event
-            }
-          });
-        }
-      }, {
-        key: "status",
-        get: function get() {
+        key: "checkedInStatus",
+        value: function checkedInStatus() {
           var checked_in_users = this.event.checked_in;
-
-          var _this$event$attendees = this.event.attendees.reduce(function (counts, user) {
+          return this.event.attendees.reduce(function (counts, user) {
             /* istanbul ignore else */
             if (user.external) {
               counts.count++;
@@ -42395,14 +42671,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, {
             checked_in: 0,
             count: 0
-          }),
-              checked_in = _this$event$attendees.checked_in,
-              count = _this$event$attendees.count;
-
-          return "".concat(checked_in, " / ").concat(count);
+          });
         }
         /** URL for mailing all attendees of the event */
 
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          /* istanbul ignore else */
+          if (changes.search) {
+            this.show_attendees = !!this.search;
+          }
+
+          if (changes.event) {
+            var _this$checkedInStatus = this.checkedInStatus(),
+                checked_in = _this$checkedInStatus.checked_in,
+                count = _this$checkedInStatus.count;
+
+            this.checked_in = checked_in >= count;
+          }
+        }
+      }, {
+        key: "openEditModal",
+        value: function openEditModal() {
+          this._dialog.open(visitors_form_modal_component_1.VisitorsFormModalComponent, {
+            data: {
+              booking: this.event
+            }
+          });
+        }
+      }, {
+        key: "upcoming",
+        get: function get() {
+          return this.event.status === 'upcoming' || this.event.status === 'in_progress';
+        }
+        /** Display string for checkin statuses of all attendees */
+
+      }, {
+        key: "status",
+        get: function get() {
+          var _this$checkedInStatus2 = this.checkedInStatus(),
+              checked_in = _this$checkedInStatus2.checked_in,
+              count = _this$checkedInStatus2.count;
+
+          return "".concat(checked_in, " / ").concat(count);
+        }
       }, {
         key: "mail_url",
         get: function get() {
@@ -42432,10 +42745,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵNgOnChangesFeature],
       decls: 1,
       vars: 1,
-      consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "staff"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Email Visitors", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "tapped"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "tapped"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]],
+      consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Visitors", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "tapped"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "tapped"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]],
       template: function VisitorBookingItemComponent_Template(rf, ctx) {
         if (rf & 1) {
-          i0.ɵɵtemplate(0, VisitorBookingItemComponent_div_0_Template, 32, 27, "div", 0);
+          i0.ɵɵtemplate(0, VisitorBookingItemComponent_div_0_Template, 33, 38, "div", 0);
         }
 
         if (rf & 2) {
@@ -42444,7 +42757,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       directives: [i2.NgIf, i3.IconComponent, i4.MatAnchor, i5.MatTooltip, i6.ActionIconComponent, i4.MatButton, i7.ɵb, i2.NgForOf, i8.VisitorComponent],
       pipes: [i9.ɵa],
-      styles: ["[_nghost-%COMP%] {\n  font-size: 0.9em;\n}\n.visitor-booking[_ngcontent-%COMP%] {\n  transition: background 200ms;\n  background-color: #fff;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.showing[_ngcontent-%COMP%] {\n  background-color: #f0f0f0;\n}\n.showing[_ngcontent-%COMP%]   .toggle[_ngcontent-%COMP%] {\n  color: #1937ea;\n}\n.details[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 10;\n  display: flex;\n  align-items: center;\n  padding: 0.5em 0;\n  transition: opacity 200ms;\n}\n.details.blur[_ngcontent-%COMP%] {\n  opacity: 0.35;\n  background-color: #fff;\n}\n.details[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 0 0.5em;\n}\n.details[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 7.75rem;\n  font-size: 0.9em;\n}\n.details[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 13.25em;\n}\n.details[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  width: 12em;\n}\n.icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 2em;\n  width: 2em;\n  border-radius: 100%;\n  background-color: #ccc;\n  font-size: 1.5em;\n}\n.time[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: rgba(0, 0, 0, 0.65);\n}\n.title[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 1em;\n}\n.host[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n}\n.status[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  font-weight: 500;\n  width: 3.5em;\n}\n.staff[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 1.5em;\n  width: 1.5em;\n  margin-right: 0.5em;\n  border-radius: 4px;\n  border: 3px solid #1937ea;\n  font-weight: 600;\n  font-size: 0.8em;\n  color: #1937ea;\n}\n.attendees[_ngcontent-%COMP%] {\n  position: relative;\n}\n.attendees[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -0.65em;\n  left: 2.15em;\n  width: 2px;\n  background-color: #999;\n  bottom: 2em;\n}\n.toggle[_ngcontent-%COMP%] {\n  font-size: 1.2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdGltZWxpbmUvaXRlbS9pdGVtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQzNDQTtFQUNJLGdCQUFBO0FDT0o7QURKQTtFQUNJLDRCQUFBO0VBQ0Esc0JBQUE7RUFDQSwyQ0FBQTtBQ09KO0FESkE7RUFDSSx5QkFBQTtBQ09KO0FETEk7RUFDSSxjREdRO0FFSWhCO0FESEE7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0FDTUo7QURKSTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtBQ01SO0FESEk7RUFDSSxlQUFBO0FDS1I7QURGSTtFQUNJLGNBQUE7RUFDQSxnQkFBQTtBQ0lSO0FEREk7RUFDSSxjQUFBO0FDR1I7QURBSTtFQUNJLFdBQUE7QUNFUjtBREVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxnQkFBQTtBQ0NKO0FER0k7RUFDSSwwQkFBQTtBQ0FSO0FESUE7RUFDSSxPQUFBO0VBQ0EsY0FBQTtBQ0RKO0FESUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtBQ0RKO0FESUE7RUFDSSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtBQ0RKO0FESUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLHlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLGNEN0VZO0FFNEVoQjtBRElBO0VBQ0ksa0JBQUE7QUNESjtBREVJO0VBQ0ksa0JBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLFVBQUE7RUFDQSxzQkFBQTtFQUNBLFdBQUE7QUNBUjtBRElBO0VBQ0ksaUJBQUE7QUNESiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG46aG9zdCB7XG4gICAgZm9udC1zaXplOiAuOWVtO1xufVxuXG4udmlzaXRvci1ib29raW5nIHtcbiAgICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kIDIwMG1zO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoIzAwMCwgLjEpO1xufVxuXG4uc2hvd2luZyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcblxuICAgIC50b2dnbGUge1xuICAgICAgICBjb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgfVxufVxuXG4uZGV0YWlscyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHotaW5kZXg6IDEwO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAwLjVlbSAwO1xuICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMjAwbXM7XG5cbiAgICAmLmJsdXIge1xuICAgICAgICBvcGFjaXR5OiAuMzU7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgfVxuXG4gICAgPiAqIHtcbiAgICAgICAgbWFyZ2luOiAwIDAuNWVtO1xuICAgIH1cblxuICAgIC50aW1lIHtcbiAgICAgICAgd2lkdGg6IDcuNzVyZW07XG4gICAgICAgIGZvbnQtc2l6ZTogLjllbTtcbiAgICB9XG5cbiAgICAuaG9zdCB7XG4gICAgICAgIHdpZHRoOiAxMy4yNWVtO1xuICAgIH1cblxuICAgIC5sb2NhdGlvbiB7XG4gICAgICAgIHdpZHRoOiAxMmVtO1xuICAgIH1cbn1cblxuLmljb24ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDJlbTtcbiAgICB3aWR0aDogMmVtO1xuICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2NjYztcbiAgICBmb250LXNpemU6IDEuNWVtO1xufVxuXG4udGltZSB7XG4gICAgc3BhbiB7XG4gICAgICAgIGNvbG9yOiByZ2JhKCMwMDAsIDAuNjUpO1xuICAgIH1cbn1cblxuLnRpdGxlIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogMWVtO1xufVxuXG4uaG9zdCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5zdGF0dXMge1xuICAgIGZvbnQtc2l6ZTogLjllbTtcbiAgICBmb250LXdlaWdodDogNTAwO1xuICAgIHdpZHRoOiAzLjVlbTtcbn1cblxuLnN0YWZmIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAxLjVlbTtcbiAgICB3aWR0aDogMS41ZW07XG4gICAgbWFyZ2luLXJpZ2h0OiAuNWVtO1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBib3JkZXI6IDNweCBzb2xpZCAkY29sb3ItcHJpbWFyeTtcbiAgICBmb250LXdlaWdodDogNjAwO1xuICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICBjb2xvcjogJGNvbG9yLXByaW1hcnk7XG59XG5cbi5hdHRlbmRlZXMge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAuYmFyIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0uNjVlbTtcbiAgICAgICAgbGVmdDogMi4xNWVtO1xuICAgICAgICB3aWR0aDogMnB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTk5O1xuICAgICAgICBib3R0b206IDJlbTtcbiAgICB9XG59XG5cbi50b2dnbGUge1xuICAgIGZvbnQtc2l6ZTogMS4ycmVtO1xufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuOmhvc3Qge1xuICBmb250LXNpemU6IDAuOWVtO1xufVxuXG4udmlzaXRvci1ib29raW5nIHtcbiAgdHJhbnNpdGlvbjogYmFja2dyb3VuZCAyMDBtcztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC4xKTtcbn1cblxuLnNob3dpbmcge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjBmMGYwO1xufVxuLnNob3dpbmcgLnRvZ2dsZSB7XG4gIGNvbG9yOiAjMTkzN2VhO1xufVxuXG4uZGV0YWlscyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgei1pbmRleDogMTA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDAuNWVtIDA7XG4gIHRyYW5zaXRpb246IG9wYWNpdHkgMjAwbXM7XG59XG4uZGV0YWlscy5ibHVyIHtcbiAgb3BhY2l0eTogMC4zNTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbn1cbi5kZXRhaWxzID4gKiB7XG4gIG1hcmdpbjogMCAwLjVlbTtcbn1cbi5kZXRhaWxzIC50aW1lIHtcbiAgd2lkdGg6IDcuNzVyZW07XG4gIGZvbnQtc2l6ZTogMC45ZW07XG59XG4uZGV0YWlscyAuaG9zdCB7XG4gIHdpZHRoOiAxMy4yNWVtO1xufVxuLmRldGFpbHMgLmxvY2F0aW9uIHtcbiAgd2lkdGg6IDEyZW07XG59XG5cbi5pY29uIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGhlaWdodDogMmVtO1xuICB3aWR0aDogMmVtO1xuICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2NjO1xuICBmb250LXNpemU6IDEuNWVtO1xufVxuXG4udGltZSBzcGFuIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42NSk7XG59XG5cbi50aXRsZSB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMWVtO1xufVxuXG4uaG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5zdGF0dXMge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICB3aWR0aDogMy41ZW07XG59XG5cbi5zdGFmZiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDEuNWVtO1xuICB3aWR0aDogMS41ZW07XG4gIG1hcmdpbi1yaWdodDogMC41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYm9yZGVyOiAzcHggc29saWQgIzE5MzdlYTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgY29sb3I6ICMxOTM3ZWE7XG59XG5cbi5hdHRlbmRlZXMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG4uYXR0ZW5kZWVzIC5iYXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogLTAuNjVlbTtcbiAgbGVmdDogMi4xNWVtO1xuICB3aWR0aDogMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTk5O1xuICBib3R0b206IDJlbTtcbn1cblxuLnRvZ2dsZSB7XG4gIGZvbnQtc2l6ZTogMS4ycmVtO1xufSJdfQ== */"],
+      styles: ["[_nghost-%COMP%] {\n  font-size: 0.9em;\n}\n.visitor-booking[_ngcontent-%COMP%] {\n  transition: background 200ms;\n  background-color: #fff;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.showing[_ngcontent-%COMP%] {\n  background-color: #f0f0f0;\n}\n.showing[_ngcontent-%COMP%]   .toggle[_ngcontent-%COMP%] {\n  color: #1937ea;\n}\n.details[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 10;\n  display: flex;\n  align-items: center;\n  padding: 0.5em 0;\n  transition: opacity 200ms;\n}\n.details.blur[_ngcontent-%COMP%] {\n  opacity: 0.35;\n  background-color: #fff;\n}\n.details[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 0 0.5em;\n}\n.details[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 7.75rem;\n  font-size: 0.9em;\n}\n.details[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 13.25em;\n}\n.details[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  width: 12em;\n}\n.icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 2em;\n  width: 2em;\n  border-radius: 100%;\n  background-color: #ccc;\n  font-size: 1.5em;\n}\n.icon.upcoming[_ngcontent-%COMP%] {\n  border: 2px solid #ffb300;\n  background-color: #ffb300;\n  color: #fff;\n}\n.icon.all-checked-in[_ngcontent-%COMP%] {\n  border: 2px solid #1937ea;\n  background-color: #1937ea;\n  color: #fff;\n}\n.time[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: rgba(0, 0, 0, 0.65);\n}\n.title[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 1em;\n}\n.host[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n}\n.status[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  font-weight: 500;\n  width: 3.5em;\n}\n.staff[_ngcontent-%COMP%] {\n  margin-left: 0.5rem;\n  font-weight: 600;\n  font-size: 0.6em;\n  opacity: 0.35;\n  text-transform: uppercase;\n}\n.attendees[_ngcontent-%COMP%] {\n  position: relative;\n}\n.attendees[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -0.65em;\n  left: 2.15em;\n  width: 2px;\n  background-color: #999;\n  bottom: 2em;\n}\n.toggle[_ngcontent-%COMP%] {\n  font-size: 1.2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdGltZWxpbmUvaXRlbS9pdGVtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQzNDQTtFQUNJLGdCQUFBO0FDT0o7QURKQTtFQUNJLDRCQUFBO0VBQ0Esc0JBQUE7RUFDQSwyQ0FBQTtBQ09KO0FESkE7RUFDSSx5QkFBQTtBQ09KO0FETEk7RUFDSSxjREdRO0FFSWhCO0FESEE7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0FDTUo7QURKSTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtBQ01SO0FESEk7RUFDSSxlQUFBO0FDS1I7QURGSTtFQUNJLGNBQUE7RUFDQSxnQkFBQTtBQ0lSO0FEREk7RUFDSSxjQUFBO0FDR1I7QURBSTtFQUNJLFdBQUE7QUNFUjtBREVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxnQkFBQTtBQ0NKO0FEQ0k7RUFDSSx5QkFBQTtFQUNBLHlCRHBERTtFQ3FERixXQUFBO0FDQ1I7QURFSTtFQUNJLHlCQUFBO0VBQ0EseUJEbERRO0VDbURSLFdBQUE7QUNBUjtBREtJO0VBQ0ksMEJBQUE7QUNGUjtBRE1BO0VBQ0ksT0FBQTtFQUNBLGNBQUE7QUNISjtBRE1BO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUNISjtBRE1BO0VBQ0ksZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7QUNISjtBRE1BO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLHlCQUFBO0FDSEo7QURNQTtFQUNJLGtCQUFBO0FDSEo7QURJSTtFQUNJLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0VBQ0Esc0JBQUE7RUFDQSxXQUFBO0FDRlI7QURNQTtFQUNJLGlCQUFBO0FDSEoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxuOmhvc3Qge1xuICAgIGZvbnQtc2l6ZTogLjllbTtcbn1cblxuLnZpc2l0b3ItYm9va2luZyB7XG4gICAgdHJhbnNpdGlvbjogYmFja2dyb3VuZCAyMDBtcztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKCMwMDAsIC4xKTtcbn1cblxuLnNob3dpbmcge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmMGYwZjA7XG5cbiAgICAudG9nZ2xlIHtcbiAgICAgICAgY29sb3I6ICRjb2xvci1wcmltYXJ5O1xuICAgIH1cbn1cblxuLmRldGFpbHMge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB6LWluZGV4OiAxMDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMC41ZW0gMDtcbiAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zO1xuXG4gICAgJi5ibHVyIHtcbiAgICAgICAgb3BhY2l0eTogLjM1O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIH1cblxuICAgID4gKiB7XG4gICAgICAgIG1hcmdpbjogMCAwLjVlbTtcbiAgICB9XG5cbiAgICAudGltZSB7XG4gICAgICAgIHdpZHRoOiA3Ljc1cmVtO1xuICAgICAgICBmb250LXNpemU6IC45ZW07XG4gICAgfVxuXG4gICAgLmhvc3Qge1xuICAgICAgICB3aWR0aDogMTMuMjVlbTtcbiAgICB9XG5cbiAgICAubG9jYXRpb24ge1xuICAgICAgICB3aWR0aDogMTJlbTtcbiAgICB9XG59XG5cbi5pY29uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAyZW07XG4gICAgd2lkdGg6IDJlbTtcbiAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG4gICAgZm9udC1zaXplOiAxLjVlbTtcblxuICAgICYudXBjb21pbmcge1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkcGVuZGluZztcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHBlbmRpbmc7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cblxuICAgICYuYWxsLWNoZWNrZWQtaW4ge1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3ItcHJpbWFyeTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cbn1cblxuLnRpbWUge1xuICAgIHNwYW4ge1xuICAgICAgICBjb2xvcjogcmdiYSgjMDAwLCAwLjY1KTtcbiAgICB9XG59XG5cbi50aXRsZSB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDFlbTtcbn1cblxuLmhvc3Qge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXdlaWdodDogNDAwO1xufVxuXG4uc3RhdHVzIHtcbiAgICBmb250LXNpemU6IC45ZW07XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICB3aWR0aDogMy41ZW07XG59XG5cbi5zdGFmZiB7XG4gICAgbWFyZ2luLWxlZnQ6IC41cmVtO1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgZm9udC1zaXplOiAuNmVtO1xuICAgIG9wYWNpdHk6IC4zNTtcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uYXR0ZW5kZWVzIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgLmJhciB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAtLjY1ZW07XG4gICAgICAgIGxlZnQ6IDIuMTVlbTtcbiAgICAgICAgd2lkdGg6IDJweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzk5OTtcbiAgICAgICAgYm90dG9tOiAyZW07XG4gICAgfVxufVxuXG4udG9nZ2xlIHtcbiAgICBmb250LXNpemU6IDEuMnJlbTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0IHtcbiAgZm9udC1zaXplOiAwLjllbTtcbn1cblxuLnZpc2l0b3ItYm9va2luZyB7XG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQgMjAwbXM7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMSk7XG59XG5cbi5zaG93aW5nIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcbn1cbi5zaG93aW5nIC50b2dnbGUge1xuICBjb2xvcjogIzE5MzdlYTtcbn1cblxuLmRldGFpbHMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHotaW5kZXg6IDEwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVlbSAwO1xuICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zO1xufVxuLmRldGFpbHMuYmx1ciB7XG4gIG9wYWNpdHk6IDAuMzU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG4uZGV0YWlscyA+ICoge1xuICBtYXJnaW46IDAgMC41ZW07XG59XG4uZGV0YWlscyAudGltZSB7XG4gIHdpZHRoOiA3Ljc1cmVtO1xuICBmb250LXNpemU6IDAuOWVtO1xufVxuLmRldGFpbHMgLmhvc3Qge1xuICB3aWR0aDogMTMuMjVlbTtcbn1cbi5kZXRhaWxzIC5sb2NhdGlvbiB7XG4gIHdpZHRoOiAxMmVtO1xufVxuXG4uaWNvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDJlbTtcbiAgd2lkdGg6IDJlbTtcbiAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NjYztcbiAgZm9udC1zaXplOiAxLjVlbTtcbn1cbi5pY29uLnVwY29taW5nIHtcbiAgYm9yZGVyOiAycHggc29saWQgI2ZmYjMwMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmYjMwMDtcbiAgY29sb3I6ICNmZmY7XG59XG4uaWNvbi5hbGwtY2hlY2tlZC1pbiB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMxOTM3ZWE7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxOTM3ZWE7XG4gIGNvbG9yOiAjZmZmO1xufVxuXG4udGltZSBzcGFuIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42NSk7XG59XG5cbi50aXRsZSB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMWVtO1xufVxuXG4uaG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5zdGF0dXMge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICB3aWR0aDogMy41ZW07XG59XG5cbi5zdGFmZiB7XG4gIG1hcmdpbi1sZWZ0OiAwLjVyZW07XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMC42ZW07XG4gIG9wYWNpdHk6IDAuMzU7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5hdHRlbmRlZXMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG4uYXR0ZW5kZWVzIC5iYXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogLTAuNjVlbTtcbiAgbGVmdDogMi4xNWVtO1xuICB3aWR0aDogMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTk5O1xuICBib3R0b206IDJlbTtcbn1cblxuLnRvZ2dsZSB7XG4gIGZvbnQtc2l6ZTogMS4ycmVtO1xufSJdfQ== */"],
       data: {
         animation: [angular_animations_1.ANIMATION_SHOW_CONTRACT_EXPAND]
       }
@@ -42605,7 +42918,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r1.date_display === "Today" && ctx_r1.active_index === 0 - 1);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r1.filtered_bookings);
+        i0.ɵɵproperty("ngForOf", ctx_r1.filtered_bookings)("ngForTrackBy", ctx_r1.trackByFn);
       }
     }
 
@@ -42633,7 +42946,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(3, _c0));
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate2("No visitors ", ctx_r3.search ? "matching " + "\"" + ctx_r3.search + "\"" : "", " for ", ctx_r3.date_display, "");
+        i0.ɵɵtextInterpolate2(" No visitors ", ctx_r3.search ? "matching " + "\"" + ctx_r3.search + "\"" : "", " for ", ctx_r3.date_display, " ");
       }
     }
 
@@ -42645,23 +42958,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super70 = _createSuper(VisitorTimelineComponent);
 
       function VisitorTimelineComponent(_org, _spaces) {
-        var _this216;
+        var _this217;
 
         _classCallCheck(this, VisitorTimelineComponent);
 
-        _this216 = _super70.call(this);
-        _this216._org = _org;
-        _this216._spaces = _spaces;
+        _this217 = _super70.call(this);
+        _this217._org = _org;
+        _this217._spaces = _spaces;
         /** List of visitor bookings for the current date */
 
-        _this216.visitor_bookings = [];
+        _this217.bookings = [];
         /** List of filtered bookings */
 
-        _this216.filtered_bookings = [];
+        _this217.filtered_bookings = [];
         /** Subject holding the value of the search */
 
-        _this216.search$ = new rxjs_1.Subject();
-        return _this216;
+        _this217.search$ = new rxjs_1.Subject();
+        return _this217;
       }
       /** Display string for the selected date */
 
@@ -42669,19 +42982,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(VisitorTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this217 = this;
+          var _this218 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this217.initBookings();
+            _this218.initBookings();
 
-            _this217.subscription('building', _this217._org.listen('active_building').subscribe(function (_) {
-              return _this217.search$.next("".concat(_this217.date, "|").concat(_.id));
+            _this218.subscription('building', _this218._org.listen('active_building').subscribe(function (_) {
+              return _this218.search$.next("".concat(_this218.date, "|").concat(_.id));
             }));
 
-            _this217.interval('update_bookings', function () {
-              return _this217.search$.next("".concat(_this217.date, "|").concat(dayjs().unix()));
+            _this218.interval('update_bookings', function () {
+              return _this218.search$.next("".concat(_this218.date, "|").concat(dayjs().unix()));
             }, 30 * 1000);
           });
         }
@@ -42695,34 +43008,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
 
 
-          if (changes.search) {
+          if (changes.search || changes.show_all) {
             this.filtered_bookings = this.filter(this.search);
           }
+        }
+      }, {
+        key: "trackBy",
+        value: function trackBy(index, booking) {
+          return booking.id;
         }
         /** Filter the visitor bookings */
 
       }, {
         key: "filter",
         value: function filter() {
+          var _this219 = this;
+
           var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
           var search = str.toLowerCase();
-          return this.visitor_bookings.filter(function (booking) {
+          return this.bookings.filter(function (booking) {
             return booking.attendees.find(function (user) {
               return user.name.toLowerCase().indexOf(search) >= 0 || user.email.toLowerCase().indexOf(search) >= 0;
             });
+          }).filter(function (bkn) {
+            return _this219.show_all ? true : bkn.has_visitors;
           });
         }
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this218 = this;
+          var _this220 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this218.loading = true;
-            var date = dayjs(_this218.date).startOf('d');
-            var zone = _this218._org.building.id;
-            return _this218._spaces.query({
+            _this220.loading = true;
+            var date = dayjs(_this220.date).startOf('d');
+            var zone = _this220._org.building.id;
+            return _this220._spaces.query({
               zone_ids: zone,
               available_from: date.unix(),
               available_to: date.endOf('d').unix()
@@ -42731,20 +43053,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return rxjs_1.of([]);
           }), operators_1.map(function (list) {
             var bookings = list.reduce(function (items, space) {
-              return items.concat(space.bookingsFor(_this218.date));
+              return items.concat(space.bookingsFor(_this220.date));
             }, []);
             bookings.sort(function (a, b) {
               return a.date - b.date;
             });
-            return bookings.filter(function (bkn) {
-              return bkn.has_visitors;
-            });
+            return bookings;
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this218.loading = false;
-            _this218.visitor_bookings = list;
-            _this218.filtered_bookings = _this218.filter(_this218.search);
+            _this220.loading = false;
+            _this220.bookings = list;
+            _this220.filtered_bookings = _this220.filter(_this220.search);
           }));
         }
       }, {
@@ -42782,12 +43102,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["visitor-timeline"]],
       inputs: {
         date: "date",
-        search: "search"
+        search: "search",
+        show_all: "show_all"
       },
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 18,
       vars: 3,
-      consts: [[1, "visitor-timeline"], ["class", "loader", 4, "ngIf"], [1, "heading"], [1, "icon"], [1, "time"], [1, "host"], [1, "title"], [1, "location"], [1, "state"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "loader"], ["mode", "indeterminate"], ["class", "current-line", 4, "ngIf"], [4, "ngFor", "ngForOf"], [1, "current-line"], [1, "triangle"], [3, "event", "search"], [1, "info-block"], [3, "icon"], [1, "text"]],
+      consts: [[1, "visitor-timeline"], ["class", "loader", 4, "ngIf"], [1, "heading"], [1, "icon"], [1, "time"], [1, "host"], [1, "title"], [1, "location"], [1, "state"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "loader"], ["mode", "indeterminate"], ["class", "current-line", 4, "ngIf"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [1, "current-line"], [1, "triangle"], [3, "event", "search"], [1, "info-block"], [3, "icon"], [1, "text"]],
       template: function VisitorTimelineComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -42811,7 +43132,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(14, "div", 9);
-          i0.ɵɵtemplate(15, VisitorTimelineComponent_ng_container_15_Template, 3, 2, "ng-container", 10);
+          i0.ɵɵtemplate(15, VisitorTimelineComponent_ng_container_15_Template, 3, 3, "ng-container", 10);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵtemplate(16, VisitorTimelineComponent_ng_template_16_Template, 5, 4, "ng-template", null, 11, i0.ɵɵtemplateRefExtractor);
@@ -42827,7 +43148,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [i3.NgIf, i4.MatProgressBar, i3.NgForOf, i5.VisitorBookingItemComponent, i6.IconComponent],
-      styles: [".visitor-timeline[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n  background-color: #ecf1f5;\n}\na-visitor-booking[_ngcontent-%COMP%] {\n  width: 100%;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.heading[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n  font-size: 0.8em;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  width: 100%;\n  z-index: 1;\n}\n.heading[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  padding: 0.25em 0;\n  text-transform: capitalize;\n}\n.heading[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  width: 5.5em;\n}\n.heading[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 10em;\n}\n.heading[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 16em;\n}\n.heading[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.heading[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  width: 14.25em;\n}\n.heading[_ngcontent-%COMP%]   .state[_ngcontent-%COMP%] {\n  width: 19.25em;\n}\n.current-line[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: 2px;\n  background-color: #1937ea;\n  z-index: 99;\n}\n.current-line[_ngcontent-%COMP%]   .triangle[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 6px 0 6px 6px;\n  border-color: transparent transparent transparent #1937ea;\n}\n.list[_ngcontent-%COMP%] {\n  min-height: 50%;\n  flex: 1;\n  width: 100%;\n  overflow: auto;\n}\n.loader[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  z-index: 999;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL3RpbWVsaW5lLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNPSjtBREpBO0VBQ0ksV0FBQTtFQUNBLDJDQUFBO0FDT0o7QURKQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLDJDQUFBO0VBQ0EsV0FBQTtFQUNBLFVBQUE7QUNPSjtBRExJO0VBQ0ksaUJBQUE7RUFDQSwwQkFBQTtBQ09SO0FESkk7RUFDSSxZQUFBO0FDTVI7QURISTtFQUNJLFdBQUE7QUNLUjtBREZJO0VBQ0ksV0FBQTtBQ0lSO0FEREk7RUFDSSxPQUFBO0FDR1I7QURBSTtFQUNJLGNBQUE7QUNFUjtBRENJO0VBQ0ksY0FBQTtBQ0NSO0FER0E7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0EseUJEekNZO0VDMENaLFdBQUE7QUNBSjtBREVJO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsT0FBQTtFQUNBLDJCQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxtQkFBQTtFQUNBLDJCQUFBO0VBQ0EseURBQUE7QUNBUjtBRElBO0VBQ0ksZUFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtBQ0RKO0FESUE7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDREoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG4udmlzaXRvci10aW1lbGluZSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VjZjFmNTtcbn1cblxuYS12aXNpdG9yLWJvb2tpbmcge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKCMwMDAsIC4xKTtcbn1cblxuLmhlYWRpbmcge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoIzAwMCwgLjEpO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHotaW5kZXg6IDE7XG5cbiAgICA+ICoge1xuICAgICAgICBwYWRkaW5nOiAuMjVlbSAwO1xuICAgICAgICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbiAgICB9XG5cbiAgICAuaWNvbiB7XG4gICAgICAgIHdpZHRoOiA1LjVlbTtcbiAgICB9XG5cbiAgICAudGltZSB7XG4gICAgICAgIHdpZHRoOiAxMGVtO1xuICAgIH1cblxuICAgIC5ob3N0IHtcbiAgICAgICAgd2lkdGg6IDE2ZW07XG4gICAgfVxuXG4gICAgLnRpdGxlIHtcbiAgICAgICAgZmxleDogMTtcbiAgICB9XG5cbiAgICAubG9jYXRpb24ge1xuICAgICAgICB3aWR0aDogMTQuMjVlbTtcbiAgICB9XG5cbiAgICAuc3RhdGUge1xuICAgICAgICB3aWR0aDogMTkuMjVlbTtcbiAgICB9XG59XG5cbi5jdXJyZW50LWxpbmUge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDJweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbiAgICB6LWluZGV4OiA5OTtcblxuICAgIC50cmlhbmdsZSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA1MCU7XG4gICAgICAgIGxlZnQ6IDA7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbiAgICAgICAgd2lkdGg6IDA7XG4gICAgICAgIGhlaWdodDogMDtcbiAgICAgICAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcbiAgICAgICAgYm9yZGVyLXdpZHRoOiA2cHggMCA2cHggNnB4O1xuICAgICAgICBib3JkZXItY29sb3I6IHRyYW5zcGFyZW50IHRyYW5zcGFyZW50IHRyYW5zcGFyZW50ICRjb2xvci1wcmltYXJ5O1xuICAgIH1cbn1cblxuLmxpc3Qge1xuICAgIG1pbi1oZWlnaHQ6IDUwJTtcbiAgICBmbGV4OiAxO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG92ZXJmbG93OiBhdXRvO1xufVxuXG4ubG9hZGVyIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgaGVpZ2h0OiA0cHg7XG4gICAgei1pbmRleDogOTk5O1xufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLnZpc2l0b3ItdGltZWxpbmUge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlY2YxZjU7XG59XG5cbmEtdmlzaXRvci1ib29raW5nIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMSk7XG59XG5cbi5oZWFkaW5nIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXNpemU6IDAuOGVtO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpO1xuICB3aWR0aDogMTAwJTtcbiAgei1pbmRleDogMTtcbn1cbi5oZWFkaW5nID4gKiB7XG4gIHBhZGRpbmc6IDAuMjVlbSAwO1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbn1cbi5oZWFkaW5nIC5pY29uIHtcbiAgd2lkdGg6IDUuNWVtO1xufVxuLmhlYWRpbmcgLnRpbWUge1xuICB3aWR0aDogMTBlbTtcbn1cbi5oZWFkaW5nIC5ob3N0IHtcbiAgd2lkdGg6IDE2ZW07XG59XG4uaGVhZGluZyAudGl0bGUge1xuICBmbGV4OiAxO1xufVxuLmhlYWRpbmcgLmxvY2F0aW9uIHtcbiAgd2lkdGg6IDE0LjI1ZW07XG59XG4uaGVhZGluZyAuc3RhdGUge1xuICB3aWR0aDogMTkuMjVlbTtcbn1cblxuLmN1cnJlbnQtbGluZSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICB6LWluZGV4OiA5OTtcbn1cbi5jdXJyZW50LWxpbmUgLnRyaWFuZ2xlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogMDtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICB3aWR0aDogMDtcbiAgaGVpZ2h0OiAwO1xuICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICBib3JkZXItd2lkdGg6IDZweCAwIDZweCA2cHg7XG4gIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgIzE5MzdlYTtcbn1cblxuLmxpc3Qge1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIGZsZXg6IDE7XG4gIHdpZHRoOiAxMDAlO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmxvYWRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgaGVpZ2h0OiA0cHg7XG4gIHotaW5kZXg6IDk5OTtcbn0iXX0= */"]
+      styles: [".visitor-timeline[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n  background-color: #ecf1f5;\n}\na-visitor-booking[_ngcontent-%COMP%] {\n  width: 100%;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.heading[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n  font-size: 0.8em;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  width: 100%;\n  z-index: 1;\n}\n.heading[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  padding: 0.25em;\n  text-transform: capitalize;\n  margin: 0 0.5em;\n}\n.heading[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  width: 3rem;\n}\n.heading[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 7.75rem;\n}\n.heading[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 12.25rem;\n}\n.heading[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.heading[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  width: 10.75rem;\n}\n.heading[_ngcontent-%COMP%]   .state[_ngcontent-%COMP%] {\n  width: 17.75rem;\n}\n.current-line[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: 2px;\n  background-color: #1937ea;\n  z-index: 99;\n}\n.current-line[_ngcontent-%COMP%]   .triangle[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 6px 0 6px 6px;\n  border-color: transparent transparent transparent #1937ea;\n}\n.list[_ngcontent-%COMP%] {\n  min-height: 50%;\n  flex: 1;\n  width: 100%;\n  overflow: auto;\n}\n.loader[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  z-index: 999;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL3RpbWVsaW5lLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNPSjtBREpBO0VBQ0ksV0FBQTtFQUNBLDJDQUFBO0FDT0o7QURKQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLDJDQUFBO0VBQ0EsV0FBQTtFQUNBLFVBQUE7QUNPSjtBRExJO0VBQ0ksZUFBQTtFQUNBLDBCQUFBO0VBQ0EsZUFBQTtBQ09SO0FESkk7RUFDSSxXQUFBO0FDTVI7QURISTtFQUNJLGNBQUE7QUNLUjtBREZJO0VBQ0ksZUFBQTtBQ0lSO0FEREk7RUFDSSxPQUFBO0FDR1I7QURBSTtFQUNJLGVBQUE7QUNFUjtBRENJO0VBQ0ksZUFBQTtBQ0NSO0FER0E7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0EseUJEMUNZO0VDMkNaLFdBQUE7QUNBSjtBREVJO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsT0FBQTtFQUNBLDJCQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxtQkFBQTtFQUNBLDJCQUFBO0VBQ0EseURBQUE7QUNBUjtBRElBO0VBQ0ksZUFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtBQ0RKO0FESUE7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDREoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG4udmlzaXRvci10aW1lbGluZSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VjZjFmNTtcbn1cblxuYS12aXNpdG9yLWJvb2tpbmcge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKCMwMDAsIC4xKTtcbn1cblxuLmhlYWRpbmcge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoIzAwMCwgLjEpO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHotaW5kZXg6IDE7XG5cbiAgICA+ICoge1xuICAgICAgICBwYWRkaW5nOiAuMjVlbTtcbiAgICAgICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG4gICAgICAgIG1hcmdpbjogMCAuNWVtO1xuICAgIH1cblxuICAgIC5pY29uIHtcbiAgICAgICAgd2lkdGg6IDNyZW07XG4gICAgfVxuXG4gICAgLnRpbWUge1xuICAgICAgICB3aWR0aDogNy43NXJlbTtcbiAgICB9XG5cbiAgICAuaG9zdCB7XG4gICAgICAgIHdpZHRoOiAxMi4yNXJlbTtcbiAgICB9XG5cbiAgICAudGl0bGUge1xuICAgICAgICBmbGV4OiAxO1xuICAgIH1cblxuICAgIC5sb2NhdGlvbiB7XG4gICAgICAgIHdpZHRoOiAxMC43NXJlbTtcbiAgICB9XG5cbiAgICAuc3RhdGUge1xuICAgICAgICB3aWR0aDogMTcuNzVyZW07XG4gICAgfVxufVxuXG4uY3VycmVudC1saW5lIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgei1pbmRleDogOTk7XG5cbiAgICAudHJpYW5nbGUge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogNTAlO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG4gICAgICAgIHdpZHRoOiAwO1xuICAgICAgICBoZWlnaHQ6IDA7XG4gICAgICAgIGJvcmRlci1zdHlsZTogc29saWQ7XG4gICAgICAgIGJvcmRlci13aWR0aDogNnB4IDAgNnB4IDZweDtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiB0cmFuc3BhcmVudCB0cmFuc3BhcmVudCB0cmFuc3BhcmVudCAkY29sb3ItcHJpbWFyeTtcbiAgICB9XG59XG5cbi5saXN0IHtcbiAgICBtaW4taGVpZ2h0OiA1MCU7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmxvYWRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGhlaWdodDogNHB4O1xuICAgIHotaW5kZXg6IDk5OTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi52aXNpdG9yLXRpbWVsaW5lIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWNmMWY1O1xufVxuXG5hLXZpc2l0b3ItYm9va2luZyB7XG4gIHdpZHRoOiAxMDAlO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpO1xufVxuXG4uaGVhZGluZyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDE7XG59XG4uaGVhZGluZyA+ICoge1xuICBwYWRkaW5nOiAwLjI1ZW07XG4gIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICBtYXJnaW46IDAgMC41ZW07XG59XG4uaGVhZGluZyAuaWNvbiB7XG4gIHdpZHRoOiAzcmVtO1xufVxuLmhlYWRpbmcgLnRpbWUge1xuICB3aWR0aDogNy43NXJlbTtcbn1cbi5oZWFkaW5nIC5ob3N0IHtcbiAgd2lkdGg6IDEyLjI1cmVtO1xufVxuLmhlYWRpbmcgLnRpdGxlIHtcbiAgZmxleDogMTtcbn1cbi5oZWFkaW5nIC5sb2NhdGlvbiB7XG4gIHdpZHRoOiAxMC43NXJlbTtcbn1cbi5oZWFkaW5nIC5zdGF0ZSB7XG4gIHdpZHRoOiAxNy43NXJlbTtcbn1cblxuLmN1cnJlbnQtbGluZSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICB6LWluZGV4OiA5OTtcbn1cbi5jdXJyZW50LWxpbmUgLnRyaWFuZ2xlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogMDtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICB3aWR0aDogMDtcbiAgaGVpZ2h0OiAwO1xuICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICBib3JkZXItd2lkdGg6IDZweCAwIDZweCA2cHg7XG4gIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgIzE5MzdlYTtcbn1cblxuLmxpc3Qge1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIGZsZXg6IDE7XG4gIHdpZHRoOiAxMDAlO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmxvYWRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgaGVpZ2h0OiA0cHg7XG4gIHotaW5kZXg6IDk5OTtcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -42850,6 +43171,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: core_1.Input
         }],
         search: [{
+          type: core_1.Input
+        }],
+        show_all: [{
           type: core_1.Input
         }]
       });
@@ -42874,6 +43198,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       value: true
     });
 
+    var tslib_1 = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
     var core_1 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -42886,57 +43214,88 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/bookings/booking.class */
     "./src/app/services/data/bookings/booking.class.ts");
 
+    var bookings_service_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/bookings.service */
+    "./src/app/services/data/bookings/bookings.service.ts");
+
+    var app_service_1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
-    /*! ../../../../shared/components/icon/icon.component */
-    "./src/app/shared/components/icon/icon.component.ts");
+    /*! src/app/services/data/bookings/bookings.service */
+    "./src/app/services/data/bookings/bookings.service.ts");
 
     var i2 = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
 
     var i3 = __webpack_require__(
-    /*! @angular/material/button */
-    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
-
-    var i4 = __webpack_require__(
     /*! @angular/material/tooltip */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tooltip.js");
 
+    var i4 = __webpack_require__(
+    /*! ../../../../shared/components/icon/icon.component */
+    "./src/app/shared/components/icon/icon.component.ts");
+
     var i5 = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
+    var i6 = __webpack_require__(
+    /*! @angular/material/button */
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+
+    var i7 = __webpack_require__(
     /*! ../../../../shared/components/action-icon/action-icon.component */
     "./src/app/shared/components/action-icon/action-icon.component.ts");
 
-    var i6 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
     "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
-    function VisitorComponent_div_4_Template(rf, ctx) {
+    function VisitorComponent_div_7_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 15);
-        i0.ɵɵtext(1, "S");
-        i0.ɵɵelementEnd();
-      }
-    }
-
-    function VisitorComponent_div_8_Template(rf, ctx) {
-      if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 16);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var ctx_r1 = i0.ɵɵnextContext();
+        var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(ctx_r1.status);
+        i0.ɵɵtextInterpolate(ctx_r0.status);
       }
     }
 
     var _c0 = function _c0() {
+      return {
+        "class": "material-icons",
+        content: "call"
+      };
+    };
+
+    function VisitorComponent_a_9_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "a", 16);
+        i0.ɵɵpipe(1, "safe");
+        i0.ɵɵelement(2, "action-icon", 1);
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r1 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("disabled", !ctx_r1.person.phone)("href", i0.ɵɵpipeBind2(1, 3, "tel:" + ctx_r1.person.phone, "url"), i0.ɵɵsanitizeUrl);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(6, _c0));
+      }
+    }
+
+    var _c1 = function _c1() {
       return {
         "class": "material-icons",
         content: "event_available"
@@ -42945,22 +43304,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function VisitorComponent_action_icon_14_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelement(0, "action-icon", 1);
+        i0.ɵɵelement(0, "action-icon", 17);
       }
 
       if (rf & 2) {
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(1, _c0));
+        var ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("loading", ctx_r2.loading)("icon", i0.ɵɵpureFunction0(2, _c1));
       }
     }
 
-    var _c1 = function _c1() {
+    var _c2 = function _c2(a1) {
       return {
         "class": "material-icons",
-        content: "face"
+        content: a1
       };
     };
 
-    var _c2 = function _c2() {
+    var _c3 = function _c3() {
       return {
         "class": "material-icons",
         content: "mail"
@@ -42970,13 +43330,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var VisitorComponent =
     /*#__PURE__*/
     function () {
-      function VisitorComponent(_element, _renderer) {
+      function VisitorComponent(_element, _renderer, _bookings, _service) {
         _classCallCheck(this, VisitorComponent);
 
         this._element = _element;
         this._renderer = _renderer;
+        this._bookings = _bookings;
+        this._service = _service;
       }
-      /** Whether user is a match for  */
+      /** Whether attendee is late */
 
 
       _createClass(VisitorComponent, [{
@@ -42990,11 +43352,82 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
         }
+        /**
+         * Checkin the attendee
+         */
+
+      }, {
+        key: "checkin",
+        value: function checkin() {
+          return tslib_1.__awaiter(this, void 0, void 0,
+          /*#__PURE__*/
+          regeneratorRuntime.mark(function _callee25() {
+            var _this221 = this;
+
+            var value;
+            return regeneratorRuntime.wrap(function _callee25$(_context25) {
+              while (1) {
+                switch (_context25.prev = _context25.next) {
+                  case 0:
+                    this.loading = true;
+                    _context25.next = 3;
+                    return this._bookings.checkin(this.event.id, {
+                      host_email: this.event.organiser.email,
+                      attendee_email: this.person.email,
+                      attendee_name: this.person.name,
+                      booking_id: this.event.id,
+                      icaluid: this.event.icaluid,
+                      id: this.event.id,
+                      notify_users: _toConsumableArray(this.event.notify_users),
+                      response_type: 'accepted',
+                      room_id: this.event.space.id
+                    })["catch"](function (err) {
+                      _this221._service.notifyError("Error checking in user. Error: ".concat(err.message || err));
+                    });
+
+                  case 3:
+                    value = _context25.sent;
+
+                    if (value) {
+                      this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event), {
+                        checked_in: [].concat(_toConsumableArray(this.event.checked_in), [this.person.email])
+                      }));
+                    }
+
+                    this.loading = false;
+
+                  case 6:
+                  case "end":
+                    return _context25.stop();
+                }
+              }
+            }, _callee25, this);
+          }));
+        }
+      }, {
+        key: "late",
+        get: function get() {
+          return this.event.status === 'in_progress' && this.person.external;
+        }
+        /** Whether attendee has checked in */
+
+      }, {
+        key: "approved",
+        get: function get() {
+          return this.event.checked_in.includes(this.person.email);
+        }
+        /** Whether user is a match for  */
+
       }, {
         key: "is_match",
         get: function get() {
           var search = (this.search || '').toLowerCase();
           return this.person.name.toLowerCase().indexOf(search) >= 0 || this.person.email.toLowerCase().indexOf(search) >= 0;
+        }
+      }, {
+        key: "invalid_email",
+        get: function get() {
+          return !this.person.email || this.person.email.includes('@guest.mckinsey.com');
         }
         /** URL for mailing all attendees of the event */
 
@@ -43011,7 +43444,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.VisitorComponent = VisitorComponent;
 
     VisitorComponent.ɵfac = function VisitorComponent_Factory(t) {
-      return new (t || VisitorComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2));
+      return new (t || VisitorComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(i1.BookingsService), i0.ɵɵdirectiveInject(i2.ApplicationService));
     };
 
     VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -43024,8 +43457,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       features: [i0.ɵɵNgOnChangesFeature],
       decls: 18,
-      vars: 13,
-      consts: [[1, "icon"], [3, "icon"], [1, "details"], [1, "user"], ["class", "staff", 4, "ngIf"], [1, "name"], [1, "title"], ["class", "status", 4, "ngIf"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Email Visitor", 3, "href"], ["mat-icon-button", "", "matTooltip", "Checkin Visitor"], [3, "icon", 4, "ngIf"], ["mat-icon-button", "", 3, "disabled"], [1, "empty"], [1, "bar"], [1, "staff"], [1, "status"]],
+      vars: 23,
+      consts: [["matTooltipPosition", "right", 1, "icon", 3, "matTooltip"], [3, "icon"], [1, "details"], [1, "user"], [1, "name"], [1, "title"], ["class", "status", 4, "ngIf"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href", 4, "ngIf"], ["mat-icon-button", "", "matTooltip", "Email Visitor", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Checkin Visitor", 3, "disabled", "click"], [3, "loading", "icon", 4, "ngIf"], ["mat-icon-button", "", 3, "disabled"], [1, "empty"], [1, "bar"], [1, "status"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href"], [3, "loading", "icon"]],
       template: function VisitorComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -43033,20 +43466,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(2, "div", 2);
           i0.ɵɵelementStart(3, "div", 3);
-          i0.ɵɵtemplate(4, VisitorComponent_div_4_Template, 2, 0, "div", 4);
-          i0.ɵɵelementStart(5, "div", 5);
-          i0.ɵɵtext(6);
+          i0.ɵɵelementStart(4, "div", 4);
+          i0.ɵɵtext(5);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵelement(7, "div", 6);
-          i0.ɵɵtemplate(8, VisitorComponent_div_8_Template, 2, 1, "div", 7);
-          i0.ɵɵelementStart(9, "div", 8);
+          i0.ɵɵelement(6, "div", 5);
+          i0.ɵɵtemplate(7, VisitorComponent_div_7_Template, 2, 1, "div", 6);
+          i0.ɵɵelementStart(8, "div", 7);
+          i0.ɵɵtemplate(9, VisitorComponent_a_9_Template, 3, 7, "a", 8);
           i0.ɵɵelementStart(10, "a", 9);
           i0.ɵɵpipe(11, "safe");
           i0.ɵɵelement(12, "action-icon", 1);
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(13, "button", 10);
-          i0.ɵɵtemplate(14, VisitorComponent_action_icon_14_Template, 1, 2, "action-icon", 11);
+          i0.ɵɵlistener("click", function VisitorComponent_Template_button_click_13_listener() {
+            return ctx.checkin();
+          });
+          i0.ɵɵtemplate(14, VisitorComponent_action_icon_14_Template, 1, 3, "action-icon", 11);
           i0.ɵɵelementEnd();
           i0.ɵɵelement(15, "button", 12);
           i0.ɵɵelementEnd();
@@ -43056,27 +43492,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         if (rf & 2) {
+          i0.ɵɵclassProp("approved", ctx.approved || !ctx.person.external)("late", ctx.late);
+          i0.ɵɵproperty("matTooltip", ctx.person.external ? ctx.approved ? "Checked In" : ctx.late ? "Late" : "Upcoming" : "Staff");
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(11, _c1));
-          i0.ɵɵadvance(3);
-          i0.ɵɵproperty("ngIf", !ctx.person.external);
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(20, _c2, ctx.person.external ? "face" : "assignment_ind"));
+          i0.ɵɵadvance(2);
+          i0.ɵɵclassProp("approved", ctx.approved || !ctx.person.external);
           i0.ɵɵadvance(2);
           i0.ɵɵtextInterpolate((ctx.person == null ? null : ctx.person.name) || (ctx.person == null ? null : ctx.person.email));
           i0.ɵɵadvance(2);
           i0.ɵɵproperty("ngIf", ctx.person.external);
           i0.ɵɵadvance(2);
-          i0.ɵɵproperty("href", i0.ɵɵpipeBind2(11, 8, ctx.mail_url, "url"), i0.ɵɵsanitizeUrl);
+          i0.ɵɵproperty("ngIf", !ctx.person.external);
+          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("disabled", ctx.invalid_email)("href", i0.ɵɵpipeBind2(11, 17, ctx.mail_url, "url"), i0.ɵɵsanitizeUrl);
           i0.ɵɵadvance(2);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(12, _c2));
-          i0.ɵɵadvance(2);
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(22, _c3));
+          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("disabled", ctx.loading);
+          i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngIf", ctx.person.external);
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("disabled", true);
         }
       },
-      directives: [i1.IconComponent, i2.NgIf, i3.MatAnchor, i4.MatTooltip, i5.ActionIconComponent, i3.MatButton],
-      pipes: [i6.ɵa],
-      styles: ["[_nghost-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  padding-left: 4em;\n  transition: opacity 200ms;\n}\n.not-match[_nghost-%COMP%] {\n  opacity: 0.35;\n  background-color: #fff;\n}\n[_nghost-%COMP%]:last-child   .details[_ngcontent-%COMP%] {\n  border: none;\n}\n.details[_ngcontent-%COMP%] {\n  display: flex;\n  flex: 1;\n  min-width: 50%;\n  align-items: center;\n  height: 4em;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 2em;\n  width: 2em;\n  margin-right: 0.5em;\n  border-radius: 100%;\n  border: 2px dotted rgba(0, 0, 0, 0.6);\n  color: rgba(0, 0, 0, 0.6);\n  font-size: 1.5em;\n}\n.title[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 1em;\n}\n.user[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n}\n.staff[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 1.5em;\n  width: 1.5em;\n  margin-right: 0.5em;\n  border-radius: 4px;\n  border: 3px solid #1937ea;\n  font-weight: 600;\n  font-size: 0.8em;\n  color: #1937ea;\n}\n.bar[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 1.5em;\n  top: 50%;\n  left: 2.15em;\n  height: 2px;\n  min-height: 0;\n  background-color: #999;\n  transform: translate(0, -50%);\n}\n.empty[_ngcontent-%COMP%] {\n  width: 4.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL3Zpc2l0b3IvdmlzaXRvci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdGltZWxpbmUvdmlzaXRvci92aXNpdG9yLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQzNDQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtBQ09KO0FETEk7RUFDSSxhQUFBO0VBQ0Esc0JBQUE7QUNPUjtBREhRO0VBQ0ksWUFBQTtBQ0taO0FEQUE7RUFDSSxhQUFBO0VBQ0EsT0FBQTtFQUNBLGNBQUE7RUFDQSxtQkFBQTtFQUNBLFdBQUE7RUFDQSwyQ0FBQTtBQ0dKO0FEQUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsbUJBQUE7RUFDQSxtQkFBQTtFQUNBLHFDQUFBO0VBQ0EseUJBQUE7RUFDQSxnQkFBQTtBQ0dKO0FEQUE7RUFDSSxPQUFBO0VBQ0EsY0FBQTtBQ0dKO0FEQUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtBQ0dKO0FEQUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLHlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLGNEOUNZO0FFaURoQjtBREFBO0VBQ0ksa0JBQUE7RUFDQSxZQUFBO0VBQ0EsUUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsNkJBQUE7QUNHSjtBREFBO0VBQ0ksWUFBQTtBQ0dKIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdGltZWxpbmUvdmlzaXRvci92aXNpdG9yLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbjpob3N0IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmctbGVmdDogNGVtO1xuICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMjAwbXM7XG5cbiAgICAmLm5vdC1tYXRjaCB7XG4gICAgICAgIG9wYWNpdHk6IC4zNTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICB9XG5cbiAgICAmOmxhc3QtY2hpbGQge1xuICAgICAgICAuZGV0YWlscyB7XG4gICAgICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICAgIH1cbiAgICB9XG59XG5cbi5kZXRhaWxzIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDRlbTtcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgjMDAwLCAuMSk7XG59XG5cbi5pY29uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAyZW07XG4gICAgd2lkdGg6IDJlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IC41ZW07XG4gICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICBib3JkZXI6IDJweCBkb3R0ZWQgcmdiYSgjMDAwLCAuNik7XG4gICAgY29sb3I6IHJnYmEoIzAwMCwgLjYpO1xuICAgIGZvbnQtc2l6ZTogMS41ZW07XG59XG5cbi50aXRsZSB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDFlbTtcbn1cblxuLnVzZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXdlaWdodDogNDAwO1xufVxuXG4uc3RhZmYge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDEuNWVtO1xuICAgIHdpZHRoOiAxLjVlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IC41ZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGJvcmRlcjogM3B4IHNvbGlkICRjb2xvci1wcmltYXJ5O1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIGNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbn1cblxuLmJhciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHdpZHRoOiAxLjVlbTtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiAyLjE1ZW07XG4gICAgaGVpZ2h0OiAycHg7XG4gICAgbWluLWhlaWdodDogMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTk5O1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDAsIC01MCUpO1xufVxuXG4uZW1wdHkge1xuICAgIHdpZHRoOiA0LjVlbTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nLWxlZnQ6IDRlbTtcbiAgdHJhbnNpdGlvbjogb3BhY2l0eSAyMDBtcztcbn1cbjpob3N0Lm5vdC1tYXRjaCB7XG4gIG9wYWNpdHk6IDAuMzU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG46aG9zdDpsYXN0LWNoaWxkIC5kZXRhaWxzIHtcbiAgYm9yZGVyOiBub25lO1xufVxuXG4uZGV0YWlscyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNTAlO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBoZWlnaHQ6IDRlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC4xKTtcbn1cblxuLmljb24ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgaGVpZ2h0OiAyZW07XG4gIHdpZHRoOiAyZW07XG4gIG1hcmdpbi1yaWdodDogMC41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gIGJvcmRlcjogMnB4IGRvdHRlZCByZ2JhKDAsIDAsIDAsIDAuNik7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNik7XG4gIGZvbnQtc2l6ZTogMS41ZW07XG59XG5cbi50aXRsZSB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMWVtO1xufVxuXG4udXNlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5zdGFmZiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDEuNWVtO1xuICB3aWR0aDogMS41ZW07XG4gIG1hcmdpbi1yaWdodDogMC41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYm9yZGVyOiAzcHggc29saWQgIzE5MzdlYTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgY29sb3I6ICMxOTM3ZWE7XG59XG5cbi5iYXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHdpZHRoOiAxLjVlbTtcbiAgdG9wOiA1MCU7XG4gIGxlZnQ6IDIuMTVlbTtcbiAgaGVpZ2h0OiAycHg7XG4gIG1pbi1oZWlnaHQ6IDA7XG4gIGJhY2tncm91bmQtY29sb3I6ICM5OTk7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKDAsIC01MCUpO1xufVxuXG4uZW1wdHkge1xuICB3aWR0aDogNC41ZW07XG59Il19 */"]
+      directives: [i3.MatTooltip, i4.IconComponent, i5.NgIf, i6.MatAnchor, i7.ActionIconComponent, i6.MatButton],
+      pipes: [i8.ɵa],
+      styles: ["[_nghost-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  padding-left: 4em;\n  transition: opacity 200ms;\n}\n.not-match[_nghost-%COMP%] {\n  opacity: 0.35;\n  background-color: #fff;\n}\n[_nghost-%COMP%]:last-child   .details[_ngcontent-%COMP%] {\n  border: none;\n}\n.details[_ngcontent-%COMP%] {\n  display: flex;\n  flex: 1;\n  min-width: 50%;\n  align-items: center;\n  height: 4em;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 2em;\n  width: 2em;\n  margin-right: 0.5em;\n  border-radius: 100%;\n  border: 2px dotted rgba(0, 0, 0, 0.6);\n  color: rgba(0, 0, 0, 0.6);\n  font-size: 1.5em;\n}\n.icon.late[_ngcontent-%COMP%] {\n  border: 2px solid #e53935;\n  background-color: #e53935;\n  color: #fff;\n}\n.icon.approved[_ngcontent-%COMP%] {\n  border: 2px solid #1937ea;\n  background-color: #1937ea;\n  color: #fff;\n}\n.title[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 1em;\n}\n.user[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n}\n.user.approved[_ngcontent-%COMP%] {\n  color: #1937ea;\n}\n.staff[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 1.5em;\n  width: 1.5em;\n  margin-right: 0.5em;\n  border-radius: 4px;\n  border: 3px solid #1937ea;\n  font-weight: 600;\n  font-size: 0.8em;\n  color: #1937ea;\n}\n.bar[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 1.5em;\n  top: 50%;\n  left: 2.15em;\n  height: 2px;\n  min-height: 0;\n  background-color: #999;\n  transform: translate(0, -50%);\n}\n.empty[_ngcontent-%COMP%] {\n  width: 4.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL3Zpc2l0b3IvdmlzaXRvci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdGltZWxpbmUvdmlzaXRvci92aXNpdG9yLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQzNDQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtBQ09KO0FETEk7RUFDSSxhQUFBO0VBQ0Esc0JBQUE7QUNPUjtBREhRO0VBQ0ksWUFBQTtBQ0taO0FEQUE7RUFDSSxhQUFBO0VBQ0EsT0FBQTtFQUNBLGNBQUE7RUFDQSxtQkFBQTtFQUNBLFdBQUE7RUFDQSwyQ0FBQTtBQ0dKO0FEQUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsbUJBQUE7RUFDQSxtQkFBQTtFQUNBLHFDQUFBO0VBQ0EseUJBQUE7RUFDQSxnQkFBQTtBQ0dKO0FEREk7RUFDSSx5QkFBQTtFQUNBLHlCRDdCQTtFQzhCQSxXQUFBO0FDR1I7QURBSTtFQUNJLHlCQUFBO0VBQ0EseUJEL0JRO0VDZ0NSLFdBQUE7QUNFUjtBREVBO0VBQ0ksT0FBQTtFQUNBLGNBQUE7QUNDSjtBREVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUNDSjtBRENJO0VBQ0ksY0QvQ1E7QUVnRGhCO0FER0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLHlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLGNEOURZO0FFOERoQjtBREdBO0VBQ0ksa0JBQUE7RUFDQSxZQUFBO0VBQ0EsUUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsNkJBQUE7QUNBSjtBREdBO0VBQ0ksWUFBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdGltZWxpbmUvdmlzaXRvci92aXNpdG9yLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbjpob3N0IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmctbGVmdDogNGVtO1xuICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMjAwbXM7XG5cbiAgICAmLm5vdC1tYXRjaCB7XG4gICAgICAgIG9wYWNpdHk6IC4zNTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICB9XG5cbiAgICAmOmxhc3QtY2hpbGQge1xuICAgICAgICAuZGV0YWlscyB7XG4gICAgICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICAgIH1cbiAgICB9XG59XG5cbi5kZXRhaWxzIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDRlbTtcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgjMDAwLCAuMSk7XG59XG5cbi5pY29uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAyZW07XG4gICAgd2lkdGg6IDJlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IC41ZW07XG4gICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICBib3JkZXI6IDJweCBkb3R0ZWQgcmdiYSgjMDAwLCAuNik7XG4gICAgY29sb3I6IHJnYmEoIzAwMCwgLjYpO1xuICAgIGZvbnQtc2l6ZTogMS41ZW07XG5cbiAgICAmLmxhdGUge1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkZXJyb3I7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICRlcnJvcjtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgfVxuXG4gICAgJi5hcHByb3ZlZCB7XG4gICAgICAgIGJvcmRlcjogMnB4IHNvbGlkICRjb2xvci1wcmltYXJ5O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgfVxufVxuXG4udGl0bGUge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiAxZW07XG59XG5cbi51c2VyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcblxuICAgICYuYXBwcm92ZWQge1xuICAgICAgICBjb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgfVxufVxuXG4uc3RhZmYge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDEuNWVtO1xuICAgIHdpZHRoOiAxLjVlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IC41ZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGJvcmRlcjogM3B4IHNvbGlkICRjb2xvci1wcmltYXJ5O1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIGNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbn1cblxuLmJhciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHdpZHRoOiAxLjVlbTtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiAyLjE1ZW07XG4gICAgaGVpZ2h0OiAycHg7XG4gICAgbWluLWhlaWdodDogMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTk5O1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDAsIC01MCUpO1xufVxuXG4uZW1wdHkge1xuICAgIHdpZHRoOiA0LjVlbTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nLWxlZnQ6IDRlbTtcbiAgdHJhbnNpdGlvbjogb3BhY2l0eSAyMDBtcztcbn1cbjpob3N0Lm5vdC1tYXRjaCB7XG4gIG9wYWNpdHk6IDAuMzU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG46aG9zdDpsYXN0LWNoaWxkIC5kZXRhaWxzIHtcbiAgYm9yZGVyOiBub25lO1xufVxuXG4uZGV0YWlscyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNTAlO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBoZWlnaHQ6IDRlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC4xKTtcbn1cblxuLmljb24ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgaGVpZ2h0OiAyZW07XG4gIHdpZHRoOiAyZW07XG4gIG1hcmdpbi1yaWdodDogMC41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gIGJvcmRlcjogMnB4IGRvdHRlZCByZ2JhKDAsIDAsIDAsIDAuNik7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNik7XG4gIGZvbnQtc2l6ZTogMS41ZW07XG59XG4uaWNvbi5sYXRlIHtcbiAgYm9yZGVyOiAycHggc29saWQgI2U1MzkzNTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U1MzkzNTtcbiAgY29sb3I6ICNmZmY7XG59XG4uaWNvbi5hcHByb3ZlZCB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMxOTM3ZWE7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxOTM3ZWE7XG4gIGNvbG9yOiAjZmZmO1xufVxuXG4udGl0bGUge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDFlbTtcbn1cblxuLnVzZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXdlaWdodDogNDAwO1xufVxuLnVzZXIuYXBwcm92ZWQge1xuICBjb2xvcjogIzE5MzdlYTtcbn1cblxuLnN0YWZmIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGhlaWdodDogMS41ZW07XG4gIHdpZHRoOiAxLjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAwLjVlbTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3JkZXI6IDNweCBzb2xpZCAjMTkzN2VhO1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDAuOGVtO1xuICBjb2xvcjogIzE5MzdlYTtcbn1cblxuLmJhciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgd2lkdGg6IDEuNWVtO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogMi4xNWVtO1xuICBoZWlnaHQ6IDJweDtcbiAgbWluLWhlaWdodDogMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzk5OTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCwgLTUwJSk7XG59XG5cbi5lbXB0eSB7XG4gIHdpZHRoOiA0LjVlbTtcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -43093,6 +43535,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: i0.ElementRef
         }, {
           type: i0.Renderer2
+        }, {
+          type: i1.BookingsService
+        }, {
+          type: i2.ApplicationService
         }];
       }, {
         event: [{
@@ -43199,14 +43645,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i11 = __webpack_require__(
+    /*! @angular/material/slide-toggle */
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slide-toggle.js");
+
+    var i12 = __webpack_require__(
     /*! ./timeline/timeline.component */
     "./src/app/shell/visitors/timeline/timeline.component.ts");
 
-    var i12 = __webpack_require__(
+    var i13 = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
-    var i13 = __webpack_require__(
+    var i14 = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
     "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 
@@ -43221,13 +43671,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r2 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 9);
+        i0.ɵɵelementStart(0, "button", 10);
         i0.ɵɵlistener("tapped", function VisitorsComponent_button_8_Template_button_tapped_0_listener() {
           i0.ɵɵrestoreView(_r2);
           var ctx_r1 = i0.ɵɵnextContext();
           return ctx_r1.search_str = "";
         });
-        i0.ɵɵelement(1, "app-icon", 10);
+        i0.ɵɵelement(1, "app-icon", 11);
         i0.ɵɵelementEnd();
       }
 
@@ -43299,9 +43749,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     VisitorsComponent.ɵcmp = i0.ɵɵdefineComponent({
       type: VisitorsComponent,
       selectors: [["app-visitors"]],
-      decls: 11,
-      vars: 10,
-      consts: [[1, "visitors"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "tapped", 4, "ngIf"], [3, "date", "search"], ["mat-icon-button", "", "matSuffix", "", 3, "tapped"], [3, "icon"]],
+      decls: 13,
+      vars: 12,
+      consts: [[1, "visitors"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "tapped", 4, "ngIf"], ["labelPosition", "before", "title", "Show all meetings", 3, "ngModel", "ngModelChange"], [3, "show_all", "date", "search"], ["mat-icon-button", "", "matSuffix", "", 3, "tapped"], [3, "icon"]],
       template: function VisitorsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -43326,9 +43776,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵtemplate(8, VisitorsComponent_button_8_Template, 2, 2, "button", 7);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
+          i0.ɵɵelementStart(9, "mat-slide-toggle", 8);
+          i0.ɵɵlistener("ngModelChange", function VisitorsComponent_Template_mat_slide_toggle_ngModelChange_9_listener($event) {
+            return ctx.show_all = $event;
+          });
+          i0.ɵɵtext(10, " All meetings ");
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(9, "main");
-          i0.ɵɵelement(10, "visitor-timeline", 8);
+          i0.ɵɵelementEnd();
+          i0.ɵɵelementStart(11, "main");
+          i0.ɵɵelement(12, "visitor-timeline", 9);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
@@ -43340,16 +43796,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(2);
           i0.ɵɵclassProp("rounded", true);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(9, _c1));
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(11, _c1));
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngModel", ctx.search_str);
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngIf", ctx.search_str);
-          i0.ɵɵadvance(2);
-          i0.ɵɵproperty("date", ctx.date)("search", ctx.search_str);
+          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("ngModel", ctx.show_all);
+          i0.ɵɵadvance(3);
+          i0.ɵɵproperty("show_all", ctx.show_all)("date", ctx.date)("search", ctx.search_str);
         }
       },
-      directives: [i4.SidebarComponent, i5.TopbarHeaderComponent, i6.MatFormField, i7.IconComponent, i6.MatPrefix, i8.MatInput, i9.DefaultValueAccessor, i9.NgControlStatus, i9.NgModel, i10.NgIf, i11.VisitorTimelineComponent, i12.MatButton, i6.MatSuffix, i13.ɵb],
+      directives: [i4.SidebarComponent, i5.TopbarHeaderComponent, i6.MatFormField, i7.IconComponent, i6.MatPrefix, i8.MatInput, i9.DefaultValueAccessor, i9.NgControlStatus, i9.NgModel, i10.NgIf, i11.MatSlideToggle, i12.VisitorTimelineComponent, i13.MatButton, i6.MatSuffix, i14.ɵb],
       styles: ["[_nghost-%COMP%], .visitors[_ngcontent-%COMP%], main[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 100%;\n}\n.visitors[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n}\n.input-wrapper[_ngcontent-%COMP%] {\n  height: 3.5em;\n  padding: 0 0.5em;\n}\n.input-wrapper[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  font-size: 1.25em;\n}\nmain[_ngcontent-%COMP%] {\n  height: calc(100% - 3.5em);\n}\n.group[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 12em;\n}\n.topbar[_ngcontent-%COMP%] {\n  padding: 0.1em 0 0.1em 0.5em;\n  height: 3.5em;\n}\n.topbar[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 0.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdmlzaXRvcnMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3Zpc2l0b3JzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQTdDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMvQkE7O3NCQUFBO0FDWkE7OztFQUdJLFlBQUE7RUFDQSxXQUFBO0FDbUJKO0FEaEJBO0VBQ0ksYUFBQTtFQUNBLFlBQUE7QUNtQko7QURoQkE7RUFDSSxhQUFBO0VBQ0EsZ0JBQUE7QUNtQko7QURqQkk7RUFDSSxpQkFBQTtBQ21CUjtBRGZBO0VBQ0ksMEJBQUE7QUNrQko7QURmQTtFQUNJLE9BQUE7RUFDQSxlQUFBO0FDa0JKO0FEZkE7RUFDSSw0QkFBQTtFQUNBLGFBQUE7QUNrQko7QURoQkk7RUFDSSxtQkFBQTtBQ2tCUiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3Zpc2l0b3JzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3coJGNvbG9yOiAjMDAwLCAkZGVwdGg6IDEpIHtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMXB4ICogKCRkZXB0aCAtIDEpIHJnYmEoIzAwMCwgLjIpLFxuICAgICAgICAgICAgICAgIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSxcbiAgICAgICAgICAgICAgICAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsIC4xMik7XG59XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJAaW1wb3J0ICd2YXJpYWJsZXMnO1xuQGltcG9ydCAnbWl4aW5zJztcblxuOmhvc3QsXG4udmlzaXRvcnMsXG5tYWluIHtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG59XG5cbi52aXNpdG9ycyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5pbnB1dC13cmFwcGVyIHtcbiAgICBoZWlnaHQ6IDMuNWVtO1xuICAgIHBhZGRpbmc6IDAgLjVlbTtcblxuICAgIGFwcC1pY29uIHtcbiAgICAgICAgZm9udC1zaXplOiAxLjI1ZW07XG4gICAgfVxufVxuXG5tYWluIHtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMuNWVtKTtcbn1cblxuLmdyb3VwIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogMTJlbTtcbn1cblxuLnRvcGJhciB7XG4gICAgcGFkZGluZzogLjFlbSAwIC4xZW0gLjVlbTtcbiAgICBoZWlnaHQ6IDMuNWVtO1xuXG4gICAgbWF0LWZvcm0tZmllbGQge1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IC41ZW07XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG46aG9zdCxcbi52aXNpdG9ycyxcbm1haW4ge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4udmlzaXRvcnMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5pbnB1dC13cmFwcGVyIHtcbiAgaGVpZ2h0OiAzLjVlbTtcbiAgcGFkZGluZzogMCAwLjVlbTtcbn1cbi5pbnB1dC13cmFwcGVyIGFwcC1pY29uIHtcbiAgZm9udC1zaXplOiAxLjI1ZW07XG59XG5cbm1haW4ge1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMuNWVtKTtcbn1cblxuLmdyb3VwIHtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiAxMmVtO1xufVxuXG4udG9wYmFyIHtcbiAgcGFkZGluZzogMC4xZW0gMCAwLjFlbSAwLjVlbTtcbiAgaGVpZ2h0OiAzLjVlbTtcbn1cbi50b3BiYXIgbWF0LWZvcm0tZmllbGQge1xuICBtYXJnaW4tcmlnaHQ6IDAuNWVtO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -43620,11 +44078,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateBookings",
         value: function updateBookings() {
-          var _this219 = this;
+          var _this222 = this;
 
           var bookings = [];
           this.spaces.forEach(function (space) {
-            bookings = bookings.concat(space.bookingsFor(_this219.date));
+            bookings = bookings.concat(space.bookingsFor(_this222.date));
           });
           bookings.sort(function (a, b) {
             return a.date - b.date;
@@ -44053,35 +44511,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super71 = _createSuper(WeekViewTimelineComponent);
 
       function WeekViewTimelineComponent(_spaces, _org) {
-        var _this220;
+        var _this223;
 
         _classCallCheck(this, WeekViewTimelineComponent);
 
-        _this220 = _super71.call(this);
-        _this220._spaces = _spaces;
-        _this220._org = _org;
+        _this223 = _super71.call(this);
+        _this223._spaces = _spaces;
+        _this223._org = _org;
         /** List of dates to display */
 
-        _this220.date_list = [];
+        _this223.date_list = [];
         /** List of spaces to display bookings for */
 
-        _this220.space_list = [];
+        _this223.space_list = [];
         /** Subject holding the value of the search */
 
-        _this220.search$ = new rxjs_1.Subject();
-        return _this220;
+        _this223.search$ = new rxjs_1.Subject();
+        return _this223;
       }
 
       _createClass(WeekViewTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this221 = this;
+          var _this224 = this;
 
           this.date_list = this.generateDates(this.date, this.weekends);
           this.initBookings();
           this.search$.next("".concat(this.date, "|").concat(this.weekends, "|").concat(this.level));
           this.interval('update_booking', function () {
-            return _this221.search$.next("".concat(_this221.date, "|").concat(_this221.weekends, "|").concat(_this221.level, "|").concat(dayjs().unix()));
+            return _this224.search$.next("".concat(_this224.date, "|").concat(_this224.weekends, "|").concat(_this224.level, "|").concat(dayjs().unix()));
           }, 30 * 1000);
         }
       }, {
@@ -44121,24 +44579,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this222 = this;
+          var _this225 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this222.loading = true;
-            var date = dayjs(_this222.date).startOf('w');
-            return _this222._spaces.query({
-              zone_ids: "".concat(_this222.level ? _this222.level : _this222._org.building.id).concat(_this222.space_type ? ',' + _this222.space_type : ''),
-              available_from: Math.floor(_this222.date_list[0] / 1000) || date.unix(),
-              available_to: Math.floor(_this222.date_list[_this222.date_list.length - 1] / 1000) || date.endOf('w').unix()
+            _this225.loading = true;
+            var date = dayjs(_this225.date).startOf('w');
+            return _this225._spaces.query({
+              zone_ids: "".concat(_this225.level ? _this225.level : _this225._org.building.id).concat(_this225.space_type ? ',' + _this225.space_type : ''),
+              available_from: Math.floor(_this225.date_list[0] / 1000) || date.unix(),
+              available_to: Math.floor(_this225.date_list[_this225.date_list.length - 1] / 1000) || date.endOf('w').unix()
             });
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this222.loading = false;
-            _this222.space_list = list;
+            _this225.loading = false;
+            _this225.space_list = list;
           }));
         }
       }]);
@@ -44414,87 +44872,87 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super72 = _createSuper(WeekViewComponent);
 
       function WeekViewComponent(_org, _dialog, _router, _route) {
-        var _this223;
+        var _this226;
 
         _classCallCheck(this, WeekViewComponent);
 
-        _this223 = _super72.call(this);
-        _this223._org = _org;
-        _this223._dialog = _dialog;
-        _this223._router = _router;
-        _this223._route = _route;
+        _this226 = _super72.call(this);
+        _this226._org = _org;
+        _this226._dialog = _dialog;
+        _this226._router = _router;
+        _this226._route = _route;
         /** ID of the currently selected level */
 
-        _this223.active_level = '';
+        _this226.active_level = '';
         /** ID of the currently selected level */
 
-        _this223.active_type = '';
+        _this226.active_type = '';
         /** List of levels available for the active building */
 
-        _this223.levels = [];
+        _this226.levels = [];
         /** List of space types available for the active building */
 
-        _this223.space_types = [];
-        return _this223;
+        _this226.space_types = [];
+        return _this226;
       }
 
       _createClass(WeekViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this224 = this;
+          var _this227 = this;
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this224.subscription('route.params', _this224._route.paramMap.subscribe(function (params) {
+            _this227.subscription('route.params', _this227._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this224.active_level !== params.get('level')) {
-                var level = _this224._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this227.active_level !== params.get('level')) {
+                var level = _this227._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this224._org.buildings.find(function (bld) {
+                  var building = _this227._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this224.active_level = level.id;
-                    _this224._org.building = building;
+                    _this227.active_level = level.id;
+                    _this227._org.building = building;
                   }
                 }
               }
             }));
 
-            _this224.subscription('building', _this224._org.listen('active_building').subscribe(function () {
-              var building = _this224._org.building;
+            _this227.subscription('building', _this227._org.listen('active_building').subscribe(function () {
+              var building = _this227._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this224.active_level;
+                return lvl.id === _this227.active_level;
               })) {
-                _this224.active_level = (building.levels[0] || {
+                _this227.active_level = (building.levels[0] || {
                   id: ''
                 }).id;
 
-                _this224.updateLevel();
+                _this227.updateLevel();
               }
 
-              _this224.levels = [{
+              _this227.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
 
-              _this224.levels.sort(function (a, b) {
+              _this227.levels.sort(function (a, b) {
                 return a.name.localeCompare(b.name);
               });
 
-              _this224.space_types = [{
+              _this227.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this224._org.space_types);
+              }].concat(_this227._org.space_types);
             }));
           });
         }
