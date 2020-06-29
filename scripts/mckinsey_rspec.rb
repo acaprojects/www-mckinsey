@@ -29,6 +29,7 @@ describe "Mckiney Staff App Test" do
 
         #@driver.navigate.to "https://roombooking-dev.intranet.mckinsey.com/staff/#/home"
         puts "inside after each"
+        wait.until {@driver.find_element(:xpath, "//i[@class='material-icons ng-star-inserted' and text()='home']").displayed?}
         @driver.find_element(:xpath, "//i[@class='material-icons ng-star-inserted' and text()='home']").click()
         sleep(4)
         
@@ -50,10 +51,10 @@ describe "Mckiney Staff App Test" do
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
         sleep(5)
         #click on duration
-        @driver.find_element(:xpath,"//dropdown[@ng-reflect-placeholder='Duration']//div[@class='item active']//div[@class='text'][1]").click
+        @driver.find_element(:xpath,"//div[@name='duration']").click
         sleep(4)
-        @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'"+duration+"')]").displayed?
-        puts "inside if loop"
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'"+duration+"')]").displayed?}
+        
         @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'"+duration+"')]").click
         sleep(5)
     end
@@ -69,58 +70,6 @@ describe "Mckiney Staff App Test" do
     end
         
         
-
-    
-
-
-    def select_room_list(room_code)
-
-        scroll = @driver.find_element(:xpath,"//div[@class='container']//following::cdk-virtual-scroll-viewport")
-        i = 10
-        loop do @driver.execute_script("arguments[0].scrollTop = #{i} ; ",scroll)
-        i = i+10
-        # @driver.execute_script("var event = document.createEvent('Event'); event.initEvent('scroll', false, true); arguments[0].dispatchEvent(event)",scroll)
-        begin
-          if  @driver.find_element(:xpath,"//div[@class='name' and contains(text(),'"+room_code+"')]//following::button[contains(text(),'Request')]").displayed?
-             puts "inside if loop"
-             @driver.find_element(:xpath,"//div[@class='name' and contains(text(),'"+room_code+"')]//following::button[contains(text(),'Request')]").click
-             
-             break
-         sleep(5)
-             break
-          end
-         rescue Selenium::WebDriver::Error::NoSuchElementError
-        end
-        end
-    end
-
-
-    def select_location
-        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-        wait.until {@driver.find_element(:xpath, "//i[text()='close']").displayed?}
-        @driver.find_element(:xpath,"//i[text()='close']").click
-        if @driver.find_elements(:xpath,"//div[@class='text' and text()='(ABD) Abu Dhabi']").empty?
-            sleep(5)
-            #click on drop down
-            wait.until {@driver.find_element(:xpath, "//i[contains(text(),'keyboard_arrow_down')]").displayed?}
-            @driver.find_element(:xpath,"//i[contains(text(),'keyboard_arrow_down')]").click
-            sleep(8)
-            wait.until {@driver.find_element(:xpath, "//div[@class='item ng-star-inserted']//following::div[@class='name' and @title='Abu Dhabi']").displayed?}
-            @driver.find_element(:xpath,"//div[@class='item ng-star-inserted']//following::div[@class='name' and @title='Abu Dhabi']").click
-            #click outside
-            sleep(4)
-            wait.until {@driver.find_element(:xpath, "//div[@class='topbar']").displayed?}
-            @driver.find_element(:xpath, "//div[@class='topbar']").click
-
-           select_room_list("ABD")
-            else
-            #click on room
-            sleep(10)
-
-            select_room_list("ABD")
-           
-        end
-    end
 
     def select_London_room
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -792,7 +741,6 @@ describe "Mckiney Staff App Test" do
        i = 50
        loop do @driver.execute_script("arguments[0].scrollTop = #{i} ; ",scroll)
        i = i+50
-       puts "inside scroll"
       # puts title
        title=title.to_s
        # @driver.execute_script("var event = document.createEvent('Event'); event.initEvent('scroll', false, true); arguments[0].dispatchEvent(event)",scroll)
@@ -806,7 +754,7 @@ describe "Mckiney Staff App Test" do
             wait.until{@driver.find_element(:xpath,"//div[@class= 'event-details' ]").displayed?}
             break
             sleep(5)
-            break
+        
          end
        rescue Selenium::WebDriver::Error::NoSuchElementError
         #    return false
@@ -862,7 +810,7 @@ describe "Mckiney Staff App Test" do
             wait.until{@driver.find_element(:xpath,"//div[@class= 'event-details' ]").displayed?}
             break
         sleep(5)
-            break
+    
          end
         rescue Selenium::WebDriver::Error::NoSuchElementError
            # return false
@@ -941,7 +889,7 @@ describe "Mckiney Staff App Test" do
             if (new_month_datepicker2[0].include? new_month2)
                 wait.until{@driver.find_element(:xpath,"//div[@class='date' and text() = "+date2+"]").displayed?}
                 @driver.find_element(:xpath,"//div[@class='date'and text() = "+date2+"]").click
-                break  
+             break  
              end
         end     
         end
@@ -1329,6 +1277,184 @@ describe "Mckiney Staff App Test" do
         wait.until{@driver.find_element(:xpath,"//div[@name='notes']//following::div[@class='value' and text()='Duplicate notes']").displayed?}
         
     end
+    
+    it "Verify booking can be made for 15minutes " do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test 15 minutes")
+        sleep(2)
+        select_duration("(15 minutes)")
+        @driver.switch_to.frame(@driver.find_element(:xpath,"//iframe[@class='tox-edit-area__iframe']"))
+         @driver.find_element(:xpath,"//body[@id='tinymce']")
+        @driver.find_element(:xpath,"//body[@id='tinymce']").send_keys("Duplicate notes")
+         sleep(1)
+        @driver.switch_to.default_content()
+        sleep(1)
+       
+       
+      # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot_approved        
+        search_meeting("Test 15 minutes")
+        sleep(4)
+        #wait.until{@driver.find_element(:xpath,"//div[@name='notes']//following::div[@class='value' and text()='Duplicate notes']").displayed?}
+        
+    end
+
+
+    it "Verify booking can be made for 10 minutes " do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test 10 minutes")
+        sleep(2)
+        select_duration("(10 minutes)")
+        @driver.switch_to.frame(@driver.find_element(:xpath,"//iframe[@class='tox-edit-area__iframe']"))
+         @driver.find_element(:xpath,"//body[@id='tinymce']")
+        @driver.find_element(:xpath,"//body[@id='tinymce']").send_keys("Duplicate notes")
+         sleep(1)
+        @driver.switch_to.default_content()
+        sleep(1)
+       
+       
+      # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot_approved        
+        search_meeting("Test 10 minutes")
+        sleep(4)
+        #wait.until{@driver.find_element(:xpath,"//div[@name='notes']//following::div[@class='value' and text()='Duplicate notes']").displayed?}
+        
+    end
+
+
+    it "Change date from room's calendar" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test Change Date")
+       sleep(2)
+       select_duration("(15 minutes)")
+       sleep(2)
+      # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        @driver.find_element(:xpath," //i[text()='keyboard_arrow_right']").displayed?
+        @driver.find_element(:xpath," //i[text()='keyboard_arrow_right']").click
+        if @driver.find_elements(:xpath,"//mat-chip[@role='option' and text()=' London Post ']").empty?
+            sleep(5)
+            #click on drop down
+            wait.until {@driver.find_element(:xpath, "//i[contains(text(),'keyboard_arrow_down')]").displayed?}
+            @driver.find_element(:xpath,"//i[contains(text(),'keyboard_arrow_down')]").click
+            sleep(8)
+           
+           
+          
+           @driver.find_element(:xpath,"//div[text()='London Post']").displayed?
+           @driver.find_element(:xpath,"//div[text()='London Post']").click
+           sleep(5)
+          #s //cdk-virtual-scroll-viewport
+          @driver.execute_script("document.querySelector('.location-list .inner').click()")
+          sleep(4)
+         
+           sleep(5)
+         
+            sleep(10)
+             scroll = @driver.find_element(:xpath,"//cdk-virtual-scroll-viewport")
+             i = 10
+          loop do @driver.execute_script("arguments[0].scrollTop = #{i} ; ",scroll)
+          i = i+10
+          # @driver.execute_script("var event = document.createEvent('Event'); event.initEvent('scroll', false, true); arguments[0].dispatchEvent(event)",scroll)
+          begin
+            if  @driver.find_element(:xpath,"//button[@name='select' and @class='mat-button mat-button-base inverse request']").displayed?
+               puts "inside if loop"
+               @driver.find_element(:xpath,"//button[@name='select' and @class='mat-button mat-button-base inverse request']").click
+               puts "checking Meeting details are loaded"
+             
+           sleep(5)
+               break
+            end
+           rescue Selenium::WebDriver::Error::NoSuchElementError
+           end
+           end
+
+
+        
+        else
+            #click on room
+            sleep(10)
+            scroll = @driver.find_element(:xpath,"//cdk-virtual-scroll-viewport")
+            i = 10
+         loop do @driver.execute_script("arguments[0].scrollTop = #{i} ; ",scroll)
+         i = i+10
+         # @driver.execute_script("var event = document.createEvent('Event'); event.initEvent('scroll', false, true); arguments[0].dispatchEvent(event)",scroll)
+         begin
+           if  @driver.find_element(:xpath,"//button[@name='select' and @class='mat-button mat-button-base inverse request']").displayed?
+              puts "inside if loop"
+              @driver.find_element(:xpath,"//button[@name='select' and @class='mat-button mat-button-base inverse request']").click
+              puts "checking Meeting details are loaded"
+            
+          sleep(5)
+              break
+           end
+          rescue Selenium::WebDriver::Error::NoSuchElementError
+         end
+         end
+        end
+          
+        sleep(5)
+        #Clicking next button
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()=' Next ']").click
+        #Clicking on continue on equipment modal
+        
+        # Enter charge code
+        
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+       
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(10)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").click
+        #Close the module
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        search_meeting("Test Change Date")
+        sleep(4)
+    end
+
+
+
+
+
 
     it "Verify charge code and expected attendee is mandatory" do
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -1383,6 +1509,116 @@ describe "Mckiney Staff App Test" do
         sleep(4)
     end
 
+
+    it "Verify Convergence centre is a requestable room for NYO" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test Convergence Centre")
+        sleep(2)
+       select_duration("(15 minutes)")
+       sleep(2)
+      # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        if @driver.find_elements(:xpath,"//mat-chip[@role='option' and text()=' New York WTC ']").empty?
+            sleep(5)
+            #click on drop down
+            wait.until {@driver.find_element(:xpath, "//i[contains(text(),'keyboard_arrow_down')]").displayed?}
+            @driver.find_element(:xpath,"//i[contains(text(),'keyboard_arrow_down')]").click
+            sleep(8)
+          
+           @driver.find_element(:xpath,"//div[text()='New York WTC']").displayed?
+           @driver.find_element(:xpath,"//div[text()='New York WTC']").click
+           sleep(8)
+          #s //cdk-virtual-scroll-viewport
+          @driver.execute_script("document.querySelector('.location-list .inner').click()")
+          sleep(4)
+         
+          
+
+             #click on room
+             sleep(18)
+             scroll = @driver.find_element(:xpath,"//cdk-virtual-scroll-viewport")
+             i = 10
+          loop do @driver.execute_script("arguments[0].scrollTop = #{i} ; ",scroll)
+          i = i+10
+          # @driver.execute_script("var event = document.createEvent('Event'); event.initEvent('scroll', false, true); arguments[0].dispatchEvent(event)",scroll)
+          begin
+            if  @driver.find_element(:xpath,"//div[@class='name' and text()='NYO Convergence Centre']//parent::div//parent::div[@class='space-details ng-star-inserted']//child::div[@class='actions']//child::button[@class='mat-button mat-button-base inverse request']").displayed?
+               puts "inside if loop"
+               @driver.find_element(:xpath,"//div[@class='name' and text()='NYO Convergence Centre']//parent::div//parent::div[@class='space-details ng-star-inserted']//child::div[@class='actions']//child::button[@class='mat-button mat-button-base inverse request']").click
+               puts "checking Meeting details are loaded"
+             
+           sleep(5)
+               break
+            end
+           rescue Selenium::WebDriver::Error::NoSuchElementError
+           end
+           end
+
+
+        
+        else
+            #click on room
+            sleep(10)
+            scroll = @driver.find_element(:xpath,"//cdk-virtual-scroll-viewport")
+            i = 10
+         loop do @driver.execute_script("arguments[0].scrollTop = #{i} ; ",scroll)
+         i = i+10
+         # @driver.execute_script("var event = document.createEvent('Event'); event.initEvent('scroll', false, true); arguments[0].dispatchEvent(event)",scroll)
+         begin
+           if  @driver.find_element(:xpath,"//div[@class='name' and text()='NYO Convergence Centre']//parent::div//parent::div[@class='space-details ng-star-inserted']//child::div[@class='actions']//child::button[@class='mat-button mat-button-base inverse request']").displayed?
+              puts "inside if loop"
+              @driver.find_element(:xpath,"//div[@class='name' and text()='NYO Convergence Centre']//parent::div//parent::div[@class='space-details ng-star-inserted']//child::div[@class='actions']//child::button[@class='mat-button mat-button-base inverse request']").click
+              puts "checking Meeting details are loaded"
+            
+          sleep(5)
+              break
+           end
+          rescue Selenium::WebDriver::Error::NoSuchElementError
+         end
+         end
+        end
+
+        sleep(5)
+        #Clicking next button
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()=' Next ']").click
+        #Clicking on continue on equipment modal
+        
+        # Enter charge code
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(10)
+        wait.until {@driver.find_element(:xpath, "//span[@class='request ng-star-inserted' and text()='Requested!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='request ng-star-inserted' and text()='Requested!']").click
+        #Close the module
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(10)
+        #Clicking next button
+        
+       
+        search_meeting_requested("Test Convergence Centre")
+        sleep(4)
+    end
+
+
     it "Verify Meeting cannot be created without subject" do
 
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -1427,7 +1663,7 @@ describe "Mckiney Staff App Test" do
         search_meeting("Test no room 1 attendee")
         sleep(4)
         wait.until {@driver.find_element(:xpath, "//a[text()='sk080494@gmail.com']").displayed?}
-        @driver.find_element(:xpath,"//a[text()='sk080494@gmail.com']").click
+        
         
         
         
@@ -1491,6 +1727,7 @@ describe "Mckiney Staff App Test" do
         wait.until {@driver.find_element(:xpath, "//label[text()='Host']").displayed?}
         wait.until {@driver.find_element(:xpath, "//div[@class='field']//label[contains(text(),'Attendees')]").displayed?}
         wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        sleep(2)
         @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click     
        # search_meeting("Test confirmation")
         sleep(4)
@@ -2222,7 +2459,7 @@ describe "Mckiney Staff App Test" do
         @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and contains(text(),'Ok')]").click
 
         wait.until {@driver.find_element(:xpath, "//span[text()='Successfully deleted meeting.']").displayed?}
-        @driver.find_element(:xpath, "//span[text()='Successfully deleted meeting.']").click
+        #@driver.find_element(:xpath, "//span[text()='Successfully deleted meeting.']").click
 
 
     end
@@ -4798,8 +5035,11 @@ describe "Mckiney Staff App Test" do
         @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
        
         search_meeting_approved("Test edit time approved")
-        wait.until {@driver.find_element(:xpath, "//label[text()='When:']//following::div[@class='value' and contains(text(),'10:30')]").displayed?}
-        @driver.find_element(:xpath, "//label[text()='When:']//following::div[@class='value' and contains(text(),'10:30')]").click
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click  
+        sleep(2)
+        wait.until {@driver.find_element(:xpath, "//input[@ng-reflect-model='10:30']").displayed?}
+       
 
         
     end
@@ -5299,7 +5539,7 @@ describe "Mckiney Staff App Test" do
          @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
          
          #Enter Expected attendees
-        
+
          wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
          @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
          wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
@@ -5346,6 +5586,8 @@ describe "Mckiney Staff App Test" do
       
     end
 
+    
+
 
 
     it "Verify edit option is not avaialble for inprogress" do
@@ -5357,7 +5599,7 @@ describe "Mckiney Staff App Test" do
         wait.until {@driver.find_element(:xpath, "//div[@class='text' and contains(text(),'My Day')]").displayed?}
         @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'My Day')]").click()
         sleep(10)
-        search_meeting("AC test")
+        search_meeting("Test charge code approved")
         sleep(4)
         if @driver.find_elements(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']")==0
             
@@ -5367,6 +5609,351 @@ describe "Mckiney Staff App Test" do
         end
         
     end
+
+    it "test edit  date of tentative room" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test edit date tentative")
+        sleep(5)
+        select_date(1)
+       
+       
+       select_duration("(15 minutes)")
+      # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+
+        wait.until{@driver.find_element(:xpath,"//textarea[@name='equipment-notes']").displayed?}
+        @driver.find_element(:xpath,"//textarea[@name='equipment-notes']").send_keys("RR notes")
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(10)
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        search_meeting("Test edit date tentative")
+        sleep(4)
+        #wait.until{@driver.find_element(:xpath,"//div[@name='notes']//following::div[@class='value' and text()='Enter description notes']").displayed?}
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click
+        select_date(1)
+        wait.until {@driver.find_element(:xpath, "//button[@name='next']']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='next']").click
+
+        wait.until {@driver.find_element(:xpath, " //button[@name='save']").displayed?}
+        @driver.find_element(:xpath, " //button[@name='save']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Requested!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Requested!']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(2)
+        select_date_myday(2)
+        search_meeting_requested("Test edit date tentative")
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click  
+        sleep(2)
+        
+          
+    end
+
+
+    it "test edit  time of tentative room" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test edit time tentative")
+        sleep(5)
+        select_date(1)
+       
+       
+       select_duration("(15 minutes)")
+      # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+
+        wait.until{@driver.find_element(:xpath,"//textarea[@name='equipment-notes']").displayed?}
+        @driver.find_element(:xpath,"//textarea[@name='equipment-notes']").send_keys("RR notes")
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(10)
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        search_meeting("Test edit time tentative")
+        sleep(4)
+        #wait.until{@driver.find_element(:xpath,"//div[@name='notes']//following::div[@class='value' and text()='Enter description notes']").displayed?}
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click
+        select_time
+        wait.until {@driver.find_element(:xpath, "//button[@name='next']']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='next']").click
+
+        wait.until {@driver.find_element(:xpath, " //button[@name='save']").displayed?}
+        @driver.find_element(:xpath, " //button[@name='save']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Requested!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Requested!']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+       
+        search_meeting_requested("Test edit date tentative")
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click  
+        sleep(2)
+        
+        wait.until {@driver.find_element(:xpath, "//input[@ng-reflect-model='10:30']").displayed?}
+          
+    end
+
+
+
+    it "test edit  location of tentative room" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test edit location tentative")
+        sleep(5)
+        select_date(1)
+       
+       
+       select_duration("(15 minutes)")
+      # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+
+        wait.until{@driver.find_element(:xpath,"//textarea[@name='equipment-notes']").displayed?}
+        @driver.find_element(:xpath,"//textarea[@name='equipment-notes']").send_keys("RR notes")
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(5)
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        search_meeting("Test edit location tentative")
+       
+        sleep(4)
+        #wait.until{@driver.find_element(:xpath,"//div[@name='notes']//following::div[@class='value' and text()='Enter description notes']").displayed?}
+        edit_room
+        search_meeting_requested("Test edit location tentative")
+       
+    
+    end
+
+
+    it "test edit subject tentative room" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test edit subject tentative")
+        sleep(5)
+        select_date(1)
+        @driver.switch_to.frame(@driver.find_element(:xpath,"//iframe[@class='tox-edit-area__iframe']"))
+         @driver.find_element(:xpath,"//body[@id='tinymce']")
+        @driver.find_element(:xpath,"//body[@id='tinymce']").send_keys("Enter description notes")
+         sleep(1)
+        @driver.switch_to.default_content()
+       
+       select_duration("(15 minutes)")
+      # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(10)
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        search_meeting("Test edit subject tentative")
+        sleep(4)
+        #wait.until{@driver.find_element(:xpath,"//div[@name='notes']//following::div[@class='value' and text()='Enter description notes']").displayed?}
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").clear
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test edited subject")
+
+        wait.until {@driver.find_element(:xpath, "//button[@name='next']']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='next']").click
+
+        wait.until {@driver.find_element(:xpath, " //button[@name='save']").displayed?}
+        @driver.find_element(:xpath, " //button[@name='save']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Requested!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Requested!']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+       
+        search_meeting_tentative("Test edited subject")
+       
+        
+    end
+
+    it "Verify edit attendee tentative room" do 
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test edit attendee tentative")
+        sleep(5)
+        select_date(1)
+         # @driver.find_element(:xpath,"//span[@class='mat-option-text' and contains(text(),'(15 minutes)')]").click()
+         wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+         @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+         sleep(3)
+         select_London_Pilot
+         wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+         @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+ 
+         wait.until{@driver.find_element(:xpath,"//textarea[@name='equipment-notes']").displayed?}
+         @driver.find_element(:xpath,"//textarea[@name='equipment-notes']").send_keys("RR notes")
+        
+         wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+         @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+         
+         #Enter Expected attendees
+
+         wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+         @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+         wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+         @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+         sleep(4)
+         #Click on confirm
+         wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+         @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Save']").click
+         sleep(10)
+ 
+         wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+         @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+         sleep(5)
+         search_meeting("Test edit attendee tentative")
+         sleep(4)
+         wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+         @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click
+
+         add_attendee("new","guest","newguest@gmail.com")
+
+
+         wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Next ']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Next ']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+
+        wait.until {@driver.find_element(:xpath, "//button[@name='save']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='save']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Requested!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Requested!']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(4)
+       
+        search_meeting_tentative("Test edit attendee tentative")
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click       
+        sleep(5)
+
+        wait.until{@driver.find_element(:xpath,"//a[text()='newguest@place.tech']").displayed?}
+      
+    end
+
+    
+
+
+
 
     it "Verify edit and remove location" do
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -5451,6 +6038,7 @@ describe "Mckiney Staff App Test" do
 
 
     it "Duplicate a multiroom booking" do
+    end
 
     
 
@@ -5588,6 +6176,92 @@ describe "Mckiney Staff App Test" do
     end
 
 
+    it "Verify edit recurrence add change time" do
+
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        puts "Clicking My Day Button"
+        sleep(10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='text' and contains(text(),'My Day')]").displayed?}
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'My Day')]").click()
+        sleep(10)
+        search_meeting("Test Monthly recurrence")
+        sleep(4)
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click
+
+        select_time
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Next ']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Next ']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+
+        wait.until {@driver.find_element(:xpath, "//button[@name='save']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='save']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(4)
+       
+        search_meeting_approved("Test Monthly recurrence")
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click  
+        sleep(4)
+
+        wait.until {@driver.find_element(:xpath, "//input[@ng-reflect-model='10:30']").displayed?}
+        
+          
+
+    end
+
+    it "Verify edit recurrence add change date" do
+
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        puts "Clicking My Day Button"
+        sleep(10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='text' and contains(text(),'My Day')]").displayed?}
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'My Day')]").click()
+        sleep(10)
+        search_meeting("Test Monthly recurrence")
+        sleep(4)
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click
+
+        select_date(1)
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Next ']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Next ']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+
+        wait.until {@driver.find_element(:xpath, "//button[@name='save']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='save']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(4)
+       
+        search_meeting_approved("Test Monthly recurrence")
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click  
+        sleep(4)
+
+        wait.until {@driver.find_element(:xpath, "//input[@ng-reflect-model='10:30']").displayed?}
+        
+          
+
+    end
+
+
+
     it "test edit room requirement notes recurrence" do
         
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -5622,6 +6296,83 @@ describe "Mckiney Staff App Test" do
        end
       
           
+    end
+
+
+    it "Verify edit recurrence add catering" do
+
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        puts "Clicking My Day Button"
+        sleep(10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='text' and contains(text(),'My Day')]").displayed?}
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'My Day')]").click()
+        sleep(10)
+        search_meeting("Test Monthly recurrence")
+        sleep(4)
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").displayed?}
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()='Edit']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Next ']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Next ']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+
+        wait.until {@driver.find_element(:xpath, "//button[@name='save']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='save']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(4)
+       
+        search_meeting_approved("Test Monthly recurrence")
+        wait.until{@driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()=' Edit Catering Orders ']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Edit Catering Orders ']").click  
+        sleep(4) 
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Add Order ']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Add Order ']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//div[@class='name' and text()='Refreshments']").displayed?}
+        @driver.find_element(:xpath, "//div[@class='name' and text()='Refreshments']").click
+        sleep(3)
+        wait.until {@driver.find_element(:xpath, "//div[text()='Tea, Coffee, Biscuits and Water']//following::i[text()='add'][1]").displayed?}
+        @driver.find_element(:xpath, "//div[text()='Tea, Coffee, Biscuits and Water']//following::i[text()='add'][1]").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper'and contains(text(),' Confirm Order')]").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper'and contains(text(),' Confirm Order')]").click
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper'and text()='Save Order']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper'and text()='Save Order']").click
+        sleep(3)
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper'and text()=' Next ']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper'and text()=' Next ']").click
+        sleep(2)
+        wait.until {@driver.find_element(:xpath, "//textarea[@ng-reflect-name='notes']").displayed?}
+        @driver.find_element(:xpath, "//textarea[@ng-reflect-name='notes']").send_keys("Catering notes")
+        wait.until {@driver.find_element(:xpath, "//input[@ng-reflect-name='code']").displayed?}
+        @driver.find_element(:xpath, "//input[@ng-reflect-name='code']").send_keys("24234")
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Add to booking ']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()=' Add to booking ']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        
+        #Click on confirm
+        search_meeting("Test Monthly recurrence")
+        wait.until {@driver.find_element(:xpath, "//label[text()='Orders(2):']").displayed?}
+        
+        
+          
+
     end
 
 
@@ -5711,7 +6462,6 @@ describe "Mckiney Staff App Test" do
         sleep(4)
 
         search_meeting("Test multiroom delete")
-    
         
         sleep(4)
 
@@ -5820,12 +6570,244 @@ describe "Mckiney Staff App Test" do
     end
 
 
+    it "Verify booking with host as other" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test Host")
+        sleep(5)
+        select_date(1)
+        wait.until{@driver.find_element(:xpath,"//mat-select[@name='organiser']").displayed?}
+        @driver.find_element(:xpath,"//mat-select[@name='organiser']").click
+
+        wait.until{@driver.find_element(:xpath," //span[text()=' Cameron Reeves ']").displayed?}
+        @driver.find_element(:xpath," //span[text()=' Cameron Reeves ']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot_approved
+        sleep(5)
+        #Clicking next button
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()=' Next ']").click
+        #Clicking on continue on equipment modal
+        
+        # Enter charge code
+        
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath,"//label[@for='charge-code']//following::span[@class='ng-star-inserted' and text()='*']").displayed?
+        puts"charge code is mandatory"
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+       
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath,"//label[@for='head-count']//following::span[text()='*']").displayed?
+        puts "head count is mandatory"
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(10)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").click
+        wait.until {@driver.find_element(:xpath, "//label[text()='Host']//following::div[@class='value' and text()='Cameron Reeves']").displayed?}
+        @driver.find_element(:xpath, "//label[text()='Host']//following::div[@class='value' and text()='Cameron Reeves']").click
+        
+        #Close the module
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//mat-select[@role='listbox']").displayed?}
+        @driver.find_element(:xpath, "//mat-select[@role='listbox']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[text()=' Cameron Reeves ']").displayed?}
+        @driver.find_element(:xpath, "//span[text()=' Cameron Reeves ']").click
+        
+        
+        search_meeting("Test Host")
+        sleep(4)
+
+    end
+
+
+    it "Verify delete meeting from others calendar" do 
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test EA attendee")
+        sleep(5)
+        select_date(1)
+        wait.until{@driver.find_element(:xpath,"//mat-select[@name='organiser']").displayed?}
+        @driver.find_element(:xpath,"//mat-select[@name='organiser']").click
+
+        wait.until{@driver.find_element(:xpath," //span[text()=' Cameron Reeves ']").displayed?}
+        @driver.find_element(:xpath," //span[text()=' Cameron Reeves ']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot_approved
+        sleep(5)
+        #Clicking next button
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()=' Next ']").click
+        #Clicking on continue on equipment modal
+        
+        # Enter charge code
+        
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath,"//label[@for='charge-code']//following::span[@class='ng-star-inserted' and text()='*']").displayed?
+        puts"charge code is mandatory"
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+       
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath,"//label[@for='head-count']//following::span[text()='*']").displayed?
+        puts "head count is mandatory"
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(10)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").click
+        wait.until {@driver.find_element(:xpath, "//label[text()='Host']//following::div[@class='value' and text()='Cameron Reeves']").displayed?}
+        @driver.find_element(:xpath, "//label[text()='Host']//following::div[@class='value' and text()='Cameron Reeves']").click
+        
+        #Close the module
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//mat-select[@role='listbox']").displayed?}
+        @driver.find_element(:xpath, "//mat-select[@role='listbox']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[text()=' Cameron Reeves ']").displayed?}
+        @driver.find_element(:xpath, "//span[text()=' Cameron Reeves ']").click
+        
+        
+        search_meeting("Test Host")
+        sleep(4)
+
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//mat-select[@role='listbox']").displayed?}
+        @driver.find_element(:xpath, "//mat-select[@role='listbox']").click
+
+        wait.until {@driver.find_element(:xpath, "//span[text()=' Cameron Reeves ']").displayed?}
+        @driver.find_element(:xpath, "//span[text()=' Cameron Reeves ']").click
+        
+        
+        search_meeting("Test Host")
+        sleep(4)
+        wait.until {@driver.find_element(:xpath, "//i[text()='delete']").displayed?}
+        @driver.find_element(:xpath, "//i[text()='delete']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[text()='Successfully deleted meeting.']").displayed?}
+
+    end
+
+
+    it "Decline a meeting when EA is attendee not host of a meeting" do 
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
+        sleep(5)
+        #Clicking Booking Button"
+        @driver.find_element(:xpath, "//div[@class='text' and contains(text(),'Book')]").click()
+        #Passing Meeting subject
+        wait.until{@driver.find_element(:xpath,"//input[@formcontrolname='title']").displayed?}
+        @driver.find_element(:xpath,"//input[@formcontrolname='title']").send_keys("Test EA attendee")
+        sleep(5)
+        select_date(1)
+        wait.until{@driver.find_element(:xpath,"//mat-select[@name='organiser']").displayed?}
+        @driver.find_element(:xpath,"//mat-select[@name='organiser']").click
+
+        wait.until{@driver.find_element(:xpath," //span[text()=' Cameron Reeves ']").displayed?}
+        @driver.find_element(:xpath," //span[text()=' Cameron Reeves ']").click
+
+        wait.until {@driver.find_element(:xpath, "//input[@name='user-search']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='user-search']").send_keys("sravani_kotha@")
+        
+        wait.until {@driver.find_element(:xpath, " //span[@class='mat-option-text']//div[text()='Sravani Kotha']").displayed?}
+        @driver.find_element(:xpath, " //span[@class='mat-option-text']//div[text()='Sravani Kotha']").click
+
+       
+        wait.until {@driver.find_element(:xpath, "//span[contains(text(),'Next')]").displayed?}
+        @driver.find_element(:xpath,"//span[contains(text(),'Next')]").click
+        sleep(3)
+        select_London_Pilot_approved
+        sleep(5)
+        #Clicking next button
+        @driver.find_element(:xpath,"//span[@class='mat-button-wrapper' and text()=' Next ']").click
+        #Clicking on continue on equipment modal
+        
+        # Enter charge code
+        
+        wait.until {@driver.find_element(:xpath, "//input[@name='charge-code']").displayed?}
+        @driver.find_element(:xpath,"//label[@for='charge-code']//following::span[@class='ng-star-inserted' and text()='*']").displayed?
+        puts"charge code is mandatory"
+        @driver.find_element(:xpath, "//input[@name='charge-code']").send_keys("13445")
+        
+        #Enter Expected attendees
+       
+       
+        wait.until {@driver.find_element(:xpath, "//input[@name='head-count']").displayed?}
+        @driver.find_element(:xpath, "//input[@name='head-count']").send_keys("10")
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Add to booking']").click
+        sleep(4)
+        #Click on confirm
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='Save']").click
+        sleep(10)
+        wait.until {@driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='ng-star-inserted' and text()='Confirmed!']").click
+        wait.until {@driver.find_element(:xpath, "//label[text()='Host']//following::div[@class='value' and text()='Cameron Reeves']").displayed?}
+        @driver.find_element(:xpath, "//label[text()='Host']//following::div[@class='value' and text()='Cameron Reeves']").click
+        
+        #Close the module
+        wait.until {@driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").displayed?}
+        @driver.find_element(:xpath, "//span[@class='mat-button-wrapper' and text()='My Day']").click
+        sleep(5)
+        
+        search_meeting("Test Host")
+        sleep(4)
+        wait.until {@driver.find_element(:xpath, "//i[text()='delete']").displayed?}
+        @driver.find_element(:xpath, "//i[text()='delete']").click
+        sleep(5)
+        wait.until {@driver.find_element(:xpath, "//span[text()='Successfully deleted meeting.']").displayed?}
+
+    end
+
+        
+
+       
+        
+
+
+
     it "Verify London Maps" do
 
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
         wait.until {@driver.find_element(:xpath, "//div[@class='app']").displayed?}
         sleep(5)
-        #Clicking Booking Button"
         @driver.find_element(:xpath, "//div[text()='Maps']").click()
 
         wait.until {@driver.find_element(:xpath, "//mat-select[@role='listbox' and @name='building']").displayed?}
@@ -6032,52 +7014,6 @@ describe "Mckiney Staff App Test" do
         
 
 
-
-    
-
-        
-
-        
-
-
-
-
-      
-
-
-       
-
-        
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
     it "Verify inprogress meeting can be extended" do
 
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -6093,48 +7029,7 @@ describe "Mckiney Staff App Test" do
 
     end
 
-       
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-    
-
-
-
-    
-
-       
-
-
-    
-
-
-
-    
-    
-
-
-
-    
-
-       
-        
-
-        
-
-
-
+     
 
     it "Verify Meetings in My Day" do
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -6234,6 +7129,6 @@ end
     end
 
     
+end
 
-end
-end
+
