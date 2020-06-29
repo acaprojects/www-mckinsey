@@ -1,7 +1,7 @@
  require 'selenium-webdriver'
 require "rspec"
 
-describe "Mckiney Staff App Test" do
+describe "Mckiney Concierge App Test" do
    
 
     before(:all) do
@@ -1175,6 +1175,22 @@ describe "Mckiney Staff App Test" do
         end
     end
 
+    it " Verify all the hosts are visible on clicking "All meetings" toggle button" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        sleep(3)
+        wait.until{ @driver.find_element(:xpath, "//div[@class='text' and text()='Visitors']").displayed?}
+        @driver.find_element(:xpath, "//div[@class='text' and text()='Visitors']").click()
+        sleep(5)
+        wait.until{ @driver.find_element(:xpath, "//mat-slide-toggle[@title='Show all meetings']").displayed?}
+        @driver.find_element(:xpath, "//mat-slide-toggle[@title='Show all meetings']").click()
+        sleep(3)
+
+        
+        if @driver.find_elements(:xpath, "//div[text()='test']").count>0
+         puts "visitor is visible"
+        end
+    end
+
     it " Verify search external guests" do
         wait = Selenium::WebDriver::Wait.new(:timeout => 10)
         sleep(3)
@@ -1258,6 +1274,44 @@ describe "Mckiney Staff App Test" do
         @driver.find_element(:xpath, "//i[@class='material-icons ng-star-inserted' and text()='close']").click()
 
     end
+
+
+    it "Verify booking report can be generated for current day" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        sleep(3)
+        wait.until{ @driver.find_element(:xpath, "//div[@class='text' and text()='Reports']").displayed?}
+        @driver.find_element(:xpath, "//div[@class='text' and text()='Reports']").click()
+        wait.until{ @driver.find_element(:xpath, "//a[@ng-reflect-router-link='/reports,bookings']").displayed?}
+        @driver.find_element(:xpath, "//a[@ng-reflect-router-link='/reports,bookings']").click()
+        sleep(3)
+        wait.until{ @driver.find_element(:xpath, "//button[@name='generate']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='generate']").click()
+        sleep(3)
+      
+      
+
+    end
+
+    it "Verify catering report can be generated for current day" do
+        wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+        sleep(3)
+        wait.until{ @driver.find_element(:xpath, "//div[@class='text' and text()='Visitors']").displayed?}
+        @driver.find_element(:xpath, "//div[@class='text' and text()='Visitors']").click()
+        wait.until{ @driver.find_element(:xpath, "//a[@ng-reflect-router-link='/reports,catering']").displayed?}
+        @driver.find_element(:xpath, "//a[@ng-reflect-router-link='/reports,catering']").click()
+        sleep(3)
+        wait.until{ @driver.find_element(:xpath, "//button[@name='generate']").displayed?}
+        @driver.find_element(:xpath, "//button[@name='generate']").click()
+        sleep(3)
+        wait.until{ @driver.find_element(:xpath, "//a-report-table").displayed?}
+        
+        sleep(2)
+        
+
+    end
+
+        
+        
 
 
     it " Verify catering page has two option which are clickable" do
