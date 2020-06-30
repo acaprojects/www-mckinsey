@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1593434233867,
+  "timestamp": 1593497801130,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -460,8 +460,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "ea1e5023909c5104b958f149314f44bc00338ed6",
-    "/staff/main-es5.js": "238b31839edc9ee79151c41c0e4a1711a195c279",
+    "/staff/main-es2015.js": "bc05caa8637685233661867a3a0ae373f4f4a408",
+    "/staff/main-es5.js": "3a79a9b7007af48574dbfb8879243ed343dc1480",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
