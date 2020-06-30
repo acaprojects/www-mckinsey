@@ -10019,12 +10019,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "setup",
         get: function get() {
-          return this.booking && this.booking.setup ? general_utilities_1.humaniseDuration(this.booking.setup) : '<No Setup time>';
+          return this.booking && this.booking.setup[this.booking.space.email] ? general_utilities_1.humaniseDuration(this.booking.setup[this.booking.space.email]) : '<No Setup time>';
         }
       }, {
         key: "breakdown",
         get: function get() {
-          return this.booking && this.booking.breakdown ? general_utilities_1.humaniseDuration(this.booking.breakdown) : '<No Breakdown time>';
+          return this.booking && this.booking.breakdown[this.booking.space.email] ? general_utilities_1.humaniseDuration(this.booking.breakdown[this.booking.space.email]) : '<No Breakdown time>';
         }
       }, {
         key: "notes",
@@ -15519,8 +15519,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this81.creator = raw_data.creator || raw_data.booked_by ? new user_class_1.User(raw_data.creator || raw_data.booked_by) : _this81.organiser;
         _this81._location = raw_data.location_name || raw_data.location || '';
         _this81.all_day = raw_data.all_day || _this81.duration > 23 * 60;
-        _this81.setup = raw_data.setup || 0;
-        _this81.breakdown = raw_data.breakdown || 0;
+        _this81.setup = raw_data.setup || {};
+        _this81.breakdown = raw_data.breakdown || {};
         _this81.recurrence = raw_data.recurrence || raw_data.recurr || {};
 
         if (_this81.recurrence.end && _this81.recurrence.end < new Date().getTime()) {
@@ -15681,6 +15681,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           data.room_ids = data.space_list.map(function (space) {
             return space.email;
           });
+          data.breakdown = data.breakdown || {};
+          data.setup = data.setup || {};
 
           if (data.id) {
             data.from_room = this.space ? this.space.email : '';
@@ -15688,9 +15690,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (data.notes.find(function (note) {
             return note.type === 'equipment';
-          }) || data.catering && data.catering.length) {
-            data.breakdown = data.breakdown || 15;
-            data.setup = data.setup || 15;
+          })) {
+            var eq_notes = data.notes.filter(function (note) {
+              return note.type === 'equipment';
+            });
+
+            var _iterator6 = _createForOfIteratorHelper(eq_notes),
+                _step6;
+
+            try {
+              for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+                var note = _step6.value;
+                data.setup[note.space] = 15;
+                data.breakdown[note.space] = 15;
+              }
+            } catch (err) {
+              _iterator6.e(err);
+            } finally {
+              _iterator6.f();
+            }
+          }
+
+          if (data.catering && data.catering.length) {
+            var _iterator7 = _createForOfIteratorHelper(data.catering),
+                _step7;
+
+            try {
+              for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
+                var order = _step7.value;
+                data.setup[order.location_id] = 15;
+                data.breakdown[order.location_id] = 15;
+              }
+            } catch (err) {
+              _iterator7.e(err);
+            } finally {
+              _iterator7.f();
+            }
           }
 
           data.description = data.body;
@@ -15716,21 +15751,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "declined",
         get: function get() {
-          var _iterator6 = _createForOfIteratorHelper(this.space_list),
-              _step6;
+          var _iterator8 = _createForOfIteratorHelper(this.space_list),
+              _step8;
 
           try {
-            for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-              var space = _step6.value;
+            for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+              var space = _step8.value;
 
               if ((this.approval_status[space.email] || '').indexOf('decline') >= 0) {
                 return true;
               }
             }
           } catch (err) {
-            _iterator6.e(err);
+            _iterator8.e(err);
           } finally {
-            _iterator6.f();
+            _iterator8.f();
           }
 
           return false;
@@ -15740,21 +15775,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "approved",
         get: function get() {
-          var _iterator7 = _createForOfIteratorHelper(this.space_list),
-              _step7;
+          var _iterator9 = _createForOfIteratorHelper(this.space_list),
+              _step9;
 
           try {
-            for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
-              var space = _step7.value;
+            for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
+              var space = _step9.value;
 
               if (this.approval_status[space.email] && (this.approval_status[space.email].indexOf('tentative') >= 0 || this.approval_status[space.email].indexOf('decline') >= 0)) {
                 return false;
               }
             }
           } catch (err) {
-            _iterator7.e(err);
+            _iterator9.e(err);
           } finally {
-            _iterator7.f();
+            _iterator9.f();
           }
 
           return true;
@@ -15765,21 +15800,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "tentative",
         get: function get() {
           if (!this.declined) {
-            var _iterator8 = _createForOfIteratorHelper(this.space_list),
-                _step8;
+            var _iterator10 = _createForOfIteratorHelper(this.space_list),
+                _step10;
 
             try {
-              for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
-                var space = _step8.value;
+              for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
+                var space = _step10.value;
 
                 if (this.approval_status[space.email] && this.approval_status[space.email].indexOf('tentative') >= 0) {
                   return true;
                 }
               }
             } catch (err) {
-              _iterator8.e(err);
+              _iterator10.e(err);
             } finally {
-              _iterator8.f();
+              _iterator10.f();
             }
           }
 
@@ -16006,8 +16041,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         location: faker.address.city(),
         has_catering: Math.floor(Math.random() * 34567) % 3 === 0,
         booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)],
-        setup: Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5),
-        breakdown: Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5),
+        setup: {
+          'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5)
+        },
+        breakdown: {
+          'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5)
+        },
         status: {},
         catering: [],
         room_ids: []
@@ -16038,12 +16077,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return a.date - b.date;
       });
 
-      var _iterator9 = _createForOfIteratorHelper(list),
-          _step9;
+      var _iterator11 = _createForOfIteratorHelper(list),
+          _step11;
 
       try {
-        for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
-          var booking = _step9.value;
+        for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
+          var booking = _step11.value;
           var bkn_start = dayjs(booking.date);
           var bkn_end = bkn_start.add(booking.duration, 'm');
 
@@ -16064,9 +16103,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _iterator9.e(err);
+        _iterator11.e(err);
       } finally {
-        _iterator9.f();
+        _iterator11.f();
       }
 
       slots.push({
@@ -16090,12 +16129,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var slots = getFreeBookingSlots(list, min_size);
       var time = dayjs(date).startOf('m').second(1);
 
-      var _iterator10 = _createForOfIteratorHelper(slots),
-          _step10;
+      var _iterator12 = _createForOfIteratorHelper(slots),
+          _step12;
 
       try {
-        for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
-          var block = _step10.value;
+        for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
+          var block = _step12.value;
           var start = dayjs(block.start).startOf('m');
           var end = dayjs(block.end).startOf('m');
 
@@ -16111,9 +16150,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _iterator10.e(err);
+        _iterator12.e(err);
       } finally {
-        _iterator10.f();
+        _iterator12.f();
       }
 
       return slots[slots.length - 1];
@@ -16241,12 +16280,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (options.rules.hasOwnProperty(type) && options.rules[type] instanceof Array && options.space.zones.find(function (zone) {
             return zone === type;
           })) {
-            var _iterator11 = _createForOfIteratorHelper(options.rules[type]),
-                _step11;
+            var _iterator13 = _createForOfIteratorHelper(options.rules[type]),
+                _step13;
 
             try {
-              for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
-                var rule_block = _step11.value;
+              for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+                var rule_block = _step13.value;
 
                 /* istanbul ignore else */
                 if (checkRules({
@@ -16286,9 +16325,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator11.e(err);
+              _iterator13.e(err);
             } finally {
-              _iterator11.f();
+              _iterator13.f();
             }
           }
           /* istanbul ignore else */
@@ -18242,47 +18281,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var list = ids instanceof Array ? ids : [ids];
           var bld_list = this.buildings;
 
-          var _iterator12 = _createForOfIteratorHelper(list),
-              _step12;
+          var _iterator14 = _createForOfIteratorHelper(list),
+              _step14;
 
           try {
-            for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
-              var id = _step12.value;
+            for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
+              var id = _step14.value;
 
-              var _iterator13 = _createForOfIteratorHelper(bld_list),
-                  _step13;
+              var _iterator15 = _createForOfIteratorHelper(bld_list),
+                  _step15;
 
               try {
-                for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
-                  var bld = _step13.value;
+                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                  var bld = _step15.value;
 
-                  var _iterator14 = _createForOfIteratorHelper(bld.levels),
-                      _step14;
+                  var _iterator16 = _createForOfIteratorHelper(bld.levels),
+                      _step16;
 
                   try {
-                    for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
-                      var lvl = _step14.value;
+                    for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
+                      var lvl = _step16.value;
 
                       if (lvl.id === id) {
                         return lvl;
                       }
                     }
                   } catch (err) {
-                    _iterator14.e(err);
+                    _iterator16.e(err);
                   } finally {
-                    _iterator14.f();
+                    _iterator16.f();
                   }
                 }
               } catch (err) {
-                _iterator13.e(err);
+                _iterator15.e(err);
               } finally {
-                _iterator13.f();
+                _iterator15.f();
               }
             }
           } catch (err) {
-            _iterator12.e(err);
+            _iterator14.e(err);
           } finally {
-            _iterator12.f();
+            _iterator14.f();
           }
 
           return null;
@@ -18707,12 +18746,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return key.toLowerCase().includes('date');
             });
 
-            var _iterator15 = _createForOfIteratorHelper(data),
-                _step15;
+            var _iterator17 = _createForOfIteratorHelper(data),
+                _step17;
 
             try {
-              for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
-                var row = _step15.value;
+              for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
+                var row = _step17.value;
 
                 /* istanbul ignore else */
                 if (room_field && price_field) {
@@ -18737,24 +18776,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   row[date_field] = dayjs(row[date_field]).format('DD MMM YYYY - HH:mm');
                 }
 
-                var _iterator16 = _createForOfIteratorHelper(fields),
-                    _step16;
+                var _iterator18 = _createForOfIteratorHelper(fields),
+                    _step18;
 
                 try {
-                  for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
-                    var field = _step16.value;
+                  for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                    var field = _step18.value;
                     row[field] = typeof row[field] === 'string' ? row[field].replace(/\,/g, '٫') : row[field];
                   }
                 } catch (err) {
-                  _iterator16.e(err);
+                  _iterator18.e(err);
                 } finally {
-                  _iterator16.f();
+                  _iterator18.f();
                 }
               }
             } catch (err) {
-              _iterator15.e(err);
+              _iterator17.e(err);
             } finally {
-              _iterator15.f();
+              _iterator17.f();
             }
           } else if (this.type === 'bookings') {
             data = data.map(function (i) {
@@ -18796,8 +18835,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               booking.notes = booking.notes.map(function (note) {
                 return note.author ? "[".concat(note.author, "|").concat(note.type, "]").concat(note.message.replace(/<[^>]*>?/gm, '')) : '';
               }).join('\n');
-              booking.setup = general_utilities_1.humaniseDuration(booking.setup);
-              booking.breakdown = general_utilities_1.humaniseDuration(booking.breakdown);
               booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({
                 start: booking.date
               }, booking.recurrence));
@@ -19137,21 +19174,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
           return new Promise(function (resolve) {
             _this96._service.available(options).then(function (list) {
-              var _iterator17 = _createForOfIteratorHelper(list),
-                  _step17;
+              var _iterator19 = _createForOfIteratorHelper(list),
+                  _step19;
 
               try {
-                for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
-                  var rm = _step17.value;
+                for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                  var rm = _step19.value;
 
                   if (rm.id === _this96.id) {
                     return resolve(true);
                   }
                 }
               } catch (err) {
-                _iterator17.e(err);
+                _iterator19.e(err);
               } finally {
-                _iterator17.f();
+                _iterator19.f();
               }
 
               resolve(false);
@@ -19254,12 +19291,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         get: function get() {
           var bookings = this.bookings;
 
-          var _iterator18 = _createForOfIteratorHelper(bookings),
-              _step18;
+          var _iterator20 = _createForOfIteratorHelper(bookings),
+              _step20;
 
           try {
-            for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-              var bkn = _step18.value;
+            for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+              var bkn = _step20.value;
               var status = bkn.status;
 
               if (status === 'in_progress' || status === 'started') {
@@ -19267,9 +19304,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator18.e(err);
+            _iterator20.e(err);
           } finally {
-            _iterator18.f();
+            _iterator20.f();
           }
 
           return null;
@@ -19282,21 +19319,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var now = dayjs().valueOf();
           var bookings = this.bookings;
 
-          var _iterator19 = _createForOfIteratorHelper(bookings),
-              _step19;
+          var _iterator21 = _createForOfIteratorHelper(bookings),
+              _step21;
 
           try {
-            for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-              var bkn = _step19.value;
+            for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+              var bkn = _step21.value;
 
               if (bkn.date > now) {
                 return bkn;
               }
             }
           } catch (err) {
-            _iterator19.e(err);
+            _iterator21.e(err);
           } finally {
-            _iterator19.f();
+            _iterator21.f();
           }
 
           return null;
@@ -20279,7 +20316,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee19() {
-            var delegates, promises, _iterator20, _step20, email, list;
+            var delegates, promises, _iterator22, _step22, email, list;
 
             return regeneratorRuntime.wrap(function _callee19$(_context19) {
               while (1) {
@@ -20296,17 +20333,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 3:
                     promises = [];
-                    _iterator20 = _createForOfIteratorHelper(delegates);
+                    _iterator22 = _createForOfIteratorHelper(delegates);
 
                     try {
-                      for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-                        email = _step20.value;
+                      for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                        email = _step22.value;
                         promises.push(this.show(email));
                       }
                     } catch (err) {
-                      _iterator20.e(err);
+                      _iterator22.e(err);
                     } finally {
-                      _iterator20.f();
+                      _iterator22.f();
                     }
 
                     _context19.next = 8;
@@ -20522,20 +20559,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 if (combination.length > 0) {
                   // Check that keys are pressed
-                  var _iterator21 = _createForOfIteratorHelper(combination),
-                      _step21;
+                  var _iterator23 = _createForOfIteratorHelper(combination),
+                      _step23;
 
                   try {
-                    for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                      var key = _step21.value;
+                    for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                      var key = _step23.value;
                       var state = _this108.keydown_states[key];
                       presses.push(state ? state.getValue() || -1 : -1);
                     } // Check that keys are pressed in the correct order
 
                   } catch (err) {
-                    _iterator21.e(err);
+                    _iterator23.e(err);
                   } finally {
-                    _iterator21.f();
+                    _iterator23.f();
                   }
 
                   for (var i = 0; i < combination.length - 1; i++) {
@@ -20583,18 +20620,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function updateCombinationEndList() {
           var key_list = [];
 
-          var _iterator22 = _createForOfIteratorHelper(this.registered_combos),
-              _step22;
+          var _iterator24 = _createForOfIteratorHelper(this.registered_combos),
+              _step24;
 
           try {
-            for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-              var combo = _step22.value;
+            for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+              var combo = _step24.value;
               this.combo_end.push(combo[combo.length - 1]);
             }
           } catch (err) {
-            _iterator22.e(err);
+            _iterator24.e(err);
           } finally {
-            _iterator22.f();
+            _iterator24.f();
           }
 
           this.combo_end = general_utilities_1.unique(key_list);
@@ -20609,12 +20646,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function validCombination(combo) {
           var non_meta = 0;
 
-          var _iterator23 = _createForOfIteratorHelper(combo),
-              _step23;
+          var _iterator25 = _createForOfIteratorHelper(combo),
+              _step25;
 
           try {
-            for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-              var key = _step23.value;
+            for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+              var key = _step25.value;
 
               /* istanbul ignore else */
               if (INVALID_STANDALONE_KEYS.indexOf(key) < 0) {
@@ -20622,9 +20659,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator23.e(err);
+            _iterator25.e(err);
           } finally {
-            _iterator23.f();
+            _iterator25.f();
           }
 
           return non_meta > 0;
@@ -27349,18 +27386,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         })
       });
 
-      var _iterator24 = _createForOfIteratorHelper(rooms),
-          _step24;
+      var _iterator26 = _createForOfIteratorHelper(rooms),
+          _step26;
 
       try {
-        for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-          var space = _step24.value;
+        for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+          var space = _step26.value;
           booking_data.status[space.email] = ['approved', 'tentative', 'declined'][general_utilities_1.randomInt(3)];
         }
       } catch (err) {
-        _iterator24.e(err);
+        _iterator26.e(err);
       } finally {
-        _iterator24.f();
+        _iterator26.f();
       }
 
       return booking_data;
@@ -27921,12 +27958,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             event.body.id = "category-".concat(general_utilities_1.randomInt(99999999));
             var item = event.body;
 
-            var _iterator25 = _createForOfIteratorHelper(item.zones),
-                _step25;
+            var _iterator27 = _createForOfIteratorHelper(item.zones),
+                _step27;
 
             try {
-              for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-                var zone = _step25.value;
+              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+                var zone = _step27.value;
 
                 if (!MOCK_MENU[zone]) {
                   MOCK_MENU[zone] = [];
@@ -27940,12 +27977,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   if (parent) {
                     parent.items.push(item);
                   } else {
-                    var _iterator26 = _createForOfIteratorHelper(MOCK_MENU[zone]),
-                        _step26;
+                    var _iterator28 = _createForOfIteratorHelper(MOCK_MENU[zone]),
+                        _step28;
 
                     try {
-                      for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-                        var category = _step26.value;
+                      for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                        var category = _step28.value;
 
                         var _parent = category.items.find(function (cat) {
                           return cat.id === item.parent_categories[0];
@@ -27960,9 +27997,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         }
                       }
                     } catch (err) {
-                      _iterator26.e(err);
+                      _iterator28.e(err);
                     } finally {
-                      _iterator26.f();
+                      _iterator28.f();
                     }
 
                     throw {
@@ -27978,9 +28015,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator25.e(err);
+              _iterator27.e(err);
             } finally {
-              _iterator25.f();
+              _iterator27.f();
             }
 
             return {
@@ -28007,12 +28044,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _ret3 = function () {
             var category = event.body;
 
-            var _iterator27 = _createForOfIteratorHelper(category.zones),
-                _step27;
+            var _iterator29 = _createForOfIteratorHelper(category.zones),
+                _step29;
 
             try {
-              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-                var zone = _step27.value;
+              for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                var zone = _step29.value;
 
                 if (!MOCK_MENU[zone]) {
                   MOCK_MENU[zone] = [];
@@ -28032,9 +28069,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator27.e(err);
+              _iterator29.e(err);
             } finally {
-              _iterator27.f();
+              _iterator29.f();
             }
 
             return {
@@ -28062,12 +28099,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             event.body.id = "category-".concat(general_utilities_1.randomInt(99999999));
             var category = event.body;
 
-            var _iterator28 = _createForOfIteratorHelper(category.zones),
-                _step28;
+            var _iterator30 = _createForOfIteratorHelper(category.zones),
+                _step30;
 
             try {
-              for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-                var zone = _step28.value;
+              for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                var zone = _step30.value;
 
                 if (!MOCK_MENU[zone]) {
                   MOCK_MENU[zone] = [];
@@ -28091,9 +28128,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator28.e(err);
+              _iterator30.e(err);
             } finally {
-              _iterator28.f();
+              _iterator30.f();
             }
 
             return {
@@ -28121,12 +28158,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var category = event.body;
             console.log('Body:', category);
 
-            var _iterator29 = _createForOfIteratorHelper(category.zones),
-                _step29;
+            var _iterator31 = _createForOfIteratorHelper(category.zones),
+                _step31;
 
             try {
-              for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                var zone = _step29.value;
+              for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
+                var zone = _step31.value;
 
                 if (!MOCK_MENU[zone]) {
                   MOCK_MENU[zone] = [];
@@ -28154,9 +28191,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator29.e(err);
+              _iterator31.e(err);
             } finally {
-              _iterator29.f();
+              _iterator31.f();
             }
 
             return {
@@ -28175,12 +28212,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     });
 
     function findParent(id, list) {
-      var _iterator30 = _createForOfIteratorHelper(list),
-          _step30;
+      var _iterator32 = _createForOfIteratorHelper(list),
+          _step32;
 
       try {
-        for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-          var category = _step30.value;
+        for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+          var category = _step32.value;
           var found = category.items.find(function (item) {
             return item.id === id;
           });
@@ -28196,9 +28233,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _iterator30.e(err);
+        _iterator32.e(err);
       } finally {
-        _iterator30.f();
+        _iterator32.f();
       }
 
       return null;
@@ -28278,12 +28315,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return lvls;
     }, []);
 
-    var _iterator31 = _createForOfIteratorHelper(users_mock_1.MOCK_USERS),
-        _step31;
+    var _iterator33 = _createForOfIteratorHelper(users_mock_1.MOCK_USERS),
+        _step33;
 
     try {
-      for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-        var user = _step31.value;
+      for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
+        var user = _step33.value;
 
         if (user.location || general_utilities_1.randomInt(99999) % 2 === 0) {
           user.location = location_utilities_1.generateMockLocation(null, spaces, levels);
@@ -28291,9 +28328,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }
     } catch (err) {
-      _iterator31.e(err);
+      _iterator33.e(err);
     } finally {
-      _iterator31.f();
+      _iterator33.f();
     }
 
     setTimeout(function () {
@@ -28448,21 +28485,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           results = results.filter(function (i) {
             var count = 0;
 
-            var _iterator32 = _createForOfIteratorHelper(zone_ids),
-                _step32;
+            var _iterator34 = _createForOfIteratorHelper(zone_ids),
+                _step34;
 
             try {
-              for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
-                var zone = _step32.value;
+              for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                var zone = _step34.value;
 
                 if (i.zones.indexOf(zone) >= 0) {
                   count++;
                 }
               }
             } catch (err) {
-              _iterator32.e(err);
+              _iterator34.e(err);
             } finally {
-              _iterator32.f();
+              _iterator34.f();
             }
 
             return count >= zone_ids.length;
@@ -28482,12 +28519,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var from = dayjs(+event.query_params.available_from * 1000);
           var to = dayjs(+event.query_params.available_to * 1000);
           results.forEach(function (space) {
-            var _iterator33 = _createForOfIteratorHelper(space.bookings),
-                _step33;
+            var _iterator35 = _createForOfIteratorHelper(space.bookings),
+                _step35;
 
             try {
-              for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                var booking = _step33.value;
+              for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
+                var booking = _step35.value;
                 var start = dayjs(booking.start_epoch * 1000);
                 var end = dayjs(booking.end_epoch * 1000);
 
@@ -28502,9 +28539,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator33.e(err);
+              _iterator35.e(err);
             } finally {
-              _iterator33.f();
+              _iterator35.f();
             }
           });
         }
@@ -28552,12 +28589,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     });
     exports.PREDEFINED_USERS = ['Jonathan McFarlane', 'Stephen Von Takach', 'Alex Sorafumo', 'Candy Russo', 'Cristina Boston', 'Eugene Murphy', 'Ben Hoad', 'Kim Burgess', 'Desk Test', 'Space Test', 'Wireless Test', 'Zo-Kalar']; // Add predefined user to user list
 
-    var _iterator34 = _createForOfIteratorHelper(exports.PREDEFINED_USERS),
-        _step34;
+    var _iterator36 = _createForOfIteratorHelper(exports.PREDEFINED_USERS),
+        _step36;
 
     try {
-      for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
-        var user = _step34.value;
+      for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+        var user = _step36.value;
         var id = user.split(' ').join('.').toLowerCase();
         var new_user = user_utilities_1.generateMockUser({
           id: id,
@@ -28568,9 +28605,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       } // Add handler for users index
 
     } catch (err) {
-      _iterator34.e(err);
+      _iterator36.e(err);
     } finally {
-      _iterator34.f();
+      _iterator36.f();
     }
 
     window.control.handlers.push({
@@ -29201,12 +29238,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var length = users.length + (host ? 1 : 0);
         attendee_str = "".concat(length, " Attendee").concat(length === 1 ? '' : 's', "; ").concat(host ? host.name : '');
 
-        var _iterator35 = _createForOfIteratorHelper(users),
-            _step35;
+        var _iterator37 = _createForOfIteratorHelper(users),
+            _step37;
 
         try {
-          for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
-            var item = _step35.value;
+          for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
+            var item = _step37.value;
 
             if (attendee_str) {
               attendee_str += ', ';
@@ -29215,9 +29252,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             attendee_str += item.name;
           }
         } catch (err) {
-          _iterator35.e(err);
+          _iterator37.e(err);
         } finally {
-          _iterator35.f();
+          _iterator37.f();
         }
 
         attendee_str = attendee_str.replace('; ,', ';');
@@ -29469,12 +29506,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var filters = (filter || '').toLowerCase().split(' ');
       var list = {};
 
-      var _iterator36 = _createForOfIteratorHelper(filters),
-          _step36;
+      var _iterator38 = _createForOfIteratorHelper(filters),
+          _step38;
 
       try {
-        for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
-          var _f5 = _step36.value;
+        for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
+          var _f5 = _step38.value;
 
           /* istanbul ignore else */
           if (_f5) {
@@ -29488,9 +29525,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // Group similar tokens
 
       } catch (err) {
-        _iterator36.e(err);
+        _iterator38.e(err);
       } finally {
-        _iterator36.f();
+        _iterator38.f();
       }
 
       var parts = [];
@@ -29519,12 +29556,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           item.match = '';
           var field_list = {}; // Initialise field match variables
 
-          var _iterator37 = _createForOfIteratorHelper(fields),
-              _step37;
+          var _iterator39 = _createForOfIteratorHelper(fields),
+              _step39;
 
           try {
-            for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
-              var _f = _step37.value;
+            for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
+              var _f = _step39.value;
               field_list[_f] = {
                 value: (item[_f] || '').toLowerCase(),
                 index: 65536,
@@ -29533,27 +29570,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } // Search for matches with the tokenised filter string
 
           } catch (err) {
-            _iterator37.e(err);
+            _iterator39.e(err);
           } finally {
-            _iterator37.f();
+            _iterator39.f();
           }
 
-          var _iterator38 = _createForOfIteratorHelper(parts),
-              _step38;
+          var _iterator40 = _createForOfIteratorHelper(parts),
+              _step40;
 
           try {
-            for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
-              var i = _step38.value;
+            for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
+              var i = _step40.value;
 
               /* istanbul ignore else */
               if (i.word) {
                 // Check fields for matches
-                var _iterator40 = _createForOfIteratorHelper(fields),
-                    _step40;
+                var _iterator42 = _createForOfIteratorHelper(fields),
+                    _step42;
 
                 try {
-                  for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
-                    var _f2 = _step40.value;
+                  for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
+                    var _f2 = _step42.value;
                     var field = field_list[_f2];
                     var index = field.value.indexOf(i.word);
                     field.index = index < field.index ? index : field.index;
@@ -29562,17 +29599,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   } // Update token match count
 
                 } catch (err) {
-                  _iterator40.e(err);
+                  _iterator42.e(err);
                 } finally {
-                  _iterator40.f();
+                  _iterator42.f();
                 }
 
-                var _iterator41 = _createForOfIteratorHelper(fields),
-                    _step41;
+                var _iterator43 = _createForOfIteratorHelper(fields),
+                    _step43;
 
                 try {
-                  for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
-                    var _f3 = _step41.value;
+                  for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
+                    var _f3 = _step43.value;
                     var _field = field_list[_f3];
                     /* istanbul ignore else */
 
@@ -29582,12 +29619,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       var changed = 0;
                       var tokens = (item["match_".concat(_f3)] || item[_f3] || '').split(' ');
 
-                      var _iterator42 = _createForOfIteratorHelper(tokens),
-                          _step42;
+                      var _iterator44 = _createForOfIteratorHelper(tokens),
+                          _step44;
 
                       try {
-                        for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
-                          var k = _step42.value;
+                        for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
+                          var k = _step44.value;
 
                           /* istanbul ignore else */
                           if (changed >= i.count) {
@@ -29602,9 +29639,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           }
                         }
                       } catch (err) {
-                        _iterator42.e(err);
+                        _iterator44.e(err);
                       } finally {
-                        _iterator42.f();
+                        _iterator44.f();
                       }
 
                       item["match_".concat(_f3)] = tokens.join(' ');
@@ -29612,25 +29649,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
                   }
                 } catch (err) {
-                  _iterator41.e(err);
+                  _iterator43.e(err);
                 } finally {
-                  _iterator41.f();
+                  _iterator43.f();
                 }
               }
             } // Get field with the most relevent match
 
           } catch (err) {
-            _iterator38.e(err);
+            _iterator40.e(err);
           } finally {
-            _iterator38.f();
+            _iterator40.f();
           }
 
-          var _iterator39 = _createForOfIteratorHelper(fields),
-              _step39;
+          var _iterator41 = _createForOfIteratorHelper(fields),
+              _step41;
 
           try {
-            for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
-              var _f4 = _step39.value;
+            for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
+              var _f4 = _step41.value;
               var _field2 = field_list[_f4];
               /* istanbul ignore else */
 
@@ -29640,9 +29677,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator39.e(err);
+            _iterator41.e(err);
           } finally {
-            _iterator39.f();
+            _iterator41.f();
           }
 
           return item.match_index >= 0 && item.match && match_count >= parts.length;
@@ -29746,12 +29783,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
       var list = [];
 
-      var _iterator43 = _createForOfIteratorHelper(lines),
-          _step43;
+      var _iterator45 = _createForOfIteratorHelper(lines),
+          _step45;
 
       try {
-        for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
-          var line = _step43.value;
+        for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
+          var line = _step45.value;
           var parts = line.split(',');
           parts = parts.map(function (v) {
             return v.replace('\r', '');
@@ -29775,9 +29812,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _iterator43.e(err);
+        _iterator45.e(err);
       } finally {
-        _iterator43.f();
+        _iterator45.f();
       }
 
       return list;
@@ -36409,12 +36446,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function process(date) {
           var events = [];
 
-          var _iterator44 = _createForOfIteratorHelper(this.space_list),
-              _step44;
+          var _iterator46 = _createForOfIteratorHelper(this.space_list),
+              _step46;
 
           try {
-            for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
-              var id = _step44.value;
+            for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
+              var id = _step46.value;
 
               var space = this._spaces.find(id);
               /* istanbul ignore else */
@@ -36427,9 +36464,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator44.e(err);
+            _iterator46.e(err);
           } finally {
-            _iterator44.f();
+            _iterator46.f();
           }
 
           return events.sort(function (a, b) {
@@ -38351,8 +38388,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
             this.width = Math.min(100, 100 / overlap.total + 5);
             this.left = Math.min(100 - this.width, this.width * overlap.index - 5 * overlap.index);
-            this.overflow_top = (this.event.setup ? this.event.setup / duration : -0.1) * 100;
-            this.overflow_bottom = (this.event.breakdown ? this.event.breakdown / duration : -0.1) * 100;
+            this.overflow_top = (this.event.setup[this.event.space.email] ? this.event.setup[this.event.space.email] / duration : -0.1) * 100;
+            this.overflow_bottom = (this.event.breakdown[this.event.space.email] ? this.event.breakdown[this.event.space.email] / duration : -0.1) * 100;
           }
         }
       }, {
@@ -38746,11 +38783,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this189.settings = _this189._service.setting('app.day_view') || {};
 
             _this189.subscription('breakdown', _this189._service.listen('APP.breakdown').subscribe(function (state) {
-              _this189.overflow_only = state;
+              return _this189.overflow_only = state;
             }));
 
             _this189.subscription('legend', _this189._service.listen('CONCIERGE.legend').subscribe(function (state) {
-              _this189.legend = state || {};
+              return _this189.legend = state || {};
             }));
           });
         }
@@ -38802,24 +38839,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
           });
 
-          var _iterator45 = _createForOfIteratorHelper(events),
-              _step45;
+          var _iterator47 = _createForOfIteratorHelper(events),
+              _step47;
 
           try {
             var _loop6 = function _loop6() {
-              var bkn = _step45.value;
+              var bkn = _step47.value;
               var bkn_start = dayjs(bkn.date).startOf('m');
               var bkn_end = dayjs(bkn_start).add(bkn.duration, 'm').startOf('m');
               var count = 1;
               var index = 0;
               var collisions = [];
 
-              var _iterator46 = _createForOfIteratorHelper(events),
-                  _step46;
+              var _iterator48 = _createForOfIteratorHelper(events),
+                  _step48;
 
               try {
                 var _loop7 = function _loop7() {
-                  var cmp = _step46.value;
+                  var cmp = _step48.value;
 
                   /* istanbul ignore else */
                   if (bkn.id !== cmp.id) {
@@ -38843,13 +38880,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   }
                 };
 
-                for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
+                for (_iterator48.s(); !(_step48 = _iterator48.n()).done;) {
                   _loop7();
                 }
               } catch (err) {
-                _iterator46.e(err);
+                _iterator48.e(err);
               } finally {
-                _iterator46.f();
+                _iterator48.f();
               }
 
               _this191.overlap_details[bkn.id] = {
@@ -38858,13 +38895,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               };
             };
 
-            for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
+            for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
               _loop6();
             }
           } catch (err) {
-            _iterator45.e(err);
+            _iterator47.e(err);
           } finally {
-            _iterator45.f();
+            _iterator47.f();
           }
         }
         /**
@@ -39103,7 +39140,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _this196.loading[event.id] = true;
               }
 
-              return event.declined ? (!_this196.overflow_only || event.setup || event.breakdown) && _this196.legend.declined : (!_this196.overflow_only || event.setup || event.breakdown) && _this196.legend[event.type];
+              return event.declined ? (!_this196.overflow_only || event.setup[event.space.email] || event.breakdown[event.space.email]) && _this196.legend.declined : (!_this196.overflow_only || event.setup[event.space.email] || event.breakdown[event.space.email]) && _this196.legend[event.type];
             });
             return list;
           }

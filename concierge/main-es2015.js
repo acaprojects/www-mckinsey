@@ -5057,10 +5057,14 @@ class MeetingPrivateDetailsComponent {
         this._dialog = _dialog;
     }
     get setup() {
-        return this.booking && this.booking.setup ? general_utilities_1.humaniseDuration(this.booking.setup) : '<No Setup time>';
+        return this.booking && this.booking.setup[this.booking.space.email]
+            ? general_utilities_1.humaniseDuration(this.booking.setup[this.booking.space.email])
+            : '<No Setup time>';
     }
     get breakdown() {
-        return this.booking && this.booking.breakdown ? general_utilities_1.humaniseDuration(this.booking.breakdown) : '<No Breakdown time>';
+        return this.booking && this.booking.breakdown[this.booking.space.email]
+            ? general_utilities_1.humaniseDuration(this.booking.breakdown[this.booking.space.email])
+            : '<No Breakdown time>';
     }
     get notes() {
         return '';
@@ -5069,8 +5073,8 @@ class MeetingPrivateDetailsComponent {
     openPrivateDetailsModal() {
         this._dialog.open(private_details_modal_component_1.PrivateDetailsModalComponent, {
             data: {
-                booking: this.booking
-            }
+                booking: this.booking,
+            },
         });
     }
 }
@@ -8224,8 +8228,8 @@ class Booking extends base_api_class_1.BaseDataClass {
                 : this.organiser;
         this._location = raw_data.location_name || raw_data.location || '';
         this.all_day = raw_data.all_day || this.duration > 23 * 60;
-        this.setup = raw_data.setup || 0;
-        this.breakdown = raw_data.breakdown || 0;
+        this.setup = raw_data.setup || {};
+        this.breakdown = raw_data.breakdown || {};
         this.recurrence = raw_data.recurrence || raw_data.recurr || {};
         if (this.recurrence.end && this.recurrence.end < new Date().getTime()) {
             this.recurrence = Object.assign(Object.assign({}, this.recurrence), { start: this.recurrence.start, end: this.recurrence.end });
@@ -8435,13 +8439,23 @@ class Booking extends base_api_class_1.BaseDataClass {
         data.attendees = general_utilities_1.unique([data.organiser].concat(data.attendees), 'email');
         data.notify_users = [data.organiser.email];
         data.room_ids = data.space_list.map((space) => space.email);
+        data.breakdown = data.breakdown || {};
+        data.setup = data.setup || {};
         if (data.id) {
             data.from_room = this.space ? this.space.email : '';
         }
-        if (data.notes.find((note) => note.type === 'equipment') ||
-            (data.catering && data.catering.length)) {
-            data.breakdown = data.breakdown || 15;
-            data.setup = data.setup || 15;
+        if (data.notes.find((note) => note.type === 'equipment')) {
+            const eq_notes = data.notes.filter((note) => note.type === 'equipment');
+            for (const note of eq_notes) {
+                data.setup[note.space] = 15;
+                data.breakdown[note.space] = 15;
+            }
+        }
+        if (data.catering && data.catering.length) {
+            for (const order of data.catering) {
+                data.setup[order.location_id] = 15;
+                data.breakdown[order.location_id] = 15;
+            }
         }
         data.description = data.body;
         data.recurr = data.recurrence;
@@ -8520,7 +8534,7 @@ function generateMockBooking(override = {}) {
     BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
     return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(Math.random() * 5 + 2))
             .fill(0)
-            .map((i) => user_utilities_1.generateMockUser(override.users)), organiser: user_utilities_1.generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)], setup: Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5), breakdown: Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5), status: {}, catering: [], room_ids: [] }, override);
+            .map((i) => user_utilities_1.generateMockUser(override.users)), organiser: user_utilities_1.generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)], setup: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, breakdown: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, status: {}, catering: [], room_ids: [] }, override);
 }
 exports.generateMockBooking = generateMockBooking;
 /**
@@ -10065,8 +10079,6 @@ class Report {
                 booking.start = dayjs(booking.start * 1000).format('DD MMM YYYY, h:mm A');
                 booking.end = dayjs(booking.end * 1000).format('DD MMM YYYY, h:mm A');
                 booking.notes = booking.notes.map(note => note.author ? `[${note.author}|${note.type}]${note.message.replace(/<[^>]*>?/gm, '')}` : '').join('\n');
-                booking.setup = general_utilities_1.humaniseDuration(booking.setup);
-                booking.breakdown = general_utilities_1.humaniseDuration(booking.breakdown);
                 booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({ start: booking.date }, booking.recurrence));
                 return booking;
             });
@@ -21241,9 +21253,14 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
             this.position.emit({ top: this.top, height: (duration / 60 / 24) * 100 });
             this.width = Math.min(100, 100 / overlap.total + 5);
             this.left = Math.min(100 - this.width, this.width * overlap.index - 5 * overlap.index);
-            this.overflow_top = (this.event.setup ? this.event.setup / duration : -0.1) * 100;
+            this.overflow_top =
+                (this.event.setup[this.event.space.email]
+                    ? this.event.setup[this.event.space.email] / duration
+                    : -0.1) * 100;
             this.overflow_bottom =
-                (this.event.breakdown ? this.event.breakdown / duration : -0.1) * 100;
+                (this.event.breakdown[this.event.space.email]
+                    ? this.event.breakdown[this.event.space.email] / duration
+                    : -0.1) * 100;
         }
     }
 }
@@ -21390,9 +21407,13 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
                     this.loading[event.id] = true;
                 }
                 return event.declined
-                    ? (!this.overflow_only || event.setup || event.breakdown) &&
+                    ? (!this.overflow_only ||
+                        event.setup[event.space.email] ||
+                        event.breakdown[event.space.email]) &&
                         this.legend.declined
-                    : (!this.overflow_only || event.setup || event.breakdown) &&
+                    : (!this.overflow_only ||
+                        event.setup[event.space.email] ||
+                        event.breakdown[event.space.email]) &&
                         this.legend[event.type];
             });
             return list;
@@ -21402,12 +21423,12 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
     ngOnInit() {
         this._service.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
             this.settings = this._service.setting('app.day_view') || {};
-            this.subscription('breakdown', this._service.listen('APP.breakdown').subscribe((state) => {
-                this.overflow_only = state;
-            }));
-            this.subscription('legend', this._service.listen('CONCIERGE.legend').subscribe((state) => {
-                this.legend = state || {};
-            }));
+            this.subscription('breakdown', this._service
+                .listen('APP.breakdown')
+                .subscribe((state) => (this.overflow_only = state)));
+            this.subscription('legend', this._service
+                .listen('CONCIERGE.legend')
+                .subscribe((state) => (this.legend = state || {})));
         });
     }
     ngOnChanges(changes) {
