@@ -3964,7 +3964,7 @@ class Booking extends base_api_class_1.BaseDataClass {
             (raw_data.organizer || raw_data.organiser ? new user_class_1.User(raw_data.organizer || raw_data.organiser) : user_class_1.User.active_user) || new user_class_1.User();
         this.creator = raw_data.creator ? new user_class_1.User(raw_data.creator) : this.organiser;
         this._location = raw_data.location_name || raw_data.location || '';
-        this.all_day = raw_data.all_day || this.duration > 23 * 60;
+        this.all_day = !!(raw_data.all_day || this.duration > 23 * 60);
         this.setup = raw_data.setup || 0;
         this.breakdown = raw_data.breakdown || 0;
         this.recurrence = raw_data.recurrence || raw_data.recurr || {};
@@ -4166,6 +4166,9 @@ class Booking extends base_api_class_1.BaseDataClass {
         data.description = data.body;
         data.recurr = data.recurrence;
         data.booking_type = data.type;
+        if (data.all_day) {
+            data.all_day = date.format('YYYY-MM-DD');
+        }
         delete data.body;
         delete data.type;
         delete data.recurrence;
@@ -21331,16 +21334,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "c3363e5",
-    "hash": "c3363e5",
+    "raw": "1d1ecbb",
+    "hash": "1d1ecbb",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "c3363e5",
+    "suffix": "1d1ecbb",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1593520011712
+    "time": 1593562325312
 };
 /* tslint:enable */
 
