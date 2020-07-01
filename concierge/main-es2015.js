@@ -742,7 +742,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
     /** List of catering orders in the booking */
     get catering() {
         return (this.booking.catering || []).map(order => {
-            const space = this.spaces.find(a_space => a_space.id === order.location_id) || {
+            const space = this.spaces.find(a_space => a_space.email === order.location_id) || {
                 level: {}
             };
             const building = this._org.buildings.find(bld => bld.id === space.level.id) || {};
@@ -1836,7 +1836,7 @@ function BookingCateringOrderDetailsComponent_div_1_mat_option_7_Template(rf, ct
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const space_r10 = ctx.$implicit;
-    i0.ɵɵproperty("value", space_r10.id);
+    i0.ɵɵproperty("value", space_r10.email);
     i0.ɵɵadvance(1);
     i0.ɵɵtextInterpolate1(" ", space_r10.name, " ");
 } }
@@ -2080,7 +2080,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         if (changes.space_list) {
             /* istanbul ignore else */
             if (this.form && this.space_list && !this.form.controls.location_id.value) {
-                this.form.controls.location_id.setValue(this.space_list[0].id);
+                this.form.controls.location_id.setValue(this.space_list[0].email);
             }
         }
         /* istanbul ignore else */
@@ -2092,7 +2092,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         this.form = new forms_1.FormGroup({
             id: new forms_1.FormControl(this.order.id),
             booking_date: new forms_1.FormControl(this.all_day ? dayjs(this.date).startOf('d').valueOf() : this.date),
-            location_id: new forms_1.FormControl(this.order.location_id || this.space_list[0].id),
+            location_id: new forms_1.FormControl(this.order.location_id || this.space_list[0].email),
             delivery_time: new forms_1.FormControl(this.order.delivery_time || this.available_times[0].id),
             items: new forms_1.FormControl(this.order.items.map((item) => new catering_item_class_1.CateringItem(item))),
         });
@@ -2131,12 +2131,12 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         ref.afterClosed().subscribe(() => this.unsub('confirm_event'));
     }
     loadMenu() {
-        const space = this.form.controls.location_id.value;
+        const space = this.space_list.find(space => space.email === this.form.controls.location_id.value);
         if (!this.hide_details) {
             this.form.controls.items.setValue([]);
         }
         this.loading = true;
-        this._menu.query({ room_id: space }).then((list) => {
+        this._menu.query({ room_id: space.id }).then((list) => {
             this.loading = false;
             this.category_list = list.map((i) => new catering_category_class_1.CateringCategory(i));
         }, () => (this.loading = false));
@@ -3728,88 +3728,89 @@ const i7 = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_mod
 const i8 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 const i9 = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 const i10 = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
-var I18N_0;
+const _c0 = ["content"];
+var I18N_1;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Catering details save action
      */ 
-    const MSG_EXTERNAL_2732940016977811303$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS_1 = goog.getMsg(" Add to booking ");
-    I18N_0 = MSG_EXTERNAL_2732940016977811303$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS_1;
+    const MSG_EXTERNAL_2732940016977811303$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS_2 = goog.getMsg(" Add to booking ");
+    I18N_1 = MSG_EXTERNAL_2732940016977811303$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS_2;
 }
 else {
-    I18N_0 = $localize `:Catering details save action␟6679108dd552b13e53a38ea4c5e5e6f8e6fadab7␟2732940016977811303: Add to booking `;
+    I18N_1 = $localize `:Catering details save action␟6679108dd552b13e53a38ea4c5e5e6f8e6fadab7␟2732940016977811303: Add to booking `;
 }
 function CateringDetailsModalComponent_mat_tab_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "mat-tab", 11);
 } if (rf & 2) {
     const space_r2 = ctx.$implicit;
     const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("label", space_r2.name + (ctx_r0.form[space_r2.id].invalid && ctx_r0.form[space_r2.id].touched ? "*" : ""));
+    i0.ɵɵproperty("label", space_r2.name + (ctx_r0.form[space_r2.email].invalid && ctx_r0.form[space_r2.email].touched ? "*" : ""));
 } }
-var I18N_2;
+var I18N_3;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Catering details equipment notes label
      */ 
-    const MSG_EXTERNAL_5669621286420940838$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__3 = goog.getMsg(" (eg - allergies, in tolerances, no ice in drinks etc) Additional requests are handled in confidence. ");
-    I18N_2 = MSG_EXTERNAL_5669621286420940838$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__3;
+    const MSG_EXTERNAL_5669621286420940838$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__4 = goog.getMsg(" (eg - allergies, in tolerances, no ice in drinks etc) Additional requests are handled in confidence. ");
+    I18N_3 = MSG_EXTERNAL_5669621286420940838$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__4;
 }
 else {
-    I18N_2 = $localize `:Catering details equipment notes label␟9560d941e07bf55dfdf44d454055e8dddffb2f91␟5669621286420940838: (eg - allergies, in tolerances, no ice in drinks etc) Additional requests are handled in confidence. `;
+    I18N_3 = $localize `:Catering details equipment notes label␟9560d941e07bf55dfdf44d454055e8dddffb2f91␟5669621286420940838: (eg - allergies, in tolerances, no ice in drinks etc) Additional requests are handled in confidence. `;
 }
-var I18N_4;
+var I18N_5;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-    const MSG_EXTERNAL_4048193419886450033$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__5 = goog.getMsg("Add notes here...");
-    I18N_4 = MSG_EXTERNAL_4048193419886450033$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__5;
+    const MSG_EXTERNAL_4048193419886450033$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__6 = goog.getMsg("Add notes here...");
+    I18N_5 = MSG_EXTERNAL_4048193419886450033$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__6;
 }
 else {
-    I18N_4 = $localize `:␟f7bdd304a99c014dc0fff3af941e6a9d968371db␟4048193419886450033:Add notes here...`;
+    I18N_5 = $localize `:␟f7bdd304a99c014dc0fff3af941e6a9d968371db␟4048193419886450033:Add notes here...`;
 }
-const _c6 = ["placeholder", I18N_4];
-var I18N_8;
+const _c7 = ["placeholder", I18N_5];
+var I18N_9;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-    const MSG_EXTERNAL_4704310930093496744$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__9 = goog.getMsg("Charge Code");
-    I18N_8 = MSG_EXTERNAL_4704310930093496744$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__9;
+    const MSG_EXTERNAL_4704310930093496744$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__10 = goog.getMsg("Charge Code");
+    I18N_9 = MSG_EXTERNAL_4704310930093496744$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__10;
 }
 else {
-    I18N_8 = $localize `:␟95984e0af2c6fdc0c7a9e4ad9b413fd969a5324a␟4704310930093496744:Charge Code`;
+    I18N_9 = $localize `:␟95984e0af2c6fdc0c7a9e4ad9b413fd969a5324a␟4704310930093496744:Charge Code`;
 }
-const _c10 = ["placeholder", I18N_8];
-var I18N_11;
+const _c11 = ["placeholder", I18N_9];
+var I18N_12;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Catering details charge code error
      */ 
-    const MSG_EXTERNAL_6433134519537727373$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__12 = goog.getMsg(" Charge Code is required ");
-    I18N_11 = MSG_EXTERNAL_6433134519537727373$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__12;
+    const MSG_EXTERNAL_6433134519537727373$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__13 = goog.getMsg(" Charge Code is required ");
+    I18N_12 = MSG_EXTERNAL_6433134519537727373$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__13;
 }
 else {
-    I18N_11 = $localize `:Catering details charge code error␟4b1851c001235398631979c2ebff230f501e3fb9␟6433134519537727373: Charge Code is required `;
+    I18N_12 = $localize `:Catering details charge code error␟4b1851c001235398631979c2ebff230f501e3fb9␟6433134519537727373: Charge Code is required `;
 }
-var I18N_13;
+var I18N_14;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Catering details charge code hint
      */ 
-    const MSG_EXTERNAL_1078849591937392404$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__14 = goog.getMsg("{$startTagSpan}Note:{$closeTagSpan} Your booking will be confirmed before you are charged. ", { "startTagSpan": "\uFFFD#18\uFFFD", "closeTagSpan": "\uFFFD/#18\uFFFD" });
-    I18N_13 = MSG_EXTERNAL_1078849591937392404$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__14;
+    const MSG_EXTERNAL_1078849591937392404$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__15 = goog.getMsg("{$startTagSpan}Note:{$closeTagSpan} Your booking will be confirmed before you are charged. ", { "startTagSpan": "\uFFFD#18\uFFFD", "closeTagSpan": "\uFFFD/#18\uFFFD" });
+    I18N_14 = MSG_EXTERNAL_1078849591937392404$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__15;
 }
 else {
-    I18N_13 = $localize `:Catering details charge code hint␟309202b2ded3e8d0aa94923fa187763d6ba21830␟1078849591937392404:${"\uFFFD#18\uFFFD"}:START_TAG_SPAN:Note:${"\uFFFD/#18\uFFFD"}:CLOSE_TAG_SPAN: Your booking will be confirmed before you are charged. `;
+    I18N_14 = $localize `:Catering details charge code hint␟309202b2ded3e8d0aa94923fa187763d6ba21830␟1078849591937392404:${"\uFFFD#18\uFFFD"}:START_TAG_SPAN:Note:${"\uFFFD/#18\uFFFD"}:CLOSE_TAG_SPAN: Your booking will be confirmed before you are charged. `;
 }
-var I18N_7;
+var I18N_8;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Catering details charge code label
      */ 
-    const MSG_EXTERNAL_4381230312262498447$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS___15 = goog.getMsg(" Charge Code{$startTagSpan}*{$closeTagSpan}", { "startTagSpan": "\uFFFD*10:1\uFFFD\uFFFD#1:1\uFFFD", "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*10:1\uFFFD" });
-    I18N_7 = MSG_EXTERNAL_4381230312262498447$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS___15;
+    const MSG_EXTERNAL_4381230312262498447$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS___16 = goog.getMsg(" Charge Code{$startTagSpan}*{$closeTagSpan}", { "startTagSpan": "\uFFFD*10:1\uFFFD\uFFFD#1:1\uFFFD", "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*10:1\uFFFD" });
+    I18N_8 = MSG_EXTERNAL_4381230312262498447$$SRC_APP_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS___16;
 }
 else {
-    I18N_7 = $localize `:Catering details charge code label␟0623cad0eeefa482e8dadfe201c0f0ddff07f405␟4381230312262498447: Charge Code${"\uFFFD*10:1\uFFFD\uFFFD#1:1\uFFFD"}:START_TAG_SPAN:*${"\uFFFD/#1:1\uFFFD\uFFFD/*10:1\uFFFD"}:CLOSE_TAG_SPAN:`;
+    I18N_8 = $localize `:Catering details charge code label␟0623cad0eeefa482e8dadfe201c0f0ddff07f405␟4381230312262498447: Charge Code${"\uFFFD*10:1\uFFFD\uFFFD#1:1\uFFFD"}:START_TAG_SPAN:*${"\uFFFD/#1:1\uFFFD\uFFFD/*10:1\uFFFD"}:CLOSE_TAG_SPAN:`;
 }
 function CateringDetailsModalComponent_form_12_span_10_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵi18nStart(0, I18N_7, 1);
+    i0.ɵɵi18nStart(0, I18N_8, 1);
     i0.ɵɵelement(1, "span");
     i0.ɵɵi18nEnd();
 } }
@@ -3817,29 +3818,29 @@ function CateringDetailsModalComponent_form_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "form", 12);
     i0.ɵɵelementStart(1, "div", 13);
     i0.ɵɵelementStart(2, "label", 14);
-    i0.ɵɵi18n(3, I18N_2);
+    i0.ɵɵi18n(3, I18N_3);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(4, "mat-form-field", 15);
     i0.ɵɵelementStart(5, "textarea", 16);
-    i0.ɵɵi18nAttributes(6, _c6);
+    i0.ɵɵi18nAttributes(6, _c7);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(7, "div", 13);
     i0.ɵɵelementStart(8, "label", 17);
-    i0.ɵɵi18nStart(9, I18N_7);
+    i0.ɵɵi18nStart(9, I18N_8);
     i0.ɵɵtemplate(10, CateringDetailsModalComponent_form_12_span_10_Template, 2, 0, "span", 18);
     i0.ɵɵi18nEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(11, "mat-form-field", 15);
     i0.ɵɵelementStart(12, "input", 19);
-    i0.ɵɵi18nAttributes(13, _c10);
+    i0.ɵɵi18nAttributes(13, _c11);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(14, "mat-error");
-    i0.ɵɵi18n(15, I18N_11);
+    i0.ɵɵi18n(15, I18N_12);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(16, "mat-hint");
-    i0.ɵɵi18nStart(17, I18N_13);
+    i0.ɵɵi18nStart(17, I18N_14);
     i0.ɵɵelement(18, "span");
     i0.ɵɵi18nEnd();
     i0.ɵɵelementEnd();
@@ -3852,9 +3853,9 @@ function CateringDetailsModalComponent_form_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(8);
     i0.ɵɵclassProp("error", ctx_r1.active_form.controls.code.touched && ctx_r1.active_form.controls.code.invalid);
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("ngIf", ctx_r1.needs_charge_code[ctx_r1.space_list[ctx_r1.active_space].id]);
+    i0.ɵɵproperty("ngIf", ctx_r1.needs_charge_code[ctx_r1.space_list[ctx_r1.active_space].email]);
 } }
-const _c16 = function () { return { class: "material-icons", content: "close" }; };
+const _c17 = function () { return { class: "material-icons", content: "close" }; };
 class CateringDetailsModalComponent {
     constructor(_users, _data) {
         this._users = _users;
@@ -3879,11 +3880,11 @@ class CateringDetailsModalComponent {
         return this._data.spaces || [];
     }
     get active_form() {
-        return this.form[this.space_list[this.active_space].id];
+        return this.form[this.space_list[this.active_space].email];
     }
     /** Whether form fields are valid */
     get is_valid() {
-        return this.space_list.reduce((valid, space) => valid && this.form[space.id].valid, true);
+        return this.space_list.reduce((valid, space) => valid && this.form[space.email].valid, true);
     }
     ngOnInit() {
         const note_list = this._data.notes_field.value.filter((note) => note.type === 'catering');
@@ -3898,7 +3899,7 @@ class CateringDetailsModalComponent {
         this.generateFormFields();
     }
     submit() {
-        this.space_list.forEach((space) => this.form[space.id].markAllAsTouched());
+        this.space_list.forEach((space) => this.form[space.email].markAllAsTouched());
         /* istanbul ignore else */
         if (this.is_valid) {
             // Update notes
@@ -3906,8 +3907,8 @@ class CateringDetailsModalComponent {
             const new_notes = this.space_list.map((space) => ({
                 author: this._users.current.name,
                 type: 'catering',
-                message: this.form[space.id].controls.notes.value,
-                space: space.id,
+                message: this.form[space.email].controls.notes.value,
+                space: space.email,
                 date: dayjs().valueOf(),
             }));
             this._data.notes_field.setValue(notes.concat(new_notes).filter((note) => note.message));
@@ -3915,20 +3916,36 @@ class CateringDetailsModalComponent {
             this._data.catering.setValue(orders);
             this.event.emit({ reason: 'done' });
         }
+        else {
+            this._scrollToBottom();
+        }
     }
     /** Generate form fields for each space */
     generateFormFields() {
         for (const space of this.space_list) {
-            this.form[space.id] = new forms_1.FormGroup({
-                notes: new forms_1.FormControl(this.notes[space.id] || ''),
-                code: new forms_1.FormControl(this.codes[space.id] || ''),
+            this.form[space.email] = new forms_1.FormGroup({
+                notes: new forms_1.FormControl(this.notes[space.email] || ''),
+                code: new forms_1.FormControl(this.codes[space.email] || ''),
             });
         }
+    }
+    /** Scroll the content container to the bottom */
+    _scrollToBottom() {
+        this._content_el.nativeElement.scrollTo({
+            top: this._content_el.nativeElement.scrollHeight,
+            left: 0,
+            behavior: 'smooth',
+        });
     }
 }
 exports.CateringDetailsModalComponent = CateringDetailsModalComponent;
 CateringDetailsModalComponent.ɵfac = function CateringDetailsModalComponent_Factory(t) { return new (t || CateringDetailsModalComponent)(i0.ɵɵdirectiveInject(i1.UsersService), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-CateringDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringDetailsModalComponent, selectors: [["a-catering-details-modal"]], outputs: { event: "event" }, decls: 17, vars: 5, consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/food-notes.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "tapped"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]], template: function CateringDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
+CateringDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringDetailsModalComponent, selectors: [["a-catering-details-modal"]], viewQuery: function CateringDetailsModalComponent_Query(rf, ctx) { if (rf & 1) {
+        i0.ɵɵstaticViewQuery(_c0, true);
+    } if (rf & 2) {
+        var _t;
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._content_el = _t.first);
+    } }, outputs: { event: "event" }, decls: 17, vars: 5, consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/food-notes.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "tapped"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]], template: function CateringDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "mat-tab-group", 2);
@@ -3955,7 +3972,7 @@ CateringDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringDet
         i0.ɵɵelementStart(14, "footer");
         i0.ɵɵelementStart(15, "button", 10);
         i0.ɵɵlistener("tapped", function CateringDetailsModalComponent_Template_button_tapped_15_listener() { return ctx.submit(); });
-        i0.ɵɵi18n(16, I18N_0);
+        i0.ɵɵi18n(16, I18N_1);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -3965,7 +3982,7 @@ CateringDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringDet
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngForOf", ctx.space_list);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(4, _c16));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(4, _c17));
         i0.ɵɵadvance(7);
         i0.ɵɵproperty("ngIf", ctx.space_list[ctx.active_space] && ctx.active_form);
     } }, directives: [i2.MatTabGroup, i3.NgForOf, i4.MatButton, i5.MatDialogClose, i6.IconComponent, i5.MatDialogContent, i3.NgIf, i5.MatDialogActions, i7.ɵb, i2.MatTab, i8.ɵangular_packages_forms_forms_y, i8.NgControlStatusGroup, i8.FormGroupDirective, i9.MatFormField, i10.MatInput, i8.DefaultValueAccessor, i8.NgControlStatus, i8.FormControlName, i9.MatError, i9.MatHint], styles: [".header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid #ccc;\n  width: 100%;\n}\n.header[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%] {\n  min-width: 50%;\n  flex: 1;\n}\n.details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  text-align: center;\n  margin-bottom: 1em;\n}\nmain[_ngcontent-%COMP%] {\n  padding: 1em 1em 0;\n}\nmat-hint[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #1937ea;\n}\nlabel[_ngcontent-%COMP%] {\n  min-width: 100%;\n  margin-top: 1.25em;\n  margin-right: 1em;\n  font-weight: bold;\n  font-size: 0.8em;\n  width: 100%;\n  margin-top: 0;\n  margin-bottom: 0.5em;\n}\nlabel[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #ffb300;\n}\nlabel.error[_ngcontent-%COMP%] {\n  color: #e53935;\n}\nmat-form-field[_ngcontent-%COMP%] {\n  flex: 1;\n}\nmat-tab[_ngcontent-%COMP%] {\n  display: none !important;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  min-width: 14em;\n  flex: 1;\n  flex-wrap: wrap;\n}\ntextarea[_ngcontent-%COMP%] {\n  min-height: 7em;\n}\n.fieldset[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%] {\n  margin: 0 0.25em;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n.fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%]:first-child {\n  margin-left: 0;\n}\n.fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%]:last-child {\n  margin-right: 0;\n}\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvb3ZlcmxheXMvY2F0ZXJpbmctZGV0YWlscy1tb2RhbC9jYXRlcmluZy1kZXRhaWxzLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9vdmVybGF5cy9jYXRlcmluZy1kZXRhaWxzLW1vZGFsL2NhdGVyaW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FBN0NBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQy9CQTs7c0JBQUE7QUNYQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLDZCQUFBO0VBQ0EsV0FBQTtBQ2tCSjtBRGhCSTtFQUNJLGNBQUE7RUFDQSxPQUFBO0FDa0JSO0FEZEE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0Esa0JBQUE7QUNpQko7QURkQTtFQUNJLGtCQUFBO0FDaUJKO0FEYkk7RUFDSSxjRlZRO0FHMEJoQjtBRFpBO0VBQ0ksZUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBRUksV0FBQTtFQUNBLGFBQUE7RUFDQSxvQkFBQTtBQ2NSO0FEWEk7RUFDSSxjRm5DRTtBR2dEVjtBRFZJO0VBQ0ksY0ZuQ0E7QUcrQ1I7QURSQTtFQUNJLE9BQUE7QUNXSjtBRFJBO0VBQ0ksd0JBQUE7QUNXSjtBRFJBO0VBQ0ksYUFBQTtFQUNBLGVBQUE7RUFDQSxPQUFBO0VBR0ksZUFBQTtBQ1NSO0FETEE7RUFDSSxlQUFBO0FDUUo7QURMQTtFQUNJLGFBQUE7RUFDQSxlQUFBO0FDUUo7QUROSTtFQUNJLGdCQUFBO0FDUVI7QUZyRVE7RUM0REo7SUFJUSxTQUFBO0VDU1Y7QUFDRjtBRnZFUTtFQ3lESjtJQUlRLFNBQUE7RUNjVjtBQUNGO0FEWlE7RUFDSSxjQUFBO0FDY1o7QURYUTtFQUNJLGVBQUE7QUNhWjtBRFJBO0VBQ0ksV0FBQTtFQUNBLGtCQUFBO0FDV0oiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy9jYXRlcmluZy1kZXRhaWxzLW1vZGFsL2NhdGVyaW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxuQG1peGluIGhpZGUtdGV4dC1vdmVyZmxvdyB7XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG5AbWl4aW4gYm94LXNoYWRvdygkY29sb3I6ICMwMDAsICRkZXB0aDogMSkge1xuICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAxcHggKiAoJGRlcHRoIC0gMSkgcmdiYSgjMDAwLCAuMiksXG4gICAgICAgICAgICAgICAgMCAxcHggMXB4IDAgcmdiYSgjMDAwLCAuMTQpLFxuICAgICAgICAgICAgICAgIDAgMnB4IDFweCAtMXB4IHJnYmEoIzAwMCwgLjEyKTtcbn1cblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbkBtaXhpbiByZXNwb25kLXRvKCRtZWRpYSkge1xuICAgIEBpZiAkbWVkaWEgPT0gbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBub3QtbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAoJG1lZGlhID09IHRhYmxldC1tb2JpbGUgb3IgJG1lZGlhID09IG5vdC1kZXNrdG9wKSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH1cbn1cbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcbkBpbXBvcnQgJ21peGlucyc7XG5cbi5oZWFkZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYztcbiAgICB3aWR0aDogMTAwJTtcblxuICAgIC50YWJzIHtcbiAgICAgICAgbWluLXdpZHRoOiA1MCU7XG4gICAgICAgIGZsZXg6IDE7XG4gICAgfVxufVxuXG4uZGV0YWlscyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbn1cblxubWFpbiB7XG4gICAgcGFkZGluZzogMWVtIDFlbSAwO1xufVxuXG5tYXQtaGludCB7XG4gICAgc3BhbiB7XG4gICAgICAgIGNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbiAgICB9XG59XG5cbmxhYmVsIHtcbiAgICBtaW4td2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luLXRvcDogMS4yNWVtO1xuICAgIG1hcmdpbi1yaWdodDogMWVtO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICAvLyBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbWFyZ2luLXRvcDogMDtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogLjVlbTtcbiAgICAvLyB9XG5cbiAgICBzcGFuIHtcbiAgICAgICAgY29sb3I6ICRwZW5kaW5nO1xuICAgIH1cblxuICAgICYuZXJyb3Ige1xuICAgICAgICBjb2xvcjogJGVycm9yO1xuICAgIH1cbn1cblxubWF0LWZvcm0tZmllbGQge1xuICAgIGZsZXg6IDE7XG59XG5cbm1hdC10YWIge1xuICAgIGRpc3BsYXk6IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLmZpZWxkIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIG1pbi13aWR0aDogMTRlbTtcbiAgICBmbGV4OiAxO1xuXG4gICAgLy8gQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgZmxleC13cmFwOiB3cmFwO1xuICAgIC8vIH1cbn1cblxudGV4dGFyZWEge1xuICAgIG1pbi1oZWlnaHQ6IDdlbTtcbn1cblxuLmZpZWxkc2V0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcblxuICAgIC5maWVsZCB7XG4gICAgICAgIG1hcmdpbjogMCAuMjVlbTtcblxuICAgICAgICBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICB9XG5cbiAgICAgICAgJjpmaXJzdC1jaGlsZCB7XG4gICAgICAgICAgICBtYXJnaW4tbGVmdDogMDtcbiAgICAgICAgfVxuXG4gICAgICAgICY6bGFzdC1jaGlsZCB7XG4gICAgICAgICAgICBtYXJnaW4tcmlnaHQ6IDA7XG4gICAgICAgIH1cbiAgICB9XG59XG5cbmZvb3RlciB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4uaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmhlYWRlciAudGFicyB7XG4gIG1pbi13aWR0aDogNTAlO1xuICBmbGV4OiAxO1xufVxuXG4uZGV0YWlscyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbWFyZ2luLWJvdHRvbTogMWVtO1xufVxuXG5tYWluIHtcbiAgcGFkZGluZzogMWVtIDFlbSAwO1xufVxuXG5tYXQtaGludCBzcGFuIHtcbiAgY29sb3I6ICMxOTM3ZWE7XG59XG5cbmxhYmVsIHtcbiAgbWluLXdpZHRoOiAxMDAlO1xuICBtYXJnaW4tdG9wOiAxLjI1ZW07XG4gIG1hcmdpbi1yaWdodDogMWVtO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi10b3A6IDA7XG4gIG1hcmdpbi1ib3R0b206IDAuNWVtO1xufVxubGFiZWwgc3BhbiB7XG4gIGNvbG9yOiAjZmZiMzAwO1xufVxubGFiZWwuZXJyb3Ige1xuICBjb2xvcjogI2U1MzkzNTtcbn1cblxubWF0LWZvcm0tZmllbGQge1xuICBmbGV4OiAxO1xufVxuXG5tYXQtdGFiIHtcbiAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50O1xufVxuXG4uZmllbGQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBtaW4td2lkdGg6IDE0ZW07XG4gIGZsZXg6IDE7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cblxudGV4dGFyZWEge1xuICBtaW4taGVpZ2h0OiA3ZW07XG59XG5cbi5maWVsZHNldCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cbi5maWVsZHNldCAuZmllbGQge1xuICBtYXJnaW46IDAgMC4yNWVtO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgLmZpZWxkc2V0IC5maWVsZCB7XG4gICAgbWFyZ2luOiAwO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgLmZpZWxkc2V0IC5maWVsZCB7XG4gICAgbWFyZ2luOiAwO1xuICB9XG59XG4uZmllbGRzZXQgLmZpZWxkOmZpcnN0LWNoaWxkIHtcbiAgbWFyZ2luLWxlZnQ6IDA7XG59XG4uZmllbGRzZXQgLmZpZWxkOmxhc3QtY2hpbGQge1xuICBtYXJnaW4tcmlnaHQ6IDA7XG59XG5cbmZvb3RlciB7XG4gIHdpZHRoOiAxMDAlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59Il19 */"] });
@@ -3981,6 +3998,9 @@ CateringDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringDet
                 args: [dialog_1.MAT_DIALOG_DATA]
             }] }]; }, { event: [{
             type: core_1.Output
+        }], _content_el: [{
+            type: core_1.ViewChild,
+            args: ['content', { static: true }]
         }] }); })();
 
 
@@ -4384,7 +4404,7 @@ class MeetingCateringDetailsComponent {
     }
     /** List of orders for this booking and space */
     get orders() {
-        return this.booking.catering.filter((order) => order.location_id === this.booking.space.id);
+        return this.booking.catering.filter((order) => order.location_id === this.booking.space.email);
     }
     /** Total cost of all the orders */
     get total() {
@@ -4405,7 +4425,7 @@ class MeetingCateringDetailsComponent {
     /** Notes for orders in active space */
     get notes() {
         const note = this.booking.notes.find((note) => note.type === 'catering' &&
-            note.space === this.booking.space.id &&
+            note.space === this.booking.space.email &&
             note.author === this.booking.creator.name);
         return note ? note.message : '<No Notes>';
     }
@@ -5057,14 +5077,18 @@ class MeetingPrivateDetailsComponent {
         this._dialog = _dialog;
     }
     get setup() {
-        return this.booking && this.booking.setup[this.booking.space.email]
-            ? general_utilities_1.humaniseDuration(this.booking.setup[this.booking.space.email])
-            : '<No Setup time>';
+        let setup = this.booking.setup[this.booking.space.email];
+        if (setup > 120) {
+            setup = Math.floor(setup / 60);
+        }
+        return setup ? general_utilities_1.humaniseDuration(setup) : '<No Setup time>';
     }
     get breakdown() {
-        return this.booking && this.booking.breakdown[this.booking.space.email]
-            ? general_utilities_1.humaniseDuration(this.booking.breakdown[this.booking.space.email])
-            : '<No Breakdown time>';
+        let breakdown = this.booking.breakdown[this.booking.space.email];
+        if (breakdown > 120) {
+            breakdown = Math.floor(breakdown / 60);
+        }
+        return breakdown ? general_utilities_1.humaniseDuration(breakdown) : '<No Breakdown time>';
     }
     get notes() {
         return '';
@@ -6008,7 +6032,7 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
         return this._data.booking;
     }
     ngOnInit() {
-        const note = this.booking.notes.find((note) => note.type === 'private' && note.space === this.booking.space.id) || { message: '' };
+        const note = this.booking.notes.find((note) => note.type === 'private' && note.space === this.booking.space.email) || { message: '' };
         this.form = new forms_1.FormGroup({
             setup: new forms_1.FormControl(this.booking.setup || 0),
             breakdown: new forms_1.FormControl(this.booking.breakdown || 0),
@@ -6017,7 +6041,7 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
     }
     saveChanges() {
         if (this.form.dirty) {
-            const old_notes = this.booking.notes.filter((note) => !(note.type === 'private' && note.space === this.booking.space.id));
+            const old_notes = this.booking.notes.filter((note) => !(note.type === 'private' && note.space === this.booking.space.email));
             const notes = [
                 ...old_notes,
                 {
@@ -6025,7 +6049,7 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
                     date: dayjs().valueOf(),
                     message: this.form.value.notes,
                     author: this._users.current.name,
-                    space: this.booking.space.id,
+                    space: this.booking.space.email,
                 },
             ];
             const new_booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking.toJSON()), this.form.value), { notes }));
@@ -6550,7 +6574,7 @@ function RequirementDetailsModalComponent_mat_tab_3_Template(rf, ctx) { if (rf &
 } if (rf & 2) {
     const space_r2 = ctx.$implicit;
     const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("label", space_r2.name + (ctx_r0.form[space_r2.id].invalid && ctx_r0.form[space_r2.id].touched ? "*" : ""));
+    i0.ɵɵproperty("label", space_r2.name + (ctx_r0.form[space_r2.email].invalid && ctx_r0.form[space_r2.email].touched ? "*" : ""));
 } }
 var I18N_2;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -6722,7 +6746,7 @@ function RequirementDetailsModalComponent_form_12_Template(rf, ctx) { if (rf & 1
     i0.ɵɵadvance(9);
     i0.ɵɵclassProp("error", ctx_r1.active_form.controls.code.touched && ctx_r1.active_form.controls.code.invalid);
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("ngIf", ctx_r1.needs_charge_code[ctx_r1.space_list[ctx_r1.active_space].id]);
+    i0.ɵɵproperty("ngIf", ctx_r1.needs_charge_code[ctx_r1.space_list[ctx_r1.active_space].email]);
     i0.ɵɵadvance(10);
     i0.ɵɵclassProp("error", ctx_r1.active_form.controls.head_count.touched && ctx_r1.active_form.controls.head_count.invalid);
 } }
@@ -6752,11 +6776,11 @@ class RequirementDetailsModalComponent {
         return this._data.spaces;
     }
     get active_form() {
-        return this.form[this.space_list[this.active_space].id];
+        return this.form[this.space_list[this.active_space].email];
     }
     /** Whether form fields are valid */
     get is_valid() {
-        return this.space_list.reduce((valid, space) => valid && this.form[space.id].valid, true);
+        return this.space_list.reduce((valid, space) => valid && this.form[space.email].valid, true);
     }
     ngOnInit() {
         const note_list = this._data.notes_field.value
@@ -6770,7 +6794,7 @@ class RequirementDetailsModalComponent {
         this.generateFormFields();
     }
     submit() {
-        this.space_list.forEach(space => this.form[space.id].markAllAsTouched());
+        this.space_list.forEach(space => this.form[space.email].markAllAsTouched());
         /* istanbul ignore else */
         if (this.is_valid) {
             // Update notes
@@ -6779,17 +6803,17 @@ class RequirementDetailsModalComponent {
             const new_notes = this.space_list.map(space => ({
                 author: this._users.current.name,
                 type: 'equipment',
-                message: this.form[space.id].controls.notes.value,
-                space: space.id,
+                message: this.form[space.email].controls.notes.value,
+                space: space.email,
                 date: dayjs().valueOf()
             }));
             this._data.notes_field.setValue(notes.concat(new_notes).filter(note => note.message));
             this._data.codes_field.setValue(this.space_list.reduce((map, space) => {
-                map[space.id] = this.form[space.id].controls.code.value;
+                map[space.email] = this.form[space.email].controls.code.value;
                 return map;
             }, {}));
             this._data.head_counts_field.setValue(this.space_list.reduce((map, space) => {
-                map[space.id] = this.form[space.id].controls.head_count.value;
+                map[space.email] = this.form[space.email].controls.head_count.value;
                 return map;
             }, {}));
             this.event.emit({ reason: 'done' });
@@ -6800,11 +6824,11 @@ class RequirementDetailsModalComponent {
         var _a, _b;
         for (const space of this.space_list) {
             const building = this._org.buildings.find(bld => bld.id === space.level.building_id);
-            this.needs_charge_code[space.id] = ((_b = (_a = building) === null || _a === void 0 ? void 0 : _a.required) === null || _b === void 0 ? void 0 : _b.equipment_code) || false;
-            this.form[space.id] = new forms_1.FormGroup({
-                notes: new forms_1.FormControl(this.notes[space.id] || ''),
-                code: new forms_1.FormControl(this.codes[space.id] || '', this.needs_charge_code[space.id] ? [forms_1.Validators.required] : []),
-                head_count: new forms_1.FormControl(this.head_counts[space.id] || '', [forms_1.Validators.required])
+            this.needs_charge_code[space.email] = ((_b = (_a = building) === null || _a === void 0 ? void 0 : _a.required) === null || _b === void 0 ? void 0 : _b.equipment_code) || false;
+            this.form[space.email] = new forms_1.FormGroup({
+                notes: new forms_1.FormControl(this.notes[space.email] || ''),
+                code: new forms_1.FormControl(this.codes[space.email] || '', this.needs_charge_code[space.email] ? [forms_1.Validators.required] : []),
+                head_count: new forms_1.FormControl(this.head_counts[space.email] || '', [forms_1.Validators.required])
             });
         }
     }
@@ -19622,7 +19646,7 @@ class OrderDetailsNotesComponent {
                         date: date.valueOf(),
                         author: user.name,
                         order_id: this.order.id,
-                        space: this.booking.space.id,
+                        space: this.booking.space.email,
                         message: this.new_note,
                         time: date.format('h:mm A'),
                     },
@@ -20447,7 +20471,7 @@ class DayViewApprovalsEventComponent extends base_directive_1.BaseDirective {
     /** Whether the meeting has catering attached */
     get has_catering() {
         const catering = this.event.catering;
-        return !!catering.find((order) => this.event.space.id === order.location_id);
+        return !!catering.find((order) => this.event.space.email === order.location_id);
     }
     /** View booking details */
     view() {
@@ -21205,7 +21229,7 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
         return !!this.order;
     }
     get order() {
-        return this.event.catering.find((order) => order.location_id === this.space.id);
+        return this.event.catering.find((order) => order.location_id === this.space.email);
     }
     /** View booking details */
     view() {
