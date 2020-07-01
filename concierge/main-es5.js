@@ -36412,7 +36412,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }).map(function (i) {
             return i.id;
           });
-          this.processMeetings();
+          this.updateMeetings();
           this.getMonthlyPending();
           this.interval('monthly_pending', function () {
             return _this175.getMonthlyPending();

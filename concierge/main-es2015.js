@@ -20078,7 +20078,7 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
         this.space_list = this._spaces
             .filter((space) => space.zones.indexOf(this.level === '' ? building.id : this.level) >= 0)
             .map((i) => i.id);
-        this.processMeetings();
+        this.updateMeetings();
         this.getMonthlyPending();
         this.interval('monthly_pending', () => this.getMonthlyPending(), 10 * 60 * 1000);
     }
