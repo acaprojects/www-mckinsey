@@ -15518,9 +15518,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this81.organiser = (organiser ? new user_class_1.User(organiser) : user_class_1.User.active_user) || new user_class_1.User();
         _this81.creator = raw_data.creator || raw_data.booked_by ? new user_class_1.User(raw_data.creator || raw_data.booked_by) : _this81.organiser;
         _this81._location = raw_data.location_name || raw_data.location || '';
-        _this81.all_day = raw_data.all_day || _this81.duration > 23 * 60;
+        _this81.all_day = !!raw_data.all_day || _this81.duration > 23 * 60;
         _this81.setup = raw_data.setup || {};
         _this81.breakdown = raw_data.breakdown || {};
+        Object.keys(_this81.setup).forEach(function (key) {
+          return _this81.setup[key] = Math.floor(_this81.setup[key] / 60);
+        });
+        Object.keys(_this81.breakdown).forEach(function (key) {
+          return _this81.breakdown[key] = Math.floor(_this81.breakdown[key] / 60);
+        });
         _this81.recurrence = raw_data.recurrence || raw_data.recurr || {};
 
         if (_this81.recurrence.end && _this81.recurrence.end < new Date().getTime()) {
@@ -15728,9 +15734,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          Object.keys(data.setup).forEach(function (key) {
+            return data.setup[key] = data.setup[key] * 60;
+          });
+          Object.keys(data.breakdown).forEach(function (key) {
+            return data.breakdown[key] = data.breakdown[key] * 60;
+          });
           data.description = data.body;
           data.recurr = data.recurrence;
           data.booking_type = data.type;
+
+          if (data.all_day) {
+            data.all_day = date.format('YYYY-MM-DD');
+          }
+
           delete data.type;
           delete data.recurrence;
           delete data.space_list;

@@ -8227,9 +8227,11 @@ class Booking extends base_api_class_1.BaseDataClass {
                 ? new user_class_1.User(raw_data.creator || raw_data.booked_by)
                 : this.organiser;
         this._location = raw_data.location_name || raw_data.location || '';
-        this.all_day = raw_data.all_day || this.duration > 23 * 60;
+        this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
         this.setup = raw_data.setup || {};
         this.breakdown = raw_data.breakdown || {};
+        Object.keys(this.setup).forEach(key => this.setup[key] = Math.floor(this.setup[key] / 60));
+        Object.keys(this.breakdown).forEach(key => this.breakdown[key] = Math.floor(this.breakdown[key] / 60));
         this.recurrence = raw_data.recurrence || raw_data.recurr || {};
         if (this.recurrence.end && this.recurrence.end < new Date().getTime()) {
             this.recurrence = Object.assign(Object.assign({}, this.recurrence), { start: this.recurrence.start, end: this.recurrence.end });
@@ -8457,9 +8459,14 @@ class Booking extends base_api_class_1.BaseDataClass {
                 data.breakdown[order.location_id] = 15;
             }
         }
+        Object.keys(data.setup).forEach(key => data.setup[key] = data.setup[key] * 60);
+        Object.keys(data.breakdown).forEach(key => data.breakdown[key] = data.breakdown[key] * 60);
         data.description = data.body;
         data.recurr = data.recurrence;
         data.booking_type = data.type;
+        if (data.all_day) {
+            data.all_day = date.format('YYYY-MM-DD');
+        }
         delete data.type;
         delete data.recurrence;
         delete data.space_list;
