@@ -4132,7 +4132,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this16 = this;
 
           var space_notes = (this.booking.notes || []).filter(function (note) {
-            return note.space === _this16.space.id;
+            return note.space === _this16.space.email;
           });
           return space_notes.length ? space_notes[space_notes.length - 1].message : '<No requirements>';
         }
@@ -4141,14 +4141,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "charge_code",
         get: function get() {
-          return (this.booking.equipment_codes || {})[this.space.id] || '<No charge code>';
+          return (this.booking.equipment_codes || {})[this.space.email] || '<No charge code>';
         }
         /** Expected number of attendees for the active space */
 
       }, {
         key: "expected_attendees",
         get: function get() {
-          return (this.booking.expected_attendees || {})[this.space.id] || 0;
+          return (this.booking.expected_attendees || {})[this.space.email] || 0;
         }
       }]);
 
@@ -38116,16 +38116,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "7998f3e",
-      "hash": "7998f3e",
+      "raw": "28f1c87",
+      "hash": "28f1c87",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "7998f3e",
+      "suffix": "28f1c87",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1593576749977
+      "time": 1593662661926
     };
     /* tslint:enable */
 

@@ -1810,16 +1810,16 @@ function MeetingDetailsSpaceComponent_div_0_Template(rf, ctx) { if (rf & 1) {
 class MeetingDetailsSpaceComponent {
     /** Latest equipment requirement notes for the active space */
     get notes() {
-        const space_notes = (this.booking.notes || []).filter(note => note.space === this.space.id);
+        const space_notes = (this.booking.notes || []).filter(note => note.space === this.space.email);
         return space_notes.length ? space_notes[space_notes.length - 1].message : '<No requirements>';
     }
     /** Latest equipment charge code for the active space */
     get charge_code() {
-        return (this.booking.equipment_codes || {})[this.space.id] || '<No charge code>';
+        return (this.booking.equipment_codes || {})[this.space.email] || '<No charge code>';
     }
     /** Expected number of attendees for the active space */
     get expected_attendees() {
-        return (this.booking.expected_attendees || {})[this.space.id] || 0;
+        return (this.booking.expected_attendees || {})[this.space.email] || 0;
     }
 }
 exports.MeetingDetailsSpaceComponent = MeetingDetailsSpaceComponent;
@@ -21302,16 +21302,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "7998f3e",
-    "hash": "7998f3e",
+    "raw": "28f1c87",
+    "hash": "28f1c87",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "7998f3e",
+    "suffix": "28f1c87",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1593576749977
+    "time": 1593662661926
 };
 /* tslint:enable */
 
