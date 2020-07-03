@@ -5922,13 +5922,13 @@ const i2 = __webpack_require__(/*! src/app/services/data/users/users.service */ 
 const i3 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const i4 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 const i5 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
-const i6 = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
-const i7 = __webpack_require__(/*! ../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
-const i8 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-const i9 = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
-const i10 = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
-const i11 = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
-const i12 = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+const i6 = __webpack_require__(/*! ../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
+const i7 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+const i8 = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
+const i9 = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
+const i10 = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
+const i11 = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+const i12 = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/__ivy_ngcc__/fesm2015/acaprojects-ngx-custom-events.js");
 const i13 = __webpack_require__(/*! @angular/material/progress-spinner */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 const _c0 = function () { return { type: "icon", class: "material-icons", content: "close" }; };
 function PrivateDetailsModalComponent_button_3_Template(rf, ctx) { if (rf & 1) {
@@ -5944,20 +5944,20 @@ function PrivateDetailsModalComponent_main_5_form_1_mat_option_6_Template(rf, ct
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const duration_r7 = ctx.$implicit;
-    i0.ɵɵproperty("value", duration_r7.id);
+    const duration_r8 = ctx.$implicit;
+    i0.ɵɵproperty("value", duration_r8.id);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", duration_r7.name, " ");
+    i0.ɵɵtextInterpolate1(" ", duration_r8.name, " ");
 } }
 function PrivateDetailsModalComponent_main_5_form_1_mat_option_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-option", 19);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const duration_r8 = ctx.$implicit;
-    i0.ɵɵproperty("value", duration_r8.id);
+    const duration_r9 = ctx.$implicit;
+    i0.ɵɵproperty("value", duration_r9.id);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", duration_r8.name, " ");
+    i0.ɵɵtextInterpolate1(" ", duration_r9.name, " ");
 } }
 function PrivateDetailsModalComponent_main_5_form_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "form", 8);
@@ -5991,12 +5991,12 @@ function PrivateDetailsModalComponent_main_5_form_1_Template(rf, ctx) { if (rf &
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r4 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("formGroup", ctx_r4.form);
+    const ctx_r5 = i0.ɵɵnextContext(2);
+    i0.ɵɵproperty("formGroup", ctx_r5.form);
     i0.ɵɵadvance(6);
-    i0.ɵɵproperty("ngForOf", ctx_r4.available_durations);
+    i0.ɵɵproperty("ngForOf", ctx_r5.available_durations);
     i0.ɵɵadvance(6);
-    i0.ɵɵproperty("ngForOf", ctx_r4.available_durations);
+    i0.ɵɵproperty("ngForOf", ctx_r5.available_durations);
 } }
 function PrivateDetailsModalComponent_main_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "main");
@@ -6007,13 +6007,24 @@ function PrivateDetailsModalComponent_main_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", ctx_r1.form);
 } }
-function PrivateDetailsModalComponent_ng_template_10_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "main");
-    i0.ɵɵelementStart(1, "div", 20);
-    i0.ɵɵelementStart(2, "div", 21);
-    i0.ɵɵelement(3, "mat-spinner", 22);
+function PrivateDetailsModalComponent_mat_dialog_actions_6_Template(rf, ctx) { if (rf & 1) {
+    const _r11 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "mat-dialog-actions");
+    i0.ɵɵelementStart(1, "footer");
+    i0.ɵɵelementStart(2, "button", 20);
+    i0.ɵɵlistener("tapped", function PrivateDetailsModalComponent_mat_dialog_actions_6_Template_button_tapped_2_listener() { i0.ɵɵrestoreView(_r11); const ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.saveChanges(); });
+    i0.ɵɵtext(3, "Save");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "div", 23);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} }
+function PrivateDetailsModalComponent_ng_template_7_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "main");
+    i0.ɵɵelementStart(1, "div", 21);
+    i0.ɵɵelementStart(2, "div", 22);
+    i0.ɵɵelement(3, "mat-spinner", 23);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(4, "div", 24);
     i0.ɵɵtext(5, "Updating private details...");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -6039,8 +6050,8 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
     ngOnInit() {
         const note = this.booking.notes.find((note) => note.type === 'private' && note.space === this.booking.space.email) || { message: '' };
         this.form = new forms_1.FormGroup({
-            setup: new forms_1.FormControl(this.booking.setup || 0),
-            breakdown: new forms_1.FormControl(this.booking.breakdown || 0),
+            setup: new forms_1.FormControl(this.booking.setup[this.booking.space.email] || 0),
+            breakdown: new forms_1.FormControl(this.booking.breakdown[this.booking.space.email] || 0),
             notes: new forms_1.FormControl(note.message),
         });
     }
@@ -6057,7 +6068,16 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
                     space: this.booking.space.email,
                 },
             ];
-            const new_booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking.toJSON()), this.form.value), { notes }));
+            const value = this.form.value;
+            console.log('Form:', value);
+            const setup = Object.assign({}, this.booking.setup);
+            setup[this.booking.space.email] = value.setup * 60;
+            const breakdown = Object.assign({}, this.booking.breakdown);
+            breakdown[this.booking.space.email] = value.breakdown * 60;
+            const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), { setup,
+                breakdown,
+                notes }));
+            console.log('Booking:', new_booking);
             this.loading = true;
             this._dialog_ref.disableClose = true;
             new_booking.save().then((booking) => {
@@ -6077,7 +6097,7 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
 }
 exports.PrivateDetailsModalComponent = PrivateDetailsModalComponent;
 PrivateDetailsModalComponent.ɵfac = function PrivateDetailsModalComponent_Factory(t) { return new (t || PrivateDetailsModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.UsersService), i0.ɵɵdirectiveInject(i3.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-PrivateDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: PrivateDetailsModalComponent, selectors: [["a-private-details-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 12, vars: 3, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", 3, "tapped"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup", 4, "ngIf"], [3, "formGroup"], [1, "field"], ["for", "setup"], ["appearance", "outline"], ["name", "setup", "formControlName", "setup", "placeholder", "None"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "breakdown"], ["name", "breakdown", "formControlName", "breakdown", "placeholder", "None"], ["for", "notes"], ["name", "notes", "appearance", "outline"], ["matInput", "", "name", "notes", "placeholder", "Private Notes", "formControlName", "notes"], [3, "value"], [1, "info-block"], [1, "icon"], ["diameter", "32"], ["classs", "text"]], template: function PrivateDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
+PrivateDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: PrivateDetailsModalComponent, selectors: [["a-private-details-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 9, vars: 4, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup", 4, "ngIf"], [3, "formGroup"], [1, "field"], ["for", "setup"], ["appearance", "outline"], ["name", "setup", "formControlName", "setup", "placeholder", "None"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "breakdown"], ["name", "breakdown", "formControlName", "breakdown", "placeholder", "None"], ["for", "notes"], ["name", "notes", "appearance", "outline"], ["matInput", "", "name", "notes", "placeholder", "Private Notes", "formControlName", "notes"], [3, "value"], ["mat-button", "", 3, "tapped"], [1, "info-block"], [1, "icon"], ["diameter", "32"], ["classs", "text"]], template: function PrivateDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2, "Edit Private Details");
@@ -6087,22 +6107,17 @@ PrivateDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: PrivateDetai
         i0.ɵɵelementStart(4, "mat-dialog-content");
         i0.ɵɵtemplate(5, PrivateDetailsModalComponent_main_5_Template, 2, 1, "main", 2);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(6, "mat-dialog-actions");
-        i0.ɵɵelementStart(7, "footer");
-        i0.ɵɵelementStart(8, "button", 3);
-        i0.ɵɵlistener("tapped", function PrivateDetailsModalComponent_Template_button_tapped_8_listener() { return ctx.saveChanges(); });
-        i0.ɵɵtext(9, "Save");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(10, PrivateDetailsModalComponent_ng_template_10_Template, 6, 0, "ng-template", null, 4, i0.ɵɵtemplateRefExtractor);
+        i0.ɵɵtemplate(6, PrivateDetailsModalComponent_mat_dialog_actions_6_Template, 4, 0, "mat-dialog-actions", 3);
+        i0.ɵɵtemplate(7, PrivateDetailsModalComponent_ng_template_7_Template, 6, 0, "ng-template", null, 4, i0.ɵɵtemplateRefExtractor);
     } if (rf & 2) {
-        const _r2 = i0.ɵɵreference(11);
+        const _r3 = i0.ɵɵreference(8);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("ngIf", !ctx.loading);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngIf", !ctx.loading)("ngIfElse", _r2);
-    } }, directives: [i4.NgIf, i3.MatDialogContent, i3.MatDialogActions, i5.MatButton, i6.ɵb, i3.MatDialogClose, i7.IconComponent, i8.ɵangular_packages_forms_forms_y, i8.NgControlStatusGroup, i8.FormGroupDirective, i9.MatFormField, i10.MatSelect, i8.NgControlStatus, i8.FormControlName, i4.NgForOf, i11.MatInput, i8.DefaultValueAccessor, i12.MatOption, i13.MatSpinner], styles: [".heading[_ngcontent-%COMP%] {\n  flex: 1;\n}\nmain[_ngcontent-%COMP%] {\n  padding: 1em;\n  min-width: 18em;\n  width: 24em;\n  max-width: 95vw;\n  min-height: 12em;\n}\nlabel[_ngcontent-%COMP%] {\n  min-width: 100%;\n  margin-top: 1.25em;\n  margin-right: 1em;\n  font-weight: bold;\n  font-size: 0.8em;\n  width: 100%;\n  margin-top: 0;\n  margin-bottom: 0.5em;\n}\nlabel[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #ffb300;\n}\nlabel.error[_ngcontent-%COMP%] {\n  color: #e53935;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.field[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\nmat-dialog-actions[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  min-width: 9em;\n}\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL292ZXJsYXlzL3ByaXZhdGUtZGV0YWlscy1tb2RhbC9wcml2YXRlLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL3ByaXZhdGUtZGV0YWlscy1tb2RhbC9wcml2YXRlLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FDNUNBO0VBQ0ksT0FBQTtBQ1FKO0FETEE7RUFDSSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7QUNRSjtBRExBO0VBQ0ksZUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLGFBQUE7RUFDQSxvQkFBQTtBQ1FKO0FETkk7RUFDSSxjRGJFO0FFcUJWO0FETEk7RUFDSSxjRGJBO0FFb0JSO0FESEE7RUFDSSxhQUFBO0VBQ0EsZUFBQTtBQ01KO0FESkk7RUFDSSxXQUFBO0FDTVI7QURESTtFQUNJLGNBQUE7QUNJUjtBREFBO0VBQ0ksV0FBQTtFQUNBLGtCQUFBO0FDR0oiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy9wcml2YXRlLWRldGFpbHMtbW9kYWwvcHJpdmF0ZS1kZXRhaWxzLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJAaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG4uaGVhZGluZyB7XG4gICAgZmxleDogMTtcbn1cblxubWFpbiB7XG4gICAgcGFkZGluZzogMWVtO1xuICAgIG1pbi13aWR0aDogMThlbTtcbiAgICB3aWR0aDogMjRlbTtcbiAgICBtYXgtd2lkdGg6IDk1dnc7XG4gICAgbWluLWhlaWdodDogMTJlbTtcbn1cblxubGFiZWwge1xuICAgIG1pbi13aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tdG9wOiAxLjI1ZW07XG4gICAgbWFyZ2luLXJpZ2h0OiAxZW07XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgZm9udC1zaXplOiAwLjhlbTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tdG9wOiAwO1xuICAgIG1hcmdpbi1ib3R0b206IDAuNWVtO1xuXG4gICAgc3BhbiB7XG4gICAgICAgIGNvbG9yOiAkcGVuZGluZztcbiAgICB9XG5cbiAgICAmLmVycm9yIHtcbiAgICAgICAgY29sb3I6ICRlcnJvcjtcbiAgICB9XG59XG5cbi5maWVsZCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG5cbiAgICA+ICoge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG59XG5cbm1hdC1kaWFsb2ctYWN0aW9ucyB7XG4gICAgYnV0dG9uIHtcbiAgICAgICAgbWluLXdpZHRoOiA5ZW07XG4gICAgfVxufVxuXG5mb290ZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi5oZWFkaW5nIHtcbiAgZmxleDogMTtcbn1cblxubWFpbiB7XG4gIHBhZGRpbmc6IDFlbTtcbiAgbWluLXdpZHRoOiAxOGVtO1xuICB3aWR0aDogMjRlbTtcbiAgbWF4LXdpZHRoOiA5NXZ3O1xuICBtaW4taGVpZ2h0OiAxMmVtO1xufVxuXG5sYWJlbCB7XG4gIG1pbi13aWR0aDogMTAwJTtcbiAgbWFyZ2luLXRvcDogMS4yNWVtO1xuICBtYXJnaW4tcmlnaHQ6IDFlbTtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tdG9wOiAwO1xuICBtYXJnaW4tYm90dG9tOiAwLjVlbTtcbn1cbmxhYmVsIHNwYW4ge1xuICBjb2xvcjogI2ZmYjMwMDtcbn1cbmxhYmVsLmVycm9yIHtcbiAgY29sb3I6ICNlNTM5MzU7XG59XG5cbi5maWVsZCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cbi5maWVsZCA+ICoge1xuICB3aWR0aDogMTAwJTtcbn1cblxubWF0LWRpYWxvZy1hY3Rpb25zIGJ1dHRvbiB7XG4gIG1pbi13aWR0aDogOWVtO1xufVxuXG5mb290ZXIge1xuICB3aWR0aDogMTAwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */"] });
+        i0.ɵɵproperty("ngIf", !ctx.loading)("ngIfElse", _r3);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx.loading);
+    } }, directives: [i4.NgIf, i3.MatDialogContent, i5.MatButton, i3.MatDialogClose, i6.IconComponent, i7.ɵangular_packages_forms_forms_y, i7.NgControlStatusGroup, i7.FormGroupDirective, i8.MatFormField, i9.MatSelect, i7.NgControlStatus, i7.FormControlName, i4.NgForOf, i10.MatInput, i7.DefaultValueAccessor, i11.MatOption, i3.MatDialogActions, i12.ɵb, i13.MatSpinner], styles: [".heading[_ngcontent-%COMP%] {\n  flex: 1;\n}\nmain[_ngcontent-%COMP%] {\n  padding: 1em;\n  min-width: 18em;\n  width: 24em;\n  max-width: 95vw;\n  min-height: 12em;\n}\nlabel[_ngcontent-%COMP%] {\n  min-width: 100%;\n  margin-top: 1.25em;\n  margin-right: 1em;\n  font-weight: bold;\n  font-size: 0.8em;\n  width: 100%;\n  margin-top: 0;\n  margin-bottom: 0.5em;\n}\nlabel[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #ffb300;\n}\nlabel.error[_ngcontent-%COMP%] {\n  color: #e53935;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.field[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\nmat-dialog-actions[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  min-width: 9em;\n}\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL292ZXJsYXlzL3ByaXZhdGUtZGV0YWlscy1tb2RhbC9wcml2YXRlLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL3ByaXZhdGUtZGV0YWlscy1tb2RhbC9wcml2YXRlLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FDNUNBO0VBQ0ksT0FBQTtBQ1FKO0FETEE7RUFDSSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7QUNRSjtBRExBO0VBQ0ksZUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLGFBQUE7RUFDQSxvQkFBQTtBQ1FKO0FETkk7RUFDSSxjRGJFO0FFcUJWO0FETEk7RUFDSSxjRGJBO0FFb0JSO0FESEE7RUFDSSxhQUFBO0VBQ0EsZUFBQTtBQ01KO0FESkk7RUFDSSxXQUFBO0FDTVI7QURESTtFQUNJLGNBQUE7QUNJUjtBREFBO0VBQ0ksV0FBQTtFQUNBLGtCQUFBO0FDR0oiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy9wcml2YXRlLWRldGFpbHMtbW9kYWwvcHJpdmF0ZS1kZXRhaWxzLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJAaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG4uaGVhZGluZyB7XG4gICAgZmxleDogMTtcbn1cblxubWFpbiB7XG4gICAgcGFkZGluZzogMWVtO1xuICAgIG1pbi13aWR0aDogMThlbTtcbiAgICB3aWR0aDogMjRlbTtcbiAgICBtYXgtd2lkdGg6IDk1dnc7XG4gICAgbWluLWhlaWdodDogMTJlbTtcbn1cblxubGFiZWwge1xuICAgIG1pbi13aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tdG9wOiAxLjI1ZW07XG4gICAgbWFyZ2luLXJpZ2h0OiAxZW07XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgZm9udC1zaXplOiAwLjhlbTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tdG9wOiAwO1xuICAgIG1hcmdpbi1ib3R0b206IDAuNWVtO1xuXG4gICAgc3BhbiB7XG4gICAgICAgIGNvbG9yOiAkcGVuZGluZztcbiAgICB9XG5cbiAgICAmLmVycm9yIHtcbiAgICAgICAgY29sb3I6ICRlcnJvcjtcbiAgICB9XG59XG5cbi5maWVsZCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG5cbiAgICA+ICoge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG59XG5cbm1hdC1kaWFsb2ctYWN0aW9ucyB7XG4gICAgYnV0dG9uIHtcbiAgICAgICAgbWluLXdpZHRoOiA5ZW07XG4gICAgfVxufVxuXG5mb290ZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi5oZWFkaW5nIHtcbiAgZmxleDogMTtcbn1cblxubWFpbiB7XG4gIHBhZGRpbmc6IDFlbTtcbiAgbWluLXdpZHRoOiAxOGVtO1xuICB3aWR0aDogMjRlbTtcbiAgbWF4LXdpZHRoOiA5NXZ3O1xuICBtaW4taGVpZ2h0OiAxMmVtO1xufVxuXG5sYWJlbCB7XG4gIG1pbi13aWR0aDogMTAwJTtcbiAgbWFyZ2luLXRvcDogMS4yNWVtO1xuICBtYXJnaW4tcmlnaHQ6IDFlbTtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tdG9wOiAwO1xuICBtYXJnaW4tYm90dG9tOiAwLjVlbTtcbn1cbmxhYmVsIHNwYW4ge1xuICBjb2xvcjogI2ZmYjMwMDtcbn1cbmxhYmVsLmVycm9yIHtcbiAgY29sb3I6ICNlNTM5MzU7XG59XG5cbi5maWVsZCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cbi5maWVsZCA+ICoge1xuICB3aWR0aDogMTAwJTtcbn1cblxubWF0LWRpYWxvZy1hY3Rpb25zIGJ1dHRvbiB7XG4gIG1pbi13aWR0aDogOWVtO1xufVxuXG5mb290ZXIge1xuICB3aWR0aDogMTAwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PrivateDetailsModalComponent, [{
         type: core_1.Component,
         args: [{
@@ -8446,17 +8461,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         const date = dayjs(data.date);
         data.start = data.all_day ? date.startOf('d').unix() : date.unix();
         data.end = date.add(data.duration || 60, 'm').unix();
-        data.auto_approve = data.space_list.map((space) => {
-            return !this.id || this.time_changed
-                ? !space ||
-                    (space instanceof space_class_1.Space &&
-                        !space.byRequest({
-                            date: data.date,
-                            duration: data.duration,
-                            host: data.organiser,
-                        }))
-                : (this.approval_status[space.email] || '').indexOf('tentative') < 0;
-        });
+        data.auto_approve = data.space_list.map(_ => true);
         if (data.body && !data.notes.find((note) => note.message === data.body)) {
             data.notes = data.notes.filter((note) => note.type !== 'description');
             data.notes.push({
