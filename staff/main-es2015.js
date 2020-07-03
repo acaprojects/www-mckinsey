@@ -12418,7 +12418,7 @@ function BookingConfirmComponent_mat_dialog_content_0_div_46_div_3_Template(rf, 
 } if (rf & 2) {
     const item_r27 = i0.ɵɵnextContext().$implicit;
     const ctx_r28 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("matTooltip", ctx_r28.equipment_notes[item_r27.id]);
+    i0.ɵɵproperty("matTooltip", ctx_r28.equipment_notes[item_r27.email]);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_46_div_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 31);
@@ -12427,7 +12427,7 @@ function BookingConfirmComponent_mat_dialog_content_0_div_46_div_4_Template(rf, 
 } if (rf & 2) {
     const item_r27 = i0.ɵɵnextContext().$implicit;
     const ctx_r29 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("matTooltip", ctx_r29.equipment_codes[item_r27.id]);
+    i0.ɵɵproperty("matTooltip", ctx_r29.equipment_codes[item_r27.email]);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_46_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 29);
@@ -12444,9 +12444,9 @@ function BookingConfirmComponent_mat_dialog_content_0_div_46_Template(rf, ctx) {
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate(item_r27 == null ? null : item_r27.name);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r14.equipment_notes[item_r27.id]);
+    i0.ɵɵproperty("ngIf", ctx_r14.equipment_notes[item_r27.email]);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r14.equipment_codes[item_r27.id]);
+    i0.ɵɵproperty("ngIf", ctx_r14.equipment_codes[item_r27.email]);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_47_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 32);
@@ -21336,16 +21336,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "4ec407e",
-    "hash": "4ec407e",
+    "raw": "7bc938a",
+    "hash": "7bc938a",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "4ec407e",
+    "suffix": "7bc938a",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1593744584126
+    "time": 1593746048084
 };
 /* tslint:enable */
 
