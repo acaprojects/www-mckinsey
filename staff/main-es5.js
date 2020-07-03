@@ -2543,7 +2543,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function MeetingDetailsDisplayComponent_div_11_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 16);
+        i0.ɵɵelementStart(0, "div", 17);
         i0.ɵɵelementStart(1, "label");
         i0.ɵɵtext(2, "Reccurrence:");
         i0.ɵɵelementEnd();
@@ -2562,14 +2562,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function MeetingDetailsDisplayComponent_div_22_button_6_Template(rf, ctx) {
       if (rf & 1) {
-        var _r11 = i0.ɵɵgetCurrentView();
+        var _r12 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 19);
+        i0.ɵɵelementStart(0, "button", 20);
         i0.ɵɵlistener("touchrelease", function MeetingDetailsDisplayComponent_div_22_button_6_Template_button_touchrelease_0_listener() {
-          i0.ɵɵrestoreView(_r11);
-          var item_r7 = i0.ɵɵnextContext().$implicit;
-          var ctx_r9 = i0.ɵɵnextContext();
-          return ctx_r9.locate(item_r7);
+          i0.ɵɵrestoreView(_r12);
+          var item_r8 = i0.ɵɵnextContext().$implicit;
+          var ctx_r10 = i0.ɵɵnextContext();
+          return ctx_r10.locate(item_r8);
         });
         i0.ɵɵtext(1, " Map ");
         i0.ɵɵelementEnd();
@@ -2578,13 +2578,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function MeetingDetailsDisplayComponent_div_22_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 17);
+        i0.ɵɵelementStart(0, "div", 18);
         i0.ɵɵelementStart(1, "div");
-        i0.ɵɵelementStart(2, "div", 18);
+        i0.ɵɵelementStart(2, "div", 19);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 18);
+        i0.ɵɵelementStart(4, "div", 19);
         i0.ɵɵtext(5);
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(6, MeetingDetailsDisplayComponent_div_22_button_6_Template, 2, 0, "button", 10);
@@ -2592,23 +2592,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r7 = ctx.$implicit;
+        var item_r8 = ctx.$implicit;
         var ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("title", (item_r7 == null ? null : item_r7.name) + " - " + (ctx_r1.status_map[item_r7 == null ? null : item_r7.email] || "Approved"));
+        i0.ɵɵproperty("title", (item_r8 == null ? null : item_r8.name) + " - " + (ctx_r1.status_map[item_r8 == null ? null : item_r8.email] || "Approved"));
         i0.ɵɵadvance(1);
-        i0.ɵɵclassMap("status " + ctx_r1.status_map[item_r7 == null ? null : item_r7.email]);
+        i0.ɵɵclassMap("status " + ctx_r1.status_map[item_r8 == null ? null : item_r8.email]);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(ctx_r1.status_map[item_r7 == null ? null : item_r7.email]);
+        i0.ɵɵtextInterpolate(ctx_r1.status_map[item_r8 == null ? null : item_r8.email]);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(item_r7 == null ? null : item_r7.name);
+        i0.ɵɵtextInterpolate(item_r8 == null ? null : item_r8.name);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", item_r7 == null ? null : item_r7.map_id);
+        i0.ɵɵproperty("ngIf", item_r8 == null ? null : item_r8.map_id);
       }
     }
 
     function MeetingDetailsDisplayComponent_div_23_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 20);
+        i0.ɵɵelementStart(0, "div", 21);
         i0.ɵɵtext(1, "No Location");
         i0.ɵɵelementEnd();
       }
@@ -2616,13 +2616,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function MeetingDetailsDisplayComponent_button_24_Template(rf, ctx) {
       if (rf & 1) {
-        var _r13 = i0.ɵɵgetCurrentView();
+        var _r14 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 19);
+        i0.ɵɵelementStart(0, "button", 20);
         i0.ɵɵlistener("touchrelease", function MeetingDetailsDisplayComponent_button_24_Template_button_touchrelease_0_listener() {
-          i0.ɵɵrestoreView(_r13);
-          var ctx_r12 = i0.ɵɵnextContext();
-          return ctx_r12.show_locations = !ctx_r12.show_locations;
+          i0.ɵɵrestoreView(_r14);
+          var ctx_r13 = i0.ɵɵnextContext();
+          return ctx_r13.show_locations = !ctx_r13.show_locations;
         });
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
@@ -2635,81 +2635,100 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function MeetingDetailsDisplayComponent_div_35_div_7_Template(rf, ctx) {
+    function MeetingDetailsDisplayComponent_div_30_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 23);
-        i0.ɵɵelementStart(1, "a", 24);
+        i0.ɵɵelementStart(0, "div", 11);
+        i0.ɵɵelementStart(1, "label");
+        i0.ɵɵtext(2, "Booked by:");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "div", 2);
+        i0.ɵɵtext(4);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r4 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(4);
+        i0.ɵɵtextInterpolate(ctx_r4.created_by.name);
+      }
+    }
+
+    function MeetingDetailsDisplayComponent_div_36_div_7_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 24);
+        i0.ɵɵelementStart(1, "a", 25);
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var item_r14 = i0.ɵɵnextContext().$implicit;
-        var ctx_r15 = i0.ɵɵnextContext();
+        var item_r15 = i0.ɵɵnextContext().$implicit;
+        var ctx_r16 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("href", "mailto:" + item_r14.email + "?subject=" + ctx_r15.event.title, i0.ɵɵsanitizeUrl);
+        i0.ɵɵproperty("href", "mailto:" + item_r15.email + "?subject=" + ctx_r16.event.title, i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r14.email);
+        i0.ɵɵtextInterpolate(item_r15.email);
       }
     }
 
-    function MeetingDetailsDisplayComponent_div_35_Template(rf, ctx) {
+    function MeetingDetailsDisplayComponent_div_36_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 17);
+        i0.ɵɵelementStart(0, "div", 18);
         i0.ɵɵelementStart(1, "div");
-        i0.ɵɵelementStart(2, "div", 18);
+        i0.ɵɵelementStart(2, "div", 19);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 18);
-        i0.ɵɵelementStart(5, "div", 21);
+        i0.ɵɵelementStart(4, "div", 19);
+        i0.ɵɵelementStart(5, "div", 22);
         i0.ɵɵtext(6);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(7, MeetingDetailsDisplayComponent_div_35_div_7_Template, 3, 2, "div", 22);
+        i0.ɵɵtemplate(7, MeetingDetailsDisplayComponent_div_36_div_7_Template, 3, 2, "div", 23);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var item_r14 = ctx.$implicit;
-        var ctx_r4 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("title", (item_r14 == null ? null : item_r14.name) + " - " + (ctx_r4.status_map[item_r14 == null ? null : item_r14.email] || "Accepted") + ((item_r14 == null ? null : item_r14.email) ? "\n" + item_r14.email : ""));
+        var item_r15 = ctx.$implicit;
+        var ctx_r5 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("title", (item_r15 == null ? null : item_r15.name) + " - " + (ctx_r5.status_map[item_r15 == null ? null : item_r15.email] || "Accepted") + ((item_r15 == null ? null : item_r15.email) ? "\n" + item_r15.email : ""));
         i0.ɵɵadvance(1);
-        i0.ɵɵclassMap("status " + ctx_r4.status_map[item_r14 == null ? null : item_r14.email]);
+        i0.ɵɵclassMap("status " + ctx_r5.status_map[item_r15 == null ? null : item_r15.email]);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(ctx_r4.status_map[item_r14 == null ? null : item_r14.email]);
+        i0.ɵɵtextInterpolate(ctx_r5.status_map[item_r15 == null ? null : item_r15.email]);
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate(item_r14.name);
+        i0.ɵɵtextInterpolate(item_r15.name);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", item_r14.email);
+        i0.ɵɵproperty("ngIf", item_r15.email);
       }
     }
 
-    function MeetingDetailsDisplayComponent_button_36_Template(rf, ctx) {
+    function MeetingDetailsDisplayComponent_button_37_Template(rf, ctx) {
       if (rf & 1) {
-        var _r18 = i0.ɵɵgetCurrentView();
+        var _r19 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 19);
-        i0.ɵɵlistener("touchrelease", function MeetingDetailsDisplayComponent_button_36_Template_button_touchrelease_0_listener() {
-          i0.ɵɵrestoreView(_r18);
-          var ctx_r17 = i0.ɵɵnextContext();
-          return ctx_r17.show_attendees = !ctx_r17.show_attendees;
+        i0.ɵɵelementStart(0, "button", 20);
+        i0.ɵɵlistener("touchrelease", function MeetingDetailsDisplayComponent_button_37_Template_button_touchrelease_0_listener() {
+          i0.ɵɵrestoreView(_r19);
+          var ctx_r18 = i0.ɵɵnextContext();
+          return ctx_r18.show_attendees = !ctx_r18.show_attendees;
         });
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var ctx_r5 = i0.ɵɵnextContext();
+        var ctx_r6 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", ctx_r5.show_attendees ? "Hide" : "Show", " Attendees ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r6.show_attendees ? "Hide" : "Show", " Attendees ");
       }
     }
 
-    function MeetingDetailsDisplayComponent_div_42_Template(rf, ctx) {
+    function MeetingDetailsDisplayComponent_div_43_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 25);
+        i0.ɵɵelementStart(0, "div", 26);
         i0.ɵɵelementStart(1, "label");
         i0.ɵɵtext(2, "Catered:");
         i0.ɵɵelementEnd();
@@ -2720,9 +2739,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r6 = i0.ɵɵnextContext();
+        var ctx_r7 = i0.ɵɵnextContext();
         i0.ɵɵadvance(4);
-        i0.ɵɵtextInterpolate(ctx_r6.event.catering.length ? "Yes" : "No");
+        i0.ɵɵtextInterpolate(ctx_r7.event.catering.length ? "Yes" : "No");
       }
     }
 
@@ -2778,10 +2797,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "title",
         get: function get() {
-          if (!this.event) {
-            return '';
-          }
-
           return this.event.title || '';
         }
         /** Display string of when the event will occur */
@@ -2789,10 +2804,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "when",
         get: function get() {
-          if (!this.event) {
-            return 'Unable to determine.';
-          }
-
           var date = dayjs(this.event.date);
           var end = date.add(this.event.duration || 60, 'm');
 
@@ -2829,10 +2840,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "spaces",
         get: function get() {
-          if (!this.event) {
-            return [];
-          }
-
           return this.event.space_list || (this.event.space ? [this.event.space] : []);
         }
         /** List of attendees associated with the event not including the host */
@@ -2841,10 +2848,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "attendees",
         get: function get() {
           var _this7 = this;
-
-          if (!this.event) {
-            return [];
-          }
 
           return this.event.attendees.filter(function (i) {
             return i.email !== _this7.organiser.email;
@@ -2855,11 +2858,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "organiser",
         get: function get() {
-          if (!this.event) {
-            return this._users.current;
-          }
-
           return this.event.organiser || this._users.current;
+        }
+        /** Host of the event */
+
+      }, {
+        key: "created_by",
+        get: function get() {
+          return this.event.creator || this._users.current;
         }
         /** Display string for the recurrence value of the booking */
 
@@ -2979,9 +2985,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         on_event: "event"
       },
       features: [i0.ɵɵInheritDefinitionFeature],
-      decls: 43,
-      vars: 20,
-      consts: [[1, "event-details"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["class", "field", "name", "recurrence", 4, "ngIf"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["name", "attendees", 1, "field", "multi"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["class", "field", "name", "catering", 4, "ngIf"], ["name", "recurrence", 1, "field"], [1, "list-item", 3, "title"], [1, "text"], [1, "show", 3, "touchrelease"], [1, "list-item"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["name", "catering", 1, "field"]],
+      decls: 44,
+      vars: 21,
+      consts: [[1, "event-details"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["class", "field", "name", "recurrence", 4, "ngIf"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field", "multi"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["class", "field", "name", "catering", 4, "ngIf"], ["name", "recurrence", 1, "field"], [1, "list-item", 3, "title"], [1, "text"], [1, "show", 3, "touchrelease"], [1, "list-item"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["name", "catering", 1, "field"]],
       template: function MeetingDetailsDisplayComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -3030,25 +3036,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵtext(29);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(30, "div", 12);
-          i0.ɵɵelementStart(31, "label");
-          i0.ɵɵtext(32);
+          i0.ɵɵtemplate(30, MeetingDetailsDisplayComponent_div_30_Template, 5, 1, "div", 12);
+          i0.ɵɵelementStart(31, "div", 13);
+          i0.ɵɵelementStart(32, "label");
+          i0.ɵɵtext(33);
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(33, "div", 2);
-          i0.ɵɵelementStart(34, "div", 7);
-          i0.ɵɵtemplate(35, MeetingDetailsDisplayComponent_div_35_Template, 8, 6, "div", 8);
+          i0.ɵɵelementStart(34, "div", 2);
+          i0.ɵɵelementStart(35, "div", 7);
+          i0.ɵɵtemplate(36, MeetingDetailsDisplayComponent_div_36_Template, 8, 6, "div", 8);
           i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(36, MeetingDetailsDisplayComponent_button_36_Template, 2, 1, "button", 10);
+          i0.ɵɵtemplate(37, MeetingDetailsDisplayComponent_button_37_Template, 2, 1, "button", 10);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(37, "div", 13);
-          i0.ɵɵelementStart(38, "label");
-          i0.ɵɵtext(39, "Notes:");
+          i0.ɵɵelementStart(38, "div", 14);
+          i0.ɵɵelementStart(39, "label");
+          i0.ɵɵtext(40, "Notes:");
           i0.ɵɵelementEnd();
-          i0.ɵɵelement(40, "div", 14);
-          i0.ɵɵpipe(41, "sanitize");
+          i0.ɵɵelement(41, "div", 15);
+          i0.ɵɵpipe(42, "sanitize");
           i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(42, MeetingDetailsDisplayComponent_div_42_Template, 5, 1, "div", 15);
+          i0.ɵɵtemplate(43, MeetingDetailsDisplayComponent_div_43_Template, 5, 1, "div", 16);
           i0.ɵɵelementEnd();
         }
 
@@ -3073,6 +3080,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngIf", ctx.spaces.length > 5);
           i0.ɵɵadvance(5);
           i0.ɵɵtextInterpolate(ctx.organiser.name);
+          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("ngIf", ctx.created_by && ctx.created_by.email !== ctx.organiser.email);
           i0.ɵɵadvance(3);
           i0.ɵɵtextInterpolate1("Attendees(", ctx.attendees.length || "0", "):");
           i0.ɵɵadvance(2);
@@ -3082,7 +3091,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngIf", ctx.attendees.length > 5);
           i0.ɵɵadvance(4);
-          i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(41, 18, ctx.notes), i0.ɵɵsanitizeHtml);
+          i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(42, 19, ctx.notes), i0.ɵɵsanitizeHtml);
           i0.ɵɵadvance(2);
           i0.ɵɵproperty("ngIf", ctx.has_catering);
         }
@@ -7913,7 +7922,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return new user_class_1.User(i);
         });
         _this42.organiser = (raw_data.organizer || raw_data.organiser ? new user_class_1.User(raw_data.organizer || raw_data.organiser) : user_class_1.User.active_user) || new user_class_1.User();
-        _this42.creator = raw_data.creator ? new user_class_1.User(raw_data.creator) : _this42.organiser;
+        _this42.creator = raw_data.booked_by || raw_data.creator ? new user_class_1.User(raw_data.booked_by || raw_data.creator) : _this42.organiser;
         _this42._location = raw_data.location_name || raw_data.location || '';
         _this42.all_day = !!(raw_data.all_day || _this42.duration > 23 * 60);
         _this42.setup = raw_data.setup || 0;
@@ -23237,7 +23246,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           return (this.booking.catering || []).map(function (order) {
             var space = _this111.spaces.find(function (a_space) {
-              return a_space.id === order.location_id;
+              return a_space.email === order.location_id;
             }) || {
               level: {}
             };
@@ -24013,7 +24022,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 author: _this115._users.current.name,
                 type: 'catering',
                 message: _this115.form[space.email].controls.notes.value,
-                space: space.id,
+                space: space.email,
                 date: dayjs().valueOf()
               };
             });
@@ -24078,7 +24087,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "active_form",
         get: function get() {
-          return this.form[this.space_list[this.active_space].id];
+          return this.form[this.space_list[this.active_space].email];
         }
         /** Whether form fields are valid */
 
@@ -38172,16 +38181,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "3777c42",
-      "hash": "3777c42",
+      "raw": "d70c61f",
+      "hash": "d70c61f",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "3777c42",
+      "suffix": "d70c61f",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1593747387209
+      "time": 1593756869004
     };
     /* tslint:enable */
 
