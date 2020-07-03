@@ -27324,7 +27324,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }).controls;
           var space = this.space_list.find(function (space) {
-            return space.id == form_controls.location_id.value;
+            return space.email == form_controls.location_id.value;
           }) || {
             level: {}
           };
@@ -38172,16 +38172,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "7bc938a",
-      "hash": "7bc938a",
+      "raw": "3777c42",
+      "hash": "3777c42",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "7bc938a",
+      "suffix": "3777c42",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1593746048084
+      "time": 1593747387209
     };
     /* tslint:enable */
 

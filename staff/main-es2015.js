@@ -15206,7 +15206,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
     /** Building associated with the selected space */
     get active_building() {
         const form_controls = (this.form || { controls: { location_id: { value: '' } } }).controls;
-        const space = this.space_list.find(space => space.id == form_controls.location_id.value) || { level: {} };
+        const space = this.space_list.find(space => space.email == form_controls.location_id.value) || { level: {} };
         return (this._org.buildings.find((bld) => space.level.building_id === bld.id) ||
             { catering_restricted_from: 0 });
     }
@@ -21336,16 +21336,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "7bc938a",
-    "hash": "7bc938a",
+    "raw": "3777c42",
+    "hash": "3777c42",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "7bc938a",
+    "suffix": "3777c42",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1593746048084
+    "time": 1593747387209
 };
 /* tslint:enable */
 
