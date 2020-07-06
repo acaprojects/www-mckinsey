@@ -6048,7 +6048,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this23 = this;
 
           this.loading = 'Extending meeting...';
-          var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), {
+          var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), {
             duration: block.id
           }));
           new_booking.save().then(function (booking) {
@@ -7917,7 +7917,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this42.body = // (raw_data.body instanceof Object ? raw_data.body.content : raw_data.body) ||
         raw_data.description || (typeof raw_data.body === 'string' ? raw_data.body : '');
         _this42.type = raw_data.booking_type || raw_data.type || (raw_data.visitors ? 'external' : null) || 'internal';
-        _this42.has_catering = !!raw_data.has_catering;
         _this42.attendees = (raw_data.attendees || raw_data._attendees || []).map(function (i) {
           return new user_class_1.User(i);
         });
@@ -7997,6 +7996,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this42.edits = raw_data.edits instanceof Array ? raw_data.edits : general_utilities_1.unique(general_utilities_1.flatten(Object.keys(raw_data.edits || {}).map(function (i) {
           return raw_data.edits[i];
         })));
+        _this42.has_catering = !!(raw_data.has_catering || _this42.catering && _this42.catering.length);
         return _this42;
       }
       /** Service for managing Bookings */
@@ -23251,7 +23251,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               level: {}
             };
             var building = _this111._org.buildings.find(function (bld) {
-              return bld.id === space.level.id;
+              return bld.id === space.level.building_id;
             }) || {};
             return new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order), {
               location: space.name,
@@ -27281,10 +27281,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "generateStartAndEndTimes",
         value: function generateStartAndEndTimes() {
           var start = dayjs(this.date);
+          var now = dayjs();
           /* istanbul ignore else */
 
           if (this.all_day) {
-            start = start.startOf('d');
+            start = start.isSame(now, 'd') ? now : start.startOf('d');
           }
 
           var end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
@@ -38181,16 +38182,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "d70c61f",
-      "hash": "d70c61f",
+      "raw": "ccf744e",
+      "hash": "ccf744e",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "d70c61f",
+      "suffix": "ccf744e",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1593756869004
+      "time": 1594000043714
     };
     /* tslint:enable */
 

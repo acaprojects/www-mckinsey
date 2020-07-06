@@ -2880,7 +2880,7 @@ class TimeExtensionModalComponent extends base_directive_1.BaseDirective {
      */
     extendMeeting(block) {
         this.loading = 'Extending meeting...';
-        const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), { duration: block.id }));
+        const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), { duration: block.id }));
         new_booking.save().then((booking) => {
             this.loading = null;
             this._dialog.close();
@@ -3968,11 +3968,15 @@ class Booking extends base_api_class_1.BaseDataClass {
                 raw_data.type ||
                 (raw_data.visitors ? 'external' : null) ||
                 'internal';
-        this.has_catering = !!raw_data.has_catering;
         this.attendees = (raw_data.attendees || raw_data._attendees || []).map((i) => new user_class_1.User(i));
         this.organiser =
-            (raw_data.organizer || raw_data.organiser ? new user_class_1.User(raw_data.organizer || raw_data.organiser) : user_class_1.User.active_user) || new user_class_1.User();
-        this.creator = raw_data.booked_by || raw_data.creator ? new user_class_1.User(raw_data.booked_by || raw_data.creator) : this.organiser;
+            (raw_data.organizer || raw_data.organiser
+                ? new user_class_1.User(raw_data.organizer || raw_data.organiser)
+                : user_class_1.User.active_user) || new user_class_1.User();
+        this.creator =
+            raw_data.booked_by || raw_data.creator
+                ? new user_class_1.User(raw_data.booked_by || raw_data.creator)
+                : this.organiser;
         this._location = raw_data.location_name || raw_data.location || '';
         this.all_day = !!(raw_data.all_day || this.duration > 23 * 60);
         this.setup = raw_data.setup || 0;
@@ -4026,6 +4030,7 @@ class Booking extends base_api_class_1.BaseDataClass {
             raw_data.edits instanceof Array
                 ? raw_data.edits
                 : general_utilities_1.unique(general_utilities_1.flatten(Object.keys(raw_data.edits || {}).map((i) => raw_data.edits[i])));
+        this.has_catering = !!(raw_data.has_catering || (this.catering && this.catering.length));
     }
     /** Service for managing Bookings */
     get _service() {
@@ -4154,8 +4159,7 @@ class Booking extends base_api_class_1.BaseDataClass {
                 : (this.approval_status[space.email] || '').indexOf('tentative') < 0;
         });
         if (data.body && !data.notes.find((note) => note.message === data.body)) {
-            data.notes = data.notes
-                .filter((note) => note.type !== 'description');
+            data.notes = data.notes.filter((note) => note.type !== 'description');
             data.notes.push({
                 type: 'description',
                 message: data.body,
@@ -4166,7 +4170,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         }
         data.organiser = data.organiser.toJSON();
         data.creator = data.creator.toJSON();
-        data.attendees = general_utilities_1.unique([data.organiser].concat(data.attendees.map(i => i.toJSON())), 'email');
+        data.attendees = general_utilities_1.unique([data.organiser].concat(data.attendees.map((i) => i.toJSON())), 'email');
         data.notify_users = [data.organiser.email];
         data.room_ids = data.space_list.map((space) => space.email);
         data.old_date = this.date;
@@ -12934,7 +12938,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
             const space = this.spaces.find((a_space) => a_space.email === order.location_id) || {
                 level: {},
             };
-            const building = this._org.buildings.find((bld) => bld.id === space.level.id) || {};
+            const building = this._org.buildings.find((bld) => bld.id === space.level.building_id) || {};
             return new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order), { location: space.name, symbol: building.currency }));
         });
     }
@@ -15343,9 +15347,10 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
     }
     generateStartAndEndTimes() {
         let start = dayjs(this.date);
+        const now = dayjs();
         /* istanbul ignore else */
         if (this.all_day) {
-            start = start.startOf('d');
+            start = start.isSame(now, 'd') ? now : start.startOf('d');
         }
         let end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
         let building_time = spacetime_1.default(start.toDate());
@@ -21342,16 +21347,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d70c61f",
-    "hash": "d70c61f",
+    "raw": "ccf744e",
+    "hash": "ccf744e",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d70c61f",
+    "suffix": "ccf744e",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1593756869004
+    "time": 1594000043714
 };
 /* tslint:enable */
 
