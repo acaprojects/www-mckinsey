@@ -17831,6 +17831,7 @@ const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive *
 const users_service_1 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const requirement_details_modal_component_1 = __webpack_require__(/*! src/app/shell/bookings/overlays/requirement-details-modal/requirement-details-modal.component */ "./src/app/shell/bookings/overlays/requirement-details-modal/requirement-details-modal.component.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const i2 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
@@ -18059,11 +18060,12 @@ function ExploreBookingModalComponent_ng_template_1_Template(rf, ctx) { if (rf &
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(5, _c7, ctx_r2.is_requesting ? "send" : "done"));
 } }
 class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
-    constructor(_dialog_ref, _data, _router, _service, _users, _spaces) {
+    constructor(_dialog_ref, _data, _router, _dialog, _service, _users, _spaces) {
         super();
         this._dialog_ref = _dialog_ref;
         this._data = _data;
         this._router = _router;
+        this._dialog = _dialog;
         this._service = _service;
         this._users = _users;
         this._spaces = _spaces;
@@ -18137,22 +18139,63 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
     book() {
         /* istanbul ignore else */
         if (this.form.valid) {
-            this.loading = 'Checking space availability...';
-            this.checkSpaceAvailability().then(() => {
-                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), this.form.value), { room_ids: [this._data.space.id] }));
-                new_booking.save().then(() => {
-                    this.loading = null;
-                    this.success = true;
-                    this.timeout('close', () => this._dialog_ref.close(), 5000);
-                }, err => {
-                    this.loading = null;
-                    this._service.notifyError(`Error ${this.booking.id ? 'updating' : 'creating'} booking: ${err.message || err}}`);
+            this.updateRequirements().then(() => this.makeBooking());
+        }
+    }
+    updateRequirements() {
+        return new Promise((resolve, reject) => {
+            var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+            const space_list = [...this.form.controls.space_list.value];
+            if (((_b = (_a = this.form.controls.recurrence) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.period) &&
+                ((_e = (_d = (_c = this.form.controls.recurrence) === null || _c === void 0 ? void 0 : _c.value) === null || _d === void 0 ? void 0 : _d.conflicts) === null || _e === void 0 ? void 0 : _e.length) > 0) {
+                (_j = (_h = (_g = (_f = this.form.controls) === null || _f === void 0 ? void 0 : _f.recurrence) === null || _g === void 0 ? void 0 : _g.value) === null || _h === void 0 ? void 0 : _h.conflicts) === null || _j === void 0 ? void 0 : _j.forEach(i => {
+                    if (!space_list.find(space => space.email === i.space)) {
+                        space_list.push(this._spaces.find(i.space));
+                    }
                 });
+            }
+            let resolved = false;
+            const ref = this._dialog.open(requirement_details_modal_component_1.RequirementDetailsModalComponent, {
+                maxWidth: '95vw',
+                width: '32em',
+                data: {
+                    spaces: space_list,
+                    notes_field: this.form.controls.notes,
+                    codes_field: this.form.controls.equipment_codes,
+                    head_counts_field: this.form.controls.expected_attendees,
+                },
+            });
+            this.subscription('modal_events', ref.componentInstance.event.subscribe((event) => {
+                /* istanbul ignore else */
+                if (event.reason === 'done') {
+                    resolve();
+                    resolved = true;
+                    ref.close();
+                }
+            }));
+            ref.afterClosed().subscribe(() => {
+                if (!resolved) {
+                    reject();
+                }
+            });
+        });
+    }
+    makeBooking() {
+        this.loading = 'Checking space availability...';
+        this.checkSpaceAvailability().then(() => {
+            const new_booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), this.form.value), { room_ids: [this._data.space.id] }));
+            new_booking.save().then(() => {
+                this.loading = null;
+                this.success = true;
+                this.timeout('close', () => this._dialog_ref.close(), 5000);
             }, err => {
                 this.loading = null;
-                this._service.notifyError(`Error checking space availability: ${err.message || err}`);
+                this._service.notifyError(`Error ${this.booking.id ? 'updating' : 'creating'} booking: ${err.message || err}}`);
             });
-        }
+        }, err => {
+            this.loading = null;
+            this._service.notifyError(`Error checking space availability: ${err.message || err}`);
+        });
     }
     /**
      * Check whether the selected spaces are available for the selected time period
@@ -18176,8 +18219,8 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
     }
 }
 exports.ExploreBookingModalComponent = ExploreBookingModalComponent;
-ExploreBookingModalComponent.ɵfac = function ExploreBookingModalComponent_Factory(t) { return new (t || ExploreBookingModalComponent)(i0.ɵɵdirectiveInject(i1.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA), i0.ɵɵdirectiveInject(i2.Router), i0.ɵɵdirectiveInject(i3.ApplicationService), i0.ɵɵdirectiveInject(i4.UsersService), i0.ɵɵdirectiveInject(i5.SpacesService)); };
-ExploreBookingModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ExploreBookingModalComponent, selectors: [["a-explore-booking-modal"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 3, vars: 2, consts: [[4, "ngIf", "ngIfElse"], ["done_state", ""], ["mat-dialog-title", ""], [4, "ngIf"], ["load_state", ""], [3, "icon"], [1, "text"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [3, "form"], [1, "details"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", "name", "next", 3, "tapped"], [1, "info-block"], [1, "icon"], ["diameter", "48"], [1, "success"]], template: function ExploreBookingModalComponent_Template(rf, ctx) { if (rf & 1) {
+ExploreBookingModalComponent.ɵfac = function ExploreBookingModalComponent_Factory(t) { return new (t || ExploreBookingModalComponent)(i0.ɵɵdirectiveInject(i1.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA), i0.ɵɵdirectiveInject(i2.Router), i0.ɵɵdirectiveInject(i1.MatDialog), i0.ɵɵdirectiveInject(i3.ApplicationService), i0.ɵɵdirectiveInject(i4.UsersService), i0.ɵɵdirectiveInject(i5.SpacesService)); };
+ExploreBookingModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ExploreBookingModalComponent, selectors: [["a-explore-booking-modal"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 3, vars: 2, consts: [[4, "ngIf", "ngIfElse"], ["done_state", ""], ["mat-dialog-title", ""], [4, "ngIf"], ["load_state", ""], [3, "icon"], [1, "text"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [3, "form"], [1, "details"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", "name", "next", 3, "tapped"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "success"]], template: function ExploreBookingModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, ExploreBookingModalComponent_ng_container_0_Template, 9, 7, "ng-container", 0);
         i0.ɵɵtemplate(1, ExploreBookingModalComponent_ng_template_1_Template, 5, 7, "ng-template", null, 1, i0.ɵɵtemplateRefExtractor);
     } if (rf & 2) {
@@ -18194,7 +18237,7 @@ ExploreBookingModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ExploreBooki
     }], function () { return [{ type: i1.MatDialogRef }, { type: undefined, decorators: [{
                 type: core_1.Inject,
                 args: [dialog_1.MAT_DIALOG_DATA]
-            }] }, { type: i2.Router }, { type: i3.ApplicationService }, { type: i4.UsersService }, { type: i5.SpacesService }]; }, null); })();
+            }] }, { type: i2.Router }, { type: i1.MatDialog }, { type: i3.ApplicationService }, { type: i4.UsersService }, { type: i5.SpacesService }]; }, null); })();
 
 
 /***/ }),
@@ -21366,16 +21409,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "38041ee",
-    "hash": "38041ee",
+    "raw": "50deb03",
+    "hash": "50deb03",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "38041ee",
+    "suffix": "50deb03",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594089292551
+    "time": 1594089855579
 };
 /* tslint:enable */
 
