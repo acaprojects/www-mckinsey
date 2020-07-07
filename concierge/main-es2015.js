@@ -21201,6 +21201,7 @@ const space_class_1 = __webpack_require__(/*! src/app/services/data/spaces/space
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const meeting_details_modal_component_1 = __webpack_require__(/*! src/app/overlays/meeting-details-modal/meeting-details-modal.component */ "./src/app/overlays/meeting-details-modal/meeting-details-modal.component.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
@@ -21215,7 +21216,7 @@ function DayViewSpaceEventComponent_div_0_app_icon_7_Template(rf, ctx) { if (rf 
     i0.ɵɵelement(0, "app-icon", 18);
 } if (rf & 2) {
     const ctx_r1 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(1, _c0, ctx_r1.event.approved ? "done" : ctx_r1.event.declined ? "event_busy" : ""));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(1, _c0, ctx_r1.approved ? "done" : ctx_r1.event.declined ? "event_busy" : ""));
 } }
 function DayViewSpaceEventComponent_div_0_mat_spinner_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "mat-spinner", 19);
@@ -21353,6 +21354,10 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
         this.position = new core_1.EventEmitter();
         /** Whether to hide the event */
         this.hide = false;
+    }
+    /** Whether booking is approved for the event in the displayed space */
+    get approved() {
+        return this.event.approved || this.event.approval_status[this.space.email].includes('approved');
     }
     /**  */
     get should_display() {

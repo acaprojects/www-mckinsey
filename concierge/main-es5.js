@@ -38589,6 +38589,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
 
+    var booking_class_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/booking.class */
+    "./src/app/services/data/bookings/booking.class.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -38639,7 +38643,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var ctx_r1 = i0.ɵɵnextContext(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(1, _c0, ctx_r1.event.approved ? "done" : ctx_r1.event.declined ? "event_busy" : ""));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(1, _c0, ctx_r1.approved ? "done" : ctx_r1.event.declined ? "event_busy" : ""));
       }
     }
 
@@ -38835,7 +38839,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this189.hide = false;
         return _this189;
       }
-      /**  */
+      /** Whether booking is approved for the event in the displayed space */
 
 
       _createClass(DayViewSpaceEventComponent, [{
@@ -38913,6 +38917,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.overflow_bottom = (this.event.breakdown[this.event.space.email] ? this.event.breakdown[this.event.space.email] / duration : -0.1) * 100;
           }
         }
+      }, {
+        key: "approved",
+        get: function get() {
+          return this.event.approved || this.event.approval_status[this.space.email].includes('approved');
+        }
+        /**  */
+
       }, {
         key: "should_display",
         get: function get() {
