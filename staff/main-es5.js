@@ -10879,7 +10879,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var available = !!_this53.recurr_available.find(function (occurence) {
           return !!occurence.available;
         });
-        _this53.was_available = settings.available || raw_data.available || raw_data.was_available || available || false;
+        _this53.was_available = settings.available || raw_data.available || available || false;
         _this53.support_url = raw_data.support_url;
         _this53.image = raw_data.image || '';
         _this53.zones = raw_data.zones instanceof Array ? raw_data.zones : [];
@@ -23086,6 +23086,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               date: _this109.booking.date,
               duration: _this109.booking.duration
             }).then(function (space_list) {
+              console.log('Spaces:', space_list);
+
               var _iterator33 = _createForOfIteratorHelper(space_list),
                   _step33;
 
@@ -23101,6 +23103,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _iterator33.e(err);
               } finally {
                 _iterator33.f();
+              }
+
+              if (space_list.length < spaces.length) {
+                return reject("".concat(spaces[0].name, " is not available at the select time period."));
               }
 
               resolve();
@@ -25127,215 +25133,216 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/material/input */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
-    var I18N_0;
+    var _c0 = ["content"];
+    var I18N_1;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking equipment information
        */
-      var MSG_EXTERNAL_8241212734369180516$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_1 = goog.getMsg(" Would you like to add equipment to your booking's spaces? ");
-      I18N_0 = MSG_EXTERNAL_8241212734369180516$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_1;
+      var MSG_EXTERNAL_8241212734369180516$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_2 = goog.getMsg(" Would you like to add equipment to your booking's spaces? ");
+      I18N_1 = MSG_EXTERNAL_8241212734369180516$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_2;
     } else {
-      I18N_0 = $localize(_templateObject57());
+      I18N_1 = $localize(_templateObject57());
     }
 
     function RequirementDetailsModalComponent_mat_tab_3_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelement(0, "mat-tab", 11);
+        i0.ɵɵelement(0, "mat-tab", 12);
       }
 
       if (rf & 2) {
-        var space_r2 = ctx.$implicit;
+        var space_r3 = ctx.$implicit;
         var ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("label", space_r2.name + (ctx_r0.form[space_r2.email].invalid && ctx_r0.form[space_r2.email].touched ? "*" : ""));
+        i0.ɵɵproperty("label", space_r3.name + (ctx_r0.form[space_r3.email].invalid && ctx_r0.form[space_r3.email].touched ? "*" : ""));
       }
     }
 
-    var I18N_2;
+    var I18N_3;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking equipment notes label
        */
-      var MSG_EXTERNAL_5201419736696236077$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__3 = goog.getMsg(" (eg - particular room configurations or specific equipment etc) Additional requests are handled in confidence ");
-      I18N_2 = MSG_EXTERNAL_5201419736696236077$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__3;
+      var MSG_EXTERNAL_5201419736696236077$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__4 = goog.getMsg(" (eg - particular room configurations or specific equipment etc) Additional requests are handled in confidence ");
+      I18N_3 = MSG_EXTERNAL_5201419736696236077$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__4;
     } else {
-      I18N_2 = $localize(_templateObject58());
+      I18N_3 = $localize(_templateObject58());
     }
 
-    var I18N_4;
+    var I18N_5;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      var MSG_EXTERNAL_4048193419886450033$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__5 = goog.getMsg("Add notes here...");
-      I18N_4 = MSG_EXTERNAL_4048193419886450033$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__5;
+      var MSG_EXTERNAL_4048193419886450033$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__6 = goog.getMsg("Add notes here...");
+      I18N_5 = MSG_EXTERNAL_4048193419886450033$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__6;
     } else {
-      I18N_4 = $localize(_templateObject59());
+      I18N_5 = $localize(_templateObject59());
     }
 
-    var _c6 = ["placeholder", I18N_4];
-    var I18N_8;
+    var _c7 = ["placeholder", I18N_5];
+    var I18N_9;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      var MSG_EXTERNAL_4704310930093496744$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__9 = goog.getMsg("Charge Code");
-      I18N_8 = MSG_EXTERNAL_4704310930093496744$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__9;
+      var MSG_EXTERNAL_4704310930093496744$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__10 = goog.getMsg("Charge Code");
+      I18N_9 = MSG_EXTERNAL_4704310930093496744$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__10;
     } else {
-      I18N_8 = $localize(_templateObject60());
+      I18N_9 = $localize(_templateObject60());
     }
 
-    var _c10 = ["placeholder", I18N_8];
-    var I18N_11;
+    var _c11 = ["placeholder", I18N_9];
+    var I18N_12;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking equipment charge code hint
        */
-      var MSG_EXTERNAL_8265889124285934711$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__12 = goog.getMsg("{$startTagSpan}Note:{$closeTagSpan} Your booking will be confirmed before you are charged. ", {
+      var MSG_EXTERNAL_8265889124285934711$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__13 = goog.getMsg("{$startTagSpan}Note:{$closeTagSpan} Your booking will be confirmed before you are charged. ", {
         "startTagSpan": "\uFFFD#17\uFFFD",
         "closeTagSpan": "\uFFFD/#17\uFFFD"
       });
-      I18N_11 = MSG_EXTERNAL_8265889124285934711$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__12;
+      I18N_12 = MSG_EXTERNAL_8265889124285934711$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__13;
     } else {
-      I18N_11 = $localize(_templateObject61(), "\uFFFD#17\uFFFD", "\uFFFD/#17\uFFFD");
+      I18N_12 = $localize(_templateObject61(), "\uFFFD#17\uFFFD", "\uFFFD/#17\uFFFD");
     }
 
-    var I18N_13;
+    var I18N_14;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking equipment charge code error
        */
-      var MSG_EXTERNAL_987760363308336949$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__14 = goog.getMsg(" Charge Code is required ");
-      I18N_13 = MSG_EXTERNAL_987760363308336949$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__14;
+      var MSG_EXTERNAL_987760363308336949$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__15 = goog.getMsg(" Charge Code is required ");
+      I18N_14 = MSG_EXTERNAL_987760363308336949$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__15;
     } else {
-      I18N_13 = $localize(_templateObject62());
+      I18N_14 = $localize(_templateObject62());
     }
 
-    var I18N_15;
+    var I18N_16;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking equipment headcount label
        */
-      var MSG_EXTERNAL_5102944251832692522$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__16 = goog.getMsg(" Headcount Estimate{$startTagSpan}*{$closeTagSpan}", {
+      var MSG_EXTERNAL_5102944251832692522$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__17 = goog.getMsg(" Headcount Estimate{$startTagSpan}*{$closeTagSpan}", {
         "startTagSpan": "\uFFFD#23\uFFFD",
         "closeTagSpan": "\uFFFD/#23\uFFFD"
       });
-      I18N_15 = MSG_EXTERNAL_5102944251832692522$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__16;
+      I18N_16 = MSG_EXTERNAL_5102944251832692522$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__17;
     } else {
-      I18N_15 = $localize(_templateObject63(), "\uFFFD#23\uFFFD", "\uFFFD/#23\uFFFD");
+      I18N_16 = $localize(_templateObject63(), "\uFFFD#23\uFFFD", "\uFFFD/#23\uFFFD");
     }
 
-    var I18N_17;
+    var I18N_18;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      var MSG_EXTERNAL_5616907402275895341$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__18 = goog.getMsg("e.g. 12");
-      I18N_17 = MSG_EXTERNAL_5616907402275895341$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__18;
+      var MSG_EXTERNAL_5616907402275895341$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__19 = goog.getMsg("e.g. 12");
+      I18N_18 = MSG_EXTERNAL_5616907402275895341$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__19;
     } else {
-      I18N_17 = $localize(_templateObject64());
+      I18N_18 = $localize(_templateObject64());
     }
 
-    var _c19 = ["placeholder", I18N_17];
-    var I18N_20;
+    var _c20 = ["placeholder", I18N_18];
+    var I18N_21;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking equipment headcount hint
        */
-      var MSG_EXTERNAL_3544114030507981593$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__21 = goog.getMsg("{$startTagSpan}Note:{$closeTagSpan} This estimate is used to calculate catering and/or assign rooms. Please keep updated of any changes. ", {
+      var MSG_EXTERNAL_3544114030507981593$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__22 = goog.getMsg("{$startTagSpan}Note:{$closeTagSpan} This estimate is used to calculate catering and/or assign rooms. Please keep updated of any changes. ", {
         "startTagSpan": "\uFFFD#29\uFFFD",
         "closeTagSpan": "\uFFFD/#29\uFFFD"
       });
-      I18N_20 = MSG_EXTERNAL_3544114030507981593$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__21;
+      I18N_21 = MSG_EXTERNAL_3544114030507981593$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__22;
     } else {
-      I18N_20 = $localize(_templateObject65(), "\uFFFD#29\uFFFD", "\uFFFD/#29\uFFFD");
+      I18N_21 = $localize(_templateObject65(), "\uFFFD#29\uFFFD", "\uFFFD/#29\uFFFD");
     }
 
-    var I18N_22;
+    var I18N_23;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking equipment headcount error
        */
-      var MSG_EXTERNAL_5210342041579185233$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__23 = goog.getMsg(" Headcount Estimate is required ");
-      I18N_22 = MSG_EXTERNAL_5210342041579185233$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__23;
+      var MSG_EXTERNAL_5210342041579185233$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__24 = goog.getMsg(" Headcount Estimate is required ");
+      I18N_23 = MSG_EXTERNAL_5210342041579185233$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS__24;
     } else {
-      I18N_22 = $localize(_templateObject66());
+      I18N_23 = $localize(_templateObject66());
     }
 
-    var I18N_7;
+    var I18N_8;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking equipment charge code label
        */
-      var MSG_EXTERNAL_2414153601168568330$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___24 = goog.getMsg(" Charge Code{$startTagSpan}*{$closeTagSpan}", {
+      var MSG_EXTERNAL_2414153601168568330$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___25 = goog.getMsg(" Charge Code{$startTagSpan}*{$closeTagSpan}", {
         "startTagSpan": "\uFFFD*11:1\uFFFD\uFFFD#1:1\uFFFD",
         "closeTagSpan": "\uFFFD/#1:1\uFFFD\uFFFD/*11:1\uFFFD"
       });
-      I18N_7 = MSG_EXTERNAL_2414153601168568330$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___24;
+      I18N_8 = MSG_EXTERNAL_2414153601168568330$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___25;
     } else {
-      I18N_7 = $localize(_templateObject67(), "\uFFFD*11:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*11:1\uFFFD");
+      I18N_8 = $localize(_templateObject67(), "\uFFFD*11:1\uFFFD\uFFFD#1:1\uFFFD", "\uFFFD/#1:1\uFFFD\uFFFD/*11:1\uFFFD");
     }
 
-    function RequirementDetailsModalComponent_form_12_span_11_Template(rf, ctx) {
+    function RequirementDetailsModalComponent_form_13_span_11_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵi18nStart(0, I18N_7, 1);
+        i0.ɵɵi18nStart(0, I18N_8, 1);
         i0.ɵɵelement(1, "span");
         i0.ɵɵi18nEnd();
       }
     }
 
-    function RequirementDetailsModalComponent_form_12_Template(rf, ctx) {
+    function RequirementDetailsModalComponent_form_13_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 12);
-        i0.ɵɵelementStart(1, "div", 13);
-        i0.ɵɵelementStart(2, "label", 14);
-        i0.ɵɵi18n(3, I18N_2);
+        i0.ɵɵelementStart(0, "form", 13);
+        i0.ɵɵelementStart(1, "div", 14);
+        i0.ɵɵelementStart(2, "label", 15);
+        i0.ɵɵi18n(3, I18N_3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "mat-form-field", 15);
-        i0.ɵɵelementStart(5, "textarea", 16);
-        i0.ɵɵi18nAttributes(6, _c6);
+        i0.ɵɵelementStart(4, "mat-form-field", 16);
+        i0.ɵɵelementStart(5, "textarea", 17);
+        i0.ɵɵi18nAttributes(6, _c7);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "div", 17);
-        i0.ɵɵelementStart(8, "div", 13);
-        i0.ɵɵelementStart(9, "label", 18);
-        i0.ɵɵi18nStart(10, I18N_7);
-        i0.ɵɵtemplate(11, RequirementDetailsModalComponent_form_12_span_11_Template, 2, 0, "span", 19);
+        i0.ɵɵelementStart(7, "div", 18);
+        i0.ɵɵelementStart(8, "div", 14);
+        i0.ɵɵelementStart(9, "label", 19);
+        i0.ɵɵi18nStart(10, I18N_8);
+        i0.ɵɵtemplate(11, RequirementDetailsModalComponent_form_13_span_11_Template, 2, 0, "span", 20);
         i0.ɵɵi18nEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(12, "mat-form-field", 15);
-        i0.ɵɵelementStart(13, "input", 20);
-        i0.ɵɵi18nAttributes(14, _c10);
+        i0.ɵɵelementStart(12, "mat-form-field", 16);
+        i0.ɵɵelementStart(13, "input", 21);
+        i0.ɵɵi18nAttributes(14, _c11);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(15, "mat-hint");
-        i0.ɵɵi18nStart(16, I18N_11);
+        i0.ɵɵi18nStart(16, I18N_12);
         i0.ɵɵelement(17, "span");
         i0.ɵɵi18nEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(18, "mat-error");
-        i0.ɵɵi18n(19, I18N_13);
+        i0.ɵɵi18n(19, I18N_14);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(20, "div", 13);
-        i0.ɵɵelementStart(21, "label", 21);
-        i0.ɵɵi18nStart(22, I18N_15);
+        i0.ɵɵelementStart(20, "div", 14);
+        i0.ɵɵelementStart(21, "label", 22);
+        i0.ɵɵi18nStart(22, I18N_16);
         i0.ɵɵelement(23, "span");
         i0.ɵɵi18nEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(24, "mat-form-field", 15);
-        i0.ɵɵelementStart(25, "input", 22);
-        i0.ɵɵi18nAttributes(26, _c19);
+        i0.ɵɵelementStart(24, "mat-form-field", 16);
+        i0.ɵɵelementStart(25, "input", 23);
+        i0.ɵɵi18nAttributes(26, _c20);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(27, "mat-hint");
-        i0.ɵɵi18nStart(28, I18N_20);
+        i0.ɵɵi18nStart(28, I18N_21);
         i0.ɵɵelement(29, "span");
         i0.ɵɵi18nEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(30, "mat-error");
-        i0.ɵɵi18n(31, I18N_22);
+        i0.ɵɵi18n(31, I18N_23);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -25344,18 +25351,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("formGroup", ctx_r1.active_form);
+        var ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("formGroup", ctx_r2.active_form);
         i0.ɵɵadvance(9);
-        i0.ɵɵclassProp("error", ctx_r1.active_form.controls.code.touched && ctx_r1.active_form.controls.code.invalid);
+        i0.ɵɵclassProp("error", ctx_r2.active_form.controls.code.touched && ctx_r2.active_form.controls.code.invalid);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngIf", ctx_r1.needs_charge_code[ctx_r1.space_list[ctx_r1.active_space].email]);
+        i0.ɵɵproperty("ngIf", ctx_r2.needs_charge_code[ctx_r2.space_list[ctx_r2.active_space].email]);
         i0.ɵɵadvance(10);
-        i0.ɵɵclassProp("error", ctx_r1.active_form.controls.head_count.touched && ctx_r1.active_form.controls.head_count.invalid);
+        i0.ɵɵclassProp("error", ctx_r2.active_form.controls.head_count.touched && ctx_r2.active_form.controls.head_count.invalid);
       }
     }
 
-    var _c25 = function _c25() {
+    var _c26 = function _c26() {
       return {
         "class": "material-icons",
         content: "close"
@@ -25454,6 +25461,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.event.emit({
               reason: 'done'
             });
+          } else {
+            console.log('Scroll:', this._content_el.nativeElement, this._content_el.nativeElement.scrollHeight);
+
+            this._content_el.nativeElement.scrollTo({
+              top: this._content_el.nativeElement.scrollHeight,
+              left: 0,
+              behavior: 'smooth'
+            });
           }
         }
         /** Generate form fields for each space */
@@ -25528,12 +25543,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     RequirementDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({
       type: RequirementDetailsModalComponent,
       selectors: [["a-requirement-details-modal"]],
+      viewQuery: function RequirementDetailsModalComponent_Query(rf, ctx) {
+        if (rf & 1) {
+          i0.ɵɵstaticViewQuery(_c0, true);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._content_el = _t.first);
+        }
+      },
       outputs: {
         event: "event"
       },
-      decls: 17,
+      decls: 18,
       vars: 5,
-      consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "tapped"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], [1, "fieldset"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"], ["for", "head-count"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"]],
+      consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], ["content", ""], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "tapped"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], [1, "fieldset"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"], ["for", "head-count"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"]],
       template: function RequirementDetailsModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -25549,24 +25575,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelement(5, "app-icon", 5);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(6, "mat-dialog-content");
-          i0.ɵɵelementStart(7, "main");
-          i0.ɵɵelementStart(8, "div", 6);
-          i0.ɵɵelement(9, "img", 7);
-          i0.ɵɵelementStart(10, "div", 8);
-          i0.ɵɵi18n(11, I18N_0);
+          i0.ɵɵelementStart(6, "mat-dialog-content", null, 6);
+          i0.ɵɵelementStart(8, "main");
+          i0.ɵɵelementStart(9, "div", 7);
+          i0.ɵɵelement(10, "img", 8);
+          i0.ɵɵelementStart(11, "div", 9);
+          i0.ɵɵi18n(12, I18N_1);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(12, RequirementDetailsModalComponent_form_12_Template, 32, 6, "form", 9);
+          i0.ɵɵtemplate(13, RequirementDetailsModalComponent_form_13_Template, 32, 6, "form", 10);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(13, "mat-dialog-actions");
-          i0.ɵɵelementStart(14, "footer");
-          i0.ɵɵelementStart(15, "button", 10);
-          i0.ɵɵlistener("tapped", function RequirementDetailsModalComponent_Template_button_tapped_15_listener() {
+          i0.ɵɵelementStart(14, "mat-dialog-actions");
+          i0.ɵɵelementStart(15, "footer");
+          i0.ɵɵelementStart(16, "button", 11);
+          i0.ɵɵlistener("tapped", function RequirementDetailsModalComponent_Template_button_tapped_16_listener() {
             return ctx.submit();
           });
-          i0.ɵɵtext(16, "Add to booking");
+          i0.ɵɵtext(17, "Add to booking");
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
@@ -25578,8 +25604,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngForOf", ctx.space_list);
           i0.ɵɵadvance(2);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(4, _c25));
-          i0.ɵɵadvance(7);
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(4, _c26));
+          i0.ɵɵadvance(8);
           i0.ɵɵproperty("ngIf", ctx.space_list[ctx.active_space] && ctx.active_form);
         }
       },
@@ -25611,6 +25637,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         event: [{
           type: core_1.Output
+        }],
+        _content_el: [{
+          type: core_1.ViewChild,
+          args: ['content', {
+            "static": true
+          }]
         }]
       });
     })();
@@ -27179,6 +27211,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this130.form.controls.delivery_time.setValue(_this130.available_times[0].id);
             }
 
+            _this130.form.controls.items.setValue([]);
+
             _this130.loadMenu();
           }));
           this.loadMenu();
@@ -27228,11 +27262,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var space = this.space_list.find(function (space) {
             return space.email === _this132.form.controls.location_id.value;
           });
-
-          if (!this.hide_details) {
-            this.form.controls.items.setValue([]);
-          }
-
           this.loading = true;
 
           this._menu.query({
@@ -34834,6 +34863,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return _;
           })).subscribe(function () {
             _this175.settings = _this175._service.setting('app.home') || {};
+            localStorage.removeItem('ACA_STAFF.booking_form_data');
           });
         }
       }, {
@@ -38182,16 +38212,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "ccf744e",
-      "hash": "ccf744e",
+      "raw": "38041ee",
+      "hash": "38041ee",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "ccf744e",
+      "suffix": "38041ee",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594000043714
+      "time": 1594089292551
     };
     /* tslint:enable */
 
