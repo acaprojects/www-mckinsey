@@ -1073,7 +1073,7 @@ class BookingModalComponent extends base_directive_1.BaseDirective {
      * Load existing form data or generate a new booking form
      */
     loadFormData() {
-        let form_data = this._data.booking.toJSON();
+        let form_data = {};
         this.booking = new booking_class_1.Booking(form_data);
         this.form = booking_utilities_1.generateBookingForm(this.booking, this.available_fields);
         /* istanbul ignore else */
@@ -5515,6 +5515,7 @@ const i45 = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@a
 const i46 = __webpack_require__(/*! @angular/cdk/table */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/table.js");
 const i47 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 const i48 = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
+const i49 = __webpack_require__(/*! ../shared/components/replace.pipe */ "./src/app/shared/components/replace.pipe.ts");
 const OVERLAYS = [
     confirm_modal_component_1.ConfirmModalComponent,
     new_user_modal_component_1.NewUserModalComponent,
@@ -5642,7 +5643,7 @@ i0.ɵɵsetComponentScope(booking_modal_component_1.BookingModalComponent, [i2.Ng
     item_component_2.CateringOrderListItemComponent,
     category_component_1.CateringMenuCategoryComponent,
     item_component_3.CateringMenuItemComponent,
-    delete_confirm_modal_component_1.DeleteConfirmModalComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i48.ɵa, i48.ɵb]);
+    delete_confirm_modal_component_1.DeleteConfirmModalComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i48.ɵa, i48.ɵb, i49.ReplacePipe]);
 
 
 /***/ }),
@@ -10104,15 +10105,19 @@ class Report {
                 delete booking.events;
                 delete booking.old_start;
                 delete booking.old_end;
+                delete booking.booking_type;
+                delete booking.has_catering;
+                delete booking.expected_attendees;
                 delete booking.time_changed;
                 delete booking.approval_status;
+                delete booking.room_ids;
                 booking.description = booking.body;
                 delete booking.body;
                 booking.description = booking.description.replace(/<[^>]*>?/gm, '');
                 booking.organiser = booking.organiser.name || booking.organiser.email;
                 booking.creator = booking.creator.name || booking.creator.email;
                 booking.equipment_codes = Object.keys(booking.equipment_codes).map(key => booking.equipment_codes[key]).join(', ');
-                booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
+                //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
                 booking.attendees = booking.attendees.map(person => person.name || person.email).join(', ');
                 booking.start = dayjs(booking.start * 1000).format('DD MMM YYYY, h:mm A');
                 booking.end = dayjs(booking.end * 1000).format('DD MMM YYYY, h:mm A');
@@ -14056,6 +14061,36 @@ const ɵPopoutMenuComponent_BaseFactory = i0.ɵɵgetInheritedFactory(PopoutMenuC
 
 /***/ }),
 
+/***/ "./src/app/shared/components/replace.pipe.ts":
+/*!***************************************************!*\
+  !*** ./src/app/shared/components/replace.pipe.ts ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+class ReplacePipe {
+    transform(value, from = '_', to = ' ') {
+        return (value || '').split(from).join(to);
+    }
+}
+exports.ReplacePipe = ReplacePipe;
+ReplacePipe.ɵfac = function ReplacePipe_Factory(t) { return new (t || ReplacePipe)(); };
+ReplacePipe.ɵpipe = i0.ɵɵdefinePipe({ name: "replace", type: ReplacePipe, pure: true });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ReplacePipe, [{
+        type: core_1.Pipe,
+        args: [{
+                name: 'replace'
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
 /***/ "./src/app/shared/components/searchbar/searchbar.component.ts":
 /*!********************************************************************!*\
   !*** ./src/app/shared/components/searchbar/searchbar.component.ts ***!
@@ -15788,6 +15823,7 @@ const counter_component_1 = __webpack_require__(/*! ./components/custom-fields/c
 const cdk_drop_list_scroll_container_directive_1 = __webpack_require__(/*! ./directives/cdk-drop-list-scroll-container.directive */ "./src/app/shared/directives/cdk-drop-list-scroll-container.directive.ts");
 const sidebar_component_1 = __webpack_require__(/*! ./components/sidebar/sidebar.component */ "./src/app/shared/components/sidebar/sidebar.component.ts");
 const action_icon_component_1 = __webpack_require__(/*! ./components/action-icon/action-icon.component */ "./src/app/shared/components/action-icon/action-icon.component.ts");
+const replace_pipe_1 = __webpack_require__(/*! ./components/replace.pipe */ "./src/app/shared/components/replace.pipe.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const COMPONENTS = [
     base_directive_1.BaseDirective,
@@ -15898,7 +15934,8 @@ SharedContentModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SharedCont
         user_search_field_component_1.UserSearchFieldComponent,
         user_list_field_component_1.UserListFieldComponent,
         counter_component_1.CounterComponent,
-        cdk_drop_list_scroll_container_directive_1.CdkDropListScrollContainer], imports: [common_1.CommonModule,
+        cdk_drop_list_scroll_container_directive_1.CdkDropListScrollContainer,
+        replace_pipe_1.ReplacePipe], imports: [common_1.CommonModule,
         forms_1.FormsModule,
         forms_1.ReactiveFormsModule,
         ngx_pipes_1.APipesModule,
@@ -15968,14 +16005,16 @@ SharedContentModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SharedCont
         slide_toggle_1.MatSlideToggleModule,
         scrolling_1.ScrollingModule,
         drag_drop_1.DragDropModule,
-        table_1.CdkTableModule] }); })();
+        table_1.CdkTableModule,
+        replace_pipe_1.ReplacePipe] }); })();
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SharedContentModule, [{
         type: core_1.NgModule,
         args: [{
                 declarations: [
                     ...COMPONENTS,
                     ...ENTRY_COMPONENT,
-                    ...DIRECTIVES
+                    ...DIRECTIVES,
+                    replace_pipe_1.ReplacePipe
                 ],
                 imports: [
                     common_1.CommonModule,
@@ -15998,7 +16037,8 @@ SharedContentModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SharedCont
                     ...DIRECTIVES,
                     ...ENTRY_COMPONENT,
                     ...MATERIAL_MODULES,
-                    ...CDK_MODULES
+                    ...CDK_MODULES,
+                    replace_pipe_1.ReplacePipe
                 ]
             }]
     }], null, null); })();
@@ -16964,6 +17004,7 @@ const i54 = __webpack_require__(/*! ../../overlays/booking-modal/booking-modal.c
 const i55 = __webpack_require__(/*! ../../overlays/requirement-details-modal/requirement-details-modal.component */ "./src/app/overlays/requirement-details-modal/requirement-details-modal.component.ts");
 const i56 = __webpack_require__(/*! ../../overlays/booking-modal/catering/order-details/order-details.component */ "./src/app/overlays/booking-modal/catering/order-details/order-details.component.ts");
 const i57 = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
+const i58 = __webpack_require__(/*! ../../shared/components/replace.pipe */ "./src/app/shared/components/replace.pipe.ts");
 const ROUTES = [
     { path: '', component: catering_component_1.CateringComponent },
     { path: ':page', component: catering_component_1.CateringComponent },
@@ -17037,7 +17078,7 @@ i0.ɵɵsetComponentScope(item_list_component_1.CateringMenuItemListComponent, [i
     order_details_modal_component_1.OrderDetailsModalComponent,
     items_component_1.OrderDetailsItemsComponent,
     booking_details_component_1.OrderBookingDetailsComponent,
-    messages_component_1.OrderDetailsNotesComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i57.ɵa, i57.ɵb]);
+    messages_component_1.OrderDetailsNotesComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i57.ɵa, i57.ɵb, i58.ReplacePipe]);
 
 
 /***/ }),
@@ -17367,9 +17408,14 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
         if (!group) {
             group = new catering_category_class_1.CateringCategory({ parent_id: this.item.id, zones: [this.building.id] });
         }
-        this._dialog.open(group_modal_component_1.CateringGroupModalComponent, {
+        const ref = this._dialog.open(group_modal_component_1.CateringGroupModalComponent, {
             data: { group, parent: group.id ? this.parent : this.item },
         });
+        this.subscription('item-modal', ref.componentInstance.event.subscribe((event) => {
+            if (event.reason === 'done' && event.metadata) {
+                this.updateItemList(group, event.metadata);
+            }
+        }));
     }
     openItemModal(item) {
         /* istanbul ignore else */
@@ -17380,18 +17426,20 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
             data: { item, parent: item.id ? this.parent : this.item },
         });
         this.subscription('item-modal', ref.componentInstance.event.subscribe((event) => {
-            console.log('Details:', event);
             if (event.reason === 'done' && event.metadata) {
-                if (item.id) {
-                    const index = this.parent.items.findIndex((itm) => itm.id === item.id);
-                    this.parent.items.splice(index, 1, new catering_item_class_1.CateringItem(event.metadata));
-                    this.parent.items = [...this.parent.items];
-                }
-                else {
-                    this.item.items.push(event.metadata);
-                }
+                this.updateItemList(item, event.metadata);
             }
         }));
+    }
+    updateItemList(old_item, new_item) {
+        if (old_item.id) {
+            const index = this.parent.items.findIndex((itm) => itm.id === old_item.id);
+            this.parent.items.splice(index, 1, new catering_item_class_1.CateringItem(new_item));
+            this.parent.items = [...this.parent.items];
+        }
+        else {
+            this.item.items.push(new_item);
+        }
     }
     deleteItem() {
         const type = this.item instanceof catering_category_class_1.CateringCategory
@@ -18154,7 +18202,7 @@ class CateringOrdersComponent extends base_directive_1.BaseDirective {
                 this.search$.next(`${this.date}|${this.building.id}`);
                 this.available_spaces = this._spaces.filter((space) => space.zones.indexOf(this.building.id) >= 0).map((i) => i.id);
             }));
-            this.available_spaces = this._spaces.filter((space) => space.zones.indexOf(this.building.id) >= 0).map((i) => i.id);
+            this.available_spaces = this._spaces.filter((space) => space.zones.indexOf(this.building.id) >= 0).map((i) => i.email);
             this.initBookings();
             this.interval('update_bookings', () => this.search$.next(`${this.date}|${this.building.id}|${dayjs().unix()}`), 30 * 1000);
             this.search$.next(`${this.date}|${this.building.id}|${dayjs().unix()}`);
@@ -18237,8 +18285,9 @@ class CateringOrdersComponent extends base_directive_1.BaseDirective {
         }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((space_list) => {
             let orders = [];
             space_list.forEach((space) => {
-                space.bookings.forEach((booking) => {
+                space.bookings.forEach((booking, i) => {
                     const catering = booking.catering;
+                    console.log('Catering:', space.name, i, catering);
                     catering.forEach((order) => {
                         order.booking_date = booking.date;
                         order.booking = booking;
@@ -18246,8 +18295,10 @@ class CateringOrdersComponent extends base_directive_1.BaseDirective {
                     orders = orders.concat(booking.catering);
                 });
             });
+            console.log('Orders:', orders);
             orders = general_utilities_1.unique(orders, 'id');
             orders = orders.filter((order) => this.available_spaces.indexOf(order.location_id) >= 0);
+            console.log('Orders w/Filter:', orders);
             orders.sort((a, b) => a.booking_date +
                 a.delivery_time * 60 * 1000 -
                 (b.booking_date + b.delivery_time * 60 * 1000));
@@ -18770,7 +18821,7 @@ function CateringGroupModalComponent_main_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("formGroup", ctx_r1.form);
     i0.ɵɵadvance(2);
-    i0.ɵɵstyleProp("background", i0.ɵɵpipeBind2(4, 14, "linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)), url(" + ctx_r1.image + ")", "style"), i0.ɵɵdefaultStyleSanitizer);
+    i0.ɵɵstyleProp("background", i0.ɵɵpipeBind2(4, 15, "linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)), url(" + ctx_r1.image + ")", "style"), i0.ɵɵdefaultStyleSanitizer);
     i0.ɵɵadvance(2);
     i0.ɵɵproperty("ngIf", !ctx_r1.uploading);
     i0.ɵɵadvance(1);
@@ -18785,7 +18836,9 @@ function CateringGroupModalComponent_main_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵclassProp("error", ctx_r1.form.controls.catering_type.errors && ctx_r1.form.controls.catering_type.touched);
     i0.ɵɵadvance(6);
     i0.ɵɵproperty("ngForOf", ctx_r1.types);
-    i0.ɵɵadvance(8);
+    i0.ɵɵadvance(7);
+    i0.ɵɵproperty("placeholder", (ctx_r1.form.value.package ? "Package" : "Sub-category") + "Description");
+    i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", ctx_r1.package);
     i0.ɵɵadvance(3);
     i0.ɵɵtextInterpolate1("Items to select from ", ctx_r1.package ? "package" : "sub-category", "");
@@ -18830,6 +18883,7 @@ class CateringGroupModalComponent extends base_directive_1.BaseDirective {
         this.types = [
             { id: 'kitchen', name: 'Kitchen' },
             { id: 'pantry', name: 'Pantry' },
+            { id: 'none', name: 'Other' },
         ];
     }
     /** Category being edit/created */
@@ -18931,7 +18985,7 @@ class CateringGroupModalComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringGroupModalComponent = CateringGroupModalComponent;
 CateringGroupModalComponent.ɵfac = function CateringGroupModalComponent_Factory(t) { return new (t || CateringGroupModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.CateringCategoriesService), i0.ɵɵdirectiveInject(i3.UploadManager), i0.ɵɵdirectiveInject(i4.MatDialog), i0.ɵɵdirectiveInject(i4.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-CateringGroupModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringGroupModalComponent, selectors: [["a-catering-group-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", 3, "error", "click", 4, "ngIf"], ["mat-button", "", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], [1, "field", "padded"], ["for", "name"], [1, "value"], ["formControlName", "package"], ["appearance", "outline"], ["matInput", "", "name", "name", "formControlName", "name", 3, "placeholder"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "placeholder", "Category Description", "formControlName", "description"], [4, "ngIf"], ["for", "must-select"], ["matInput", "", "name", "must-select", "type", "number", "placeholder", "Must select X items from grouping", "formControlName", "must_select"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], ["diameter", "48"], [3, "value"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["mat-button", "", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringGroupModalComponent_Template(rf, ctx) { if (rf & 1) {
+CateringGroupModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringGroupModalComponent, selectors: [["a-catering-group-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", 3, "error", "click", 4, "ngIf"], ["mat-button", "", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], [1, "field", "padded"], ["for", "name"], [1, "value"], ["formControlName", "package"], ["appearance", "outline"], ["matInput", "", "name", "name", "formControlName", "name", 3, "placeholder"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "formControlName", "description", 3, "placeholder"], [4, "ngIf"], ["for", "must-select"], ["matInput", "", "name", "must-select", "type", "number", "placeholder", "Must select X items from grouping", "formControlName", "must_select"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], ["diameter", "48"], [3, "value"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["mat-button", "", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringGroupModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2);
@@ -18939,7 +18993,7 @@ CateringGroupModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringGroup
         i0.ɵɵtemplate(3, CateringGroupModalComponent_button_3_Template, 2, 2, "button", 1);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "mat-dialog-content");
-        i0.ɵɵtemplate(5, CateringGroupModalComponent_main_5_Template, 56, 17, "main", 2);
+        i0.ɵɵtemplate(5, CateringGroupModalComponent_main_5_Template, 56, 18, "main", 2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(6, "mat-dialog-actions");
         i0.ɵɵelementStart(7, "footer");
@@ -22691,15 +22745,17 @@ const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/cdk/table */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/table.js");
 const i2 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+const i3 = __webpack_require__(/*! ../../../shared/components/replace.pipe */ "./src/app/shared/components/replace.pipe.ts");
 function ReportTableComponent_ng_container_1_th_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 7);
     i0.ɵɵtext(1);
+    i0.ɵɵpipe(2, "replace");
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const key_r3 = i0.ɵɵnextContext().$implicit;
     i0.ɵɵattribute("name", key_r3);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate(key_r3);
+    i0.ɵɵtextInterpolate(i0.ɵɵpipeBind1(2, 2, key_r3));
 } }
 function ReportTableComponent_ng_container_1_td_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "td", 8);
@@ -22714,7 +22770,7 @@ function ReportTableComponent_ng_container_1_td_2_Template(rf, ctx) { if (rf & 1
 } }
 function ReportTableComponent_ng_container_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0, 4);
-    i0.ɵɵtemplate(1, ReportTableComponent_ng_container_1_th_1_Template, 2, 2, "th", 5);
+    i0.ɵɵtemplate(1, ReportTableComponent_ng_container_1_th_1_Template, 3, 4, "th", 5);
     i0.ɵɵtemplate(2, ReportTableComponent_ng_container_1_td_2_Template, 2, 2, "td", 6);
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
@@ -22756,7 +22812,7 @@ ReportTableComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ReportTableComponent
         i0.ɵɵproperty("cdkHeaderRowDef", ctx.fields);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("cdkRowDefColumns", ctx.fields);
-    } }, directives: [i1.CdkTable, i2.NgForOf, i1.CdkHeaderRowDef, i1.CdkRowDef, i1.CdkColumnDef, i1.CdkHeaderCellDef, i1.CdkCellDef, i1.CdkHeaderCell, i1.CdkCell, i1.CdkHeaderRow, i1.CdkRow], styles: ["[_nghost-%COMP%] {\n  font-size: 0.9em;\n}\ntable[_ngcontent-%COMP%] {\n  border-collapse: collapse;\n  background-color: #fff;\n  width: 100%;\n}\nth[_ngcontent-%COMP%] {\n  padding: 0.25em 0.5em;\n}\ntd[_ngcontent-%COMP%] {\n  border-right: 1px solid #ccc;\n  padding: 0.5em 0.75em;\n}\ntd[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n[cdk-header-row][_ngcontent-%COMP%] {\n  border-top: 1px solid #f0f0f0;\n  background-color: #051c2c;\n  color: #fff;\n}\ntr[_ngcontent-%COMP%]:nth-child(2n) {\n  background-color: rgba(0, 0, 0, 0.05);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3JlcG9ydHMvcmVwb3J0LXRhYmxlL3JlcG9ydC10YWJsZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvcmVwb3J0cy9yZXBvcnQtdGFibGUvcmVwb3J0LXRhYmxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQzVDQTtFQUNJLGdCQUFBO0FDUUo7QURMQTtFQUNJLHlCQUFBO0VBQ0Esc0JBQUE7RUFDQSxXQUFBO0FDUUo7QURMQTtFQUNJLHFCQUFBO0FDUUo7QURMQTtFQUNJLDRCQUFBO0VBQ0EscUJBQUE7QUNRSjtBRE5JO0VBQ0ksWUFBQTtBQ1FSO0FESkE7RUFDSSw2QkFBQTtFQUNBLHlCRElZO0VDSFosV0R0QlM7QUU2QmI7QURISTtFQUNJLHFDQUFBO0FDTVIiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9yZXBvcnRzL3JlcG9ydC10YWJsZS9yZXBvcnQtdGFibGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbjpob3N0IHtcbiAgICBmb250LXNpemU6IDAuOWVtO1xufVxuXG50YWJsZSB7XG4gICAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG50aCB7XG4gICAgcGFkZGluZzogLjI1ZW0gLjVlbTtcbn1cblxudGQge1xuICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICNjY2M7XG4gICAgcGFkZGluZzogLjVlbSAwLjc1ZW07XG5cbiAgICAmOmxhc3QtY2hpbGQge1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgfVxufVxuXG5bY2RrLWhlYWRlci1yb3ddIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2YwZjBmMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkY29sb3ItdGVybmFyeTtcbiAgICBjb2xvcjogJGZvbnQtbGlnaHQ7XG59XG5cbnRyIHtcbiAgICAmOm50aC1jaGlsZCgybikge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCMwMDAsIDAuMDUpO1xuICAgIH1cbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0IHtcbiAgZm9udC1zaXplOiAwLjllbTtcbn1cblxudGFibGUge1xuICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICB3aWR0aDogMTAwJTtcbn1cblxudGgge1xuICBwYWRkaW5nOiAwLjI1ZW0gMC41ZW07XG59XG5cbnRkIHtcbiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2NjYztcbiAgcGFkZGluZzogMC41ZW0gMC43NWVtO1xufVxudGQ6bGFzdC1jaGlsZCB7XG4gIGJvcmRlcjogbm9uZTtcbn1cblxuW2Nkay1oZWFkZXItcm93XSB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjZjBmMGYwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDUxYzJjO1xuICBjb2xvcjogI2ZmZjtcbn1cblxudHI6bnRoLWNoaWxkKDJuKSB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG59Il19 */"] });
+    } }, directives: [i1.CdkTable, i2.NgForOf, i1.CdkHeaderRowDef, i1.CdkRowDef, i1.CdkColumnDef, i1.CdkHeaderCellDef, i1.CdkCellDef, i1.CdkHeaderCell, i1.CdkCell, i1.CdkHeaderRow, i1.CdkRow], pipes: [i3.ReplacePipe], styles: ["[_nghost-%COMP%] {\n  font-size: 0.9em;\n}\ntable[_ngcontent-%COMP%] {\n  border-collapse: collapse;\n  background-color: #fff;\n  width: 100%;\n}\nth[_ngcontent-%COMP%] {\n  padding: 0.25em 0.5em;\n  text-transform: capitalize;\n}\ntd[_ngcontent-%COMP%] {\n  border-right: 1px solid #ccc;\n  padding: 0.5em 0.75em;\n}\ntd[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n[cdk-header-row][_ngcontent-%COMP%] {\n  border-top: 1px solid #f0f0f0;\n  background-color: #051c2c;\n  color: #fff;\n}\ntr[_ngcontent-%COMP%]:nth-child(2n) {\n  background-color: rgba(0, 0, 0, 0.05);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3JlcG9ydHMvcmVwb3J0LXRhYmxlL3JlcG9ydC10YWJsZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvcmVwb3J0cy9yZXBvcnQtdGFibGUvcmVwb3J0LXRhYmxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQzVDQTtFQUNJLGdCQUFBO0FDUUo7QURMQTtFQUNJLHlCQUFBO0VBQ0Esc0JBQUE7RUFDQSxXQUFBO0FDUUo7QURMQTtFQUNJLHFCQUFBO0VBQ0EsMEJBQUE7QUNRSjtBRExBO0VBQ0ksNEJBQUE7RUFDQSxxQkFBQTtBQ1FKO0FETkk7RUFDSSxZQUFBO0FDUVI7QURKQTtFQUNJLDZCQUFBO0VBQ0EseUJER1k7RUNGWixXRHZCUztBRThCYjtBREhJO0VBQ0kscUNBQUE7QUNNUiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL3JlcG9ydHMvcmVwb3J0LXRhYmxlL3JlcG9ydC10YWJsZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiQGltcG9ydCAndmFyaWFibGVzJztcblxuOmhvc3Qge1xuICAgIGZvbnQtc2l6ZTogMC45ZW07XG59XG5cbnRhYmxlIHtcbiAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgd2lkdGg6IDEwMCU7XG59XG5cbnRoIHtcbiAgICBwYWRkaW5nOiAuMjVlbSAuNWVtO1xuICAgIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xufVxuXG50ZCB7XG4gICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2NjYztcbiAgICBwYWRkaW5nOiAuNWVtIDAuNzVlbTtcblxuICAgICY6bGFzdC1jaGlsZCB7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICB9XG59XG5cbltjZGstaGVhZGVyLXJvd10ge1xuICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCAjZjBmMGYwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRjb2xvci10ZXJuYXJ5O1xuICAgIGNvbG9yOiAkZm9udC1saWdodDtcbn1cblxudHIge1xuICAgICY6bnRoLWNoaWxkKDJuKSB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoIzAwMCwgMC4wNSk7XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuOmhvc3Qge1xuICBmb250LXNpemU6IDAuOWVtO1xufVxuXG50YWJsZSB7XG4gIGJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG50aCB7XG4gIHBhZGRpbmc6IDAuMjVlbSAwLjVlbTtcbiAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG59XG5cbnRkIHtcbiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2NjYztcbiAgcGFkZGluZzogMC41ZW0gMC43NWVtO1xufVxudGQ6bGFzdC1jaGlsZCB7XG4gIGJvcmRlcjogbm9uZTtcbn1cblxuW2Nkay1oZWFkZXItcm93XSB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjZjBmMGYwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDUxYzJjO1xuICBjb2xvcjogI2ZmZjtcbn1cblxudHI6bnRoLWNoaWxkKDJuKSB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG59Il19 */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ReportTableComponent, [{
         type: core_1.Component,
         args: [{
@@ -23011,6 +23067,7 @@ const i45 = __webpack_require__(/*! @angular/cdk/scrolling */ "./node_modules/@a
 const i46 = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/drag-drop.js");
 const i47 = __webpack_require__(/*! @angular/cdk/table */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/table.js");
 const i48 = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
+const i49 = __webpack_require__(/*! ../../shared/components/replace.pipe */ "./src/app/shared/components/replace.pipe.ts");
 const ROUTES = [
     { path: '', component: reports_component_1.ReportsComponent },
     { path: ':report', component: reports_component_1.ReportsComponent },
@@ -23029,7 +23086,7 @@ ReportsModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ReportsModule_Fa
                 imports: [common_1.CommonModule, forms_1.FormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule]
             }]
     }], null, null); })();
-i0.ɵɵsetComponentScope(reports_component_1.ReportsComponent, [i2.NgClass, i2.NgComponentOutlet, i2.NgForOf, i2.NgIf, i2.NgTemplateOutlet, i2.NgStyle, i2.NgSwitch, i2.NgSwitchCase, i2.NgSwitchDefault, i2.NgPlural, i2.NgPluralCase, i3.ɵangular_packages_forms_forms_y, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i3.DefaultValueAccessor, i3.NumberValueAccessor, i3.RangeValueAccessor, i3.CheckboxControlValueAccessor, i3.SelectControlValueAccessor, i3.SelectMultipleControlValueAccessor, i3.RadioControlValueAccessor, i3.NgControlStatus, i3.NgControlStatusGroup, i3.RequiredValidator, i3.MinLengthValidator, i3.MaxLengthValidator, i3.PatternValidator, i3.CheckboxRequiredValidator, i3.EmailValidator, i3.NgModel, i3.NgModelGroup, i3.NgForm, i1.RouterOutlet, i1.RouterLink, i1.RouterLinkWithHref, i1.RouterLinkActive, i1.ɵangular_packages_router_router_l, i4.ɵa, i4.ɵb, i5.ADatePickerComponent, i6.BaseDirective, i7.LoginComponent, i8.IconComponent, i9.ActionIconComponent, i10.TopbarHeaderComponent, i11.SearchbarComponent, i12.UserAvatarComponent, i13.UserFormComponent, i14.BookingFormComponent, i15.PopoutMenuComponent, i16.FeedbackComponent, i17.SidebarComponent, i18.CdkDropListScrollContainer, i19.DateFieldComponent, i20.ActionFieldComponent, i21.TimeFieldComponent, i22.DurationFieldComponent, i23.UserSearchFieldComponent, i24.UserListFieldComponent, i25.CounterComponent, i26.MatButton, i26.MatAnchor, i27.Dir, i28.MatSnackBarContainer, i29.MatDialogContainer, i29.MatDialogClose, i29.MatDialogTitle, i29.MatDialogContent, i29.MatDialogActions, i30.MatError, i30.MatFormField, i30.MatHint, i30.MatLabel, i30.MatPlaceholder, i30.MatPrefix, i30.MatSuffix, i31.CdkAutofill, i31.CdkTextareaAutosize, i32.MatInput, i32.MatTextareaAutosize, i33.MatProgressSpinner, i33.MatSpinner, i34.MatProgressBar, i35.MatAutocomplete, i36.MatOption, i36.MatOptgroup, i35.MatAutocompleteTrigger, i35.MatAutocompleteOrigin, i37.MatSelect, i37.MatSelectTrigger, i38.MatChipList, i38.MatChip, i38.MatChipInput, i38.MatChipRemove, i38.MatChipAvatar, i38.MatChipTrailingIcon, i36.MatRipple, i39._MatMenu, i39.MatMenuItem, i39.MatMenuTrigger, i39.MatMenuContent, i40.MatCheckbox, i40.MatCheckboxRequiredValidator, i41.MatTooltip, i41.TooltipComponent, i42.MatRadioGroup, i42.MatRadioButton, i43.MatTabGroup, i43.MatTabLabel, i43.MatTab, i43.MatTabNav, i43.MatTabLink, i43.MatTabContent, i44.MatSlideToggleRequiredValidator, i44.MatSlideToggle, i45.CdkFixedSizeVirtualScroll, i45.CdkScrollable, i45.CdkVirtualForOf, i45.CdkVirtualScrollViewport, i46.CdkDropList, i46.CdkDropListGroup, i46.CdkDrag, i46.CdkDragHandle, i46.CdkDragPreview, i46.CdkDragPlaceholder, i47.CdkTable, i47.CdkRowDef, i47.CdkCellDef, i47.CdkCellOutlet, i47.CdkHeaderCellDef, i47.CdkFooterCellDef, i47.CdkColumnDef, i47.CdkCell, i47.CdkRow, i47.CdkHeaderCell, i47.CdkFooterCell, i47.CdkHeaderRow, i47.CdkHeaderRowDef, i47.CdkFooterRow, i47.CdkFooterRowDef, i47.DataRowOutlet, i47.HeaderRowOutlet, i47.FooterRowOutlet, i47.CdkTextColumn, reports_component_1.ReportsComponent, report_display_component_1.ReportDisplayComponent, report_table_component_1.ReportTableComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i48.ɵa, i48.ɵb]);
+i0.ɵɵsetComponentScope(reports_component_1.ReportsComponent, [i2.NgClass, i2.NgComponentOutlet, i2.NgForOf, i2.NgIf, i2.NgTemplateOutlet, i2.NgStyle, i2.NgSwitch, i2.NgSwitchCase, i2.NgSwitchDefault, i2.NgPlural, i2.NgPluralCase, i3.ɵangular_packages_forms_forms_y, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i3.DefaultValueAccessor, i3.NumberValueAccessor, i3.RangeValueAccessor, i3.CheckboxControlValueAccessor, i3.SelectControlValueAccessor, i3.SelectMultipleControlValueAccessor, i3.RadioControlValueAccessor, i3.NgControlStatus, i3.NgControlStatusGroup, i3.RequiredValidator, i3.MinLengthValidator, i3.MaxLengthValidator, i3.PatternValidator, i3.CheckboxRequiredValidator, i3.EmailValidator, i3.NgModel, i3.NgModelGroup, i3.NgForm, i1.RouterOutlet, i1.RouterLink, i1.RouterLinkWithHref, i1.RouterLinkActive, i1.ɵangular_packages_router_router_l, i4.ɵa, i4.ɵb, i5.ADatePickerComponent, i6.BaseDirective, i7.LoginComponent, i8.IconComponent, i9.ActionIconComponent, i10.TopbarHeaderComponent, i11.SearchbarComponent, i12.UserAvatarComponent, i13.UserFormComponent, i14.BookingFormComponent, i15.PopoutMenuComponent, i16.FeedbackComponent, i17.SidebarComponent, i18.CdkDropListScrollContainer, i19.DateFieldComponent, i20.ActionFieldComponent, i21.TimeFieldComponent, i22.DurationFieldComponent, i23.UserSearchFieldComponent, i24.UserListFieldComponent, i25.CounterComponent, i26.MatButton, i26.MatAnchor, i27.Dir, i28.MatSnackBarContainer, i29.MatDialogContainer, i29.MatDialogClose, i29.MatDialogTitle, i29.MatDialogContent, i29.MatDialogActions, i30.MatError, i30.MatFormField, i30.MatHint, i30.MatLabel, i30.MatPlaceholder, i30.MatPrefix, i30.MatSuffix, i31.CdkAutofill, i31.CdkTextareaAutosize, i32.MatInput, i32.MatTextareaAutosize, i33.MatProgressSpinner, i33.MatSpinner, i34.MatProgressBar, i35.MatAutocomplete, i36.MatOption, i36.MatOptgroup, i35.MatAutocompleteTrigger, i35.MatAutocompleteOrigin, i37.MatSelect, i37.MatSelectTrigger, i38.MatChipList, i38.MatChip, i38.MatChipInput, i38.MatChipRemove, i38.MatChipAvatar, i38.MatChipTrailingIcon, i36.MatRipple, i39._MatMenu, i39.MatMenuItem, i39.MatMenuTrigger, i39.MatMenuContent, i40.MatCheckbox, i40.MatCheckboxRequiredValidator, i41.MatTooltip, i41.TooltipComponent, i42.MatRadioGroup, i42.MatRadioButton, i43.MatTabGroup, i43.MatTabLabel, i43.MatTab, i43.MatTabNav, i43.MatTabLink, i43.MatTabContent, i44.MatSlideToggleRequiredValidator, i44.MatSlideToggle, i45.CdkFixedSizeVirtualScroll, i45.CdkScrollable, i45.CdkVirtualForOf, i45.CdkVirtualScrollViewport, i46.CdkDropList, i46.CdkDropListGroup, i46.CdkDrag, i46.CdkDragHandle, i46.CdkDragPreview, i46.CdkDragPlaceholder, i47.CdkTable, i47.CdkRowDef, i47.CdkCellDef, i47.CdkCellOutlet, i47.CdkHeaderCellDef, i47.CdkFooterCellDef, i47.CdkColumnDef, i47.CdkCell, i47.CdkRow, i47.CdkHeaderCell, i47.CdkFooterCell, i47.CdkHeaderRow, i47.CdkHeaderRowDef, i47.CdkFooterRow, i47.CdkFooterRowDef, i47.DataRowOutlet, i47.HeaderRowOutlet, i47.FooterRowOutlet, i47.CdkTextColumn, reports_component_1.ReportsComponent, report_display_component_1.ReportDisplayComponent, report_table_component_1.ReportTableComponent], [i2.AsyncPipe, i2.UpperCasePipe, i2.LowerCasePipe, i2.JsonPipe, i2.SlicePipe, i2.DecimalPipe, i2.PercentPipe, i2.TitleCasePipe, i2.CurrencyPipe, i2.DatePipe, i2.I18nPluralPipe, i2.I18nSelectPipe, i2.KeyValuePipe, i48.ɵa, i48.ɵb, i49.ReplacePipe]);
 
 
 /***/ }),
