@@ -101,7 +101,7 @@ function _templateObject82() {
 }
 
 function _templateObject81() {
-  var data = _taggedTemplateLiteral([":User form email label\u241Fb8480807b438eac2f42f84f1b1a789c54a6d1393\u241F3566445219862145051:Email", ":START_TAG_SPAN:*", ":CLOSE_TAG_SPAN::"]);
+  var data = _taggedTemplateLiteral([":User form email label\u241F91b96d7228b6e05c238fa4e39abfc17ad51a6eef\u241F6631334172623029500:Email:"]);
 
   _templateObject81 = function _templateObject81() {
     return data;
@@ -1607,7 +1607,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_span_9_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "span", 26);
+        i0.ɵɵelementStart(0, "span", 27);
         i0.ɵɵtext(1, "Requested!");
         i0.ɵɵelementEnd();
       }
@@ -1615,7 +1615,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_10_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 27);
+        i0.ɵɵelementStart(0, "div", 28);
         i0.ɵɵtext(1, "Please await confirmation of room");
         i0.ɵɵelementEnd();
       }
@@ -1655,7 +1655,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_39_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 28);
+        i0.ɵɵelementStart(0, "div", 29);
         i0.ɵɵelementStart(1, "div", 8);
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
@@ -1663,16 +1663,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r26 = ctx.$implicit;
-        i0.ɵɵproperty("title", item_r26 == null ? null : item_r26.name);
+        var item_r27 = ctx.$implicit;
+        i0.ɵɵproperty("title", item_r27 == null ? null : item_r27.name);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(item_r26 == null ? null : item_r26.name);
+        i0.ɵɵtextInterpolate(item_r27 == null ? null : item_r27.name);
       }
     }
 
     function BookingConfirmComponent_mat_dialog_content_0_div_40_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 29);
+        i0.ɵɵelementStart(0, "div", 30);
         i0.ɵɵtext(1, "No Locations");
         i0.ɵɵelementEnd();
       }
@@ -1680,13 +1680,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_button_41_Template(rf, ctx) {
       if (rf & 1) {
-        var _r28 = i0.ɵɵgetCurrentView();
+        var _r29 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 30);
+        i0.ɵɵelementStart(0, "button", 31);
         i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_41_Template_button_touchrelease_0_listener() {
-          i0.ɵɵrestoreView(_r28);
-          var ctx_r27 = i0.ɵɵnextContext(2);
-          return ctx_r27.show_locations = !ctx_r27.show_locations;
+          i0.ɵɵrestoreView(_r29);
+          var ctx_r28 = i0.ɵɵnextContext(2);
+          return ctx_r28.show_locations = !ctx_r28.show_locations;
         });
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
@@ -1707,7 +1707,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_52_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_49_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 20);
+        i0.ɵɵelementStart(1, "label");
+        i0.ɵɵtext(2, "Booked By:");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "div", 12);
+        i0.ɵɵtext(4);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r17 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(4);
+        i0.ɵɵtextInterpolate((ctx_r17.user == null ? null : ctx_r17.user.name) || (ctx_r17.user == null ? null : ctx_r17.user.email));
+      }
+    }
+
+    function BookingConfirmComponent_mat_dialog_content_0_span_53_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "span");
         i0.ɵɵtext(1, "*");
@@ -1715,7 +1734,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_55_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_56_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "span");
         i0.ɵɵtext(1, "<No Attendees>");
@@ -1723,69 +1742,69 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_57_div_4_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_58_div_4_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 33);
-        i0.ɵɵelementStart(1, "a", 34);
+        i0.ɵɵelementStart(0, "div", 34);
+        i0.ɵɵelementStart(1, "a", 35);
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var item_r29 = i0.ɵɵnextContext().$implicit;
-        var ctx_r30 = i0.ɵɵnextContext(2);
+        var item_r30 = i0.ɵɵnextContext().$implicit;
+        var ctx_r31 = i0.ɵɵnextContext(2);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("href", "mailto:" + item_r29.email + "?subject=" + ctx_r30.booking.title, i0.ɵɵsanitizeUrl);
+        i0.ɵɵproperty("href", "mailto:" + item_r30.email + "?subject=" + ctx_r31.booking.title, i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r29.email);
+        i0.ɵɵtextInterpolate(item_r30.email);
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_57_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_58_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 28);
+        i0.ɵɵelementStart(0, "div", 29);
         i0.ɵɵelementStart(1, "div", 8);
-        i0.ɵɵelementStart(2, "div", 31);
+        i0.ɵɵelementStart(2, "div", 32);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_57_div_4_Template, 3, 2, "div", 32);
+        i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_58_div_4_Template, 3, 2, "div", 33);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var item_r29 = ctx.$implicit;
-        i0.ɵɵproperty("title", (item_r29 == null ? null : item_r29.name) + ((item_r29 == null ? null : item_r29.email) ? "\n" + item_r29.email : ""));
+        var item_r30 = ctx.$implicit;
+        i0.ɵɵproperty("title", (item_r30 == null ? null : item_r30.name) + ((item_r30 == null ? null : item_r30.email) ? "\n" + item_r30.email : ""));
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate(item_r29.name);
+        i0.ɵɵtextInterpolate(item_r30.name);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", item_r29.email);
+        i0.ɵɵproperty("ngIf", item_r30.email);
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_button_58_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_button_59_Template(rf, ctx) {
       if (rf & 1) {
-        var _r33 = i0.ɵɵgetCurrentView();
+        var _r34 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 30);
-        i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_58_Template_button_touchrelease_0_listener() {
-          i0.ɵɵrestoreView(_r33);
-          var ctx_r32 = i0.ɵɵnextContext(2);
-          return ctx_r32.show_attendees = !ctx_r32.show_attendees;
+        i0.ɵɵelementStart(0, "button", 31);
+        i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_59_Template_button_touchrelease_0_listener() {
+          i0.ɵɵrestoreView(_r34);
+          var ctx_r33 = i0.ɵɵnextContext(2);
+          return ctx_r33.show_attendees = !ctx_r33.show_attendees;
         });
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var ctx_r20 = i0.ɵɵnextContext(2);
+        var ctx_r21 = i0.ɵɵnextContext(2);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", ctx_r20.show_attendees ? "Hide" : "Show", " Attendees ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r21.show_attendees ? "Hide" : "Show", " Attendees ");
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_62_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_63_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "span");
         i0.ɵɵtext(1, "*");
@@ -1793,7 +1812,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_span_68_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_span_69_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "span");
         i0.ɵɵtext(1, "*");
@@ -1801,14 +1820,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_72_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_73_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 29);
+        i0.ɵɵelementStart(0, "div", 30);
         i0.ɵɵelementStart(1, "div", 8);
-        i0.ɵɵelementStart(2, "div", 31);
+        i0.ɵɵelementStart(2, "div", 32);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 33);
+        i0.ɵɵelementStart(4, "div", 34);
         i0.ɵɵtext(5);
         i0.ɵɵpipe(6, "currency");
         i0.ɵɵelementEnd();
@@ -1817,38 +1836,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var order_r34 = ctx.$implicit;
+        var order_r35 = ctx.$implicit;
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate(order_r34.location || "<Removed>");
+        i0.ɵɵtextInterpolate(order_r35.location || "<Removed>");
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate3(" ", order_r34.item_count, " item", order_r34.item_count === 1 ? "" : "", " | ", i0.ɵɵpipeBind2(6, 4, order_r34.total / 100, order_r34.symbol), " ");
+        i0.ɵɵtextInterpolate3(" ", order_r35.item_count, " item", order_r35.item_count === 1 ? "" : "", " | ", i0.ɵɵpipeBind2(6, 4, order_r35.total / 100, order_r35.symbol), " ");
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_button_73_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_button_74_Template(rf, ctx) {
       if (rf & 1) {
-        var _r36 = i0.ɵɵgetCurrentView();
+        var _r37 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 30);
-        i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_73_Template_button_touchrelease_0_listener() {
-          i0.ɵɵrestoreView(_r36);
-          var ctx_r35 = i0.ɵɵnextContext(2);
-          return ctx_r35.show_orders = !ctx_r35.show_orders;
+        i0.ɵɵelementStart(0, "button", 31);
+        i0.ɵɵlistener("touchrelease", function BookingConfirmComponent_mat_dialog_content_0_button_74_Template_button_touchrelease_0_listener() {
+          i0.ɵɵrestoreView(_r37);
+          var ctx_r36 = i0.ɵɵnextContext(2);
+          return ctx_r36.show_orders = !ctx_r36.show_orders;
         });
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var ctx_r24 = i0.ɵɵnextContext(2);
+        var ctx_r25 = i0.ɵɵnextContext(2);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", ctx_r24.show_orders ? "Hide" : "Show", " Catering orders ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r25.show_orders ? "Hide" : "Show", " Catering orders ");
       }
     }
 
-    function BookingConfirmComponent_mat_dialog_content_0_div_74_Template(rf, ctx) {
+    function BookingConfirmComponent_mat_dialog_content_0_div_75_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 27);
+        i0.ɵɵelementStart(0, "div", 28);
         i0.ɵɵtext(1, " * - changed fields ");
         i0.ɵɵelementEnd();
       }
@@ -1932,42 +1951,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵtext(48);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(49, "div", 21);
-        i0.ɵɵelementStart(50, "label");
-        i0.ɵɵtext(51);
-        i0.ɵɵtemplate(52, BookingConfirmComponent_mat_dialog_content_0_span_52_Template, 2, 0, "span", 1);
-        i0.ɵɵtext(53, ":");
+        i0.ɵɵtemplate(49, BookingConfirmComponent_mat_dialog_content_0_div_49_Template, 5, 1, "div", 21);
+        i0.ɵɵelementStart(50, "div", 22);
+        i0.ɵɵelementStart(51, "label");
+        i0.ɵɵtext(52);
+        i0.ɵɵtemplate(53, BookingConfirmComponent_mat_dialog_content_0_span_53_Template, 2, 0, "span", 1);
+        i0.ɵɵtext(54, ":");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(54, "div", 12);
-        i0.ɵɵtemplate(55, BookingConfirmComponent_mat_dialog_content_0_span_55_Template, 2, 0, "span", 1);
-        i0.ɵɵelementStart(56, "div", 16);
-        i0.ɵɵtemplate(57, BookingConfirmComponent_mat_dialog_content_0_div_57_Template, 5, 3, "div", 17);
+        i0.ɵɵelementStart(55, "div", 12);
+        i0.ɵɵtemplate(56, BookingConfirmComponent_mat_dialog_content_0_span_56_Template, 2, 0, "span", 1);
+        i0.ɵɵelementStart(57, "div", 16);
+        i0.ɵɵtemplate(58, BookingConfirmComponent_mat_dialog_content_0_div_58_Template, 5, 3, "div", 17);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(58, BookingConfirmComponent_mat_dialog_content_0_button_58_Template, 2, 1, "button", 19);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(59, "div", 22);
-        i0.ɵɵelementStart(60, "label");
-        i0.ɵɵtext(61, "Notes");
-        i0.ɵɵtemplate(62, BookingConfirmComponent_mat_dialog_content_0_span_62_Template, 2, 0, "span", 1);
-        i0.ɵɵtext(63, ":");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(64, "div", 23);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(65, "div", 24);
-        i0.ɵɵelementStart(66, "label");
-        i0.ɵɵtext(67);
-        i0.ɵɵtemplate(68, BookingConfirmComponent_mat_dialog_content_0_span_68_Template, 2, 0, "span", 1);
-        i0.ɵɵtext(69, ":");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(70, "div", 12);
-        i0.ɵɵelementStart(71, "div", 16);
-        i0.ɵɵtemplate(72, BookingConfirmComponent_mat_dialog_content_0_div_72_Template, 7, 7, "div", 25);
-        i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(73, BookingConfirmComponent_mat_dialog_content_0_button_73_Template, 2, 1, "button", 19);
+        i0.ɵɵtemplate(59, BookingConfirmComponent_mat_dialog_content_0_button_59_Template, 2, 1, "button", 19);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(74, BookingConfirmComponent_mat_dialog_content_0_div_74_Template, 2, 0, "div", 10);
+        i0.ɵɵelementStart(60, "div", 23);
+        i0.ɵɵelementStart(61, "label");
+        i0.ɵɵtext(62, "Notes");
+        i0.ɵɵtemplate(63, BookingConfirmComponent_mat_dialog_content_0_span_63_Template, 2, 0, "span", 1);
+        i0.ɵɵtext(64, ":");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(65, "div", 24);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(66, "div", 25);
+        i0.ɵɵelementStart(67, "label");
+        i0.ɵɵtext(68);
+        i0.ɵɵtemplate(69, BookingConfirmComponent_mat_dialog_content_0_span_69_Template, 2, 0, "span", 1);
+        i0.ɵɵtext(70, ":");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(71, "div", 12);
+        i0.ɵɵelementStart(72, "div", 16);
+        i0.ɵɵtemplate(73, BookingConfirmComponent_mat_dialog_content_0_div_73_Template, 7, 7, "div", 26);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(74, BookingConfirmComponent_mat_dialog_content_0_button_74_Template, 2, 1, "button", 19);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(75, BookingConfirmComponent_mat_dialog_content_0_div_75_Template, 2, 0, "div", 10);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
@@ -1975,7 +1995,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(36, _c0));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(37, _c0));
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("src", ctx_r0.success ? ctx_r0.is_request ? "assets/img/requested.svg" : "assets/img/confirmed.svg" : "assets/img/edit.svg", i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(3);
@@ -2012,6 +2032,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵproperty("ngIf", ctx_r0.changes.organiser);
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate((ctx_r0.organiser == null ? null : ctx_r0.organiser.name) || (ctx_r0.organiser == null ? null : ctx_r0.organiser.email));
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r0.user && ctx_r0.user.email !== ctx_r0.organiser.email);
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate1("Attendees(", ctx_r0.attendees.length || "0", ")");
         i0.ɵɵadvance(1);
@@ -2045,17 +2067,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template(rf, ctx) {
       if (rf & 1) {
-        var _r39 = i0.ɵɵgetCurrentView();
+        var _r40 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "button", 35);
+        i0.ɵɵelementStart(1, "button", 36);
         i0.ɵɵtext(2, "Edit");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "button", 36);
+        i0.ɵɵelementStart(3, "button", 37);
         i0.ɵɵlistener("tapped", function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template_button_tapped_3_listener() {
-          i0.ɵɵrestoreView(_r39);
-          var ctx_r38 = i0.ɵɵnextContext(2);
-          return ctx_r38.saveChanges();
+          i0.ɵɵrestoreView(_r40);
+          var ctx_r39 = i0.ɵɵnextContext(2);
+          return ctx_r39.saveChanges();
         });
         i0.ɵɵtext(4, "Save");
         i0.ɵɵelementEnd();
@@ -2085,9 +2107,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function BookingConfirmComponent_ng_template_2_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "main");
-        i0.ɵɵelementStart(1, "div", 37);
-        i0.ɵɵelementStart(2, "div", 38);
-        i0.ɵɵelement(3, "mat-spinner", 39);
+        i0.ɵɵelementStart(1, "div", 38);
+        i0.ɵɵelementStart(2, "div", 39);
+        i0.ɵɵelement(3, "mat-spinner", 40);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "div", 8);
         i0.ɵɵtext(5);
@@ -2105,7 +2127,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_ng_template_4_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "button", 40);
+        i0.ɵɵelementStart(0, "button", 41);
         i0.ɵɵtext(1, "Close");
         i0.ɵɵelementEnd();
       }
@@ -2324,6 +2346,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var duration_value = this.booking.duration;
           return general_utilities_1.humaniseDuration(duration_value);
         }
+      }, {
+        key: "user",
+        get: function get() {
+          return this.booking.creator || this._users.current;
+        }
         /** List of spaces associated with the event */
 
       }, {
@@ -2418,10 +2445,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 6,
       vars: 3,
-      consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["name", "attendees", 1, "field"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], ["class", "list-item", 4, "ngFor", "ngForOf"], [1, "request"], [1, "info"], [1, "list-item", 3, "title"], [1, "list-item"], [1, "show", 3, "touchrelease"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "tapped"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "mat-dialog-close", ""]],
+      consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "touchrelease", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], ["class", "list-item", 4, "ngFor", "ngForOf"], [1, "request"], [1, "info"], [1, "list-item", 3, "title"], [1, "list-item"], [1, "show", 3, "touchrelease"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "tapped"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "mat-dialog-close", ""]],
       template: function BookingConfirmComponent_Template(rf, ctx) {
         if (rf & 1) {
-          i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 75, 37, "mat-dialog-content", 0);
+          i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 76, 38, "mat-dialog-content", 0);
           i0.ɵɵtemplate(1, BookingConfirmComponent_mat_dialog_actions_1_Template, 3, 2, "mat-dialog-actions", 1);
           i0.ɵɵtemplate(2, BookingConfirmComponent_ng_template_2_Template, 6, 1, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
           i0.ɵɵtemplate(4, BookingConfirmComponent_ng_template_4_Template, 2, 0, "ng-template", null, 3, i0.ɵɵtemplateRefExtractor);
@@ -4764,7 +4791,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "within_restricted_time",
         get: function get() {
-          return true;
+          return false;
         }
         /** Whether items are available for order at anytime */
 
@@ -9695,6 +9722,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             _this44.booking.approval_status[_this44.booking.space.id] = 'accepted';
 
+            _this44._service.set('UPDATED_BOOKING', _this44.booking);
+
             _this44.setLoading(null);
 
             _this44.event.emit({
@@ -9721,6 +9750,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this45._service.notifySuccess('Meeting declined.');
 
             _this45.booking.approval_status[_this45.booking.space.id] = 'declined';
+
+            _this45._service.set('UPDATED_BOOKING', _this45.booking);
 
             _this45.setLoading(null);
 
@@ -9846,6 +9877,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     if (new_booking) {
                       this._data.booking = new_booking;
+
+                      this._service.set('UPDATED_BOOKING', new_booking);
 
                       this._service.notifySuccess('Successfully updated requirements');
                     }
@@ -10105,7 +10138,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "notes",
         get: function get() {
-          return '';
+          return (this.booking.notes.find(function (note) {
+            return note.type === 'private';
+          }) || {}).message;
         }
       }]);
 
@@ -11883,6 +11918,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.loading = true;
             this._dialog_ref.disableClose = true;
             new_booking.save().then(function (booking) {
+              _this54._service.set('UPDATED_BOOKING', new_booking);
+
               _this54._service.notifySuccess('Successfully updated private details');
 
               _this54.event.emit({
@@ -14200,6 +14237,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this64.set('APP.breakdown', false);
 
         _this64.set('CONCIERGE.legend', {});
+
+        _this64.set('UPDATED_BOOKING', null);
 
         _this64.set('CONCIERGE.pending_bookings', {});
 
@@ -25165,13 +25204,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc User form email label
        */
-      var MSG_EXTERNAL_3566445219862145051$$SRC_APP_SHARED_COMPONENTS_FORMS_USER_FORM_USER_FORM_COMPONENT_TS___15 = goog.getMsg("Email{$startTagSpan}*{$closeTagSpan}:", {
-        "startTagSpan": "\uFFFD#3\uFFFD",
-        "closeTagSpan": "\uFFFD/#3\uFFFD"
-      });
-      I18N_14 = MSG_EXTERNAL_3566445219862145051$$SRC_APP_SHARED_COMPONENTS_FORMS_USER_FORM_USER_FORM_COMPONENT_TS___15;
+      var MSG_EXTERNAL_6631334172623029500$$SRC_APP_SHARED_COMPONENTS_FORMS_USER_FORM_USER_FORM_COMPONENT_TS___15 = goog.getMsg("Email:");
+      I18N_14 = MSG_EXTERNAL_6631334172623029500$$SRC_APP_SHARED_COMPONENTS_FORMS_USER_FORM_USER_FORM_COMPONENT_TS___15;
     } else {
-      I18N_14 = $localize(_templateObject81(), "\uFFFD#3\uFFFD", "\uFFFD/#3\uFFFD");
+      I18N_14 = $localize(_templateObject81());
     }
 
     var I18N_16;
@@ -25200,16 +25236,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 4);
         i0.ɵɵelementStart(1, "label", 10);
-        i0.ɵɵi18nStart(2, I18N_14);
-        i0.ɵɵelement(3, "span");
-        i0.ɵɵi18nEnd();
+        i0.ɵɵi18n(2, I18N_14);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "mat-form-field", 6);
-        i0.ɵɵelementStart(5, "input", 11);
-        i0.ɵɵi18nAttributes(6, _c18);
+        i0.ɵɵelementStart(3, "mat-form-field", 6);
+        i0.ɵɵelementStart(4, "input", 11);
+        i0.ɵɵi18nAttributes(5, _c18);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "mat-error");
-        i0.ɵɵi18n(8, I18N_19);
+        i0.ɵɵelementStart(6, "mat-error");
+        i0.ɵɵi18n(7, I18N_19);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -25228,7 +25262,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementStart(1, "form", 2);
         i0.ɵɵtemplate(2, UserFormComponent_div_0_div_2_Template, 8, 2, "div", 3);
         i0.ɵɵtemplate(3, UserFormComponent_div_0_div_3_Template, 8, 2, "div", 3);
-        i0.ɵɵtemplate(4, UserFormComponent_div_0_div_4_Template, 9, 2, "div", 3);
+        i0.ɵɵtemplate(4, UserFormComponent_div_0_div_4_Template, 8, 2, "div", 3);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
@@ -32185,9 +32219,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "removeFromMenu",
         value: function removeFromMenu(id) {
           var list = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.catering_menu;
+          var depth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
 
-          if (list.length === 0) {
-            return;
+          if (list.length === 0 || depth > 4) {
+            return false;
           }
 
           var found = list.findIndex(function (item) {
@@ -32196,6 +32231,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (found >= 0) {
             list.splice(found, 1);
+            return true;
           } else {
             var _iterator46 = _createForOfIteratorHelper(list),
                 _step46;
@@ -32203,7 +32239,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             try {
               for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
                 var item = _step46.value;
-                this.removeFromMenu(id, item.items);
+
+                if (this.removeFromMenu(id, item.items, depth + 1)) {
+                  return true;
+                }
               }
             } catch (err) {
               _iterator46.e(err);
@@ -32211,6 +32250,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _iterator46.f();
             }
           }
+
+          return false;
         }
       }, {
         key: "loadCateringMenu",
@@ -32673,7 +32714,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           regeneratorRuntime.mark(function _callee24() {
             var _this153 = this;
 
-            var booking, catering, new_booking;
+            var booking, catering, new_booking, updated_booking;
             return regeneratorRuntime.wrap(function _callee24$(_context24) {
               while (1) {
                 switch (_context24.prev = _context24.next) {
@@ -32682,7 +32723,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     /* istanbul ignore else */
 
                     if (!booking) {
-                      _context24.next = 9;
+                      _context24.next = 11;
                       break;
                     }
 
@@ -32704,9 +32745,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     });
 
                   case 8:
+                    updated_booking = _context24.sent;
+
+                    if (booking) {
+                      this._service.set('UPDATED_BOOKING', updated_booking);
+                    }
+
                     this.loading = false;
 
-                  case 9:
+                  case 11:
                   case "end":
                     return _context24.stop();
                 }
@@ -35945,7 +35992,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 switch (_context29.prev = _context29.next) {
                   case 0:
                     if (!(this.booking && this.new_note)) {
-                      _context29.next = 15;
+                      _context29.next = 16;
                       break;
                     }
 
@@ -35976,12 +36023,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 9:
                     new_booking = _context29.sent;
                     this.booking = new_booking;
+
+                    if (new_booking) {
+                      this._service.set('UPDATED_BOOKING', new_booking);
+                    }
+
                     this.order.booking = new_booking;
                     this.bookingChange.emit(new_booking);
                     this.loading = false;
                     this.new_note = '';
 
-                  case 15:
+                  case 16:
                   case "end":
                     return _context29.stop();
                 }
@@ -36421,6 +36473,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     updated_booking = _context30.sent;
 
                     if (updated_booking) {
+                      this._service.set('UPDATED_BOOKING', updated_booking);
+
                       this.booking = updated_booking;
                     }
 
@@ -36797,6 +36851,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.interval('monthly_pending', function () {
             return _this178.getMonthlyPending();
           }, 10 * 60 * 1000);
+          this.subscription('UPDATED', this._service.listen('UPDATED_BOOKING').subscribe(function (value) {
+            if (value) {
+              console.log('Updated:', value);
+
+              var bookings = _this178.events.filter(function (bkn) {
+                return bkn.icaluid !== value.icaluid;
+              });
+
+              if (!value.approved && !value.declined) {
+                bookings.push(value);
+              }
+
+              _this178.events = bookings;
+            }
+          }));
         }
       }, {
         key: "ngOnChanges",
@@ -37491,6 +37560,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _this184.event.approval_status[_this184.event.space.id] = 'accepted';
                 STATES[_this184.event.id] = 'accepted';
 
+                _this184._service.set('UPDATED_BOOKING', _this184.event);
+
                 _this184._service.set('BOOKING.states', STATES);
 
                 _this184.loading = false;
@@ -37551,6 +37622,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 _this185.event.approval_status[booking.space.id] = 'declined';
                 STATES[_this185.event.id] = 'declined';
+
+                _this185._service.set('UPDATED_BOOKING', _this185.event);
 
                 _this185._service.set('BOOKING.states', STATES);
 
@@ -39237,6 +39310,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this192.subscription('legend', _this192._service.listen('CONCIERGE.legend').subscribe(function (state) {
               return _this192.legend = state || {};
             }));
+
+            _this192.subscription('UPDATED', _this192._service.listen('UPDATED_BOOKING').subscribe(function (value) {
+              if (value && value instanceof booking_class_1.Booking) {
+                console.log('Updated:', value);
+
+                var bookings = _this192.space.bookings.filter(function (bkn) {
+                  return bkn.icaluid !== value.icaluid;
+                });
+
+                if (value.space_list.find(function (space) {
+                  return space.email === _this192.space.email;
+                })) {
+                  bookings.push(value);
+                }
+
+                _this192.space = new space_class_1.Space(Object.assign(Object.assign({}, _this192.space), {
+                  bookings: bookings
+                }));
+              }
+            }));
           });
         }
       }, {
@@ -39565,7 +39658,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               /* istanbul ignore else */
               if (event.reason === 'done') {
                 new_booking.save().then(function (bkn) {
-                  return resolve(bkn);
+                  resolve(bkn);
+
+                  _this198._service.set('UPDATED_BOOKING', bkn);
                 }, function (err) {
                   return reject(err);
                 });
@@ -43125,6 +43220,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 _this219._service.notifySuccess(_this219.booking.id ? 'Successfully updated visitors.' : 'Successfully added visitors.');
 
+                _this219._service.set('UPDATED_BOOKING', bkn);
+
                 _this219._dialog_ref.close();
               }, function (err) {
                 _this219.loading = null;
@@ -46005,13 +46102,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       factory: function WeekViewModule_Factory(t) {
         return new (t || WeekViewModule)();
       },
-      imports: [[common_1.CommonModule, forms_1.FormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule]]
+      imports: [[common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(WeekViewModule, {
         declarations: [week_view_component_1.WeekViewComponent, timeline_component_1.WeekViewTimelineComponent, day_display_component_1.WeekViewDayDisplayComponent, item_component_1.WeekViewItemComponent],
-        imports: [common_1.CommonModule, forms_1.FormsModule, i1.RouterModule, shared_module_1.SharedContentModule]
+        imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, i1.RouterModule, shared_module_1.SharedContentModule]
       });
     })();
     /*@__PURE__*/
@@ -46022,7 +46119,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: core_1.NgModule,
         args: [{
           declarations: [week_view_component_1.WeekViewComponent, timeline_component_1.WeekViewTimelineComponent, day_display_component_1.WeekViewDayDisplayComponent, item_component_1.WeekViewItemComponent],
-          imports: [common_1.CommonModule, forms_1.FormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule]
+          imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild(ROUTES), shared_module_1.SharedContentModule]
         }]
       }], null, null);
     })();
