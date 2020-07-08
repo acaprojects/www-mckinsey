@@ -1,0 +1,21 @@
+Getting Started
+Install required Ruby Gems
+
+gem install selenium-webdriver
+gem install rspec
+gem install rspec_junit_formatter
+
+
+Install Browser Support to $PATH
+This is easiest to do with homebrew on Mac:
+
+ brew install chromedriver
+
+
+brew install geckodriver
+Can also download the exec file and place locally in test folder if required for remote testing where it is not possible to install the drivers to path.
+
+Testing
+Call the test and pass results to junit xml
+
+rspec -c <testfile>.rb --format RspecJunitFormatter --out rspec.xml
