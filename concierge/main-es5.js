@@ -40710,6 +40710,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
 
+    var router_1 = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
     var app_service_1 = __webpack_require__(
     /*! src/app/services/app.service */
     "./src/app/services/app.service.ts");
@@ -40747,67 +40751,71 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/app/services/data/reports/reports.service.ts");
 
     var i4 = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var i5 = __webpack_require__(
     /*! ../../../shared/components/custom-fields/date-field/date-field.component */
     "./src/app/shared/components/custom-fields/date-field/date-field.component.ts");
 
-    var i5 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
-    var i6 = __webpack_require__(
+    var i7 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i7 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
-    var i8 = __webpack_require__(
+    var i9 = __webpack_require__(
     /*! @angular/material/form-field */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
-    var i9 = __webpack_require__(
+    var i10 = __webpack_require__(
     /*! @angular/material/select */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
-    var i10 = __webpack_require__(
+    var i11 = __webpack_require__(
     /*! @angular/material/core */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
-    var i11 = __webpack_require__(
+    var i12 = __webpack_require__(
     /*! @angular/material/progress-spinner */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
 
-    var i12 = __webpack_require__(
+    var i13 = __webpack_require__(
     /*! ../report-table/report-table.component */
     "./src/app/shell/reports/report-table/report-table.component.ts");
 
-    var i13 = __webpack_require__(
+    var i14 = __webpack_require__(
     /*! ../../../shared/components/icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
 
-    function ReportDisplayComponent_mat_form_field_13_span_4_Template(rf, ctx) {
+    function ReportDisplayComponent_mat_form_field_13_mat_select_1_span_3_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "span", 22);
+        i0.ɵɵelementStart(0, "span", 24);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var ctx_r9 = i0.ɵɵnextContext(2);
+        var ctx_r11 = i0.ɵɵnextContext(3);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate2(" (+", ctx_r9.locations.length - 1, " ", (ctx_r9.locations == null ? null : ctx_r9.locations.length) === 2 ? "other" : "others", ") ");
+        i0.ɵɵtextInterpolate2(" (+", ctx_r11.locations.length - 1, " ", (ctx_r11.locations == null ? null : ctx_r11.locations.length) === 2 ? "other" : "others", ") ");
       }
     }
 
-    function ReportDisplayComponent_mat_form_field_13_mat_option_5_Template(rf, ctx) {
+    function ReportDisplayComponent_mat_form_field_13_mat_select_1_mat_option_4_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 23);
-        i0.ɵɵelementStart(1, "div", 24);
-        i0.ɵɵelementStart(2, "div", 25);
+        i0.ɵɵelementStart(0, "mat-option", 25);
+        i0.ɵɵelementStart(1, "div", 26);
+        i0.ɵɵelementStart(2, "div", 27);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 26);
+        i0.ɵɵelementStart(4, "div", 28);
         i0.ɵɵtext(5);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -40815,45 +40823,127 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var building_r11 = ctx.$implicit;
-        i0.ɵɵproperty("value", building_r11);
+        var building_r13 = ctx.$implicit;
+        i0.ɵɵproperty("value", building_r13);
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate(building_r11.code);
+        i0.ɵɵtextInterpolate(building_r13.code);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(building_r11.name);
+        i0.ɵɵtextInterpolate(building_r13.name);
+      }
+    }
+
+    function ReportDisplayComponent_mat_form_field_13_mat_select_1_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r15 = i0.ɵɵgetCurrentView();
+
+        i0.ɵɵelementStart(0, "mat-select", 21);
+        i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_mat_form_field_13_mat_select_1_Template_mat_select_ngModelChange_0_listener($event) {
+          i0.ɵɵrestoreView(_r15);
+          var ctx_r14 = i0.ɵɵnextContext(2);
+          return ctx_r14.locations[0] = $event;
+        });
+        i0.ɵɵelementStart(1, "mat-select-trigger");
+        i0.ɵɵtext(2);
+        i0.ɵɵtemplate(3, ReportDisplayComponent_mat_form_field_13_mat_select_1_span_3_Template, 2, 2, "span", 22);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(4, ReportDisplayComponent_mat_form_field_13_mat_select_1_mat_option_4_Template, 6, 3, "mat-option", 23);
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r9 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("ngModel", ctx_r9.locations[0]);
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1(" ", ctx_r9.locations ? ctx_r9.locations[0] == null ? null : ctx_r9.locations[0].name : "", " ");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", (ctx_r9.locations == null ? null : ctx_r9.locations.length) > 1);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngForOf", ctx_r9.buildings);
+      }
+    }
+
+    function ReportDisplayComponent_mat_form_field_13_mat_select_2_span_3_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "span", 24);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r16 = i0.ɵɵnextContext(3);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate2(" (+", ctx_r16.locations.length - 1, " ", (ctx_r16.locations == null ? null : ctx_r16.locations.length) === 2 ? "other" : "others", ") ");
+      }
+    }
+
+    function ReportDisplayComponent_mat_form_field_13_mat_select_2_mat_option_4_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 25);
+        i0.ɵɵelementStart(1, "div", 26);
+        i0.ɵɵelementStart(2, "div", 27);
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "div", 28);
+        i0.ɵɵtext(5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var building_r18 = ctx.$implicit;
+        i0.ɵɵproperty("value", building_r18);
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate(building_r18.code);
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(building_r18.name);
+      }
+    }
+
+    function ReportDisplayComponent_mat_form_field_13_mat_select_2_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r20 = i0.ɵɵgetCurrentView();
+
+        i0.ɵɵelementStart(0, "mat-select", 29);
+        i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_mat_form_field_13_mat_select_2_Template_mat_select_ngModelChange_0_listener($event) {
+          i0.ɵɵrestoreView(_r20);
+          var ctx_r19 = i0.ɵɵnextContext(2);
+          return ctx_r19.locations = $event;
+        });
+        i0.ɵɵelementStart(1, "mat-select-trigger");
+        i0.ɵɵtext(2);
+        i0.ɵɵtemplate(3, ReportDisplayComponent_mat_form_field_13_mat_select_2_span_3_Template, 2, 2, "span", 22);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(4, ReportDisplayComponent_mat_form_field_13_mat_select_2_mat_option_4_Template, 6, 3, "mat-option", 23);
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r10 = i0.ɵɵnextContext(2);
+        i0.ɵɵproperty("ngModel", ctx_r10.locations);
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1(" ", ctx_r10.locations ? ctx_r10.locations[0] == null ? null : ctx_r10.locations[0].name : "", " ");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", (ctx_r10.locations == null ? null : ctx_r10.locations.length) > 1);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngForOf", ctx_r10.buildings);
       }
     }
 
     function ReportDisplayComponent_mat_form_field_13_Template(rf, ctx) {
       if (rf & 1) {
-        var _r13 = i0.ɵɵgetCurrentView();
-
         i0.ɵɵelementStart(0, "mat-form-field", 18);
-        i0.ɵɵelementStart(1, "mat-select", 19);
-        i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_mat_form_field_13_Template_mat_select_ngModelChange_1_listener($event) {
-          i0.ɵɵrestoreView(_r13);
-          var ctx_r12 = i0.ɵɵnextContext();
-          return ctx_r12.locations[0] = $event;
-        });
-        i0.ɵɵelementStart(2, "mat-select-trigger");
-        i0.ɵɵtext(3);
-        i0.ɵɵtemplate(4, ReportDisplayComponent_mat_form_field_13_span_4_Template, 2, 2, "span", 20);
-        i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(5, ReportDisplayComponent_mat_form_field_13_mat_option_5_Template, 6, 3, "mat-option", 21);
-        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(1, ReportDisplayComponent_mat_form_field_13_mat_select_1_Template, 5, 4, "mat-select", 19);
+        i0.ɵɵtemplate(2, ReportDisplayComponent_mat_form_field_13_mat_select_2_Template, 5, 4, "mat-select", 20);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
         var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngModel", ctx_r0.locations[0]);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r0.locations ? ctx_r0.locations[0] == null ? null : ctx_r0.locations[0].name : "", " ");
+        i0.ɵɵproperty("ngIf", !ctx_r0.multipleLocations);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", (ctx_r0.locations == null ? null : ctx_r0.locations.length) > 1);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r0.buildings);
+        i0.ɵɵproperty("ngIf", ctx_r0.multipleLocations);
       }
     }
 
@@ -40867,7 +40957,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function ReportDisplayComponent_ng_template_17_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelement(0, "mat-spinner", 27);
+        i0.ɵɵelement(0, "mat-spinner", 30);
       }
     }
 
@@ -40878,14 +40968,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function ReportDisplayComponent_ng_container_22_ng_container_1_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelement(1, "a-report-table", 28);
+        i0.ɵɵelement(1, "a-report-table", 31);
         i0.ɵɵelementContainerEnd();
       }
 
       if (rf & 2) {
-        var ctx_r14 = i0.ɵɵnextContext(2);
+        var ctx_r21 = i0.ɵɵnextContext(2);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("list", ctx_r14.report_data.data || i0.ɵɵpureFunction0(2, _c0))("details", ctx_r14.report);
+        i0.ɵɵproperty("list", ctx_r21.report_data.data || i0.ɵɵpureFunction0(2, _c0))("details", ctx_r21.report);
       }
     }
 
@@ -40915,11 +41005,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function ReportDisplayComponent_ng_template_23_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 29);
-        i0.ɵɵelementStart(1, "div", 30);
-        i0.ɵɵelement(2, "app-icon", 31);
+        i0.ɵɵelementStart(0, "div", 32);
+        i0.ɵɵelementStart(1, "div", 33);
+        i0.ɵɵelement(2, "app-icon", 34);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "div", 32);
+        i0.ɵɵelementStart(3, "div", 35);
         i0.ɵɵtext(4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -40936,11 +41026,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function ReportDisplayComponent_ng_template_25_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 29);
-        i0.ɵɵelementStart(1, "div", 30);
-        i0.ɵɵelement(2, "mat-spinner", 27);
+        i0.ɵɵelementStart(0, "div", 32);
+        i0.ɵɵelementStart(1, "div", 33);
+        i0.ɵɵelement(2, "mat-spinner", 30);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "div", 32);
+        i0.ɵɵelementStart(3, "div", 35);
         i0.ɵɵtext(4, "Loading report...");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -40950,12 +41040,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ReportDisplayComponent =
     /*#__PURE__*/
     function () {
-      function ReportDisplayComponent(_service, _org, _reports) {
+      function ReportDisplayComponent(_service, _org, _reports, _router) {
         _classCallCheck(this, ReportDisplayComponent);
 
         this._service = _service;
         this._org = _org;
         this._reports = _reports;
+        this._router = _router;
         /** Start date for the generated report */
 
         this.start_date = dayjs().startOf('d').valueOf();
@@ -40965,6 +41056,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** List of selected locations */
 
         this.locations = [{}];
+        /** Multiple Locations? */
+
+        this.multipleLocations = false;
       }
       /** List of available buildings */
 
@@ -40978,7 +41072,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return _;
           })).subscribe(function () {
             _this208.locations = [_this208._org.building];
-          });
+          }); // TODO: Improve logic to handle other conditions for Multi location select.
+
+
+          this.multipleLocations = this._router.url.indexOf('catering') > 0;
         }
       }, {
         key: "ngOnChanges",
@@ -41043,7 +41140,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.ReportDisplayComponent = ReportDisplayComponent;
 
     ReportDisplayComponent.ɵfac = function ReportDisplayComponent_Factory(t) {
-      return new (t || ReportDisplayComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.ReportsService));
+      return new (t || ReportDisplayComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.ReportsService), i0.ɵɵdirectiveInject(i4.Router));
     };
 
     ReportDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -41055,7 +41152,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵNgOnChangesFeature],
       decls: 27,
       vars: 13,
-      consts: [[1, "header"], [1, "period"], [1, "field"], ["for", "start-date"], ["name", "start-date", 3, "ngModel", "from", "to", "ngModelChange"], [1, "gap"], ["for", "end-date"], ["name", "end-date", 3, "ngModel", "from", "to", "ngModelChange"], [1, "location", "dark-mode"], ["appearance", "outline", 4, "ngIf"], [1, "actions"], ["mat-button", "", "name", "generate", 3, "disabled", "click"], [4, "ngIf", "ngIfElse"], ["gen_loader", ""], ["mat-button", "", "name", "download", 3, "disabled", "click"], [1, "display"], ["empty_state", ""], ["load_state", ""], ["appearance", "outline"], ["name", "locations", 3, "ngModel", "ngModelChange"], ["class", "selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "selection"], [3, "value"], [1, "option"], [1, "code"], [1, "name"], ["diameter", "32"], [3, "list", "details"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"]],
+      consts: [[1, "header"], [1, "period"], [1, "field"], ["for", "start-date"], ["name", "start-date", 3, "ngModel", "from", "to", "ngModelChange"], [1, "gap"], ["for", "end-date"], ["name", "end-date", 3, "ngModel", "from", "to", "ngModelChange"], [1, "location", "dark-mode"], ["appearance", "outline", 4, "ngIf"], [1, "actions"], ["mat-button", "", "name", "generate", 3, "disabled", "click"], [4, "ngIf", "ngIfElse"], ["gen_loader", ""], ["mat-button", "", "name", "download", 3, "disabled", "click"], [1, "display"], ["empty_state", ""], ["load_state", ""], ["appearance", "outline"], ["name", "locations", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", 3, "ngModel", "ngModelChange"], ["class", "selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "selection"], [3, "value"], [1, "option"], [1, "code"], [1, "name"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange"], ["diameter", "32"], [3, "list", "details"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"]],
       template: function ReportDisplayComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -41085,7 +41182,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(12, "div", 8);
-          i0.ɵɵtemplate(13, ReportDisplayComponent_mat_form_field_13_Template, 6, 4, "mat-form-field", 9);
+          i0.ɵɵtemplate(13, ReportDisplayComponent_mat_form_field_13_Template, 3, 2, "mat-form-field", 9);
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(14, "div", 10);
           i0.ɵɵelementStart(15, "button", 11);
@@ -41131,7 +41228,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngIf", !ctx.loading)("ngIfElse", _r7);
         }
       },
-      directives: [i4.DateFieldComponent, i5.NgControlStatus, i5.NgModel, i6.NgIf, i7.MatButton, i8.MatFormField, i9.MatSelect, i9.MatSelectTrigger, i6.NgForOf, i10.MatOption, i11.MatSpinner, i12.ReportTableComponent, i13.IconComponent],
+      directives: [i5.DateFieldComponent, i6.NgControlStatus, i6.NgModel, i7.NgIf, i8.MatButton, i9.MatFormField, i10.MatSelect, i10.MatSelectTrigger, i7.NgForOf, i11.MatOption, i12.MatSpinner, i13.ReportTableComponent, i14.IconComponent],
       styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n}\n.header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: 100%;\n  background-color: #051c2c;\n  color: #fff;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  padding: 0.5em;\n}\nlabel[_ngcontent-%COMP%] {\n  margin-bottom: 0.5em;\n  font-size: 0.8em;\n  font-weight: 500;\n}\n.location[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 25%;\n  text-align: center;\n}\n.period[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.gap[_ngcontent-%COMP%] {\n  padding: 1em;\n}\n.actions[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.display[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  min-height: 50%;\n  width: 100%;\n  overflow: auto;\n}\nbutton[_ngcontent-%COMP%] {\n  margin: 0.25em;\n  width: 8em;\n  height: 2.75em;\n}\nmat-option[_ngcontent-%COMP%]   .option[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\nmat-option[_ngcontent-%COMP%]   .option[_ngcontent-%COMP%]   .code[_ngcontent-%COMP%] {\n  width: 4em;\n  font-size: 0.75em;\n  font-weight: 500;\n}\nmat-spinner[_ngcontent-%COMP%] {\n  margin: auto;\n}\nmat-form-field[_ngcontent-%COMP%] {\n  height: 3em;\n}\n.selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hlbGwvcmVwb3J0cy9yZXBvcnQtZGlzcGxheS9yZXBvcnQtZGlzcGxheS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvcmVwb3J0cy9yZXBvcnQtZGlzcGxheS9yZXBvcnQtZGlzcGxheS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUE3Q0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FDL0JBOztzQkFBQTtBQ1pBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0FDbUJKO0FEaEJBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtFQUNBLHlCRmlCWTtFRWhCWixXRlRTO0VDSVQsaUhBQUE7RUNPQSxjQUFBO0FDbUJKO0FEaEJBO0VBQ0ksb0JBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0FDbUJKO0FEaEJBO0VBQ0ksT0FBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtBQ21CSjtBRGhCQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ21CSjtBRGhCQTtFQUNJLFlBQUE7QUNtQko7QURoQkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7QUNtQko7QURoQkE7RUFDSSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLGNBQUE7QUNtQko7QURoQkE7RUFDSSxjQUFBO0VBQ0EsVUFBQTtFQUNBLGNBQUE7QUNtQko7QURmSTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ2tCUjtBRGpCUTtFQUNJLFVBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0FDbUJaO0FEZEE7RUFDSSxZQUFBO0FDaUJKO0FEZEE7RUFDSSxXQUFBO0FDaUJKO0FEZEE7RUFDSSxhQUFBO0VBQ0EsaUJBQUE7QUNpQkoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9yZXBvcnRzL3JlcG9ydC1kaXNwbGF5L3JlcG9ydC1kaXNwbGF5LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3coJGNvbG9yOiAjMDAwLCAkZGVwdGg6IDEpIHtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMXB4ICogKCRkZXB0aCAtIDEpIHJnYmEoIzAwMCwgLjIpLFxuICAgICAgICAgICAgICAgIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSxcbiAgICAgICAgICAgICAgICAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsIC4xMik7XG59XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgKCRtZWRpYSA9PSB0YWJsZXQtbW9iaWxlIG9yICRtZWRpYSA9PSBub3QtZGVza3RvcCkge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJAaW1wb3J0ICd2YXJpYWJsZXMnO1xuQGltcG9ydCAnbWl4aW5zJztcblxuOmhvc3Qge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGhlaWdodDogMTAwJTtcbn1cblxuLmhlYWRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRjb2xvci10ZXJuYXJ5O1xuICAgIGNvbG9yOiAkZm9udC1saWdodDtcbiAgICBAaW5jbHVkZSBib3gtc2hhZG93O1xuICAgIHBhZGRpbmc6IDAuNWVtO1xufVxuXG5sYWJlbCB7XG4gICAgbWFyZ2luLWJvdHRvbTogMC41ZW07XG4gICAgZm9udC1zaXplOiAwLjhlbTtcbiAgICBmb250LXdlaWdodDogNTAwO1xufVxuXG4ubG9jYXRpb24ge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiAyNSU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ucGVyaW9kIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5nYXAge1xuICAgIHBhZGRpbmc6IDFlbTtcbn1cblxuLmFjdGlvbnMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmRpc3BsYXkge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi1oZWlnaHQ6IDUwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBvdmVyZmxvdzogYXV0bztcbn1cblxuYnV0dG9uIHtcbiAgICBtYXJnaW46IDAuMjVlbTtcbiAgICB3aWR0aDogOGVtO1xuICAgIGhlaWdodDogMi43NWVtO1xufVxuXG5tYXQtb3B0aW9uIHtcbiAgICAub3B0aW9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgLmNvZGUge1xuICAgICAgICAgICAgd2lkdGg6IDRlbTtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogLjc1ZW07XG4gICAgICAgICAgICBmb250LXdlaWdodDogNTAwO1xuICAgICAgICB9XG4gICAgfVxufVxuXG5tYXQtc3Bpbm5lciB7XG4gICAgbWFyZ2luOiBhdXRvO1xufVxuXG5tYXQtZm9ybS1maWVsZCB7XG4gICAgaGVpZ2h0OiAzZW07XG59XG5cbi5zZWxlY3Rpb24ge1xuICAgIG9wYWNpdHk6IDAuNzU7XG4gICAgZm9udC1zaXplOiAwLjc1ZW07XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG4uaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IDEwMCU7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwNTFjMmM7XG4gIGNvbG9yOiAjZmZmO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMHB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbiAgcGFkZGluZzogMC41ZW07XG59XG5cbmxhYmVsIHtcbiAgbWFyZ2luLWJvdHRvbTogMC41ZW07XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbi5sb2NhdGlvbiB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMjUlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5wZXJpb2Qge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uZ2FwIHtcbiAgcGFkZGluZzogMWVtO1xufVxuXG4uYWN0aW9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5kaXNwbGF5IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBmbGV4OiAxO1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIHdpZHRoOiAxMDAlO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuYnV0dG9uIHtcbiAgbWFyZ2luOiAwLjI1ZW07XG4gIHdpZHRoOiA4ZW07XG4gIGhlaWdodDogMi43NWVtO1xufVxuXG5tYXQtb3B0aW9uIC5vcHRpb24ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxubWF0LW9wdGlvbiAub3B0aW9uIC5jb2RlIHtcbiAgd2lkdGg6IDRlbTtcbiAgZm9udC1zaXplOiAwLjc1ZW07XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbm1hdC1zcGlubmVyIHtcbiAgbWFyZ2luOiBhdXRvO1xufVxuXG5tYXQtZm9ybS1maWVsZCB7XG4gIGhlaWdodDogM2VtO1xufVxuXG4uc2VsZWN0aW9uIHtcbiAgb3BhY2l0eTogMC43NTtcbiAgZm9udC1zaXplOiAwLjc1ZW07XG59Il19 */"]
     });
     /*@__PURE__*/
@@ -41151,6 +41248,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: i2.OrganisationService
         }, {
           type: i3.ReportsService
+        }, {
+          type: i4.Router
         }];
       }, {
         report: [{
