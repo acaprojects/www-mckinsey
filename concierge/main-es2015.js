@@ -11898,6 +11898,8 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
         this.min = 15;
         /** Step value between options */
         this.step = 15;
+        /** Special case prepopulation i.e. out of step options */
+        this.specialPreprops = [];
         this.duration = '60';
     }
     ngOnInit() {
@@ -11951,6 +11953,13 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
         const blocks = [];
         let time = min;
         let date = this.time ? dayjs(this.time) : null;
+        // Add special case for 10min duration/prepropulation
+        for (const option of this.specialPreprops) {
+            blocks.push({
+                id: `${option}`,
+                name: `${general_utilities_1.humaniseDuration(option)}${date ? ' (' + date.add(option, 'm').format('h:mm A') + ')' : ''}`
+            });
+        }
         while (time <= max) {
             blocks.push({
                 id: `${time}`,
@@ -11963,7 +11972,7 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
 }
 exports.DurationFieldComponent = DurationFieldComponent;
 DurationFieldComponent.ɵfac = function DurationFieldComponent_Factory(t) { return ɵDurationFieldComponent_BaseFactory(t || DurationFieldComponent); };
-DurationFieldComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DurationFieldComponent, selectors: [["a-duration-field"]], inputs: { max: "max", min: "min", step: "step", time: "time", disabled: "disabled" }, features: [i0.ɵɵProvidersFeature([
+DurationFieldComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DurationFieldComponent, selectors: [["a-duration-field"]], inputs: { max: "max", min: "min", step: "step", time: "time", disabled: "disabled", specialPreprops: "specialPreprops" }, features: [i0.ɵɵProvidersFeature([
             {
                 provide: forms_1.NG_VALUE_ACCESSOR,
                 useExisting: core_1.forwardRef(() => DurationFieldComponent),
@@ -12009,6 +12018,8 @@ const ɵDurationFieldComponent_BaseFactory = i0.ɵɵgetInheritedFactory(Duration
         }], time: [{
             type: core_1.Input
         }], disabled: [{
+            type: core_1.Input
+        }], specialPreprops: [{
             type: core_1.Input
         }] }); })();
 
@@ -13095,6 +13106,7 @@ function BookingFormComponent_div_0_div_7_div_6_Template(rf, ctx) { if (rf & 1) 
     i0.ɵɵtext(1, " Duration is invalid. End time must be in the future ");
     i0.ɵɵelementEnd();
 } }
+const _c17 = function () { return [10]; };
 function BookingFormComponent_div_0_div_7_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 5);
     i0.ɵɵelementStart(1, "div", 18);
@@ -13111,61 +13123,61 @@ function BookingFormComponent_div_0_div_7_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(4);
     i0.ɵɵproperty("ngIf", ctx_r5.form.controls.all_day);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("max", 720)("disabled", ctx_r5.form.controls.all_day == null ? null : ctx_r5.form.controls.all_day.value)("time", ctx_r5.form.controls.date == null ? null : ctx_r5.form.controls.date.value);
+    i0.ɵɵproperty("max", 720)("disabled", ctx_r5.form.controls.all_day == null ? null : ctx_r5.form.controls.all_day.value)("time", ctx_r5.form.controls.date == null ? null : ctx_r5.form.controls.date.value)("specialPreprops", i0.ɵɵpureFunction0(6, _c17));
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", ctx_r5.form.controls.duration.touched && ctx_r5.form.controls.duration.invalid);
 } }
-var I18N_17;
+var I18N_18;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Booking form organiser label
      */ 
-    const MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___18 = goog.getMsg("Host: ");
-    I18N_17 = MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___18;
+    const MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___19 = goog.getMsg("Host: ");
+    I18N_18 = MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___19;
 }
 else {
-    I18N_17 = $localize `:Booking form organiser label␟6d30be09dfac40ef0698474c6aaeeb22a1c8d856␟6531032616724249294:Host: `;
+    I18N_18 = $localize `:Booking form organiser label␟6d30be09dfac40ef0698474c6aaeeb22a1c8d856␟6531032616724249294:Host: `;
 }
 function BookingFormComponent_div_0_div_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 5);
     i0.ɵɵelementStart(1, "label", 23);
-    i0.ɵɵi18n(2, I18N_17);
+    i0.ɵɵi18n(2, I18N_18);
     i0.ɵɵelementEnd();
     i0.ɵɵelement(3, "a-user-search-field", 24);
     i0.ɵɵelementEnd();
 } }
-var I18N_19;
+var I18N_20;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Booking form attendees label
      */ 
-    const MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___20 = goog.getMsg("Attendees: ");
-    I18N_19 = MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___20;
+    const MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___21 = goog.getMsg("Attendees: ");
+    I18N_20 = MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___21;
 }
 else {
-    I18N_19 = $localize `:Booking form attendees label␟5263e73f856f10e8fd35d099b86e840131447628␟6839812770018074077:Attendees: `;
+    I18N_20 = $localize `:Booking form attendees label␟5263e73f856f10e8fd35d099b86e840131447628␟6839812770018074077:Attendees: `;
 }
 function BookingFormComponent_div_0_div_9_Template(rf, ctx) { if (rf & 1) {
     const _r18 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 5);
     i0.ɵɵelementStart(1, "label", 25);
-    i0.ɵɵi18n(2, I18N_19);
+    i0.ɵɵi18n(2, I18N_20);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "a-user-list-field", 26);
     i0.ɵɵlistener("newUser", function BookingFormComponent_div_0_div_9_Template_a_user_list_field_newUser_3_listener() { i0.ɵɵrestoreView(_r18); const ctx_r17 = i0.ɵɵnextContext(2); return ctx_r17.openNewUserModal(); });
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } }
-var I18N_21;
+var I18N_22;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Booking form booking type label
      */ 
-    const MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___22 = goog.getMsg("Booking Type: ");
-    I18N_21 = MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___22;
+    const MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___23 = goog.getMsg("Booking Type: ");
+    I18N_22 = MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___23;
 }
 else {
-    I18N_21 = $localize `:Booking form booking type label␟f4ef91167d8cde0c44b5f1816c04514bfddab4ef␟5451072315426622181:Booking Type: `;
+    I18N_22 = $localize `:Booking form booking type label␟f4ef91167d8cde0c44b5f1816c04514bfddab4ef␟5451072315426622181:Booking Type: `;
 }
 function BookingFormComponent_div_0_div_10_mat_option_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-option", 30);
@@ -13180,7 +13192,7 @@ function BookingFormComponent_div_0_div_10_mat_option_5_Template(rf, ctx) { if (
 function BookingFormComponent_div_0_div_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 5);
     i0.ɵɵelementStart(1, "label", 27);
-    i0.ɵɵi18n(2, I18N_21);
+    i0.ɵɵi18n(2, I18N_22);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "mat-form-field", 9);
     i0.ɵɵelementStart(4, "mat-select", 28);
@@ -13193,48 +13205,48 @@ function BookingFormComponent_div_0_div_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(5);
     i0.ɵɵproperty("ngForOf", ctx_r8.booking_types);
 } }
-var I18N_23;
+var I18N_24;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Booking form need catering label
      */ 
-    const MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___24 = goog.getMsg(" Need catering? ");
-    I18N_23 = MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___24;
+    const MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___25 = goog.getMsg(" Need catering? ");
+    I18N_24 = MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___25;
 }
 else {
-    I18N_23 = $localize `:Booking form need catering label␟699b6c70e53bdd2307d045e794b9c6b34f7a231d␟7411992491467264678: Need catering? `;
+    I18N_24 = $localize `:Booking form need catering label␟699b6c70e53bdd2307d045e794b9c6b34f7a231d␟7411992491467264678: Need catering? `;
 }
 function BookingFormComponent_div_0_div_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 5);
     i0.ɵɵelementStart(1, "mat-checkbox", 31);
-    i0.ɵɵi18n(2, I18N_23);
+    i0.ɵɵi18n(2, I18N_24);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } }
-var I18N_25;
+var I18N_26;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Booking form notes label
      */ 
-    const MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___26 = goog.getMsg("Notes: ");
-    I18N_25 = MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___26;
+    const MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___27 = goog.getMsg("Notes: ");
+    I18N_26 = MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___27;
 }
 else {
-    I18N_25 = $localize `:Booking form notes label␟1c77748f492424d14b466cd894c5f6cfc928ef31␟700996066350595311:Notes: `;
+    I18N_26 = $localize `:Booking form notes label␟1c77748f492424d14b466cd894c5f6cfc928ef31␟700996066350595311:Notes: `;
 }
-var I18N_27;
+var I18N_28;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-    const MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____28 = goog.getMsg("Meeting Description");
-    I18N_27 = MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____28;
+    const MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____29 = goog.getMsg("Meeting Description");
+    I18N_28 = MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____29;
 }
 else {
-    I18N_27 = $localize `:␟1d7196648206ad98de33b135cb624c3262bc9682␟9064615467372810718:Meeting Description`;
+    I18N_28 = $localize `:␟1d7196648206ad98de33b135cb624c3262bc9682␟9064615467372810718:Meeting Description`;
 }
-const _c29 = ["placeholder", I18N_27];
+const _c30 = ["placeholder", I18N_28];
 function BookingFormComponent_div_0_div_12_mat_form_field_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-form-field", 35);
     i0.ɵɵelementStart(1, "textarea", 36);
-    i0.ɵɵi18nAttributes(2, _c29);
+    i0.ɵɵi18nAttributes(2, _c30);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } }
@@ -13244,7 +13256,7 @@ function BookingFormComponent_div_0_div_12_ng_template_4_Template(rf, ctx) { if 
 function BookingFormComponent_div_0_div_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 5);
     i0.ɵɵelementStart(1, "label", 32);
-    i0.ɵɵi18n(2, I18N_25);
+    i0.ɵɵi18n(2, I18N_26);
     i0.ɵɵelementEnd();
     i0.ɵɵtemplate(3, BookingFormComponent_div_0_div_12_mat_form_field_3_Template, 3, 0, "mat-form-field", 33);
     i0.ɵɵtemplate(4, BookingFormComponent_div_0_div_12_ng_template_4_Template, 1, 0, "ng-template", null, 34, i0.ɵɵtemplateRefExtractor);
@@ -13264,7 +13276,7 @@ function BookingFormComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(5, "div", 4);
     i0.ɵɵtemplate(6, BookingFormComponent_div_0_div_6_Template, 5, 2, "div", 2);
-    i0.ɵɵtemplate(7, BookingFormComponent_div_0_div_7_Template, 7, 5, "div", 2);
+    i0.ɵɵtemplate(7, BookingFormComponent_div_0_div_7_Template, 7, 7, "div", 2);
     i0.ɵɵelementEnd();
     i0.ɵɵtemplate(8, BookingFormComponent_div_0_div_8_Template, 4, 0, "div", 2);
     i0.ɵɵtemplate(9, BookingFormComponent_div_0_div_9_Template, 4, 0, "div", 2);
@@ -13415,7 +13427,7 @@ class BookingFormComponent extends base_directive_1.BaseDirective {
 }
 exports.BookingFormComponent = BookingFormComponent;
 BookingFormComponent.ɵfac = function BookingFormComponent_Factory(t) { return new (t || BookingFormComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.UsersService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
-BookingFormComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFormComponent, selectors: [["a-booking-form"]], inputs: { form: "form" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "group", "date"], [1, "group", "time"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["for", "date"], ["name", "date", "formControlName", "date"], ["for", "start-time"], ["name", "start-time", "formControlName", "date", 3, "disabled"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time"], ["formControlName", "all_day"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["formControlName", "has_catering"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]], template: function BookingFormComponent_Template(rf, ctx) { if (rf & 1) {
+BookingFormComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFormComponent, selectors: [["a-booking-form"]], inputs: { form: "form" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "group", "date"], [1, "group", "time"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["for", "date"], ["name", "date", "formControlName", "date"], ["for", "start-time"], ["name", "start-time", "formControlName", "date", 3, "disabled"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time", "specialPreprops"], ["formControlName", "all_day"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["formControlName", "has_catering"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]], template: function BookingFormComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, BookingFormComponent_div_0_Template, 13, 11, "div", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.form);
