@@ -335,10 +335,10 @@ function BookingConfirmComponent_mat_dialog_content_0_div_39_Template(rf, ctx) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r27 = ctx.$implicit;
-    i0.ɵɵproperty("title", item_r27 == null ? null : item_r27.name);
+    const item_r26 = ctx.$implicit;
+    i0.ɵɵproperty("title", item_r26 == null ? null : item_r26.name);
     i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(item_r27 == null ? null : item_r27.name);
+    i0.ɵɵtextInterpolate(item_r26 == null ? null : item_r26.name);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_40_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 30);
@@ -346,9 +346,9 @@ function BookingConfirmComponent_mat_dialog_content_0_div_40_Template(rf, ctx) {
     i0.ɵɵelementEnd();
 } }
 function BookingConfirmComponent_mat_dialog_content_0_button_41_Template(rf, ctx) { if (rf & 1) {
-    const _r29 = i0.ɵɵgetCurrentView();
+    const _r28 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "button", 31);
-    i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_content_0_button_41_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r29); const ctx_r28 = i0.ɵɵnextContext(2); return ctx_r28.show_locations = !ctx_r28.show_locations; });
+    i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_content_0_button_41_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r28); const ctx_r27 = i0.ɵɵnextContext(2); return ctx_r27.show_locations = !ctx_r27.show_locations; });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -392,12 +392,12 @@ function BookingConfirmComponent_mat_dialog_content_0_div_58_div_4_Template(rf, 
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r30 = i0.ɵɵnextContext().$implicit;
-    const ctx_r31 = i0.ɵɵnextContext(2);
+    const item_r29 = i0.ɵɵnextContext().$implicit;
+    const ctx_r30 = i0.ɵɵnextContext(2);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("href", "mailto:" + item_r30.email + "?subject=" + ctx_r31.booking.title, i0.ɵɵsanitizeUrl);
+    i0.ɵɵproperty("href", "mailto:" + item_r29.email + "?subject=" + ctx_r30.booking.title, i0.ɵɵsanitizeUrl);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate(item_r30.email);
+    i0.ɵɵtextInterpolate(item_r29.email);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_58_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 29);
@@ -409,17 +409,17 @@ function BookingConfirmComponent_mat_dialog_content_0_div_58_Template(rf, ctx) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r30 = ctx.$implicit;
-    i0.ɵɵproperty("title", (item_r30 == null ? null : item_r30.name) + ((item_r30 == null ? null : item_r30.email) ? "\n" + item_r30.email : ""));
+    const item_r29 = ctx.$implicit;
+    i0.ɵɵproperty("title", (item_r29 == null ? null : item_r29.name) + ((item_r29 == null ? null : item_r29.email) ? "\n" + item_r29.email : ""));
     i0.ɵɵadvance(3);
-    i0.ɵɵtextInterpolate(item_r30.name);
+    i0.ɵɵtextInterpolate(item_r29.name);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", item_r30.email);
+    i0.ɵɵproperty("ngIf", item_r29.email);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_button_59_Template(rf, ctx) { if (rf & 1) {
-    const _r34 = i0.ɵɵgetCurrentView();
+    const _r33 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "button", 31);
-    i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_content_0_button_59_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r34); const ctx_r33 = i0.ɵɵnextContext(2); return ctx_r33.show_attendees = !ctx_r33.show_attendees; });
+    i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_content_0_button_59_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r33); const ctx_r32 = i0.ɵɵnextContext(2); return ctx_r32.show_attendees = !ctx_r32.show_attendees; });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -450,27 +450,22 @@ function BookingConfirmComponent_mat_dialog_content_0_div_73_Template(rf, ctx) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const order_r35 = ctx.$implicit;
+    const order_r34 = ctx.$implicit;
     i0.ɵɵadvance(3);
-    i0.ɵɵtextInterpolate(order_r35.location || "<Removed>");
+    i0.ɵɵtextInterpolate(order_r34.location || "<Removed>");
     i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate3(" ", order_r35.item_count, " item", order_r35.item_count === 1 ? "" : "", " | ", i0.ɵɵpipeBind2(6, 4, order_r35.total / 100, order_r35.symbol), " ");
+    i0.ɵɵtextInterpolate3(" ", order_r34.item_count, " item", order_r34.item_count === 1 ? "" : "", " | ", i0.ɵɵpipeBind2(6, 4, order_r34.total / 100, order_r34.symbol), " ");
 } }
 function BookingConfirmComponent_mat_dialog_content_0_button_74_Template(rf, ctx) { if (rf & 1) {
-    const _r37 = i0.ɵɵgetCurrentView();
+    const _r36 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "button", 31);
-    i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_content_0_button_74_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r37); const ctx_r36 = i0.ɵɵnextContext(2); return ctx_r36.show_orders = !ctx_r36.show_orders; });
+    i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_content_0_button_74_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r36); const ctx_r35 = i0.ɵɵnextContext(2); return ctx_r35.show_orders = !ctx_r35.show_orders; });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r25 = i0.ɵɵnextContext(2);
     i0.ɵɵadvance(1);
     i0.ɵɵtextInterpolate1(" ", ctx_r25.show_orders ? "Hide" : "Show", " Catering orders ");
-} }
-function BookingConfirmComponent_mat_dialog_content_0_div_75_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 28);
-    i0.ɵɵtext(1, " * - changed fields ");
-    i0.ɵɵelementEnd();
 } }
 const _c0 = function () { return { type: "icon", class: "material-icons", content: "close" }; };
 function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf & 1) {
@@ -578,13 +573,12 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
     i0.ɵɵtemplate(74, BookingConfirmComponent_mat_dialog_content_0_button_74_Template, 2, 1, "button", 19);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(75, BookingConfirmComponent_mat_dialog_content_0_div_75_Template, 2, 0, "div", 10);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
     i0.ɵɵadvance(3);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(37, _c0));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(36, _c0));
     i0.ɵɵadvance(2);
     i0.ɵɵproperty("src", ctx_r0.success ? ctx_r0.is_request ? "assets/img/requested.svg" : "assets/img/confirmed.svg" : "assets/img/edit.svg", i0.ɵɵsanitizeUrl);
     i0.ɵɵadvance(3);
@@ -649,17 +643,15 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
     i0.ɵɵproperty("ngForOf", ctx_r0.catering);
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", ctx_r0.attendees.length > 5);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r0.booking == null ? null : ctx_r0.booking.id);
 } }
 function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template(rf, ctx) { if (rf & 1) {
-    const _r40 = i0.ɵɵgetCurrentView();
+    const _r39 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementContainerStart(0);
     i0.ɵɵelementStart(1, "button", 36);
     i0.ɵɵtext(2, "Edit");
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "button", 37);
-    i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template_button_click_3_listener() { i0.ɵɵrestoreView(_r40); const ctx_r39 = i0.ɵɵnextContext(2); return ctx_r39.saveChanges(); });
+    i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template_button_click_3_listener() { i0.ɵɵrestoreView(_r39); const ctx_r38 = i0.ɵɵnextContext(2); return ctx_r38.saveChanges(); });
     i0.ɵɵtext(4, "Save");
     i0.ɵɵelementEnd();
     i0.ɵɵelementContainerEnd();
@@ -783,15 +775,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
     }
     /** Map of changes to the booking */
     get changes() {
-        if (!this.booking.id && this.old_booking) {
-            return {};
-        }
-        return Object.keys(this.booking).reduce((map, key) => {
-            if (!(this.booking[key] instanceof Function) && key[0] !== '_') {
-                map[key] = this.booking[key] !== this.old_booking[key];
-            }
-            return map;
-        }, {});
+        return {};
     }
     /**
      * Save booking changes
@@ -800,7 +784,6 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             this.loading = 'Checking availability of selected spaces';
             this._dialog_ref.disableClose = true;
-            console.log('Check Available');
             let message = yield this.checkSpaceAvailability().catch(e => e);
             if (message) {
                 this.loading = null;
@@ -808,7 +791,6 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
                 this._service.notifyError(`Error checking space availability: ${message}`);
                 return;
             }
-            console.log('Make Booking');
             this.loading = 'Processing booking request...';
             const booking = yield this._bookings.save(this.booking).catch(err => {
                 this._service.notifyError(`Error ${this.booking.id ? 'updating' : 'creating'} booking: ${err}`);
@@ -856,7 +838,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
 exports.BookingConfirmComponent = BookingConfirmComponent;
 BookingConfirmComponent.ɵfac = function BookingConfirmComponent_Factory(t) { return new (t || BookingConfirmComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.UsersService), i0.ɵɵdirectiveInject(i3.OrganisationService), i0.ɵɵdirectiveInject(i4.BookingsService), i0.ɵɵdirectiveInject(i5.SpacesService), i0.ɵɵdirectiveInject(i6.Router), i0.ɵɵdirectiveInject(i7.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
 BookingConfirmComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingConfirmComponent, selectors: [["a-booking-confirm-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 6, vars: 3, consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], ["class", "list-item", 4, "ngFor", "ngForOf"], [1, "request"], [1, "info"], [1, "list-item", 3, "title"], [1, "list-item"], [1, "show", 3, "click"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "mat-dialog-close", ""]], template: function BookingConfirmComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 76, 38, "mat-dialog-content", 0);
+        i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 75, 37, "mat-dialog-content", 0);
         i0.ɵɵtemplate(1, BookingConfirmComponent_mat_dialog_actions_1_Template, 3, 2, "mat-dialog-actions", 1);
         i0.ɵɵtemplate(2, BookingConfirmComponent_ng_template_2_Template, 6, 1, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
         i0.ɵɵtemplate(4, BookingConfirmComponent_ng_template_4_Template, 2, 0, "ng-template", null, 3, i0.ɵɵtemplateRefExtractor);
@@ -1073,7 +1055,7 @@ class BookingModalComponent extends base_directive_1.BaseDirective {
      * Load existing form data or generate a new booking form
      */
     loadFormData() {
-        let form_data = {};
+        let form_data = this._data.booking ? this._data.booking.toJSON() : {};
         this.booking = new booking_class_1.Booking(form_data);
         this.form = booking_utilities_1.generateBookingForm(this.booking, this.available_fields);
         /* istanbul ignore else */
@@ -1143,7 +1125,7 @@ class BookingModalComponent extends base_directive_1.BaseDirective {
                 maxHeight: '95vh',
                 data: {
                     old_booking: this.booking,
-                    booking: new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), value), { room_ids: value.space_list.map((space) => space.id) })),
+                    booking: new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking.toJSON()), value), { room_ids: value.space_list.map((space) => space.id) })),
                 },
             });
             dialog_ref.componentInstance.event.subscribe(event => {
@@ -1353,11 +1335,11 @@ function CateringMenuCategoryComponent_ng_container_6_div_1_Template(rf, ctx) { 
     const item_r4 = ctx.$implicit;
     const ctx_r3 = i0.ɵɵnextContext(2);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("disabled", ctx_r3.disabled)("symbol", ctx_r3.symbol)("item", item_r4)("field", ctx_r3.items);
+    i0.ɵɵproperty("compact", ctx_r3.compact)("disabled", ctx_r3.disabled)("symbol", ctx_r3.symbol)("item", item_r4)("field", ctx_r3.items);
 } }
 function CateringMenuCategoryComponent_ng_container_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, CateringMenuCategoryComponent_ng_container_6_div_1_Template, 2, 4, "div", 7);
+    i0.ɵɵtemplate(1, CateringMenuCategoryComponent_ng_container_6_div_1_Template, 2, 5, "div", 7);
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
@@ -1369,11 +1351,11 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Catering category empty label
      */ 
-    const MSG_EXTERNAL_8482974523885197860$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_CATEGORY_CATEGORY_COMPONENT_TS__1 = goog.getMsg("Category contains no available items");
-    I18N_0 = MSG_EXTERNAL_8482974523885197860$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_CATEGORY_CATEGORY_COMPONENT_TS__1;
+    const MSG_EXTERNAL_6814465353074885090$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_CATEGORY_CATEGORY_COMPONENT_TS__1 = goog.getMsg(" Category contains no available items ");
+    I18N_0 = MSG_EXTERNAL_6814465353074885090$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_CATEGORY_CATEGORY_COMPONENT_TS__1;
 }
 else {
-    I18N_0 = $localize `:Catering category empty label␟413312f415b4e0acfd6be72da7d811ea1e3a60de␟8482974523885197860:Category contains no available items`;
+    I18N_0 = $localize `:Catering category empty label␟16f6097b2835179782588895e1b7b3b9338e3154␟6814465353074885090: Category contains no available items `;
 }
 const _c2 = function () { return { class: "material-icons", content: "close" }; };
 function CateringMenuCategoryComponent_ng_template_7_Template(rf, ctx) { if (rf & 1) {
@@ -1399,7 +1381,7 @@ class CateringMenuCategoryComponent {
 }
 exports.CateringMenuCategoryComponent = CateringMenuCategoryComponent;
 CateringMenuCategoryComponent.ɵfac = function CateringMenuCategoryComponent_Factory(t) { return new (t || CateringMenuCategoryComponent)(); };
-CateringMenuCategoryComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuCategoryComponent, selectors: [["a-category-display"]], inputs: { category: "category", items: "items", symbol: "symbol", disabled: "disabled" }, outputs: { close: "close" }, decls: 9, vars: 5, consts: [[1, "header"], [1, "content"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [1, "name"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [3, "disabled", "symbol", "item", "field"], [1, "info-block", "center"], [1, "icon"], [1, "text"]], template: function CateringMenuCategoryComponent_Template(rf, ctx) { if (rf & 1) {
+CateringMenuCategoryComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuCategoryComponent, selectors: [["a-category-display"]], inputs: { category: "category", items: "items", symbol: "symbol", disabled: "disabled", compact: "compact" }, outputs: { close: "close" }, decls: 9, vars: 5, consts: [[1, "header"], [1, "content"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [1, "name"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [3, "compact", "disabled", "symbol", "item", "field"], [1, "info-block", "center"], [1, "icon"], [1, "text"]], template: function CateringMenuCategoryComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "button", 2);
@@ -1436,6 +1418,8 @@ CateringMenuCategoryComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMen
         }], symbol: [{
             type: core_1.Input
         }], disabled: [{
+            type: core_1.Input
+        }], compact: [{
             type: core_1.Input
         }], close: [{
             type: core_1.Output
@@ -1615,7 +1599,7 @@ function CateringMenuItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵclassProp("subitem", ctx_r0.subitem);
+    i0.ɵɵclassProp("compact", ctx_r0.compact)("subitem", ctx_r0.subitem);
     i0.ɵɵattribute("disabled", ctx_r0.disabled && !ctx_r0.item.can_order_anytime);
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", !ctx_r0.subitem);
@@ -1643,7 +1627,7 @@ function CateringMenuItemComponent_a_catering_order_item_2_Template(rf, ctx) { i
 } if (rf & 2) {
     const sub_item_r16 = ctx.$implicit;
     const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("subitem", true)("symbol", ctx_r1.symbol)("item", sub_item_r16)("field", ctx_r1.field);
+    i0.ɵɵproperty("compact", ctx_r1.compact)("subitem", true)("symbol", ctx_r1.symbol)("item", sub_item_r16)("field", ctx_r1.field);
 } }
 class CateringMenuItemComponent extends base_directive_1.BaseDirective {
     constructor(_service, _dialog) {
@@ -1745,10 +1729,10 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringMenuItemComponent = CateringMenuItemComponent;
 CateringMenuItemComponent.ɵfac = function CateringMenuItemComponent_Factory(t) { return new (t || CateringMenuItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.MatDialog)); };
-CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-order-item"]], inputs: { subitem: "subitem", item: "item", field: "field", symbol: "symbol", disabled: "disabled" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [["class", "catering-item", 3, "subitem", 4, "ngIf"], [1, "children"], [3, "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "subitem", "symbol", "item", "field"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 15, 14, "div", 0);
+CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-order-item"]], inputs: { subitem: "subitem", item: "item", field: "field", symbol: "symbol", disabled: "disabled", compact: "compact" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [["class", "catering-item", 3, "compact", "subitem", 4, "ngIf"], [1, "children"], [3, "compact", "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "compact", "subitem", "symbol", "item", "field"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 15, 16, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
-        i0.ɵɵtemplate(2, CateringMenuItemComponent_a_catering_order_item_2_Template, 1, 4, "a-catering-order-item", 2);
+        i0.ɵɵtemplate(2, CateringMenuItemComponent_a_catering_order_item_2_Template, 1, 5, "a-catering-order-item", 2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.item);
@@ -1756,7 +1740,7 @@ CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuIte
         i0.ɵɵproperty("@show", ctx.show_children ? "show" : "hide");
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngForOf", ctx.item.items);
-    } }, directives: [i3.NgIf, i3.NgForOf, i4.MatTooltip, i5.MatButton, i6.CounterComponent, i7.NgControlStatus, i7.NgModel, i8.IconComponent, CateringMenuItemComponent], pipes: [i3.CurrencyPipe], styles: [".catering-item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.5rem;\n}\n.catering-item[disabled=true][_ngcontent-%COMP%] {\n  pointer-events: none;\n  opacity: 0.35;\n  background-color: rgba(0, 0, 0, 0.2);\n}\n.subitem[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n}\n.name[_ngcontent-%COMP%] {\n  max-width: 480px;\n}\n.image[_ngcontent-%COMP%] {\n  height: 3em;\n  width: 3em;\n  min-width: 3em;\n  border-radius: 4px;\n  background-color: rgba(0, 0, 0, 0.05);\n  background-position: center;\n  background-size: cover;\n  border: 1px solid rgba(0, 0, 0, 0.05);\n}\n.details[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 25%;\n  padding: 0 0.5em;\n  display: flex;\n  flex-direction: column;\n}\n.details[_ngcontent-%COMP%]   *[_ngcontent-%COMP%]    >  {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.options[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.options[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  background: none;\n  border: none;\n  font-size: 0.8em;\n  height: 1.5em;\n  color: rgba(0, 0, 0, 0.85);\n  line-height: 1em;\n  padding: 0 0.25em;\n  text-decoration: underline;\n}\n.option[_ngcontent-%COMP%] {\n  padding: 0.25em 0.5em;\n  border-radius: 4px;\n  color: #fff;\n  font-size: 0.8rem;\n  background-color: #1937ea;\n  margin: 0.25em;\n  margin-right: 0.4rem;\n  margin-left: 0;\n  white-space: nowrap;\n}\n.description[_ngcontent-%COMP%] {\n  font-size: 0.75em;\n  margin-top: 0.25em;\n}\n.children[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  background-color: rgba(0, 0, 0, 0.05);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FDMUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtBQ01KO0FESkk7RUFDSSxvQkFBQTtFQUNBLGFBQUE7RUFDQSxvQ0FBQTtBQ01SO0FERkE7RUFDSSwwQkFBQTtBQ0tKO0FERkE7RUFDSSxnQkFBQTtBQ0tKO0FERkE7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLHFDQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtFQUNBLHFDQUFBO0FDS0o7QURGQTtFQUNJLE9BQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7QUNLSjtBREhJO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLHVCQUFBO0FDS1I7QUREQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ0lKO0FERkk7RUFDSSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtFQUNBLGFBQUE7RUFDQSwwQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSwwQkFBQTtBQ0lSO0FEQUE7RUFDSSxxQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLGlCQUFBO0VBQ0EseUJEbERZO0VDbURaLGNBQUE7RUFDQSxvQkFBQTtFQUNBLGNBQUE7RUFDQSxtQkFBQTtBQ0dKO0FEQUE7RUFDSSxpQkFBQTtFQUNBLGtCQUFBO0FDR0o7QURBQTtFQUNJLGdCQUFBO0VBQ0EscUNBQUE7QUNHSiIsImZpbGUiOiJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxuXG4uY2F0ZXJpbmctaXRlbSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmc6IC41cmVtO1xuXG4gICAgJltkaXNhYmxlZD1cInRydWVcIl0ge1xuICAgICAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgICAgICAgb3BhY2l0eTogLjM1O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCMwMDAsIC4yKTtcbiAgICB9XG59XG5cbi5zdWJpdGVtIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbn1cblxuLm5hbWUge1xuICAgIG1heC13aWR0aDogNDgwcHg7XG59XG5cbi5pbWFnZSB7XG4gICAgaGVpZ2h0OiAzZW07XG4gICAgd2lkdGg6IDNlbTtcbiAgICBtaW4td2lkdGg6IDNlbTtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgjMDAwLCAuMDUpO1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoIzAwMCwgLjA1KTtcbn1cblxuLmRldGFpbHMge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiAyNSU7XG4gICAgcGFkZGluZzogMCAuNWVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcblxuICAgICogPiB7XG4gICAgICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xuICAgIH1cbn1cblxuLm9wdGlvbnMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICAgIGJ1dHRvbiB7XG4gICAgICAgIGJhY2tncm91bmQ6IG5vbmU7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgICAgZm9udC1zaXplOiAuOGVtO1xuICAgICAgICBoZWlnaHQ6IDEuNWVtO1xuICAgICAgICBjb2xvcjogcmdiYSgjMDAwLCAuODUpO1xuICAgICAgICBsaW5lLWhlaWdodDogMWVtO1xuICAgICAgICBwYWRkaW5nOiAwIC4yNWVtO1xuICAgICAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgICB9XG59XG5cbi5vcHRpb24ge1xuICAgIHBhZGRpbmc6IC4yNWVtIC41ZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGNvbG9yOiAjZmZmO1xuICAgIGZvbnQtc2l6ZTogLjhyZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgbWFyZ2luOiAuMjVlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IC40cmVtO1xuICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG59XG5cbi5kZXNjcmlwdGlvbiB7XG4gICAgZm9udC1zaXplOiAuNzVlbTtcbiAgICBtYXJnaW4tdG9wOiAuMjVlbTtcbn1cblxuLmNoaWxkcmVuIHtcbiAgICBmb250LXNpemU6IC45ZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgjMDAwLCAuMDUpO1xufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmNhdGVyaW5nLWl0ZW0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVyZW07XG59XG4uY2F0ZXJpbmctaXRlbVtkaXNhYmxlZD10cnVlXSB7XG4gIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICBvcGFjaXR5OiAwLjM1O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuMik7XG59XG5cbi5zdWJpdGVtIHtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbi5uYW1lIHtcbiAgbWF4LXdpZHRoOiA0ODBweDtcbn1cblxuLmltYWdlIHtcbiAgaGVpZ2h0OiAzZW07XG4gIHdpZHRoOiAzZW07XG4gIG1pbi13aWR0aDogM2VtO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjA1KTtcbn1cblxuLmRldGFpbHMge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDI1JTtcbiAgcGFkZGluZzogMCAwLjVlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWxzICogPiB7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG4ub3B0aW9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4ub3B0aW9ucyBidXR0b24ge1xuICBiYWNrZ3JvdW5kOiBub25lO1xuICBib3JkZXI6IG5vbmU7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIGhlaWdodDogMS41ZW07XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpO1xuICBsaW5lLWhlaWdodDogMWVtO1xuICBwYWRkaW5nOiAwIDAuMjVlbTtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5cbi5vcHRpb24ge1xuICBwYWRkaW5nOiAwLjI1ZW0gMC41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgY29sb3I6ICNmZmY7XG4gIGZvbnQtc2l6ZTogMC44cmVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICBtYXJnaW46IDAuMjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAwLjRyZW07XG4gIG1hcmdpbi1sZWZ0OiAwO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuXG4uZGVzY3JpcHRpb24ge1xuICBmb250LXNpemU6IDAuNzVlbTtcbiAgbWFyZ2luLXRvcDogMC4yNWVtO1xufVxuXG4uY2hpbGRyZW4ge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuMDUpO1xufSJdfQ== */"], data: { animation: [angular_animations_1.ANIMATION_SHOW_CONTRACT_EXPAND] } });
+    } }, directives: [i3.NgIf, i3.NgForOf, i4.MatTooltip, i5.MatButton, i6.CounterComponent, i7.NgControlStatus, i7.NgModel, i8.IconComponent, CateringMenuItemComponent], pipes: [i3.CurrencyPipe], styles: [".catering-item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.5rem;\n}\n.catering-item[disabled=true][_ngcontent-%COMP%] {\n  pointer-events: none;\n  opacity: 0.35;\n  background-color: rgba(0, 0, 0, 0.2);\n}\n.subitem[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n}\n.name[_ngcontent-%COMP%] {\n  max-width: 480px;\n}\n.image[_ngcontent-%COMP%] {\n  height: 3em;\n  width: 3em;\n  min-width: 3em;\n  border-radius: 4px;\n  background-color: rgba(0, 0, 0, 0.05);\n  background-position: center;\n  background-size: cover;\n  border: 1px solid rgba(0, 0, 0, 0.05);\n}\n.compact[_ngcontent-%COMP%] {\n  flex-wrap: wrap;\n}\n.compact[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%] {\n  min-width: 70%;\n  flex: 1;\n}\n.compact[_ngcontent-%COMP%]   .option[_ngcontent-%COMP%], .compact[_ngcontent-%COMP%]   a-counter[_ngcontent-%COMP%], .compact[_ngcontent-%COMP%]    > button[_ngcontent-%COMP%] {\n  margin-left: auto;\n}\n.details[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 25%;\n  padding: 0 0.5em;\n  display: flex;\n  flex-direction: column;\n}\n.details[_ngcontent-%COMP%]   *[_ngcontent-%COMP%]    >  {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.options[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.options[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  background: none;\n  border: none;\n  font-size: 0.8em;\n  height: 1.5em;\n  color: rgba(0, 0, 0, 0.85);\n  line-height: 1em;\n  padding: 0 0.25em;\n  text-decoration: underline;\n}\n.option[_ngcontent-%COMP%] {\n  padding: 0.25em 0.5em;\n  border-radius: 4px;\n  color: #fff;\n  font-size: 0.8rem;\n  background-color: #1937ea;\n  margin: 0.25em;\n  margin-right: 0.4rem;\n  margin-left: 0;\n  white-space: nowrap;\n}\n.description[_ngcontent-%COMP%] {\n  font-size: 0.75em;\n  margin-top: 0.25em;\n}\n.children[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  background-color: rgba(0, 0, 0, 0.05);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvY2F0ZXJpbmcvb3JkZXItZGV0YWlscy9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FDMUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtBQ01KO0FESkk7RUFDSSxvQkFBQTtFQUNBLGFBQUE7RUFDQSxvQ0FBQTtBQ01SO0FERkE7RUFDSSwwQkFBQTtBQ0tKO0FERkE7RUFDSSxnQkFBQTtBQ0tKO0FERkE7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLHFDQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtFQUNBLHFDQUFBO0FDS0o7QURGQTtFQUNJLGVBQUE7QUNLSjtBREhJO0VBQ0ksY0FBQTtFQUNBLE9BQUE7QUNLUjtBREZJOzs7RUFHSSxpQkFBQTtBQ0lSO0FEQUE7RUFDSSxPQUFBO0VBQ0EsY0FBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLHNCQUFBO0FDR0o7QURESTtFQUNJLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSx1QkFBQTtBQ0dSO0FEQ0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7QUNFSjtBREFJO0VBQ0ksZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsZ0JBQUE7RUFDQSxhQUFBO0VBQ0EsMEJBQUE7RUFDQSxnQkFBQTtFQUNBLGlCQUFBO0VBQ0EsMEJBQUE7QUNFUjtBREVBO0VBQ0kscUJBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtFQUNBLHlCRGpFWTtFQ2tFWixjQUFBO0VBQ0Esb0JBQUE7RUFDQSxjQUFBO0VBQ0EsbUJBQUE7QUNDSjtBREVBO0VBQ0ksaUJBQUE7RUFDQSxrQkFBQTtBQ0NKO0FERUE7RUFDSSxnQkFBQTtFQUNBLHFDQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy9ib29raW5nLW1vZGFsL2NhdGVyaW5nL29yZGVyLWRldGFpbHMvaXRlbS9pdGVtLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cblxuLmNhdGVyaW5nLWl0ZW0ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAuNXJlbTtcblxuICAgICZbZGlzYWJsZWQ9XCJ0cnVlXCJdIHtcbiAgICAgICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gICAgICAgIG9wYWNpdHk6IC4zNTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgjMDAwLCAuMik7XG4gICAgfVxufVxuXG4uc3ViaXRlbSB7XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbi5uYW1lIHtcbiAgICBtYXgtd2lkdGg6IDQ4MHB4O1xufVxuXG4uaW1hZ2Uge1xuICAgIGhlaWdodDogM2VtO1xuICAgIHdpZHRoOiAzZW07XG4gICAgbWluLXdpZHRoOiAzZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoIzAwMCwgLjA1KTtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKCMwMDAsIC4wNSk7XG59XG5cbi5jb21wYWN0IHtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG5cbiAgICAuZGV0YWlscyB7XG4gICAgICAgIG1pbi13aWR0aDogNzAlO1xuICAgICAgICBmbGV4OiAxO1xuICAgIH1cblxuICAgIC5vcHRpb24sXG4gICAgYS1jb3VudGVyLFxuICAgID4gYnV0dG9uIHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICAgfVxufVxuXG4uZGV0YWlscyB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDI1JTtcbiAgICBwYWRkaW5nOiAwIC41ZW07XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuXG4gICAgKiA+IHtcbiAgICAgICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gICAgfVxufVxuXG4ub3B0aW9ucyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuXG4gICAgYnV0dG9uIHtcbiAgICAgICAgYmFja2dyb3VuZDogbm9uZTtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgICBmb250LXNpemU6IC44ZW07XG4gICAgICAgIGhlaWdodDogMS41ZW07XG4gICAgICAgIGNvbG9yOiByZ2JhKCMwMDAsIC44NSk7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAxZW07XG4gICAgICAgIHBhZGRpbmc6IDAgLjI1ZW07XG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xuICAgIH1cbn1cblxuLm9wdGlvbiB7XG4gICAgcGFkZGluZzogLjI1ZW0gLjVlbTtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgZm9udC1zaXplOiAuOHJlbTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbiAgICBtYXJnaW46IC4yNWVtO1xuICAgIG1hcmdpbi1yaWdodDogLjRyZW07XG4gICAgbWFyZ2luLWxlZnQ6IDA7XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbn1cblxuLmRlc2NyaXB0aW9uIHtcbiAgICBmb250LXNpemU6IC43NWVtO1xuICAgIG1hcmdpbi10b3A6IC4yNWVtO1xufVxuXG4uY2hpbGRyZW4ge1xuICAgIGZvbnQtc2l6ZTogLjllbTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCMwMDAsIC4wNSk7XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4uY2F0ZXJpbmctaXRlbSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDAuNXJlbTtcbn1cbi5jYXRlcmluZy1pdGVtW2Rpc2FibGVkPXRydWVdIHtcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gIG9wYWNpdHk6IDAuMzU7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4yKTtcbn1cblxuLnN1Yml0ZW0ge1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbn1cblxuLm5hbWUge1xuICBtYXgtd2lkdGg6IDQ4MHB4O1xufVxuXG4uaW1hZ2Uge1xuICBoZWlnaHQ6IDNlbTtcbiAgd2lkdGg6IDNlbTtcbiAgbWluLXdpZHRoOiAzZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjA1KTtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMDUpO1xufVxuXG4uY29tcGFjdCB7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cbi5jb21wYWN0IC5kZXRhaWxzIHtcbiAgbWluLXdpZHRoOiA3MCU7XG4gIGZsZXg6IDE7XG59XG4uY29tcGFjdCAub3B0aW9uLFxuLmNvbXBhY3QgYS1jb3VudGVyLFxuLmNvbXBhY3QgPiBidXR0b24ge1xuICBtYXJnaW4tbGVmdDogYXV0bztcbn1cblxuLmRldGFpbHMge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDI1JTtcbiAgcGFkZGluZzogMCAwLjVlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWxzICogPiB7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG4ub3B0aW9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4ub3B0aW9ucyBidXR0b24ge1xuICBiYWNrZ3JvdW5kOiBub25lO1xuICBib3JkZXI6IG5vbmU7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIGhlaWdodDogMS41ZW07XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpO1xuICBsaW5lLWhlaWdodDogMWVtO1xuICBwYWRkaW5nOiAwIDAuMjVlbTtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5cbi5vcHRpb24ge1xuICBwYWRkaW5nOiAwLjI1ZW0gMC41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgY29sb3I6ICNmZmY7XG4gIGZvbnQtc2l6ZTogMC44cmVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICBtYXJnaW46IDAuMjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAwLjRyZW07XG4gIG1hcmdpbi1sZWZ0OiAwO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuXG4uZGVzY3JpcHRpb24ge1xuICBmb250LXNpemU6IDAuNzVlbTtcbiAgbWFyZ2luLXRvcDogMC4yNWVtO1xufVxuXG4uY2hpbGRyZW4ge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuMDUpO1xufSJdfQ== */"], data: { animation: [angular_animations_1.ANIMATION_SHOW_CONTRACT_EXPAND] } });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CateringMenuItemComponent, [{
         type: core_1.Component,
         args: [{
@@ -1774,6 +1758,8 @@ CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuIte
         }], symbol: [{
             type: core_1.Input
         }], disabled: [{
+            type: core_1.Input
+        }], compact: [{
             type: core_1.Input
         }] }); })();
 
@@ -1819,11 +1805,11 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Catering order cancel action
      */ 
-    const MSG_EXTERNAL_8890553633144307762$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ORDER_DETAILS_COMPONENT_TS_1 = goog.getMsg("Back");
-    I18N_0 = MSG_EXTERNAL_8890553633144307762$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ORDER_DETAILS_COMPONENT_TS_1;
+    const MSG_EXTERNAL_6168722822529020983$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ORDER_DETAILS_COMPONENT_TS_1 = goog.getMsg(" Back ");
+    I18N_0 = MSG_EXTERNAL_6168722822529020983$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ORDER_DETAILS_COMPONENT_TS_1;
 }
 else {
-    I18N_0 = $localize `:Catering order cancel action␟cda31dbd724cf5f4fa7a4274d9120651490c8a8c␟8890553633144307762:Back`;
+    I18N_0 = $localize `:Catering order cancel action␟9dc973b1a2fa6ac0ac5a539eeb8a44c2f7ab8138␟6168722822529020983: Back `;
 }
 var I18N_2;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -1992,11 +1978,11 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Catering order loading label
      */ 
-    const MSG_EXTERNAL_3030815663356248509$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ORDER_DETAILS_COMPONENT_TS__11 = goog.getMsg("Loading menu for {$interpolation}...", { "interpolation": "\uFFFD0\uFFFD" });
-    I18N_10 = MSG_EXTERNAL_3030815663356248509$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ORDER_DETAILS_COMPONENT_TS__11;
+    const MSG_EXTERNAL_2999949068960617481$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ORDER_DETAILS_COMPONENT_TS__11 = goog.getMsg(" Loading menu for {$interpolation}... ", { "interpolation": "\uFFFD0\uFFFD" });
+    I18N_10 = MSG_EXTERNAL_2999949068960617481$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ORDER_DETAILS_COMPONENT_TS__11;
 }
 else {
-    I18N_10 = $localize `:Catering order loading label␟bfda21d2176fb36e23aa0481fe88e423db437c00␟3030815663356248509:Loading menu for ${"\uFFFD0\uFFFD"}:INTERPOLATION:...`;
+    I18N_10 = $localize `:Catering order loading label␟a903946ea861214017096f1395af361b04201aba␟2999949068960617481: Loading menu for ${"\uFFFD0\uFFFD"}:INTERPOLATION:... `;
 }
 function BookingCateringOrderDetailsComponent_ng_template_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 18);
@@ -2022,7 +2008,7 @@ function BookingCateringOrderDetailsComponent_ng_template_12_Template(rf, ctx) {
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r7 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("category", ctx_r7.active_category)("symbol", ctx_r7.symbol)("items", ctx_r7.form.controls.items)("disabled", ctx_r7.within_restricted_time);
+    i0.ɵɵproperty("compact", ctx_r7.compact)("category", ctx_r7.active_category)("symbol", ctx_r7.symbol)("items", ctx_r7.form.controls.items)("disabled", ctx_r7.within_restricted_time);
 } }
 class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirective {
     constructor(_menu, _org, _dialog) {
@@ -2198,7 +2184,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
 }
 exports.BookingCateringOrderDetailsComponent = BookingCateringOrderDetailsComponent;
 BookingCateringOrderDetailsComponent.ɵfac = function BookingCateringOrderDetailsComponent_Factory(t) { return new (t || BookingCateringOrderDetailsComponent)(i0.ɵɵdirectiveInject(i1.CateringMenuService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
-BookingCateringOrderDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingCateringOrderDetailsComponent, selectors: [["a-catering-order-details"]], inputs: { order: "order", date: "date", duration: "duration", space_list: "space_list", all_day: "all_day", hide_details: "hide_details", compact: "compact" }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 14, vars: 7, consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", 1, "inverse", 3, "click"], ["mat-button", "", "name", "confirm", 3, "disabled", "click"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "location_id"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "delivery_time"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "click", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "click"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "category", "symbol", "items", "disabled", "close"]], template: function BookingCateringOrderDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+BookingCateringOrderDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingCateringOrderDetailsComponent, selectors: [["a-catering-order-details"]], inputs: { order: "order", date: "date", duration: "duration", space_list: "space_list", all_day: "all_day", hide_details: "hide_details", compact: "compact" }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 14, vars: 7, consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", 1, "inverse", 3, "click"], ["mat-button", "", "name", "confirm", 3, "disabled", "click"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "location_id"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "delivery_time"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "click", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "click"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "compact", "category", "symbol", "items", "disabled", "close"]], template: function BookingCateringOrderDetailsComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtemplate(1, BookingCateringOrderDetailsComponent_div_1_Template, 14, 3, "div", 1);
         i0.ɵɵtemplate(2, BookingCateringOrderDetailsComponent_div_2_Template, 2, 2, "div", 2);
@@ -2215,7 +2201,7 @@ BookingCateringOrderDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: Book
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(8, BookingCateringOrderDetailsComponent_ng_template_8_Template, 7, 1, "ng-template", null, 6, i0.ɵɵtemplateRefExtractor);
         i0.ɵɵtemplate(10, BookingCateringOrderDetailsComponent_ng_template_10_Template, 6, 1, "ng-template", null, 7, i0.ɵɵtemplateRefExtractor);
-        i0.ɵɵtemplate(12, BookingCateringOrderDetailsComponent_ng_template_12_Template, 1, 4, "ng-template", null, 8, i0.ɵɵtemplateRefExtractor);
+        i0.ɵɵtemplate(12, BookingCateringOrderDetailsComponent_ng_template_12_Template, 1, 5, "ng-template", null, 8, i0.ɵɵtemplateRefExtractor);
     } if (rf & 2) {
         const _r4 = i0.ɵɵreference(11);
         i0.ɵɵclassProp("compact", ctx.compact);
@@ -4899,7 +4885,9 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
         })
             .then(() => {
             this._service.notifySuccess('Meeting approved.');
-            this.booking.approval_status[this.booking.space.id] = 'accepted';
+            for (const space of this.booking.space_list) {
+                this.booking.approval_status[space.email] = 'accepted';
+            }
             this._service.set('UPDATED_BOOKING', this.booking);
             this.setLoading(null);
             this.event.emit({ reason: 'action', metadata: 'approved' });
@@ -4918,7 +4906,7 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
         })
             .then(() => {
             this._service.notifySuccess('Meeting declined.');
-            this.booking.approval_status[this.booking.space.id] = 'declined';
+            this.booking.approval_status[this.booking.space.email] = 'declined';
             this._service.set('UPDATED_BOOKING', this.booking);
             this.setLoading(null);
             this.event.emit({ reason: 'action', metadata: 'declined' });
@@ -4928,7 +4916,6 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
     confirmDeleteMeeting() {
         const ref = this._dialog.open(delete_confirm_modal_component_1.DeleteConfirmModalComponent);
         this.subscription('confirm', ref.componentInstance.event.subscribe((event) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log('Event:', event);
             /* istanbul ignore else */
             if (event.reason === 'action') {
                 ref.componentInstance.loading = true;
@@ -4956,7 +4943,7 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             this.setLoading('Updating requirements...');
             const value = form.value;
-            const booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), value), { room_ids: value.space_list.map((space) => space.id) }));
+            const booking = new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking.toJSON()), value), { room_ids: value.space_list.map((space) => space.id) }));
             const new_booking = (yield booking.save().catch((err) => {
                 this._service.notifyError(`Error updating requirements. Error: ${err.message || err}`);
             }));
@@ -6059,7 +6046,6 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
                 },
             ];
             const value = this.form.value;
-            console.log('Form:', value);
             const setup = Object.assign({}, this.booking.setup);
             setup[this.booking.space.email] = value.setup * 60;
             const breakdown = Object.assign({}, this.booking.breakdown);
@@ -6067,7 +6053,6 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
             const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), { setup,
                 breakdown,
                 notes }));
-            console.log('Booking:', new_booking);
             this.loading = true;
             this._dialog_ref.disableClose = true;
             new_booking.save().then((booking) => {
@@ -7379,7 +7364,7 @@ class ApplicationService extends base_class_1.BaseClass {
         this.set('loading', {});
         this.set('APP.breakdown', false);
         this.set('CONCIERGE.legend', {});
-        this.set('UPDATED_BOOKING', null);
+        this.set('UPDATED_BOOKING', null, 'subject');
         this.set('CONCIERGE.pending_bookings', {});
         this.set('CONCIERGE.day_view.viewing', null);
         this._app_ref.isStable.pipe(operators_1.first((_) => _)).subscribe(() => {
@@ -7553,9 +7538,9 @@ class ApplicationService extends base_class_1.BaseClass {
      * @param name Property name
      * @param value New value
      */
-    set(name, value) {
+    set(name, value, type = 'behaviourSubject') {
         if (!this._subjects[name]) {
-            this._subjects[name] = new rxjs_1.BehaviorSubject(value);
+            this._subjects[name] = type === 'subject' ? new rxjs_1.Subject() : new rxjs_1.BehaviorSubject(value);
             this._observers[name] = this._subjects[name].asObservable();
         }
         else {
@@ -8270,7 +8255,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         this.notes = raw_data.notes || [];
         this.equipment_codes = raw_data.equipment_codes || raw_data.equipment_code || {};
         this.expected_attendees = raw_data.expected_attendees || {};
-        this.approval_status = raw_data.approval_status || raw_data.status || {};
+        this.approval_status = (raw_data.status instanceof Object ? raw_data.status : '') || raw_data.approval_status || {};
         this.checked_in = raw_data.checked_in || raw_data.checkins || [];
         this.notify_users = raw_data.notify_users || [];
         if (raw_data.description && !this.notes.find((i) => i.type === 'description')) {
@@ -8303,9 +8288,6 @@ class Booking extends base_api_class_1.BaseDataClass {
         else {
             this.space_list = space_ids.map((id) => new space_class_1.Space({ id, name: id, email: id }));
         }
-        if (raw_data.show_as && raw_data.show_as === 'cancelled') {
-            this.space_list.forEach((space) => (this.approval_status[space.email] = 'declined'));
-        }
         this.catering = (raw_data.catering instanceof Array ? raw_data.catering : []).map((i) => new catering_order_class_1.CateringOrder(i));
         const edited_fields = Array.isArray(raw_data.edits)
             ? raw_data.edits
@@ -8322,7 +8304,7 @@ class Booking extends base_api_class_1.BaseDataClass {
     /** Whether booking has been declined */
     get declined() {
         for (const space of this.space_list) {
-            if ((this.approval_status[space.email] || '').indexOf('decline') >= 0) {
+            if ((this.approval_status[space.email] || '').includes('decline')) {
                 return true;
             }
         }
@@ -8332,8 +8314,8 @@ class Booking extends base_api_class_1.BaseDataClass {
     get approved() {
         for (const space of this.space_list) {
             if (this.approval_status[space.email] &&
-                (this.approval_status[space.email].indexOf('tentative') >= 0 ||
-                    this.approval_status[space.email].indexOf('decline') >= 0)) {
+                (this.approval_status[space.email].includes('tentative') ||
+                    this.approval_status[space.email].includes('decline'))) {
                 return false;
             }
         }
@@ -10272,7 +10254,7 @@ class Space extends base_api_class_1.BaseDataClass {
         this.image = raw_data.image || '';
         this.zones = raw_data.zones instanceof Array ? raw_data.zones : [];
         const raw_bookings = settings.bookings || raw_data.bookings || [];
-        this.bookings = raw_bookings.map((bkn) => new booking_class_1.Booking(bkn));
+        this.bookings = raw_bookings.map((bkn) => new booking_class_1.Booking(bkn.toJSON ? bkn.toJSON() : bkn));
         this._extras = [];
         this.linked_spaces =
             settings.linked_rooms || raw_data.linked_rooms || raw_data.linked_spaces || [];
@@ -15323,7 +15305,6 @@ window.control.handlers.push({
     callback: (event) => {
         if (event.body && event.route_params.id) {
             const category = event.body;
-            console.log('Body:', category);
             for (const zone of category.zones) {
                 if (!MOCK_MENU[zone]) {
                     MOCK_MENU[zone] = [];
@@ -18002,7 +17983,7 @@ class CateringOrdersItemComponent {
                 this.loading = true;
                 const catering = [...booking.catering];
                 catering.splice(catering.findIndex((order) => order.id === this.order.id), 1, new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, this.order), { status: this.active_status })));
-                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking), { catering }));
+                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking.toJSON()), { catering }));
                 const updated_booking = yield new_booking.save().catch((err) => {
                     this._service.notifyError(`Error updating order status. Error: ${err.message || err}`);
                     this.active_status = this.order.status;
@@ -18299,7 +18280,6 @@ class CateringOrdersComponent extends base_directive_1.BaseDirective {
             space_list.forEach((space) => {
                 space.bookings.forEach((booking, i) => {
                     const catering = booking.catering;
-                    console.log('Catering:', space.name, i, catering);
                     catering.forEach((order) => {
                         order.booking_date = booking.date;
                         order.booking = booking;
@@ -18307,10 +18287,8 @@ class CateringOrdersComponent extends base_directive_1.BaseDirective {
                     orders = orders.concat(booking.catering);
                 });
             });
-            console.log('Orders:', orders);
             orders = general_utilities_1.unique(orders, 'id');
             orders = orders.filter((order) => this.available_spaces.indexOf(order.location_id) >= 0);
-            console.log('Orders w/Filter:', orders);
             orders.sort((a, b) => a.booking_date +
                 a.delivery_time * 60 * 1000 -
                 (b.booking_date + b.delivery_time * 60 * 1000));
@@ -19307,7 +19285,6 @@ class CateringItemModalComponent extends base_directive_1.BaseDirective {
                 ? this._menu_items.update(this.item.id, data)
                 : this._menu_items.add(data);
             request.then((item) => {
-                console.log('Item:', item);
                 this.event.emit({ reason: 'done', metadata: item });
                 this._dialog_ref.close();
             }, (err) => this._service.notifyError(`Error ${this.item.id ? 'updating' : 'creating'} item. Error: ${err.message || err}`));
@@ -19645,7 +19622,7 @@ class OrderDetailsItemsComponent {
                     orders.splice(index, 1, order);
                 }
                 this.loading = true;
-                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), { catering: orders }));
+                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), { catering: orders }));
                 const booking = yield this._bookings
                     .save(new_booking)
                     .catch((err) => this._service.notifyError(`Error unable to update order. Error: ${err.message || err}`));
@@ -19817,7 +19794,7 @@ class OrderDetailsNotesComponent {
                         time: date.format('h:mm A'),
                     },
                 ];
-                const pending_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), { notes: new_notes }));
+                const pending_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), { notes: new_notes }));
                 this.loading = true;
                 const new_booking = (yield pending_booking.save().catch((err) => {
                     this._service.notifyError(`Failed to add note to order meeting. Error: ${err.message || err}`);
@@ -20053,7 +20030,7 @@ class OrderDetailsModalComponent extends base_directive_1.BaseDirective {
                 this.loading = true;
                 const catering = [...booking.catering];
                 catering.splice(catering.findIndex((order) => order.id === this._data.order.id), 1, new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, this._data.order), { status: this.active_status })));
-                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking), { catering }));
+                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking.toJSON()), { catering }));
                 const updated_booking = yield new_booking.save().catch((err) => {
                     this._service.notifyError(`Error updating order status. Error: ${err.message || err}`);
                     this.active_status = this._data.order.status;
@@ -20251,10 +20228,10 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
             .map((i) => i.id);
         this.updateMeetings();
         this.getMonthlyPending();
+        this.interval('update', () => this.updateMeetings(), 30 * 1000);
         this.interval('monthly_pending', () => this.getMonthlyPending(), 10 * 60 * 1000);
         this.subscription('UPDATED', this._service.listen('UPDATED_BOOKING').subscribe((value) => {
             if (value) {
-                console.log('Updated:', value);
                 const bookings = this.events.filter(bkn => bkn.icaluid !== value.icaluid);
                 if (!value.approved && !value.declined) {
                     bookings.push(value);
@@ -20695,7 +20672,9 @@ class DayViewApprovalsEventComponent extends base_directive_1.BaseDirective {
                 })
                     .then(() => {
                     this._service.notifySuccess('Meeting approved.');
-                    this.event.approval_status[this.event.space.id] = 'accepted';
+                    for (const space of this.event.space_list) {
+                        this.event.approval_status[space.email] = 'accepted';
+                    }
                     STATES[this.event.id] = 'accepted';
                     this._service.set('UPDATED_BOOKING', this.event);
                     this._service.set('BOOKING.states', STATES);
@@ -20740,7 +20719,7 @@ class DayViewApprovalsEventComponent extends base_directive_1.BaseDirective {
                 })
                     .then(() => {
                     this._service.notifySuccess('Meeting declined.');
-                    this.event.approval_status[booking.space.id] = 'declined';
+                    this.event.approval_status[booking.space.email] = 'declined';
                     STATES[this.event.id] = 'declined';
                     this._service.set('UPDATED_BOOKING', this.event);
                     this._service.set('BOOKING.states', STATES);
@@ -20818,7 +20797,6 @@ const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive *
 const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const router_1 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 const booking_modal_component_1 = __webpack_require__(/*! src/app/overlays/booking-modal/booking-modal.component */ "./src/app/overlays/booking-modal/booking-modal.component.ts");
-const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
@@ -21019,11 +20997,7 @@ class DayViewComponent extends base_directive_1.BaseDirective {
         });
     }
     newMeeting() {
-        this._dialog.open(booking_modal_component_1.BookingModalComponent, {
-            data: {
-                booking: new booking_class_1.Booking({})
-            }
-        });
+        this._dialog.open(booking_modal_component_1.BookingModalComponent, { data: {} });
     }
     updateLevel() {
         this._router.navigate(['/day-view', this.active_level]);
@@ -21336,7 +21310,7 @@ function DayViewSpaceEventComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     const ctx_r0 = i0.ɵɵnextContext();
     i0.ɵɵstyleProp("top", ctx_r0.top + "%")("left", ctx_r0.left + "%")("width", ctx_r0.fixed ? "15rem" : ctx_r0.width + "%")("height", ctx_r0.fixed ? ctx_r0.height * 3 + "rem" : ctx_r0.height + "%");
     i0.ɵɵclassProp("fixed", ctx_r0.fixed)("inactive", !ctx_r0.active);
-    i0.ɵɵproperty("id", "event-" + ctx_r0.event.local_id);
+    i0.ɵɵproperty("id", "event-" + ctx_r0.local_id);
     i0.ɵɵadvance(1);
     i0.ɵɵclassMap("overflow" + (ctx_r0.type ? " " + ctx_r0.type : ""));
     i0.ɵɵstyleProp("top", 0 - ctx_r0.overflow_top + "%")("bottom", 0 - ctx_r0.overflow_bottom + "%");
@@ -21378,6 +21352,9 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
         this.position = new core_1.EventEmitter();
         /** Whether to hide the event */
         this.hide = false;
+    }
+    get local_id() {
+        return this.event.icaluid.substr(0, 6);
     }
     /** Whether booking is approved for the event in the displayed space */
     get approved() {
@@ -21620,7 +21597,7 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
     get events() {
         /* istanbul ignore else */
         if (this.space) {
-            const bookings = this.space.bookingsFor(this.date);
+            const bookings = this.space.bookings;
             const list = bookings.filter((event) => {
                 if (this.override_state && this.override_state === event.icaluid) {
                     this.loading[event.id] = true;
@@ -21646,11 +21623,11 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
                 .subscribe((state) => (this.legend = state || {})));
             this.subscription('UPDATED', this._service.listen('UPDATED_BOOKING').subscribe((value) => {
                 if (value && value instanceof booking_class_1.Booking) {
-                    console.log('Updated:', value);
-                    const bookings = this.space.bookings.filter(bkn => bkn.icaluid !== value.icaluid);
+                    const bookings = this.space.bookings.filter(bkn => !bkn.icaluid || bkn.icaluid !== value.icaluid);
                     if (value.space_list.find(space => space.email === this.space.email)) {
                         bookings.push(value);
                     }
+                    console.log('Value:', value, value.declined);
                     this.space = new space_class_1.Space(Object.assign(Object.assign({}, this.space), { bookings }));
                 }
             }));
@@ -21801,7 +21778,7 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
             this.handleDropError(booking.id, 'The meeting is already in this room');
             return;
         }
-        const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking), { room_ids: room_list.map((space) => space.id) }));
+        const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking.toJSON()), { room_ids: room_list.map((space) => space.id) }));
         this.checkCollisions(room_list, date.valueOf(), new_booking.duration, new_booking.icaluid).then(() => {
             this.moveBooking(message, new_booking).then((_) => {
                 this.override_state = null;
@@ -22259,12 +22236,13 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
                             this.view(booking);
                         }
                     }
-                    const space = this.filtered_spaces.find((space) => space.id === rm.id);
+                    const index = this.spaces.findIndex((space) => space.id === rm.id);
                     /* istanbul ignore else */
-                    if (space) {
-                        space.bookings = rm.bookings;
+                    if (index > 0) {
+                        this.spaces.splice(index, 1, rm);
                     }
                 });
+                this.initSpaces();
                 delete this.loading_space;
                 this.last_update = dayjs().valueOf();
                 this.loading_space = {};
@@ -23434,7 +23412,7 @@ class EventFormComponent {
     }
     addVisitor() {
         const list = this.form.controls.attendees.value;
-        list.push(new user_class_1.User({ visitor: true, email: `${Math.floor(Math.random() * 99999)}@guest.mckinsey.com` }));
+        list.push(new user_class_1.User({ visitor: true, email: '' }));
         this.form.controls.attendees.setValue(list);
         this.form.markAsDirty();
     }
@@ -23554,7 +23532,7 @@ class VisitorFormComponent extends base_directive_1.BaseDirective {
             delete this.form;
             this.form = new forms_1.FormGroup({
                 name: new forms_1.FormControl(this.person.name, [forms_1.Validators.minLength(2)]),
-                email: new forms_1.FormControl(this.person.email, [forms_1.Validators.required, forms_1.Validators.email]),
+                email: new forms_1.FormControl(this.person.email, [forms_1.Validators.email]),
             });
         }
     }
@@ -23646,38 +23624,28 @@ function VisitorsFormModalComponent_main_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("form", ctx_r1.form)("event", ctx_r1.booking);
 } }
-function VisitorsFormModalComponent_mat_dialog_actions_6_button_4_Template(rf, ctx) { if (rf & 1) {
-    const _r7 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 10);
-    i0.ɵɵlistener("click", function VisitorsFormModalComponent_mat_dialog_actions_6_button_4_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r7); const ctx_r6 = i0.ɵɵnextContext(2); return ctx_r6.delete(); });
-    i0.ɵɵtext(1, " Delete ");
-    i0.ɵɵelementEnd();
-} }
 function VisitorsFormModalComponent_mat_dialog_actions_6_Template(rf, ctx) { if (rf & 1) {
-    const _r9 = i0.ɵɵgetCurrentView();
+    const _r6 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "mat-dialog-actions");
     i0.ɵɵelementStart(1, "footer");
     i0.ɵɵelementStart(2, "button", 8);
-    i0.ɵɵlistener("click", function VisitorsFormModalComponent_mat_dialog_actions_6_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r9); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.save(); });
+    i0.ɵɵlistener("click", function VisitorsFormModalComponent_mat_dialog_actions_6_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r6); const ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.save(); });
     i0.ɵɵtext(3, "Save");
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(4, VisitorsFormModalComponent_mat_dialog_actions_6_button_4_Template, 2, 0, "button", 9);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r2 = i0.ɵɵnextContext();
     i0.ɵɵadvance(2);
     i0.ɵɵproperty("disabled", !ctx_r2.has_attendees);
-    i0.ɵɵadvance(2);
-    i0.ɵɵproperty("ngIf", ctx_r2.booking.id);
 } }
 function VisitorsFormModalComponent_ng_template_7_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "main", 11);
-    i0.ɵɵelementStart(1, "div", 12);
-    i0.ɵɵelementStart(2, "div", 13);
-    i0.ɵɵelement(3, "mat-spinner", 14);
+    i0.ɵɵelementStart(0, "main", 9);
+    i0.ɵɵelementStart(1, "div", 10);
+    i0.ɵɵelementStart(2, "div", 11);
+    i0.ɵɵelement(3, "mat-spinner", 12);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "div", 15);
+    i0.ɵɵelementStart(4, "div", 13);
     i0.ɵɵtext(5);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -23754,7 +23722,13 @@ class VisitorsFormModalComponent extends base_directive_1.BaseDirective {
             this._dialog_ref.disableClose = true;
             /* istanbul ignore else */
             if (this.form.dirty && this.form.valid) {
-                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking), this.form.value));
+                const attendees = this.form.controls.attendees.value;
+                for (const attendee of attendees) {
+                    if (!attendee.email) {
+                        attendee.email = `${Math.floor(Math.random() * 99999)}@guest.mckinsey.com`;
+                    }
+                }
+                const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), this.form.value));
                 new_booking.save().then((bkn) => {
                     this.event.emit({ reason: 'done', metadata: bkn });
                     this._service.notifySuccess(this.booking.id
@@ -23773,7 +23747,7 @@ class VisitorsFormModalComponent extends base_directive_1.BaseDirective {
 }
 exports.VisitorsFormModalComponent = VisitorsFormModalComponent;
 VisitorsFormModalComponent.ɵfac = function VisitorsFormModalComponent_Factory(t) { return new (t || VisitorsFormModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService), i0.ɵɵdirectiveInject(i3.MatDialogRef), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-VisitorsFormModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorsFormModalComponent, selectors: [["a-visitors-form-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 9, vars: 5, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "form", "event"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["mat-button", "", "name", "delete", "class", "error", 3, "click", 4, "ngIf"], ["mat-button", "", "name", "delete", 1, "error", 3, "click"], [2, "min-height", "12em"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function VisitorsFormModalComponent_Template(rf, ctx) { if (rf & 1) {
+VisitorsFormModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorsFormModalComponent, selectors: [["a-visitors-form-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 9, vars: 5, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "form", "event"], ["mat-button", "", "name", "save", 3, "disabled", "click"], [2, "min-height", "12em"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function VisitorsFormModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2);
@@ -23783,7 +23757,7 @@ VisitorsFormModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorsFormMo
         i0.ɵɵelementStart(4, "mat-dialog-content");
         i0.ɵɵtemplate(5, VisitorsFormModalComponent_main_5_Template, 2, 2, "main", 2);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(6, VisitorsFormModalComponent_mat_dialog_actions_6_Template, 5, 2, "mat-dialog-actions", 3);
+        i0.ɵɵtemplate(6, VisitorsFormModalComponent_mat_dialog_actions_6_Template, 4, 1, "mat-dialog-actions", 3);
         i0.ɵɵtemplate(7, VisitorsFormModalComponent_ng_template_7_Template, 6, 1, "ng-template", null, 4, i0.ɵɵtemplateRefExtractor);
     } if (rf & 2) {
         const _r3 = i0.ɵɵreference(8);
@@ -23823,20 +23797,26 @@ VisitorsFormModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorsFormMo
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const angular_animations_1 = __webpack_require__(/*! src/app/shared/globals/angular-animations */ "./src/app/shared/globals/angular-animations.ts");
 const visitors_form_modal_component_1 = __webpack_require__(/*! ../../overlays/visitors-form-modal/visitors-form-modal.component */ "./src/app/shell/visitors/overlays/visitors-form-modal/visitors-form-modal.component.ts");
+const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+const bookings_service_1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-const i1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
-const i2 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-const i3 = __webpack_require__(/*! ../../../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
-const i4 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
-const i5 = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tooltip.js");
-const i6 = __webpack_require__(/*! ../../../../shared/components/action-icon/action-icon.component */ "./src/app/shared/components/action-icon/action-icon.component.ts");
-const i7 = __webpack_require__(/*! ../visitor/visitor.component */ "./src/app/shell/visitors/timeline/visitor/visitor.component.ts");
-const i8 = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
+const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
+const i2 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const i3 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+const i4 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+const i5 = __webpack_require__(/*! ../../../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
+const i6 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+const i7 = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tooltip.js");
+const i8 = __webpack_require__(/*! ../../../../shared/components/action-icon/action-icon.component */ "./src/app/shared/components/action-icon/action-icon.component.ts");
+const i9 = __webpack_require__(/*! ../visitor/visitor.component */ "./src/app/shell/visitors/timeline/visitor/visitor.component.ts");
+const i10 = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 function VisitorBookingItemComponent_div_0_ng_container_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
     i0.ɵɵtext(1);
@@ -23857,7 +23837,7 @@ function VisitorBookingItemComponent_div_0_ng_container_6_Template(rf, ctx) { if
     i0.ɵɵelementContainerEnd();
 } }
 function VisitorBookingItemComponent_div_0_a_visitor_32_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "a-visitor", 22);
+    i0.ɵɵelement(0, "a-visitor", 23);
 } if (rf & 2) {
     const item_r4 = ctx.$implicit;
     const ctx_r3 = i0.ɵɵnextContext(2);
@@ -23904,23 +23884,24 @@ function VisitorBookingItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(22, "action-icon", 4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(23, "button", 15);
-    i0.ɵɵelement(24, "action-icon", 4);
+    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_23_listener() { i0.ɵɵrestoreView(_r6); const ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.checkin(); });
+    i0.ɵɵelement(24, "action-icon", 16);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(25, "button", 16);
-    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_25_listener() { i0.ɵɵrestoreView(_r6); const ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.openEditModal(); });
+    i0.ɵɵelementStart(25, "button", 17);
+    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_25_listener() { i0.ɵɵrestoreView(_r6); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.openEditModal(); });
     i0.ɵɵelement(26, "action-icon", 4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(27, "div", 17);
-    i0.ɵɵelementStart(28, "button", 18);
-    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_28_listener() { i0.ɵɵrestoreView(_r6); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.show_attendees = !ctx_r7.show_attendees; });
+    i0.ɵɵelementStart(27, "div", 18);
+    i0.ɵɵelementStart(28, "button", 19);
+    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_28_listener() { i0.ɵɵrestoreView(_r6); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.show_attendees = !ctx_r8.show_attendees; });
     i0.ɵɵelement(29, "app-icon", 4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(30, "div", 19);
-    i0.ɵɵelement(31, "div", 20);
-    i0.ɵɵtemplate(32, VisitorBookingItemComponent_div_0_a_visitor_32_Template, 1, 3, "a-visitor", 21);
+    i0.ɵɵelementStart(30, "div", 20);
+    i0.ɵɵelement(31, "div", 21);
+    i0.ɵɵtemplate(32, VisitorBookingItemComponent_div_0_a_visitor_32_Template, 1, 3, "a-visitor", 22);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -23931,7 +23912,7 @@ function VisitorBookingItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(1);
     i0.ɵɵclassProp("upcoming", ctx_r0.upcoming)("all-checked-in", ctx_r0.checked_in);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(31, _c0));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(32, _c0));
     i0.ɵɵadvance(2);
     i0.ɵɵproperty("ngIf", !ctx_r0.event.all_day);
     i0.ɵɵadvance(1);
@@ -23945,26 +23926,28 @@ function VisitorBookingItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate(ctx_r0.status);
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("disabled", !ctx_r0.event.organiser.phone)("href", i0.ɵɵpipeBind2(18, 25, "tel:" + ctx_r0.event.organiser.phone, "url"), i0.ɵɵsanitizeUrl);
+    i0.ɵɵproperty("disabled", !ctx_r0.event.organiser.phone)("href", i0.ɵɵpipeBind2(18, 26, "tel:" + ctx_r0.event.organiser.phone, "url"), i0.ɵɵsanitizeUrl);
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(32, _c1));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(33, _c1));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("href", i0.ɵɵpipeBind2(21, 28, ctx_r0.mail_url, "url"), i0.ɵɵsanitizeUrl);
+    i0.ɵɵproperty("href", i0.ɵɵpipeBind2(21, 29, ctx_r0.mail_url, "url"), i0.ɵɵsanitizeUrl);
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(33, _c2));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(34, _c2));
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(34, _c3));
+    i0.ɵɵproperty("loading", ctx_r0.loading)("icon", i0.ɵɵpureFunction0(35, _c3));
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(35, _c4));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(36, _c4));
     i0.ɵɵadvance(3);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(36, _c5, ctx_r0.show_attendees ? "keyboard_arrow_down" : "keyboard_arrow_right"));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(37, _c5, ctx_r0.show_attendees ? "keyboard_arrow_down" : "keyboard_arrow_right"));
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("@show", ctx_r0.show_attendees ? "show" : "hide");
     i0.ɵɵadvance(2);
     i0.ɵɵproperty("ngForOf", ctx_r0.event.attendees);
 } }
 class VisitorBookingItemComponent {
-    constructor(_dialog) {
+    constructor(_service, _bookings, _dialog) {
+        this._service = _service;
+        this._bookings = _bookings;
         this._dialog = _dialog;
         /** Whether all the attendees have checked in */
         this.checked_in = false;
@@ -23992,6 +23975,32 @@ class VisitorBookingItemComponent {
             return counts;
         }, { checked_in: 0, count: 0 });
     }
+    /**
+     * Checkin the attendee
+     */
+    checkin() {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            this.loading = true;
+            const value = yield this._bookings
+                .checkin(this.event.id, {
+                host_email: this.event.organiser.email,
+                attendee_emails: general_utilities_1.unique(this.event.attendees.map(user => user.email)),
+                booking_id: this.event.id,
+                icaluid: this.event.icaluid,
+                id: this.event.id,
+                notify_users: [...this.event.notify_users],
+                response_type: 'accepted',
+                room_id: this.event.space.id,
+            })
+                .catch((err) => {
+                this._service.notifyError(`Error checking in all attendees for booking. Error: ${err.message || err}`);
+            });
+            if (value) {
+                this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event.toJSON()), { checked_in: general_utilities_1.unique([...this.event.checked_in, ...this.event.attendees.map(user => user.email)]) }));
+            }
+            this.loading = false;
+        });
+    }
     /** URL for mailing all attendees of the event */
     get mail_url() {
         const subject = encodeURIComponent(`${this.event.title}" at ${this.event.start_time}, ${this.event.date_string}`);
@@ -24018,12 +24027,12 @@ class VisitorBookingItemComponent {
     }
 }
 exports.VisitorBookingItemComponent = VisitorBookingItemComponent;
-VisitorBookingItemComponent.ɵfac = function VisitorBookingItemComponent_Factory(t) { return new (t || VisitorBookingItemComponent)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
-VisitorBookingItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorBookingItemComponent, selectors: [["a-visitor-booking"]], inputs: { event: "event", search: "search" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Visitors", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]], template: function VisitorBookingItemComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtemplate(0, VisitorBookingItemComponent_div_0_Template, 33, 38, "div", 0);
+VisitorBookingItemComponent.ɵfac = function VisitorBookingItemComponent_Factory(t) { return new (t || VisitorBookingItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
+VisitorBookingItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorBookingItemComponent, selectors: [["a-visitor-booking"]], inputs: { event: "event", search: "search" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Visitors", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]], template: function VisitorBookingItemComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, VisitorBookingItemComponent_div_0_Template, 33, 39, "div", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.event);
-    } }, directives: [i2.NgIf, i3.IconComponent, i4.MatAnchor, i5.MatTooltip, i6.ActionIconComponent, i4.MatButton, i2.NgForOf, i7.VisitorComponent], pipes: [i8.ɵa], styles: ["[_nghost-%COMP%] {\n  font-size: 0.9em;\n}\n.visitor-booking[_ngcontent-%COMP%] {\n  transition: background 200ms;\n  background-color: #fff;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.showing[_ngcontent-%COMP%] {\n  background-color: #f0f0f0;\n}\n.showing[_ngcontent-%COMP%]   .toggle[_ngcontent-%COMP%] {\n  color: #1937ea;\n}\n.details[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 10;\n  display: flex;\n  align-items: center;\n  padding: 0.5em 0;\n  transition: opacity 200ms;\n}\n.details.blur[_ngcontent-%COMP%] {\n  opacity: 0.35;\n  background-color: #fff;\n}\n.details[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 0 0.5em;\n}\n.details[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 7.75rem;\n  font-size: 0.9em;\n}\n.details[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 13.25em;\n}\n.details[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  width: 12em;\n}\n.icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 2em;\n  width: 2em;\n  border-radius: 100%;\n  background-color: #ccc;\n  font-size: 1.5em;\n}\n.icon.upcoming[_ngcontent-%COMP%] {\n  border: 2px solid #ffb300;\n  background-color: #ffb300;\n  color: #fff;\n}\n.icon.all-checked-in[_ngcontent-%COMP%] {\n  border: 2px solid #1937ea;\n  background-color: #1937ea;\n  color: #fff;\n}\n.time[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: rgba(0, 0, 0, 0.65);\n}\n.title[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 1em;\n}\n.host[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n}\n.status[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  font-weight: 500;\n  width: 3.5em;\n}\n.staff[_ngcontent-%COMP%] {\n  margin-left: 0.5rem;\n  font-weight: 600;\n  font-size: 0.6em;\n  opacity: 0.35;\n  text-transform: uppercase;\n}\n.attendees[_ngcontent-%COMP%] {\n  position: relative;\n}\n.attendees[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -0.65em;\n  left: 2.15em;\n  width: 2px;\n  background-color: #999;\n  bottom: 2em;\n}\n.toggle[_ngcontent-%COMP%] {\n  font-size: 1.2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdGltZWxpbmUvaXRlbS9pdGVtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQzNDQTtFQUNJLGdCQUFBO0FDT0o7QURKQTtFQUNJLDRCQUFBO0VBQ0Esc0JBQUE7RUFDQSwyQ0FBQTtBQ09KO0FESkE7RUFDSSx5QkFBQTtBQ09KO0FETEk7RUFDSSxjREdRO0FFSWhCO0FESEE7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0FDTUo7QURKSTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtBQ01SO0FESEk7RUFDSSxlQUFBO0FDS1I7QURGSTtFQUNJLGNBQUE7RUFDQSxnQkFBQTtBQ0lSO0FEREk7RUFDSSxjQUFBO0FDR1I7QURBSTtFQUNJLFdBQUE7QUNFUjtBREVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxnQkFBQTtBQ0NKO0FEQ0k7RUFDSSx5QkFBQTtFQUNBLHlCRHBERTtFQ3FERixXQUFBO0FDQ1I7QURFSTtFQUNJLHlCQUFBO0VBQ0EseUJEbERRO0VDbURSLFdBQUE7QUNBUjtBREtJO0VBQ0ksMEJBQUE7QUNGUjtBRE1BO0VBQ0ksT0FBQTtFQUNBLGNBQUE7QUNISjtBRE1BO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUNISjtBRE1BO0VBQ0ksZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7QUNISjtBRE1BO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLHlCQUFBO0FDSEo7QURNQTtFQUNJLGtCQUFBO0FDSEo7QURJSTtFQUNJLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0VBQ0Esc0JBQUE7RUFDQSxXQUFBO0FDRlI7QURNQTtFQUNJLGlCQUFBO0FDSEoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxuOmhvc3Qge1xuICAgIGZvbnQtc2l6ZTogLjllbTtcbn1cblxuLnZpc2l0b3ItYm9va2luZyB7XG4gICAgdHJhbnNpdGlvbjogYmFja2dyb3VuZCAyMDBtcztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKCMwMDAsIC4xKTtcbn1cblxuLnNob3dpbmcge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmMGYwZjA7XG5cbiAgICAudG9nZ2xlIHtcbiAgICAgICAgY29sb3I6ICRjb2xvci1wcmltYXJ5O1xuICAgIH1cbn1cblxuLmRldGFpbHMge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB6LWluZGV4OiAxMDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMC41ZW0gMDtcbiAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zO1xuXG4gICAgJi5ibHVyIHtcbiAgICAgICAgb3BhY2l0eTogLjM1O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIH1cblxuICAgID4gKiB7XG4gICAgICAgIG1hcmdpbjogMCAwLjVlbTtcbiAgICB9XG5cbiAgICAudGltZSB7XG4gICAgICAgIHdpZHRoOiA3Ljc1cmVtO1xuICAgICAgICBmb250LXNpemU6IC45ZW07XG4gICAgfVxuXG4gICAgLmhvc3Qge1xuICAgICAgICB3aWR0aDogMTMuMjVlbTtcbiAgICB9XG5cbiAgICAubG9jYXRpb24ge1xuICAgICAgICB3aWR0aDogMTJlbTtcbiAgICB9XG59XG5cbi5pY29uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAyZW07XG4gICAgd2lkdGg6IDJlbTtcbiAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG4gICAgZm9udC1zaXplOiAxLjVlbTtcblxuICAgICYudXBjb21pbmcge1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkcGVuZGluZztcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHBlbmRpbmc7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cblxuICAgICYuYWxsLWNoZWNrZWQtaW4ge1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3ItcHJpbWFyeTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cbn1cblxuLnRpbWUge1xuICAgIHNwYW4ge1xuICAgICAgICBjb2xvcjogcmdiYSgjMDAwLCAwLjY1KTtcbiAgICB9XG59XG5cbi50aXRsZSB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDFlbTtcbn1cblxuLmhvc3Qge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXdlaWdodDogNDAwO1xufVxuXG4uc3RhdHVzIHtcbiAgICBmb250LXNpemU6IC45ZW07XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICB3aWR0aDogMy41ZW07XG59XG5cbi5zdGFmZiB7XG4gICAgbWFyZ2luLWxlZnQ6IC41cmVtO1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgZm9udC1zaXplOiAuNmVtO1xuICAgIG9wYWNpdHk6IC4zNTtcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uYXR0ZW5kZWVzIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgLmJhciB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAtLjY1ZW07XG4gICAgICAgIGxlZnQ6IDIuMTVlbTtcbiAgICAgICAgd2lkdGg6IDJweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzk5OTtcbiAgICAgICAgYm90dG9tOiAyZW07XG4gICAgfVxufVxuXG4udG9nZ2xlIHtcbiAgICBmb250LXNpemU6IDEuMnJlbTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0IHtcbiAgZm9udC1zaXplOiAwLjllbTtcbn1cblxuLnZpc2l0b3ItYm9va2luZyB7XG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQgMjAwbXM7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMSk7XG59XG5cbi5zaG93aW5nIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcbn1cbi5zaG93aW5nIC50b2dnbGUge1xuICBjb2xvcjogIzE5MzdlYTtcbn1cblxuLmRldGFpbHMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHotaW5kZXg6IDEwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVlbSAwO1xuICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zO1xufVxuLmRldGFpbHMuYmx1ciB7XG4gIG9wYWNpdHk6IDAuMzU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG4uZGV0YWlscyA+ICoge1xuICBtYXJnaW46IDAgMC41ZW07XG59XG4uZGV0YWlscyAudGltZSB7XG4gIHdpZHRoOiA3Ljc1cmVtO1xuICBmb250LXNpemU6IDAuOWVtO1xufVxuLmRldGFpbHMgLmhvc3Qge1xuICB3aWR0aDogMTMuMjVlbTtcbn1cbi5kZXRhaWxzIC5sb2NhdGlvbiB7XG4gIHdpZHRoOiAxMmVtO1xufVxuXG4uaWNvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDJlbTtcbiAgd2lkdGg6IDJlbTtcbiAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NjYztcbiAgZm9udC1zaXplOiAxLjVlbTtcbn1cbi5pY29uLnVwY29taW5nIHtcbiAgYm9yZGVyOiAycHggc29saWQgI2ZmYjMwMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmYjMwMDtcbiAgY29sb3I6ICNmZmY7XG59XG4uaWNvbi5hbGwtY2hlY2tlZC1pbiB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMxOTM3ZWE7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxOTM3ZWE7XG4gIGNvbG9yOiAjZmZmO1xufVxuXG4udGltZSBzcGFuIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42NSk7XG59XG5cbi50aXRsZSB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMWVtO1xufVxuXG4uaG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5zdGF0dXMge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICB3aWR0aDogMy41ZW07XG59XG5cbi5zdGFmZiB7XG4gIG1hcmdpbi1sZWZ0OiAwLjVyZW07XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMC42ZW07XG4gIG9wYWNpdHk6IDAuMzU7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5hdHRlbmRlZXMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG4uYXR0ZW5kZWVzIC5iYXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogLTAuNjVlbTtcbiAgbGVmdDogMi4xNWVtO1xuICB3aWR0aDogMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTk5O1xuICBib3R0b206IDJlbTtcbn1cblxuLnRvZ2dsZSB7XG4gIGZvbnQtc2l6ZTogMS4ycmVtO1xufSJdfQ== */"], data: { animation: [angular_animations_1.ANIMATION_SHOW_CONTRACT_EXPAND] } });
+    } }, directives: [i4.NgIf, i5.IconComponent, i6.MatAnchor, i7.MatTooltip, i8.ActionIconComponent, i6.MatButton, i4.NgForOf, i9.VisitorComponent], pipes: [i10.ɵa], styles: ["[_nghost-%COMP%] {\n  font-size: 0.9em;\n}\n.visitor-booking[_ngcontent-%COMP%] {\n  transition: background 200ms;\n  background-color: #fff;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.showing[_ngcontent-%COMP%] {\n  background-color: #f0f0f0;\n}\n.showing[_ngcontent-%COMP%]   .toggle[_ngcontent-%COMP%] {\n  color: #1937ea;\n}\n.details[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 10;\n  display: flex;\n  align-items: center;\n  padding: 0.5em 0;\n  transition: opacity 200ms;\n}\n.details.blur[_ngcontent-%COMP%] {\n  opacity: 0.35;\n  background-color: #fff;\n}\n.details[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 0 0.5em;\n}\n.details[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 7.75rem;\n  font-size: 0.9em;\n}\n.details[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 13.25em;\n}\n.details[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  width: 12em;\n}\n.icon[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 2em;\n  width: 2em;\n  border-radius: 100%;\n  background-color: #ccc;\n  font-size: 1.5em;\n}\n.icon.upcoming[_ngcontent-%COMP%] {\n  border: 2px solid #ffb300;\n  background-color: #ffb300;\n  color: #fff;\n}\n.icon.all-checked-in[_ngcontent-%COMP%] {\n  border: 2px solid #1937ea;\n  background-color: #1937ea;\n  color: #fff;\n}\n.time[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: rgba(0, 0, 0, 0.65);\n}\n.title[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 1em;\n}\n.host[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n}\n.status[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  font-weight: 500;\n  width: 3.5em;\n}\n.staff[_ngcontent-%COMP%] {\n  margin-left: 0.5rem;\n  font-weight: 600;\n  font-size: 0.6em;\n  opacity: 0.35;\n  text-transform: uppercase;\n}\n.attendees[_ngcontent-%COMP%] {\n  position: relative;\n}\n.attendees[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -0.65em;\n  left: 2.15em;\n  width: 2px;\n  background-color: #999;\n  bottom: 2em;\n}\n.toggle[_ngcontent-%COMP%] {\n  font-size: 1.2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdGltZWxpbmUvaXRlbS9pdGVtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQzNDQTtFQUNJLGdCQUFBO0FDT0o7QURKQTtFQUNJLDRCQUFBO0VBQ0Esc0JBQUE7RUFDQSwyQ0FBQTtBQ09KO0FESkE7RUFDSSx5QkFBQTtBQ09KO0FETEk7RUFDSSxjREdRO0FFSWhCO0FESEE7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0FDTUo7QURKSTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtBQ01SO0FESEk7RUFDSSxlQUFBO0FDS1I7QURGSTtFQUNJLGNBQUE7RUFDQSxnQkFBQTtBQ0lSO0FEREk7RUFDSSxjQUFBO0FDR1I7QURBSTtFQUNJLFdBQUE7QUNFUjtBREVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxnQkFBQTtBQ0NKO0FEQ0k7RUFDSSx5QkFBQTtFQUNBLHlCRHBERTtFQ3FERixXQUFBO0FDQ1I7QURFSTtFQUNJLHlCQUFBO0VBQ0EseUJEbERRO0VDbURSLFdBQUE7QUNBUjtBREtJO0VBQ0ksMEJBQUE7QUNGUjtBRE1BO0VBQ0ksT0FBQTtFQUNBLGNBQUE7QUNISjtBRE1BO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUNISjtBRE1BO0VBQ0ksZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7QUNISjtBRE1BO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLHlCQUFBO0FDSEo7QURNQTtFQUNJLGtCQUFBO0FDSEo7QURJSTtFQUNJLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0VBQ0Esc0JBQUE7RUFDQSxXQUFBO0FDRlI7QURNQTtFQUNJLGlCQUFBO0FDSEoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxuOmhvc3Qge1xuICAgIGZvbnQtc2l6ZTogLjllbTtcbn1cblxuLnZpc2l0b3ItYm9va2luZyB7XG4gICAgdHJhbnNpdGlvbjogYmFja2dyb3VuZCAyMDBtcztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKCMwMDAsIC4xKTtcbn1cblxuLnNob3dpbmcge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmMGYwZjA7XG5cbiAgICAudG9nZ2xlIHtcbiAgICAgICAgY29sb3I6ICRjb2xvci1wcmltYXJ5O1xuICAgIH1cbn1cblxuLmRldGFpbHMge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB6LWluZGV4OiAxMDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMC41ZW0gMDtcbiAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zO1xuXG4gICAgJi5ibHVyIHtcbiAgICAgICAgb3BhY2l0eTogLjM1O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIH1cblxuICAgID4gKiB7XG4gICAgICAgIG1hcmdpbjogMCAwLjVlbTtcbiAgICB9XG5cbiAgICAudGltZSB7XG4gICAgICAgIHdpZHRoOiA3Ljc1cmVtO1xuICAgICAgICBmb250LXNpemU6IC45ZW07XG4gICAgfVxuXG4gICAgLmhvc3Qge1xuICAgICAgICB3aWR0aDogMTMuMjVlbTtcbiAgICB9XG5cbiAgICAubG9jYXRpb24ge1xuICAgICAgICB3aWR0aDogMTJlbTtcbiAgICB9XG59XG5cbi5pY29uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAyZW07XG4gICAgd2lkdGg6IDJlbTtcbiAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG4gICAgZm9udC1zaXplOiAxLjVlbTtcblxuICAgICYudXBjb21pbmcge1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkcGVuZGluZztcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHBlbmRpbmc7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cblxuICAgICYuYWxsLWNoZWNrZWQtaW4ge1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3ItcHJpbWFyeTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cbn1cblxuLnRpbWUge1xuICAgIHNwYW4ge1xuICAgICAgICBjb2xvcjogcmdiYSgjMDAwLCAwLjY1KTtcbiAgICB9XG59XG5cbi50aXRsZSB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDFlbTtcbn1cblxuLmhvc3Qge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXdlaWdodDogNDAwO1xufVxuXG4uc3RhdHVzIHtcbiAgICBmb250LXNpemU6IC45ZW07XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICB3aWR0aDogMy41ZW07XG59XG5cbi5zdGFmZiB7XG4gICAgbWFyZ2luLWxlZnQ6IC41cmVtO1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgZm9udC1zaXplOiAuNmVtO1xuICAgIG9wYWNpdHk6IC4zNTtcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uYXR0ZW5kZWVzIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgLmJhciB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAtLjY1ZW07XG4gICAgICAgIGxlZnQ6IDIuMTVlbTtcbiAgICAgICAgd2lkdGg6IDJweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzk5OTtcbiAgICAgICAgYm90dG9tOiAyZW07XG4gICAgfVxufVxuXG4udG9nZ2xlIHtcbiAgICBmb250LXNpemU6IDEuMnJlbTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0IHtcbiAgZm9udC1zaXplOiAwLjllbTtcbn1cblxuLnZpc2l0b3ItYm9va2luZyB7XG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQgMjAwbXM7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMSk7XG59XG5cbi5zaG93aW5nIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcbn1cbi5zaG93aW5nIC50b2dnbGUge1xuICBjb2xvcjogIzE5MzdlYTtcbn1cblxuLmRldGFpbHMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHotaW5kZXg6IDEwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVlbSAwO1xuICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zO1xufVxuLmRldGFpbHMuYmx1ciB7XG4gIG9wYWNpdHk6IDAuMzU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG4uZGV0YWlscyA+ICoge1xuICBtYXJnaW46IDAgMC41ZW07XG59XG4uZGV0YWlscyAudGltZSB7XG4gIHdpZHRoOiA3Ljc1cmVtO1xuICBmb250LXNpemU6IDAuOWVtO1xufVxuLmRldGFpbHMgLmhvc3Qge1xuICB3aWR0aDogMTMuMjVlbTtcbn1cbi5kZXRhaWxzIC5sb2NhdGlvbiB7XG4gIHdpZHRoOiAxMmVtO1xufVxuXG4uaWNvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDJlbTtcbiAgd2lkdGg6IDJlbTtcbiAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NjYztcbiAgZm9udC1zaXplOiAxLjVlbTtcbn1cbi5pY29uLnVwY29taW5nIHtcbiAgYm9yZGVyOiAycHggc29saWQgI2ZmYjMwMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmYjMwMDtcbiAgY29sb3I6ICNmZmY7XG59XG4uaWNvbi5hbGwtY2hlY2tlZC1pbiB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMxOTM3ZWE7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxOTM3ZWE7XG4gIGNvbG9yOiAjZmZmO1xufVxuXG4udGltZSBzcGFuIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42NSk7XG59XG5cbi50aXRsZSB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMWVtO1xufVxuXG4uaG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5zdGF0dXMge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICB3aWR0aDogMy41ZW07XG59XG5cbi5zdGFmZiB7XG4gIG1hcmdpbi1sZWZ0OiAwLjVyZW07XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMC42ZW07XG4gIG9wYWNpdHk6IDAuMzU7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5hdHRlbmRlZXMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG4uYXR0ZW5kZWVzIC5iYXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogLTAuNjVlbTtcbiAgbGVmdDogMi4xNWVtO1xuICB3aWR0aDogMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTk5O1xuICBib3R0b206IDJlbTtcbn1cblxuLnRvZ2dsZSB7XG4gIGZvbnQtc2l6ZTogMS4ycmVtO1xufSJdfQ== */"], data: { animation: [angular_animations_1.ANIMATION_SHOW_CONTRACT_EXPAND] } });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(VisitorBookingItemComponent, [{
         type: core_1.Component,
         args: [{
@@ -24032,7 +24041,7 @@ VisitorBookingItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorBookin
                 styleUrls: ['./item.component.scss'],
                 animations: [angular_animations_1.ANIMATION_SHOW_CONTRACT_EXPAND],
             }]
-    }], function () { return [{ type: i1.MatDialog }]; }, { event: [{
+    }], function () { return [{ type: i1.ApplicationService }, { type: i2.BookingsService }, { type: i3.MatDialog }]; }, { event: [{
             type: core_1.Input
         }], search: [{
             type: core_1.Input
@@ -24165,7 +24174,7 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
             this.filtered_bookings = this.filter(this.search);
         }
     }
-    trackBy(index, booking) {
+    trackByFn(index, booking) {
         return booking.id;
     }
     /** Filter the visitor bookings */
@@ -24357,7 +24366,7 @@ class VisitorComponent {
             const value = yield this._bookings
                 .checkin(this.event.id, {
                 host_email: this.event.organiser.email,
-                attendee_email: this.person.email,
+                attendee_emails: [this.person.email],
                 attendee_name: this.person.name,
                 booking_id: this.event.id,
                 icaluid: this.event.icaluid,
@@ -24370,7 +24379,7 @@ class VisitorComponent {
                 this._service.notifyError(`Error checking in user. Error: ${err.message || err}`);
             });
             if (value) {
-                this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event), { checked_in: [...this.event.checked_in, this.person.email] }));
+                this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event.toJSON()), { checked_in: [...this.event.checked_in, this.person.email] }));
             }
             this.loading = false;
         });
@@ -25045,7 +25054,6 @@ const router_1 = __webpack_require__(/*! @angular/router */ "./node_modules/@ang
 const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const booking_modal_component_1 = __webpack_require__(/*! src/app/overlays/booking-modal/booking-modal.component */ "./src/app/overlays/booking-modal/booking-modal.component.ts");
-const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
@@ -25157,11 +25165,7 @@ class WeekViewComponent extends base_directive_1.BaseDirective {
         });
     }
     newMeeting() {
-        this._dialog.open(booking_modal_component_1.BookingModalComponent, {
-            data: {
-                booking: new booking_class_1.Booking({}),
-            },
-        });
+        this._dialog.open(booking_modal_component_1.BookingModalComponent, { data: {} });
     }
     updateLevel() {
         this._router.navigate(['/week-view', this.active_level]);
