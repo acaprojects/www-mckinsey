@@ -13854,6 +13854,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Step value between options */
 
         _this72.step = 15;
+        /** Special case prepopulation i.e. out of step options */
+
+        _this72.specialPreprops = [];
         _this72.duration = 60;
         return _this72;
       }
@@ -13932,7 +13935,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function generateDurationOptions(max, min, step) {
           var blocks = [];
           var time = min;
-          var date = this.time ? dayjs(this.time) : null;
+          var date = this.time ? dayjs(this.time) : null; // Add special case for 10min duration/prepropulation
+
+          var _iterator20 = _createForOfIteratorHelper(this.specialPreprops),
+              _step20;
+
+          try {
+            for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+              var option = _step20.value;
+              blocks.push({
+                id: option,
+                name: date ? "".concat(date.add(option, 'm').format('h:mm A'), " (").concat(general_utilities_1.humaniseDuration(option), ")") : "".concat(general_utilities_1.humaniseDuration(option))
+              });
+            }
+          } catch (err) {
+            _iterator20.e(err);
+          } finally {
+            _iterator20.f();
+          }
 
           while (time <= max) {
             blocks.push({
@@ -13967,7 +13987,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         min: "min",
         step: "step",
         time: "time",
-        disabled: "disabled"
+        disabled: "disabled",
+        specialPreprops: "specialPreprops"
       },
       features: [i0.ɵɵProvidersFeature([{
         provide: forms_1.NG_VALUE_ACCESSOR,
@@ -14036,6 +14057,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: core_1.Input
         }],
         disabled: [{
+          type: core_1.Input
+        }],
+        specialPreprops: [{
           type: core_1.Input
         }]
       });
@@ -16217,6 +16241,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
+    var _c20 = function _c20() {
+      return [10];
+    };
+
     function BookingFormComponent_div_0_div_8_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 35);
@@ -16236,22 +16264,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(4);
         i0.ɵɵproperty("ngIf", ctx_r6.form.controls.all_day);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("max", 720)("disabled", ctx_r6.form.controls.all_day == null ? null : ctx_r6.form.controls.all_day.value)("time", ctx_r6.form.controls.date == null ? null : ctx_r6.form.controls.date.value);
+        i0.ɵɵproperty("max", 720)("disabled", ctx_r6.form.controls.all_day == null ? null : ctx_r6.form.controls.all_day.value)("time", ctx_r6.form.controls.date == null ? null : ctx_r6.form.controls.date.value)("specialPreprops", i0.ɵɵpureFunction0(6, _c20));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r6.form.controls.duration.touched && ctx_r6.form.controls.duration.invalid);
       }
     }
 
-    var I18N_20;
+    var I18N_21;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form organiser label
        */
-      var MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___21 = goog.getMsg("Host: ");
-      I18N_20 = MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___21;
+      var MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___22 = goog.getMsg("Host: ");
+      I18N_21 = MSG_EXTERNAL_6531032616724249294$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___22;
     } else {
-      I18N_20 = $localize(_templateObject18());
+      I18N_21 = $localize(_templateObject18());
     }
 
     function BookingFormComponent_div_0_div_9_mat_option_5_Template(rf, ctx) {
@@ -16273,7 +16301,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 41);
         i0.ɵɵelementStart(1, "label", 42);
-        i0.ɵɵi18n(2, I18N_20);
+        i0.ɵɵi18n(2, I18N_21);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "mat-form-field", 21);
         i0.ɵɵelementStart(4, "mat-select", 43);
@@ -16292,16 +16320,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_22;
+    var I18N_23;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form attendees label
        */
-      var MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___23 = goog.getMsg("Attendees: ");
-      I18N_22 = MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___23;
+      var MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___24 = goog.getMsg("Attendees: ");
+      I18N_23 = MSG_EXTERNAL_6839812770018074077$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___24;
     } else {
-      I18N_22 = $localize(_templateObject19());
+      I18N_23 = $localize(_templateObject19());
     }
 
     function BookingFormComponent_div_0_div_10_Template(rf, ctx) {
@@ -16310,7 +16338,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         i0.ɵɵelementStart(0, "div", 46);
         i0.ɵɵelementStart(1, "label", 47);
-        i0.ɵɵi18n(2, I18N_22);
+        i0.ɵɵi18n(2, I18N_23);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "a-user-list-field", 48);
         i0.ɵɵlistener("newUser", function BookingFormComponent_div_0_div_10_Template_a_user_list_field_newUser_3_listener() {
@@ -16323,16 +16351,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_24;
+    var I18N_25;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form booking type label
        */
-      var MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___25 = goog.getMsg("Booking Type: ");
-      I18N_24 = MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___25;
+      var MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___26 = goog.getMsg("Booking Type: ");
+      I18N_25 = MSG_EXTERNAL_5451072315426622181$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___26;
     } else {
-      I18N_24 = $localize(_templateObject20());
+      I18N_25 = $localize(_templateObject20());
     }
 
     function BookingFormComponent_div_0_div_11_mat_option_5_Template(rf, ctx) {
@@ -16354,7 +16382,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 49);
         i0.ɵɵelementStart(1, "label", 50);
-        i0.ɵɵi18n(2, I18N_24);
+        i0.ɵɵi18n(2, I18N_25);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "mat-form-field", 21);
         i0.ɵɵelementStart(4, "mat-select", 51);
@@ -16371,45 +16399,45 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_26;
+    var I18N_27;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form need space label
        */
-      var MSG_EXTERNAL_5057818150057639935$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___27 = goog.getMsg("Need a meeting space?");
-      I18N_26 = MSG_EXTERNAL_5057818150057639935$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___27;
+      var MSG_EXTERNAL_5057818150057639935$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___28 = goog.getMsg("Need a meeting space?");
+      I18N_27 = MSG_EXTERNAL_5057818150057639935$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___28;
     } else {
-      I18N_26 = $localize(_templateObject21());
+      I18N_27 = $localize(_templateObject21());
     }
 
     function BookingFormComponent_div_0_div_12_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 52);
         i0.ɵɵelementStart(1, "mat-checkbox", 53);
-        i0.ɵɵi18n(2, I18N_26);
+        i0.ɵɵi18n(2, I18N_27);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
     }
 
-    var I18N_28;
+    var I18N_29;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form need catering label
        */
-      var MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___29 = goog.getMsg(" Need catering? ");
-      I18N_28 = MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___29;
+      var MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___30 = goog.getMsg(" Need catering? ");
+      I18N_29 = MSG_EXTERNAL_7411992491467264678$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___30;
     } else {
-      I18N_28 = $localize(_templateObject22());
+      I18N_29 = $localize(_templateObject22());
     }
 
     function BookingFormComponent_div_0_div_13_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 54);
         i0.ɵɵelementStart(1, "mat-checkbox", 55);
-        i0.ɵɵi18n(2, I18N_28);
+        i0.ɵɵi18n(2, I18N_29);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
@@ -16421,34 +16449,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var I18N_30;
+    var I18N_31;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
        * @desc Booking form notes label
        */
-      var MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___31 = goog.getMsg("Notes: ");
-      I18N_30 = MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___31;
+      var MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___32 = goog.getMsg("Notes: ");
+      I18N_31 = MSG_EXTERNAL_700996066350595311$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS___32;
     } else {
-      I18N_30 = $localize(_templateObject23());
+      I18N_31 = $localize(_templateObject23());
     }
 
-    var I18N_32;
+    var I18N_33;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      var MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____33 = goog.getMsg("Meeting Description");
-      I18N_32 = MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____33;
+      var MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____34 = goog.getMsg("Meeting Description");
+      I18N_33 = MSG_EXTERNAL_9064615467372810718$$SRC_APP_SHARED_COMPONENTS_FORMS_BOOKING_FORM_BOOKING_FORM_COMPONENT_TS____34;
     } else {
-      I18N_32 = $localize(_templateObject24());
+      I18N_33 = $localize(_templateObject24());
     }
 
-    var _c34 = ["placeholder", I18N_32];
+    var _c35 = ["placeholder", I18N_33];
 
     function BookingFormComponent_div_0_div_14_mat_form_field_3_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-form-field", 60);
         i0.ɵɵelementStart(1, "textarea", 61);
-        i0.ɵɵi18nAttributes(2, _c34);
+        i0.ɵɵi18nAttributes(2, _c35);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
@@ -16464,7 +16492,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 56);
         i0.ɵɵelementStart(1, "label", 57);
-        i0.ɵɵi18n(2, I18N_30);
+        i0.ɵɵi18n(2, I18N_31);
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(3, BookingFormComponent_div_0_div_14_mat_form_field_3_Template, 3, 0, "mat-form-field", 58);
         i0.ɵɵtemplate(4, BookingFormComponent_div_0_div_14_ng_template_4_Template, 1, 0, "ng-template", null, 59, i0.ɵɵtemplateRefExtractor);
@@ -16491,7 +16519,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(6, "div", 7);
         i0.ɵɵtemplate(7, BookingFormComponent_div_0_div_7_Template, 5, 5, "div", 8);
-        i0.ɵɵtemplate(8, BookingFormComponent_div_0_div_8_Template, 7, 5, "div", 9);
+        i0.ɵɵtemplate(8, BookingFormComponent_div_0_div_8_Template, 7, 7, "div", 9);
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(9, BookingFormComponent_div_0_div_9_Template, 6, 2, "div", 10);
         i0.ɵɵtemplate(10, BookingFormComponent_div_0_div_10_Template, 4, 0, "div", 11);
@@ -16719,7 +16747,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 1,
       vars: 1,
-      consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], ["class", "field", "name", "title", 4, "ngIf"], [1, "group", "date"], ["class", "field", "name", "date", 4, "ngIf"], ["class", "field", "name", "recurrence", 4, "ngIf"], [1, "group", "time"], ["class", "field", "name", "start-time", 4, "ngIf"], ["class", "field", "name", "duration", 4, "ngIf"], ["class", "field", "name", "organiser", 4, "ngIf"], ["class", "field", "name", "attendees", 4, "ngIf"], ["class", "field", "name", "booking-type", 4, "ngIf"], ["class", "field", "name", "need-space", 4, "ngIf"], ["class", "field", "name", "has-catering", 4, "ngIf"], ["class", "field", "name", "body", 4, "ngIf"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["name", "title", 1, "field"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["name", "date", 1, "field"], ["for", "date"], ["name", "date", "formControlName", "date", 3, "from"], ["name", "recurrence", 1, "field"], ["for", "recurrence"], ["name", "recurrence", 3, "placeholder", "onAction"], ["name", "start-time", 1, "field"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], ["name", "duration", 1, "field"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time"], ["formControlName", "all_day"], ["name", "organiser", 1, "field"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser", 3, "placeholder"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["name", "attendees", 1, "field"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["name", "booking-type", 1, "field"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], ["name", "need-space", 1, "field"], ["formControlName", "needs_space"], ["name", "has-catering", 1, "field"], ["formControlName", "has_catering", 3, "disabled"], ["name", "body", 1, "field"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]],
+      consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], ["class", "field", "name", "title", 4, "ngIf"], [1, "group", "date"], ["class", "field", "name", "date", 4, "ngIf"], ["class", "field", "name", "recurrence", 4, "ngIf"], [1, "group", "time"], ["class", "field", "name", "start-time", 4, "ngIf"], ["class", "field", "name", "duration", 4, "ngIf"], ["class", "field", "name", "organiser", 4, "ngIf"], ["class", "field", "name", "attendees", 4, "ngIf"], ["class", "field", "name", "booking-type", 4, "ngIf"], ["class", "field", "name", "need-space", 4, "ngIf"], ["class", "field", "name", "has-catering", 4, "ngIf"], ["class", "field", "name", "body", 4, "ngIf"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["name", "title", 1, "field"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["name", "date", 1, "field"], ["for", "date"], ["name", "date", "formControlName", "date", 3, "from"], ["name", "recurrence", 1, "field"], ["for", "recurrence"], ["name", "recurrence", 3, "placeholder", "onAction"], ["name", "start-time", 1, "field"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], ["name", "duration", 1, "field"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "disabled", "time", "specialPreprops"], ["formControlName", "all_day"], ["name", "organiser", 1, "field"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser", 3, "placeholder"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["name", "attendees", 1, "field"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["name", "booking-type", 1, "field"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], ["name", "need-space", 1, "field"], ["formControlName", "needs_space"], ["name", "has-catering", 1, "field"], ["formControlName", "has_catering", 3, "disabled"], ["name", "body", 1, "field"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]],
       template: function BookingFormComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, BookingFormComponent_div_0_Template, 15, 13, "div", 0);
@@ -19914,12 +19942,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return lvls;
     }, []);
 
-    var _iterator20 = _createForOfIteratorHelper(users_mock_1.MOCK_USERS),
-        _step20;
+    var _iterator21 = _createForOfIteratorHelper(users_mock_1.MOCK_USERS),
+        _step21;
 
     try {
-      for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-        var user = _step20.value;
+      for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+        var user = _step21.value;
 
         if (user.location || general_utilities_1.randomInt(99999) % 2 === 0) {
           user.location = location_utilities_1.generateMockLocation(null, spaces, levels);
@@ -19927,9 +19955,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }
     } catch (err) {
-      _iterator20.e(err);
+      _iterator21.e(err);
     } finally {
-      _iterator20.f();
+      _iterator21.f();
     }
 
     setTimeout(function () {
@@ -20081,21 +20109,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           results = results.filter(function (i) {
             var count = 0;
 
-            var _iterator21 = _createForOfIteratorHelper(zone_ids),
-                _step21;
+            var _iterator22 = _createForOfIteratorHelper(zone_ids),
+                _step22;
 
             try {
-              for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                var zone = _step21.value;
+              for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                var zone = _step22.value;
 
                 if (i.zones.indexOf(zone) >= 0) {
                   count++;
                 }
               }
             } catch (err) {
-              _iterator21.e(err);
+              _iterator22.e(err);
             } finally {
-              _iterator21.f();
+              _iterator22.f();
             }
 
             return count >= zone_ids.length;
@@ -20115,12 +20143,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var from = dayjs(+event.query_params.available_from * 1000);
           var to = dayjs(+event.query_params.available_to * 1000);
           results.forEach(function (space) {
-            var _iterator22 = _createForOfIteratorHelper(space.bookings),
-                _step22;
+            var _iterator23 = _createForOfIteratorHelper(space.bookings),
+                _step23;
 
             try {
-              for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-                var booking = _step22.value;
+              for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                var booking = _step23.value;
                 var start = dayjs(booking.start_epoch * 1000);
                 var end = dayjs(booking.end_epoch * 1000);
 
@@ -20135,9 +20163,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator22.e(err);
+              _iterator23.e(err);
             } finally {
-              _iterator22.f();
+              _iterator23.f();
             }
           });
         }
@@ -20185,12 +20213,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     });
     exports.PREDEFINED_USERS = ['Jonathan McFarlane', 'Stephen Von Takach', 'Alex Sorafumo', 'Candy Russo', 'Cristina Boston', 'Eugene Murphy', 'Ben Hoad', 'Kim Burgess', 'Desk Test', 'Space Test', 'Wireless Test', 'Zo-Kalar']; // Add predefined user to user list
 
-    var _iterator23 = _createForOfIteratorHelper(exports.PREDEFINED_USERS),
-        _step23;
+    var _iterator24 = _createForOfIteratorHelper(exports.PREDEFINED_USERS),
+        _step24;
 
     try {
-      for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-        var user = _step23.value;
+      for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+        var user = _step24.value;
         var id = user.split(' ').join('.').toLowerCase();
         var new_user = user_utilities_1.generateMockUser({
           id: id,
@@ -20201,9 +20229,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       } // Add handler for users index
 
     } catch (err) {
-      _iterator23.e(err);
+      _iterator24.e(err);
     } finally {
-      _iterator23.f();
+      _iterator24.f();
     }
 
     window.control.handlers.push({
@@ -20825,12 +20853,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var length = users.length + (host ? 1 : 0);
         attendee_str = "".concat(length, " Attendee").concat(length === 1 ? '' : 's', "; ").concat(host ? host.name : '');
 
-        var _iterator24 = _createForOfIteratorHelper(users),
-            _step24;
+        var _iterator25 = _createForOfIteratorHelper(users),
+            _step25;
 
         try {
-          for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-            var item = _step24.value;
+          for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+            var item = _step25.value;
 
             if (attendee_str) {
               attendee_str += ', ';
@@ -20839,9 +20867,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             attendee_str += item.name;
           }
         } catch (err) {
-          _iterator24.e(err);
+          _iterator25.e(err);
         } finally {
-          _iterator24.f();
+          _iterator25.f();
         }
 
         attendee_str = attendee_str.replace('; ,', ';');
@@ -21094,12 +21122,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var filters = (filter || '').toLowerCase().split(' ');
       var list = {};
 
-      var _iterator25 = _createForOfIteratorHelper(filters),
-          _step25;
+      var _iterator26 = _createForOfIteratorHelper(filters),
+          _step26;
 
       try {
-        for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-          var _f6 = _step25.value;
+        for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+          var _f6 = _step26.value;
 
           /* istanbul ignore else */
           if (_f6) {
@@ -21113,9 +21141,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // Group similar tokens
 
       } catch (err) {
-        _iterator25.e(err);
+        _iterator26.e(err);
       } finally {
-        _iterator25.f();
+        _iterator26.f();
       }
 
       var parts = [];
@@ -21144,12 +21172,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           item.match = '';
           var field_list = {}; // Initialise field match variables
 
-          var _iterator26 = _createForOfIteratorHelper(fields),
-              _step26;
+          var _iterator27 = _createForOfIteratorHelper(fields),
+              _step27;
 
           try {
-            for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-              var _f2 = _step26.value;
+            for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+              var _f2 = _step27.value;
               field_list[_f2] = {
                 value: (item[_f2] || '').toLowerCase(),
                 index: 65536,
@@ -21158,27 +21186,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } // Search for matches with the tokenised filter string
 
           } catch (err) {
-            _iterator26.e(err);
+            _iterator27.e(err);
           } finally {
-            _iterator26.f();
+            _iterator27.f();
           }
 
-          var _iterator27 = _createForOfIteratorHelper(parts),
-              _step27;
+          var _iterator28 = _createForOfIteratorHelper(parts),
+              _step28;
 
           try {
-            for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-              var i = _step27.value;
+            for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+              var i = _step28.value;
 
               /* istanbul ignore else */
               if (i.word) {
                 // Check fields for matches
-                var _iterator29 = _createForOfIteratorHelper(fields),
-                    _step29;
+                var _iterator30 = _createForOfIteratorHelper(fields),
+                    _step30;
 
                 try {
-                  for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                    var _f3 = _step29.value;
+                  for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                    var _f3 = _step30.value;
                     var field = field_list[_f3];
                     var index = field.value.indexOf(i.word);
                     field.index = index < field.index ? index : field.index;
@@ -21187,17 +21215,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   } // Update token match count
 
                 } catch (err) {
-                  _iterator29.e(err);
+                  _iterator30.e(err);
                 } finally {
-                  _iterator29.f();
+                  _iterator30.f();
                 }
 
-                var _iterator30 = _createForOfIteratorHelper(fields),
-                    _step30;
+                var _iterator31 = _createForOfIteratorHelper(fields),
+                    _step31;
 
                 try {
-                  for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-                    var _f4 = _step30.value;
+                  for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
+                    var _f4 = _step31.value;
                     var _field = field_list[_f4];
                     /* istanbul ignore else */
 
@@ -21207,12 +21235,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       var changed = 0;
                       var tokens = (item["match_".concat(_f4)] || item[_f4] || '').split(' ');
 
-                      var _iterator31 = _createForOfIteratorHelper(tokens),
-                          _step31;
+                      var _iterator32 = _createForOfIteratorHelper(tokens),
+                          _step32;
 
                       try {
-                        for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-                          var k = _step31.value;
+                        for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                          var k = _step32.value;
 
                           /* istanbul ignore else */
                           if (changed >= i.count) {
@@ -21227,9 +21255,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           }
                         }
                       } catch (err) {
-                        _iterator31.e(err);
+                        _iterator32.e(err);
                       } finally {
-                        _iterator31.f();
+                        _iterator32.f();
                       }
 
                       item["match_".concat(_f4)] = tokens.join(' ');
@@ -21237,25 +21265,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
                   }
                 } catch (err) {
-                  _iterator30.e(err);
+                  _iterator31.e(err);
                 } finally {
-                  _iterator30.f();
+                  _iterator31.f();
                 }
               }
             } // Get field with the most relevent match
 
           } catch (err) {
-            _iterator27.e(err);
+            _iterator28.e(err);
           } finally {
-            _iterator27.f();
+            _iterator28.f();
           }
 
-          var _iterator28 = _createForOfIteratorHelper(fields),
-              _step28;
+          var _iterator29 = _createForOfIteratorHelper(fields),
+              _step29;
 
           try {
-            for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-              var _f5 = _step28.value;
+            for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+              var _f5 = _step29.value;
               var _field2 = field_list[_f5];
               /* istanbul ignore else */
 
@@ -21265,9 +21293,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator28.e(err);
+            _iterator29.e(err);
           } finally {
-            _iterator28.f();
+            _iterator29.f();
           }
 
           return item.match_index >= 0 && item.match && match_count >= parts.length;
@@ -21371,12 +21399,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
       var list = [];
 
-      var _iterator32 = _createForOfIteratorHelper(lines),
-          _step32;
+      var _iterator33 = _createForOfIteratorHelper(lines),
+          _step33;
 
       try {
-        for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
-          var line = _step32.value;
+        for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
+          var line = _step33.value;
           var parts = line.split(',');
           parts = parts.map(function (v) {
             return v.replace('\r', '');
@@ -21400,9 +21428,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _iterator32.e(err);
+        _iterator33.e(err);
       } finally {
-        _iterator32.f();
+        _iterator33.f();
       }
 
       return list;
@@ -23033,21 +23061,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }).then(function (space_list) {
               console.log('Spaces:', space_list);
 
-              var _iterator33 = _createForOfIteratorHelper(space_list),
-                  _step33;
+              var _iterator34 = _createForOfIteratorHelper(space_list),
+                  _step34;
 
               try {
-                for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                  var space = _step33.value;
+                for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                  var space = _step34.value;
 
                   if (!space.was_available) {
                     return reject("".concat(space.name, " is not available at the select time period."));
                   }
                 }
               } catch (err) {
-                _iterator33.e(err);
+                _iterator34.e(err);
               } finally {
-                _iterator33.f();
+                _iterator34.f();
               }
 
               if (space_list.length < spaces.length) {
@@ -23177,18 +23205,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var catering = this.catering;
           var codes = {};
 
-          var _iterator34 = _createForOfIteratorHelper(this.catering),
-              _step34;
+          var _iterator35 = _createForOfIteratorHelper(this.catering),
+              _step35;
 
           try {
-            for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
-              var order = _step34.value;
+            for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
+              var order = _step35.value;
               codes[order.location_id] = order.charge_code;
             }
           } catch (err) {
-            _iterator34.e(err);
+            _iterator35.e(err);
           } finally {
-            _iterator34.f();
+            _iterator35.f();
           }
 
           console.log('Catering Codes:', codes);
@@ -24019,21 +24047,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "generateFormFields",
         value: function generateFormFields() {
-          var _iterator35 = _createForOfIteratorHelper(this.space_list),
-              _step35;
+          var _iterator36 = _createForOfIteratorHelper(this.space_list),
+              _step36;
 
           try {
-            for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
-              var space = _step35.value;
+            for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+              var space = _step36.value;
               this.form[space.email] = new forms_1.FormGroup({
                 notes: new forms_1.FormControl(this.notes[space.email] || ''),
                 code: new forms_1.FormControl(this.codes[space.email] || '')
               });
             }
           } catch (err) {
-            _iterator35.e(err);
+            _iterator36.e(err);
           } finally {
-            _iterator35.f();
+            _iterator36.f();
           }
         }
         /** Scroll the content container to the bottom */
@@ -25430,12 +25458,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var _a, _b;
 
-          var _iterator36 = _createForOfIteratorHelper(this.space_list),
-              _step36;
+          var _iterator37 = _createForOfIteratorHelper(this.space_list),
+              _step37;
 
           try {
             var _loop4 = function _loop4() {
-              var space = _step36.value;
+              var space = _step37.value;
 
               var building = _this122._org.buildings.find(function (bld) {
                 return bld.id === space.level.building_id;
@@ -25449,13 +25477,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               });
             };
 
-            for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+            for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
               _loop4();
             }
           } catch (err) {
-            _iterator36.e(err);
+            _iterator37.e(err);
           } finally {
-            _iterator36.f();
+            _iterator37.f();
           }
         }
       }, {
@@ -29086,12 +29114,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var sort_order = (bld.sort_order ? _toConsumableArray(bld.sort_order) : []).reverse();
 
-          var _iterator37 = _createForOfIteratorHelper(sort_order),
-              _step37;
+          var _iterator38 = _createForOfIteratorHelper(sort_order),
+              _step38;
 
           try {
-            for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
-              var zone_id = _step37.value;
+            for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
+              var zone_id = _step38.value;
 
               if (zone_id === '*') {
                 continue;
@@ -29107,9 +29135,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator37.e(err);
+            _iterator38.e(err);
           } finally {
-            _iterator37.f();
+            _iterator38.f();
           }
 
           return (space_a.name || '').localeCompare(space_b.name || '');
@@ -32335,21 +32363,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               date: _this158.booking.date,
               duration: _this158.booking.duration
             }).then(function (space_list) {
-              var _iterator38 = _createForOfIteratorHelper(space_list),
-                  _step38;
+              var _iterator39 = _createForOfIteratorHelper(space_list),
+                  _step39;
 
               try {
-                for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
-                  var space = _step38.value;
+                for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
+                  var space = _step39.value;
 
                   if (!space.was_available) {
                     return reject("".concat(space.name, " is not available at the select time period."));
                   }
                 }
               } catch (err) {
-                _iterator38.e(err);
+                _iterator39.e(err);
               } finally {
-                _iterator38.f();
+                _iterator39.f();
               }
 
               resolve();
@@ -33432,12 +33460,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var desk_list = this.id_list || [];
           var status_list = [];
 
-          var _iterator39 = _createForOfIteratorHelper(desk_list),
-              _step39;
+          var _iterator40 = _createForOfIteratorHelper(desk_list),
+              _step40;
 
           try {
             var _loop5 = function _loop5() {
-              var desk_id = _step39.value;
+              var desk_id = _step40.value;
               var in_use = (_this166.in_use || []).find(function (id) {
                 return id === desk_id;
               });
@@ -33455,13 +33483,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               });
             };
 
-            for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
+            for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
               _loop5();
             }
           } catch (err) {
-            _iterator39.e(err);
+            _iterator40.e(err);
           } finally {
-            _iterator39.f();
+            _iterator40.f();
           }
 
           this.status.emit(status_list);
@@ -33783,12 +33811,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.timeout('process_statuses', function () {
             var statuses = [];
 
-            var _iterator40 = _createForOfIteratorHelper(_this170.space_list),
-                _step40;
+            var _iterator41 = _createForOfIteratorHelper(_this170.space_list),
+                _step41;
 
             try {
-              for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
-                var space = _step40.value;
+              for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
+                var space = _step41.value;
 
                 var status = _this170.getStatus(space, _this170.date);
 
@@ -33803,9 +33831,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 });
               }
             } catch (err) {
-              _iterator40.e(err);
+              _iterator41.e(err);
             } finally {
-              _iterator40.f();
+              _iterator41.f();
             }
 
             _this170.status.emit(statuses);
@@ -33916,12 +33944,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
           var listeners = [];
 
-          var _iterator41 = _createForOfIteratorHelper(this.space_list),
-              _step41;
+          var _iterator42 = _createForOfIteratorHelper(this.space_list),
+              _step42;
 
           try {
             var _loop6 = function _loop6() {
-              var space = _step41.value;
+              var space = _step42.value;
               var id = space.map_id.indexOf('area') < 0 ? "area-".concat(space.map_id, "-status") : space.map_id;
               listeners.push({
                 id: id,
@@ -33956,13 +33984,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             };
 
-            for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
+            for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
               _loop6();
             }
           } catch (err) {
-            _iterator41.e(err);
+            _iterator42.e(err);
           } finally {
-            _iterator41.f();
+            _iterator42.f();
           }
 
           this.listeners.emit(listeners);
@@ -35898,12 +35926,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var statuses = this.event.approval_status || {};
           var spaces = this.event.space_list || [];
 
-          var _iterator42 = _createForOfIteratorHelper(spaces),
-              _step42;
+          var _iterator43 = _createForOfIteratorHelper(spaces),
+              _step43;
 
           try {
-            for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
-              var space = _step42.value;
+            for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
+              var space = _step43.value;
               var status = statuses[space.email] || '';
 
               if (status.indexOf('tentative') >= 0 || status.indexOf('not') === 0) {
@@ -35913,9 +35941,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator42.e(err);
+            _iterator43.e(err);
           } finally {
-            _iterator42.f();
+            _iterator43.f();
           }
 
           var location = this.event.location || '';
@@ -38249,16 +38277,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "fd0bd6e",
-      "hash": "fd0bd6e",
+      "raw": "cdbbaf2",
+      "hash": "cdbbaf2",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "fd0bd6e",
+      "suffix": "cdbbaf2",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594113385087
+      "time": 1594166578160
     };
     /* tslint:enable */
 
