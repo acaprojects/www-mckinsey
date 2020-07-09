@@ -23006,6 +23006,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this._dialog_ref.disableClose = true;
           this.checkSpaceAvailability().then(function () {
             _this108.loading = 'Processing booking request...';
+            _this108.booking.time_changed = _this108.old_booking && (_this108.old_booking.date !== _this108.booking.date || _this108.old_booking.duration !== _this108.booking.duration);
 
             _this108.booking.save().then(function () {
               _this108.loading = null;
@@ -23561,6 +23562,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "delivery_time",
         get: function get() {
           var date = dayjs(this._data.date);
+
+          if (this._data.form && this._data.form.controls.delivery_time) {
+            date = date.add(this._data.form.controls.delivery_time.value, 'm');
+          }
+
           return date.format('h:mm A');
         }
         /** Form field for order items */
@@ -23684,7 +23690,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       directives: [i5.MatButton, i4.MatDialogClose, i6.IconComponent, i4.MatDialogContent, i7.NgForOf, i4.MatDialogActions, i8.CateringMenuItemComponent],
       pipes: [i7.CurrencyPipe],
-      styles: [".heading[_ngcontent-%COMP%] {\n  flex: 1;\n}\n\n.details[_ngcontent-%COMP%] {\n  padding: 1em;\n  text-align: center;\n}\n\n.details[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  font-weight: 400;\n}\n\n.list[_ngcontent-%COMP%] {\n  height: 50vh;\n  overflow: auto;\n}\n\n.total[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  padding: 0.5em 1em;\n}\n\n.total[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  font-weight: 500;\n  margin-right: 1.5em;\n}\n\nmat-dialog-actions[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n}\n\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hlbGwvYm9va2luZ3Mvb3ZlcmxheXMvY2F0ZXJpbmctY29uZmlybS1tb2RhbC9jYXRlcmluZy1jb25maXJtLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5ncy9vdmVybGF5cy9jYXRlcmluZy1jb25maXJtLW1vZGFsL2NhdGVyaW5nLWNvbmZpcm0tbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxPQUFBO0FDQUo7O0FER0E7RUFDSSxZQUFBO0VBQ0Esa0JBQUE7QUNBSjs7QURFSTtFQUNJLGdCQUFBO0FDQVI7O0FESUE7RUFDSSxZQUFBO0VBQ0EsY0FBQTtBQ0RKOztBREtBO0VBQ0ksMEJBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtFQUNBLGtCQUFBO0FDRko7O0FESUk7RUFDSSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsbUJBQUE7QUNGUjs7QURNQTtFQUNJLDBCQUFBO0FDSEo7O0FETUE7RUFDSSxXQUFBO0VBQ0Esa0JBQUE7QUNISiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2Jvb2tpbmdzL292ZXJsYXlzL2NhdGVyaW5nLWNvbmZpcm0tbW9kYWwvY2F0ZXJpbmctY29uZmlybS1tb2RhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmhlYWRpbmcge1xuICAgIGZsZXg6IDE7XG59XG5cbi5kZXRhaWxzIHtcbiAgICBwYWRkaW5nOiAxZW07XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuXG4gICAgc3BhbiB7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgfVxufVxuXG4ubGlzdCB7XG4gICAgaGVpZ2h0OiA1MHZoO1xuICAgIG92ZXJmbG93OiBhdXRvO1xufVxuXG5cbi50b3RhbCB7XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gICAgcGFkZGluZzogLjVlbSAxZW07XG5cbiAgICBsYWJlbCB7XG4gICAgICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxLjVlbTtcbiAgICB9XG59XG5cbm1hdC1kaWFsb2ctYWN0aW9ucyB7XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbmZvb3RlciB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuIiwiLmhlYWRpbmcge1xuICBmbGV4OiAxO1xufVxuXG4uZGV0YWlscyB7XG4gIHBhZGRpbmc6IDFlbTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuLmRldGFpbHMgc3BhbiB7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5saXN0IHtcbiAgaGVpZ2h0OiA1MHZoO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLnRvdGFsIHtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIHBhZGRpbmc6IDAuNWVtIDFlbTtcbn1cbi50b3RhbCBsYWJlbCB7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIG1hcmdpbi1yaWdodDogMS41ZW07XG59XG5cbm1hdC1kaWFsb2ctYWN0aW9ucyB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjY2NjO1xufVxuXG5mb290ZXIge1xuICB3aWR0aDogMTAwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */"]
+      styles: [".heading[_ngcontent-%COMP%] {\n  flex: 1;\n}\n\n.details[_ngcontent-%COMP%] {\n  padding: 1em;\n  min-width: 20em;\n  width: 32em;\n  max-width: 95vw;\n  text-align: center;\n}\n\n.details[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  font-weight: 400;\n}\n\n.list[_ngcontent-%COMP%] {\n  height: 50vh;\n  overflow: auto;\n}\n\n.total[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  padding: 0.5em 1em;\n}\n\n.total[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  font-weight: 500;\n  margin-right: 1.5em;\n}\n\nmat-dialog-actions[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n}\n\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hlbGwvYm9va2luZ3Mvb3ZlcmxheXMvY2F0ZXJpbmctY29uZmlybS1tb2RhbC9jYXRlcmluZy1jb25maXJtLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5ncy9vdmVybGF5cy9jYXRlcmluZy1jb25maXJtLW1vZGFsL2NhdGVyaW5nLWNvbmZpcm0tbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxPQUFBO0FDQUo7O0FER0E7RUFDSSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0Esa0JBQUE7QUNBSjs7QURFSTtFQUNJLGdCQUFBO0FDQVI7O0FESUE7RUFDSSxZQUFBO0VBQ0EsY0FBQTtBQ0RKOztBREtBO0VBQ0ksMEJBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtFQUNBLGtCQUFBO0FDRko7O0FESUk7RUFDSSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsbUJBQUE7QUNGUjs7QURNQTtFQUNJLDBCQUFBO0FDSEo7O0FETUE7RUFDSSxXQUFBO0VBQ0Esa0JBQUE7QUNISiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2Jvb2tpbmdzL292ZXJsYXlzL2NhdGVyaW5nLWNvbmZpcm0tbW9kYWwvY2F0ZXJpbmctY29uZmlybS1tb2RhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmhlYWRpbmcge1xuICAgIGZsZXg6IDE7XG59XG5cbi5kZXRhaWxzIHtcbiAgICBwYWRkaW5nOiAxZW07XG4gICAgbWluLXdpZHRoOiAyMGVtO1xuICAgIHdpZHRoOiAzMmVtO1xuICAgIG1heC13aWR0aDogOTV2dztcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgICBzcGFuIHtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICB9XG59XG5cbi5saXN0IHtcbiAgICBoZWlnaHQ6IDUwdmg7XG4gICAgb3ZlcmZsb3c6IGF1dG87XG59XG5cblxuLnRvdGFsIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgICBwYWRkaW5nOiAuNWVtIDFlbTtcblxuICAgIGxhYmVsIHtcbiAgICAgICAgZm9udC1zaXplOiAuOGVtO1xuICAgICAgICBmb250LXdlaWdodDogNTAwO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEuNWVtO1xuICAgIH1cbn1cblxubWF0LWRpYWxvZy1hY3Rpb25zIHtcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbn1cblxuZm9vdGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iLCIuaGVhZGluZyB7XG4gIGZsZXg6IDE7XG59XG5cbi5kZXRhaWxzIHtcbiAgcGFkZGluZzogMWVtO1xuICBtaW4td2lkdGg6IDIwZW07XG4gIHdpZHRoOiAzMmVtO1xuICBtYXgtd2lkdGg6IDk1dnc7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5kZXRhaWxzIHNwYW4ge1xuICBmb250LXdlaWdodDogNDAwO1xufVxuXG4ubGlzdCB7XG4gIGhlaWdodDogNTB2aDtcbiAgb3ZlcmZsb3c6IGF1dG87XG59XG5cbi50b3RhbCB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjY2NjO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xuICBwYWRkaW5nOiAwLjVlbSAxZW07XG59XG4udG90YWwgbGFiZWwge1xuICBmb250LXNpemU6IDAuOGVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICBtYXJnaW4tcmlnaHQ6IDEuNWVtO1xufVxuXG5tYXQtZGlhbG9nLWFjdGlvbnMge1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYztcbn1cblxuZm9vdGVyIHtcbiAgd2lkdGg6IDEwMCU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -30294,6 +30300,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           switch (event.step) {
             case 'search':
+              console.log('Space List:', space_list);
+
               if (space_list && space_list.length && this.settings.multiple_spaces && (!event.metadata || !event.metadata.ref || event.metadata.ref !== 'equipment')) {
                 this.openEquipmentDetailsModal();
               } else {
@@ -30324,7 +30332,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               if (!this.form.controls.needs_space || this.form.controls.needs_space.value && (!space_list || !space_list.length || !this.form.controls.id.value)) {
                 this.navigate('search');
-              } else if ((_a = this.form.controls.id) === null || _a === void 0 ? void 0 : _a.value) {
+              } else if (((_a = this.form.controls.id) === null || _a === void 0 ? void 0 : _a.value) && space_list && space_list.length) {
                 this.openEquipmentDetailsModal();
               } else {
                 this.confirmBooking();
@@ -38330,16 +38338,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "9822e10",
-      "hash": "9822e10",
+      "raw": "cd313da",
+      "hash": "cd313da",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "9822e10",
+      "suffix": "cd313da",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594271909245
+      "time": 1594279214862
     };
     /* tslint:enable */
 
