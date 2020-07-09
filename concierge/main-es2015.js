@@ -22609,9 +22609,9 @@ function ReportDisplayComponent_mat_form_field_13_Template(rf, ctx) { if (rf & 1
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", !ctx_r0.multipleLocations);
+    i0.ɵɵproperty("ngIf", !ctx_r0.report.multi_locations);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r0.multipleLocations);
+    i0.ɵɵproperty("ngIf", ctx_r0.report.multi_locations);
 } }
 function ReportDisplayComponent_span_16_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "span");
@@ -22691,13 +22691,14 @@ class ReportDisplayComponent {
         this._org.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
             this.locations = [this._org.building];
         });
-        // TODO: Improve logic to handle other conditions for Multi location select.
-        this.multipleLocations = this._router.url.indexOf('catering') > 0;
     }
     ngOnChanges(changes) {
         /* istanbul ignore else */
         if (changes.report) {
             this.report_data = null;
+        }
+        if (this.locations.length > 1) {
+            this.locations = [this.locations[0]];
         }
     }
     /**
@@ -23015,7 +23016,8 @@ class ReportsComponent extends base_directive_1.BaseDirective {
                 short_name: 'Bookings',
                 description: 'Generate comprehensive report on various aspects of bookings',
                 hide_fields: ['room_email'],
-                icon: { type: 'img', src: 'assets/img/report-booking.svg' }
+                icon: { type: 'img', src: 'assets/img/report-booking.svg' },
+                multi_locations: false,
             },
             {
                 id: 'catering',
@@ -23023,7 +23025,8 @@ class ReportsComponent extends base_directive_1.BaseDirective {
                 short_name: 'Catering',
                 description: 'View confirmed catering report or mark up unconfirmed catering',
                 hide_fields: ['room_email'],
-                icon: { type: 'icon', class: 'material-icons', content: 'room_service' }
+                icon: { type: 'icon', class: 'material-icons', content: 'room_service' },
+                multi_locations: true,
             },
         ];
     }

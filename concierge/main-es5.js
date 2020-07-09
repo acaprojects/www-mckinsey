@@ -41026,9 +41026,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", !ctx_r0.multipleLocations);
+        i0.ɵɵproperty("ngIf", !ctx_r0.report.multi_locations);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.multipleLocations);
+        i0.ɵɵproperty("ngIf", ctx_r0.report.multi_locations);
       }
     }
 
@@ -41157,10 +41157,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return _;
           })).subscribe(function () {
             _this208.locations = [_this208._org.building];
-          }); // TODO: Improve logic to handle other conditions for Multi location select.
-
-
-          this.multipleLocations = this._router.url.indexOf('catering') > 0;
+          });
         }
       }, {
         key: "ngOnChanges",
@@ -41168,6 +41165,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
           if (changes.report) {
             this.report_data = null;
+          }
+
+          if (this.locations.length > 1) {
+            this.locations = [this.locations[0]];
           }
         }
         /**
@@ -41721,7 +41722,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           icon: {
             type: 'img',
             src: 'assets/img/report-booking.svg'
-          }
+          },
+          multi_locations: false
         }, {
           id: 'catering',
           name: 'Aggregate Charge Back Report',
@@ -41732,7 +41734,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             type: 'icon',
             "class": 'material-icons',
             content: 'room_service'
-          }
+          },
+          multi_locations: true
         }];
         return _this211;
       }
