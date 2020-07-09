@@ -11712,6 +11712,8 @@ class DateFieldComponent extends base_directive_1.BaseDirective {
         this.position = 'right';
         /** Offset of the tooltip */
         this.offset = 'bottom';
+        /** Optional event emitter for changes */
+        this.onChange = new core_1.EventEmitter();
     }
     /** First allowed date on the calendar */
     get from() {
@@ -11750,6 +11752,7 @@ class DateFieldComponent extends base_directive_1.BaseDirective {
         this.date = new_date;
         if (this._onChange) {
             this._onChange(new_date);
+            this.onChange.emit(new_date);
         }
         this.show_tooltip = false;
     }
@@ -11797,7 +11800,7 @@ DateFieldComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DateFieldComponent, se
     } if (rf & 2) {
         var _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._trigger = _t.first);
-    } }, inputs: { _from: ["from", "_from"], _to: ["to", "_to"], position: "position", offset: "offset", disabled: "disabled" }, features: [i0.ɵɵProvidersFeature([
+    } }, inputs: { _from: ["from", "_from"], _to: ["to", "_to"], position: "position", offset: "offset", disabled: "disabled" }, outputs: { onChange: "onChange" }, features: [i0.ɵɵProvidersFeature([
             {
                 provide: forms_1.NG_VALUE_ACCESSOR,
                 useExisting: core_1.forwardRef(() => DateFieldComponent),
@@ -11860,6 +11863,8 @@ const ɵDateFieldComponent_BaseFactory = i0.ɵɵgetInheritedFactory(DateFieldCom
             type: core_1.Input
         }], disabled: [{
             type: core_1.Input
+        }], onChange: [{
+            type: core_1.Output
         }], _trigger: [{
             type: core_1.ViewChild,
             args: [menu_1.MatMenuTrigger, { static: true }]
@@ -22702,6 +22707,15 @@ class ReportDisplayComponent {
         }
     }
     /**
+     * Ensure Space Time Continuum
+     */
+    checkDates(new_date) {
+        if (this.start_date > this.end_date) {
+            this.start_date = dayjs(new_date).startOf('d').valueOf();
+            this.end_date = dayjs(new_date).endOf('d').valueOf();
+        }
+    }
+    /**
      * Generate report
      */
     generateReport() {
@@ -22735,7 +22749,7 @@ class ReportDisplayComponent {
 }
 exports.ReportDisplayComponent = ReportDisplayComponent;
 ReportDisplayComponent.ɵfac = function ReportDisplayComponent_Factory(t) { return new (t || ReportDisplayComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.ReportsService), i0.ɵɵdirectiveInject(i4.Router)); };
-ReportDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ReportDisplayComponent, selectors: [["a-report-display"]], inputs: { report: "report" }, features: [i0.ɵɵNgOnChangesFeature], decls: 27, vars: 13, consts: [[1, "header"], [1, "period"], [1, "field"], ["for", "start-date"], ["name", "start-date", 3, "ngModel", "from", "to", "ngModelChange"], [1, "gap"], ["for", "end-date"], ["name", "end-date", 3, "ngModel", "from", "to", "ngModelChange"], [1, "location", "dark-mode"], ["appearance", "outline", 4, "ngIf"], [1, "actions"], ["mat-button", "", "name", "generate", 3, "disabled", "click"], [4, "ngIf", "ngIfElse"], ["gen_loader", ""], ["mat-button", "", "name", "download", 3, "disabled", "click"], [1, "display"], ["empty_state", ""], ["load_state", ""], ["appearance", "outline"], ["name", "locations", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", 3, "ngModel", "ngModelChange"], ["class", "selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "selection"], [3, "value"], [1, "option"], [1, "code"], [1, "name"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange"], ["diameter", "32"], [3, "list", "details"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"]], template: function ReportDisplayComponent_Template(rf, ctx) { if (rf & 1) {
+ReportDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ReportDisplayComponent, selectors: [["a-report-display"]], inputs: { report: "report" }, features: [i0.ɵɵNgOnChangesFeature], decls: 27, vars: 13, consts: [[1, "header"], [1, "period"], [1, "field"], ["for", "start-date"], ["name", "start-date", 3, "ngModel", "from", "to", "ngModelChange", "onChange"], [1, "gap"], ["for", "end-date"], ["name", "end-date", 3, "ngModel", "from", "to", "ngModelChange", "onChange"], [1, "location", "dark-mode"], ["appearance", "outline", 4, "ngIf"], [1, "actions"], ["mat-button", "", "name", "generate", 3, "disabled", "click"], [4, "ngIf", "ngIfElse"], ["gen_loader", ""], ["mat-button", "", "name", "download", 3, "disabled", "click"], [1, "display"], ["empty_state", ""], ["load_state", ""], ["appearance", "outline"], ["name", "locations", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", 3, "ngModel", "ngModelChange"], ["class", "selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "selection"], [3, "value"], [1, "option"], [1, "code"], [1, "name"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange"], ["diameter", "32"], [3, "list", "details"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"]], template: function ReportDisplayComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "div", 2);
@@ -22743,7 +22757,7 @@ ReportDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ReportDisplayCompo
         i0.ɵɵtext(4, "Start Date");
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(5, "a-date-field", 4);
-        i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_Template_a_date_field_ngModelChange_5_listener($event) { return ctx.start_date = $event; });
+        i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_Template_a_date_field_ngModelChange_5_listener($event) { return ctx.start_date = $event; })("onChange", function ReportDisplayComponent_Template_a_date_field_onChange_5_listener($event) { return ctx.checkDates($event); });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(6, "div", 5);
@@ -22754,7 +22768,7 @@ ReportDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ReportDisplayCompo
         i0.ɵɵtext(10, "End Date");
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(11, "a-date-field", 7);
-        i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_Template_a_date_field_ngModelChange_11_listener($event) { return ctx.end_date = $event; });
+        i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_Template_a_date_field_ngModelChange_11_listener($event) { return ctx.end_date = $event; })("onChange", function ReportDisplayComponent_Template_a_date_field_onChange_11_listener($event) { return ctx.checkDates($event); });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -22782,9 +22796,9 @@ ReportDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ReportDisplayCompo
         const _r2 = i0.ɵɵreference(18);
         const _r7 = i0.ɵɵreference(26);
         i0.ɵɵadvance(5);
-        i0.ɵɵproperty("ngModel", ctx.start_date)("from", ctx.end_date / 10)("to", ctx.end_date);
+        i0.ɵɵproperty("ngModel", ctx.start_date)("from", ctx.end_date / 10)("to", ctx.end_date * 10);
         i0.ɵɵadvance(6);
-        i0.ɵɵproperty("ngModel", ctx.end_date)("from", ctx.start_date)("to", ctx.start_date * 10);
+        i0.ɵɵproperty("ngModel", ctx.end_date)("from", ctx.start_date / 10)("to", ctx.start_date * 10);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx.buildings && ctx.buildings.length > 1);
         i0.ɵɵadvance(2);

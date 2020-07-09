@@ -22061,6 +22061,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Offset of the tooltip */
 
         _this111.offset = 'bottom';
+        /** Optional event emitter for changes */
+
+        _this111.onChange = new core_1.EventEmitter();
         return _this111;
       }
       /** First allowed date on the calendar */
@@ -22091,6 +22094,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (this._onChange) {
             this._onChange(new_date);
+
+            this.onChange.emit(new_date);
           }
 
           this.show_tooltip = false;
@@ -22209,6 +22214,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         offset: "offset",
         disabled: "disabled"
       },
+      outputs: {
+        onChange: "onChange"
+      },
       features: [i0.ɵɵProvidersFeature([{
         provide: forms_1.NG_VALUE_ACCESSOR,
         useExisting: core_1.forwardRef(function () {
@@ -22299,6 +22307,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }],
         disabled: [{
           type: core_1.Input
+        }],
+        onChange: [{
+          type: core_1.Output
         }],
         _trigger: [{
           type: core_1.ViewChild,
@@ -41172,6 +41183,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
         /**
+         * Ensure Space Time Continuum
+         */
+
+      }, {
+        key: "checkDates",
+        value: function checkDates(new_date) {
+          if (this.start_date > this.end_date) {
+            this.start_date = dayjs(new_date).startOf('d').valueOf();
+            this.end_date = dayjs(new_date).endOf('d').valueOf();
+          }
+        }
+        /**
          * Generate report
          */
 
@@ -41238,7 +41261,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵNgOnChangesFeature],
       decls: 27,
       vars: 13,
-      consts: [[1, "header"], [1, "period"], [1, "field"], ["for", "start-date"], ["name", "start-date", 3, "ngModel", "from", "to", "ngModelChange"], [1, "gap"], ["for", "end-date"], ["name", "end-date", 3, "ngModel", "from", "to", "ngModelChange"], [1, "location", "dark-mode"], ["appearance", "outline", 4, "ngIf"], [1, "actions"], ["mat-button", "", "name", "generate", 3, "disabled", "click"], [4, "ngIf", "ngIfElse"], ["gen_loader", ""], ["mat-button", "", "name", "download", 3, "disabled", "click"], [1, "display"], ["empty_state", ""], ["load_state", ""], ["appearance", "outline"], ["name", "locations", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", 3, "ngModel", "ngModelChange"], ["class", "selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "selection"], [3, "value"], [1, "option"], [1, "code"], [1, "name"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange"], ["diameter", "32"], [3, "list", "details"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"]],
+      consts: [[1, "header"], [1, "period"], [1, "field"], ["for", "start-date"], ["name", "start-date", 3, "ngModel", "from", "to", "ngModelChange", "onChange"], [1, "gap"], ["for", "end-date"], ["name", "end-date", 3, "ngModel", "from", "to", "ngModelChange", "onChange"], [1, "location", "dark-mode"], ["appearance", "outline", 4, "ngIf"], [1, "actions"], ["mat-button", "", "name", "generate", 3, "disabled", "click"], [4, "ngIf", "ngIfElse"], ["gen_loader", ""], ["mat-button", "", "name", "download", 3, "disabled", "click"], [1, "display"], ["empty_state", ""], ["load_state", ""], ["appearance", "outline"], ["name", "locations", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["name", "locations", 3, "ngModel", "ngModelChange"], ["class", "selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "selection"], [3, "value"], [1, "option"], [1, "code"], [1, "name"], ["name", "locations", "multiple", "", 3, "ngModel", "ngModelChange"], ["diameter", "32"], [3, "list", "details"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"]],
       template: function ReportDisplayComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -41250,6 +41273,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelementStart(5, "a-date-field", 4);
           i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_Template_a_date_field_ngModelChange_5_listener($event) {
             return ctx.start_date = $event;
+          })("onChange", function ReportDisplayComponent_Template_a_date_field_onChange_5_listener($event) {
+            return ctx.checkDates($event);
           });
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
@@ -41263,6 +41288,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelementStart(11, "a-date-field", 7);
           i0.ɵɵlistener("ngModelChange", function ReportDisplayComponent_Template_a_date_field_ngModelChange_11_listener($event) {
             return ctx.end_date = $event;
+          })("onChange", function ReportDisplayComponent_Template_a_date_field_onChange_11_listener($event) {
+            return ctx.checkDates($event);
           });
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
@@ -41299,9 +41326,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _r7 = i0.ɵɵreference(26);
 
           i0.ɵɵadvance(5);
-          i0.ɵɵproperty("ngModel", ctx.start_date)("from", ctx.end_date / 10)("to", ctx.end_date);
+          i0.ɵɵproperty("ngModel", ctx.start_date)("from", ctx.end_date / 10)("to", ctx.end_date * 10);
           i0.ɵɵadvance(6);
-          i0.ɵɵproperty("ngModel", ctx.end_date)("from", ctx.start_date)("to", ctx.start_date * 10);
+          i0.ɵɵproperty("ngModel", ctx.end_date)("from", ctx.start_date / 10)("to", ctx.start_date * 10);
           i0.ɵɵadvance(2);
           i0.ɵɵproperty("ngIf", ctx.buildings && ctx.buildings.length > 1);
           i0.ɵɵadvance(2);
