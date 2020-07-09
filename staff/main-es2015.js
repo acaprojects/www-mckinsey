@@ -13009,11 +13009,12 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
             return Promise.resolve();
         }
         return new Promise((resolve, reject) => {
+            const all_day = this.booking.all_day;
             this._spaces
                 .available({
                 room_ids: spaces.map((space) => space.id).join(','),
-                date: this.booking.date,
-                duration: this.booking.duration,
+                date: all_day ? dayjs(this.booking.date).startOf('d').valueOf() : this.booking.date,
+                duration: all_day ? 24 * 60 : this.booking.duration,
             })
                 .then((space_list) => {
                 console.log('Spaces:', space_list);
@@ -15247,7 +15248,8 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
     /** Building associated with the selected space */
     get active_building() {
         const form_controls = (this.form || { controls: { location_id: { value: '' } } }).controls;
-        const space = this.space_list.find(space => space.email == form_controls.location_id.value) || { level: {} };
+        const space = this.space_list.find((space) => space.email == form_controls.location_id.value) ||
+            { level: {} };
         return (this._org.buildings.find((bld) => space.level.building_id === bld.id) ||
             { catering_restricted_from: 0 });
     }
@@ -15349,7 +15351,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         ref.afterClosed().subscribe(() => this.unsub('confirm_event'));
     }
     loadMenu() {
-        const space = this.space_list.find(space => space.email === this.form.controls.location_id.value);
+        const space = this.space_list.find((space) => space.email === this.form.controls.location_id.value);
         this.loading = true;
         this._menu.query({ room_id: space.id }).then((list) => {
             this.loading = false;
@@ -15392,15 +15394,20 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         // }
         building_time = building_time.hour(7);
         const as_dayjs = dayjs(building_time.toLocalDate());
+        if (this.all_day || this.duration >= 13 * 60) {
+            if (start.isBefore(as_dayjs, 'm')) {
+                start = as_dayjs;
+                end = start.add(13, 'h');
+            }
+            else {
+                const possible_end = as_dayjs.hour(20);
+                if (end.isAfter(possible_end)) {
+                    end = possible_end;
+                }
+            }
+        }
         if (start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
-            end = start.add(13, 'h');
-        }
-        else {
-            const possible_end = as_dayjs.hour(20);
-            if (end.isAfter(possible_end)) {
-                end = possible_end;
-            }
         }
         return { start, end };
     }
@@ -16137,6 +16144,7 @@ const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive *
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
@@ -16292,7 +16300,8 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                     recurr_period: (recurrence.period || '').toLowerCase(),
                     recurr_end: recurrence.end
                 } : {};
-                const query = Object.assign({ date: this.form.controls.date.value, duration: this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
+                const all_day = this.form.controls.all_day.value;
+                const query = Object.assign({ date: all_day ? dayjs(this.form.controls.date.value).startOf('d').valueOf() : this.form.controls.date.value, duration: all_day ? 24 * 60 : this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
                 /* istanbul ignore else */
                 if (this.zone_ids && this.zone_ids.length) {
                     query.zone_ids = this.zone_ids.join(',');
@@ -21460,16 +21469,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "aa7f2eb",
-    "hash": "aa7f2eb",
+    "raw": "9822e10",
+    "hash": "9822e10",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "aa7f2eb",
+    "suffix": "9822e10",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594266968264
+    "time": 1594271909245
 };
 /* tslint:enable */
 

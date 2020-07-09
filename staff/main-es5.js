@@ -23065,12 +23065,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           return new Promise(function (resolve, reject) {
+            var all_day = _this109.booking.all_day;
+
             _this109._spaces.available({
               room_ids: spaces.map(function (space) {
                 return space.id;
               }).join(','),
-              date: _this109.booking.date,
-              duration: _this109.booking.duration
+              date: all_day ? dayjs(_this109.booking.date).startOf('d').valueOf() : _this109.booking.date,
+              duration: all_day ? 24 * 60 : _this109.booking.duration
             }).then(function (space_list) {
               console.log('Spaces:', space_list);
 
@@ -27308,15 +27310,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           building_time = building_time.hour(7);
           var as_dayjs = dayjs(building_time.toLocalDate());
 
+          if (this.all_day || this.duration >= 13 * 60) {
+            if (start.isBefore(as_dayjs, 'm')) {
+              start = as_dayjs;
+              end = start.add(13, 'h');
+            } else {
+              var possible_end = as_dayjs.hour(20);
+
+              if (end.isAfter(possible_end)) {
+                end = possible_end;
+              }
+            }
+          }
+
           if (start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
-            end = start.add(13, 'h');
-          } else {
-            var possible_end = as_dayjs.hour(20);
-
-            if (end.isAfter(possible_end)) {
-              end = possible_end;
-            }
           }
 
           return {
@@ -28764,6 +28772,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/spaces/spaces.service */
     "./src/app/services/data/spaces/spaces.service.ts");
 
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -29023,9 +29035,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 recurr_period: (recurrence.period || '').toLowerCase(),
                 recurr_end: recurrence.end
               } : {};
+              var all_day = _this139.form.controls.all_day.value;
               var query = Object.assign({
-                date: _this139.form.controls.date.value,
-                duration: _this139.form.controls.duration.value,
+                date: all_day ? dayjs(_this139.form.controls.date.value).startOf('d').valueOf() : _this139.form.controls.date.value,
+                duration: all_day ? 24 * 60 : _this139.form.controls.duration.value,
                 zone_ids: _this139._org.building.id,
                 bookable: true
               }, recurrence_properties);
@@ -38317,16 +38330,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "aa7f2eb",
-      "hash": "aa7f2eb",
+      "raw": "9822e10",
+      "hash": "9822e10",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "aa7f2eb",
+      "suffix": "9822e10",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594266968264
+      "time": 1594271909245
     };
     /* tslint:enable */
 
