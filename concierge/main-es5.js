@@ -43831,8 +43831,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _context31.next = 3;
                     return this._bookings.checkin(this.event.id, {
                       host_email: this.event.organiser.email,
-                      attendee_emails: general_utilities_1.unique(this.event.attendees.map(function (user) {
-                        return user.email;
+                      attendees: general_utilities_1.unique(this.event.attendees.map(function (user) {
+                        return {
+                          name: user.name,
+                          email: user.email
+                        };
                       })),
                       booking_id: this.event.id,
                       icaluid: this.event.icaluid,
@@ -44569,8 +44572,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _context32.next = 3;
                     return this._bookings.checkin(this.event.id, {
                       host_email: this.event.organiser.email,
-                      attendee_emails: [this.person.email],
-                      attendee_name: this.person.name,
+                      attendees: [{
+                        name: this.person.name,
+                        email: this.person.email
+                      }],
                       booking_id: this.event.id,
                       icaluid: this.event.icaluid,
                       id: this.event.id,

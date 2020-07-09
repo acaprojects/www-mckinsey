@@ -24074,7 +24074,7 @@ class VisitorBookingItemComponent {
             const value = yield this._bookings
                 .checkin(this.event.id, {
                 host_email: this.event.organiser.email,
-                attendee_emails: general_utilities_1.unique(this.event.attendees.map(user => user.email)),
+                attendees: general_utilities_1.unique(this.event.attendees.map(user => ({ name: user.name, email: user.email }))),
                 booking_id: this.event.id,
                 icaluid: this.event.icaluid,
                 id: this.event.id,
@@ -24456,8 +24456,7 @@ class VisitorComponent {
             const value = yield this._bookings
                 .checkin(this.event.id, {
                 host_email: this.event.organiser.email,
-                attendee_emails: [this.person.email],
-                attendee_name: this.person.name,
+                attendees: [{ name: this.person.name, email: this.person.email }],
                 booking_id: this.event.id,
                 icaluid: this.event.icaluid,
                 id: this.event.id,
