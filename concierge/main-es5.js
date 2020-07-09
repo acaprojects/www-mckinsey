@@ -24089,7 +24089,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.timeout('Getting Title', function () {
             return _this123.updateRoute(document.title);
-          });
+          }, 1000);
 
           this._router.events.subscribe(function (event) {
             /* istanbul ignore else */
@@ -30248,6 +30248,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/shared/base.directive */
     "./src/app/shared/base.directive.ts");
 
+    var app_service_1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -30257,54 +30261,58 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var i2 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
+    var i3 = __webpack_require__(
     /*! ../../shared/components/sidebar/sidebar.component */
     "./src/app/shared/components/sidebar/sidebar.component.ts");
 
-    var i3 = __webpack_require__(
+    var i4 = __webpack_require__(
     /*! ../../shared/components/topbar-header/topbar-header.component */
     "./src/app/shared/components/topbar-header/topbar-header.component.ts");
 
-    var i4 = __webpack_require__(
+    var i5 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i5 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! @angular/material/form-field */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
-    var i6 = __webpack_require__(
+    var i7 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
 
-    var i7 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! @angular/material/input */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
-    var i8 = __webpack_require__(
+    var i9 = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
-    var i9 = __webpack_require__(
+    var i10 = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
-    var i10 = __webpack_require__(
+    var i11 = __webpack_require__(
     /*! @angular/material/select */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
-    var i11 = __webpack_require__(
+    var i12 = __webpack_require__(
     /*! @angular/material/core */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
-    var i12 = __webpack_require__(
+    var i13 = __webpack_require__(
     /*! ./menu/menu.component */
     "./src/app/shell/catering/menu/menu.component.ts");
 
-    var i13 = __webpack_require__(
+    var i14 = __webpack_require__(
     /*! ./orders/orders.component */
     "./src/app/shell/catering/orders/orders.component.ts");
 
-    var i14 = __webpack_require__(
+    var i15 = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
     "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 
@@ -30542,13 +30550,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super51 = _createSuper(CateringComponent);
 
-      function CateringComponent(_route) {
+      function CateringComponent(_route, _service) {
         var _this141;
 
         _classCallCheck(this, CateringComponent);
 
         _this141 = _super51.call(this);
         _this141._route = _route;
+        _this141._service = _service;
         /** Toggle for new category modal */
 
         _this141.category = 0;
@@ -30567,6 +30576,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this142 = this;
 
           this.category = 0;
+          this._service.title = 'Catering';
           this.subscription('route.params', this._route.paramMap.subscribe(function (params) {
             if (params.has('page')) {
               _this142.page = params.get('page');
@@ -30581,7 +30591,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.CateringComponent = CateringComponent;
 
     CateringComponent.ɵfac = function CateringComponent_Factory(t) {
-      return new (t || CateringComponent)(i0.ɵɵdirectiveInject(i1.ActivatedRoute));
+      return new (t || CateringComponent)(i0.ɵɵdirectiveInject(i1.ActivatedRoute), i0.ɵɵdirectiveInject(i2.ApplicationService));
     };
 
     CateringComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -30632,8 +30642,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngSwitchCase", "orders");
         }
       },
-      directives: [i2.SidebarComponent, i3.TopbarHeaderComponent, i4.NgIf, i4.NgSwitch, i4.NgSwitchCase, i4.NgSwitchDefault, i5.MatFormField, i6.IconComponent, i5.MatPrefix, i7.MatInput, i8.DefaultValueAccessor, i8.NgControlStatus, i8.NgModel, i9.MatButton, i5.MatSuffix, i10.MatSelect, i11.MatOption, i12.CateringMenuComponent, i13.CateringOrdersComponent, i9.MatAnchor, i1.RouterLinkWithHref],
-      pipes: [i14.ɵa],
+      directives: [i3.SidebarComponent, i4.TopbarHeaderComponent, i5.NgIf, i5.NgSwitch, i5.NgSwitchCase, i5.NgSwitchDefault, i6.MatFormField, i7.IconComponent, i6.MatPrefix, i8.MatInput, i9.DefaultValueAccessor, i9.NgControlStatus, i9.NgModel, i10.MatButton, i6.MatSuffix, i11.MatSelect, i12.MatOption, i13.CateringMenuComponent, i14.CateringOrdersComponent, i10.MatAnchor, i1.RouterLinkWithHref],
+      pipes: [i15.ɵa],
       styles: ["[_nghost-%COMP%], .catering[_ngcontent-%COMP%], main[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 100%;\n}\n.catering[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n  background-color: #ecf1f5;\n}\nmain[_ngcontent-%COMP%] {\n  position: relative;\n  height: calc(100% - 3.5em);\n}\n.group[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 12em;\n}\n.other-field[_ngcontent-%COMP%] {\n  margin-left: 0.5em;\n}\n.options[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n}\nh2[_ngcontent-%COMP%] {\n  font-weight: 400;\n}\n.input-wrapper[_ngcontent-%COMP%] {\n  height: 3.5em;\n  padding: 0 0.5em;\n}\n.input-wrapper[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  font-size: 1.25em;\n}\n.card[_ngcontent-%COMP%] {\n  padding: 0;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  margin: 1em;\n  font-weight: 300;\n  background-color: #fff;\n  height: 16em;\n  width: 24em;\n  overflow: hidden;\n}\n.card[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n}\n.card[_ngcontent-%COMP%]   .img[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-position: center !important;\n  background-size: cover !important;\n  color: #fff;\n  width: 100%;\n  height: 13em;\n}\n.card[_ngcontent-%COMP%]   .desc[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 3em;\n  color: rgba(0, 0, 0, 0.6);\n}\nbutton[_ngcontent-%COMP%] {\n  margin-right: 0.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hlbGwvY2F0ZXJpbmcvY2F0ZXJpbmcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL2NhdGVyaW5nL2NhdGVyaW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQTdDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMvQkE7O3NCQUFBO0FDWkE7OztFQUdJLFlBQUE7RUFDQSxXQUFBO0FDbUJKO0FEaEJBO0VBQ0ksYUFBQTtFQUNBLFlBQUE7RUFDQSx5QkFBQTtBQ21CSjtBRGhCQTtFQUNJLGtCQUFBO0VBQ0EsMEJBQUE7QUNtQko7QURoQkE7RUFDSSxPQUFBO0VBQ0EsZUFBQTtBQ21CSjtBRGhCQTtFQUNJLGtCQUFBO0FDbUJKO0FEaEJBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtBQ21CSjtBRGhCQTtFQUNJLGdCQUFBO0FDbUJKO0FEaEJBO0VBQ0ksYUFBQTtFQUNBLGdCQUFBO0FDbUJKO0FEakJJO0VBQ0ksaUJBQUE7QUNtQlI7QURmQTtFQUNJLFVBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VENUNBLGlIQUFBO0VDOENBLFdBQUE7RUFDQSxnQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSxnQkFBQTtBQ2tCSjtBRGhCSTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0Esc0JBQUE7QUNrQlI7QURmSTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0Esc0NBQUE7RUFDQSxpQ0FBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtBQ2lCUjtBRGRJO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNnQlI7QURYQTtFQUNJLG1CQUFBO0FDY0oiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9jYXRlcmluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiQGltcG9ydCAndmFyaWFibGVzJztcbkBpbXBvcnQgJ21peGlucyc7XG5cbjpob3N0LFxuLmNhdGVyaW5nLFxubWFpbiB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG4uY2F0ZXJpbmcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNlY2YxZjU7XG59XG5cbm1haW4ge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMuNWVtKTtcbn1cblxuLmdyb3VwIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogMTJlbTtcbn1cblxuLm90aGVyLWZpZWxkIHtcbiAgICBtYXJnaW4tbGVmdDogLjVlbTtcbn1cblxuLm9wdGlvbnMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG59XG5cbmgyIHtcbiAgICBmb250LXdlaWdodDogNDAwO1xufVxuXG4uaW5wdXQtd3JhcHBlciB7XG4gICAgaGVpZ2h0OiAzLjVlbTtcbiAgICBwYWRkaW5nOiAwIC41ZW07XG5cbiAgICBhcHAtaWNvbiB7XG4gICAgICAgIGZvbnQtc2l6ZTogMS4yNWVtO1xuICAgIH1cbn1cblxuLmNhcmQge1xuICAgIHBhZGRpbmc6IDA7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcbiAgICBtYXJnaW46IDFlbTtcbiAgICBmb250LXdlaWdodDogMzAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgaGVpZ2h0OiAxNmVtO1xuICAgIHdpZHRoOiAyNGVtO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAuY29udGVudCB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIH1cblxuICAgIC5pbWcge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyICFpbXBvcnRhbnQ7XG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXIgIWltcG9ydGFudDtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEzZW07XG4gICAgfVxuXG4gICAgLmRlc2Mge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgaGVpZ2h0OiAzZW07XG4gICAgICAgIGNvbG9yOiByZ2JhKCMwMDAsIC42KTtcbiAgICB9XG5cbn1cblxuYnV0dG9uIHtcbiAgICBtYXJnaW4tcmlnaHQ6IC41ZW07XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0LFxuLmNhdGVyaW5nLFxubWFpbiB7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5jYXRlcmluZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VjZjFmNTtcbn1cblxubWFpbiB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiBjYWxjKDEwMCUgLSAzLjVlbSk7XG59XG5cbi5ncm91cCB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMTJlbTtcbn1cblxuLm90aGVyLWZpZWxkIHtcbiAgbWFyZ2luLWxlZnQ6IDAuNWVtO1xufVxuXG4ub3B0aW9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG5oMiB7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5pbnB1dC13cmFwcGVyIHtcbiAgaGVpZ2h0OiAzLjVlbTtcbiAgcGFkZGluZzogMCAwLjVlbTtcbn1cbi5pbnB1dC13cmFwcGVyIGFwcC1pY29uIHtcbiAgZm9udC1zaXplOiAxLjI1ZW07XG59XG5cbi5jYXJkIHtcbiAgcGFkZGluZzogMDtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMHB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbiAgbWFyZ2luOiAxZW07XG4gIGZvbnQtd2VpZ2h0OiAzMDA7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGhlaWdodDogMTZlbTtcbiAgd2lkdGg6IDI0ZW07XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG4uY2FyZCAuY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuLmNhcmQgLmltZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgIWltcG9ydGFudDtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlciAhaW1wb3J0YW50O1xuICBjb2xvcjogI2ZmZjtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTNlbTtcbn1cbi5jYXJkIC5kZXNjIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGhlaWdodDogM2VtO1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjYpO1xufVxuXG5idXR0b24ge1xuICBtYXJnaW4tcmlnaHQ6IDAuNWVtO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -30649,6 +30659,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }], function () {
         return [{
           type: i1.ActivatedRoute
+        }, {
+          type: i2.ApplicationService
         }];
       }, null);
     })();
@@ -33061,6 +33073,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
+    var bookings_service_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/bookings.service */
+    "./src/app/services/data/bookings/bookings.service.ts");
+
+    var booking_utilities_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/booking.utilities */
+    "./src/app/services/data/bookings/booking.utilities.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -33070,30 +33090,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/app/services/data/spaces/spaces.service.ts");
 
     var i2 = __webpack_require__(
+    /*! src/app/services/data/bookings/bookings.service */
+    "./src/app/services/data/bookings/bookings.service.ts");
+
+    var i3 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
-    var i3 = __webpack_require__(
+    var i4 = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
-    var i4 = __webpack_require__(
+    var i5 = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
-    var i5 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i6 = __webpack_require__(
+    var i7 = __webpack_require__(
     /*! @angular/material/progress-bar */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
 
-    var i7 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! ./item/item.component */
     "./src/app/shell/catering/orders/item/item.component.ts");
 
-    var i8 = __webpack_require__(
+    var i9 = __webpack_require__(
     /*! ../../../shared/components/icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
 
@@ -33167,13 +33191,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super55 = _createSuper(CateringOrdersComponent);
 
-      function CateringOrdersComponent(_spaces, _org, _route, _dialog) {
+      function CateringOrdersComponent(_spaces, _bookings, _org, _route, _dialog) {
         var _this155;
 
         _classCallCheck(this, CateringOrdersComponent);
 
         _this155 = _super55.call(this);
         _this155._spaces = _spaces;
+        _this155._bookings = _bookings;
         _this155._org = _org;
         _this155._route = _route;
         _this155._dialog = _dialog;
@@ -33206,13 +33231,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return _;
           })).subscribe(function () {
             _this156.subscription('building', _this156._org.listen('active_building').subscribe(function () {
-              _this156.search$.next("".concat(_this156.date, "|").concat(_this156.building.id));
-
               _this156.available_spaces = _this156._spaces.filter(function (space) {
                 return space.zones.indexOf(_this156.building.id) >= 0;
               }).map(function (i) {
-                return i.id;
+                return i.email;
               });
+
+              _this156.search$.next("".concat(_this156.date, "|").concat(_this156.building.id));
+
+              _this156.updateOrders();
             }));
 
             _this156.available_spaces = _this156._spaces.filter(function (space) {
@@ -33326,32 +33353,68 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           }), operators_1.map(function (space_list) {
-            var orders = [];
+            var date = dayjs(_this158.date).startOf('d');
+            var end = date.endOf('d');
+
+            var bookings = _this158._bookings.booking_list.getValue();
+
             space_list.forEach(function (space) {
-              space.bookings.forEach(function (booking, i) {
-                var catering = booking.catering;
-                catering.forEach(function (order) {
-                  order.booking_date = booking.date;
-                  order.booking = booking;
-                });
-                orders = orders.concat(booking.catering);
+              return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
+                space: space.email,
+                from: date.valueOf(),
+                to: end.valueOf()
               });
             });
-            orders = general_utilities_1.unique(orders, 'id');
-            orders = orders.filter(function (order) {
-              return _this158.available_spaces.indexOf(order.location_id) >= 0;
-            });
-            orders.sort(function (a, b) {
-              return a.booking_date + a.delivery_time * 60 * 1000 - (b.booking_date + b.delivery_time * 60 * 1000);
-            });
-            return orders;
+
+            _this158._bookings.booking_list.next(bookings);
+
+            return space_list;
           })); // Process API results
 
-          this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this158.loading = false;
-            _this158.orders = list;
-            _this158.filtered_orders = _this158.filter(list, _this158.search);
+          this.subscription('search_results', this.search_results$.subscribe(function (_) {
+            return _this158.loading = false;
           }));
+          this.subscription('bookings', this._bookings.booking_list.subscribe(function (_) {
+            return _this158.updateOrders();
+          }));
+        }
+      }, {
+        key: "updateOrders",
+        value: function updateOrders() {
+          var _this159 = this;
+
+          var bookings = this._bookings.booking_list.getValue();
+
+          var date = dayjs(this.date);
+          console.log('Available Spaces:', this.available_spaces);
+          var relevant_bookings = bookings.filter(function (booking) {
+            var start = dayjs(booking.date);
+            var end = start.add(booking.duration, 'm');
+            return booking.catering.length && booking.space_list.find(function (space) {
+              return _this159.available_spaces.find(function (email) {
+                return email === space.email;
+              });
+            }) && (start.isSame(date, 'd') || end.isSame(date, 'd') || date.isAfter(start, 'd') && date.isBefore(end, 'd'));
+          });
+          var orders = [];
+          relevant_bookings.forEach(function (booking, i) {
+            var catering = booking.catering;
+            catering.forEach(function (order) {
+              order.booking_date = booking.date;
+              order.booking = booking;
+            });
+            orders = orders.concat(booking.catering);
+          });
+          orders = general_utilities_1.unique(orders, 'id');
+          orders = orders.filter(function (order) {
+            return _this159.available_spaces.indexOf(order.location_id) >= 0;
+          });
+          orders.sort(function (a, b) {
+            return a.booking_date + a.delivery_time * 60 * 1000 - (b.booking_date + b.delivery_time * 60 * 1000);
+          });
+          this.loading = false;
+          this.orders = orders;
+          this.filtered_orders = this.filter(orders, this.search);
         }
       }, {
         key: "date_display",
@@ -33374,7 +33437,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.CateringOrdersComponent = CateringOrdersComponent;
 
     CateringOrdersComponent.ɵfac = function CateringOrdersComponent_Factory(t) {
-      return new (t || CateringOrdersComponent)(i0.ɵɵdirectiveInject(i1.SpacesService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.ActivatedRoute), i0.ɵɵdirectiveInject(i4.MatDialog));
+      return new (t || CateringOrdersComponent)(i0.ɵɵdirectiveInject(i1.SpacesService), i0.ɵɵdirectiveInject(i2.BookingsService), i0.ɵɵdirectiveInject(i3.OrganisationService), i0.ɵɵdirectiveInject(i4.ActivatedRoute), i0.ɵɵdirectiveInject(i5.MatDialog));
     };
 
     CateringOrdersComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -33424,7 +33487,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngIf", ctx.filtered_orders && ctx.filtered_orders.length)("ngIfElse", _r2);
         }
       },
-      directives: [i5.NgIf, i6.MatProgressBar, i5.NgForOf, i7.CateringOrdersItemComponent, i8.IconComponent],
+      directives: [i6.NgIf, i7.MatProgressBar, i6.NgForOf, i8.CateringOrdersItemComponent, i9.IconComponent],
       styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n  font-size: 0.9em;\n}\n\n.heading[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n  font-size: 0.8rem;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  width: 100%;\n  z-index: 1;\n}\n\n.heading[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  padding: 0.25em 0;\n  text-transform: capitalize;\n}\n\n.heading[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  width: 5em;\n}\n\n.heading[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 6rem;\n}\n\n.heading[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 10rem;\n}\n\n.heading[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  flex: 1;\n}\n\n.heading[_ngcontent-%COMP%]   .types[_ngcontent-%COMP%] {\n  width: 6.25rem;\n}\n\n.heading[_ngcontent-%COMP%]   .state[_ngcontent-%COMP%] {\n  width: 17.5rem;\n}\n\n.list[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 1;\n  min-height: 50%;\n  width: 100%;\n  overflow: auto;\n}\n\n.top-row[_ngcontent-%COMP%] {\n  display: flex;\n  position: -webkit-sticky;\n  position: sticky;\n  align-items: center;\n  top: 0;\n  width: 100%;\n}\n\n.loader[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  z-index: 999;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vcmRlcnMvb3JkZXJzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vcmRlcnMvb3JkZXJzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0FDQUo7O0FER0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSwyQ0FBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0FDQUo7O0FERUk7RUFDSSxpQkFBQTtFQUNBLDBCQUFBO0FDQVI7O0FER0k7RUFDSSxVQUFBO0FDRFI7O0FESUk7RUFDSSxXQUFBO0FDRlI7O0FES0k7RUFDSSxZQUFBO0FDSFI7O0FETUk7RUFDSSxPQUFBO0FDSlI7O0FET0k7RUFDSSxjQUFBO0FDTFI7O0FEUUk7RUFDSSxjQUFBO0FDTlI7O0FEVUE7RUFDSSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLGNBQUE7QUNQSjs7QURVQTtFQUNJLGFBQUE7RUFDQSx3QkFBQTtFQUFBLGdCQUFBO0VBQ0EsbUJBQUE7RUFDQSxNQUFBO0VBQ0EsV0FBQTtBQ1BKOztBRFVBO0VBQ0ksa0JBQUE7RUFDQSxTQUFBO0VBQ0EsT0FBQTtFQUNBLFFBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtBQ1BKIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvY2F0ZXJpbmcvb3JkZXJzL29yZGVycy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuOmhvc3Qge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBmb250LXNpemU6IC45ZW07XG59XG5cbi5oZWFkaW5nIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgZm9udC1zaXplOiAuOHJlbTtcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgjMDAwLCAuMSk7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgei1pbmRleDogMTtcblxuICAgID4gKiB7XG4gICAgICAgIHBhZGRpbmc6IC4yNWVtIDA7XG4gICAgICAgIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICAgIH1cblxuICAgIC5pY29uIHtcbiAgICAgICAgd2lkdGg6IDVlbTtcbiAgICB9XG5cbiAgICAudGltZSB7XG4gICAgICAgIHdpZHRoOiA2cmVtO1xuICAgIH1cblxuICAgIC5ob3N0IHtcbiAgICAgICAgd2lkdGg6IDEwcmVtO1xuICAgIH1cblxuICAgIC5sb2NhdGlvbiB7XG4gICAgICAgIGZsZXg6IDE7XG4gICAgfVxuXG4gICAgLnR5cGVzIHtcbiAgICAgICAgd2lkdGg6IDYuMjVyZW07XG4gICAgfVxuXG4gICAgLnN0YXRlIHtcbiAgICAgICAgd2lkdGg6IDE3LjVyZW07XG4gICAgfVxufVxuXG4ubGlzdCB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGZsZXg6IDE7XG4gICAgbWluLWhlaWdodDogNTAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG92ZXJmbG93OiBhdXRvO1xufVxuXG4udG9wLXJvdyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgdG9wOiAwO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG4ubG9hZGVyIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgaGVpZ2h0OiA0cHg7XG4gICAgei1pbmRleDogOTk5O1xufVxuIiwiOmhvc3Qge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBmb250LXNpemU6IDAuOWVtO1xufVxuXG4uaGVhZGluZyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgZm9udC1zaXplOiAwLjhyZW07XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gIHdpZHRoOiAxMDAlO1xuICB6LWluZGV4OiAxO1xufVxuLmhlYWRpbmcgPiAqIHtcbiAgcGFkZGluZzogMC4yNWVtIDA7XG4gIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xufVxuLmhlYWRpbmcgLmljb24ge1xuICB3aWR0aDogNWVtO1xufVxuLmhlYWRpbmcgLnRpbWUge1xuICB3aWR0aDogNnJlbTtcbn1cbi5oZWFkaW5nIC5ob3N0IHtcbiAgd2lkdGg6IDEwcmVtO1xufVxuLmhlYWRpbmcgLmxvY2F0aW9uIHtcbiAgZmxleDogMTtcbn1cbi5oZWFkaW5nIC50eXBlcyB7XG4gIHdpZHRoOiA2LjI1cmVtO1xufVxuLmhlYWRpbmcgLnN0YXRlIHtcbiAgd2lkdGg6IDE3LjVyZW07XG59XG5cbi5saXN0IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBmbGV4OiAxO1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIHdpZHRoOiAxMDAlO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLnRvcC1yb3cge1xuICBkaXNwbGF5OiBmbGV4O1xuICBwb3NpdGlvbjogc3RpY2t5O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4ubG9hZGVyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBoZWlnaHQ6IDRweDtcbiAgei1pbmRleDogOTk5O1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -33441,11 +33504,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return [{
           type: i1.SpacesService
         }, {
-          type: i2.OrganisationService
+          type: i2.BookingsService
         }, {
-          type: i3.ActivatedRoute
+          type: i3.OrganisationService
         }, {
-          type: i4.MatDialog
+          type: i4.ActivatedRoute
+        }, {
+          type: i5.MatDialog
         }];
       }, {
         search: [{
@@ -33735,21 +33800,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super56 = _createSuper(CateringCategoryModalComponent);
 
       function CateringCategoryModalComponent(_service, _menu_categories, _upload_manager, _dialog, _dialog_ref, _data) {
-        var _this159;
+        var _this160;
 
         _classCallCheck(this, CateringCategoryModalComponent);
 
-        _this159 = _super56.call(this);
-        _this159._service = _service;
-        _this159._menu_categories = _menu_categories;
-        _this159._upload_manager = _upload_manager;
-        _this159._dialog = _dialog;
-        _this159._dialog_ref = _dialog_ref;
-        _this159._data = _data;
+        _this160 = _super56.call(this);
+        _this160._service = _service;
+        _this160._menu_categories = _menu_categories;
+        _this160._upload_manager = _upload_manager;
+        _this160._dialog = _dialog;
+        _this160._dialog_ref = _dialog_ref;
+        _this160._data = _data;
         /** Emitter for user action on the modal */
 
-        _this159.event = new core_1.EventEmitter();
-        return _this159;
+        _this160.event = new core_1.EventEmitter();
+        return _this160;
       }
 
       _createClass(CateringCategoryModalComponent, [{
@@ -33764,7 +33829,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this160 = this;
+          var _this161 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -33780,7 +33845,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
 
           ref.componentInstance.event.subscribe(function (event) {
-            return tslib_1.__awaiter(_this160, void 0, void 0,
+            return tslib_1.__awaiter(_this161, void 0, void 0,
             /*#__PURE__*/
             regeneratorRuntime.mark(function _callee25() {
               var e;
@@ -33821,7 +33886,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "submit",
         value: function submit() {
-          var _this161 = this;
+          var _this162 = this;
 
           this.form.markAllAsTouched();
           /* istanbul ignore else */
@@ -33830,14 +33895,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var data = Object.assign(Object.assign({}, this.category.toJSON()), this.form.value);
             var request = this.category.id ? this._menu_categories.update(this.category.id, data) : this._menu_categories.add(data);
             request.then(function (item) {
-              _this161.event.emit({
+              _this162.event.emit({
                 reason: 'done',
                 metadata: item
               });
 
-              _this161._dialog_ref.close();
+              _this162._dialog_ref.close();
             }, function (err) {
-              return _this161._service.notifyError("Error ".concat(_this161.category.id ? 'updating' : 'creating', " category. Error: ").concat(err.message || err));
+              return _this162._service.notifyError("Error ".concat(_this162.category.id ? 'updating' : 'creating', " category. Error: ").concat(err.message || err));
             });
           }
         }
@@ -33846,7 +33911,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "uploadImage",
         value: function uploadImage(event) {
-          var _this162 = this;
+          var _this163 = this;
 
           /* istanbul ignore else */
           if (event && event.target && event.target.files) {
@@ -33856,27 +33921,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (files.length) {
               var fileReader = new FileReader();
               fileReader.addEventListener('loadend', function (e) {
-                _this162.uploading = true;
+                _this163.uploading = true;
                 var arrayBuffer = e.target.result;
                 var blob = blobUtil.arrayBufferToBlob(arrayBuffer, 'image/png');
 
-                _this162._upload_manager.upload([blob], {
+                _this163._upload_manager.upload([blob], {
                   file_name: files[0].name
                 });
 
-                var upload = _this162._upload_manager.uploads[_this162._upload_manager.uploads.length - 1];
+                var upload = _this163._upload_manager.uploads[_this163._upload_manager.uploads.length - 1];
 
-                _this162.interval('upload', function () {
+                _this163.interval('upload', function () {
                   /* istanbul ignore else */
                   if (upload.complete || upload.error) {
                     /* istanbul ignore else */
                     if (upload.access_url && upload.complete) {
-                      _this162.form.controls.image_path.setValue(upload.access_url);
+                      _this163.form.controls.image_path.setValue(upload.access_url);
                     }
 
-                    _this162.uploading = false;
+                    _this163.uploading = false;
 
-                    _this162.clearInterval('upload');
+                    _this163.clearInterval('upload');
                   }
                 });
               });
@@ -34378,23 +34443,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super57 = _createSuper(CateringGroupModalComponent);
 
       function CateringGroupModalComponent(_service, _menu_categories, _upload_manager, _dialog, _dialog_ref, _data) {
-        var _this163;
+        var _this164;
 
         _classCallCheck(this, CateringGroupModalComponent);
 
-        _this163 = _super57.call(this);
-        _this163._service = _service;
-        _this163._menu_categories = _menu_categories;
-        _this163._upload_manager = _upload_manager;
-        _this163._dialog = _dialog;
-        _this163._dialog_ref = _dialog_ref;
-        _this163._data = _data;
+        _this164 = _super57.call(this);
+        _this164._service = _service;
+        _this164._menu_categories = _menu_categories;
+        _this164._upload_manager = _upload_manager;
+        _this164._dialog = _dialog;
+        _this164._dialog_ref = _dialog_ref;
+        _this164._data = _data;
         /** Emitter for user action on the modal */
 
-        _this163.event = new core_1.EventEmitter();
+        _this164.event = new core_1.EventEmitter();
         /** List of available catering types */
 
-        _this163.types = [{
+        _this164.types = [{
           id: 'kitchen',
           name: 'Kitchen'
         }, {
@@ -34404,7 +34469,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           id: 'none',
           name: 'Other'
         }];
-        return _this163;
+        return _this164;
       }
       /** Category being edit/created */
 
@@ -34429,7 +34494,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this164 = this;
+          var _this165 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -34445,7 +34510,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
 
           ref.componentInstance.event.subscribe(function (event) {
-            return tslib_1.__awaiter(_this164, void 0, void 0,
+            return tslib_1.__awaiter(_this165, void 0, void 0,
             /*#__PURE__*/
             regeneratorRuntime.mark(function _callee26() {
               var e;
@@ -34486,7 +34551,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "submit",
         value: function submit() {
-          var _this165 = this;
+          var _this166 = this;
 
           this.form.markAllAsTouched();
           /* istanbul ignore else */
@@ -34497,14 +34562,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
             var request = this.category.id ? this._menu_categories.update(this.category.id, data) : this._menu_categories.add(data);
             request.then(function (item) {
-              _this165.event.emit({
+              _this166.event.emit({
                 reason: 'done',
                 metadata: item
               });
 
-              _this165._dialog_ref.close();
+              _this166._dialog_ref.close();
             }, function (err) {
-              return _this165._service.notifyError("Error ".concat(_this165.category.id ? 'updating' : 'creating', " category. Error: ").concat(err.message || err));
+              return _this166._service.notifyError("Error ".concat(_this166.category.id ? 'updating' : 'creating', " category. Error: ").concat(err.message || err));
             });
           }
         }
@@ -34513,7 +34578,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "uploadImage",
         value: function uploadImage(event) {
-          var _this166 = this;
+          var _this167 = this;
 
           /* istanbul ignore else */
           if (event && event.target && event.target.files) {
@@ -34523,27 +34588,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (files.length) {
               var fileReader = new FileReader();
               fileReader.addEventListener('loadend', function (e) {
-                _this166.uploading = true;
+                _this167.uploading = true;
                 var arrayBuffer = e.target.result;
                 var blob = blobUtil.arrayBufferToBlob(arrayBuffer, 'image/png');
 
-                _this166._upload_manager.upload([blob], {
+                _this167._upload_manager.upload([blob], {
                   file_name: files[0].name
                 });
 
-                var upload = _this166._upload_manager.uploads[_this166._upload_manager.uploads.length - 1];
+                var upload = _this167._upload_manager.uploads[_this167._upload_manager.uploads.length - 1];
 
-                _this166.interval('upload', function () {
+                _this167.interval('upload', function () {
                   /* istanbul ignore else */
                   if (upload.complete || upload.error) {
                     /* istanbul ignore else */
                     if (upload.access_url && upload.complete) {
-                      _this166.form.controls.image_path.setValue(upload.access_url);
+                      _this167.form.controls.image_path.setValue(upload.access_url);
                     }
 
-                    _this166.uploading = false;
+                    _this167.uploading = false;
 
-                    _this166.clearInterval('upload');
+                    _this167.clearInterval('upload');
                   }
                 });
               });
@@ -34991,29 +35056,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super58 = _createSuper(CateringItemModalComponent);
 
       function CateringItemModalComponent(_service, _menu_items, _dialog, _dialog_ref, _data) {
-        var _this167;
+        var _this168;
 
         _classCallCheck(this, CateringItemModalComponent);
 
-        _this167 = _super58.call(this);
-        _this167._service = _service;
-        _this167._menu_items = _menu_items;
-        _this167._dialog = _dialog;
-        _this167._dialog_ref = _dialog_ref;
-        _this167._data = _data;
+        _this168 = _super58.call(this);
+        _this168._service = _service;
+        _this168._menu_items = _menu_items;
+        _this168._dialog = _dialog;
+        _this168._dialog_ref = _dialog_ref;
+        _this168._data = _data;
         /** Emitter for user action on the modal */
 
-        _this167.event = new core_1.EventEmitter();
+        _this168.event = new core_1.EventEmitter();
         /** List of available catering types */
 
-        _this167.types = [{
+        _this168.types = [{
           id: 'kitchen',
           name: 'Kitchen'
         }, {
           id: 'pantry',
           name: 'Pantry'
         }];
-        return _this167;
+        return _this168;
       }
       /** Category being edit/created */
 
@@ -35038,7 +35103,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this168 = this;
+          var _this169 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -35054,7 +35119,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
 
           ref.componentInstance.event.subscribe(function (event) {
-            return tslib_1.__awaiter(_this168, void 0, void 0,
+            return tslib_1.__awaiter(_this169, void 0, void 0,
             /*#__PURE__*/
             regeneratorRuntime.mark(function _callee27() {
               var e;
@@ -35095,7 +35160,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "submit",
         value: function submit() {
-          var _this169 = this;
+          var _this170 = this;
 
           this.form.markAllAsTouched();
           /* istanbul ignore else */
@@ -35104,14 +35169,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var data = new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, this.item.toJSON()), this.form.value)).toJSON();
             var request = this.item.id ? this._menu_items.update(this.item.id, data) : this._menu_items.add(data);
             request.then(function (item) {
-              _this169.event.emit({
+              _this170.event.emit({
                 reason: 'done',
                 metadata: item
               });
 
-              _this169._dialog_ref.close();
+              _this170._dialog_ref.close();
             }, function (err) {
-              return _this169._service.notifyError("Error ".concat(_this169.item.id ? 'updating' : 'creating', " item. Error: ").concat(err.message || err));
+              return _this170._service.notifyError("Error ".concat(_this170.item.id ? 'updating' : 'creating', " item. Error: ").concat(err.message || err));
             });
           }
         }
@@ -35705,7 +35770,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee28() {
-            var _this170 = this;
+            var _this171 = this;
 
             var orders, index, new_booking, booking;
             return regeneratorRuntime.wrap(function _callee28$(_context28) {
@@ -35734,7 +35799,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }));
                     _context28.next = 8;
                     return this._bookings.save(new_booking)["catch"](function (err) {
-                      return _this170._service.notifyError("Error unable to update order. Error: ".concat(err.message || err));
+                      return _this171._service.notifyError("Error unable to update order. Error: ".concat(err.message || err));
                     });
 
                   case 8:
@@ -36041,7 +36106,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee29() {
-            var _this171 = this;
+            var _this172 = this;
 
             var user, notes, date, new_notes, pending_booking, new_booking, bookings;
             return regeneratorRuntime.wrap(function _callee29$(_context29) {
@@ -36071,9 +36136,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.loading = true;
                     _context29.next = 9;
                     return this._bookings.save(pending_booking)["catch"](function (err) {
-                      _this171._service.notifyError("Failed to add note to order meeting. Error: ".concat(err.message || err));
+                      _this172._service.notifyError("Failed to add note to order meeting. Error: ".concat(err.message || err));
 
-                      _this171.loading = false;
+                      _this172.loading = false;
                       throw err;
                     });
 
@@ -36106,10 +36171,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "notes",
         get: function get() {
-          var _this172 = this;
+          var _this173 = this;
 
           var notes = this.booking.notes.filter(function (note) {
-            return note.type === 'catering' && note.space === _this172.order.location_id && (!note.order_id || note.order_id === _this172.order.id);
+            return note.type === 'catering' && note.space === _this173.order.location_id && (!note.order_id || note.order_id === _this173.order.id);
           });
           notes.forEach(function (note) {
             note.time = dayjs(note.date).format('DD MMM, h:mm A');
@@ -36442,21 +36507,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super59 = _createSuper(OrderDetailsModalComponent);
 
       function OrderDetailsModalComponent(_service, _spaces, _bookings, _data) {
-        var _this173;
+        var _this174;
 
         _classCallCheck(this, OrderDetailsModalComponent);
 
-        _this173 = _super59.call(this);
-        _this173._service = _service;
-        _this173._spaces = _spaces;
-        _this173._bookings = _bookings;
-        _this173._data = _data;
+        _this174 = _super59.call(this);
+        _this174._service = _service;
+        _this174._spaces = _spaces;
+        _this174._bookings = _bookings;
+        _this174._data = _data;
         /** Emitter for user action on the modal */
 
-        _this173.event = new core_1.EventEmitter();
+        _this174.event = new core_1.EventEmitter();
         /** List of available order statuses */
 
-        _this173.statuses = [{
+        _this174.statuses = [{
           id: 'accepted',
           name: 'Accepted',
           icon: {
@@ -36492,7 +36557,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           },
           colour: '#747474'
         }];
-        return _this173;
+        return _this174;
       }
       /** Active booking to display */
 
@@ -36510,7 +36575,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee30() {
-            var _this174 = this;
+            var _this175 = this;
 
             var booking, catering, new_booking, updated_booking, bookings;
             return regeneratorRuntime.wrap(function _callee30$(_context30) {
@@ -36528,7 +36593,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.loading = true;
                     catering = _toConsumableArray(booking.catering);
                     catering.splice(catering.findIndex(function (order) {
-                      return order.id === _this174._data.order.id;
+                      return order.id === _this175._data.order.id;
                     }), 1, new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, this._data.order), {
                       status: this.active_status
                     })));
@@ -36537,9 +36602,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }));
                     _context30.next = 8;
                     return new_booking.save()["catch"](function (err) {
-                      _this174._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
+                      _this175._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
 
-                      _this174.active_status = _this174._data.order.status;
+                      _this175.active_status = _this175._data.order.status;
                     });
 
                   case 8:
@@ -36586,10 +36651,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "status_details",
         get: function get() {
-          var _this175 = this;
+          var _this176 = this;
 
           return this.statuses.find(function (status) {
-            return status.id === _this175.active_status;
+            return status.id === _this176.active_status;
           });
         }
         /** Space associated with the order */
@@ -36884,21 +36949,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super60 = _createSuper(DayViewApprovalsComponent);
 
       function DayViewApprovalsComponent(_org, _spaces, _bookings) {
-        var _this176;
+        var _this177;
 
         _classCallCheck(this, DayViewApprovalsComponent);
 
-        _this176 = _super60.call(this);
-        _this176._org = _org;
-        _this176._spaces = _spaces;
-        _this176._bookings = _bookings;
+        _this177 = _super60.call(this);
+        _this177._org = _org;
+        _this177._spaces = _spaces;
+        _this177._bookings = _bookings;
         /** List of bookings that are pending approval */
 
-        _this176.events = [];
+        _this177.events = [];
         /** List of spaces to check for pending approvals */
 
-        _this176.space_list = [];
-        return _this176;
+        _this177.space_list = [];
+        return _this177;
       }
       /** Display value for the active date */
 
@@ -36906,39 +36971,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DayViewApprovalsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this177 = this;
+          var _this178 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            return _this177.init();
+            return _this178.init();
           });
         }
       }, {
         key: "init",
         value: function init() {
-          var _this178 = this;
+          var _this179 = this;
 
           this.events = [];
           var building = this._org.building;
           this.space_list = this._spaces.filter(function (space) {
-            return space.zones.indexOf(_this178.level === '' ? building.id : _this178.level) >= 0;
+            return space.zones.indexOf(_this179.level === '' ? building.id : _this179.level) >= 0;
           }).map(function (i) {
             return i.email;
           });
           this.updateEvents();
           this.getMonthlyPending();
           this.interval('monthly_pending', function () {
-            return _this178.getMonthlyPending();
+            return _this179.getMonthlyPending();
           }, 10 * 60 * 1000);
           this.subscription('update', this._bookings.booking_list.subscribe(function (_) {
-            return _this178.updateEvents();
+            return _this179.updateEvents();
           }));
         }
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this179 = this;
+          var _this180 = this;
 
           /* istanbul ignore else */
           if (changes.date && this.date !== changes.date.previousValue) {
@@ -36948,7 +37013,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (!dayjs(changes.date.previousValue).isSame(dayjs(changes.date.currentValue), 'M')) {
               this.getMonthlyPending();
               this.interval('monthly_pending', function () {
-                return _this179.getMonthlyPending();
+                return _this180.getMonthlyPending();
               }, 10 * 60 * 1000);
             }
           }
@@ -36977,13 +37042,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateEvents",
         value: function updateEvents() {
-          var _this180 = this;
+          var _this181 = this;
 
           var list = this._bookings.booking_list.getValue();
 
           var date = dayjs(this.date);
           this.events = list.filter(function (booking) {
-            return dayjs(booking.date).isSame(date, 'd') && booking.tentative && _this180.space_list.find(function (space) {
+            return dayjs(booking.date).isSame(date, 'd') && booking.tentative && _this181.space_list.find(function (space) {
               return space === booking.space.email;
             });
           });
@@ -36991,7 +37056,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getMonthlyPending",
         value: function getMonthlyPending() {
-          var _this181 = this;
+          var _this182 = this;
 
           var now = dayjs().startOf('d');
           var start = dayjs(this.date).startOf('M');
@@ -37011,7 +37076,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             available_from: start.unix(),
             available_to: end.unix()
           }).then(function (spaces) {
-            var bookings = _this181._bookings.booking_list.getValue();
+            var bookings = _this182._bookings.booking_list.getValue();
 
             spaces.forEach(function (space) {
               return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
@@ -37021,7 +37086,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               });
             });
 
-            _this181._bookings.booking_list.next(bookings);
+            _this182._bookings.booking_list.next(bookings);
           });
         }
       }, {
@@ -37225,10 +37290,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function DayViewApprovalsEventComponent_div_0_div_17_div_12_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 20);
-        i0.ɵɵelementStart(1, "label", 34);
+        i0.ɵɵelementStart(1, "label", 35);
         i0.ɵɵtext(2, "Booked by:");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "div", 35);
+        i0.ɵɵelementStart(3, "div", 36);
         i0.ɵɵelementStart(4, "div", 7);
         i0.ɵɵtext(5);
         i0.ɵɵelementEnd();
@@ -37263,7 +37328,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function DayViewApprovalsEventComponent_div_0_div_17_div_17_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 36);
+        i0.ɵɵelementStart(0, "div", 37);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
@@ -37305,19 +37370,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵtemplate(17, DayViewApprovalsEventComponent_div_0_div_17_div_17_Template, 2, 1, "div", 29);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(18, "div", 20);
-        i0.ɵɵelementStart(19, "label", 30);
+        i0.ɵɵelementStart(18, "div", 30);
+        i0.ɵɵelementStart(19, "label", 31);
         i0.ɵɵtext(20, "Welcomed by:");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(21, "div", 31);
+        i0.ɵɵelementStart(21, "div", 32);
         i0.ɵɵtext(22);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(23, "div", 20);
-        i0.ɵɵelementStart(24, "label", 32);
+        i0.ɵɵelementStart(23, "div", 30);
+        i0.ɵɵelementStart(24, "label", 33);
         i0.ɵɵtext(25, "Catering:");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(26, "div", 33);
+        i0.ɵɵelementStart(26, "div", 34);
         i0.ɵɵtext(27);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -37352,10 +37417,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function DayViewApprovalsEventComponent_div_0_div_23_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 37);
-        i0.ɵɵelementStart(1, "div", 38);
-        i0.ɵɵelementStart(2, "div", 39);
-        i0.ɵɵelement(3, "mat-spinner", 40);
+        i0.ɵɵelementStart(0, "div", 38);
+        i0.ɵɵelementStart(1, "div", 39);
+        i0.ɵɵelementStart(2, "div", 40);
+        i0.ɵɵelement(3, "mat-spinner", 41);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "div", 7);
         i0.ɵɵtext(5, "Processing request...");
@@ -37483,18 +37548,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super61 = _createSuper(DayViewApprovalsEventComponent);
 
       function DayViewApprovalsEventComponent(_service, _bookings, _dialog) {
-        var _this182;
+        var _this183;
 
         _classCallCheck(this, DayViewApprovalsEventComponent);
 
-        _this182 = _super61.call(this);
-        _this182._service = _service;
-        _this182._bookings = _bookings;
-        _this182._dialog = _dialog;
+        _this183 = _super61.call(this);
+        _this183._service = _service;
+        _this183._bookings = _bookings;
+        _this183._dialog = _dialog;
         /** Event emitter for event actions */
 
-        _this182.acting = new core_1.EventEmitter();
-        return _this182;
+        _this183.acting = new core_1.EventEmitter();
+        return _this183;
       }
 
       _createClass(DayViewApprovalsEventComponent, [{
@@ -37502,16 +37567,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         /** View booking details */
         value: function view() {
-          var _this183 = this;
+          var _this184 = this;
 
           this.timeout('view', function () {
-            _this183._dialog.open(meeting_details_modal_component_1.MeetingDetailsModalComponent, {
+            _this184._dialog.open(meeting_details_modal_component_1.MeetingDetailsModalComponent, {
               data: {
-                booking: _this183.event
+                booking: _this184.event
               }
             });
 
-            _this183._service.set('CONCIERGE.day_view.viewing', _this183.event);
+            _this184._service.set('CONCIERGE.day_view.viewing', _this184.event);
           }, 50);
         }
         /**
@@ -37521,7 +37586,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "accept",
         value: function accept() {
-          var _this184 = this;
+          var _this185 = this;
 
           this.acting.emit(true);
 
@@ -37544,27 +37609,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
             if (event.reason === 'done') {
-              _this184.loading = true;
+              _this185.loading = true;
 
-              var _event = _this184.event.toJSON();
+              var _event = _this185.event.toJSON();
 
-              _this184._bookings.accept(_this184.event.id, {
+              _this185._bookings.accept(_this185.event.id, {
                 concierge: true,
-                host: _this184.event.organiser.email,
-                room_id: (_a = _this184.event.space) === null || _a === void 0 ? void 0 : _a.id,
-                icaluid: _this184.event.icaluid,
+                host: _this185.event.organiser.email,
+                room_id: (_a = _this185.event.space) === null || _a === void 0 ? void 0 : _a.id,
+                icaluid: _this185.event.icaluid,
                 start: _event.start,
                 end: _event.end
               }).then(function () {
-                _this184._service.notifySuccess('Meeting approved.');
+                _this185._service.notifySuccess('Meeting approved.');
 
-                var _iterator49 = _createForOfIteratorHelper(_this184.event.space_list),
+                var _iterator49 = _createForOfIteratorHelper(_this185.event.space_list),
                     _step49;
 
                 try {
                   for (_iterator49.s(); !(_step49 = _iterator49.n()).done;) {
                     var space = _step49.value;
-                    _this184.event.approval_status[space.email] = 'accepted';
+                    _this185.event.approval_status[space.email] = 'accepted';
                   }
                 } catch (err) {
                   _iterator49.e(err);
@@ -37572,27 +37637,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   _iterator49.f();
                 }
 
-                STATES[_this184.event.id] = 'accepted';
+                STATES[_this185.event.id] = 'accepted';
 
-                var bookings = _this184._bookings.booking_list.getValue();
+                var bookings = _this185._bookings.booking_list.getValue();
 
                 bookings.splice(bookings.findIndex(function (bkn) {
-                  return bkn.icaluid === _this184.event.icaluid;
-                }), 1, _this184.event);
+                  return bkn.icaluid === _this185.event.icaluid;
+                }), 1, _this185.event);
 
-                _this184._bookings.booking_list.next(bookings);
+                _this185._bookings.booking_list.next(bookings);
 
-                _this184._service.set('BOOKING.states', STATES);
+                _this185._service.set('BOOKING.states', STATES);
 
-                _this184.loading = false;
+                _this185.loading = false;
 
-                _this184.acting.emit(false);
+                _this185.acting.emit(false);
               }, function () {
-                _this184.acting.emit(false);
+                _this185.acting.emit(false);
 
-                _this184._service.notifyError('Error approving meeting.');
+                _this185._service.notifyError('Error approving meeting.');
 
-                _this184.loading = false;
+                _this185.loading = false;
               });
             }
 
@@ -37606,7 +37671,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "decline",
         value: function decline() {
-          var _this185 = this;
+          var _this186 = this;
 
           this.acting.emit(true);
 
@@ -37626,11 +37691,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           ref.componentInstance.event.subscribe(function (event) {
             /* istanbul ignore else */
             if (event.reason === 'done') {
-              _this185.loading = true;
-              var booking = _this185.event;
-              _this185.loading = true;
+              _this186.loading = true;
+              var booking = _this186.event;
+              _this186.loading = true;
 
-              _this185._bookings.decline(booking.id, {
+              _this186._bookings.decline(booking.id, {
                 booking_id: booking.id,
                 organiser: booking.organiser.email,
                 icaluid: booking.icaluid,
@@ -37638,30 +37703,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 end: Math.floor(booking.date / 1000) + booking.duration * 60,
                 room_id: booking.space.id
               }).then(function () {
-                _this185._service.notifySuccess('Meeting declined.');
+                _this186._service.notifySuccess('Meeting declined.');
 
-                _this185.event.approval_status[booking.space.email] = 'declined';
-                STATES[_this185.event.id] = 'declined';
+                _this186.event.approval_status[booking.space.email] = 'declined';
+                STATES[_this186.event.id] = 'declined';
 
-                var bookings = _this185._bookings.booking_list.getValue();
+                var bookings = _this186._bookings.booking_list.getValue();
 
                 bookings.splice(bookings.findIndex(function (bkn) {
-                  return bkn.icaluid === _this185.event.icaluid;
-                }), 1, _this185.event);
+                  return bkn.icaluid === _this186.event.icaluid;
+                }), 1, _this186.event);
 
-                _this185._bookings.booking_list.next(bookings);
+                _this186._bookings.booking_list.next(bookings);
 
-                _this185._service.set('BOOKING.states', STATES);
+                _this186._service.set('BOOKING.states', STATES);
 
-                _this185.loading = false;
+                _this186.loading = false;
 
-                _this185.acting.emit(false);
+                _this186.acting.emit(false);
               }, function () {
-                _this185.acting.emit(false);
+                _this186.acting.emit(false);
 
-                _this185._service.notifyError('Error declining meeting.');
+                _this186._service.notifyError('Error declining meeting.');
 
-                _this185.loading = false;
+                _this186.loading = false;
               });
             }
 
@@ -37699,11 +37764,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "has_catering",
         get: function get() {
-          var _this186 = this;
+          var _this187 = this;
 
           var catering = this.event.catering;
           return !!catering.find(function (order) {
-            return _this186.event.space.email === order.location_id;
+            return _this187.event.space.email === order.location_id;
           });
         }
       }]);
@@ -37729,7 +37794,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 1,
       vars: 1,
-      consts: [[3, "class", 4, "ngIf"], [1, "header"], [1, "avatar"], [3, "user"], [1, "details"], [1, "text", "bold"], [4, "ngIf"], [1, "text"], ["mat-icon-button", "", "name", "view", 1, "search", 3, "click"], [3, "icon"], [1, "body"], [1, "control"], [1, "bar"], [3, "icon", "click"], ["class", "contents", 4, "ngIf"], [1, "footer"], ["mat-button", "", "name", "accept", 1, "inverse", 3, "click"], ["mat-button", "", "name", "decline", 1, "inverse", 3, "click"], ["class", "load-state", 4, "ngIf"], [1, "contents"], [1, "field"], ["for", "name"], ["name", "host", 1, "value"], [1, "actions"], ["mat-icon-button", "", 3, "href"], ["class", "field", 4, "ngIf"], [1, "field", "multiline"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["class", "attendee", 4, "ngFor", "ngForOf"], ["for", "notifyee"], ["name", "notifyee", 1, "value"], ["for", "catering"], ["name", "catering", 1, "value"], ["for", "bookee"], ["name", "bookee", 1, "value"], [1, "attendee"], [1, "load-state"], [1, "no-item", "center"], [1, "icon"], ["diameter", "32"]],
+      consts: [[3, "class", 4, "ngIf"], [1, "header"], [1, "avatar"], [3, "user"], [1, "details"], [1, "text", "bold"], [4, "ngIf"], [1, "text"], ["mat-icon-button", "", "name", "view", 1, "search", 3, "click"], [3, "icon"], [1, "body"], [1, "control"], [1, "bar"], [3, "icon", "click"], ["class", "contents", 4, "ngIf"], [1, "footer"], ["mat-button", "", "name", "accept", 1, "inverse", 3, "click"], ["mat-button", "", "name", "decline", 1, "inverse", 3, "click"], ["class", "load-state", 4, "ngIf"], [1, "contents"], [1, "field", "limit-height"], ["for", "name"], ["name", "host", 1, "value"], [1, "actions"], ["mat-icon-button", "", 3, "href"], ["class", "field limit-height", 4, "ngIf"], [1, "field", "multiline"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["class", "attendee", 4, "ngFor", "ngForOf"], [1, "field"], ["for", "notifyee"], ["name", "notifyee", 1, "value"], ["for", "catering"], ["name", "catering", 1, "value"], ["for", "bookee"], ["name", "bookee", 1, "value"], [1, "attendee"], [1, "load-state"], [1, "no-item", "center"], [1, "icon"], ["diameter", "32"]],
       template: function DayViewApprovalsEventComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, DayViewApprovalsEventComponent_div_0_Template, 24, 21, "div", 0);
@@ -37740,7 +37805,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [i4.NgIf, i5.UserAvatarComponent, i6.MatButton, i7.IconComponent, i6.MatAnchor, i4.NgForOf, i8.MatSpinner],
-      styles: [".approval-event[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  background-color: #fff;\n  font-size: 0.8em;\n  margin: 0.5em 1px;\n  border: 2px solid #1F40E6;\n  border-right: 4px solid #1F40E6;\n}\n.approval-event.internal[_ngcontent-%COMP%] {\n  border-color: #E69FC7;\n}\n.approval-event.external[_ngcontent-%COMP%] {\n  border-color: #8C5AC8;\n}\n.approval-event.training[_ngcontent-%COMP%] {\n  border-color: #F0E700;\n}\n.approval-event.interview[_ngcontent-%COMP%] {\n  border-color: #348D02;\n}\n.approval-event.setup[_ngcontent-%COMP%] {\n  border-color: #d32f2f;\n}\n.approval-event.cancelled[_ngcontent-%COMP%] {\n  border-color: #617288;\n}\n.approval-event.declined[_ngcontent-%COMP%] {\n  border-color: #505050;\n}\n.header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 1em;\n}\n.avatar[_ngcontent-%COMP%] {\n  font-size: 1.2em;\n}\n.details[_ngcontent-%COMP%] {\n  padding: 0.5em;\n  max-width: calc(100% - 4em);\n}\n.footer[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  width: 100%;\n}\n.load-state[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(255, 255, 255, 0.85);\n}\n.control[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0 1em;\n  margin-bottom: 0.5em;\n}\n.control[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  height: 1px;\n  min-width: 1px;\n  flex: 1;\n  background-color: #ccc;\n}\n.control[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  height: 1em;\n  width: 1em;\n  font-size: 1.5em;\n  margin: 0 0.5em;\n  cursor: pointer;\n}\n.contents[_ngcontent-%COMP%] {\n  padding: 0 1em 1em;\n  overflow: hidden;\n}\n.text[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: calc(100% - 2.5em);\n}\n.text[_ngcontent-%COMP%]    > div[_ngcontent-%COMP%] {\n  height: 6px;\n  width: 6px;\n  border-radius: 100%;\n  background-color: #ffb300;\n  margin: 0.25em;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  margin-bottom: 0.5em;\n  max-height: 2em;\n}\n.field[_ngcontent-%COMP%]:last-child {\n  margin-bottom: 0;\n}\n.field[_ngcontent-%COMP%]   .value[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0 0.5em;\n  flex: 1;\n  min-width: 50%;\n}\n.field[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\n.field.multiline[_ngcontent-%COMP%] {\n  align-items: flex-start;\n}\n.field.multiline[_ngcontent-%COMP%]   .value[_ngcontent-%COMP%] {\n  flex-direction: column;\n  align-items: flex-start;\n}\n.no-item[_ngcontent-%COMP%] {\n  font-size: 0.6em;\n  color: #000;\n}\n.no-item[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  margin: 0;\n  font-size: 0.75em;\n}\nbutton[mat-button][_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 30%;\n  background-color: #f7f8ff;\n  transition: color 200ms, background-color 200ms;\n  border: 1px solid #ccc;\n  border-radius: 0;\n  color: rgba(0, 0, 0, 0.85);\n  cursor: pointer;\n}\nbutton[mat-button].accepted[_ngcontent-%COMP%], button[mat-button].declined[_ngcontent-%COMP%] {\n  pointer-events: none;\n  color: #fff;\n}\nbutton[mat-button].accepted[_ngcontent-%COMP%] {\n  background-color: #43a047;\n}\nbutton[mat-button].declined[_ngcontent-%COMP%] {\n  background-color: #e53935;\n}\n.bold[_ngcontent-%COMP%] {\n  font-weight: 500;\n}\n.actions[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n[mat-icon-button][_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n[mat-icon-button].search[_ngcontent-%COMP%] {\n  background-color: #1937ea;\n  color: #fff;\n  border: 1px solid #1937ea;\n  margin: 0.3em;\n}\n[mat-icon-button].search[disabled][_ngcontent-%COMP%] {\n  background-color: #f0f0f0;\n  color: rgba(0, 0, 0, 0.35);\n  border-color: rgba(0, 0, 0, 0.35);\n}\n[mat-icon-button].search.search[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0.4em;\n  right: 0.4em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL2RheS12aWV3L2FwcHJvdmFscy12aWV3L2V2ZW50L2V2ZW50LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9kYXktdmlldy9hcHByb3ZhbHMtdmlldy9ldmVudC9ldmVudC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUM1Q0E7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxzQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtFQUNBLCtCQUFBO0FDUUo7QUROSTtFQUNJLHFCQUFBO0FDUVI7QURMSTtFQUNJLHFCQUFBO0FDT1I7QURKSTtFQUNJLHFCQUFBO0FDTVI7QURISTtFQUNJLHFCQUFBO0FDS1I7QURGSTtFQUNJLHFCQUFBO0FDSVI7QURESTtFQUNJLHFCQUFBO0FDR1I7QURBSTtFQUNJLHFCQUFBO0FDRVI7QURFQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7QUNDSjtBREVBO0VBQ0ksZ0JBQUE7QUNDSjtBREVBO0VBQ0ksY0FBQTtFQUNBLDJCQUFBO0FDQ0o7QURFQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtBQ0NKO0FERUE7RUFDSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSwyQ0FBQTtBQ0NKO0FERUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGNBQUE7RUFDQSxvQkFBQTtBQ0NKO0FEQ0k7RUFDSSxXQUFBO0VBQ0EsY0FBQTtFQUNBLE9BQUE7RUFDQSxzQkFBQTtBQ0NSO0FERUk7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLGdCQUFBO0VBQ0EsZUFBQTtFQUNBLGVBQUE7QUNBUjtBRElBO0VBQ0ksa0JBQUE7RUFDQSxnQkFBQTtBQ0RKO0FESUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtBQ0RKO0FER0k7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLG1CQUFBO0VBQ0EseUJEaEdFO0VDaUdGLGNBQUE7QUNEUjtBREtBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esb0JBQUE7RUFDQSxlQUFBO0FDRko7QURJSTtFQUNJLGdCQUFBO0FDRlI7QURLSTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsT0FBQTtFQUNBLGNBQUE7QUNIUjtBRE1JO0VBQ0ksT0FBQTtFQUNBLGNBQUE7QUNKUjtBRE9JO0VBQ0ksdUJBQUE7QUNMUjtBRE9RO0VBQ0ksc0JBQUE7RUFDQSx1QkFBQTtBQ0xaO0FEV0E7RUFDSSxnQkFBQTtFQUNBLFdBQUE7QUNSSjtBRFVJO0VBQ0ksU0FBQTtFQUNBLGlCQUFBO0FDUlI7QURZQTtFQUNJLE9BQUE7RUFDQSxjQUFBO0VBQ0EseUJBQUE7RUFDQSwrQ0FBQTtFQUNBLHNCQUFBO0VBQ0EsZ0JBQUE7RUFDQSwwQkFBQTtFQUNBLGVBQUE7QUNUSjtBRFdJO0VBRUksb0JBQUE7RUFDQSxXQUFBO0FDVlI7QURhSTtFQUNJLHlCRHRLRTtBRTJKVjtBRGNJO0VBQ0kseUJEbEtBO0FFc0pSO0FEZ0JBO0VBQ0ksZ0JBQUE7QUNiSjtBRGdCQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBQ2JKO0FEZ0JBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7QUNiSjtBRGdCQTtFQUNJLHlCRGxMWTtFQ21MWixXQUFBO0VBQ0EseUJBQUE7RUFDQSxhQUFBO0FDYko7QURlSTtFQUNJLHlCQUFBO0VBQ0EsMEJBQUE7RUFDQSxpQ0FBQTtBQ2JSO0FEZ0JJO0VBQ0ksa0JBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtBQ2RSIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvZGF5LXZpZXcvYXBwcm92YWxzLXZpZXcvZXZlbnQvZXZlbnQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbi5hcHByb3ZhbC1ldmVudCB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIG1hcmdpbjogLjVlbSAxcHg7XG4gICAgYm9yZGVyOiAycHggc29saWQgIzFGNDBFNjtcbiAgICBib3JkZXItcmlnaHQ6IDRweCBzb2xpZCAjMUY0MEU2O1xuXG4gICAgJi5pbnRlcm5hbCB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogI0U2OUZDNztcbiAgICB9XG5cbiAgICAmLmV4dGVybmFsIHtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiAjOEM1QUM4O1xuICAgIH1cblxuICAgICYudHJhaW5pbmcge1xuICAgICAgICBib3JkZXItY29sb3I6ICNGMEU3MDA7XG4gICAgfVxuXG4gICAgJi5pbnRlcnZpZXcge1xuICAgICAgICBib3JkZXItY29sb3I6ICMzNDhEMDI7XG4gICAgfVxuXG4gICAgJi5zZXR1cCB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogI2QzMmYyZjtcbiAgICB9XG5cbiAgICAmLmNhbmNlbGxlZCB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogIzYxNzI4ODtcbiAgICB9XG5cbiAgICAmLmRlY2xpbmVkIHtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiAjNTA1MDUwO1xuICAgIH1cbn1cblxuLmhlYWRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmc6IDFlbTtcbn1cblxuLmF2YXRhciB7XG4gICAgZm9udC1zaXplOiAxLjJlbTtcbn1cblxuLmRldGFpbHMge1xuICAgIHBhZGRpbmc6IC41ZW07XG4gICAgbWF4LXdpZHRoOiBjYWxjKDEwMCUgLSA0ZW0pO1xufVxuXG4uZm9vdGVyIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG4ubG9hZC1zdGF0ZSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCNmZmYsIC44NSk7XG59XG5cbi5jb250cm9sIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgcGFkZGluZzogMCAxZW07XG4gICAgbWFyZ2luLWJvdHRvbTogLjVlbTtcblxuICAgIC5iYXIge1xuICAgICAgICBoZWlnaHQ6IDFweDtcbiAgICAgICAgbWluLXdpZHRoOiAxcHg7XG4gICAgICAgIGZsZXg6IDE7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG4gICAgfVxuXG4gICAgLmljb24ge1xuICAgICAgICBoZWlnaHQ6IDFlbTtcbiAgICAgICAgd2lkdGg6IDFlbTtcbiAgICAgICAgZm9udC1zaXplOiAxLjVlbTtcbiAgICAgICAgbWFyZ2luOiAwIC41ZW07XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG59XG5cbi5jb250ZW50cyB7XG4gICAgcGFkZGluZzogMCAxZW0gMWVtO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbi50ZXh0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDIuNWVtKTtcblxuICAgID4gZGl2IHtcbiAgICAgICAgaGVpZ2h0OiA2cHg7XG4gICAgICAgIHdpZHRoOiA2cHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICRwZW5kaW5nO1xuICAgICAgICBtYXJnaW46IC4yNWVtO1xuICAgIH1cbn1cblxuLmZpZWxkIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWFyZ2luLWJvdHRvbTogLjVlbTtcbiAgICBtYXgtaGVpZ2h0OiAyZW07XG5cbiAgICAmOmxhc3QtY2hpbGQge1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAwO1xuICAgIH1cblxuICAgIC52YWx1ZSB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIHBhZGRpbmc6IDAgLjVlbTtcbiAgICAgICAgZmxleDogMTtcbiAgICAgICAgbWluLXdpZHRoOiA1MCU7XG4gICAgfVxuXG4gICAgLnRleHQge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBtaW4td2lkdGg6IDUwJTtcbiAgICB9XG5cbiAgICAmLm11bHRpbGluZSB7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xuXG4gICAgICAgIC52YWx1ZSB7XG4gICAgICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgICAgICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG5cblxuLm5vLWl0ZW0ge1xuICAgIGZvbnQtc2l6ZTogLjZlbTtcbiAgICBjb2xvcjogIzAwMDtcblxuICAgIC5pY29uIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBmb250LXNpemU6IC43NWVtO1xuICAgIH1cbn1cblxuYnV0dG9uW21hdC1idXR0b25dIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogMzAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmN2Y4ZmY7XG4gICAgdHJhbnNpdGlvbjogY29sb3IgMjAwbXMsIGJhY2tncm91bmQtY29sb3IgMjAwbXM7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuICAgIGNvbG9yOiByZ2JhKCMwMDAsIC44NSk7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuXG4gICAgJi5hY2NlcHRlZCxcbiAgICAmLmRlY2xpbmVkIHtcbiAgICAgICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cblxuICAgICYuYWNjZXB0ZWQge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkc3VjY2VzcztcbiAgICB9XG5cbiAgICAmLmRlY2xpbmVkIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGVycm9yO1xuICAgIH1cbn1cblxuLmJvbGQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbi5hY3Rpb25zIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cblttYXQtaWNvbi1idXR0b25dIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cblttYXQtaWNvbi1idXR0b25dLnNlYXJjaCB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyOiAxcHggc29saWQgJGNvbG9yLXByaW1hcnk7XG4gICAgbWFyZ2luOiAuM2VtO1xuXG4gICAgJltkaXNhYmxlZF0ge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjBmMGYwO1xuICAgICAgICBjb2xvcjogcmdiYSgjMDAwLCAuMzUpO1xuICAgICAgICBib3JkZXItY29sb3I6IHJnYmEoIzAwMCwgLjM1KTtcbiAgICB9XG5cbiAgICAmLnNlYXJjaCB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAuNGVtO1xuICAgICAgICByaWdodDogLjRlbTtcbiAgICB9XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4uYXBwcm92YWwtZXZlbnQge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBmb250LXNpemU6IDAuOGVtO1xuICBtYXJnaW46IDAuNWVtIDFweDtcbiAgYm9yZGVyOiAycHggc29saWQgIzFGNDBFNjtcbiAgYm9yZGVyLXJpZ2h0OiA0cHggc29saWQgIzFGNDBFNjtcbn1cbi5hcHByb3ZhbC1ldmVudC5pbnRlcm5hbCB7XG4gIGJvcmRlci1jb2xvcjogI0U2OUZDNztcbn1cbi5hcHByb3ZhbC1ldmVudC5leHRlcm5hbCB7XG4gIGJvcmRlci1jb2xvcjogIzhDNUFDODtcbn1cbi5hcHByb3ZhbC1ldmVudC50cmFpbmluZyB7XG4gIGJvcmRlci1jb2xvcjogI0YwRTcwMDtcbn1cbi5hcHByb3ZhbC1ldmVudC5pbnRlcnZpZXcge1xuICBib3JkZXItY29sb3I6ICMzNDhEMDI7XG59XG4uYXBwcm92YWwtZXZlbnQuc2V0dXAge1xuICBib3JkZXItY29sb3I6ICNkMzJmMmY7XG59XG4uYXBwcm92YWwtZXZlbnQuY2FuY2VsbGVkIHtcbiAgYm9yZGVyLWNvbG9yOiAjNjE3Mjg4O1xufVxuLmFwcHJvdmFsLWV2ZW50LmRlY2xpbmVkIHtcbiAgYm9yZGVyLWNvbG9yOiAjNTA1MDUwO1xufVxuXG4uaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcGFkZGluZzogMWVtO1xufVxuXG4uYXZhdGFyIHtcbiAgZm9udC1zaXplOiAxLjJlbTtcbn1cblxuLmRldGFpbHMge1xuICBwYWRkaW5nOiAwLjVlbTtcbiAgbWF4LXdpZHRoOiBjYWxjKDEwMCUgLSA0ZW0pO1xufVxuXG4uZm9vdGVyIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmxvYWQtc3RhdGUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjg1KTtcbn1cblxuLmNvbnRyb2wge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgcGFkZGluZzogMCAxZW07XG4gIG1hcmdpbi1ib3R0b206IDAuNWVtO1xufVxuLmNvbnRyb2wgLmJhciB7XG4gIGhlaWdodDogMXB4O1xuICBtaW4td2lkdGg6IDFweDtcbiAgZmxleDogMTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NjYztcbn1cbi5jb250cm9sIC5pY29uIHtcbiAgaGVpZ2h0OiAxZW07XG4gIHdpZHRoOiAxZW07XG4gIGZvbnQtc2l6ZTogMS41ZW07XG4gIG1hcmdpbjogMCAwLjVlbTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uY29udGVudHMge1xuICBwYWRkaW5nOiAwIDFlbSAxZW07XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbi50ZXh0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IGNhbGMoMTAwJSAtIDIuNWVtKTtcbn1cbi50ZXh0ID4gZGl2IHtcbiAgaGVpZ2h0OiA2cHg7XG4gIHdpZHRoOiA2cHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmIzMDA7XG4gIG1hcmdpbjogMC4yNWVtO1xufVxuXG4uZmllbGQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW4tYm90dG9tOiAwLjVlbTtcbiAgbWF4LWhlaWdodDogMmVtO1xufVxuLmZpZWxkOmxhc3QtY2hpbGQge1xuICBtYXJnaW4tYm90dG9tOiAwO1xufVxuLmZpZWxkIC52YWx1ZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDAgMC41ZW07XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNTAlO1xufVxuLmZpZWxkIC50ZXh0IHtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiA1MCU7XG59XG4uZmllbGQubXVsdGlsaW5lIHtcbiAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG59XG4uZmllbGQubXVsdGlsaW5lIC52YWx1ZSB7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xufVxuXG4ubm8taXRlbSB7XG4gIGZvbnQtc2l6ZTogMC42ZW07XG4gIGNvbG9yOiAjMDAwO1xufVxuLm5vLWl0ZW0gLmljb24ge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtc2l6ZTogMC43NWVtO1xufVxuXG5idXR0b25bbWF0LWJ1dHRvbl0ge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDMwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y3ZjhmZjtcbiAgdHJhbnNpdGlvbjogY29sb3IgMjAwbXMsIGJhY2tncm91bmQtY29sb3IgMjAwbXM7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5idXR0b25bbWF0LWJ1dHRvbl0uYWNjZXB0ZWQsIGJ1dHRvblttYXQtYnV0dG9uXS5kZWNsaW5lZCB7XG4gIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICBjb2xvcjogI2ZmZjtcbn1cbmJ1dHRvblttYXQtYnV0dG9uXS5hY2NlcHRlZCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0M2EwNDc7XG59XG5idXR0b25bbWF0LWJ1dHRvbl0uZGVjbGluZWQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTUzOTM1O1xufVxuXG4uYm9sZCB7XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbi5hY3Rpb25zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuW21hdC1pY29uLWJ1dHRvbl0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cblxuW21hdC1pY29uLWJ1dHRvbl0uc2VhcmNoIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE5MzdlYTtcbiAgY29sb3I6ICNmZmY7XG4gIGJvcmRlcjogMXB4IHNvbGlkICMxOTM3ZWE7XG4gIG1hcmdpbjogMC4zZW07XG59XG5bbWF0LWljb24tYnV0dG9uXS5zZWFyY2hbZGlzYWJsZWRdIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4zNSk7XG4gIGJvcmRlci1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjM1KTtcbn1cblttYXQtaWNvbi1idXR0b25dLnNlYXJjaC5zZWFyY2gge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMC40ZW07XG4gIHJpZ2h0OiAwLjRlbTtcbn0iXX0= */"],
+      styles: [".approval-event[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  background-color: #fff;\n  font-size: 0.8em;\n  margin: 0.5em 1px;\n  border: 2px solid #1F40E6;\n  border-right: 4px solid #1F40E6;\n}\n.approval-event.internal[_ngcontent-%COMP%] {\n  border-color: #E69FC7;\n}\n.approval-event.external[_ngcontent-%COMP%] {\n  border-color: #8C5AC8;\n}\n.approval-event.training[_ngcontent-%COMP%] {\n  border-color: #F0E700;\n}\n.approval-event.interview[_ngcontent-%COMP%] {\n  border-color: #348D02;\n}\n.approval-event.setup[_ngcontent-%COMP%] {\n  border-color: #d32f2f;\n}\n.approval-event.cancelled[_ngcontent-%COMP%] {\n  border-color: #617288;\n}\n.approval-event.declined[_ngcontent-%COMP%] {\n  border-color: #505050;\n}\n.header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 1em;\n}\n.avatar[_ngcontent-%COMP%] {\n  font-size: 1.2em;\n}\n.details[_ngcontent-%COMP%] {\n  padding: 0.5em;\n  max-width: calc(100% - 4em);\n}\n.footer[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  width: 100%;\n}\n.load-state[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(255, 255, 255, 0.85);\n}\n.control[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0 1em;\n  margin-bottom: 0.5em;\n}\n.control[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  height: 1px;\n  min-width: 1px;\n  flex: 1;\n  background-color: #ccc;\n}\n.control[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  height: 1em;\n  width: 1em;\n  font-size: 1.5em;\n  margin: 0 0.5em;\n  cursor: pointer;\n}\n.contents[_ngcontent-%COMP%] {\n  padding: 0 1em 1em;\n  overflow: hidden;\n}\n.text[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  width: calc(100% - 2.5em);\n}\n.text[_ngcontent-%COMP%]    > div[_ngcontent-%COMP%] {\n  height: 6px;\n  width: 6px;\n  border-radius: 100%;\n  background-color: #ffb300;\n  margin: 0.25em;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  margin-bottom: 0.5em;\n}\n.field.limit-height[_ngcontent-%COMP%] {\n  max-height: 2em;\n}\n.field[_ngcontent-%COMP%]:last-child {\n  margin-bottom: 0;\n}\n.field[_ngcontent-%COMP%]   .value[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0 0.5em;\n  flex: 1;\n  min-width: 50%;\n}\n.field[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\n.field.multiline[_ngcontent-%COMP%] {\n  align-items: flex-start;\n}\n.field.multiline[_ngcontent-%COMP%]   .value[_ngcontent-%COMP%] {\n  flex-direction: column;\n  align-items: flex-start;\n}\n.no-item[_ngcontent-%COMP%] {\n  font-size: 0.6em;\n  color: #000;\n}\n.no-item[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  margin: 0;\n  font-size: 0.75em;\n}\nbutton[mat-button][_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 30%;\n  background-color: #f7f8ff;\n  transition: color 200ms, background-color 200ms;\n  border: 1px solid #ccc;\n  border-radius: 0;\n  color: rgba(0, 0, 0, 0.85);\n  cursor: pointer;\n}\nbutton[mat-button].accepted[_ngcontent-%COMP%], button[mat-button].declined[_ngcontent-%COMP%] {\n  pointer-events: none;\n  color: #fff;\n}\nbutton[mat-button].accepted[_ngcontent-%COMP%] {\n  background-color: #43a047;\n}\nbutton[mat-button].declined[_ngcontent-%COMP%] {\n  background-color: #e53935;\n}\n.bold[_ngcontent-%COMP%] {\n  font-weight: 500;\n}\n.actions[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n[mat-icon-button][_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n[mat-icon-button].search[_ngcontent-%COMP%] {\n  background-color: #1937ea;\n  color: #fff;\n  border: 1px solid #1937ea;\n  margin: 0.3em;\n}\n[mat-icon-button].search[disabled][_ngcontent-%COMP%] {\n  background-color: #f0f0f0;\n  color: rgba(0, 0, 0, 0.35);\n  border-color: rgba(0, 0, 0, 0.35);\n}\n[mat-icon-button].search.search[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0.4em;\n  right: 0.4em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL2RheS12aWV3L2FwcHJvdmFscy12aWV3L2V2ZW50L2V2ZW50LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9kYXktdmlldy9hcHByb3ZhbHMtdmlldy9ldmVudC9ldmVudC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUM1Q0E7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxzQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtFQUNBLCtCQUFBO0FDUUo7QUROSTtFQUNJLHFCQUFBO0FDUVI7QURMSTtFQUNJLHFCQUFBO0FDT1I7QURKSTtFQUNJLHFCQUFBO0FDTVI7QURISTtFQUNJLHFCQUFBO0FDS1I7QURGSTtFQUNJLHFCQUFBO0FDSVI7QURESTtFQUNJLHFCQUFBO0FDR1I7QURBSTtFQUNJLHFCQUFBO0FDRVI7QURFQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7QUNDSjtBREVBO0VBQ0ksZ0JBQUE7QUNDSjtBREVBO0VBQ0ksY0FBQTtFQUNBLDJCQUFBO0FDQ0o7QURFQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtBQ0NKO0FERUE7RUFDSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSwyQ0FBQTtBQ0NKO0FERUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGNBQUE7RUFDQSxvQkFBQTtBQ0NKO0FEQ0k7RUFDSSxXQUFBO0VBQ0EsY0FBQTtFQUNBLE9BQUE7RUFDQSxzQkFBQTtBQ0NSO0FERUk7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLGdCQUFBO0VBQ0EsZUFBQTtFQUNBLGVBQUE7QUNBUjtBRElBO0VBQ0ksa0JBQUE7RUFDQSxnQkFBQTtBQ0RKO0FESUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtBQ0RKO0FER0k7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLG1CQUFBO0VBQ0EseUJEaEdFO0VDaUdGLGNBQUE7QUNEUjtBREtBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0Esb0JBQUE7QUNGSjtBRElJO0VBQ0ksZUFBQTtBQ0ZSO0FES0k7RUFDSSxnQkFBQTtBQ0hSO0FETUk7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLE9BQUE7RUFDQSxjQUFBO0FDSlI7QURPSTtFQUNJLE9BQUE7RUFDQSxjQUFBO0FDTFI7QURRSTtFQUNJLHVCQUFBO0FDTlI7QURRUTtFQUNJLHNCQUFBO0VBQ0EsdUJBQUE7QUNOWjtBRFlBO0VBQ0ksZ0JBQUE7RUFDQSxXQUFBO0FDVEo7QURXSTtFQUNJLFNBQUE7RUFDQSxpQkFBQTtBQ1RSO0FEYUE7RUFDSSxPQUFBO0VBQ0EsY0FBQTtFQUNBLHlCQUFBO0VBQ0EsK0NBQUE7RUFDQSxzQkFBQTtFQUNBLGdCQUFBO0VBQ0EsMEJBQUE7RUFDQSxlQUFBO0FDVko7QURZSTtFQUVJLG9CQUFBO0VBQ0EsV0FBQTtBQ1hSO0FEY0k7RUFDSSx5QkR6S0U7QUU2SlY7QURlSTtFQUNJLHlCRHJLQTtBRXdKUjtBRGlCQTtFQUNJLGdCQUFBO0FDZEo7QURpQkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7QUNkSjtBRGlCQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0FDZEo7QURpQkE7RUFDSSx5QkRyTFk7RUNzTFosV0FBQTtFQUNBLHlCQUFBO0VBQ0EsYUFBQTtBQ2RKO0FEZ0JJO0VBQ0kseUJBQUE7RUFDQSwwQkFBQTtFQUNBLGlDQUFBO0FDZFI7QURpQkk7RUFDSSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxZQUFBO0FDZlIiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9kYXktdmlldy9hcHByb3ZhbHMtdmlldy9ldmVudC9ldmVudC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiQGltcG9ydCAndmFyaWFibGVzJztcblxuLmFwcHJvdmFsLWV2ZW50IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgbWFyZ2luOiAuNWVtIDFweDtcbiAgICBib3JkZXI6IDJweCBzb2xpZCAjMUY0MEU2O1xuICAgIGJvcmRlci1yaWdodDogNHB4IHNvbGlkICMxRjQwRTY7XG5cbiAgICAmLmludGVybmFsIHtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiAjRTY5RkM3O1xuICAgIH1cblxuICAgICYuZXh0ZXJuYWwge1xuICAgICAgICBib3JkZXItY29sb3I6ICM4QzVBQzg7XG4gICAgfVxuXG4gICAgJi50cmFpbmluZyB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogI0YwRTcwMDtcbiAgICB9XG5cbiAgICAmLmludGVydmlldyB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogIzM0OEQwMjtcbiAgICB9XG5cbiAgICAmLnNldHVwIHtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiAjZDMyZjJmO1xuICAgIH1cblxuICAgICYuY2FuY2VsbGVkIHtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiAjNjE3Mjg4O1xuICAgIH1cblxuICAgICYuZGVjbGluZWQge1xuICAgICAgICBib3JkZXItY29sb3I6ICM1MDUwNTA7XG4gICAgfVxufVxuXG4uaGVhZGVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMWVtO1xufVxuXG4uYXZhdGFyIHtcbiAgICBmb250LXNpemU6IDEuMmVtO1xufVxuXG4uZGV0YWlscyB7XG4gICAgcGFkZGluZzogLjVlbTtcbiAgICBtYXgtd2lkdGg6IGNhbGMoMTAwJSAtIDRlbSk7XG59XG5cbi5mb290ZXIge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG59XG5cbi5sb2FkLXN0YXRlIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoI2ZmZiwgLjg1KTtcbn1cblxuLmNvbnRyb2wge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAwIDFlbTtcbiAgICBtYXJnaW4tYm90dG9tOiAuNWVtO1xuXG4gICAgLmJhciB7XG4gICAgICAgIGhlaWdodDogMXB4O1xuICAgICAgICBtaW4td2lkdGg6IDFweDtcbiAgICAgICAgZmxleDogMTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2NjYztcbiAgICB9XG5cbiAgICAuaWNvbiB7XG4gICAgICAgIGhlaWdodDogMWVtO1xuICAgICAgICB3aWR0aDogMWVtO1xuICAgICAgICBmb250LXNpemU6IDEuNWVtO1xuICAgICAgICBtYXJnaW46IDAgLjVlbTtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbn1cblxuLmNvbnRlbnRzIHtcbiAgICBwYWRkaW5nOiAwIDFlbSAxZW07XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuLnRleHQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gMi41ZW0pO1xuXG4gICAgPiBkaXYge1xuICAgICAgICBoZWlnaHQ6IDZweDtcbiAgICAgICAgd2lkdGg6IDZweDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHBlbmRpbmc7XG4gICAgICAgIG1hcmdpbjogLjI1ZW07XG4gICAgfVxufVxuXG4uZmllbGQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBtYXJnaW4tYm90dG9tOiAuNWVtO1xuXG4gICAgJi5saW1pdC1oZWlnaHQge1xuICAgICAgICBtYXgtaGVpZ2h0OiAyZW07XG4gICAgfVxuXG4gICAgJjpsYXN0LWNoaWxkIHtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMDtcbiAgICB9XG5cbiAgICAudmFsdWUge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBwYWRkaW5nOiAwIC41ZW07XG4gICAgICAgIGZsZXg6IDE7XG4gICAgICAgIG1pbi13aWR0aDogNTAlO1xuICAgIH1cblxuICAgIC50ZXh0IHtcbiAgICAgICAgZmxleDogMTtcbiAgICAgICAgbWluLXdpZHRoOiA1MCU7XG4gICAgfVxuXG4gICAgJi5tdWx0aWxpbmUge1xuICAgICAgICBhbGlnbi1pdGVtczogZmxleC1zdGFydDtcblxuICAgICAgICAudmFsdWUge1xuICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xuICAgICAgICB9XG4gICAgfVxufVxuXG5cbi5uby1pdGVtIHtcbiAgICBmb250LXNpemU6IC42ZW07XG4gICAgY29sb3I6ICMwMDA7XG5cbiAgICAuaWNvbiB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgZm9udC1zaXplOiAuNzVlbTtcbiAgICB9XG59XG5cbmJ1dHRvblttYXQtYnV0dG9uXSB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDMwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjdmOGZmO1xuICAgIHRyYW5zaXRpb246IGNvbG9yIDIwMG1zLCBiYWNrZ3JvdW5kLWNvbG9yIDIwMG1zO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7XG4gICAgYm9yZGVyLXJhZGl1czogMDtcbiAgICBjb2xvcjogcmdiYSgjMDAwLCAuODUpO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcblxuICAgICYuYWNjZXB0ZWQsXG4gICAgJi5kZWNsaW5lZCB7XG4gICAgICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICB9XG5cbiAgICAmLmFjY2VwdGVkIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHN1Y2Nlc3M7XG4gICAgfVxuXG4gICAgJi5kZWNsaW5lZCB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICRlcnJvcjtcbiAgICB9XG59XG5cbi5ib2xkIHtcbiAgICBmb250LXdlaWdodDogNTAwO1xufVxuXG4uYWN0aW9ucyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG5bbWF0LWljb24tYnV0dG9uXSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG5bbWF0LWljb24tYnV0dG9uXS5zZWFyY2gge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRjb2xvci1wcmltYXJ5O1xuICAgIGNvbG9yOiAjZmZmO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICRjb2xvci1wcmltYXJ5O1xuICAgIG1hcmdpbjogLjNlbTtcblxuICAgICZbZGlzYWJsZWRdIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcbiAgICAgICAgY29sb3I6IHJnYmEoIzAwMCwgLjM1KTtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiByZ2JhKCMwMDAsIC4zNSk7XG4gICAgfVxuXG4gICAgJi5zZWFyY2gge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogLjRlbTtcbiAgICAgICAgcmlnaHQ6IC40ZW07XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmFwcHJvdmFsLWV2ZW50IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgbWFyZ2luOiAwLjVlbSAxcHg7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMxRjQwRTY7XG4gIGJvcmRlci1yaWdodDogNHB4IHNvbGlkICMxRjQwRTY7XG59XG4uYXBwcm92YWwtZXZlbnQuaW50ZXJuYWwge1xuICBib3JkZXItY29sb3I6ICNFNjlGQzc7XG59XG4uYXBwcm92YWwtZXZlbnQuZXh0ZXJuYWwge1xuICBib3JkZXItY29sb3I6ICM4QzVBQzg7XG59XG4uYXBwcm92YWwtZXZlbnQudHJhaW5pbmcge1xuICBib3JkZXItY29sb3I6ICNGMEU3MDA7XG59XG4uYXBwcm92YWwtZXZlbnQuaW50ZXJ2aWV3IHtcbiAgYm9yZGVyLWNvbG9yOiAjMzQ4RDAyO1xufVxuLmFwcHJvdmFsLWV2ZW50LnNldHVwIHtcbiAgYm9yZGVyLWNvbG9yOiAjZDMyZjJmO1xufVxuLmFwcHJvdmFsLWV2ZW50LmNhbmNlbGxlZCB7XG4gIGJvcmRlci1jb2xvcjogIzYxNzI4ODtcbn1cbi5hcHByb3ZhbC1ldmVudC5kZWNsaW5lZCB7XG4gIGJvcmRlci1jb2xvcjogIzUwNTA1MDtcbn1cblxuLmhlYWRlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDFlbTtcbn1cblxuLmF2YXRhciB7XG4gIGZvbnQtc2l6ZTogMS4yZW07XG59XG5cbi5kZXRhaWxzIHtcbiAgcGFkZGluZzogMC41ZW07XG4gIG1heC13aWR0aDogY2FsYygxMDAlIC0gNGVtKTtcbn1cblxuLmZvb3RlciB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5sb2FkLXN0YXRlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44NSk7XG59XG5cbi5jb250cm9sIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHBhZGRpbmc6IDAgMWVtO1xuICBtYXJnaW4tYm90dG9tOiAwLjVlbTtcbn1cbi5jb250cm9sIC5iYXIge1xuICBoZWlnaHQ6IDFweDtcbiAgbWluLXdpZHRoOiAxcHg7XG4gIGZsZXg6IDE7XG4gIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG59XG4uY29udHJvbCAuaWNvbiB7XG4gIGhlaWdodDogMWVtO1xuICB3aWR0aDogMWVtO1xuICBmb250LXNpemU6IDEuNWVtO1xuICBtYXJnaW46IDAgMC41ZW07XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmNvbnRlbnRzIHtcbiAgcGFkZGluZzogMCAxZW0gMWVtO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG4udGV4dCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiBjYWxjKDEwMCUgLSAyLjVlbSk7XG59XG4udGV4dCA+IGRpdiB7XG4gIGhlaWdodDogNnB4O1xuICB3aWR0aDogNnB4O1xuICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZiMzAwO1xuICBtYXJnaW46IDAuMjVlbTtcbn1cblxuLmZpZWxkIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWFyZ2luLWJvdHRvbTogMC41ZW07XG59XG4uZmllbGQubGltaXQtaGVpZ2h0IHtcbiAgbWF4LWhlaWdodDogMmVtO1xufVxuLmZpZWxkOmxhc3QtY2hpbGQge1xuICBtYXJnaW4tYm90dG9tOiAwO1xufVxuLmZpZWxkIC52YWx1ZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDAgMC41ZW07XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNTAlO1xufVxuLmZpZWxkIC50ZXh0IHtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiA1MCU7XG59XG4uZmllbGQubXVsdGlsaW5lIHtcbiAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG59XG4uZmllbGQubXVsdGlsaW5lIC52YWx1ZSB7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xufVxuXG4ubm8taXRlbSB7XG4gIGZvbnQtc2l6ZTogMC42ZW07XG4gIGNvbG9yOiAjMDAwO1xufVxuLm5vLWl0ZW0gLmljb24ge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtc2l6ZTogMC43NWVtO1xufVxuXG5idXR0b25bbWF0LWJ1dHRvbl0ge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDMwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y3ZjhmZjtcbiAgdHJhbnNpdGlvbjogY29sb3IgMjAwbXMsIGJhY2tncm91bmQtY29sb3IgMjAwbXM7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5idXR0b25bbWF0LWJ1dHRvbl0uYWNjZXB0ZWQsIGJ1dHRvblttYXQtYnV0dG9uXS5kZWNsaW5lZCB7XG4gIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICBjb2xvcjogI2ZmZjtcbn1cbmJ1dHRvblttYXQtYnV0dG9uXS5hY2NlcHRlZCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0M2EwNDc7XG59XG5idXR0b25bbWF0LWJ1dHRvbl0uZGVjbGluZWQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTUzOTM1O1xufVxuXG4uYm9sZCB7XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbi5hY3Rpb25zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuW21hdC1pY29uLWJ1dHRvbl0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cblxuW21hdC1pY29uLWJ1dHRvbl0uc2VhcmNoIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE5MzdlYTtcbiAgY29sb3I6ICNmZmY7XG4gIGJvcmRlcjogMXB4IHNvbGlkICMxOTM3ZWE7XG4gIG1hcmdpbjogMC4zZW07XG59XG5bbWF0LWljb24tYnV0dG9uXS5zZWFyY2hbZGlzYWJsZWRdIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4zNSk7XG4gIGJvcmRlci1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjM1KTtcbn1cblttYXQtaWNvbi1idXR0b25dLnNlYXJjaC5zZWFyY2gge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMC40ZW07XG4gIHJpZ2h0OiAwLjRlbTtcbn0iXX0= */"],
       data: {
         animation: [animations_1.trigger('show', [animations_1.transition(':enter', [animations_1.style({
           opacity: 0,
@@ -37845,71 +37910,79 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
+    var app_service_1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
+    var i2 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
-    var i2 = __webpack_require__(
+    var i3 = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
-    var i3 = __webpack_require__(
+    var i4 = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
-    var i4 = __webpack_require__(
+    var i5 = __webpack_require__(
     /*! ../../shared/components/sidebar/sidebar.component */
     "./src/app/shared/components/sidebar/sidebar.component.ts");
 
-    var i5 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! ../../shared/components/topbar-header/topbar-header.component */
     "./src/app/shared/components/topbar-header/topbar-header.component.ts");
 
-    var i6 = __webpack_require__(
+    var i7 = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
-    var i7 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! @angular/material/menu */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 
-    var i8 = __webpack_require__(
+    var i9 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
 
-    var i9 = __webpack_require__(
+    var i10 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i10 = __webpack_require__(
+    var i11 = __webpack_require__(
     /*! @angular/material/form-field */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
-    var i11 = __webpack_require__(
+    var i12 = __webpack_require__(
     /*! @angular/material/select */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
-    var i12 = __webpack_require__(
+    var i13 = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
-    var i13 = __webpack_require__(
+    var i14 = __webpack_require__(
     /*! @angular/material/slide-toggle */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slide-toggle.js");
 
-    var i14 = __webpack_require__(
+    var i15 = __webpack_require__(
     /*! ./timeline/timeline.component */
     "./src/app/shell/day-view/timeline/timeline.component.ts");
 
-    var i15 = __webpack_require__(
+    var i16 = __webpack_require__(
     /*! @angular/material/core */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
-    var i16 = __webpack_require__(
+    var i17 = __webpack_require__(
     /*! @angular/material/checkbox */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
 
@@ -38127,34 +38200,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super62 = _createSuper(DayViewComponent);
 
-      function DayViewComponent(_org, _dialog, _router, _route) {
-        var _this187;
+      function DayViewComponent(_service, _org, _dialog, _router, _route) {
+        var _this188;
 
         _classCallCheck(this, DayViewComponent);
 
-        _this187 = _super62.call(this);
-        _this187._org = _org;
-        _this187._dialog = _dialog;
-        _this187._router = _router;
-        _this187._route = _route;
+        _this188 = _super62.call(this);
+        _this188._service = _service;
+        _this188._org = _org;
+        _this188._dialog = _dialog;
+        _this188._router = _router;
+        _this188._route = _route;
         /** ID of the currently selected level */
 
-        _this187.active_level = '';
+        _this188.active_level = '';
         /** ID of the currently selected type */
 
-        _this187.active_type = '';
+        _this188.active_type = '';
         /** List of levels available for the active building */
 
-        _this187.levels = [];
+        _this188.levels = [];
         /** List of space types available for the active building */
 
-        _this187.space_types = [];
+        _this188.space_types = [];
         /** List of legend keys to show */
 
-        _this187.legend = [];
+        _this188.legend = [];
         /** List of available legend keys */
 
-        _this187.legend_keys = [{
+        _this188.legend_keys = [{
           name: 'Internal',
           id: 'internal',
           color: '#E69FC7',
@@ -38190,68 +38264,70 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           color: '#617288',
           active: true
         }];
-        return _this187;
+        return _this188;
       }
 
       _createClass(DayViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this188 = this;
+          var _this189 = this;
+
+          this._service.title = 'Day View';
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this188.legend = _this188.legend_keys.map(function (item) {
+            _this189.legend = _this189.legend_keys.map(function (item) {
               return "".concat(item.id);
             });
 
-            _this188.subscription('route.params', _this188._route.paramMap.subscribe(function (params) {
+            _this189.subscription('route.params', _this189._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this188.active_level !== params.get('level')) {
-                var level = _this188._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this189.active_level !== params.get('level')) {
+                var level = _this189._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this188._org.buildings.find(function (bld) {
+                  var building = _this189._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this188.active_level = level.id;
-                    _this188._org.building = building;
+                    _this189.active_level = level.id;
+                    _this189._org.building = building;
                   }
                 }
               }
             }));
 
-            _this188.subscription('building', _this188._org.listen('active_building').subscribe(function () {
-              var building = _this188._org.building;
+            _this189.subscription('building', _this189._org.listen('active_building').subscribe(function () {
+              var building = _this189._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this188.active_level;
+                return lvl.id === _this189.active_level;
               })) {
-                _this188.active_level = building.levels[0].id;
+                _this189.active_level = building.levels[0].id;
 
-                _this188.updateLevel();
+                _this189.updateLevel();
               }
 
-              _this188.levels = [{
+              _this189.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
 
-              _this188.levels.sort(function (a, b) {
+              _this189.levels.sort(function (a, b) {
                 return a.name.localeCompare(b.name);
               });
 
-              _this188.space_types = [{
+              _this189.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this188._org.space_types);
+              }].concat(_this189._org.space_types);
             }));
           });
         }
@@ -38286,7 +38362,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.DayViewComponent = DayViewComponent;
 
     DayViewComponent.ɵfac = function DayViewComponent_Factory(t) {
-      return new (t || DayViewComponent)(i0.ɵɵdirectiveInject(i1.OrganisationService), i0.ɵɵdirectiveInject(i2.MatDialog), i0.ɵɵdirectiveInject(i3.Router), i0.ɵɵdirectiveInject(i3.ActivatedRoute));
+      return new (t || DayViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.Router), i0.ɵɵdirectiveInject(i4.ActivatedRoute));
     };
 
     DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -38416,7 +38492,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngForOf", ctx.legend_keys);
         }
       },
-      directives: [i4.SidebarComponent, i5.TopbarHeaderComponent, i6.MatButton, i7.MatMenuTrigger, i8.IconComponent, i9.NgIf, i10.MatFormField, i11.MatSelect, i12.NgControlStatus, i12.NgModel, i11.MatSelectTrigger, i9.NgForOf, i13.MatSlideToggle, i14.DayViewTimelineComponent, i7._MatMenu, i7.MatMenuItem, i15.MatOption, i16.MatCheckbox],
+      directives: [i5.SidebarComponent, i6.TopbarHeaderComponent, i7.MatButton, i8.MatMenuTrigger, i9.IconComponent, i10.NgIf, i11.MatFormField, i12.MatSelect, i13.NgControlStatus, i13.NgModel, i12.MatSelectTrigger, i10.NgForOf, i14.MatSlideToggle, i15.DayViewTimelineComponent, i8._MatMenu, i8.MatMenuItem, i16.MatOption, i17.MatCheckbox],
       styles: ["[_nghost-%COMP%], .day-view[_ngcontent-%COMP%], main[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 100%;\n}\n.day-view[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n  max-height: 100vh;\n}\nmain[_ngcontent-%COMP%] {\n  height: calc(100% - 3.5em);\n}\n.group[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 12em;\n}\n.topbar[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  padding: 0.1em 0 0.1em 0.5em;\n  height: 3.5em;\n}\n.topbar[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 0.5em;\n  width: 10em;\n}\n.key[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.key[_ngcontent-%COMP%]:hover   .blob[_ngcontent-%COMP%] {\n  height: 16px;\n  width: 16px;\n}\n.key[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 6em;\n}\n.key[_ngcontent-%COMP%]   .colour[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 16px;\n  width: 16px;\n}\n.key[_ngcontent-%COMP%]   .blob[_ngcontent-%COMP%] {\n  height: 8px;\n  width: 8px;\n  border-radius: 100%;\n  transition: height 200ms, width 200ms;\n}\n.selected[_ngcontent-%COMP%] {\n  color: #1937ea;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hlbGwvZGF5LXZpZXcvZGF5LXZpZXcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL2RheS12aWV3L2RheS12aWV3LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQTdDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMvQkE7O3NCQUFBO0FDWkE7OztFQUdJLFlBQUE7RUFDQSxXQUFBO0FDbUJKO0FEaEJBO0VBQ0ksYUFBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtBQ21CSjtBRGhCQTtFQUNJLDBCQUFBO0FDbUJKO0FEaEJBO0VBQ0ksT0FBQTtFQUNBLGVBQUE7QUNtQko7QURoQkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxlQUFBO0VBQ0EsNEJBQUE7RUFDQSxhQUFBO0FDbUJKO0FEakJJO0VBQ0ksbUJBQUE7RUFDQSxXQUFBO0FDbUJSO0FEZkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7QUNrQko7QURmUTtFQUNJLFlBQUE7RUFDQSxXQUFBO0FDaUJaO0FEYkk7RUFDSSxPQUFBO0VBQ0EsY0FBQTtBQ2VSO0FEWkk7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FDY1I7QURYSTtFQUNJLFdBQUE7RUFDQSxVQUFBO0VBQ0EsbUJBQUE7RUFDQSxxQ0FBQTtBQ2FSO0FEVEE7RUFDSSxjRm5EWTtBRytEaEIiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9kYXktdmlldy9kYXktdmlldy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiQGltcG9ydCAndmFyaWFibGVzJztcbkBpbXBvcnQgJ21peGlucyc7XG5cbjpob3N0LFxuLmRheS12aWV3LFxubWFpbiB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG4uZGF5LXZpZXcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG1heC1oZWlnaHQ6IDEwMHZoO1xufVxuXG5tYWluIHtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMuNWVtKTtcbn1cblxuLmdyb3VwIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogMTJlbTtcbn1cblxuLnRvcGJhciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICBwYWRkaW5nOiAuMWVtIDAgLjFlbSAuNWVtO1xuICAgIGhlaWdodDogMy41ZW07XG5cbiAgICBtYXQtZm9ybS1maWVsZCB7XG4gICAgICAgIG1hcmdpbi1yaWdodDogLjVlbTtcbiAgICAgICAgd2lkdGg6IDEwZW07XG4gICAgfVxufVxuXG4ua2V5IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cbiAgICAmOmhvdmVyIHtcbiAgICAgICAgLmJsb2Ige1xuICAgICAgICAgICAgaGVpZ2h0OiAxNnB4O1xuICAgICAgICAgICAgd2lkdGg6IDE2cHg7XG4gICAgICAgIH1cbiAgICB9XG5cbiAgICAudGV4dCB7XG4gICAgICAgIGZsZXg6IDE7XG4gICAgICAgIG1pbi13aWR0aDogNmVtO1xuICAgIH1cblxuICAgIC5jb2xvdXIge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgaGVpZ2h0OiAxNnB4O1xuICAgICAgICB3aWR0aDogMTZweDtcbiAgICB9XG5cbiAgICAuYmxvYiB7XG4gICAgICAgIGhlaWdodDogOHB4O1xuICAgICAgICB3aWR0aDogOHB4O1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICAgICAgICB0cmFuc2l0aW9uOiBoZWlnaHQgMjAwbXMsIHdpZHRoIDIwMG1zO1xuICAgIH1cbn1cblxuLnNlbGVjdGVkIHtcbiAgICBjb2xvcjogJGNvbG9yLXByaW1hcnk7XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbjpob3N0LFxuLmRheS12aWV3LFxubWFpbiB7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5kYXktdmlldyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGhlaWdodDogMTAwJTtcbiAgbWF4LWhlaWdodDogMTAwdmg7XG59XG5cbm1haW4ge1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMuNWVtKTtcbn1cblxuLmdyb3VwIHtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiAxMmVtO1xufVxuXG4udG9wYmFyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBwYWRkaW5nOiAwLjFlbSAwIDAuMWVtIDAuNWVtO1xuICBoZWlnaHQ6IDMuNWVtO1xufVxuLnRvcGJhciBtYXQtZm9ybS1maWVsZCB7XG4gIG1hcmdpbi1yaWdodDogMC41ZW07XG4gIHdpZHRoOiAxMGVtO1xufVxuXG4ua2V5IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cbi5rZXk6aG92ZXIgLmJsb2Ige1xuICBoZWlnaHQ6IDE2cHg7XG4gIHdpZHRoOiAxNnB4O1xufVxuLmtleSAudGV4dCB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNmVtO1xufVxuLmtleSAuY29sb3VyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGhlaWdodDogMTZweDtcbiAgd2lkdGg6IDE2cHg7XG59XG4ua2V5IC5ibG9iIHtcbiAgaGVpZ2h0OiA4cHg7XG4gIHdpZHRoOiA4cHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gIHRyYW5zaXRpb246IGhlaWdodCAyMDBtcywgd2lkdGggMjAwbXM7XG59XG5cbi5zZWxlY3RlZCB7XG4gIGNvbG9yOiAjMTkzN2VhO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -38431,13 +38507,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [{
-          type: i1.OrganisationService
+          type: i1.ApplicationService
         }, {
-          type: i2.MatDialog
+          type: i2.OrganisationService
         }, {
-          type: i3.Router
+          type: i3.MatDialog
         }, {
-          type: i3.ActivatedRoute
+          type: i4.Router
+        }, {
+          type: i4.ActivatedRoute
         }];
       }, null);
     })();
@@ -38807,7 +38885,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate(ctx_r0.event.all_day ? "All Day" : ctx_r0.period);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngIf", !ctx_r0.loading && (ctx_r0.event.declined || ctx_r0.event.approved));
+        i0.ɵɵproperty("ngIf", !ctx_r0.loading && (ctx_r0.event.declined || ctx_r0.approved));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.loading);
         i0.ɵɵadvance(5);
@@ -38839,21 +38917,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super63 = _createSuper(DayViewSpaceEventComponent);
 
       function DayViewSpaceEventComponent(_service, _dialog, _router) {
-        var _this189;
+        var _this190;
 
         _classCallCheck(this, DayViewSpaceEventComponent);
 
-        _this189 = _super63.call(this);
-        _this189._service = _service;
-        _this189._dialog = _dialog;
-        _this189._router = _router;
+        _this190 = _super63.call(this);
+        _this190._service = _service;
+        _this190._dialog = _dialog;
+        _this190._router = _router;
         /** Emitter for the current position of the event within the timeline */
 
-        _this189.position = new core_1.EventEmitter();
+        _this190.position = new core_1.EventEmitter();
         /** Whether to hide the event */
 
-        _this189.hide = false;
-        return _this189;
+        _this190.hide = false;
+        return _this190;
       }
 
       _createClass(DayViewSpaceEventComponent, [{
@@ -38941,7 +39019,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "approved",
         get: function get() {
-          return this.event.approved || this.event.approval_status[this.space.email].includes('approved');
+          return this.event.approved || this.event.approval_status[this.space.email].includes('accepted');
         }
         /**  */
 
@@ -38995,10 +39073,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "order",
         get: function get() {
-          var _this190 = this;
+          var _this191 = this;
 
           return this.event.catering.find(function (order) {
-            return order.location_id === _this190.space.email;
+            return order.location_id === _this191.space.email;
           });
         }
       }, {
@@ -39299,40 +39377,40 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super64 = _createSuper(DayViewSpaceComponent);
 
       function DayViewSpaceComponent(_service, _spaces, _bookings, _dialog) {
-        var _this191;
+        var _this192;
 
         _classCallCheck(this, DayViewSpaceComponent);
 
-        _this191 = _super64.call(this);
-        _this191._service = _service;
-        _this191._spaces = _spaces;
-        _this191._bookings = _bookings;
-        _this191._dialog = _dialog;
+        _this192 = _super64.call(this);
+        _this192._service = _service;
+        _this192._spaces = _spaces;
+        _this192._bookings = _bookings;
+        _this192._dialog = _dialog;
         /** Mapping of whether to show events with a given legend id */
 
-        _this191.legend = {};
+        _this192.legend = {};
         /** Emitter for whether the space column is in view */
 
-        _this191.inView = new core_1.EventEmitter();
+        _this192.inView = new core_1.EventEmitter();
         /** Emitter for whether an event is being dragged */
 
-        _this191.dragging = new core_1.EventEmitter();
+        _this192.dragging = new core_1.EventEmitter();
         /** List of bookings for the current date and space */
 
-        _this191.event_list = [];
+        _this192.event_list = [];
         /** Mapping of event IDs to overlap details */
 
-        _this191.overlap_details = {};
+        _this192.overlap_details = {};
         /** Mapping of positions of event in the day */
 
-        _this191.position_list = {};
+        _this192.position_list = {};
         /** Map of bookings to whether they are loading */
 
-        _this191.loading = {};
+        _this192.loading = {};
         /** Settings for day view */
 
-        _this191.settings = {};
-        return _this191;
+        _this192.settings = {};
+        return _this192;
       }
       /** Events to display for the active date */
 
@@ -39340,37 +39418,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DayViewSpaceComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this192 = this;
+          var _this193 = this;
 
           this._service.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this192.settings = _this192._service.setting('app.day_view') || {};
+            _this193.settings = _this193._service.setting('app.day_view') || {};
 
-            _this192.subscription('breakdown', _this192._service.listen('APP.breakdown').subscribe(function (state) {
-              return _this192.overflow_only = state;
+            _this193.subscription('breakdown', _this193._service.listen('APP.breakdown').subscribe(function (state) {
+              return _this193.overflow_only = state;
             }));
 
-            _this192.subscription('legend', _this192._service.listen('CONCIERGE.legend').subscribe(function (state) {
-              return _this192.legend = state || {};
+            _this193.subscription('legend', _this193._service.listen('CONCIERGE.legend').subscribe(function (state) {
+              return _this193.legend = state || {};
             }));
 
-            _this192.subscription('bookings', _this192._bookings.booking_list.subscribe(function () {
-              return _this192.updateEvents();
+            _this193.subscription('bookings', _this193._bookings.booking_list.subscribe(function () {
+              return _this193.updateEvents();
             }));
           });
         }
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this193 = this;
+          var _this194 = this;
 
           /* istanbul ignore else */
           if (changes.scroll) {
             this.checkInView();
           }
 
-          if (changes.space || changes.date) {
+          if (changes.space || changes.date || changes.legend) {
             this.updateEvents();
           }
           /* istanbul ignore else */
@@ -39378,7 +39456,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (changes.last_update) {
             this.timeout('update_overlaps', function () {
-              return _this193.calculateOverlaps();
+              return _this194.calculateOverlaps();
             }, 1000);
           }
         }
@@ -39396,7 +39474,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateEvents",
         value: function updateEvents() {
-          var _this194 = this;
+          var _this195 = this;
 
           var date = dayjs(this.date);
 
@@ -39404,7 +39482,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var start = dayjs(booking.date);
             var end = start.add(booking.duration, 'm');
             return booking.space_list.find(function (space) {
-              return space.email === _this194.space.email;
+              return space.email === _this195.space.email;
             }) && (start.isSame(date, 'd') || end.isSame(date, 'd') || date.isAfter(start, 'd') && date.isBefore(end, 'd'));
           });
 
@@ -39417,13 +39495,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "calculateOverlaps",
         value: function calculateOverlaps() {
-          var _this195 = this;
+          var _this196 = this;
 
           var events = this.events.sort(function (a, b) {
             return a.date - b.date || a.duration - b.duration || (a.title || '').localeCompare(b.title || '');
           });
           events.forEach(function (i) {
-            return _this195.overlap_details[i.id] = {
+            return _this196.overlap_details[i.id] = {
               index: 0,
               total: 1
             };
@@ -39479,7 +39557,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _iterator51.f();
               }
 
-              _this195.overlap_details[bkn.id] = {
+              _this196.overlap_details[bkn.id] = {
                 index: Math.max(0, index),
                 total: count
               };
@@ -39525,10 +39603,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "endDrag",
         value: function endDrag() {
-          var _this196 = this;
+          var _this197 = this;
 
           this.timeout('end_drag', function () {
-            return _this196.top = 0;
+            return _this197.top = 0;
           }, 10);
           this.dragging.emit(false);
         }
@@ -39557,7 +39635,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "drop",
         value: function drop(event) {
-          var _this197 = this;
+          var _this198 = this;
 
           var id = event.item.element.nativeElement.id;
           var booking = event.previousContainer.data.list.find(function (i) {
@@ -39625,15 +39703,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             })
           }));
           this.checkCollisions(room_list, date.valueOf(), new_booking.duration, new_booking.icaluid).then(function () {
-            _this197.moveBooking(message, new_booking).then(function (_) {
-              _this197.override_state = null;
+            _this198.moveBooking(message, new_booking).then(function (_) {
+              _this198.override_state = null;
 
-              _this197._service.notifySuccess(success);
+              _this198._service.notifySuccess(success);
             }, function (err) {
-              return _this197.handleDropError(new_booking.id, "Error: ".concat(err));
+              return _this198.handleDropError(new_booking.id, "Error: ".concat(err));
             });
           }, function () {
-            return _this197.handleDropError(new_booking.id, 'Updated meeting time clashes with another');
+            return _this198.handleDropError(new_booking.id, 'Updated meeting time clashes with another');
           });
         }
         /**
@@ -39646,10 +39724,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "checkCollisions",
         value: function checkCollisions(spaces, date, duration, ignore) {
-          var _this198 = this;
+          var _this199 = this;
 
           return new Promise(function (resolve, reject) {
-            _this198._spaces.available({
+            _this199._spaces.available({
               room_ids: spaces.map(function (i) {
                 return i.id;
               }).join(','),
@@ -39687,10 +39765,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "moveBooking",
         value: function moveBooking(confirm_msg, new_booking) {
-          var _this199 = this;
+          var _this200 = this;
 
           return new Promise(function (resolve, reject) {
-            var ref = _this199._dialog.open(confirm_modal_component_1.ConfirmModalComponent, {
+            var ref = _this200._dialog.open(confirm_modal_component_1.ConfirmModalComponent, {
               data: {
                 title: 'Update meeting',
                 content: confirm_msg,
@@ -39703,19 +39781,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             });
 
-            _this199.subscription('confirm', ref.componentInstance.event.subscribe(function (event) {
+            _this200.subscription('confirm', ref.componentInstance.event.subscribe(function (event) {
               /* istanbul ignore else */
               if (event.reason === 'done') {
-                _this199._bookings.save(new_booking).then(function (bkn) {
+                _this200._bookings.save(new_booking).then(function (bkn) {
                   resolve(bkn);
 
-                  var bookings = _this199._bookings.booking_list.getValue();
+                  var bookings = _this200._bookings.booking_list.getValue();
 
                   bookings.splice(bookings.findIndex(function (bkn) {
                     return bkn.icaluid === bkn.icaluid;
                   }), 1, bkn);
 
-                  _this199._bookings.booking_list.next(bookings);
+                  _this200._bookings.booking_list.next(bookings);
                 }, function (err) {
                   return reject(err);
                 });
@@ -39728,17 +39806,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "events",
         get: function get() {
-          var _this200 = this;
+          var _this201 = this;
 
           /* istanbul ignore else */
           if (this.space) {
             var bookings = this.event_list;
             var list = bookings.filter(function (event) {
-              if (_this200.override_state && _this200.override_state === event.icaluid) {
-                _this200.loading[event.id] = true;
+              if (_this201.override_state && _this201.override_state === event.icaluid) {
+                _this201.loading[event.id] = true;
               }
 
-              return (!_this200.overflow_only || event.setup[event.space.email] || event.breakdown[event.space.email]) && (event.declined && _this200.legend.declined || !event.declined && _this200.legend[event.type]);
+              return (!_this201.overflow_only || event.setup[event.space.email] || event.breakdown[event.space.email]) && (event.declined && _this201.legend.declined || !event.declined && _this201.legend[event.type]);
             });
             return list;
           }
@@ -40188,52 +40266,52 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super65 = _createSuper(DayViewTimelineComponent);
 
       function DayViewTimelineComponent(_service, _spaces, _bookings, _org, _route, _renderer, _dialog) {
-        var _this201;
+        var _this202;
 
         _classCallCheck(this, DayViewTimelineComponent);
 
-        _this201 = _super65.call(this);
-        _this201._service = _service;
-        _this201._spaces = _spaces;
-        _this201._bookings = _bookings;
-        _this201._org = _org;
-        _this201._route = _route;
-        _this201._renderer = _renderer;
-        _this201._dialog = _dialog;
+        _this202 = _super65.call(this);
+        _this202._service = _service;
+        _this202._spaces = _spaces;
+        _this202._bookings = _bookings;
+        _this202._org = _org;
+        _this202._route = _route;
+        _this202._renderer = _renderer;
+        _this202._dialog = _dialog;
         /** List of shown legend items */
 
-        _this201.legend = [];
+        _this202.legend = [];
         /** List of timeblocks to display */
 
-        _this201.time_blocks = _this201.generateTimeBlocks();
+        _this202.time_blocks = _this202.generateTimeBlocks();
         /** Top value of the content scroll */
 
-        _this201.scroll_top = 0;
+        _this202.scroll_top = 0;
         /** Left value of the content scroll */
 
-        _this201.scroll_left = 0;
+        _this202.scroll_left = 0;
         /** Offset of the scroll value when starting a drag */
 
-        _this201.scroll_offset = 0;
+        _this202.scroll_offset = 0;
         /** List of spaces to display for  */
 
-        _this201.spaces = [];
+        _this202.spaces = [];
         /** List of spaces to display for  */
 
-        _this201.filtered_spaces = [];
+        _this202.filtered_spaces = [];
         /** Mapping of space ids to whether they are in view */
 
-        _this201.in_view = {};
+        _this202.in_view = {};
         /** Mapping of spaces loading booking date */
 
-        _this201.loading_space = {};
+        _this202.loading_space = {};
         /** Last update time for the space bookings */
 
-        _this201.last_update = 0;
+        _this202.last_update = 0;
         /** Whether to show the holding bay */
 
-        _this201.show_holding_bay = true;
-        return _this201;
+        _this202.show_holding_bay = true;
+        return _this202;
       }
       /** Update scroll box when the window is resized */
 
@@ -40248,28 +40326,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this202 = this;
+          var _this203 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this202._org.initialised.pipe(operators_1.first(function (_) {
+            _this203._org.initialised.pipe(operators_1.first(function (_) {
               return _;
             })).subscribe(function () {
-              var zone_id = !_this202.level ? _this202._org.building.id : _this202.level;
-              _this202.spaces = _this202._spaces.filter(function (_) {
+              var zone_id = !_this203.level ? _this203._org.building.id : _this203.level;
+              _this203.spaces = _this203._spaces.filter(function (_) {
                 return _.zones.indexOf(zone_id) >= 0;
               });
 
-              _this202.init();
+              _this203.init();
 
-              _this202.initSpaces(); // Update time
+              _this203.initSpaces(); // Update time
 
 
-              _this202.updateTime();
+              _this203.updateTime();
 
-              _this202.interval('time', function () {
-                return _this202.updateTime();
+              _this203.interval('time', function () {
+                return _this203.updateTime();
               }, 15 * 1000);
             });
           });
@@ -40303,24 +40381,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "init",
         value: function init() {
-          var _this203 = this;
+          var _this204 = this;
 
           this._service.title = 'Day View';
           this.subscription('viewing', this._service.listen('CONCIERGE.day_view.viewing').subscribe(function (event) {
-            return _this203.scrollIntoView(event);
+            return _this204.scrollIntoView(event);
           })); // Subscribe to route query changes
 
           this.subscription('route.query', this._route.queryParamMap.subscribe(function (params) {
             /* istanbul ignore else */
             if (params.has('view')) {
-              _this203.view_id = params.get('view');
+              _this204.view_id = params.get('view');
               var details = localStorage.getItem('CONCIERGE.view_booking');
               /* istanbul ignore else */
 
               if (details) {
                 var booking = new booking_class_1.Booking(JSON.parse(details));
 
-                _this203.view(booking);
+                _this204.view(booking);
 
                 localStorage.removeItem('CONCIERGE.view_booking');
               }
@@ -40330,9 +40408,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.updateBookings();
           this.interval('scroll', function () {
             /* istanbul ignore else */
-            if (_this203.scroll_area && _this203.scroll_area.nativeElement) {
-              _this203.updateScroll({
-                target: _this203.scroll_area.nativeElement
+            if (_this204.scroll_area && _this204.scroll_area.nativeElement) {
+              _this204.updateScroll({
+                target: _this204.scroll_area.nativeElement
               });
             }
           }, 1000);
@@ -40386,41 +40464,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateBookings",
         value: function updateBookings() {
-          var _this204 = this;
+          var _this205 = this;
 
           this.timeout('update', function () {
-            var visible_rooms = _this204.spaces.filter(function (i) {
-              return _this204.in_view[i.id] !== false;
+            var visible_rooms = _this205.spaces.filter(function (i) {
+              return _this205.in_view[i.id] !== false;
             });
 
             if (visible_rooms.length) {
               visible_rooms.forEach(function (rm) {
-                return _this204.loading_space[rm.id] = true;
+                return _this205.loading_space[rm.id] = true;
               });
-              var time = dayjs(_this204.date).startOf('d');
+              var time = dayjs(_this205.date).startOf('d');
               var end = time.endOf('d');
               var room_ids = visible_rooms.reduce(function (v, i) {
                 return v + (v ? ',' : '') + i.id;
               }, '');
 
-              var level = _this204._service.get('APP.level');
+              var level = _this205._service.get('APP.level');
 
-              var zone_ids = [level === -1 ? _this204._org.building.id : level];
+              var zone_ids = [level === -1 ? _this205._org.building.id : level];
               /* istanbul ignore else */
 
-              if (_this204.space_type) {
-                zone_ids.push(_this204.space_type);
+              if (_this205.space_type) {
+                zone_ids.push(_this205.space_type);
               }
 
-              _this204.loading = true;
+              _this205.loading = true;
 
-              _this204._spaces.query({
+              _this205._spaces.query({
                 room_ids: room_ids,
                 zone_ids: zone_ids.join(','),
                 available_from: time.unix(),
                 available_to: end.unix()
               }).then(function (room_list) {
-                var bookings = _this204._bookings.booking_list.getValue();
+                var bookings = _this205._bookings.booking_list.getValue();
 
                 room_list.forEach(function (space) {
                   return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
@@ -40430,27 +40508,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   });
                 });
 
-                _this204._bookings.booking_list.next(bookings);
+                _this205._bookings.booking_list.next(bookings);
 
-                _this204.last_update = dayjs().valueOf();
-                _this204.loading_space = {};
-                _this204.loading = false;
+                _this205.last_update = dayjs().valueOf();
+                _this205.loading_space = {};
+                _this205.loading = false;
 
-                _this204.timeout('update_bookings', function () {
-                  return _this204.updateBookings();
+                _this205.timeout('update_bookings', function () {
+                  return _this205.updateBookings();
                 }, UPDATE_INTERVAL * 1000);
               }, function () {
-                delete _this204.loading_space;
-                _this204.loading_space = {};
-                _this204.loading = false;
+                delete _this205.loading_space;
+                _this205.loading_space = {};
+                _this205.loading = false;
 
-                _this204.timeout('update_bookings', function () {
-                  return _this204.updateBookings();
+                _this205.timeout('update_bookings', function () {
+                  return _this205.updateBookings();
                 }, UPDATE_INTERVAL * 1000);
               });
             } else {
-              _this204.timeout('update_bookings', function () {
-                return _this204.updateBookings();
+              _this205.timeout('update_bookings', function () {
+                return _this205.updateBookings();
               }, UPDATE_INTERVAL * 1000);
             }
           });
@@ -40531,7 +40609,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "dragChange",
         value: function dragChange(is_dragging) {
-          var _this205 = this;
+          var _this206 = this;
 
           if (is_dragging) {
             this.scroll_offset = this.scroll_area.nativeElement.scrollTop;
@@ -40540,13 +40618,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 x: event.clientX,
                 y: event.clientY
               };
-              var y = position.y > _this205.box.bottom - _this205.box.height * 0.05 ? 1 : position.y < _this205.box.top + _this205.box.height * 0.05 ? -1 : 0;
-              var x = position.x > _this205.box.right - _this205.box.width * 0.05 ? 1 : position.x < _this205.box.left + _this205.box.height * 0.05 ? -1 : 0;
+              var y = position.y > _this206.box.bottom - _this206.box.height * 0.05 ? 1 : position.y < _this206.box.top + _this206.box.height * 0.05 ? -1 : 0;
+              var x = position.x > _this206.box.right - _this206.box.width * 0.05 ? 1 : position.x < _this206.box.left + _this206.box.height * 0.05 ? -1 : 0;
 
-              _this205.scrollView(x * 5, y * 5);
+              _this206.scrollView(x * 5, y * 5);
 
-              _this205.interval('auto_scroll', function () {
-                return _this205.scrollView(x * 10, y * 10);
+              _this206.interval('auto_scroll', function () {
+                return _this206.scrollView(x * 10, y * 10);
               }, 10);
             }));
             this.clearInterval('bookings');
@@ -40558,11 +40636,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initSpaces",
         value: function initSpaces() {
-          var _this206 = this;
+          var _this207 = this;
 
           var holding_bay = this.holding_bay;
           this.filtered_spaces = this.spaces.filter(function (i) {
-            return (!_this206.space_type || i.zones.indexOf(_this206.space_type) >= 0) && (!holding_bay || i.id !== holding_bay.id) && i.bookable;
+            return (!_this207.space_type || i.zones.indexOf(_this207.space_type) >= 0) && (!holding_bay || i.id !== holding_bay.id) && i.bookable;
           });
           this.filtered_spaces.sort(function (a, b) {
             return a.name.localeCompare(b.name);
@@ -40580,10 +40658,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "is_loading",
         get: function get() {
-          var _this207 = this;
+          var _this208 = this;
 
           return this.loading || Object.keys(this.loading_space).reduce(function (loading, key) {
-            return loading || _this207.loading_space[key];
+            return loading || _this208.loading_space[key];
           }, false);
         }
       }, {
@@ -41162,12 +41240,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ReportDisplayComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this208 = this;
+          var _this209 = this;
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this208.locations = [_this208._org.building];
+            _this209.locations = [_this209._org.building];
           });
         }
       }, {
@@ -41201,7 +41279,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "generateReport",
         value: function generateReport() {
-          var _this209 = this;
+          var _this210 = this;
 
           /* istanbul ignore else */
           if (this.report) {
@@ -41216,14 +41294,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return i.id;
               }).join(',')
             }).then(function (report) {
-              _this209.loading = false;
-              _this209.report_data = new report_class_1.Report(Object.assign(Object.assign({}, report), {
-                type: _this209.report.id
+              _this210.loading = false;
+              _this210.report_data = new report_class_1.Report(Object.assign(Object.assign({}, report), {
+                type: _this210.report.id
               }));
             }, function (err) {
-              _this209.loading = false;
+              _this210.loading = false;
 
-              _this209._service.notifyError("Error generating report. Error: ".concat(err.message || err));
+              _this210._service.notifyError("Error generating report. Error: ".concat(err.message || err));
             });
           }
         }
@@ -41482,12 +41560,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ReportTableComponent, [{
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this210 = this;
+          var _this211 = this;
 
           /* istanbul ignore else */
           if (changes.list && this.list && this.list.length) {
             this.fields = Object.keys(this.list[0]).filter(function (i) {
-              return _this210.details.hide_fields.indexOf(i) < 0;
+              return _this211.details.hide_fields.indexOf(i) < 0;
             });
           }
         }
@@ -41587,6 +41665,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/shared/base.directive */
     "./src/app/shared/base.directive.ts");
 
+    var app_service_1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -41594,6 +41676,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var i1 = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var i2 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
 
     function ReportsComponent_div_4_mat_form_field_1_mat_option_2_Template(rf, ctx) {
       if (rf & 1) {
@@ -41730,17 +41816,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super66 = _createSuper(ReportsComponent);
 
-      function ReportsComponent(_route, _router) {
-        var _this211;
+      function ReportsComponent(_route, _router, _service) {
+        var _this212;
 
         _classCallCheck(this, ReportsComponent);
 
-        _this211 = _super66.call(this);
-        _this211._route = _route;
-        _this211._router = _router;
+        _this212 = _super66.call(this);
+        _this212._route = _route;
+        _this212._router = _router;
+        _this212._service = _service;
         /** List of available reports to display */
 
-        _this211.reports = [{
+        _this212.reports = [{
           id: 'bookings',
           name: 'Aggregate Bookings Report',
           short_name: 'Bookings',
@@ -41764,17 +41851,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           },
           multi_locations: true
         }];
-        return _this211;
+        return _this212;
       }
 
       _createClass(ReportsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this212 = this;
+          var _this213 = this;
 
+          this._service.title = 'Reports';
           this.subscription('route.params', this._route.paramMap.subscribe(function (params) {
             if (params.has('report')) {
-              _this212.active_report = params.get('report');
+              _this213.active_report = params.get('report');
             }
           }));
         }
@@ -41786,10 +41874,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "the_report",
         get: function get() {
-          var _this213 = this;
+          var _this214 = this;
 
           return this.reports.find(function (report) {
-            return report.id === _this213.active_report;
+            return report.id === _this214.active_report;
           });
         }
       }]);
@@ -41800,7 +41888,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.ReportsComponent = ReportsComponent;
 
     ReportsComponent.ɵfac = function ReportsComponent_Factory(t) {
-      return new (t || ReportsComponent)(i0.ɵɵdirectiveInject(i1.ActivatedRoute), i0.ɵɵdirectiveInject(i1.Router));
+      return new (t || ReportsComponent)(i0.ɵɵdirectiveInject(i1.ActivatedRoute), i0.ɵɵdirectiveInject(i1.Router), i0.ɵɵdirectiveInject(i2.ApplicationService));
     };
 
     ReportsComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -41857,6 +41945,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: i1.ActivatedRoute
         }, {
           type: i1.Router
+        }, {
+          type: i2.ApplicationService
         }];
       }, null);
     })();
@@ -42214,12 +42304,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var i4 = __webpack_require__(
-    /*! ../shared/components/feedback/feedback.component */
-    "./src/app/shared/components/feedback/feedback.component.ts");
-
-    var i5 = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var i5 = __webpack_require__(
+    /*! ../shared/components/feedback/feedback.component */
+    "./src/app/shared/components/feedback/feedback.component.ts");
 
     var i6 = __webpack_require__(
     /*! ../shared/components/login/login.component */
@@ -42237,6 +42327,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 4);
         i0.ɵɵelement(1, "router-outlet");
+        i0.ɵɵelement(2, "feedback");
         i0.ɵɵelementEnd();
       }
     }
@@ -42369,14 +42460,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super67 = _createSuper(ShellWrapperComponent);
 
       function ShellWrapperComponent(_service, _users) {
-        var _this214;
+        var _this215;
 
         _classCallCheck(this, ShellWrapperComponent);
 
-        _this214 = _super67.call(this);
-        _this214._service = _service;
-        _this214._users = _users;
-        return _this214;
+        _this215 = _super67.call(this);
+        _this215._service = _service;
+        _this215._users = _users;
+        return _this215;
       }
       /** Whether the user needs to login */
 
@@ -42384,16 +42475,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShellWrapperComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this215 = this;
+          var _this216 = this;
 
           this.subscription('loading', this._service.listen('loading').subscribe(function (loading) {
-            _this215.loading_state = loading;
+            _this216.loading_state = loading;
           }));
 
           this._service.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this215.logo = _this215._service.setting('app.logo_dark') || {
+            _this216.logo = _this216._service.setting('app.logo_dark') || {
               type: 'icon'
             };
           });
@@ -42448,16 +42539,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       type: ShellWrapperComponent,
       selectors: [["app-shell-wrapper"]],
       features: [i0.ɵɵInheritDefinitionFeature],
-      decls: 5,
+      decls: 4,
       vars: 3,
       consts: [[1, "shell"], ["class", "view", 4, "ngIf"], ["class", "login-module", 4, "ngIf"], ["class", "loading-block", 4, "ngIf"], [1, "view"], [1, "login-module"], [1, "loading-block"], [1, "info-block"], [1, "header"], [1, "logo"], [3, "class", 4, "ngIf"], [3, "src", 4, "ngIf"], ["class", "item", 4, "ngFor", "ngForOf"], [3, "src"], [1, "item"], [1, "message"], [1, "icon"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [1, "material-icons", "success"], [1, "material-icons", "failure"], ["diameter", "16"]],
       template: function ShellWrapperComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
-          i0.ɵɵtemplate(1, ShellWrapperComponent_div_1_Template, 2, 0, "div", 1);
+          i0.ɵɵtemplate(1, ShellWrapperComponent_div_1_Template, 3, 0, "div", 1);
           i0.ɵɵtemplate(2, ShellWrapperComponent_div_2_Template, 2, 0, "div", 2);
           i0.ɵɵtemplate(3, ShellWrapperComponent_div_3_Template, 7, 5, "div", 3);
-          i0.ɵɵelement(4, "feedback");
           i0.ɵɵelementEnd();
         }
 
@@ -42470,7 +42560,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngIf", ctx.is_loading);
         }
       },
-      directives: [i3.NgIf, i4.FeedbackComponent, i5.RouterOutlet, i6.LoginComponent, i3.NgForOf, i3.NgSwitch, i3.NgSwitchCase, i3.NgSwitchDefault, i7.MatSpinner],
+      directives: [i3.NgIf, i4.RouterOutlet, i5.FeedbackComponent, i6.LoginComponent, i3.NgForOf, i3.NgSwitch, i3.NgSwitchCase, i3.NgSwitchDefault, i7.MatSpinner],
       pipes: [i8.ɵa],
       styles: [".shell[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #F0F0F0;\n}\n.view[_ngcontent-%COMP%] {\n  z-index: 1;\n}\n.loading-block[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  font-size: 0.9em;\n  background-color: #F0F0F0;\n  z-index: 2;\n  overflow: auto;\n  z-index: 9999;\n}\n.info-block[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 1em;\n  left: 50%;\n  transform: translateX(-50%);\n  margin: 0;\n  background-color: #fff;\n  border-radius: 4px;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  padding: 1em;\n  width: 360px;\n  max-width: calc(100vw - 2em);\n}\nimg[_ngcontent-%COMP%] {\n  max-height: 60px;\n  max-width: 240px;\n  height: 60px;\n}\n.header[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 8px;\n  padding: 1em;\n  width: 100%;\n  z-index: 2;\n}\n.body[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 0;\n}\n.item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.25em 0.5em 0.25em 1em;\n  width: 100%;\n}\n.item[_ngcontent-%COMP%]:nth-child(2n+1) {\n  background-color: rgba(0, 0, 0, 0.05);\n  border-radius: 8px;\n}\n.message[_ngcontent-%COMP%] {\n  padding-right: 0.5em;\n  width: 20em;\n  max-width: calc(100vw - 5em);\n}\n.success[_ngcontent-%COMP%] {\n  color: #43a047;\n}\n.failure[_ngcontent-%COMP%] {\n  color: #e53935;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3NoZWxsLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9zaGVsbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxlQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUNBLHlCQUFBO0FDT0o7QURKQTtFQUNJLFVBQUE7QUNPSjtBREpBO0VBQ0ksZUFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0VBQ0EsVUFBQTtFQUNBLGNBQUE7RUFDQSxhQUFBO0FDT0o7QURKQTtFQUNJLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSwyQkFBQTtFQUNBLFNBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsK0dBQUE7RUFHQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLDRCQUFBO0FDS0o7QURGQTtFQUNJLGdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0FDS0o7QURGQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtBQ0tKO0FERkE7RUFDSSxrQkFBQTtFQUNBLFVBQUE7QUNLSjtBREZBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0NBQUE7RUFDQSxXQUFBO0FDS0o7QURISTtFQUNJLHFDQUFBO0VBQ0Esa0JBQUE7QUNLUjtBRERBO0VBQ0ksb0JBQUE7RUFDQSxXQUFBO0VBQ0EsNEJBQUE7QUNJSjtBRERBO0VBQ0ksY0Q5RU07QUVrRlY7QUREQTtFQUNJLGNEMUVJO0FFOEVSIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvc2hlbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxuLnNoZWxsIHtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGMEYwRjA7XG59XG5cbi52aWV3IHtcbiAgICB6LWluZGV4OiAxO1xufVxuXG4ubG9hZGluZy1ibG9jayB7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBmb250LXNpemU6IC45ZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0YwRjBGMDtcbiAgICB6LWluZGV4OiAyO1xuICAgIG92ZXJmbG93OiBhdXRvO1xuICAgIHotaW5kZXg6IDk5OTk7XG59XG5cbi5pbmZvLWJsb2NrIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAxZW07XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcbiAgICBtYXJnaW46IDA7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDAgcmdiYSgjMDAwLCAuMiksXG4gICAgICAgICAgICAgICAgMCAxcHggMXB4IDAgcmdiYSgjMDAwLCAuMTQpLFxuICAgICAgICAgICAgICAgIDAgMnB4IDFweCAtMXB4IHJnYmEoIzAwMCwgLjEyKTtcbiAgICBwYWRkaW5nOiAxZW07XG4gICAgd2lkdGg6IDM2MHB4O1xuICAgIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDJlbSk7XG59XG5cbmltZyB7XG4gICAgbWF4LWhlaWdodDogNjBweDtcbiAgICBtYXgtd2lkdGg6IDI0MHB4O1xuICAgIGhlaWdodDogNjBweDtcbn1cblxuLmhlYWRlciB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBib3JkZXItcmFkaXVzOiA4cHg7XG4gICAgcGFkZGluZzogMWVtO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHotaW5kZXg6IDI7XG59XG5cbi5ib2R5IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgei1pbmRleDogMDtcbn1cblxuLml0ZW0ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAuMjVlbSAuNWVtIC4yNWVtIDFlbTtcbiAgICB3aWR0aDogMTAwJTtcblxuICAgICY6bnRoLWNoaWxkKDJuICsgMSkge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCMwMDAsIC4wNSk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgICB9XG59XG5cbi5tZXNzYWdlIHtcbiAgICBwYWRkaW5nLXJpZ2h0OiAuNWVtO1xuICAgIHdpZHRoOiAyMGVtO1xuICAgIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDVlbSk7XG59XG5cbi5zdWNjZXNzIHtcbiAgICBjb2xvcjogJHN1Y2Nlc3M7XG59XG5cbi5mYWlsdXJlIHtcbiAgICBjb2xvcjogJGVycm9yO1xufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLnNoZWxsIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIGJhY2tncm91bmQtY29sb3I6ICNGMEYwRjA7XG59XG5cbi52aWV3IHtcbiAgei1pbmRleDogMTtcbn1cblxuLmxvYWRpbmctYmxvY2sge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgZm9udC1zaXplOiAwLjllbTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0YwRjBGMDtcbiAgei1pbmRleDogMjtcbiAgb3ZlcmZsb3c6IGF1dG87XG4gIHotaW5kZXg6IDk5OTk7XG59XG5cbi5pbmZvLWJsb2NrIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDFlbTtcbiAgbGVmdDogNTAlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSk7XG4gIG1hcmdpbjogMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG4gIHBhZGRpbmc6IDFlbTtcbiAgd2lkdGg6IDM2MHB4O1xuICBtYXgtd2lkdGg6IGNhbGMoMTAwdncgLSAyZW0pO1xufVxuXG5pbWcge1xuICBtYXgtaGVpZ2h0OiA2MHB4O1xuICBtYXgtd2lkdGg6IDI0MHB4O1xuICBoZWlnaHQ6IDYwcHg7XG59XG5cbi5oZWFkZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG4gIHBhZGRpbmc6IDFlbTtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDI7XG59XG5cbi5ib2R5IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB6LWluZGV4OiAwO1xufVxuXG4uaXRlbSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDAuMjVlbSAwLjVlbSAwLjI1ZW0gMWVtO1xuICB3aWR0aDogMTAwJTtcbn1cbi5pdGVtOm50aC1jaGlsZCgybisxKSB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIGJvcmRlci1yYWRpdXM6IDhweDtcbn1cblxuLm1lc3NhZ2Uge1xuICBwYWRkaW5nLXJpZ2h0OiAwLjVlbTtcbiAgd2lkdGg6IDIwZW07XG4gIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDVlbSk7XG59XG5cbi5zdWNjZXNzIHtcbiAgY29sb3I6ICM0M2EwNDc7XG59XG5cbi5mYWlsdXJlIHtcbiAgY29sb3I6ICNlNTM5MzU7XG59Il19 */"]
     });
@@ -42987,16 +43077,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super68 = _createSuper(VisitorFormComponent);
 
       function VisitorFormComponent(_service) {
-        var _this216;
+        var _this217;
 
         _classCallCheck(this, VisitorFormComponent);
 
-        _this216 = _super68.call(this);
-        _this216._service = _service;
+        _this217 = _super68.call(this);
+        _this217._service = _service;
         /** Emitter for changes to the person */
 
-        _this216.personChange = new core_1.EventEmitter();
-        return _this216;
+        _this217.personChange = new core_1.EventEmitter();
+        return _this217;
       }
 
       _createClass(VisitorFormComponent, [{
@@ -43275,20 +43365,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super69 = _createSuper(VisitorsFormModalComponent);
 
       function VisitorsFormModalComponent(_service, _bookings, _dialog_ref, _dialog, _data) {
-        var _this217;
+        var _this218;
 
         _classCallCheck(this, VisitorsFormModalComponent);
 
-        _this217 = _super69.call(this);
-        _this217._service = _service;
-        _this217._bookings = _bookings;
-        _this217._dialog_ref = _dialog_ref;
-        _this217._dialog = _dialog;
-        _this217._data = _data;
+        _this218 = _super69.call(this);
+        _this218._service = _service;
+        _this218._bookings = _bookings;
+        _this218._dialog_ref = _dialog_ref;
+        _this218._dialog = _dialog;
+        _this218._data = _data;
         /** Emitter for user action on the modal */
 
-        _this217.event = new core_1.EventEmitter();
-        return _this217;
+        _this218.event = new core_1.EventEmitter();
+        return _this218;
       }
       /** Visitor booking data */
 
@@ -43310,7 +43400,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this218 = this;
+          var _this219 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -43329,24 +43419,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /* istanbul ignore else */
             if (event.reason === 'done') {
               /* istanbul ignore else */
-              if (_this218.booking.id) {
-                _this218.loading = 'Deleting visitor booking...';
-                _this218._dialog_ref.disableClose = true;
+              if (_this219.booking.id) {
+                _this219.loading = 'Deleting visitor booking...';
+                _this219._dialog_ref.disableClose = true;
 
-                _this218.booking["delete"]().then(function () {
-                  _this218.event.emit({
+                _this219.booking["delete"]().then(function () {
+                  _this219.event.emit({
                     reason: 'done'
                   });
 
-                  _this218._service.notifySuccess('Successfully removed visitors.');
+                  _this219._service.notifySuccess('Successfully removed visitors.');
 
-                  _this218._dialog_ref.close();
+                  _this219._dialog_ref.close();
                 }, function (err) {
-                  _this218.loading = null;
+                  _this219.loading = null;
 
-                  _this218._service.notifyError("Failed to remove visitors. Error: ".concat(err.message || err));
+                  _this219._service.notifyError("Failed to remove visitors. Error: ".concat(err.message || err));
 
-                  _this218._dialog_ref.disableClose = false;
+                  _this219._dialog_ref.disableClose = false;
                 });
               }
             }
@@ -43359,18 +43449,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "save",
         value: function save() {
-          var _this219 = this;
+          var _this220 = this;
 
           this.timeout('save', function () {
-            _this219.loading = 'Saving visitor booking...';
+            _this220.loading = 'Saving visitor booking...';
 
-            _this219.form.markAllAsTouched();
+            _this220.form.markAllAsTouched();
 
-            _this219._dialog_ref.disableClose = true;
+            _this220._dialog_ref.disableClose = true;
             /* istanbul ignore else */
 
-            if (_this219.form.dirty && _this219.form.valid) {
-              var attendees = _this219.form.controls.attendees.value;
+            if (_this220.form.dirty && _this220.form.valid) {
+              var attendees = _this220.form.controls.attendees.value;
 
               var _iterator52 = _createForOfIteratorHelper(attendees),
                   _step52;
@@ -43389,31 +43479,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _iterator52.f();
               }
 
-              var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this219.booking.toJSON()), _this219.form.value));
+              var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this220.booking.toJSON()), _this220.form.value));
 
-              _this219._bookings.save(new_booking).then(function (bkn) {
-                _this219.event.emit({
+              _this220._bookings.save(new_booking).then(function (bkn) {
+                _this220.event.emit({
                   reason: 'done',
                   metadata: bkn
                 });
 
-                _this219._service.notifySuccess(_this219.booking.id ? 'Successfully updated visitors.' : 'Successfully added visitors.');
+                _this220._service.notifySuccess(_this220.booking.id ? 'Successfully updated visitors.' : 'Successfully added visitors.');
 
-                var bookings = _this219._bookings.booking_list.getValue();
+                var bookings = _this220._bookings.booking_list.getValue();
 
                 bookings.splice(bookings.findIndex(function (bkn) {
                   return bkn.icaluid === bkn.icaluid;
                 }), 1, bkn);
 
-                _this219._bookings.booking_list.next(bookings);
+                _this220._bookings.booking_list.next(bookings);
 
-                _this219._dialog_ref.close();
+                _this220._dialog_ref.close();
               }, function (err) {
-                _this219.loading = null;
+                _this220.loading = null;
 
-                _this219._service.notifyError("Failed to ".concat(_this219.booking.id ? 'update' : 'add', " visitors. Error: ").concat(err.message || err));
+                _this220._service.notifyError("Failed to ".concat(_this220.booking.id ? 'update' : 'add', " visitors. Error: ").concat(err.message || err));
 
-                _this219._dialog_ref.disableClose = false;
+                _this220._dialog_ref.disableClose = false;
               });
             }
           });
@@ -43855,7 +43945,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee31() {
-            var _this220 = this;
+            var _this221 = this;
 
             var value;
             return regeneratorRuntime.wrap(function _callee31$(_context31) {
@@ -43879,7 +43969,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       response_type: 'accepted',
                       room_id: this.event.space.id
                     })["catch"](function (err) {
-                      _this220._service.notifyError("Error checking in all attendees for booking. Error: ".concat(err.message || err));
+                      _this221._service.notifyError("Error checking in all attendees for booking. Error: ".concat(err.message || err));
                     });
 
                   case 3:
@@ -44192,23 +44282,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super70 = _createSuper(VisitorTimelineComponent);
 
       function VisitorTimelineComponent(_org, _spaces) {
-        var _this221;
+        var _this222;
 
         _classCallCheck(this, VisitorTimelineComponent);
 
-        _this221 = _super70.call(this);
-        _this221._org = _org;
-        _this221._spaces = _spaces;
+        _this222 = _super70.call(this);
+        _this222._org = _org;
+        _this222._spaces = _spaces;
         /** List of visitor bookings for the current date */
 
-        _this221.bookings = [];
+        _this222.bookings = [];
         /** List of filtered bookings */
 
-        _this221.filtered_bookings = [];
+        _this222.filtered_bookings = [];
         /** Subject holding the value of the search */
 
-        _this221.search$ = new rxjs_1.Subject();
-        return _this221;
+        _this222.search$ = new rxjs_1.Subject();
+        return _this222;
       }
       /** Display string for the selected date */
 
@@ -44216,19 +44306,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(VisitorTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this222 = this;
+          var _this223 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this222.initBookings();
+            _this223.initBookings();
 
-            _this222.subscription('building', _this222._org.listen('active_building').subscribe(function (_) {
-              return _this222.search$.next("".concat(_this222.date, "|").concat(_.id));
+            _this223.subscription('building', _this223._org.listen('active_building').subscribe(function (_) {
+              return _this223.search$.next("".concat(_this223.date, "|").concat(_.id));
             }));
 
-            _this222.interval('update_bookings', function () {
-              return _this222.search$.next("".concat(_this222.date, "|").concat(dayjs().unix()));
+            _this223.interval('update_bookings', function () {
+              return _this223.search$.next("".concat(_this223.date, "|").concat(dayjs().unix()));
             }, 30 * 1000);
           });
         }
@@ -44256,7 +44346,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "filter",
         value: function filter() {
-          var _this223 = this;
+          var _this224 = this;
 
           var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
           var search = str.toLowerCase();
@@ -44265,20 +44355,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return user.name.toLowerCase().indexOf(search) >= 0 || user.email.toLowerCase().indexOf(search) >= 0;
             });
           }).filter(function (bkn) {
-            return _this223.show_all ? true : bkn.has_visitors;
+            return _this224.show_all ? true : bkn.has_visitors;
           });
         }
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this224 = this;
+          var _this225 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this224.loading = true;
-            var date = dayjs(_this224.date).startOf('d');
-            var zone = _this224._org.building.id;
-            return _this224._spaces.query({
+            _this225.loading = true;
+            var date = dayjs(_this225.date).startOf('d');
+            var zone = _this225._org.building.id;
+            return _this225._spaces.query({
               zone_ids: zone,
               available_from: date.unix(),
               available_to: date.endOf('d').unix()
@@ -44287,7 +44377,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return rxjs_1.of([]);
           }), operators_1.map(function (list) {
             var bookings = list.reduce(function (items, space) {
-              return items.concat(space.bookingsFor(_this224.date));
+              return items.concat(space.bookingsFor(_this225.date));
             }, []);
             bookings.sort(function (a, b) {
               return a.date - b.date;
@@ -44296,9 +44386,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this224.loading = false;
-            _this224.bookings = list;
-            _this224.filtered_bookings = _this224.filter(_this224.search);
+            _this225.loading = false;
+            _this225.bookings = list;
+            _this225.filtered_bookings = _this225.filter(_this225.search);
           }));
         }
       }, {
@@ -44596,7 +44686,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee32() {
-            var _this225 = this;
+            var _this226 = this;
 
             var value;
             return regeneratorRuntime.wrap(function _callee32$(_context32) {
@@ -44618,7 +44708,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       response_type: 'accepted',
                       room_id: this.event.space.id
                     })["catch"](function (err) {
-                      _this225._service.notifyError("Error checking in user. Error: ".concat(err.message || err));
+                      _this226._service.notifyError("Error checking in user. Error: ".concat(err.message || err));
                     });
 
                   case 3:
@@ -44824,10 +44914,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./overlays/visitors-form-modal/visitors-form-modal.component */
     "./src/app/shell/visitors/overlays/visitors-form-modal/visitors-form-modal.component.ts");
 
-    var dayjs = __webpack_require__(
-    /*! dayjs */
-    "./node_modules/dayjs/dayjs.min.js");
-
     var spaces_service_1 = __webpack_require__(
     /*! src/app/services/data/spaces/spaces.service */
     "./src/app/services/data/spaces/spaces.service.ts");
@@ -44836,59 +44922,71 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
+    var app_service_1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
+    var i2 = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
-    var i2 = __webpack_require__(
+    var i3 = __webpack_require__(
     /*! src/app/services/data/spaces/spaces.service */
     "./src/app/services/data/spaces/spaces.service.ts");
 
-    var i3 = __webpack_require__(
+    var i4 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
-    var i4 = __webpack_require__(
+    var i5 = __webpack_require__(
     /*! ../../shared/components/sidebar/sidebar.component */
     "./src/app/shared/components/sidebar/sidebar.component.ts");
 
-    var i5 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! ../../shared/components/topbar-header/topbar-header.component */
     "./src/app/shared/components/topbar-header/topbar-header.component.ts");
 
-    var i6 = __webpack_require__(
+    var i7 = __webpack_require__(
     /*! @angular/material/form-field */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
-    var i7 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! ../../shared/components/icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
 
-    var i8 = __webpack_require__(
+    var i9 = __webpack_require__(
     /*! @angular/material/input */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 
-    var i9 = __webpack_require__(
+    var i10 = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
-    var i10 = __webpack_require__(
+    var i11 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i11 = __webpack_require__(
+    var i12 = __webpack_require__(
     /*! @angular/material/slide-toggle */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slide-toggle.js");
 
-    var i12 = __webpack_require__(
+    var i13 = __webpack_require__(
     /*! ./timeline/timeline.component */
     "./src/app/shell/visitors/timeline/timeline.component.ts");
 
-    var i13 = __webpack_require__(
+    var i14 = __webpack_require__(
     /*! @angular/material/button */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 
@@ -44929,9 +45027,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var VisitorsComponent =
     /*#__PURE__*/
     function () {
-      function VisitorsComponent(_dialog, _spaces, _org) {
+      function VisitorsComponent(_service, _dialog, _spaces, _org) {
         _classCallCheck(this, VisitorsComponent);
 
+        this._service = _service;
         this._dialog = _dialog;
         this._spaces = _spaces;
         this._org = _org;
@@ -44939,7 +45038,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       _createClass(VisitorsComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this._service.title = 'Visitors';
+        }
       }, {
         key: "newVisitorMeeting",
         value: function newVisitorMeeting() {
@@ -44975,7 +45076,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.VisitorsComponent = VisitorsComponent;
 
     VisitorsComponent.ɵfac = function VisitorsComponent_Factory(t) {
-      return new (t || VisitorsComponent)(i0.ɵɵdirectiveInject(i1.MatDialog), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.OrganisationService));
+      return new (t || VisitorsComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.MatDialog), i0.ɵɵdirectiveInject(i3.SpacesService), i0.ɵɵdirectiveInject(i4.OrganisationService));
     };
 
     VisitorsComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -45039,7 +45140,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("show_all", ctx.show_all)("date", ctx.date)("search", ctx.search_str);
         }
       },
-      directives: [i4.SidebarComponent, i5.TopbarHeaderComponent, i6.MatFormField, i7.IconComponent, i6.MatPrefix, i8.MatInput, i9.DefaultValueAccessor, i9.NgControlStatus, i9.NgModel, i10.NgIf, i11.MatSlideToggle, i12.VisitorTimelineComponent, i13.MatButton, i6.MatSuffix],
+      directives: [i5.SidebarComponent, i6.TopbarHeaderComponent, i7.MatFormField, i8.IconComponent, i7.MatPrefix, i9.MatInput, i10.DefaultValueAccessor, i10.NgControlStatus, i10.NgModel, i11.NgIf, i12.MatSlideToggle, i13.VisitorTimelineComponent, i14.MatButton, i7.MatSuffix],
       styles: ["[_nghost-%COMP%], .visitors[_ngcontent-%COMP%], main[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 100%;\n}\n.visitors[_ngcontent-%COMP%] {\n  display: flex;\n  max-height: 100vh;\n}\n.input-wrapper[_ngcontent-%COMP%] {\n  height: 3.5em;\n  padding: 0 0.5em;\n}\n.input-wrapper[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  font-size: 1.25em;\n}\nmain[_ngcontent-%COMP%] {\n  height: calc(100% - 3.5em);\n}\n.group[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 12em;\n}\n.topbar[_ngcontent-%COMP%] {\n  padding: 0.1em 0 0.1em 0.5em;\n  height: 3.5em;\n}\n.topbar[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 0.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hlbGwvdmlzaXRvcnMvdmlzaXRvcnMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3Zpc2l0b3JzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzswQkFBQTtBQWdDQTs7Y0FBQTtBQWFBOztzQkFBQTtBQTdDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMvQkE7O3NCQUFBO0FDWkE7OztFQUdJLFlBQUE7RUFDQSxXQUFBO0FDbUJKO0FEaEJBO0VBQ0ksYUFBQTtFQUNBLGlCQUFBO0FDbUJKO0FEaEJBO0VBQ0ksYUFBQTtFQUNBLGdCQUFBO0FDbUJKO0FEakJJO0VBQ0ksaUJBQUE7QUNtQlI7QURmQTtFQUNJLDBCQUFBO0FDa0JKO0FEZkE7RUFDSSxPQUFBO0VBQ0EsZUFBQTtBQ2tCSjtBRGZBO0VBQ0ksNEJBQUE7RUFDQSxhQUFBO0FDa0JKO0FEaEJJO0VBQ0ksbUJBQUE7QUNrQlIiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC92aXNpdG9ycy92aXNpdG9ycy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuQG1peGluIHJlc3BvbmQtdG8oJG1lZGlhKSB7XG4gICAgQGlmICRtZWRpYSA9PSBtb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG5vdC1tb2JpbGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiQGltcG9ydCAndmFyaWFibGVzJztcbkBpbXBvcnQgJ21peGlucyc7XG5cbjpob3N0LFxuLnZpc2l0b3JzLFxubWFpbiB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG4udmlzaXRvcnMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgbWF4LWhlaWdodDogMTAwdmg7XG59XG5cbi5pbnB1dC13cmFwcGVyIHtcbiAgICBoZWlnaHQ6IDMuNWVtO1xuICAgIHBhZGRpbmc6IDAgLjVlbTtcblxuICAgIGFwcC1pY29uIHtcbiAgICAgICAgZm9udC1zaXplOiAxLjI1ZW07XG4gICAgfVxufVxuXG5tYWluIHtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMuNWVtKTtcbn1cblxuLmdyb3VwIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogMTJlbTtcbn1cblxuLnRvcGJhciB7XG4gICAgcGFkZGluZzogLjFlbSAwIC4xZW0gLjVlbTtcbiAgICBoZWlnaHQ6IDMuNWVtO1xuXG4gICAgbWF0LWZvcm0tZmllbGQge1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IC41ZW07XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG46aG9zdCxcbi52aXNpdG9ycyxcbm1haW4ge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4udmlzaXRvcnMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBtYXgtaGVpZ2h0OiAxMDB2aDtcbn1cblxuLmlucHV0LXdyYXBwZXIge1xuICBoZWlnaHQ6IDMuNWVtO1xuICBwYWRkaW5nOiAwIDAuNWVtO1xufVxuLmlucHV0LXdyYXBwZXIgYXBwLWljb24ge1xuICBmb250LXNpemU6IDEuMjVlbTtcbn1cblxubWFpbiB7XG4gIGhlaWdodDogY2FsYygxMDAlIC0gMy41ZW0pO1xufVxuXG4uZ3JvdXAge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDEyZW07XG59XG5cbi50b3BiYXIge1xuICBwYWRkaW5nOiAwLjFlbSAwIDAuMWVtIDAuNWVtO1xuICBoZWlnaHQ6IDMuNWVtO1xufVxuLnRvcGJhciBtYXQtZm9ybS1maWVsZCB7XG4gIG1hcmdpbi1yaWdodDogMC41ZW07XG59Il19 */"]
     });
     /*@__PURE__*/
@@ -45054,11 +45155,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [{
-          type: i1.MatDialog
+          type: i1.ApplicationService
         }, {
-          type: i2.SpacesService
+          type: i2.MatDialog
         }, {
-          type: i3.OrganisationService
+          type: i3.SpacesService
+        }, {
+          type: i4.OrganisationService
         }];
       }, null);
     })();
@@ -45310,11 +45413,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateBookings",
         value: function updateBookings() {
-          var _this226 = this;
+          var _this227 = this;
 
           var bookings = [];
           this.spaces.forEach(function (space) {
-            bookings = bookings.concat(space.bookingsFor(_this226.date));
+            bookings = bookings.concat(space.bookingsFor(_this227.date));
           });
           bookings.sort(function (a, b) {
             return a.date - b.date;
@@ -45739,35 +45842,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super71 = _createSuper(WeekViewTimelineComponent);
 
       function WeekViewTimelineComponent(_spaces, _org) {
-        var _this227;
+        var _this228;
 
         _classCallCheck(this, WeekViewTimelineComponent);
 
-        _this227 = _super71.call(this);
-        _this227._spaces = _spaces;
-        _this227._org = _org;
+        _this228 = _super71.call(this);
+        _this228._spaces = _spaces;
+        _this228._org = _org;
         /** List of dates to display */
 
-        _this227.date_list = [];
+        _this228.date_list = [];
         /** List of spaces to display bookings for */
 
-        _this227.space_list = [];
+        _this228.space_list = [];
         /** Subject holding the value of the search */
 
-        _this227.search$ = new rxjs_1.Subject();
-        return _this227;
+        _this228.search$ = new rxjs_1.Subject();
+        return _this228;
       }
 
       _createClass(WeekViewTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this228 = this;
+          var _this229 = this;
 
           this.date_list = this.generateDates(this.date, this.weekends);
           this.initBookings();
           this.search$.next("".concat(this.date, "|").concat(this.weekends, "|").concat(this.level));
           this.interval('update_booking', function () {
-            return _this228.search$.next("".concat(_this228.date, "|").concat(_this228.weekends, "|").concat(_this228.level, "|").concat(dayjs().unix()));
+            return _this229.search$.next("".concat(_this229.date, "|").concat(_this229.weekends, "|").concat(_this229.level, "|").concat(dayjs().unix()));
           }, 30 * 1000);
         }
       }, {
@@ -45807,24 +45910,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this229 = this;
+          var _this230 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this229.loading = true;
-            var date = dayjs(_this229.date).startOf('w');
-            return _this229._spaces.query({
-              zone_ids: "".concat(_this229.level ? _this229.level : _this229._org.building.id).concat(_this229.space_type ? ',' + _this229.space_type : ''),
-              available_from: Math.floor(_this229.date_list[0] / 1000) || date.unix(),
-              available_to: Math.floor(_this229.date_list[_this229.date_list.length - 1] / 1000) || date.endOf('w').unix()
+            _this230.loading = true;
+            var date = dayjs(_this230.date).startOf('w');
+            return _this230._spaces.query({
+              zone_ids: "".concat(_this230.level ? _this230.level : _this230._org.building.id).concat(_this230.space_type ? ',' + _this230.space_type : ''),
+              available_from: Math.floor(_this230.date_list[0] / 1000) || date.unix(),
+              available_to: Math.floor(_this230.date_list[_this230.date_list.length - 1] / 1000) || date.endOf('w').unix()
             });
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this229.loading = false;
-            _this229.space_list = list;
+            _this230.loading = false;
+            _this230.space_list = list;
           }));
         }
       }]);
@@ -45952,55 +46055,63 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
+    var app_service_1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var i1 = __webpack_require__(
+    /*! src/app/services/app.service */
+    "./src/app/services/app.service.ts");
+
+    var i2 = __webpack_require__(
     /*! src/app/services/data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
 
-    var i2 = __webpack_require__(
+    var i3 = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 
-    var i3 = __webpack_require__(
+    var i4 = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
-    var i4 = __webpack_require__(
+    var i5 = __webpack_require__(
     /*! ../../shared/components/sidebar/sidebar.component */
     "./src/app/shared/components/sidebar/sidebar.component.ts");
 
-    var i5 = __webpack_require__(
+    var i6 = __webpack_require__(
     /*! ../../shared/components/topbar-header/topbar-header.component */
     "./src/app/shared/components/topbar-header/topbar-header.component.ts");
 
-    var i6 = __webpack_require__(
+    var i7 = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var i7 = __webpack_require__(
+    var i8 = __webpack_require__(
     /*! @angular/material/slide-toggle */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slide-toggle.js");
 
-    var i8 = __webpack_require__(
+    var i9 = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
-    var i9 = __webpack_require__(
+    var i10 = __webpack_require__(
     /*! ./timeline/timeline.component */
     "./src/app/shell/week-view/timeline/timeline.component.ts");
 
-    var i10 = __webpack_require__(
+    var i11 = __webpack_require__(
     /*! @angular/material/form-field */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 
-    var i11 = __webpack_require__(
+    var i12 = __webpack_require__(
     /*! @angular/material/select */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
 
-    var i12 = __webpack_require__(
+    var i13 = __webpack_require__(
     /*! @angular/material/core */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
@@ -46095,88 +46206,91 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super72 = _createSuper(WeekViewComponent);
 
-      function WeekViewComponent(_org, _dialog, _router, _route) {
-        var _this230;
+      function WeekViewComponent(_service, _org, _dialog, _router, _route) {
+        var _this231;
 
         _classCallCheck(this, WeekViewComponent);
 
-        _this230 = _super72.call(this);
-        _this230._org = _org;
-        _this230._dialog = _dialog;
-        _this230._router = _router;
-        _this230._route = _route;
+        _this231 = _super72.call(this);
+        _this231._service = _service;
+        _this231._org = _org;
+        _this231._dialog = _dialog;
+        _this231._router = _router;
+        _this231._route = _route;
         /** ID of the currently selected level */
 
-        _this230.active_level = '';
+        _this231.active_level = '';
         /** ID of the currently selected level */
 
-        _this230.active_type = '';
+        _this231.active_type = '';
         /** List of levels available for the active building */
 
-        _this230.levels = [];
+        _this231.levels = [];
         /** List of space types available for the active building */
 
-        _this230.space_types = [];
-        return _this230;
+        _this231.space_types = [];
+        return _this231;
       }
 
       _createClass(WeekViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this231 = this;
+          var _this232 = this;
+
+          this._service.title = 'Week View';
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this231.subscription('route.params', _this231._route.paramMap.subscribe(function (params) {
+            _this232.subscription('route.params', _this232._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this231.active_level !== params.get('level')) {
-                var level = _this231._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this232.active_level !== params.get('level')) {
+                var level = _this232._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this231._org.buildings.find(function (bld) {
+                  var building = _this232._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this231.active_level = level.id;
-                    _this231._org.building = building;
+                    _this232.active_level = level.id;
+                    _this232._org.building = building;
                   }
                 }
               }
             }));
 
-            _this231.subscription('building', _this231._org.listen('active_building').subscribe(function () {
-              var building = _this231._org.building;
+            _this232.subscription('building', _this232._org.listen('active_building').subscribe(function () {
+              var building = _this232._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this231.active_level;
+                return lvl.id === _this232.active_level;
               })) {
-                _this231.active_level = (building.levels[0] || {
+                _this232.active_level = (building.levels[0] || {
                   id: ''
                 }).id;
 
-                _this231.updateLevel();
+                _this232.updateLevel();
               }
 
-              _this231.levels = [{
+              _this232.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
 
-              _this231.levels.sort(function (a, b) {
+              _this232.levels.sort(function (a, b) {
                 return a.name.localeCompare(b.name);
               });
 
-              _this231.space_types = [{
+              _this232.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this231._org.space_types);
+              }].concat(_this232._org.space_types);
             }));
           });
         }
@@ -46200,7 +46314,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.WeekViewComponent = WeekViewComponent;
 
     WeekViewComponent.ɵfac = function WeekViewComponent_Factory(t) {
-      return new (t || WeekViewComponent)(i0.ɵɵdirectiveInject(i1.OrganisationService), i0.ɵɵdirectiveInject(i2.MatDialog), i0.ɵɵdirectiveInject(i3.Router), i0.ɵɵdirectiveInject(i3.ActivatedRoute));
+      return new (t || WeekViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.Router), i0.ɵɵdirectiveInject(i4.ActivatedRoute));
     };
 
     WeekViewComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -46252,7 +46366,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("date", ctx.date)("level", ctx.active_level)("space_type", ctx.active_type)("weekends", ctx.weekend);
         }
       },
-      directives: [i4.SidebarComponent, i5.TopbarHeaderComponent, i6.NgIf, i7.MatSlideToggle, i8.NgControlStatus, i8.NgModel, i9.WeekViewTimelineComponent, i10.MatFormField, i11.MatSelect, i6.NgForOf, i12.MatOption],
+      directives: [i5.SidebarComponent, i6.TopbarHeaderComponent, i7.NgIf, i8.MatSlideToggle, i9.NgControlStatus, i9.NgModel, i10.WeekViewTimelineComponent, i11.MatFormField, i12.MatSelect, i7.NgForOf, i13.MatOption],
       styles: ["[_nghost-%COMP%], .week-view[_ngcontent-%COMP%], main[_ngcontent-%COMP%] {\n  height: 100%;\n  width: 100%;\n}\n.week-view[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n  max-height: 100vh;\n}\nmain[_ngcontent-%COMP%] {\n  height: calc(100% - 3.5em);\n}\n.group[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 12em;\n}\n.topbar[_ngcontent-%COMP%] {\n  padding: 0.1em 0 0.1em 0.5em;\n  height: 3.5em;\n}\n.topbar[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 0.5em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoYXJlZC9zdHlsZXMvbWl4aW5zLnNjc3MiLCIvaG9tZS9ydW5uZXIvd29yay9tY2tpbnNleS1jb25jaWVyZ2UtdWkvbWNraW5zZXktY29uY2llcmdlLXVpL3NyYy9hcHAvc2hlbGwvd2Vlay12aWV3L3dlZWstdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hlbGwvd2Vlay12aWV3L3dlZWstdmlldy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUE3Q0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FDL0JBOztzQkFBQTtBQ1pBOzs7RUFHSSxZQUFBO0VBQ0EsV0FBQTtBQ21CSjtBRGhCQTtFQUNJLGFBQUE7RUFDQSxZQUFBO0VBQ0EsaUJBQUE7QUNtQko7QURoQkE7RUFDSSwwQkFBQTtBQ21CSjtBRGhCQTtFQUNJLE9BQUE7RUFDQSxlQUFBO0FDbUJKO0FEaEJBO0VBQ0ksNEJBQUE7RUFDQSxhQUFBO0FDbUJKO0FEakJJO0VBQ0ksbUJBQUE7QUNtQlIiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC93ZWVrLXZpZXcvd2Vlay12aWV3LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbkBtaXhpbiBoaWRlLXRleHQtb3ZlcmZsb3cge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbn1cblxuQG1peGluIGJveC1zaGFkb3coJGNvbG9yOiAjMDAwLCAkZGVwdGg6IDEpIHtcbiAgICBib3gtc2hhZG93OiAwIDFweCAzcHggMXB4ICogKCRkZXB0aCAtIDEpIHJnYmEoIzAwMCwgLjIpLFxuICAgICAgICAgICAgICAgIDAgMXB4IDFweCAwIHJnYmEoIzAwMCwgLjE0KSxcbiAgICAgICAgICAgICAgICAwIDJweCAxcHggLTFweCByZ2JhKCMwMDAsIC4xMik7XG59XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgKCRtZWRpYSA9PSB0YWJsZXQtbW9iaWxlIG9yICRtZWRpYSA9PSBub3QtZGVza3RvcCkge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3AtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJAaW1wb3J0ICd2YXJpYWJsZXMnO1xuQGltcG9ydCAnbWl4aW5zJztcblxuOmhvc3QsXG4ud2Vlay12aWV3LFxubWFpbiB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG4ud2Vlay12aWV3IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBtYXgtaGVpZ2h0OiAxMDB2aDtcbn1cblxubWFpbiB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMCUgLSAzLjVlbSk7XG59XG5cbi5ncm91cCB7XG4gICAgZmxleDogMTtcbiAgICBtaW4td2lkdGg6IDEyZW07XG59XG5cbi50b3BiYXIge1xuICAgIHBhZGRpbmc6IC4xZW0gMCAuMWVtIC41ZW07XG4gICAgaGVpZ2h0OiAzLjVlbTtcblxuICAgIG1hdC1mb3JtLWZpZWxkIHtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAuNWVtO1xuICAgIH1cbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuOmhvc3QsXG4ud2Vlay12aWV3LFxubWFpbiB7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi53ZWVrLXZpZXcge1xuICBkaXNwbGF5OiBmbGV4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIG1heC1oZWlnaHQ6IDEwMHZoO1xufVxuXG5tYWluIHtcbiAgaGVpZ2h0OiBjYWxjKDEwMCUgLSAzLjVlbSk7XG59XG5cbi5ncm91cCB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogMTJlbTtcbn1cblxuLnRvcGJhciB7XG4gIHBhZGRpbmc6IDAuMWVtIDAgMC4xZW0gMC41ZW07XG4gIGhlaWdodDogMy41ZW07XG59XG4udG9wYmFyIG1hdC1mb3JtLWZpZWxkIHtcbiAgbWFyZ2luLXJpZ2h0OiAwLjVlbTtcbn0iXX0= */"]
     });
     /*@__PURE__*/
@@ -46267,13 +46381,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [{
-          type: i1.OrganisationService
+          type: i1.ApplicationService
         }, {
-          type: i2.MatDialog
+          type: i2.OrganisationService
         }, {
-          type: i3.Router
+          type: i3.MatDialog
         }, {
-          type: i3.ActivatedRoute
+          type: i4.Router
+        }, {
+          type: i4.ActivatedRoute
         }];
       }, null);
     })();
