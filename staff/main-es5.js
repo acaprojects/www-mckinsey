@@ -4813,13 +4813,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super6 = _createSuper(RecurrenceModalComponent);
 
-      function RecurrenceModalComponent(_data) {
+      function RecurrenceModalComponent(_data, _dialog_ref) {
         var _this18;
 
         _classCallCheck(this, RecurrenceModalComponent);
 
         _this18 = _super6.call(this);
         _this18._data = _data;
+        _this18._dialog_ref = _dialog_ref;
         /** Emitter for user action on the modal */
 
         _this18.event = new core_1.EventEmitter();
@@ -4847,6 +4848,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(RecurrenceModalComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
+          this._dialog_ref.disableClose = true;
           var end_date = dayjs(this._data.details.end * 1000 || this._data.date).endOf('d').startOf('m');
           this.form = new forms_1.FormGroup({
             period: new forms_1.FormControl(this._data.details.period || 'none'),
@@ -4882,7 +4884,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.RecurrenceModalComponent = RecurrenceModalComponent;
 
     RecurrenceModalComponent.ɵfac = function RecurrenceModalComponent_Factory(t) {
-      return new (t || RecurrenceModalComponent)(i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA));
+      return new (t || RecurrenceModalComponent)(i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA), i0.ɵɵdirectiveInject(i1.MatDialogRef));
     };
 
     RecurrenceModalComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -4943,6 +4945,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             type: core_1.Inject,
             args: [dialog_1.MAT_DIALOG_DATA]
           }]
+        }, {
+          type: i1.MatDialogRef
         }];
       }, {
         event: [{
@@ -8013,7 +8017,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               host: data.organiser
             }) : (_this43.approval_status[space.email] || '').indexOf('tentative') < 0;
           });
-          console.log('Space List:', data.space_list, data.auto_approve);
+          data.catering = data.catering.filter(function (order) {
+            return !!_this43.space_list.find(function (space) {
+              return space.email === order.location;
+            });
+          });
 
           if (data.body && !data.notes.find(function (note) {
             return note.message === data.body;
@@ -30487,6 +30495,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
           if (this.form.valid) {
             var value = this.form.value;
+            console.log('Form:', value);
 
             var dialog_ref = this._dialog.open(booking_confirm_component_1.BookingConfirmComponent, {
               width: '32em',
@@ -30495,6 +30504,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               data: {
                 old_booking: this.booking,
                 booking: new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), value), {
+                  booking_type: value.type,
                   room_ids: value.space_list.map(function (space) {
                     return space.id;
                   }),
@@ -38303,16 +38313,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "c14fc7a",
-      "hash": "c14fc7a",
+      "raw": "b1c04a4",
+      "hash": "b1c04a4",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "c14fc7a",
+      "suffix": "b1c04a4",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594191119131
+      "time": 1594258297857
     };
     /* tslint:enable */
 

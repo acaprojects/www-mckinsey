@@ -2196,9 +2196,10 @@ exports.RECURRENCE_METADATA = {
     maxWidth: 'calc(100vw - 2em)',
 };
 class RecurrenceModalComponent extends base_directive_1.BaseDirective {
-    constructor(_data) {
+    constructor(_data, _dialog_ref) {
         super();
         this._data = _data;
+        this._dialog_ref = _dialog_ref;
         /** Emitter for user action on the modal */
         this.event = new core_1.EventEmitter();
         /** Available recurrence periods */
@@ -2211,7 +2212,10 @@ class RecurrenceModalComponent extends base_directive_1.BaseDirective {
         ];
     }
     ngOnInit() {
-        const end_date = dayjs((this._data.details.end * 1000) || this._data.date).endOf('d').startOf('m');
+        this._dialog_ref.disableClose = true;
+        const end_date = dayjs(this._data.details.end * 1000 || this._data.date)
+            .endOf('d')
+            .startOf('m');
         this.form = new forms_1.FormGroup({
             period: new forms_1.FormControl(this._data.details.period || 'none'),
             end: new forms_1.FormControl(end_date.valueOf(), [forms_1.Validators.required]),
@@ -2234,7 +2238,7 @@ class RecurrenceModalComponent extends base_directive_1.BaseDirective {
     }
 }
 exports.RecurrenceModalComponent = RecurrenceModalComponent;
-RecurrenceModalComponent.ɵfac = function RecurrenceModalComponent_Factory(t) { return new (t || RecurrenceModalComponent)(i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
+RecurrenceModalComponent.ɵfac = function RecurrenceModalComponent_Factory(t) { return new (t || RecurrenceModalComponent)(i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA), i0.ɵɵdirectiveInject(i1.MatDialogRef)); };
 RecurrenceModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: RecurrenceModalComponent, selectors: [["recurrence-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 10, vars: 5, consts: [["mat-dialog-title", "", 1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], [3, "formGroup", 4, "ngIf"], [3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "field"], ["for", "period"], ["appearance", "outline"], ["name", "period", "formControlName", "period", "placeholder", "None"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["for", "end"], ["name", "end", "formControlName", "end"], ["class", "error-message", 4, "ngIf"], [1, "error-message"], ["mat-button", "", 3, "click"], [1, "body"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function RecurrenceModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
@@ -2268,7 +2272,7 @@ RecurrenceModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: RecurrenceModalC
     }], function () { return [{ type: undefined, decorators: [{
                 type: core_1.Inject,
                 args: [dialog_1.MAT_DIALOG_DATA]
-            }] }]; }, { event: [{
+            }] }, { type: i1.MatDialogRef }]; }, { event: [{
             type: core_1.Output
         }] }); })();
 
@@ -4150,7 +4154,7 @@ class Booking extends base_api_class_1.BaseDataClass {
                         }))
                 : (this.approval_status[space.email] || '').indexOf('tentative') < 0;
         });
-        console.log('Space List:', data.space_list, data.auto_approve);
+        data.catering = data.catering.filter(order => !!this.space_list.find(space => space.email === order.location));
         if (data.body && !data.notes.find((note) => note.message === data.body)) {
             data.notes = data.notes.filter((note) => note.type !== 'description');
             data.notes.push({
@@ -17118,13 +17122,14 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
         /* istanbul ignore else */
         if (this.form.valid) {
             const value = this.form.value;
+            console.log('Form:', value);
             const dialog_ref = this._dialog.open(booking_confirm_component_1.BookingConfirmComponent, {
                 width: '32em',
                 maxWidth: '95vw',
                 maxHeight: '95vh',
                 data: {
                     old_booking: this.booking,
-                    booking: new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), value), { room_ids: value.space_list.map((space) => space.id), id: this.booking.id === 'ad-hoc' ? '' : this.booking.id })),
+                    booking: new booking_class_1.Booking(Object.assign(Object.assign(Object.assign({}, this.booking), value), { booking_type: value.type, room_ids: value.space_list.map((space) => space.id), id: this.booking.id === 'ad-hoc' ? '' : this.booking.id })),
                 },
             });
             dialog_ref.componentInstance.event.subscribe((event) => {
@@ -21452,16 +21457,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "c14fc7a",
-    "hash": "c14fc7a",
+    "raw": "b1c04a4",
+    "hash": "b1c04a4",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "c14fc7a",
+    "suffix": "b1c04a4",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594191119131
+    "time": 1594258297857
 };
 /* tslint:enable */
 
