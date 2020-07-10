@@ -13957,7 +13957,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var option = _step20.value;
               blocks.push({
                 id: option,
-                name: date ? "".concat(date.add(option, 'm').format('h:mm A'), " (").concat(general_utilities_1.humaniseDuration(option), ")") : "".concat(general_utilities_1.humaniseDuration(option))
+                name: date ? "".concat(date.add(option, 'm').format(general_utilities_1.timeFormatString()), " (").concat(general_utilities_1.humaniseDuration(option), ")") : "".concat(general_utilities_1.humaniseDuration(option))
               });
             }
           } catch (err) {
@@ -13969,7 +13969,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           while (time <= max) {
             blocks.push({
               id: time,
-              name: date ? "".concat(date.add(time, 'm').format('h:mm A'), " (").concat(general_utilities_1.humaniseDuration(time), ")") : "".concat(general_utilities_1.humaniseDuration(time))
+              name: date ? "".concat(date.add(time, 'm').format(general_utilities_1.timeFormatString()), " (").concat(general_utilities_1.humaniseDuration(time), ")") : "".concat(general_utilities_1.humaniseDuration(time))
             });
             time += step;
           }
@@ -38369,16 +38369,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "d6fbc43",
-      "hash": "d6fbc43",
+      "raw": "b58fe48",
+      "hash": "b58fe48",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "d6fbc43",
+      "suffix": "b58fe48",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594360177680
+      "time": 1594363690466
     };
     /* tslint:enable */
 

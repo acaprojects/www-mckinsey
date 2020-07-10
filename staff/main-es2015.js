@@ -7276,7 +7276,7 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
             blocks.push({
                 id: option,
                 name: date
-                    ? `${date.add(option, 'm').format('h:mm A')} (${general_utilities_1.humaniseDuration(option)})`
+                    ? `${date.add(option, 'm').format(general_utilities_1.timeFormatString())} (${general_utilities_1.humaniseDuration(option)})`
                     : `${general_utilities_1.humaniseDuration(option)}`,
             });
         }
@@ -7284,7 +7284,7 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
             blocks.push({
                 id: time,
                 name: date
-                    ? `${date.add(time, 'm').format('h:mm A')} (${general_utilities_1.humaniseDuration(time)})`
+                    ? `${date.add(time, 'm').format(general_utilities_1.timeFormatString())} (${general_utilities_1.humaniseDuration(time)})`
                     : `${general_utilities_1.humaniseDuration(time)}`,
             });
             time += step;
@@ -21505,16 +21505,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d6fbc43",
-    "hash": "d6fbc43",
+    "raw": "b58fe48",
+    "hash": "b58fe48",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d6fbc43",
+    "suffix": "b58fe48",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594360177680
+    "time": 1594363690466
 };
 /* tslint:enable */
 
