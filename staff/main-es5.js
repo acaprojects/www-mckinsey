@@ -29640,6 +29640,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return space.id === _this144.space.id;
           });
         }
+      }, {
+        key: "is_hidden",
+        get: function get() {
+          /* istanbul ignore else */
+          if (!this.form) {
+            return false;
+          }
+
+          return this.space.rulesFor({
+            date: this.form.controls.date.value,
+            duration: this.form.controls.duration.value,
+            host: this.form.controls.organiser.value || this._users.current
+          }).hide;
+        }
         /** Whether space is booked by request */
 
       }, {
@@ -29714,7 +29728,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         if (rf & 2) {
-          i0.ɵɵproperty("ngIf", ctx.space);
+          i0.ɵɵproperty("ngIf", ctx.space && !ctx.is_hidden);
         }
       },
       directives: [i5.NgIf, i6.IconComponent, i7.MatButton],
@@ -38349,16 +38363,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "af1bbf3",
-      "hash": "af1bbf3",
+      "raw": "b6ced0e",
+      "hash": "b6ced0e",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "af1bbf3",
+      "suffix": "b6ced0e",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594340212743
+      "time": 1594347379571
     };
     /* tslint:enable */
 
