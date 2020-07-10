@@ -18792,6 +18792,7 @@ const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angul
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const ngx_uploads_1 = __webpack_require__(/*! @acaprojects/ngx-uploads */ "./node_modules/@acaprojects/ngx-uploads/__ivy_ngcc__/fesm2015/acaprojects-ngx-uploads.js");
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
+const catering_category_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const blobUtil = __webpack_require__(/*! blob-util */ "./node_modules/blob-util/dist/blob-util.es.js");
 const catering_categories_service_1 = __webpack_require__(/*! src/app/services/data/catering/catering-categories.service */ "./src/app/services/data/catering/catering-categories.service.ts");
@@ -19080,7 +19081,9 @@ class CateringGroupModalComponent extends base_directive_1.BaseDirective {
         this.form.markAllAsTouched();
         /* istanbul ignore else */
         if (this.form.valid) {
-            const data = Object.assign(Object.assign(Object.assign({}, this.category.toJSON()), this.form.value), { parent_categories: [this.parent.id] });
+            const data = Object.assign(Object.assign(Object.assign({}, (this.category instanceof catering_category_class_1.CateringCategory
+                ? this.category.toJSON()
+                : this.category)), this.form.value), { parent_categories: [this.parent.id] });
             const request = this.category.id
                 ? this._menu_categories.update(this.category.id, data)
                 : this._menu_categories.add(data);
@@ -19400,7 +19403,7 @@ class CateringItemModalComponent extends base_directive_1.BaseDirective {
             order_anytime: new forms_1.FormControl(this.item.order_anytime),
             out_of_stock: new forms_1.FormControl(this.item.out_of_stock),
             allergy: new forms_1.FormControl(this.item.allergy),
-            parent_categories: new forms_1.FormControl([this._data.parent.id])
+            parent_categories: new forms_1.FormControl([this._data.parent.id]),
         });
     }
     delete() {
@@ -19428,7 +19431,7 @@ class CateringItemModalComponent extends base_directive_1.BaseDirective {
         this.form.markAllAsTouched();
         /* istanbul ignore else */
         if (this.form.valid) {
-            const data = new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, this.item.toJSON()), this.form.value)).toJSON();
+            const data = new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, (this.item instanceof catering_item_class_1.CateringItem ? this.item.toJSON() : this.item)), this.form.value)).toJSON();
             const request = this.item.id
                 ? this._menu_items.update(this.item.id, data)
                 : this._menu_items.add(data);

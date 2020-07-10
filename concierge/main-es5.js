@@ -34110,6 +34110,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/app.service */
     "./src/app/services/app.service.ts");
 
+    var catering_category_class_1 = __webpack_require__(
+    /*! src/app/services/data/catering/catering-category.class */
+    "./src/app/services/data/catering/catering-category.class.ts");
+
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
     "./src/app/shared/base.directive.ts");
@@ -34565,7 +34569,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
 
           if (this.form.valid) {
-            var data = Object.assign(Object.assign(Object.assign({}, this.category.toJSON()), this.form.value), {
+            var data = Object.assign(Object.assign(Object.assign({}, this.category instanceof catering_category_class_1.CateringCategory ? this.category.toJSON() : this.category), this.form.value), {
               parent_categories: [this.parent.id]
             });
             var request = this.category.id ? this._menu_categories.update(this.category.id, data) : this._menu_categories.add(data);
@@ -35174,7 +35178,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
 
           if (this.form.valid) {
-            var data = new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, this.item.toJSON()), this.form.value)).toJSON();
+            var data = new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, this.item instanceof catering_item_class_1.CateringItem ? this.item.toJSON() : this.item), this.form.value)).toJSON();
             var request = this.item.id ? this._menu_items.update(this.item.id, data) : this._menu_items.add(data);
             request.then(function (item) {
               _this170.event.emit({
