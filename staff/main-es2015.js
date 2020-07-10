@@ -1504,8 +1504,9 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     /** Whether user is able to edit the booking */
     get can_edit() {
         const user = this._users.current;
-        return (this.booking.organiser.email === user.email ||
-            user.delegates.includes(this.booking.organiser.email));
+        return (this._data.as_delegate &&
+            (this.booking.organiser.email === user.email ||
+                user.delegates.includes(this.booking.organiser.email)));
     }
     /** Whether booking is in progress */
     get in_progress() {
@@ -13149,6 +13150,9 @@ class BookingCateringConfirmModalComponent extends base_directive_1.BaseDirectiv
     /** Delivery time for the order */
     get delivery_time() {
         let date = dayjs(this._data.date);
+        if (this._data.all_day) {
+            date = date.startOf('d');
+        }
         if (this._data.form && this._data.form.controls.delivery_time) {
             date = date.add(this._data.form.controls.delivery_time.value, 'm');
         }
@@ -13433,7 +13437,7 @@ class CateringDetailsModalComponent {
     }
     /** List of selected spaces */
     get space_list() {
-        return this._data.spaces || [];
+        return (this._data.spaces || []).filter((space) => this._data.catering.value.find((order) => order.location_id === space.email));
     }
     get active_form() {
         return this.form[this.space_list[this.active_space].email];
@@ -13468,7 +13472,9 @@ class CateringDetailsModalComponent {
                 date: dayjs().valueOf(),
             }));
             this._data.notes_field.setValue(notes.concat(new_notes).filter((note) => note.message));
-            const orders = this._data.catering.value.map((order) => new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order), { charge_code: this.form[order.location_id] ? this.form[order.location_id].controls.code.value : '' })));
+            const orders = this._data.catering.value.map((order) => new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order), { charge_code: this.form[order.location_id]
+                    ? this.form[order.location_id].controls.code.value
+                    : '' })));
             this._data.catering.setValue(orders);
             this.event.emit({ reason: 'done' });
         }
@@ -15345,6 +15351,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         const ref = this._dialog.open(catering_confirm_modal_component_1.BookingCateringConfirmModalComponent, {
             maxWidth: '95vw',
             data: {
+                all_day: this.all_day,
                 date: this.date,
                 form: this.form,
             },
@@ -21479,16 +21486,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "cd313da",
-    "hash": "cd313da",
+    "raw": "af1bbf3",
+    "hash": "af1bbf3",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "cd313da",
+    "suffix": "af1bbf3",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594279214862
+    "time": 1594340212743
 };
 /* tslint:enable */
 
