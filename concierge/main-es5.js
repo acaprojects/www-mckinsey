@@ -31879,11 +31879,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(3);
           i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(8, _c3));
           i0.ɵɵadvance(2);
-          i0.ɵɵtextInterpolate1("Edit ", ctx.item.items ? ctx.item["package"] ? "Package" : "Sub-category" : "item", "");
+          i0.ɵɵtextInterpolate1("Edit ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "item", "");
           i0.ɵɵadvance(3);
           i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(9, _c4));
           i0.ɵɵadvance(2);
-          i0.ɵɵtextInterpolate1("Delete ", ctx.item.items ? ctx.item["package"] ? "Package" : "Sub-category" : "item", "");
+          i0.ɵɵtextInterpolate1("Delete ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "item", "");
         }
       },
       directives: [i6.NgIf, i6.NgForOf, i7._MatMenu, i7.MatMenuItem, i8.IconComponent, i9.MatButton, i7.MatMenuTrigger, CateringMenuItemComponent],
