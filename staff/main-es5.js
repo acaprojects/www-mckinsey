@@ -3865,7 +3865,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "can_edit",
         get: function get() {
           var user = this._users.current;
-          return this._data.as_delegate && (this.booking.organiser.email === user.email || user.delegates.includes(this.booking.organiser.email));
+          return this.booking.organiser.email === user.email || this._data.as_delegate && user.delegates.includes(this.booking.organiser.email);
         }
         /** Whether booking is in progress */
 
@@ -38363,16 +38363,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "b6ced0e",
-      "hash": "b6ced0e",
+      "raw": "3432556",
+      "hash": "3432556",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "b6ced0e",
+      "suffix": "3432556",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594347379571
+      "time": 1594352474700
     };
     /* tslint:enable */
 
