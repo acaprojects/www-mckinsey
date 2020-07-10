@@ -26458,6 +26458,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
+    function hasSelectionRequirements(category) {
+      return category.must_select < category.items.length || category.must_select === category.items.length && category.items.find(function (item) {
+        return item.items && item.must_select < item.items.length;
+      });
+    }
+
     var CateringMenuItemComponent =
     /*#__PURE__*/
     function (_base_directive_1$Bas30) {
@@ -26523,7 +26529,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var amount = this.item.amount;
               this.item.setAmount(value);
 
-              if (this.item["package"] && amount < value && this.item.items && this.item.items.length && this.item.must_select < this.item.items.length) {
+              if (this.item["package"] && amount < value && this.item.items && this.item.items.length && hasSelectionRequirements(this.item)) {
                 this.selectPackageOptions().then(function (confirmed_item) {
                   list.push(new catering_item_class_1.CateringItem(confirmed_item));
 
@@ -38363,16 +38369,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "3432556",
-      "hash": "3432556",
+      "raw": "d6fbc43",
+      "hash": "d6fbc43",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "3432556",
+      "suffix": "d6fbc43",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594352474700
+      "time": 1594360177680
     };
     /* tslint:enable */
 

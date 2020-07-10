@@ -14848,6 +14848,11 @@ function CateringMenuItemComponent_a_catering_order_item_2_Template(rf, ctx) { i
     const ctx_r1 = i0.ɵɵnextContext();
     i0.ɵɵproperty("subitem", true)("symbol", ctx_r1.symbol)("item", sub_item_r16)("field", ctx_r1.field);
 } }
+function hasSelectionRequirements(category) {
+    return (category.must_select < category.items.length ||
+        (category.must_select === category.items.length &&
+            category.items.find((item) => item.items && item.must_select < item.items.length)));
+}
 class CateringMenuItemComponent extends base_directive_1.BaseDirective {
     constructor(_service, _dialog) {
         super();
@@ -14896,7 +14901,11 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
             else {
                 const amount = this.item.amount;
                 this.item.setAmount(value);
-                if (this.item.package && amount < value && this.item.items && this.item.items.length && this.item.must_select < this.item.items.length) {
+                if (this.item.package &&
+                    amount < value &&
+                    this.item.items &&
+                    this.item.items.length &&
+                    hasSelectionRequirements(this.item)) {
                     this.selectPackageOptions().then((confirmed_item) => {
                         list.push(new catering_item_class_1.CateringItem(confirmed_item));
                         this.field.setValue(list.filter((an_item) => an_item.amount));
@@ -21496,16 +21505,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "3432556",
-    "hash": "3432556",
+    "raw": "d6fbc43",
+    "hash": "d6fbc43",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "3432556",
+    "suffix": "d6fbc43",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594352474700
+    "time": 1594360177680
 };
 /* tslint:enable */
 
