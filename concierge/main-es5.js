@@ -15614,7 +15614,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this80.equipment_codes = raw_data.equipment_codes || raw_data.equipment_code || {};
         _this80.expected_attendees = raw_data.expected_attendees || {};
         _this80.approval_status = (raw_data.status instanceof Object ? raw_data.status : '') || raw_data.approval_status || {};
-        _this80.checked_in = raw_data.checked_in || raw_data.checkins || raw_data.check_ins || [];
+        _this80.checked_in = raw_data.checked_in || raw_data.checkins || Object.keys(raw_data.check_ins || {});
         _this80.notify_users = raw_data.notify_users || [];
 
         if (raw_data.description && !_this80.notes.find(function (i) {

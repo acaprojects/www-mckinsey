@@ -8275,7 +8275,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         this.equipment_codes = raw_data.equipment_codes || raw_data.equipment_code || {};
         this.expected_attendees = raw_data.expected_attendees || {};
         this.approval_status = (raw_data.status instanceof Object ? raw_data.status : '') || raw_data.approval_status || {};
-        this.checked_in = raw_data.checked_in || raw_data.checkins || raw_data.check_ins || [];
+        this.checked_in = raw_data.checked_in || raw_data.checkins || Object.keys(raw_data.check_ins || {});
         this.notify_users = raw_data.notify_users || [];
         if (raw_data.description && !this.notes.find((i) => i.type === 'description')) {
             this.notes = [
