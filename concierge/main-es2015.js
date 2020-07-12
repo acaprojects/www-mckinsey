@@ -1737,6 +1737,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
             }
             else {
                 const amount = this.item.amount;
+                this.item.setAmount(value);
                 if (this.item.package &&
                     amount < value &&
                     this.item.items &&
@@ -1754,7 +1755,6 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
                                     });
                                 }
                             });
-                            this.item.setAmount(value);
                         }, 5);
                         this.field.setValue(list.filter((an_item) => an_item.amount));
                     }, () => {
@@ -1764,7 +1764,6 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
                     });
                 }
                 else {
-                    this.item.setAmount(value);
                     list.push(new catering_item_class_1.CateringItem(this.item));
                 }
             }
@@ -8639,9 +8638,9 @@ const user_utilities_1 = __webpack_require__(/*! ../users/user.utilities */ "./s
 const user_class_1 = __webpack_require__(/*! ../users/user.class */ "./src/app/services/data/users/user.class.ts");
 const catering_order_class_1 = __webpack_require__(/*! ../catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 const validation_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
+const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 const MINUTE = 1;
 const HOUR = 60;
 const DAY = 24 * HOUR;
@@ -9071,19 +9070,27 @@ function statusFromBookings(bookings, bookable, requestable, date = dayjs().valu
 exports.statusFromBookings = statusFromBookings;
 function replaceBookings(list, new_bookings, filter_options) {
     const from = dayjs(filter_options.from);
-    const to = dayjs(filter_options.from);
+    const to = dayjs(filter_options.to);
     const filtered_list = list.filter((booking) => {
         const start = dayjs(booking.date);
         const end = start.add(booking.duration, 'm');
-        return (!booking.space_list.find((space) => space.email === filter_options.space) &&
-            (start.isBefore(from, 'm') || end.isAfter(to, 'm')) &&
-            !(start.isBefore(from, 'm') && end.isAfter(to, 'm')));
+        return (!booking.space_list.find((space) => space.email === filter_options.space) ||
+            !timePeriodsIntersect(from.valueOf(), to.valueOf(), start.valueOf(), end.valueOf()));
     });
     const updated_list = filtered_list.concat(new_bookings);
     updated_list.sort((a, b) => a.date - b.date);
-    return updated_list;
+    return general_utilities_1.unique(updated_list, 'icaluid');
 }
 exports.replaceBookings = replaceBookings;
+function timePeriodsIntersect(start1, end1, start2, end2) {
+    const day1 = dayjs(start1);
+    const end_time1 = dayjs(end1);
+    const day2 = dayjs(start2);
+    const end_time2 = dayjs(end2);
+    return (day1.isAfter(day2, 'm') && day1.isBefore(end_time2)) || (end_time1.isAfter(day2, 'm') && end_time1.isBefore(end_time2)) ||
+        (day2.isAfter(day1, 'm') && day2.isBefore(end_time1)) || (end_time2.isAfter(day1, 'm') && end_time2.isBefore(end_time1));
+}
+exports.timePeriodsIntersect = timePeriodsIntersect;
 
 
 /***/ }),
@@ -14559,8 +14566,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const menu_1 = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js");
 const base_directive_1 = __webpack_require__(/*! ../../base.directive */ "./src/app/shared/base.directive.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const bookings_service_1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
 const i2 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
@@ -20552,12 +20559,11 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
         let start = dayjs(this.date).startOf('M');
         const end = start.endOf('M');
         /* istanbul ignore else */
-        if (now.isAfter(end, 'm')) {
-            return;
-        }
-        else if (now.isAfter(start, 'm')) {
-            start = now;
-        }
+        // if (now.isAfter(end, 'm')) {
+        //     return;
+        // } else if (now.isAfter(start, 'm')) {
+        //     start = now;
+        // }
         const building = this._org.building;
         this._spaces
             .query({
@@ -20567,11 +20573,13 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
         })
             .then((spaces) => {
             let bookings = this._bookings.booking_list.getValue();
-            spaces.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
-                space: space.email,
-                from: start.valueOf(),
-                to: end.valueOf(),
-            })));
+            spaces.forEach((space) => {
+                (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
+                    space: space.email,
+                    from: start.valueOf(),
+                    to: end.valueOf(),
+                }));
+            });
             this._bookings.booking_list.next(bookings);
         });
     }

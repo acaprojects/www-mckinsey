@@ -4001,6 +4001,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               item.setAmount(value);
             } else {
               var amount = this.item.amount;
+              this.item.setAmount(value);
 
               if (this.item["package"] && amount < value && this.item.items && this.item.items.length && hasSelectionRequirements(this.item)) {
                 this.selectPackageOptions().then(function (confirmed_item) {
@@ -4017,8 +4018,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         });
                       }
                     });
-
-                    _this16.item.setAmount(value);
                   }, 5);
 
                   _this16.field.setValue(list.filter(function (an_item) {
@@ -4034,7 +4033,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   _this16._service.notifyWarn('Package options not selected. Item removed from order');
                 });
               } else {
-                this.item.setAmount(value);
                 list.push(new catering_item_class_1.CateringItem(this.item));
               }
             }
@@ -16247,6 +16245,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/shared/utilities/validation.utilities */
     "./src/app/shared/utilities/validation.utilities.ts");
 
+    var service_manager_class_1 = __webpack_require__(
+    /*! ../service-manager.class */
+    "./src/app/services/data/service-manager.class.ts");
+
     var faker = __webpack_require__(
     /*! faker */
     "./node_modules/faker/index.js");
@@ -16254,10 +16256,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var dayjs = __webpack_require__(
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
-
-    var service_manager_class_1 = __webpack_require__(
-    /*! ../service-manager.class */
-    "./src/app/services/data/service-manager.class.ts");
 
     var MINUTE = 1;
     var HOUR = 60;
@@ -16821,22 +16819,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function replaceBookings(list, new_bookings, filter_options) {
       var from = dayjs(filter_options.from);
-      var to = dayjs(filter_options.from);
+      var to = dayjs(filter_options.to);
       var filtered_list = list.filter(function (booking) {
         var start = dayjs(booking.date);
         var end = start.add(booking.duration, 'm');
         return !booking.space_list.find(function (space) {
           return space.email === filter_options.space;
-        }) && (start.isBefore(from, 'm') || end.isAfter(to, 'm')) && !(start.isBefore(from, 'm') && end.isAfter(to, 'm'));
+        }) || !timePeriodsIntersect(from.valueOf(), to.valueOf(), start.valueOf(), end.valueOf());
       });
       var updated_list = filtered_list.concat(new_bookings);
       updated_list.sort(function (a, b) {
         return a.date - b.date;
       });
-      return updated_list;
+      return general_utilities_1.unique(updated_list, 'icaluid');
     }
 
     exports.replaceBookings = replaceBookings;
+
+    function timePeriodsIntersect(start1, end1, start2, end2) {
+      var day1 = dayjs(start1);
+      var end_time1 = dayjs(end1);
+      var day2 = dayjs(start2);
+      var end_time2 = dayjs(end2);
+      return day1.isAfter(day2, 'm') && day1.isBefore(end_time2) || end_time1.isAfter(day2, 'm') && end_time1.isBefore(end_time2) || day2.isAfter(day1, 'm') && day2.isBefore(end_time1) || end_time2.isAfter(day1, 'm') && end_time2.isBefore(end_time1);
+    }
+
+    exports.timePeriodsIntersect = timePeriodsIntersect;
     /***/
   },
 
@@ -26863,13 +26871,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../base.directive */
     "./src/app/shared/base.directive.ts");
 
-    var dayjs = __webpack_require__(
-    /*! dayjs */
-    "./node_modules/dayjs/dayjs.min.js");
-
     var bookings_service_1 = __webpack_require__(
     /*! src/app/services/data/bookings/bookings.service */
     "./src/app/services/data/bookings/bookings.service.ts");
+
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
@@ -37277,12 +37285,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var start = dayjs(this.date).startOf('M');
           var end = start.endOf('M');
           /* istanbul ignore else */
-
-          if (now.isAfter(end, 'm')) {
-            return;
-          } else if (now.isAfter(start, 'm')) {
-            start = now;
-          }
+          // if (now.isAfter(end, 'm')) {
+          //     return;
+          // } else if (now.isAfter(start, 'm')) {
+          //     start = now;
+          // }
 
           var building = this._org.building;
 
@@ -37294,7 +37301,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var bookings = _this184._bookings.booking_list.getValue();
 
             spaces.forEach(function (space) {
-              return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
+              bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
                 space: space.email,
                 from: start.valueOf(),
                 to: end.valueOf()
