@@ -35444,7 +35444,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(5);
           i0.ɵɵtextInterpolate1(" ", ctx.booking.time_period, " ");
           i0.ɵɵadvance(5);
-          i0.ɵɵtextInterpolate2(" ", (ctx.booking.attendees == null ? null : ctx.booking.attendees.length) || "0", "(", ctx.booking.expected_attendees[ctx.booking.space == null ? null : ctx.booking.space.id] || 0, " expected) ");
+          i0.ɵɵtextInterpolate2(" ", (ctx.booking.attendees == null ? null : ctx.booking.attendees.length) || "0", "(", ctx.booking.expected_attendees[ctx.booking.space == null ? null : ctx.booking.space.email] || 0, " expected) ");
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("routerLink", i0.ɵɵpureFunction1(7, _c0, ctx.booking.space == null ? null : ctx.booking.space.level.id))("queryParams", i0.ɵɵpureFunction1(9, _c1, ctx.booking.id.slice(0, 10)));
         }
@@ -40268,7 +40268,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    var UPDATE_INTERVAL = 30;
+    var UPDATE_INTERVAL = 10;
 
     var DayViewTimelineComponent =
     /*#__PURE__*/
