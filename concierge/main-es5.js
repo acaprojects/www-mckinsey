@@ -15998,6 +15998,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           Object.keys(data.breakdown).forEach(function (key) {
             return data.breakdown[key] = data.breakdown[key] * 60;
           });
+          data.catering = data.catering.filter(function (order) {
+            return data.room_ids.includes(order.location_id);
+          });
           data.description = data.body;
           data.recurr = data.recurrence;
           data.booking_type = data.type;

@@ -8600,6 +8600,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         }
         Object.keys(data.setup).forEach((key) => (data.setup[key] = data.setup[key] * 60));
         Object.keys(data.breakdown).forEach((key) => (data.breakdown[key] = data.breakdown[key] * 60));
+        data.catering = data.catering.filter(order => data.room_ids.includes(order.location_id));
         data.description = data.body;
         data.recurr = data.recurrence;
         data.booking_type = data.type;
