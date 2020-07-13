@@ -12140,7 +12140,7 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
         this.step = 15;
         /** Special case prepopulation i.e. out of step options */
         this.specialPreprops = [];
-        this.duration = '60';
+        this.duration = 60;
     }
     ngOnInit() {
         this.duration_options = this.generateDurationOptions(this.max, this.min, this.step);
@@ -12168,7 +12168,7 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
      * @param value The new value for the component
      */
     writeValue(value) {
-        this.duration = `${value}`;
+        this.duration = value;
     }
     setDisabledState(disabled) {
         this.disabled = disabled;
@@ -12211,6 +12211,7 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
             });
             time += step;
         }
+        blocks.push({ id: 7 * 24 * 60, name: '1 week' });
         return blocks;
     }
 }
@@ -12220,8 +12221,8 @@ DurationFieldComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DurationFieldCompo
             {
                 provide: forms_1.NG_VALUE_ACCESSOR,
                 useExisting: core_1.forwardRef(() => DurationFieldComponent),
-                multi: true
-            }
+                multi: true,
+            },
         ]), i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 5, vars: 4, consts: [[1, "duration-field"], ["appearance", "outline"], [3, "value", "disabled", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function DurationFieldComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "mat-form-field", 1);
@@ -12249,9 +12250,9 @@ const ɵDurationFieldComponent_BaseFactory = i0.ɵɵgetInheritedFactory(Duration
                     {
                         provide: forms_1.NG_VALUE_ACCESSOR,
                         useExisting: core_1.forwardRef(() => DurationFieldComponent),
-                        multi: true
-                    }
-                ]
+                        multi: true,
+                    },
+                ],
             }]
     }], null, { max: [{
             type: core_1.Input

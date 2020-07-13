@@ -22690,7 +22690,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Special case prepopulation i.e. out of step options */
 
         _this117.specialPreprops = [];
-        _this117.duration = '60';
+        _this117.duration = 60;
         return _this117;
       }
 
@@ -22732,7 +22732,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "writeValue",
         value: function writeValue(value) {
-          this.duration = "".concat(value);
+          this.duration = value;
         }
       }, {
         key: "setDisabledState",
@@ -22795,6 +22795,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             time += step;
           }
 
+          blocks.push({
+            id: 7 * 24 * 60,
+            name: '1 week'
+          });
           return blocks;
         }
       }]);
