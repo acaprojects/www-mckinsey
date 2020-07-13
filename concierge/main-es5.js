@@ -361,7 +361,7 @@ function _templateObject56() {
 }
 
 function _templateObject55() {
-  var data = _taggedTemplateLiteral([":Add new external attendee\u241F3a10667289d92e44bbdfc11b7ceb85fb2c45c115\u241F1436761491145200496: New Contact "]);
+  var data = _taggedTemplateLiteral([":Add new external attendee\u241Fb8749e272cb8fa120bd4f1a809d6557303bf5f49\u241F9067346228751642408: Add External "]);
 
   _templateObject55 = function _templateObject55() {
     return data;
@@ -23432,8 +23432,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Add new external attendee
        */
-      var MSG_EXTERNAL_1436761491145200496$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4 = goog.getMsg(" New Contact ");
-      I18N_3 = MSG_EXTERNAL_1436761491145200496$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4;
+      var MSG_EXTERNAL_9067346228751642408$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4 = goog.getMsg(" Add External ");
+      I18N_3 = MSG_EXTERNAL_9067346228751642408$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4;
     } else {
       I18N_3 = $localize(_templateObject55());
     }
