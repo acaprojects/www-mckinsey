@@ -4369,6 +4369,24 @@ function generateBookingForm(booking, use_fields) {
         fields.date.setValidators([forms_1.Validators.required, isFuture]);
         fields.date.updateValueAndValidity();
     }
+    let list_length = 0;
+    fields.space_list.valueChanges.subscribe(list => {
+        if (list && list.length > list_length && list_length === 0) {
+            const expected = fields.expected_attendees.value || {};
+            const codes = fields.equipment_codes.value || {};
+            if (Object.keys(expected).length >= 0 || Object.keys(codes).length >= 0) {
+                const key = Object.keys(expected)[0] || Object.keys(codes)[0];
+                const new_expected = {};
+                const new_codes = {};
+                const notes = fields.notes.value;
+                notes.forEach(note => note.space === key ? note.space = list[0].email : '');
+                new_expected[list[0].email] = expected[key];
+                new_codes[list[0].email] = codes[key];
+                fields.expected_attendees.setValue(new_expected);
+                fields.equipment_codes.setValue(new_codes);
+            }
+        }
+    });
     const simplified_fields = [
         'id',
         'space_list',
@@ -14862,8 +14880,9 @@ function hasSelectionRequirements(category) {
             category.items.find((item) => item.items && item.must_select < item.items.length)));
 }
 function getActiveList(category) {
-    let list = category.items.filter((item) => item.amount > 0).map((item) => item.id);
-    for (const item of category.items) {
+    const items = category.items || [];
+    let list = items.filter((item) => item.amount > 0).map((item) => item.id);
+    for (const item of items) {
         if (item.items && item.items.length) {
             list = list.concat(getActiveList(item));
         }
@@ -14899,6 +14918,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
             this.subscription('field_change', this.field.valueChanges.subscribe((list) => {
                 const item = list.find((an_item) => an_item.id === this.item.id);
                 this.item.setAmount(item ? item.amount : 0);
+                this.updatePackageSelection();
             }));
         }
     }
@@ -14924,19 +14944,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
                     this.item.items.length &&
                     hasSelectionRequirements(this.item)) {
                     this.selectPackageOptions().then((confirmed_item) => {
-                        list.push(new catering_item_class_1.CateringItem(confirmed_item));
-                        const active_items = getActiveList(confirmed_item);
-                        this.timeout('update_package', () => {
-                            this.item.items.forEach((item) => {
-                                item.setAmount(active_items.includes(item.id) ? 1 : 0);
-                                if (item.items) {
-                                    item.items.forEach((item) => {
-                                        item.setAmount(active_items.includes(item.id) ? 1 : 0);
-                                    });
-                                }
-                            });
-                            this.item.setAmount(value);
-                        }, 5);
+                        list.push(new catering_category_class_1.CateringCategory(confirmed_item));
                         this.field.setValue(list.filter((an_item) => an_item.amount));
                     }, () => {
                         this.item.setAmount(999);
@@ -14945,11 +14953,26 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
                     });
                 }
                 else {
-                    this.item.setAmount(value);
                     list.push(new catering_item_class_1.CateringItem(this.item));
                 }
             }
             this.field.setValue(list.filter((an_item) => an_item.amount));
+        }
+    }
+    updatePackageSelection() {
+        const cart_item = this.field.value.find((item) => item.id === this.item.id);
+        if (cart_item) {
+            const active_items = getActiveList(cart_item);
+            this.timeout('update_package', () => {
+                this.item.items.forEach((item) => {
+                    item.setAmount(active_items.includes(item.id) ? 1 : 0);
+                    if (item.items) {
+                        item.items.forEach((item) => {
+                            item.setAmount(active_items.includes(item.id) ? 1 : 0);
+                        });
+                    }
+                });
+            }, 5);
         }
     }
     /** Reselect package options */
@@ -21532,16 +21555,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "b44e754",
-    "hash": "b44e754",
+    "raw": "415392a",
+    "hash": "415392a",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b44e754",
+    "suffix": "415392a",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594542206016
+    "time": 1594604375898
 };
 /* tslint:enable */
 
