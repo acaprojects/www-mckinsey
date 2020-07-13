@@ -7655,11 +7655,11 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     /**
      * @desc Add new external attendee
      */ 
-    const MSG_EXTERNAL_1436761491145200496$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4 = goog.getMsg(" New Contact ");
-    I18N_3 = MSG_EXTERNAL_1436761491145200496$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4;
+    const MSG_EXTERNAL_9067346228751642408$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4 = goog.getMsg(" Add External ");
+    I18N_3 = MSG_EXTERNAL_9067346228751642408$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4;
 }
 else {
-    I18N_3 = $localize `:Add new external attendee␟3a10667289d92e44bbdfc11b7ceb85fb2c45c115␟1436761491145200496: New Contact `;
+    I18N_3 = $localize `:Add new external attendee␟b8749e272cb8fa120bd4f1a809d6557303bf5f49␟9067346228751642408: Add External `;
 }
 var I18N_5;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -14807,7 +14807,7 @@ function CateringMenuItemComponent_div_0_a_counter_13_Template(rf, ctx) { if (rf
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r8 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("ngModel", ctx_r8.item.amount);
+    i0.ɵɵproperty("max", ctx_r8.item.maximum_quantity)("ngModel", ctx_r8.item.amount);
 } }
 const _c8 = function (a1) { return { class: "material-icons", content: a1 }; };
 function CateringMenuItemComponent_div_0_button_14_Template(rf, ctx) { if (rf & 1) {
@@ -14839,7 +14839,7 @@ function CateringMenuItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵtemplate(12, CateringMenuItemComponent_div_0_div_12_Template, 3, 4, "div", 12);
-    i0.ɵɵtemplate(13, CateringMenuItemComponent_div_0_a_counter_13_Template, 1, 1, "a-counter", 13);
+    i0.ɵɵtemplate(13, CateringMenuItemComponent_div_0_a_counter_13_Template, 1, 2, "a-counter", 13);
     i0.ɵɵtemplate(14, CateringMenuItemComponent_div_0_button_14_Template, 2, 3, "button", 14);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -15010,7 +15010,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringMenuItemComponent = CateringMenuItemComponent;
 CateringMenuItemComponent.ɵfac = function CateringMenuItemComponent_Factory(t) { return new (t || CateringMenuItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.MatDialog)); };
-CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-order-item"]], inputs: { subitem: "subitem", item: "item", field: "field", symbol: "symbol", disabled: "disabled" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [["class", "catering-item", 3, "subitem", "package", 4, "ngIf"], [1, "children"], [3, "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "subitem", "symbol", "item", "field"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
+CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-order-item"]], inputs: { subitem: "subitem", item: "item", field: "field", symbol: "symbol", disabled: "disabled" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [["class", "catering-item", 3, "subitem", "package", 4, "ngIf"], [1, "children"], [3, "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "max", "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "max", "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "subitem", "symbol", "item", "field"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 15, 16, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵtemplate(2, CateringMenuItemComponent_a_catering_order_item_2_Template, 1, 4, "a-catering-order-item", 2);
@@ -21555,16 +21555,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "415392a",
-    "hash": "415392a",
+    "raw": "27cbca8",
+    "hash": "27cbca8",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "415392a",
+    "suffix": "27cbca8",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594604375898
+    "time": 1594624880483
 };
 /* tslint:enable */
 

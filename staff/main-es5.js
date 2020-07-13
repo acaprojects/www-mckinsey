@@ -971,7 +971,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([":Add new external attendee\u241F3a10667289d92e44bbdfc11b7ceb85fb2c45c115\u241F1436761491145200496: New Contact "]);
+  var data = _taggedTemplateLiteral([":Add new external attendee\u241Fb8749e272cb8fa120bd4f1a809d6557303bf5f49\u241F9067346228751642408: Add External "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -14646,8 +14646,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Add new external attendee
        */
-      var MSG_EXTERNAL_1436761491145200496$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4 = goog.getMsg(" New Contact ");
-      I18N_3 = MSG_EXTERNAL_1436761491145200496$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4;
+      var MSG_EXTERNAL_9067346228751642408$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4 = goog.getMsg(" Add External ");
+      I18N_3 = MSG_EXTERNAL_9067346228751642408$$SRC_APP_SHARED_COMPONENTS_CUSTOM_FIELDS_USER_LIST_FIELD_USER_LIST_FIELD_COMPONENT_TS_4;
     } else {
       I18N_3 = $localize(_templateObject3());
     }
@@ -26404,7 +26404,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var ctx_r8 = i0.ɵɵnextContext(2);
-        i0.ɵɵproperty("ngModel", ctx_r8.item.amount);
+        i0.ɵɵproperty("max", ctx_r8.item.maximum_quantity)("ngModel", ctx_r8.item.amount);
       }
     }
 
@@ -26455,7 +26455,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(12, CateringMenuItemComponent_div_0_div_12_Template, 3, 4, "div", 12);
-        i0.ɵɵtemplate(13, CateringMenuItemComponent_div_0_a_counter_13_Template, 1, 1, "a-counter", 13);
+        i0.ɵɵtemplate(13, CateringMenuItemComponent_div_0_a_counter_13_Template, 1, 2, "a-counter", 13);
         i0.ɵɵtemplate(14, CateringMenuItemComponent_div_0_button_14_Template, 2, 3, "button", 14);
         i0.ɵɵelementEnd();
       }
@@ -26733,7 +26733,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 3,
       vars: 3,
-      consts: [["class", "catering-item", 3, "subitem", "package", 4, "ngIf"], [1, "children"], [3, "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "subitem", "symbol", "item", "field"]],
+      consts: [["class", "catering-item", 3, "subitem", "package", 4, "ngIf"], [1, "children"], [3, "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "max", "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "max", "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "subitem", "symbol", "item", "field"]],
       template: function CateringMenuItemComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 15, 16, "div", 0);
@@ -38459,16 +38459,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "415392a",
-      "hash": "415392a",
+      "raw": "27cbca8",
+      "hash": "27cbca8",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "415392a",
+      "suffix": "27cbca8",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594604375898
+      "time": 1594624880483
     };
     /* tslint:enable */
 
