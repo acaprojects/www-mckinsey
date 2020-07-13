@@ -37090,6 +37090,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
+    var booking_class_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/booking.class */
+    "./src/app/services/data/bookings/booking.class.ts");
+
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
     "./src/app/shared/base.directive.ts");
@@ -37332,10 +37336,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var list = this._bookings.booking_list.getValue();
 
           var date = dayjs(this.date);
-          this.events = list.filter(function (booking) {
+          var events = list.filter(function (booking) {
             return dayjs(booking.date).isSame(date, 'd') && booking.tentative && _this186.space_list.find(function (space) {
               return space === booking.space.email;
             });
+          });
+          events.sort(function (a, b) {
+            return a.date - b.date;
+          });
+          this.events = [];
+          events.forEach(function (event) {
+            var json = event.toJSON();
+
+            var _iterator51 = _createForOfIteratorHelper(event.space_list),
+                _step51;
+
+            try {
+              var _loop6 = function _loop6() {
+                var space = _step51.value;
+
+                if (event.approval_status[space.email].includes('tentative')) {
+                  _this186.events.push(new booking_class_1.Booking(Object.assign(Object.assign({}, json), {
+                    room_ids: [space.email].concat(_toConsumableArray(json.room_ids.filter(function (id) {
+                      return id !== space.email;
+                    })))
+                  })));
+                }
+              };
+
+              for (_iterator51.s(); !(_step51 = _iterator51.n()).done;) {
+                _loop6();
+              }
+            } catch (err) {
+              _iterator51.e(err);
+            } finally {
+              _iterator51.f();
+            }
           });
         }
       }, {
@@ -37908,18 +37944,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }).then(function () {
                 _this190._service.notifySuccess('Meeting approved.');
 
-                var _iterator51 = _createForOfIteratorHelper(_this190.event.space_list),
-                    _step51;
+                var _iterator52 = _createForOfIteratorHelper(_this190.event.space_list),
+                    _step52;
 
                 try {
-                  for (_iterator51.s(); !(_step51 = _iterator51.n()).done;) {
-                    var space = _step51.value;
+                  for (_iterator52.s(); !(_step52 = _iterator52.n()).done;) {
+                    var space = _step52.value;
                     _this190.event.approval_status[space.email] = 'accepted';
                   }
                 } catch (err) {
-                  _iterator51.e(err);
+                  _iterator52.e(err);
                 } finally {
-                  _iterator51.f();
+                  _iterator52.f();
                 }
 
                 STATES[_this190.event.id] = 'accepted';
@@ -39793,24 +39829,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
           });
 
-          var _iterator52 = _createForOfIteratorHelper(events),
-              _step52;
+          var _iterator53 = _createForOfIteratorHelper(events),
+              _step53;
 
           try {
-            var _loop6 = function _loop6() {
-              var bkn = _step52.value;
+            var _loop7 = function _loop7() {
+              var bkn = _step53.value;
               var bkn_start = dayjs(bkn.date).startOf('m');
               var bkn_end = dayjs(bkn_start).add(bkn.duration, 'm').startOf('m');
               var count = 1;
               var index = 0;
               var collisions = [];
 
-              var _iterator53 = _createForOfIteratorHelper(events),
-                  _step53;
+              var _iterator54 = _createForOfIteratorHelper(events),
+                  _step54;
 
               try {
-                var _loop7 = function _loop7() {
-                  var cmp = _step53.value;
+                var _loop8 = function _loop8() {
+                  var cmp = _step54.value;
 
                   /* istanbul ignore else */
                   if (bkn.id !== cmp.id) {
@@ -39834,13 +39870,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   }
                 };
 
-                for (_iterator53.s(); !(_step53 = _iterator53.n()).done;) {
-                  _loop7();
+                for (_iterator54.s(); !(_step54 = _iterator54.n()).done;) {
+                  _loop8();
                 }
               } catch (err) {
-                _iterator53.e(err);
+                _iterator54.e(err);
               } finally {
-                _iterator53.f();
+                _iterator54.f();
               }
 
               _this201.overlap_details[bkn.id] = {
@@ -39849,13 +39885,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               };
             };
 
-            for (_iterator52.s(); !(_step52 = _iterator52.n()).done;) {
-              _loop6();
+            for (_iterator53.s(); !(_step53 = _iterator53.n()).done;) {
+              _loop7();
             }
           } catch (err) {
-            _iterator52.e(err);
+            _iterator53.e(err);
           } finally {
-            _iterator52.f();
+            _iterator53.f();
           }
         }
         /**
@@ -43756,21 +43792,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (_this225.form.dirty && _this225.form.valid) {
               var attendees = _this225.form.controls.attendees.value;
 
-              var _iterator54 = _createForOfIteratorHelper(attendees),
-                  _step54;
+              var _iterator55 = _createForOfIteratorHelper(attendees),
+                  _step55;
 
               try {
-                for (_iterator54.s(); !(_step54 = _iterator54.n()).done;) {
-                  var attendee = _step54.value;
+                for (_iterator55.s(); !(_step55 = _iterator55.n()).done;) {
+                  var attendee = _step55.value;
 
                   if (!attendee.email) {
                     attendee.email = "".concat(Math.floor(Math.random() * 99999), "@guest.mckinsey.com");
                   }
                 }
               } catch (err) {
-                _iterator54.e(err);
+                _iterator55.e(err);
               } finally {
-                _iterator54.f();
+                _iterator55.f();
               }
 
               var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this225.booking.toJSON()), _this225.form.value));

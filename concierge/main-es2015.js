@@ -20456,6 +20456,7 @@ OrderDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderDetailsMo
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
@@ -20593,9 +20594,19 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
     updateEvents() {
         const list = this._bookings.booking_list.getValue();
         const date = dayjs(this.date);
-        this.events = list.filter((booking) => dayjs(booking.date).isSame(date, 'd') &&
+        const events = list.filter((booking) => dayjs(booking.date).isSame(date, 'd') &&
             booking.tentative &&
             this.space_list.find((space) => space === booking.space.email));
+        events.sort((a, b) => a.date - b.date);
+        this.events = [];
+        events.forEach((event) => {
+            const json = event.toJSON();
+            for (const space of event.space_list) {
+                if (event.approval_status[space.email].includes('tentative')) {
+                    this.events.push(new booking_class_1.Booking(Object.assign(Object.assign({}, json), { room_ids: [space.email, ...json.room_ids.filter(id => id !== space.email)] })));
+                }
+            }
+        });
     }
     getMonthlyPending() {
         const now = dayjs().startOf('d');
@@ -20617,11 +20628,11 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
             .then((spaces) => {
             let bookings = this._bookings.booking_list.getValue();
             spaces.forEach((space) => {
-                (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
+                bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
                     space: space.email,
                     from: start.valueOf(),
                     to: end.valueOf(),
-                }));
+                });
             });
             this._bookings.booking_list.next(bookings);
         });
