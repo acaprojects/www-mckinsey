@@ -1686,8 +1686,9 @@ function hasSelectionRequirements(category) {
             category.items.find((item) => item.items && item.must_select < item.items.length)));
 }
 function getActiveList(category) {
-    let list = category.items.filter((item) => item.amount > 0).map((item) => item.id);
-    for (const item of category.items) {
+    const items = category.items || [];
+    let list = items.filter((item) => item.amount > 0).map((item) => item.id);
+    for (const item of items) {
         if (item.items && item.items.length) {
             list = list.concat(getActiveList(item));
         }
@@ -1723,6 +1724,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
             this.subscription('field_change', this.field.valueChanges.subscribe((list) => {
                 const item = list.find((an_item) => an_item.id === this.item.id);
                 this.item.setAmount(item ? item.amount : 0);
+                this.updatePackageSelection();
             }));
         }
     }
@@ -1748,18 +1750,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
                     this.item.items.length &&
                     hasSelectionRequirements(this.item)) {
                     this.selectPackageOptions().then((confirmed_item) => {
-                        list.push(new catering_item_class_1.CateringItem(confirmed_item));
-                        const active_items = getActiveList(confirmed_item);
-                        this.timeout('update_package', () => {
-                            this.item.items.forEach((item) => {
-                                item.setAmount(active_items.includes(item.id) ? 1 : 0);
-                                if (item.items) {
-                                    item.items.forEach((item) => {
-                                        item.setAmount(active_items.includes(item.id) ? 1 : 0);
-                                    });
-                                }
-                            });
-                        }, 5);
+                        list.push(new catering_category_class_1.CateringCategory(confirmed_item));
                         this.field.setValue(list.filter((an_item) => an_item.amount));
                     }, () => {
                         this.item.setAmount(999);
@@ -1772,6 +1763,22 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
                 }
             }
             this.field.setValue(list.filter((an_item) => an_item.amount));
+        }
+    }
+    updatePackageSelection() {
+        const cart_item = this.field.value.find((item) => item.id === this.item.id);
+        if (cart_item) {
+            const active_items = getActiveList(cart_item);
+            this.timeout('update_package', () => {
+                this.item.items.forEach((item) => {
+                    item.setAmount(active_items.includes(item.id) ? 1 : 0);
+                    if (item.items) {
+                        item.items.forEach((item) => {
+                            item.setAmount(active_items.includes(item.id) ? 1 : 0);
+                        });
+                    }
+                });
+            }, 5);
         }
     }
     /** Reselect package options */
