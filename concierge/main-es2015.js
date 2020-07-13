@@ -12196,14 +12196,18 @@ class DurationFieldComponent extends base_directive_1.BaseDirective {
         // Add special case for 10min duration/prepropulation
         for (const option of this.specialPreprops) {
             blocks.push({
-                id: `${option}`,
-                name: `${general_utilities_1.humaniseDuration(option)}${date ? ' (' + date.add(option, 'm').format(general_utilities_1.timeFormatString()) + ')' : ''}`
+                id: option,
+                name: date
+                    ? `${date.add(option, 'm').format(general_utilities_1.timeFormatString())} (${general_utilities_1.humaniseDuration(option)})`
+                    : `${general_utilities_1.humaniseDuration(option)}`,
             });
         }
         while (time <= max) {
             blocks.push({
-                id: `${time}`,
-                name: `${general_utilities_1.humaniseDuration(time)}${date ? ' (' + date.add(time, 'm').format(general_utilities_1.timeFormatString()) + ')' : ''}`
+                id: time,
+                name: date
+                    ? `${date.add(time, 'm').format(general_utilities_1.timeFormatString())} (${general_utilities_1.humaniseDuration(time)})`
+                    : `${general_utilities_1.humaniseDuration(time)}`,
             });
             time += step;
         }
@@ -18852,6 +18856,7 @@ class CateringCategoryModalComponent extends base_directive_1.BaseDirective {
                 ? this._menu_categories.update(this.category.id, data)
                 : this._menu_categories.add(data);
             request.then((item) => {
+                item.items = this.category.items;
                 this.event.emit({ reason: 'done', metadata: item });
                 this._dialog_ref.close();
             }, (err) => this._service.notifyError(`Error ${this.category.id ? 'updating' : 'creating'} category. Error: ${err.message || err}`));
@@ -19252,6 +19257,7 @@ class CateringGroupModalComponent extends base_directive_1.BaseDirective {
                 ? this._menu_categories.update(this.category.id, data)
                 : this._menu_categories.add(data);
             request.then((item) => {
+                item.items = this.category.items;
                 this.event.emit({ reason: 'done', metadata: item });
                 this._dialog_ref.close();
             }, (err) => this._service.notifyError(`Error ${this.category.id ? 'updating' : 'creating'} category. Error: ${err.message || err}`));

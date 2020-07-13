@@ -22777,8 +22777,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
               var option = _step29.value;
               blocks.push({
-                id: "".concat(option),
-                name: "".concat(general_utilities_1.humaniseDuration(option)).concat(date ? ' (' + date.add(option, 'm').format(general_utilities_1.timeFormatString()) + ')' : '')
+                id: option,
+                name: date ? "".concat(date.add(option, 'm').format(general_utilities_1.timeFormatString()), " (").concat(general_utilities_1.humaniseDuration(option), ")") : "".concat(general_utilities_1.humaniseDuration(option))
               });
             }
           } catch (err) {
@@ -22789,8 +22789,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           while (time <= max) {
             blocks.push({
-              id: "".concat(time),
-              name: "".concat(general_utilities_1.humaniseDuration(time)).concat(date ? ' (' + date.add(time, 'm').format(general_utilities_1.timeFormatString()) + ')' : '')
+              id: time,
+              name: date ? "".concat(date.add(time, 'm').format(general_utilities_1.timeFormatString()), " (").concat(general_utilities_1.humaniseDuration(time), ")") : "".concat(general_utilities_1.humaniseDuration(time))
             });
             time += step;
           }
@@ -34168,6 +34168,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var data = Object.assign(Object.assign({}, this.category.toJSON()), this.form.value);
             var request = this.category.id ? this._menu_categories.update(this.category.id, data) : this._menu_categories.add(data);
             request.then(function (item) {
+              item.items = _this167.category.items;
+
               _this167.event.emit({
                 reason: 'done',
                 metadata: item
@@ -34839,6 +34841,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
             var request = this.category.id ? this._menu_categories.update(this.category.id, data) : this._menu_categories.add(data);
             request.then(function (item) {
+              item.items = _this171.category.items;
+
               _this171.event.emit({
                 reason: 'done',
                 metadata: item
