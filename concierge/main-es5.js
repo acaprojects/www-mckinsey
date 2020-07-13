@@ -17254,7 +17254,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.image_path = data.image_path || '';
         this.catering_type = data.catering_type;
         this.must_select = data.must_select || 0;
-        this.out_of_stock = !!(data.out_of_stock || data.hide);
+        this.out_of_stock = !!data.out_of_stock;
         this._amount = data._amount || data.amount || 0;
         this.allergy = data.allergy;
       }
@@ -17327,7 +17327,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           delete obj._server_names; // Convert remaining members to be public
 
           obj.price = obj.unit_price;
-          obj.hide = obj.out_of_stock;
           obj.categories = obj.parent_categories;
           var keys = Object.keys(obj);
 
