@@ -6533,7 +6533,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return rxjs_1.of([]);
             }), operators_1.map(function (list) {
               _this31.loading = false;
-              return list;
+              return list.filter(function (space) {
+                var rules = space.rulesFor({
+                  date: _this31.form.controls.date.value,
+                  duration: _this31.form.controls.duration.value,
+                  host: _this31.form.controls.organiser.value
+                });
+                return !rules.hide;
+              });
             })); // Process API results
 
             _this31.subscription('search_results', _this31.search_results$.subscribe(function (list) {
@@ -17669,7 +17676,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.booking = data.booking;
         this.delivery_time = data.delivery_time || data.start || 0;
         this.booking_date = data.booking_date;
-        this.location_id = data.location_id || data.location;
+        this.location_id = data.location_id || data.location || '';
         this.location = data.location || '';
         this.status = data.status || 'accepted';
         this.charge_code = data.charge_code || data.code;
@@ -35943,7 +35950,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _r4 = i0.ɵɵreference(7);
 
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.items && ctx_r0.items.length)("ngIfElse", _r4);
+        i0.ɵɵproperty("ngIf", ctx_r0.order && ctx_r0.items && ctx_r0.items.length)("ngIfElse", _r4);
       }
     }
 
@@ -36119,7 +36126,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "items",
         get: function get() {
-          return this.order.items || [];
+          return this.order.items;
         }
       }]);
 
@@ -37422,18 +37429,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "date_display",
         get: function get() {
-          var now = dayjs().startOf('d');
-          var date = dayjs(this.date).startOf('d');
-
-          if (now.isSame(date, 'd')) {
-            return 'Today';
-          } else if (date.diff(now, 'd') === 1) {
-            return 'Tomorrow';
-          } else if (now.diff(date, 'd') === 1) {
-            return 'Yesterday';
-          }
-
-          return date.format('DD MMM YYYY');
+          // const now = dayjs().startOf('d');
+          // const date = dayjs(this.date).startOf('d');
+          // if (now.isSame(date, 'd')) {
+          return 'Today'; // } else if (date.diff(now, 'd') === 1) {
+          //     return 'Tomorrow';
+          // } else if (now.diff(date, 'd') === 1) {
+          //     return 'Yesterday';
+          // }
+          // return date.format('DD MMM YYYY');
         }
       }]);
 

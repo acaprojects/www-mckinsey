@@ -3153,7 +3153,14 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 return this._spaces.available(query);
             }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
                 this.loading = false;
-                return list;
+                return list.filter(space => {
+                    const rules = space.rulesFor({
+                        date: this.form.controls.date.value,
+                        duration: this.form.controls.duration.value,
+                        host: this.form.controls.organiser.value,
+                    });
+                    return !rules.hide;
+                });
             }));
             // Process API results
             this.subscription('search_results', this.search_results$.subscribe(list => (this.space_list = list)));
@@ -9539,7 +9546,7 @@ class CateringOrder {
         this.booking = data.booking;
         this.delivery_time = data.delivery_time || data.start || 0;
         this.booking_date = data.booking_date;
-        this.location_id = data.location_id || data.location;
+        this.location_id = data.location_id || data.location || '';
         this.location = data.location || '';
         this.status = data.status || 'accepted';
         this.charge_code = data.charge_code || data.code;
@@ -19874,7 +19881,7 @@ function OrderDetailsItemsComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     const ctx_r0 = i0.ɵɵnextContext();
     const _r4 = i0.ɵɵreference(7);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r0.items && ctx_r0.items.length)("ngIfElse", _r4);
+    i0.ɵɵproperty("ngIf", ctx_r0.order && ctx_r0.items && ctx_r0.items.length)("ngIfElse", _r4);
 } }
 const _c0 = function (a0) { return [a0]; };
 function OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template(rf, ctx) { if (rf & 1) {
@@ -19934,7 +19941,7 @@ class OrderDetailsItemsComponent {
     }
     /** List of items in the order */
     get items() {
-        return this.order.items || [];
+        return this.order.items;
     }
     editOrder() {
         this.editing = true;
@@ -20546,18 +20553,16 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
     }
     /** Display value for the active date */
     get date_display() {
-        const now = dayjs().startOf('d');
-        const date = dayjs(this.date).startOf('d');
-        if (now.isSame(date, 'd')) {
-            return 'Today';
-        }
-        else if (date.diff(now, 'd') === 1) {
-            return 'Tomorrow';
-        }
-        else if (now.diff(date, 'd') === 1) {
-            return 'Yesterday';
-        }
-        return date.format('DD MMM YYYY');
+        // const now = dayjs().startOf('d');
+        // const date = dayjs(this.date).startOf('d');
+        // if (now.isSame(date, 'd')) {
+        return 'Today';
+        // } else if (date.diff(now, 'd') === 1) {
+        //     return 'Tomorrow';
+        // } else if (now.diff(date, 'd') === 1) {
+        //     return 'Yesterday';
+        // }
+        // return date.format('DD MMM YYYY');
     }
     ngOnInit() {
         this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
