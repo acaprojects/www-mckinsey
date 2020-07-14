@@ -16419,7 +16419,14 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 return this._spaces.available(query);
             }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
                 this.loading = false;
-                return list;
+                return list.filter(space => {
+                    const rules = space.rulesFor({
+                        date: this.form.controls.date.value,
+                        duration: this.form.controls.duration.value,
+                        host: this.form.controls.organiser.value,
+                    });
+                    return !rules.hide;
+                });
             }));
             // Process API results
             this.subscription('search_results', this.search_results$.subscribe(list => {
@@ -21590,16 +21597,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "6e6ce4b",
-    "hash": "6e6ce4b",
+    "raw": "47a0729",
+    "hash": "47a0729",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "6e6ce4b",
+    "suffix": "47a0729",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594691424847
+    "time": 1594696602412
 };
 /* tslint:enable */
 

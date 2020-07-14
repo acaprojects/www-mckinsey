@@ -29235,7 +29235,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return rxjs_1.of([]);
             }), operators_1.map(function (list) {
               _this141.loading = false;
-              return list;
+              return list.filter(function (space) {
+                var rules = space.rulesFor({
+                  date: _this141.form.controls.date.value,
+                  duration: _this141.form.controls.duration.value,
+                  host: _this141.form.controls.organiser.value
+                });
+                return !rules.hide;
+              });
             })); // Process API results
 
             _this141.subscription('search_results', _this141.search_results$.subscribe(function (list) {
@@ -38537,16 +38544,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "6e6ce4b",
-      "hash": "6e6ce4b",
+      "raw": "47a0729",
+      "hash": "47a0729",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "6e6ce4b",
+      "suffix": "47a0729",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594691424847
+      "time": 1594696602412
     };
     /* tslint:enable */
 
