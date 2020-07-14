@@ -5011,9 +5011,7 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
         })
             .then(() => {
             this._service.notifySuccess('Meeting approved.');
-            for (const space of this.booking.space_list) {
-                this.booking.approval_status[space.email] = 'accepted';
-            }
+            this.booking.approval_status[this.space.email] = 'accepted';
             const bookings = this._bookings.booking_list.getValue();
             bookings.splice(bookings.findIndex((bkn) => bkn.icaluid === this.booking.icaluid), 1, this.booking);
             this._bookings.booking_list.next(bookings);
@@ -20971,10 +20969,9 @@ class DayViewApprovalsEventComponent extends base_directive_1.BaseDirective {
                     end: event.end
                 })
                     .then(() => {
+                    var _a;
                     this._service.notifySuccess('Meeting approved.');
-                    for (const space of this.event.space_list) {
-                        this.event.approval_status[space.email] = 'accepted';
-                    }
+                    this.event.approval_status[(_a = this.event.space) === null || _a === void 0 ? void 0 : _a.email] = 'accepted';
                     STATES[this.event.id] = 'accepted';
                     const bookings = this._bookings.booking_list.getValue();
                     bookings.splice(bookings.findIndex(bkn => bkn.icaluid === this.event.icaluid), 1, this.event);
