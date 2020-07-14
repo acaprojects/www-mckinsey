@@ -3998,7 +3998,7 @@ class CateringDetailsModalComponent {
                 date: dayjs().valueOf(),
             }));
             this._data.notes_field.setValue(notes.concat(new_notes).filter((note) => note.message));
-            const orders = this._data.catering.value.map((order) => new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order), { charge_code: this.form[order.location_id].controls.code.value })));
+            const orders = this._data.catering.value.map((order) => new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order), { charge_code: this.form[order.location_id] ? this.form[order.location_id].controls.code.value : '' })));
             this._data.catering.setValue(orders);
             this.event.emit({ reason: 'done' });
         }

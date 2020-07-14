@@ -8058,7 +8058,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             var orders = this._data.catering.value.map(function (order) {
               return new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order), {
-                charge_code: _this39.form[order.location_id].controls.code.value
+                charge_code: _this39.form[order.location_id] ? _this39.form[order.location_id].controls.code.value : ''
               }));
             });
 
