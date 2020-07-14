@@ -3153,14 +3153,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 return this._spaces.available(query);
             }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
                 this.loading = false;
-                return list.filter(space => {
-                    const rules = space.rulesFor({
-                        date: this.form.controls.date.value,
-                        duration: this.form.controls.duration.value,
-                        host: this.form.controls.organiser.value,
-                    });
-                    return !rules.hide;
-                });
+                return list;
             }));
             // Process API results
             this.subscription('search_results', this.search_results$.subscribe(list => (this.space_list = list)));
@@ -3389,27 +3382,11 @@ class BookingSpaceItemComponent extends base_directive_1.BaseDirective {
             !!(this.form.controls.space_list.value || []).find((space) => space.id === this.space.id));
     }
     get is_hidden() {
-        /* istanbul ignore else */
-        if (!this.form) {
-            return false;
-        }
-        return this.space.rulesFor({
-            date: this.form.controls.date.value,
-            duration: this.form.controls.duration.value,
-            host: this.form.controls.organiser.value || this._users.current,
-        }).hide;
+        return false;
     }
     /** Whether space is booked by request */
     get is_request() {
-        /* istanbul ignore else */
-        if (!this.form) {
-            return false;
-        }
-        return this.space.byRequest({
-            date: this.form.controls.date.value,
-            duration: this.form.controls.duration.value,
-            host: this.form.controls.organiser.value || this._users.current,
-        });
+        return false;
     }
     get availability() {
         const count = this.space.recurr_available.reduce((count, ocurrence) => count + (ocurrence.available ? 1 : 0), 0);

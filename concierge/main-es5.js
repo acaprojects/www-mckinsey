@@ -6533,14 +6533,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return rxjs_1.of([]);
             }), operators_1.map(function (list) {
               _this31.loading = false;
-              return list.filter(function (space) {
-                var rules = space.rulesFor({
-                  date: _this31.form.controls.date.value,
-                  duration: _this31.form.controls.duration.value,
-                  host: _this31.form.controls.organiser.value
-                });
-                return !rules.hide;
-              });
+              return list;
             })); // Process API results
 
             _this31.subscription('search_results', _this31.search_results$.subscribe(function (list) {
@@ -7038,32 +7031,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "is_hidden",
         get: function get() {
-          /* istanbul ignore else */
-          if (!this.form) {
-            return false;
-          }
-
-          return this.space.rulesFor({
-            date: this.form.controls.date.value,
-            duration: this.form.controls.duration.value,
-            host: this.form.controls.organiser.value || this._users.current
-          }).hide;
+          return false;
         }
         /** Whether space is booked by request */
 
       }, {
         key: "is_request",
         get: function get() {
-          /* istanbul ignore else */
-          if (!this.form) {
-            return false;
-          }
-
-          return this.space.byRequest({
-            date: this.form.controls.date.value,
-            duration: this.form.controls.duration.value,
-            host: this.form.controls.organiser.value || this._users.current
-          });
+          return false;
         }
       }, {
         key: "availability",
