@@ -4034,6 +4034,9 @@ class Booking extends base_api_class_1.BaseDataClass {
     }
     /** Whether booking has been declined */
     get declined() {
+        if (this.location_name.toLowerCase().includes('decline')) {
+            return true;
+        }
         for (const space of this.space_list) {
             if ((this.approval_status[space.email] || '').indexOf('decline') >= 0) {
                 return true;
@@ -21597,16 +21600,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "47a0729",
-    "hash": "47a0729",
+    "raw": "16d237d",
+    "hash": "16d237d",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "47a0729",
+    "suffix": "16d237d",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594696602412
+    "time": 1594696994802
 };
 /* tslint:enable */
 

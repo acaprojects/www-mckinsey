@@ -8088,6 +8088,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "declined",
         get: function get() {
+          if (this.location_name.toLowerCase().includes('decline')) {
+            return true;
+          }
+
           var _iterator4 = _createForOfIteratorHelper(this.space_list),
               _step4;
 
@@ -38544,16 +38548,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "47a0729",
-      "hash": "47a0729",
+      "raw": "16d237d",
+      "hash": "16d237d",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "47a0729",
+      "suffix": "16d237d",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594696602412
+      "time": 1594696994802
     };
     /* tslint:enable */
 
