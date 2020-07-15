@@ -8866,9 +8866,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param date Datetime of the new event
      */
 
-    function statusFromBookings(bookings, bookable, requestable) {
+    function statusFromBookings() {
+      var bookings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var bookable = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      var requestable = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
       var date = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : dayjs().valueOf();
-      var free_slots = getFreeBookingSlots(bookings);
+      var free_slots = getFreeBookingSlots(bookings.filter(function (bkn) {
+        return !bkn.declined;
+      }));
       var now = dayjs(date);
       var next_free_slot = free_slots.find(function (slot) {
         var start = dayjs(slot.start);
@@ -38548,16 +38553,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "16d237d",
-      "hash": "16d237d",
+      "raw": "0712a1f",
+      "hash": "0712a1f",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "16d237d",
+      "suffix": "0712a1f",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594696994802
+      "time": 1594787661064
     };
     /* tslint:enable */
 

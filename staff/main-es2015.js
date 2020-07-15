@@ -4627,8 +4627,8 @@ exports.stringToMinutes = stringToMinutes;
  * @param host Host of the new event
  * @param date Datetime of the new event
  */
-function statusFromBookings(bookings, bookable, requestable, date = dayjs().valueOf()) {
-    const free_slots = getFreeBookingSlots(bookings);
+function statusFromBookings(bookings = [], bookable = true, requestable = false, date = dayjs().valueOf()) {
+    const free_slots = getFreeBookingSlots(bookings.filter(bkn => !bkn.declined));
     const now = dayjs(date);
     const next_free_slot = free_slots.find((slot) => {
         const start = dayjs(slot.start);
@@ -21600,16 +21600,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "16d237d",
-    "hash": "16d237d",
+    "raw": "0712a1f",
+    "hash": "0712a1f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "16d237d",
+    "suffix": "0712a1f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594696994802
+    "time": 1594787661064
 };
 /* tslint:enable */
 
