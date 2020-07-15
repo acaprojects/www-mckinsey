@@ -8625,6 +8625,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         auto_approve: true,
         hide: true
       };
+      var match = false;
       /* istanbul ignore else */
 
       if (options.space) {
@@ -8673,6 +8674,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     space_rules_for_user.auto_approve = ruleset.auto_approve;
                   }
 
+                  match = true;
                   break;
                 }
               }
@@ -8695,6 +8697,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (_ret === "break") break;
         }
+      }
+
+      if (!match) {
+        space_rules_for_user.hide = true;
       }
 
       return space_rules_for_user;
@@ -38556,16 +38562,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "78905d5",
-      "hash": "78905d5",
+      "raw": "afbdeb2",
+      "hash": "afbdeb2",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "78905d5",
+      "suffix": "afbdeb2",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594796684769
+      "time": 1594797563132
     };
     /* tslint:enable */
 
