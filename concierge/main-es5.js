@@ -9462,7 +9462,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expired",
         get: function get() {
-          return this.booking.status === 'done' || this.booking.declined;
+          return this.booking.status === 'done';
         }
       }]);
 

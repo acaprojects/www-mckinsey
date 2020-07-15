@@ -4804,7 +4804,7 @@ class MeetingDetailsDisplayComponent {
     }
     /** Whether booking has been declined or ended */
     get expired() {
-        return this.booking.status === 'done' || this.booking.declined;
+        return this.booking.status === 'done';
     }
     ngOnInit() {
         Object.values(this.booking.edits || []).forEach(i => {
