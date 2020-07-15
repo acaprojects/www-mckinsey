@@ -15977,6 +15977,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          Object.keys(data.setup).forEach(function (key) {
+            return data.setup[key] = data.setup[key] * 60;
+          });
+          Object.keys(data.breakdown).forEach(function (key) {
+            return data.breakdown[key] = data.breakdown[key] * 60;
+          });
+          data.catering = data.catering.filter(function (order) {
+            return data.room_ids.includes(order.location_id);
+          });
+
           if (data.catering && data.catering.length) {
             var _iterator10 = _createForOfIteratorHelper(data.catering),
                 _step10;
@@ -15994,15 +16004,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          Object.keys(data.setup).forEach(function (key) {
-            return data.setup[key] = data.setup[key] * 60;
-          });
-          Object.keys(data.breakdown).forEach(function (key) {
-            return data.breakdown[key] = data.breakdown[key] * 60;
-          });
-          data.catering = data.catering.filter(function (order) {
-            return data.room_ids.includes(order.location_id);
-          });
           data.description = data.body;
           data.recurr = data.recurrence;
           data.booking_type = data.type;
@@ -39305,8 +39306,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
             this.width = Math.min(100, 100 / overlap.total + 5);
             this.left = Math.min(100 - this.width, this.width * overlap.index - 5 * overlap.index);
-            this.overflow_top = (this.event.setup[this.event.space.email] ? this.event.setup[this.event.space.email] / duration : -0.1) * 100;
-            this.overflow_bottom = (this.event.breakdown[this.event.space.email] ? this.event.breakdown[this.event.space.email] / duration : -0.1) * 100;
+            this.overflow_top = (this.event.setup[this.space.email] ? this.event.setup[this.space.email] / duration : -0.1) * 100;
+            this.overflow_bottom = (this.event.breakdown[this.space.email] ? this.event.breakdown[this.space.email] / duration : -0.1) * 100;
           }
         }
       }, {

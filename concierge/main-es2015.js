@@ -8595,15 +8595,15 @@ class Booking extends base_api_class_1.BaseDataClass {
                 data.breakdown[note.space] = 15;
             }
         }
+        Object.keys(data.setup).forEach((key) => (data.setup[key] = data.setup[key] * 60));
+        Object.keys(data.breakdown).forEach((key) => (data.breakdown[key] = data.breakdown[key] * 60));
+        data.catering = data.catering.filter(order => data.room_ids.includes(order.location_id));
         if (data.catering && data.catering.length) {
             for (const order of data.catering) {
                 data.setup[order.location_id] = 15;
                 data.breakdown[order.location_id] = 15;
             }
         }
-        Object.keys(data.setup).forEach((key) => (data.setup[key] = data.setup[key] * 60));
-        Object.keys(data.breakdown).forEach((key) => (data.breakdown[key] = data.breakdown[key] * 60));
-        data.catering = data.catering.filter(order => data.room_ids.includes(order.location_id));
         data.description = data.body;
         data.recurr = data.recurrence;
         data.booking_type = data.type;
@@ -21749,12 +21749,12 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
             this.width = Math.min(100, 100 / overlap.total + 5);
             this.left = Math.min(100 - this.width, this.width * overlap.index - 5 * overlap.index);
             this.overflow_top =
-                (this.event.setup[this.event.space.email]
-                    ? this.event.setup[this.event.space.email] / duration
+                (this.event.setup[this.space.email]
+                    ? this.event.setup[this.space.email] / duration
                     : -0.1) * 100;
             this.overflow_bottom =
-                (this.event.breakdown[this.event.space.email]
-                    ? this.event.breakdown[this.event.space.email] / duration
+                (this.event.breakdown[this.space.email]
+                    ? this.event.breakdown[this.space.email] / duration
                     : -0.1) * 100;
         }
     }
