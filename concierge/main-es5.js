@@ -15970,8 +15970,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             try {
               for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
                 var note = _step9.value;
-                data.setup[note.space] = 15;
-                data.breakdown[note.space] = 15;
+                data.setup[note.space] = data.setup[note.space] || 15;
+                data.breakdown[note.space] = data.breakdown[note.space] || 15;
               }
             } catch (err) {
               _iterator9.e(err);
@@ -15980,12 +15980,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          Object.keys(data.setup).forEach(function (key) {
-            return data.setup[key] = data.setup[key] * 60;
-          });
-          Object.keys(data.breakdown).forEach(function (key) {
-            return data.breakdown[key] = data.breakdown[key] * 60;
-          });
           data.catering = data.catering.filter(function (order) {
             return data.room_ids.includes(order.location_id);
           });
@@ -15997,8 +15991,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             try {
               for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
                 var order = _step10.value;
-                data.setup[order.location_id] = 15;
-                data.breakdown[order.location_id] = 15;
+                data.setup[order.location_id] = data.setup[order.location_id] || 15;
+                data.breakdown[order.location_id] = data.breakdown[order.location_id] || 15;
               }
             } catch (err) {
               _iterator10.e(err);
@@ -16007,6 +16001,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          Object.keys(data.setup).forEach(function (key) {
+            return data.setup[key] = data.setup[key] * 60;
+          });
+          Object.keys(data.breakdown).forEach(function (key) {
+            return data.breakdown[key] = data.breakdown[key] * 60;
+          });
           data.description = data.body;
           data.recurr = data.recurrence;
           data.booking_type = data.type;
