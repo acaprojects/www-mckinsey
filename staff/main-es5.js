@@ -8566,6 +8566,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       });
+      fields.date.valueChanges.subscribe(function (_) {
+        fields.duration.updateValueAndValidity();
+      });
       var simplified_fields = ['id', 'space_list', 'space_ids', 'notes', 'booking_type', 'equipment_codes', 'expected_attendees'].concat(_toConsumableArray(use_fields)).reduce(function (map, key) {
         /* istanbul ignore else */
         if (fields[key]) {
@@ -38553,16 +38556,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "0712a1f",
-      "hash": "0712a1f",
+      "raw": "78905d5",
+      "hash": "78905d5",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "0712a1f",
+      "suffix": "78905d5",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594787661064
+      "time": 1594796684769
     };
     /* tslint:enable */
 

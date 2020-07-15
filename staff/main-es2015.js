@@ -4389,6 +4389,9 @@ function generateBookingForm(booking, use_fields) {
             }
         }
     });
+    fields.date.valueChanges.subscribe((_) => {
+        fields.duration.updateValueAndValidity();
+    });
     const simplified_fields = [
         'id',
         'space_list',
@@ -21600,16 +21603,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "0712a1f",
-    "hash": "0712a1f",
+    "raw": "78905d5",
+    "hash": "78905d5",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "0712a1f",
+    "suffix": "78905d5",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594787661064
+    "time": 1594796684769
 };
 /* tslint:enable */
 
