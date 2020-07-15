@@ -5202,12 +5202,13 @@ class MeetingPrivateDetailsComponent {
         return breakdown ? general_utilities_1.humaniseDuration(breakdown) : '<No Breakdown time>';
     }
     get notes() {
-        return (this.booking.notes.find(note => note.type === 'private') || {}).message;
+        return (this.booking.notes.find(note => note.type === 'private' && note.space === this.space.email) || {}).message;
     }
     ngOnInit() { }
     openPrivateDetailsModal() {
         this._dialog.open(private_details_modal_component_1.PrivateDetailsModalComponent, {
             data: {
+                space: this.space,
                 booking: this.booking,
             },
         });
@@ -6159,16 +6160,16 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
         return this._data.booking;
     }
     ngOnInit() {
-        const note = this.booking.notes.find((note) => note.type === 'private' && note.space === this.booking.space.email) || { message: '' };
+        const note = this.booking.notes.find((note) => note.type === 'private' && note.space === this._data.space.email) || { message: '' };
         this.form = new forms_1.FormGroup({
-            setup: new forms_1.FormControl(this.booking.setup[this.booking.space.email] || 0),
-            breakdown: new forms_1.FormControl(this.booking.breakdown[this.booking.space.email] || 0),
+            setup: new forms_1.FormControl(this.booking.setup[this._data.space.email] || 0),
+            breakdown: new forms_1.FormControl(this.booking.breakdown[this._data.space.email] || 0),
             notes: new forms_1.FormControl(note.message),
         });
     }
     saveChanges() {
         if (this.form.dirty) {
-            const old_notes = this.booking.notes.filter((note) => !(note.type === 'private' && note.space === this.booking.space.email));
+            const old_notes = this.booking.notes.filter((note) => !(note.type === 'private' && note.space === this._data.space.email));
             const notes = [
                 ...old_notes,
                 {
@@ -6176,14 +6177,14 @@ class PrivateDetailsModalComponent extends base_directive_1.BaseDirective {
                     date: dayjs().valueOf(),
                     message: this.form.value.notes,
                     author: this._users.current.name,
-                    space: this.booking.space.email,
+                    space: this._data.space.email,
                 },
             ];
             const value = this.form.value;
             const setup = Object.assign({}, this.booking.setup);
-            setup[this.booking.space.email] = value.setup * 60;
+            setup[this._data.space.email] = value.setup * 60;
             const breakdown = Object.assign({}, this.booking.breakdown);
-            breakdown[this.booking.space.email] = value.breakdown * 60;
+            breakdown[this._data.space.email] = value.breakdown * 60;
             const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), { setup,
                 breakdown,
                 notes }));
