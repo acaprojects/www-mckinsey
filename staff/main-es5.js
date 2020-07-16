@@ -35710,7 +35710,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
 
             var filter_fn = function filter_fn(i) {
-              return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), i.date, i.date + (i.duration || 60) * 60 * 1000);
+              return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), i.date, i.date + ((i.duration || 60) - 1) * 60 * 1000);
             }; // Add events for today to list
 
 
@@ -38594,16 +38594,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "31cd1a2",
-      "hash": "31cd1a2",
+      "raw": "1d3c9b7",
+      "hash": "1d3c9b7",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "31cd1a2",
+      "suffix": "1d3c9b7",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594893976216
+      "time": 1594900365142
     };
     /* tslint:enable */
 

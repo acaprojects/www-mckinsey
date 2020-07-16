@@ -19953,7 +19953,7 @@ class ScheduleEventListComponent extends base_directive_1.BaseDirective {
                 is_today: date.isSame(now, 'd'),
                 date: date.valueOf(),
             });
-            const filter_fn = (i) => booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), i.date, i.date + (i.duration || 60) * 60 * 1000);
+            const filter_fn = (i) => booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), i.date, i.date + ((i.duration || 60) - 1) * 60 * 1000);
             // Add events for today to list
             const new_items = list.filter(filter_fn);
             const old_items = old_events.filter(filter_fn);
@@ -21620,16 +21620,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "31cd1a2",
-    "hash": "31cd1a2",
+    "raw": "1d3c9b7",
+    "hash": "1d3c9b7",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "31cd1a2",
+    "suffix": "1d3c9b7",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594893976216
+    "time": 1594900365142
 };
 /* tslint:enable */
 
