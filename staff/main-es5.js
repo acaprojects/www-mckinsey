@@ -8545,7 +8545,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         fields.date.updateValueAndValidity();
       }
 
-      var list_length = 0;
+      var list_length = -1;
       fields.space_list.valueChanges.subscribe(function (list) {
         if (list && list.length > list_length && list_length === 0) {
           var expected = fields.expected_attendees.value || {};
@@ -8565,6 +8565,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             fields.equipment_codes.setValue(new_codes);
           }
         }
+
+        list_length = list.length;
       });
       fields.date.valueChanges.subscribe(function (_) {
         fields.duration.updateValueAndValidity();
@@ -38592,16 +38594,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "6ff1ac6",
-      "hash": "6ff1ac6",
+      "raw": "31cd1a2",
+      "hash": "31cd1a2",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "6ff1ac6",
+      "suffix": "31cd1a2",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594893559919
+      "time": 1594893976216
     };
     /* tslint:enable */
 

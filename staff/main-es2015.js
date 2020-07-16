@@ -4371,7 +4371,7 @@ function generateBookingForm(booking, use_fields) {
         fields.date.setValidators([forms_1.Validators.required, isFuture]);
         fields.date.updateValueAndValidity();
     }
-    let list_length = 0;
+    let list_length = -1;
     fields.space_list.valueChanges.subscribe((list) => {
         if (list && list.length > list_length && list_length === 0) {
             const expected = fields.expected_attendees.value || {};
@@ -4388,6 +4388,7 @@ function generateBookingForm(booking, use_fields) {
                 fields.equipment_codes.setValue(new_codes);
             }
         }
+        list_length = list.length;
     });
     fields.date.valueChanges.subscribe((_) => {
         fields.duration.updateValueAndValidity();
@@ -21619,16 +21620,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "6ff1ac6",
-    "hash": "6ff1ac6",
+    "raw": "31cd1a2",
+    "hash": "31cd1a2",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "6ff1ac6",
+    "suffix": "31cd1a2",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594893559919
+    "time": 1594893976216
 };
 /* tslint:enable */
 
