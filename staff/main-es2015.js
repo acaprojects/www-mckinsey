@@ -5197,6 +5197,7 @@ class Building extends base_api_class_1.BaseDataClass {
         this._settings = settings;
         this._phone_numbers = raw_data.phone_numbers || disc_info.phone_numbers || {};
         this._location = raw_data.location || disc_info.location || { longitude: null, latitude: null };
+        this.catering_hours = raw_data.catering_hours || disc_info.catering_hours || settings.catering_hours || { start: 7, end: 20 };
         const searchables = [];
         if (raw_data.neighbourhoods) {
             for (const lvl in raw_data.neighbourhoods) {
@@ -15495,29 +15496,30 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         }
         let end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
         let building_time = spacetime_1.default(start.toDate());
-        // const space = this.form ? this.form.controls.location_id.value : null;
-        // if (space) {
-        //     const building = this._service.Organisation.buildings.find((bld) =>bld.id === space.level.building_id);
-        //     if (building && building.timezone) {
-        //         building_time = building_time.goto(building.timezone);
-        //     }
-        // }
-        building_time = building_time.hour(7);
+        const space = this.form ? this.form.controls.location_id.value : null;
+        let catering_hours = { start: 7, end: 20 };
+        if (space && space.level) {
+            const building = this._org.buildings.find((bld) => bld.id === space.level.building_id);
+            if (building && building.timezone) {
+                building_time = building_time.goto(building.timezone);
+            }
+            catering_hours = building.catering_hours || catering_hours;
+        }
+        building_time = building_time.hour(catering_hours.start);
         const as_dayjs = dayjs(building_time.toLocalDate());
-        if (this.all_day || this.duration >= 13 * 60) {
+        if (this.all_day || this.duration >= (catering_hours.end - catering_hours.start) * 60) {
             if (start.isBefore(as_dayjs, 'm')) {
                 start = as_dayjs;
-                end = start.add(13, 'h');
-            }
-            else {
-                const possible_end = as_dayjs.hour(20);
-                if (end.isAfter(possible_end)) {
-                    end = possible_end;
-                }
+                end = start.add((catering_hours.end - catering_hours.start), 'h');
             }
         }
         if (start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
+        }
+        const possible_end = as_dayjs.minute(0).hour(catering_hours.end);
+        console.log('End:', end.format('h:mm A'), possible_end.format('h:mm A'));
+        if (end.isAfter(possible_end, 'm')) {
+            end = possible_end;
         }
         return { start, end };
     }
@@ -21608,16 +21610,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "32aeba7",
-    "hash": "32aeba7",
+    "raw": "28334eb",
+    "hash": "28334eb",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "32aeba7",
+    "suffix": "28334eb",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594811576245
+    "time": 1594858963945
 };
 /* tslint:enable */
 
