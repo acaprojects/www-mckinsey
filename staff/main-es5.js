@@ -27379,13 +27379,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this132.loadMenu();
           }));
           this.loadMenu();
-          this.generateAvailableTimes();
-
-          if (this.form && !this.available_times.find(function (time) {
-            return time.id === _this132.form.controls.delivery_time.value;
-          })) {
-            this.form.controls.delivery_time.setValue(this.available_times[0].id);
-          }
         }
       }, {
         key: "confirmOrder",
@@ -27402,9 +27395,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
 
           this.subscription('confirm_event', ref.componentInstance.event.subscribe(function (event) {
+            var _a;
             /* istanbul ignore else */
+
+
             if (event.reason === 'done') {
-              var order = new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, _this133.order), _this133.form.value));
+              var order = new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, _this133.order), ((_a = _this133.form) === null || _a === void 0 ? void 0 : _a.value) || {}));
 
               _this133.event.emit(order);
 
@@ -27432,6 +27428,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this134.category_list = list.map(function (i) {
               return new catering_category_class_1.CateringCategory(i);
             });
+
+            _this134.generateAvailableTimes();
+
+            if (_this134.form && !_this134.available_times.find(function (time) {
+              return time.id === _this134.form.controls.delivery_time.value;
+            })) {
+              _this134.form.controls.delivery_time.setValue(_this134.available_times[0].id);
+            }
           }, function () {
             return _this134.loading = false;
           });
@@ -27480,15 +27484,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
           var building_time = spacetime_1["default"](start.toDate());
-          var space = this.form ? this.form.controls.location_id.value : null;
+          var space_email = this.form ? this.form.controls.location_id.value : null;
           var catering_hours = {
             start: 7,
             end: 20
           };
 
-          if (space && space.level) {
+          if (space_email) {
+            var space = this.space_list.find(function (space) {
+              return space.email === space_email;
+            });
+
             var building = this._org.buildings.find(function (bld) {
-              return bld.id === space.level.building_id;
+              var _a;
+
+              return bld.id === ((_a = space) === null || _a === void 0 ? void 0 : _a.level.building_id);
             });
 
             if (building && building.timezone) {
@@ -27512,8 +27522,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             start = as_dayjs;
           }
 
-          var possible_end = dayjs(building_time.hour(catering_hours.end).toLocalDate());
-          console.log('End:', end.format('h:mm A'), possible_end.format('h:mm A'));
+          var possible_end = dayjs(building_time.startOf('hour').hour(catering_hours.end).toLocalDate());
 
           if (end.isAfter(possible_end, 'm')) {
             end = possible_end;
@@ -38583,16 +38592,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "4fd578f",
-      "hash": "4fd578f",
+      "raw": "6ff1ac6",
+      "hash": "6ff1ac6",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "4fd578f",
+      "suffix": "6ff1ac6",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594891542797
+      "time": 1594893559919
     };
     /* tslint:enable */
 

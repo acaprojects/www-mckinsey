@@ -15440,11 +15440,6 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
             this.loadMenu();
         }));
         this.loadMenu();
-        this.generateAvailableTimes();
-        if (this.form &&
-            !this.available_times.find((time) => time.id === this.form.controls.delivery_time.value)) {
-            this.form.controls.delivery_time.setValue(this.available_times[0].id);
-        }
     }
     confirmOrder() {
         const ref = this._dialog.open(catering_confirm_modal_component_1.BookingCateringConfirmModalComponent, {
@@ -15456,9 +15451,10 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
             },
         });
         this.subscription('confirm_event', ref.componentInstance.event.subscribe((event) => {
+            var _a;
             /* istanbul ignore else */
             if (event.reason === 'done') {
-                const order = new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, this.order), this.form.value));
+                const order = new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, this.order), (((_a = this.form) === null || _a === void 0 ? void 0 : _a.value) || {})));
                 this.event.emit(order);
                 ref.close();
             }
@@ -15471,6 +15467,11 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         this._menu.query({ room_id: space.id }).then((list) => {
             this.loading = false;
             this.category_list = list.map((i) => new catering_category_class_1.CateringCategory(i));
+            this.generateAvailableTimes();
+            if (this.form &&
+                !this.available_times.find((time) => time.id === this.form.controls.delivery_time.value)) {
+                this.form.controls.delivery_time.setValue(this.available_times[0].id);
+            }
         }, () => (this.loading = false));
     }
     /** Generate a list of available delivery times for the given booking time */
@@ -15500,10 +15501,11 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         }
         let end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
         let building_time = spacetime_1.default(start.toDate());
-        const space = this.form ? this.form.controls.location_id.value : null;
+        const space_email = this.form ? this.form.controls.location_id.value : null;
         let catering_hours = { start: 7, end: 20 };
-        if (space && space.level) {
-            const building = this._org.buildings.find((bld) => bld.id === space.level.building_id);
+        if (space_email) {
+            const space = this.space_list.find((space) => space.email === space_email);
+            const building = this._org.buildings.find((bld) => { var _a; return bld.id === ((_a = space) === null || _a === void 0 ? void 0 : _a.level.building_id); });
             if (building && building.timezone) {
                 building_time = building_time.goto(building.timezone);
             }
@@ -15514,14 +15516,16 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         if (this.all_day || this.duration >= (catering_hours.end - catering_hours.start) * 60) {
             if (start.isBefore(as_dayjs, 'm')) {
                 start = as_dayjs;
-                end = start.add((catering_hours.end - catering_hours.start), 'h');
+                end = start.add(catering_hours.end - catering_hours.start, 'h');
             }
         }
         if (start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
         }
-        const possible_end = dayjs(building_time.hour(catering_hours.end).toLocalDate());
-        console.log('End:', end.format('h:mm A'), possible_end.format('h:mm A'));
+        const possible_end = dayjs(building_time
+            .startOf('hour')
+            .hour(catering_hours.end)
+            .toLocalDate());
         if (end.isAfter(possible_end, 'm')) {
             end = possible_end;
         }
@@ -21615,16 +21619,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "4fd578f",
-    "hash": "4fd578f",
+    "raw": "6ff1ac6",
+    "hash": "6ff1ac6",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "4fd578f",
+    "suffix": "6ff1ac6",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594891542797
+    "time": 1594893559919
 };
 /* tslint:enable */
 
