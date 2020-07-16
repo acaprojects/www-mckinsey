@@ -16530,8 +16530,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (simplified_fields.all_day) {
         simplified_fields.all_day.valueChanges.subscribe(function (value) {
           if (value) {
+            simplified_fields.date.setValidators([forms_1.Validators.required]);
+            simplified_fields.date.updateValueAndValidity();
             simplified_fields.duration.disable();
           } else {
+            simplified_fields.date.setValidators([forms_1.Validators.required, isFuture]);
+            simplified_fields.date.updateValueAndValidity();
             simplified_fields.duration.enable();
           }
         });
