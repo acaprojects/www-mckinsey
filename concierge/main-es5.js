@@ -16497,7 +16497,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         fields.date.setValidators([forms_1.Validators.required, isFuture]);
       }
 
-      var list_length = 0;
+      var list_length = -1;
       fields.space_list.valueChanges.subscribe(function (list) {
         if (list && list.length > list_length && list_length === 0) {
           var expected = fields.expected_attendees.value || {};
@@ -16517,6 +16517,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             fields.equipment_codes.setValue(new_codes);
           }
         }
+
+        list_length = list.length;
       });
       var simplified_fields = ['id', 'space_list', 'space_ids', 'notes', 'equipment_codes', 'expected_attendees', 'organiser_email'].concat(_toConsumableArray(use_fields)).reduce(function (map, key) {
         /* istanbul ignore else */

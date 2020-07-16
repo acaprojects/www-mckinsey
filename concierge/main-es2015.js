@@ -8797,7 +8797,7 @@ function generateBookingForm(booking, use_fields) {
     else {
         fields.date.setValidators([forms_1.Validators.required, isFuture]);
     }
-    let list_length = 0;
+    let list_length = -1;
     fields.space_list.valueChanges.subscribe(list => {
         if (list && list.length > list_length && list_length === 0) {
             const expected = fields.expected_attendees.value || {};
@@ -8814,6 +8814,7 @@ function generateBookingForm(booking, use_fields) {
                 fields.equipment_codes.setValue(new_codes);
             }
         }
+        list_length = list.length;
     });
     const simplified_fields = [
         'id',
