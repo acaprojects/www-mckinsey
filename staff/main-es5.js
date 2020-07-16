@@ -27512,7 +27512,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             start = as_dayjs;
           }
 
-          var possible_end = as_dayjs.minute(0).hour(catering_hours.end);
+          var possible_end = dayjs(building_time.hour(catering_hours.end).toLocalDate());
           console.log('End:', end.format('h:mm A'), possible_end.format('h:mm A'));
 
           if (end.isAfter(possible_end, 'm')) {
@@ -38583,16 +38583,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "12b9bba",
-      "hash": "12b9bba",
+      "raw": "4fd578f",
+      "hash": "4fd578f",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "12b9bba",
+      "suffix": "4fd578f",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594880745122
+      "time": 1594891542797
     };
     /* tslint:enable */
 
