@@ -16432,10 +16432,11 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 return this._spaces.available(query);
             }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
                 this.loading = false;
+                const all_day = this.form.controls.all_day.value;
                 return list.filter(space => {
                     const rules = space.rulesFor({
                         date: this.form.controls.date.value,
-                        duration: this.form.controls.duration.value,
+                        duration: all_day ? 24 * 60 : this.form.controls.duration.value,
                         host: this.form.controls.organiser.value,
                     });
                     return !rules.hide;
@@ -21610,16 +21611,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "ec66464",
-    "hash": "ec66464",
+    "raw": "4209d46",
+    "hash": "4209d46",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "ec66464",
+    "suffix": "4209d46",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594867829836
+    "time": 1594875331522
 };
 /* tslint:enable */
 

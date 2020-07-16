@@ -29269,10 +29269,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return rxjs_1.of([]);
             }), operators_1.map(function (list) {
               _this141.loading = false;
+              var all_day = _this141.form.controls.all_day.value;
               return list.filter(function (space) {
                 var rules = space.rulesFor({
                   date: _this141.form.controls.date.value,
-                  duration: _this141.form.controls.duration.value,
+                  duration: all_day ? 24 * 60 : _this141.form.controls.duration.value,
                   host: _this141.form.controls.organiser.value
                 });
                 return !rules.hide;
@@ -38578,16 +38579,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "ec66464",
-      "hash": "ec66464",
+      "raw": "4209d46",
+      "hash": "4209d46",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "ec66464",
+      "suffix": "4209d46",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594867829836
+      "time": 1594875331522
     };
     /* tslint:enable */
 
