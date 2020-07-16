@@ -10435,10 +10435,8 @@ ServiceManager._service_list = [];
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const base_api_class_1 = __webpack_require__(/*! ../base-api.class */ "./src/app/services/data/base-api.class.ts");
-const booking_class_1 = __webpack_require__(/*! ../bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const level_class_1 = __webpack_require__(/*! ../organisation/level.class */ "./src/app/services/data/organisation/level.class.ts");
 const booking_utilities_1 = __webpack_require__(/*! ../bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const building_class_1 = __webpack_require__(/*! ../organisation/building.class */ "./src/app/services/data/organisation/building.class.ts");
 const organisation_class_1 = __webpack_require__(/*! ../organisation/organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
 const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
@@ -10478,7 +10476,7 @@ class Space extends base_api_class_1.BaseDataClass {
         this.image = raw_data.image || '';
         this.zones = raw_data.zones instanceof Array ? raw_data.zones : [];
         const raw_bookings = settings.bookings || raw_data.bookings || [];
-        this.bookings = raw_bookings.map((bkn) => new booking_class_1.Booking(bkn.toJSON ? bkn.toJSON() : bkn));
+        this.bookings = raw_bookings.map((bkn) => bkn.toJSON ? bkn.toJSON() : bkn);
         this._extras = [];
         this.linked_spaces =
             settings.linked_rooms || raw_data.linked_rooms || raw_data.linked_spaces || [];
@@ -10487,48 +10485,10 @@ class Space extends base_api_class_1.BaseDataClass {
     get _service() {
         return service_manager_class_1.ServiceManager.serviceFor(building_class_1.Building);
     }
-    /** Whether the space has a booking in progress */
-    get in_use() {
-        return !!this.current;
-    }
-    /** Get any current in progress meeting */
-    get current() {
-        const bookings = this.bookings;
-        for (const bkn of bookings) {
-            const status = bkn.status;
-            if (status === 'in_progress' || status === 'started') {
-                return bkn;
-            }
-        }
-        return null;
-    }
-    /** Get the next upcoming meeting */
-    get next() {
-        const now = dayjs().valueOf();
-        const bookings = this.bookings;
-        for (const bkn of bookings) {
-            if (bkn.date > now) {
-                return bkn;
-            }
-        }
-        return null;
-    }
-    /** List of bookings for today */
-    get todays_bookings() {
-        return this.bookingsFor(dayjs().valueOf());
-    }
     /** Level in which the space is associated */
     get level() {
         const service = service_manager_class_1.ServiceManager.serviceFor(organisation_class_1.Organisation);
         return (service ? service.levelWithID(this.zones) : null) || new level_class_1.BuildingLevel({});
-    }
-    /**
-     * Get bookings for space
-     * @param date Date to filter bookings on
-     */
-    bookingsFor(date) {
-        const day = dayjs(date);
-        return this.bookings.filter((i) => dayjs(i.date).isSame(day, 'd'));
     }
     /**
      * Whether the space is available.
@@ -13136,7 +13096,6 @@ const new_user_modal_component_1 = __webpack_require__(/*! src/app/overlays/new-
 const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const user_class_1 = __webpack_require__(/*! src/app/services/data/users/user.class */ "./src/app/services/data/users/user.class.ts");
 const space_select_modal_component_1 = __webpack_require__(/*! src/app/overlays/space-select-modal/space-select-modal.component */ "./src/app/overlays/space-select-modal/space-select-modal.component.ts");
-const recurrence_modal_component_1 = __webpack_require__(/*! src/app/overlays/recurrence-modal/recurrence-modal.component */ "./src/app/overlays/recurrence-modal/recurrence-modal.component.ts");
 const users_service_1 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -13550,21 +13509,6 @@ class BookingFormComponent extends base_directive_1.BaseDirective {
             this.user_list = [user].concat(delegates);
         });
     }
-    /** Display string for the recurrence value of the booking */
-    get recurrence() {
-        const recurrence = this.form.controls.recurrence
-            ? this.form.controls.recurrence.value
-            : null;
-        const periods = ['None', 'Daily', 'Weekly', 'Biweekly', 'Monthly'];
-        if (!recurrence || !recurrence.period || recurrence.period >= periods.length) {
-            return 'No recurrence';
-        }
-        const period = typeof recurrence.period === 'string' ? recurrence.period : periods[recurrence.period];
-        const end = recurrence.end
-            ? `until ${dayjs(recurrence.end).format('DD MMM YYYY')}`
-            : 'forever';
-        return `${period} ${end}`;
-    }
     /** Whether notes and description should use the HTML editor */
     get use_html() {
         return this._service.setting('app.booking.html_body') || false;
@@ -13606,28 +13550,6 @@ class BookingFormComponent extends base_directive_1.BaseDirective {
                 this.form.controls.space_list.setValue(general_utilities_1.unique(space_list, 'id'));
                 ref.close();
                 this.unsub('new_spaces');
-            }
-        }));
-    }
-    /**
-     * Open modal to change the recurrence details for the booking
-     */
-    openRecurrenceModal() {
-        const ref = this._dialog.open(recurrence_modal_component_1.RecurrenceModalComponent, {
-            width: 'auto',
-            height: 'auto',
-            maxWidth: '95vw',
-            data: {
-                details: this.form.controls.recurrence.value,
-                date: this.form.controls.date.value,
-            },
-        });
-        this.subscription('recurrence', ref.componentInstance.event.subscribe((event) => {
-            /* istanbul ignore else */
-            if (event.reason === 'done') {
-                this.form.controls.recurrence.setValue(event.metadata && event.metadata.period !== 'none' ? event.metadata : {});
-                ref.close();
-                this.unsub('recurrence');
             }
         }));
     }
@@ -16550,7 +16472,7 @@ exports.humaniseDuration = humaniseDuration;
 function filterList(filter, items, fields = ['id']) {
     let results;
     // Tokenise filter string
-    const filters = (filter || '').toLowerCase().split(' ');
+    const filters = filter.toLowerCase().split(' ');
     const list = {};
     for (const f of filters) {
         /* istanbul ignore else */
@@ -16571,7 +16493,7 @@ function filterList(filter, items, fields = ['id']) {
         }
     }
     parts.sort((a, b) => b.word.length - a.word.length || a.word.localeCompare(b.word));
-    const item_list = JSON.parse(JSON.stringify(items || []));
+    const item_list = JSON.parse(JSON.stringify(items));
     /* istanbul ignore else */
     if (filter) {
         results = item_list.filter((item) => {
@@ -16800,6 +16722,7 @@ function eventToPoint(event) {
     }
 }
 exports.eventToPoint = eventToPoint;
+/* istanbul ignore next */
 /**
  * Flatten nested array
  * @param an_array Array to flatten
@@ -17655,7 +17578,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
         return this._org.building;
     }
     get symbol() {
-        return this.building.currency || 'USD';
+        return this.building.currency;
     }
     openGroupModal(group) {
         /* istanbul ignore else */
@@ -18558,7 +18481,7 @@ class CateringOrdersComponent extends base_directive_1.BaseDirective {
             const date = dayjs(this.date).startOf('d');
             const end = date.endOf('d');
             let bookings = this._bookings.booking_list.getValue();
-            space_list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
+            space_list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(bkn => new booking_class_1.Booking(bkn)), {
                 space: space.email,
                 from: date.valueOf(),
                 to: end.valueOf(),
@@ -20607,7 +20530,7 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
             .then((spaces) => {
             let bookings = this._bookings.booking_list.getValue();
             spaces.forEach((space) => {
-                bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
+                bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(bkn => new booking_class_1.Booking(bkn)), {
                     space: space.email,
                     from: start.valueOf(),
                     to: end.valueOf(),
@@ -21930,6 +21853,7 @@ class DayViewSpaceComponent extends base_directive_1.BaseDirective {
             this.timeout('update_overlaps', () => this.calculateOverlaps(), 1000);
         }
     }
+    /* istanbul ignore next */
     /**
      * Track by function for ngFor optimisation
      * @param index Index of the item
@@ -22529,7 +22453,7 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
                 })
                     .then((room_list) => {
                     let bookings = this._bookings.booking_list.getValue();
-                    room_list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings, {
+                    room_list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(bkn => new booking_class_1.Booking(bkn)), {
                         space: space.email,
                         from: time.valueOf(),
                         to: end.valueOf()
@@ -24445,17 +24369,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const bookings_service_1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
-const i3 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-const i4 = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
-const i5 = __webpack_require__(/*! ./item/item.component */ "./src/app/shell/visitors/timeline/item/item.component.ts");
-const i6 = __webpack_require__(/*! ../../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
+const i3 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const i4 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+const i5 = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
+const i6 = __webpack_require__(/*! ./item/item.component */ "./src/app/shell/visitors/timeline/item/item.component.ts");
+const i7 = __webpack_require__(/*! ../../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
 function VisitorTimelineComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 12);
     i0.ɵɵelement(1, "mat-progress-bar", 13);
@@ -24515,10 +24443,11 @@ function VisitorTimelineComponent_ng_template_16_Template(rf, ctx) { if (rf & 1)
     i0.ɵɵtextInterpolate2(" No visitors ", ctx_r3.search ? "matching " + "\"" + ctx_r3.search + "\"" : "", " for ", ctx_r3.date_display, " ");
 } }
 class VisitorTimelineComponent extends base_directive_1.BaseDirective {
-    constructor(_org, _spaces) {
+    constructor(_org, _spaces, _bookings) {
         super();
         this._org = _org;
         this._spaces = _spaces;
+        this._bookings = _bookings;
         /** List of visitor bookings for the current date */
         this.bookings = [];
         /** List of filtered bookings */
@@ -24535,15 +24464,18 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
         /* istanbul ignore else */
         if (this.date_display === 'Today') {
             const date = dayjs().startOf('m').valueOf();
-            return this.filtered_bookings.findIndex(bkn => date > bkn.date);
+            return this.filtered_bookings.findIndex((bkn) => date > bkn.date);
         }
         return -1;
     }
     ngOnInit() {
-        this._spaces.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
+        this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
             this.initBookings();
-            this.subscription('building', this._org.listen('active_building').subscribe(_ => this.search$.next(`${this.date}|${_.id}`)));
+            this.subscription('building', this._org
+                .listen('active_building')
+                .subscribe((_) => this.search$.next(`${this.date}|${_.id}`)));
             this.interval('update_bookings', () => this.search$.next(`${this.date}|${dayjs().unix()}`), 30 * 1000);
+            this.subscription('bookings', this._bookings.booking_list.subscribe(() => this.updateEvents()));
         });
     }
     ngOnChanges(changes) {
@@ -24562,29 +24494,48 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
     /** Filter the visitor bookings */
     filter(str = '') {
         const search = str.toLowerCase();
-        return this.bookings.filter(booking => {
-            return booking.attendees.find(user => user.name.toLowerCase().indexOf(search) >= 0 ||
+        return this.bookings
+            .filter((booking) => {
+            return booking.attendees.find((user) => user.name.toLowerCase().indexOf(search) >= 0 ||
                 user.email.toLowerCase().indexOf(search) >= 0);
-        }).filter(bkn => this.show_all ? true : bkn.has_visitors);
+        })
+            .filter((bkn) => (this.show_all ? true : bkn.has_visitors));
+    }
+    updateEvents() {
+        const date = dayjs(this.date).startOf('d');
+        const bookings = this._bookings.booking_list.getValue().filter((booking) => {
+            const start = dayjs(booking.date);
+            const end = start.add(booking.duration, 'm');
+            return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
+        });
+        this.bookings = bookings;
+        this.filter(this.search);
     }
     initBookings() {
         // Listen for input changes
-        this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(_ => {
+        this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
             this.loading = true;
             const date = dayjs(this.date).startOf('d');
             const zone = this._org.building.id;
             return this._spaces.query({
                 zone_ids: zone,
                 available_from: date.unix(),
-                available_to: date.endOf('d').unix()
+                available_to: date.endOf('d').unix(),
             });
-        }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
-            const bookings = list.reduce((items, space) => items.concat(space.bookingsFor(this.date)), []);
+        }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((list) => {
+            const date = dayjs(this.date).startOf('d');
+            let bookings = this._bookings.booking_list.getValue();
+            list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map((bkn) => new booking_class_1.Booking(bkn)), {
+                space: space.email,
+                from: date.valueOf(),
+                to: date.endOf('d').valueOf(),
+            })));
             bookings.sort((a, b) => a.date - b.date);
+            this._bookings.booking_list.next(bookings);
             return bookings;
         }));
         // Process API results
-        this.subscription('search_results', this.search_results$.subscribe(list => {
+        this.subscription('search_results', this.search_results$.subscribe((list) => {
             this.loading = false;
             this.bookings = list;
             this.filtered_bookings = this.filter(this.search);
@@ -24592,7 +24543,7 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
     }
 }
 exports.VisitorTimelineComponent = VisitorTimelineComponent;
-VisitorTimelineComponent.ɵfac = function VisitorTimelineComponent_Factory(t) { return new (t || VisitorTimelineComponent)(i0.ɵɵdirectiveInject(i1.OrganisationService), i0.ɵɵdirectiveInject(i2.SpacesService)); };
+VisitorTimelineComponent.ɵfac = function VisitorTimelineComponent_Factory(t) { return new (t || VisitorTimelineComponent)(i0.ɵɵdirectiveInject(i1.OrganisationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.BookingsService)); };
 VisitorTimelineComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorTimelineComponent, selectors: [["visitor-timeline"]], inputs: { date: "date", search: "search", show_all: "show_all" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 18, vars: 3, consts: [[1, "visitor-timeline"], ["class", "loader", 4, "ngIf"], [1, "heading"], [1, "icon"], [1, "time"], [1, "host"], [1, "title"], [1, "location"], [1, "state"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "loader"], ["mode", "indeterminate"], ["class", "current-line", 4, "ngIf"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [1, "current-line"], [1, "triangle"], [3, "event", "search"], [1, "info-block"], [3, "icon"], [1, "text"]], template: function VisitorTimelineComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtemplate(1, VisitorTimelineComponent_div_1_Template, 2, 0, "div", 1);
@@ -24625,15 +24576,15 @@ VisitorTimelineComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorTimelineC
         i0.ɵɵproperty("ngIf", ctx.loading);
         i0.ɵɵadvance(14);
         i0.ɵɵproperty("ngIf", ctx.filtered_bookings && ctx.filtered_bookings.length)("ngIfElse", _r2);
-    } }, directives: [i3.NgIf, i4.MatProgressBar, i3.NgForOf, i5.VisitorBookingItemComponent, i6.IconComponent], styles: [".visitor-timeline[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n  background-color: #ecf1f5;\n}\na-visitor-booking[_ngcontent-%COMP%] {\n  width: 100%;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.heading[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n  font-size: 0.8em;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  width: 100%;\n  z-index: 1;\n}\n.heading[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  padding: 0.25em;\n  text-transform: capitalize;\n  margin: 0 0.5em;\n}\n.heading[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  width: 3rem;\n}\n.heading[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 7.75rem;\n}\n.heading[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 12.25rem;\n}\n.heading[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.heading[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  width: 10.75rem;\n}\n.heading[_ngcontent-%COMP%]   .state[_ngcontent-%COMP%] {\n  width: 17.75rem;\n}\n.current-line[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: 2px;\n  background-color: #1937ea;\n  z-index: 99;\n}\n.current-line[_ngcontent-%COMP%]   .triangle[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 6px 0 6px 6px;\n  border-color: transparent transparent transparent #1937ea;\n}\n.list[_ngcontent-%COMP%] {\n  min-height: 50%;\n  flex: 1;\n  width: 100%;\n  overflow: auto;\n}\n.loader[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  z-index: 999;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL3RpbWVsaW5lLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNPSjtBREpBO0VBQ0ksV0FBQTtFQUNBLDJDQUFBO0FDT0o7QURKQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLDJDQUFBO0VBQ0EsV0FBQTtFQUNBLFVBQUE7QUNPSjtBRExJO0VBQ0ksZUFBQTtFQUNBLDBCQUFBO0VBQ0EsZUFBQTtBQ09SO0FESkk7RUFDSSxXQUFBO0FDTVI7QURISTtFQUNJLGNBQUE7QUNLUjtBREZJO0VBQ0ksZUFBQTtBQ0lSO0FEREk7RUFDSSxPQUFBO0FDR1I7QURBSTtFQUNJLGVBQUE7QUNFUjtBRENJO0VBQ0ksZUFBQTtBQ0NSO0FER0E7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0EseUJEMUNZO0VDMkNaLFdBQUE7QUNBSjtBREVJO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsT0FBQTtFQUNBLDJCQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxtQkFBQTtFQUNBLDJCQUFBO0VBQ0EseURBQUE7QUNBUjtBRElBO0VBQ0ksZUFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtBQ0RKO0FESUE7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDREoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG4udmlzaXRvci10aW1lbGluZSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VjZjFmNTtcbn1cblxuYS12aXNpdG9yLWJvb2tpbmcge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKCMwMDAsIC4xKTtcbn1cblxuLmhlYWRpbmcge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoIzAwMCwgLjEpO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHotaW5kZXg6IDE7XG5cbiAgICA+ICoge1xuICAgICAgICBwYWRkaW5nOiAuMjVlbTtcbiAgICAgICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG4gICAgICAgIG1hcmdpbjogMCAuNWVtO1xuICAgIH1cblxuICAgIC5pY29uIHtcbiAgICAgICAgd2lkdGg6IDNyZW07XG4gICAgfVxuXG4gICAgLnRpbWUge1xuICAgICAgICB3aWR0aDogNy43NXJlbTtcbiAgICB9XG5cbiAgICAuaG9zdCB7XG4gICAgICAgIHdpZHRoOiAxMi4yNXJlbTtcbiAgICB9XG5cbiAgICAudGl0bGUge1xuICAgICAgICBmbGV4OiAxO1xuICAgIH1cblxuICAgIC5sb2NhdGlvbiB7XG4gICAgICAgIHdpZHRoOiAxMC43NXJlbTtcbiAgICB9XG5cbiAgICAuc3RhdGUge1xuICAgICAgICB3aWR0aDogMTcuNzVyZW07XG4gICAgfVxufVxuXG4uY3VycmVudC1saW5lIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgei1pbmRleDogOTk7XG5cbiAgICAudHJpYW5nbGUge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogNTAlO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG4gICAgICAgIHdpZHRoOiAwO1xuICAgICAgICBoZWlnaHQ6IDA7XG4gICAgICAgIGJvcmRlci1zdHlsZTogc29saWQ7XG4gICAgICAgIGJvcmRlci13aWR0aDogNnB4IDAgNnB4IDZweDtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiB0cmFuc3BhcmVudCB0cmFuc3BhcmVudCB0cmFuc3BhcmVudCAkY29sb3ItcHJpbWFyeTtcbiAgICB9XG59XG5cbi5saXN0IHtcbiAgICBtaW4taGVpZ2h0OiA1MCU7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmxvYWRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGhlaWdodDogNHB4O1xuICAgIHotaW5kZXg6IDk5OTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi52aXNpdG9yLXRpbWVsaW5lIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWNmMWY1O1xufVxuXG5hLXZpc2l0b3ItYm9va2luZyB7XG4gIHdpZHRoOiAxMDAlO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpO1xufVxuXG4uaGVhZGluZyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDE7XG59XG4uaGVhZGluZyA+ICoge1xuICBwYWRkaW5nOiAwLjI1ZW07XG4gIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICBtYXJnaW46IDAgMC41ZW07XG59XG4uaGVhZGluZyAuaWNvbiB7XG4gIHdpZHRoOiAzcmVtO1xufVxuLmhlYWRpbmcgLnRpbWUge1xuICB3aWR0aDogNy43NXJlbTtcbn1cbi5oZWFkaW5nIC5ob3N0IHtcbiAgd2lkdGg6IDEyLjI1cmVtO1xufVxuLmhlYWRpbmcgLnRpdGxlIHtcbiAgZmxleDogMTtcbn1cbi5oZWFkaW5nIC5sb2NhdGlvbiB7XG4gIHdpZHRoOiAxMC43NXJlbTtcbn1cbi5oZWFkaW5nIC5zdGF0ZSB7XG4gIHdpZHRoOiAxNy43NXJlbTtcbn1cblxuLmN1cnJlbnQtbGluZSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICB6LWluZGV4OiA5OTtcbn1cbi5jdXJyZW50LWxpbmUgLnRyaWFuZ2xlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogMDtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICB3aWR0aDogMDtcbiAgaGVpZ2h0OiAwO1xuICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICBib3JkZXItd2lkdGg6IDZweCAwIDZweCA2cHg7XG4gIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgIzE5MzdlYTtcbn1cblxuLmxpc3Qge1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIGZsZXg6IDE7XG4gIHdpZHRoOiAxMDAlO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmxvYWRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgaGVpZ2h0OiA0cHg7XG4gIHotaW5kZXg6IDk5OTtcbn0iXX0= */"] });
+    } }, directives: [i4.NgIf, i5.MatProgressBar, i4.NgForOf, i6.VisitorBookingItemComponent, i7.IconComponent], styles: [".visitor-timeline[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n  background-color: #ecf1f5;\n}\na-visitor-booking[_ngcontent-%COMP%] {\n  width: 100%;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n.heading[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  font-weight: 400;\n  font-size: 0.8em;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  width: 100%;\n  z-index: 1;\n}\n.heading[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  padding: 0.25em;\n  text-transform: capitalize;\n  margin: 0 0.5em;\n}\n.heading[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  width: 3rem;\n}\n.heading[_ngcontent-%COMP%]   .time[_ngcontent-%COMP%] {\n  width: 7.75rem;\n}\n.heading[_ngcontent-%COMP%]   .host[_ngcontent-%COMP%] {\n  width: 12.25rem;\n}\n.heading[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.heading[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%] {\n  width: 10.75rem;\n}\n.heading[_ngcontent-%COMP%]   .state[_ngcontent-%COMP%] {\n  width: 17.75rem;\n}\n.current-line[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: 2px;\n  background-color: #1937ea;\n  z-index: 99;\n}\n.current-line[_ngcontent-%COMP%]   .triangle[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 6px 0 6px 6px;\n  border-color: transparent transparent transparent #1937ea;\n}\n.list[_ngcontent-%COMP%] {\n  min-height: 50%;\n  flex: 1;\n  width: 100%;\n  overflow: auto;\n}\n.loader[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  z-index: 999;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL3Zpc2l0b3JzL3RpbWVsaW5lL3RpbWVsaW5lLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNPSjtBREpBO0VBQ0ksV0FBQTtFQUNBLDJDQUFBO0FDT0o7QURKQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLDJDQUFBO0VBQ0EsV0FBQTtFQUNBLFVBQUE7QUNPSjtBRExJO0VBQ0ksZUFBQTtFQUNBLDBCQUFBO0VBQ0EsZUFBQTtBQ09SO0FESkk7RUFDSSxXQUFBO0FDTVI7QURISTtFQUNJLGNBQUE7QUNLUjtBREZJO0VBQ0ksZUFBQTtBQ0lSO0FEREk7RUFDSSxPQUFBO0FDR1I7QURBSTtFQUNJLGVBQUE7QUNFUjtBRENJO0VBQ0ksZUFBQTtBQ0NSO0FER0E7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0EseUJEMUNZO0VDMkNaLFdBQUE7QUNBSjtBREVJO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsT0FBQTtFQUNBLDJCQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxtQkFBQTtFQUNBLDJCQUFBO0VBQ0EseURBQUE7QUNBUjtBRElBO0VBQ0ksZUFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtBQ0RKO0FESUE7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDREoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC92aXNpdG9ycy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuIiwiXG5AaW1wb3J0ICd2YXJpYWJsZXMnO1xuXG4udmlzaXRvci10aW1lbGluZSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VjZjFmNTtcbn1cblxuYS12aXNpdG9yLWJvb2tpbmcge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKCMwMDAsIC4xKTtcbn1cblxuLmhlYWRpbmcge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoIzAwMCwgLjEpO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHotaW5kZXg6IDE7XG5cbiAgICA+ICoge1xuICAgICAgICBwYWRkaW5nOiAuMjVlbTtcbiAgICAgICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG4gICAgICAgIG1hcmdpbjogMCAuNWVtO1xuICAgIH1cblxuICAgIC5pY29uIHtcbiAgICAgICAgd2lkdGg6IDNyZW07XG4gICAgfVxuXG4gICAgLnRpbWUge1xuICAgICAgICB3aWR0aDogNy43NXJlbTtcbiAgICB9XG5cbiAgICAuaG9zdCB7XG4gICAgICAgIHdpZHRoOiAxMi4yNXJlbTtcbiAgICB9XG5cbiAgICAudGl0bGUge1xuICAgICAgICBmbGV4OiAxO1xuICAgIH1cblxuICAgIC5sb2NhdGlvbiB7XG4gICAgICAgIHdpZHRoOiAxMC43NXJlbTtcbiAgICB9XG5cbiAgICAuc3RhdGUge1xuICAgICAgICB3aWR0aDogMTcuNzVyZW07XG4gICAgfVxufVxuXG4uY3VycmVudC1saW5lIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgei1pbmRleDogOTk7XG5cbiAgICAudHJpYW5nbGUge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogNTAlO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG4gICAgICAgIHdpZHRoOiAwO1xuICAgICAgICBoZWlnaHQ6IDA7XG4gICAgICAgIGJvcmRlci1zdHlsZTogc29saWQ7XG4gICAgICAgIGJvcmRlci13aWR0aDogNnB4IDAgNnB4IDZweDtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiB0cmFuc3BhcmVudCB0cmFuc3BhcmVudCB0cmFuc3BhcmVudCAkY29sb3ItcHJpbWFyeTtcbiAgICB9XG59XG5cbi5saXN0IHtcbiAgICBtaW4taGVpZ2h0OiA1MCU7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmxvYWRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGhlaWdodDogNHB4O1xuICAgIHotaW5kZXg6IDk5OTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbi52aXNpdG9yLXRpbWVsaW5lIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWNmMWY1O1xufVxuXG5hLXZpc2l0b3ItYm9va2luZyB7XG4gIHdpZHRoOiAxMDAlO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpO1xufVxuXG4uaGVhZGluZyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDE7XG59XG4uaGVhZGluZyA+ICoge1xuICBwYWRkaW5nOiAwLjI1ZW07XG4gIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICBtYXJnaW46IDAgMC41ZW07XG59XG4uaGVhZGluZyAuaWNvbiB7XG4gIHdpZHRoOiAzcmVtO1xufVxuLmhlYWRpbmcgLnRpbWUge1xuICB3aWR0aDogNy43NXJlbTtcbn1cbi5oZWFkaW5nIC5ob3N0IHtcbiAgd2lkdGg6IDEyLjI1cmVtO1xufVxuLmhlYWRpbmcgLnRpdGxlIHtcbiAgZmxleDogMTtcbn1cbi5oZWFkaW5nIC5sb2NhdGlvbiB7XG4gIHdpZHRoOiAxMC43NXJlbTtcbn1cbi5oZWFkaW5nIC5zdGF0ZSB7XG4gIHdpZHRoOiAxNy43NXJlbTtcbn1cblxuLmN1cnJlbnQtbGluZSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICB6LWluZGV4OiA5OTtcbn1cbi5jdXJyZW50LWxpbmUgLnRyaWFuZ2xlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogMDtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICB3aWR0aDogMDtcbiAgaGVpZ2h0OiAwO1xuICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICBib3JkZXItd2lkdGg6IDZweCAwIDZweCA2cHg7XG4gIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgIzE5MzdlYTtcbn1cblxuLmxpc3Qge1xuICBtaW4taGVpZ2h0OiA1MCU7XG4gIGZsZXg6IDE7XG4gIHdpZHRoOiAxMDAlO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmxvYWRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgaGVpZ2h0OiA0cHg7XG4gIHotaW5kZXg6IDk5OTtcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(VisitorTimelineComponent, [{
         type: core_1.Component,
         args: [{
                 selector: 'visitor-timeline',
                 templateUrl: './timeline.component.html',
-                styleUrls: ['./timeline.component.scss']
+                styleUrls: ['./timeline.component.scss'],
             }]
-    }], function () { return [{ type: i1.OrganisationService }, { type: i2.SpacesService }]; }, { date: [{
+    }], function () { return [{ type: i1.OrganisationService }, { type: i2.SpacesService }, { type: i3.BookingsService }]; }, { date: [{
             type: core_1.Input
         }], search: [{
             type: core_1.Input
@@ -24768,7 +24719,7 @@ class VisitorComponent {
 }
 exports.VisitorComponent = VisitorComponent;
 VisitorComponent.ɵfac = function VisitorComponent_Factory(t) { return new (t || VisitorComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(i1.BookingsService), i0.ɵɵdirectiveInject(i2.ApplicationService)); };
-VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorComponent, selectors: [["a-visitor"]], inputs: { event: "event", person: "person", search: "search" }, features: [i0.ɵɵNgOnChangesFeature], decls: 18, vars: 23, consts: [["matTooltipPosition", "right", 1, "icon", 3, "matTooltip"], [3, "icon"], [1, "details"], [1, "user"], [1, "name"], [1, "title"], ["class", "status", 4, "ngIf"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href", 4, "ngIf"], ["mat-icon-button", "", "matTooltip", "Email Visitor", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Checkin Visitor", 3, "disabled", "click"], [3, "loading", "icon", 4, "ngIf"], ["mat-icon-button", "", 3, "disabled"], [1, "empty"], [1, "bar"], [1, "status"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href"], [3, "loading", "icon"]], template: function VisitorComponent_Template(rf, ctx) { if (rf & 1) {
+VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorComponent, selectors: [["a-visitor"]], inputs: { event: "event", person: "person", search: "search" }, features: [i0.ɵɵNgOnChangesFeature], decls: 18, vars: 24, consts: [["matTooltipPosition", "right", 1, "icon", 3, "matTooltip"], [3, "icon"], [1, "details"], [1, "user"], [1, "name"], [1, "title"], ["class", "status", 4, "ngIf"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href", 4, "ngIf"], ["mat-icon-button", "", 3, "matTooltip", "disabled", "href"], ["name", "checkin", "mat-icon-button", "", "matTooltip", "Checkin Visitor", 3, "disabled", "click"], [3, "loading", "icon", 4, "ngIf"], ["mat-icon-button", "", 3, "disabled"], [1, "empty"], [1, "bar"], [1, "status"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href"], [3, "loading", "icon"]], template: function VisitorComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "app-icon", 1);
         i0.ɵɵelementEnd();
@@ -24799,7 +24750,7 @@ VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorComponent, select
         i0.ɵɵclassProp("approved", ctx.approved || !ctx.person.external)("late", ctx.late);
         i0.ɵɵproperty("matTooltip", ctx.person.external ? ctx.approved ? "Checked In" : ctx.late ? "Late" : "Upcoming" : "Staff");
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(20, _c2, ctx.person.external ? "face" : "assignment_ind"));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(21, _c2, ctx.person.external ? "face" : "assignment_ind"));
         i0.ɵɵadvance(2);
         i0.ɵɵclassProp("approved", ctx.approved || !ctx.person.external);
         i0.ɵɵadvance(2);
@@ -24809,11 +24760,11 @@ VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorComponent, select
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", !ctx.person.external);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("disabled", ctx.invalid_email)("href", i0.ɵɵpipeBind2(11, 17, ctx.mail_url, "url"), i0.ɵɵsanitizeUrl);
+        i0.ɵɵproperty("matTooltip", ctx.person.external ? "Email Staff Member" : "Email Visitor")("disabled", ctx.invalid_email)("href", i0.ɵɵpipeBind2(11, 18, ctx.mail_url, "url"), i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(22, _c3));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(23, _c3));
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("disabled", ctx.loading);
+        i0.ɵɵproperty("disabled", ctx.loading || !ctx.person.external);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx.person.external);
         i0.ɵɵadvance(1);
@@ -25050,10 +25001,14 @@ VisitorsModule.ɵinj = i0.ɵɵdefineInjector({ factory: function VisitorsModule_
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+const bookings_service_1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-const i1 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-const i2 = __webpack_require__(/*! ./item/item.component */ "./src/app/shell/week-view/day-display/item/item.component.ts");
-const i3 = __webpack_require__(/*! ../../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
+const i1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const i2 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+const i3 = __webpack_require__(/*! ./item/item.component */ "./src/app/shell/week-view/day-display/item/item.component.ts");
+const i4 = __webpack_require__(/*! ../../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
 function WeekViewDayDisplayComponent_div_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 6);
     i0.ɵɵtext(1, "Today");
@@ -25091,8 +25046,10 @@ function WeekViewDayDisplayComponent_ng_template_6_Template(rf, ctx) { if (rf & 
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate1("No events for ", ctx_r3.date_display, "");
 } }
-class WeekViewDayDisplayComponent {
-    constructor() {
+class WeekViewDayDisplayComponent extends base_directive_1.BaseDirective {
+    constructor(_bookings) {
+        super();
+        this._bookings = _bookings;
         /** List of bookings for this date */
         this.booking_list = [];
     }
@@ -25105,24 +25062,28 @@ class WeekViewDayDisplayComponent {
     get is_today() {
         return dayjs(this.date).isSame(dayjs(), 'd');
     }
+    ngOnInit() {
+        this.subscription('bookings', this._bookings.booking_list.subscribe(() => this.updateEvents()));
+    }
     ngOnChanges(changes) {
         /* istanbul ignore else */
         if (changes.date || changes.spaces) {
-            this.updateBookings();
+            this.updateEvents();
         }
     }
-    updateBookings() {
-        let bookings = [];
-        this.spaces.forEach(space => {
-            bookings = bookings.concat(space.bookingsFor(this.date));
+    updateEvents() {
+        const date = dayjs(this.date).startOf('d');
+        const bookings = this._bookings.booking_list.getValue().filter((booking) => {
+            const start = dayjs(booking.date);
+            const end = start.add(booking.duration, 'm');
+            return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
         });
-        bookings.sort((a, b) => a.date - b.date);
         this.booking_list = bookings;
     }
 }
 exports.WeekViewDayDisplayComponent = WeekViewDayDisplayComponent;
-WeekViewDayDisplayComponent.ɵfac = function WeekViewDayDisplayComponent_Factory(t) { return new (t || WeekViewDayDisplayComponent)(); };
-WeekViewDayDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewDayDisplayComponent, selectors: [["week-view-day-display"]], inputs: { date: "date", spaces: "spaces" }, features: [i0.ɵɵNgOnChangesFeature], decls: 8, vars: 4, consts: [[1, "heading"], [1, "text"], ["class", "info", 4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "info"], [3, "event", 4, "ngFor", "ngForOf"], [3, "event"], [1, "info-block"], [1, "icon"], [3, "icon"]], template: function WeekViewDayDisplayComponent_Template(rf, ctx) { if (rf & 1) {
+WeekViewDayDisplayComponent.ɵfac = function WeekViewDayDisplayComponent_Factory(t) { return new (t || WeekViewDayDisplayComponent)(i0.ɵɵdirectiveInject(i1.BookingsService)); };
+WeekViewDayDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewDayDisplayComponent, selectors: [["week-view-day-display"]], inputs: { date: "date", spaces: "spaces" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 8, vars: 4, consts: [[1, "heading"], [1, "text"], ["class", "info", 4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "info"], [3, "event", 4, "ngFor", "ngForOf"], [3, "event"], [1, "info-block"], [1, "icon"], [3, "icon"]], template: function WeekViewDayDisplayComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵtext(2);
@@ -25141,15 +25102,15 @@ WeekViewDayDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewDayDi
         i0.ɵɵproperty("ngIf", ctx.is_today);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx.booking_list && ctx.booking_list.length)("ngIfElse", _r2);
-    } }, directives: [i1.NgIf, i1.NgForOf, i2.WeekViewItemComponent, i3.IconComponent], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  border-left: 1px solid #ccc;\n}\n[_nghost-%COMP%]:first-child {\n  border: none;\n}\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.heading[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  padding: 0.25em 1em;\n  height: 3em;\n  border-bottom: 1px solid #ccc;\n  text-align: center;\n}\n.info[_ngcontent-%COMP%] {\n  font-size: 0.75em;\n}\n.list[_ngcontent-%COMP%] {\n  flex: 1;\n  min-height: 50%;\n  background-color: #fff;\n  overflow: auto;\n}\n.info-block[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  opacity: 0.6;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC93ZWVrLXZpZXcvZGF5LWRpc3BsYXkvZGF5LWRpc3BsYXkuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL3dlZWstdmlldy9kYXktZGlzcGxheS9kYXktZGlzcGxheS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLDJCQUFBO0FDQUo7QURFSTtFQUNJLFlBQUE7QUNBUjtBREdJO0VBQ0ksV0FBQTtBQ0RSO0FES0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0VBQ0EsNkJBQUE7RUFDQSxrQkFBQTtBQ0ZKO0FES0E7RUFDSSxpQkFBQTtBQ0ZKO0FES0E7RUFDSSxPQUFBO0VBQ0EsZUFBQTtFQUNBLHNCQUFBO0VBQ0EsY0FBQTtBQ0ZKO0FES0E7RUFDSSxnQkFBQTtFQUNBLFlBQUE7QUNGSiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL3dlZWstdmlldy9kYXktZGlzcGxheS9kYXktZGlzcGxheS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuOmhvc3Qge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjY2M7XG5cbiAgICAmOmZpcnN0LWNoaWxkIHtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgIH1cblxuICAgID4gKiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbn1cblxuLmhlYWRpbmcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHBhZGRpbmc6IDAuMjVlbSAxZW07XG4gICAgaGVpZ2h0OiAzZW07XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uaW5mbyB7XG4gICAgZm9udC1zaXplOiAuNzVlbTtcbn1cblxuLmxpc3Qge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLWhlaWdodDogNTAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgb3ZlcmZsb3c6IGF1dG87XG59XG5cbi5pbmZvLWJsb2NrIHtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgb3BhY2l0eTogLjY7XG59XG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGhlaWdodDogMTAwJTtcbiAgYm9yZGVyLWxlZnQ6IDFweCBzb2xpZCAjY2NjO1xufVxuOmhvc3Q6Zmlyc3QtY2hpbGQge1xuICBib3JkZXI6IG5vbmU7XG59XG46aG9zdCA+ICoge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmhlYWRpbmcge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgcGFkZGluZzogMC4yNWVtIDFlbTtcbiAgaGVpZ2h0OiAzZW07XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5pbmZvIHtcbiAgZm9udC1zaXplOiAwLjc1ZW07XG59XG5cbi5saXN0IHtcbiAgZmxleDogMTtcbiAgbWluLWhlaWdodDogNTAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmluZm8tYmxvY2sge1xuICBmb250LXNpemU6IDAuOGVtO1xuICBvcGFjaXR5OiAwLjY7XG59Il19 */"] });
+    } }, directives: [i2.NgIf, i2.NgForOf, i3.WeekViewItemComponent, i4.IconComponent], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  border-left: 1px solid #ccc;\n}\n[_nghost-%COMP%]:first-child {\n  border: none;\n}\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.heading[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  padding: 0.25em 1em;\n  height: 3em;\n  border-bottom: 1px solid #ccc;\n  text-align: center;\n}\n.info[_ngcontent-%COMP%] {\n  font-size: 0.75em;\n}\n.list[_ngcontent-%COMP%] {\n  flex: 1;\n  min-height: 50%;\n  background-color: #fff;\n  overflow: auto;\n}\n.info-block[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  opacity: 0.6;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC93ZWVrLXZpZXcvZGF5LWRpc3BsYXkvZGF5LWRpc3BsYXkuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL3dlZWstdmlldy9kYXktZGlzcGxheS9kYXktZGlzcGxheS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLDJCQUFBO0FDQUo7QURFSTtFQUNJLFlBQUE7QUNBUjtBREdJO0VBQ0ksV0FBQTtBQ0RSO0FES0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0VBQ0EsNkJBQUE7RUFDQSxrQkFBQTtBQ0ZKO0FES0E7RUFDSSxpQkFBQTtBQ0ZKO0FES0E7RUFDSSxPQUFBO0VBQ0EsZUFBQTtFQUNBLHNCQUFBO0VBQ0EsY0FBQTtBQ0ZKO0FES0E7RUFDSSxnQkFBQTtFQUNBLFlBQUE7QUNGSiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL3dlZWstdmlldy9kYXktZGlzcGxheS9kYXktZGlzcGxheS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuOmhvc3Qge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjY2M7XG5cbiAgICAmOmZpcnN0LWNoaWxkIHtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgIH1cblxuICAgID4gKiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbn1cblxuLmhlYWRpbmcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHBhZGRpbmc6IDAuMjVlbSAxZW07XG4gICAgaGVpZ2h0OiAzZW07XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uaW5mbyB7XG4gICAgZm9udC1zaXplOiAuNzVlbTtcbn1cblxuLmxpc3Qge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLWhlaWdodDogNTAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgb3ZlcmZsb3c6IGF1dG87XG59XG5cbi5pbmZvLWJsb2NrIHtcbiAgICBmb250LXNpemU6IC44ZW07XG4gICAgb3BhY2l0eTogLjY7XG59XG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGhlaWdodDogMTAwJTtcbiAgYm9yZGVyLWxlZnQ6IDFweCBzb2xpZCAjY2NjO1xufVxuOmhvc3Q6Zmlyc3QtY2hpbGQge1xuICBib3JkZXI6IG5vbmU7XG59XG46aG9zdCA+ICoge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmhlYWRpbmcge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgcGFkZGluZzogMC4yNWVtIDFlbTtcbiAgaGVpZ2h0OiAzZW07XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5pbmZvIHtcbiAgZm9udC1zaXplOiAwLjc1ZW07XG59XG5cbi5saXN0IHtcbiAgZmxleDogMTtcbiAgbWluLWhlaWdodDogNTAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmluZm8tYmxvY2sge1xuICBmb250LXNpemU6IDAuOGVtO1xuICBvcGFjaXR5OiAwLjY7XG59Il19 */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(WeekViewDayDisplayComponent, [{
         type: core_1.Component,
         args: [{
                 selector: 'week-view-day-display',
                 templateUrl: './day-display.component.html',
-                styleUrls: ['./day-display.component.scss']
+                styleUrls: ['./day-display.component.scss'],
             }]
-    }], null, { date: [{
+    }], function () { return [{ type: i1.BookingsService }]; }, { date: [{
             type: core_1.Input
         }], spaces: [{
             type: core_1.Input
@@ -25310,12 +25271,16 @@ const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive *
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
+const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
+const bookings_service_1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
-const i3 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-const i4 = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
-const i5 = __webpack_require__(/*! ../day-display/day-display.component */ "./src/app/shell/week-view/day-display/day-display.component.ts");
+const i3 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const i4 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+const i5 = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
+const i6 = __webpack_require__(/*! ../day-display/day-display.component */ "./src/app/shell/week-view/day-display/day-display.component.ts");
 function WeekViewTimelineComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 3);
     i0.ɵɵelement(1, "mat-progress-bar", 4);
@@ -25329,10 +25294,11 @@ function WeekViewTimelineComponent_week_view_day_display_2_Template(rf, ctx) { i
     i0.ɵɵproperty("date", date_r2)("spaces", ctx_r1.space_list);
 } }
 class WeekViewTimelineComponent extends base_directive_1.BaseDirective {
-    constructor(_spaces, _org) {
+    constructor(_spaces, _org, _bookings) {
         super();
         this._spaces = _spaces;
         this._org = _org;
+        this._bookings = _bookings;
         /** List of dates to display */
         this.date_list = [];
         /** List of spaces to display bookings for */
@@ -25386,12 +25352,21 @@ class WeekViewTimelineComponent extends base_directive_1.BaseDirective {
         // Process API results
         this.subscription('search_results', this.search_results$.subscribe((list) => {
             this.loading = false;
+            const date = dayjs(this.date).startOf('d');
+            let bookings = this._bookings.booking_list.getValue();
+            list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map((bkn) => new booking_class_1.Booking(bkn)), {
+                space: space.email,
+                from: date.valueOf(),
+                to: date.endOf('d').valueOf(),
+            })));
+            bookings.sort((a, b) => a.date - b.date);
+            this._bookings.booking_list.next(bookings);
             this.space_list = list;
         }));
     }
 }
 exports.WeekViewTimelineComponent = WeekViewTimelineComponent;
-WeekViewTimelineComponent.ɵfac = function WeekViewTimelineComponent_Factory(t) { return new (t || WeekViewTimelineComponent)(i0.ɵɵdirectiveInject(i1.SpacesService), i0.ɵɵdirectiveInject(i2.OrganisationService)); };
+WeekViewTimelineComponent.ɵfac = function WeekViewTimelineComponent_Factory(t) { return new (t || WeekViewTimelineComponent)(i0.ɵɵdirectiveInject(i1.SpacesService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.BookingsService)); };
 WeekViewTimelineComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewTimelineComponent, selectors: [["week-view-timeline"]], inputs: { date: "date", level: "level", space_type: "space_type", weekends: "weekends", loading: "loading" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 2, consts: [[1, "week-timeline"], ["class", "loader", 4, "ngIf"], [3, "date", "spaces", 4, "ngFor", "ngForOf"], [1, "loader"], ["mode", "indeterminate"], [3, "date", "spaces"]], template: function WeekViewTimelineComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtemplate(1, WeekViewTimelineComponent_div_1_Template, 2, 0, "div", 1);
@@ -25402,7 +25377,7 @@ WeekViewTimelineComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewTimelin
         i0.ɵɵproperty("ngIf", ctx.loading);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngForOf", ctx.date_list);
-    } }, directives: [i3.NgIf, i3.NgForOf, i4.MatProgressBar, i5.WeekViewDayDisplayComponent], styles: [".week-timeline[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  height: 100%;\n  width: 100%;\n  background-color: #ecf1f5;\n}\n.week-timeline[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 12.5%;\n}\n.loader[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  z-index: 999;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC93ZWVrLXZpZXcvdGltZWxpbmUvdGltZWxpbmUuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL3dlZWstdmlldy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNESjtBREdJO0VBQ0ksT0FBQTtFQUNBLGdCQUFBO0FDRFI7QURLQTtFQUNJLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7QUNGSiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL3dlZWstdmlldy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG4ud2Vlay10aW1lbGluZSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNlY2YxZjU7XG5cbiAgICA+ICoge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBtaW4td2lkdGg6IDEyLjUlO1xuICAgIH1cbn1cblxuLmxvYWRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGhlaWdodDogNHB4O1xuICAgIHotaW5kZXg6IDk5OTtcbn1cbiIsIi53ZWVrLXRpbWVsaW5lIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWNmMWY1O1xufVxuLndlZWstdGltZWxpbmUgPiAqIHtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiAxMi41JTtcbn1cblxuLmxvYWRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgaGVpZ2h0OiA0cHg7XG4gIHotaW5kZXg6IDk5OTtcbn0iXX0= */"] });
+    } }, directives: [i4.NgIf, i4.NgForOf, i5.MatProgressBar, i6.WeekViewDayDisplayComponent], styles: [".week-timeline[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  height: 100%;\n  width: 100%;\n  background-color: #ecf1f5;\n}\n.week-timeline[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 12.5%;\n}\n.loader[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  z-index: 999;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC93ZWVrLXZpZXcvdGltZWxpbmUvdGltZWxpbmUuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL3dlZWstdmlldy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNESjtBREdJO0VBQ0ksT0FBQTtFQUNBLGdCQUFBO0FDRFI7QURLQTtFQUNJLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7QUNGSiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL3dlZWstdmlldy90aW1lbGluZS90aW1lbGluZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG4ud2Vlay10aW1lbGluZSB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNlY2YxZjU7XG5cbiAgICA+ICoge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBtaW4td2lkdGg6IDEyLjUlO1xuICAgIH1cbn1cblxuLmxvYWRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGhlaWdodDogNHB4O1xuICAgIHotaW5kZXg6IDk5OTtcbn1cbiIsIi53ZWVrLXRpbWVsaW5lIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWNmMWY1O1xufVxuLndlZWstdGltZWxpbmUgPiAqIHtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiAxMi41JTtcbn1cblxuLmxvYWRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgaGVpZ2h0OiA0cHg7XG4gIHotaW5kZXg6IDk5OTtcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(WeekViewTimelineComponent, [{
         type: core_1.Component,
         args: [{
@@ -25410,7 +25385,7 @@ WeekViewTimelineComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewTimelin
                 templateUrl: './timeline.component.html',
                 styleUrls: ['./timeline.component.scss'],
             }]
-    }], function () { return [{ type: i1.SpacesService }, { type: i2.OrganisationService }]; }, { date: [{
+    }], function () { return [{ type: i1.SpacesService }, { type: i2.OrganisationService }, { type: i3.BookingsService }]; }, { date: [{
             type: core_1.Input
         }], level: [{
             type: core_1.Input
