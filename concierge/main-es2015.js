@@ -8640,10 +8640,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 const general_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const user_utilities_1 = __webpack_require__(/*! ../users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
-const user_class_1 = __webpack_require__(/*! ../users/user.class */ "./src/app/services/data/users/user.class.ts");
 const catering_order_class_1 = __webpack_require__(/*! ../catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 const validation_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
-const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const MINUTE = 1;
@@ -8763,22 +8761,19 @@ function generateBookingForm(booking, use_fields) {
     if (!booking) {
         throw Error('No booking passed');
     }
-    const user_service = service_manager_class_1.ServiceManager.serviceFor(user_class_1.User);
     let time = dayjs().startOf('m');
     time = time.minute(Math.ceil(time.minute() / 5) * 5);
-    const current_user = user_service.current ||
-        new user_class_1.User({ id: 'local-user', name: 'Local User', email: 'local@place.tech' });
     const fields = {
-        id: new forms_1.FormControl(booking.id || ''),
+        id: new forms_1.FormControl(booking.id),
         space_list: new forms_1.FormControl(booking.space_list, []),
-        date: new forms_1.FormControl(booking.date || time.valueOf(), [forms_1.Validators.required]),
+        date: new forms_1.FormControl(booking.date, [forms_1.Validators.required]),
         duration: new forms_1.FormControl(booking.duration),
-        organiser: new forms_1.FormControl(booking.organiser || current_user, [forms_1.Validators.required]),
-        organiser_email: new forms_1.FormControl(booking.organiser.email || current_user.email, [
+        organiser: new forms_1.FormControl(booking.organiser, [forms_1.Validators.required]),
+        organiser_email: new forms_1.FormControl(booking.organiser.email, [
             forms_1.Validators.required,
         ]),
         attendees: new forms_1.FormControl(booking.attendees, []),
-        title: new forms_1.FormControl(booking.title || '', [forms_1.Validators.required]),
+        title: new forms_1.FormControl(booking.title, [forms_1.Validators.required]),
         type: new forms_1.FormControl(booking.type),
         body: new forms_1.FormControl(booking.body),
         notes: new forms_1.FormControl(booking.notes),
@@ -8880,6 +8875,7 @@ function rulesForSpace(options) {
     /* istanbul ignore else */
     if (options.space) {
         for (const type in options.rules) {
+            /* istanbul ignore else */
             if (options.rules.hasOwnProperty(type) &&
                 options.rules[type] instanceof Array &&
                 options.space.zones.find((zone) => zone === type)) {
@@ -8992,14 +8988,14 @@ function checkRules(options) {
                     break;
                 case 'min_length':
                     /* istanbul ignore else */
-                    if (options.duration) {
-                        durationGreaterThanOrEqual(options.duration, condition[0]) ? matches++ : '';
+                    if (options.duration && durationGreaterThanOrEqual(options.duration, condition[0])) {
+                        matches++;
                     }
                     break;
                 case 'max_length':
                     /* istanbul ignore else */
-                    if (options.duration) {
-                        durationGreaterThanOrEqual(condition[0], options.duration) ? matches++ : '';
+                    if (options.duration && durationGreaterThanOrEqual(condition[0], options.duration)) {
+                        matches++;
                     }
                     break;
             }
@@ -10192,13 +10188,9 @@ const space_class_1 = __webpack_require__(/*! ../spaces/space.class */ "./src/ap
 const organisation_class_1 = __webpack_require__(/*! ../organisation/organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 class Report {
-    constructor(raw_data) {
+    constructor(raw_data = {}) {
         this.type = raw_data.type || '';
-        this.data = this.cleanData(raw_data.data || []);
-    }
-    /** Service for managing model on the server */
-    get _service() {
-        return service_manager_class_1.ServiceManager.serviceFor(Report);
+        this.data = this.cleanData(raw_data.data);
     }
     /** Create report data structure from CSV */
     static fromCSV(type, data) {
@@ -10206,14 +10198,15 @@ class Report {
         return new Report({ type, data: csv_json });
     }
     /** Download report data as CSV format */
-    downloadCSV(name = 'unammed.csv') {
+    downloadCSV(name = 'unnamed.csv') {
         general_utilities_1.downloadFile(name, general_utilities_1.jsonToCsv(this.data));
     }
     /** Download report data as JSON format */
     downloadJSON(name = 'unnamed.json') {
         general_utilities_1.downloadFile(name, JSON.stringify(this.data, undefined, 4));
     }
-    cleanData(data) {
+    cleanData(data = []) {
+        var _a;
         if (data.length > 0 && this.type === 'catering') {
             const fields = Object.keys(data[0]);
             const room_field = fields.find((key) => key.toLowerCase().includes('room') && key.toLowerCase().includes('email'));
@@ -10225,11 +10218,8 @@ class Report {
                 if (room_field && price_field && space_service) {
                     const room = space_service.find(row[room_field].toLowerCase());
                     const org_service = service_manager_class_1.ServiceManager.serviceFor(organisation_class_1.Organisation);
-                    const bld = org_service.buildings.find((bld) => bld.id === ((room || {}).level || {}).building_id);
-                    /* istanbul ignore else */
-                    if (bld) {
-                        row[price_field] = new common_1.CurrencyPipe('en_us').transform(row[price_field] / 100, bld.currency || 'USD');
-                    }
+                    const bld = org_service.buildings.find((bld) => { var _a, _b; return bld.id === ((_b = (_a = room) === null || _a === void 0 ? void 0 : _a.level) === null || _b === void 0 ? void 0 : _b.building_id); });
+                    row[price_field] = new common_1.CurrencyPipe('en_us').transform(row[price_field] / 100, (_a = bld) === null || _a === void 0 ? void 0 : _a.currency);
                 }
                 /* istanbul ignore else */
                 if (date_field) {
@@ -10246,7 +10236,6 @@ class Report {
         else if (this.type === 'bookings') {
             data = data.map((i) => {
                 const booking = i;
-                console.log('Booking:', i);
                 if (booking.setup instanceof Object) {
                     booking.setup = booking.setup[booking.room_email];
                 }
@@ -10367,14 +10356,12 @@ const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular
 const composer_1 = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 const base_service_1 = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
 const report_class_1 = __webpack_require__(/*! ./report.class */ "./src/app/services/data/reports/report.class.ts");
-const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 class ReportsService extends base_service_1.BaseAPIService {
     constructor(_composer) {
         super(_composer);
         this._composer = _composer;
-        service_manager_class_1.ServiceManager.setService(report_class_1.Report, this);
         this._name = 'Reports';
         this._api_route = '/reports';
     }
@@ -22582,15 +22569,16 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
      * @param booking Booking to scroll into view
      */
     scrollIntoView(booking) {
-        if (booking && this.scroll_area && this.scroll_area.nativeElement) {
-            const element = this.scroll_area.nativeElement.querySelector(`#event-${booking.id}`);
+        if (booking && booking.space && this.scroll_area && this.scroll_area.nativeElement) {
+            const element = this.scroll_area.nativeElement.querySelector(`#space-col-${booking.space.id}`);
             /* istanbul ignore else */
             if (element) {
                 const scroll_box = this.scroll_area.nativeElement.getBoundingClientRect();
+                const date_percent = Math.abs(dayjs(booking.date).diff(dayjs(booking.date).startOf('d'), 'm')) / (24 * 60);
                 const box = element.getBoundingClientRect();
                 this.scroll_area.nativeElement.scrollTo({
-                    left: box.left - scroll_box.left + this.scroll_area.nativeElement.scrollLeft,
-                    top: box.top - scroll_box.top + this.scroll_area.nativeElement.scrollTop,
+                    left: box.left - scroll_box.left + this.scroll_area.nativeElement.scrollLeft - 10,
+                    top: this.scroll_area.nativeElement.scrollHeight * date_percent - 10,
                     behavior: 'smooth',
                 });
             }

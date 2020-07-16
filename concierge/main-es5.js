@@ -16253,10 +16253,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../users/user.utilities */
     "./src/app/services/data/users/user.utilities.ts");
 
-    var user_class_1 = __webpack_require__(
-    /*! ../users/user.class */
-    "./src/app/services/data/users/user.class.ts");
-
     var catering_order_class_1 = __webpack_require__(
     /*! ../catering/catering-order.class */
     "./src/app/services/data/catering/catering-order.class.ts");
@@ -16264,10 +16260,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var validation_utilities_1 = __webpack_require__(
     /*! src/app/shared/utilities/validation.utilities */
     "./src/app/shared/utilities/validation.utilities.ts");
-
-    var service_manager_class_1 = __webpack_require__(
-    /*! ../service-manager.class */
-    "./src/app/services/data/service-manager.class.ts");
 
     var faker = __webpack_require__(
     /*! faker */
@@ -16465,23 +16457,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         throw Error('No booking passed');
       }
 
-      var user_service = service_manager_class_1.ServiceManager.serviceFor(user_class_1.User);
       var time = dayjs().startOf('m');
       time = time.minute(Math.ceil(time.minute() / 5) * 5);
-      var current_user = user_service.current || new user_class_1.User({
-        id: 'local-user',
-        name: 'Local User',
-        email: 'local@place.tech'
-      });
       var fields = {
-        id: new forms_1.FormControl(booking.id || ''),
+        id: new forms_1.FormControl(booking.id),
         space_list: new forms_1.FormControl(booking.space_list, []),
-        date: new forms_1.FormControl(booking.date || time.valueOf(), [forms_1.Validators.required]),
+        date: new forms_1.FormControl(booking.date, [forms_1.Validators.required]),
         duration: new forms_1.FormControl(booking.duration),
-        organiser: new forms_1.FormControl(booking.organiser || current_user, [forms_1.Validators.required]),
-        organiser_email: new forms_1.FormControl(booking.organiser.email || current_user.email, [forms_1.Validators.required]),
+        organiser: new forms_1.FormControl(booking.organiser, [forms_1.Validators.required]),
+        organiser_email: new forms_1.FormControl(booking.organiser.email, [forms_1.Validators.required]),
         attendees: new forms_1.FormControl(booking.attendees, []),
-        title: new forms_1.FormControl(booking.title || '', [forms_1.Validators.required]),
+        title: new forms_1.FormControl(booking.title, [forms_1.Validators.required]),
         type: new forms_1.FormControl(booking.type),
         body: new forms_1.FormControl(booking.body),
         notes: new forms_1.FormControl(booking.notes),
@@ -16593,6 +16579,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (options.space) {
         var _loop4 = function _loop4(type) {
+          /* istanbul ignore else */
           if (options.rules.hasOwnProperty(type) && options.rules[type] instanceof Array && options.space.zones.find(function (zone) {
             return zone === type;
           })) {
@@ -16752,16 +16739,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             case 'min_length':
               /* istanbul ignore else */
-              if (options.duration) {
-                durationGreaterThanOrEqual(options.duration, condition[0]) ? matches++ : '';
+              if (options.duration && durationGreaterThanOrEqual(options.duration, condition[0])) {
+                matches++;
               }
 
               break;
 
             case 'max_length':
               /* istanbul ignore else */
-              if (options.duration) {
-                durationGreaterThanOrEqual(condition[0], options.duration) ? matches++ : '';
+              if (options.duration && durationGreaterThanOrEqual(condition[0], options.duration)) {
+                matches++;
               }
 
               break;
@@ -19055,13 +19042,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Report =
     /*#__PURE__*/
     function () {
-      function Report(raw_data) {
+      function Report() {
+        var raw_data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
         _classCallCheck(this, Report);
 
         this.type = raw_data.type || '';
-        this.data = this.cleanData(raw_data.data || []);
+        this.data = this.cleanData(raw_data.data);
       }
-      /** Service for managing model on the server */
+      /** Create report data structure from CSV */
 
 
       _createClass(Report, [{
@@ -19069,7 +19058,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         /** Download report data as CSV format */
         value: function downloadCSV() {
-          var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'unammed.csv';
+          var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'unnamed.csv';
           general_utilities_1.downloadFile(name, general_utilities_1.jsonToCsv(this.data));
         }
         /** Download report data as JSON format */
@@ -19082,7 +19071,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "cleanData",
-        value: function cleanData(data) {
+        value: function cleanData() {
+          var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+          var _a;
+
           if (data.length > 0 && this.type === 'catering') {
             var fields = Object.keys(data[0]);
             var room_field = fields.find(function (key) {
@@ -19110,13 +19103,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     var room = space_service.find(row[room_field].toLowerCase());
                     var org_service = service_manager_class_1.ServiceManager.serviceFor(organisation_class_1.Organisation);
                     var bld = org_service.buildings.find(function (bld) {
-                      return bld.id === ((room || {}).level || {}).building_id;
-                    });
-                    /* istanbul ignore else */
+                      var _a, _b;
 
-                    if (bld) {
-                      row[price_field] = new common_1.CurrencyPipe('en_us').transform(row[price_field] / 100, bld.currency || 'USD');
-                    }
+                      return bld.id === ((_b = (_a = room) === null || _a === void 0 ? void 0 : _a.level) === null || _b === void 0 ? void 0 : _b.building_id);
+                    });
+                    row[price_field] = new common_1.CurrencyPipe('en_us').transform(row[price_field] / 100, (_a = bld) === null || _a === void 0 ? void 0 : _a.currency);
                   })();
                 }
                 /* istanbul ignore else */
@@ -19148,7 +19139,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           } else if (this.type === 'bookings') {
             data = data.map(function (i) {
               var booking = i;
-              console.log('Booking:', i);
 
               if (booking.setup instanceof Object) {
                 booking.setup = booking.setup[booking.room_email];
@@ -19208,13 +19198,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           return data;
         }
-      }, {
-        key: "_service",
-        get: function get() {
-          return service_manager_class_1.ServiceManager.serviceFor(Report);
-        }
-        /** Create report data structure from CSV */
-
       }], [{
         key: "fromCSV",
         value: function fromCSV(type, data) {
@@ -19265,10 +19248,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./report.class */
     "./src/app/services/data/reports/report.class.ts");
 
-    var service_manager_class_1 = __webpack_require__(
-    /*! ../service-manager.class */
-    "./src/app/services/data/service-manager.class.ts");
-
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -19291,7 +19270,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _this97 = _super30.call(this, _composer);
         _this97._composer = _composer;
-        service_manager_class_1.ServiceManager.setService(report_class_1.Report, _assertThisInitialized(_this97));
         _this97._name = 'Reports';
         _this97._api_route = '/reports';
         return _this97;
@@ -40884,16 +40862,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "scrollIntoView",
         value: function scrollIntoView(booking) {
-          if (booking && this.scroll_area && this.scroll_area.nativeElement) {
-            var element = this.scroll_area.nativeElement.querySelector("#event-".concat(booking.id));
+          if (booking && booking.space && this.scroll_area && this.scroll_area.nativeElement) {
+            var element = this.scroll_area.nativeElement.querySelector("#space-col-".concat(booking.space.id));
             /* istanbul ignore else */
 
             if (element) {
               var scroll_box = this.scroll_area.nativeElement.getBoundingClientRect();
+              var date_percent = Math.abs(dayjs(booking.date).diff(dayjs(booking.date).startOf('d'), 'm')) / (24 * 60);
               var box = element.getBoundingClientRect();
               this.scroll_area.nativeElement.scrollTo({
-                left: box.left - scroll_box.left + this.scroll_area.nativeElement.scrollLeft,
-                top: box.top - scroll_box.top + this.scroll_area.nativeElement.scrollTop,
+                left: box.left - scroll_box.left + this.scroll_area.nativeElement.scrollLeft - 10,
+                top: this.scroll_area.nativeElement.scrollHeight * date_percent - 10,
                 behavior: 'smooth'
               });
             }
