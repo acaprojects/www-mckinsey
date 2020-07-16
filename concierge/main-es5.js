@@ -4786,32 +4786,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           var end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
-          var building_time = spacetime_1["default"](start.toDate()); // const space = this.form ? this.form.controls.location_id.value : null;
-          // if (space) {
-          //     const building = this._service.Organisation.buildings.find((bld) =>bld.id === space.level.building_id);
-          //     if (building && building.timezone) {
-          //         building_time = building_time.goto(building.timezone);
-          //     }
-          // }
+          var building_time = spacetime_1["default"](start.toDate());
+          var space = this.form ? this.form.controls.location_id.value : null;
+          var catering_hours = {
+            start: 7,
+            end: 20
+          };
 
-          building_time = building_time.hour(7);
+          if (space && space.level) {
+            var building = this._org.buildings.find(function (bld) {
+              return bld.id === space.level.building_id;
+            });
+
+            if (building && building.timezone) {
+              building_time = building_time["goto"](building.timezone);
+            }
+
+            catering_hours = building.catering_hours || catering_hours;
+          }
+
+          building_time = building_time.hour(catering_hours.start);
           var as_dayjs = dayjs(building_time.toLocalDate());
 
-          if (this.all_day || this.duration >= 13 * 60) {
+          if (this.all_day || this.duration >= (catering_hours.end - catering_hours.start) * 60) {
             if (start.isBefore(as_dayjs, 'm')) {
               start = as_dayjs;
-              end = start.add(13, 'h');
-            } else {
-              var possible_end = as_dayjs.hour(20);
-
-              if (end.isAfter(possible_end)) {
-                end = possible_end;
-              }
+              end = start.add(catering_hours.end - catering_hours.start, 'h');
             }
           }
 
           if (start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
+          }
+
+          var possible_end = as_dayjs.minute(0).hour(catering_hours.end);
+
+          if (end.isAfter(possible_end, 'm')) {
+            end = possible_end;
           }
 
           return {
@@ -18048,6 +18059,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _this92.required.expected_attendees = true;
         }
 
+        _this92.catering_hours = raw_data.catering_hours || disc_info.catering_hours || settings.catering_hours || {
+          start: 7,
+          end: 20
+        };
         _this92.timezone = raw_data.timezone || disc_info.timezone || settings.timezone || '';
         _this92.has_catering = raw_data.has_catering || disc_info.has_catering || settings.has_catering || false;
         _this92.holding_bay = raw_data.holding_bay || disc_info.holding_bay || settings.holding_bay || '';
