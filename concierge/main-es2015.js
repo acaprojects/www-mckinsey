@@ -2240,10 +2240,11 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         }
         let end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
         let building_time = spacetime_1.default(start.toDate());
-        const space = this.form ? this.form.controls.location_id.value : null;
+        const space_email = this.form ? this.form.controls.location_id.value : null;
         let catering_hours = { start: 7, end: 20 };
-        if (space && space.level) {
-            const building = this._org.buildings.find((bld) => bld.id === space.level.building_id);
+        if (space_email) {
+            const space = this.space_list.find((space) => space.email === space_email);
+            const building = this._org.buildings.find((bld) => { var _a; return bld.id === ((_a = space) === null || _a === void 0 ? void 0 : _a.level.building_id); });
             if (building && building.timezone) {
                 building_time = building_time.goto(building.timezone);
             }
@@ -2254,13 +2255,16 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         if (this.all_day || this.duration >= (catering_hours.end - catering_hours.start) * 60) {
             if (start.isBefore(as_dayjs, 'm')) {
                 start = as_dayjs;
-                end = start.add((catering_hours.end - catering_hours.start), 'h');
+                end = start.add(catering_hours.end - catering_hours.start, 'h');
             }
         }
         if (start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
         }
-        const possible_end = as_dayjs.minute(0).hour(catering_hours.end);
+        const possible_end = dayjs(building_time
+            .startOf('hour')
+            .hour(catering_hours.end)
+            .toLocalDate());
         if (end.isAfter(possible_end, 'm')) {
             end = possible_end;
         }
