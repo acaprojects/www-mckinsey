@@ -4641,7 +4641,7 @@ exports.stringToMinutes = stringToMinutes;
  * @param date Datetime of the new event
  */
 function statusFromBookings(bookings = [], bookable = true, requestable = false, date = dayjs().valueOf()) {
-    const free_slots = getFreeBookingSlots(bookings.filter(bkn => !bkn.declined));
+    const free_slots = getFreeBookingSlots(bookings.filter((bkn) => !bkn.declined));
     const now = dayjs(date);
     const next_free_slot = free_slots.find((slot) => {
         const start = dayjs(slot.start);
@@ -4672,13 +4672,11 @@ function statusFromBookings(bookings = [], bookable = true, requestable = false,
     };
 }
 exports.statusFromBookings = statusFromBookings;
-function timePeriodsIntersect(start1, end1, start2, end2) {
-    const day1 = dayjs(start1);
-    const end_time1 = dayjs(end1);
-    const day2 = dayjs(start2);
-    const end_time2 = dayjs(end2);
-    return (day1.isAfter(day2, 'm') && day1.isBefore(end_time2)) || (end_time1.isAfter(day2, 'm') && end_time1.isBefore(end_time2)) ||
-        (day2.isAfter(day1, 'm') && day2.isBefore(end_time1)) || (end_time2.isAfter(day1, 'm') && end_time2.isBefore(end_time1));
+function timePeriodsIntersect(start1, end1, start2, end2, type = '') {
+    return ((start1 >= start2 && start1 < end2) ||
+        (end1 > start2 && end1 <= end2) ||
+        (start2 >= start1 && start2 < end1) ||
+        (end2 > start1 && end2 <= end1));
 }
 exports.timePeriodsIntersect = timePeriodsIntersect;
 
@@ -21620,16 +21618,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "1d3c9b7",
-    "hash": "1d3c9b7",
+    "raw": "186936f",
+    "hash": "186936f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "1d3c9b7",
+    "suffix": "186936f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594900365142
+    "time": 1594901662491
 };
 /* tslint:enable */
 
