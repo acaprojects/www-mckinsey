@@ -8581,8 +8581,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (simplified_fields.all_day) {
         simplified_fields.all_day.valueChanges.subscribe(function (value) {
           if (value) {
+            simplified_fields.date.setValidators([forms_1.Validators.required]);
+            simplified_fields.date.updateValueAndValidity();
             simplified_fields.duration.disable();
           } else {
+            simplified_fields.date.setValidators([forms_1.Validators.required, isFuture]);
+            simplified_fields.date.updateValueAndValidity();
             simplified_fields.duration.enable();
           }
         });
@@ -38579,16 +38583,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "4209d46",
-      "hash": "4209d46",
+      "raw": "12b9bba",
+      "hash": "12b9bba",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "4209d46",
+      "suffix": "12b9bba",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594875331522
+      "time": 1594880745122
     };
     /* tslint:enable */
 
