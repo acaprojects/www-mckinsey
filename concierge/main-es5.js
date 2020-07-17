@@ -19747,7 +19747,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 2:
                     list = _context19.sent;
 
-                    if (Object.keys(_query).length) {
+                    if (!Object.keys(_query).length) {
                       this.set('list', list);
                     }
 

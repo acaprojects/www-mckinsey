@@ -10593,7 +10593,7 @@ class SpacesService extends base_service_1.BaseAPIService {
         });
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             const list = yield _super.query.call(this, query);
-            if (Object.keys(query).length) {
+            if (!Object.keys(query).length) {
                 this.set('list', list);
             }
             return list;
