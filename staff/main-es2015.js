@@ -3957,6 +3957,10 @@ class Booking extends base_api_class_1.BaseDataClass {
             raw_data.duration ||
                 dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') ||
                 60;
+        this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
+        if (this.all_day) {
+            this.date = dayjs(this.date).startOf('d').valueOf();
+        }
         this.body =
             (typeof raw_data.body === 'string' ? raw_data.body : '') || raw_data.description;
         this.class =
@@ -3974,7 +3978,6 @@ class Booking extends base_api_class_1.BaseDataClass {
                 ? new user_class_1.User(raw_data.booked_by || raw_data.creator)
                 : this.organiser;
         this.location_name = raw_data.location_name || '';
-        this.all_day = !!(raw_data.all_day || this.duration > 23 * 60);
         this.setup = raw_data.setup || 0;
         this.breakdown = raw_data.breakdown || 0;
         this.recurrence = raw_data.recurrence || raw_data.recurr || {};
@@ -4118,8 +4121,7 @@ class Booking extends base_api_class_1.BaseDataClass {
     }
     /** Display value for the location of the booking */
     get location() {
-        return (this.space_list.map((space) => space.name).join(', ') ||
-            'No location set');
+        return this.space_list.map((space) => space.name).join(', ') || 'No location set';
     }
     /** Display value for the level of the first space in the booking */
     get level() {
@@ -21618,16 +21620,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "a3ab21e",
-    "hash": "a3ab21e",
+    "raw": "e130570",
+    "hash": "e130570",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "a3ab21e",
+    "suffix": "e130570",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594945169564
+    "time": 1594964728308
 };
 /* tslint:enable */
 

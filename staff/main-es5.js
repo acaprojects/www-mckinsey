@@ -7892,6 +7892,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var start = dayjs(time).startOf('m');
         _this42.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
         _this42.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
+        _this42.all_day = !!raw_data.all_day || _this42.duration > 23 * 60;
+
+        if (_this42.all_day) {
+          _this42.date = dayjs(_this42.date).startOf('d').valueOf();
+        }
+
         _this42.body = (typeof raw_data.body === 'string' ? raw_data.body : '') || raw_data.description;
         _this42["class"] = raw_data.booking_type || raw_data["class"] || (raw_data.visitors ? 'external' : null) || 'internal';
         _this42.attendees = (raw_data.attendees || raw_data._attendees || []).map(function (i) {
@@ -7900,7 +7906,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this42.organiser = (raw_data.organizer || raw_data.organiser ? new user_class_1.User(raw_data.organizer || raw_data.organiser) : user_class_1.User.active_user) || new user_class_1.User();
         _this42.creator = raw_data.booked_by || raw_data.creator ? new user_class_1.User(raw_data.booked_by || raw_data.creator) : _this42.organiser;
         _this42.location_name = raw_data.location_name || '';
-        _this42.all_day = !!(raw_data.all_day || _this42.duration > 23 * 60);
         _this42.setup = raw_data.setup || 0;
         _this42.breakdown = raw_data.breakdown || 0;
         _this42.recurrence = raw_data.recurrence || raw_data.recurr || {};
@@ -38591,16 +38596,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "a3ab21e",
-      "hash": "a3ab21e",
+      "raw": "e130570",
+      "hash": "e130570",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "a3ab21e",
+      "suffix": "e130570",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1594945169564
+      "time": 1594964728308
     };
     /* tslint:enable */
 
