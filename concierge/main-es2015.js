@@ -10587,6 +10587,18 @@ class SpacesService extends base_service_1.BaseAPIService {
         };
         this._org.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
     }
+    query(query = {}) {
+        const _super = Object.create(null, {
+            query: { get: () => super.query }
+        });
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            const list = yield _super.query.call(this, query);
+            if (Object.keys(query).length) {
+                this.set('list', list);
+            }
+            return list;
+        });
+    }
     /**
      * Get available spaces
      * @param options
