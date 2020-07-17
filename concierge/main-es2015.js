@@ -2127,6 +2127,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
             ? this.form.controls.items.value.reduce((total, item) => total + item.amount, 0)
             : 0;
     }
+    /* istanbul ignore next */
     /** Whether booking time is outside of catering hours */
     get out_of_hours() {
         return this.form.controls.delivery_time.value < 0;
@@ -2231,6 +2232,8 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
             this.available_times.push({ id: -1, name: 'Out of hours' });
         }
     }
+    /* istanbul ignore next */
+    // TODO: work out how to get spacetime lib working with jest
     generateStartAndEndTimes() {
         let start = dayjs(this.date);
         const now = dayjs();
@@ -7916,7 +7919,6 @@ exports.BaseDataClass = BaseDataClass;
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-const base_api_class_1 = __webpack_require__(/*! ./base-api.class */ "./src/app/services/data/base-api.class.ts");
 const base_class_1 = __webpack_require__(/*! ../../shared/base.class */ "./src/app/shared/base.class.ts");
 const api_utilities_1 = __webpack_require__(/*! ../../shared/utilities/api.utilities */ "./src/app/shared/utilities/api.utilities.ts");
 class BaseAPIService extends base_class_1.BaseClass {
@@ -8005,7 +8007,7 @@ class BaseAPIService extends base_class_1.BaseClass {
      * @param predicate Function for filtering the list
      */
     filter(predicate = this._list_filter) {
-        const list = this.get('list') || [];
+        const list = this.get('list');
         return list.reduce((a, i) => {
             if (predicate(i)) {
                 a.push(i);
@@ -8018,14 +8020,14 @@ class BaseAPIService extends base_class_1.BaseClass {
      * @param id ID of the item
      */
     find(id) {
-        const list = this.get('list') || [];
+        const list = this.get('list');
         return list.find((i) => i.id === id || (i.email || '').toLowerCase() === (id || '').toLowerCase());
     }
     /**
      * Query the index of the API route associated with this service
      * @param query_params Map of query paramaters to add to the request URL
      */
-    query(query_params = { update_list: true }) {
+    query(query_params = {}) {
         let engine = false;
         let cache = 1000;
         /* istanbul ignore else */
@@ -8052,11 +8054,6 @@ class BaseAPIService extends base_class_1.BaseClass {
                     reject(e);
                     this._promises[key] = null;
                 }, () => {
-                    if ((!query || (query_params && query_params.update_list)) &&
-                        result.length > 0 &&
-                        result[0] instanceof base_api_class_1.BaseDataClass) {
-                        this.set('list', this.updateList(this.get('list'), result));
-                    }
                     resolve(result);
                     this.timeout(key, () => (this._promises[key] = null), cache);
                 });
@@ -8112,7 +8109,6 @@ class BaseAPIService extends base_class_1.BaseClass {
                     this._promises.new_item = null;
                 }, () => {
                     resolve(result);
-                    this.set('list', this.updateList(this.get('list'), [result]));
                     this.analyticsEvent(`create-${this._name.toLowerCase()}-success`);
                     this._promises.new_item = null;
                 });
@@ -8213,9 +8209,6 @@ class BaseAPIService extends base_class_1.BaseClass {
                     this._promises[key] = null;
                 }, () => {
                     resolve(result);
-                    this.set('list', this.updateList(this.removeItem(this.get('list'), { id }), [
-                        result,
-                    ]));
                     this.analyticsEvent(`update-${this._name.toLowerCase()}-success`, id);
                     this._promises[key] = null;
                 });
@@ -8235,7 +8228,6 @@ class BaseAPIService extends base_class_1.BaseClass {
                 const query = api_utilities_1.toQueryString(Object.assign({}, query_params));
                 const url = `${this.route()}/${id}${query ? '?' + query : ''}`;
                 this.http.delete(url).subscribe((_) => null, (e) => reject(e), () => {
-                    this.set('list', this.removeItem(this.get('list'), { id }));
                     this._promises[key] = null;
                     resolve();
                 });
@@ -8243,24 +8235,6 @@ class BaseAPIService extends base_class_1.BaseClass {
         }
         return this._promises[key];
     }
-    /**
-     * Add new API item from another service or API class
-     * @param id ID of the item/or service adding the new item
-     * @param data Raw API data for the new item
-     * @param type Adder type
-     */
-    addFrom(id, data, type = 'other') {
-        const new_item = this.process(data);
-        this.set('list', this.updateList(this.get('list'), [new_item]));
-        return new_item.id;
-    }
-    /**
-     * Remove items with the given IDs from the list
-     * @param id ID of the item/or service remove the list of items
-     * @param remove_ids List of item IDs to remove
-     * @param type Remover type
-     */
-    removeFrom(id, remove_ids, type = 'other') { }
     /**
      * Load initial data for the service
      */
@@ -8280,47 +8254,6 @@ class BaseAPIService extends base_class_1.BaseClass {
      */
     process(raw_item) {
         return raw_item;
-    }
-    /**
-     * Update recorded list of items
-     * @param old_list Old list of items
-     * @param list List of updated items
-     * @param compareFn Function to compare items to remove duplicates
-     */
-    updateList(old_list, list, compareFn = this._compare) {
-        /* istanbul ignore else */
-        if (!list || list.length === 0) {
-            return old_list;
-        }
-        const new_list = [];
-        const mixed_list = [...list, ...old_list];
-        /* istanbul ignore else */
-        if (!compareFn) {
-            compareFn = this._compare;
-        }
-        for (const item of mixed_list) {
-            const found = new_list.find((i) => compareFn(i, item));
-            /* istanbul ignore else */
-            if (!found) {
-                new_list.push(item);
-            }
-        }
-        return new_list;
-    }
-    /**
-     * Remove the given item from the given list
-     * @param list List of items
-     * @param item Item to remove
-     * @param compareFn Function to compare items
-     */
-    removeItem(list, item, compareFn) {
-        const new_list = [];
-        /* istanbul ignore else */
-        if (!compareFn) {
-            compareFn = this._compare;
-        }
-        list.forEach((i) => (compareFn(item, i) ? null : new_list.push(i)));
-        return new_list;
     }
 }
 exports.BaseAPIService = BaseAPIService;
@@ -8363,6 +8296,10 @@ class Booking extends base_api_class_1.BaseDataClass {
             raw_data.duration ||
                 dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') ||
                 60;
+        this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
+        if (this.all_day) {
+            this.date = dayjs(this.date).startOf('d').valueOf();
+        }
         this.old_start = raw_data.old_start || dayjs(this.date).unix();
         this.old_end =
             raw_data.old_end ||
@@ -8382,7 +8319,6 @@ class Booking extends base_api_class_1.BaseDataClass {
                 ? new user_class_1.User(raw_data.creator || raw_data.booked_by)
                 : this.organiser;
         this._location = raw_data.location_name || raw_data.location || '';
-        this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
         this.setup = raw_data.setup || {};
         this.breakdown = raw_data.breakdown || {};
         Object.keys(this.setup).forEach((key) => (this.setup[key] = Math.floor(this.setup[key] / 60)));
@@ -8773,9 +8709,7 @@ function generateBookingForm(booking, use_fields) {
         date: new forms_1.FormControl(booking.date, [forms_1.Validators.required]),
         duration: new forms_1.FormControl(booking.duration),
         organiser: new forms_1.FormControl(booking.organiser, [forms_1.Validators.required]),
-        organiser_email: new forms_1.FormControl(booking.organiser.email, [
-            forms_1.Validators.required,
-        ]),
+        organiser_email: new forms_1.FormControl(booking.organiser.email, [forms_1.Validators.required]),
         attendees: new forms_1.FormControl(booking.attendees, []),
         title: new forms_1.FormControl(booking.title, [forms_1.Validators.required]),
         type: new forms_1.FormControl(booking.type),
@@ -8802,7 +8736,7 @@ function generateBookingForm(booking, use_fields) {
         fields.date.setValidators([forms_1.Validators.required, isFuture]);
     }
     let list_length = -1;
-    fields.space_list.valueChanges.subscribe(list => {
+    fields.space_list.valueChanges.subscribe((list) => {
         if (list && list.length > list_length && list_length === 0) {
             const expected = fields.expected_attendees.value || {};
             const codes = fields.equipment_codes.value || {};
@@ -8811,7 +8745,7 @@ function generateBookingForm(booking, use_fields) {
                 const new_expected = {};
                 const new_codes = {};
                 const notes = fields.notes.value;
-                notes.forEach(note => note.space === key ? note.space = list[0].email : '');
+                notes.forEach((note) => (note.space === key ? (note.space = list[0].email) : ''));
                 new_expected[list[0].email] = expected[key];
                 new_codes[list[0].email] = codes[key];
                 fields.expected_attendees.setValue(new_expected);
@@ -8997,13 +8931,15 @@ function checkRules(options) {
                     break;
                 case 'min_length':
                     /* istanbul ignore else */
-                    if (options.duration && durationGreaterThanOrEqual(options.duration, condition[0])) {
+                    if (options.duration &&
+                        durationGreaterThanOrEqual(options.duration, condition[0])) {
                         matches++;
                     }
                     break;
                 case 'max_length':
                     /* istanbul ignore else */
-                    if (options.duration && durationGreaterThanOrEqual(condition[0], options.duration)) {
+                    if (options.duration &&
+                        durationGreaterThanOrEqual(condition[0], options.duration)) {
                         matches++;
                     }
                     break;
@@ -9068,12 +9004,13 @@ function statusFromBookings(bookings, bookable, requestable, date = dayjs().valu
     const next_free_slot = free_slots.find((slot) => {
         const start = dayjs(slot.start);
         const end = dayjs(slot.end);
-        return start.isAfter(now) || (now.isAfter(start, 's') && now.isBefore(end, 'm'));
+        return start.isAfter(now) || timePeriodsIntersect(date, date, slot.start, slot.end);
     });
     const start = dayjs(next_free_slot.start);
     const end = dayjs(next_free_slot.end);
-    const currently_free = now.isAfter(start, 's') && now.isBefore(end, 'm');
+    const currently_free = timePeriodsIntersect(date, date, next_free_slot.start, next_free_slot.end);
     const time_until_next_block = general_utilities_1.humaniseDuration(currently_free ? end.diff(now, 'm') : start.diff(now, 'm'), true);
+    console.log('Next Free:', next_free_slot);
     const free_tomorrow = !currently_free && !start.isSame(now, 'd');
     const free_today = currently_free && !end.isSame(now, 'd');
     return {
@@ -9113,8 +9050,10 @@ function timePeriodsIntersect(start1, end1, start2, end2) {
     const end_time1 = dayjs(end1);
     const day2 = dayjs(start2);
     const end_time2 = dayjs(end2);
-    return (day1.isAfter(day2, 'm') && day1.isBefore(end_time2)) || (end_time1.isAfter(day2, 'm') && end_time1.isBefore(end_time2)) ||
-        (day2.isAfter(day1, 'm') && day2.isBefore(end_time1)) || (end_time2.isAfter(day1, 'm') && end_time2.isBefore(end_time1));
+    return ((day1.isAfter(day2, 'm') && day1.isBefore(end_time2)) ||
+        (end_time1.isAfter(day2, 'm') && end_time1.isBefore(end_time2)) ||
+        (day2.isAfter(day1, 'm') && day2.isBefore(end_time1)) ||
+        (end_time2.isAfter(day1, 'm') && end_time2.isBefore(end_time1)));
 }
 exports.timePeriodsIntersect = timePeriodsIntersect;
 
@@ -10922,9 +10861,9 @@ const md5_1 = __webpack_require__(/*! ts-md5/dist/md5 */ "./node_modules/ts-md5/
 const base_service_1 = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
 const user_class_1 = __webpack_require__(/*! ./user.class */ "./src/app/services/data/users/user.class.ts");
 const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const app_service_1 = __webpack_require__(/*! ../../app.service */ "./src/app/services/app.service.ts");
 const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 const i2 = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
@@ -10942,6 +10881,7 @@ class UsersService extends base_service_1.BaseAPIService {
         this._api_route = '/users';
         this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
         this.set('current_user', new user_class_1.User({ id: 'local_user', name: 'Local User' }));
+        this.set('delegates', null);
         this._composer.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
     }
     /** Currently logged in user */
@@ -10952,7 +10892,7 @@ class UsersService extends base_service_1.BaseAPIService {
     get is_logged_in() {
         return this.current && this.current.id !== 'local_user';
     }
-    /** istanbul ignore function */
+    /* istanbul ignore next */
     /**
      * Sets the access token and expiry for the user
      * @param token OAuth bearer token
@@ -11023,35 +10963,35 @@ class UsersService extends base_service_1.BaseAPIService {
                 this._service.set('loading', loading);
                 return resolve();
             }
-            this.show('current').then((current_user) => {
+            this.show('current').then((current_user) => tslib_1.__awaiter(this, void 0, void 0, function* () {
                 this.set('status', 'available');
                 this.set('current_user', current_user);
                 this._initialised.next(true);
                 if (this._service && this._service.setting('app.user.grab_api_details')) {
-                    this.show(current_user.email).then((user) => {
+                    this.show(current_user.email).then((user) => tslib_1.__awaiter(this, void 0, void 0, function* () {
                         this.set('current_user', user);
                         if (this._service.setting('app.user.update_location')) {
                             this.interval('location', () => user.locate(), 5000);
                         }
-                        this.loadDelegates();
+                        yield this.loadDelegates();
                         resolve();
                         loading.user = {
                             message: 'Loading user credentials',
                             state: 'complete',
                         };
                         this._service.set('loading', loading);
-                    }, () => this.timeout('load', () => this.load(++tries).then(() => resolve())));
+                    }), () => this.timeout('load', () => this.load(++tries).then(() => resolve())));
                 }
                 else {
                     if (this._service.setting('app.user.update_location')) {
                         this.interval('location', () => current_user.locate(), 5000);
                     }
-                    this.loadDelegates();
+                    yield this.loadDelegates();
                     resolve();
                     loading.user = { message: 'Loading user credentials', state: 'complete' };
                     this._service.set('loading', loading);
                 }
-            }, () => this.timeout('load', () => this.load(++tries).then(() => resolve())));
+            }), () => this.timeout('load', () => this.load(++tries).then(() => resolve())));
         });
     }
     loadDelegates() {
@@ -11065,6 +11005,7 @@ class UsersService extends base_service_1.BaseAPIService {
                 promises.push(this.show(email));
             }
             const list = yield Promise.all(promises);
+            console.log('Delegates:', list);
             this.set('delegates', list);
             this.set('list', general_utilities_1.unique((this.get('list') || []).concat(list)));
             return list;
@@ -23734,7 +23675,6 @@ class EventFormComponent {
         const attendees = this.attendees;
         attendees.splice(index, 1, item);
         this.attendees = attendees;
-        this._users.addFrom('visitor-modal', item.toJSON(), 'other');
         this.form.controls.attendees.setValue(attendees);
         this.form.markAsDirty();
     }
