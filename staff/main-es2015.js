@@ -1589,7 +1589,7 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     }
     /** Navigate the booking with the details of the current booking set */
     duplicateMeeting() {
-        const new_booking = this.booking.duplicate();
+        const new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), { id: 'ad-hoc', icaluid: '' }));
         this._router.navigate(['/book']);
         if (localStorage) {
             localStorage.setItem('ACA_STAFF.booking_form_data', JSON.stringify(new_booking));
@@ -21620,16 +21620,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "e130570",
-    "hash": "e130570",
+    "raw": "c85f865",
+    "hash": "c85f865",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "e130570",
+    "suffix": "c85f865",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594964728308
+    "time": 1594980831018
 };
 /* tslint:enable */
 
