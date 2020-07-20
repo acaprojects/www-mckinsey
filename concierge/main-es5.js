@@ -38745,11 +38745,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
-
-              _this195.levels.sort(function (a, b) {
-                return a.name.localeCompare(b.name);
-              });
-
               _this195.space_types = [{
                 id: '',
                 name: 'All Space Types'

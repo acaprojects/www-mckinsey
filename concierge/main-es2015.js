@@ -21361,7 +21361,6 @@ class DayViewComponent extends base_directive_1.BaseDirective {
                     this.updateLevel();
                 }
                 this.levels = [{ id: '', name: 'All Levels' }].concat(building.levels);
-                this.levels.sort((a, b) => a.name.localeCompare(b.name));
                 this.space_types = [{ id: '', name: 'All Space Types' }].concat(this._org.space_types);
             }));
         });
