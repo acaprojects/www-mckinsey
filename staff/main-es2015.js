@@ -4375,8 +4375,9 @@ function generateBookingForm(booking, use_fields) {
     }
     let list_length = -1;
     fields.space_list.valueChanges.subscribe((list) => {
-        if (list && list.length > list_length && list_length === 0) {
-            const expected = fields.expected_attendees.value || {};
+        const expected = fields.expected_attendees.value || {};
+        const matches = Object.keys(expected).filter((key) => list.find((space) => space.email === key)).length;
+        if (list && list.length && matches === 0) {
             const codes = fields.equipment_codes.value || {};
             if (Object.keys(expected).length >= 0 || Object.keys(codes).length >= 0) {
                 const key = Object.keys(expected)[0] || Object.keys(codes)[0];
@@ -12938,7 +12939,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
         const all_day = this.booking.all_day;
         const date = dayjs(date_value);
         const end = date.add(duration_value, 'm');
-        if (all_day || duration_value > 23 * 60) {
+        if (all_day && duration_value < 25 * 60) {
             return `${date.format('DD MMM YYYY')} - All Day`;
         }
         else {
@@ -15099,15 +15100,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+const date_fns_tz_1 = __webpack_require__(/*! date-fns-tz */ "./node_modules/date-fns-tz/esm/index.js");
 const catering_category_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 const catering_item_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const catering_order_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const catering_menu_service_1 = __webpack_require__(/*! src/app/services/data/catering/catering-menu.service */ "./src/app/services/data/catering/catering-menu.service.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-const spacetime_1 = __webpack_require__(/*! spacetime */ "./node_modules/spacetime/builds/spacetime.mjs");
 const catering_confirm_modal_component_1 = __webpack_require__(/*! ../../../overlays/catering-confirm-modal/catering-confirm-modal.component */ "./src/app/shell/bookings/overlays/catering-confirm-modal/catering-confirm-modal.component.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/catering/catering-menu.service */ "./src/app/services/data/catering/catering-menu.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
@@ -15494,6 +15496,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         }
     }
     generateStartAndEndTimes() {
+        var _a;
         let start = dayjs(this.date);
         const now = dayjs();
         /* istanbul ignore else */
@@ -15501,19 +15504,22 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
             start = start.isSame(now, 'd') ? now : start.startOf('d');
         }
         let end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
-        let building_time = spacetime_1.default(start.toDate());
+        let building_time = dayjs();
         const space_email = this.form ? this.form.controls.location_id.value : null;
         let catering_hours = { start: 7, end: 20 };
+        building_time = building_time.minute(0).hour(catering_hours.start);
         if (space_email) {
             const space = this.space_list.find((space) => space.email === space_email);
             const building = this._org.buildings.find((bld) => { var _a; return bld.id === ((_a = space) === null || _a === void 0 ? void 0 : _a.level.building_id); });
+            catering_hours = ((_a = building) === null || _a === void 0 ? void 0 : _a.catering_hours) || catering_hours;
+            building_time = building_time.minute(0).hour(catering_hours.start);
             if (building && building.timezone) {
-                building_time = building_time.goto(building.timezone);
+                const hour = general_utilities_1.padZero(Math.floor(catering_hours.start), 2);
+                const minute = general_utilities_1.padZero(Math.floor(catering_hours.start * 60) % 60, 2);
+                building_time = dayjs(date_fns_tz_1.toDate(`${start.format(`YYYY-MM-DD`)}T${hour}:${minute} ${building.timezone}`));
             }
-            catering_hours = building.catering_hours || catering_hours;
         }
-        building_time = building_time.hour(catering_hours.start);
-        const as_dayjs = dayjs(building_time.toLocalDate());
+        const as_dayjs = dayjs(building_time);
         if (this.all_day || this.duration >= (catering_hours.end - catering_hours.start) * 60) {
             if (start.isBefore(as_dayjs, 'm')) {
                 start = as_dayjs;
@@ -15523,10 +15529,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         if (start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
         }
-        const possible_end = dayjs(building_time
-            .startOf('hour')
-            .hour(catering_hours.end)
-            .toLocalDate());
+        const possible_end = building_time.add(catering_hours.end - catering_hours.start, 'h');
         if (end.isAfter(possible_end, 'm')) {
             end = possible_end;
         }
@@ -16453,7 +16456,14 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
             }));
             // Process API results
             this.subscription('search_results', this.search_results$.subscribe(list => {
-                this.space_list = list;
+                this.space_list = list.filter(space => {
+                    for (const zone of this.zone_ids) {
+                        if (space.zones.includes(zone)) {
+                            return true;
+                        }
+                    }
+                    return !this.zone_ids.length;
+                });
                 this.space_list.sort((a, b) => this.sort(a, b));
             }));
             this.change$.next('');
@@ -21620,16 +21630,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "c85f865",
-    "hash": "c85f865",
+    "raw": "d481fc9",
+    "hash": "d481fc9",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "c85f865",
+    "suffix": "d481fc9",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1594980831018
+    "time": 1595213413593
 };
 /* tslint:enable */
 
