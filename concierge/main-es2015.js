@@ -749,7 +749,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
         const all_day = this.booking.all_day;
         const date = dayjs(date_value);
         const end = date.add(duration_value, 'm');
-        if (all_day || duration_value > 23 * 60) {
+        if (all_day && duration_value < 25 * 60) {
             return `${date.format('DD MMM YYYY')} - All Day`;
         }
         else {
@@ -1859,15 +1859,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+const date_fns_tz_1 = __webpack_require__(/*! date-fns-tz */ "./node_modules/date-fns-tz/esm/index.js");
 const catering_category_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 const catering_item_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const catering_order_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 const catering_confirm_modal_component_1 = __webpack_require__(/*! src/app/overlays/catering-confirm-modal/catering-confirm-modal.component */ "./src/app/overlays/catering-confirm-modal/catering-confirm-modal.component.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-const spacetime_1 = __webpack_require__(/*! spacetime */ "./node_modules/spacetime/builds/spacetime.mjs");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const catering_menu_service_1 = __webpack_require__(/*! src/app/services/data/catering/catering-menu.service */ "./src/app/services/data/catering/catering-menu.service.ts");
+const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/catering/catering-menu.service */ "./src/app/services/data/catering/catering-menu.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
@@ -2232,9 +2233,8 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
             this.available_times.push({ id: -1, name: 'Out of hours' });
         }
     }
-    /* istanbul ignore next */
-    // TODO: work out how to get spacetime lib working with jest
     generateStartAndEndTimes() {
+        var _a;
         let start = dayjs(this.date);
         const now = dayjs();
         /* istanbul ignore else */
@@ -2242,19 +2242,22 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
             start = start.isSame(now, 'd') ? now : start.startOf('d');
         }
         let end = this.all_day ? start.endOf('d') : start.add(this.duration, 'm');
-        let building_time = spacetime_1.default(start.toDate());
+        let building_time = dayjs();
         const space_email = this.form ? this.form.controls.location_id.value : null;
         let catering_hours = { start: 7, end: 20 };
+        building_time = building_time.minute(0).hour(catering_hours.start);
         if (space_email) {
             const space = this.space_list.find((space) => space.email === space_email);
             const building = this._org.buildings.find((bld) => { var _a; return bld.id === ((_a = space) === null || _a === void 0 ? void 0 : _a.level.building_id); });
+            catering_hours = ((_a = building) === null || _a === void 0 ? void 0 : _a.catering_hours) || catering_hours;
+            building_time = building_time.minute(0).hour(catering_hours.start);
             if (building && building.timezone) {
-                building_time = building_time.goto(building.timezone);
+                const hour = general_utilities_1.padZero(Math.floor(catering_hours.start), 2);
+                const minute = general_utilities_1.padZero(Math.floor(catering_hours.start * 60) % 60, 2);
+                building_time = dayjs(date_fns_tz_1.toDate(`${start.format(`YYYY-MM-DD`)}T${hour}:${minute} ${building.timezone}`));
             }
-            catering_hours = building.catering_hours || catering_hours;
         }
-        building_time = building_time.hour(catering_hours.start);
-        const as_dayjs = dayjs(building_time.toLocalDate());
+        const as_dayjs = dayjs(building_time);
         if (this.all_day || this.duration >= (catering_hours.end - catering_hours.start) * 60) {
             if (start.isBefore(as_dayjs, 'm')) {
                 start = as_dayjs;
@@ -2264,10 +2267,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         if (start.isBefore(as_dayjs, 'm')) {
             start = as_dayjs;
         }
-        const possible_end = dayjs(building_time
-            .startOf('hour')
-            .hour(catering_hours.end)
-            .toLocalDate());
+        const possible_end = building_time.add(catering_hours.end - catering_hours.start, 'h');
         if (end.isAfter(possible_end, 'm')) {
             end = possible_end;
         }
@@ -3143,34 +3143,45 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
         return this._service.setting('app.booking.multiple_spaces');
     }
     ngOnInit() {
-        this._spaces.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
+        this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
             // Listen for input changes
-            this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(_ => {
+            this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
                 this.loading = true;
-                const recurrence = this.form.controls.recurrence ? this.form.controls.recurrence.value : null;
-                const recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None' ? {
-                    recurr_period: (recurrence.period || '').toLowerCase(),
-                    recurr_end: dayjs(recurrence.end).unix()
-                } : {};
+                const recurrence = this.form.controls.recurrence
+                    ? this.form.controls.recurrence.value
+                    : null;
+                const recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None'
+                    ? {
+                        recurr_period: (recurrence.period || '').toLowerCase(),
+                        recurr_end: dayjs(recurrence.end).unix(),
+                    }
+                    : {};
                 const query = Object.assign({ date: this.form.controls.date.value, duration: this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
                 /* istanbul ignore else */
                 if (this.zone_ids && this.zone_ids.length) {
                     query.zone_ids = this.zone_ids.join(',');
                 }
                 return this._spaces.available(query);
-            }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
+            }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((list) => {
                 this.loading = false;
                 return list;
             }));
             // Process API results
-            this.subscription('search_results', this.search_results$.subscribe(list => (this.space_list = list)));
+            this.subscription('search_results', this.search_results$.subscribe((list) => (this.space_list = list.filter((space) => {
+                for (const zone of this.zone_ids) {
+                    if (space.zones.includes(zone)) {
+                        return true;
+                    }
+                }
+                return !this.zone_ids.length;
+            }))));
             this.change$.next('');
         });
     }
     ngOnChanges(changes) {
         /* istanbul ignore else */
         if (changes.form) {
-            const onChange = _ => this.change$.next(_);
+            const onChange = (_) => this.change$.next(_);
             /* istanbul ignore else */
             if (this.form.controls.date) {
                 this.subscription('date_field', this.form.controls.date.valueChanges.subscribe(onChange));
@@ -3188,8 +3199,8 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
     selectSpace(space) {
         if (this.multiple) {
             const list = this.spaces.value;
-            if (list.find(item => item.id === space.id)) {
-                this.spaces.setValue(list.filter(item => item.id !== space.id));
+            if (list.find((item) => item.id === space.id)) {
+                this.spaces.setValue(list.filter((item) => item.id !== space.id));
             }
             else {
                 this.spaces.setValue(list.concat([space]));
@@ -3248,7 +3259,7 @@ BookingFindSpaceComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFindSpac
         args: [{
                 selector: 'booking-find-space',
                 templateUrl: './find-space.component.html',
-                styleUrls: ['./find-space.component.scss']
+                styleUrls: ['./find-space.component.scss'],
             }]
     }], function () { return [{ type: i1.ApplicationService }, { type: i2.SpacesService }, { type: i3.OrganisationService }]; }, { spaces: [{
             type: core_1.Input
@@ -8579,10 +8590,8 @@ exports.Booking = Booking;
 Object.defineProperty(exports, "__esModule", { value: true });
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 const general_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const user_utilities_1 = __webpack_require__(/*! ../users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
 const catering_order_class_1 = __webpack_require__(/*! ../catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 const validation_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
-const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const MINUTE = 1;
 const HOUR = 60;
@@ -8601,31 +8610,6 @@ const DURATION_MAP = {
     minute: MINUTE,
     minutes: MINUTE,
 };
-let BOOKING_COUNT = 0;
-let BOOKING_DATE = dayjs().hour(6).minute(0).subtract(10, 'd').startOf('m');
-/**
- * Set the initial time used for generating mock bookings
- * @param time New initial time as ms from UTC epoch
- */
-function setMockBookingStartDatetime(time) {
-    BOOKING_DATE = dayjs(time).startOf('m');
-}
-exports.setMockBookingStartDatetime = setMockBookingStartDatetime;
-/**
- * Create mock raw API data for a booking
- * @param override Overrides the properties of the generated booking with it's own
- */
-function generateMockBooking(override = {}) {
-    const id = `booking-${BOOKING_COUNT++}`;
-    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4 + 2) * 15, 'm');
-    const start = BOOKING_DATE.valueOf();
-    const duration = Math.floor(Math.random() * 4 + 2) * 15;
-    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
-    return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(Math.random() * 5 + 2))
-            .fill(0)
-            .map((i) => user_utilities_1.generateMockUser(override.users)), organiser: user_utilities_1.generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)], setup: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, breakdown: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, status: {}, catering: [], room_ids: [] }, override);
-}
-exports.generateMockBooking = generateMockBooking;
 /**
  * Generate a list of free time slots between the given bookings
  * @param list List of bookings to find slots between
@@ -8737,8 +8721,9 @@ function generateBookingForm(booking, use_fields) {
     }
     let list_length = -1;
     fields.space_list.valueChanges.subscribe((list) => {
-        if (list && list.length > list_length && list_length === 0) {
-            const expected = fields.expected_attendees.value || {};
+        const expected = fields.expected_attendees.value || {};
+        const matches = Object.keys(expected).filter((key) => list.find((space) => space.email === key)).length;
+        if (list && list.length && matches === 0) {
             const codes = fields.equipment_codes.value || {};
             if (Object.keys(expected).length >= 0 || Object.keys(codes).length >= 0) {
                 const key = Object.keys(expected)[0] || Object.keys(codes)[0];
@@ -9194,7 +9179,7 @@ class CateringCategory extends catering_item_class_1.CateringItem {
         this.items = (data.items || []).map(item => item.items ? new CateringCategory(item) : new catering_item_class_1.CateringItem(item));
         this.package = data.package === 'true' || data.package === true;
         this.zones = data.zones && data.zones.length ? [...data.zones] : [];
-        this.must_select = this.must_select || this.items.length;
+        this.must_select = this.must_select || 0;
         this.order_anytime = !!data.order_anytime && this.package;
     }
     get can_order_anytime() {
@@ -9626,31 +9611,6 @@ class MapLocation {
     }
 }
 exports.MapLocation = MapLocation;
-
-
-/***/ }),
-
-/***/ "./src/app/services/data/location/location.utilities.ts":
-/*!**************************************************************!*\
-  !*** ./src/app/services/data/location/location.utilities.ts ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-function generateMockLocation(overrides, fixed_locations, maps) {
-    const fixed = general_utilities_1.randomInt(999999999) % 2 === 0;
-    if (fixed && (!overrides || overrides.fixed)) {
-        return Object.assign({ map_id: fixed_locations[general_utilities_1.randomInt(fixed_locations.length)], level: maps[general_utilities_1.randomInt(maps.length)] }, overrides);
-    }
-    else {
-        return Object.assign({ x: general_utilities_1.randomInt(900, 100), x_max: 1000, y: general_utilities_1.randomInt(500, 100), level: maps[general_utilities_1.randomInt(maps.length)], confidence: general_utilities_1.randomInt(30) }, overrides);
-    }
-}
-exports.generateMockLocation = generateMockLocation;
 
 
 /***/ }),
@@ -10514,19 +10474,7 @@ exports.Space = Space;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const booking_utilities_1 = __webpack_require__(/*! ../bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
-const user_utilities_1 = __webpack_require__(/*! ../users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
-const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-let SPACE_COUNT = 0;
-function generateMockSpace(overrides = {}) {
-    const id = `space-${SPACE_COUNT++}`;
-    const name = `${faker.name.firstName()} ${faker.name.lastName()} Space`;
-    const linked = Math.floor(Math.random() * 99999) % 2 === 0 && SPACE_COUNT > 1;
-    return Object.assign({ id,
-        name, long_name: `${name} with an long name`, map_id: `${SPACE_COUNT}`, capacity: Math.floor(Math.random() * 20 + 1) * 2, email: `${name.toLowerCase().split(' ').join('.')}@${user_utilities_1.USER_DOMAIN}`, type: faker.commerce.productName(), searchable: Math.floor(Math.random() * 99999) % 2 === 0, controlable: Math.floor(Math.random() * 99999) % 2 === 0, bookable: Math.floor(Math.random() * 99999) % 2 === 0, cost_hour: Math.floor(Math.random() * 300) * 100, setup: Math.floor(Math.random() * 6) * 5, breakdown: Math.floor(Math.random() * 6) * 5, zones: ['zone_lvl-0'], support_url: `/control/#/${id}`, bookings: Array(10).fill(0).map(i => booking_utilities_1.generateMockBooking()), linked_rooms: linked ? [`space-${Math.floor(Math.random() * (SPACE_COUNT - 1))}`] : [], image: faker.image.business() }, overrides);
-}
-exports.generateMockSpace = generateMockSpace;
 function availabilityOptionsToQuery(options) {
     let query = {};
     if (options) {
@@ -10792,44 +10740,7 @@ exports.User = User;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
-const general_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-let USER_COUNT = 0;
-exports.USER_DOMAIN = 'acaprojects.com';
-const USER_EMAILS = [];
-/**
- * Generate raw mock data for a user
- * @param id Forced ID for the mock
- * @param name Forced name for the user
- * @param external Whether user is external of the organisation
- */
-function generateMockUser(override = {}) {
-    const id = `user-${USER_COUNT++}`;
-    const name = `${faker.name.firstName()} ${faker.name.lastName()}`;
-    const external = override.external || !((Math.random() * 99999) % 2);
-    const organisation = external ? faker.company.companyName() : exports.USER_DOMAIN.split('.')[0];
-    let delegates = [];
-    const delegate_count = Math.min(Math.random() * 4 + 1, USER_EMAILS.length);
-    for (let i = 0; i < delegate_count; i++) {
-        delegates.push(USER_EMAILS[Math.floor(Math.random() * USER_EMAILS.length)]);
-    }
-    delegates = general_utilities_1.unique(delegates);
-    const email = `${name
-        .split(' ')
-        .join('.')
-        .toLowerCase()}@${external ? 'not-' : ''}${exports.USER_DOMAIN}`;
-    USER_EMAILS.push(email);
-    return Object.assign({ id,
-        name, first_name: name.split(' ')[0], last_name: name.split(' ')[1], email, phone: faker.phone.phoneNumber(), visitor: external, organisation: {
-            id: organisation
-                .split(' ')
-                .join('.')
-                .toLowerCase(),
-            name: organisation
-        }, department: faker.commerce.department(), staff_code: general_utilities_1.padZero(Math.floor(Math.random() * 99999), 5), delegates, image: faker.image.avatar() }, override);
-}
-exports.generateMockUser = generateMockUser;
 /**
  * Generate form fields for the given user
  * @param user User to generate form for
@@ -14890,12 +14801,12 @@ exports.build = dayjs();
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
 const general_utilities_1 = __webpack_require__(/*! ../../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const spaces_mock_1 = __webpack_require__(/*! ./spaces.mock */ "./src/app/shared/mocks/api/spaces.mock.ts");
 const users_mock_1 = __webpack_require__(/*! ./users.mock */ "./src/app/shared/mocks/api/users.mock.ts");
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
@@ -14916,7 +14827,7 @@ exports.MOCK_BOOKINGS = Array(1000)
     const guests = general_utilities_1.unique(Array(general_utilities_1.randomInt(10))
         .fill(0)
         .map((i) => users_mock_1.MOCK_CONTACTS[general_utilities_1.randomInt(users_mock_1.MOCK_CONTACTS.length)]), 'email');
-    const booking_data = booking_utilities_1.generateMockBooking({
+    const booking_data = spec_helpers_1.generateMockBooking({
         organiser,
         attendees: attendees.concat(guests),
         room_ids: rooms.map((i) => i.email),
@@ -15512,7 +15423,7 @@ const users_mock_1 = __webpack_require__(/*! ./users.mock */ "./src/app/shared/m
 const spaces_mock_1 = __webpack_require__(/*! ./spaces.mock */ "./src/app/shared/mocks/api/spaces.mock.ts");
 const buildings_mock_1 = __webpack_require__(/*! ./buildings.mock */ "./src/app/shared/mocks/api/buildings.mock.ts");
 const general_utilities_1 = __webpack_require__(/*! ../../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const location_utilities_1 = __webpack_require__(/*! src/app/services/data/location/location.utilities */ "./src/app/services/data/location/location.utilities.ts");
+const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 exports.MOCK_LOCATIONS = [];
 const spaces = spaces_mock_1.MOCK_SPACES.map(space => space.map_id);
 const levels = buildings_mock_1.MOCK_BUILDINGS.reduce((lvls, bld) => {
@@ -15521,7 +15432,7 @@ const levels = buildings_mock_1.MOCK_BUILDINGS.reduce((lvls, bld) => {
 }, []);
 for (const user of users_mock_1.MOCK_USERS) {
     if (user.location || general_utilities_1.randomInt(99999) % 2 === 0) {
-        user.location = location_utilities_1.generateMockLocation(null, spaces, levels);
+        user.location = spec_helpers_1.generateMockLocation(null, spaces, levels);
         exports.MOCK_LOCATIONS.push(user.location);
     }
 }
@@ -15576,9 +15487,9 @@ exports.MOCK_ORG = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const space_utilities_1 = __webpack_require__(/*! src/app/services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
@@ -15592,7 +15503,7 @@ exports.MOCK_SPACES = [
     { id: '11.07', name: 'LON-11-EC11_11_07_Client', zones: ['zone_bld-02', 'zone_lvl-11'] },
     { id: '11.10', name: 'LON-11-EC11_11_10_Client', zones: ['zone_bld-02', 'zone_lvl-11'] }
 ].map((space_data) => {
-    const space = space_utilities_1.generateMockSpace(Object.assign(Object.assign({ bookable: true }, space_data), { map_id: `${space_data.id}`, id: `sys_rm-${space_data.id}`, email: `${space_data.id}@${common_mock_1.DOMAIN}`, name: `${space_data.name}` }));
+    const space = spec_helpers_1.generateMockSpace(Object.assign(Object.assign({ bookable: true }, space_data), { map_id: `${space_data.id}`, id: `sys_rm-${space_data.id}`, email: `${space_data.id}@${common_mock_1.DOMAIN}`, name: `${space_data.name}` }));
     window.control.systems[space.id] = {
         Bookings: [
             {
@@ -15668,15 +15579,15 @@ window.control.handlers.push({
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_utilities_1 = __webpack_require__(/*! src/app/services/data/users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
+const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
 exports.MOCK_USERS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
-    .map(i => user_utilities_1.generateMockUser());
+    .map(i => spec_helpers_1.generateMockUser());
 exports.MOCK_CONTACTS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
-    .map(i => user_utilities_1.generateMockUser({ external: true }));
+    .map(i => spec_helpers_1.generateMockUser({ external: true }));
 exports.PREDEFINED_USERS = [
     'Jonathan McFarlane',
     'Stephen Von Takach',
@@ -15694,7 +15605,7 @@ exports.PREDEFINED_USERS = [
 // Add predefined user to user list
 for (const user of exports.PREDEFINED_USERS) {
     const id = user.split(' ').join('.').toLowerCase();
-    const new_user = user_utilities_1.generateMockUser({ id, name: user });
+    const new_user = spec_helpers_1.generateMockUser({ id, name: user });
     new_user.location = true;
     exports.MOCK_USERS.push(new_user);
 }
@@ -15794,9 +15705,8 @@ window.control.handlers = window.control.handlers || [];
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const space_utilities_1 = __webpack_require__(/*! ../../services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
-const booking_utilities_1 = __webpack_require__(/*! ../../services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const spec_helpers_1 = __webpack_require__(/*! ../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const NUMBERS = '0123456789'.split('');
 let index = 0;
@@ -15807,8 +15717,8 @@ const IMAGES = ['large_down', 'large_up', 'small_down', 'small_up'];
  */
 function createSystem(id) {
     id = id || `sys-${LETTERS[Math.floor(index / NUMBERS.length)]}${NUMBERS[(index++) % NUMBERS.length]}`;
-    booking_utilities_1.setMockBookingStartDatetime(dayjs().minute(-50).valueOf());
-    const space = space_utilities_1.generateMockSpace({ id });
+    spec_helpers_1.setMockBookingStartDatetime(dayjs().minute(-50).valueOf());
+    const space = spec_helpers_1.generateMockSpace({ id });
     SPACE_LIST.push(space);
     const booking_bindings = {
         touch_enabled: true,
@@ -16707,6 +16617,294 @@ function flatten(an_array) {
     return res.reverse();
 }
 exports.flatten = flatten;
+
+
+/***/ }),
+
+/***/ "./src/app/shared/utilities/spec-helpers.ts":
+/*!**************************************************!*\
+  !*** ./src/app/shared/utilities/spec-helpers.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+const building_class_1 = __webpack_require__(/*! src/app/services/data/organisation/building.class */ "./src/app/services/data/organisation/building.class.ts");
+const organisation_class_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
+const base_api_class_1 = __webpack_require__(/*! src/app/services/data/base-api.class */ "./src/app/services/data/base-api.class.ts");
+const location_class_1 = __webpack_require__(/*! src/app/services/data/location/location.class */ "./src/app/services/data/location/location.class.ts");
+const user_class_1 = __webpack_require__(/*! src/app/services/data/users/user.class */ "./src/app/services/data/users/user.class.ts");
+const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
+const space_class_1 = __webpack_require__(/*! src/app/services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
+const service_manager_class_1 = __webpack_require__(/*! src/app/services/data/service-manager.class */ "./src/app/services/data/service-manager.class.ts");
+const report_class_1 = __webpack_require__(/*! src/app/services/data/reports/report.class */ "./src/app/services/data/reports/report.class.ts");
+const catering_item_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
+const catering_category_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+const general_utilities_1 = __webpack_require__(/*! ./general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+let SERVICE;
+;
+/* istanbul ignore file */
+/**
+ * Generate a mocked version of the application service
+ */
+function generateMockAppService() {
+    SERVICE = {
+        setting: jest.fn(),
+        notify: jest.fn(),
+        notifyInfo: jest.fn(),
+        notifyWarn: jest.fn(),
+        notifySuccess: jest.fn(),
+        notifyError: jest.fn(),
+        log: jest.fn(),
+        navigate: jest.fn(),
+        navigateBack: jest.fn(),
+        get: jest.fn(),
+        listen: jest.fn(),
+        set: jest.fn(),
+        Composer: { auth: { token: 'test' } },
+        Hotkeys: { listen: jest.fn() },
+        Users: generateMockDataService('UsersService'),
+        Organisation: {
+            levelWithID: jest.fn(),
+            listen: jest.fn(),
+            initialised: rxjs_1.of(true),
+            building: new building_class_1.Building(generateMockBuilding({ id: 'bld-01' }))
+        },
+        Locations: generateMockDataService('LocationsService'),
+        Base: generateMockDataService('BaseService'),
+        Menu: generateMockDataService('CateringMenuService'),
+        Spaces: generateMockDataService('SpacesService'),
+        Bookings: generateMockDataService('BookingsService'),
+        Reports: generateMockDataService('ReportsService'),
+        CateringItems: generateMockDataService('CateringItemsService'),
+        CateringCategories: generateMockDataService('CateringCategoriesService'),
+        initialised: rxjs_1.of(true)
+    };
+    service_manager_class_1.ServiceManager.setService(base_api_class_1.BaseDataClass, SERVICE.Base);
+    service_manager_class_1.ServiceManager.setService(organisation_class_1.Organisation, SERVICE.Organisation);
+    service_manager_class_1.ServiceManager.setService(building_class_1.Building, SERVICE.Organisation);
+    service_manager_class_1.ServiceManager.setService(user_class_1.User, SERVICE.Users);
+    service_manager_class_1.ServiceManager.setService(booking_class_1.Booking, SERVICE.Bookings);
+    service_manager_class_1.ServiceManager.setService(space_class_1.Space, SERVICE.Spaces);
+    service_manager_class_1.ServiceManager.setService(location_class_1.MapLocation, SERVICE.Locations);
+    service_manager_class_1.ServiceManager.setService(report_class_1.Report, SERVICE.Reports);
+    service_manager_class_1.ServiceManager.setService(catering_item_class_1.CateringItem, SERVICE.CateringItems);
+    service_manager_class_1.ServiceManager.setService(catering_category_class_1.CateringCategory, SERVICE.CateringCategories);
+    SERVICE.Organisation.buildings = [SERVICE.Organisation.building];
+    SERVICE.Users.current = new user_class_1.User(generateMockUser());
+    SERVICE.Users.initialised = rxjs_1.of(true);
+    SERVICE.Bookings.booking_list = new rxjs_1.BehaviorSubject(new Array(10).fill(0).map(_ => new booking_class_1.Booking(generateMockBooking())));
+    SERVICE.listen.mockReturnValue(rxjs_1.of(null, []));
+    return SERVICE;
+}
+exports.generateMockAppService = generateMockAppService;
+function generateMockDataService(name) {
+    const service = {
+        find: jest.fn(),
+        filter: jest.fn(),
+        listen: jest.fn(),
+        get: jest.fn(),
+        set: jest.fn(),
+        setting: jest.fn(),
+        query: jest.fn(),
+        show: jest.fn(),
+        add: jest.fn(),
+        save: jest.fn(),
+        remove: jest.fn(),
+        delete: jest.fn(),
+        update: jest.fn(),
+        addFrom: jest.fn(),
+        removeFrom: jest.fn(),
+        task: jest.fn(),
+        available: jest.fn(),
+        process: jest.fn(),
+        updateList: jest.fn(),
+        clearList: jest.fn(),
+        removeFromList: jest.fn(),
+        accept: jest.fn(),
+        decline: jest.fn(),
+        checkin: jest.fn(),
+        is_logged_in: false,
+        initialised: rxjs_1.of(true),
+        name
+    };
+    service.save.mockImplementation(_ => Promise.resolve(new booking_class_1.Booking(_)));
+    service.listen.mockReturnValue(rxjs_1.of(null));
+    service.filter.mockReturnValue([]);
+    return service;
+}
+exports.generateMockDataService = generateMockDataService;
+let SPACE_COUNT = 0;
+function generateMockSpace(overrides = {}) {
+    const id = `space-${SPACE_COUNT++}`;
+    const name = `${faker.name.firstName()} ${faker.name.lastName()} Space`;
+    const linked = Math.floor(Math.random() * 99999) % 2 === 0 && SPACE_COUNT > 1;
+    return Object.assign({ id,
+        name, long_name: `${name} with an long name`, map_id: `${SPACE_COUNT}`, capacity: Math.floor(Math.random() * 20 + 1) * 2, email: `${name.toLowerCase().split(' ').join('.')}@${exports.USER_DOMAIN}`, type: faker.commerce.productName(), searchable: Math.floor(Math.random() * 99999) % 2 === 0, controlable: Math.floor(Math.random() * 99999) % 2 === 0, bookable: Math.floor(Math.random() * 99999) % 2 === 0, cost_hour: Math.floor(Math.random() * 300) * 100, setup: Math.floor(Math.random() * 6) * 5, breakdown: Math.floor(Math.random() * 6) * 5, zones: ['zone_lvl-0'], support_url: `/control/#/${id}`, bookings: Array(10).fill(0).map(i => generateMockBooking()), linked_rooms: linked ? [`space-${Math.floor(Math.random() * (SPACE_COUNT - 1))}`] : [], image: faker.image.business() }, overrides);
+}
+exports.generateMockSpace = generateMockSpace;
+let BOOKING_COUNT = 0;
+let BOOKING_DATE = dayjs().hour(6).minute(0).subtract(10, 'd').startOf('m');
+/**
+ * Set the initial time used for generating mock bookings
+ * @param time New initial time as ms from UTC epoch
+ */
+function setMockBookingStartDatetime(time) {
+    BOOKING_DATE = dayjs(time).startOf('m');
+}
+exports.setMockBookingStartDatetime = setMockBookingStartDatetime;
+/**
+ * Create mock raw API data for a booking
+ * @param override Overrides the properties of the generated booking with it's own
+ */
+function generateMockBooking(override = {}) {
+    const id = `booking-${BOOKING_COUNT++}`;
+    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4 + 2) * 15, 'm');
+    const start = BOOKING_DATE.valueOf();
+    const duration = Math.floor(Math.random() * 4 + 2) * 15;
+    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
+    return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(Math.random() * 5 + 2))
+            .fill(0)
+            .map((i) => generateMockUser(override.users)), organiser: generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)], setup: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, breakdown: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, status: {}, catering: [], room_ids: [] }, override);
+}
+exports.generateMockBooking = generateMockBooking;
+let BLD_COUNT = 0;
+let LVL_COUNT = 0;
+/**
+ * Generate raw mock data for creating a building
+ * @param id Forced ID for the mock
+ */
+function generateMockBuilding(overrides = {}) {
+    const id = `zone_bld-${BLD_COUNT++}`;
+    const levels = Array(10)
+        .fill(0)
+        .map(i => generateMockLevel());
+    const features = {};
+    for (const lvl of levels) {
+        const count = Math.floor(Math.random() * 3 + 2);
+        features[lvl.level_id] = {};
+        for (let i = 0; i < count; i++) {
+            features[lvl.level_id][faker.commerce.productName()] = `feature-${i + 1}`;
+        }
+    }
+    return Object.assign({ id, zone_id: id, extras: Array(10)
+            .fill(0)
+            .map(i => {
+            const name = faker.commerce.productName();
+            return {
+                extra_id: name
+                    .split(' ')
+                    .join('-')
+                    .toLowerCase(),
+                extra_name: name
+            };
+        }), loan_items: Array(10)
+            .fill(0)
+            .map(i => {
+            const name = faker.commerce.productName();
+            return {
+                extra_id: name
+                    .split(' ')
+                    .join('-')
+                    .toLowerCase(),
+                extra_name: name
+            };
+        }), levels, roles: {
+            'first-aiders': Array(10)
+                .fill(0)
+                .map(i => generateMockUser())
+        }, neighbourhoods: features, settings: {
+            test: {
+                nested: {
+                    level2: true,
+                    org: false
+                }
+            }
+        } }, overrides);
+}
+exports.generateMockBuilding = generateMockBuilding;
+/**
+ * Generate raw mock data for a building level
+ * @param id Forced ID for the mock
+ * @param map_url Map URL for the level
+ */
+function generateMockLevel(id, map_url) {
+    if (!id) {
+        id = `zone_lvl-${LVL_COUNT++}`;
+    }
+    return {
+        level_id: id,
+        level_name: `Level ${LVL_COUNT}`,
+        map_url
+    };
+}
+exports.generateMockLevel = generateMockLevel;
+let USER_COUNT = 0;
+exports.USER_DOMAIN = 'acaprojects.com';
+const USER_EMAILS = [];
+/**
+ * Generate raw mock data for a user
+ * @param id Forced ID for the mock
+ * @param name Forced name for the user
+ * @param external Whether user is external of the organisation
+ */
+function generateMockUser(override = {}) {
+    const id = `user-${USER_COUNT++}`;
+    const name = `${faker.name.firstName()} ${faker.name.lastName()}`;
+    const external = override.external || !((Math.random() * 99999) % 2);
+    const organisation = external ? faker.company.companyName() : exports.USER_DOMAIN.split('.')[0];
+    let delegates = [];
+    const delegate_count = Math.min(Math.random() * 4 + 1, USER_EMAILS.length);
+    for (let i = 0; i < delegate_count; i++) {
+        delegates.push(USER_EMAILS[Math.floor(Math.random() * USER_EMAILS.length)]);
+    }
+    delegates = general_utilities_1.unique(delegates);
+    const email = `${name
+        .split(' ')
+        .join('.')
+        .toLowerCase()}@${external ? 'not-' : ''}${exports.USER_DOMAIN}`;
+    USER_EMAILS.push(email);
+    return Object.assign({ id,
+        name, first_name: name.split(' ')[0], last_name: name.split(' ')[1], email, phone: faker.phone.phoneNumber(), visitor: external, organisation: {
+            id: organisation
+                .split(' ')
+                .join('.')
+                .toLowerCase(),
+            name: organisation
+        }, department: faker.commerce.department(), staff_code: general_utilities_1.padZero(Math.floor(Math.random() * 99999), 5), delegates, image: faker.image.avatar() }, override);
+}
+exports.generateMockUser = generateMockUser;
+function generateMockLocation(overrides, fixed_locations, maps) {
+    const fixed = general_utilities_1.randomInt(999999999) % 2 === 0;
+    if (fixed && (!overrides || overrides.fixed)) {
+        return Object.assign({ map_id: fixed_locations[general_utilities_1.randomInt(fixed_locations.length)], level: maps[general_utilities_1.randomInt(maps.length)] }, overrides);
+    }
+    else {
+        return Object.assign({ x: general_utilities_1.randomInt(900, 100), x_max: 1000, y: general_utilities_1.randomInt(500, 100), level: maps[general_utilities_1.randomInt(maps.length)], confidence: general_utilities_1.randomInt(30) }, overrides);
+    }
+}
+exports.generateMockLocation = generateMockLocation;
+let ORG_COUNT = 0;
+function generateMockOrganisation() {
+    return {
+        id: `zone_org-${ORG_COUNT++}`,
+        name: `Organisation ${ORG_COUNT}`,
+        buildings: Array(3).fill(0).map(i => generateMockBuilding()),
+        settings: {
+            test: {
+                nested: {
+                    org: true
+                }
+            }
+        }
+    };
+}
+exports.generateMockOrganisation = generateMockOrganisation;
 
 
 /***/ }),
