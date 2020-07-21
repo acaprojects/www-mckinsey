@@ -23148,7 +23148,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var spaces = this.spaces;
 
-          if (this.booking.id && !this.changes.date && !this.changes.duration || spaces && spaces.length <= 0) {
+          if (this.booking.id && this.booking.date === this.old_booking.date && this.booking.duration === this.old_booking.duration || spaces && spaces.length <= 0) {
             return Promise.resolve();
           }
 
@@ -38658,16 +38658,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "7729429",
-      "hash": "7729429",
+      "raw": "8bd2de8",
+      "hash": "8bd2de8",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "7729429",
+      "suffix": "8bd2de8",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595293121828
+      "time": 1595297397369
     };
     /* tslint:enable */
 
