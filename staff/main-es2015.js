@@ -13075,7 +13075,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
                     ? dayjs(this.booking.date).startOf('d').valueOf()
                     : this.booking.date,
                 duration: all_day ? 24 * 60 : this.booking.duration,
-                ignore: this.booking.id
+                ignore: this.booking.icaluid
             })
                 .then((space_list) => {
                 console.log('Spaces:', space_list);
@@ -21660,16 +21660,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f6a683d",
-    "hash": "f6a683d",
+    "raw": "a5c49a8",
+    "hash": "a5c49a8",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f6a683d",
+    "suffix": "a5c49a8",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595312770799
+    "time": 1595313903741
 };
 /* tslint:enable */
 
