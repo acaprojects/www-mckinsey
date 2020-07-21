@@ -23163,7 +23163,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return space.id;
               }).join(','),
               date: all_day ? dayjs(_this109.booking.date).startOf('d').valueOf() : _this109.booking.date,
-              duration: all_day ? 24 * 60 : _this109.booking.duration
+              duration: all_day ? 24 * 60 : _this109.booking.duration,
+              ignore: _this109.booking.id
             }).then(function (space_list) {
               console.log('Spaces:', space_list);
 
@@ -38698,16 +38699,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "721b124",
-      "hash": "721b124",
+      "raw": "f6a683d",
+      "hash": "f6a683d",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "721b124",
+      "suffix": "f6a683d",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595308406512
+      "time": 1595312770799
     };
     /* tslint:enable */
 
