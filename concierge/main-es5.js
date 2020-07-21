@@ -44539,7 +44539,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "mail_url",
         get: function get() {
           var subject = encodeURIComponent("".concat(this.event.title, "\" at ").concat(this.event.start_time, ", ").concat(this.event.date_string));
-          return "mailto:".concat(this.event.attendees.map(function (user) {
+          return "mailto:".concat(this.event.attendees.filter(function (user) {
+            return !user.email.includes('@guest');
+          }).map(function (user) {
             return user.email;
           }).join(','), "?Subject=").concat(subject, "\"");
         }
@@ -44564,7 +44566,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵNgOnChangesFeature],
       decls: 1,
       vars: 1,
-      consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email All Visitors", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]],
+      consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Attendees", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]],
       template: function VisitorBookingItemComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, VisitorBookingItemComponent_div_0_Template, 33, 39, "div", 0);
