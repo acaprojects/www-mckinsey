@@ -328,7 +328,7 @@ function BookingConfirmComponent_mat_dialog_content_0_span_35_Template(rf, ctx) 
     i0.ɵɵelementEnd();
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_39_div_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 31);
+    i0.ɵɵelementStart(0, "div", 32);
     i0.ɵɵtext(1, " Notes ");
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -337,7 +337,7 @@ function BookingConfirmComponent_mat_dialog_content_0_div_39_div_3_Template(rf, 
     i0.ɵɵproperty("matTooltip", ctx_r27.equipment_notes[item_r26.email]);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_39_div_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 31);
+    i0.ɵɵelementStart(0, "div", 32);
     i0.ɵɵtext(1, " Code ");
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -347,17 +347,18 @@ function BookingConfirmComponent_mat_dialog_content_0_div_39_div_4_Template(rf, 
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_39_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 29);
-    i0.ɵɵelementStart(1, "div", 8);
+    i0.ɵɵelementStart(1, "div", 30);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(3, BookingConfirmComponent_mat_dialog_content_0_div_39_div_3_Template, 2, 1, "div", 30);
-    i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_39_div_4_Template, 2, 1, "div", 30);
+    i0.ɵɵtemplate(3, BookingConfirmComponent_mat_dialog_content_0_div_39_div_3_Template, 2, 1, "div", 31);
+    i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_39_div_4_Template, 2, 1, "div", 31);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const item_r26 = ctx.$implicit;
     const ctx_r13 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(1);
     i0.ɵɵproperty("title", item_r26 == null ? null : item_r26.name);
-    i0.ɵɵadvance(2);
+    i0.ɵɵadvance(1);
     i0.ɵɵtextInterpolate(item_r26 == null ? null : item_r26.name);
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", ctx_r13.equipment_notes[item_r26.email]);
@@ -365,7 +366,7 @@ function BookingConfirmComponent_mat_dialog_content_0_div_39_Template(rf, ctx) {
     i0.ɵɵproperty("ngIf", ctx_r13.equipment_codes[item_r26.email]);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_40_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 32);
+    i0.ɵɵelementStart(0, "div", 29);
     i0.ɵɵtext(1, "No Locations");
     i0.ɵɵelementEnd();
 } }
@@ -410,8 +411,8 @@ function BookingConfirmComponent_mat_dialog_content_0_span_56_Template(rf, ctx) 
     i0.ɵɵelementEnd();
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_58_div_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 36);
-    i0.ɵɵelementStart(1, "a", 37);
+    i0.ɵɵelementStart(0, "div", 37);
+    i0.ɵɵelementStart(1, "a", 38);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -424,12 +425,12 @@ function BookingConfirmComponent_mat_dialog_content_0_div_58_div_4_Template(rf, 
     i0.ɵɵtextInterpolate(item_r33.email);
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_58_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 29);
+    i0.ɵɵelementStart(0, "div", 34);
     i0.ɵɵelementStart(1, "div", 8);
-    i0.ɵɵelementStart(2, "div", 34);
+    i0.ɵɵelementStart(2, "div", 35);
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_58_div_4_Template, 3, 2, "div", 35);
+    i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_58_div_4_Template, 3, 2, "div", 36);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -462,12 +463,12 @@ function BookingConfirmComponent_mat_dialog_content_0_span_69_Template(rf, ctx) 
     i0.ɵɵelementEnd();
 } }
 function BookingConfirmComponent_mat_dialog_content_0_div_73_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 32);
+    i0.ɵɵelementStart(0, "div", 29);
     i0.ɵɵelementStart(1, "div", 8);
-    i0.ɵɵelementStart(2, "div", 34);
+    i0.ɵɵelementStart(2, "div", 35);
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "div", 36);
+    i0.ɵɵelementStart(4, "div", 37);
     i0.ɵɵtext(5);
     i0.ɵɵpipe(6, "currency");
     i0.ɵɵelementEnd();
@@ -571,20 +572,20 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
     i0.ɵɵelementStart(55, "div", 12);
     i0.ɵɵtemplate(56, BookingConfirmComponent_mat_dialog_content_0_span_56_Template, 2, 0, "span", 1);
     i0.ɵɵelementStart(57, "div", 16);
-    i0.ɵɵtemplate(58, BookingConfirmComponent_mat_dialog_content_0_div_58_Template, 5, 3, "div", 17);
+    i0.ɵɵtemplate(58, BookingConfirmComponent_mat_dialog_content_0_div_58_Template, 5, 3, "div", 23);
     i0.ɵɵelementEnd();
     i0.ɵɵtemplate(59, BookingConfirmComponent_mat_dialog_content_0_button_59_Template, 2, 1, "button", 19);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(60, "div", 23);
+    i0.ɵɵelementStart(60, "div", 24);
     i0.ɵɵelementStart(61, "label");
     i0.ɵɵtext(62, "Notes");
     i0.ɵɵtemplate(63, BookingConfirmComponent_mat_dialog_content_0_span_63_Template, 2, 0, "span", 1);
     i0.ɵɵtext(64, ":");
     i0.ɵɵelementEnd();
-    i0.ɵɵelement(65, "div", 24);
+    i0.ɵɵelement(65, "div", 25);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(66, "div", 25);
+    i0.ɵɵelementStart(66, "div", 26);
     i0.ɵɵelementStart(67, "label");
     i0.ɵɵtext(68);
     i0.ɵɵtemplate(69, BookingConfirmComponent_mat_dialog_content_0_span_69_Template, 2, 0, "span", 1);
@@ -592,7 +593,7 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(71, "div", 12);
     i0.ɵɵelementStart(72, "div", 16);
-    i0.ɵɵtemplate(73, BookingConfirmComponent_mat_dialog_content_0_div_73_Template, 7, 7, "div", 26);
+    i0.ɵɵtemplate(73, BookingConfirmComponent_mat_dialog_content_0_div_73_Template, 7, 7, "div", 17);
     i0.ɵɵelementEnd();
     i0.ɵɵtemplate(74, BookingConfirmComponent_mat_dialog_content_0_button_74_Template, 2, 1, "button", 19);
     i0.ɵɵelementEnd();
@@ -671,10 +672,10 @@ function BookingConfirmComponent_mat_dialog_content_0_Template(rf, ctx) { if (rf
 function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template(rf, ctx) { if (rf & 1) {
     const _r43 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "button", 38);
+    i0.ɵɵelementStart(1, "button", 39);
     i0.ɵɵtext(2, "Edit");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "button", 39);
+    i0.ɵɵelementStart(3, "button", 40);
     i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template_button_click_3_listener() { i0.ɵɵrestoreView(_r43); const ctx_r42 = i0.ɵɵnextContext(2); return ctx_r42.saveChanges(); });
     i0.ɵɵtext(4, "Save");
     i0.ɵɵelementEnd();
@@ -694,9 +695,9 @@ function BookingConfirmComponent_mat_dialog_actions_1_Template(rf, ctx) { if (rf
 } }
 function BookingConfirmComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "main");
-    i0.ɵɵelementStart(1, "div", 40);
-    i0.ɵɵelementStart(2, "div", 41);
-    i0.ɵɵelement(3, "mat-spinner", 42);
+    i0.ɵɵelementStart(1, "div", 41);
+    i0.ɵɵelementStart(2, "div", 42);
+    i0.ɵɵelement(3, "mat-spinner", 43);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(4, "div", 8);
     i0.ɵɵtext(5);
@@ -709,7 +710,7 @@ function BookingConfirmComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", ctx_r3.loading, " ");
 } }
 function BookingConfirmComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "button", 43);
+    i0.ɵɵelementStart(0, "button", 44);
     i0.ɵɵtext(1, "Close");
     i0.ɵɵelementEnd();
 } }
@@ -886,7 +887,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
 }
 exports.BookingConfirmComponent = BookingConfirmComponent;
 BookingConfirmComponent.ɵfac = function BookingConfirmComponent_Factory(t) { return new (t || BookingConfirmComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.BookingsService), i0.ɵɵdirectiveInject(i4.SpacesService), i0.ɵɵdirectiveInject(i5.Router), i0.ɵɵdirectiveInject(i6.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-BookingConfirmComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingConfirmComponent, selectors: [["a-booking-confirm-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 6, vars: 3, consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], ["class", "list-item", 4, "ngFor", "ngForOf"], [1, "request"], [1, "info"], [1, "list-item", 3, "title"], ["class", "tooltip", 3, "matTooltip", 4, "ngIf"], [1, "tooltip", 3, "matTooltip"], [1, "list-item"], [1, "show", 3, "click"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "mat-dialog-close", ""]], template: function BookingConfirmComponent_Template(rf, ctx) { if (rf & 1) {
+BookingConfirmComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingConfirmComponent, selectors: [["a-booking-confirm-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 6, vars: 3, consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], [1, "request"], [1, "info"], [1, "list-item"], [1, "text", 3, "title"], ["class", "tooltip", 3, "matTooltip", 4, "ngIf"], [1, "tooltip", 3, "matTooltip"], [1, "show", 3, "click"], [1, "list-item", 3, "title"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "mat-dialog-close", ""]], template: function BookingConfirmComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 75, 37, "mat-dialog-content", 0);
         i0.ɵɵtemplate(1, BookingConfirmComponent_mat_dialog_actions_1_Template, 3, 2, "mat-dialog-actions", 1);
         i0.ɵɵtemplate(2, BookingConfirmComponent_ng_template_2_Template, 6, 1, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
