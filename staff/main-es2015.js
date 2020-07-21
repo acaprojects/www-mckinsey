@@ -16464,7 +16464,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 const recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None'
                     ? {
                         recurr_period: (recurrence.period || '').toLowerCase(),
-                        recurr_end: dayjs(recurrence.end).unix(),
+                        recurr_end: dayjs(recurrence.end * 1000).endOf('d').unix(),
                     }
                     : {};
                 const query = Object.assign({ date: this.form.controls.date.value, duration: this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
@@ -21661,16 +21661,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "24e7600",
-    "hash": "24e7600",
+    "raw": "a24a7e0",
+    "hash": "a24a7e0",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "24e7600",
+    "suffix": "a24a7e0",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595314385106
+    "time": 1595327546343
 };
 /* tslint:enable */
 
