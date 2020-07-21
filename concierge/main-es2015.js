@@ -855,8 +855,8 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
     checkSpaceAvailability() {
         const spaces = this.spaces;
         if ((this.booking.id &&
-            (this.booking.date === this.old_booking.date &&
-                this.booking.duration === this.old_booking.duration)) ||
+            this.booking.date === this.old_booking.date &&
+            this.booking.duration === this.old_booking.duration) ||
             (spaces && spaces.length <= 0)) {
             return Promise.resolve();
         }
@@ -869,7 +869,9 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
             })
                 .then((space_list) => {
                 if (space_list.length < spaces.length) {
-                    return reject(`One ${spaces.length - space_list.length > 1 ? 'or more spaces' : 'space'} are not available at the select time period.`);
+                    return reject(`${spaces.length - space_list.length > 1
+                        ? spaces.length - space_list.length + ' spaces are'
+                        : 'One space is'} not available for the selected time period.`);
                 }
                 for (const space of space_list) {
                     if (!space.was_available) {

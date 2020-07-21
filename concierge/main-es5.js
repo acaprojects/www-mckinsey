@@ -2269,7 +2269,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               duration: _this5.booking.duration
             }).then(function (space_list) {
               if (space_list.length < spaces.length) {
-                return reject("One ".concat(spaces.length - space_list.length > 1 ? 'or more spaces' : 'space', " are not available at the select time period."));
+                return reject("".concat(spaces.length - space_list.length > 1 ? spaces.length - space_list.length + ' spaces are' : 'One space is', " not available for the selected time period."));
               }
 
               var _iterator = _createForOfIteratorHelper(space_list),
