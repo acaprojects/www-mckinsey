@@ -16271,6 +16271,7 @@ BookingSpaceFiltersComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingSpace
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
@@ -16279,6 +16280,7 @@ const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive *
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
+const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
@@ -16426,37 +16428,35 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
         return this._service.setting('app.booking.multiple_spaces');
     }
     ngOnInit() {
-        this._spaces.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
+        this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
+            let request_id = 0;
             // Listen for input changes
-            this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(_ => {
+            this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
                 this.loading = true;
-                const recurrence = this.form.controls.recurrence ? this.form.controls.recurrence.value : null;
-                const recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None' ? {
-                    recurr_period: (recurrence.period || '').toLowerCase(),
-                    recurr_end: recurrence.end
-                } : {};
-                const all_day = this.form.controls.all_day.value;
-                const query = Object.assign({ date: all_day ? dayjs(this.form.controls.date.value).startOf('d').valueOf() : this.form.controls.date.value, duration: all_day ? 24 * 60 : this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
+                request_id = general_utilities_1.randomInt(99999999);
+                const recurrence = this.form.controls.recurrence
+                    ? this.form.controls.recurrence.value
+                    : null;
+                const recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None'
+                    ? {
+                        recurr_period: (recurrence.period || '').toLowerCase(),
+                        recurr_end: dayjs(recurrence.end).unix(),
+                    }
+                    : {};
+                const query = Object.assign({ date: this.form.controls.date.value, duration: this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
                 /* istanbul ignore else */
                 if (this.zone_ids && this.zone_ids.length) {
                     query.zone_ids = this.zone_ids.join(',');
                 }
-                return this._spaces.available(query);
-            }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
+                const id = request_id;
+                return this._spaces.available(query).then((list) => tslib_1.__awaiter(this, void 0, void 0, function* () { return ({ id, list }); }));
+            }), operators_1.catchError((_) => rxjs_1.of({ id: request_id, list: [] })), operators_1.map((resp) => {
                 this.loading = false;
-                const all_day = this.form.controls.all_day.value;
-                return list.filter(space => {
-                    const rules = space.rulesFor({
-                        date: this.form.controls.date.value,
-                        duration: all_day ? 24 * 60 : this.form.controls.duration.value,
-                        host: this.form.controls.organiser.value,
-                    });
-                    return !rules.hide;
-                });
+                return resp.id === request_id ? resp.list : this.space_list;
             }));
             // Process API results
-            this.subscription('search_results', this.search_results$.subscribe(list => {
-                this.space_list = list.filter(space => {
+            this.subscription('search_results', this.search_results$.subscribe((list) => {
+                this.space_list = list.filter((space) => {
                     for (const zone of this.zone_ids) {
                         if (space.zones.includes(zone)) {
                             return true;
@@ -16472,7 +16472,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
     ngOnChanges(changes) {
         /* istanbul ignore else */
         if (changes.form) {
-            const onChange = _ => this.change$.next(_);
+            const onChange = (_) => this.change$.next(_);
             /* istanbul ignore else */
             if (this.form.controls.date) {
                 this.subscription('date_field', this.form.controls.date.valueChanges.subscribe(onChange));
@@ -16490,8 +16490,8 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
     selectSpace(space) {
         if (this.multiple) {
             const list = this.spaces.value;
-            if (list.find(item => item.id === space.id)) {
-                this.spaces.setValue(list.filter(item => item.id !== space.id));
+            if (list.find((item) => item.id === space.id)) {
+                this.spaces.setValue(list.filter((item) => item.id !== space.id));
             }
             else {
                 this.spaces.setValue(list.concat([space]));
@@ -16518,8 +16518,8 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
      * @param space_b
      */
     sort(space_a, space_b) {
-        const bld = this._org.buildings.find(bld => bld.id === space_a.level.building_id);
-        const bld_b = this._org.buildings.find(bld => bld.id === space_b.level.building_id);
+        const bld = this._org.buildings.find((bld) => bld.id === space_a.level.building_id);
+        const bld_b = this._org.buildings.find((bld) => bld.id === space_b.level.building_id);
         if (bld && bld !== bld_b) {
             return (bld.name || '').localeCompare(bld_b.name || '');
         }
@@ -16577,7 +16577,7 @@ BookingFindSpaceComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFindSpac
         args: [{
                 selector: 'booking-find-space',
                 templateUrl: './find-space.component.html',
-                styleUrls: ['./find-space.component.scss']
+                styleUrls: ['./find-space.component.scss'],
             }]
     }], function () { return [{ type: i1.ApplicationService }, { type: i2.SpacesService }, { type: i3.OrganisationService }]; }, { spaces: [{
             type: core_1.Input
@@ -21630,16 +21630,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d481fc9",
-    "hash": "d481fc9",
+    "raw": "7729429",
+    "hash": "7729429",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d481fc9",
+    "suffix": "7729429",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595213413593
+    "time": 1595293121828
 };
 /* tslint:enable */
 

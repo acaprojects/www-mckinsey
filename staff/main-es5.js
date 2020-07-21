@@ -28991,6 +28991,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       value: true
     });
 
+    var tslib_1 = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
     var core_1 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -29022,6 +29026,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var spaces_service_1 = __webpack_require__(
     /*! src/app/services/data/spaces/spaces.service */
     "./src/app/services/data/spaces/spaces.service.ts");
+
+    var general_utilities_1 = __webpack_require__(
+    /*! src/app/shared/utilities/general.utilities */
+    "./src/app/shared/utilities/general.utilities.ts");
 
     var dayjs = __webpack_require__(
     /*! dayjs */
@@ -29278,18 +29286,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            // Listen for input changes
+            var request_id = 0; // Listen for input changes
+
             _this141.search_results$ = _this141.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
               _this141.loading = true;
+              request_id = general_utilities_1.randomInt(99999999);
               var recurrence = _this141.form.controls.recurrence ? _this141.form.controls.recurrence.value : null;
               var recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None' ? {
                 recurr_period: (recurrence.period || '').toLowerCase(),
-                recurr_end: recurrence.end
+                recurr_end: dayjs(recurrence.end).unix()
               } : {};
-              var all_day = _this141.form.controls.all_day.value;
               var query = Object.assign({
-                date: all_day ? dayjs(_this141.form.controls.date.value).startOf('d').valueOf() : _this141.form.controls.date.value,
-                duration: all_day ? 24 * 60 : _this141.form.controls.duration.value,
+                date: _this141.form.controls.date.value,
+                duration: _this141.form.controls.duration.value,
                 zone_ids: _this141._org.building.id,
                 bookable: true
               }, recurrence_properties);
@@ -29299,20 +29308,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 query.zone_ids = _this141.zone_ids.join(',');
               }
 
-              return _this141._spaces.available(query);
-            }), operators_1.catchError(function (_) {
-              return rxjs_1.of([]);
-            }), operators_1.map(function (list) {
-              _this141.loading = false;
-              var all_day = _this141.form.controls.all_day.value;
-              return list.filter(function (space) {
-                var rules = space.rulesFor({
-                  date: _this141.form.controls.date.value,
-                  duration: all_day ? 24 * 60 : _this141.form.controls.duration.value,
-                  host: _this141.form.controls.organiser.value
-                });
-                return !rules.hide;
+              var id = request_id;
+              return _this141._spaces.available(query).then(function (list) {
+                return tslib_1.__awaiter(_this141, void 0, void 0,
+                /*#__PURE__*/
+                regeneratorRuntime.mark(function _callee18() {
+                  return regeneratorRuntime.wrap(function _callee18$(_context18) {
+                    while (1) {
+                      switch (_context18.prev = _context18.next) {
+                        case 0:
+                          return _context18.abrupt("return", {
+                            id: id,
+                            list: list
+                          });
+
+                        case 1:
+                        case "end":
+                          return _context18.stop();
+                      }
+                    }
+                  }, _callee18);
+                }));
               });
+            }), operators_1.catchError(function (_) {
+              return rxjs_1.of({
+                id: request_id,
+                list: []
+              });
+            }), operators_1.map(function (resp) {
+              _this141.loading = false;
+              return resp.id === request_id ? resp.list : _this141.space_list;
             })); // Process API results
 
             _this141.subscription('search_results', _this141.search_results$.subscribe(function (list) {
@@ -31892,43 +31917,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadUserLocation(user_email) {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee18() {
+          regeneratorRuntime.mark(function _callee19() {
             var user, location;
-            return regeneratorRuntime.wrap(function _callee18$(_context18) {
+            return regeneratorRuntime.wrap(function _callee19$(_context19) {
               while (1) {
-                switch (_context18.prev = _context18.next) {
+                switch (_context19.prev = _context19.next) {
                   case 0:
                     this.focus = null;
                     this.focus_feature = null;
                     this.loading = true;
                     this.message = "Loading user details...";
-                    _context18.next = 6;
+                    _context19.next = 6;
                     return this._users.show(user_email);
 
                   case 6:
-                    user = _context18.sent;
+                    user = _context19.sent;
 
                     if (user) {
-                      _context18.next = 9;
+                      _context19.next = 9;
                       break;
                     }
 
-                    return _context18.abrupt("return", user);
+                    return _context19.abrupt("return", user);
 
                   case 9:
                     this.message = "Loading location for ".concat(user.name, "...");
-                    _context18.next = 12;
+                    _context19.next = 12;
                     return user.locate();
 
                   case 12:
-                    location = _context18.sent;
+                    location = _context19.sent;
 
                     if (location) {
-                      _context18.next = 15;
+                      _context19.next = 15;
                       break;
                     }
 
-                    return _context18.abrupt("return", user);
+                    return _context19.abrupt("return", user);
 
                   case 15:
                     this.active_level = location.level.id;
@@ -31966,14 +31991,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.loading = false;
                     this.message = '';
                     this.processFeatures();
-                    return _context18.abrupt("return", user);
+                    return _context19.abrupt("return", user);
 
                   case 22:
                   case "end":
-                    return _context18.stop();
+                    return _context19.stop();
                 }
               }
-            }, _callee18, this);
+            }, _callee19, this);
           }));
         }
       }, {
@@ -38633,16 +38658,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "d481fc9",
-      "hash": "d481fc9",
+      "raw": "7729429",
+      "hash": "7729429",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "d481fc9",
+      "suffix": "7729429",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595213413593
+      "time": 1595293121828
     };
     /* tslint:enable */
 
