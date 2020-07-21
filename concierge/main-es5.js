@@ -2266,7 +2266,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return space.id;
               }).join(','),
               date: _this5.booking.date,
-              duration: _this5.booking.duration
+              duration: _this5.booking.duration,
+              ignore: _this5.booking.icaluid
             }).then(function (space_list) {
               if (space_list.length < spaces.length) {
                 return reject("".concat(spaces.length - space_list.length > 1 ? spaces.length - space_list.length + ' spaces are' : 'One space is', " not available for the selected time period."));

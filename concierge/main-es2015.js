@@ -866,6 +866,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
                 room_ids: spaces.map((space) => space.id).join(','),
                 date: this.booking.date,
                 duration: this.booking.duration,
+                ignore: this.booking.icaluid
             })
                 .then((space_list) => {
                 if (space_list.length < spaces.length) {
