@@ -22511,7 +22511,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_46_div_3_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 31);
+        i0.ɵɵelementStart(0, "div", 32);
         i0.ɵɵtext(1, " Notes ");
         i0.ɵɵelementEnd();
       }
@@ -22525,7 +22525,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_46_div_4_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 31);
+        i0.ɵɵelementStart(0, "div", 32);
         i0.ɵɵtext(1, " Code ");
         i0.ɵɵelementEnd();
       }
@@ -22540,19 +22540,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function BookingConfirmComponent_mat_dialog_content_0_div_46_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 29);
-        i0.ɵɵelementStart(1, "div", 8);
+        i0.ɵɵelementStart(1, "div", 30);
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(3, BookingConfirmComponent_mat_dialog_content_0_div_46_div_3_Template, 2, 1, "div", 30);
-        i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_46_div_4_Template, 2, 1, "div", 30);
+        i0.ɵɵtemplate(3, BookingConfirmComponent_mat_dialog_content_0_div_46_div_3_Template, 2, 1, "div", 31);
+        i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_46_div_4_Template, 2, 1, "div", 31);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
         var item_r27 = ctx.$implicit;
         var ctx_r14 = i0.ɵɵnextContext(2);
+        i0.ɵɵadvance(1);
         i0.ɵɵproperty("title", item_r27 == null ? null : item_r27.name);
-        i0.ɵɵadvance(2);
+        i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate(item_r27 == null ? null : item_r27.name);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r14.equipment_notes[item_r27.email]);
@@ -22563,7 +22564,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_47_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 32);
+        i0.ɵɵelementStart(0, "div", 29);
         i0.ɵɵtext(1, "No Locations");
         i0.ɵɵelementEnd();
       }
@@ -22647,8 +22648,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_65_div_4_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 36);
-        i0.ɵɵelementStart(1, "a", 37);
+        i0.ɵɵelementStart(0, "div", 37);
+        i0.ɵɵelementStart(1, "a", 38);
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -22666,12 +22667,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_65_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 29);
+        i0.ɵɵelementStart(0, "div", 34);
         i0.ɵɵelementStart(1, "div", 8);
-        i0.ɵɵelementStart(2, "div", 34);
+        i0.ɵɵelementStart(2, "div", 35);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_65_div_4_Template, 3, 2, "div", 35);
+        i0.ɵɵtemplate(4, BookingConfirmComponent_mat_dialog_content_0_div_65_div_4_Template, 3, 2, "div", 36);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
@@ -22725,12 +22726,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingConfirmComponent_mat_dialog_content_0_div_80_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 32);
+        i0.ɵɵelementStart(0, "div", 29);
         i0.ɵɵelementStart(1, "div", 8);
-        i0.ɵɵelementStart(2, "div", 34);
+        i0.ɵɵelementStart(2, "div", 35);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 36);
+        i0.ɵɵelementStart(4, "div", 37);
         i0.ɵɵtext(5);
         i0.ɵɵpipe(6, "currency");
         i0.ɵɵelementEnd();
@@ -22866,20 +22867,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementStart(62, "div", 12);
         i0.ɵɵtemplate(63, BookingConfirmComponent_mat_dialog_content_0_span_63_Template, 2, 0, "span", 1);
         i0.ɵɵelementStart(64, "div", 16);
-        i0.ɵɵtemplate(65, BookingConfirmComponent_mat_dialog_content_0_div_65_Template, 5, 3, "div", 17);
+        i0.ɵɵtemplate(65, BookingConfirmComponent_mat_dialog_content_0_div_65_Template, 5, 3, "div", 23);
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(66, BookingConfirmComponent_mat_dialog_content_0_button_66_Template, 2, 1, "button", 19);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(67, "div", 23);
+        i0.ɵɵelementStart(67, "div", 24);
         i0.ɵɵelementStart(68, "label");
         i0.ɵɵtext(69, "Notes");
         i0.ɵɵtemplate(70, BookingConfirmComponent_mat_dialog_content_0_span_70_Template, 2, 0, "span", 1);
         i0.ɵɵtext(71, ":");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(72, "div", 24);
+        i0.ɵɵelement(72, "div", 25);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(73, "div", 25);
+        i0.ɵɵelementStart(73, "div", 26);
         i0.ɵɵelementStart(74, "label");
         i0.ɵɵtext(75);
         i0.ɵɵtemplate(76, BookingConfirmComponent_mat_dialog_content_0_span_76_Template, 2, 0, "span", 1);
@@ -22887,7 +22888,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(78, "div", 12);
         i0.ɵɵelementStart(79, "div", 16);
-        i0.ɵɵtemplate(80, BookingConfirmComponent_mat_dialog_content_0_div_80_Template, 7, 7, "div", 26);
+        i0.ɵɵtemplate(80, BookingConfirmComponent_mat_dialog_content_0_div_80_Template, 7, 7, "div", 17);
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(81, BookingConfirmComponent_mat_dialog_content_0_button_81_Template, 2, 1, "button", 19);
         i0.ɵɵelementEnd();
@@ -22976,10 +22977,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _r45 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "button", 38);
+        i0.ɵɵelementStart(1, "button", 39);
         i0.ɵɵtext(2, "Edit");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "button", 39);
+        i0.ɵɵelementStart(3, "button", 40);
         i0.ɵɵlistener("click", function BookingConfirmComponent_mat_dialog_actions_1_ng_container_2_Template_button_click_3_listener() {
           i0.ɵɵrestoreView(_r45);
           var ctx_r44 = i0.ɵɵnextContext(2);
@@ -23013,9 +23014,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function BookingConfirmComponent_ng_template_2_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "main");
-        i0.ɵɵelementStart(1, "div", 40);
-        i0.ɵɵelementStart(2, "div", 41);
-        i0.ɵɵelement(3, "mat-spinner", 42);
+        i0.ɵɵelementStart(1, "div", 41);
+        i0.ɵɵelementStart(2, "div", 42);
+        i0.ɵɵelement(3, "mat-spinner", 43);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "div", 8);
         i0.ɵɵtext(5);
@@ -23035,7 +23036,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r47 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 43);
+        i0.ɵɵelementStart(0, "button", 44);
         i0.ɵɵlistener("click", function BookingConfirmComponent_ng_template_4_Template_button_click_0_listener() {
           i0.ɵɵrestoreView(_r47);
           var ctx_r46 = i0.ɵɵnextContext();
@@ -23043,7 +23044,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
         i0.ɵɵtext(1, "New Booking");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(2, "a", 44);
+        i0.ɵɵelementStart(2, "a", 45);
         i0.ɵɵlistener("click", function BookingConfirmComponent_ng_template_4_Template_a_click_2_listener() {
           i0.ɵɵrestoreView(_r47);
           var ctx_r48 = i0.ɵɵnextContext();
@@ -23396,7 +23397,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 6,
       vars: 3,
-      consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], ["class", "list-item", 4, "ngFor", "ngForOf"], [1, "request"], [1, "info"], [1, "list-item", 3, "title"], ["class", "tooltip", 3, "matTooltip", 4, "ngIf"], [1, "tooltip", 3, "matTooltip"], [1, "list-item"], [1, "show", 3, "click"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", "name", "save", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "name", "new", 1, "inverse", 3, "click"], ["button", "", "mat-button", "", "mat-dialog-close", "", 3, "click"]],
+      consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], [1, "request"], [1, "info"], [1, "list-item"], [1, "text", 3, "title"], ["class", "tooltip", 3, "matTooltip", 4, "ngIf"], [1, "tooltip", 3, "matTooltip"], [1, "show", 3, "click"], [1, "list-item", 3, "title"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", "name", "save", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "name", "new", 1, "inverse", 3, "click"], ["button", "", "mat-button", "", "mat-dialog-close", "", 3, "click"]],
       template: function BookingConfirmComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 82, 39, "mat-dialog-content", 0);
@@ -38699,16 +38700,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "a5c49a8",
-      "hash": "a5c49a8",
+      "raw": "24e7600",
+      "hash": "24e7600",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "a5c49a8",
+      "suffix": "24e7600",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595313903741
+      "time": 1595314385106
     };
     /* tslint:enable */
 
