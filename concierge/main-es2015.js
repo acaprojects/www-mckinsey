@@ -868,6 +868,9 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
                 duration: this.booking.duration,
             })
                 .then((space_list) => {
+                if (space_list.length < spaces.length) {
+                    return reject(`One ${spaces.length - space_list.length > 1 ? 'or more spaces' : 'space'} are not available at the select time period.`);
+                }
                 for (const space of space_list) {
                     if (!space.was_available) {
                         return reject(`${space.name} is not available at the select time period.`);
@@ -10398,7 +10401,6 @@ class Space extends base_api_class_1.BaseDataClass {
         this.was_available =
             settings.available ||
                 raw_data.available ||
-                raw_data.was_available ||
                 available ||
                 false;
         this.support_url = raw_data.support_url;
@@ -24691,18 +24693,28 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
     }
     updateEvents() {
         const date = dayjs(this.date).startOf('d');
-        const bookings = this._bookings.booking_list.getValue().filter((booking) => {
+        const bookings = this._bookings.booking_list
+            .getValue()
+            .filter((booking) => {
             const start = dayjs(booking.date);
             const end = start.add(booking.duration, 'm');
             return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
+        })
+            .filter((bkn) => bkn.space_list.find((space) => space.zones.includes(this._org.building.id)));
+        this.bookings = bookings.map((bkn) => {
+            const data = bkn.toJSON();
+            return new booking_class_1.Booking(Object.assign(Object.assign({}, data), { room_ids: [
+                    bkn.space_list.find((space) => space.zones.includes(this._org.building.id))
+                        .email,
+                ].concat(bkn.space_list.map((space) => space.email)) }));
         });
-        this.bookings = bookings;
-        this.filter(this.search);
+        this.filtered_bookings = this.filter(this.search);
     }
     initBookings() {
         // Listen for input changes
         this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
             this.loading = true;
+            this.updateEvents();
             const date = dayjs(this.date).startOf('d');
             const zone = this._org.building.id;
             return this._spaces.query({
@@ -24720,14 +24732,11 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
             })));
             bookings.sort((a, b) => a.date - b.date);
             this._bookings.booking_list.next(bookings);
+            this.updateEvents();
             return bookings;
         }));
         // Process API results
-        this.subscription('search_results', this.search_results$.subscribe((list) => {
-            this.loading = false;
-            this.bookings = list;
-            this.filtered_bookings = this.filter(this.search);
-        }));
+        this.subscription('search_results', this.search_results$.subscribe((_) => (this.loading = false)));
     }
 }
 exports.VisitorTimelineComponent = VisitorTimelineComponent;
