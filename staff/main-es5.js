@@ -8541,7 +8541,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       fields.duration.setValidators([forms_1.Validators.required, validation_utilities_1.validateEndTime(fields.date)]);
       /* istanbul ignore else */
 
-      if (booking.id) {
+      if (booking.id && booking.id !== 'ad-hoc') {
         fields.organiser.disable();
         /* istanbul ignore else */
 
@@ -38658,16 +38658,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "8bd2de8",
-      "hash": "8bd2de8",
+      "raw": "a4f6f5b",
+      "hash": "a4f6f5b",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "8bd2de8",
+      "suffix": "a4f6f5b",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595297397369
+      "time": 1595303046175
     };
     /* tslint:enable */
 
