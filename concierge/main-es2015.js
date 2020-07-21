@@ -24528,7 +24528,7 @@ class VisitorBookingItemComponent {
 }
 exports.VisitorBookingItemComponent = VisitorBookingItemComponent;
 VisitorBookingItemComponent.ɵfac = function VisitorBookingItemComponent_Factory(t) { return new (t || VisitorBookingItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
-VisitorBookingItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorBookingItemComponent, selectors: [["a-visitor-booking"]], inputs: { event: "event", search: "search" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Visitors", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]], template: function VisitorBookingItemComponent_Template(rf, ctx) { if (rf & 1) {
+VisitorBookingItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorBookingItemComponent, selectors: [["a-visitor-booking"]], inputs: { event: "event", search: "search" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email All Visitors", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]], template: function VisitorBookingItemComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, VisitorBookingItemComponent_div_0_Template, 33, 39, "div", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.event);
@@ -24961,7 +24961,7 @@ VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorComponent, select
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", !ctx.person.external);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matTooltip", ctx.person.external ? "Email Staff Member" : "Email Visitor")("disabled", ctx.invalid_email)("href", i0.ɵɵpipeBind2(11, 18, ctx.mail_url, "url"), i0.ɵɵsanitizeUrl);
+        i0.ɵɵproperty("matTooltip", !ctx.person.external ? "Email Staff Member" : "Email Visitor")("disabled", ctx.invalid_email)("href", i0.ɵɵpipeBind2(11, 18, ctx.mail_url, "url"), i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(23, _c3));
         i0.ɵɵadvance(1);
