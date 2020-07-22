@@ -11699,6 +11699,7 @@ function is24HourTime() {
     return localeString.indexOf('AM') < 0 && localeString.indexOf('PM') < 0;
 }
 exports.is24HourTime = is24HourTime;
+/* istanbul ignore next */
 /**
  * Downloads a file to the users computer with the given filename and contents
  * @param filename Name of the file to download
@@ -11804,6 +11805,7 @@ function eventToPoint(event) {
     }
 }
 exports.eventToPoint = eventToPoint;
+/* istanbul ignore next */
 /**
  * Flatten nested array
  * @param an_array Array to flatten
@@ -16804,8 +16806,6 @@ class BookingSpaceItemComponent extends base_directive_1.BaseDirective {
         this._dialog = _dialog;
         /** Emitter for select actions on the */
         this.select = new core_1.EventEmitter();
-        /** Whether booking this space is by request */
-        this.is_request = false;
     }
     /** Whether space image should be displayed */
     get show_image() {
@@ -16819,6 +16819,18 @@ class BookingSpaceItemComponent extends base_directive_1.BaseDirective {
         }
         return (this.form.controls.space_list &&
             !!(this.form.controls.space_list.value || []).find((space) => space.id === this.space.id));
+    }
+    /** Whether space is booked by request */
+    get is_request() {
+        /* istanbul ignore else */
+        if (!this.form) {
+            return false;
+        }
+        return this.space.byRequest({
+            date: this.form.controls.date.value,
+            duration: this.form.controls.duration.value,
+            host: this.form.controls.organiser.value || this._users.current,
+        });
     }
     get availability() {
         const count = this.space.recurr_available.reduce((count, ocurrence) => count + (ocurrence.available ? 1 : 0), 0);
@@ -16835,26 +16847,6 @@ class BookingSpaceItemComponent extends base_directive_1.BaseDirective {
         const level = this.space.level;
         const bld = this._org.buildings.find((building) => building.id === level.building_id);
         return `${bld ? bld.name + ', ' : ''}${level.name}`;
-    }
-    ngOnInit() {
-        if (this.form) {
-            this.updateRequest();
-        }
-    }
-    ngOnChanges(changes) {
-        if (changes.form && this.form) {
-            this.updateRequest();
-            this.subscription('date', this.form.controls.date.valueChanges.subscribe(() => this.updateRequest()));
-        }
-    }
-    updateRequest() {
-        this.is_request = this.space.byRequest({
-            date: this.form.controls.date.value,
-            duration: this.form.controls.all_day.value
-                ? 24 * 60
-                : this.form.controls.duration.value,
-            host: this.form.controls.organiser.value,
-        });
     }
     /**
      * Open the modal to show the location of a space
@@ -16903,7 +16895,7 @@ class BookingSpaceItemComponent extends base_directive_1.BaseDirective {
 }
 exports.BookingSpaceItemComponent = BookingSpaceItemComponent;
 BookingSpaceItemComponent.ɵfac = function BookingSpaceItemComponent_Factory(t) { return new (t || BookingSpaceItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.UsersService), i0.ɵɵdirectiveInject(i4.MatDialog)); };
-BookingSpaceItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingSpaceItemComponent, selectors: [["a-booking-space-item"]], inputs: { space: "space", form: "form", multi: "multi" }, outputs: { select: "select" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "space-details", 3, "with-image", 4, "ngIf"], [1, "space-details"], [1, "details"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "overlay"], [1, "name"], [1, "info"], [1, "location"], [1, "capacity"], [3, "icon"], ["class", "info recurr", 4, "ngIf"], [1, "actions"], ["mat-button", "", "name", "select", 3, "click"], ["mat-button", "", "name", "locate", 1, "inverse", 3, "click"], [1, "image"], [1, "info", "recurr"]], template: function BookingSpaceItemComponent_Template(rf, ctx) { if (rf & 1) {
+BookingSpaceItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingSpaceItemComponent, selectors: [["a-booking-space-item"]], inputs: { space: "space", form: "form", multi: "multi" }, outputs: { select: "select" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [["class", "space-details", 3, "with-image", 4, "ngIf"], [1, "space-details"], [1, "details"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "overlay"], [1, "name"], [1, "info"], [1, "location"], [1, "capacity"], [3, "icon"], ["class", "info recurr", 4, "ngIf"], [1, "actions"], ["mat-button", "", "name", "select", 3, "click"], ["mat-button", "", "name", "locate", 1, "inverse", 3, "click"], [1, "image"], [1, "info", "recurr"]], template: function BookingSpaceItemComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, BookingSpaceItemComponent_div_0_Template, 18, 14, "div", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.space);
@@ -21698,16 +21690,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "14d3060",
-    "hash": "14d3060",
+    "raw": "98a39c5",
+    "hash": "98a39c5",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "14d3060",
+    "suffix": "98a39c5",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595402599546
+    "time": 1595404969170
 };
 /* tslint:enable */
 
