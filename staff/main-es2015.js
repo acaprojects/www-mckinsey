@@ -374,42 +374,42 @@ class BookingRulesModalComponent extends base_directive_1.BaseDirective {
     }
     /** Name of the set building */
     get location() {
-        const building = this._data.building || {};
+        const building = this._data.building;
         return building.name || '';
     }
     /** Booking rule details */
     get rules() {
-        const building = this._data.building || {};
-        const details = building.booking_details || {};
+        const building = this._data.building;
+        const details = building.booking_details;
         return details.rules || [];
     }
     /** Booking rule details */
     get info() {
-        const building = this._data.building || {};
-        const details = building.booking_details || {};
+        const building = this._data.building;
+        const details = building.booking_details;
         return details.info || '';
     }
     /** Booking map rule details */
     get map_rules() {
-        const building = this._data.building || {};
-        const details = building.booking_details || {};
+        const building = this._data.building;
+        const details = building.booking_details;
         return details.map_rules || [];
     }
     /** Other special booking rules */
     get other_rules() {
-        const building = this._data.building || {};
-        const details = building.booking_details || {};
+        const building = this._data.building;
+        const details = building.booking_details;
         const rules = details.other_rules || {};
         return Object.keys(rules).reduce((a, v) => { a.push({ title: v, rules: rules[v] || [] }); return a; }, []);
     }
     get contact() {
-        const building = this._data.building || {};
-        const details = building.booking_details || {};
+        const building = this._data.building;
+        const details = building.booking_details;
         return details.contact || '';
     }
     get link() {
-        const building = this._data.building || {};
-        const details = building.booking_details || {};
+        const building = this._data.building;
+        const details = building.booking_details;
         return details.link || {};
     }
 }
@@ -2298,6 +2298,7 @@ const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive *
 const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
+const space_utilities_1 = __webpack_require__(/*! src/app/services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
@@ -2624,7 +2625,7 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
         // Process API results
         this.subscription('search_results', this.search_results$.subscribe(list => {
             this.spaces = list;
-            this.spaces.sort((a, b) => this.sort(a, b));
+            this.spaces.sort((a, b) => space_utilities_1.sort(a, b, this._org.buildings));
             this.update();
         }));
         this.active_building = ((_a = this._data.spaces) === null || _a === void 0 ? void 0 : _a.length) ?
@@ -2657,35 +2658,6 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
         this.selected_spaces.forEach(space => (map[space.id] = space.byRequest(options)));
         this.spaces.forEach(space => (map[space.id] = space.byRequest(options)));
         this.request_map = map;
-    }
-    /**
-     * Compare two spaces to determine order
-     * @param space_a
-     * @param space_b
-     */
-    sort(space_a, space_b) {
-        const bld = this._org.buildings.find(bld => bld.id === space_a.level.building_id);
-        const bld_b = this._org.buildings.find(bld => bld.id === space_b.level.building_id);
-        if (bld) {
-            if (bld !== bld_b) {
-                return (bld.name || '').localeCompare(bld_b.name || '');
-            }
-            const sort_order = (bld.sort_order ? [...bld.sort_order] : []).reverse();
-            for (const zone_id of sort_order) {
-                if (zone_id === '*') {
-                    continue;
-                }
-                const a_has_zone = space_a.zones.indexOf(zone_id) >= 0;
-                const b_has_zone = space_b.zones.indexOf(zone_id) >= 0;
-                if (a_has_zone && !b_has_zone) {
-                    return 1;
-                }
-                else if (b_has_zone && !a_has_zone) {
-                    return -1;
-                }
-            }
-        }
-        return (space_a.name || '').localeCompare(space_b.name || '');
     }
 }
 exports.SpaceSelectModalComponent = SpaceSelectModalComponent;
@@ -3085,8 +3057,6 @@ class ApplicationService extends base_class_1.BaseClass {
         this._composer = _composer;
         this._snackbar = _snackbar;
         this._analytics = _analytics;
-        /** List of previous routes for return navigation */
-        this._route_trail = [];
         /** Map of state variables for Service */
         this._subjects = {};
         /** Map of observables for state variables */
@@ -3096,16 +3066,11 @@ class ApplicationService extends base_class_1.BaseClass {
         this.set('loading', {});
         this._app_ref.isStable.pipe(operators_1.first(_ => _)).subscribe(() => {
             this._zone.run(() => {
-                this._stable = true;
                 this.log('APP', `Application has stablised.`);
                 this.setupCache();
                 this.waitForSettings();
             });
         });
-    }
-    /** Whether the application has stablised */
-    get is_stable() {
-        return this._stable || false;
     }
     get Bindings() {
         return this._composer.bindings;
@@ -3118,20 +3083,12 @@ class ApplicationService extends base_class_1.BaseClass {
     get Hotkeys() {
         return this._hotkeys;
     }
-    /** Engine Composer service */
-    get Composer() {
-        return this._composer;
-    }
     /**
      * Get a setting from the settings service
      * @param key Name of the setting. i.e. nested items can be grabbed using `.` to seperate key names
      */
     setting(key) {
         return this._settings.get(key);
-    }
-    /** Name of the application */
-    get name() {
-        return this._settings.app_name;
     }
     /**
      * Title of the page
@@ -3306,7 +3263,7 @@ class ApplicationService extends base_class_1.BaseClass {
      */
     setupComposer() {
         this.log('SYSTEM', 'Setup up composer...');
-        const loading = this.get('loading') || {};
+        const loading = this.get('loading');
         loading.composer = {
             message: 'Initialising service connection',
             state: 'loading'
@@ -3337,6 +3294,7 @@ class ApplicationService extends base_class_1.BaseClass {
         };
         this.set('loading', loading);
     }
+    /* istanbul ignore next */
     /**
      * Setup handler for cache change events
      */
@@ -3358,6 +3316,7 @@ class ApplicationService extends base_class_1.BaseClass {
             }, 5 * 60 * 1000);
         }
     }
+    /* istanbul ignore next */
     /**
      * Update the cache and reload the page
      *
@@ -4025,10 +3984,6 @@ class Booking extends base_api_class_1.BaseDataClass {
             this.space_list.forEach((space) => (this.approval_status[space.email] = 'declined'));
         }
         this.catering = (raw_data.catering instanceof Array ? raw_data.catering : []).map((i) => new catering_order_class_1.CateringOrder(i));
-        this.edits =
-            raw_data.edits instanceof Array
-                ? raw_data.edits
-                : general_utilities_1.unique(general_utilities_1.flatten(Object.keys(raw_data.edits || {}).map((i) => raw_data.edits[i])));
         this.has_catering = !!(raw_data.has_catering || (this.catering && this.catering.length));
     }
     /** Service for managing Bookings */
@@ -4049,14 +4004,7 @@ class Booking extends base_api_class_1.BaseDataClass {
     }
     /** Whether booking has been approved */
     get approved() {
-        for (const space of this.space_list) {
-            if (this.approval_status[space.email] &&
-                (this.approval_status[space.email].indexOf('tentative') >= 0 ||
-                    this.approval_status[space.email].indexOf('decline') >= 0)) {
-                return false;
-            }
-        }
-        return true;
+        return !this.declined && !this.tentative;
     }
     /** Whether booking is tentative */
     get tentative() {
@@ -4214,13 +4162,11 @@ exports.Booking = Booking;
 Object.defineProperty(exports, "__esModule", { value: true });
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 const general_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const user_utilities_1 = __webpack_require__(/*! ../users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
 const user_class_1 = __webpack_require__(/*! ../users/user.class */ "./src/app/services/data/users/user.class.ts");
 const catering_order_class_1 = __webpack_require__(/*! ../catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 const validation_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
-const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const MINUTE = 1;
 const HOUR = 60;
 const DAY = 24 * HOUR;
@@ -4248,21 +4194,6 @@ function setMockBookingStartDatetime(time) {
     BOOKING_DATE = dayjs(time).startOf('m');
 }
 exports.setMockBookingStartDatetime = setMockBookingStartDatetime;
-/**
- * Create mock raw API data for a booking
- * @param override Overrides the properties of the generated booking with it's own
- */
-function generateMockBooking(override = {}) {
-    const id = `booking-${BOOKING_COUNT++}`;
-    BOOKING_DATE = BOOKING_DATE.add(30, 'm');
-    const start = BOOKING_DATE.valueOf();
-    const duration = ((BOOKING_COUNT % 4) + 2) * 15;
-    BOOKING_DATE = BOOKING_DATE.add(60, 'm');
-    return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(Math.random() * 5 + 2))
-            .fill(0)
-            .map((i) => user_utilities_1.generateMockUser()), organiser: user_utilities_1.generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, catering: [], room_ids: [] }, override);
-}
-exports.generateMockBooking = generateMockBooking;
 /**
  * Generate a list of free time slots between the given bookings
  * @param list List of bookings to find slots between
@@ -5150,31 +5081,6 @@ exports.MapLocation = MapLocation;
 
 /***/ }),
 
-/***/ "./src/app/services/data/location/location.utilities.ts":
-/*!**************************************************************!*\
-  !*** ./src/app/services/data/location/location.utilities.ts ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-function generateMockLocation(overrides, fixed_locations, maps) {
-    const fixed = general_utilities_1.randomInt(999999999) % 2 === 0;
-    if (fixed && (!overrides || overrides.fixed)) {
-        return Object.assign({ map_id: fixed_locations[general_utilities_1.randomInt(fixed_locations.length)], level: maps[general_utilities_1.randomInt(maps.length)] }, overrides);
-    }
-    else {
-        return Object.assign({ x: general_utilities_1.randomInt(900, 100), x_max: 1000, y: general_utilities_1.randomInt(500, 100), level: maps[general_utilities_1.randomInt(maps.length)], confidence: general_utilities_1.randomInt(30) }, overrides);
-    }
-}
-exports.generateMockLocation = generateMockLocation;
-
-
-/***/ }),
-
 /***/ "./src/app/services/data/organisation/building.class.ts":
 /*!**************************************************************!*\
   !*** ./src/app/services/data/organisation/building.class.ts ***!
@@ -5226,7 +5132,7 @@ class Building extends base_api_class_1.BaseDataClass {
         this.searchables = searchables;
         this.code = raw_data.code || disc_info.code || settings.code || '';
         this.address = raw_data.address || disc_info.address || settings.address || '';
-        this.booking_details = raw_data.booking_details || disc_info.booking_details || settings.booking_details || null;
+        this.booking_details = raw_data.booking_details || disc_info.booking_details || settings.booking_details || {};
         this.booking_rules = raw_data.booking_rules || disc_info.booking_rules || settings.booking_rules || {};
         this.catering_restricted_from = raw_data.catering_restricted_from || disc_info.catering_restricted_from || settings.catering_restricted_from || 0;
         this.currency = raw_data.currency || disc_info.currency || settings.currency || 'USD';
@@ -5531,7 +5437,7 @@ class OrganisationService extends base_service_1.BaseAPIService {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             /* istanbul ignore else */
             if (localStorage) {
-                this._active_building = localStorage.getItem(`${this._service.name}.building`);
+                this._active_building = localStorage.getItem(`STAFF.building`);
             }
             const loading = this._service.get('loading') || {};
             loading.organisation = { message: 'Loading organisation data', state: 'loading' };
@@ -5721,10 +5627,6 @@ class Space extends base_api_class_1.BaseDataClass {
         this.linked_spaces =
             settings.linked_rooms || raw_data.linked_rooms || raw_data.linked_spaces || [];
     }
-    /** Service for managing spaces */
-    get _service() {
-        return service_manager_class_1.ServiceManager.serviceFor(building_class_1.Building);
-    }
     /** Whether the space has a booking in progress */
     get in_use() {
         return !!this.current;
@@ -5765,32 +5667,10 @@ class Space extends base_api_class_1.BaseDataClass {
      * @param date Date to filter bookings on
      */
     bookingsFor(date) {
-        if (date) {
-            const day = dayjs(date);
-            return this.bookings.filter((i) => {
-                const start = dayjs(i.date);
-                return start.isSame(day, 'd');
-            });
-        }
-        else {
-            return this.bookings;
-        }
-    }
-    /**
-     * Whether the space is available.
-     */
-    isAvailable(options) {
-        options = options
-            ? Object.assign(Object.assign(Object.assign({}, OPTION_DEFAULTS), options), { room_ids: this.id }) : Object.assign(Object.assign({}, OPTION_DEFAULTS), { room_ids: this.id });
-        return new Promise((resolve) => {
-            this._service.available(options).then((list) => {
-                for (const rm of list) {
-                    if (rm.id === this.id) {
-                        return resolve(true);
-                    }
-                }
-                resolve(false);
-            }, () => resolve(false));
+        const day = dayjs(date);
+        return this.bookings.filter((i) => {
+            const start = dayjs(i.date);
+            return start.isSame(day, 'd');
         });
     }
     /**
@@ -5810,11 +5690,9 @@ class Space extends base_api_class_1.BaseDataClass {
      * @param options Conditions for generating the space rules
      */
     rulesFor(options) {
+        var _a;
         const service = service_manager_class_1.ServiceManager.serviceFor(building_class_1.Building);
-        if (!service || !this.level) {
-            return { auto_approve: true, hide: false };
-        }
-        const building = service.buildings.find((bld) => bld.id === this.level.building_id);
+        const building = (_a = service) === null || _a === void 0 ? void 0 : _a.buildings.find((bld) => this.zones.includes(bld.id));
         if (!building) {
             return { auto_approve: true, hide: false };
         }
@@ -5852,19 +5730,7 @@ exports.Space = Space;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const booking_utilities_1 = __webpack_require__(/*! ../bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
-const user_utilities_1 = __webpack_require__(/*! ../users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
-const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-let SPACE_COUNT = 0;
-function generateMockSpace(overrides = {}) {
-    const id = `space-${SPACE_COUNT++}`;
-    const name = `${faker.name.firstName()} ${faker.name.lastName()} Space`;
-    const linked = Math.floor(Math.random() * 99999) % 2 === 0 && SPACE_COUNT > 1;
-    return Object.assign({ id,
-        name, long_name: `${name} with an long name`, map_id: `${SPACE_COUNT}`, capacity: Math.floor(Math.random() * 20 + 1) * 2, email: `${name.toLowerCase().split(' ').join('.')}@${user_utilities_1.USER_DOMAIN}`, type: faker.commerce.productName(), searchable: Math.floor(Math.random() * 99999) % 2 === 0, controlable: Math.floor(Math.random() * 99999) % 2 === 0, bookable: Math.floor(Math.random() * 99999) % 2 === 0, cost_hour: Math.floor(Math.random() * 300) * 100, setup: Math.floor(Math.random() * 6) * 5, breakdown: Math.floor(Math.random() * 6) * 5, zones: ['zone_lvl-0'], support_url: `/control/#/${id}`, bookings: Array(10).fill(0).map(i => booking_utilities_1.generateMockBooking()), linked_rooms: linked ? [`space-${Math.floor(Math.random() * (SPACE_COUNT - 1))}`] : [], image: faker.image.business() }, overrides);
-}
-exports.generateMockSpace = generateMockSpace;
 function availabilityOptionsToQuery(options) {
     let query = {};
     if (options) {
@@ -5880,6 +5746,37 @@ function availabilityOptionsToQuery(options) {
     return query;
 }
 exports.availabilityOptionsToQuery = availabilityOptionsToQuery;
+/**
+ * Compare two spaces to determine order
+ * @param first
+ * @param second
+ */
+function sort(first, second, blds = []) {
+    var _a;
+    const bld = blds.find(bld => first.zones.includes(bld.id));
+    const bld_b = blds.find(bld => second.zones.includes(bld.id));
+    if (bld) {
+        if (bld !== bld_b) {
+            return (bld.name).localeCompare((_a = bld_b) === null || _a === void 0 ? void 0 : _a.name);
+        }
+        const sort_order = [...bld.sort_order].reverse();
+        for (const zone_id of sort_order) {
+            if (zone_id === '*') {
+                continue;
+            }
+            const a_has_zone = first.zones.indexOf(zone_id) >= 0;
+            const b_has_zone = second.zones.indexOf(zone_id) >= 0;
+            if (a_has_zone && !b_has_zone) {
+                return 1;
+            }
+            else if (b_has_zone && !a_has_zone) {
+                return -1;
+            }
+        }
+    }
+    return first.name.localeCompare(second.name);
+}
+exports.sort = sort;
 
 
 /***/ }),
@@ -5901,8 +5798,8 @@ const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rx
 const base_service_1 = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
 const space_class_1 = __webpack_require__(/*! ./space.class */ "./src/app/services/data/spaces/space.class.ts");
 const space_utilities_1 = __webpack_require__(/*! ./space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
-const organisation_service_1 = __webpack_require__(/*! ../organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
+const organisation_service_1 = __webpack_require__(/*! ../organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const app_service_1 = __webpack_require__(/*! ../../app.service */ "./src/app/services/app.service.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -5910,20 +5807,32 @@ const i1 = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos
 const i2 = __webpack_require__(/*! ../organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const i3 = __webpack_require__(/*! ../../app.service */ "./src/app/services/app.service.ts");
 class SpacesService extends base_service_1.BaseAPIService {
-    constructor(_composer, _org_service, _app) {
+    constructor(_composer, _org, _service) {
         super(_composer);
         this._composer = _composer;
-        this._org_service = _org_service;
-        this._app = _app;
+        this._org = _org;
+        this._service = _service;
         service_manager_class_1.ServiceManager.setService(space_class_1.Space, this);
         this._name = 'Space';
-        this._api_route = 'rooms';
+        this._api_route = '/rooms';
         this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
         this._list_filter = (a) => {
-            const bld = this._org_service.building;
+            const bld = this._org.building;
             return a.level.building_id === bld.id;
         };
-        this._org_service.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
+        this._org.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
+    }
+    query(query = {}) {
+        const _super = Object.create(null, {
+            query: { get: () => super.query }
+        });
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            const list = yield _super.query.call(this, query);
+            if (!Object.keys(query).length) {
+                this.set('list', list);
+            }
+            return list;
+        });
     }
     /**
      * Get available spaces
@@ -5934,26 +5843,28 @@ class SpacesService extends base_service_1.BaseAPIService {
             throw new Error('Space avilability requires request options');
         }
         if (!options.date) {
-            options.date = dayjs().startOf('m').valueOf();
+            options.date = dayjs()
+                .startOf('m')
+                .valueOf();
         }
         const key = `available|${options.id ? options.id : ''}`;
         if (!this._promises[key]) {
             this._promises[key] = new Promise((resolve, reject) => {
                 const respond = (list) => {
-                    const available_spaces = list.filter((i) => {
-                        const linked = list.filter((j) => i.linked_spaces.indexOf(j.id) >= 0);
+                    const available_spaces = list.filter(i => {
+                        const linked = list.filter(j => i.linked_spaces.indexOf(j.id) >= 0);
                         return (i.was_available && linked.reduce((a, v) => a && v.was_available, true));
                     });
                     delete this._promises[key];
                     resolve(available_spaces);
                 };
-                const error = (e) => {
+                const error = e => {
                     reject(e);
                     delete this._promises[key];
                 };
                 const query = space_utilities_1.availabilityOptionsToQuery(options);
                 if (options.id) {
-                    this.show(options.id, query).then((i) => respond([i]), error);
+                    this.show(options.id, query).then(i => respond([i]), error);
                 }
                 else {
                     this.query(query).then(respond, error);
@@ -5967,17 +5878,17 @@ class SpacesService extends base_service_1.BaseAPIService {
      */
     load() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            const loading = this._app.get('loading') || {};
+            const loading = this._service.get('loading') || {};
             if (!loading.spaces) {
                 loading.spaces = { message: 'Loading space data', state: 'loading' };
-                this._app.set('loading', loading);
+                this._service.set('loading', loading);
             }
             yield this.query().catch(() => {
                 loading.spaces = { message: 'Loading space data', state: 'failed' };
-                this._app.set('loading', loading);
+                this._service.set('loading', loading);
             });
             loading.spaces = { message: 'Loading space data', state: 'complete' };
-            this._app.set('loading', loading);
+            this._service.set('loading', loading);
         });
     }
     /**
@@ -5994,7 +5905,7 @@ SpacesService.ɵprov = i0.ɵɵdefineInjectable({ token: SpacesService, factory: 
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SpacesService, [{
         type: core_1.Injectable,
         args: [{
-                providedIn: 'root',
+                providedIn: 'root'
             }]
     }], function () { return [{ type: i1.ComposerService }, { type: i2.OrganisationService }, { type: i3.ApplicationService }]; }, null); })();
 
@@ -6116,44 +6027,7 @@ exports.User = User;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
-const general_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-let USER_COUNT = 0;
-exports.USER_DOMAIN = 'acaprojects.com';
-const USER_EMAILS = [];
-/**
- * Generate raw mock data for a user
- * @param id Forced ID for the mock
- * @param name Forced name for the user
- * @param external Whether user is external of the organisation
- */
-function generateMockUser(override = {}) {
-    const id = `user-${USER_COUNT++}`;
-    const name = `${faker.name.firstName()} ${faker.name.lastName()}`;
-    const external = override.external || !((Math.random() * 99999) % 2);
-    const organisation = external ? faker.company.companyName() : exports.USER_DOMAIN.split('.')[0];
-    let delegates = [];
-    const delegate_count = Math.min(Math.random() * 4 + 1, USER_EMAILS.length);
-    for (let i = 0; i < delegate_count; i++) {
-        delegates.push(USER_EMAILS[Math.floor(Math.random() * USER_EMAILS.length)]);
-    }
-    delegates = general_utilities_1.unique(delegates);
-    const email = `${name
-        .split(' ')
-        .join('.')
-        .toLowerCase()}@${external ? 'not-' : ''}${exports.USER_DOMAIN}`;
-    USER_EMAILS.push(email);
-    return Object.assign({ id,
-        name, first_name: name.split(' ')[0], last_name: name.split(' ')[1], email, phone: faker.phone.phoneNumber(), visitor: external, organisation: {
-            id: organisation
-                .split(' ')
-                .join('.')
-                .toLowerCase(),
-            name: organisation
-        }, department: faker.commerce.department(), staff_code: general_utilities_1.padZero(Math.floor(Math.random() * 99999), 5), delegates, image: faker.image.avatar() }, override);
-}
-exports.generateMockUser = generateMockUser;
 /**
  * Generate form fields for the given user
  * @param user User to generate form for
@@ -6560,9 +6434,11 @@ class SettingsService extends base_class_1.BaseClass {
     init() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             yield this.loadFromFile('api');
+            /* istanbul ignore next */
             if (this._settings.api.debug) {
                 window.debug = true;
             }
+            /* istanbul ignore next */
             if (this._settings.api.app && this._settings.api.app.name) {
                 this._app_name = this._settings.api.app.name;
             }
@@ -6572,6 +6448,7 @@ class SettingsService extends base_class_1.BaseClass {
     }
     /** Whether settings service has initialised */
     get app_name() { return this._app_name; }
+    /* istanbul ignore next */
     /**
      * Log data to the browser console
      * @param type Type of message
@@ -6598,19 +6475,9 @@ class SettingsService extends base_class_1.BaseClass {
     get(key) {
         const keys = key.split('.');
         let value = null;
-        if (keys[0] === 'session') {
-            keys.shift();
-            value = general_utilities_1.getItemWithKeys(keys, this._settings.session);
-        }
-        else if (keys[0] === 'local') {
-            keys.shift();
-            value = general_utilities_1.getItemWithKeys(keys, this._settings.local);
-        }
-        else {
-            value = general_utilities_1.getItemWithKeys(keys, this._settings.api) ||
-                general_utilities_1.getItemWithKeys(keys, this._settings.session) ||
-                general_utilities_1.getItemWithKeys(keys, this._settings.local);
-        }
+        value = general_utilities_1.getItemWithKeys(keys, this._settings.api) ||
+            general_utilities_1.getItemWithKeys(keys, this._settings.session) ||
+            general_utilities_1.getItemWithKeys(keys, this._settings.local);
         return value;
     }
     /**
@@ -10357,11 +10224,11 @@ exports.ANIMATION_SHOW_CONTRACT_EXPAND = animations_1.trigger('show', [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
 const general_utilities_1 = __webpack_require__(/*! ../../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const spaces_mock_1 = __webpack_require__(/*! ./spaces.mock */ "./src/app/shared/mocks/api/spaces.mock.ts");
 const users_mock_1 = __webpack_require__(/*! ./users.mock */ "./src/app/shared/mocks/api/users.mock.ts");
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
+const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
@@ -10379,7 +10246,7 @@ exports.MOCK_BOOKINGS = Array(200)
     const attendees = general_utilities_1.unique(Array(general_utilities_1.randomInt(20))
         .fill(0)
         .map((i) => users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)]), 'email');
-    return booking_utilities_1.generateMockBooking({
+    return spec_helpers_1.generateMockBooking({
         organiser,
         attendees,
         room_ids: rooms.map((i) => i.email),
@@ -10870,7 +10737,7 @@ const users_mock_1 = __webpack_require__(/*! ./users.mock */ "./src/app/shared/m
 const spaces_mock_1 = __webpack_require__(/*! ./spaces.mock */ "./src/app/shared/mocks/api/spaces.mock.ts");
 const buildings_mock_1 = __webpack_require__(/*! ./buildings.mock */ "./src/app/shared/mocks/api/buildings.mock.ts");
 const general_utilities_1 = __webpack_require__(/*! ../../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const location_utilities_1 = __webpack_require__(/*! src/app/services/data/location/location.utilities */ "./src/app/services/data/location/location.utilities.ts");
+const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 exports.MOCK_LOCATIONS = [];
 const spaces = spaces_mock_1.MOCK_SPACES.map(space => space.map_id);
 const levels = buildings_mock_1.MOCK_BUILDINGS.reduce((lvls, bld) => {
@@ -10879,7 +10746,7 @@ const levels = buildings_mock_1.MOCK_BUILDINGS.reduce((lvls, bld) => {
 }, []);
 for (const user of users_mock_1.MOCK_USERS) {
     if (user.location || general_utilities_1.randomInt(99999) % 2 === 0) {
-        user.location = location_utilities_1.generateMockLocation(null, spaces, levels);
+        user.location = spec_helpers_1.generateMockLocation(null, spaces, levels);
         exports.MOCK_LOCATIONS.push(user.location);
     }
 }
@@ -10934,8 +10801,8 @@ exports.MOCK_ORG = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const space_utilities_1 = __webpack_require__(/*! src/app/services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
+const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
@@ -10950,7 +10817,7 @@ exports.MOCK_SPACES = [
     { id: '11.07', name: 'LON-11-EC11_11_07_Client', zones: ['zone_bld-01', 'zone_lvl-11'] },
     { id: '11.10', name: 'LON-11-EC11_11_10_Client', zones: ['zone_bld-01', 'zone_lvl-11'] }
 ].map((space_data) => {
-    const space = space_utilities_1.generateMockSpace(Object.assign(Object.assign({}, space_data), { map_id: `${space_data.id}`, id: `sys_rm-${space_data.id}`, name: `${space_data.name}` }));
+    const space = spec_helpers_1.generateMockSpace(Object.assign(Object.assign({}, space_data), { map_id: `${space_data.id}`, id: `sys_rm-${space_data.id}`, name: `${space_data.name}` }));
     window.control.systems[space.id] = {
         Bookings: [
             {
@@ -11026,15 +10893,15 @@ window.control.handlers.push({
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_utilities_1 = __webpack_require__(/*! src/app/services/data/users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
+const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
 exports.MOCK_USERS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
-    .map(i => user_utilities_1.generateMockUser());
+    .map(i => spec_helpers_1.generateMockUser());
 exports.MOCK_CONTACTS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
-    .map(i => user_utilities_1.generateMockUser({ external: true }));
+    .map(i => spec_helpers_1.generateMockUser({ external: true }));
 exports.PREDEFINED_USERS = [
     'Jonathan McFarlane',
     'Stephen Von Takach',
@@ -11052,7 +10919,7 @@ exports.PREDEFINED_USERS = [
 // Add predefined user to user list
 for (const user of exports.PREDEFINED_USERS) {
     const id = user.split(' ').join('.').toLowerCase();
-    const new_user = user_utilities_1.generateMockUser({ id, name: user });
+    const new_user = spec_helpers_1.generateMockUser({ id, name: user });
     new_user.location = true;
     exports.MOCK_USERS.push(new_user);
 }
@@ -11152,9 +11019,9 @@ window.control.handlers = window.control.handlers || [];
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const space_utilities_1 = __webpack_require__(/*! ../../services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
 const booking_utilities_1 = __webpack_require__(/*! ../../services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const spec_helpers_1 = __webpack_require__(/*! ../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const NUMBERS = '0123456789'.split('');
 let index = 0;
@@ -11166,7 +11033,7 @@ const IMAGES = ['large_down', 'large_up', 'small_down', 'small_up'];
 function createSystem(id) {
     id = id || `sys-${LETTERS[Math.floor(index / NUMBERS.length)]}${NUMBERS[(index++) % NUMBERS.length]}`;
     booking_utilities_1.setMockBookingStartDatetime(dayjs().minute(-50).valueOf());
-    const space = space_utilities_1.generateMockSpace({ id });
+    const space = spec_helpers_1.generateMockSpace({ id });
     SPACE_LIST.push(space);
     const booking_bindings = {
         touch_enabled: true,
@@ -12048,6 +11915,292 @@ function flatten(an_array) {
     return res.reverse();
 }
 exports.flatten = flatten;
+
+
+/***/ }),
+
+/***/ "./src/app/shared/utilities/spec-helpers.ts":
+/*!**************************************************!*\
+  !*** ./src/app/shared/utilities/spec-helpers.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+const building_class_1 = __webpack_require__(/*! src/app/services/data/organisation/building.class */ "./src/app/services/data/organisation/building.class.ts");
+const organisation_class_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
+const base_api_class_1 = __webpack_require__(/*! src/app/services/data/base-api.class */ "./src/app/services/data/base-api.class.ts");
+const location_class_1 = __webpack_require__(/*! src/app/services/data/location/location.class */ "./src/app/services/data/location/location.class.ts");
+const user_class_1 = __webpack_require__(/*! src/app/services/data/users/user.class */ "./src/app/services/data/users/user.class.ts");
+const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
+const space_class_1 = __webpack_require__(/*! src/app/services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
+const service_manager_class_1 = __webpack_require__(/*! src/app/services/data/service-manager.class */ "./src/app/services/data/service-manager.class.ts");
+const catering_item_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
+const catering_category_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
+const general_utilities_1 = __webpack_require__(/*! ./general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+let SERVICE;
+;
+/* istanbul ignore file */
+/**
+ * Generate a mocked version of the application service
+ */
+function generateMockAppService() {
+    SERVICE = {
+        setting: jest.fn(),
+        notify: jest.fn(),
+        notifyInfo: jest.fn(),
+        notifyWarn: jest.fn(),
+        notifySuccess: jest.fn(),
+        notifyError: jest.fn(),
+        log: jest.fn(),
+        navigate: jest.fn(),
+        navigateBack: jest.fn(),
+        get: jest.fn(),
+        listen: jest.fn(),
+        set: jest.fn(),
+        Composer: { auth: { token: 'test' } },
+        Hotkeys: { listen: jest.fn() },
+        Users: generateMockDataService('UsersService'),
+        Organisation: {
+            levelWithID: jest.fn(),
+            listen: jest.fn(),
+            initialised: rxjs_1.of(true),
+            building: new building_class_1.Building(generateMockBuilding({ id: 'bld-01' }))
+        },
+        Locations: generateMockDataService('LocationsService'),
+        Base: generateMockDataService('BaseService'),
+        Menu: generateMockDataService('CateringMenuService'),
+        Spaces: generateMockDataService('SpacesService'),
+        Bookings: generateMockDataService('BookingsService'),
+        Reports: generateMockDataService('ReportsService'),
+        CateringItems: generateMockDataService('CateringItemsService'),
+        CateringCategories: generateMockDataService('CateringCategoriesService'),
+        initialised: rxjs_1.of(true)
+    };
+    service_manager_class_1.ServiceManager.setService(base_api_class_1.BaseDataClass, SERVICE.Base);
+    service_manager_class_1.ServiceManager.setService(organisation_class_1.Organisation, SERVICE.Organisation);
+    service_manager_class_1.ServiceManager.setService(building_class_1.Building, SERVICE.Organisation);
+    service_manager_class_1.ServiceManager.setService(user_class_1.User, SERVICE.Users);
+    service_manager_class_1.ServiceManager.setService(booking_class_1.Booking, SERVICE.Bookings);
+    service_manager_class_1.ServiceManager.setService(space_class_1.Space, SERVICE.Spaces);
+    service_manager_class_1.ServiceManager.setService(location_class_1.MapLocation, SERVICE.Locations);
+    service_manager_class_1.ServiceManager.setService(catering_item_class_1.CateringItem, SERVICE.CateringItems);
+    service_manager_class_1.ServiceManager.setService(catering_category_class_1.CateringCategory, SERVICE.CateringCategories);
+    SERVICE.Organisation.buildings = [SERVICE.Organisation.building];
+    SERVICE.Users.current = new user_class_1.User(generateMockUser());
+    SERVICE.Users.initialised = rxjs_1.of(true);
+    SERVICE.Bookings.booking_list = new rxjs_1.BehaviorSubject(new Array(10).fill(0).map(_ => new booking_class_1.Booking(generateMockBooking())));
+    SERVICE.listen.mockReturnValue(rxjs_1.of(null, []));
+    return SERVICE;
+}
+exports.generateMockAppService = generateMockAppService;
+function generateMockDataService(name) {
+    const service = {
+        find: jest.fn(),
+        filter: jest.fn(),
+        listen: jest.fn(),
+        get: jest.fn(),
+        set: jest.fn(),
+        setting: jest.fn(),
+        query: jest.fn(),
+        show: jest.fn(),
+        add: jest.fn(),
+        save: jest.fn(),
+        remove: jest.fn(),
+        delete: jest.fn(),
+        update: jest.fn(),
+        addFrom: jest.fn(),
+        removeFrom: jest.fn(),
+        task: jest.fn(),
+        available: jest.fn(),
+        process: jest.fn(),
+        updateList: jest.fn(),
+        clearList: jest.fn(),
+        removeFromList: jest.fn(),
+        accept: jest.fn(),
+        decline: jest.fn(),
+        checkin: jest.fn(),
+        is_logged_in: false,
+        initialised: rxjs_1.of(true),
+        name
+    };
+    service.save.mockImplementation(_ => Promise.resolve(new booking_class_1.Booking(_)));
+    service.listen.mockReturnValue(rxjs_1.of(null));
+    service.filter.mockReturnValue([]);
+    return service;
+}
+exports.generateMockDataService = generateMockDataService;
+let SPACE_COUNT = 0;
+function generateMockSpace(overrides = {}) {
+    const id = `space-${SPACE_COUNT++}`;
+    const name = `${faker.name.firstName()} ${faker.name.lastName()} Space`;
+    const linked = Math.floor(Math.random() * 99999) % 2 === 0 && SPACE_COUNT > 1;
+    return Object.assign({ id,
+        name, long_name: `${name} with an long name`, map_id: `${SPACE_COUNT}`, capacity: Math.floor(Math.random() * 20 + 1) * 2, email: `${name.toLowerCase().split(' ').join('.')}@${exports.USER_DOMAIN}`, type: faker.commerce.productName(), searchable: Math.floor(Math.random() * 99999) % 2 === 0, controlable: Math.floor(Math.random() * 99999) % 2 === 0, bookable: Math.floor(Math.random() * 99999) % 2 === 0, cost_hour: Math.floor(Math.random() * 300) * 100, setup: Math.floor(Math.random() * 6) * 5, breakdown: Math.floor(Math.random() * 6) * 5, zones: ['zone_lvl-0'], support_url: `/control/#/${id}`, bookings: Array(10).fill(0).map(i => generateMockBooking()), linked_rooms: linked ? [`space-${Math.floor(Math.random() * (SPACE_COUNT - 1))}`] : [], image: faker.image.business() }, overrides);
+}
+exports.generateMockSpace = generateMockSpace;
+let BOOKING_COUNT = 0;
+let BOOKING_DATE = dayjs().hour(6).minute(0).subtract(10, 'd').startOf('m');
+/**
+ * Set the initial time used for generating mock bookings
+ * @param time New initial time as ms from UTC epoch
+ */
+function setMockBookingStartDatetime(time) {
+    BOOKING_DATE = dayjs(time).startOf('m');
+}
+exports.setMockBookingStartDatetime = setMockBookingStartDatetime;
+/**
+ * Create mock raw API data for a booking
+ * @param override Overrides the properties of the generated booking with it's own
+ */
+function generateMockBooking(override = {}) {
+    const id = `booking-${BOOKING_COUNT++}`;
+    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4 + 2) * 15, 'm');
+    const start = BOOKING_DATE.valueOf();
+    const duration = Math.floor(Math.random() * 4 + 2) * 15;
+    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
+    return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(Math.random() * 5 + 2))
+            .fill(0)
+            .map((i) => generateMockUser(override.users)), organiser: generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)], setup: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, breakdown: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, status: {}, catering: [], room_ids: [] }, override);
+}
+exports.generateMockBooking = generateMockBooking;
+let BLD_COUNT = 0;
+let LVL_COUNT = 0;
+/**
+ * Generate raw mock data for creating a building
+ * @param id Forced ID for the mock
+ */
+function generateMockBuilding(overrides = {}) {
+    const id = `zone_bld-${BLD_COUNT++}`;
+    const levels = Array(10)
+        .fill(0)
+        .map(i => generateMockLevel());
+    const features = {};
+    for (const lvl of levels) {
+        const count = Math.floor(Math.random() * 3 + 2);
+        features[lvl.level_id] = {};
+        for (let i = 0; i < count; i++) {
+            features[lvl.level_id][faker.commerce.productName()] = `feature-${i + 1}`;
+        }
+    }
+    return Object.assign({ id, zone_id: id, extras: Array(10)
+            .fill(0)
+            .map(i => {
+            const name = faker.commerce.productName();
+            return {
+                extra_id: name
+                    .split(' ')
+                    .join('-')
+                    .toLowerCase(),
+                extra_name: name
+            };
+        }), loan_items: Array(10)
+            .fill(0)
+            .map(i => {
+            const name = faker.commerce.productName();
+            return {
+                extra_id: name
+                    .split(' ')
+                    .join('-')
+                    .toLowerCase(),
+                extra_name: name
+            };
+        }), levels, roles: {
+            'first-aiders': Array(10)
+                .fill(0)
+                .map(i => generateMockUser())
+        }, neighbourhoods: features, settings: {
+            test: {
+                nested: {
+                    level2: true,
+                    org: false
+                }
+            }
+        } }, overrides);
+}
+exports.generateMockBuilding = generateMockBuilding;
+/**
+ * Generate raw mock data for a building level
+ * @param id Forced ID for the mock
+ * @param map_url Map URL for the level
+ */
+function generateMockLevel(id, map_url) {
+    if (!id) {
+        id = `zone_lvl-${LVL_COUNT++}`;
+    }
+    return {
+        level_id: id,
+        level_name: `Level ${LVL_COUNT}`,
+        map_url
+    };
+}
+exports.generateMockLevel = generateMockLevel;
+let USER_COUNT = 0;
+exports.USER_DOMAIN = 'acaprojects.com';
+const USER_EMAILS = [];
+/**
+ * Generate raw mock data for a user
+ * @param id Forced ID for the mock
+ * @param name Forced name for the user
+ * @param external Whether user is external of the organisation
+ */
+function generateMockUser(override = {}) {
+    const id = `user-${USER_COUNT++}`;
+    const name = `${faker.name.firstName()} ${faker.name.lastName()}`;
+    const external = override.external || !((Math.random() * 99999) % 2);
+    const organisation = external ? faker.company.companyName() : exports.USER_DOMAIN.split('.')[0];
+    let delegates = [];
+    const delegate_count = Math.min(Math.random() * 4 + 1, USER_EMAILS.length);
+    for (let i = 0; i < delegate_count; i++) {
+        delegates.push(USER_EMAILS[Math.floor(Math.random() * USER_EMAILS.length)]);
+    }
+    delegates = general_utilities_1.unique(delegates);
+    const email = `${name
+        .split(' ')
+        .join('.')
+        .toLowerCase()}@${external ? 'not-' : ''}${exports.USER_DOMAIN}`;
+    USER_EMAILS.push(email);
+    return Object.assign({ id,
+        name, first_name: name.split(' ')[0], last_name: name.split(' ')[1], email, phone: faker.phone.phoneNumber(), visitor: external, organisation: {
+            id: organisation
+                .split(' ')
+                .join('.')
+                .toLowerCase(),
+            name: organisation
+        }, department: faker.commerce.department(), staff_code: general_utilities_1.padZero(Math.floor(Math.random() * 99999), 5), delegates, image: faker.image.avatar() }, override);
+}
+exports.generateMockUser = generateMockUser;
+function generateMockLocation(overrides, fixed_locations, maps) {
+    const fixed = general_utilities_1.randomInt(999999999) % 2 === 0;
+    if (fixed && (!overrides || overrides.fixed)) {
+        return Object.assign({ map_id: fixed_locations[general_utilities_1.randomInt(fixed_locations.length)], level: maps[general_utilities_1.randomInt(maps.length)] }, overrides);
+    }
+    else {
+        return Object.assign({ x: general_utilities_1.randomInt(900, 100), x_max: 1000, y: general_utilities_1.randomInt(500, 100), level: maps[general_utilities_1.randomInt(maps.length)], confidence: general_utilities_1.randomInt(30) }, overrides);
+    }
+}
+exports.generateMockLocation = generateMockLocation;
+let ORG_COUNT = 0;
+function generateMockOrganisation() {
+    return {
+        id: `zone_org-${ORG_COUNT++}`,
+        name: `Organisation ${ORG_COUNT}`,
+        buildings: Array(3).fill(0).map(i => generateMockBuilding()),
+        settings: {
+            test: {
+                nested: {
+                    org: true
+                }
+            }
+        }
+    };
+}
+exports.generateMockOrganisation = generateMockOrganisation;
 
 
 /***/ }),
@@ -16303,6 +16456,7 @@ const organisation_service_1 = __webpack_require__(/*! src/app/services/data/org
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const space_utilities_1 = __webpack_require__(/*! src/app/services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
@@ -16344,7 +16498,7 @@ function BookingFindSpaceComponent_ng_container_4_cdk_virtual_scroll_viewport_1_
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r6 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("itemSize", 130);
+    i0.ɵɵproperty("itemSize", 150);
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("cdkVirtualForOf", ctx_r6.space_list);
 } }
@@ -16453,12 +16607,13 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
             let request_id = 0;
             // Listen for input changes
             this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
+                var _a;
                 this.loading = true;
                 request_id = general_utilities_1.randomInt(99999999);
                 const recurrence = this.form.controls.recurrence
                     ? this.form.controls.recurrence.value
                     : null;
-                const recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None'
+                const recurrence_properties = ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) !== 'None'
                     ? {
                         recurr_period: (recurrence.period || '').toLowerCase(),
                         recurr_end: dayjs(recurrence.end * 1000).endOf('d').unix(),
@@ -16472,13 +16627,14 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 const id = request_id;
                 return this._spaces.available(query).then((list) => tslib_1.__awaiter(this, void 0, void 0, function* () { return ({ id, list }); }));
             }), operators_1.catchError((_) => rxjs_1.of({ id: request_id, list: [] })), operators_1.map((resp) => {
+                var _a;
                 this.loading = false;
                 const list = resp.id === request_id ? resp.list : this.space_list;
                 const recurrence = this.form.controls.recurrence
                     ? this.form.controls.recurrence.value
                     : null;
                 const date = dayjs(this.form.controls.date.value);
-                return recurrence && recurrence.period && recurrence.period !== 'None'
+                return ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) !== 'None'
                     ? list.filter((space) => space.recurr_available.find((block) => block.available && dayjs(block.date * 1000).isSame(date, 'd')))
                     : list;
             }));
@@ -16492,7 +16648,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                     }
                     return !this.zone_ids.length;
                 });
-                this.space_list.sort((a, b) => this.sort(a, b));
+                this.space_list.sort((a, b) => space_utilities_1.sort(a, b, this._org.buildings));
             }));
             this.change$.next('');
         });
@@ -16540,37 +16696,10 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
     previous() {
         this.event.emit({ type: 'previous', step: 'search' });
     }
-    /**
-     * Compare two spaces to determine order
-     * @param space_a
-     * @param space_b
-     */
-    sort(space_a, space_b) {
-        const bld = this._org.buildings.find((bld) => bld.id === space_a.level.building_id);
-        const bld_b = this._org.buildings.find((bld) => bld.id === space_b.level.building_id);
-        if (bld && bld !== bld_b) {
-            return (bld.name || '').localeCompare(bld_b.name || '');
-        }
-        const sort_order = (bld.sort_order ? [...bld.sort_order] : []).reverse();
-        for (const zone_id of sort_order) {
-            if (zone_id === '*') {
-                continue;
-            }
-            const a_has_zone = space_a.zones.indexOf(zone_id) >= 0;
-            const b_has_zone = space_b.zones.indexOf(zone_id) >= 0;
-            if (a_has_zone && !b_has_zone) {
-                return 1;
-            }
-            else if (b_has_zone && !a_has_zone) {
-                return -1;
-            }
-        }
-        return (space_a.name || '').localeCompare(space_b.name || '');
-    }
 }
 exports.BookingFindSpaceComponent = BookingFindSpaceComponent;
 BookingFindSpaceComponent.ɵfac = function BookingFindSpaceComponent_Factory(t) { return new (t || BookingFindSpaceComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.OrganisationService)); };
-BookingFindSpaceComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFindSpaceComponent, selectors: [["booking-find-space"]], inputs: { spaces: "spaces", form: "form" }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 14, vars: 5, consts: [[1, "find-space"], [1, "background"], [1, "header"], [3, "date", "locations", "locationsChange"], [4, "ngIf", "ngIfElse"], [1, "footer"], [1, "box"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], [3, "itemSize", 4, "ngIf", "ngIfElse"], [3, "itemSize"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [3, "form", "space", "multi", "select"], ["mat-button", "", "name", "next", 3, "disabled", "click"], [1, "body"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"], [1, "text"], [3, "icon"]], template: function BookingFindSpaceComponent_Template(rf, ctx) { if (rf & 1) {
+BookingFindSpaceComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFindSpaceComponent, selectors: [["booking-find-space"]], inputs: { spaces: "spaces", form: "form" }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 14, vars: 5, consts: [[1, "find-space"], [1, "background"], [1, "header"], [3, "date", "locations", "locationsChange"], [4, "ngIf", "ngIfElse"], [1, "footer"], [1, "box"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], ["minBufferPx", "900", "maxBufferPx", "1200", 3, "itemSize", 4, "ngIf", "ngIfElse"], ["minBufferPx", "900", "maxBufferPx", "1200", 3, "itemSize"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [3, "form", "space", "multi", "select"], ["mat-button", "", "name", "next", 3, "disabled", "click"], [1, "body"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"], [1, "text"], [3, "icon"]], template: function BookingFindSpaceComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "div", 1);
         i0.ɵɵelementStart(2, "div", 2);
@@ -16852,7 +16981,7 @@ BookingSpaceItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingSpaceIte
         i0.ɵɵtemplate(0, BookingSpaceItemComponent_div_0_Template, 18, 14, "div", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.space && !ctx.is_hidden);
-    } }, directives: [i5.NgIf, i6.IconComponent, i7.MatButton], styles: [".space-details[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  width: 720px;\n  max-width: calc(100vw - 1em);\n  background-color: #fff;\n  flex-wrap: wrap;\n  border-radius: 0;\n  overflow: hidden;\n  transition: box-shadow 200ms, top 200ms;\n  top: 0;\n  margin: 0.5em auto;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n.space-details[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  top: -2px;\n}\n.space-details[_ngcontent-%COMP%]   .overlay[_ngcontent-%COMP%] {\n  display: none;\n}\n.with-image[_ngcontent-%COMP%] {\n  padding-top: 0;\n  width: 480px;\n}\n.with-image[_ngcontent-%COMP%]   .overlay[_ngcontent-%COMP%] {\n  display: initial;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.65);\n  color: #fff;\n  transition: opacity 200ms;\n}\n.with-image[_ngcontent-%COMP%]   .image[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden;\n  background-position: center;\n  background-size: cover;\n}\n.with-image[_ngcontent-%COMP%]:hover   .details[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%], .with-image[_ngcontent-%COMP%]:hover   .details[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%], .with-image[_ngcontent-%COMP%]:hover   .details[_ngcontent-%COMP%]   .capacity[_ngcontent-%COMP%] {\n  -webkit-filter: drop-shadow(0px 0px 2px black);\n          filter: drop-shadow(0px 0px 2px black);\n  color: #fff;\n}\n.with-image[_ngcontent-%COMP%]:hover   .details[_ngcontent-%COMP%]   .overlay[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n.with-image[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%] {\n  position: relative;\n  height: 6em;\n  width: 24em;\n  margin: 0 auto 0 0;\n  max-width: 24em;\n  overflow: hidden;\n  height: 12em;\n}\n.with-image[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%], .with-image[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%], .with-image[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%]   .capacity[_ngcontent-%COMP%] {\n  transition: -webkit-filter 200ms;\n  transition: filter 200ms;\n  transition: filter 200ms, -webkit-filter 200ms;\n}\n.with-image[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 2em;\n  color: #fff;\n}\n.with-image[_ngcontent-%COMP%]   .info[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 1em;\n  color: rgba(255, 255, 255, 0.65);\n  width: calc(100% - 2em);\n}\n.details[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n  padding: 0.5em 1em;\n  padding: 1em;\n  min-width: 99%;\n}\n.info[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  color: rgba(0, 0, 0, 0.65);\n}\n.name[_ngcontent-%COMP%] {\n  font-size: 1.2em;\n}\n.location[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  flex: 1;\n  min-width: 50%;\n}\n.capacity[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.recurr[_ngcontent-%COMP%] {\n  color: #1937ea;\n  font-size: 0.8em;\n}\n.recurr[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  text-decoration: underline;\n}\n.actions[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: row;\n  flex: 1;\n}\nbutton[_ngcontent-%COMP%] {\n  min-width: 10em;\n  flex: 1;\n  margin: 0;\n  border-radius: 0;\n}\nbutton.request[_ngcontent-%COMP%] {\n  color: #fff;\n  background-color: #ffb300;\n  border-color: #ffb300;\n}\nbutton.request.inverse[_ngcontent-%COMP%] {\n  color: #ffb300;\n  background-color: #fff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy92YXJpYWJsZXMuc2NzcyIsIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9maW5kLXNwYWNlL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyIsIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy9taXhpbnMuc2NzcyIsInNyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9maW5kLXNwYWNlL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFpQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSx1Q0FBQTtFQUNBLE1BQUE7RUFDQSxrQkFBQTtFQ1JBLGlIQUFBO0FDZUo7QUZKSTtFQ1hBLGlIQUFBO0VEYUksU0FBQTtBRU1SO0FGSEk7RUFDSSxhQUFBO0FFS1I7QUZEQTtFQUNJLGNBQUE7RUFDQSxZQUFBO0FFSUo7QUZGSTtFQUNJLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSxNQUFBO0VBQ0EsT0FBQTtFQUNBLFFBQUE7RUFDQSxTQUFBO0VBQ0EscUNBQUE7RUFDQSxXRG5DSztFQ29DTCx5QkFBQTtBRUlSO0FGREk7RUFDSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxnQkFBQTtFQUNBLDJCQUFBO0VBQ0Esc0JBQUE7QUVHUjtBRkVZOzs7RUFHSSw4Q0FBQTtVQUFBLHNDQUFBO0VBQ0EsV0FBQTtBRUFoQjtBRkVZO0VBQ0ksVUFBQTtBRUFoQjtBRktJO0VBQ0ksa0JBQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBT0ksWUFBQTtBRVRaO0FGR1E7OztFQUdJLGdDQUFBO0VBQUEsd0JBQUE7RUFBQSw4Q0FBQTtBRURaO0FGUUk7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxXRHBGSztBRzhFYjtBRlNJO0VBQ0ksa0JBQUE7RUFDQSxXQUFBO0VBQ0EsZ0NBQUE7RUFDQSx1QkFBQTtBRVBSO0FGV0E7RUFDSSxPQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBRUksWUFBQTtFQUNBLGNBQUE7QUVUUjtBRmFBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsMEJBQUE7QUVWSjtBRmFBO0VBQ0ksZ0JBQUE7QUVWSjtBRmFBO0VBQ0ksZ0JBQUE7RUFDQSxPQUFBO0VBQ0EsY0FBQTtBRVZKO0FGYUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7QUVWSjtBRmFBO0VBQ0ksY0RqSFk7RUNrSFosZ0JBQUE7QUVWSjtBRldJO0VBQ0ksMEJBQUE7QUVUUjtBRmFBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLE9BQUE7QUVWSjtBRmFBO0VBQ0ksZUFBQTtFQUNBLE9BQUE7RUFDQSxTQUFBO0VBQ0EsZ0JBQUE7QUVWSjtBRllJO0VBQ0ksV0FBQTtFQUNBLHlCRGhKRTtFQ2lKRixxQkRqSkU7QUd1SVY7QUZZUTtFQUNJLGNEcEpGO0VDcUpFLHNCQUFBO0FFVloiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9ib29raW5ncy9zcGFjZS1mbG93L2ZpbmQtc3BhY2UvaXRlbS9pdGVtLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cblxuJGZvbnQtZGFyazogIzAwMDtcbiRmb250LWxpZ2h0OiAjZmZmO1xuXG4kc3VjY2VzczogIzQzYTA0NztcbiRzdWNjZXNzLWxpZ2h0OiBsaWdodGVuKCRzdWNjZXNzLCAxMCk7XG4kc3VjY2Vzcy1kYXJrOiBkYXJrZW4oJHN1Y2Nlc3MsIDEwKTtcblxuJHBlbmRpbmc6ICNmZmIzMDA7XG4kcGVuZGluZy1saWdodDogbGlnaHRlbigkcGVuZGluZywgMTApO1xuJHBlbmRpbmctZGFyazogZGFya2VuKCRwZW5kaW5nLCAxMCk7XG5cbiRlcnJvcjogI2U1MzkzNTtcbiRlcnJvci1saWdodDogbGlnaHRlbigkZXJyb3IsIDEwKTtcbiRlcnJvci1kYXJrOiBkYXJrZW4oJGVycm9yLCAxMCk7XG5cbiRjb2xvci1wcmltYXJ5OiAjMTkzN2VhO1xuJGNvbG9yLXByaW1hcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcbiRjb2xvci1wcmltYXJ5LWRhcms6IGRhcmtlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuXG4kY29sb3Itc2Vjb25kYXJ5OiAjNDI4NUY0O1xuJGNvbG9yLXNlY29uZGFyeS1saWdodDogbGlnaHRlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG4kY29sb3Itc2Vjb25kYXJ5LWRhcms6IGRhcmtlbigkY29sb3Itc2Vjb25kYXJ5LCAxMCk7XG5cbiRiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuJGZvb3Rlci1iYWNrOiAjMjYzMjM4O1xuJGhlYWRlci1iYWNrOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwNTFDMkMsICMwNTFDMkMgNDAlLCAjMEIyNDUzIDYwJSwgIzFGNDBFNiAxMDAlKTtcblxuJGNvbG9yLXRlcm5hcnk6ICMwNTFjMmM7XG5cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuXG4kZm9udC1zdGFjazogXCJUaGVpbmhhcmR0XCIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgQXJpYWwsIHNhbnMtc2VyaWY7XG5cbiRoZWFkaW5nLWZvbnQ6IFwiTGFyaXNoTWNLaW5zZXlcIiwgJ0dlb3JnaWEnLCBzZXJpZjtcbiRmb250OiAkZm9udC1zdGFjaztcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICdtaXhpbnMnO1xuXG4uc3BhY2UtZGV0YWlscyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB3aWR0aDogNzIwcHg7XG4gICAgbWF4LXdpZHRoOiBjYWxjKDEwMHZ3IC0gMWVtKTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdHJhbnNpdGlvbjogYm94LXNoYWRvdyAyMDBtcywgdG9wIDIwMG1zO1xuICAgIHRvcDogMDtcbiAgICBtYXJnaW46IDAuNWVtIGF1dG87XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcblxuICAgICY6aG92ZXIge1xuICAgICAgICBAaW5jbHVkZSBib3gtc2hhZG93KCMwMDAsIDMpO1xuICAgICAgICB0b3A6IC0ycHg7XG4gICAgfVxuXG4gICAgLm92ZXJsYXkge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH1cbn1cblxuLndpdGgtaW1hZ2Uge1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICAgIHdpZHRoOiA0ODBweDtcblxuICAgIC5vdmVybGF5IHtcbiAgICAgICAgZGlzcGxheTogaW5pdGlhbDtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDA7XG4gICAgICAgIGxlZnQ6IDA7XG4gICAgICAgIHJpZ2h0OiAwO1xuICAgICAgICBib3R0b206IDA7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGZvbnQtZGFyaywgLjY1KTtcbiAgICAgICAgY29sb3I6ICRmb250LWxpZ2h0O1xuICAgICAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zO1xuICAgIH1cblxuICAgIC5pbWFnZSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICByaWdodDogMDtcbiAgICAgICAgYm90dG9tOiAwO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgfVxuXG4gICAgJjpob3ZlciB7XG4gICAgICAgIC5kZXRhaWxzIHtcbiAgICAgICAgICAgIC5uYW1lLFxuICAgICAgICAgICAgLmxvY2F0aW9uLFxuICAgICAgICAgICAgLmNhcGFjaXR5IHtcbiAgICAgICAgICAgICAgICBmaWx0ZXI6IGRyb3Atc2hhZG93KDBweCAwcHggMnB4IGJsYWNrKTtcbiAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5vdmVybGF5IHtcbiAgICAgICAgICAgICAgICBvcGFjaXR5OiAwO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxuXG4gICAgLmRldGFpbHMge1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIGhlaWdodDogNmVtO1xuICAgICAgICB3aWR0aDogMjRlbTtcbiAgICAgICAgbWFyZ2luOiAwIGF1dG8gMCAwO1xuICAgICAgICBtYXgtd2lkdGg6IDI0ZW07XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIC5uYW1lLFxuICAgICAgICAubG9jYXRpb24sXG4gICAgICAgIC5jYXBhY2l0eSB7XG4gICAgICAgICAgICB0cmFuc2l0aW9uOiBmaWx0ZXIgMjAwbXM7XG4gICAgICAgIH1cbiAgICAgICAgLy8gQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgICAgIGhlaWdodDogMTJlbTtcbiAgICAgICAgLy8gfVxuICAgIH1cblxuICAgIC5uYW1lIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICBib3R0b206IDJlbTtcbiAgICAgICAgY29sb3I6ICRmb250LWxpZ2h0O1xuICAgIH1cblxuICAgIC5pbmZvIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICBib3R0b206IDFlbTtcbiAgICAgICAgY29sb3I6IHJnYmEoJGZvbnQtbGlnaHQsIC42NSk7XG4gICAgICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyZW0pO1xuICAgIH1cbn1cblxuLmRldGFpbHMge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG4gICAgcGFkZGluZzogLjVlbSAxZW07XG4gICAgLy8gQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgcGFkZGluZzogMWVtO1xuICAgICAgICBtaW4td2lkdGg6IDk5JTtcbiAgICAvLyB9XG59XG5cbi5pbmZvIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgY29sb3I6IHJnYmEoJGZvbnQtZGFyaywgLjY1KTtcbn1cblxuLm5hbWUge1xuICAgIGZvbnQtc2l6ZTogMS4yZW07XG59XG5cbi5sb2NhdGlvbiB7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG59XG5cbi5jYXBhY2l0eSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucmVjdXJyIHtcbiAgICBjb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIHNwYW4ge1xuICAgICAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgICB9XG59XG5cbi5hY3Rpb25zIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgICBmbGV4OiAxO1xufVxuXG5idXR0b24ge1xuICAgIG1pbi13aWR0aDogMTBlbTtcbiAgICBmbGV4OiAxO1xuICAgIG1hcmdpbjogMDtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuXG4gICAgJi5yZXF1ZXN0IHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICRwZW5kaW5nO1xuICAgICAgICBib3JkZXItY29sb3I6ICRwZW5kaW5nO1xuXG4gICAgICAgICYuaW52ZXJzZSB7XG4gICAgICAgICAgICBjb2xvcjogJHBlbmRpbmc7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLnNwYWNlLWRldGFpbHMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiA3MjBweDtcbiAgbWF4LXdpZHRoOiBjYWxjKDEwMHZ3IC0gMWVtKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBib3JkZXItcmFkaXVzOiAwO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICB0cmFuc2l0aW9uOiBib3gtc2hhZG93IDIwMG1zLCB0b3AgMjAwbXM7XG4gIHRvcDogMDtcbiAgbWFyZ2luOiAwLjVlbSBhdXRvO1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMHB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbn1cbi5zcGFjZS1kZXRhaWxzOmhvdmVyIHtcbiAgYm94LXNoYWRvdzogMCAxcHggM3B4IDJweCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMnB4IDFweCAtMXB4IHJnYmEoMCwgMCwgMCwgMC4xMik7XG4gIHRvcDogLTJweDtcbn1cbi5zcGFjZS1kZXRhaWxzIC5vdmVybGF5IHtcbiAgZGlzcGxheTogbm9uZTtcbn1cblxuLndpdGgtaW1hZ2Uge1xuICBwYWRkaW5nLXRvcDogMDtcbiAgd2lkdGg6IDQ4MHB4O1xufVxuLndpdGgtaW1hZ2UgLm92ZXJsYXkge1xuICBkaXNwbGF5OiBpbml0aWFsO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjY1KTtcbiAgY29sb3I6ICNmZmY7XG4gIHRyYW5zaXRpb246IG9wYWNpdHkgMjAwbXM7XG59XG4ud2l0aC1pbWFnZSAuaW1hZ2Uge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuLndpdGgtaW1hZ2U6aG92ZXIgLmRldGFpbHMgLm5hbWUsXG4ud2l0aC1pbWFnZTpob3ZlciAuZGV0YWlscyAubG9jYXRpb24sXG4ud2l0aC1pbWFnZTpob3ZlciAuZGV0YWlscyAuY2FwYWNpdHkge1xuICBmaWx0ZXI6IGRyb3Atc2hhZG93KDBweCAwcHggMnB4IGJsYWNrKTtcbiAgY29sb3I6ICNmZmY7XG59XG4ud2l0aC1pbWFnZTpob3ZlciAuZGV0YWlscyAub3ZlcmxheSB7XG4gIG9wYWNpdHk6IDA7XG59XG4ud2l0aC1pbWFnZSAuZGV0YWlscyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiA2ZW07XG4gIHdpZHRoOiAyNGVtO1xuICBtYXJnaW46IDAgYXV0byAwIDA7XG4gIG1heC13aWR0aDogMjRlbTtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgaGVpZ2h0OiAxMmVtO1xufVxuLndpdGgtaW1hZ2UgLmRldGFpbHMgLm5hbWUsXG4ud2l0aC1pbWFnZSAuZGV0YWlscyAubG9jYXRpb24sXG4ud2l0aC1pbWFnZSAuZGV0YWlscyAuY2FwYWNpdHkge1xuICB0cmFuc2l0aW9uOiBmaWx0ZXIgMjAwbXM7XG59XG4ud2l0aC1pbWFnZSAubmFtZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAyZW07XG4gIGNvbG9yOiAjZmZmO1xufVxuLndpdGgtaW1hZ2UgLmluZm8ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTogMWVtO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjY1KTtcbiAgd2lkdGg6IGNhbGMoMTAwJSAtIDJlbSk7XG59XG5cbi5kZXRhaWxzIHtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiA1MCU7XG4gIHBhZGRpbmc6IDAuNWVtIDFlbTtcbiAgcGFkZGluZzogMWVtO1xuICBtaW4td2lkdGg6IDk5JTtcbn1cblxuLmluZm8ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjY1KTtcbn1cblxuLm5hbWUge1xuICBmb250LXNpemU6IDEuMmVtO1xufVxuXG4ubG9jYXRpb24ge1xuICBmb250LXNpemU6IDAuOGVtO1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDUwJTtcbn1cblxuLmNhcGFjaXR5IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLnJlY3VyciB7XG4gIGNvbG9yOiAjMTkzN2VhO1xuICBmb250LXNpemU6IDAuOGVtO1xufVxuLnJlY3VyciBzcGFuIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5cbi5hY3Rpb25zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGZsZXg6IDE7XG59XG5cbmJ1dHRvbiB7XG4gIG1pbi13aWR0aDogMTBlbTtcbiAgZmxleDogMTtcbiAgbWFyZ2luOiAwO1xuICBib3JkZXItcmFkaXVzOiAwO1xufVxuYnV0dG9uLnJlcXVlc3Qge1xuICBjb2xvcjogI2ZmZjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmYjMwMDtcbiAgYm9yZGVyLWNvbG9yOiAjZmZiMzAwO1xufVxuYnV0dG9uLnJlcXVlc3QuaW52ZXJzZSB7XG4gIGNvbG9yOiAjZmZiMzAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xufSJdfQ== */"] });
+    } }, directives: [i5.NgIf, i6.IconComponent, i7.MatButton], styles: [".space-details[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  width: 720px;\n  height: 130px;\n  max-width: calc(100vw - 1em);\n  background-color: #fff;\n  flex-wrap: wrap;\n  border-radius: 0;\n  overflow: hidden;\n  transition: box-shadow 200ms, top 200ms;\n  top: 0;\n  margin: 10px auto;\n  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n}\n.space-details[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);\n  top: -2px;\n}\n.space-details[_ngcontent-%COMP%]   .overlay[_ngcontent-%COMP%] {\n  display: none;\n}\n.with-image[_ngcontent-%COMP%] {\n  padding-top: 0;\n  width: 480px;\n}\n.with-image[_ngcontent-%COMP%]   .overlay[_ngcontent-%COMP%] {\n  display: initial;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.65);\n  color: #fff;\n  transition: opacity 200ms;\n}\n.with-image[_ngcontent-%COMP%]   .image[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden;\n  background-position: center;\n  background-size: cover;\n}\n.with-image[_ngcontent-%COMP%]:hover   .details[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%], .with-image[_ngcontent-%COMP%]:hover   .details[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%], .with-image[_ngcontent-%COMP%]:hover   .details[_ngcontent-%COMP%]   .capacity[_ngcontent-%COMP%] {\n  -webkit-filter: drop-shadow(0px 0px 2px black);\n          filter: drop-shadow(0px 0px 2px black);\n  color: #fff;\n}\n.with-image[_ngcontent-%COMP%]:hover   .details[_ngcontent-%COMP%]   .overlay[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n.with-image[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%] {\n  position: relative;\n  height: 6em;\n  width: 24em;\n  margin: 0 auto 0 0;\n  max-width: 24em;\n  overflow: hidden;\n  height: 12em;\n}\n.with-image[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%], .with-image[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%]   .location[_ngcontent-%COMP%], .with-image[_ngcontent-%COMP%]   .details[_ngcontent-%COMP%]   .capacity[_ngcontent-%COMP%] {\n  transition: -webkit-filter 200ms;\n  transition: filter 200ms;\n  transition: filter 200ms, -webkit-filter 200ms;\n}\n.with-image[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 2em;\n  color: #fff;\n}\n.with-image[_ngcontent-%COMP%]   .info[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 1em;\n  color: rgba(255, 255, 255, 0.65);\n  width: calc(100% - 2em);\n}\n.details[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n  padding: 0.5em 1em;\n  padding: 1em;\n  min-width: 99%;\n}\n.info[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  color: rgba(0, 0, 0, 0.65);\n}\n.name[_ngcontent-%COMP%] {\n  font-size: 1.2em;\n}\n.location[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  flex: 1;\n  min-width: 50%;\n}\n.capacity[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.recurr[_ngcontent-%COMP%] {\n  color: #1937ea;\n  font-size: 0.8em;\n}\n.recurr[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  text-decoration: underline;\n}\n.actions[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: row;\n  flex: 1;\n}\nbutton[_ngcontent-%COMP%] {\n  min-width: 10em;\n  flex: 1;\n  margin: 0;\n  border-radius: 0;\n}\nbutton.request[_ngcontent-%COMP%] {\n  color: #fff;\n  background-color: #ffb300;\n  border-color: #ffb300;\n}\nbutton.request.inverse[_ngcontent-%COMP%] {\n  color: #ffb300;\n  background-color: #fff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy92YXJpYWJsZXMuc2NzcyIsIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9maW5kLXNwYWNlL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyIsIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy9taXhpbnMuc2NzcyIsInNyYy9hcHAvc2hlbGwvYm9va2luZ3Mvc3BhY2UtZmxvdy9maW5kLXNwYWNlL2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFpQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUMzQ0E7RUFDSSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsNEJBQUE7RUFDQSxzQkFBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsdUNBQUE7RUFDQSxNQUFBO0VBQ0EsaUJBQUE7RUNUQSxpSEFBQTtBQ2dCSjtBRkpJO0VDWkEsaUhBQUE7RURjSSxTQUFBO0FFTVI7QUZISTtFQUNJLGFBQUE7QUVLUjtBRkRBO0VBQ0ksY0FBQTtFQUNBLFlBQUE7QUVJSjtBRkZJO0VBQ0ksZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxxQ0FBQTtFQUNBLFdEcENLO0VDcUNMLHlCQUFBO0FFSVI7QUZESTtFQUNJLGtCQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUNBLGdCQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtBRUdSO0FGRVk7OztFQUdJLDhDQUFBO1VBQUEsc0NBQUE7RUFDQSxXQUFBO0FFQWhCO0FGRVk7RUFDSSxVQUFBO0FFQWhCO0FGS0k7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFPSSxZQUFBO0FFVFo7QUZHUTs7O0VBR0ksZ0NBQUE7RUFBQSx3QkFBQTtFQUFBLDhDQUFBO0FFRFo7QUZRSTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFdEckZLO0FHK0ViO0FGU0k7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxnQ0FBQTtFQUNBLHVCQUFBO0FFUFI7QUZXQTtFQUNJLE9BQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFFSSxZQUFBO0VBQ0EsY0FBQTtBRVRSO0FGYUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSwwQkFBQTtBRVZKO0FGYUE7RUFDSSxnQkFBQTtBRVZKO0FGYUE7RUFDSSxnQkFBQTtFQUNBLE9BQUE7RUFDQSxjQUFBO0FFVko7QUZhQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtBRVZKO0FGYUE7RUFDSSxjRGxIWTtFQ21IWixnQkFBQTtBRVZKO0FGV0k7RUFDSSwwQkFBQTtBRVRSO0FGYUE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsT0FBQTtBRVZKO0FGYUE7RUFDSSxlQUFBO0VBQ0EsT0FBQTtFQUNBLFNBQUE7RUFDQSxnQkFBQTtBRVZKO0FGWUk7RUFDSSxXQUFBO0VBQ0EseUJEakpFO0VDa0pGLHFCRGxKRTtBR3dJVjtBRllRO0VBQ0ksY0RySkY7RUNzSkUsc0JBQUE7QUVWWiIsImZpbGUiOiJzcmMvYXBwL3NoZWxsL2Jvb2tpbmdzL3NwYWNlLWZsb3cvZmluZC1zcGFjZS9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG4kaGVhZGVyLWJhY2s6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgIzA1MUMyQywgIzA1MUMyQyA0MCUsICMwQjI0NTMgNjAlLCAjMUY0MEU2IDEwMCUpO1xuXG4kY29sb3ItdGVybmFyeTogIzA1MWMyYztcblxuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG5cbiRmb250LXN0YWNrOiBcIlRoZWluaGFyZHRcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgc2Fucy1zZXJpZjtcblxuJGhlYWRpbmctZm9udDogXCJMYXJpc2hNY0tpbnNleVwiLCAnR2VvcmdpYScsIHNlcmlmO1xuJGZvbnQ6ICRmb250LXN0YWNrO1xuXG4kYmFzZS1zaXplOiAxNnB4O1xuJHRhYmxldC1zaXplOiAxNnB4O1xuJG1vYmlsZS1zaXplOiAxNnB4O1xuXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cblxuJGJyZWFrLW1vYmlsZTogNDUwcHg7XG4kYnJlYWstdGFibGV0OiA4MDBweDtcbiRicmVhay1sYXB0b3A6IDEwMjRweDtcblxuJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGU6IDgwMHB4O1xuJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQ6IDEwNDhweDtcbiRicmVhay1sYW5kc2NhcGUtbGFwdG9wOiAxMjgwcHg7XG5cbkBtaXhpbiByZXNwb25kLXRvKCRtZWRpYSkge1xuICAgIEBpZiAkbWVkaWEgPT0gbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbW9iaWxlLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBub3QtbW9iaWxlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYXB0b3AtcG9ydHJhaXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSAgQGVsc2UgaWYgJG1lZGlhID09IGxhdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gdGFibGV0LXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgKCRtZWRpYSA9PSB0YWJsZXQtbW9iaWxlIG9yICRtZWRpYSA9PSBub3QtZGVza3RvcCkge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLWxhbmRzY2FwZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBkZXNrdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBsYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH1cbn1cbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcbkBpbXBvcnQgJ21peGlucyc7XG5cbi5zcGFjZS1kZXRhaWxzIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHdpZHRoOiA3MjBweDtcbiAgICBoZWlnaHQ6IDEzMHB4O1xuICAgIG1heC13aWR0aDogY2FsYygxMDB2dyAtIDFlbSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG4gICAgYm9yZGVyLXJhZGl1czogMDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHRyYW5zaXRpb246IGJveC1zaGFkb3cgMjAwbXMsIHRvcCAyMDBtcztcbiAgICB0b3A6IDA7XG4gICAgbWFyZ2luOiAxMHB4IGF1dG87XG4gICAgQGluY2x1ZGUgYm94LXNoYWRvdztcblxuICAgICY6aG92ZXIge1xuICAgICAgICBAaW5jbHVkZSBib3gtc2hhZG93KCMwMDAsIDMpO1xuICAgICAgICB0b3A6IC0ycHg7XG4gICAgfVxuXG4gICAgLm92ZXJsYXkge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH1cbn1cblxuLndpdGgtaW1hZ2Uge1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICAgIHdpZHRoOiA0ODBweDtcblxuICAgIC5vdmVybGF5IHtcbiAgICAgICAgZGlzcGxheTogaW5pdGlhbDtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDA7XG4gICAgICAgIGxlZnQ6IDA7XG4gICAgICAgIHJpZ2h0OiAwO1xuICAgICAgICBib3R0b206IDA7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGZvbnQtZGFyaywgLjY1KTtcbiAgICAgICAgY29sb3I6ICRmb250LWxpZ2h0O1xuICAgICAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDIwMG1zO1xuICAgIH1cblxuICAgIC5pbWFnZSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICByaWdodDogMDtcbiAgICAgICAgYm90dG9tOiAwO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgfVxuXG4gICAgJjpob3ZlciB7XG4gICAgICAgIC5kZXRhaWxzIHtcbiAgICAgICAgICAgIC5uYW1lLFxuICAgICAgICAgICAgLmxvY2F0aW9uLFxuICAgICAgICAgICAgLmNhcGFjaXR5IHtcbiAgICAgICAgICAgICAgICBmaWx0ZXI6IGRyb3Atc2hhZG93KDBweCAwcHggMnB4IGJsYWNrKTtcbiAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5vdmVybGF5IHtcbiAgICAgICAgICAgICAgICBvcGFjaXR5OiAwO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxuXG4gICAgLmRldGFpbHMge1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIGhlaWdodDogNmVtO1xuICAgICAgICB3aWR0aDogMjRlbTtcbiAgICAgICAgbWFyZ2luOiAwIGF1dG8gMCAwO1xuICAgICAgICBtYXgtd2lkdGg6IDI0ZW07XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIC5uYW1lLFxuICAgICAgICAubG9jYXRpb24sXG4gICAgICAgIC5jYXBhY2l0eSB7XG4gICAgICAgICAgICB0cmFuc2l0aW9uOiBmaWx0ZXIgMjAwbXM7XG4gICAgICAgIH1cbiAgICAgICAgLy8gQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgICAgIGhlaWdodDogMTJlbTtcbiAgICAgICAgLy8gfVxuICAgIH1cblxuICAgIC5uYW1lIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICBib3R0b206IDJlbTtcbiAgICAgICAgY29sb3I6ICRmb250LWxpZ2h0O1xuICAgIH1cblxuICAgIC5pbmZvIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICBib3R0b206IDFlbTtcbiAgICAgICAgY29sb3I6IHJnYmEoJGZvbnQtbGlnaHQsIC42NSk7XG4gICAgICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyZW0pO1xuICAgIH1cbn1cblxuLmRldGFpbHMge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG4gICAgcGFkZGluZzogLjVlbSAxZW07XG4gICAgLy8gQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgcGFkZGluZzogMWVtO1xuICAgICAgICBtaW4td2lkdGg6IDk5JTtcbiAgICAvLyB9XG59XG5cbi5pbmZvIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgY29sb3I6IHJnYmEoJGZvbnQtZGFyaywgLjY1KTtcbn1cblxuLm5hbWUge1xuICAgIGZvbnQtc2l6ZTogMS4yZW07XG59XG5cbi5sb2NhdGlvbiB7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG59XG5cbi5jYXBhY2l0eSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucmVjdXJyIHtcbiAgICBjb2xvcjogJGNvbG9yLXByaW1hcnk7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIHNwYW4ge1xuICAgICAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgICB9XG59XG5cbi5hY3Rpb25zIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgICBmbGV4OiAxO1xufVxuXG5idXR0b24ge1xuICAgIG1pbi13aWR0aDogMTBlbTtcbiAgICBmbGV4OiAxO1xuICAgIG1hcmdpbjogMDtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuXG4gICAgJi5yZXF1ZXN0IHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICRwZW5kaW5nO1xuICAgICAgICBib3JkZXItY29sb3I6ICRwZW5kaW5nO1xuXG4gICAgICAgICYuaW52ZXJzZSB7XG4gICAgICAgICAgICBjb2xvcjogJHBlbmRpbmc7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgICAgICB9XG4gICAgfVxufVxuIiwiXG5AbWl4aW4gaGlkZS10ZXh0LW92ZXJmbG93IHtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG59XG5cbkBtaXhpbiBib3gtc2hhZG93KCRjb2xvcjogIzAwMCwgJGRlcHRoOiAxKSB7XG4gICAgYm94LXNoYWRvdzogMCAxcHggM3B4IDFweCAqICgkZGVwdGggLSAxKSByZ2JhKCMwMDAsIC4yKSxcbiAgICAgICAgICAgICAgICAwIDFweCAxcHggMCByZ2JhKCMwMDAsIC4xNCksXG4gICAgICAgICAgICAgICAgMCAycHggMXB4IC0xcHggcmdiYSgjMDAwLCAuMTIpO1xufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLnNwYWNlLWRldGFpbHMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiA3MjBweDtcbiAgaGVpZ2h0OiAxMzBweDtcbiAgbWF4LXdpZHRoOiBjYWxjKDEwMHZ3IC0gMWVtKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBib3JkZXItcmFkaXVzOiAwO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICB0cmFuc2l0aW9uOiBib3gtc2hhZG93IDIwMG1zLCB0b3AgMjAwbXM7XG4gIHRvcDogMDtcbiAgbWFyZ2luOiAxMHB4IGF1dG87XG4gIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDJweCAxcHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xufVxuLnNwYWNlLWRldGFpbHM6aG92ZXIge1xuICBib3gtc2hhZG93OiAwIDFweCAzcHggMnB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggMXB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAycHggMXB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcbiAgdG9wOiAtMnB4O1xufVxuLnNwYWNlLWRldGFpbHMgLm92ZXJsYXkge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4ud2l0aC1pbWFnZSB7XG4gIHBhZGRpbmctdG9wOiAwO1xuICB3aWR0aDogNDgwcHg7XG59XG4ud2l0aC1pbWFnZSAub3ZlcmxheSB7XG4gIGRpc3BsYXk6IGluaXRpYWw7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgYm90dG9tOiAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNjUpO1xuICBjb2xvcjogI2ZmZjtcbiAgdHJhbnNpdGlvbjogb3BhY2l0eSAyMDBtcztcbn1cbi53aXRoLWltYWdlIC5pbWFnZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgYm90dG9tOiAwO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG4ud2l0aC1pbWFnZTpob3ZlciAuZGV0YWlscyAubmFtZSxcbi53aXRoLWltYWdlOmhvdmVyIC5kZXRhaWxzIC5sb2NhdGlvbixcbi53aXRoLWltYWdlOmhvdmVyIC5kZXRhaWxzIC5jYXBhY2l0eSB7XG4gIGZpbHRlcjogZHJvcC1zaGFkb3coMHB4IDBweCAycHggYmxhY2spO1xuICBjb2xvcjogI2ZmZjtcbn1cbi53aXRoLWltYWdlOmhvdmVyIC5kZXRhaWxzIC5vdmVybGF5IHtcbiAgb3BhY2l0eTogMDtcbn1cbi53aXRoLWltYWdlIC5kZXRhaWxzIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDZlbTtcbiAgd2lkdGg6IDI0ZW07XG4gIG1hcmdpbjogMCBhdXRvIDAgMDtcbiAgbWF4LXdpZHRoOiAyNGVtO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBoZWlnaHQ6IDEyZW07XG59XG4ud2l0aC1pbWFnZSAuZGV0YWlscyAubmFtZSxcbi53aXRoLWltYWdlIC5kZXRhaWxzIC5sb2NhdGlvbixcbi53aXRoLWltYWdlIC5kZXRhaWxzIC5jYXBhY2l0eSB7XG4gIHRyYW5zaXRpb246IGZpbHRlciAyMDBtcztcbn1cbi53aXRoLWltYWdlIC5uYW1lIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDJlbTtcbiAgY29sb3I6ICNmZmY7XG59XG4ud2l0aC1pbWFnZSAuaW5mbyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAxZW07XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNjUpO1xuICB3aWR0aDogY2FsYygxMDAlIC0gMmVtKTtcbn1cblxuLmRldGFpbHMge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDUwJTtcbiAgcGFkZGluZzogMC41ZW0gMWVtO1xuICBwYWRkaW5nOiAxZW07XG4gIG1pbi13aWR0aDogOTklO1xufVxuXG4uaW5mbyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNjUpO1xufVxuXG4ubmFtZSB7XG4gIGZvbnQtc2l6ZTogMS4yZW07XG59XG5cbi5sb2NhdGlvbiB7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNTAlO1xufVxuXG4uY2FwYWNpdHkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucmVjdXJyIHtcbiAgY29sb3I6ICMxOTM3ZWE7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG59XG4ucmVjdXJyIHNwYW4ge1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cblxuLmFjdGlvbnMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgZmxleDogMTtcbn1cblxuYnV0dG9uIHtcbiAgbWluLXdpZHRoOiAxMGVtO1xuICBmbGV4OiAxO1xuICBtYXJnaW46IDA7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG59XG5idXR0b24ucmVxdWVzdCB7XG4gIGNvbG9yOiAjZmZmO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZiMzAwO1xuICBib3JkZXItY29sb3I6ICNmZmIzMDA7XG59XG5idXR0b24ucmVxdWVzdC5pbnZlcnNlIHtcbiAgY29sb3I6ICNmZmIzMDA7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59Il19 */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BookingSpaceItemComponent, [{
         type: core_1.Component,
         args: [{
@@ -17262,11 +17391,11 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
     }
     /** Open modal for adding equipment requirements to booking */
     openEquipmentDetailsModal() {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+        var _a, _b, _c, _d, _e;
         const space_list = [...this.form.controls.space_list.value];
         if (((_b = (_a = this.form.controls.recurrence) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.period) &&
             ((_e = (_d = (_c = this.form.controls.recurrence) === null || _c === void 0 ? void 0 : _c.value) === null || _d === void 0 ? void 0 : _d.conflicts) === null || _e === void 0 ? void 0 : _e.length) > 0) {
-            (_j = (_h = (_g = (_f = this.form.controls) === null || _f === void 0 ? void 0 : _f.recurrence) === null || _g === void 0 ? void 0 : _g.value) === null || _h === void 0 ? void 0 : _h.conflicts) === null || _j === void 0 ? void 0 : _j.forEach(i => {
+            this.form.controls.recurrence.value.conflicts.forEach(i => {
                 if (!space_list.find(space => space.email === i.space)) {
                     space_list.push(this._spaces.find(i.space));
                 }
@@ -18050,8 +18179,8 @@ const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookin
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const users_service_1 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const requirement_details_modal_component_1 = __webpack_require__(/*! src/app/shell/bookings/overlays/requirement-details-modal/requirement-details-modal.component */ "./src/app/shell/bookings/overlays/requirement-details-modal/requirement-details-modal.component.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const i2 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
@@ -18294,15 +18423,10 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
     get is_requesting() {
         const booking = this.booking.toJSON();
         return this.space.byRequest({
-            date: this.booking.date || dayjs(this._data.date).valueOf(),
-            duration: this.booking.duration || 30,
-            host: booking.organiser || this._users.current
+            date: this.booking.date,
+            duration: this.booking.duration,
+            host: booking.organiser,
         });
-    }
-    /** Display string for the selected date */
-    get date() {
-        const date = dayjs(this._data.date);
-        return date.format('DD MMM YYYY');
     }
     /** Display string for the selected time */
     get time() {
@@ -18325,12 +18449,12 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
             title: 'Ad-Hoc Booking',
             date: date.valueOf(),
             duration: 30,
-            room_ids: [this._data.space.id]
+            room_ids: [this._data.space.id],
         });
         const status = booking_utilities_1.statusFromBookings(this._data.bookings, this.space.bookable, this.space.byRequest({
             date: this._data.date,
             duration: 30,
-            host: this._users.current
+            host: this._users.current,
         }), this._data.date);
         this.available_until = status.available_until;
     }
@@ -18350,7 +18474,7 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
                 'space_list',
                 'organiser',
                 'title',
-                'duration'
+                'duration',
             ]);
             this.state = 'form';
         }
@@ -18363,16 +18487,7 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
     }
     updateRequirements() {
         return new Promise((resolve, reject) => {
-            var _a, _b, _c, _d, _e, _f, _g, _h, _j;
             const space_list = [...this.form.controls.space_list.value];
-            if (((_b = (_a = this.form.controls.recurrence) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.period) &&
-                ((_e = (_d = (_c = this.form.controls.recurrence) === null || _c === void 0 ? void 0 : _c.value) === null || _d === void 0 ? void 0 : _d.conflicts) === null || _e === void 0 ? void 0 : _e.length) > 0) {
-                (_j = (_h = (_g = (_f = this.form.controls) === null || _f === void 0 ? void 0 : _f.recurrence) === null || _g === void 0 ? void 0 : _g.value) === null || _h === void 0 ? void 0 : _h.conflicts) === null || _j === void 0 ? void 0 : _j.forEach(i => {
-                    if (!space_list.find(space => space.email === i.space)) {
-                        space_list.push(this._spaces.find(i.space));
-                    }
-                });
-            }
             let resolved = false;
             const ref = this._dialog.open(requirement_details_modal_component_1.RequirementDetailsModalComponent, {
                 maxWidth: '95vw',
@@ -18387,16 +18502,12 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
             this.subscription('modal_events', ref.componentInstance.event.subscribe((event) => {
                 /* istanbul ignore else */
                 if (event.reason === 'done') {
+                    this.unsub('closed');
                     resolve();
-                    resolved = true;
                     ref.close();
                 }
             }));
-            ref.afterClosed().subscribe(() => {
-                if (!resolved) {
-                    reject();
-                }
-            });
+            this.subscription('closed', ref.afterClosed().subscribe(() => reject()));
         });
     }
     makeBooking() {
@@ -18407,11 +18518,11 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
                 this.loading = null;
                 this.success = true;
                 this.timeout('close', () => this._dialog_ref.close(), 5000);
-            }, err => {
+            }, (err) => {
                 this.loading = null;
                 this._service.notifyError(`Error ${this.booking.id ? 'updating' : 'creating'} booking: ${err.message || err}}`);
             });
-        }, err => {
+        }, (err) => {
             this.loading = null;
             this._service.notifyError(`Error checking space availability: ${err.message || err}`);
         });
@@ -18422,18 +18533,20 @@ class ExploreBookingModalComponent extends base_directive_1.BaseDirective {
     checkSpaceAvailability() {
         const spaces = this.booking.space_list;
         return new Promise((resolve, reject) => {
-            this._spaces.available({
-                room_ids: spaces.map(space => space.id).join(','),
+            this._spaces
+                .available({
+                room_ids: spaces.map((space) => space.id).join(','),
                 date: this.booking.date,
-                duration: this.booking.duration
-            }).then(space_list => {
+                duration: this.booking.duration,
+            })
+                .then((space_list) => {
                 for (const space of space_list) {
                     if (!space.was_available) {
                         return reject(`${space.name} is not available at the select time period.`);
                     }
                 }
                 resolve();
-            }, err => reject(err));
+            }, (err) => reject(err));
         });
     }
 }
@@ -18451,7 +18564,7 @@ ExploreBookingModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ExploreBooki
         args: [{
                 selector: 'a-explore-booking-modal',
                 templateUrl: './booking-modal.component.html',
-                styleUrls: ['./booking-modal.component.scss']
+                styleUrls: ['./booking-modal.component.scss'],
             }]
     }], function () { return [{ type: i1.MatDialogRef }, { type: undefined, decorators: [{
                 type: core_1.Inject,
@@ -19948,7 +20061,6 @@ class ScheduleEventListComponent extends base_directive_1.BaseDirective {
                     to: end.unix(),
                 })
                     .then((list) => {
-                    this._bookings.updateList(this._bookings.filter(), list);
                     const old_events = this.events.filter((i) => {
                         const date = dayjs(i.date);
                         return (i.type !== 'date' &&
@@ -21660,16 +21772,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "dd0fe32",
-    "hash": "dd0fe32",
+    "raw": "ee8b53a",
+    "hash": "ee8b53a",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "dd0fe32",
+    "suffix": "ee8b53a",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595381199474
+    "time": 1595396765683
 };
 /* tslint:enable */
 
