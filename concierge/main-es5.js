@@ -15831,7 +15831,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this85.old_start = raw_data.old_start || dayjs(_this85.date).unix();
         _this85.old_end = raw_data.old_end || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
         _this85.body = (typeof raw_data.body === 'string' ? raw_data.body : '') || raw_data.description;
-        _this85.type = raw_data.booking_type || raw_data.type || (raw_data.visitors ? 'external' : null) || 'internal';
         _this85.attendees = (raw_data.attendees || raw_data._attendees || []).map(function (i) {
           return new user_class_1.User(i);
         });
@@ -15909,6 +15908,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return general_utilities_1.flatten(Object.values(raw_data.edits[room]));
         })));
         _this85.edits = edited_fields;
+        _this85.type = raw_data.booking_type || (_this85.has_visitors ? 'external' : null) || 'internal';
         _this85.has_catering = !!(raw_data.has_catering || _this85.catering && _this85.catering.length);
         return _this85;
       }

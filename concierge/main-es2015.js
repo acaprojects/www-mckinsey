@@ -8383,11 +8383,6 @@ class Booking extends base_api_class_1.BaseDataClass {
                 dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
         this.body =
             (typeof raw_data.body === 'string' ? raw_data.body : '') || raw_data.description;
-        this.type =
-            raw_data.booking_type ||
-                raw_data.type ||
-                (raw_data.visitors ? 'external' : null) ||
-                'internal';
         this.attendees = (raw_data.attendees || raw_data._attendees || []).map((i) => new user_class_1.User(i));
         const organiser = raw_data.organiser || raw_data.organizer;
         this.organiser = (organiser ? new user_class_1.User(organiser) : user_class_1.User.active_user) || new user_class_1.User();
@@ -8451,6 +8446,7 @@ class Booking extends base_api_class_1.BaseDataClass {
                 return general_utilities_1.flatten(Object.values(raw_data.edits[room]));
             })));
         this.edits = edited_fields;
+        this.type = raw_data.booking_type || (this.has_visitors ? 'external' : null) || 'internal';
         this.has_catering = !!(raw_data.has_catering || (this.catering && this.catering.length));
     }
     /** Service for managing Bookings */
@@ -8613,7 +8609,7 @@ class Booking extends base_api_class_1.BaseDataClass {
                 data.breakdown[note.space] = data.breakdown[note.space] || 15;
             }
         }
-        data.catering = data.catering.filter(order => data.room_ids.includes(order.location_id));
+        data.catering = data.catering.filter((order) => data.room_ids.includes(order.location_id));
         if (data.catering && data.catering.length) {
             for (const order of data.catering) {
                 data.setup[order.location_id] = data.setup[order.location_id] || 15;
