@@ -16532,7 +16532,10 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                             .unix(),
                     }
                     : {};
-                const query = Object.assign({ date: this.form.controls.date.value, duration: this.form.controls.all_day.value
+                const date = dayjs(this.form.controls.date.value);
+                const query = Object.assign({ date: this.form.controls.all_day.value
+                        ? date.startOf('d').valueOf()
+                        : date.valueOf(), duration: this.form.controls.all_day.value
                         ? 24 * 60
                         : this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
                 /* istanbul ignore else */
@@ -16571,7 +16574,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                             return true;
                         }
                     }
-                    return (!this.zone_ids.length);
+                    return !this.zone_ids.length;
                 });
                 this.space_list.sort((a, b) => space_utilities_1.sort(a, b, this._org.buildings));
             }));
@@ -21695,16 +21698,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d65a523",
-    "hash": "d65a523",
+    "raw": "14d3060",
+    "hash": "14d3060",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d65a523",
+    "suffix": "14d3060",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595401896968
+    "time": 1595402599546
 };
 /* tslint:enable */
 
