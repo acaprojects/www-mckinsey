@@ -13047,12 +13047,10 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
         });
     }
     newBooking() {
-        localStorage.removeItem('ACA_STAFF.booking_form_data');
         this._router.navigate(['/book', 'spaces']);
         this._dialog_ref.close();
     }
     toSchedule() {
-        localStorage.removeItem('ACA_STAFF.booking_form_data');
         this._router.navigate(['/schedule']);
         this._dialog_ref.close();
     }
@@ -13079,7 +13077,6 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
                 ignore: this.booking.icaluid
             })
                 .then((space_list) => {
-                console.log('Spaces:', space_list);
                 for (const space of space_list) {
                     if (!space.was_available) {
                         return reject(`${space.name} is not available at the select time period.`);
@@ -17229,6 +17226,7 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
     /** Clear user changes to the form data */
     resetForm() {
         delete this.form;
+        delete this.booking;
         localStorage.removeItem('ACA_STAFF.booking_form_data');
         this.loadFormData();
     }
@@ -17343,6 +17341,7 @@ class BookingSpaceFlowComponent extends base_directive_1.BaseDirective {
                 /* istanbul ignore else */
                 if (event.reason === 'done') {
                     this.resetForm();
+                    this._router.navigate(['/book', 'spaces']);
                 }
             });
         }
@@ -21661,16 +21660,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "a24a7e0",
-    "hash": "a24a7e0",
+    "raw": "dd0fe32",
+    "hash": "dd0fe32",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "a24a7e0",
+    "suffix": "dd0fe32",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595327546343
+    "time": 1595381199474
 };
 /* tslint:enable */
 

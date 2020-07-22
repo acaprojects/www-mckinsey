@@ -23126,8 +23126,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "newBooking",
         value: function newBooking() {
-          localStorage.removeItem('ACA_STAFF.booking_form_data');
-
           this._router.navigate(['/book', 'spaces']);
 
           this._dialog_ref.close();
@@ -23135,8 +23133,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toSchedule",
         value: function toSchedule() {
-          localStorage.removeItem('ACA_STAFF.booking_form_data');
-
           this._router.navigate(['/schedule']);
 
           this._dialog_ref.close();
@@ -23167,8 +23163,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               duration: all_day ? 24 * 60 : _this109.booking.duration,
               ignore: _this109.booking.icaluid
             }).then(function (space_list) {
-              console.log('Spaces:', space_list);
-
               var _iterator34 = _createForOfIteratorHelper(space_list),
                   _step34;
 
@@ -30723,6 +30717,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "resetForm",
         value: function resetForm() {
           delete this.form;
+          delete this.booking;
           localStorage.removeItem('ACA_STAFF.booking_form_data');
           this.loadFormData();
         }
@@ -30897,6 +30892,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               /* istanbul ignore else */
               if (event.reason === 'done') {
                 _this151.resetForm();
+
+                _this151._router.navigate(['/book', 'spaces']);
               }
             });
           }
@@ -38700,16 +38697,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "a24a7e0",
-      "hash": "a24a7e0",
+      "raw": "dd0fe32",
+      "hash": "dd0fe32",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "a24a7e0",
+      "suffix": "dd0fe32",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595327546343
+      "time": 1595381199474
     };
     /* tslint:enable */
 
