@@ -3181,14 +3181,17 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 return resp.id === request_id ? resp.list : this.space_list;
             }));
             // Process API results
-            this.subscription('search_results', this.search_results$.subscribe((list) => (this.space_list = list.filter((space) => {
-                for (const zone of this.zone_ids) {
-                    if (space.zones.includes(zone)) {
-                        return true;
+            this.subscription('search_results', this.search_results$.subscribe((list) => {
+                this.space_list = list.filter((space) => {
+                    for (const zone of this.zone_ids) {
+                        if (space.zones.includes(zone)) {
+                            return true;
+                        }
                     }
-                }
-                return !this.zone_ids.length;
-            }))));
+                    return !this.zone_ids.length;
+                });
+                this.space_list.sort((a, b) => this.sort(a, b));
+            }));
             this.change$.next('');
         });
     }
@@ -3234,6 +3237,33 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
     /** Move flow to previous step */
     previous() {
         this.event.emit({ type: 'previous', step: 'search' });
+    }
+    /**
+     * Compare two spaces to determine order
+     * @param space_a
+     * @param space_b
+     */
+    sort(space_a, space_b) {
+        const bld = this._org.buildings.find((bld) => bld.id === space_a.level.building_id);
+        const bld_b = this._org.buildings.find((bld) => bld.id === space_b.level.building_id);
+        if (bld && bld !== bld_b) {
+            return (bld.name || '').localeCompare(bld_b.name || '');
+        }
+        const sort_order = (bld.sort_order ? [...bld.sort_order] : []).reverse();
+        for (const zone_id of sort_order) {
+            if (zone_id === '*') {
+                continue;
+            }
+            const a_has_zone = space_a.zones.indexOf(zone_id) >= 0;
+            const b_has_zone = space_b.zones.indexOf(zone_id) >= 0;
+            if (a_has_zone && !b_has_zone) {
+                return 1;
+            }
+            else if (b_has_zone && !a_has_zone) {
+                return -1;
+            }
+        }
+        return (space_a.name || '').localeCompare(space_b.name || '');
     }
 }
 exports.BookingFindSpaceComponent = BookingFindSpaceComponent;
@@ -9709,6 +9739,7 @@ class Building extends base_api_class_1.BaseDataClass {
         this.has_catering = raw_data.has_catering || disc_info.has_catering || settings.has_catering || false;
         this.holding_bay = raw_data.holding_bay || disc_info.holding_bay || settings.holding_bay || '';
         this.visitor_space = raw_data.visitor_space || disc_info.visitor_space || settings.visitor_space || '';
+        this.sort_order = raw_data.sort_order || disc_info.sort_order || settings.sort_order || [];
     }
     /** List of available extras for the building */
     get extras() {
