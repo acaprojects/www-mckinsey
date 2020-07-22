@@ -4710,73 +4710,73 @@ function MeetingDetailsDisplayComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(7, "a", 8);
     i0.ɵɵelement(8, "app-icon", 9);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(9, "a", 8);
+    i0.ɵɵelementStart(9, "a", 10);
     i0.ɵɵelement(10, "app-icon", 9);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(11, MeetingDetailsDisplayComponent_div_2_div_11_Template, 10, 10, "div", 10);
+    i0.ɵɵtemplate(11, MeetingDetailsDisplayComponent_div_2_div_11_Template, 10, 10, "div", 11);
     i0.ɵɵelementStart(12, "div", 4);
-    i0.ɵɵelementStart(13, "label", 11);
+    i0.ɵɵelementStart(13, "label", 12);
     i0.ɵɵtext(14, "Location(s):");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(15, "div", 12);
+    i0.ɵɵelementStart(15, "div", 13);
     i0.ɵɵtext(16);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(17, "div", 4);
-    i0.ɵɵelementStart(18, "label", 13);
+    i0.ɵɵelementStart(18, "label", 14);
     i0.ɵɵtext(19, "Start:");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(20, "div", 14);
+    i0.ɵɵelementStart(20, "div", 15);
     i0.ɵɵtext(21);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(22, "div", 4);
-    i0.ɵɵelementStart(23, "label", 15);
+    i0.ɵɵelementStart(23, "label", 16);
     i0.ɵɵtext(24, "End:");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(25, "div", 16);
+    i0.ɵɵelementStart(25, "div", 17);
     i0.ɵɵtext(26);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(27, "div", 4);
-    i0.ɵɵelementStart(28, "label", 17);
+    i0.ɵɵelementStart(28, "label", 18);
     i0.ɵɵtext(29, "Duration:");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(30, "div", 18);
+    i0.ɵɵelementStart(30, "div", 19);
     i0.ɵɵtext(31);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(32, "div", 4);
-    i0.ɵɵelementStart(33, "label", 19);
+    i0.ɵɵelementStart(33, "label", 20);
     i0.ɵɵtext(34, "Recurrence:");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(35, "div", 20);
+    i0.ɵɵelementStart(35, "div", 21);
     i0.ɵɵtext(36);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(37, "div", 4);
-    i0.ɵɵelementStart(38, "label", 21);
+    i0.ɵɵelementStart(38, "label", 22);
     i0.ɵɵtext(39, "Attendees:");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(40, "div", 22);
+    i0.ɵɵelementStart(40, "div", 23);
     i0.ɵɵtext(41);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(42, "div", 4);
-    i0.ɵɵelementStart(43, "label", 23);
+    i0.ɵɵelementStart(43, "label", 24);
     i0.ɵɵtext(44, "VC Equipment:");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(45, "div", 24);
+    i0.ɵɵelementStart(45, "div", 25);
     i0.ɵɵtext(46, " No ");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(47, "div", 4);
-    i0.ɵɵelementStart(48, "label", 25);
+    i0.ɵɵelementStart(48, "label", 26);
     i0.ɵɵtext(49, "Notes:");
     i0.ɵɵelementEnd();
-    i0.ɵɵelement(50, "div", 26);
+    i0.ɵɵelement(50, "div", 27);
     i0.ɵɵpipe(51, "sanitize");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -4791,8 +4791,7 @@ function MeetingDetailsDisplayComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(35, _c0));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("href", "tel:" + (ctx_r0.booking.organiser == null ? null : ctx_r0.booking.organiser.phone), i0.ɵɵsanitizeUrl);
-    i0.ɵɵattribute("disabled", !(ctx_r0.booking.organiser == null ? null : ctx_r0.booking.organiser.phone));
+    i0.ɵɵproperty("disabled", !(ctx_r0.booking.organiser == null ? null : ctx_r0.booking.organiser.phone))("href", "tel:" + (ctx_r0.booking.organiser == null ? null : ctx_r0.booking.organiser.phone), i0.ɵɵsanitizeUrl);
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(36, _c1));
     i0.ɵɵadvance(1);
@@ -4830,7 +4829,7 @@ function MeetingDetailsDisplayComponent_div_2_Template(rf, ctx) { if (rf & 1) {
 } }
 function MeetingDetailsDisplayComponent_button_3_Template(rf, ctx) { if (rf & 1) {
     const _r4 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 27);
+    i0.ɵɵelementStart(0, "button", 28);
     i0.ɵɵlistener("click", function MeetingDetailsDisplayComponent_button_3_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r4); const ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.editMeeting(); });
     i0.ɵɵtext(1, " Edit Meeting\n");
     i0.ɵɵelementEnd();
@@ -4893,7 +4892,7 @@ class MeetingDetailsDisplayComponent {
 }
 exports.MeetingDetailsDisplayComponent = MeetingDetailsDisplayComponent;
 MeetingDetailsDisplayComponent.ɵfac = function MeetingDetailsDisplayComponent_Factory(t) { return new (t || MeetingDetailsDisplayComponent)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
-MeetingDetailsDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetailsDisplayComponent, selectors: [["meeting-details"]], inputs: { booking: "booking", space: "space" }, decls: 4, vars: 2, consts: [[1, "heading"], ["class", "content", 4, "ngIf"], ["class", "footer", "mat-button", "", 3, "click", 4, "ngIf"], [1, "content"], [1, "field"], ["for", "host"], ["name", "host", 1, "value"], [1, "actions"], ["mat-icon-button", "", "target", "_blank", 3, "href"], [3, "icon"], ["class", "field", 3, "edited", 4, "ngIf"], ["for", "location"], ["name", "location", 1, "value"], ["for", "start-time"], ["name", "start-time", 1, "value"], ["for", "end-time"], ["name", "end-time", 1, "value"], ["for", "duration"], ["name", "duration", 1, "value"], ["for", "recurrence"], ["name", "recurrence", 1, "value"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["for", "vc-equipment"], ["name", "vc-equipment", 1, "value"], ["for", "notes"], ["name", "notes", 1, "value", "html", 3, "innerHTML"], ["mat-button", "", 1, "footer", 3, "click"]], template: function MeetingDetailsDisplayComponent_Template(rf, ctx) { if (rf & 1) {
+MeetingDetailsDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetailsDisplayComponent, selectors: [["meeting-details"]], inputs: { booking: "booking", space: "space" }, decls: 4, vars: 2, consts: [[1, "heading"], ["class", "content", 4, "ngIf"], ["class", "footer", "mat-button", "", 3, "click", 4, "ngIf"], [1, "content"], [1, "field"], ["for", "host"], ["name", "host", 1, "value"], [1, "actions"], ["mat-icon-button", "", "target", "_blank", 3, "href"], [3, "icon"], ["mat-icon-button", "", "target", "_blank", 3, "disabled", "href"], ["class", "field", 3, "edited", 4, "ngIf"], ["for", "location"], ["name", "location", 1, "value"], ["for", "start-time"], ["name", "start-time", 1, "value"], ["for", "end-time"], ["name", "end-time", 1, "value"], ["for", "duration"], ["name", "duration", 1, "value"], ["for", "recurrence"], ["name", "recurrence", 1, "value"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["for", "vc-equipment"], ["name", "vc-equipment", 1, "value"], ["for", "notes"], ["name", "notes", 1, "value", "html", 3, "innerHTML"], ["mat-button", "", 1, "footer", 3, "click"]], template: function MeetingDetailsDisplayComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtext(1, " Meeting Details\n");
         i0.ɵɵelementEnd();
@@ -21389,7 +21388,9 @@ class DayViewComponent extends base_directive_1.BaseDirective {
         /** List of space types available for the active building */
         this.space_types = [];
         /** List of legend keys to show */
-        this.legend = [];
+        this.legend = {};
+        /** List of legend keys to show */
+        this.legend_list = [];
         /** List of available legend keys */
         this.legend_keys = [
             { name: 'Internal', id: 'internal', color: '#E69FC7', active: true },
@@ -21404,7 +21405,7 @@ class DayViewComponent extends base_directive_1.BaseDirective {
     ngOnInit() {
         this._service.title = 'Day View';
         this._org.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
-            this.legend = this.legend_keys.map(item => `${item.id}`);
+            this.legend_list = this.legend_keys.map(item => `${item.id}`);
             this.subscription('route.params', this._route.paramMap.subscribe((params) => {
                 /* istanbul ignore else */
                 if (params.has('level') && this.active_level !== params.get('level')) {
@@ -21439,20 +21440,15 @@ class DayViewComponent extends base_directive_1.BaseDirective {
         this._router.navigate(['/day-view', this.active_level]);
     }
     updateLegend() {
-        this.legend = this.legend_keys.reduce((list, key) => {
-            if (key.active) {
-                list.push(key.id);
-            }
-            return list;
-        }, []);
-    }
-    postLegend() {
-        this.legend = [...this.legend];
+        this.legend = this.legend_keys.reduce((map, key) => {
+            map[key.id] = this.legend_list.includes(`${key.id}`);
+            return map;
+        }, {});
     }
 }
 exports.DayViewComponent = DayViewComponent;
 DayViewComponent.ɵfac = function DayViewComponent_Factory(t) { return new (t || DayViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.Router), i0.ɵɵdirectiveInject(i4.ActivatedRoute)); };
-DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, selectors: [["a-day-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 38, vars: 28, consts: [[1, "day-view"], [1, "group"], [3, "date", "zone", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["mat-icon-button", "", 1, "not-desktop", 3, "matMenuTriggerFor"], [3, "icon"], ["appearance", "outline", 3, "desktop-only", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "legend", "overflow_only", "space_type"], ["menu", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["level_list", "matMenu"], ["mat-menu-item", "", 3, "selected", "click", 4, "ngFor", "ngForOf"], ["space_type_list", "matMenu"], ["legend_list", "matMenu"], ["mat-menu-item", "", 4, "ngFor", "ngForOf"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"], ["mat-menu-item", ""], [3, "ngModel", "ngModelChange", "click"]], template: function DayViewComponent_Template(rf, ctx) { if (rf & 1) {
+DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, selectors: [["a-day-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 38, vars: 28, consts: [[1, "day-view"], [1, "group"], [3, "date", "zone", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["mat-icon-button", "", 1, "not-desktop", 3, "matMenuTriggerFor"], [3, "icon"], ["appearance", "outline", 3, "desktop-only", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "legend", "overflow_only", "space_type"], ["menu", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["level_list", "matMenu"], ["mat-menu-item", "", 3, "selected", "click", 4, "ngFor", "ngForOf"], ["space_type_list", "matMenu"], ["legend_listing", "matMenu"], ["mat-menu-item", "", 4, "ngFor", "ngForOf"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"], ["mat-menu-item", ""], [3, "ngModel", "ngModelChange", "click"]], template: function DayViewComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "a-sidebar");
         i0.ɵɵelementStart(2, "div", 1);
@@ -21466,7 +21462,7 @@ DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, select
         i0.ɵɵtemplate(8, DayViewComponent_mat_form_field_8_Template, 3, 4, "mat-form-field", 6);
         i0.ɵɵelementStart(9, "mat-form-field", 7);
         i0.ɵɵelementStart(10, "mat-select", 8);
-        i0.ɵɵlistener("ngModelChange", function DayViewComponent_Template_mat_select_ngModelChange_10_listener($event) { return ctx.legend = $event; })("ngModelChange", function DayViewComponent_Template_mat_select_ngModelChange_10_listener() { return ctx.postLegend(); });
+        i0.ɵɵlistener("ngModelChange", function DayViewComponent_Template_mat_select_ngModelChange_10_listener($event) { return ctx.legend_list = $event; })("ngModelChange", function DayViewComponent_Template_mat_select_ngModelChange_10_listener() { return ctx.updateLegend(); });
         i0.ɵɵelementStart(11, "mat-select-trigger");
         i0.ɵɵtext(12, "Legend");
         i0.ɵɵelementEnd();
@@ -21529,7 +21525,7 @@ DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, select
         i0.ɵɵadvance(1);
         i0.ɵɵclassProp("desktop-only", true);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngModel", ctx.legend);
+        i0.ɵɵproperty("ngModel", ctx.legend_list);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("ngForOf", ctx.legend_keys);
         i0.ɵɵadvance(1);
@@ -22477,7 +22473,7 @@ function DayViewTimelineComponent_div_19_Template(rf, ctx) { if (rf & 1) {
     const ctx_r6 = i0.ɵɵnextContext();
     i0.ɵɵstyleProp("min-height", ctx_r6.time_blocks.length * 3 + "rem");
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("space_list", ctx_r6.space_zones)("date", ctx_r6.date)("space", item_r14)("legend", ctx_r6.legend_map)("overflow_only", ctx_r6.overflow_only)("scroll", 0 - ctx_r6.scroll_left)("scrollTop", ctx_r6.scroll_offset - ctx_r6.scroll_top)("lastUpdate", ctx_r6.last_update);
+    i0.ɵɵproperty("space_list", ctx_r6.space_zones)("date", ctx_r6.date)("space", item_r14)("legend", ctx_r6.legend)("overflow_only", ctx_r6.overflow_only)("scroll", 0 - ctx_r6.scroll_left)("scrollTop", ctx_r6.scroll_offset - ctx_r6.scroll_top)("lastUpdate", ctx_r6.last_update);
 } }
 function DayViewTimelineComponent_div_20_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 31);
@@ -22522,7 +22518,7 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
         this._renderer = _renderer;
         this._dialog = _dialog;
         /** List of shown legend items */
-        this.legend = [];
+        this.legend = {};
         /** List of timeblocks to display */
         this.time_blocks = this.generateTimeBlocks();
         /** Top value of the content scroll */
@@ -22544,7 +22540,6 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
         /** Whether to show the holding bay */
         this.show_holding_bay = true;
         this.space_zones = [];
-        this.legend_map = {};
     }
     /** Update scroll box when the window is resized */
     onResize() {
@@ -22594,9 +22589,6 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
         if (changes.space_type) {
             this.initSpaces();
         }
-        if (changes.legend) {
-            this.updateLegend();
-        }
     }
     init() {
         this._service.title = 'Day View';
@@ -22629,7 +22621,6 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
         if (this.scroll_area.nativeElement) {
             this.box = this.scroll_area.nativeElement.getBoundingClientRect();
         }
-        this.updateLegend();
     }
     /**
      * Update scroll parameters to match the change in the scroll position
@@ -22638,11 +22629,6 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
     updateScroll(event) {
         this.scroll_top = event.target.scrollTop;
         this.scroll_left = event.target.scrollLeft;
-    }
-    updateLegend() {
-        const map = {};
-        this.legend.forEach((item) => (map[item] = true));
-        this.legend_map = map;
     }
     /** Generate time blocks to display on the day view */
     generateTimeBlocks() {
