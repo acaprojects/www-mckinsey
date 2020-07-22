@@ -38700,7 +38700,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         })("ngModelChange", function DayViewComponent_div_37_Template_mat_checkbox_ngModelChange_1_listener() {
           i0.ɵɵrestoreView(_r28);
           var ctx_r29 = i0.ɵɵnextContext();
-          return ctx_r29.updateLegend();
+          return ctx_r29.updateLegend(true);
         })("click", function DayViewComponent_div_37_Template_mat_checkbox_click_1_listener($event) {
           i0.ɵɵrestoreView(_r28);
           return $event.stopPropagation();
@@ -38887,6 +38887,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "updateLegend",
         value: function updateLegend() {
           var _this196 = this;
+
+          var mobile = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+          if (mobile) {
+            this.legend_list = this.legend_keys.reduce(function (list, key) {
+              if (key.active) list.push(key.id);
+              return list;
+            }, []);
+          }
 
           this.legend = this.legend_keys.reduce(function (map, key) {
             map[key.id] = _this196.legend_list.includes("".concat(key.id));

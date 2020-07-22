@@ -21346,7 +21346,7 @@ function DayViewComponent_div_37_Template(rf, ctx) { if (rf & 1) {
     const _r28 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 27);
     i0.ɵɵelementStart(1, "mat-checkbox", 28);
-    i0.ɵɵlistener("ngModelChange", function DayViewComponent_div_37_Template_mat_checkbox_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r28); const key_r26 = ctx.$implicit; return key_r26.active = $event; })("ngModelChange", function DayViewComponent_div_37_Template_mat_checkbox_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r28); const ctx_r29 = i0.ɵɵnextContext(); return ctx_r29.updateLegend(); })("click", function DayViewComponent_div_37_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r28); return $event.stopPropagation(); });
+    i0.ɵɵlistener("ngModelChange", function DayViewComponent_div_37_Template_mat_checkbox_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r28); const key_r26 = ctx.$implicit; return key_r26.active = $event; })("ngModelChange", function DayViewComponent_div_37_Template_mat_checkbox_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r28); const ctx_r29 = i0.ɵɵnextContext(); return ctx_r29.updateLegend(true); })("click", function DayViewComponent_div_37_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r28); return $event.stopPropagation(); });
     i0.ɵɵelementStart(2, "div", 23);
     i0.ɵɵelementStart(3, "div", 24);
     i0.ɵɵtext(4);
@@ -21435,7 +21435,14 @@ class DayViewComponent extends base_directive_1.BaseDirective {
     updateLevel() {
         this._router.navigate(['/day-view', this.active_level]);
     }
-    updateLegend() {
+    updateLegend(mobile = false) {
+        if (mobile) {
+            this.legend_list = this.legend_keys.reduce((list, key) => {
+                if (key.active)
+                    list.push(key.id);
+                return list;
+            }, []);
+        }
         this.legend = this.legend_keys.reduce((map, key) => {
             map[key.id] = this.legend_list.includes(`${key.id}`);
             return map;
