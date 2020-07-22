@@ -7238,7 +7238,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function find(id) {
           var list = this.get('list');
           return list.find(function (i) {
-            return i.id === id || i.email && i.email.toLowerCase() === id.toLowerCase();
+            var _a, _b;
+
+            return i.id === id || ((_a = i.email) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === ((_b = id) === null || _b === void 0 ? void 0 : _b.toLowerCase());
           });
         }
         /**
@@ -17479,7 +17481,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("value", ctx_r0.building);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate2(" ", ctx_r0.building_details.code, " - ", ctx_r0.building_details.name, " ");
+        i0.ɵɵtextInterpolate2(" ", ctx_r0.building_details == null ? null : ctx_r0.building_details.code, " - ", ctx_r0.building_details == null ? null : ctx_r0.building_details.name, " ");
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngForOf", ctx_r0.building_list);
       }
@@ -38690,16 +38692,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "98a39c5",
-      "hash": "98a39c5",
+      "raw": "33bbf17",
+      "hash": "33bbf17",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "98a39c5",
+      "suffix": "33bbf17",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595404969170
+      "time": 1595408994323
     };
     /* tslint:enable */
 
