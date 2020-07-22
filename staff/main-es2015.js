@@ -3558,15 +3558,15 @@ class BaseAPIService extends base_class_1.BaseClass {
      * @param predicate Function for filtering the list
      */
     filter(predicate = this._list_filter) {
-        const list = this.get('list') || [];
+        const list = this.get('list');
         return list.filter(_ => predicate(_));
     }
     /**
      * Get item with the given id from the loaded items
      * @param id ID of the item
      */
-    find(id = '') {
-        const list = this.get('list') || [];
+    find(id) {
+        const list = this.get('list');
         return list.find((i) => i.id === id || (i.email && i.email.toLowerCase() === id.toLowerCase()));
     }
     /**
@@ -3701,47 +3701,6 @@ class BaseAPIService extends base_class_1.BaseClass {
         return this._promises[key];
     }
     /**
-     * Setup a poller for an API endpoint
-     * @param id Show request ID. Leave blank to poll on the query endpoint
-     * @param query_params Map of query paramaters to add to the polled URL
-     * @param delay Delay between each poll event
-     */
-    poll(id, query_params = {}, delay = 5000) {
-        const key = `poll|${id || ''}|${api_utilities_1.toQueryString(query_params) || ''}`;
-        this.stopPoll(id, query_params);
-        this._subjects[key] = new rxjs_1.Subject();
-        this._observers[key] = this._subjects[key].asObservable();
-        const sub = this._subjects[key];
-        const query = Object.assign(Object.assign({}, (query_params || {})), { _poll: true });
-        if (id) {
-            this.show(id, query).then((d) => sub.next(d), (e) => sub.error(e));
-            this.interval(key, () => {
-                this.show(id, query).then((d) => sub.next(d), (e) => sub.error(e));
-            }, delay);
-        }
-        else {
-            this.query(query).then((d) => sub.next(d), (e) => sub.error(e));
-            this.interval(key, () => {
-                this.query(query).then((d) => sub.next(d), (e) => sub.error(e));
-            }, delay);
-        }
-        return this._observers[key];
-    }
-    /**
-     * Destroy poller
-     * @param id
-     * @param query_params
-     */
-    stopPoll(id, query_params = {}) {
-        const key = `poll|${id || ''}|${api_utilities_1.toQueryString(query_params) || ''}`;
-        /* istanbul ignore else */
-        if (this._subjects[key]) {
-            this._subjects[key].complete();
-            this._subjects[key] = null;
-            this._observers[key] = null;
-        }
-    }
-    /**
      * Make put request for changes to the item with the given id
      * @param id ID of the item being updated
      * @param form_data New values for the item
@@ -3794,24 +3753,6 @@ class BaseAPIService extends base_class_1.BaseClass {
         }
         return this._promises[key];
     }
-    /**
-     * Add new API item from another service or API class
-     * @param id ID of the item/or service adding the new item
-     * @param data Raw API data for the new item
-     * @param type Adder type
-     */
-    addFrom(id, data, type = 'other') {
-        const new_item = this.process(data);
-        this.set('list', this.updateList(this.get('list'), [new_item]));
-        return new_item.id;
-    }
-    /**
-     * Remove items with the given IDs from the list
-     * @param id ID of the item/or service remove the list of items
-     * @param remove_ids List of item IDs to remove
-     * @param type Remover type
-     */
-    removeFrom(id, remove_ids, type = 'other') { }
     /**
      * Load initial data for the service
      */
@@ -6091,6 +6032,7 @@ class UsersService extends base_service_1.BaseAPIService {
         this._name = 'Users';
         this._api_route = 'users';
         this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
+        this.set('list', []);
         this.set('current_user', new user_class_1.User({ id: 'local_user', name: 'Local User' }));
         this._composer.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
     }
@@ -6102,7 +6044,7 @@ class UsersService extends base_service_1.BaseAPIService {
     get is_logged_in() {
         return this.current && this.current.id !== 'local_user';
     }
-    /** istanbul ignore function */
+    /* istanbul ignore next */
     /**
      * Sets the access token and expiry for the user
      * @param token OAuth bearer token
@@ -6134,45 +6076,17 @@ class UsersService extends base_service_1.BaseAPIService {
      * @param options Options for the login request
      */
     login(query_params, options = {}) {
-        if (!this._promises['login']) {
-            this._promises['login'] = new Promise((resolve, reject) => {
-                this.set('status', 'loading');
-                let headers = new http_1.HttpHeaders();
-                if (!options || options.form !== false) {
-                    headers = headers.append('Content-Type', 'application/x-www-form-urlencoded');
-                }
-                const url = (options ? options.url : '') || '/auth/signin';
-                this.uhttp.post(url, query_params, { headers }).subscribe((_) => null, (e) => reject(e), () => {
-                    this._composer.auth.authorise();
-                    resolve();
-                });
-            });
-        }
-        return this._promises['login'];
-    }
-    /**
-     * Logout of user and redirect to logout URL
-     */
-    logout() {
-        this._composer.auth.logout();
+        return tslib_1.__awaiter(this, void 0, void 0, function* () { });
     }
     /**
      * Load initial data for the service
      */
     load(tries = 0) {
         const loading = this._service.get('loading') || {};
-        if (!loading.user) {
-            loading.user = { message: 'Loading user credentials', state: 'loading' };
-            this._service.set('loading', loading);
-        }
+        loading.user = { message: 'Loading user credentials', state: 'loading' };
+        this._service.set('loading', loading);
         this.set('status', 'loading');
         return new Promise((resolve) => {
-            if (tries > 4) {
-                this.set('status', 'invalid');
-                loading.user = { message: 'Loading user credentials', state: 'failed' };
-                this._service.set('loading', loading);
-                return resolve();
-            }
             this.show('current').then((current_user) => {
                 this.set('status', 'available');
                 this.set('current_user', current_user);
@@ -6189,7 +6103,7 @@ class UsersService extends base_service_1.BaseAPIService {
                             state: 'complete',
                         };
                         this._service.set('loading', loading);
-                    }, () => this.timeout('load', () => this.load(++tries).then(() => resolve())));
+                    }, () => this.timeout('load', () => this.load(++tries).then(() => resolve()), Math.min(3000, 300 * tries)));
                 }
                 else {
                     if (this._service.setting('app.user.update_location')) {
@@ -6200,22 +6114,19 @@ class UsersService extends base_service_1.BaseAPIService {
                     loading.user = { message: 'Loading user credentials', state: 'complete' };
                     this._service.set('loading', loading);
                 }
-            }, () => this.timeout('load', () => this.load(++tries).then(() => resolve())));
+            }, () => this.timeout('load', () => this.load(++tries).then(() => resolve()), Math.min(3000, 300 * tries)));
         });
     }
     loadDelegates() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            const delegates = this.current.delegates;
-            if (!delegates || !delegates.length) {
-                return [];
-            }
+            const delegates = this.current.delegates || [];
             const promises = [];
             for (const email of delegates) {
                 promises.push(this.show(email));
             }
             const list = yield Promise.all(promises);
             this.set('delegates', list);
-            this.set('list', general_utilities_1.unique((this.get('list') || []).concat(list)));
+            this.set('list', general_utilities_1.unique(this.get('list').concat(list)));
             return list;
         });
     }
@@ -16621,7 +16532,9 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                             .unix(),
                     }
                     : {};
-                const query = Object.assign({ date: this.form.controls.date.value, duration: this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
+                const query = Object.assign({ date: this.form.controls.date.value, duration: this.form.controls.all_day.value
+                        ? 24 * 60
+                        : this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
                 /* istanbul ignore else */
                 if (this.zone_ids && this.zone_ids.length) {
                     query.zone_ids = this.zone_ids.join(',');
@@ -16650,7 +16563,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                             : this.form.controls.duration.value,
                         host: this.form.controls.organiser.value,
                     });
-                    if (rules.hide) {
+                    if (rules.hide || !space.was_available) {
                         return false;
                     }
                     for (const zone of this.zone_ids) {
@@ -21782,16 +21695,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d6c4aba",
-    "hash": "d6c4aba",
+    "raw": "d65a523",
+    "hash": "d65a523",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d6c4aba",
+    "suffix": "d65a523",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595399294225
+    "time": 1595401896968
 };
 /* tslint:enable */
 
