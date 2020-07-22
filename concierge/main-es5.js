@@ -6553,16 +6553,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var request_id = 0; // Listen for input changes
 
             _this31.search_results$ = _this31.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
+              var _a;
+
               _this31.loading = true;
               request_id = general_utilities_1.randomInt(99999999);
               var recurrence = _this31.form.controls.recurrence ? _this31.form.controls.recurrence.value : null;
-              var recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None' ? {
+              var recurrence_properties = ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None' ? {
                 recurr_period: (recurrence.period || '').toLowerCase(),
                 recurr_end: dayjs(recurrence.end).unix()
               } : {};
+              var date = dayjs(_this31.form.controls.date.value);
               var query = Object.assign({
-                date: _this31.form.controls.date.value,
-                duration: _this31.form.controls.duration.value,
+                date: _this31.form.controls.all_day.value ? date.startOf('d').valueOf() : date.valueOf(),
+                duration: _this31.form.controls.all_day.value ? 24 * 60 : _this31.form.controls.duration.value,
                 zone_ids: _this31._org.building.id,
                 bookable: true
               }, recurrence_properties);
@@ -6606,6 +6609,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             _this31.subscription('search_results', _this31.search_results$.subscribe(function (list) {
               _this31.space_list = list.filter(function (space) {
+                if (!space.was_available) {
+                  return false;
+                }
+
                 var _iterator5 = _createForOfIteratorHelper(_this31.zone_ids),
                     _step5;
 
@@ -6788,7 +6795,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 14,
       vars: 5,
-      consts: [[1, "find-space"], [1, "background"], [1, "header"], [3, "date", "locations", "locationsChange"], [4, "ngIf", "ngIfElse"], [1, "footer"], [1, "box"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], [3, "itemSize", 4, "ngIf", "ngIfElse"], [3, "itemSize"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [3, "form", "space", "multi", "select"], ["mat-button", "", "name", "next", 3, "disabled", "click"], [1, "body"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"], [1, "text"], [3, "icon"]],
+      consts: [[1, "find-space"], [1, "background"], [1, "header"], [3, "date", "locations", "locationsChange"], [4, "ngIf", "ngIfElse"], [1, "footer"], [1, "box"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], ["minBufferPx", "900", "maxBufferPx", "1200", 3, "itemSize", 4, "ngIf", "ngIfElse"], ["minBufferPx", "900", "maxBufferPx", "1200", 3, "itemSize"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [3, "form", "space", "multi", "select"], ["mat-button", "", "name", "next", 3, "disabled", "click"], [1, "body"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"], [1, "text"], [3, "icon"]],
       template: function BookingFindSpaceComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);

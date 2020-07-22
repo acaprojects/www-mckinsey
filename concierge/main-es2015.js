@@ -3158,18 +3158,24 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
             let request_id = 0;
             // Listen for input changes
             this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
+                var _a;
                 this.loading = true;
                 request_id = general_utilities_1.randomInt(99999999);
                 const recurrence = this.form.controls.recurrence
                     ? this.form.controls.recurrence.value
                     : null;
-                const recurrence_properties = recurrence && recurrence.period && recurrence.period !== 'None'
+                const recurrence_properties = ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None'
                     ? {
                         recurr_period: (recurrence.period || '').toLowerCase(),
                         recurr_end: dayjs(recurrence.end).unix(),
                     }
                     : {};
-                const query = Object.assign({ date: this.form.controls.date.value, duration: this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
+                const date = dayjs(this.form.controls.date.value);
+                const query = Object.assign({ date: this.form.controls.all_day.value
+                        ? date.startOf('d').valueOf()
+                        : date.valueOf(), duration: this.form.controls.all_day.value
+                        ? 24 * 60
+                        : this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
                 /* istanbul ignore else */
                 if (this.zone_ids && this.zone_ids.length) {
                     query.zone_ids = this.zone_ids.join(',');
@@ -3183,6 +3189,9 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
             // Process API results
             this.subscription('search_results', this.search_results$.subscribe((list) => {
                 this.space_list = list.filter((space) => {
+                    if (!space.was_available) {
+                        return false;
+                    }
                     for (const zone of this.zone_ids) {
                         if (space.zones.includes(zone)) {
                             return true;
@@ -3268,7 +3277,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
 }
 exports.BookingFindSpaceComponent = BookingFindSpaceComponent;
 BookingFindSpaceComponent.ɵfac = function BookingFindSpaceComponent_Factory(t) { return new (t || BookingFindSpaceComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.OrganisationService)); };
-BookingFindSpaceComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFindSpaceComponent, selectors: [["booking-find-space"]], inputs: { spaces: "spaces", form: "form" }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 14, vars: 5, consts: [[1, "find-space"], [1, "background"], [1, "header"], [3, "date", "locations", "locationsChange"], [4, "ngIf", "ngIfElse"], [1, "footer"], [1, "box"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], [3, "itemSize", 4, "ngIf", "ngIfElse"], [3, "itemSize"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [3, "form", "space", "multi", "select"], ["mat-button", "", "name", "next", 3, "disabled", "click"], [1, "body"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"], [1, "text"], [3, "icon"]], template: function BookingFindSpaceComponent_Template(rf, ctx) { if (rf & 1) {
+BookingFindSpaceComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFindSpaceComponent, selectors: [["booking-find-space"]], inputs: { spaces: "spaces", form: "form" }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 14, vars: 5, consts: [[1, "find-space"], [1, "background"], [1, "header"], [3, "date", "locations", "locationsChange"], [4, "ngIf", "ngIfElse"], [1, "footer"], [1, "box"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], ["minBufferPx", "900", "maxBufferPx", "1200", 3, "itemSize", 4, "ngIf", "ngIfElse"], ["minBufferPx", "900", "maxBufferPx", "1200", 3, "itemSize"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [3, "form", "space", "multi", "select"], ["mat-button", "", "name", "next", 3, "disabled", "click"], [1, "body"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"], [1, "text"], [3, "icon"]], template: function BookingFindSpaceComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "div", 1);
         i0.ɵɵelementStart(2, "div", 2);
