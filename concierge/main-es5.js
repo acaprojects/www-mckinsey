@@ -19098,15 +19098,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               booking['Booked By'] = booking.booked_by.name || booking.booked_by.email;
               booking.charge_code = booking.equipment_codes ? Object.keys(booking.equipment_codes).map(function (key) {
                 return booking.equipment_codes[key];
-              }).join(', ') : ''; //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
+              }).join('٫ ') : ''; //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
 
               booking.attendees = (booking.attendees || []).map(function (person) {
                 return person.name || person.email || person;
               }).join(', ');
-              booking.start = dayjs(booking.start).format('DD MMM YYYY, h:mm A');
-              booking.end = dayjs(booking.end).format('DD MMM YYYY, h:mm A');
+              booking.start = dayjs(booking.start).format('DD MMM YYYY٫ h:mm A');
+              booking.end = dayjs(booking.end).format('DD MMM YYYY٫ h:mm A');
               booking.notes = (booking.notes || []).map(function (note) {
-                return note.author ? "[".concat(note.author, "|").concat(note.type, "]").concat(note.message.replace(/<[^>]*>?/gm, '')) : '';
+                return note.author && (note.type === 'description' || note.type === 'private') ? "[".concat(note.author, "|").concat(note.type, "]").concat(note.message.replace(/<[^>]*>?/gm, '')) : '';
               }).join('\n');
               booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({
                 start: booking.date

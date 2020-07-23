@@ -10221,16 +10221,16 @@ class Report {
                 booking.charge_code = booking.equipment_codes
                     ? Object.keys(booking.equipment_codes)
                         .map((key) => booking.equipment_codes[key])
-                        .join(', ')
+                        .join('٫ ')
                     : '';
                 //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
                 booking.attendees = (booking.attendees || [])
                     .map((person) => person.name || person.email || person)
                     .join(', ');
-                booking.start = dayjs(booking.start).format('DD MMM YYYY, h:mm A');
-                booking.end = dayjs(booking.end).format('DD MMM YYYY, h:mm A');
+                booking.start = dayjs(booking.start).format('DD MMM YYYY٫ h:mm A');
+                booking.end = dayjs(booking.end).format('DD MMM YYYY٫ h:mm A');
                 booking.notes = (booking.notes || [])
-                    .map((note) => note.author
+                    .map((note) => note.author && (note.type === 'description' || note.type === 'private')
                     ? `[${note.author}|${note.type}]${note.message.replace(/<[^>]*>?/gm, '')}`
                     : '')
                     .join('\n');
