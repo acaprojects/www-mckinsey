@@ -22538,7 +22538,6 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
                 this.loading = true;
                 this._spaces
                     .query({
-                    room_ids,
                     zone_ids: zone_ids.join(','),
                     available_from: time.unix(),
                     available_to: end.unix(),
@@ -25758,16 +25757,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "b931f91",
-    "hash": "b931f91",
+    "raw": "b2b9e9f",
+    "hash": "b2b9e9f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b931f91",
+    "suffix": "b2b9e9f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595506760173
+    "time": 1595541969309
 };
 /* tslint:enable */
 
