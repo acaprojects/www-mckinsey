@@ -10268,6 +10268,7 @@ class Report {
                     'sensitivity',
                     'seriesMasterId',
                     'show_as',
+                    'notes',
                     'status',
                     'subject',
                     'type',

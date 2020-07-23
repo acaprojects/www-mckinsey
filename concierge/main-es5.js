@@ -19111,7 +19111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({
                 start: booking.date
               }, booking.recurr));
-              var remove_fields = ['id', 'icaluid', 'accepted_at', 'accepted_by', 'check_ins', 'changeKey', 'created', 'booking_type', 'edit_history', 'end_epoch', 'old_attendees', 'start_epoch', 'expected_attendees', 'isAllDay', 'isCancelled', 'body', 'is_free', 'lastModifiedDateTime', 'locationType', 'locations', 'organizer', 'booked_by', 'originalEndTimeZone', 'originalStartTimeZone', 'recurr', 'room_booking_status', 'room_email', 'room_emails', 'room_id', 'sensitivity', 'seriesMasterId', 'show_as', 'status', 'subject', 'type', 'previous_booking', 'catering', 'responseStatus', 'equipment_codes'];
+              var remove_fields = ['id', 'icaluid', 'accepted_at', 'accepted_by', 'check_ins', 'changeKey', 'created', 'booking_type', 'edit_history', 'end_epoch', 'old_attendees', 'start_epoch', 'expected_attendees', 'isAllDay', 'isCancelled', 'body', 'is_free', 'lastModifiedDateTime', 'locationType', 'locations', 'organizer', 'booked_by', 'originalEndTimeZone', 'originalStartTimeZone', 'recurr', 'room_booking_status', 'room_email', 'room_emails', 'room_id', 'sensitivity', 'seriesMasterId', 'show_as', 'notes', 'status', 'subject', 'type', 'previous_booking', 'catering', 'responseStatus', 'equipment_codes'];
 
               for (var _i5 = 0, _remove_fields = remove_fields; _i5 < _remove_fields.length; _i5++) {
                 var _field = _remove_fields[_i5];
