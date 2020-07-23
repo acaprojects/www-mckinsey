@@ -37858,7 +37858,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var ctx_r10 = i0.ɵɵnextContext();
           return ctx_r10.accept();
         });
-        i0.ɵɵtext(20);
+        i0.ɵɵtext(20, " Accept ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(21, "button", 17);
         i0.ɵɵlistener("click", function DayViewApprovalsEventComponent_div_0_Template_button_click_21_listener() {
@@ -37866,7 +37866,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var ctx_r11 = i0.ɵɵnextContext();
           return ctx_r11.decline();
         });
-        i0.ɵɵtext(22);
+        i0.ɵɵtext(22, " Decline ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(23, DayViewApprovalsEventComponent_div_0_div_23_Template, 6, 0, "div", 18);
@@ -37886,20 +37886,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate(ctx_r0.event.title);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(18, _c2));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(12, _c2));
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(19, _c3, "keyboard_arrow_" + (ctx_r0.shown ? "up" : "down")));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(13, _c3, "keyboard_arrow_" + (ctx_r0.shown ? "up" : "down")));
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx_r0.shown);
-        i0.ɵɵadvance(2);
-        i0.ɵɵclassProp("accepted", ctx_r0.event.approved);
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" Accept", ctx_r0.event.approved ? "ed" : "", " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵclassProp("declined", ctx_r0.event.declined);
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" Decline", ctx_r0.event.declined ? "d" : "", " ");
-        i0.ɵɵadvance(1);
+        i0.ɵɵadvance(6);
         i0.ɵɵproperty("ngIf", ctx_r0.loading);
       }
     }
@@ -38153,7 +38145,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       consts: [[3, "class", 4, "ngIf"], [1, "header"], [1, "avatar"], [3, "user"], [1, "details"], [1, "text", "bold"], [4, "ngIf"], [1, "text"], ["mat-icon-button", "", "name", "view", 1, "search", 3, "click"], [3, "icon"], [1, "body"], [1, "control"], [1, "bar"], [3, "icon", "click"], ["class", "contents", 4, "ngIf"], [1, "footer"], ["mat-button", "", "name", "accept", 1, "inverse", 3, "click"], ["mat-button", "", "name", "decline", 1, "inverse", 3, "click"], ["class", "load-state", 4, "ngIf"], [1, "contents"], [1, "field", "limit-height"], ["for", "name"], ["name", "host", 1, "value"], [1, "actions"], ["mat-icon-button", "", 3, "href"], ["class", "field limit-height", 4, "ngIf"], [1, "field", "multiline"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["class", "attendee", 4, "ngFor", "ngForOf"], [1, "field"], ["for", "notifyee"], ["name", "notifyee", 1, "value"], ["for", "catering"], ["name", "catering", 1, "value"], ["for", "bookee"], ["name", "bookee", 1, "value"], [1, "attendee"], [1, "load-state"], [1, "no-item", "center"], [1, "icon"], ["diameter", "32"]],
       template: function DayViewApprovalsEventComponent_Template(rf, ctx) {
         if (rf & 1) {
-          i0.ɵɵtemplate(0, DayViewApprovalsEventComponent_div_0_Template, 24, 21, "div", 0);
+          i0.ɵɵtemplate(0, DayViewApprovalsEventComponent_div_0_Template, 24, 15, "div", 0);
         }
 
         if (rf & 2) {
@@ -47080,16 +47072,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "26b7646",
-      "hash": "26b7646",
+      "raw": "b931f91",
+      "hash": "b931f91",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "26b7646",
+      "suffix": "b931f91",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595503514424
+      "time": 1595506760173
     };
     /* tslint:enable */
 
