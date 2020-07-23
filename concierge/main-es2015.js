@@ -8414,12 +8414,10 @@ class Booking extends base_api_class_1.BaseDataClass {
     }
     /** Whether booking is tentative */
     get tentative() {
-        if (!this.declined) {
-            for (const space of this.space_list) {
-                if (this.approval_status[space.email] &&
-                    this.approval_status[space.email].indexOf('tentative') >= 0) {
-                    return true;
-                }
+        for (const space of this.space_list) {
+            if (this.approval_status[space.email] &&
+                this.approval_status[space.email].indexOf('tentative') >= 0) {
+                return true;
             }
         }
         return false;
@@ -25768,16 +25766,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "a479299",
-    "hash": "a479299",
+    "raw": "26b7646",
+    "hash": "26b7646",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "a479299",
+    "suffix": "26b7646",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595500145043
+    "time": 1595503514424
 };
 /* tslint:enable */
 

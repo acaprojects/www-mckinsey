@@ -16025,23 +16025,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tentative",
         get: function get() {
-          if (!this.declined) {
-            var _iterator14 = _createForOfIteratorHelper(this.space_list),
-                _step14;
+          var _iterator14 = _createForOfIteratorHelper(this.space_list),
+              _step14;
 
-            try {
-              for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
-                var space = _step14.value;
+          try {
+            for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
+              var space = _step14.value;
 
-                if (this.approval_status[space.email] && this.approval_status[space.email].indexOf('tentative') >= 0) {
-                  return true;
-                }
+              if (this.approval_status[space.email] && this.approval_status[space.email].indexOf('tentative') >= 0) {
+                return true;
               }
-            } catch (err) {
-              _iterator14.e(err);
-            } finally {
-              _iterator14.f();
             }
+          } catch (err) {
+            _iterator14.e(err);
+          } finally {
+            _iterator14.f();
           }
 
           return false;
@@ -47082,16 +47080,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "a479299",
-      "hash": "a479299",
+      "raw": "26b7646",
+      "hash": "26b7646",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "a479299",
+      "suffix": "26b7646",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595500145043
+      "time": 1595503514424
     };
     /* tslint:enable */
 
