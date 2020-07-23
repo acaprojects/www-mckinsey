@@ -19103,8 +19103,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               booking.attendees = (booking.attendees || []).map(function (person) {
                 return person.name || person.email || person;
               }).join(', ');
-              booking.start = dayjs(booking.start_epoch * 1000).format('DD MMM YYYY, h:mm A');
-              booking.end = dayjs(booking.end_epoch * 1000).format('DD MMM YYYY, h:mm A');
+              booking.start = dayjs(booking.start).format('DD MMM YYYY, h:mm A');
+              booking.end = dayjs(booking.end).format('DD MMM YYYY, h:mm A');
               booking.notes = (booking.notes || []).map(function (note) {
                 return note.author ? "[".concat(note.author, "|").concat(note.type, "]").concat(note.message.replace(/<[^>]*>?/gm, '')) : '';
               }).join('\n');
@@ -38243,7 +38243,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 icaluid: booking.icaluid,
                 start: Math.floor(booking.date / 1000),
                 end: Math.floor(booking.date / 1000) + booking.duration * 60,
-                room_id: booking.space.email
+                room_email: booking.space.email
               }).then(function () {
                 _this192._service.notifySuccess('Meeting declined.');
 
@@ -46069,12 +46069,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateEvents",
         value: function updateEvents() {
+          var _this237 = this;
+
           var date = dayjs(this.date).startOf('d');
 
           var bookings = this._bookings.booking_list.getValue().filter(function (booking) {
             var start = dayjs(booking.date);
             var end = start.add(booking.duration, 'm');
-            return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
+            return booking.space_list.find(function (space) {
+              return _this237.spaces.find(function (a_space) {
+                return a_space.email === space.email;
+              });
+            }) && booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
           });
 
           this.booking_list = bookings;
@@ -46518,36 +46524,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super73 = _createSuper(WeekViewTimelineComponent);
 
       function WeekViewTimelineComponent(_spaces, _org, _bookings) {
-        var _this237;
+        var _this238;
 
         _classCallCheck(this, WeekViewTimelineComponent);
 
-        _this237 = _super73.call(this);
-        _this237._spaces = _spaces;
-        _this237._org = _org;
-        _this237._bookings = _bookings;
+        _this238 = _super73.call(this);
+        _this238._spaces = _spaces;
+        _this238._org = _org;
+        _this238._bookings = _bookings;
         /** List of dates to display */
 
-        _this237.date_list = [];
+        _this238.date_list = [];
         /** List of spaces to display bookings for */
 
-        _this237.space_list = [];
+        _this238.space_list = [];
         /** Subject holding the value of the search */
 
-        _this237.search$ = new rxjs_1.Subject();
-        return _this237;
+        _this238.search$ = new rxjs_1.Subject();
+        return _this238;
       }
 
       _createClass(WeekViewTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this238 = this;
+          var _this239 = this;
 
           this.date_list = this.generateDates(this.date, this.weekends);
           this.initBookings();
           this.search$.next("".concat(this.date, "|").concat(this.weekends, "|").concat(this.level));
           this.interval('update_booking', function () {
-            return _this238.search$.next("".concat(_this238.date, "|").concat(_this238.weekends, "|").concat(_this238.level, "|").concat(dayjs().unix()));
+            return _this239.search$.next("".concat(_this239.date, "|").concat(_this239.weekends, "|").concat(_this239.level, "|").concat(dayjs().unix()));
           }, 30 * 1000);
         }
       }, {
@@ -46587,26 +46593,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this239 = this;
+          var _this240 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this239.loading = true;
-            var date = dayjs(_this239.date).startOf('w');
-            return _this239._spaces.query({
-              zone_ids: "".concat(_this239.level ? _this239.level : _this239._org.building.id).concat(_this239.space_type ? ',' + _this239.space_type : ''),
-              available_from: Math.floor(_this239.date_list[0] / 1000) || date.unix(),
-              available_to: Math.floor(_this239.date_list[_this239.date_list.length - 1] / 1000) || date.endOf('w').unix()
+            _this240.loading = true;
+            var date = dayjs(_this240.date).startOf('w');
+            return _this240._spaces.query({
+              zone_ids: "".concat(_this240.level ? _this240.level : _this240._org.building.id).concat(_this240.space_type ? ',' + _this240.space_type : ''),
+              available_from: Math.floor(_this240.date_list[0] / 1000) || date.unix(),
+              available_to: Math.floor(_this240.date_list[_this240.date_list.length - 1] / 1000) || date.endOf('w').unix()
             });
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this239.loading = false;
-            var date = dayjs(_this239.date).startOf('d');
+            _this240.loading = false;
+            var date = dayjs(_this240.date).startOf('d');
 
-            var bookings = _this239._bookings.booking_list.getValue();
+            var bookings = _this240._bookings.booking_list.getValue();
 
             list.forEach(function (space) {
               return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(function (bkn) {
@@ -46621,9 +46627,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return a.date - b.date;
             });
 
-            _this239._bookings.booking_list.next(bookings);
+            _this240._bookings.booking_list.next(bookings);
 
-            _this239.space_list = list;
+            _this240.space_list = list;
           }));
         }
       }]);
@@ -46905,90 +46911,90 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super74 = _createSuper(WeekViewComponent);
 
       function WeekViewComponent(_service, _org, _dialog, _router, _route) {
-        var _this240;
+        var _this241;
 
         _classCallCheck(this, WeekViewComponent);
 
-        _this240 = _super74.call(this);
-        _this240._service = _service;
-        _this240._org = _org;
-        _this240._dialog = _dialog;
-        _this240._router = _router;
-        _this240._route = _route;
+        _this241 = _super74.call(this);
+        _this241._service = _service;
+        _this241._org = _org;
+        _this241._dialog = _dialog;
+        _this241._router = _router;
+        _this241._route = _route;
         /** ID of the currently selected level */
 
-        _this240.active_level = '';
+        _this241.active_level = '';
         /** ID of the currently selected level */
 
-        _this240.active_type = '';
+        _this241.active_type = '';
         /** List of levels available for the active building */
 
-        _this240.levels = [];
+        _this241.levels = [];
         /** List of space types available for the active building */
 
-        _this240.space_types = [];
-        return _this240;
+        _this241.space_types = [];
+        return _this241;
       }
 
       _createClass(WeekViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this241 = this;
+          var _this242 = this;
 
           this._service.title = 'Week View';
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this241.subscription('route.params', _this241._route.paramMap.subscribe(function (params) {
+            _this242.subscription('route.params', _this242._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this241.active_level !== params.get('level')) {
-                var level = _this241._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this242.active_level !== params.get('level')) {
+                var level = _this242._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this241._org.buildings.find(function (bld) {
+                  var building = _this242._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this241.active_level = level.id;
-                    _this241._org.building = building;
+                    _this242.active_level = level.id;
+                    _this242._org.building = building;
                   }
                 }
               }
             }));
 
-            _this241.subscription('building', _this241._org.listen('active_building').subscribe(function () {
-              var building = _this241._org.building;
+            _this242.subscription('building', _this242._org.listen('active_building').subscribe(function () {
+              var building = _this242._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this241.active_level;
+                return lvl.id === _this242.active_level;
               })) {
-                _this241.active_level = (building.levels[0] || {
+                _this242.active_level = (building.levels[0] || {
                   id: ''
                 }).id;
 
-                _this241.updateLevel();
+                _this242.updateLevel();
               }
 
-              _this241.levels = [{
+              _this242.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
 
-              _this241.levels.sort(function (a, b) {
+              _this242.levels.sort(function (a, b) {
                 return a.name.localeCompare(b.name);
               });
 
-              _this241.space_types = [{
+              _this242.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this241._org.space_types);
+              }].concat(_this242._org.space_types);
             }));
           });
         }

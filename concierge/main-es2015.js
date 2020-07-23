@@ -10227,8 +10227,8 @@ class Report {
                 booking.attendees = (booking.attendees || [])
                     .map((person) => person.name || person.email || person)
                     .join(', ');
-                booking.start = dayjs(booking.start_epoch * 1000).format('DD MMM YYYY, h:mm A');
-                booking.end = dayjs(booking.end_epoch * 1000).format('DD MMM YYYY, h:mm A');
+                booking.start = dayjs(booking.start).format('DD MMM YYYY, h:mm A');
+                booking.end = dayjs(booking.end).format('DD MMM YYYY, h:mm A');
                 booking.notes = (booking.notes || [])
                     .map((note) => note.author
                     ? `[${note.author}|${note.type}]${note.message.replace(/<[^>]*>?/gm, '')}`
@@ -21141,7 +21141,7 @@ class DayViewApprovalsEventComponent extends base_directive_1.BaseDirective {
                     icaluid: booking.icaluid,
                     start: Math.floor(booking.date / 1000),
                     end: Math.floor(booking.date / 1000) + booking.duration * 60,
-                    room_id: booking.space.email,
+                    room_email: booking.space.email,
                 })
                     .then(() => {
                     this._service.notifySuccess('Meeting declined.');
@@ -25306,7 +25306,8 @@ class WeekViewDayDisplayComponent extends base_directive_1.BaseDirective {
         const bookings = this._bookings.booking_list.getValue().filter((booking) => {
             const start = dayjs(booking.date);
             const end = start.add(booking.duration, 'm');
-            return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
+            return (booking.space_list.find((space) => this.spaces.find((a_space) => a_space.email === space.email)) &&
+                booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf()));
         });
         this.booking_list = bookings;
     }
