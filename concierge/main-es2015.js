@@ -2257,7 +2257,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
         building_time = building_time.minute(0).hour(catering_hours.start);
         if (space_email) {
             const space = this.space_list.find((space) => space.email === space_email);
-            const building = this._org.buildings.find((bld) => { var _a; return bld.id === ((_a = space) === null || _a === void 0 ? void 0 : _a.level.building_id); });
+            const building = this._org.buildings.find((bld) => { var _a; return (_a = space) === null || _a === void 0 ? void 0 : _a.zones.includes(bld.id); });
             catering_hours = ((_a = building) === null || _a === void 0 ? void 0 : _a.catering_hours) || catering_hours;
             building_time = building_time.minute(0).hour(catering_hours.start);
             if (building && building.timezone) {
@@ -3158,31 +3158,26 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
             let request_id = 0;
             // Listen for input changes
             this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
-                var _a;
                 this.loading = true;
                 request_id = general_utilities_1.randomInt(99999999);
-                const recurrence = this.form.controls.recurrence
-                    ? this.form.controls.recurrence.value
-                    : null;
-                const recurrence_properties = ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None'
-                    ? {
-                        recurr_period: (recurrence.period || '').toLowerCase(),
-                        recurr_end: dayjs(recurrence.end).unix(),
-                    }
-                    : {};
                 const date = dayjs(this.form.controls.date.value);
-                const query = Object.assign({ date: this.form.controls.all_day.value
+                const query = {
+                    date: this.form.controls.all_day.value
                         ? date.startOf('d').valueOf()
-                        : date.valueOf(), duration: this.form.controls.all_day.value
+                        : date.valueOf(),
+                    duration: this.form.controls.all_day.value
                         ? 24 * 60
-                        : this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
+                        : this.form.controls.duration.value,
+                    zone_ids: this._org.building.id,
+                    bookable: true
+                };
                 /* istanbul ignore else */
                 if (this.zone_ids && this.zone_ids.length) {
                     query.zone_ids = this.zone_ids.join(',');
                 }
                 const id = request_id;
                 return this._spaces.available(query).then((list) => tslib_1.__awaiter(this, void 0, void 0, function* () { return ({ id, list }); }));
-            }), operators_1.catchError((_) => rxjs_1.of({ id: request_id, list: [] })), operators_1.map((resp) => {
+            }), operators_1.catchError((_) => rxjs_1.of({ id: request_id, list: [], error: _ })), operators_1.map((resp) => {
                 this.loading = false;
                 return resp.id === request_id ? resp.list : this.space_list;
             }));
@@ -3253,12 +3248,13 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
      * @param space_b
      */
     sort(space_a, space_b) {
-        const bld = this._org.buildings.find((bld) => bld.id === space_a.level.building_id);
-        const bld_b = this._org.buildings.find((bld) => bld.id === space_b.level.building_id);
+        var _a;
+        const bld = this._org.buildings.find((bld) => space_a.zones.includes(bld.id));
+        const bld_b = this._org.buildings.find((bld) => space_b.zones.includes(bld.id));
         if (bld && bld !== bld_b) {
-            return (bld.name || '').localeCompare(bld_b.name || '');
+            return bld.name.localeCompare((_a = bld_b) === null || _a === void 0 ? void 0 : _a.name);
         }
-        const sort_order = (bld.sort_order ? [...bld.sort_order] : []).reverse();
+        const sort_order = [...bld.sort_order].reverse();
         for (const zone_id of sort_order) {
             if (zone_id === '*') {
                 continue;
@@ -3272,7 +3268,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 return -1;
             }
         }
-        return (space_a.name || '').localeCompare(space_b.name || '');
+        return space_a.name.localeCompare(space_b.name);
     }
 }
 exports.BookingFindSpaceComponent = BookingFindSpaceComponent;
@@ -5058,7 +5054,6 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
                 this.booking = booking;
             }
         }));
-        console.log('Edits:', this.booking.title, this.booking.edits);
     }
     setLoading(state) {
         this.loading = state;
@@ -7544,25 +7539,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 const service_worker_1 = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
-const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const snack_bar_1 = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
+const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const composer_1 = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
 const ngx_heap_io_1 = __webpack_require__(/*! @acaprojects/ngx-heap-io */ "./node_modules/@acaprojects/ngx-heap-io/__ivy_ngcc__/fesm2015/acaprojects-ngx-heap-io.js");
 const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 const base_class_1 = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
 const settings_service_1 = __webpack_require__(/*! ./settings.service */ "./src/app/services/settings.service.ts");
 const hotkeys_service_1 = __webpack_require__(/*! ./hotkeys.service */ "./src/app/services/hotkeys.service.ts");
-const service_manager_class_1 = __webpack_require__(/*! ./data/service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 const i2 = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
 const i3 = __webpack_require__(/*! ./settings.service */ "./src/app/services/settings.service.ts");
 const i4 = __webpack_require__(/*! ./hotkeys.service */ "./src/app/services/hotkeys.service.ts");
 const i5 = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/__ivy_ngcc__/fesm2015/placeos-composer.js");
-const i6 = __webpack_require__(/*! @acaprojects/ngx-heap-io */ "./node_modules/@acaprojects/ngx-heap-io/__ivy_ngcc__/fesm2015/acaprojects-ngx-heap-io.js");
-const i7 = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
+const i6 = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
+const i7 = __webpack_require__(/*! @acaprojects/ngx-heap-io */ "./node_modules/@acaprojects/ngx-heap-io/__ivy_ngcc__/fesm2015/acaprojects-ngx-heap-io.js");
 class ApplicationService extends base_class_1.BaseClass {
-    constructor(_app_ref, _zone, _title, _cache, _settings, _hotkeys, _composer, _analytics, _snackbar) {
+    constructor(_app_ref, _zone, _title, _cache, _settings, _hotkeys, _composer, _snackbar, _analytics) {
         super();
         this._app_ref = _app_ref;
         this._zone = _zone;
@@ -7571,43 +7565,29 @@ class ApplicationService extends base_class_1.BaseClass {
         this._settings = _settings;
         this._hotkeys = _hotkeys;
         this._composer = _composer;
-        this._analytics = _analytics;
         this._snackbar = _snackbar;
-        /** List of previous routes for return navigation */
-        this._route_trail = [];
+        this._analytics = _analytics;
         /** Map of state variables for Service */
         this._subjects = {};
         /** Map of observables for state variables */
         this._observers = {};
-        service_manager_class_1.ServiceManager.setService(ApplicationService, this);
         this.set('system', null);
         this.set('title', 'Home');
         this.set('loading', {});
-        this.set('APP.breakdown', false);
-        this.set('CONCIERGE.legend', {});
-        this.set('CONCIERGE.pending_bookings', {});
         this.set('CONCIERGE.day_view.viewing', null);
-        this._app_ref.isStable.pipe(operators_1.first((_) => _)).subscribe(() => {
+        this._app_ref.isStable.pipe(operators_1.first(_ => _)).subscribe(() => {
             this._zone.run(() => {
-                this._stable = true;
                 this.log('APP', `Application has stablised.`);
                 this.setupCache();
                 this.waitForSettings();
             });
         });
     }
-    /** Whether the application has stablised */
-    get is_stable() {
-        return this._stable || false;
-    }
-    get Bindings() {
-        return this._composer.bindings;
-    }
     /** Analytics service */
     get Analytics() {
         return {};
     }
-    /** Analytics service */
+    /** Hotkeys service */
     get Hotkeys() {
         return this._hotkeys;
     }
@@ -7655,11 +7635,11 @@ class ApplicationService extends base_class_1.BaseClass {
     notify(type, message, action = 'OK', on_action, icon = {
         type: 'icon',
         class: 'material-icons',
-        content: 'info',
+        content: 'info'
     }) {
         const snackbar_ref = this._snackbar.open(message, action, {
             panelClass: [type],
-            duration: 5000,
+            duration: 5000
         });
         this.subscription('snackbar_close', snackbar_ref.afterDismissed().subscribe(() => {
             this.unsub('snackbar_close');
@@ -7680,7 +7660,7 @@ class ApplicationService extends base_class_1.BaseClass {
         const icon = {
             type: 'icon',
             class: 'material-icons',
-            content: 'done',
+            content: 'done'
         };
         console.debug(msg);
         this.notify('success', msg, action, on_action, icon);
@@ -7695,7 +7675,7 @@ class ApplicationService extends base_class_1.BaseClass {
         const icon = {
             type: 'icon',
             class: 'material-icons',
-            content: 'error',
+            content: 'error'
         };
         console.error(msg);
         this.notify('error', msg, action, on_action, icon);
@@ -7710,7 +7690,7 @@ class ApplicationService extends base_class_1.BaseClass {
         const icon = {
             type: 'icon',
             class: 'material-icons',
-            content: 'warning',
+            content: 'warning'
         };
         console.warn(msg);
         this.notify('warn', msg, action, on_action, icon);
@@ -7751,16 +7731,19 @@ class ApplicationService extends base_class_1.BaseClass {
      * @param next Callback for value changes
      */
     listen(name) {
-        return this._observers[name] ? this._observers[name] : null;
+        if (!this._observers[name]) {
+            this.set(name, null);
+        }
+        return this._observers[name];
     }
     /**
      * Update the value of the named property
      * @param name Property name
      * @param value New value
      */
-    set(name, value, type = 'behaviourSubject') {
+    set(name, value) {
         if (!this._subjects[name]) {
-            this._subjects[name] = type === 'subject' ? new rxjs_1.Subject() : new rxjs_1.BehaviorSubject(value);
+            this._subjects[name] = new rxjs_1.BehaviorSubject(value);
             this._observers[name] = this._subjects[name].asObservable();
         }
         else {
@@ -7770,7 +7753,7 @@ class ApplicationService extends base_class_1.BaseClass {
     /** Wait for settings to be initialised before setting up the application */
     waitForSettings() {
         // Wait until the settings have loaded before initialising
-        this._settings.initialised.pipe(operators_1.first((_) => _)).subscribe(() => this.init());
+        this._settings.initialised.pipe(operators_1.first(_ => _)).subscribe(() => this.init());
     }
     /**
      * Initialise application services
@@ -7778,9 +7761,9 @@ class ApplicationService extends base_class_1.BaseClass {
     init() {
         this.setupComposer();
         // this.setupAnalytics();
-        this._composer.initialised
-            .pipe(operators_1.first((_) => _))
-            .subscribe(() => this._initialised.next(true));
+        this._composer.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
+            this._initialised.next(true);
+        });
         // Add service to window if in debug mode
         if (window.debug) {
             window.application = this;
@@ -7791,10 +7774,10 @@ class ApplicationService extends base_class_1.BaseClass {
      */
     setupComposer() {
         this.log('SYSTEM', 'Setup up composer...');
-        const loading = this.get('loading') || {};
+        const loading = this.get('loading');
         loading.composer = {
             message: 'Initialising service connection',
-            state: 'loading',
+            state: 'loading'
         };
         this.set('loading', loading);
         // Get application settings
@@ -7813,21 +7796,22 @@ class ApplicationService extends base_class_1.BaseClass {
             token_uri: `${url}/auth/token`,
             redirect_uri: `${location.origin}${route}/oauth-resp.html`,
             handle_login: !settings.local_login,
-            mock,
+            mock
         };
         this._composer.setup(config);
         loading.composer = {
             message: 'Initialising service connection',
-            state: 'complete',
+            state: 'complete'
         };
         this.set('loading', loading);
     }
+    /* istanbul ignore next */
     /**
      * Setup handler for cache change events
      */
     setupCache() {
         if (this._cache.isEnabled) {
-            this.subscription('cache_update', this._cache.available.subscribe((event) => {
+            this.subscription('cache_update', this._cache.available.subscribe(event => {
                 const current = `current version is ${event.current.hash}`;
                 const available = `available version is ${event.available.hash}`;
                 this.log('CACHE', `Update available: ${current} ${available}`);
@@ -7843,6 +7827,7 @@ class ApplicationService extends base_class_1.BaseClass {
             }, 5 * 60 * 1000);
         }
     }
+    /* istanbul ignore next */
     /**
      * Update the cache and reload the page
      *
@@ -7857,14 +7842,14 @@ class ApplicationService extends base_class_1.BaseClass {
     }
 }
 exports.ApplicationService = ApplicationService;
-ApplicationService.ɵfac = function ApplicationService_Factory(t) { return new (t || ApplicationService)(i0.ɵɵinject(i0.ApplicationRef), i0.ɵɵinject(i0.NgZone), i0.ɵɵinject(i1.Title), i0.ɵɵinject(i2.SwUpdate), i0.ɵɵinject(i3.SettingsService), i0.ɵɵinject(i4.HotkeysService), i0.ɵɵinject(i5.ComposerService), i0.ɵɵinject(i6.HeapIoService), i0.ɵɵinject(i7.MatSnackBar)); };
+ApplicationService.ɵfac = function ApplicationService_Factory(t) { return new (t || ApplicationService)(i0.ɵɵinject(i0.ApplicationRef), i0.ɵɵinject(i0.NgZone), i0.ɵɵinject(i1.Title), i0.ɵɵinject(i2.SwUpdate), i0.ɵɵinject(i3.SettingsService), i0.ɵɵinject(i4.HotkeysService), i0.ɵɵinject(i5.ComposerService), i0.ɵɵinject(i6.MatSnackBar), i0.ɵɵinject(i7.HeapIoService)); };
 ApplicationService.ɵprov = i0.ɵɵdefineInjectable({ token: ApplicationService, factory: ApplicationService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ApplicationService, [{
         type: core_1.Injectable,
         args: [{
-                providedIn: 'root',
+                providedIn: 'root'
             }]
-    }], function () { return [{ type: i0.ApplicationRef }, { type: i0.NgZone }, { type: i1.Title }, { type: i2.SwUpdate }, { type: i3.SettingsService }, { type: i4.HotkeysService }, { type: i5.ComposerService }, { type: i6.HeapIoService }, { type: i7.MatSnackBar }]; }, null); })();
+    }], function () { return [{ type: i0.ApplicationRef }, { type: i0.NgZone }, { type: i1.Title }, { type: i2.SwUpdate }, { type: i3.SettingsService }, { type: i4.HotkeysService }, { type: i5.ComposerService }, { type: i6.MatSnackBar }, { type: i7.HeapIoService }]; }, null); })();
 
 
 /***/ }),
@@ -8085,12 +8070,7 @@ class BaseAPIService extends base_class_1.BaseClass {
      */
     filter(predicate = this._list_filter) {
         const list = this.get('list');
-        return list.reduce((a, i) => {
-            if (predicate(i)) {
-                a.push(i);
-            }
-            return a;
-        }, []);
+        return list.filter(predicate);
     }
     /**
      * Get item with the given id from the loaded items
@@ -8098,7 +8078,7 @@ class BaseAPIService extends base_class_1.BaseClass {
      */
     find(id) {
         const list = this.get('list');
-        return list.find((i) => i.id === id || (i.email || '').toLowerCase() === (id || '').toLowerCase());
+        return list.find((i) => { var _a; return i.id === id || ((_a = i.email) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === id.toLowerCase(); });
     }
     /**
      * Query the index of the API route associated with this service
@@ -8224,47 +8204,6 @@ class BaseAPIService extends base_class_1.BaseClass {
             });
         }
         return this._promises[key];
-    }
-    /**
-     * Setup a poller for an API endpoint
-     * @param id Show request ID. Leave blank to poll on the query endpoint
-     * @param query_params Map of query paramaters to add to the polled URL
-     * @param delay Delay between each poll event
-     */
-    poll(id, query_params = {}, delay = 5000) {
-        const key = `poll|${id || ''}|${api_utilities_1.toQueryString(query_params) || ''}`;
-        this.stopPoll(id, query_params);
-        this._subjects[key] = new rxjs_1.Subject();
-        this._observers[key] = this._subjects[key].asObservable();
-        const sub = this._subjects[key];
-        const query = Object.assign(Object.assign({}, (query_params || {})), { _poll: true });
-        if (id) {
-            this.show(id, query).then((d) => sub.next(d), (e) => sub.error(e));
-            this.interval(key, () => {
-                this.show(id, query).then((d) => sub.next(d), (e) => sub.error(e));
-            }, delay);
-        }
-        else {
-            this.query(query).then((d) => sub.next(d), (e) => sub.error(e));
-            this.interval(key, () => {
-                this.query(query).then((d) => sub.next(d), (e) => sub.error(e));
-            }, delay);
-        }
-        return this._observers[key];
-    }
-    /**
-     * Destroy poller
-     * @param id
-     * @param query_params
-     */
-    stopPoll(id, query_params = {}) {
-        const key = `poll|${id || ''}|${api_utilities_1.toQueryString(query_params) || ''}`;
-        /* istanbul ignore else */
-        if (this._subjects[key]) {
-            this._subjects[key].complete();
-            this._subjects[key] = null;
-            this._observers[key] = null;
-        }
     }
     /**
      * Make put request for changes to the item with the given id
@@ -9057,7 +8996,6 @@ function statusFromBookings(bookings, bookable, requestable, date = dayjs().valu
     const end = dayjs(next_free_slot.end);
     const currently_free = timePeriodsIntersect(date, date, next_free_slot.start, next_free_slot.end);
     const time_until_next_block = general_utilities_1.humaniseDuration(currently_free ? end.diff(now, 'm') : start.diff(now, 'm'), true);
-    console.log('Next Free:', next_free_slot);
     const free_tomorrow = !currently_free && !start.isSame(now, 'd');
     const free_today = currently_free && !end.isSame(now, 'd');
     return {
@@ -9133,7 +9071,7 @@ class BookingsService extends base_service_1.BaseAPIService {
         service_manager_class_1.ServiceManager.setService(booking_class_1.Booking, this);
         this._name = 'Bookings';
         this._api_route = '/bookings';
-        this._compare = (a, b) => !(a.id || '').localeCompare(b.id) || !(a.icaluid || '').localeCompare(b.icaluid);
+        this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.icaluid.localeCompare(b.icaluid);
     }
     accept(id, fields) {
         return this.task(id, 'accept', fields);
@@ -10226,7 +10164,7 @@ class Report {
                 //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
                 booking.attendees = (booking.attendees || [])
                     .map((person) => person.name || person.email || person)
-                    .join(', ');
+                    .join('٫ ');
                 booking.start = dayjs(booking.start).format('DD MMM YYYY٫ h:mm A');
                 booking.end = dayjs(booking.end).format('DD MMM YYYY٫ h:mm A');
                 booking.notes = (booking.notes || [])
@@ -10991,7 +10929,6 @@ class UsersService extends base_service_1.BaseAPIService {
                 promises.push(this.show(email));
             }
             const list = yield Promise.all(promises);
-            console.log('Delegates:', list);
             this.set('delegates', list);
             this.set('list', general_utilities_1.unique((this.get('list') || []).concat(list)));
             return list;
@@ -11184,8 +11121,8 @@ const tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const http_1 = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 const general_utilities_1 = __webpack_require__(/*! ../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const application_1 = __webpack_require__(/*! ../shared/globals/application */ "./src/app/shared/globals/application.ts");
 const base_class_1 = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
+const version_1 = __webpack_require__(/*! src/environments/version */ "./src/environments/version.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
@@ -11200,9 +11137,10 @@ class SettingsService extends base_class_1.BaseClass {
         /** Name of the application */
         this._app_name = 'PlaceOS';
         const now = dayjs();
-        const built = now.isSame(application_1.build, 'd') ? `Today at ${application_1.build.format('h:mmA')}` : application_1.build.format('D MMM YYYY, h:mmA');
-        this.log('CORE', `${application_1.core_version}`, null, 'debug', true);
-        this.log('APP', `${application_1.version} | Built: ${built}`, null, 'debug', true);
+        const build = dayjs(version_1.VERSION.time);
+        const built = now.isSame(build, 'd') ? `Today at ${build.format('h:mmA')}` : build.format('D MMM YYYY, h:mmA');
+        this.log('CORE', `${version_1.VERSION.core_version}`, null, 'debug', true);
+        this.log('APP', `${version_1.VERSION.version} - ${version_1.VERSION.hash} | Built: ${built}`, null, 'debug', true);
         this.init();
     }
     /**
@@ -11211,9 +11149,11 @@ class SettingsService extends base_class_1.BaseClass {
     init() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             yield this.loadFromFile('api');
+            /* istanbul ignore next */
             if (this._settings.api.debug) {
                 window.debug = true;
             }
+            /* istanbul ignore next */
             if (this._settings.api.app && this._settings.api.app.name) {
                 this._app_name = this._settings.api.app.name;
             }
@@ -11223,6 +11163,7 @@ class SettingsService extends base_class_1.BaseClass {
     }
     /** Whether settings service has initialised */
     get app_name() { return this._app_name; }
+    /* istanbul ignore next */
     /**
      * Log data to the browser console
      * @param type Type of message
@@ -11249,21 +11190,12 @@ class SettingsService extends base_class_1.BaseClass {
     get(key) {
         const keys = key.split('.');
         let value = null;
-        if (keys[0] === 'session') {
-            keys.shift();
-            value = general_utilities_1.getItemWithKeys(keys, this._settings.session);
-        }
-        else if (keys[0] === 'local') {
-            keys.shift();
-            value = general_utilities_1.getItemWithKeys(keys, this._settings.local);
-        }
-        else {
-            value = general_utilities_1.getItemWithKeys(keys, this._settings.api) ||
-                general_utilities_1.getItemWithKeys(keys, this._settings.session) ||
-                general_utilities_1.getItemWithKeys(keys, this._settings.local);
-        }
+        value = general_utilities_1.getItemWithKeys(keys, this._settings.api) ||
+            general_utilities_1.getItemWithKeys(keys, this._settings.session) ||
+            general_utilities_1.getItemWithKeys(keys, this._settings.local);
         return value;
     }
+    /* istanbul ignore next */
     /**
      * Load setting data from a file
      * @param name Namespace to add file data to
@@ -14833,27 +14765,6 @@ exports.ANIMATION_SHOW_CONTRACT_EXPAND = animations_1.trigger('show', [
 
 /***/ }),
 
-/***/ "./src/app/shared/globals/application.ts":
-/*!***********************************************!*\
-  !*** ./src/app/shared/globals/application.ts ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/** Version number of the application */
-exports.version = 'local-dev';
-/** Version number of the base application */
-exports.core_version = '1.0.0';
-/** Build time of the application */
-exports.build = dayjs();
-
-
-/***/ }),
-
 /***/ "./src/app/shared/mocks/api/bookings.mock.ts":
 /*!***************************************************!*\
   !*** ./src/app/shared/mocks/api/bookings.mock.ts ***!
@@ -17634,13 +17545,13 @@ const i7 = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@an
 const i8 = __webpack_require__(/*! ../../../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
 const i9 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 function CateringMenuItemComponent_div_0_div_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "div", 21);
+    i0.ɵɵelement(0, "div", 20);
 } if (rf & 2) {
     const ctx_r4 = i0.ɵɵnextContext(2);
     i0.ɵɵstyleProp("background-image", "url(" + ctx_r4.item.image_path + ")", i0.ɵɵdefaultStyleSanitizer);
 } }
 function CateringMenuItemComponent_div_0_div_8_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 22);
+    i0.ɵɵelementStart(0, "div", 21);
     i0.ɵɵtext(1);
     i0.ɵɵpipe(2, "currency");
     i0.ɵɵelementEnd();
@@ -17650,46 +17561,19 @@ function CateringMenuItemComponent_div_0_div_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind2(2, 1, ctx_r5.item.unit_price / 100, ctx_r5.symbol), " ");
 } }
 function CateringMenuItemComponent_div_0_div_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 23);
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r6 = i0.ɵɵnextContext(2);
-    i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate2(" Contains ", ctx_r6.item.items.length, " item", ctx_r6.item.items.length === 1 ? "" : "s", " ");
-} }
-function CateringMenuItemComponent_div_0_div_10_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 23);
-    i0.ɵɵelementStart(1, "span", 24);
-    i0.ɵɵtext(2, "Selected ");
-    i0.ɵɵelementEnd();
-    i0.ɵɵtext(3);
-    i0.ɵɵelementStart(4, "span", 24);
-    i0.ɵɵtext(5, "ion");
-    i0.ɵɵelementEnd();
-    i0.ɵɵtext(6);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r7 = i0.ɵɵnextContext(2);
-    i0.ɵɵadvance(3);
-    i0.ɵɵtextInterpolate1("", ctx_r7.item.must_select, " opt");
-    i0.ɵɵadvance(3);
-    i0.ɵɵtextInterpolate1("", ctx_r7.item.items.length === 1 ? "" : "s", " ");
-} }
-function CateringMenuItemComponent_div_0_div_11_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 25);
+    i0.ɵɵelementStart(0, "div", 22);
     i0.ɵɵtext(1);
     i0.ɵɵpipe(2, "currency");
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r8 = i0.ɵɵnextContext(2);
+    const ctx_r6 = i0.ɵɵnextContext(2);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind2(2, 1, ctx_r8.item.unit_price / 100, ctx_r8.symbol), " ");
+    i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind2(2, 1, ctx_r6.item.unit_price / 100, ctx_r6.symbol), " ");
 } }
 const _c0 = function () { return { class: "material-icons", content: "more_vert" }; };
 const _c1 = function (a1) { return { class: "material-icons", content: a1 }; };
 function CateringMenuItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
-    const _r10 = i0.ɵɵgetCurrentView();
+    const _r8 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 10);
     i0.ɵɵtemplate(1, CateringMenuItemComponent_div_0_div_1_Template, 1, 2, "div", 11);
     i0.ɵɵelementStart(2, "div", 12);
@@ -17701,17 +17585,15 @@ function CateringMenuItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(7, "div", 15);
     i0.ɵɵtemplate(8, CateringMenuItemComponent_div_0_div_8_Template, 3, 4, "div", 16);
-    i0.ɵɵtemplate(9, CateringMenuItemComponent_div_0_div_9_Template, 2, 2, "div", 17);
-    i0.ɵɵtemplate(10, CateringMenuItemComponent_div_0_div_10_Template, 7, 2, "div", 17);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(11, CateringMenuItemComponent_div_0_div_11_Template, 3, 4, "div", 18);
+    i0.ɵɵtemplate(9, CateringMenuItemComponent_div_0_div_9_Template, 3, 4, "div", 17);
+    i0.ɵɵelementStart(10, "button", 18);
+    i0.ɵɵelement(11, "app-icon", 7);
+    i0.ɵɵelementEnd();
     i0.ɵɵelementStart(12, "button", 19);
+    i0.ɵɵlistener("click", function CateringMenuItemComponent_div_0_Template_button_click_12_listener() { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.show_children = !ctx_r7.show_children; });
     i0.ɵɵelement(13, "app-icon", 7);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(14, "button", 20);
-    i0.ɵɵlistener("click", function CateringMenuItemComponent_div_0_Template_button_click_14_listener() { i0.ɵɵrestoreView(_r10); const ctx_r9 = i0.ɵɵnextContext(); return ctx_r9.show_children = !ctx_r9.show_children; });
-    i0.ɵɵelement(15, "app-icon", 7);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -17727,32 +17609,28 @@ function CateringMenuItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(2);
     i0.ɵɵproperty("ngIf", ctx_r0.item.unit_price);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r0.item.package && ctx_r0.item.items.length && !ctx_r0.item.must_select);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r0.item.package && ctx_r0.item.must_select && ctx_r0.item.amount > 0);
-    i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", ctx_r0.item.unit_price);
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("matMenuTriggerFor", _r2);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(15, _c0));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(13, _c0));
     i0.ɵɵadvance(1);
     i0.ɵɵclassProp("hide", !(ctx_r0.item.items && ctx_r0.item.items.length));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(16, _c1, ctx_r0.show_children ? "keyboard_arrow_up" : "keyboard_arrow_down"));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(14, _c1, ctx_r0.show_children ? "keyboard_arrow_up" : "keyboard_arrow_down"));
 } }
 function CateringMenuItemComponent_a_catering_menu_item_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "a-catering-menu-item", 26);
+    i0.ɵɵelement(0, "a-catering-menu-item", 23);
 } if (rf & 2) {
-    const sub_item_r11 = ctx.$implicit;
+    const sub_item_r9 = ctx.$implicit;
     const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("subitem", true)("parent", ctx_r1.item)("item", sub_item_r11);
+    i0.ɵɵproperty("subitem", true)("parent", ctx_r1.item)("item", sub_item_r9);
 } }
 const _c2 = function () { return { class: "material-icons", content: "add" }; };
 function CateringMenuItemComponent_ng_container_5_button_1_Template(rf, ctx) { if (rf & 1) {
-    const _r14 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 29);
-    i0.ɵɵlistener("click", function CateringMenuItemComponent_ng_container_5_button_1_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r14); const ctx_r13 = i0.ɵɵnextContext(2); return ctx_r13.openGroupModal(); });
+    const _r12 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "button", 26);
+    i0.ɵɵlistener("click", function CateringMenuItemComponent_ng_container_5_button_1_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r12); const ctx_r11 = i0.ɵɵnextContext(2); return ctx_r11.openGroupModal(); });
     i0.ɵɵelementStart(1, "div", 6);
     i0.ɵɵelement(2, "app-icon", 7);
     i0.ɵɵelementStart(3, "div", 8);
@@ -17765,11 +17643,11 @@ function CateringMenuItemComponent_ng_container_5_button_1_Template(rf, ctx) { i
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(1, _c2));
 } }
 function CateringMenuItemComponent_ng_container_5_Template(rf, ctx) { if (rf & 1) {
-    const _r16 = i0.ɵɵgetCurrentView();
+    const _r14 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, CateringMenuItemComponent_ng_container_5_button_1_Template, 5, 2, "button", 27);
-    i0.ɵɵelementStart(2, "button", 28);
-    i0.ɵɵlistener("click", function CateringMenuItemComponent_ng_container_5_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r16); const ctx_r15 = i0.ɵɵnextContext(); return ctx_r15.openItemModal(); });
+    i0.ɵɵtemplate(1, CateringMenuItemComponent_ng_container_5_button_1_Template, 5, 2, "button", 24);
+    i0.ɵɵelementStart(2, "button", 25);
+    i0.ɵɵlistener("click", function CateringMenuItemComponent_ng_container_5_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r14); const ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.openItemModal(); });
     i0.ɵɵelementStart(3, "div", 6);
     i0.ɵɵelement(4, "app-icon", 7);
     i0.ɵɵelementStart(5, "div", 8);
@@ -17835,7 +17713,6 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
         const item = old_item instanceof catering_category_class_1.CateringCategory
             ? new catering_category_class_1.CateringCategory(new_item)
             : new catering_item_class_1.CateringItem(new_item);
-        console.log('Item:', item);
         if (old_item.id) {
             const index = this.parent.items.findIndex((itm) => itm.id === old_item.id);
             this.parent.items.splice(index, 1, item);
@@ -17880,8 +17757,8 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringMenuItemComponent = CateringMenuItemComponent;
 CateringMenuItemComponent.ɵfac = function CateringMenuItemComponent_Factory(t) { return new (t || CateringMenuItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.MatDialog), i0.ɵɵdirectiveInject(i3.OrganisationService), i0.ɵɵdirectiveInject(i4.CateringItemsService), i0.ɵɵdirectiveInject(i5.CateringCategoriesService)); };
-CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-menu-item"]], inputs: { subitem: "subitem", item: "item", parent: "parent", disabled: "disabled" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 16, vars: 10, consts: [["class", "catering-item", 3, "subitem", 4, "ngIf"], [1, "children"], [3, "subitem", "parent", "item", 4, "ngFor", "ngForOf"], ["appMenu", "matMenu"], [4, "ngIf"], ["mat-menu-item", "", "name", "edit", 3, "click"], [1, "group"], [3, "icon"], [1, "text"], ["mat-menu-item", "", "name", "delete", 1, "delete", 3, "click"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], ["mat-icon-button", "", "name", "more", 3, "matMenuTriggerFor"], ["mat-icon-button", "", "name", "show-children", 3, "click"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option"], [1, "not-mobile"], [1, "option", "price", "not-mobile"], [3, "subitem", "parent", "item"], ["mat-menu-item", "", "name", "add-group", 3, "click", 4, "ngIf"], ["mat-menu-item", "", "name", "add-item", 3, "click"], ["mat-menu-item", "", "name", "add-group", 3, "click"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 16, 18, "div", 0);
+CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-menu-item"]], inputs: { subitem: "subitem", item: "item", parent: "parent", disabled: "disabled" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 16, vars: 10, consts: [["class", "catering-item", 3, "subitem", 4, "ngIf"], [1, "children"], [3, "subitem", "parent", "item", 4, "ngFor", "ngForOf"], ["appMenu", "matMenu"], [4, "ngIf"], ["mat-menu-item", "", "name", "edit", 3, "click"], [1, "group"], [3, "icon"], [1, "text"], ["mat-menu-item", "", "name", "delete", 1, "delete", 3, "click"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], ["mat-icon-button", "", "name", "more", 3, "matMenuTriggerFor"], ["mat-icon-button", "", "name", "show-children", 3, "click"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", "price", "not-mobile"], [3, "subitem", "parent", "item"], ["mat-menu-item", "", "name", "add-group", 3, "click", 4, "ngIf"], ["mat-menu-item", "", "name", "add-item", 3, "click"], ["mat-menu-item", "", "name", "add-group", 3, "click"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 14, 16, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵtemplate(2, CateringMenuItemComponent_a_catering_menu_item_2_Template, 1, 3, "a-catering-menu-item", 2);
         i0.ɵɵelementEnd();
@@ -19423,7 +19300,7 @@ class CateringGroupModalComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringGroupModalComponent = CateringGroupModalComponent;
 CateringGroupModalComponent.ɵfac = function CateringGroupModalComponent_Factory(t) { return new (t || CateringGroupModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.CateringCategoriesService), i0.ɵɵdirectiveInject(i3.UploadManager), i0.ɵɵdirectiveInject(i4.MatDialog), i0.ɵɵdirectiveInject(i4.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-CateringGroupModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringGroupModalComponent, selectors: [["a-catering-group-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", 3, "error", "click", 4, "ngIf"], ["mat-button", "", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], [1, "field", "padded"], ["for", "name"], [1, "value"], ["formControlName", "package"], ["appearance", "outline"], ["matInput", "", "name", "name", "formControlName", "name", 3, "placeholder"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "formControlName", "description", 3, "placeholder"], [4, "ngIf"], ["for", "must-select"], ["matInput", "", "name", "must-select", "type", "number", "placeholder", "Must select X items from grouping", "formControlName", "must_select"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], ["diameter", "48"], [3, "value"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["mat-button", "", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringGroupModalComponent_Template(rf, ctx) { if (rf & 1) {
+CateringGroupModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringGroupModalComponent, selectors: [["a-catering-group-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", "name", "delete", 3, "error", "click", 4, "ngIf"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], [1, "field", "padded"], ["for", "name"], [1, "value"], ["formControlName", "package"], ["appearance", "outline"], ["matInput", "", "name", "name", "formControlName", "name", 3, "placeholder"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "formControlName", "description", 3, "placeholder"], [4, "ngIf"], ["for", "must-select"], ["matInput", "", "name", "must-select", "type", "number", "placeholder", "Must select X items from grouping", "formControlName", "must_select"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], ["diameter", "48"], [3, "value"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["mat-button", "", "name", "delete", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringGroupModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2);
@@ -19741,7 +19618,7 @@ class CateringItemModalComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringItemModalComponent = CateringItemModalComponent;
 CateringItemModalComponent.ɵfac = function CateringItemModalComponent_Factory(t) { return new (t || CateringItemModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.CateringItemsService), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i3.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-CateringItemModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringItemModalComponent, selectors: [["a-catering-item-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 6, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", 3, "error", "click", 4, "ngIf"], ["mat-button", "", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field", "padded"], ["for", "name"], [1, "value"], [1, "field"], ["appearance", "outline"], ["matInput", "", "name", "name", "placeholder", "Item Name", "formControlName", "name"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "placeholder", "Item Description", "formControlName", "description"], ["for", "allergy"], ["matInput", "", "name", "allergy", "placeholder", "Allergy details about the item", "formControlName", "allergy"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "supplier-price"], ["matInput", "", "name", "supplier-price", "type", "number", "placeholder", "Price for one unit of the item from the supplier", "formControlName", "supplier_cost"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], [3, "value"], ["mat-button", "", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringItemModalComponent_Template(rf, ctx) { if (rf & 1) {
+CateringItemModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringItemModalComponent, selectors: [["a-catering-item-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 6, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", "name", "delete", 3, "error", "click", 4, "ngIf"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field", "padded"], ["for", "name"], [1, "value"], [1, "field"], ["appearance", "outline"], ["matInput", "", "name", "name", "placeholder", "Item Name", "formControlName", "name"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "placeholder", "Item Description", "formControlName", "description"], ["for", "allergy"], ["matInput", "", "name", "allergy", "placeholder", "Allergy details about the item", "formControlName", "allergy"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "supplier-price"], ["matInput", "", "name", "supplier-price", "type", "number", "placeholder", "Price for one unit of the item from the supplier", "formControlName", "supplier_cost"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], [3, "value"], ["mat-button", "", "name", "delete", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringItemModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2);
@@ -21810,7 +21687,8 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
     }
     /** Type of booking */
     get type() {
-        if (this.event.declined) {
+        var _a;
+        if (!this.event || ((_a = this.event.approval_status[this.space.email]) === null || _a === void 0 ? void 0 : _a.includes('decline'))) {
             return 'cancelled';
         }
         const booking_type = this.event.type;
@@ -24597,9 +24475,9 @@ const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/b
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const bookings_service_1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
 const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
@@ -24712,6 +24590,7 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
             this.filtered_bookings = this.filter(this.search);
         }
     }
+    /* istanbul ignore next */
     trackByFn(index, booking) {
         return booking.id;
     }
@@ -24727,20 +24606,18 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
     }
     updateEvents() {
         const date = dayjs(this.date).startOf('d');
-        const bookings = this._bookings.booking_list
-            .getValue()
-            .filter((booking) => {
+        const bookings = this._bookings.booking_list.getValue().filter((booking) => {
             const start = dayjs(booking.date);
             const end = start.add(booking.duration, 'm');
             return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
         })
             .filter((bkn) => bkn.space_list.find((space) => space.zones.includes(this._org.building.id)));
+        console.log('Events:', bookings.map((i) => `${i.title}${i.space_list.map(i => i.email).join(',')}`));
         this.bookings = bookings.map((bkn) => {
             const data = bkn.toJSON();
-            return new booking_class_1.Booking(Object.assign(Object.assign({}, data), { room_ids: [
-                    bkn.space_list.find((space) => space.zones.includes(this._org.building.id))
-                        .email,
-                ].concat(bkn.space_list.map((space) => space.email)) }));
+            const space = bkn.space_list.find((space) => space.zones.includes(this._org.building.id)) ||
+                bkn.space;
+            return new booking_class_1.Booking(Object.assign(Object.assign({}, data), { room_ids: [space.email].concat(bkn.space_list.map((space) => space.email)) }));
         });
         this.filtered_bookings = this.filter(this.search);
     }
@@ -24759,11 +24636,13 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
         }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((list) => {
             const date = dayjs(this.date).startOf('d');
             let bookings = this._bookings.booking_list.getValue();
+            console.log('Booking list:', bookings.map((i) => i.title));
             list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map((bkn) => new booking_class_1.Booking(bkn)), {
                 space: space.email,
                 from: date.valueOf(),
                 to: date.endOf('d').valueOf(),
             })));
+            console.log('Bookings:', bookings.map((i) => i.title));
             bookings.sort((a, b) => a.date - b.date);
             this._bookings.booking_list.next(bookings);
             this.updateEvents();
@@ -25871,6 +25750,36 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.environment = {
     production: true
 };
+
+
+/***/ }),
+
+/***/ "./src/environments/version.ts":
+/*!*************************************!*\
+  !*** ./src/environments/version.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// IMPORTANT: THIS FILE IS AUTO GENERATED! DO NOT MANUALLY EDIT OR CHECKIN!
+/* tslint:disable */
+exports.VERSION = {
+    "dirty": false,
+    "raw": "a479299",
+    "hash": "a479299",
+    "distance": null,
+    "tag": null,
+    "semver": null,
+    "suffix": "a479299",
+    "semverString": null,
+    "version": "0.0.0",
+    "core_version": "1.0.0",
+    "time": 1595500145043
+};
+/* tslint:enable */
 
 
 /***/ }),
