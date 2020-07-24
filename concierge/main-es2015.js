@@ -22529,8 +22529,7 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
                 const time = dayjs(this.date).startOf('d');
                 const end = time.endOf('d');
                 const room_ids = visible_rooms.reduce((v, i) => v + (v ? ',' : '') + i.id, '');
-                const level = this._service.get('APP.level');
-                const zone_ids = [level === -1 ? this._org.building.id : level];
+                const zone_ids = [this.level || this._org.building.id];
                 /* istanbul ignore else */
                 if (this.space_type) {
                     zone_ids.push(this.space_type);
@@ -25757,16 +25756,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "b2b9e9f",
-    "hash": "b2b9e9f",
+    "raw": "a09c93f",
+    "hash": "a09c93f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b2b9e9f",
+    "suffix": "a09c93f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595541969309
+    "time": 1595550352263
 };
 /* tslint:enable */
 

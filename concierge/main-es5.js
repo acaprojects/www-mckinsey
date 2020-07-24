@@ -40851,10 +40851,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var room_ids = visible_rooms.reduce(function (v, i) {
                 return v + (v ? ',' : '') + i.id;
               }, '');
-
-              var level = _this211._service.get('APP.level');
-
-              var zone_ids = [level === -1 ? _this211._org.building.id : level];
+              var zone_ids = [_this211.level || _this211._org.building.id];
               /* istanbul ignore else */
 
               if (_this211.space_type) {
@@ -47071,16 +47068,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "b2b9e9f",
-      "hash": "b2b9e9f",
+      "raw": "a09c93f",
+      "hash": "a09c93f",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "b2b9e9f",
+      "suffix": "a09c93f",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595541969309
+      "time": 1595550352263
     };
     /* tslint:enable */
 
