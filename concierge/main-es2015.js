@@ -7869,6 +7869,7 @@ const base_class_1 = __webpack_require__(/*! ../../shared/base.class */ "./src/a
 const service_manager_class_1 = __webpack_require__(/*! ./service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 class BaseDataClass extends base_class_1.BaseClass {
     constructor(raw_data) {
+        var _a;
         super();
         /** Subject for emitting events on the object */
         this.event_subject = new rxjs_1.Subject();
@@ -7877,7 +7878,7 @@ class BaseDataClass extends base_class_1.BaseClass {
         /** Map of local property names to server ones */
         this._server_names = {};
         this.id = raw_data.id || raw_data.zone_id || raw_data.email || '';
-        this.name = raw_data.name || '';
+        this.name = ((_a = raw_data.settings) === null || _a === void 0 ? void 0 : _a.room_name) || raw_data.name || '';
         this.email = `${raw_data.email || ''}`.toLowerCase();
     }
     /** Service for managing model on the server */
@@ -25756,16 +25757,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "a09c93f",
-    "hash": "a09c93f",
+    "raw": "25f7a80",
+    "hash": "25f7a80",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "a09c93f",
+    "suffix": "25f7a80",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595550352263
+    "time": 1595808695628
 };
 /* tslint:enable */
 

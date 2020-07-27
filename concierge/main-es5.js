@@ -14997,6 +14997,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, BaseDataClass);
 
+        var _a;
+
         _this74 = _super20.call(this);
         /** Subject for emitting events on the object */
 
@@ -15008,7 +15010,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _this74._server_names = {};
         _this74.id = raw_data.id || raw_data.zone_id || raw_data.email || '';
-        _this74.name = raw_data.name || '';
+        _this74.name = ((_a = raw_data.settings) === null || _a === void 0 ? void 0 : _a.room_name) || raw_data.name || '';
         _this74.email = "".concat(raw_data.email || '').toLowerCase();
         return _this74;
       }
@@ -47068,16 +47070,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "a09c93f",
-      "hash": "a09c93f",
+      "raw": "25f7a80",
+      "hash": "25f7a80",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "a09c93f",
+      "suffix": "25f7a80",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595550352263
+      "time": 1595808695628
     };
     /* tslint:enable */
 
