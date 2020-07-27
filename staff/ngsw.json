@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1595570905717,
+  "timestamp": 1595810636170,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -396,7 +396,7 @@
     "/staff/assets/maps/charlotte/level_11.svg": "366e82a6108209fd3b267c4f82a0055e434b12b0",
     "/staff/assets/maps/chengdu/level_15.svg": "151fd39bcf1604fb9a38e73f7e22d6df26d8db85",
     "/staff/assets/maps/chicago/level_04.svg": "50cc15a9a68d4850a56639e42926f6051f80de34",
-    "/staff/assets/maps/doha/level_01.svg": "78ac0ce4214395a18fceee46848a2b7b663ae65a",
+    "/staff/assets/maps/doha/level_01.svg": "52dfbdb71f776466a9aecde2638d85a848b66c45",
     "/staff/assets/maps/hong_kong/level_40.svg": "21ed5ed554b5d3d0fdd03ac4cd048171f0c34ff2",
     "/staff/assets/maps/istanbul/level_28.svg": "226a886b10e2a977968e6a38af6450da7be2e150",
     "/staff/assets/maps/istanbul/level_29.svg": "3904910929edc7b6e101f9900c9c02bc467165ef",
@@ -466,8 +466,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "58c573961e13e14a4a24bb0ff861238fba06d7de",
-    "/staff/main-es5.js": "c91407783484355208daa4c5c74b143585fafa9b",
+    "/staff/main-es2015.js": "ef2417cc643064fd99b73a07e49e26b17b129c68",
+    "/staff/main-es5.js": "39c2635e1c27cc1a377719d571863a5939fc9aa2",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
