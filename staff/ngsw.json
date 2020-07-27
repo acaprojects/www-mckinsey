@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1595810636170,
+  "timestamp": 1595817306683,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -449,7 +449,7 @@
     "/staff/assets/maps/taipei/level_47.svg": "637cbadc4b664d2c6df6b4a22b46d4e5c57ecc42",
     "/staff/assets/maps/tokyo/level_32.svg": "1b6fd71b6e07d4f3d63f542cec3842b04084762f",
     "/staff/assets/maps/tokyo/level_33.svg": "8e025f4b2e3711e7f579e07dc73bff575b8132b2",
-    "/staff/assets/maps/toronto/level_01.svg": "f53023aa1a281f15ec2fba1a275f2f28758ee632",
+    "/staff/assets/maps/toronto/level_01.svg": "0eacba63a07334f8a94c34dca1c1f77e723191eb",
     "/staff/assets/maps/toronto/level_02.svg": "65de2ce8bed64ebfc6594c2697c642a1bfed1a95",
     "/staff/assets/maps/toronto/level_03.svg": "324c9717594e49560d29f5ffc363a6962e09e1cf",
     "/staff/assets/maps/toronto_pmx/level_24.svg": "8b4ce47a95ffb73faef2f254fbc52481500a44a5",
@@ -466,8 +466,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "ef2417cc643064fd99b73a07e49e26b17b129c68",
-    "/staff/main-es5.js": "39c2635e1c27cc1a377719d571863a5939fc9aa2",
+    "/staff/main-es2015.js": "f16db1fbde80e97820f5afdec4f312c01fb074d1",
+    "/staff/main-es5.js": "7fbea78db8abaea36f2ff70f8cfb513b875f890a",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
