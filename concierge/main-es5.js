@@ -10185,7 +10185,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "type",
         get: function get() {
-          return this.booking.declined ? 'declined' : this.booking.type;
+          var _a;
+
+          return ((_a = this.booking.approval_status[this.space.email]) === null || _a === void 0 ? void 0 : _a.includes('decline')) ? 'declined' : this.booking.type;
         }
       }]);
 
@@ -10206,7 +10208,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 26,
-      vars: 18,
+      vars: 20,
       consts: [[1, "time"], [1, "heading"], [1, "actions"], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor", 4, "ngIf"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["appMenu", "matMenu"], ["mat-menu-item", "", "name", "accept", 3, "click"], [1, "group"], [3, "icon"], ["mat-menu-item", "", "name", "decline", 3, "click"], ["mat-menu-item", "", "name", "delete", 3, "click"], ["load_state", ""], ["mat-icon-button", "", "name", "menu", 3, "matMenuTriggerFor"], ["mat-icon-button", "", "mat-dialog-close", ""], [1, "block"], [3, "booking", "space"], [3, "booking", "space", "event"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], [1, "text"]],
       template: function MeetingDetailsModalComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -10263,7 +10265,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵclassMap(ctx.type);
           i0.ɵɵadvance(2);
           i0.ɵɵtextInterpolate(ctx.booking.time_period);
-          i0.ɵɵadvance(2);
+          i0.ɵɵadvance(1);
+          i0.ɵɵclassProp("edited", ctx.booking.edits.includes("title"));
+          i0.ɵɵadvance(1);
           i0.ɵɵtextInterpolate(ctx.booking == null ? null : ctx.booking.title);
           i0.ɵɵadvance(2);
           i0.ɵɵproperty("ngIf", !ctx.loading);
@@ -10274,17 +10278,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngIf", !ctx.loading)("ngIfElse", _r4);
           i0.ɵɵadvance(5);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(15, _c2));
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(17, _c2));
           i0.ɵɵadvance(4);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(16, _c3));
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(18, _c3));
           i0.ɵɵadvance(2);
           i0.ɵɵclassProp("error", true);
           i0.ɵɵadvance(2);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(17, _c4));
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(19, _c4));
         }
       },
       directives: [i4.NgIf, i3.MatDialogContent, i5._MatMenu, i5.MatMenuItem, i6.IconComponent, i7.MatButton, i5.MatMenuTrigger, i3.MatDialogClose, i8.MeetingDetailsDisplayComponent, i9.MeetingDetailsRequirementsComponent, i10.MeetingCateringDetailsComponent, i11.MeetingPrivateDetailsComponent, i12.MatSpinner],
-      styles: [".heading[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 3;\n  text-align: center;\n  border-radius: 4px 4px 0 0;\n}\n.heading[_ngcontent-%COMP%]:before {\n  position: absolute;\n  height: 4px;\n  width: 4px;\n  left: -10px;\n  top: 4px;\n  border-radius: 100%;\n}\n.heading.edited[_ngcontent-%COMP%]:before {\n  content: \"\";\n  background-color: #ffb300;\n}\n.time[_ngcontent-%COMP%] {\n  flex: 1;\n  font-weight: 500;\n}\n.actions[_ngcontent-%COMP%] {\n  flex: 1;\n  text-align: right;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  max-height: 80vh;\n  border-radius: 0 0 4px 4px;\n}\nmain[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  overflow: auto hidden;\n  padding: 2em 0;\n  min-width: 32em;\n  min-height: 16em;\n}\n.block[_ngcontent-%COMP%] {\n  height: 26em;\n  flex: 1;\n  min-width: 18em;\n  margin: 0 0.75em;\n  border: 1px solid #ccc;\n}\n.block[_ngcontent-%COMP%]:first-child {\n  margin-left: 2em;\n}\n.block[_ngcontent-%COMP%]:last-child {\n  margin-right: 2em;\n}\n.group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 1rem;\n  padding-right: 0.5em;\n}\n.group[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  font-size: 1.2em;\n  margin-right: 0.5em;\n}\n.error[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  color: #e53935;\n}\nheader[_ngcontent-%COMP%] {\n  border: 2px solid #1f40e6;\n  background-color: rgba(31, 64, 230, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  border: 2px solid #1f40e6;\n  border-top: none;\n}\nheader.internal[_ngcontent-%COMP%] {\n  border: 2px solid #e69fc7;\n  background-color: rgba(230, 159, 199, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.internal[_ngcontent-%COMP%] {\n  border: 2px solid #e69fc7;\n  border-top: none;\n}\nheader.external[_ngcontent-%COMP%] {\n  border: 2px solid #8c5ac8;\n  background-color: rgba(140, 90, 200, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.external[_ngcontent-%COMP%] {\n  border: 2px solid #8c5ac8;\n  border-top: none;\n}\nheader.training[_ngcontent-%COMP%] {\n  border: 2px solid #f0e700;\n  background-color: rgba(240, 231, 0, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.training[_ngcontent-%COMP%] {\n  border: 2px solid #f0e700;\n  border-top: none;\n}\nheader.interview[_ngcontent-%COMP%] {\n  border: 2px solid #348d02;\n  background-color: rgba(52, 141, 2, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.interview[_ngcontent-%COMP%] {\n  border: 2px solid #348d02;\n  border-top: none;\n}\nheader.setup[_ngcontent-%COMP%] {\n  border: 2px solid #d32f2f;\n  background-color: rgba(211, 47, 47, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.setup[_ngcontent-%COMP%] {\n  border: 2px solid #d32f2f;\n  border-top: none;\n}\nheader.cancelled[_ngcontent-%COMP%] {\n  border: 2px solid #617288;\n  background-color: rgba(97, 114, 136, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.cancelled[_ngcontent-%COMP%] {\n  border: 2px solid #617288;\n  border-top: none;\n}\nheader.declined[_ngcontent-%COMP%] {\n  border: 2px solid #505050;\n  background-color: rgba(80, 80, 80, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.declined[_ngcontent-%COMP%] {\n  border: 2px solid #505050;\n  border-top: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL292ZXJsYXlzL21lZXRpbmctZGV0YWlscy1tb2RhbC9tZWV0aW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL21lZXRpbmctZGV0YWlscy1tb2RhbC9tZWV0aW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FDM0NBO0VBQ0ksa0JBQUE7RUFDQSxPQUFBO0VBQ0Esa0JBQUE7RUFDQSwwQkFBQTtBQ09KO0FETEk7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsV0FBQTtFQUNBLFFBQUE7RUFDQSxtQkFBQTtBQ09SO0FESFE7RUFDSSxXQUFBO0VBQ0EseUJEVEY7QUVjVjtBREFBO0VBQ0ksT0FBQTtFQUNBLGdCQUFBO0FDR0o7QURBQTtFQUNJLE9BQUE7RUFDQSxpQkFBQTtBQ0dKO0FEQUE7RUFDSSxnQkFBQTtFQUNBLDBCQUFBO0FDR0o7QURBQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EscUJBQUE7RUFDQSxjQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0FDR0o7QURBQTtFQUNJLFlBQUE7RUFDQSxPQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0Esc0JBQUE7QUNHSjtBRERJO0VBQ0ksZ0JBQUE7QUNHUjtBREFJO0VBQ0ksaUJBQUE7QUNFUjtBREVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtFQUNBLG9CQUFBO0FDQ0o7QURDSTtFQUNJLGdCQUFBO0VBQ0EsbUJBQUE7QUNDUjtBRElJO0VBQ0ksY0RqRUE7QUVnRVI7QURtQlE7RUFDSSx5QkFBQTtFQUNBLG1EQUFBO0VBQ0EscUNBQUE7RUFDQSxtQkFBQTtBQ2hCWjtBRG1CUTtFQUNJLHlCQUFBO0VBQ0EsZ0JBQUE7QUNoQlo7QURMUTtFQUNJLHlCQUFBO0VBQ0EscURBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDUVo7QURMUTtFQUNJLHlCQUFBO0VBQ0EsZ0JBQUE7QUNRWjtBRGpCUTtFQUNJLHlCQUFBO0VBQ0Esb0RBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDb0JaO0FEakJRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ29CWjtBRDdCUTtFQUNJLHlCQUFBO0VBQ0EsbURBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDZ0NaO0FEN0JRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ2dDWjtBRHpDUTtFQUNJLHlCQUFBO0VBQ0Esa0RBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDNENaO0FEekNRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQzRDWjtBRHJEUTtFQUNJLHlCQUFBO0VBQ0EsbURBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDd0RaO0FEckRRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ3dEWjtBRGpFUTtFQUNJLHlCQUFBO0VBQ0Esb0RBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDb0VaO0FEakVRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ29FWjtBRDdFUTtFQUNJLHlCQUFBO0VBQ0Esa0RBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDZ0ZaO0FEN0VRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ2dGWiIsImZpbGUiOiJzcmMvYXBwL292ZXJsYXlzL21lZXRpbmctZGV0YWlscy1tb2RhbC9tZWV0aW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxuLmhlYWRpbmcge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBmbGV4OiAzO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBib3JkZXItcmFkaXVzOiA0cHggNHB4IDAgMDtcblxuICAgICY6YmVmb3JlIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICBoZWlnaHQ6IDRweDtcbiAgICAgICAgd2lkdGg6IDRweDtcbiAgICAgICAgbGVmdDogLTEwcHg7XG4gICAgICAgIHRvcDogNHB4O1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICAgIH1cblxuICAgICYuZWRpdGVkIHtcbiAgICAgICAgJjpiZWZvcmUge1xuICAgICAgICAgICAgY29udGVudDogJyc7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkcGVuZGluZztcbiAgICAgICAgfVxuICAgIH1cbn1cblxuLnRpbWUge1xuICAgIGZsZXg6IDE7XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbn1cblxuLmFjdGlvbnMge1xuICAgIGZsZXg6IDE7XG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudCB7XG4gICAgbWF4LWhlaWdodDogODB2aDtcbiAgICBib3JkZXItcmFkaXVzOiAwIDAgNHB4IDRweDtcbn1cblxubWFpbiB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBvdmVyZmxvdzogYXV0byBoaWRkZW47XG4gICAgcGFkZGluZzogMmVtIDA7XG4gICAgbWluLXdpZHRoOiAzMmVtO1xuICAgIG1pbi1oZWlnaHQ6IDE2ZW07XG59XG5cbi5ibG9jayB7XG4gICAgaGVpZ2h0OiAyNmVtO1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiAxOGVtO1xuICAgIG1hcmdpbjogMCAuNzVlbTtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xuXG4gICAgJjpmaXJzdC1jaGlsZCB7XG4gICAgICAgIG1hcmdpbi1sZWZ0OiAyZW07XG4gICAgfVxuXG4gICAgJjpsYXN0LWNoaWxkIHtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAyZW07XG4gICAgfVxufVxuXG4uZ3JvdXAge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDFyZW07XG4gICAgcGFkZGluZy1yaWdodDogLjVlbTtcblxuICAgIGFwcC1pY29uIHtcbiAgICAgICAgZm9udC1zaXplOiAxLjJlbTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAuNWVtO1xuICAgIH1cbn1cblxuLmVycm9yIHtcbiAgICBhcHAtaWNvbiB7XG4gICAgICAgIGNvbG9yOiAkZXJyb3I7XG4gICAgfVxufVxuXG5AbWl4aW4gYmxvY2stY29sb3IoJGNvbG9yLCAkdHlwZTogJycpIHtcbiAgICBAaWYoJHR5cGUgIT0gJycpIHtcbiAgICAgICAgaGVhZGVyLiN7JHR5cGV9IHtcbiAgICAgICAgICAgIGJvcmRlcjogMnB4IHNvbGlkICRjb2xvcjtcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGNvbG9yLCAwLjMpICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICBjb2xvcjogcmdiYSgjMDAwLCAuODUpICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICBib3JkZXItYm90dG9tOiBub25lO1xuICAgICAgICB9XG5cbiAgICAgICAgbWF0LWRpYWxvZy1jb250ZW50LiN7JHR5cGV9IHtcbiAgICAgICAgICAgIGJvcmRlcjogMnB4IHNvbGlkICRjb2xvcjtcbiAgICAgICAgICAgIGJvcmRlci10b3A6IG5vbmU7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIHtcbiAgICAgICAgaGVhZGVyIHtcbiAgICAgICAgICAgIGJvcmRlcjogMnB4IHNvbGlkICRjb2xvcjtcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGNvbG9yLCAwLjMpICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICBjb2xvcjogcmdiYSgjMDAwLCAuODUpICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICBib3JkZXItYm90dG9tOiBub25lO1xuICAgICAgICB9XG5cbiAgICAgICAgbWF0LWRpYWxvZy1jb250ZW50IHtcbiAgICAgICAgICAgIGJvcmRlcjogMnB4IHNvbGlkICRjb2xvcjtcbiAgICAgICAgICAgIGJvcmRlci10b3A6IG5vbmU7XG4gICAgICAgIH1cbiAgICB9XG59XG5cbkBpbmNsdWRlIGJsb2NrLWNvbG9yKCMxZjQwZTYpO1xuQGluY2x1ZGUgYmxvY2stY29sb3IoI2U2OWZjNywgJ2ludGVybmFsJyk7XG5AaW5jbHVkZSBibG9jay1jb2xvcigjOGM1YWM4LCAnZXh0ZXJuYWwnKTtcbkBpbmNsdWRlIGJsb2NrLWNvbG9yKCNmMGU3MDAsICd0cmFpbmluZycpO1xuQGluY2x1ZGUgYmxvY2stY29sb3IoIzM0OGQwMiwgJ2ludGVydmlldycpO1xuQGluY2x1ZGUgYmxvY2stY29sb3IoI2QzMmYyZiwgJ3NldHVwJyk7XG5AaW5jbHVkZSBibG9jay1jb2xvcigjNjE3Mjg4LCAnY2FuY2VsbGVkJyk7XG5AaW5jbHVkZSBibG9jay1jb2xvcigjNTA1MDUwLCAnZGVjbGluZWQnKTtcblxuXG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4uaGVhZGluZyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZmxleDogMztcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBib3JkZXItcmFkaXVzOiA0cHggNHB4IDAgMDtcbn1cbi5oZWFkaW5nOmJlZm9yZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgaGVpZ2h0OiA0cHg7XG4gIHdpZHRoOiA0cHg7XG4gIGxlZnQ6IC0xMHB4O1xuICB0b3A6IDRweDtcbiAgYm9yZGVyLXJhZGl1czogMTAwJTtcbn1cbi5oZWFkaW5nLmVkaXRlZDpiZWZvcmUge1xuICBjb250ZW50OiBcIlwiO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZiMzAwO1xufVxuXG4udGltZSB7XG4gIGZsZXg6IDE7XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbi5hY3Rpb25zIHtcbiAgZmxleDogMTtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudCB7XG4gIG1heC1oZWlnaHQ6IDgwdmg7XG4gIGJvcmRlci1yYWRpdXM6IDAgMCA0cHggNHB4O1xufVxuXG5tYWluIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBvdmVyZmxvdzogYXV0byBoaWRkZW47XG4gIHBhZGRpbmc6IDJlbSAwO1xuICBtaW4td2lkdGg6IDMyZW07XG4gIG1pbi1oZWlnaHQ6IDE2ZW07XG59XG5cbi5ibG9jayB7XG4gIGhlaWdodDogMjZlbTtcbiAgZmxleDogMTtcbiAgbWluLXdpZHRoOiAxOGVtO1xuICBtYXJnaW46IDAgMC43NWVtO1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xufVxuLmJsb2NrOmZpcnN0LWNoaWxkIHtcbiAgbWFyZ2luLWxlZnQ6IDJlbTtcbn1cbi5ibG9jazpsYXN0LWNoaWxkIHtcbiAgbWFyZ2luLXJpZ2h0OiAyZW07XG59XG5cbi5ncm91cCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMXJlbTtcbiAgcGFkZGluZy1yaWdodDogMC41ZW07XG59XG4uZ3JvdXAgYXBwLWljb24ge1xuICBmb250LXNpemU6IDEuMmVtO1xuICBtYXJnaW4tcmlnaHQ6IDAuNWVtO1xufVxuXG4uZXJyb3IgYXBwLWljb24ge1xuICBjb2xvcjogI2U1MzkzNTtcbn1cblxuaGVhZGVyIHtcbiAgYm9yZGVyOiAycHggc29saWQgIzFmNDBlNjtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgzMSwgNjQsIDIzMCwgMC4zKSAhaW1wb3J0YW50O1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjg1KSAhaW1wb3J0YW50O1xuICBib3JkZXItYm90dG9tOiBub25lO1xufVxuXG5tYXQtZGlhbG9nLWNvbnRlbnQge1xuICBib3JkZXI6IDJweCBzb2xpZCAjMWY0MGU2O1xuICBib3JkZXItdG9wOiBub25lO1xufVxuXG5oZWFkZXIuaW50ZXJuYWwge1xuICBib3JkZXI6IDJweCBzb2xpZCAjZTY5ZmM3O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDIzMCwgMTU5LCAxOTksIDAuMykgIWltcG9ydGFudDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44NSkgIWltcG9ydGFudDtcbiAgYm9yZGVyLWJvdHRvbTogbm9uZTtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50LmludGVybmFsIHtcbiAgYm9yZGVyOiAycHggc29saWQgI2U2OWZjNztcbiAgYm9yZGVyLXRvcDogbm9uZTtcbn1cblxuaGVhZGVyLmV4dGVybmFsIHtcbiAgYm9yZGVyOiAycHggc29saWQgIzhjNWFjODtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxNDAsIDkwLCAyMDAsIDAuMykgIWltcG9ydGFudDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44NSkgIWltcG9ydGFudDtcbiAgYm9yZGVyLWJvdHRvbTogbm9uZTtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50LmV4dGVybmFsIHtcbiAgYm9yZGVyOiAycHggc29saWQgIzhjNWFjODtcbiAgYm9yZGVyLXRvcDogbm9uZTtcbn1cblxuaGVhZGVyLnRyYWluaW5nIHtcbiAgYm9yZGVyOiAycHggc29saWQgI2YwZTcwMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNDAsIDIzMSwgMCwgMC4zKSAhaW1wb3J0YW50O1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjg1KSAhaW1wb3J0YW50O1xuICBib3JkZXItYm90dG9tOiBub25lO1xufVxuXG5tYXQtZGlhbG9nLWNvbnRlbnQudHJhaW5pbmcge1xuICBib3JkZXI6IDJweCBzb2xpZCAjZjBlNzAwO1xuICBib3JkZXItdG9wOiBub25lO1xufVxuXG5oZWFkZXIuaW50ZXJ2aWV3IHtcbiAgYm9yZGVyOiAycHggc29saWQgIzM0OGQwMjtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg1MiwgMTQxLCAyLCAwLjMpICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpICFpbXBvcnRhbnQ7XG4gIGJvcmRlci1ib3R0b206IG5vbmU7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudC5pbnRlcnZpZXcge1xuICBib3JkZXI6IDJweCBzb2xpZCAjMzQ4ZDAyO1xuICBib3JkZXItdG9wOiBub25lO1xufVxuXG5oZWFkZXIuc2V0dXAge1xuICBib3JkZXI6IDJweCBzb2xpZCAjZDMyZjJmO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDIxMSwgNDcsIDQ3LCAwLjMpICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpICFpbXBvcnRhbnQ7XG4gIGJvcmRlci1ib3R0b206IG5vbmU7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudC5zZXR1cCB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICNkMzJmMmY7XG4gIGJvcmRlci10b3A6IG5vbmU7XG59XG5cbmhlYWRlci5jYW5jZWxsZWQge1xuICBib3JkZXI6IDJweCBzb2xpZCAjNjE3Mjg4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDk3LCAxMTQsIDEzNiwgMC4zKSAhaW1wb3J0YW50O1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjg1KSAhaW1wb3J0YW50O1xuICBib3JkZXItYm90dG9tOiBub25lO1xufVxuXG5tYXQtZGlhbG9nLWNvbnRlbnQuY2FuY2VsbGVkIHtcbiAgYm9yZGVyOiAycHggc29saWQgIzYxNzI4ODtcbiAgYm9yZGVyLXRvcDogbm9uZTtcbn1cblxuaGVhZGVyLmRlY2xpbmVkIHtcbiAgYm9yZGVyOiAycHggc29saWQgIzUwNTA1MDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg4MCwgODAsIDgwLCAwLjMpICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpICFpbXBvcnRhbnQ7XG4gIGJvcmRlci1ib3R0b206IG5vbmU7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudC5kZWNsaW5lZCB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICM1MDUwNTA7XG4gIGJvcmRlci10b3A6IG5vbmU7XG59Il19 */"]
+      styles: [".heading[_ngcontent-%COMP%] {\n  position: relative;\n  flex: 3;\n  text-align: center;\n  border-radius: 4px 4px 0 0;\n}\n.heading[_ngcontent-%COMP%]:before {\n  display: inline-block;\n  height: 4px;\n  width: 4px;\n  margin: 0.5em 0.5em 0.25em 0;\n  border-radius: 100%;\n}\n.heading.edited[_ngcontent-%COMP%]:before {\n  content: \"\";\n  background-color: #ffb300;\n}\n.time[_ngcontent-%COMP%] {\n  flex: 1;\n  font-weight: 500;\n}\n.actions[_ngcontent-%COMP%] {\n  flex: 1;\n  text-align: right;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  max-height: 80vh;\n  border-radius: 0 0 4px 4px;\n}\nmain[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  align-items: center;\n  overflow: auto hidden;\n  padding: 2em 0;\n  min-width: 32em;\n  min-height: 16em;\n}\n.block[_ngcontent-%COMP%] {\n  height: 26em;\n  flex: 1;\n  min-width: 18em;\n  margin: 0 0.75em;\n  border: 1px solid #ccc;\n}\n.block[_ngcontent-%COMP%]:first-child {\n  margin-left: 2em;\n}\n.block[_ngcontent-%COMP%]:last-child {\n  margin-right: 2em;\n}\n.group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 1rem;\n  padding-right: 0.5em;\n}\n.group[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  font-size: 1.2em;\n  margin-right: 0.5em;\n}\n.error[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  color: #e53935;\n}\nheader[_ngcontent-%COMP%] {\n  border: 2px solid #1f40e6;\n  background-color: rgba(31, 64, 230, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  border: 2px solid #1f40e6;\n  border-top: none;\n}\nheader.internal[_ngcontent-%COMP%] {\n  border: 2px solid #e69fc7;\n  background-color: rgba(230, 159, 199, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.internal[_ngcontent-%COMP%] {\n  border: 2px solid #e69fc7;\n  border-top: none;\n}\nheader.external[_ngcontent-%COMP%] {\n  border: 2px solid #8c5ac8;\n  background-color: rgba(140, 90, 200, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.external[_ngcontent-%COMP%] {\n  border: 2px solid #8c5ac8;\n  border-top: none;\n}\nheader.training[_ngcontent-%COMP%] {\n  border: 2px solid #f0e700;\n  background-color: rgba(240, 231, 0, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.training[_ngcontent-%COMP%] {\n  border: 2px solid #f0e700;\n  border-top: none;\n}\nheader.interview[_ngcontent-%COMP%] {\n  border: 2px solid #348d02;\n  background-color: rgba(52, 141, 2, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.interview[_ngcontent-%COMP%] {\n  border: 2px solid #348d02;\n  border-top: none;\n}\nheader.setup[_ngcontent-%COMP%] {\n  border: 2px solid #d32f2f;\n  background-color: rgba(211, 47, 47, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.setup[_ngcontent-%COMP%] {\n  border: 2px solid #d32f2f;\n  border-top: none;\n}\nheader.cancelled[_ngcontent-%COMP%] {\n  border: 2px solid #617288;\n  background-color: rgba(97, 114, 136, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.cancelled[_ngcontent-%COMP%] {\n  border: 2px solid #617288;\n  border-top: none;\n}\nheader.declined[_ngcontent-%COMP%] {\n  border: 2px solid #505050;\n  background-color: rgba(80, 80, 80, 0.3) !important;\n  color: rgba(0, 0, 0, 0.85) !important;\n  border-bottom: none;\n}\nmat-dialog-content.declined[_ngcontent-%COMP%] {\n  border: 2px solid #505050;\n  border-top: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL292ZXJsYXlzL21lZXRpbmctZGV0YWlscy1tb2RhbC9tZWV0aW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL21lZXRpbmctZGV0YWlscy1tb2RhbC9tZWV0aW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7OzBCQUFBO0FBZ0NBOztjQUFBO0FBYUE7O3NCQUFBO0FDM0NBO0VBQ0ksa0JBQUE7RUFDQSxPQUFBO0VBQ0Esa0JBQUE7RUFDQSwwQkFBQTtBQ09KO0FETEk7RUFDSSxxQkFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsNEJBQUE7RUFDQSxtQkFBQTtBQ09SO0FESFE7RUFDSSxXQUFBO0VBQ0EseUJEUkY7QUVhVjtBREFBO0VBQ0ksT0FBQTtFQUNBLGdCQUFBO0FDR0o7QURBQTtFQUNJLE9BQUE7RUFDQSxpQkFBQTtBQ0dKO0FEQUE7RUFDSSxnQkFBQTtFQUNBLDBCQUFBO0FDR0o7QURBQTtFQUNJLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EscUJBQUE7RUFDQSxjQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0FDR0o7QURBQTtFQUNJLFlBQUE7RUFDQSxPQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0Esc0JBQUE7QUNHSjtBRERJO0VBQ0ksZ0JBQUE7QUNHUjtBREFJO0VBQ0ksaUJBQUE7QUNFUjtBREVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtFQUNBLG9CQUFBO0FDQ0o7QURDSTtFQUNJLGdCQUFBO0VBQ0EsbUJBQUE7QUNDUjtBRElJO0VBQ0ksY0RoRUE7QUUrRFI7QURtQlE7RUFDSSx5QkFBQTtFQUNBLG1EQUFBO0VBQ0EscUNBQUE7RUFDQSxtQkFBQTtBQ2hCWjtBRG1CUTtFQUNJLHlCQUFBO0VBQ0EsZ0JBQUE7QUNoQlo7QURMUTtFQUNJLHlCQUFBO0VBQ0EscURBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDUVo7QURMUTtFQUNJLHlCQUFBO0VBQ0EsZ0JBQUE7QUNRWjtBRGpCUTtFQUNJLHlCQUFBO0VBQ0Esb0RBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDb0JaO0FEakJRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ29CWjtBRDdCUTtFQUNJLHlCQUFBO0VBQ0EsbURBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDZ0NaO0FEN0JRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ2dDWjtBRHpDUTtFQUNJLHlCQUFBO0VBQ0Esa0RBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDNENaO0FEekNRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQzRDWjtBRHJEUTtFQUNJLHlCQUFBO0VBQ0EsbURBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDd0RaO0FEckRRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ3dEWjtBRGpFUTtFQUNJLHlCQUFBO0VBQ0Esb0RBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDb0VaO0FEakVRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ29FWjtBRDdFUTtFQUNJLHlCQUFBO0VBQ0Esa0RBQUE7RUFDQSxxQ0FBQTtFQUNBLG1CQUFBO0FDZ0ZaO0FEN0VRO0VBQ0kseUJBQUE7RUFDQSxnQkFBQTtBQ2dGWiIsImZpbGUiOiJzcmMvYXBwL292ZXJsYXlzL21lZXRpbmctZGV0YWlscy1tb2RhbC9tZWV0aW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIlxuQGltcG9ydCAndmFyaWFibGVzJztcblxuLmhlYWRpbmcge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBmbGV4OiAzO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBib3JkZXItcmFkaXVzOiA0cHggNHB4IDAgMDtcblxuICAgICY6YmVmb3JlIHtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgICBoZWlnaHQ6IDRweDtcbiAgICAgICAgd2lkdGg6IDRweDtcbiAgICAgICAgbWFyZ2luOiAuNWVtIC41ZW0gLjI1ZW0gMDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICB9XG5cbiAgICAmLmVkaXRlZCB7XG4gICAgICAgICY6YmVmb3JlIHtcbiAgICAgICAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHBlbmRpbmc7XG4gICAgICAgIH1cbiAgICB9XG59XG5cbi50aW1lIHtcbiAgICBmbGV4OiAxO1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbi5hY3Rpb25zIHtcbiAgICBmbGV4OiAxO1xuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xufVxuXG5tYXQtZGlhbG9nLWNvbnRlbnQge1xuICAgIG1heC1oZWlnaHQ6IDgwdmg7XG4gICAgYm9yZGVyLXJhZGl1czogMCAwIDRweCA0cHg7XG59XG5cbm1haW4ge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgb3ZlcmZsb3c6IGF1dG8gaGlkZGVuO1xuICAgIHBhZGRpbmc6IDJlbSAwO1xuICAgIG1pbi13aWR0aDogMzJlbTtcbiAgICBtaW4taGVpZ2h0OiAxNmVtO1xufVxuXG4uYmxvY2sge1xuICAgIGhlaWdodDogMjZlbTtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogMThlbTtcbiAgICBtYXJnaW46IDAgLjc1ZW07XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcblxuICAgICY6Zmlyc3QtY2hpbGQge1xuICAgICAgICBtYXJnaW4tbGVmdDogMmVtO1xuICAgIH1cblxuICAgICY6bGFzdC1jaGlsZCB7XG4gICAgICAgIG1hcmdpbi1yaWdodDogMmVtO1xuICAgIH1cbn1cblxuLmdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAxcmVtO1xuICAgIHBhZGRpbmctcmlnaHQ6IC41ZW07XG5cbiAgICBhcHAtaWNvbiB7XG4gICAgICAgIGZvbnQtc2l6ZTogMS4yZW07XG4gICAgICAgIG1hcmdpbi1yaWdodDogLjVlbTtcbiAgICB9XG59XG5cbi5lcnJvciB7XG4gICAgYXBwLWljb24ge1xuICAgICAgICBjb2xvcjogJGVycm9yO1xuICAgIH1cbn1cblxuQG1peGluIGJsb2NrLWNvbG9yKCRjb2xvciwgJHR5cGU6ICcnKSB7XG4gICAgQGlmKCR0eXBlICE9ICcnKSB7XG4gICAgICAgIGhlYWRlci4jeyR0eXBlfSB7XG4gICAgICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3I7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCRjb2xvciwgMC4zKSAhaW1wb3J0YW50O1xuICAgICAgICAgICAgY29sb3I6IHJnYmEoIzAwMCwgLjg1KSAhaW1wb3J0YW50O1xuICAgICAgICAgICAgYm9yZGVyLWJvdHRvbTogbm9uZTtcbiAgICAgICAgfVxuXG4gICAgICAgIG1hdC1kaWFsb2ctY29udGVudC4jeyR0eXBlfSB7XG4gICAgICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3I7XG4gICAgICAgICAgICBib3JkZXItdG9wOiBub25lO1xuICAgICAgICB9XG4gICAgfSBAZWxzZSB7XG4gICAgICAgIGhlYWRlciB7XG4gICAgICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3I7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCRjb2xvciwgMC4zKSAhaW1wb3J0YW50O1xuICAgICAgICAgICAgY29sb3I6IHJnYmEoIzAwMCwgLjg1KSAhaW1wb3J0YW50O1xuICAgICAgICAgICAgYm9yZGVyLWJvdHRvbTogbm9uZTtcbiAgICAgICAgfVxuXG4gICAgICAgIG1hdC1kaWFsb2ctY29udGVudCB7XG4gICAgICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3I7XG4gICAgICAgICAgICBib3JkZXItdG9wOiBub25lO1xuICAgICAgICB9XG4gICAgfVxufVxuXG5AaW5jbHVkZSBibG9jay1jb2xvcigjMWY0MGU2KTtcbkBpbmNsdWRlIGJsb2NrLWNvbG9yKCNlNjlmYzcsICdpbnRlcm5hbCcpO1xuQGluY2x1ZGUgYmxvY2stY29sb3IoIzhjNWFjOCwgJ2V4dGVybmFsJyk7XG5AaW5jbHVkZSBibG9jay1jb2xvcigjZjBlNzAwLCAndHJhaW5pbmcnKTtcbkBpbmNsdWRlIGJsb2NrLWNvbG9yKCMzNDhkMDIsICdpbnRlcnZpZXcnKTtcbkBpbmNsdWRlIGJsb2NrLWNvbG9yKCNkMzJmMmYsICdzZXR1cCcpO1xuQGluY2x1ZGUgYmxvY2stY29sb3IoIzYxNzI4OCwgJ2NhbmNlbGxlZCcpO1xuQGluY2x1ZGUgYmxvY2stY29sb3IoIzUwNTA1MCwgJ2RlY2xpbmVkJyk7XG5cblxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmhlYWRpbmcge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGZsZXg6IDM7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgYm9yZGVyLXJhZGl1czogNHB4IDRweCAwIDA7XG59XG4uaGVhZGluZzpiZWZvcmUge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGhlaWdodDogNHB4O1xuICB3aWR0aDogNHB4O1xuICBtYXJnaW46IDAuNWVtIDAuNWVtIDAuMjVlbSAwO1xuICBib3JkZXItcmFkaXVzOiAxMDAlO1xufVxuLmhlYWRpbmcuZWRpdGVkOmJlZm9yZSB7XG4gIGNvbnRlbnQ6IFwiXCI7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmIzMDA7XG59XG5cbi50aW1lIHtcbiAgZmxleDogMTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbn1cblxuLmFjdGlvbnMge1xuICBmbGV4OiAxO1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50IHtcbiAgbWF4LWhlaWdodDogODB2aDtcbiAgYm9yZGVyLXJhZGl1czogMCAwIDRweCA0cHg7XG59XG5cbm1haW4ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG92ZXJmbG93OiBhdXRvIGhpZGRlbjtcbiAgcGFkZGluZzogMmVtIDA7XG4gIG1pbi13aWR0aDogMzJlbTtcbiAgbWluLWhlaWdodDogMTZlbTtcbn1cblxuLmJsb2NrIHtcbiAgaGVpZ2h0OiAyNmVtO1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDE4ZW07XG4gIG1hcmdpbjogMCAwLjc1ZW07XG4gIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7XG59XG4uYmxvY2s6Zmlyc3QtY2hpbGQge1xuICBtYXJnaW4tbGVmdDogMmVtO1xufVxuLmJsb2NrOmxhc3QtY2hpbGQge1xuICBtYXJnaW4tcmlnaHQ6IDJlbTtcbn1cblxuLmdyb3VwIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBwYWRkaW5nLXJpZ2h0OiAwLjVlbTtcbn1cbi5ncm91cCBhcHAtaWNvbiB7XG4gIGZvbnQtc2l6ZTogMS4yZW07XG4gIG1hcmdpbi1yaWdodDogMC41ZW07XG59XG5cbi5lcnJvciBhcHAtaWNvbiB7XG4gIGNvbG9yOiAjZTUzOTM1O1xufVxuXG5oZWFkZXIge1xuICBib3JkZXI6IDJweCBzb2xpZCAjMWY0MGU2O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDMxLCA2NCwgMjMwLCAwLjMpICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpICFpbXBvcnRhbnQ7XG4gIGJvcmRlci1ib3R0b206IG5vbmU7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudCB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMxZjQwZTY7XG4gIGJvcmRlci10b3A6IG5vbmU7XG59XG5cbmhlYWRlci5pbnRlcm5hbCB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICNlNjlmYzc7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjMwLCAxNTksIDE5OSwgMC4zKSAhaW1wb3J0YW50O1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjg1KSAhaW1wb3J0YW50O1xuICBib3JkZXItYm90dG9tOiBub25lO1xufVxuXG5tYXQtZGlhbG9nLWNvbnRlbnQuaW50ZXJuYWwge1xuICBib3JkZXI6IDJweCBzb2xpZCAjZTY5ZmM3O1xuICBib3JkZXItdG9wOiBub25lO1xufVxuXG5oZWFkZXIuZXh0ZXJuYWwge1xuICBib3JkZXI6IDJweCBzb2xpZCAjOGM1YWM4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDE0MCwgOTAsIDIwMCwgMC4zKSAhaW1wb3J0YW50O1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjg1KSAhaW1wb3J0YW50O1xuICBib3JkZXItYm90dG9tOiBub25lO1xufVxuXG5tYXQtZGlhbG9nLWNvbnRlbnQuZXh0ZXJuYWwge1xuICBib3JkZXI6IDJweCBzb2xpZCAjOGM1YWM4O1xuICBib3JkZXItdG9wOiBub25lO1xufVxuXG5oZWFkZXIudHJhaW5pbmcge1xuICBib3JkZXI6IDJweCBzb2xpZCAjZjBlNzAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDI0MCwgMjMxLCAwLCAwLjMpICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpICFpbXBvcnRhbnQ7XG4gIGJvcmRlci1ib3R0b206IG5vbmU7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudC50cmFpbmluZyB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICNmMGU3MDA7XG4gIGJvcmRlci10b3A6IG5vbmU7XG59XG5cbmhlYWRlci5pbnRlcnZpZXcge1xuICBib3JkZXI6IDJweCBzb2xpZCAjMzQ4ZDAyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDUyLCAxNDEsIDIsIDAuMykgIWltcG9ydGFudDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44NSkgIWltcG9ydGFudDtcbiAgYm9yZGVyLWJvdHRvbTogbm9uZTtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50LmludGVydmlldyB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMzNDhkMDI7XG4gIGJvcmRlci10b3A6IG5vbmU7XG59XG5cbmhlYWRlci5zZXR1cCB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICNkMzJmMmY7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjExLCA0NywgNDcsIDAuMykgIWltcG9ydGFudDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44NSkgIWltcG9ydGFudDtcbiAgYm9yZGVyLWJvdHRvbTogbm9uZTtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50LnNldHVwIHtcbiAgYm9yZGVyOiAycHggc29saWQgI2QzMmYyZjtcbiAgYm9yZGVyLXRvcDogbm9uZTtcbn1cblxuaGVhZGVyLmNhbmNlbGxlZCB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICM2MTcyODg7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoOTcsIDExNCwgMTM2LCAwLjMpICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpICFpbXBvcnRhbnQ7XG4gIGJvcmRlci1ib3R0b206IG5vbmU7XG59XG5cbm1hdC1kaWFsb2ctY29udGVudC5jYW5jZWxsZWQge1xuICBib3JkZXI6IDJweCBzb2xpZCAjNjE3Mjg4O1xuICBib3JkZXItdG9wOiBub25lO1xufVxuXG5oZWFkZXIuZGVjbGluZWQge1xuICBib3JkZXI6IDJweCBzb2xpZCAjNTA1MDUwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDgwLCA4MCwgODAsIDAuMykgIWltcG9ydGFudDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44NSkgIWltcG9ydGFudDtcbiAgYm9yZGVyLWJvdHRvbTogbm9uZTtcbn1cblxubWF0LWRpYWxvZy1jb250ZW50LmRlY2xpbmVkIHtcbiAgYm9yZGVyOiAycHggc29saWQgIzUwNTA1MDtcbiAgYm9yZGVyLXRvcDogbm9uZTtcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -14981,10 +14985,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../shared/base.class */
     "./src/app/shared/base.class.ts");
 
-    var service_manager_class_1 = __webpack_require__(
-    /*! ./service-manager.class */
-    "./src/app/services/data/service-manager.class.ts");
-
     var BaseDataClass =
     /*#__PURE__*/
     function (_base_class_1$BaseCla2) {
@@ -15014,66 +15014,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this74.email = "".concat(raw_data.email || '').toLowerCase();
         return _this74;
       }
-      /** Service for managing model on the server */
+      /**
+       * Convert object into plain object
+       */
 
 
       _createClass(BaseDataClass, [{
-        key: "save",
-
-        /**
-         * Save pending changes to server
-         */
-        value: function save() {
-          var _this75 = this;
-
-          if (this._service) {
-            var form = this.toJSON();
-            return new Promise(function (resolve, reject) {
-              var promise = _this75.id ? _this75._service.update(_this75.id, form) : _this75._service.add(form);
-              promise.then(function (d) {
-                _this75.event_subject.next({
-                  type: 'item_saved',
-                  metadata: d
-                });
-
-                resolve(d);
-              }, function (_) {
-                return reject(_);
-              });
-            });
-          } else {
-            return Promise.reject('No service to process request');
-          }
-        }
-        /**
-         * Delete this item from the server
-         */
-
-      }, {
-        key: "delete",
-        value: function _delete() {
-          if (this.id) {
-            return this._service["delete"](this.id);
-          }
-        }
-        /**
-         * Run task for this item on the service
-         * @param task_name Name of the task
-         * @param parameters Parameters to pass to the task request
-         */
-
-      }, {
-        key: "runTask",
-        value: function runTask(task_name, parameters) {
-          if (this.id) {
-            return this._service.task(this.id, task_name, parameters);
-          }
-        }
-        /**
-         * Convert object into plain object
-         */
-
-      }, {
         key: "toJSON",
         value: function toJSON() {
           var obj = Object.assign({}, this); // Remove local private members
@@ -15125,11 +15071,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             email: null
           }));
         }
-      }, {
-        key: "_service",
-        get: function get() {
-          return service_manager_class_1.ServiceManager.serviceFor(BaseDataClass);
-        }
       }]);
 
       return BaseDataClass;
@@ -15179,42 +15120,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super21 = _createSuper(BaseAPIService);
 
       function BaseAPIService(_composer) {
-        var _this76;
+        var _this75;
 
         _classCallCheck(this, BaseAPIService);
 
-        _this76 = _super21.call(this);
-        _this76._composer = _composer;
+        _this75 = _super21.call(this);
+        _this75._composer = _composer;
         /** Map of state variables for Service */
 
-        _this76._subjects = {};
+        _this75._subjects = {};
         /** Map of observables for state variables */
 
-        _this76._observers = {};
+        _this75._observers = {};
         /** Map of poll subscribers for API endpoints */
 
-        _this76._subscribers = {};
+        _this75._subscribers = {};
         /** Map of promises for Service */
 
-        _this76._promises = {};
+        _this75._promises = {};
         /** Comparison function for service items */
 
-        _this76._compare = function (a, b) {
+        _this75._compare = function (a, b) {
           return a === b || a.id === b.id;
         };
         /** Default filter function for list method */
 
 
-        _this76._list_filter = function (a) {
+        _this75._list_filter = function (a) {
           return !!a;
         };
 
-        _this76._name = 'Base';
-        _this76._api_route = 'base';
+        _this75._name = 'Base';
+        _this75._api_route = 'base';
 
-        _this76.set('list', []);
+        _this75.set('list', []);
 
-        return _this76;
+        return _this75;
       }
       /** Http Client */
 
@@ -15226,13 +15167,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * Initailise service
          */
         value: function init() {
-          var _this77 = this;
+          var _this76 = this;
 
           this.load().then(function (_) {
-            return _this77._initialised.next(true);
+            return _this76._initialised.next(true);
           }, function (err) {
-            _this77.timeout('init', function () {
-              return _this77.init();
+            _this76.timeout('init', function () {
+              return _this76.init();
             }, 1000);
           });
         }
@@ -15330,7 +15271,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "query",
         value: function query() {
-          var _this78 = this;
+          var _this77 = this;
 
           var query_params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
           var engine = false;
@@ -15349,21 +15290,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (!this._promises[key]) {
             this._promises[key] = new Promise(function (resolve, reject) {
-              var url = "".concat(_this78.route(engine)).concat(query ? '?' + query : '');
+              var url = "".concat(_this77.route(engine)).concat(query ? '?' + query : '');
               var result = [];
 
-              _this78.http.get(url).subscribe(function (d) {
+              _this77.http.get(url).subscribe(function (d) {
                 result = d && d instanceof Array ? d.map(function (i) {
-                  return _this78.process(i);
+                  return _this77.process(i);
                 }) : d && !(d instanceof Array) && d.results ? d.results : [];
               }, function (e) {
                 reject(e);
-                _this78._promises[key] = null;
+                _this77._promises[key] = null;
               }, function () {
                 resolve(result);
 
-                _this78.timeout(key, function () {
-                  return _this78._promises[key] = null;
+                _this77.timeout(key, function () {
+                  return _this77._promises[key] = null;
                 }, cache);
               });
             });
@@ -15380,7 +15321,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "show",
         value: function show(id) {
-          var _this79 = this;
+          var _this78 = this;
 
           var query_params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
           var engine = false;
@@ -15397,19 +15338,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (!this._promises[key]) {
             this._promises[key] = new Promise(function (resolve, reject) {
-              var url = "".concat(_this79.route(engine), "/").concat(id).concat(query ? '?' + query : '');
+              var url = "".concat(_this78.route(engine), "/").concat(id).concat(query ? '?' + query : '');
               var result = null;
 
-              _this79.http.get(url).subscribe(function (d) {
-                return result = _this79.process(d);
+              _this78.http.get(url).subscribe(function (d) {
+                return result = _this78.process(d);
               }, function (e) {
                 reject(e);
-                _this79._promises.new_item = null;
+                _this78._promises.new_item = null;
               }, function () {
                 resolve(result);
 
-                _this79.timeout(key, function () {
-                  return _this79._promises[key] = null;
+                _this78.timeout(key, function () {
+                  return _this78._promises[key] = null;
                 }, 1000);
               });
             });
@@ -15426,7 +15367,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "add",
         value: function add(form_data) {
-          var _this80 = this;
+          var _this79 = this;
 
           var query_params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
@@ -15434,25 +15375,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (!this._promises.new_item) {
             this._promises.new_item = new Promise(function (resolve, reject) {
               var query = api_utilities_1.toQueryString(query_params);
-              var url = "".concat(_this80.route(query_params.engine)).concat(query ? '?' + query : '');
+              var url = "".concat(_this79.route(query_params.engine)).concat(query ? '?' + query : '');
               var result = null;
 
-              _this80.http.post(url, Object.assign(Object.assign({}, form_data), {
+              _this79.http.post(url, Object.assign(Object.assign({}, form_data), {
                 concierge: true
               })).subscribe(function (d) {
-                return result = _this80.process(d);
+                return result = _this79.process(d);
               }, function (e) {
                 reject(e);
 
-                _this80.analyticsEvent("create-".concat(_this80._name.toLowerCase(), "-failed"));
+                _this79.analyticsEvent("create-".concat(_this79._name.toLowerCase(), "-failed"));
 
-                _this80._promises.new_item = null;
+                _this79._promises.new_item = null;
               }, function () {
                 resolve(result);
 
-                _this80.analyticsEvent("create-".concat(_this80._name.toLowerCase(), "-success"));
+                _this79.analyticsEvent("create-".concat(_this79._name.toLowerCase(), "-success"));
 
-                _this80._promises.new_item = null;
+                _this79._promises.new_item = null;
               });
             });
           }
@@ -15470,7 +15411,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "task",
         value: function task(id, task_name) {
-          var _this81 = this;
+          var _this80 = this;
 
           var form_data = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
           var method = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'post';
@@ -15487,24 +15428,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _task: task_name,
                 concierge: true
               });
-              var url = "".concat(_this81.route(), "/").concat(id, "/").concat(task_name);
+              var url = "".concat(_this80.route(), "/").concat(id, "/").concat(task_name);
               var result;
-              var request = method === 'post' ? _this81.http.post(url, post_data) : _this81.http.get("".concat(url).concat(query ? '?' + query : ''));
+              var request = method === 'post' ? _this80.http.post(url, post_data) : _this80.http.get("".concat(url).concat(query ? '?' + query : ''));
               request.subscribe(function (d) {
                 return result = d;
               }, function (e) {
                 reject(e);
 
-                _this81.analyticsEvent("".concat(_this81._name.toLowerCase(), "-task-").concat(task_name, "-failed"), id);
+                _this80.analyticsEvent("".concat(_this80._name.toLowerCase(), "-task-").concat(task_name, "-failed"), id);
 
-                delete _this81._promises[key];
+                delete _this80._promises[key];
               }, function () {
                 resolve(result);
 
-                _this81.analyticsEvent("".concat(_this81._name.toLowerCase(), "-task-").concat(task_name, "-success"), id);
+                _this80.analyticsEvent("".concat(_this80._name.toLowerCase(), "-task-").concat(task_name, "-success"), id);
 
-                _this81.timeout(key, function () {
-                  return delete _this81._promises[key];
+                _this80.timeout(key, function () {
+                  return delete _this80._promises[key];
                 }, 1000);
               });
             });
@@ -15522,7 +15463,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "update",
         value: function update(id, form_data) {
-          var _this82 = this;
+          var _this81 = this;
 
           var query_params = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
           var key = "update|".concat(id);
@@ -15533,25 +15474,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var query = api_utilities_1.toQueryString(Object.assign(Object.assign({}, query_params), {
                 concierge: true
               }));
-              var url = "".concat(_this82.route(query_params.engine), "/").concat(id).concat(query ? '?' + query : '');
+              var url = "".concat(_this81.route(query_params.engine), "/").concat(id).concat(query ? '?' + query : '');
               var result = null;
 
-              _this82.http.put(url, Object.assign(Object.assign({}, form_data), {
+              _this81.http.put(url, Object.assign(Object.assign({}, form_data), {
                 concierge: true
               })).subscribe(function (d) {
-                return result = _this82.process(d);
+                return result = _this81.process(d);
               }, function (e) {
                 reject(e);
 
-                _this82.analyticsEvent("update-".concat(_this82._name.toLowerCase(), "-failed"), id);
+                _this81.analyticsEvent("update-".concat(_this81._name.toLowerCase(), "-failed"), id);
 
-                _this82._promises[key] = null;
+                _this81._promises[key] = null;
               }, function () {
                 resolve(result);
 
-                _this82.analyticsEvent("update-".concat(_this82._name.toLowerCase(), "-success"), id);
+                _this81.analyticsEvent("update-".concat(_this81._name.toLowerCase(), "-success"), id);
 
-                _this82._promises[key] = null;
+                _this81._promises[key] = null;
               });
             });
           }
@@ -15566,7 +15507,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete(id) {
-          var _this83 = this;
+          var _this82 = this;
 
           var query_params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
           var key = "delete|".concat(id);
@@ -15575,14 +15516,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (!this._promises[key]) {
             this._promises[key] = new Promise(function (resolve, reject) {
               var query = api_utilities_1.toQueryString(Object.assign({}, query_params));
-              var url = "".concat(_this83.route(), "/").concat(id).concat(query ? '?' + query : '');
+              var url = "".concat(_this82.route(), "/").concat(id).concat(query ? '?' + query : '');
 
-              _this83.http["delete"](url).subscribe(function (_) {
+              _this82.http["delete"](url).subscribe(function (_) {
                 return null;
               }, function (e) {
                 return reject(e);
               }, function () {
-                _this83._promises[key] = null;
+                _this82._promises[key] = null;
                 resolve();
               });
             });
@@ -15701,88 +15642,88 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super22 = _createSuper(Booking);
 
       function Booking() {
-        var _this84;
+        var _this83;
 
         var raw_data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
         _classCallCheck(this, Booking);
 
-        _this84 = _super22.call(this, raw_data);
+        _this83 = _super22.call(this, raw_data);
         /** Whether the time or duration has changed */
 
-        _this84.time_changed = false;
+        _this83.time_changed = false;
         /** Map of display strings */
 
-        _this84._display = {};
-        _this84.icaluid = raw_data.icaluid || _this84.id || '';
-        _this84.title = raw_data.title || raw_data.subject || raw_data.Subject || '';
+        _this83._display = {};
+        _this83.icaluid = raw_data.icaluid || _this83.id || '';
+        _this83.title = raw_data.title || raw_data.subject || raw_data.Subject || '';
         var time = raw_data.date || raw_data.start_epoch * 1000 || raw_data.start * 1000 || raw_data.Start;
         var start = dayjs(time).startOf('m');
-        _this84.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
-        _this84.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
-        _this84.all_day = !!raw_data.all_day || _this84.duration > 23 * 60;
+        _this83.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
+        _this83.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
+        _this83.all_day = !!raw_data.all_day || _this83.duration > 23 * 60;
 
-        if (_this84.all_day) {
-          _this84.date = dayjs(_this84.date).startOf('d').valueOf();
+        if (_this83.all_day) {
+          _this83.date = dayjs(_this83.date).startOf('d').valueOf();
         }
 
-        _this84.old_start = raw_data.old_start || dayjs(_this84.date).unix();
-        _this84.old_end = raw_data.old_end || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
-        _this84.body = (typeof raw_data.body === 'string' ? raw_data.body : '') || raw_data.description;
-        _this84.attendees = (raw_data.attendees || raw_data._attendees || []).map(function (i) {
+        _this83.old_start = raw_data.old_start || dayjs(_this83.date).unix();
+        _this83.old_end = raw_data.old_end || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
+        _this83.body = (typeof raw_data.body === 'string' ? raw_data.body : '') || raw_data.description;
+        _this83.attendees = (raw_data.attendees || raw_data._attendees || []).map(function (i) {
           return new user_class_1.User(i);
         });
         var organiser = raw_data.organiser || raw_data.organizer;
-        _this84.organiser = (organiser ? new user_class_1.User(organiser) : user_class_1.User.active_user) || new user_class_1.User();
-        _this84.creator = raw_data.creator || raw_data.booked_by ? new user_class_1.User(raw_data.creator || raw_data.booked_by) : _this84.organiser;
-        _this84._location = raw_data.location_name || raw_data.location || '';
-        _this84.setup = raw_data.setup || {};
-        _this84.breakdown = raw_data.breakdown || {};
-        Object.keys(_this84.setup).forEach(function (key) {
-          return _this84.setup[key] = Math.floor(_this84.setup[key] / 60);
+        _this83.organiser = (organiser ? new user_class_1.User(organiser) : user_class_1.User.active_user) || new user_class_1.User();
+        _this83.creator = raw_data.creator || raw_data.booked_by ? new user_class_1.User(raw_data.creator || raw_data.booked_by) : _this83.organiser;
+        _this83._location = raw_data.location_name || raw_data.location || '';
+        _this83.setup = raw_data.setup || {};
+        _this83.breakdown = raw_data.breakdown || {};
+        Object.keys(_this83.setup).forEach(function (key) {
+          return _this83.setup[key] = Math.floor(_this83.setup[key] / 60);
         });
-        Object.keys(_this84.breakdown).forEach(function (key) {
-          return _this84.breakdown[key] = Math.floor(_this84.breakdown[key] / 60);
+        Object.keys(_this83.breakdown).forEach(function (key) {
+          return _this83.breakdown[key] = Math.floor(_this83.breakdown[key] / 60);
         });
-        _this84.recurrence = raw_data.recurrence || raw_data.recurr || {};
+        _this83.recurrence = raw_data.recurrence || raw_data.recurr || {};
 
-        if (_this84.recurrence.end && _this84.recurrence.end < new Date().getTime()) {
-          _this84.recurrence = Object.assign(Object.assign({}, _this84.recurrence), {
-            start: _this84.recurrence.start,
-            end: _this84.recurrence.end
+        if (_this83.recurrence.end && _this83.recurrence.end < new Date().getTime()) {
+          _this83.recurrence = Object.assign(Object.assign({}, _this83.recurrence), {
+            start: _this83.recurrence.start,
+            end: _this83.recurrence.end
           });
         }
 
-        _this84.notes = raw_data.notes || [];
-        _this84.equipment_codes = raw_data.equipment_codes || raw_data.equipment_code || {};
-        _this84.expected_attendees = raw_data.expected_attendees || {};
-        _this84.approval_status = (raw_data.status instanceof Object ? raw_data.status : '') || raw_data.approval_status || {};
-        _this84.checked_in = raw_data.checked_in || raw_data.checkins || Object.keys(raw_data.check_ins || {});
-        _this84.notify_users = raw_data.notify_users || [];
+        _this83.notes = raw_data.notes || [];
+        _this83.equipment_codes = raw_data.equipment_codes || raw_data.equipment_code || {};
+        _this83.expected_attendees = raw_data.expected_attendees || {};
+        _this83.approval_status = (raw_data.status instanceof Object ? raw_data.status : '') || raw_data.approval_status || {};
+        _this83.checked_in = raw_data.checked_in || raw_data.checkins || Object.keys(raw_data.check_ins || {});
+        _this83.notify_users = raw_data.notify_users || [];
 
-        if (raw_data.description && !_this84.notes.find(function (i) {
+        if (raw_data.description && !_this83.notes.find(function (i) {
           return i.type === 'description';
         })) {
-          _this84.notes = [].concat(_toConsumableArray(_this84.notes), [{
+          _this83.notes = [].concat(_toConsumableArray(_this83.notes), [{
             type: 'description',
             date: -1,
             message: raw_data.description,
-            author: _this84.organiser.email
+            author: _this83.organiser.email
           }]);
         }
 
-        _this84._display = {
+        _this83._display = {
           date: start.format('DD MMM YYYY'),
-          time: "".concat(start.format('h:mma'), " - ").concat(dayjs(start).add(_this84.duration, 'm').format('h:mma')),
+          time: "".concat(start.format('h:mma'), " - ").concat(dayjs(start).add(_this83.duration, 'm').format('h:mma')),
           start: start.format('h:mma'),
-          end: dayjs(start).add(_this84.duration, 'm').format('h:mma'),
-          duration: general_utilities_1.humaniseDuration(_this84.duration)
+          end: dayjs(start).add(_this83.duration, 'm').format('h:mma'),
+          duration: general_utilities_1.humaniseDuration(_this83.duration)
         };
         var space_ids = general_utilities_1.unique(raw_data.room_ids || raw_data.room_id || raw_data._space_list || []);
         var space_service = service_manager_class_1.ServiceManager.serviceFor(space_class_1.Space);
 
         if (space_service) {
-          _this84.space_list = space_ids.map(function (id) {
+          _this83.space_list = space_ids.map(function (id) {
             return space_service.find(id) || new space_class_1.Space({
               id: id,
               name: id,
@@ -15790,7 +15731,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
           });
         } else {
-          _this84.space_list = space_ids.map(function (id) {
+          _this83.space_list = space_ids.map(function (id) {
             return new space_class_1.Space({
               id: id,
               name: id,
@@ -15799,16 +15740,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
 
-        _this84.catering = (raw_data.catering instanceof Array ? raw_data.catering : []).map(function (i) {
+        _this83.catering = (raw_data.catering instanceof Array ? raw_data.catering : []).map(function (i) {
           return new catering_order_class_1.CateringOrder(i);
         });
         var edited_fields = Array.isArray(raw_data.edits) ? raw_data.edits : general_utilities_1.unique(general_utilities_1.flatten(Object.keys(raw_data.edits || {}).map(function (room) {
           return general_utilities_1.flatten(Object.values(raw_data.edits[room]));
         })));
-        _this84.edits = edited_fields;
-        _this84.type = raw_data.booking_type || (_this84.has_visitors ? 'external' : null) || 'internal';
-        _this84.has_catering = !!(raw_data.has_catering || _this84.catering && _this84.catering.length);
-        return _this84;
+        _this83.edits = edited_fields;
+        _this83.type = raw_data.booking_type || (_this83.has_visitors ? 'external' : null) || 'internal';
+        _this83.has_catering = !!(raw_data.has_catering || _this83.catering && _this83.catering.length);
+        return _this83;
       }
       /** Service for managing Bookings */
 
@@ -16810,22 +16751,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super23 = _createSuper(BookingsService);
 
       function BookingsService(_composer) {
-        var _this85;
+        var _this84;
 
         _classCallCheck(this, BookingsService);
 
-        _this85 = _super23.call(this, _composer);
-        _this85._composer = _composer;
-        _this85.booking_list = new rxjs_1.BehaviorSubject([]);
-        service_manager_class_1.ServiceManager.setService(booking_class_1.Booking, _assertThisInitialized(_this85));
-        _this85._name = 'Bookings';
-        _this85._api_route = '/bookings';
+        _this84 = _super23.call(this, _composer);
+        _this84._composer = _composer;
+        _this84.booking_list = new rxjs_1.BehaviorSubject([]);
+        service_manager_class_1.ServiceManager.setService(booking_class_1.Booking, _assertThisInitialized(_this84));
+        _this84._name = 'Bookings';
+        _this84._api_route = '/bookings';
 
-        _this85._compare = function (a, b) {
+        _this84._compare = function (a, b) {
           return !a.id.localeCompare(b.id) || !a.icaluid.localeCompare(b.icaluid);
         };
 
-        return _this85;
+        return _this84;
       }
 
       _createClass(BookingsService, [{
@@ -16950,16 +16891,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super24 = _createSuper(CateringCategoriesService);
 
       function CateringCategoriesService(_composer) {
-        var _this86;
+        var _this85;
 
         _classCallCheck(this, CateringCategoriesService);
 
-        _this86 = _super24.call(this, _composer);
-        _this86._composer = _composer;
-        service_manager_class_1.ServiceManager.setService(catering_category_class_1.CateringCategory, _assertThisInitialized(_this86));
-        _this86._name = 'catering category/group';
-        _this86._api_route = '/catering/category';
-        return _this86;
+        _this85 = _super24.call(this, _composer);
+        _this85._composer = _composer;
+        service_manager_class_1.ServiceManager.setService(catering_category_class_1.CateringCategory, _assertThisInitialized(_this85));
+        _this85._name = 'catering category/group';
+        _this85._api_route = '/catering/category';
+        return _this85;
       }
 
       _createClass(CateringCategoriesService, [{
@@ -17044,19 +16985,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super25 = _createSuper(CateringCategory);
 
       function CateringCategory(data) {
-        var _this87;
+        var _this86;
 
         _classCallCheck(this, CateringCategory);
 
-        _this87 = _super25.call(this, data);
-        _this87.items = (data.items || []).map(function (item) {
+        _this86 = _super25.call(this, data);
+        _this86.items = (data.items || []).map(function (item) {
           return item.items ? new CateringCategory(item) : new catering_item_class_1.CateringItem(item);
         });
-        _this87["package"] = data["package"] === 'true' || data["package"] === true;
-        _this87.zones = data.zones && data.zones.length ? _toConsumableArray(data.zones) : [];
-        _this87.must_select = _this87.must_select || 0;
-        _this87.order_anytime = !!data.order_anytime && _this87["package"];
-        return _this87;
+        _this86["package"] = data["package"] === 'true' || data["package"] === true;
+        _this86.zones = data.zones && data.zones.length ? _toConsumableArray(data.zones) : [];
+        _this86.must_select = _this86.must_select || 0;
+        _this86.order_anytime = !!data.order_anytime && _this86["package"];
+        return _this86;
       }
 
       _createClass(CateringCategory, [{
@@ -17302,16 +17243,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super26 = _createSuper(CateringItemsService);
 
       function CateringItemsService(_composer) {
-        var _this88;
+        var _this87;
 
         _classCallCheck(this, CateringItemsService);
 
-        _this88 = _super26.call(this, _composer);
-        _this88._composer = _composer;
-        service_manager_class_1.ServiceManager.setService(catering_item_class_1.CateringItem, _assertThisInitialized(_this88));
-        _this88._name = 'Catering Menu';
-        _this88._api_route = '/catering/item';
-        return _this88;
+        _this87 = _super26.call(this, _composer);
+        _this87._composer = _composer;
+        service_manager_class_1.ServiceManager.setService(catering_item_class_1.CateringItem, _assertThisInitialized(_this87));
+        _this87._name = 'Catering Menu';
+        _this87._api_route = '/catering/item';
+        return _this87;
       }
 
       _createClass(CateringItemsService, [{
@@ -17420,15 +17361,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super27 = _createSuper(CateringMenuService);
 
       function CateringMenuService(_composer) {
-        var _this89;
+        var _this88;
 
         _classCallCheck(this, CateringMenuService);
 
-        _this89 = _super27.call(this, _composer);
-        _this89._composer = _composer;
-        _this89._name = 'Catering Menu';
-        _this89._api_route = '/menu';
-        return _this89;
+        _this88 = _super27.call(this, _composer);
+        _this88._composer = _composer;
+        _this88._name = 'Catering Menu';
+        _this88._api_route = '/menu';
+        return _this88;
       }
       /**
        * Convert user data to local format
@@ -17745,11 +17686,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "display",
         get: function get() {
-          var _this90 = this;
+          var _this89 = this;
 
           var org_service = service_manager_class_1.ServiceManager.serviceFor(organisation_class_1.Organisation);
           var bld = org_service.buildings.find(function (bld) {
-            return bld.id === _this90.level.building_id;
+            return bld.id === _this89.level.building_id;
           });
           return bld ? "".concat(bld.name, ", ").concat(this.level.name) : this.level.name;
         }
@@ -17810,44 +17751,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super28 = _createSuper(Building);
 
       function Building(raw_data) {
-        var _this91;
+        var _this90;
 
         _classCallCheck(this, Building);
 
-        _this91 = _super28.call(this, raw_data);
+        _this90 = _super28.call(this, raw_data);
         /** Class type of required service */
 
-        _this91.__type = 'Building';
+        _this90.__type = 'Building';
         var settings = raw_data.settings || {};
         var disc_info = settings.discovery_info || settings;
-        _this91.zone_id = raw_data.zone_id || raw_data.zone;
-        _this91._extras = (raw_data.extras || disc_info.extras || []).map(function (i) {
+        _this90.zone_id = raw_data.zone_id || raw_data.zone;
+        _this90._extras = (raw_data.extras || disc_info.extras || []).map(function (i) {
           return {
             id: i.extra_id || i.id,
             name: i.extra_name || i.name
           };
         });
-        _this91._loan_items = (raw_data.loan_items || disc_info.loan_items || []).map(function (i) {
+        _this90._loan_items = (raw_data.loan_items || disc_info.loan_items || []).map(function (i) {
           return {
             id: i.extra_id || i.id,
             name: i.extra_name || i.name
           };
         });
-        _this91._levels = (raw_data.levels || disc_info.levels || []).map(function (i) {
+        _this90._levels = (raw_data.levels || disc_info.levels || []).map(function (i) {
           return new level_class_1.BuildingLevel(Object.assign(Object.assign({}, i), {
-            building_id: _this91.id
+            building_id: _this90.id
           }));
         });
-        _this91._roles = raw_data.roles || disc_info.roles || {};
-        _this91._lockers = raw_data.lockers || raw_data.locker_structure || disc_info.locker_structure || {};
-        _this91._systems = raw_data.systems || disc_info.systems || {};
-        _this91._settings = settings;
-        _this91._phone_numbers = raw_data.phone_numbers || disc_info.phone_numbers || {};
-        _this91._location = raw_data.location || disc_info.location || {
+        _this90._roles = raw_data.roles || disc_info.roles || {};
+        _this90._lockers = raw_data.lockers || raw_data.locker_structure || disc_info.locker_structure || {};
+        _this90._systems = raw_data.systems || disc_info.systems || {};
+        _this90._settings = settings;
+        _this90._phone_numbers = raw_data.phone_numbers || disc_info.phone_numbers || {};
+        _this90._location = raw_data.location || disc_info.location || {
           longitude: null,
           latitude: null
         };
-        _this91._searchables = [];
+        _this90._searchables = [];
 
         if (raw_data.neighbourhoods) {
           for (var lvl in raw_data.neighbourhoods) {
@@ -17856,7 +17797,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               for (var feature in lvl_features) {
                 if (lvl_features.hasOwnProperty(feature)) {
-                  _this91._searchables.push({
+                  _this90._searchables.push({
                     id: lvl_features[feature],
                     name: feature,
                     level_id: lvl
@@ -17867,32 +17808,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
 
-        _this91.code = raw_data.code || disc_info.code || settings.code || '';
-        _this91.address = raw_data.address || disc_info.address || settings.address || '';
-        _this91.booking_details = raw_data.booking_details || disc_info.booking_details || settings.booking_details || null;
-        _this91.booking_rules = raw_data.booking_rules || disc_info.booking_rules || settings.booking_rules || {};
-        _this91.catering_restricted_from = raw_data.catering_restricted_from || disc_info.catering_restricted_from || settings.catering_restricted_from || 0;
-        _this91.currency = raw_data.currency || disc_info.currency || settings.currency || 'USD';
-        _this91.required = raw_data.required || disc_info.required || settings.required || {};
+        _this90.code = raw_data.code || disc_info.code || settings.code || '';
+        _this90.address = raw_data.address || disc_info.address || settings.address || '';
+        _this90.booking_details = raw_data.booking_details || disc_info.booking_details || settings.booking_details || null;
+        _this90.booking_rules = raw_data.booking_rules || disc_info.booking_rules || settings.booking_rules || {};
+        _this90.catering_restricted_from = raw_data.catering_restricted_from || disc_info.catering_restricted_from || settings.catering_restricted_from || 0;
+        _this90.currency = raw_data.currency || disc_info.currency || settings.currency || 'USD';
+        _this90.required = raw_data.required || disc_info.required || settings.required || {};
 
         if (disc_info.requires_equipment_code) {
-          _this91.required.equipment_code = true;
+          _this90.required.equipment_code = true;
         }
 
         if (disc_info.requires_expected_attendees) {
-          _this91.required.expected_attendees = true;
+          _this90.required.expected_attendees = true;
         }
 
-        _this91.catering_hours = raw_data.catering_hours || disc_info.catering_hours || settings.catering_hours || {
+        _this90.catering_hours = raw_data.catering_hours || disc_info.catering_hours || settings.catering_hours || {
           start: 7,
           end: 20
         };
-        _this91.timezone = raw_data.timezone || disc_info.timezone || settings.timezone || '';
-        _this91.has_catering = raw_data.has_catering || disc_info.has_catering || settings.has_catering || false;
-        _this91.holding_bay = raw_data.holding_bay || disc_info.holding_bay || settings.holding_bay || '';
-        _this91.visitor_space = raw_data.visitor_space || disc_info.visitor_space || settings.visitor_space || '';
-        _this91.sort_order = raw_data.sort_order || disc_info.sort_order || settings.sort_order || [];
-        return _this91;
+        _this90.timezone = raw_data.timezone || disc_info.timezone || settings.timezone || '';
+        _this90.has_catering = raw_data.has_catering || disc_info.has_catering || settings.has_catering || false;
+        _this90.holding_bay = raw_data.holding_bay || disc_info.holding_bay || settings.holding_bay || '';
+        _this90.visitor_space = raw_data.visitor_space || disc_info.visitor_space || settings.visitor_space || '';
+        _this90.sort_order = raw_data.sort_order || disc_info.sort_order || settings.sort_order || [];
+        return _this90;
       }
       /** List of available extras for the building */
 
@@ -18005,10 +17946,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "role_names",
         get: function get() {
-          var _this92 = this;
+          var _this91 = this;
 
           return Object.keys(this._roles).filter(function (i) {
-            return _this92._roles.hasOwnProperty(i);
+            return _this91._roles.hasOwnProperty(i);
           });
         }
         /** Map of the locker ID arrays */
@@ -18113,10 +18054,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       value: true
     });
 
-    var tslib_1 = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-
     var base_api_class_1 = __webpack_require__(
     /*! ../base-api.class */
     "./src/app/services/data/base-api.class.ts");
@@ -18125,10 +18062,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../../shared/utilities/general.utilities */
     "./src/app/shared/utilities/general.utilities.ts");
 
-    var service_manager_class_1 = __webpack_require__(
-    /*! ../service-manager.class */
-    "./src/app/services/data/service-manager.class.ts");
-
     var Organisation =
     /*#__PURE__*/
     function (_base_api_class_1$Bas3) {
@@ -18136,82 +18069,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super29 = _createSuper(Organisation);
 
-      function Organisation(raw_data) {
-        var _this93;
+      function Organisation() {
+        var _this92;
+
+        var raw_data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
         _classCallCheck(this, Organisation);
 
-        _this93 = _super29.call(this, raw_data);
-        _this93._settings = raw_data.settings || {};
-        return _this93;
+        var _a, _b;
+
+        _this92 = _super29.call(this, raw_data);
+        _this92._settings = raw_data.settings || {};
+        _this92.available_buildings = (((_b = (_a = raw_data.settings) === null || _a === void 0 ? void 0 : _a.discovery_info) === null || _b === void 0 ? void 0 : _b.buildings) || []).map(function (bld) {
+          return bld.zone_id;
+        });
+        return _this92;
       }
-      /** Service for managing organisations */
+      /**
+       * Get a custom building setting
+       * @param key Name of the setting. i.e. nested items can be grabbed using `.` to seperate key names
+       */
 
 
       _createClass(Organisation, [{
         key: "setting",
-
-        /**
-         * Get a custom building setting
-         * @param key Name of the setting. i.e. nested items can be grabbed using `.` to seperate key names
-         */
         value: function setting(key) {
           var keys = key.split('.');
           var value = general_utilities_1.getItemWithKeys(keys, this._settings);
           return value;
-        }
-        /**
-         * Building objects are readonly and cannot be changed
-         */
-
-      }, {
-        key: "save",
-        value: function save() {
-          return tslib_1.__awaiter(this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee10() {
-            return regeneratorRuntime.wrap(function _callee10$(_context10) {
-              while (1) {
-                switch (_context10.prev = _context10.next) {
-                  case 0:
-                    throw new Error('Organisation objects are readonly and cannot be changed');
-
-                  case 1:
-                  case "end":
-                    return _context10.stop();
-                }
-              }
-            }, _callee10);
-          }));
-        }
-        /**
-         * Building objects are readonly and cannot be deleted
-         */
-
-      }, {
-        key: "delete",
-        value: function _delete() {
-          return tslib_1.__awaiter(this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee11() {
-            return regeneratorRuntime.wrap(function _callee11$(_context11) {
-              while (1) {
-                switch (_context11.prev = _context11.next) {
-                  case 0:
-                    throw new Error('Organisation objects are readonly and cannot be deleted');
-
-                  case 1:
-                  case "end":
-                    return _context11.stop();
-                }
-              }
-            }, _callee11);
-          }));
-        }
-      }, {
-        key: "_service",
-        get: function get() {
-          return service_manager_class_1.ServiceManager.serviceFor(Organisation);
         }
       }]);
 
@@ -18306,30 +18191,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super30 = _createSuper(OrganisationService);
 
       function OrganisationService(_composer, _service, _users) {
-        var _this94;
+        var _this93;
 
         _classCallCheck(this, OrganisationService);
 
-        _this94 = _super30.call(this, _composer);
-        _this94._composer = _composer;
-        _this94._service = _service;
-        _this94._users = _users;
-        service_manager_class_1.ServiceManager.setService(organisation_class_1.Organisation, _assertThisInitialized(_this94));
-        service_manager_class_1.ServiceManager.setService(building_class_1.Building, _assertThisInitialized(_this94));
-        _this94._name = 'Organisation';
-        _this94._api_route = '/zones';
+        _this93 = _super30.call(this, _composer);
+        _this93._composer = _composer;
+        _this93._service = _service;
+        _this93._users = _users;
+        service_manager_class_1.ServiceManager.setService(organisation_class_1.Organisation, _assertThisInitialized(_this93));
+        service_manager_class_1.ServiceManager.setService(building_class_1.Building, _assertThisInitialized(_this93));
+        _this93._name = 'Organisation';
+        _this93._api_route = '/zones';
 
-        _this94.set('buildings', []);
+        _this93.set('buildings', []);
 
-        _this94.set('active_building', null);
+        _this93.set('active_building', null);
 
-        _this94._users.initialised.pipe(operators_1.first(function (_) {
+        _this93._users.initialised.pipe(operators_1.first(function (_) {
           return _;
         })).subscribe(function () {
-          return _this94.init();
+          return _this93.init();
         });
 
-        return _this94;
+        return _this93;
       }
       /**
        * Add is not available on organisation service
@@ -18341,19 +18226,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function add(form_data, query_params) {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee12() {
-            return regeneratorRuntime.wrap(function _callee12$(_context12) {
+          regeneratorRuntime.mark(function _callee10() {
+            return regeneratorRuntime.wrap(function _callee10$(_context10) {
               while (1) {
-                switch (_context12.prev = _context12.next) {
+                switch (_context10.prev = _context10.next) {
                   case 0:
                     throw new Error('Add is not available on the organisation service');
 
                   case 1:
                   case "end":
-                    return _context12.stop();
+                    return _context10.stop();
                 }
               }
-            }, _callee12);
+            }, _callee10);
           }));
         }
         /**
@@ -18365,19 +18250,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function update(id, form_data, query_params) {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee13() {
-            return regeneratorRuntime.wrap(function _callee13$(_context13) {
+          regeneratorRuntime.mark(function _callee11() {
+            return regeneratorRuntime.wrap(function _callee11$(_context11) {
               while (1) {
-                switch (_context13.prev = _context13.next) {
+                switch (_context11.prev = _context11.next) {
                   case 0:
                     throw new Error('Update is not available on the organisation service');
 
                   case 1:
                   case "end":
-                    return _context13.stop();
+                    return _context11.stop();
                 }
               }
-            }, _callee13);
+            }, _callee11);
           }));
         }
         /**
@@ -18389,19 +18274,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function _delete(id) {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee14() {
-            return regeneratorRuntime.wrap(function _callee14$(_context14) {
+          regeneratorRuntime.mark(function _callee12() {
+            return regeneratorRuntime.wrap(function _callee12$(_context12) {
               while (1) {
-                switch (_context14.prev = _context14.next) {
+                switch (_context12.prev = _context12.next) {
                   case 0:
                     throw new Error('Delete is not available on the organisation service');
 
                   case 1:
                   case "end":
-                    return _context14.stop();
+                    return _context12.stop();
                 }
               }
-            }, _callee14);
+            }, _callee12);
           }));
         }
         /**
@@ -18513,11 +18398,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function load() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee15() {
+          regeneratorRuntime.mark(function _callee13() {
             var loading, user, building;
-            return regeneratorRuntime.wrap(function _callee15$(_context15) {
+            return regeneratorRuntime.wrap(function _callee13$(_context13) {
               while (1) {
-                switch (_context15.prev = _context15.next) {
+                switch (_context13.prev = _context13.next) {
                   case 0:
                     /* istanbul ignore else */
                     if (localStorage) {
@@ -18529,7 +18414,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       message: 'Loading organisation data',
                       state: 'loading'
                     };
-                    _context15.next = 5;
+                    _context13.next = 5;
                     return this.loadOrganisation();
 
                   case 5:
@@ -18544,7 +18429,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     this._service.set('loading', loading);
 
-                    _context15.next = 10;
+                    _context13.next = 10;
                     return this.loadBuildings();
 
                   case 10:
@@ -18559,7 +18444,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     this._service.set('loading', loading);
 
-                    _context15.next = 15;
+                    _context13.next = 15;
                     return this.loadLevels();
 
                   case 15:
@@ -18577,7 +18462,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     this._service.set('loading', loading);
 
-                    _context15.next = 21;
+                    _context13.next = 21;
                     return this.loadSpaceTypes();
 
                   case 21:
@@ -18606,10 +18491,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 25:
                   case "end":
-                    return _context15.stop();
+                    return _context13.stop();
                 }
               }
-            }, _callee15, this);
+            }, _callee13, this);
           }));
         }
         /**
@@ -18621,29 +18506,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadOrganisation() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee16() {
+          regeneratorRuntime.mark(function _callee14() {
             var org_data;
-            return regeneratorRuntime.wrap(function _callee16$(_context16) {
+            return regeneratorRuntime.wrap(function _callee14$(_context14) {
               while (1) {
-                switch (_context16.prev = _context16.next) {
+                switch (_context14.prev = _context14.next) {
                   case 0:
-                    _context16.next = 2;
+                    _context14.next = 2;
                     return this.query({
                       tags: 'org',
                       engine: true
                     });
 
                   case 2:
-                    org_data = _context16.sent;
+                    org_data = _context14.sent;
                     this._organisation = new organisation_class_1.Organisation(org_data[0]);
                     this.set('organisation', this._organisation);
 
                   case 5:
                   case "end":
-                    return _context16.stop();
+                    return _context14.stop();
                 }
               }
-            }, _callee16, this);
+            }, _callee14, this);
           }));
         }
         /**
@@ -18655,13 +18540,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadBuildings() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee17() {
+          regeneratorRuntime.mark(function _callee15() {
+            var _this94 = this;
+
             var bld_data, buildings;
-            return regeneratorRuntime.wrap(function _callee17$(_context17) {
+            return regeneratorRuntime.wrap(function _callee15$(_context15) {
               while (1) {
-                switch (_context17.prev = _context17.next) {
+                switch (_context15.prev = _context15.next) {
                   case 0:
-                    _context17.next = 2;
+                    _context15.next = 2;
                     return this.query({
                       tags: 'building',
                       engine: true,
@@ -18669,9 +18556,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     });
 
                   case 2:
-                    bld_data = _context17.sent;
+                    bld_data = _context15.sent;
                     buildings = bld_data.map(function (i) {
                       return new building_class_1.Building(i);
+                    }).filter(function (bld) {
+                      return _this94._organisation.available_buildings.includes(bld.id);
                     });
                     this.set('buildings', buildings);
                     /* istanbul ignore else */
@@ -18682,10 +18571,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context17.stop();
+                    return _context15.stop();
                 }
               }
-            }, _callee17, this);
+            }, _callee15, this);
           }));
         }
         /**
@@ -18697,20 +18586,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadLevels() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee18() {
+          regeneratorRuntime.mark(function _callee16() {
             var lvl_data, levels;
-            return regeneratorRuntime.wrap(function _callee18$(_context18) {
+            return regeneratorRuntime.wrap(function _callee16$(_context16) {
               while (1) {
-                switch (_context18.prev = _context18.next) {
+                switch (_context16.prev = _context16.next) {
                   case 0:
-                    _context18.next = 2;
+                    _context16.next = 2;
                     return this.query({
                       tags: 'level',
                       engine: true
                     });
 
                   case 2:
-                    lvl_data = _context18.sent;
+                    lvl_data = _context16.sent;
                     levels = lvl_data.map(function (i) {
                       return new level_class_1.BuildingLevel(i);
                     });
@@ -18718,10 +18607,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 5:
                   case "end":
-                    return _context18.stop();
+                    return _context16.stop();
                 }
               }
-            }, _callee18, this);
+            }, _callee16, this);
           }));
         }
         /**
@@ -18733,20 +18622,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadSpaceTypes() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee19() {
+          regeneratorRuntime.mark(function _callee17() {
             var type_data, types;
-            return regeneratorRuntime.wrap(function _callee19$(_context19) {
+            return regeneratorRuntime.wrap(function _callee17$(_context17) {
               while (1) {
-                switch (_context19.prev = _context19.next) {
+                switch (_context17.prev = _context17.next) {
                   case 0:
-                    _context19.next = 2;
+                    _context17.next = 2;
                     return this.query({
                       tags: 'room',
                       engine: true
                     });
 
                   case 2:
-                    type_data = _context19.sent;
+                    type_data = _context17.sent;
                     types = type_data.map(function (i) {
                       return {
                         id: i.id,
@@ -18757,10 +18646,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 5:
                   case "end":
-                    return _context19.stop();
+                    return _context17.stop();
                 }
               }
-            }, _callee19, this);
+            }, _callee17, this);
           }));
         }
       }, {
@@ -19626,30 +19515,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee20() {
+          regeneratorRuntime.mark(function _callee18() {
             var list;
-            return regeneratorRuntime.wrap(function _callee20$(_context20) {
+            return regeneratorRuntime.wrap(function _callee18$(_context18) {
               while (1) {
-                switch (_context20.prev = _context20.next) {
+                switch (_context18.prev = _context18.next) {
                   case 0:
-                    _context20.next = 2;
+                    _context18.next = 2;
                     return _super.query.call(this, _query);
 
                   case 2:
-                    list = _context20.sent;
+                    list = _context18.sent;
 
                     if (!Object.keys(_query).length) {
                       this.set('list', list);
                     }
 
-                    return _context20.abrupt("return", list);
+                    return _context18.abrupt("return", list);
 
                   case 5:
                   case "end":
-                    return _context20.stop();
+                    return _context18.stop();
                 }
               }
-            }, _callee20, this);
+            }, _callee18, this);
           }));
         }
         /**
@@ -19715,13 +19604,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function load() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee21() {
+          regeneratorRuntime.mark(function _callee19() {
             var _this103 = this;
 
             var loading;
-            return regeneratorRuntime.wrap(function _callee21$(_context21) {
+            return regeneratorRuntime.wrap(function _callee19$(_context19) {
               while (1) {
-                switch (_context21.prev = _context21.next) {
+                switch (_context19.prev = _context19.next) {
                   case 0:
                     loading = this._service.get('loading') || {};
 
@@ -19734,7 +19623,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       this._service.set('loading', loading);
                     }
 
-                    _context21.next = 4;
+                    _context19.next = 4;
                     return this.query()["catch"](function () {
                       loading.spaces = {
                         message: 'Loading space data',
@@ -19754,10 +19643,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context21.stop();
+                    return _context19.stop();
                 }
               }
-            }, _callee21, this);
+            }, _callee19, this);
           }));
         }
         /**
@@ -19902,29 +19791,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } else {
               resolve(null);
             }
-          });
-        }
-        /**
-         * Whether user is available during the given period
-         * @param start Start time as a unix timestamp with milliseconds
-         * @param end End time as a unix timestamp with milliseconds
-         */
-
-      }, {
-        key: "available",
-        value: function available(start, end) {
-          var _this106 = this;
-
-          return new Promise(function (resolve) {
-            _this106._service.query({
-              email: _this106.email,
-              start: start,
-              end: end
-            }).then(function (l) {
-              return resolve(l && l.length > 0);
-            }, function (_) {
-              return resolve(false);
-            });
           });
         }
         /**
@@ -20130,37 +19996,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super35 = _createSuper(UsersService);
 
       function UsersService(_composer, uhttp, location, _service) {
-        var _this107;
+        var _this106;
 
         _classCallCheck(this, UsersService);
 
-        _this107 = _super35.call(this, _composer);
-        _this107._composer = _composer;
-        _this107.uhttp = uhttp;
-        _this107.location = location;
-        _this107._service = _service;
-        service_manager_class_1.ServiceManager.setService(user_class_1.User, _assertThisInitialized(_this107));
-        _this107._name = 'Users';
-        _this107._api_route = '/users';
+        _this106 = _super35.call(this, _composer);
+        _this106._composer = _composer;
+        _this106.uhttp = uhttp;
+        _this106.location = location;
+        _this106._service = _service;
+        service_manager_class_1.ServiceManager.setService(user_class_1.User, _assertThisInitialized(_this106));
+        _this106._name = 'Users';
+        _this106._api_route = '/users';
 
-        _this107._compare = function (a, b) {
+        _this106._compare = function (a, b) {
           return !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
         };
 
-        _this107.set('current_user', new user_class_1.User({
+        _this106.set('current_user', new user_class_1.User({
           id: 'local_user',
           name: 'Local User'
         }));
 
-        _this107.set('delegates', null);
+        _this106.set('delegates', null);
 
-        _this107._composer.initialised.pipe(operators_1.first(function (_) {
+        _this106._composer.initialised.pipe(operators_1.first(function (_) {
           return _;
         })).subscribe(function () {
-          return _this107.init();
+          return _this106.init();
         });
 
-        return _this107;
+        return _this106;
       }
       /** Currently logged in user */
 
@@ -20211,13 +20077,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "login",
         value: function login(query_params) {
-          var _this108 = this;
+          var _this107 = this;
 
           var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
           if (!this._promises['login']) {
             this._promises['login'] = new Promise(function (resolve, reject) {
-              _this108.set('status', 'loading');
+              _this107.set('status', 'loading');
 
               var headers = new http_1.HttpHeaders();
 
@@ -20227,14 +20093,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               var url = (options ? options.url : '') || '/auth/signin';
 
-              _this108.uhttp.post(url, query_params, {
+              _this107.uhttp.post(url, query_params, {
                 headers: headers
               }).subscribe(function (_) {
                 return null;
               }, function (e) {
                 return reject(e);
               }, function () {
-                _this108._composer.auth.authorise();
+                _this107._composer.auth.authorise();
 
                 resolve();
               });
@@ -20259,7 +20125,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "load",
         value: function load() {
-          var _this109 = this;
+          var _this108 = this;
 
           var tries = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
           var loading = this._service.get('loading') || {};
@@ -20276,27 +20142,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.set('status', 'loading');
           return new Promise(function (resolve) {
             if (tries > 4) {
-              _this109.set('status', 'invalid');
+              _this108.set('status', 'invalid');
 
               loading.user = {
                 message: 'Loading user credentials',
                 state: 'failed'
               };
 
-              _this109._service.set('loading', loading);
+              _this108._service.set('loading', loading);
 
               return resolve();
             }
 
-            _this109.show('current').then(function (current_user) {
-              return tslib_1.__awaiter(_this109, void 0, void 0,
+            _this108.show('current').then(function (current_user) {
+              return tslib_1.__awaiter(_this108, void 0, void 0,
               /*#__PURE__*/
-              regeneratorRuntime.mark(function _callee23() {
-                var _this110 = this;
+              regeneratorRuntime.mark(function _callee21() {
+                var _this109 = this;
 
-                return regeneratorRuntime.wrap(function _callee23$(_context23) {
+                return regeneratorRuntime.wrap(function _callee21$(_context21) {
                   while (1) {
-                    switch (_context23.prev = _context23.next) {
+                    switch (_context21.prev = _context21.next) {
                       case 0:
                         this.set('status', 'available');
                         this.set('current_user', current_user);
@@ -20304,17 +20170,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         this._initialised.next(true);
 
                         if (!(this._service && this._service.setting('app.user.grab_api_details'))) {
-                          _context23.next = 7;
+                          _context21.next = 7;
                           break;
                         }
 
                         this.show(current_user.email).then(function (user) {
-                          return tslib_1.__awaiter(_this110, void 0, void 0,
+                          return tslib_1.__awaiter(_this109, void 0, void 0,
                           /*#__PURE__*/
-                          regeneratorRuntime.mark(function _callee22() {
-                            return regeneratorRuntime.wrap(function _callee22$(_context22) {
+                          regeneratorRuntime.mark(function _callee20() {
+                            return regeneratorRuntime.wrap(function _callee20$(_context20) {
                               while (1) {
-                                switch (_context22.prev = _context22.next) {
+                                switch (_context20.prev = _context20.next) {
                                   case 0:
                                     this.set('current_user', user);
 
@@ -20324,7 +20190,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                       }, 5000);
                                     }
 
-                                    _context22.next = 4;
+                                    _context20.next = 4;
                                     return this.loadDelegates();
 
                                   case 4:
@@ -20338,19 +20204,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                                   case 7:
                                   case "end":
-                                    return _context22.stop();
+                                    return _context20.stop();
                                 }
                               }
-                            }, _callee22, this);
+                            }, _callee20, this);
                           }));
                         }, function () {
-                          return _this110.timeout('load', function () {
-                            return _this110.load(++tries).then(function () {
+                          return _this109.timeout('load', function () {
+                            return _this109.load(++tries).then(function () {
                               return resolve();
                             });
                           });
                         });
-                        _context23.next = 13;
+                        _context21.next = 13;
                         break;
 
                       case 7:
@@ -20360,7 +20226,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           }, 5000);
                         }
 
-                        _context23.next = 10;
+                        _context21.next = 10;
                         return this.loadDelegates();
 
                       case 10:
@@ -20374,14 +20240,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                       case 13:
                       case "end":
-                        return _context23.stop();
+                        return _context21.stop();
                     }
                   }
-                }, _callee23, this);
+                }, _callee21, this);
               }));
             }, function () {
-              return _this109.timeout('load', function () {
-                return _this109.load(++tries).then(function () {
+              return _this108.timeout('load', function () {
+                return _this108.load(++tries).then(function () {
                   return resolve();
                 });
               });
@@ -20393,21 +20259,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadDelegates() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee24() {
+          regeneratorRuntime.mark(function _callee22() {
             var delegates, promises, _iterator24, _step24, email, list;
 
-            return regeneratorRuntime.wrap(function _callee24$(_context24) {
+            return regeneratorRuntime.wrap(function _callee22$(_context22) {
               while (1) {
-                switch (_context24.prev = _context24.next) {
+                switch (_context22.prev = _context22.next) {
                   case 0:
                     delegates = this.current.delegates;
 
                     if (!(!delegates || !delegates.length)) {
-                      _context24.next = 3;
+                      _context22.next = 3;
                       break;
                     }
 
-                    return _context24.abrupt("return", []);
+                    return _context22.abrupt("return", []);
 
                   case 3:
                     promises = [];
@@ -20424,21 +20290,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       _iterator24.f();
                     }
 
-                    _context24.next = 8;
+                    _context22.next = 8;
                     return Promise.all(promises);
 
                   case 8:
-                    list = _context24.sent;
+                    list = _context22.sent;
                     this.set('delegates', list);
                     this.set('list', general_utilities_1.unique((this.get('list') || []).concat(list)));
-                    return _context24.abrupt("return", list);
+                    return _context22.abrupt("return", list);
 
                   case 12:
                   case "end":
-                    return _context24.stop();
+                    return _context22.stop();
                 }
               }
-            }, _callee24, this);
+            }, _callee22, this);
           }));
         }
         /**
@@ -20543,7 +20409,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*#__PURE__*/
     function () {
       function HotkeysService() {
-        var _this111 = this;
+        var _this110 = this;
 
         _classCallCheck(this, HotkeysService);
 
@@ -20562,41 +20428,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.counter = 0;
         window.addEventListener('keydown', function (event) {
-          var code = _this111.mapKey((event.code || '').toLowerCase());
+          var code = _this110.mapKey((event.code || '').toLowerCase());
           /* istanbul ignore else */
 
 
-          if (_this111.last_down !== code) {
+          if (_this110.last_down !== code) {
             /* istanbul ignore else */
-            if (!_this111.keydown_states[code]) {
-              _this111.keydown_states[code] = new rxjs_1.BehaviorSubject(null);
-              _this111.keydown_observers[code] = _this111.keydown_states[code].asObservable();
+            if (!_this110.keydown_states[code]) {
+              _this110.keydown_states[code] = new rxjs_1.BehaviorSubject(null);
+              _this110.keydown_observers[code] = _this110.keydown_states[code].asObservable();
             }
 
-            _this111.keydown_states[code].next(++_this111.counter);
+            _this110.keydown_states[code].next(++_this110.counter);
             /* istanbul ignore else */
 
 
-            if (_this111.combo_end.indexOf(code) >= 0) {
+            if (_this110.combo_end.indexOf(code) >= 0) {
               event.preventDefault();
             }
 
-            _this111.last_down = code;
+            _this110.last_down = code;
           }
         });
         window.addEventListener('keyup', function (event) {
-          var code = _this111.mapKey((event.code || '').toLowerCase());
+          var code = _this110.mapKey((event.code || '').toLowerCase());
           /* istanbul ignore else */
 
 
-          if (_this111.keydown_states[code]) {
-            _this111.keydown_states[code].next(null);
+          if (_this110.keydown_states[code]) {
+            _this110.keydown_states[code].next(null);
           }
           /* istanbul ignore else */
 
 
-          if (_this111.last_down === code) {
-            _this111.last_down = null;
+          if (_this110.last_down === code) {
+            _this110.last_down = null;
           }
         });
       }
@@ -20610,11 +20476,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(HotkeysService, [{
         key: "listen",
         value: function listen(combo, next) {
-          var _this112 = this;
+          var _this111 = this;
 
           combo = combo instanceof Array ? combo : combo.split('+');
           var combination = combo.map(function (i) {
-            return _this112.mapKey(i.toLowerCase());
+            return _this111.mapKey(i.toLowerCase());
           });
           /* istanbul ignore else */
 
@@ -20643,7 +20509,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   try {
                     for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
                       var key = _step25.value;
-                      var state = _this112.keydown_states[key];
+                      var state = _this111.keydown_states[key];
                       presses.push(state ? state.getValue() || -1 : -1);
                     } // Check that keys are pressed in the correct order
 
@@ -20836,36 +20702,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super36 = _createSuper(SettingsService);
 
       function SettingsService(http) {
-        var _this113;
+        var _this112;
 
         _classCallCheck(this, SettingsService);
 
-        _this113 = _super36.call(this);
-        _this113.http = http;
+        _this112 = _super36.call(this);
+        _this112.http = http;
         /** Map of settings */
 
-        _this113._settings = {
+        _this112._settings = {
           api: {},
           local: {},
           session: {}
         };
         /** Store for promises */
 
-        _this113._promises = {};
+        _this112._promises = {};
         /** Name of the application */
 
-        _this113._app_name = 'PlaceOS';
+        _this112._app_name = 'PlaceOS';
         var now = dayjs();
         var build = dayjs(version_1.VERSION.time);
         var built = now.isSame(build, 'd') ? "Today at ".concat(build.format('h:mmA')) : build.format('D MMM YYYY, h:mmA');
 
-        _this113.log('CORE', "".concat(version_1.VERSION.core_version), null, 'debug', true);
+        _this112.log('CORE', "".concat(version_1.VERSION.core_version), null, 'debug', true);
 
-        _this113.log('APP', "".concat(version_1.VERSION.version, " - ").concat(version_1.VERSION.hash, " | Built: ").concat(built), null, 'debug', true);
+        _this112.log('APP', "".concat(version_1.VERSION.version, " - ").concat(version_1.VERSION.hash, " | Built: ").concat(built), null, 'debug', true);
 
-        _this113.init();
+        _this112.init();
 
-        return _this113;
+        return _this112;
       }
       /**
        * Initialise the settings
@@ -20877,12 +20743,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function init() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee25() {
-            return regeneratorRuntime.wrap(function _callee25$(_context25) {
+          regeneratorRuntime.mark(function _callee23() {
+            return regeneratorRuntime.wrap(function _callee23$(_context23) {
               while (1) {
-                switch (_context25.prev = _context25.next) {
+                switch (_context23.prev = _context23.next) {
                   case 0:
-                    _context25.next = 2;
+                    _context23.next = 2;
                     return this.loadFromFile('api');
 
                   case 2:
@@ -20903,10 +20769,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context25.stop();
+                    return _context23.stop();
                 }
               }
-            }, _callee25, this);
+            }, _callee23, this);
           }));
         }
         /** Whether settings service has initialised */
@@ -20970,46 +20836,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var tries = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee26() {
-            var _this114 = this;
+          regeneratorRuntime.mark(function _callee24() {
+            var _this113 = this;
 
             var file_name, key;
-            return regeneratorRuntime.wrap(function _callee26$(_context26) {
+            return regeneratorRuntime.wrap(function _callee24$(_context24) {
               while (1) {
-                switch (_context26.prev = _context26.next) {
+                switch (_context24.prev = _context24.next) {
                   case 0:
                     if (!(file !== 'assets/settings.json' && tries > 5)) {
-                      _context26.next = 2;
+                      _context24.next = 2;
                       break;
                     }
 
-                    return _context26.abrupt("return", Promise.resolve());
+                    return _context24.abrupt("return", Promise.resolve());
 
                   case 2:
                     file_name = file.split('/')[file.split('/').length - 1]; // Check if data has been loaded into the global space
 
                     if (!(window[file_name] instanceof Object)) {
-                      _context26.next = 6;
+                      _context24.next = 6;
                       break;
                     }
 
                     this._settings[name] = Object.assign(Object.assign({}, this._settings[name] || {}), window[file_name]);
-                    return _context26.abrupt("return", Promise.resolve());
+                    return _context24.abrupt("return", Promise.resolve());
 
                   case 6:
                     key = "load|".concat(name, "|").concat(file);
 
                     if (!this._promises[key]) {
                       this._promises[key] = new Promise(function (resolve, reject) {
-                        _this114.http.get(file).subscribe(function (data) {
-                          _this114._settings[name] = Object.assign(Object.assign({}, _this114._settings[name] || {}), data || {});
+                        _this113.http.get(file).subscribe(function (data) {
+                          _this113._settings[name] = Object.assign(Object.assign({}, _this113._settings[name] || {}), data || {});
                         }, function (e) {
-                          _this114.log('Settings', "Failed to load settings from \"".concat(file, "\""));
+                          _this113.log('Settings', "Failed to load settings from \"".concat(file, "\""));
 
-                          _this114._promises[key] = null;
+                          _this113._promises[key] = null;
 
-                          _this114.timeout("load_".concat(file_name), function () {
-                            _this114.loadFromFile(name, file, ++tries).then(function () {
+                          _this113.timeout("load_".concat(file_name), function () {
+                            _this113.loadFromFile(name, file, ++tries).then(function () {
                               return resolve();
                             });
                           });
@@ -21019,14 +20885,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       });
                     }
 
-                    return _context26.abrupt("return", this._promises[key]);
+                    return _context24.abrupt("return", this._promises[key]);
 
                   case 9:
                   case "end":
-                    return _context26.stop();
+                    return _context24.stop();
                 }
               }
-            }, _callee26, this);
+            }, _callee24, this);
           }));
         }
       }, {
@@ -21143,7 +21009,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "timeout",
         value: function timeout(name, fn) {
-          var _this115 = this;
+          var _this114 = this;
 
           var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 300;
 
@@ -21151,7 +21017,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.clearTimeout(name);
             this._timers[name] = setTimeout(function () {
               fn();
-              _this115._timers[name] = null;
+              _this114._timers[name] = null;
             }, delay);
           } else {
             throw new Error(name ? 'Cannot create named timeout without a name' : 'Cannot create a timeout without a callback');
@@ -21553,18 +21419,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super38 = _createSuper(ActionFieldComponent);
 
       function ActionFieldComponent() {
-        var _this116;
+        var _this115;
 
         _classCallCheck(this, ActionFieldComponent);
 
-        _this116 = _super38.apply(this, arguments);
+        _this115 = _super38.apply(this, arguments);
         /** Emitter for user interaction events */
 
-        _this116.on_action = new core_1.EventEmitter();
+        _this115.on_action = new core_1.EventEmitter();
         /** Whether to show tooltip */
 
-        _this116.show_tooltip = false;
-        return _this116;
+        _this115.show_tooltip = false;
+        return _this115;
       }
       /**
        * Emit that the user has performed an action on the field
@@ -22014,24 +21880,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super39 = _createSuper(DateFieldComponent);
 
       function DateFieldComponent() {
-        var _this117;
+        var _this116;
 
         _classCallCheck(this, DateFieldComponent);
 
-        _this117 = _super39.apply(this, arguments);
+        _this116 = _super39.apply(this, arguments);
         /** Earliest date available the user is allowed to pick */
 
-        _this117._from = dayjs().valueOf();
+        _this116._from = dayjs().valueOf();
         /** Position of the tooltip */
 
-        _this117.position = 'right';
+        _this116.position = 'right';
         /** Offset of the tooltip */
 
-        _this117.offset = 'bottom';
+        _this116.offset = 'bottom';
         /** Optional event emitter for changes */
 
-        _this117.onChange = new core_1.EventEmitter();
-        return _this117;
+        _this116.onChange = new core_1.EventEmitter();
+        return _this116;
       }
       /** First allowed date on the calendar */
 
@@ -22369,25 +22235,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super40 = _createSuper(DurationFieldComponent);
 
       function DurationFieldComponent() {
-        var _this118;
+        var _this117;
 
         _classCallCheck(this, DurationFieldComponent);
 
-        _this118 = _super40.apply(this, arguments);
+        _this117 = _super40.apply(this, arguments);
         /** Maximum duration option available */
 
-        _this118.max = 240;
+        _this117.max = 240;
         /** Minimum duration option available */
 
-        _this118.min = 15;
+        _this117.min = 15;
         /** Step value between options */
 
-        _this118.step = 15;
+        _this117.step = 15;
         /** Special case prepopulation i.e. out of step options */
 
-        _this118.specialPreprops = [];
-        _this118.duration = 60;
-        return _this118;
+        _this117.specialPreprops = [];
+        _this117.duration = 60;
+        return _this117;
       }
 
       _createClass(DurationFieldComponent, [{
@@ -22727,35 +22593,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super41 = _createSuper(TimeFieldComponent);
 
       function TimeFieldComponent() {
-        var _this119;
+        var _this118;
 
         _classCallCheck(this, TimeFieldComponent);
 
-        _this119 = _super41.apply(this, arguments);
+        _this118 = _super41.apply(this, arguments);
         /** Time step between each allowed time option */
 
-        _this119.step = 15;
+        _this118.step = 15;
         /** Whether past times are allowed */
 
-        _this119.no_past_times = true;
+        _this118.no_past_times = true;
         /** String representing the currently set time */
 
-        _this119.date = dayjs().valueOf();
+        _this118.date = dayjs().valueOf();
         /** String representing the currently set time */
 
-        _this119.time = dayjs().format('HH:mm');
-        return _this119;
+        _this118.time = dayjs().format('HH:mm');
+        return _this118;
       }
 
       _createClass(TimeFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this120 = this;
+          var _this119 = this;
 
           this.show_select = true;
           this._time_options = this.generateAvailableTimes(this.date, !this.no_past_times, this.step);
           this.timeout('hide', function () {
-            return _this120.show_select = false;
+            return _this119.show_select = false;
           });
         }
       }, {
@@ -22830,18 +22696,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "showSelect",
         value: function showSelect() {
-          var _this121 = this;
+          var _this120 = this;
 
           this.show_select = true;
           this.timeout('on_shown', function () {
-            if (_this121.select_field) {
-              _this121.select_field.focus();
+            if (_this120.select_field) {
+              _this120.select_field.focus();
 
-              _this121.select_field.open();
+              _this120.select_field.open();
 
-              _this121.subscription('listen_close', _this121.select_field.openedChange.subscribe(function (state) {
+              _this120.subscription('listen_close', _this120.select_field.openedChange.subscribe(function (state) {
                 if (!state) {
-                  _this121.show_select = false;
+                  _this120.show_select = false;
                 }
               }));
             }
@@ -23278,48 +23144,48 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super42 = _createSuper(UserListFieldComponent);
 
       function UserListFieldComponent(_service, _users) {
-        var _this122;
+        var _this121;
 
         _classCallCheck(this, UserListFieldComponent);
 
-        _this122 = _super42.call(this);
-        _this122._service = _service;
-        _this122._users = _users;
+        _this121 = _super42.call(this);
+        _this121._service = _service;
+        _this121._users = _users;
         /** Number of characters needed before a search will start */
 
-        _this122.limit = 3;
+        _this121.limit = 3;
         /** Emitter for action to make a new user */
 
-        _this122.new_user = new core_1.EventEmitter();
+        _this121.new_user = new core_1.EventEmitter();
         /** Subject holding the value of the search */
 
-        _this122.search$ = new rxjs_1.Subject();
-        return _this122;
+        _this121.search$ = new rxjs_1.Subject();
+        return _this121;
       }
 
       _createClass(UserListFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this123 = this;
+          var _this122 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(function (query) {
-            _this123.loading = true;
-            return query.length >= _this123.limit ? _this123._users.query({
-              q: query.slice(0, Math.max(_this123.limit, 3)),
+            _this122.loading = true;
+            return query.length >= _this122.limit ? _this122._users.query({
+              q: query.slice(0, Math.max(_this122.limit, 3)),
               cache: 60 * 1000
             }) : Promise.resolve([]);
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           }), operators_1.map(function (list) {
-            _this123.loading = false;
-            return general_utilities_1.filterList(_this123.search_str, list, ['name', 'email']);
+            _this122.loading = false;
+            return general_utilities_1.filterList(_this122.search_str, list, ['name', 'email']);
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this123.user_list = list;
+            _this122.user_list = list;
 
-            _this123.user_list.forEach(function (i) {
+            _this122.user_list.forEach(function (i) {
               i.match_name = general_utilities_1.matchToHighlight(i.match_name);
               i.match_email = general_utilities_1.matchToHighlight(i.match_email);
               return i;
@@ -23372,7 +23238,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addUsersFromFile",
         value: function addUsersFromFile(event) {
-          var _this124 = this;
+          var _this123 = this;
 
           /* istanbul ignore else */
           if (event.target) {
@@ -23383,12 +23249,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var reader = new FileReader();
               reader.readAsText(file, 'UTF-8');
               reader.addEventListener('load', function (evt) {
-                _this124.processCsvData(evt.srcElement.result);
+                _this123.processCsvData(evt.srcElement.result);
 
                 event.target.value = '';
               });
               reader.addEventListener('error', function (_) {
-                return _this124._service.notifyError('Error reading file.');
+                return _this123._service.notifyError('Error reading file.');
               });
             }
           }
@@ -23401,7 +23267,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processCsvData",
         value: function processCsvData(data) {
-          var _this125 = this;
+          var _this124 = this;
 
           var list = general_utilities_1.csvToJson(data) || [];
           var id = this._users.current.staff_code;
@@ -23416,7 +23282,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             el.type = 'external';
 
-            _this125.addUser(new user_class_1.User(el));
+            _this124.addUser(new user_class_1.User(el));
           });
         }
         /* istanbul ignore next */
@@ -23770,41 +23636,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super43 = _createSuper(UserSearchFieldComponent);
 
       function UserSearchFieldComponent(_users) {
-        var _this126;
+        var _this125;
 
         _classCallCheck(this, UserSearchFieldComponent);
 
-        _this126 = _super43.call(this);
-        _this126._users = _users;
+        _this125 = _super43.call(this);
+        _this125._users = _users;
         /** Subject holding the value of the search */
 
-        _this126.search$ = new rxjs_1.Subject();
-        return _this126;
+        _this125.search$ = new rxjs_1.Subject();
+        return _this125;
       }
 
       _createClass(UserSearchFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this127 = this;
+          var _this126 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(function (query) {
-            _this127.loading = true;
-            return _this127.options && _this127.options.length > 0 ? Promise.resolve(_this127.options) : query.length >= 3 ? _this127._users.query({
+            _this126.loading = true;
+            return _this126.options && _this126.options.length > 0 ? Promise.resolve(_this126.options) : query.length >= 3 ? _this126._users.query({
               q: query.slice(0, 3),
               cache: 60 * 1000
             }) : Promise.resolve([]);
           }), operators_1.catchError(function (err) {
             return rxjs_1.of([]);
           }), operators_1.map(function (list) {
-            _this127.loading = false;
-            return general_utilities_1.filterList(_this127.search_str, list, ['name', 'email']);
+            _this126.loading = false;
+            return general_utilities_1.filterList(_this126.search_str, list, ['name', 'email']);
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this127.user_list = list;
+            _this126.user_list = list;
 
-            _this127.user_list.forEach(function (i) {
+            _this126.user_list.forEach(function (i) {
               i.match_name = general_utilities_1.matchToHighlight(i.match_name);
               i.match_email = general_utilities_1.matchToHighlight(i.match_email);
               return i;
@@ -24044,29 +23910,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super44 = _createSuper(FeedbackComponent);
 
       function FeedbackComponent(_router) {
-        var _this128;
+        var _this127;
 
         _classCallCheck(this, FeedbackComponent);
 
-        _this128 = _super44.call(this);
-        _this128._router = _router;
-        return _this128;
+        _this127 = _super44.call(this);
+        _this127._router = _router;
+        return _this127;
       }
 
       _createClass(FeedbackComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this129 = this;
+          var _this128 = this;
 
           this.timeout('Getting Title', function () {
-            return _this129.updateRoute(document.title);
+            return _this128.updateRoute(document.title);
           }, 1000);
 
           this._router.events.subscribe(function (event) {
             /* istanbul ignore else */
             if (event instanceof router_1.NavigationEnd) {
-              _this129.timeout('Getting Title', function () {
-                return _this129.updateRoute(document.title);
+              _this128.timeout('Getting Title', function () {
+                return _this128.updateRoute(document.title);
               });
             }
           });
@@ -24771,39 +24637,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super45 = _createSuper(BookingFormComponent);
 
       function BookingFormComponent(_service, _users, _dialog) {
-        var _this130;
+        var _this129;
 
         _classCallCheck(this, BookingFormComponent);
 
-        _this130 = _super45.call(this);
-        _this130._service = _service;
-        _this130._users = _users;
-        _this130._dialog = _dialog;
+        _this129 = _super45.call(this);
+        _this129._service = _service;
+        _this129._users = _users;
+        _this129._dialog = _dialog;
         /** List of available users to host bookings */
 
-        _this130.user_list = [];
+        _this129.user_list = [];
         /** From date input for date field */
 
-        _this130.from_date = dayjs().minute(Math.ceil(dayjs().minute() / 5) * 5).valueOf();
-        return _this130;
+        _this129.from_date = dayjs().minute(Math.ceil(dayjs().minute() / 5) * 5).valueOf();
+        return _this129;
       }
 
       _createClass(BookingFormComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this131 = this;
+          var _this130 = this;
 
           this._users.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            var user = _this131._users.current;
+            var user = _this130._users.current;
             var delegates = user.delegates.map(function (email) {
-              return _this131._users.find(email) || new user_class_1.User({
+              return _this130._users.find(email) || new user_class_1.User({
                 email: email,
                 name: email.split('@')[0]
               });
             });
-            _this131.user_list = [user].concat(delegates);
+            _this130.user_list = [user].concat(delegates);
           });
         }
         /** Whether notes and description should use the HTML editor */
@@ -24815,7 +24681,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * Open modal to change the space details for the booking
          */
         value: function openSpacesModal() {
-          var _this132 = this;
+          var _this131 = this;
 
           var ref = this._dialog.open(space_select_modal_component_1.SpaceSelectModalComponent, {
             width: 'auto',
@@ -24833,14 +24699,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.subscription('new_spaces', ref.componentInstance.event.subscribe(function (event) {
             /* istanbul ignore else */
             if (event.reason === 'done') {
-              var space_list = _this132.form.controls.space_list.value;
+              var space_list = _this131.form.controls.space_list.value;
               space_list = event.metadata;
 
-              _this132.form.controls.space_list.setValue(general_utilities_1.unique(space_list, 'id'));
+              _this131.form.controls.space_list.setValue(general_utilities_1.unique(space_list, 'id'));
 
               ref.close();
 
-              _this132.unsub('new_spaces');
+              _this131.unsub('new_spaces');
             }
           }));
         }
@@ -24851,7 +24717,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openNewUserModal",
         value: function openNewUserModal() {
-          var _this133 = this;
+          var _this132 = this;
 
           var ref = this._dialog.open(new_user_modal_component_1.NewUserModalComponent, {
             width: 'auto',
@@ -24861,14 +24727,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.subscription('new_user', ref.componentInstance.event.subscribe(function (event) {
             /* istanbul ignore else */
             if (event.reason === 'done') {
-              var attendees = _this133.form.controls.attendees.value;
+              var attendees = _this132.form.controls.attendees.value;
               attendees.push(event.metadata);
 
-              _this133.form.controls.attendees.setValue(general_utilities_1.unique(attendees, 'email'));
+              _this132.form.controls.attendees.setValue(general_utilities_1.unique(attendees, 'email'));
 
               ref.close();
 
-              _this133.unsub('new_user');
+              _this132.unsub('new_user');
             }
           }));
         }
@@ -25679,20 +25545,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super47 = _createSuper(LoginComponent);
 
       function LoginComponent(_service, _users) {
-        var _this134;
+        var _this133;
 
         _classCallCheck(this, LoginComponent);
 
-        _this134 = _super47.call(this);
-        _this134._service = _service;
-        _this134._users = _users;
-        return _this134;
+        _this133 = _super47.call(this);
+        _this133._service = _service;
+        _this133._users = _users;
+        return _this133;
       }
 
       _createClass(LoginComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this135 = this;
+          var _this134 = this;
 
           this.loading = true;
           this.form = new forms_1.FormGroup({
@@ -25703,8 +25569,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this._service.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this135.loading = false;
-            _this135.logo = _this135._service.setting('app.logo_light') || {
+            _this134.loading = false;
+            _this134.logo = _this134._service.setting('app.logo_light') || {
               type: 'icon'
             };
           });
@@ -25714,7 +25580,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "login",
         value: function login() {
-          var _this136 = this;
+          var _this135 = this;
 
           this.loading = true;
           var form = this.form.value;
@@ -25725,11 +25591,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, {
             form: true
           }).then(function () {
-            return _this136.loading = false;
+            return _this135.loading = false;
           }, function () {
-            _this136.loading = false;
+            _this135.loading = false;
 
-            _this136.form.controls.password.setErrors({
+            _this135.form.controls.password.setErrors({
               check: true
             });
           });
@@ -25916,27 +25782,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super48 = _createSuper(PopoutMenuComponent);
 
       function PopoutMenuComponent() {
-        var _this137;
+        var _this136;
 
         _classCallCheck(this, PopoutMenuComponent);
 
-        _this137 = _super48.apply(this, arguments);
+        _this136 = _super48.apply(this, arguments);
         /** List of available actions */
 
-        _this137.actions = [];
+        _this136.actions = [];
         /** Emitter for user actions */
 
-        _this137.action = new core_1.EventEmitter();
-        return _this137;
+        _this136.action = new core_1.EventEmitter();
+        return _this136;
       }
 
       _createClass(PopoutMenuComponent, [{
         key: "close",
         value: function close() {
-          var _this138 = this;
+          var _this137 = this;
 
           this.timeout('close', function () {
-            _this138.show = false;
+            _this137.show = false;
           });
         }
       }]);
@@ -26149,15 +26015,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super49 = _createSuper(SearchbarComponent);
 
       function SearchbarComponent() {
-        var _this139;
+        var _this138;
 
         _classCallCheck(this, SearchbarComponent);
 
-        _this139 = _super49.apply(this, arguments);
+        _this138 = _super49.apply(this, arguments);
         /** Emitter for changes to the searchbar value */
 
-        _this139.valueChange = new core_1.EventEmitter();
-        return _this139;
+        _this138.valueChange = new core_1.EventEmitter();
+        return _this138;
       }
 
       _createClass(SearchbarComponent, [{
@@ -26696,25 +26562,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super50 = _createSuper(TopbarHeaderComponent);
 
       function TopbarHeaderComponent(_bookings) {
-        var _this140;
+        var _this139;
 
         _classCallCheck(this, TopbarHeaderComponent);
 
-        _this140 = _super50.call(this);
-        _this140._bookings = _bookings;
+        _this139 = _super50.call(this);
+        _this139._bookings = _bookings;
         /** Whether to show new item button */
 
-        _this140.show_add_item = false;
+        _this139.show_add_item = false;
         /** Whether to show the events for the active month */
 
-        _this140.show_events = false;
+        _this139.show_events = false;
         /** Emitter for changes selected date */
 
-        _this140.dateChange = new core_1.EventEmitter();
+        _this139.dateChange = new core_1.EventEmitter();
         /** Emitter for add item button */
 
-        _this140.event = new core_1.EventEmitter();
-        return _this140;
+        _this139.event = new core_1.EventEmitter();
+        return _this139;
       }
       /** Display string for the currently selected date */
 
@@ -26722,28 +26588,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(TopbarHeaderComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this141 = this;
+          var _this140 = this;
 
           var date = +localStorage.getItem('CONCIERGE.date');
           /* istanbul ignore else */
 
           if (date && date !== this.date) {
             this.timeout('init', function () {
-              _this141.date = date;
+              _this140.date = date;
 
-              _this141.dateChange.emit(_this141.date);
+              _this140.dateChange.emit(_this140.date);
             }, 10);
           }
 
           this.subscription('events', this._bookings.booking_list.subscribe(function (list) {
-            _this141.event_map = {};
-            var date = dayjs(_this141.date).startOf('M');
+            _this140.event_map = {};
+            var date = dayjs(_this140.date).startOf('M');
             var end = date.endOf('M');
 
             while (!date.isAfter(end, 'd')) {
-              _this141.event_map[date.format('YYYY-MM-DD')] = list.filter(function (booking) {
+              _this140.event_map[date.format('YYYY-MM-DD')] = list.filter(function (booking) {
                 return dayjs(booking.date).isSame(date, 'd') && booking.space_list.find(function (space) {
-                  return space.zones.includes(_this141.zone);
+                  return space.zones.includes(_this140.zone);
                 }) && booking.tentative;
               }).length;
               date = date.add(1, 'd');
@@ -27152,23 +27018,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super51 = _createSuper(CdkDropListScrollContainer);
 
       function CdkDropListScrollContainer(_cdkDropList, _renderer) {
-        var _this142;
+        var _this141;
 
         _classCallCheck(this, CdkDropListScrollContainer);
 
-        _this142 = _super51.call(this);
-        _this142._cdkDropList = _cdkDropList;
-        _this142._renderer = _renderer;
+        _this141 = _super51.call(this);
+        _this141._cdkDropList = _cdkDropList;
+        _this141._renderer = _renderer;
         /** Direction of scroll to determine updating the position of the drop list */
 
-        _this142.direction = ScrollDirection.X;
+        _this141.direction = ScrollDirection.X;
         /** Last scroll position */
 
-        _this142.last_scroll = {
+        _this141.last_scroll = {
           x: 0,
           y: 0
         };
-        return _this142;
+        return _this141;
       }
 
       _createClass(CdkDropListScrollContainer, [{
@@ -27181,25 +27047,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngAfterContentInit",
         value: function ngAfterContentInit() {
-          var _this143 = this;
+          var _this142 = this;
 
           this.subscription('drag_items', this.items.changes.subscribe(function (items) {
             var list = items.toArray();
             list.forEach(function (i, index) {
-              _this143.subscription("list-item-".concat(index), _this143._renderer.listen(i.element.nativeElement, 'mousedown', function () {
-                _this143.subscription('item-dragged', _this143._renderer.listen('window', 'mouseup', function () {
-                  return _this143.onDrop();
+              _this142.subscription("list-item-".concat(index), _this142._renderer.listen(i.element.nativeElement, 'mousedown', function () {
+                _this142.subscription('item-dragged', _this142._renderer.listen('window', 'mouseup', function () {
+                  return _this142.onDrop();
                 }));
 
-                _this143.onDrag();
+                _this142.onDrag();
               }));
 
-              _this143.subscription("list-item-touch-".concat(index), _this143._renderer.listen(i.element.nativeElement, 'touchstart', function () {
-                _this143.subscription('item-dragged', _this143._renderer.listen('window', 'touchend', function () {
-                  return _this143.onDrop();
+              _this142.subscription("list-item-touch-".concat(index), _this142._renderer.listen(i.element.nativeElement, 'touchstart', function () {
+                _this142.subscription('item-dragged', _this142._renderer.listen('window', 'touchend', function () {
+                  return _this142.onDrop();
                 }));
 
-                _this143.onDrag();
+                _this142.onDrag();
               }));
             });
           }));
@@ -27209,11 +27075,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onDrag",
         value: function onDrag() {
-          var _this144 = this;
+          var _this143 = this;
 
           if (this.element) {
             this.subscription('scroll', this._renderer.listen(this.element, 'scroll', function () {
-              return _this144.updateListPosition();
+              return _this143.updateListPosition();
             }));
           }
         }
@@ -27231,23 +27097,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateListPosition",
         value: function updateListPosition() {
-          var _this145 = this;
+          var _this144 = this;
 
           this.timeout('update_positions', function () {
             var scroll = {
-              x: _this145.element.scrollLeft,
-              y: _this145.element.scrollTop
+              x: _this144.element.scrollLeft,
+              y: _this144.element.scrollTop
             };
 
-            if ((_this145.direction === ScrollDirection.BOTH || _this145.direction === ScrollDirection.Y) && scroll.y !== _this145.last_scroll.y || (_this145.direction === ScrollDirection.BOTH || _this145.direction === ScrollDirection.X) && scroll.x !== _this145.last_scroll.x) {
-              _this145._cdkDropList._dropListRef._cacheOwnPosition();
+            if ((_this144.direction === ScrollDirection.BOTH || _this144.direction === ScrollDirection.Y) && scroll.y !== _this144.last_scroll.y || (_this144.direction === ScrollDirection.BOTH || _this144.direction === ScrollDirection.X) && scroll.x !== _this144.last_scroll.x) {
+              _this144._cdkDropList._dropListRef._cacheOwnPosition();
 
-              _this145._cdkDropList._dropListRef._siblings.forEach(function (i) {
+              _this144._cdkDropList._dropListRef._siblings.forEach(function (i) {
                 return i.isReceiving() ? i._cacheOwnPosition() : null;
               });
             }
 
-            _this145.last_scroll = scroll;
+            _this144.last_scroll = scroll;
           }, 50);
         }
       }]);
@@ -30407,13 +30273,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ORG_COUNT = 0;
 
     function generateMockOrganisation() {
+      var buildings = Array(3).fill(0).map(function (i) {
+        return generateMockBuilding();
+      });
       return {
         id: "zone_org-".concat(ORG_COUNT++),
         name: "Organisation ".concat(ORG_COUNT),
-        buildings: Array(3).fill(0).map(function (i) {
-          return generateMockBuilding();
-        }),
+        buildings: buildings,
         settings: {
+          discovery_info: {
+            buildings: buildings
+          },
           test: {
             nested: {
               org: true
@@ -30913,35 +30783,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super52 = _createSuper(CateringComponent);
 
       function CateringComponent(_route, _service) {
-        var _this146;
+        var _this145;
 
         _classCallCheck(this, CateringComponent);
 
-        _this146 = _super52.call(this);
-        _this146._route = _route;
-        _this146._service = _service;
+        _this145 = _super52.call(this);
+        _this145._route = _route;
+        _this145._service = _service;
         /** Toggle for new category modal */
 
-        _this146.category = 0;
+        _this145.category = 0;
         /** Toggle for new package modal */
 
-        _this146["package"] = 0;
+        _this145["package"] = 0;
         /** Order type to filter by */
 
-        _this146.order_type = '';
-        return _this146;
+        _this145.order_type = '';
+        return _this145;
       }
 
       _createClass(CateringComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this147 = this;
+          var _this146 = this;
 
           this.category = 0;
           this._service.title = 'Catering';
           this.subscription('route.params', this._route.paramMap.subscribe(function (params) {
             if (params.has('page')) {
-              _this147.page = params.get('page');
+              _this146.page = params.get('page');
             }
           }));
         }
@@ -31524,14 +31394,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super53 = _createSuper(CateringMenuItemListComponent);
 
       function CateringMenuItemListComponent(_dialog, _org) {
-        var _this148;
+        var _this147;
 
         _classCallCheck(this, CateringMenuItemListComponent);
 
-        _this148 = _super53.call(this);
-        _this148._dialog = _dialog;
-        _this148._org = _org;
-        return _this148;
+        _this147 = _super53.call(this);
+        _this147._dialog = _dialog;
+        _this147._org = _org;
+        return _this147;
       }
       /** Currently active building */
 
@@ -31547,7 +31417,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openGroupModal",
         value: function openGroupModal(group) {
-          var _this149 = this;
+          var _this148 = this;
 
           /* istanbul ignore else */
           if (!group) {
@@ -31567,14 +31437,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.subscription('category_modal', ref.componentInstance.event.subscribe(function (event) {
             /* istanbul ignore else */
             if (event.reason === 'done') {
-              var index = _this149.category.items.findIndex(function (item) {
+              var index = _this148.category.items.findIndex(function (item) {
                 return event.metadata.id === item.id;
               });
 
               if (index >= 0) {
-                _this149.category.items.splice(index, 1, event.metadata);
+                _this148.category.items.splice(index, 1, event.metadata);
               } else {
-                _this149.category.items.push(event.metadata);
+                _this148.category.items.push(event.metadata);
               }
             }
           }));
@@ -31975,17 +31845,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super54 = _createSuper(CateringMenuItemComponent);
 
       function CateringMenuItemComponent(_service, _dialog, _org, _menu_items, _menu_categories) {
-        var _this150;
+        var _this149;
 
         _classCallCheck(this, CateringMenuItemComponent);
 
-        _this150 = _super54.call(this);
-        _this150._service = _service;
-        _this150._dialog = _dialog;
-        _this150._org = _org;
-        _this150._menu_items = _menu_items;
-        _this150._menu_categories = _menu_categories;
-        return _this150;
+        _this149 = _super54.call(this);
+        _this149._service = _service;
+        _this149._dialog = _dialog;
+        _this149._org = _org;
+        _this149._menu_items = _menu_items;
+        _this149._menu_categories = _menu_categories;
+        return _this149;
       }
       /** Currently active building */
 
@@ -31993,7 +31863,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(CateringMenuItemComponent, [{
         key: "openGroupModal",
         value: function openGroupModal(group) {
-          var _this151 = this;
+          var _this150 = this;
 
           /* istanbul ignore else */
           if (!group) {
@@ -32012,14 +31882,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.subscription('item-modal', ref.componentInstance.event.subscribe(function (event) {
             if (event.reason === 'done' && event.metadata) {
-              _this151.updateItemList(group, event.metadata);
+              _this150.updateItemList(group, event.metadata);
             }
           }));
         }
       }, {
         key: "openItemModal",
         value: function openItemModal(item) {
-          var _this152 = this;
+          var _this151 = this;
 
           /* istanbul ignore else */
           if (!item) {
@@ -32037,7 +31907,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.subscription('item-modal', ref.componentInstance.event.subscribe(function (event) {
             if (event.reason === 'done' && event.metadata) {
-              _this152.updateItemList(item, event.metadata);
+              _this151.updateItemList(item, event.metadata);
             }
           }));
         }
@@ -32059,7 +31929,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "deleteItem",
         value: function deleteItem() {
-          var _this153 = this;
+          var _this152 = this;
 
           var type = this.item instanceof catering_category_class_1.CateringCategory ? this.item["package"] ? 'Package' : 'Sub-category' : 'Item';
 
@@ -32077,23 +31947,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
 
           ref.componentInstance.event.subscribe(function (event) {
-            return tslib_1.__awaiter(_this153, void 0, void 0,
+            return tslib_1.__awaiter(_this152, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee27() {
+            regeneratorRuntime.mark(function _callee25() {
               var e, service;
-              return regeneratorRuntime.wrap(function _callee27$(_context27) {
+              return regeneratorRuntime.wrap(function _callee25$(_context25) {
                 while (1) {
-                  switch (_context27.prev = _context27.next) {
+                  switch (_context25.prev = _context25.next) {
                     case 0:
                       if (!(event.reason === 'done')) {
-                        _context27.next = 8;
+                        _context25.next = 8;
                         break;
                       }
 
                       ref.componentInstance.loading = "Deleting ".concat(type, "...");
                       e = null;
                       service = this.item instanceof catering_category_class_1.CateringCategory ? this._menu_categories : this._menu_items;
-                      _context27.next = 6;
+                      _context25.next = 6;
                       return service["delete"](this.item.id)["catch"](function (err) {
                         return e === err;
                       });
@@ -32107,10 +31977,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 8:
                     case "end":
-                      return _context27.stop();
+                      return _context25.stop();
                   }
                 }
-              }, _callee27, this);
+              }, _callee25, this);
             }));
           });
         }
@@ -32490,31 +32360,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super55 = _createSuper(CateringMenuComponent);
 
       function CateringMenuComponent(_service, _org, _menu, _dialog) {
-        var _this154;
+        var _this153;
 
         _classCallCheck(this, CateringMenuComponent);
 
-        _this154 = _super55.call(this);
-        _this154._service = _service;
-        _this154._org = _org;
-        _this154._menu = _menu;
-        _this154._dialog = _dialog;
+        _this153 = _super55.call(this);
+        _this153._service = _service;
+        _this153._org = _org;
+        _this153._menu = _menu;
+        _this153._dialog = _dialog;
         /** Emitter for changes to the length of catering categories */
 
-        _this154.length = new core_1.EventEmitter();
+        _this153.length = new core_1.EventEmitter();
         /** List of top level catering categories */
 
-        _this154.catering_menu = [];
+        _this153.catering_menu = [];
         /** Filtered list of top level catering categories */
 
-        _this154.filtered_menu = [];
+        _this153.filtered_menu = [];
         /** Index of the active tab */
 
-        _this154.index = 0;
+        _this153.index = 0;
         /** Map of indexes to package open state */
 
-        _this154.state = {};
-        return _this154;
+        _this153.state = {};
+        return _this153;
       }
       /** Currently active building */
 
@@ -32522,19 +32392,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(CateringMenuComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this155 = this;
+          var _this154 = this;
 
           this._service.set('DELETED.menu', '');
 
           this.subscription('deleted', this._service.listen('DELETED.menu').subscribe(function (id) {
-            return _this155.removeFromMenu(id);
+            return _this154.removeFromMenu(id);
           }));
           this.subscription('building', this._org.listen('active_building').subscribe(function (_) {
-            _this155.index = 0;
-            _this155.catering_menu = [];
-            _this155.filtered_menu = [];
+            _this154.index = 0;
+            _this154.catering_menu = [];
+            _this154.filtered_menu = [];
 
-            _this155.loadCateringMenu();
+            _this154.loadCateringMenu();
           }));
         }
       }, {
@@ -32555,7 +32425,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openCategoryModal",
         value: function openCategoryModal(category) {
-          var _this156 = this;
+          var _this155 = this;
 
           /* istanbul ignore else */
           if (!category) {
@@ -32573,18 +32443,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.subscription('category_modal', ref.componentInstance.event.subscribe(function (event) {
             /* istanbul ignore else */
             if (event.reason === 'done') {
-              var index = _this156.catering_menu.findIndex(function (item) {
+              var index = _this155.catering_menu.findIndex(function (item) {
                 return event.metadata.id === item.id;
               });
 
               if (index >= 0) {
-                _this156.catering_menu.splice(index, 1, event.metadata);
+                _this155.catering_menu.splice(index, 1, event.metadata);
 
-                _this156.index = index;
+                _this155.index = index;
               } else {
-                _this156.index = _this156.catering_menu.length;
+                _this155.index = _this155.catering_menu.length;
 
-                _this156.catering_menu.push(event.metadata);
+                _this155.catering_menu.push(event.metadata);
               }
             }
           }));
@@ -32636,7 +32506,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadCateringMenu",
         value: function loadCateringMenu() {
-          var _this157 = this;
+          var _this156 = this;
 
           /* istanbul ignore else */
           if (this.building) {
@@ -32645,20 +32515,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this._menu.query({
               zone_id: this.building.id
             }).then(function (menu) {
-              _this157.catering_menu = (menu || []).map(function (item) {
+              _this156.catering_menu = (menu || []).map(function (item) {
                 return new catering_category_class_1.CateringCategory(item);
               });
 
-              _this157.length.emit(_this157.catering_menu.length);
+              _this156.length.emit(_this156.catering_menu.length);
 
-              _this157.filtered_menu = _this157.filter(_this157.catering_menu);
-              _this157.loading = false;
+              _this156.filtered_menu = _this156.filter(_this156.catering_menu);
+              _this156.loading = false;
             }, function (err) {
-              _this157._service.notifyError("Error loading menu for ".concat(_this157.building.name, ". Error: ").concat(err.message | err), 'Retry', function () {
-                return _this157.loadCateringMenu();
+              _this156._service.notifyError("Error loading menu for ".concat(_this156.building.name, ". Error: ").concat(err.message | err), 'Retry', function () {
+                return _this156.loadCateringMenu();
               });
 
-              _this157.loading = false;
+              _this156.loading = false;
             });
           }
         }
@@ -33096,41 +32966,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function updateStatus() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee28() {
-            var _this158 = this;
+          regeneratorRuntime.mark(function _callee26() {
+            var _this157 = this;
 
             var booking, catering, new_booking, updated_booking, bookings;
-            return regeneratorRuntime.wrap(function _callee28$(_context28) {
+            return regeneratorRuntime.wrap(function _callee26$(_context26) {
               while (1) {
-                switch (_context28.prev = _context28.next) {
+                switch (_context26.prev = _context26.next) {
                   case 0:
                     booking = this.order.booking;
                     /* istanbul ignore else */
 
                     if (!booking) {
-                      _context28.next = 11;
+                      _context26.next = 11;
                       break;
                     }
 
                     this.loading = true;
                     catering = _toConsumableArray(booking.catering);
                     catering.splice(catering.findIndex(function (order) {
-                      return order.id === _this158.order.id;
+                      return order.id === _this157.order.id;
                     }), 1, new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, this.order), {
                       status: this.active_status
                     })));
                     new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking.toJSON()), {
                       catering: catering
                     }));
-                    _context28.next = 8;
+                    _context26.next = 8;
                     return this._bookings.save(new_booking)["catch"](function (err) {
-                      _this158._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
+                      _this157._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
 
-                      _this158.active_status = _this158.order.status;
+                      _this157.active_status = _this157.order.status;
                     });
 
                   case 8:
-                    updated_booking = _context28.sent;
+                    updated_booking = _context26.sent;
 
                     if (updated_booking) {
                       bookings = this._bookings.booking_list.getValue();
@@ -33145,10 +33015,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 11:
                   case "end":
-                    return _context28.stop();
+                    return _context26.stop();
                 }
               }
-            }, _callee28, this);
+            }, _callee26, this);
           }));
         }
         /** Open modal to view catering order details */
@@ -33180,10 +33050,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "status_details",
         get: function get() {
-          var _this159 = this;
+          var _this158 = this;
 
           return this.statuses.find(function (status) {
-            return status.id === _this159.active_status;
+            return status.id === _this158.active_status;
           }) || {};
         }
       }, {
@@ -33513,32 +33383,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super56 = _createSuper(CateringOrdersComponent);
 
       function CateringOrdersComponent(_spaces, _bookings, _org, _route, _dialog) {
-        var _this160;
+        var _this159;
 
         _classCallCheck(this, CateringOrdersComponent);
 
-        _this160 = _super56.call(this);
-        _this160._spaces = _spaces;
-        _this160._bookings = _bookings;
-        _this160._org = _org;
-        _this160._route = _route;
-        _this160._dialog = _dialog;
+        _this159 = _super56.call(this);
+        _this159._spaces = _spaces;
+        _this159._bookings = _bookings;
+        _this159._org = _org;
+        _this159._route = _route;
+        _this159._dialog = _dialog;
         /** Search filter string */
 
-        _this160.search = '';
+        _this159.search = '';
         /** List of catering orders for the selected date */
 
-        _this160.orders = [];
+        _this159.orders = [];
         /** List of catering orders for the selected date */
 
-        _this160.filtered_orders = [];
+        _this159.filtered_orders = [];
         /** List of space IDs for active building */
 
-        _this160.available_spaces = [];
+        _this159.available_spaces = [];
         /** Subject holding the value of the search */
 
-        _this160.search$ = new rxjs_1.Subject();
-        return _this160;
+        _this159.search$ = new rxjs_1.Subject();
+        return _this159;
       }
       /** Display string for the currenly selected date */
 
@@ -33546,38 +33416,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(CateringOrdersComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this161 = this;
+          var _this160 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this161.subscription('building', _this161._org.listen('active_building').subscribe(function () {
-              _this161.available_spaces = _this161._spaces.filter(function (space) {
-                return space.zones.indexOf(_this161.building.id) >= 0;
+            _this160.subscription('building', _this160._org.listen('active_building').subscribe(function () {
+              _this160.available_spaces = _this160._spaces.filter(function (space) {
+                return space.zones.indexOf(_this160.building.id) >= 0;
               }).map(function (i) {
                 return i.email;
               });
 
-              _this161.search$.next("".concat(_this161.date, "|").concat(_this161.building.id));
+              _this160.search$.next("".concat(_this160.date, "|").concat(_this160.building.id));
 
-              _this161.updateOrders();
+              _this160.updateOrders();
             }));
 
-            _this161.available_spaces = _this161._spaces.filter(function (space) {
-              return space.zones.indexOf(_this161.building.id) >= 0;
+            _this160.available_spaces = _this160._spaces.filter(function (space) {
+              return space.zones.indexOf(_this160.building.id) >= 0;
             }).map(function (i) {
               return i.email;
             });
 
-            _this161.initBookings();
+            _this160.initBookings();
 
-            _this161.interval('update_bookings', function () {
-              return _this161.search$.next("".concat(_this161.date, "|").concat(_this161.building.id, "|").concat(dayjs().unix()));
+            _this160.interval('update_bookings', function () {
+              return _this160.search$.next("".concat(_this160.date, "|").concat(_this160.building.id, "|").concat(dayjs().unix()));
             }, 30 * 1000);
 
-            _this161.search$.next("".concat(_this161.date, "|").concat(_this161.building.id, "|").concat(dayjs().unix()));
+            _this160.search$.next("".concat(_this160.date, "|").concat(_this160.building.id, "|").concat(dayjs().unix()));
 
-            _this161.subscription('route.query', _this161._route.queryParamMap.subscribe(function (params) {
+            _this160.subscription('route.query', _this160._route.queryParamMap.subscribe(function (params) {
               /* istanbul ignore else */
               if (params.has('view')) {
                 var view_id = params.get('view');
@@ -33590,7 +33460,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   var order = new catering_order_class_1.CateringOrder(JSON.parse(details));
                   order.booking = booking;
 
-                  _this161.viewOrderDetails(order);
+                  _this160.viewOrderDetails(order);
 
                   localStorage.removeItem('CONCIERGE.view_order');
                   localStorage.removeItem('CONCIERGE.view_booking');
@@ -33643,12 +33513,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "filter",
         value: function filter(list) {
-          var _this162 = this;
+          var _this161 = this;
 
           var search = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
           var filter = search.toLowerCase();
           return list.filter(function (order) {
-            return (!_this162.type || _this162.type === 'Pantry' && order.pantry || _this162.type === 'Kitchen' && order.kitchen) && order.items.find(function (item) {
+            return (!_this161.type || _this161.type === 'Pantry' && order.pantry || _this161.type === 'Kitchen' && order.kitchen) && order.items.find(function (item) {
               return item.name.toLowerCase().indexOf(filter) >= 0 || item.items && item.items.find(function (sub_item) {
                 return sub_item.name.toLowerCase().indexOf(filter) >= 0 || sub_item.items && sub_item.items.find(function (sub_sub_item) {
                   return sub_sub_item.name.toLowerCase().indexOf(filter) >= 0;
@@ -33660,24 +33530,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this163 = this;
+          var _this162 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this163.loading = true;
-            var date = dayjs(_this163.date).startOf('d');
-            return _this163._spaces.query({
-              zone_ids: _this163.building.id,
+            _this162.loading = true;
+            var date = dayjs(_this162.date).startOf('d');
+            return _this162._spaces.query({
+              zone_ids: _this162.building.id,
               available_from: date.unix(),
               available_to: date.endOf('d').unix()
             });
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           }), operators_1.map(function (space_list) {
-            var date = dayjs(_this163.date).startOf('d');
+            var date = dayjs(_this162.date).startOf('d');
             var end = date.endOf('d');
 
-            var bookings = _this163._bookings.booking_list.getValue();
+            var bookings = _this162._bookings.booking_list.getValue();
 
             space_list.forEach(function (space) {
               return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(function (bkn) {
@@ -33689,22 +33559,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               });
             });
 
-            _this163._bookings.booking_list.next(bookings);
+            _this162._bookings.booking_list.next(bookings);
 
             return space_list;
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (_) {
-            return _this163.loading = false;
+            return _this162.loading = false;
           }));
           this.subscription('bookings', this._bookings.booking_list.subscribe(function (_) {
-            return _this163.updateOrders();
+            return _this162.updateOrders();
           }));
         }
       }, {
         key: "updateOrders",
         value: function updateOrders() {
-          var _this164 = this;
+          var _this163 = this;
 
           var bookings = this._bookings.booking_list.getValue();
 
@@ -33713,7 +33583,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var start = dayjs(booking.date);
             var end = start.add(booking.duration, 'm');
             return booking.catering.length && booking.space_list.find(function (space) {
-              return _this164.available_spaces.find(function (email) {
+              return _this163.available_spaces.find(function (email) {
                 return email === space.email;
               });
             }) && booking_utilities_1.timePeriodsIntersect(date.startOf('d').valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
@@ -33729,7 +33599,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
           orders = general_utilities_1.unique(orders, 'id');
           orders = orders.filter(function (order) {
-            return _this164.available_spaces.indexOf(order.location_id) >= 0;
+            return _this163.available_spaces.indexOf(order.location_id) >= 0;
           });
           orders.sort(function (a, b) {
             return a.booking_date + a.delivery_time * 60 * 1000 - (b.booking_date + b.delivery_time * 60 * 1000);
@@ -34122,21 +33992,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super57 = _createSuper(CateringCategoryModalComponent);
 
       function CateringCategoryModalComponent(_service, _menu_categories, _upload_manager, _dialog, _dialog_ref, _data) {
-        var _this165;
+        var _this164;
 
         _classCallCheck(this, CateringCategoryModalComponent);
 
-        _this165 = _super57.call(this);
-        _this165._service = _service;
-        _this165._menu_categories = _menu_categories;
-        _this165._upload_manager = _upload_manager;
-        _this165._dialog = _dialog;
-        _this165._dialog_ref = _dialog_ref;
-        _this165._data = _data;
+        _this164 = _super57.call(this);
+        _this164._service = _service;
+        _this164._menu_categories = _menu_categories;
+        _this164._upload_manager = _upload_manager;
+        _this164._dialog = _dialog;
+        _this164._dialog_ref = _dialog_ref;
+        _this164._data = _data;
         /** Emitter for user action on the modal */
 
-        _this165.event = new core_1.EventEmitter();
-        return _this165;
+        _this164.event = new core_1.EventEmitter();
+        return _this164;
       }
 
       _createClass(CateringCategoryModalComponent, [{
@@ -34151,7 +34021,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this166 = this;
+          var _this165 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -34167,22 +34037,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
 
           ref.componentInstance.event.subscribe(function (event) {
-            return tslib_1.__awaiter(_this166, void 0, void 0,
+            return tslib_1.__awaiter(_this165, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee29() {
+            regeneratorRuntime.mark(function _callee27() {
               var e;
-              return regeneratorRuntime.wrap(function _callee29$(_context29) {
+              return regeneratorRuntime.wrap(function _callee27$(_context27) {
                 while (1) {
-                  switch (_context29.prev = _context29.next) {
+                  switch (_context27.prev = _context27.next) {
                     case 0:
                       if (!(event.reason === 'done')) {
-                        _context29.next = 7;
+                        _context27.next = 7;
                         break;
                       }
 
                       ref.componentInstance.loading = "Deleting Category...";
                       e = null;
-                      _context29.next = 5;
+                      _context27.next = 5;
                       return this._menu_categories["delete"](this.category.id)["catch"](function (err) {
                         return e === err;
                       });
@@ -34198,17 +34068,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 7:
                     case "end":
-                      return _context29.stop();
+                      return _context27.stop();
                   }
                 }
-              }, _callee29, this);
+              }, _callee27, this);
             }));
           });
         }
       }, {
         key: "submit",
         value: function submit() {
-          var _this167 = this;
+          var _this166 = this;
 
           this.form.markAllAsTouched();
           /* istanbul ignore else */
@@ -34217,16 +34087,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var data = Object.assign(Object.assign({}, this.category.toJSON()), this.form.value);
             var request = this.category.id ? this._menu_categories.update(this.category.id, data) : this._menu_categories.add(data);
             request.then(function (item) {
-              item.items = _this167.category.items;
+              item.items = _this166.category.items;
 
-              _this167.event.emit({
+              _this166.event.emit({
                 reason: 'done',
                 metadata: item
               });
 
-              _this167._dialog_ref.close();
+              _this166._dialog_ref.close();
             }, function (err) {
-              return _this167._service.notifyError("Error ".concat(_this167.category.id ? 'updating' : 'creating', " category. Error: ").concat(err.message || err));
+              return _this166._service.notifyError("Error ".concat(_this166.category.id ? 'updating' : 'creating', " category. Error: ").concat(err.message || err));
             });
           }
         }
@@ -34235,7 +34105,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "uploadImage",
         value: function uploadImage(event) {
-          var _this168 = this;
+          var _this167 = this;
 
           /* istanbul ignore else */
           if (event && event.target && event.target.files) {
@@ -34245,27 +34115,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (files.length) {
               var fileReader = new FileReader();
               fileReader.addEventListener('loadend', function (e) {
-                _this168.uploading = true;
+                _this167.uploading = true;
                 var arrayBuffer = e.target.result;
                 var blob = blobUtil.arrayBufferToBlob(arrayBuffer, 'image/png');
 
-                _this168._upload_manager.upload([blob], {
+                _this167._upload_manager.upload([blob], {
                   file_name: files[0].name
                 });
 
-                var upload = _this168._upload_manager.uploads[_this168._upload_manager.uploads.length - 1];
+                var upload = _this167._upload_manager.uploads[_this167._upload_manager.uploads.length - 1];
 
-                _this168.interval('upload', function () {
+                _this167.interval('upload', function () {
                   /* istanbul ignore else */
                   if (upload.complete || upload.error) {
                     /* istanbul ignore else */
                     if (upload.access_url && upload.complete) {
-                      _this168.form.controls.image_path.setValue(upload.access_url);
+                      _this167.form.controls.image_path.setValue(upload.access_url);
                     }
 
-                    _this168.uploading = false;
+                    _this167.uploading = false;
 
-                    _this168.clearInterval('upload');
+                    _this167.clearInterval('upload');
                   }
                 });
               });
@@ -34771,23 +34641,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super58 = _createSuper(CateringGroupModalComponent);
 
       function CateringGroupModalComponent(_service, _menu_categories, _upload_manager, _dialog, _dialog_ref, _data) {
-        var _this169;
+        var _this168;
 
         _classCallCheck(this, CateringGroupModalComponent);
 
-        _this169 = _super58.call(this);
-        _this169._service = _service;
-        _this169._menu_categories = _menu_categories;
-        _this169._upload_manager = _upload_manager;
-        _this169._dialog = _dialog;
-        _this169._dialog_ref = _dialog_ref;
-        _this169._data = _data;
+        _this168 = _super58.call(this);
+        _this168._service = _service;
+        _this168._menu_categories = _menu_categories;
+        _this168._upload_manager = _upload_manager;
+        _this168._dialog = _dialog;
+        _this168._dialog_ref = _dialog_ref;
+        _this168._data = _data;
         /** Emitter for user action on the modal */
 
-        _this169.event = new core_1.EventEmitter();
+        _this168.event = new core_1.EventEmitter();
         /** List of available catering types */
 
-        _this169.types = [{
+        _this168.types = [{
           id: 'kitchen',
           name: 'Kitchen'
         }, {
@@ -34797,7 +34667,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           id: 'none',
           name: 'Other'
         }];
-        return _this169;
+        return _this168;
       }
       /** Category being edit/created */
 
@@ -34822,7 +34692,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this170 = this;
+          var _this169 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -34838,22 +34708,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
 
           ref.componentInstance.event.subscribe(function (event) {
-            return tslib_1.__awaiter(_this170, void 0, void 0,
+            return tslib_1.__awaiter(_this169, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee30() {
+            regeneratorRuntime.mark(function _callee28() {
               var e;
-              return regeneratorRuntime.wrap(function _callee30$(_context30) {
+              return regeneratorRuntime.wrap(function _callee28$(_context28) {
                 while (1) {
-                  switch (_context30.prev = _context30.next) {
+                  switch (_context28.prev = _context28.next) {
                     case 0:
                       if (!(event.reason === 'done')) {
-                        _context30.next = 7;
+                        _context28.next = 7;
                         break;
                       }
 
                       ref.componentInstance.loading = "Deleting ".concat(this.category["package"] ? 'Package' : 'Sub-Category', "...");
                       e = null;
-                      _context30.next = 5;
+                      _context28.next = 5;
                       return this._menu_categories["delete"](this.category.id)["catch"](function (err) {
                         return e === err;
                       });
@@ -34869,17 +34739,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 7:
                     case "end":
-                      return _context30.stop();
+                      return _context28.stop();
                   }
                 }
-              }, _callee30, this);
+              }, _callee28, this);
             }));
           });
         }
       }, {
         key: "submit",
         value: function submit() {
-          var _this171 = this;
+          var _this170 = this;
 
           this.form.markAllAsTouched();
           /* istanbul ignore else */
@@ -34890,16 +34760,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
             var request = this.category.id ? this._menu_categories.update(this.category.id, data) : this._menu_categories.add(data);
             request.then(function (item) {
-              item.items = _this171.category.items;
+              item.items = _this170.category.items;
 
-              _this171.event.emit({
+              _this170.event.emit({
                 reason: 'done',
                 metadata: item
               });
 
-              _this171._dialog_ref.close();
+              _this170._dialog_ref.close();
             }, function (err) {
-              return _this171._service.notifyError("Error ".concat(_this171.category.id ? 'updating' : 'creating', " category. Error: ").concat(err.message || err));
+              return _this170._service.notifyError("Error ".concat(_this170.category.id ? 'updating' : 'creating', " category. Error: ").concat(err.message || err));
             });
           }
         }
@@ -34908,7 +34778,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "uploadImage",
         value: function uploadImage(event) {
-          var _this172 = this;
+          var _this171 = this;
 
           /* istanbul ignore else */
           if (event && event.target && event.target.files) {
@@ -34918,27 +34788,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (files.length) {
               var fileReader = new FileReader();
               fileReader.addEventListener('loadend', function (e) {
-                _this172.uploading = true;
+                _this171.uploading = true;
                 var arrayBuffer = e.target.result;
                 var blob = blobUtil.arrayBufferToBlob(arrayBuffer, 'image/png');
 
-                _this172._upload_manager.upload([blob], {
+                _this171._upload_manager.upload([blob], {
                   file_name: files[0].name
                 });
 
-                var upload = _this172._upload_manager.uploads[_this172._upload_manager.uploads.length - 1];
+                var upload = _this171._upload_manager.uploads[_this171._upload_manager.uploads.length - 1];
 
-                _this172.interval('upload', function () {
+                _this171.interval('upload', function () {
                   /* istanbul ignore else */
                   if (upload.complete || upload.error) {
                     /* istanbul ignore else */
                     if (upload.access_url && upload.complete) {
-                      _this172.form.controls.image_path.setValue(upload.access_url);
+                      _this171.form.controls.image_path.setValue(upload.access_url);
                     }
 
-                    _this172.uploading = false;
+                    _this171.uploading = false;
 
-                    _this172.clearInterval('upload');
+                    _this171.clearInterval('upload');
                   }
                 });
               });
@@ -35386,29 +35256,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super59 = _createSuper(CateringItemModalComponent);
 
       function CateringItemModalComponent(_service, _menu_items, _dialog, _dialog_ref, _data) {
-        var _this173;
+        var _this172;
 
         _classCallCheck(this, CateringItemModalComponent);
 
-        _this173 = _super59.call(this);
-        _this173._service = _service;
-        _this173._menu_items = _menu_items;
-        _this173._dialog = _dialog;
-        _this173._dialog_ref = _dialog_ref;
-        _this173._data = _data;
+        _this172 = _super59.call(this);
+        _this172._service = _service;
+        _this172._menu_items = _menu_items;
+        _this172._dialog = _dialog;
+        _this172._dialog_ref = _dialog_ref;
+        _this172._data = _data;
         /** Emitter for user action on the modal */
 
-        _this173.event = new core_1.EventEmitter();
+        _this172.event = new core_1.EventEmitter();
         /** List of available catering types */
 
-        _this173.types = [{
+        _this172.types = [{
           id: 'kitchen',
           name: 'Kitchen'
         }, {
           id: 'pantry',
           name: 'Pantry'
         }];
-        return _this173;
+        return _this172;
       }
       /** Category being edit/created */
 
@@ -35433,7 +35303,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this174 = this;
+          var _this173 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -35449,22 +35319,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
 
           ref.componentInstance.event.subscribe(function (event) {
-            return tslib_1.__awaiter(_this174, void 0, void 0,
+            return tslib_1.__awaiter(_this173, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee31() {
+            regeneratorRuntime.mark(function _callee29() {
               var e;
-              return regeneratorRuntime.wrap(function _callee31$(_context31) {
+              return regeneratorRuntime.wrap(function _callee29$(_context29) {
                 while (1) {
-                  switch (_context31.prev = _context31.next) {
+                  switch (_context29.prev = _context29.next) {
                     case 0:
                       if (!(event.reason === 'done')) {
-                        _context31.next = 7;
+                        _context29.next = 7;
                         break;
                       }
 
                       ref.componentInstance.loading = "Deleting item...";
                       e = null;
-                      _context31.next = 5;
+                      _context29.next = 5;
                       return this._menu_items["delete"](this.item.id)["catch"](function (err) {
                         return e === err;
                       });
@@ -35480,17 +35350,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 7:
                     case "end":
-                      return _context31.stop();
+                      return _context29.stop();
                   }
                 }
-              }, _callee31, this);
+              }, _callee29, this);
             }));
           });
         }
       }, {
         key: "submit",
         value: function submit() {
-          var _this175 = this;
+          var _this174 = this;
 
           this.form.markAllAsTouched();
           /* istanbul ignore else */
@@ -35499,14 +35369,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var data = new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, this.item instanceof catering_item_class_1.CateringItem ? this.item.toJSON() : this.item), this.form.value)).toJSON();
             var request = this.item.id ? this._menu_items.update(this.item.id, data) : this._menu_items.add(data);
             request.then(function (item) {
-              _this175.event.emit({
+              _this174.event.emit({
                 reason: 'done',
                 metadata: item
               });
 
-              _this175._dialog_ref.close();
+              _this174._dialog_ref.close();
             }, function (err) {
-              return _this175._service.notifyError("Error ".concat(_this175.item.id ? 'updating' : 'creating', " item. Error: ").concat(err.message || err));
+              return _this174._service.notifyError("Error ".concat(_this174.item.id ? 'updating' : 'creating', " item. Error: ").concat(err.message || err));
             });
           }
         }
@@ -36103,16 +35973,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function handleOrderEvent(order) {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee32() {
-            var _this176 = this;
+          regeneratorRuntime.mark(function _callee30() {
+            var _this175 = this;
 
             var orders, index, new_booking, booking;
-            return regeneratorRuntime.wrap(function _callee32$(_context32) {
+            return regeneratorRuntime.wrap(function _callee30$(_context30) {
               while (1) {
-                switch (_context32.prev = _context32.next) {
+                switch (_context30.prev = _context30.next) {
                   case 0:
                     if (!order) {
-                      _context32.next = 11;
+                      _context30.next = 11;
                       break;
                     }
 
@@ -36131,13 +36001,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, this.booking.toJSON()), {
                       catering: orders
                     }));
-                    _context32.next = 8;
+                    _context30.next = 8;
                     return this._bookings.save(new_booking)["catch"](function (err) {
-                      return _this176._service.notifyError("Error unable to update order. Error: ".concat(err.message || err));
+                      return _this175._service.notifyError("Error unable to update order. Error: ".concat(err.message || err));
                     });
 
                   case 8:
-                    booking = _context32.sent;
+                    booking = _context30.sent;
 
                     if (booking) {
                       this.booking = booking;
@@ -36149,10 +36019,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 11:
                   case "end":
-                    return _context32.stop();
+                    return _context30.stop();
                 }
               }
-            }, _callee32, this);
+            }, _callee30, this);
           }));
         }
       }, {
@@ -36439,16 +36309,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function addNote() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee33() {
-            var _this177 = this;
+          regeneratorRuntime.mark(function _callee31() {
+            var _this176 = this;
 
             var user, notes, date, new_notes, pending_booking, new_booking, bookings;
-            return regeneratorRuntime.wrap(function _callee33$(_context33) {
+            return regeneratorRuntime.wrap(function _callee31$(_context31) {
               while (1) {
-                switch (_context33.prev = _context33.next) {
+                switch (_context31.prev = _context31.next) {
                   case 0:
                     if (!(this.booking && this.new_note)) {
-                      _context33.next = 16;
+                      _context31.next = 16;
                       break;
                     }
 
@@ -36468,16 +36338,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       notes: new_notes
                     }));
                     this.loading = true;
-                    _context33.next = 9;
+                    _context31.next = 9;
                     return this._bookings.save(pending_booking)["catch"](function (err) {
-                      _this177._service.notifyError("Failed to add note to order meeting. Error: ".concat(err.message || err));
+                      _this176._service.notifyError("Failed to add note to order meeting. Error: ".concat(err.message || err));
 
-                      _this177.loading = false;
+                      _this176.loading = false;
                       throw err;
                     });
 
                   case 9:
-                    new_booking = _context33.sent;
+                    new_booking = _context31.sent;
                     this.booking = new_booking;
 
                     if (new_booking) {
@@ -36496,19 +36366,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 16:
                   case "end":
-                    return _context33.stop();
+                    return _context31.stop();
                 }
               }
-            }, _callee33, this);
+            }, _callee31, this);
           }));
         }
       }, {
         key: "notes",
         get: function get() {
-          var _this178 = this;
+          var _this177 = this;
 
           var notes = this.booking.notes.filter(function (note) {
-            return note.type === 'catering' && note.space === _this178.order.location_id && (!note.order_id || note.order_id === _this178.order.id);
+            return note.type === 'catering' && note.space === _this177.order.location_id && (!note.order_id || note.order_id === _this177.order.id);
           });
           notes.forEach(function (note) {
             note.time = dayjs(note.date).format('DD MMM, h:mm A');
@@ -36841,21 +36711,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super60 = _createSuper(OrderDetailsModalComponent);
 
       function OrderDetailsModalComponent(_service, _spaces, _bookings, _data) {
-        var _this179;
+        var _this178;
 
         _classCallCheck(this, OrderDetailsModalComponent);
 
-        _this179 = _super60.call(this);
-        _this179._service = _service;
-        _this179._spaces = _spaces;
-        _this179._bookings = _bookings;
-        _this179._data = _data;
+        _this178 = _super60.call(this);
+        _this178._service = _service;
+        _this178._spaces = _spaces;
+        _this178._bookings = _bookings;
+        _this178._data = _data;
         /** Emitter for user action on the modal */
 
-        _this179.event = new core_1.EventEmitter();
+        _this178.event = new core_1.EventEmitter();
         /** List of available order statuses */
 
-        _this179.statuses = [{
+        _this178.statuses = [{
           id: 'accepted',
           name: 'Accepted',
           icon: {
@@ -36891,7 +36761,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           },
           colour: '#747474'
         }];
-        return _this179;
+        return _this178;
       }
       /** Active booking to display */
 
@@ -36908,41 +36778,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function updateStatus() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee34() {
-            var _this180 = this;
+          regeneratorRuntime.mark(function _callee32() {
+            var _this179 = this;
 
             var booking, catering, new_booking, updated_booking, bookings;
-            return regeneratorRuntime.wrap(function _callee34$(_context34) {
+            return regeneratorRuntime.wrap(function _callee32$(_context32) {
               while (1) {
-                switch (_context34.prev = _context34.next) {
+                switch (_context32.prev = _context32.next) {
                   case 0:
                     booking = this._data.booking;
                     /* istanbul ignore else */
 
                     if (!booking) {
-                      _context34.next = 11;
+                      _context32.next = 11;
                       break;
                     }
 
                     this.loading = true;
                     catering = _toConsumableArray(booking.catering);
                     catering.splice(catering.findIndex(function (order) {
-                      return order.id === _this180._data.order.id;
+                      return order.id === _this179._data.order.id;
                     }), 1, new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, this._data.order), {
                       status: this.active_status
                     })));
                     new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, booking.toJSON()), {
                       catering: catering
                     }));
-                    _context34.next = 8;
-                    return new_booking.save()["catch"](function (err) {
-                      _this180._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
+                    _context32.next = 8;
+                    return this._bookings.save(new_booking)["catch"](function (err) {
+                      _this179._service.notifyError("Error updating order status. Error: ".concat(err.message || err));
 
-                      _this180.active_status = _this180._data.order.status;
+                      _this179.active_status = _this179._data.order.status;
                     });
 
                   case 8:
-                    updated_booking = _context34.sent;
+                    updated_booking = _context32.sent;
 
                     if (updated_booking) {
                       bookings = this._bookings.booking_list.getValue();
@@ -36959,10 +36829,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 11:
                   case "end":
-                    return _context34.stop();
+                    return _context32.stop();
                 }
               }
-            }, _callee34, this);
+            }, _callee32, this);
           }));
         }
       }, {
@@ -36985,10 +36855,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "status_details",
         get: function get() {
-          var _this181 = this;
+          var _this180 = this;
 
           return this.statuses.find(function (status) {
-            return status.id === _this181.active_status;
+            return status.id === _this180.active_status;
           });
         }
         /** Space associated with the order */
@@ -37287,21 +37157,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super61 = _createSuper(DayViewApprovalsComponent);
 
       function DayViewApprovalsComponent(_org, _spaces, _bookings) {
-        var _this182;
+        var _this181;
 
         _classCallCheck(this, DayViewApprovalsComponent);
 
-        _this182 = _super61.call(this);
-        _this182._org = _org;
-        _this182._spaces = _spaces;
-        _this182._bookings = _bookings;
+        _this181 = _super61.call(this);
+        _this181._org = _org;
+        _this181._spaces = _spaces;
+        _this181._bookings = _bookings;
         /** List of bookings that are pending approval */
 
-        _this182.events = [];
+        _this181.events = [];
         /** List of spaces to check for pending approvals */
 
-        _this182.space_list = [];
-        return _this182;
+        _this181.space_list = [];
+        return _this181;
       }
       /** Display value for the active date */
 
@@ -37309,39 +37179,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DayViewApprovalsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this183 = this;
+          var _this182 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            return _this183.init();
+            return _this182.init();
           });
         }
       }, {
         key: "init",
         value: function init() {
-          var _this184 = this;
+          var _this183 = this;
 
           this.events = [];
           var building = this._org.building;
           this.space_list = this._spaces.filter(function (space) {
-            return space.zones.indexOf(_this184.level === '' ? building.id : _this184.level) >= 0;
+            return space.zones.indexOf(_this183.level === '' ? building.id : _this183.level) >= 0;
           }).map(function (i) {
             return i.email;
           });
           this.updateEvents();
           this.getMonthlyPending();
           this.interval('monthly_pending', function () {
-            return _this184.getMonthlyPending();
+            return _this183.getMonthlyPending();
           }, 10 * 60 * 1000);
           this.subscription('update', this._bookings.booking_list.subscribe(function (_) {
-            return _this184.updateEvents();
+            return _this183.updateEvents();
           }));
         }
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this185 = this;
+          var _this184 = this;
 
           /* istanbul ignore else */
           if (changes.date && this.date !== changes.date.previousValue) {
@@ -37351,7 +37221,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (!dayjs(changes.date.previousValue).isSame(dayjs(changes.date.currentValue), 'M')) {
               this.getMonthlyPending();
               this.interval('monthly_pending', function () {
-                return _this185.getMonthlyPending();
+                return _this184.getMonthlyPending();
               }, 10 * 60 * 1000);
             }
           }
@@ -37380,13 +37250,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateEvents",
         value: function updateEvents() {
-          var _this186 = this;
+          var _this185 = this;
 
           var list = this._bookings.booking_list.getValue();
 
           var date = dayjs(this.date);
           var events = list.filter(function (booking) {
-            return dayjs(booking.date).isSame(date, 'd') && booking.tentative && _this186.space_list.find(function (space) {
+            return dayjs(booking.date).isSame(date, 'd') && booking.tentative && _this185.space_list.find(function (space) {
               return space === booking.space.email;
             });
           });
@@ -37405,7 +37275,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 var space = _step51.value;
 
                 if (event.approval_status[space.email].includes('tentative')) {
-                  _this186.events.push(new booking_class_1.Booking(Object.assign(Object.assign({}, json), {
+                  _this185.events.push(new booking_class_1.Booking(Object.assign(Object.assign({}, json), {
                     room_ids: [space.email].concat(_toConsumableArray(json.room_ids.filter(function (id) {
                       return id !== space.email;
                     })))
@@ -37426,7 +37296,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getMonthlyPending",
         value: function getMonthlyPending() {
-          var _this187 = this;
+          var _this186 = this;
 
           var now = dayjs().startOf('d');
           var start = dayjs(this.date).startOf('M');
@@ -37445,7 +37315,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             available_from: start.unix(),
             available_to: end.unix()
           }).then(function (spaces) {
-            var bookings = _this187._bookings.booking_list.getValue();
+            var bookings = _this186._bookings.booking_list.getValue();
 
             spaces.forEach(function (space) {
               bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(function (bkn) {
@@ -37457,7 +37327,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               });
             });
 
-            _this187._bookings.booking_list.next(bookings);
+            _this186._bookings.booking_list.next(bookings);
           });
         }
       }, {
@@ -37908,18 +37778,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super62 = _createSuper(DayViewApprovalsEventComponent);
 
       function DayViewApprovalsEventComponent(_service, _bookings, _dialog) {
-        var _this188;
+        var _this187;
 
         _classCallCheck(this, DayViewApprovalsEventComponent);
 
-        _this188 = _super62.call(this);
-        _this188._service = _service;
-        _this188._bookings = _bookings;
-        _this188._dialog = _dialog;
+        _this187 = _super62.call(this);
+        _this187._service = _service;
+        _this187._bookings = _bookings;
+        _this187._dialog = _dialog;
         /** Event emitter for event actions */
 
-        _this188.acting = new core_1.EventEmitter();
-        return _this188;
+        _this187.acting = new core_1.EventEmitter();
+        return _this187;
       }
 
       _createClass(DayViewApprovalsEventComponent, [{
@@ -37927,17 +37797,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         /** View booking details */
         value: function view() {
-          var _this189 = this;
+          var _this188 = this;
 
           this.timeout('view', function () {
-            _this189._dialog.open(meeting_details_modal_component_1.MeetingDetailsModalComponent, {
+            _this188._dialog.open(meeting_details_modal_component_1.MeetingDetailsModalComponent, {
               data: {
-                space: _this189.event.space,
-                booking: _this189.event
+                space: _this188.event.space,
+                booking: _this188.event
               }
             });
 
-            _this189._service.set('CONCIERGE.day_view.viewing', _this189.event);
+            _this188._service.set('CONCIERGE.day_view.viewing', _this188.event);
           }, 50);
         }
         /**
@@ -37947,7 +37817,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "accept",
         value: function accept() {
-          var _this190 = this;
+          var _this189 = this;
 
           this.acting.emit(true);
 
@@ -37970,44 +37840,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
             if (event.reason === 'done') {
-              _this190.loading = true;
+              _this189.loading = true;
 
-              var _event = _this190.event.toJSON();
+              var _event = _this189.event.toJSON();
 
-              _this190._bookings.accept(_this190.event.id, {
+              _this189._bookings.accept(_this189.event.id, {
                 concierge: true,
-                host: _this190.event.organiser.email,
-                room_email: (_a = _this190.event.space) === null || _a === void 0 ? void 0 : _a.email,
-                icaluid: _this190.event.icaluid,
+                host: _this189.event.organiser.email,
+                room_email: (_a = _this189.event.space) === null || _a === void 0 ? void 0 : _a.email,
+                icaluid: _this189.event.icaluid,
                 start: _event.start,
                 end: _event.end
               }).then(function () {
                 var _a;
 
-                _this190._service.notifySuccess('Meeting approved.');
+                _this189._service.notifySuccess('Meeting approved.');
 
-                _this190.event.approval_status[(_a = _this190.event.space) === null || _a === void 0 ? void 0 : _a.email] = 'accepted';
-                STATES[_this190.event.id] = 'accepted';
+                _this189.event.approval_status[(_a = _this189.event.space) === null || _a === void 0 ? void 0 : _a.email] = 'accepted';
+                STATES[_this189.event.id] = 'accepted';
 
-                var bookings = _this190._bookings.booking_list.getValue();
+                var bookings = _this189._bookings.booking_list.getValue();
 
                 bookings.splice(bookings.findIndex(function (bkn) {
-                  return bkn.icaluid === _this190.event.icaluid;
-                }), 1, _this190.event);
+                  return bkn.icaluid === _this189.event.icaluid;
+                }), 1, _this189.event);
 
-                _this190._bookings.booking_list.next(bookings);
+                _this189._bookings.booking_list.next(bookings);
 
-                _this190._service.set('BOOKING.states', STATES);
+                _this189._service.set('BOOKING.states', STATES);
 
-                _this190.loading = false;
+                _this189.loading = false;
 
-                _this190.acting.emit(false);
+                _this189.acting.emit(false);
               }, function () {
-                _this190.acting.emit(false);
+                _this189.acting.emit(false);
 
-                _this190._service.notifyError('Error approving meeting.');
+                _this189._service.notifyError('Error approving meeting.');
 
-                _this190.loading = false;
+                _this189.loading = false;
               });
             }
 
@@ -38021,7 +37891,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "decline",
         value: function decline() {
-          var _this191 = this;
+          var _this190 = this;
 
           this.acting.emit(true);
 
@@ -38041,11 +37911,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           ref.componentInstance.event.subscribe(function (event) {
             /* istanbul ignore else */
             if (event.reason === 'done') {
-              _this191.loading = true;
-              var booking = _this191.event;
-              _this191.loading = true;
+              _this190.loading = true;
+              var booking = _this190.event;
+              _this190.loading = true;
 
-              _this191._bookings.decline(booking.id, {
+              _this190._bookings.decline(booking.id, {
                 booking_id: booking.id,
                 organiser: booking.organiser.email,
                 icaluid: booking.icaluid,
@@ -38053,30 +37923,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 end: Math.floor(booking.date / 1000) + booking.duration * 60,
                 room_email: booking.space.email
               }).then(function () {
-                _this191._service.notifySuccess('Meeting declined.');
+                _this190._service.notifySuccess('Meeting declined.');
 
-                _this191.event.approval_status[booking.space.email] = 'declined';
-                STATES[_this191.event.id] = 'declined';
+                _this190.event.approval_status[booking.space.email] = 'declined';
+                STATES[_this190.event.id] = 'declined';
 
-                var bookings = _this191._bookings.booking_list.getValue();
+                var bookings = _this190._bookings.booking_list.getValue();
 
                 bookings.splice(bookings.findIndex(function (bkn) {
-                  return bkn.icaluid === _this191.event.icaluid;
-                }), 1, _this191.event);
+                  return bkn.icaluid === _this190.event.icaluid;
+                }), 1, _this190.event);
 
-                _this191._bookings.booking_list.next(bookings);
+                _this190._bookings.booking_list.next(bookings);
 
-                _this191._service.set('BOOKING.states', STATES);
+                _this190._service.set('BOOKING.states', STATES);
 
-                _this191.loading = false;
+                _this190.loading = false;
 
-                _this191.acting.emit(false);
+                _this190.acting.emit(false);
               }, function () {
-                _this191.acting.emit(false);
+                _this190.acting.emit(false);
 
-                _this191._service.notifyError('Error declining meeting.');
+                _this190._service.notifyError('Error declining meeting.');
 
-                _this191.loading = false;
+                _this190.loading = false;
               });
             }
 
@@ -38114,11 +37984,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "has_catering",
         get: function get() {
-          var _this192 = this;
+          var _this191 = this;
 
           var catering = this.event.catering;
           return !!catering.find(function (order) {
-            return _this192.event.space.email === order.location_id;
+            return _this191.event.space.email === order.location_id;
           });
         }
       }]);
@@ -38551,37 +38421,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super63 = _createSuper(DayViewComponent);
 
       function DayViewComponent(_service, _org, _dialog, _router, _route) {
-        var _this193;
+        var _this192;
 
         _classCallCheck(this, DayViewComponent);
 
-        _this193 = _super63.call(this);
-        _this193._service = _service;
-        _this193._org = _org;
-        _this193._dialog = _dialog;
-        _this193._router = _router;
-        _this193._route = _route;
+        _this192 = _super63.call(this);
+        _this192._service = _service;
+        _this192._org = _org;
+        _this192._dialog = _dialog;
+        _this192._router = _router;
+        _this192._route = _route;
         /** ID of the currently selected level */
 
-        _this193.active_level = '';
+        _this192.active_level = '';
         /** ID of the currently selected type */
 
-        _this193.active_type = '';
+        _this192.active_type = '';
         /** List of levels available for the active building */
 
-        _this193.levels = [];
+        _this192.levels = [];
         /** List of space types available for the active building */
 
-        _this193.space_types = [];
+        _this192.space_types = [];
         /** List of legend keys to show */
 
-        _this193.legend = {};
+        _this192.legend = {};
         /** List of legend keys to show */
 
-        _this193.legend_list = [];
+        _this192.legend_list = [];
         /** List of available legend keys */
 
-        _this193.legend_keys = [{
+        _this192.legend_keys = [{
           name: 'Internal',
           id: 'internal',
           color: '#E69FC7',
@@ -38617,65 +38487,65 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           color: '#617288',
           active: true
         }];
-        return _this193;
+        return _this192;
       }
 
       _createClass(DayViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this194 = this;
+          var _this193 = this;
 
           this._service.title = 'Day View';
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this194.legend_list = _this194.legend_keys.map(function (item) {
+            _this193.legend_list = _this193.legend_keys.map(function (item) {
               return "".concat(item.id);
             });
 
-            _this194.subscription('route.params', _this194._route.paramMap.subscribe(function (params) {
+            _this193.subscription('route.params', _this193._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this194.active_level !== params.get('level')) {
-                var level = _this194._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this193.active_level !== params.get('level')) {
+                var level = _this193._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this194._org.buildings.find(function (bld) {
+                  var building = _this193._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this194.active_level = level.id;
-                    _this194._org.building = building;
+                    _this193.active_level = level.id;
+                    _this193._org.building = building;
                   }
                 }
               }
             }));
 
-            _this194.subscription('building', _this194._org.listen('active_building').subscribe(function () {
-              var building = _this194._org.building;
+            _this193.subscription('building', _this193._org.listen('active_building').subscribe(function () {
+              var building = _this193._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this194.active_level;
+                return lvl.id === _this193.active_level;
               })) {
-                _this194.active_level = building.levels[0].id;
+                _this193.active_level = building.levels[0].id;
 
-                _this194.updateLevel();
+                _this193.updateLevel();
               }
 
-              _this194.levels = [{
+              _this193.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
-              _this194.space_types = [{
+              _this193.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this194._org.space_types);
+              }].concat(_this193._org.space_types);
             }));
           });
         }
@@ -38694,7 +38564,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateLegend",
         value: function updateLegend() {
-          var _this195 = this;
+          var _this194 = this;
 
           var mobile = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
@@ -38706,7 +38576,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.legend = this.legend_keys.reduce(function (map, key) {
-            map[key.id] = _this195.legend_list.includes("".concat(key.id));
+            map[key.id] = _this194.legend_list.includes("".concat(key.id));
             return map;
           }, {});
         }
@@ -39243,7 +39113,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate(ctx_r0.event.all_day ? "All Day" : ctx_r0.period);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngIf", !ctx_r0.loading && (ctx_r0.event.declined || ctx_r0.approved));
+        i0.ɵɵproperty("ngIf", !ctx_r0.loading && (ctx_r0.declined || ctx_r0.approved));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.loading);
         i0.ɵɵadvance(5);
@@ -39275,21 +39145,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super64 = _createSuper(DayViewSpaceEventComponent);
 
       function DayViewSpaceEventComponent(_service, _dialog, _router) {
-        var _this196;
+        var _this195;
 
         _classCallCheck(this, DayViewSpaceEventComponent);
 
-        _this196 = _super64.call(this);
-        _this196._service = _service;
-        _this196._dialog = _dialog;
-        _this196._router = _router;
+        _this195 = _super64.call(this);
+        _this195._service = _service;
+        _this195._dialog = _dialog;
+        _this195._router = _router;
         /** Emitter for the current position of the event within the timeline */
 
-        _this196.position = new core_1.EventEmitter();
+        _this195.position = new core_1.EventEmitter();
         /** Whether to hide the event */
 
-        _this196.hide = false;
-        return _this196;
+        _this195.hide = false;
+        return _this195;
       }
 
       _createClass(DayViewSpaceEventComponent, [{
@@ -39380,6 +39250,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         get: function get() {
           return this.event.approved || this.event.approval_status[this.space.email].includes('accepted');
         }
+        /** Whether booking is declined for the event in the displayed space */
+
+      }, {
+        key: "declined",
+        get: function get() {
+          return !this.approved && this.event.approval_status[this.space.email].includes('decline');
+        }
         /**  */
 
       }, {
@@ -39434,10 +39311,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "order",
         get: function get() {
-          var _this197 = this;
+          var _this196 = this;
 
           return this.event.catering.find(function (order) {
-            return order.location_id === _this197.space.email;
+            return order.location_id === _this196.space.email;
           });
         }
       }, {
@@ -39738,40 +39615,40 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super65 = _createSuper(DayViewSpaceComponent);
 
       function DayViewSpaceComponent(_service, _spaces, _bookings, _dialog) {
-        var _this198;
+        var _this197;
 
         _classCallCheck(this, DayViewSpaceComponent);
 
-        _this198 = _super65.call(this);
-        _this198._service = _service;
-        _this198._spaces = _spaces;
-        _this198._bookings = _bookings;
-        _this198._dialog = _dialog;
+        _this197 = _super65.call(this);
+        _this197._service = _service;
+        _this197._spaces = _spaces;
+        _this197._bookings = _bookings;
+        _this197._dialog = _dialog;
         /** Mapping of whether to show events with a given legend id */
 
-        _this198.legend = {};
+        _this197.legend = {};
         /** Emitter for whether the space column is in view */
 
-        _this198.inView = new core_1.EventEmitter();
+        _this197.inView = new core_1.EventEmitter();
         /** Emitter for whether an event is being dragged */
 
-        _this198.dragging = new core_1.EventEmitter();
+        _this197.dragging = new core_1.EventEmitter();
         /** List of bookings for the current date and space */
 
-        _this198.event_list = [];
+        _this197.event_list = [];
         /** Mapping of event IDs to overlap details */
 
-        _this198.overlap_details = {};
+        _this197.overlap_details = {};
         /** Mapping of positions of event in the day */
 
-        _this198.position_list = {};
+        _this197.position_list = {};
         /** Map of bookings to whether they are loading */
 
-        _this198.loading = {};
+        _this197.loading = {};
         /** Settings for day view */
 
-        _this198.settings = {};
-        return _this198;
+        _this197.settings = {};
+        return _this197;
       }
       /** Events to display for the active date */
 
@@ -39779,30 +39656,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DayViewSpaceComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this199 = this;
+          var _this198 = this;
 
           this._service.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this199.settings = _this199._service.setting('app.day_view') || {};
+            _this198.settings = _this198._service.setting('app.day_view') || {};
 
-            _this199.subscription('breakdown', _this199._service.listen('APP.breakdown').subscribe(function (state) {
-              return _this199.overflow_only = state;
+            _this198.subscription('breakdown', _this198._service.listen('APP.breakdown').subscribe(function (state) {
+              return _this198.overflow_only = state;
             }));
 
-            _this199.subscription('legend', _this199._service.listen('CONCIERGE.legend').subscribe(function (state) {
-              return _this199.legend = state || {};
+            _this198.subscription('legend', _this198._service.listen('CONCIERGE.legend').subscribe(function (state) {
+              return _this198.legend = state || {};
             }));
 
-            _this199.subscription('bookings', _this199._bookings.booking_list.subscribe(function () {
-              return _this199.updateEvents();
+            _this198.subscription('bookings', _this198._bookings.booking_list.subscribe(function () {
+              return _this198.updateEvents();
             }));
           });
         }
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this200 = this;
+          var _this199 = this;
 
           /* istanbul ignore else */
           if (changes.scroll) {
@@ -39817,7 +39694,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (changes.last_update) {
             this.timeout('update_overlaps', function () {
-              return _this200.calculateOverlaps();
+              return _this199.calculateOverlaps();
             }, 1000);
           }
         }
@@ -39837,22 +39714,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateEvents",
         value: function updateEvents() {
-          var _this201 = this;
+          var _this200 = this;
 
           this.timeout('update_events', function () {
-            var date = dayjs(_this201.date);
+            var date = dayjs(_this200.date);
 
-            var bookings = _this201._bookings.booking_list.getValue().filter(function (booking) {
+            var bookings = _this200._bookings.booking_list.getValue().filter(function (booking) {
               var start = dayjs(booking.date);
               var end = start.add(booking.duration, 'm');
               return booking.space_list.find(function (space) {
-                return space.email === _this201.space.email;
+                return space.email === _this200.space.email;
               }) && (start.isSame(date, 'd') || end.isSame(date, 'd') || date.isAfter(start, 'd') && date.isBefore(end, 'd'));
             });
 
-            _this201.event_list = bookings;
+            _this200.event_list = bookings;
 
-            _this201.checkInView();
+            _this200.checkInView();
           });
         }
         /**
@@ -39862,13 +39739,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "calculateOverlaps",
         value: function calculateOverlaps() {
-          var _this202 = this;
+          var _this201 = this;
 
           var events = this.events.sort(function (a, b) {
             return a.date - b.date || a.duration - b.duration || (a.title || '').localeCompare(b.title || '');
           });
           events.forEach(function (i) {
-            return _this202.overlap_details[i.id] = {
+            return _this201.overlap_details[i.id] = {
               index: 0,
               total: 1
             };
@@ -39924,7 +39801,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _iterator53.f();
               }
 
-              _this202.overlap_details[bkn.id] = {
+              _this201.overlap_details[bkn.id] = {
                 index: Math.max(0, index),
                 total: count
               };
@@ -39970,10 +39847,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "endDrag",
         value: function endDrag() {
-          var _this203 = this;
+          var _this202 = this;
 
           this.timeout('end_drag', function () {
-            return _this203.top = 0;
+            return _this202.top = 0;
           }, 10);
           this.dragging.emit(false);
         }
@@ -40002,7 +39879,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "drop",
         value: function drop(event) {
-          var _this204 = this;
+          var _this203 = this;
 
           var id = event.item.element.nativeElement.id;
           var booking = event.previousContainer.data.list.find(function (i) {
@@ -40070,15 +39947,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             })
           }));
           this.checkCollisions(room_list, date.valueOf(), new_booking.duration, new_booking.icaluid).then(function () {
-            _this204.moveBooking(message, new_booking).then(function (_) {
-              _this204.override_state = null;
+            _this203.moveBooking(message, new_booking).then(function (_) {
+              _this203.override_state = null;
 
-              _this204._service.notifySuccess(success);
+              _this203._service.notifySuccess(success);
             }, function (err) {
-              return _this204.handleDropError(new_booking.id, "Error: ".concat(err));
+              return _this203.handleDropError(new_booking.id, "Error: ".concat(err));
             });
           }, function () {
-            return _this204.handleDropError(new_booking.id, 'Updated meeting time clashes with another');
+            return _this203.handleDropError(new_booking.id, 'Updated meeting time clashes with another');
           });
         }
         /**
@@ -40091,10 +39968,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "checkCollisions",
         value: function checkCollisions(spaces, date, duration, ignore) {
-          var _this205 = this;
+          var _this204 = this;
 
           return new Promise(function (resolve, reject) {
-            _this205._spaces.available({
+            _this204._spaces.available({
               room_ids: spaces.map(function (i) {
                 return i.id;
               }).join(','),
@@ -40132,10 +40009,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "moveBooking",
         value: function moveBooking(confirm_msg, new_booking) {
-          var _this206 = this;
+          var _this205 = this;
 
           return new Promise(function (resolve, reject) {
-            var ref = _this206._dialog.open(confirm_modal_component_1.ConfirmModalComponent, {
+            var ref = _this205._dialog.open(confirm_modal_component_1.ConfirmModalComponent, {
               data: {
                 title: 'Update meeting',
                 content: confirm_msg,
@@ -40148,19 +40025,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             });
 
-            _this206.subscription('confirm', ref.componentInstance.event.subscribe(function (event) {
+            _this205.subscription('confirm', ref.componentInstance.event.subscribe(function (event) {
               /* istanbul ignore else */
               if (event.reason === 'done') {
-                _this206._bookings.save(new_booking).then(function (bkn) {
+                _this205._bookings.save(new_booking).then(function (bkn) {
                   resolve(bkn);
 
-                  var bookings = _this206._bookings.booking_list.getValue();
+                  var bookings = _this205._bookings.booking_list.getValue();
 
                   bookings.splice(bookings.findIndex(function (bkn) {
                     return bkn.icaluid === bkn.icaluid;
                   }), 1, bkn);
 
-                  _this206._bookings.booking_list.next(bookings);
+                  _this205._bookings.booking_list.next(bookings);
                 }, function (err) {
                   return reject(err);
                 });
@@ -40173,17 +40050,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "events",
         get: function get() {
-          var _this207 = this;
+          var _this206 = this;
 
           /* istanbul ignore else */
           if (this.space) {
             var bookings = this.event_list;
             var list = bookings.filter(function (event) {
-              if (_this207.override_state && _this207.override_state === event.icaluid) {
-                _this207.loading[event.id] = true;
+              if (_this206.override_state && _this206.override_state === event.icaluid) {
+                _this206.loading[event.id] = true;
               }
 
-              return (!_this207.overflow_only || event.setup[event.space.email] || event.breakdown[event.space.email]) && (!!event.declined && _this207.legend.declined !== false || !event.declined && _this207.legend[event.type] !== false);
+              return (!_this206.overflow_only || event.setup[event.space.email] || event.breakdown[event.space.email]) && (!!event.declined && _this206.legend.declined !== false || !event.declined && _this206.legend[event.type] !== false);
             });
             return list;
           }
@@ -40640,53 +40517,53 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super66 = _createSuper(DayViewTimelineComponent);
 
       function DayViewTimelineComponent(_service, _spaces, _bookings, _org, _route, _renderer, _dialog) {
-        var _this208;
+        var _this207;
 
         _classCallCheck(this, DayViewTimelineComponent);
 
-        _this208 = _super66.call(this);
-        _this208._service = _service;
-        _this208._spaces = _spaces;
-        _this208._bookings = _bookings;
-        _this208._org = _org;
-        _this208._route = _route;
-        _this208._renderer = _renderer;
-        _this208._dialog = _dialog;
+        _this207 = _super66.call(this);
+        _this207._service = _service;
+        _this207._spaces = _spaces;
+        _this207._bookings = _bookings;
+        _this207._org = _org;
+        _this207._route = _route;
+        _this207._renderer = _renderer;
+        _this207._dialog = _dialog;
         /** List of shown legend items */
 
-        _this208.legend = {};
+        _this207.legend = {};
         /** List of timeblocks to display */
 
-        _this208.time_blocks = _this208.generateTimeBlocks();
+        _this207.time_blocks = _this207.generateTimeBlocks();
         /** Top value of the content scroll */
 
-        _this208.scroll_top = 0;
+        _this207.scroll_top = 0;
         /** Left value of the content scroll */
 
-        _this208.scroll_left = 0;
+        _this207.scroll_left = 0;
         /** Offset of the scroll value when starting a drag */
 
-        _this208.scroll_offset = 0;
+        _this207.scroll_offset = 0;
         /** List of spaces to display for  */
 
-        _this208.spaces = [];
+        _this207.spaces = [];
         /** List of spaces to display for  */
 
-        _this208.filtered_spaces = [];
+        _this207.filtered_spaces = [];
         /** Mapping of space ids to whether they are in view */
 
-        _this208.in_view = {};
+        _this207.in_view = {};
         /** Mapping of spaces loading booking date */
 
-        _this208.loading_space = {};
+        _this207.loading_space = {};
         /** Last update time for the space bookings */
 
-        _this208.last_update = 0;
+        _this207.last_update = 0;
         /** Whether to show the holding bay */
 
-        _this208.show_holding_bay = true;
-        _this208.space_zones = [];
-        return _this208;
+        _this207.show_holding_bay = true;
+        _this207.space_zones = [];
+        return _this207;
       }
       /** Update scroll box when the window is resized */
 
@@ -40701,28 +40578,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this209 = this;
+          var _this208 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this209._org.initialised.pipe(operators_1.first(function (_) {
+            _this208._org.initialised.pipe(operators_1.first(function (_) {
               return _;
             })).subscribe(function () {
-              var zone_id = !_this209.level ? _this209._org.building.id : _this209.level;
-              _this209.spaces = _this209._spaces.filter(function (_) {
+              var zone_id = !_this208.level ? _this208._org.building.id : _this208.level;
+              _this208.spaces = _this208._spaces.filter(function (_) {
                 return _.zones.indexOf(zone_id) >= 0;
               });
 
-              _this209.init();
+              _this208.init();
 
-              _this209.initSpaces(); // Update time
+              _this208.initSpaces(); // Update time
 
 
-              _this209.updateTime();
+              _this208.updateTime();
 
-              _this209.interval('time', function () {
-                return _this209.updateTime();
+              _this208.interval('time', function () {
+                return _this208.updateTime();
               }, 15 * 1000);
             });
           });
@@ -40756,24 +40633,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "init",
         value: function init() {
-          var _this210 = this;
+          var _this209 = this;
 
           this._service.title = 'Day View';
           this.subscription('viewing', this._service.listen('CONCIERGE.day_view.viewing').subscribe(function (event) {
-            return _this210.scrollIntoView(event);
+            return _this209.scrollIntoView(event);
           })); // Subscribe to route query changes
 
           this.subscription('route.query', this._route.queryParamMap.subscribe(function (params) {
             /* istanbul ignore else */
             if (params.has('view')) {
-              _this210.view_id = params.get('view');
+              _this209.view_id = params.get('view');
               var details = localStorage.getItem('CONCIERGE.view_booking');
               /* istanbul ignore else */
 
               if (details) {
                 var booking = new booking_class_1.Booking(JSON.parse(details));
 
-                _this210.view(booking);
+                _this209.view(booking);
 
                 localStorage.removeItem('CONCIERGE.view_booking');
               }
@@ -40783,9 +40660,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.updateBookings();
           this.interval('scroll', function () {
             /* istanbul ignore else */
-            if (_this210.scroll_area && _this210.scroll_area.nativeElement) {
-              _this210.updateScroll({
-                target: _this210.scroll_area.nativeElement
+            if (_this209.scroll_area && _this209.scroll_area.nativeElement) {
+              _this209.updateScroll({
+                target: _this209.scroll_area.nativeElement
               });
             }
           }, 1000);
@@ -40837,37 +40714,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateBookings",
         value: function updateBookings() {
-          var _this211 = this;
+          var _this210 = this;
 
           this.timeout('update', function () {
-            var visible_rooms = _this211.spaces.filter(function (i) {
-              return _this211.in_view[i.id] !== false;
+            var visible_rooms = _this210.spaces.filter(function (i) {
+              return _this210.in_view[i.id] !== false;
             });
 
             if (visible_rooms.length) {
               visible_rooms.forEach(function (rm) {
-                return _this211.loading_space[rm.id] = true;
+                return _this210.loading_space[rm.id] = true;
               });
-              var time = dayjs(_this211.date).startOf('d');
+              var time = dayjs(_this210.date).startOf('d');
               var end = time.endOf('d');
               var room_ids = visible_rooms.reduce(function (v, i) {
                 return v + (v ? ',' : '') + i.id;
               }, '');
-              var zone_ids = [_this211.level || _this211._org.building.id];
+              var zone_ids = [_this210.level || _this210._org.building.id];
               /* istanbul ignore else */
 
-              if (_this211.space_type) {
-                zone_ids.push(_this211.space_type);
+              if (_this210.space_type) {
+                zone_ids.push(_this210.space_type);
               }
 
-              _this211.loading = true;
+              _this210.loading = true;
 
-              _this211._spaces.query({
+              _this210._spaces.query({
                 zone_ids: zone_ids.join(','),
                 available_from: time.unix(),
                 available_to: end.unix()
               }).then(function (room_list) {
-                var bookings = _this211._bookings.booking_list.getValue();
+                var bookings = _this210._bookings.booking_list.getValue();
 
                 room_list.forEach(function (space) {
                   return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(function (bkn) {
@@ -40879,27 +40756,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   });
                 });
 
-                _this211._bookings.booking_list.next(bookings);
+                _this210._bookings.booking_list.next(bookings);
 
-                _this211.last_update = dayjs().valueOf();
-                _this211.loading_space = {};
-                _this211.loading = false;
+                _this210.last_update = dayjs().valueOf();
+                _this210.loading_space = {};
+                _this210.loading = false;
 
-                _this211.timeout('update_bookings', function () {
-                  return _this211.updateBookings();
+                _this210.timeout('update_bookings', function () {
+                  return _this210.updateBookings();
                 }, UPDATE_INTERVAL * 1000);
               }, function () {
-                delete _this211.loading_space;
-                _this211.loading_space = {};
-                _this211.loading = false;
+                delete _this210.loading_space;
+                _this210.loading_space = {};
+                _this210.loading = false;
 
-                _this211.timeout('update_bookings', function () {
-                  return _this211.updateBookings();
+                _this210.timeout('update_bookings', function () {
+                  return _this210.updateBookings();
                 }, UPDATE_INTERVAL * 1000);
               });
             } else {
-              _this211.timeout('update_bookings', function () {
-                return _this211.updateBookings();
+              _this210.timeout('update_bookings', function () {
+                return _this210.updateBookings();
               }, UPDATE_INTERVAL * 1000);
             }
           });
@@ -40982,7 +40859,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "dragChange",
         value: function dragChange(is_dragging) {
-          var _this212 = this;
+          var _this211 = this;
 
           if (is_dragging) {
             this.scroll_offset = this.scroll_area.nativeElement.scrollTop;
@@ -40991,13 +40868,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 x: event.clientX,
                 y: event.clientY
               };
-              var y = position.y > _this212.box.bottom - _this212.box.height * 0.05 ? 1 : position.y < _this212.box.top + _this212.box.height * 0.05 ? -1 : 0;
-              var x = position.x > _this212.box.right - _this212.box.width * 0.05 ? 1 : position.x < _this212.box.left + _this212.box.height * 0.05 ? -1 : 0;
+              var y = position.y > _this211.box.bottom - _this211.box.height * 0.05 ? 1 : position.y < _this211.box.top + _this211.box.height * 0.05 ? -1 : 0;
+              var x = position.x > _this211.box.right - _this211.box.width * 0.05 ? 1 : position.x < _this211.box.left + _this211.box.height * 0.05 ? -1 : 0;
 
-              _this212.scrollView(x * 5, y * 5);
+              _this211.scrollView(x * 5, y * 5);
 
-              _this212.interval('auto_scroll', function () {
-                return _this212.scrollView(x * 10, y * 10);
+              _this211.interval('auto_scroll', function () {
+                return _this211.scrollView(x * 10, y * 10);
               }, 10);
             }));
             this.clearInterval('bookings');
@@ -41009,11 +40886,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initSpaces",
         value: function initSpaces() {
-          var _this213 = this;
+          var _this212 = this;
 
           var holding_bay = this.holding_bay;
           this.filtered_spaces = this.spaces.filter(function (i) {
-            return (!_this213.space_type || i.zones.indexOf(_this213.space_type) >= 0) && (!holding_bay || i.id !== holding_bay.id) && i.bookable;
+            return (!_this212.space_type || i.zones.indexOf(_this212.space_type) >= 0) && (!holding_bay || i.id !== holding_bay.id) && i.bookable;
           });
           this.filtered_spaces.sort(function (a, b) {
             return a.name.localeCompare(b.name);
@@ -41025,10 +40902,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "is_loading",
         get: function get() {
-          var _this214 = this;
+          var _this213 = this;
 
           return this.loading || Object.keys(this.loading_space).reduce(function (loading, key) {
-            return loading || _this214.loading_space[key];
+            return loading || _this213.loading_space[key];
           }, false);
         }
       }, {
@@ -41600,12 +41477,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ReportDisplayComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this215 = this;
+          var _this214 = this;
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this215.locations = [_this215._org.building];
+            _this214.locations = [_this214._org.building];
           });
         }
       }, {
@@ -41639,7 +41516,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "generateReport",
         value: function generateReport() {
-          var _this216 = this;
+          var _this215 = this;
 
           /* istanbul ignore else */
           if (this.report) {
@@ -41654,14 +41531,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return i.id;
               }).join(',')
             }).then(function (report) {
-              _this216.loading = false;
-              _this216.report_data = new report_class_1.Report(Object.assign(Object.assign({}, report), {
-                type: _this216.report.id
+              _this215.loading = false;
+              _this215.report_data = new report_class_1.Report(Object.assign(Object.assign({}, report), {
+                type: _this215.report.id
               }));
             }, function (err) {
-              _this216.loading = false;
+              _this215.loading = false;
 
-              _this216._service.notifyError("Error generating report. Error: ".concat(err.message || err));
+              _this215._service.notifyError("Error generating report. Error: ".concat(err.message || err));
             });
           }
         }
@@ -41920,12 +41797,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ReportTableComponent, [{
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this217 = this;
+          var _this216 = this;
 
           /* istanbul ignore else */
           if (changes.list && this.list && this.list.length) {
             this.fields = Object.keys(this.list[0]).filter(function (i) {
-              return _this217.details.hide_fields.indexOf(i) < 0;
+              return _this216.details.hide_fields.indexOf(i) < 0;
             });
           }
         }
@@ -42177,17 +42054,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super67 = _createSuper(ReportsComponent);
 
       function ReportsComponent(_route, _router, _service) {
-        var _this218;
+        var _this217;
 
         _classCallCheck(this, ReportsComponent);
 
-        _this218 = _super67.call(this);
-        _this218._route = _route;
-        _this218._router = _router;
-        _this218._service = _service;
+        _this217 = _super67.call(this);
+        _this217._route = _route;
+        _this217._router = _router;
+        _this217._service = _service;
         /** List of available reports to display */
 
-        _this218.reports = [{
+        _this217.reports = [{
           id: 'bookings',
           name: 'Aggregate Bookings Report',
           short_name: 'Bookings',
@@ -42211,18 +42088,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           },
           multi_locations: true
         }];
-        return _this218;
+        return _this217;
       }
 
       _createClass(ReportsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this219 = this;
+          var _this218 = this;
 
           this._service.title = 'Reports';
           this.subscription('route.params', this._route.paramMap.subscribe(function (params) {
             if (params.has('report')) {
-              _this219.active_report = params.get('report');
+              _this218.active_report = params.get('report');
             }
           }));
         }
@@ -42234,10 +42111,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "the_report",
         get: function get() {
-          var _this220 = this;
+          var _this219 = this;
 
           return this.reports.find(function (report) {
-            return report.id === _this220.active_report;
+            return report.id === _this219.active_report;
           });
         }
       }]);
@@ -42820,14 +42697,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super68 = _createSuper(ShellWrapperComponent);
 
       function ShellWrapperComponent(_service, _users) {
-        var _this221;
+        var _this220;
 
         _classCallCheck(this, ShellWrapperComponent);
 
-        _this221 = _super68.call(this);
-        _this221._service = _service;
-        _this221._users = _users;
-        return _this221;
+        _this220 = _super68.call(this);
+        _this220._service = _service;
+        _this220._users = _users;
+        return _this220;
       }
       /** Whether the user needs to login */
 
@@ -42835,16 +42712,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShellWrapperComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this222 = this;
+          var _this221 = this;
 
           this.subscription('loading', this._service.listen('loading').subscribe(function (loading) {
-            _this222.loading_state = loading;
+            _this221.loading_state = loading;
           }));
 
           this._service.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this222.logo = _this222._service.setting('app.logo_dark') || {
+            _this221.logo = _this221._service.setting('app.logo_dark') || {
               type: 'icon'
             };
           });
@@ -43434,16 +43311,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super69 = _createSuper(VisitorFormComponent);
 
       function VisitorFormComponent(_service) {
-        var _this223;
+        var _this222;
 
         _classCallCheck(this, VisitorFormComponent);
 
-        _this223 = _super69.call(this);
-        _this223._service = _service;
+        _this222 = _super69.call(this);
+        _this222._service = _service;
         /** Emitter for changes to the person */
 
-        _this223.personChange = new core_1.EventEmitter();
-        return _this223;
+        _this222.personChange = new core_1.EventEmitter();
+        return _this222;
       }
 
       _createClass(VisitorFormComponent, [{
@@ -43722,20 +43599,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super70 = _createSuper(VisitorsFormModalComponent);
 
       function VisitorsFormModalComponent(_service, _bookings, _dialog_ref, _dialog, _data) {
-        var _this224;
+        var _this223;
 
         _classCallCheck(this, VisitorsFormModalComponent);
 
-        _this224 = _super70.call(this);
-        _this224._service = _service;
-        _this224._bookings = _bookings;
-        _this224._dialog_ref = _dialog_ref;
-        _this224._dialog = _dialog;
-        _this224._data = _data;
+        _this223 = _super70.call(this);
+        _this223._service = _service;
+        _this223._bookings = _bookings;
+        _this223._dialog_ref = _dialog_ref;
+        _this223._dialog = _dialog;
+        _this223._data = _data;
         /** Emitter for user action on the modal */
 
-        _this224.event = new core_1.EventEmitter();
-        return _this224;
+        _this223.event = new core_1.EventEmitter();
+        return _this223;
       }
       /** Visitor booking data */
 
@@ -43757,7 +43634,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          var _this225 = this;
+          var _this224 = this;
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
@@ -43776,24 +43653,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /* istanbul ignore else */
             if (event.reason === 'done') {
               /* istanbul ignore else */
-              if (_this225.booking.id) {
-                _this225.loading = 'Deleting visitor booking...';
-                _this225._dialog_ref.disableClose = true;
+              if (_this224.booking.id) {
+                _this224.loading = 'Deleting visitor booking...';
+                _this224._dialog_ref.disableClose = true;
 
-                _this225.booking["delete"]().then(function () {
-                  _this225.event.emit({
+                _this224.booking["delete"]().then(function () {
+                  _this224.event.emit({
                     reason: 'done'
                   });
 
-                  _this225._service.notifySuccess('Successfully removed visitors.');
+                  _this224._service.notifySuccess('Successfully removed visitors.');
 
-                  _this225._dialog_ref.close();
+                  _this224._dialog_ref.close();
                 }, function (err) {
-                  _this225.loading = null;
+                  _this224.loading = null;
 
-                  _this225._service.notifyError("Failed to remove visitors. Error: ".concat(err.message || err));
+                  _this224._service.notifyError("Failed to remove visitors. Error: ".concat(err.message || err));
 
-                  _this225._dialog_ref.disableClose = false;
+                  _this224._dialog_ref.disableClose = false;
                 });
               }
             }
@@ -43806,18 +43683,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "save",
         value: function save() {
-          var _this226 = this;
+          var _this225 = this;
 
           this.timeout('save', function () {
-            _this226.loading = 'Saving visitor booking...';
+            _this225.loading = 'Saving visitor booking...';
 
-            _this226.form.markAllAsTouched();
+            _this225.form.markAllAsTouched();
 
-            _this226._dialog_ref.disableClose = true;
+            _this225._dialog_ref.disableClose = true;
             /* istanbul ignore else */
 
-            if (_this226.form.dirty && _this226.form.valid) {
-              var attendees = _this226.form.controls.attendees.value;
+            if (_this225.form.dirty && _this225.form.valid) {
+              var attendees = _this225.form.controls.attendees.value;
 
               var _iterator54 = _createForOfIteratorHelper(attendees),
                   _step54;
@@ -43836,31 +43713,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _iterator54.f();
               }
 
-              var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this226.booking.toJSON()), _this226.form.value));
+              var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this225.booking.toJSON()), _this225.form.value));
 
-              _this226._bookings.save(new_booking).then(function (bkn) {
-                _this226.event.emit({
+              _this225._bookings.save(new_booking).then(function (bkn) {
+                _this225.event.emit({
                   reason: 'done',
                   metadata: bkn
                 });
 
-                _this226._service.notifySuccess(_this226.booking.id ? 'Successfully updated visitors.' : 'Successfully added visitors.');
+                _this225._service.notifySuccess(_this225.booking.id ? 'Successfully updated visitors.' : 'Successfully added visitors.');
 
-                var bookings = _this226._bookings.booking_list.getValue();
+                var bookings = _this225._bookings.booking_list.getValue();
 
                 bookings.splice(bookings.findIndex(function (bkn) {
                   return bkn.icaluid === bkn.icaluid;
                 }), 1, bkn);
 
-                _this226._bookings.booking_list.next(bookings);
+                _this225._bookings.booking_list.next(bookings);
 
-                _this226._dialog_ref.close();
+                _this225._dialog_ref.close();
               }, function (err) {
-                _this226.loading = null;
+                _this225.loading = null;
 
-                _this226._service.notifyError("Failed to ".concat(_this226.booking.id ? 'update' : 'add', " visitors. Error: ").concat(err.message || err));
+                _this225._service.notifyError("Failed to ".concat(_this225.booking.id ? 'update' : 'add', " visitors. Error: ").concat(err.message || err));
 
-                _this226._dialog_ref.disableClose = false;
+                _this225._dialog_ref.disableClose = false;
               });
             }
           });
@@ -44301,16 +44178,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function checkin() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee35() {
-            var _this227 = this;
+          regeneratorRuntime.mark(function _callee33() {
+            var _this226 = this;
 
             var value;
-            return regeneratorRuntime.wrap(function _callee35$(_context35) {
+            return regeneratorRuntime.wrap(function _callee33$(_context33) {
               while (1) {
-                switch (_context35.prev = _context35.next) {
+                switch (_context33.prev = _context33.next) {
                   case 0:
                     this.loading = true;
-                    _context35.next = 3;
+                    _context33.next = 3;
                     return this._bookings.checkin(this.event.id, {
                       host_email: this.event.organiser.email,
                       attendees: general_utilities_1.unique(this.event.attendees.map(function (user) {
@@ -44326,11 +44203,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       response_type: 'accepted',
                       room_id: this.event.space.id
                     })["catch"](function (err) {
-                      _this227._service.notifyError("Error checking in all attendees for booking. Error: ".concat(err.message || err));
+                      _this226._service.notifyError("Error checking in all attendees for booking. Error: ".concat(err.message || err));
                     });
 
                   case 3:
-                    value = _context35.sent;
+                    value = _context33.sent;
 
                     if (value) {
                       this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event.toJSON()), {
@@ -44344,10 +44221,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context35.stop();
+                    return _context33.stop();
                 }
               }
-            }, _callee35, this);
+            }, _callee33, this);
           }));
         }
         /** URL for mailing all attendees of the event */
@@ -44657,24 +44534,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super71 = _createSuper(VisitorTimelineComponent);
 
       function VisitorTimelineComponent(_org, _spaces, _bookings) {
-        var _this228;
+        var _this227;
 
         _classCallCheck(this, VisitorTimelineComponent);
 
-        _this228 = _super71.call(this);
-        _this228._org = _org;
-        _this228._spaces = _spaces;
-        _this228._bookings = _bookings;
+        _this227 = _super71.call(this);
+        _this227._org = _org;
+        _this227._spaces = _spaces;
+        _this227._bookings = _bookings;
         /** List of visitor bookings for the current date */
 
-        _this228.bookings = [];
+        _this227.bookings = [];
         /** List of filtered bookings */
 
-        _this228.filtered_bookings = [];
+        _this227.filtered_bookings = [];
         /** Subject holding the value of the search */
 
-        _this228.search$ = new rxjs_1.Subject();
-        return _this228;
+        _this227.search$ = new rxjs_1.Subject();
+        return _this227;
       }
       /** Display string for the selected date */
 
@@ -44682,23 +44559,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(VisitorTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this229 = this;
+          var _this228 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this229.initBookings();
+            _this228.initBookings();
 
-            _this229.subscription('building', _this229._org.listen('active_building').subscribe(function (_) {
-              return _this229.search$.next("".concat(_this229.date, "|").concat(_.id));
+            _this228.subscription('building', _this228._org.listen('active_building').subscribe(function (_) {
+              return _this228.search$.next("".concat(_this228.date, "|").concat(_.id));
             }));
 
-            _this229.interval('update_bookings', function () {
-              return _this229.search$.next("".concat(_this229.date, "|").concat(dayjs().unix()));
+            _this228.interval('update_bookings', function () {
+              return _this228.search$.next("".concat(_this228.date, "|").concat(dayjs().unix()));
             }, 30 * 1000);
 
-            _this229.subscription('bookings', _this229._bookings.booking_list.subscribe(function () {
-              return _this229.updateEvents();
+            _this228.subscription('bookings', _this228._bookings.booking_list.subscribe(function () {
+              return _this228.updateEvents();
             }));
           });
         }
@@ -44728,7 +44605,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "filter",
         value: function filter() {
-          var _this230 = this;
+          var _this229 = this;
 
           var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
           var search = str.toLowerCase();
@@ -44737,13 +44614,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return user.name.toLowerCase().indexOf(search) >= 0 || user.email.toLowerCase().indexOf(search) >= 0;
             });
           }).filter(function (bkn) {
-            return _this230.show_all ? true : bkn.has_visitors;
+            return _this229.show_all ? true : bkn.has_visitors;
           });
         }
       }, {
         key: "updateEvents",
         value: function updateEvents() {
-          var _this231 = this;
+          var _this230 = this;
 
           var date = dayjs(this.date).startOf('d');
 
@@ -44753,7 +44630,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
           }).filter(function (bkn) {
             return bkn.space_list.find(function (space) {
-              return space.zones.includes(_this231._org.building.id);
+              return space.zones.includes(_this230._org.building.id);
             });
           });
 
@@ -44765,7 +44642,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.bookings = bookings.map(function (bkn) {
             var data = bkn.toJSON();
             var space = bkn.space_list.find(function (space) {
-              return space.zones.includes(_this231._org.building.id);
+              return space.zones.includes(_this230._org.building.id);
             }) || bkn.space;
             return new booking_class_1.Booking(Object.assign(Object.assign({}, data), {
               room_ids: [space.email].concat(bkn.space_list.map(function (space) {
@@ -44778,17 +44655,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this232 = this;
+          var _this231 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this232.loading = true;
+            _this231.loading = true;
 
-            _this232.updateEvents();
+            _this231.updateEvents();
 
-            var date = dayjs(_this232.date).startOf('d');
-            var zone = _this232._org.building.id;
-            return _this232._spaces.query({
+            var date = dayjs(_this231.date).startOf('d');
+            var zone = _this231._org.building.id;
+            return _this231._spaces.query({
               zone_ids: zone,
               available_from: date.unix(),
               available_to: date.endOf('d').unix()
@@ -44796,9 +44673,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           }), operators_1.map(function (list) {
-            var date = dayjs(_this232.date).startOf('d');
+            var date = dayjs(_this231.date).startOf('d');
 
-            var bookings = _this232._bookings.booking_list.getValue();
+            var bookings = _this231._bookings.booking_list.getValue();
 
             console.log('Booking list:', bookings.map(function (i) {
               return i.title;
@@ -44819,15 +44696,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return a.date - b.date;
             });
 
-            _this232._bookings.booking_list.next(bookings);
+            _this231._bookings.booking_list.next(bookings);
 
-            _this232.updateEvents();
+            _this231.updateEvents();
 
             return bookings;
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (_) {
-            return _this232.loading = false;
+            return _this231.loading = false;
           }));
         }
       }, {
@@ -45126,16 +45003,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function checkin() {
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee36() {
-            var _this233 = this;
+          regeneratorRuntime.mark(function _callee34() {
+            var _this232 = this;
 
             var value;
-            return regeneratorRuntime.wrap(function _callee36$(_context36) {
+            return regeneratorRuntime.wrap(function _callee34$(_context34) {
               while (1) {
-                switch (_context36.prev = _context36.next) {
+                switch (_context34.prev = _context34.next) {
                   case 0:
                     this.loading = true;
-                    _context36.next = 3;
+                    _context34.next = 3;
                     return this._bookings.checkin(this.event.id, {
                       host_email: this.event.organiser.email,
                       attendees: [{
@@ -45149,11 +45026,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       response_type: 'accepted',
                       room_id: this.event.space.id
                     })["catch"](function (err) {
-                      _this233._service.notifyError("Error checking in user. Error: ".concat(err.message || err));
+                      _this232._service.notifyError("Error checking in user. Error: ".concat(err.message || err));
                     });
 
                   case 3:
-                    value = _context36.sent;
+                    value = _context34.sent;
 
                     if (value) {
                       this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event.toJSON()), {
@@ -45165,10 +45042,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context36.stop();
+                    return _context34.stop();
                 }
               }
-            }, _callee36, this);
+            }, _callee34, this);
           }));
         }
       }, {
@@ -45855,16 +45732,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super72 = _createSuper(WeekViewDayDisplayComponent);
 
       function WeekViewDayDisplayComponent(_bookings) {
-        var _this234;
+        var _this233;
 
         _classCallCheck(this, WeekViewDayDisplayComponent);
 
-        _this234 = _super72.call(this);
-        _this234._bookings = _bookings;
+        _this233 = _super72.call(this);
+        _this233._bookings = _bookings;
         /** List of bookings for this date */
 
-        _this234.booking_list = [];
-        return _this234;
+        _this233.booking_list = [];
+        return _this233;
       }
       /** Display string for the set date */
 
@@ -45872,10 +45749,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(WeekViewDayDisplayComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this235 = this;
+          var _this234 = this;
 
           this.subscription('bookings', this._bookings.booking_list.subscribe(function () {
-            return _this235.updateEvents();
+            return _this234.updateEvents();
           }));
         }
       }, {
@@ -45889,7 +45766,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateEvents",
         value: function updateEvents() {
-          var _this236 = this;
+          var _this235 = this;
 
           var date = dayjs(this.date).startOf('d');
 
@@ -45897,7 +45774,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var start = dayjs(booking.date);
             var end = start.add(booking.duration, 'm');
             return booking.space_list.find(function (space) {
-              return _this236.spaces.find(function (a_space) {
+              return _this235.spaces.find(function (a_space) {
                 return a_space.email === space.email;
               });
             }) && booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
@@ -46344,36 +46221,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super73 = _createSuper(WeekViewTimelineComponent);
 
       function WeekViewTimelineComponent(_spaces, _org, _bookings) {
-        var _this237;
+        var _this236;
 
         _classCallCheck(this, WeekViewTimelineComponent);
 
-        _this237 = _super73.call(this);
-        _this237._spaces = _spaces;
-        _this237._org = _org;
-        _this237._bookings = _bookings;
+        _this236 = _super73.call(this);
+        _this236._spaces = _spaces;
+        _this236._org = _org;
+        _this236._bookings = _bookings;
         /** List of dates to display */
 
-        _this237.date_list = [];
+        _this236.date_list = [];
         /** List of spaces to display bookings for */
 
-        _this237.space_list = [];
+        _this236.space_list = [];
         /** Subject holding the value of the search */
 
-        _this237.search$ = new rxjs_1.Subject();
-        return _this237;
+        _this236.search$ = new rxjs_1.Subject();
+        return _this236;
       }
 
       _createClass(WeekViewTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this238 = this;
+          var _this237 = this;
 
           this.date_list = this.generateDates(this.date, this.weekends);
           this.initBookings();
           this.search$.next("".concat(this.date, "|").concat(this.weekends, "|").concat(this.level));
           this.interval('update_booking', function () {
-            return _this238.search$.next("".concat(_this238.date, "|").concat(_this238.weekends, "|").concat(_this238.level, "|").concat(dayjs().unix()));
+            return _this237.search$.next("".concat(_this237.date, "|").concat(_this237.weekends, "|").concat(_this237.level, "|").concat(dayjs().unix()));
           }, 30 * 1000);
         }
       }, {
@@ -46413,26 +46290,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this239 = this;
+          var _this238 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this239.loading = true;
-            var date = dayjs(_this239.date).startOf('w');
-            return _this239._spaces.query({
-              zone_ids: "".concat(_this239.level ? _this239.level : _this239._org.building.id).concat(_this239.space_type ? ',' + _this239.space_type : ''),
-              available_from: Math.floor(_this239.date_list[0] / 1000) || date.unix(),
-              available_to: Math.floor(_this239.date_list[_this239.date_list.length - 1] / 1000) || date.endOf('w').unix()
+            _this238.loading = true;
+            var date = dayjs(_this238.date).startOf('w');
+            return _this238._spaces.query({
+              zone_ids: "".concat(_this238.level ? _this238.level : _this238._org.building.id).concat(_this238.space_type ? ',' + _this238.space_type : ''),
+              available_from: Math.floor(_this238.date_list[0] / 1000) || date.unix(),
+              available_to: Math.floor(_this238.date_list[_this238.date_list.length - 1] / 1000) || date.endOf('w').unix()
             });
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this239.loading = false;
-            var date = dayjs(_this239.date).startOf('d');
+            _this238.loading = false;
+            var date = dayjs(_this238.date).startOf('d');
 
-            var bookings = _this239._bookings.booking_list.getValue();
+            var bookings = _this238._bookings.booking_list.getValue();
 
             list.forEach(function (space) {
               return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(function (bkn) {
@@ -46447,9 +46324,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return a.date - b.date;
             });
 
-            _this239._bookings.booking_list.next(bookings);
+            _this238._bookings.booking_list.next(bookings);
 
-            _this239.space_list = list;
+            _this238.space_list = list;
           }));
         }
       }]);
@@ -46731,90 +46608,90 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super74 = _createSuper(WeekViewComponent);
 
       function WeekViewComponent(_service, _org, _dialog, _router, _route) {
-        var _this240;
+        var _this239;
 
         _classCallCheck(this, WeekViewComponent);
 
-        _this240 = _super74.call(this);
-        _this240._service = _service;
-        _this240._org = _org;
-        _this240._dialog = _dialog;
-        _this240._router = _router;
-        _this240._route = _route;
+        _this239 = _super74.call(this);
+        _this239._service = _service;
+        _this239._org = _org;
+        _this239._dialog = _dialog;
+        _this239._router = _router;
+        _this239._route = _route;
         /** ID of the currently selected level */
 
-        _this240.active_level = '';
+        _this239.active_level = '';
         /** ID of the currently selected level */
 
-        _this240.active_type = '';
+        _this239.active_type = '';
         /** List of levels available for the active building */
 
-        _this240.levels = [];
+        _this239.levels = [];
         /** List of space types available for the active building */
 
-        _this240.space_types = [];
-        return _this240;
+        _this239.space_types = [];
+        return _this239;
       }
 
       _createClass(WeekViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this241 = this;
+          var _this240 = this;
 
           this._service.title = 'Week View';
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this241.subscription('route.params', _this241._route.paramMap.subscribe(function (params) {
+            _this240.subscription('route.params', _this240._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this241.active_level !== params.get('level')) {
-                var level = _this241._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this240.active_level !== params.get('level')) {
+                var level = _this240._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this241._org.buildings.find(function (bld) {
+                  var building = _this240._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this241.active_level = level.id;
-                    _this241._org.building = building;
+                    _this240.active_level = level.id;
+                    _this240._org.building = building;
                   }
                 }
               }
             }));
 
-            _this241.subscription('building', _this241._org.listen('active_building').subscribe(function () {
-              var building = _this241._org.building;
+            _this240.subscription('building', _this240._org.listen('active_building').subscribe(function () {
+              var building = _this240._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this241.active_level;
+                return lvl.id === _this240.active_level;
               })) {
-                _this241.active_level = (building.levels[0] || {
+                _this240.active_level = (building.levels[0] || {
                   id: ''
                 }).id;
 
-                _this241.updateLevel();
+                _this240.updateLevel();
               }
 
-              _this241.levels = [{
+              _this240.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
 
-              _this241.levels.sort(function (a, b) {
+              _this240.levels.sort(function (a, b) {
                 return a.name.localeCompare(b.name);
               });
 
-              _this241.space_types = [{
+              _this240.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this241._org.space_types);
+              }].concat(_this240._org.space_types);
             }));
           });
         }
@@ -47070,16 +46947,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "25f7a80",
-      "hash": "25f7a80",
+      "raw": "2178fb7",
+      "hash": "2178fb7",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "25f7a80",
+      "suffix": "2178fb7",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595808695628
+      "time": 1595897401815
     };
     /* tslint:enable */
 
