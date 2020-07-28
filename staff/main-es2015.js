@@ -5204,9 +5204,11 @@ const base_api_class_1 = __webpack_require__(/*! ../base-api.class */ "./src/app
 const general_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 /* istanbul ignore next */
 class Organisation extends base_api_class_1.BaseDataClass {
-    constructor(raw_data) {
+    constructor(raw_data = {}) {
+        var _a, _b;
         super(raw_data);
         this._settings = raw_data.settings || {};
+        this.available_buildings = (((_b = (_a = raw_data.settings) === null || _a === void 0 ? void 0 : _a.discovery_info) === null || _b === void 0 ? void 0 : _b.buildings) || []).map((bld) => bld.zone_id);
     }
     /**
      * Get a custom building setting
@@ -5407,7 +5409,9 @@ class OrganisationService extends base_service_1.BaseAPIService {
     loadBuildings() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             const bld_data = yield this.query({ tags: 'building', engine: true, limit: 500 });
-            const buildings = bld_data.map((i) => new building_class_1.Building(i));
+            const buildings = bld_data
+                .map((i) => new building_class_1.Building(i))
+                .filter((bld) => this._organisation.available_buildings.includes(bld.id));
             this.set('buildings', buildings);
             /* istanbul ignore else */
             if (!this._active_building && buildings && buildings.length > 0) {
@@ -12079,11 +12083,15 @@ function generateMockLocation(overrides, fixed_locations, maps) {
 exports.generateMockLocation = generateMockLocation;
 let ORG_COUNT = 0;
 function generateMockOrganisation() {
+    const buildings = Array(3).fill(0).map(i => generateMockBuilding());
     return {
         id: `zone_org-${ORG_COUNT++}`,
         name: `Organisation ${ORG_COUNT}`,
-        buildings: Array(3).fill(0).map(i => generateMockBuilding()),
+        buildings,
         settings: {
+            discovery_info: {
+                buildings
+            },
             test: {
                 nested: {
                     org: true
@@ -21669,16 +21677,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "e6029fe",
-    "hash": "e6029fe",
+    "raw": "0907c88",
+    "hash": "0907c88",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "e6029fe",
+    "suffix": "0907c88",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595822383042
+    "time": 1595897526742
 };
 /* tslint:enable */
 
