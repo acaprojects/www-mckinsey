@@ -1537,29 +1537,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingRulesModalComponent_li_9_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "li");
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
+        i0.ɵɵelement(0, "li", 10);
+        i0.ɵɵpipe(1, "safe");
       }
 
       if (rf & 2) {
         var item_r8 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r8);
+        i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, item_r8), i0.ɵɵsanitizeHtml);
       }
     }
 
     function BookingRulesModalComponent_ng_container_10_ng_container_1_li_3_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "li");
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
+        i0.ɵɵelement(0, "li", 10);
+        i0.ɵɵpipe(1, "safe");
       }
 
       if (rf & 2) {
         var item_r12 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r12);
+        i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, item_r12), i0.ɵɵsanitizeHtml);
       }
     }
 
@@ -1568,7 +1564,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementContainerStart(0);
         i0.ɵɵtext(1);
         i0.ɵɵelementStart(2, "ul");
-        i0.ɵɵtemplate(3, BookingRulesModalComponent_ng_container_10_ng_container_1_li_3_Template, 2, 1, "li", 4);
+        i0.ɵɵtemplate(3, BookingRulesModalComponent_ng_container_10_ng_container_1_li_3_Template, 2, 3, "li", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementContainerEnd();
       }
@@ -1585,7 +1581,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function BookingRulesModalComponent_ng_container_10_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_container_10_ng_container_1_Template, 4, 2, "ng-container", 4);
+        i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_container_10_ng_container_1_Template, 4, 2, "ng-container", 11);
         i0.ɵɵelementContainerEnd();
       }
 
@@ -1632,7 +1628,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function BookingRulesModalComponent_ng_template_14_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "ul");
-        i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_template_14_li_1_Template, 2, 1, "li", 4);
+        i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_template_14_li_1_Template, 2, 1, "li", 11);
         i0.ɵɵelementEnd();
       }
 
@@ -1645,10 +1641,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingRulesModalComponent_div_16_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 10);
+        i0.ɵɵelementStart(0, "div", 12);
         i0.ɵɵtext(1, " For more info email:");
         i0.ɵɵelement(2, "br");
-        i0.ɵɵelementStart(3, "a", 11);
+        i0.ɵɵelementStart(3, "a", 13);
         i0.ɵɵtext(4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -1665,8 +1661,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BookingRulesModalComponent_div_17_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 10);
-        i0.ɵɵelementStart(1, "a", 11);
+        i0.ɵɵelementStart(0, "div", 12);
+        i0.ɵɵelementStart(1, "a", 13);
         i0.ɵɵpipe(2, "safe");
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
@@ -1810,7 +1806,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 22,
       vars: 8,
-      consts: [["content", ""], [1, "header"], [1, "info"], [1, "rules"], [4, "ngFor", "ngForOf"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["rules_list", ""], ["class", "contact", 4, "ngIf"], ["mat-button", "", "mat-dialog-close", ""], [1, "contact"], [3, "href"]],
+      consts: [["content", ""], [1, "header"], [1, "info"], [1, "rules"], [3, "innerHTML", 4, "ngFor", "ngForOf"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["rules_list", ""], ["class", "contact", 4, "ngIf"], ["mat-button", "", "mat-dialog-close", ""], [3, "innerHTML"], [4, "ngFor", "ngForOf"], [1, "contact"], [3, "href"]],
       template: function BookingRulesModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "mat-dialog-content", null, 0);
@@ -1823,7 +1819,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(7, "div", 3);
           i0.ɵɵelementStart(8, "ul");
-          i0.ɵɵtemplate(9, BookingRulesModalComponent_li_9_Template, 2, 1, "li", 4);
+          i0.ɵɵtemplate(9, BookingRulesModalComponent_li_9_Template, 2, 3, "li", 4);
           i0.ɵɵelementEnd();
           i0.ɵɵtemplate(10, BookingRulesModalComponent_ng_container_10_Template, 2, 1, "ng-container", 5);
           i0.ɵɵelementContainerStart(11);
@@ -38646,16 +38642,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "f269809",
-      "hash": "f269809",
+      "raw": "7d0e084",
+      "hash": "7d0e084",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "f269809",
+      "suffix": "7d0e084",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595998508091
+      "time": 1596001401401
     };
     /* tslint:enable */
 

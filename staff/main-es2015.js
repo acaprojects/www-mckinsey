@@ -255,28 +255,24 @@ const i3 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@
 const i4 = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
 const _c0 = ["content"];
 function BookingRulesModalComponent_li_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "li");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
+    i0.ɵɵelement(0, "li", 10);
+    i0.ɵɵpipe(1, "safe");
 } if (rf & 2) {
     const item_r8 = ctx.$implicit;
-    i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate(item_r8);
+    i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, item_r8), i0.ɵɵsanitizeHtml);
 } }
 function BookingRulesModalComponent_ng_container_10_ng_container_1_li_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "li");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
+    i0.ɵɵelement(0, "li", 10);
+    i0.ɵɵpipe(1, "safe");
 } if (rf & 2) {
     const item_r12 = ctx.$implicit;
-    i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate(item_r12);
+    i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, item_r12), i0.ɵɵsanitizeHtml);
 } }
 function BookingRulesModalComponent_ng_container_10_ng_container_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
     i0.ɵɵtext(1);
     i0.ɵɵelementStart(2, "ul");
-    i0.ɵɵtemplate(3, BookingRulesModalComponent_ng_container_10_ng_container_1_li_3_Template, 2, 1, "li", 4);
+    i0.ɵɵtemplate(3, BookingRulesModalComponent_ng_container_10_ng_container_1_li_3_Template, 2, 3, "li", 4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
@@ -288,7 +284,7 @@ function BookingRulesModalComponent_ng_container_10_ng_container_1_Template(rf, 
 } }
 function BookingRulesModalComponent_ng_container_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_container_10_ng_container_1_Template, 4, 2, "ng-container", 4);
+    i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_container_10_ng_container_1_Template, 4, 2, "ng-container", 11);
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
     const ctx_r2 = i0.ɵɵnextContext();
@@ -322,7 +318,7 @@ function BookingRulesModalComponent_ng_template_14_li_1_Template(rf, ctx) { if (
 } }
 function BookingRulesModalComponent_ng_template_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "ul");
-    i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_template_14_li_1_Template, 2, 1, "li", 4);
+    i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_template_14_li_1_Template, 2, 1, "li", 11);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r5 = i0.ɵɵnextContext();
@@ -330,10 +326,10 @@ function BookingRulesModalComponent_ng_template_14_Template(rf, ctx) { if (rf & 
     i0.ɵɵproperty("ngForOf", ctx_r5.map_rules);
 } }
 function BookingRulesModalComponent_div_16_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 10);
+    i0.ɵɵelementStart(0, "div", 12);
     i0.ɵɵtext(1, " For more info email:");
     i0.ɵɵelement(2, "br");
-    i0.ɵɵelementStart(3, "a", 11);
+    i0.ɵɵelementStart(3, "a", 13);
     i0.ɵɵtext(4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -345,8 +341,8 @@ function BookingRulesModalComponent_div_16_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate(ctx_r6.contact);
 } }
 function BookingRulesModalComponent_div_17_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 10);
-    i0.ɵɵelementStart(1, "a", 11);
+    i0.ɵɵelementStart(0, "div", 12);
+    i0.ɵɵelementStart(1, "a", 13);
     i0.ɵɵpipe(2, "safe");
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
@@ -420,7 +416,7 @@ BookingRulesModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingRulesMo
     } if (rf & 2) {
         var _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._content_el = _t.first);
-    } }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 22, vars: 8, consts: [["content", ""], [1, "header"], [1, "info"], [1, "rules"], [4, "ngFor", "ngForOf"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["rules_list", ""], ["class", "contact", 4, "ngIf"], ["mat-button", "", "mat-dialog-close", ""], [1, "contact"], [3, "href"]], template: function BookingRulesModalComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 22, vars: 8, consts: [["content", ""], [1, "header"], [1, "info"], [1, "rules"], [3, "innerHTML", 4, "ngFor", "ngForOf"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["rules_list", ""], ["class", "contact", 4, "ngIf"], ["mat-button", "", "mat-dialog-close", ""], [3, "innerHTML"], [4, "ngFor", "ngForOf"], [1, "contact"], [3, "href"]], template: function BookingRulesModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-dialog-content", null, 0);
         i0.ɵɵelementStart(2, "main");
         i0.ɵɵelementStart(3, "div", 1);
@@ -431,7 +427,7 @@ BookingRulesModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingRulesMo
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(7, "div", 3);
         i0.ɵɵelementStart(8, "ul");
-        i0.ɵɵtemplate(9, BookingRulesModalComponent_li_9_Template, 2, 1, "li", 4);
+        i0.ɵɵtemplate(9, BookingRulesModalComponent_li_9_Template, 2, 3, "li", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(10, BookingRulesModalComponent_ng_container_10_Template, 2, 1, "ng-container", 5);
         i0.ɵɵelementContainerStart(11);
@@ -21677,16 +21673,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f269809",
-    "hash": "f269809",
+    "raw": "7d0e084",
+    "hash": "7d0e084",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f269809",
+    "suffix": "7d0e084",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595998508091
+    "time": 1596001401401
 };
 /* tslint:enable */
 
