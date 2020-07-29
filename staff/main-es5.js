@@ -29075,13 +29075,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/shared/utilities/general.utilities */
     "./src/app/shared/utilities/general.utilities.ts");
 
-    var dayjs = __webpack_require__(
-    /*! dayjs */
-    "./node_modules/dayjs/dayjs.min.js");
-
     var space_utilities_1 = __webpack_require__(
     /*! src/app/services/data/spaces/space.utilities */
     "./src/app/services/data/spaces/space.utilities.ts");
+
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
@@ -29337,22 +29337,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var request_id = 0; // Listen for input changes
 
             _this140.search_results$ = _this140.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-              var _a;
-
               _this140.loading = true;
               request_id = general_utilities_1.randomInt(99999999);
-              var recurrence = _this140.form.controls.recurrence ? _this140.form.controls.recurrence.value : null;
-              var recurrence_properties = ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None' ? {
-                recurr_period: (recurrence.period || '').toLowerCase(),
-                recurr_end: dayjs(recurrence.end * 1000).endOf('d').unix()
-              } : {};
               var date = dayjs(_this140.form.controls.date.value);
-              var query = Object.assign({
+              var query = {
                 date: _this140.form.controls.all_day.value ? date.startOf('d').valueOf() : date.valueOf(),
                 duration: _this140.form.controls.all_day.value ? 24 * 60 : _this140.form.controls.duration.value,
                 zone_ids: _this140._org.building.id,
                 bookable: true
-              }, recurrence_properties);
+              };
               /* istanbul ignore else */
 
               if (_this140.zone_ids && _this140.zone_ids.length) {
@@ -29384,31 +29377,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }), operators_1.catchError(function (_) {
               return rxjs_1.of({
                 id: request_id,
-                list: []
+                list: [],
+                error: _
               });
             }), operators_1.map(function (resp) {
-              var _a;
-
               _this140.loading = false;
-              var list = resp.id === request_id ? resp.list : _this140.space_list;
-              var recurrence = _this140.form.controls.recurrence ? _this140.form.controls.recurrence.value : null;
-              var date = dayjs(_this140.form.controls.date.value);
-              return ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None' ? list.filter(function (space) {
-                return space.recurr_available.find(function (block) {
-                  return block.available && dayjs(block.date * 1000).isSame(date, 'd');
-                });
-              }) : list;
+              return resp.id === request_id ? resp.list : _this140.space_list;
             })); // Process API results
 
             _this140.subscription('search_results', _this140.search_results$.subscribe(function (list) {
               _this140.space_list = list.filter(function (space) {
-                var rules = space.rulesFor({
-                  date: _this140.form.controls.date.value,
-                  duration: _this140.form.controls.all_day.value ? 24 * 60 : _this140.form.controls.duration.value,
-                  host: _this140.form.controls.organiser.value
-                });
-
-                if (rules.hide || !space.was_available) {
+                if (!space.was_available) {
                   return false;
                 }
 
@@ -38642,16 +38621,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "7d0e084",
-      "hash": "7d0e084",
+      "raw": "027cd9e",
+      "hash": "027cd9e",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "7d0e084",
+      "suffix": "027cd9e",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1596001401401
+      "time": 1596002871970
     };
     /* tslint:enable */
 

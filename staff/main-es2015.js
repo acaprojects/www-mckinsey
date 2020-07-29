@@ -16351,8 +16351,8 @@ const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ ".
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const space_utilities_1 = __webpack_require__(/*! src/app/services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
@@ -16503,55 +16503,33 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
             let request_id = 0;
             // Listen for input changes
             this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
-                var _a;
                 this.loading = true;
                 request_id = general_utilities_1.randomInt(99999999);
-                const recurrence = this.form.controls.recurrence
-                    ? this.form.controls.recurrence.value
-                    : null;
-                const recurrence_properties = ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None'
-                    ? {
-                        recurr_period: (recurrence.period || '').toLowerCase(),
-                        recurr_end: dayjs(recurrence.end * 1000)
-                            .endOf('d')
-                            .unix(),
-                    }
-                    : {};
                 const date = dayjs(this.form.controls.date.value);
-                const query = Object.assign({ date: this.form.controls.all_day.value
+                const query = {
+                    date: this.form.controls.all_day.value
                         ? date.startOf('d').valueOf()
-                        : date.valueOf(), duration: this.form.controls.all_day.value
+                        : date.valueOf(),
+                    duration: this.form.controls.all_day.value
                         ? 24 * 60
-                        : this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
+                        : this.form.controls.duration.value,
+                    zone_ids: this._org.building.id,
+                    bookable: true
+                };
                 /* istanbul ignore else */
                 if (this.zone_ids && this.zone_ids.length) {
                     query.zone_ids = this.zone_ids.join(',');
                 }
                 const id = request_id;
                 return this._spaces.available(query).then((list) => tslib_1.__awaiter(this, void 0, void 0, function* () { return ({ id, list }); }));
-            }), operators_1.catchError((_) => rxjs_1.of({ id: request_id, list: [] })), operators_1.map((resp) => {
-                var _a;
+            }), operators_1.catchError((_) => rxjs_1.of({ id: request_id, list: [], error: _ })), operators_1.map((resp) => {
                 this.loading = false;
-                const list = resp.id === request_id ? resp.list : this.space_list;
-                const recurrence = this.form.controls.recurrence
-                    ? this.form.controls.recurrence.value
-                    : null;
-                const date = dayjs(this.form.controls.date.value);
-                return ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None'
-                    ? list.filter((space) => space.recurr_available.find((block) => block.available && dayjs(block.date * 1000).isSame(date, 'd')))
-                    : list;
+                return resp.id === request_id ? resp.list : this.space_list;
             }));
             // Process API results
             this.subscription('search_results', this.search_results$.subscribe((list) => {
                 this.space_list = list.filter((space) => {
-                    const rules = space.rulesFor({
-                        date: this.form.controls.date.value,
-                        duration: this.form.controls.all_day.value
-                            ? 24 * 60
-                            : this.form.controls.duration.value,
-                        host: this.form.controls.organiser.value,
-                    });
-                    if (rules.hide || !space.was_available) {
+                    if (!space.was_available) {
                         return false;
                     }
                     for (const zone of this.zone_ids) {
@@ -21673,16 +21651,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "7d0e084",
-    "hash": "7d0e084",
+    "raw": "027cd9e",
+    "hash": "027cd9e",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "7d0e084",
+    "suffix": "027cd9e",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596001401401
+    "time": 1596002871970
 };
 /* tslint:enable */
 
