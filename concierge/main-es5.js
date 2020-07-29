@@ -2482,7 +2482,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 6,
       vars: 3,
-      consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], [1, "request"], [1, "info"], [1, "list-item"], [1, "text", 3, "title"], ["class", "tooltip", 3, "matTooltip", 4, "ngIf"], [1, "tooltip", 3, "matTooltip"], [1, "show", 3, "click"], [1, "list-item", 3, "title"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "mat-dialog-close", ""]],
+      consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], [1, "request"], [1, "info"], [1, "list-item"], [1, "text", 3, "title"], ["class", "tooltip", 3, "matTooltip", 4, "ngIf"], [1, "tooltip", 3, "matTooltip"], [1, "show", 3, "click"], [1, "list-item", 3, "title"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "name", "previous", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", "name", "next", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "name", "next", "mat-dialog-close", ""]],
       template: function BookingConfirmComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 75, 37, "mat-dialog-content", 0);
@@ -4743,7 +4743,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.loading = true;
 
           this._menu.query({
-            room_id: space.id
+            zone_id: this._org.buildings.find(function (bld) {
+              return space.zones.includes(bld.id);
+            }).id
           }).then(function (list) {
             _this24.loading = false;
             _this24.category_list = list.map(function (i) {
@@ -4949,7 +4951,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 14,
       vars: 7,
-      consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", 1, "inverse", 3, "click"], ["mat-button", "", "name", "confirm", 3, "disabled", "click"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "location_id"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "delivery_time"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "click", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "click"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "compact", "category", "symbol", "items", "disabled", "close"]],
+      consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "location_id"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "delivery_time"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "click", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "click"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "compact", "category", "symbol", "items", "disabled", "close"]],
       template: function BookingCateringOrderDetailsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -7460,7 +7462,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 9,
       vars: 3,
-      consts: [[1, "booking-form"], ["container", ""], [3, "formGroup", "ngSubmit"], [1, "body"], [3, "form"], [1, "footer"], ["mat-button", "", "type", "button", "name", "return", "class", "inverse", 3, "click", 4, "ngIf"], ["mat-button", "", "type", "submit"], ["mat-button", "", "type", "button", "name", "return", 1, "inverse", 3, "click"]],
+      consts: [[1, "booking-form"], ["container", ""], [3, "formGroup", "ngSubmit"], [1, "body"], [3, "form"], [1, "footer"], ["mat-button", "", "type", "button", "name", "return", "class", "inverse", 3, "click", 4, "ngIf"], ["mat-button", "", "type", "submit", "name", "next"], ["mat-button", "", "type", "button", "name", "return", 1, "inverse", 3, "click"]],
       template: function BookingSpaceFlowFormComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0, 1);
@@ -8306,7 +8308,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 17,
       vars: 5,
-      consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/food-notes.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "click"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]],
+      consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/food-notes.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", "name", "next", 3, "click"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]],
       template: function CateringDetailsModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -11034,7 +11036,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 8,
       vars: 4,
-      consts: [["mat-dialog-title", ""], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "body"], [3, "form"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]],
+      consts: [["mat-dialog-title", ""], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "body"], [3, "form"], ["mat-button", "", "name", "previous", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", "name", "next", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]],
       template: function NewUserModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "header");
@@ -13580,7 +13582,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 17,
       vars: 5,
-      consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "click"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], [1, "fieldset"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"], ["for", "head-count"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"]],
+      consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", "name", "next", 3, "click"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], [1, "fieldset"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"], ["for", "head-count"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"]],
       template: function RequirementDetailsModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -18865,6 +18867,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           } else if (this.type === 'bookings') {
             data = data.map(function (i) {
+              var _a, _b, _c;
+
               var booking = i;
 
               if (booking.setup instanceof Object) {
@@ -18878,8 +18882,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               booking.setup = general_utilities_1.humaniseDuration((booking.setup || 0) / 60);
               booking.breakdown = general_utilities_1.humaniseDuration((booking.breakdown || 0) / 60);
               booking.description = (booking.description || '').replace(/<[^>]*>?/gm, '');
-              booking['Meeting Host'] = booking.organizer;
-              booking['Booked By'] = booking.booked_by.name || booking.booked_by.email;
+              booking['Meeting Host'] = ((_a = booking.organizer) === null || _a === void 0 ? void 0 : _a.name) || booking.organizer;
+              booking['Booked By'] = ((_b = booking.booked_by) === null || _b === void 0 ? void 0 : _b.name) || ((_c = booking.booked_by) === null || _c === void 0 ? void 0 : _c.email) || '';
               booking.charge_code = booking.equipment_codes ? Object.keys(booking.equipment_codes).map(function (key) {
                 return booking.equipment_codes[key];
               }).join('٫ ') : ''; //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
@@ -20191,7 +20195,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                     }
 
                                     _context20.next = 4;
-                                    return this.loadDelegates();
+                                    return this.loadDelegates()["catch"](function (_) {
+                                      return null;
+                                    });
 
                                   case 4:
                                     resolve();
@@ -20227,7 +20233,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         }
 
                         _context21.next = 10;
-                        return this.loadDelegates();
+                        return this.loadDelegates()["catch"](function (_) {
+                          return null;
+                        });
 
                       case 10:
                         resolve();
@@ -24778,7 +24786,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 1,
       vars: 1,
-      consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "group", "date"], [1, "group", "time"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["for", "date"], ["name", "date", "formControlName", "date", 3, "from"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "time", "specialPreprops"], ["formControlName", "all_day"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["formControlName", "has_catering"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]],
+      consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "group", "date"], [1, "group", "time"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["for", "date"], ["name", "date", "formControlName", "date", 3, "from"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], [1, "label-group"], ["for", "duration"], ["name", "all-day", "formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "time", "specialPreprops"], ["name", "all-day", "formControlName", "all_day"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["name", "catering", "formControlName", "has_catering"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]],
       template: function BookingFormComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, BookingFormComponent_div_0_Template, 13, 11, "div", 0);
@@ -26280,7 +26288,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var item_r4 = ctx.$implicit;
-        i0.ɵɵproperty("routerLink", i0.ɵɵpureFunction1(3, _c0, item_r4.route));
+        var i_r5 = ctx.index;
+        i0.ɵɵproperty("id", "link-" + (item_r4.id || i_r5))("routerLink", i0.ɵɵpureFunction1(4, _c0, item_r4.route));
         i0.ɵɵadvance(4);
         i0.ɵɵproperty("icon", item_r4.icon);
         i0.ɵɵadvance(2);
@@ -26296,24 +26305,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var building_r6 = ctx.$implicit;
-        i0.ɵɵproperty("value", building_r6);
+        var building_r7 = ctx.$implicit;
+        i0.ɵɵproperty("value", building_r7);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", building_r6.name, " ");
+        i0.ɵɵtextInterpolate1(" ", building_r7.name, " ");
       }
     }
 
     function SidebarComponent_div_5_Template(rf, ctx) {
       if (rf & 1) {
-        var _r8 = i0.ɵɵgetCurrentView();
+        var _r9 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementStart(0, "div", 13);
         i0.ɵɵelementStart(1, "mat-form-field", 14);
         i0.ɵɵelementStart(2, "mat-select", 15);
         i0.ɵɵlistener("ngModelChange", function SidebarComponent_div_5_Template_mat_select_ngModelChange_2_listener($event) {
-          i0.ɵɵrestoreView(_r8);
-          var ctx_r7 = i0.ɵɵnextContext();
-          return ctx_r7.active_building = $event;
+          i0.ɵɵrestoreView(_r9);
+          var ctx_r8 = i0.ɵɵnextContext();
+          return ctx_r8.active_building = $event;
         });
         i0.ɵɵtemplate(3, SidebarComponent_div_5_mat_option_3_Template, 2, 2, "mat-option", 16);
         i0.ɵɵelementEnd();
@@ -26390,7 +26399,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["a-sidebar"]],
       decls: 6,
       vars: 4,
-      consts: [[1, "logo"], [3, "class", 4, "ngIf"], [3, "src", 4, "ngIf"], [1, "menu"], ["mat-button", "", "class", "item", "routerLinkActive", "active", 3, "routerLink", 4, "ngFor", "ngForOf"], ["class", "building dark-mode", 4, "ngIf"], [3, "src"], ["mat-button", "", "routerLinkActive", "active", 1, "item", 3, "routerLink"], [1, "content"], [1, "bar"], [1, "icon"], [3, "icon"], [1, "text"], [1, "building", "dark-mode"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
+      consts: [[1, "logo"], [3, "class", 4, "ngIf"], [3, "src", 4, "ngIf"], [1, "menu"], ["mat-button", "", "class", "item", "routerLinkActive", "active", 3, "id", "routerLink", 4, "ngFor", "ngForOf"], ["class", "building dark-mode", 4, "ngIf"], [3, "src"], ["mat-button", "", "routerLinkActive", "active", 1, "item", 3, "id", "routerLink"], [1, "content"], [1, "bar"], [1, "icon"], [3, "icon"], [1, "text"], [1, "building", "dark-mode"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
       template: function SidebarComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -26398,7 +26407,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵtemplate(2, SidebarComponent_img_2_Template, 2, 4, "img", 2);
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(3, "div", 3);
-          i0.ɵɵtemplate(4, SidebarComponent_a_4_Template, 7, 5, "a", 4);
+          i0.ɵɵtemplate(4, SidebarComponent_a_4_Template, 7, 6, "a", 4);
           i0.ɵɵelementEnd();
           i0.ɵɵtemplate(5, SidebarComponent_div_5_Template, 4, 2, "div", 5);
         }
@@ -27262,28 +27271,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../utilities/spec-helpers */
     "./src/app/shared/utilities/spec-helpers.ts");
 
+    var catering_menu_mock_1 = __webpack_require__(
+    /*! ./catering-menu.mock */
+    "./src/app/shared/mocks/api/catering-menu.mock.ts");
+
     window.control = window.control || {};
     window.control.systems = window.control.systems || {};
     window.control.handlers = window.control.handlers || [];
-    exports.MOCK_BOOKINGS = Array(1000).fill(0).map(function (i) {
-      var rooms = general_utilities_1.unique(Array(general_utilities_1.randomInt(3, 1)).fill(0).map(function (i) {
-        return spaces_mock_1.MOCK_SPACES[Math.floor(Math.random() * spaces_mock_1.MOCK_SPACES.length)];
+    exports.MOCK_BOOKINGS = Array(997).fill(0).map(function (i) {
+      var rooms = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(3, 1)).fill(0).map(function (i) {
+        return spaces_mock_1.MOCK_SPACES[general_utilities_1.predictableRandomInt(spaces_mock_1.MOCK_SPACES.length)];
       }), 'id'); // Set the organiser with the generated user list
 
-      var organiser = general_utilities_1.randomInt(9999) % 10 === 0 ? users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1] : users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)]; // Set the attendees with the generated user list
+      var organizer = general_utilities_1.predictableRandomInt(9999) % 10 === 0 ? users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1] : users_mock_1.MOCK_USERS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_USERS.length)]; // Set the attendees with the generated user list
 
-      var attendees = general_utilities_1.unique(Array(general_utilities_1.randomInt(10)).fill(0).map(function (i) {
-        return users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)];
+      var attendees = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(10)).fill(0).map(function (i) {
+        return users_mock_1.MOCK_USERS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_USERS.length)];
       }), 'email');
-      var guests = general_utilities_1.unique(Array(general_utilities_1.randomInt(10)).fill(0).map(function (i) {
-        return users_mock_1.MOCK_CONTACTS[general_utilities_1.randomInt(users_mock_1.MOCK_CONTACTS.length)];
+      var guests = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(10)).fill(0).map(function (i) {
+        return users_mock_1.MOCK_CONTACTS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_CONTACTS.length)];
       }), 'email');
       var booking_data = spec_helpers_1.generateMockBooking({
-        organiser: organiser,
+        organizer: organizer,
         attendees: attendees.concat(guests),
         room_ids: rooms.map(function (i) {
           return i.email;
-        })
+        }),
+        menu: catering_menu_mock_1.MOCK_MENU
       });
 
       var _iterator29 = _createForOfIteratorHelper(rooms),
@@ -27292,7 +27306,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       try {
         for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
           var space = _step29.value;
-          booking_data.status[space.email] = ['approved', 'tentative', 'declined'][general_utilities_1.randomInt(3)];
+          booking_data.status[space.email] = ['approved', 'tentative', 'declined'][general_utilities_1.predictableRandomInt(3)];
         }
       } catch (err) {
         _iterator29.e(err);
@@ -27315,11 +27329,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       callback: function callback(event) {
         var user = users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1];
         var data = !event.query_params.email ? exports.MOCK_BOOKINGS.filter(function (i) {
-          return i.organiser.email === user.email || i.organiser === user.email || i.attendees.reduce(function (a, v) {
+          return i.organizer.email === user.email || i.organizer === user.email || i.attendees.reduce(function (a, v) {
             return a || v.email === user.email;
           }, false);
         }) : exports.MOCK_BOOKINGS.filter(function (i) {
-          return i.organiser.email === event.query_params.email || i.organiser === event.query_params.email || i.attendees.reduce(function (a, v) {
+          return i.organizer.email === event.query_params.email || i.organizer === event.query_params.email || i.attendees.reduce(function (a, v) {
             return a || v.email === event.query_params.email;
           }, false);
         }); // Filter bookings between a given period
@@ -27371,7 +27385,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       method: 'POST',
       callback: function callback(event) {
         if (event.body) {
-          event.body.id = "bkn-".concat(general_utilities_1.randomInt(9999999));
+          event.body.id = "bkn-".concat(general_utilities_1.predictableRandomInt(9999999));
           event.body.icaluid = "ical-".concat(event.body.id);
           event.body.approval_status = {};
 
@@ -27392,6 +27406,72 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             message: 'Invalid booking data'
           };
         }
+      }
+    }); // Handler for new bookings
+
+    window.control.handlers.push({
+      path: "".concat(common_mock_1.API, "/bookings/:id/checkin"),
+      metadata: exports.MOCK_BOOKINGS,
+      method: 'POST',
+      callback: function callback(event) {
+        if (event.route_params.id) {
+          var index = exports.MOCK_BOOKINGS.findIndex(function (i) {
+            return i.id === event.route_params.id || i.icaluid === event.route_params.id;
+          });
+
+          if (index >= 0) {
+            var booking = exports.MOCK_BOOKINGS[index];
+
+            if (!booking.checkins) {
+              booking.checkins = [];
+            }
+
+            booking.checkins = general_utilities_1.unique(event.body.attendees.map(function (i) {
+              return i.email;
+            }).concat(booking.checkins));
+            return booking;
+          } else {
+            throw {
+              status: 404,
+              message: 'Booking not found'
+            };
+          }
+        } else throw {
+          status: 500,
+          message: 'Invalid booking ID'
+        };
+      }
+    }); // Handler for new bookings
+
+    window.control.handlers.push({
+      path: "".concat(common_mock_1.API, "/bookings/:id/concierge_decline"),
+      metadata: exports.MOCK_BOOKINGS,
+      method: 'POST',
+      callback: function callback(event) {
+        if (event.route_params.id) {
+          var index = exports.MOCK_BOOKINGS.findIndex(function (i) {
+            return i.id === event.route_params.id || i.icaluid === event.route_params.id;
+          });
+
+          if (index >= 0) {
+            var booking = exports.MOCK_BOOKINGS[index];
+
+            if (!booking.approval_status) {
+              booking.approval_status = {};
+            }
+
+            booking.approval_status[event.body.room_email] = 'declined';
+            return booking;
+          } else {
+            throw {
+              status: 404,
+              message: 'Booking not found'
+            };
+          }
+        } else throw {
+          status: 500,
+          message: 'Invalid booking ID'
+        };
       }
     }); // Handler for updating existing bookings
 
@@ -27578,7 +27658,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.MOCK_BUILDINGS.push(Object.assign(Object.assign({}, exports.MOCK_BUILDINGS[0]), {
       name: 'London'
     }));
-    organisation_mock_1.MOCK_ORG[0].discovery_info.buildings = exports.MOCK_BUILDINGS; // setTimeout(() => {
+    organisation_mock_1.MOCK_ORG[0].settings.discovery_info.buildings = exports.MOCK_BUILDINGS; // setTimeout(() => {
 
     window.control.handlers.push({
       path: '/api/engine/v2/zones',
@@ -27630,7 +27710,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../utilities/general.utilities */
     "./src/app/shared/utilities/general.utilities.ts");
 
-    var MOCK_MENU = {
+    var buildings_mock_1 = __webpack_require__(
+    /*! ./buildings.mock */
+    "./src/app/shared/mocks/api/buildings.mock.ts");
+
+    exports.MOCK_MENU = {
       'zone_bld-01': [{
         id: 'snacks',
         name: 'Snacks',
@@ -27837,8 +27921,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       metadata: [],
       method: 'GET',
       callback: function callback(event) {
+        console.log('Menu Event:', event, exports.MOCK_MENU);
+
         if (event.query_params.zone_id) {
-          return MOCK_MENU[event.query_params.zone_id] || [];
+          return exports.MOCK_MENU[event.query_params.zone_id] || [];
         }
 
         throw {
@@ -27855,29 +27941,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       callback: function callback(event) {
         if (event.body) {
           var _ret2 = function () {
-            event.body.id = "category-".concat(general_utilities_1.randomInt(99999999));
+            event.body.id = "category-".concat(general_utilities_1.predictableRandomInt(99999999));
             var item = event.body;
+            var zones = buildings_mock_1.MOCK_BUILDINGS.map(function (i) {
+              return i.zone_id;
+            });
 
-            var _iterator30 = _createForOfIteratorHelper(item.zones),
+            var _iterator30 = _createForOfIteratorHelper(zones),
                 _step30;
 
             try {
               for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
                 var zone = _step30.value;
 
-                if (!MOCK_MENU[zone]) {
-                  MOCK_MENU[zone] = [];
+                if (!exports.MOCK_MENU[zone]) {
+                  exports.MOCK_MENU[zone] = [];
                 }
 
                 if (item.parent_categories && item.parent_categories.length) {
-                  var parent = MOCK_MENU[zone].find(function (cat) {
+                  var parent = exports.MOCK_MENU[zone].find(function (cat) {
                     return cat.id === item.parent_categories[0];
                   });
 
                   if (parent) {
                     parent.items.push(item);
                   } else {
-                    var _iterator31 = _createForOfIteratorHelper(MOCK_MENU[zone]),
+                    var _iterator31 = _createForOfIteratorHelper(exports.MOCK_MENU[zone]),
                         _step31;
 
                     try {
@@ -27943,24 +28032,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (event.body && event.route_params.id) {
           var _ret3 = function () {
             var category = event.body;
+            var zones = buildings_mock_1.MOCK_BUILDINGS.map(function (i) {
+              return i.zone_id;
+            });
 
-            var _iterator32 = _createForOfIteratorHelper(category.zones),
+            var _iterator32 = _createForOfIteratorHelper(zones),
                 _step32;
 
             try {
               for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
                 var zone = _step32.value;
 
-                if (!MOCK_MENU[zone]) {
-                  MOCK_MENU[zone] = [];
+                if (!exports.MOCK_MENU[zone]) {
+                  exports.MOCK_MENU[zone] = [];
                 }
 
-                var parent = findParent(event.route_params.id, MOCK_MENU[zone]);
+                console.log('List:', exports.MOCK_MENU[zone]);
+                var parent = findParent(event.route_params.id, exports.MOCK_MENU[zone]);
 
                 if (parent) {
                   parent.items.splice(parent.items.findIndex(function (itm) {
                     return itm.id === category.id;
                   }), 1, category);
+                  break;
                 } else {
                   throw {
                     status: 400,
@@ -27994,51 +28088,52 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       metadata: [],
       method: 'POST',
       callback: function callback(event) {
+        var _a;
+
         if (event.body) {
-          var _ret4 = function () {
-            event.body.id = "category-".concat(general_utilities_1.randomInt(99999999));
-            var category = event.body;
+          event.body.id = "category-".concat(general_utilities_1.predictableRandomInt(99999999));
+          var category = event.body;
+          var found = false;
 
-            var _iterator33 = _createForOfIteratorHelper(category.zones),
-                _step33;
+          var _iterator33 = _createForOfIteratorHelper(category.zones),
+              _step33;
 
-            try {
-              for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                var zone = _step33.value;
+          try {
+            for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
+              var zone = _step33.value;
 
-                if (!MOCK_MENU[zone]) {
-                  MOCK_MENU[zone] = [];
-                }
-
-                if (category.parent_categories && category.parent_categories.length) {
-                  var parent = MOCK_MENU[zone].find(function (cat) {
-                    return cat.id === category.parent_categories[0];
-                  });
-
-                  if (parent) {
-                    parent.items.push(category);
-                  } else {
-                    throw {
-                      status: 400,
-                      message: "Unable to find parent category with id \"".concat(category.parent_categories[0], "\"")
-                    };
-                  }
-                } else {
-                  MOCK_MENU[zone].push(category);
-                }
+              if (!exports.MOCK_MENU[zone]) {
+                exports.MOCK_MENU[zone] = [];
               }
-            } catch (err) {
-              _iterator33.e(err);
-            } finally {
-              _iterator33.f();
+
+              if ((_a = category.parent_categories) === null || _a === void 0 ? void 0 : _a.length) {
+                var parent = findItem(category.parent_categories[0], exports.MOCK_MENU[zone]);
+
+                if (parent) {
+                  parent.items.push(category);
+                  found = true;
+                  break;
+                }
+              } else {
+                exports.MOCK_MENU[zone].push(category);
+                found = true;
+                break;
+              }
             }
+          } catch (err) {
+            _iterator33.e(err);
+          } finally {
+            _iterator33.f();
+          }
 
-            return {
-              v: category
+          if (!found) {
+            throw {
+              status: 400,
+              message: "Unable to find parent category with id \"".concat(category.parent_categories[0], "\"")
             };
-          }();
+          }
 
-          if (typeof _ret4 === "object") return _ret4.v;
+          return category;
         }
 
         throw {
@@ -28054,7 +28149,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       method: 'PUT',
       callback: function callback(event) {
         if (event.body && event.route_params.id) {
-          var _ret5 = function () {
+          var _ret4 = function () {
             var category = event.body;
 
             var _iterator34 = _createForOfIteratorHelper(category.zones),
@@ -28064,21 +28159,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
                 var zone = _step34.value;
 
-                if (!MOCK_MENU[zone]) {
-                  MOCK_MENU[zone] = [];
+                if (!exports.MOCK_MENU[zone]) {
+                  exports.MOCK_MENU[zone] = [];
                 }
 
-                var index = MOCK_MENU[zone].findIndex(function (itm) {
+                var index = exports.MOCK_MENU[zone].findIndex(function (itm) {
                   return itm.id === category.id;
                 });
 
                 if (index < 0) {
-                  var parent = findParent(event.route_params.id, MOCK_MENU[zone]);
+                  var parent = findParent(event.route_params.id, exports.MOCK_MENU[zone]);
 
                   if (parent) {
                     parent.items.splice(parent.items.findIndex(function (itm) {
                       return itm.id === category.id;
                     }), 1, category);
+                    break;
                   } else {
                     throw {
                       status: 400,
@@ -28086,7 +28182,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     };
                   }
                 } else {
-                  MOCK_MENU[zone].splice(index, 1, category);
+                  exports.MOCK_MENU[zone].splice(index, 1, category);
+                  break;
                 }
               }
             } catch (err) {
@@ -28100,7 +28197,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
           }();
 
-          if (typeof _ret5 === "object") return _ret5.v;
+          if (typeof _ret4 === "object") return _ret4.v;
         }
 
         throw {
@@ -28110,14 +28207,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     });
 
-    function findParent(id, list) {
+    function findItem(id) {
+      var list = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
       var _iterator35 = _createForOfIteratorHelper(list),
           _step35;
 
       try {
         for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
           var category = _step35.value;
-          var found = category.items.find(function (item) {
+
+          if (category.id === id) {
+            return category;
+          } else {
+            var item = findItem(id, category.items);
+
+            if (item) {
+              return item;
+            }
+          }
+        }
+      } catch (err) {
+        _iterator35.e(err);
+      } finally {
+        _iterator35.f();
+      }
+
+      return null;
+    }
+
+    function findParent(id) {
+      var list = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+      var _a;
+
+      var _iterator36 = _createForOfIteratorHelper(list),
+          _step36;
+
+      try {
+        for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+          var category = _step36.value;
+          var found = (_a = category.items) === null || _a === void 0 ? void 0 : _a.find(function (item) {
             return item.id === id;
           });
 
@@ -28132,9 +28262,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _iterator35.e(err);
+        _iterator36.e(err);
       } finally {
-        _iterator35.f();
+        _iterator36.f();
       }
 
       return null;
@@ -28160,7 +28290,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     });
     /** Domain of the organisation */
 
-    exports.DOMAIN = 'acaprojects.com';
+    exports.DOMAIN = 'place.tech';
     /** Endpoint where the staff API is located */
 
     exports.API = '/api/staff';
@@ -28214,22 +28344,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return lvls;
     }, []);
 
-    var _iterator36 = _createForOfIteratorHelper(users_mock_1.MOCK_USERS),
-        _step36;
+    var _iterator37 = _createForOfIteratorHelper(users_mock_1.MOCK_USERS),
+        _step37;
 
     try {
-      for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
-        var user = _step36.value;
+      for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
+        var user = _step37.value;
 
-        if (user.location || general_utilities_1.randomInt(99999) % 2 === 0) {
+        if (user.location || general_utilities_1.predictableRandomInt(99999) % 2 === 0) {
           user.location = spec_helpers_1.generateMockLocation(null, spaces, levels);
           exports.MOCK_LOCATIONS.push(user.location);
         }
       }
     } catch (err) {
-      _iterator36.e(err);
+      _iterator37.e(err);
     } finally {
-      _iterator36.f();
+      _iterator37.f();
     }
 
     setTimeout(function () {
@@ -28273,11 +28403,108 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       value: true
     });
     exports.MOCK_ORG = [{
-      send_acceptance: true,
-      discovery_info: {
-        buildings: []
+      settings: {
+        send_acceptance: true,
+        discovery_info: {
+          buildings: []
+        }
       }
     }];
+    /***/
+  },
+
+  /***/
+  "./src/app/shared/mocks/api/reports.mock.ts":
+  /*!**************************************************!*\
+    !*** ./src/app/shared/mocks/api/reports.mock.ts ***!
+    \**************************************************/
+
+  /*! no static exports found */
+
+  /***/
+  function srcAppSharedMocksApiReportsMockTs(module, exports, __webpack_require__) {
+    "use strict";
+
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+
+    var common_mock_1 = __webpack_require__(
+    /*! ./common.mock */
+    "./src/app/shared/mocks/api/common.mock.ts");
+
+    var bookings_mock_1 = __webpack_require__(
+    /*! ./bookings.mock */
+    "./src/app/shared/mocks/api/bookings.mock.ts");
+
+    var booking_utilities_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/booking.utilities */
+    "./src/app/services/data/bookings/booking.utilities.ts");
+
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js"); // Handler for bookings index
+
+
+    window.control.handlers.push({
+      path: "".concat(common_mock_1.API, "/reports/bookings"),
+      metadata: [],
+      method: 'GET',
+      callback: function callback(event) {
+        var start = dayjs(+event.query_params.start_date * 1000).startOf('d');
+        var end = dayjs(+event.query_params.end_date * 1000).endOf('d');
+        var bookings = bookings_mock_1.MOCK_BOOKINGS.filter(function (bkn) {
+          return booking_utilities_1.timePeriodsIntersect(bkn.start_epoch * 1000 || bkn.date, bkn.end_epoch * 1000 || bkn.date, start.valueOf(), end.valueOf());
+        });
+        console.log('Bookings:', start.format('DD MMM YYYY'), end.format('DD MMM YYYY'), bookings);
+        return bookings.map(function (bkn) {
+          return Object.assign(Object.assign({}, bkn), {
+            start: bkn.start_epoch * 1000,
+            end: bkn.end_epoch * 1000
+          });
+        });
+      }
+    }); // Handler for bookings index
+
+    window.control.handlers.push({
+      path: "".concat(common_mock_1.API, "/reports/catering"),
+      metadata: [],
+      method: 'GET',
+      callback: function callback(event) {
+        var start = dayjs(+event.query_params.start_date * 1000).startOf('d');
+        var end = dayjs(+event.query_params.end_date * 1000).endOf('d');
+        console.log('Event:', event);
+        var bookings = bookings_mock_1.MOCK_BOOKINGS.filter(function (bkn) {
+          return booking_utilities_1.timePeriodsIntersect(bkn.start_epoch * 1000 || bkn.date, bkn.end_epoch * 1000 || bkn.date, start.valueOf(), end.valueOf());
+        });
+        console.log('Bookings:', start.format('DD MMM YYYY'), end.format('DD MMM YYYY'), bookings);
+        var catering = [];
+
+        var _iterator38 = _createForOfIteratorHelper(bookings),
+            _step38;
+
+        try {
+          for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
+            var booking = _step38.value;
+            catering = catering.concat(_toConsumableArray(booking.catering));
+          }
+        } catch (err) {
+          _iterator38.e(err);
+        } finally {
+          _iterator38.f();
+        }
+
+        return catering.map(function (order) {
+          return {
+            delivery_time: dayjs(order.booking_date).add(order.delivery_time, 'm').format('DD MMM YYYY, h:mm A'),
+            location_id: order.location_id,
+            items: order.items.map(function (i) {
+              return i.name;
+            })
+          };
+        });
+      }
+    });
     /***/
   },
 
@@ -28384,21 +28611,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           results = results.filter(function (i) {
             var count = 0;
 
-            var _iterator37 = _createForOfIteratorHelper(zone_ids),
-                _step37;
+            var _iterator39 = _createForOfIteratorHelper(zone_ids),
+                _step39;
 
             try {
-              for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
-                var zone = _step37.value;
+              for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
+                var zone = _step39.value;
 
                 if (i.zones.indexOf(zone) >= 0) {
                   count++;
                 }
               }
             } catch (err) {
-              _iterator37.e(err);
+              _iterator39.e(err);
             } finally {
-              _iterator37.f();
+              _iterator39.f();
             }
 
             return count >= zone_ids.length;
@@ -28418,12 +28645,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var from = dayjs(+event.query_params.available_from * 1000);
           var to = dayjs(+event.query_params.available_to * 1000);
           results.forEach(function (space) {
-            var _iterator38 = _createForOfIteratorHelper(space.bookings),
-                _step38;
+            var _iterator40 = _createForOfIteratorHelper(space.bookings),
+                _step40;
 
             try {
-              for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
-                var booking = _step38.value;
+              for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
+                var booking = _step40.value;
                 var start = dayjs(booking.start_epoch * 1000);
                 var end = dayjs(booking.end_epoch * 1000);
 
@@ -28438,9 +28665,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator38.e(err);
+              _iterator40.e(err);
             } finally {
-              _iterator38.f();
+              _iterator40.f();
             }
           });
         }
@@ -28475,25 +28702,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../utilities/spec-helpers */
     "./src/app/shared/utilities/spec-helpers.ts");
 
+    var general_utilities_1 = __webpack_require__(
+    /*! ../../utilities/general.utilities */
+    "./src/app/shared/utilities/general.utilities.ts");
+
     window.control = window.control || {};
     window.control.systems = window.control.systems || {};
     window.control.handlers = window.control.handlers || [];
-    exports.MOCK_USERS = Array(Math.floor(Math.random() * 300 + 100)).fill(0).map(function (i) {
+    exports.MOCK_USERS = Array(general_utilities_1.predictableRandomInt(300) + 100).fill(0).map(function (i) {
       return spec_helpers_1.generateMockUser();
     });
-    exports.MOCK_CONTACTS = Array(Math.floor(Math.random() * 300 + 100)).fill(0).map(function (i) {
+    exports.MOCK_CONTACTS = Array(general_utilities_1.predictableRandomInt(300) + 100).fill(0).map(function (i) {
       return spec_helpers_1.generateMockUser({
         external: true
       });
     });
     exports.PREDEFINED_USERS = ['Jonathan McFarlane', 'Stephen Von Takach', 'Alex Sorafumo', 'Candy Russo', 'Cristina Boston', 'Eugene Murphy', 'Ben Hoad', 'Kim Burgess', 'Desk Test', 'Space Test', 'Wireless Test', 'Zo-Kalar']; // Add predefined user to user list
 
-    var _iterator39 = _createForOfIteratorHelper(exports.PREDEFINED_USERS),
-        _step39;
+    var _iterator41 = _createForOfIteratorHelper(exports.PREDEFINED_USERS),
+        _step41;
 
     try {
-      for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
-        var user = _step39.value;
+      for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
+        var user = _step41.value;
         var id = user.split(' ').join('.').toLowerCase();
         var new_user = spec_helpers_1.generateMockUser({
           id: id,
@@ -28504,9 +28735,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       } // Add handler for users index
 
     } catch (err) {
-      _iterator39.e(err);
+      _iterator41.e(err);
     } finally {
-      _iterator39.f();
+      _iterator41.f();
     }
 
     window.control.handlers.push({
@@ -28601,6 +28832,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./systems.mock */
     "./src/app/shared/mocks/systems.mock.ts");
 
+    var faker = __webpack_require__(
+    /*! faker */
+    "./node_modules/faker/index.js");
+
+    faker.seed(2560);
+
     __webpack_require__(
     /*! ./api/organisation.mock */
     "./src/app/shared/mocks/api/organisation.mock.ts");
@@ -28629,11 +28866,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./api/catering-menu.mock */
     "./src/app/shared/mocks/api/catering-menu.mock.ts");
 
-    var faker = __webpack_require__(
-    /*! faker */
-    "./node_modules/faker/index.js");
+    __webpack_require__(
+    /*! ./api/reports.mock */
+    "./src/app/shared/mocks/api/reports.mock.ts");
 
-    faker.seed(2560);
     window.control = window.control || {};
     window.control.systems = Object.assign(Object.assign({}, window.control.systems), _defineProperty({}, 'sys-B0', systems_mock_1.createSystem('sys-B0'))) || {};
     window.control.handlers = window.control.handlers || [];
@@ -28664,6 +28900,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../utilities/spec-helpers */
     "./src/app/shared/utilities/spec-helpers.ts");
 
+    var general_utilities_1 = __webpack_require__(
+    /*! ../utilities/general.utilities */
+    "./src/app/shared/utilities/general.utilities.ts");
+
     var LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     var NUMBERS = '0123456789'.split('');
     var index = 0;
@@ -28688,7 +28928,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         cancel_timeout: 600,
         has_catering: true,
         control_url: 'https://aca.im/demo/aca/control/',
-        icon: "/assets/img/".concat(IMAGES[Math.floor(Math.random() * IMAGES.length)], ".png")
+        icon: "/assets/img/".concat(IMAGES[general_utilities_1.predictableRandomInt(IMAGES.length)], ".png")
       };
       var today = dayjs();
       var desk_bindings = {
@@ -29137,12 +29377,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var length = users.length + (host ? 1 : 0);
         attendee_str = "".concat(length, " Attendee").concat(length === 1 ? '' : 's', "; ").concat(host ? host.name : '');
 
-        var _iterator40 = _createForOfIteratorHelper(users),
-            _step40;
+        var _iterator42 = _createForOfIteratorHelper(users),
+            _step42;
 
         try {
-          for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
-            var item = _step40.value;
+          for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
+            var item = _step42.value;
 
             if (attendee_str) {
               attendee_str += ', ';
@@ -29151,9 +29391,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             attendee_str += item.name;
           }
         } catch (err) {
-          _iterator40.e(err);
+          _iterator42.e(err);
         } finally {
-          _iterator40.f();
+          _iterator42.f();
         }
 
         attendee_str = attendee_str.replace('; ,', ';');
@@ -29405,12 +29645,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var filters = filter.toLowerCase().split(' ');
       var list = {};
 
-      var _iterator41 = _createForOfIteratorHelper(filters),
-          _step41;
+      var _iterator43 = _createForOfIteratorHelper(filters),
+          _step43;
 
       try {
-        for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
-          var _f5 = _step41.value;
+        for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
+          var _f5 = _step43.value;
 
           /* istanbul ignore else */
           if (_f5) {
@@ -29424,9 +29664,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // Group similar tokens
 
       } catch (err) {
-        _iterator41.e(err);
+        _iterator43.e(err);
       } finally {
-        _iterator41.f();
+        _iterator43.f();
       }
 
       var parts = [];
@@ -29455,12 +29695,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           item.match = '';
           var field_list = {}; // Initialise field match variables
 
-          var _iterator42 = _createForOfIteratorHelper(fields),
-              _step42;
+          var _iterator44 = _createForOfIteratorHelper(fields),
+              _step44;
 
           try {
-            for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
-              var _f = _step42.value;
+            for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
+              var _f = _step44.value;
               field_list[_f] = {
                 value: (item[_f] || '').toLowerCase(),
                 index: 65536,
@@ -29469,27 +29709,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } // Search for matches with the tokenised filter string
 
           } catch (err) {
-            _iterator42.e(err);
+            _iterator44.e(err);
           } finally {
-            _iterator42.f();
+            _iterator44.f();
           }
 
-          var _iterator43 = _createForOfIteratorHelper(parts),
-              _step43;
+          var _iterator45 = _createForOfIteratorHelper(parts),
+              _step45;
 
           try {
-            for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
-              var i = _step43.value;
+            for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
+              var i = _step45.value;
 
               /* istanbul ignore else */
               if (i.word) {
                 // Check fields for matches
-                var _iterator45 = _createForOfIteratorHelper(fields),
-                    _step45;
+                var _iterator47 = _createForOfIteratorHelper(fields),
+                    _step47;
 
                 try {
-                  for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
-                    var _f2 = _step45.value;
+                  for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
+                    var _f2 = _step47.value;
                     var field = field_list[_f2];
                     var index = field.value.indexOf(i.word);
                     field.index = index < field.index ? index : field.index;
@@ -29498,17 +29738,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   } // Update token match count
 
                 } catch (err) {
-                  _iterator45.e(err);
+                  _iterator47.e(err);
                 } finally {
-                  _iterator45.f();
+                  _iterator47.f();
                 }
 
-                var _iterator46 = _createForOfIteratorHelper(fields),
-                    _step46;
+                var _iterator48 = _createForOfIteratorHelper(fields),
+                    _step48;
 
                 try {
-                  for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
-                    var _f3 = _step46.value;
+                  for (_iterator48.s(); !(_step48 = _iterator48.n()).done;) {
+                    var _f3 = _step48.value;
                     var _field2 = field_list[_f3];
                     /* istanbul ignore else */
 
@@ -29518,12 +29758,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       var changed = 0;
                       var tokens = (item["match_".concat(_f3)] || item[_f3] || '').split(' ');
 
-                      var _iterator47 = _createForOfIteratorHelper(tokens),
-                          _step47;
+                      var _iterator49 = _createForOfIteratorHelper(tokens),
+                          _step49;
 
                       try {
-                        for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
-                          var k = _step47.value;
+                        for (_iterator49.s(); !(_step49 = _iterator49.n()).done;) {
+                          var k = _step49.value;
 
                           /* istanbul ignore else */
                           if (changed >= i.count) {
@@ -29538,9 +29778,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           }
                         }
                       } catch (err) {
-                        _iterator47.e(err);
+                        _iterator49.e(err);
                       } finally {
-                        _iterator47.f();
+                        _iterator49.f();
                       }
 
                       item["match_".concat(_f3)] = tokens.join(' ');
@@ -29548,25 +29788,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
                   }
                 } catch (err) {
-                  _iterator46.e(err);
+                  _iterator48.e(err);
                 } finally {
-                  _iterator46.f();
+                  _iterator48.f();
                 }
               }
             } // Get field with the most relevent match
 
           } catch (err) {
-            _iterator43.e(err);
+            _iterator45.e(err);
           } finally {
-            _iterator43.f();
+            _iterator45.f();
           }
 
-          var _iterator44 = _createForOfIteratorHelper(fields),
-              _step44;
+          var _iterator46 = _createForOfIteratorHelper(fields),
+              _step46;
 
           try {
-            for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
-              var _f4 = _step44.value;
+            for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
+              var _f4 = _step46.value;
               var _field3 = field_list[_f4];
               /* istanbul ignore else */
 
@@ -29576,9 +29816,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator44.e(err);
+            _iterator46.e(err);
           } finally {
-            _iterator44.f();
+            _iterator46.f();
           }
 
           return item.match_index >= 0 && item.match && match_count >= parts.length;
@@ -29682,12 +29922,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
       var list = [];
 
-      var _iterator48 = _createForOfIteratorHelper(lines),
-          _step48;
+      var _iterator50 = _createForOfIteratorHelper(lines),
+          _step50;
 
       try {
-        for (_iterator48.s(); !(_step48 = _iterator48.n()).done;) {
-          var line = _step48.value;
+        for (_iterator50.s(); !(_step50 = _iterator50.n()).done;) {
+          var line = _step50.value;
           var parts = line.split(',');
           parts = parts.map(function (v) {
             return v.replace('\r', '');
@@ -29711,9 +29951,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _iterator48.e(err);
+        _iterator50.e(err);
       } finally {
-        _iterator48.f();
+        _iterator50.f();
       }
 
       return list;
@@ -29838,7 +30078,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     exports.flatten = flatten;
+    var seed = xmur3('PlaceOS');
+    var rand = sfc32(0x9E3779B9, 0x243F6A88, 0xB7E15162, seed());
+
+    function predictableRandomInt() {
+      var ceil = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 100;
+      var floor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      return Math.floor(rand() * (ceil - floor)) + floor;
+    }
+
+    exports.predictableRandomInt = predictableRandomInt; // https://stackoverflow.com/questions/521295/seeding-the-random-number-generator-in-javascript
+
+    function xmur3(str) {
+      for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++) {
+        h = Math.imul(h ^ str.charCodeAt(i), 3432918353), h = h << 13 | h >>> 19;
+      }
+
+      return function () {
+        h = Math.imul(h ^ h >>> 16, 2246822507);
+        h = Math.imul(h ^ h >>> 13, 3266489909);
+        return (h ^= h >>> 16) >>> 0;
+      };
+    }
+
+    function sfc32(a, b, c, d) {
+      return function () {
+        a >>>= 0;
+        b >>>= 0;
+        c >>>= 0;
+        d >>>= 0;
+        var t = a + b | 0;
+        a = b ^ b >>> 9;
+        b = c + (c << 3) | 0;
+        c = c << 21 | c >>> 11;
+        d = d + 1 | 0;
+        t = t + d | 0;
+        c = c + t | 0;
+        return (t >>> 0) / 4294967296;
+      };
+    }
     /***/
+
   },
 
   /***/
@@ -30033,27 +30313,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var overrides = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var id = "space-".concat(SPACE_COUNT++);
       var name = "".concat(faker.name.firstName(), " ").concat(faker.name.lastName(), " Space");
-      var linked = Math.floor(Math.random() * 99999) % 2 === 0 && SPACE_COUNT > 1;
+      var linked = Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0 && SPACE_COUNT > 1;
       return Object.assign({
         id: id,
         name: name,
         long_name: "".concat(name, " with an long name"),
         map_id: "".concat(SPACE_COUNT),
-        capacity: Math.floor(Math.random() * 20 + 1) * 2,
+        capacity: Math.floor(general_utilities_1.predictableRandomInt(20) + 1) * 2,
         email: "".concat(name.toLowerCase().split(' ').join('.'), "@").concat(exports.USER_DOMAIN),
         type: faker.commerce.productName(),
-        searchable: Math.floor(Math.random() * 99999) % 2 === 0,
-        controlable: Math.floor(Math.random() * 99999) % 2 === 0,
-        bookable: Math.floor(Math.random() * 99999) % 2 === 0,
-        cost_hour: Math.floor(Math.random() * 300) * 100,
-        setup: Math.floor(Math.random() * 6) * 5,
-        breakdown: Math.floor(Math.random() * 6) * 5,
+        searchable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0,
+        controlable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0,
+        bookable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0,
+        cost_hour: Math.floor(general_utilities_1.predictableRandomInt(300)) * 100,
+        setup: Math.floor(general_utilities_1.predictableRandomInt(6)) * 5,
+        breakdown: Math.floor(general_utilities_1.predictableRandomInt(6)) * 5,
         zones: ['zone_lvl-0'],
         support_url: "/control/#/".concat(id),
         bookings: Array(10).fill(0).map(function (i) {
           return generateMockBooking();
         }),
-        linked_rooms: linked ? ["space-".concat(Math.floor(Math.random() * (SPACE_COUNT - 1)))] : [],
+        linked_rooms: linked ? ["space-".concat(Math.floor(general_utilities_1.predictableRandomInt(SPACE_COUNT - 1)))] : [],
         image: faker.image.business()
       }, overrides);
     }
@@ -30079,18 +30359,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function generateMockBooking() {
       var override = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var id = "booking-".concat(BOOKING_COUNT++);
-      BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4 + 2) * 15, 'm');
+      BOOKING_DATE = BOOKING_DATE.add(Math.floor(general_utilities_1.predictableRandomInt(4) + 2) * 15, 'm');
       var start = BOOKING_DATE.valueOf();
-      var duration = Math.floor(Math.random() * 4 + 2) * 15;
-      BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
+      var duration = Math.floor(general_utilities_1.predictableRandomInt(4) + 2) * 15;
+      BOOKING_DATE = BOOKING_DATE.add(Math.floor(general_utilities_1.predictableRandomInt(4)) * 15, 'm');
+      var organizer = generateMockUser({
+        external: false,
+        visitor: false
+      });
+      var orders = Array(Math.floor(general_utilities_1.predictableRandomInt(5))).fill(0).map(function (_) {
+        return generateMockCateringOrder({
+          booking_date: start
+        }, override.room_ids, override.menu);
+      });
       return Object.assign({
         id: id,
-        icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8),
+        icaluid: general_utilities_1.padZero(Math.floor(general_utilities_1.predictableRandomInt(99999999)), 8),
         title: "".concat(faker.commerce.productName(), " Meeting"),
-        attendees: Array(Math.floor(Math.random() * 5 + 2)).fill(0).map(function (i) {
-          return generateMockUser(override.users);
+        attendees: Array(Math.floor(general_utilities_1.predictableRandomInt(5) + 2)).fill(0).map(function (_, i) {
+          return i === 0 ? organizer : generateMockUser(override.users);
         }),
-        organiser: generateMockUser(),
+        organizer: organizer,
         start_epoch: dayjs(start).unix(),
         end_epoch: dayjs(start).add(duration, 'm').unix(),
         description: faker.lorem.paragraph(),
@@ -30099,16 +30388,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           message: faker.lorem.paragraph()
         }],
         location: faker.address.city(),
-        has_catering: Math.floor(Math.random() * 34567) % 3 === 0,
-        booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)],
+        has_catering: Math.floor(general_utilities_1.predictableRandomInt(34567)) % 3 === 0,
+        booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.predictableRandomInt(5)],
         setup: {
-          'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5)
+          'space-01': Math.max(0, (general_utilities_1.predictableRandomInt(12) - 6) * 5)
         },
         breakdown: {
-          'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5)
+          'space-01': Math.max(0, (general_utilities_1.predictableRandomInt(12) - 6) * 5)
         },
         status: {},
-        catering: [],
+        catering: orders,
         room_ids: []
       }, override);
     }
@@ -30129,13 +30418,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
       var features = {};
 
-      var _iterator49 = _createForOfIteratorHelper(levels),
-          _step49;
+      var _iterator51 = _createForOfIteratorHelper(levels),
+          _step51;
 
       try {
-        for (_iterator49.s(); !(_step49 = _iterator49.n()).done;) {
-          var lvl = _step49.value;
-          var count = Math.floor(Math.random() * 3 + 2);
+        for (_iterator51.s(); !(_step51 = _iterator51.n()).done;) {
+          var lvl = _step51.value;
+          var count = Math.floor(general_utilities_1.predictableRandomInt(3) + 2);
           features[lvl.level_id] = {};
 
           for (var i = 0; i < count; i++) {
@@ -30143,9 +30432,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       } catch (err) {
-        _iterator49.e(err);
+        _iterator51.e(err);
       } finally {
-        _iterator49.f();
+        _iterator51.f();
       }
 
       return Object.assign({
@@ -30204,7 +30493,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.generateMockLevel = generateMockLevel;
     var USER_COUNT = 0;
-    exports.USER_DOMAIN = 'acaprojects.com';
+    exports.USER_DOMAIN = 'place.tech';
     var USER_EMAILS = [];
     /**
      * Generate raw mock data for a user
@@ -30217,13 +30506,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var override = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var id = "user-".concat(USER_COUNT++);
       var name = "".concat(faker.name.firstName(), " ").concat(faker.name.lastName());
-      var external = override.external || !(Math.random() * 99999 % 2);
+      var external = override.external || !(general_utilities_1.predictableRandomInt(99999) % 2);
       var organisation = external ? faker.company.companyName() : exports.USER_DOMAIN.split('.')[0];
       var delegates = [];
-      var delegate_count = Math.min(Math.random() * 4 + 1, USER_EMAILS.length);
+      var delegate_count = Math.min(general_utilities_1.predictableRandomInt(4) + 1, USER_EMAILS.length);
 
       for (var i = 0; i < delegate_count; i++) {
-        delegates.push(USER_EMAILS[Math.floor(Math.random() * USER_EMAILS.length)]);
+        delegates.push(USER_EMAILS[Math.floor(general_utilities_1.predictableRandomInt(USER_EMAILS.length))]);
       }
 
       delegates = general_utilities_1.unique(delegates);
@@ -30242,7 +30531,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           name: organisation
         },
         department: faker.commerce.department(),
-        staff_code: general_utilities_1.padZero(Math.floor(Math.random() * 99999), 5),
+        staff_code: general_utilities_1.padZero(Math.floor(general_utilities_1.predictableRandomInt(99999)), 5),
         delegates: delegates,
         image: faker.image.avatar()
       }, override);
@@ -30250,21 +30539,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.generateMockUser = generateMockUser;
 
+    function generateMockCateringOrder() {
+      var overrides = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var room_ids = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+      var menu = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return Object.assign({
+        id: "order-".concat(general_utilities_1.predictableRandomInt(99999999)),
+        delivery_time: general_utilities_1.predictableRandomInt(6) * 5,
+        location_id: room_ids[general_utilities_1.predictableRandomInt(room_ids.length)],
+        items: new Array(general_utilities_1.predictableRandomInt(5, 1)).fill(0).map(function (i) {
+          return pickMenuItem(menu);
+        })
+      }, overrides);
+    }
+
+    exports.generateMockCateringOrder = generateMockCateringOrder;
+
+    function pickMenuItem() {
+      var menu_map = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      var _a;
+
+      var zones = Object.keys(menu_map);
+      var menu = menu_map[zones[general_utilities_1.predictableRandomInt(zones.length)]] || [];
+      var category = menu[general_utilities_1.predictableRandomInt(menu.length)] || {
+        items: []
+      };
+      var group = Object.assign({}, category.items[general_utilities_1.predictableRandomInt(category.items.length)] || {});
+
+      if (!group["package"] && ((_a = group.items) === null || _a === void 0 ? void 0 : _a.length)) {
+        var item = Object.assign({}, group.items[general_utilities_1.predictableRandomInt(group.items.length)]);
+        item.amount = general_utilities_1.predictableRandomInt(5, 1);
+        return item;
+      }
+
+      group.amount = general_utilities_1.predictableRandomInt(5, 1);
+      return group;
+    }
+
     function generateMockLocation(overrides, fixed_locations, maps) {
-      var fixed = general_utilities_1.randomInt(999999999) % 2 === 0;
+      var fixed = general_utilities_1.predictableRandomInt(999999999) % 2 === 0;
 
       if (fixed && (!overrides || overrides.fixed)) {
         return Object.assign({
-          map_id: fixed_locations[general_utilities_1.randomInt(fixed_locations.length)],
-          level: maps[general_utilities_1.randomInt(maps.length)]
+          map_id: fixed_locations[general_utilities_1.predictableRandomInt(fixed_locations.length)],
+          level: maps[general_utilities_1.predictableRandomInt(maps.length)]
         }, overrides);
       } else {
         return Object.assign({
-          x: general_utilities_1.randomInt(900, 100),
+          x: general_utilities_1.predictableRandomInt(900, 100),
           x_max: 1000,
-          y: general_utilities_1.randomInt(500, 100),
-          level: maps[general_utilities_1.randomInt(maps.length)],
-          confidence: general_utilities_1.randomInt(30)
+          y: general_utilities_1.predictableRandomInt(500, 100),
+          level: maps[general_utilities_1.predictableRandomInt(maps.length)],
+          confidence: general_utilities_1.predictableRandomInt(30)
         }, overrides);
       }
     }
@@ -30559,13 +30886,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r9 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 14);
+        i0.ɵɵelementStart(0, "button", 15);
         i0.ɵɵlistener("click", function CateringComponent_div_4_button_4_Template_button_click_0_listener() {
           i0.ɵɵrestoreView(_r9);
           var ctx_r8 = i0.ɵɵnextContext(2);
           return ctx_r8.search_str = "";
         });
-        i0.ɵɵelement(1, "app-icon", 15);
+        i0.ɵɵelement(1, "app-icon", 16);
         i0.ɵɵelementEnd();
       }
 
@@ -30579,20 +30906,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r11 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "mat-form-field", 9);
-        i0.ɵɵelementStart(1, "mat-select", 16);
+        i0.ɵɵelementStart(0, "mat-form-field", 10);
+        i0.ɵɵelementStart(1, "mat-select", 17);
         i0.ɵɵlistener("ngModelChange", function CateringComponent_div_4_mat_form_field_5_Template_mat_select_ngModelChange_1_listener($event) {
           i0.ɵɵrestoreView(_r11);
           var ctx_r10 = i0.ɵɵnextContext(2);
           return ctx_r10.order_type = $event;
         });
-        i0.ɵɵelementStart(2, "mat-option", 17);
+        i0.ɵɵelementStart(2, "mat-option", 18);
         i0.ɵɵtext(3, "All Orders");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "mat-option", 17);
+        i0.ɵɵelementStart(4, "mat-option", 18);
         i0.ɵɵtext(5, "Pantry Only");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(6, "mat-option", 17);
+        i0.ɵɵelementStart(6, "mat-option", 18);
         i0.ɵɵtext(7, "Kitchen Only");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -30624,19 +30951,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r13 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "div", 8);
-        i0.ɵɵelementStart(1, "mat-form-field", 9);
-        i0.ɵɵelement(2, "app-icon", 10);
-        i0.ɵɵelementStart(3, "input", 11);
+        i0.ɵɵelementStart(0, "div", 9);
+        i0.ɵɵelementStart(1, "mat-form-field", 10);
+        i0.ɵɵelement(2, "app-icon", 11);
+        i0.ɵɵelementStart(3, "input", 12);
         i0.ɵɵlistener("ngModelChange", function CateringComponent_div_4_Template_input_ngModelChange_3_listener($event) {
           i0.ɵɵrestoreView(_r13);
           var ctx_r12 = i0.ɵɵnextContext();
           return ctx_r12.search_str = $event;
         });
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(4, CateringComponent_div_4_button_4_Template, 2, 2, "button", 12);
+        i0.ɵɵtemplate(4, CateringComponent_div_4_button_4_Template, 2, 2, "button", 13);
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(5, CateringComponent_div_4_mat_form_field_5_Template, 8, 6, "mat-form-field", 13);
+        i0.ɵɵtemplate(5, CateringComponent_div_4_mat_form_field_5_Template, 8, 6, "mat-form-field", 14);
         i0.ɵɵelementEnd();
       }
 
@@ -30659,7 +30986,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r15 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 18);
+        i0.ɵɵelementStart(0, "button", 19);
         i0.ɵɵlistener("click", function CateringComponent_button_5_Template_button_click_0_listener() {
           i0.ɵɵrestoreView(_r15);
           var ctx_r14 = i0.ɵɵnextContext();
@@ -30674,7 +31001,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r17 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "button", 18);
+        i0.ɵɵelementStart(0, "button", 20);
         i0.ɵɵlistener("click", function CateringComponent_button_6_Template_button_click_0_listener() {
           i0.ɵɵrestoreView(_r17);
           var ctx_r16 = i0.ɵɵnextContext();
@@ -30690,7 +31017,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _r19 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "a-catering-menu", 19);
+        i0.ɵɵelementStart(1, "a-catering-menu", 21);
         i0.ɵɵlistener("length", function CateringComponent_ng_container_9_Template_a_catering_menu_length_1_listener($event) {
           i0.ɵɵrestoreView(_r19);
           var ctx_r18 = i0.ɵɵnextContext();
@@ -30710,7 +31037,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function CateringComponent_ng_container_10_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelement(1, "a-catering-orders", 20);
+        i0.ɵɵelement(1, "a-catering-orders", 22);
         i0.ɵɵelementContainerEnd();
       }
 
@@ -30732,29 +31059,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function CateringComponent_ng_container_11_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 21);
-        i0.ɵɵelementStart(2, "a", 22);
-        i0.ɵɵelementStart(3, "div", 23);
-        i0.ɵɵelementStart(4, "div", 24);
+        i0.ɵɵelementStart(1, "div", 23);
+        i0.ɵɵelementStart(2, "a", 24);
+        i0.ɵɵelementStart(3, "div", 25);
+        i0.ɵɵelementStart(4, "div", 26);
         i0.ɵɵpipe(5, "safe");
         i0.ɵɵelementStart(6, "h2");
         i0.ɵɵtext(7, "Menus and Pricing");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(8, "div", 25);
+        i0.ɵɵelementStart(8, "div", 27);
         i0.ɵɵtext(9, "View and edit menus and pricing");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(10, "a", 22);
-        i0.ɵɵelementStart(11, "div", 23);
-        i0.ɵɵelementStart(12, "div", 24);
+        i0.ɵɵelementStart(10, "a", 28);
+        i0.ɵɵelementStart(11, "div", 25);
+        i0.ɵɵelementStart(12, "div", 26);
         i0.ɵɵpipe(13, "safe");
         i0.ɵɵelementStart(14, "h2");
         i0.ɵɵtext(15, "Catering Orders");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(16, "div", 25);
+        i0.ɵɵelementStart(16, "div", 27);
         i0.ɵɵtext(17, " View catering orders and their statuses upon arrival ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -30832,7 +31159,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 12,
       vars: 7,
-      consts: [[1, "catering"], [1, "group"], [3, "date", "dateChange"], ["class", "input-wrapper", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "click", 4, "ngIf"], ["appearance", "outline", 3, "other-field", 4, "ngIf"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], [3, "icon"], [3, "ngModel", "ngModelChange"], [3, "value"], ["mat-button", "", 3, "click"], [3, "search", "category", "package", "length"], [3, "date", "search", "type"], [1, "options"], ["mat-button", "", 1, "card", 3, "routerLink"], [1, "content"], [1, "img"], [1, "desc"]],
+      consts: [[1, "catering"], [1, "group"], [3, "date", "dateChange"], ["class", "input-wrapper", 4, "ngIf"], ["mat-button", "", "name", "add-category", 3, "click", 4, "ngIf"], ["mat-button", "", "name", "add-package", 3, "click", 4, "ngIf"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "click", 4, "ngIf"], ["appearance", "outline", 3, "other-field", 4, "ngIf"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], [3, "icon"], [3, "ngModel", "ngModelChange"], [3, "value"], ["mat-button", "", "name", "add-category", 3, "click"], ["mat-button", "", "name", "add-package", 3, "click"], [3, "search", "category", "package", "length"], [3, "date", "search", "type"], [1, "options"], ["name", "menu", "mat-button", "", 1, "card", 3, "routerLink"], [1, "content"], [1, "img"], [1, "desc"], ["name", "orders", "mat-button", "", 1, "card", 3, "routerLink"]],
       template: function CateringComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -30844,13 +31171,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
           i0.ɵɵtemplate(4, CateringComponent_div_4_Template, 6, 7, "div", 3);
           i0.ɵɵtemplate(5, CateringComponent_button_5_Template, 2, 0, "button", 4);
-          i0.ɵɵtemplate(6, CateringComponent_button_6_Template, 2, 0, "button", 4);
+          i0.ɵɵtemplate(6, CateringComponent_button_6_Template, 2, 0, "button", 5);
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(7, "main");
-          i0.ɵɵelementContainerStart(8, 5);
-          i0.ɵɵtemplate(9, CateringComponent_ng_container_9_Template, 2, 3, "ng-container", 6);
-          i0.ɵɵtemplate(10, CateringComponent_ng_container_10_Template, 2, 3, "ng-container", 6);
-          i0.ɵɵtemplate(11, CateringComponent_ng_container_11_Template, 18, 14, "ng-container", 7);
+          i0.ɵɵelementContainerStart(8, 6);
+          i0.ɵɵtemplate(9, CateringComponent_ng_container_9_Template, 2, 3, "ng-container", 7);
+          i0.ɵɵtemplate(10, CateringComponent_ng_container_10_Template, 2, 3, "ng-container", 7);
+          i0.ɵɵtemplate(11, CateringComponent_ng_container_11_Template, 18, 14, "ng-container", 8);
           i0.ɵɵelementContainerEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
@@ -32062,11 +32389,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(3);
           i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(8, _c3));
           i0.ɵɵadvance(2);
-          i0.ɵɵtextInterpolate1("Edit ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "item", "");
+          i0.ɵɵtextInterpolate1("Edit ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "Item", "");
           i0.ɵɵadvance(3);
           i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(9, _c4));
           i0.ɵɵadvance(2);
-          i0.ɵɵtextInterpolate1("Delete ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "item", "");
+          i0.ɵɵtextInterpolate1("Delete ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "Item", "");
         }
       },
       directives: [i6.NgIf, i6.NgForOf, i7._MatMenu, i7.MatMenuItem, i8.IconComponent, i9.MatButton, i7.MatMenuTrigger, CateringMenuItemComponent],
@@ -32483,21 +32810,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             list.splice(found, 1);
             return true;
           } else {
-            var _iterator50 = _createForOfIteratorHelper(list),
-                _step50;
+            var _iterator52 = _createForOfIteratorHelper(list),
+                _step52;
 
             try {
-              for (_iterator50.s(); !(_step50 = _iterator50.n()).done;) {
-                var item = _step50.value;
+              for (_iterator52.s(); !(_step52 = _iterator52.n()).done;) {
+                var item = _step52.value;
 
                 if (this.removeFromMenu(id, item.items, depth + 1)) {
                   return true;
                 }
               }
             } catch (err) {
-              _iterator50.e(err);
+              _iterator52.e(err);
             } finally {
-              _iterator50.f();
+              _iterator52.f();
             }
           }
 
@@ -33756,6 +34083,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @acaprojects/ngx-uploads */
     "./node_modules/@acaprojects/ngx-uploads/__ivy_ngcc__/fesm2015/acaprojects-ngx-uploads.js");
 
+    var catering_category_class_1 = __webpack_require__(
+    /*! src/app/services/data/catering/catering-category.class */
+    "./src/app/services/data/catering/catering-category.class.ts");
+
     var app_service_1 = __webpack_require__(
     /*! src/app/services/app.service */
     "./src/app/services/app.service.ts");
@@ -34084,10 +34415,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
 
           if (this.form.valid) {
-            var data = Object.assign(Object.assign({}, this.category.toJSON()), this.form.value);
-            var request = this.category.id ? this._menu_categories.update(this.category.id, data) : this._menu_categories.add(data);
+            var category = new catering_category_class_1.CateringCategory(this.category);
+            var data = Object.assign(Object.assign({}, category.toJSON()), this.form.value);
+            var request = category.id ? this._menu_categories.update(category.id, data) : this._menu_categories.add(data);
             request.then(function (item) {
-              item.items = _this166.category.items;
+              item.items = category.items;
 
               _this166.event.emit({
                 reason: 'done',
@@ -34173,7 +34505,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 13,
       vars: 6,
-      consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", 3, "error", "click", 4, "ngIf"], ["mat-button", "", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup", 4, "ngIf"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], ["for", "name"], ["appearance", "outline"], ["matInput", "", "name", "name", "placeholder", "Category Name", "formControlName", "name"], ["for", "description"], ["matInput", "", "name", "description", "placeholder", "Category Description", "formControlName", "description"], ["diameter", "48"], ["mat-button", "", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]],
+      consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", "name", "delete", 3, "error", "click", 4, "ngIf"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup", 4, "ngIf"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], ["for", "name"], ["appearance", "outline"], ["matInput", "", "name", "name", "placeholder", "Category Name", "formControlName", "name"], ["for", "description"], ["matInput", "", "name", "description", "placeholder", "Category Description", "formControlName", "description"], ["diameter", "48"], ["mat-button", "", "name", "delete", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]],
       template: function CateringCategoryModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "header");
@@ -34764,7 +35096,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               _this170.event.emit({
                 reason: 'done',
-                metadata: item
+                metadata: new catering_category_class_1.CateringCategory(item)
               });
 
               _this170._dialog_ref.close();
@@ -34862,7 +35194,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 13,
       vars: 7,
-      consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", "name", "delete", 3, "error", "click", 4, "ngIf"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], [1, "field", "padded"], ["for", "name"], [1, "value"], ["formControlName", "package"], ["appearance", "outline"], ["matInput", "", "name", "name", "formControlName", "name", 3, "placeholder"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "formControlName", "description", 3, "placeholder"], [4, "ngIf"], ["for", "must-select"], ["matInput", "", "name", "must-select", "type", "number", "placeholder", "Must select X items from grouping", "formControlName", "must_select"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], ["diameter", "48"], [3, "value"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["mat-button", "", "name", "delete", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]],
+      consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", "name", "delete", 3, "error", "click", 4, "ngIf"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], [1, "field", "padded"], ["for", "name"], [1, "value"], ["name", "package", "formControlName", "package"], ["appearance", "outline"], ["matInput", "", "name", "name", "formControlName", "name", 3, "placeholder"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "formControlName", "description", 3, "placeholder"], [4, "ngIf"], ["for", "must-select"], ["matInput", "", "name", "must-select", "type", "number", "placeholder", "Must select X items from grouping", "formControlName", "must_select"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], ["diameter", "48"], [3, "value"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["mat-button", "", "name", "delete", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]],
       template: function CateringGroupModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "header");
@@ -35577,7 +35909,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 25,
       vars: 11,
-      consts: [[1, "heading"], [1, "content"], [1, "field"], ["for", "host"], ["name", "host", 1, "value"], ["for", "space"], ["name", "space", 1, "value"], ["for", "period"], ["name", "period", 1, "value"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["button", "", "mat-button", "", "mat-dialog-close", "", 1, "footer", 3, "routerLink", "queryParams", "click"]],
+      consts: [[1, "heading"], [1, "content"], [1, "field"], ["for", "host"], ["name", "host", 1, "value"], ["for", "space"], ["name", "space", 1, "value"], ["for", "period"], ["name", "period", 1, "value"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["name", "view-meeting", "button", "", "mat-button", "", "mat-dialog-close", "", 1, "footer", 3, "routerLink", "queryParams", "click"]],
       template: function OrderBookingDetailsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -36050,7 +36382,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 10,
       vars: 4,
-      consts: [[1, "heading"], ["class", "content padded", 4, "ngIf", "ngIfElse"], ["edit_state", ""], ["class", "footer", "mat-button", "", 3, "click", 4, "ngIf"], ["empty_state", ""], ["load_state", ""], [1, "content", "padded"], [4, "ngIf", "ngIfElse"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "amount"], [4, "ngIf"], ["class", "sub-item", 4, "ngFor", "ngForOf"], [1, "sub-item"], [1, "content"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event", 4, "ngIf", "ngIfElse"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event"], ["mat-button", "", 1, "footer", 3, "click"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"], ["diameter", "32"]],
+      consts: [[1, "heading"], ["class", "content padded", 4, "ngIf", "ngIfElse"], ["edit_state", ""], ["class", "footer", "name", "edit", "mat-button", "", 3, "click", 4, "ngIf"], ["empty_state", ""], ["load_state", ""], [1, "content", "padded"], [4, "ngIf", "ngIfElse"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "amount"], [4, "ngIf"], ["class", "sub-item", 4, "ngFor", "ngForOf"], [1, "sub-item"], [1, "content"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event", 4, "ngIf", "ngIfElse"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event"], ["name", "edit", "mat-button", "", 1, "footer", 3, "click"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"], ["diameter", "32"]],
       template: function OrderDetailsItemsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -37267,12 +37599,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           events.forEach(function (event) {
             var json = event.toJSON();
 
-            var _iterator51 = _createForOfIteratorHelper(event.space_list),
-                _step51;
+            var _iterator53 = _createForOfIteratorHelper(event.space_list),
+                _step53;
 
             try {
               var _loop5 = function _loop5() {
-                var space = _step51.value;
+                var space = _step53.value;
 
                 if (event.approval_status[space.email].includes('tentative')) {
                   _this185.events.push(new booking_class_1.Booking(Object.assign(Object.assign({}, json), {
@@ -37283,13 +37615,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               };
 
-              for (_iterator51.s(); !(_step51 = _iterator51.n()).done;) {
+              for (_iterator53.s(); !(_step53 = _iterator53.n()).done;) {
                 _loop5();
               }
             } catch (err) {
-              _iterator51.e(err);
+              _iterator53.e(err);
             } finally {
-              _iterator51.f();
+              _iterator53.f();
             }
           });
         }
@@ -38208,7 +38540,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function DayViewComponent_mat_form_field_7_mat_option_2_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 21);
+        i0.ɵɵelementStart(0, "mat-option", 22);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
@@ -38226,7 +38558,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _r13 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementStart(0, "mat-form-field", 7);
-        i0.ɵɵelementStart(1, "mat-select", 20);
+        i0.ɵɵelementStart(1, "mat-select", 21);
         i0.ɵɵlistener("ngModelChange", function DayViewComponent_mat_form_field_7_Template_mat_select_ngModelChange_1_listener($event) {
           i0.ɵɵrestoreView(_r13);
           var ctx_r12 = i0.ɵɵnextContext();
@@ -38253,7 +38585,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function DayViewComponent_mat_form_field_8_mat_option_2_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 21);
+        i0.ɵɵelementStart(0, "mat-option", 22);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
@@ -38271,7 +38603,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _r18 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementStart(0, "mat-form-field", 7);
-        i0.ɵɵelementStart(1, "mat-select", 22);
+        i0.ɵɵelementStart(1, "mat-select", 23);
         i0.ɵɵlistener("ngModelChange", function DayViewComponent_mat_form_field_8_Template_mat_select_ngModelChange_1_listener($event) {
           i0.ɵɵrestoreView(_r18);
           var ctx_r17 = i0.ɵɵnextContext();
@@ -38294,13 +38626,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function DayViewComponent_mat_option_13_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 21);
-        i0.ɵɵelementStart(1, "div", 23);
-        i0.ɵɵelementStart(2, "div", 24);
+        i0.ɵɵelementStart(0, "mat-option", 22);
+        i0.ɵɵelementStart(1, "div", 24);
+        i0.ɵɵelementStart(2, "div", 25);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 25);
-        i0.ɵɵelement(5, "div", 26);
+        i0.ɵɵelementStart(4, "div", 26);
+        i0.ɵɵelement(5, "div", 27);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -38369,8 +38701,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         var _r28 = i0.ɵɵgetCurrentView();
 
-        i0.ɵɵelementStart(0, "div", 27);
-        i0.ɵɵelementStart(1, "mat-checkbox", 28);
+        i0.ɵɵelementStart(0, "div", 28);
+        i0.ɵɵelementStart(1, "mat-checkbox", 29);
         i0.ɵɵlistener("ngModelChange", function DayViewComponent_div_37_Template_mat_checkbox_ngModelChange_1_listener($event) {
           i0.ɵɵrestoreView(_r28);
           var key_r26 = ctx.$implicit;
@@ -38383,12 +38715,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵrestoreView(_r28);
           return $event.stopPropagation();
         });
-        i0.ɵɵelementStart(2, "div", 23);
-        i0.ɵɵelementStart(3, "div", 24);
+        i0.ɵɵelementStart(2, "div", 24);
+        i0.ɵɵelementStart(3, "div", 25);
         i0.ɵɵtext(4);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "div", 25);
-        i0.ɵɵelement(6, "div", 26);
+        i0.ɵɵelementStart(5, "div", 26);
+        i0.ɵɵelement(6, "div", 27);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -38597,7 +38929,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 38,
       vars: 28,
-      consts: [[1, "day-view"], [1, "group"], [3, "date", "zone", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["mat-icon-button", "", 1, "not-desktop", 3, "matMenuTriggerFor"], [3, "icon"], ["appearance", "outline", 3, "desktop-only", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "legend", "overflow_only", "space_type"], ["menu", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["level_list", "matMenu"], ["mat-menu-item", "", 3, "selected", "click", 4, "ngFor", "ngForOf"], ["space_type_list", "matMenu"], ["legend_listing", "matMenu"], ["mat-menu-item", "", 4, "ngFor", "ngForOf"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"], ["mat-menu-item", ""], [3, "ngModel", "ngModelChange", "click"]],
+      consts: [[1, "day-view"], [1, "group"], [3, "date", "zone", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["mat-icon-button", "", 1, "not-desktop", 3, "matMenuTriggerFor"], [3, "icon"], ["appearance", "outline", 3, "desktop-only", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "overflow", "labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "legend", "overflow_only", "space_type"], ["menu", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], ["level_list", "matMenu"], ["mat-menu-item", "", 3, "selected", "click", 4, "ngFor", "ngForOf"], ["space_type_list", "matMenu"], ["legend_listing", "matMenu"], ["mat-menu-item", "", 4, "ngFor", "ngForOf"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"], ["mat-menu-item", ""], [3, "ngModel", "ngModelChange", "click"]],
       template: function DayViewComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -38655,7 +38987,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵlistener("click", function DayViewComponent_Template_div_click_26_listener($event) {
             return $event.stopPropagation();
           });
-          i0.ɵɵelementStart(27, "mat-slide-toggle", 10);
+          i0.ɵɵelementStart(27, "mat-slide-toggle", 15);
           i0.ɵɵlistener("ngModelChange", function DayViewComponent_Template_mat_slide_toggle_ngModelChange_27_listener($event) {
             return ctx.only_overflow = $event;
           });
@@ -38663,14 +38995,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(29, "mat-menu", null, 15);
-          i0.ɵɵtemplate(31, DayViewComponent_button_31_Template, 2, 3, "button", 16);
+          i0.ɵɵelementStart(29, "mat-menu", null, 16);
+          i0.ɵɵtemplate(31, DayViewComponent_button_31_Template, 2, 3, "button", 17);
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(32, "mat-menu", null, 17);
-          i0.ɵɵtemplate(34, DayViewComponent_button_34_Template, 2, 3, "button", 16);
+          i0.ɵɵelementStart(32, "mat-menu", null, 18);
+          i0.ɵɵtemplate(34, DayViewComponent_button_34_Template, 2, 3, "button", 17);
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(35, "mat-menu", null, 18);
-          i0.ɵɵtemplate(37, DayViewComponent_div_37_Template, 7, 4, "div", 19);
+          i0.ɵɵelementStart(35, "mat-menu", null, 19);
+          i0.ɵɵtemplate(37, DayViewComponent_div_37_Template, 7, 4, "div", 20);
           i0.ɵɵelementEnd();
         }
 
@@ -39751,24 +40083,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
           });
 
-          var _iterator52 = _createForOfIteratorHelper(events),
-              _step52;
+          var _iterator54 = _createForOfIteratorHelper(events),
+              _step54;
 
           try {
             var _loop6 = function _loop6() {
-              var bkn = _step52.value;
+              var bkn = _step54.value;
               var bkn_start = dayjs(bkn.date).startOf('m');
               var bkn_end = dayjs(bkn_start).add(bkn.duration, 'm').startOf('m');
               var count = 1;
               var index = 0;
               var collisions = [];
 
-              var _iterator53 = _createForOfIteratorHelper(events),
-                  _step53;
+              var _iterator55 = _createForOfIteratorHelper(events),
+                  _step55;
 
               try {
                 var _loop7 = function _loop7() {
-                  var cmp = _step53.value;
+                  var cmp = _step55.value;
 
                   /* istanbul ignore else */
                   if (bkn.id !== cmp.id) {
@@ -39792,13 +40124,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   }
                 };
 
-                for (_iterator53.s(); !(_step53 = _iterator53.n()).done;) {
+                for (_iterator55.s(); !(_step55 = _iterator55.n()).done;) {
                   _loop7();
                 }
               } catch (err) {
-                _iterator53.e(err);
+                _iterator55.e(err);
               } finally {
-                _iterator53.f();
+                _iterator55.f();
               }
 
               _this201.overlap_details[bkn.id] = {
@@ -39807,13 +40139,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               };
             };
 
-            for (_iterator52.s(); !(_step52 = _iterator52.n()).done;) {
+            for (_iterator54.s(); !(_step54 = _iterator54.n()).done;) {
               _loop6();
             }
           } catch (err) {
-            _iterator52.e(err);
+            _iterator54.e(err);
           } finally {
-            _iterator52.f();
+            _iterator54.f();
           }
         }
         /**
@@ -42009,7 +42341,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var report_r11 = ctx.$implicit;
-        i0.ɵɵproperty("routerLink", i0.ɵɵpureFunction1(5, _c0, report_r11.id));
+        i0.ɵɵproperty("name", report_r11.id + "-report")("routerLink", i0.ɵɵpureFunction1(6, _c0, report_r11.id));
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("icon", report_r11.icon);
         i0.ɵɵadvance(2);
@@ -42017,14 +42349,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate(report_r11.description);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(7, _c1));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(8, _c1));
       }
     }
 
     function ReportsComponent_div_6_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 12);
-        i0.ɵɵtemplate(1, ReportsComponent_div_6_a_1_Template, 10, 8, "a", 13);
+        i0.ɵɵtemplate(1, ReportsComponent_div_6_a_1_Template, 10, 9, "a", 13);
         i0.ɵɵelementEnd();
       }
 
@@ -42134,7 +42466,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 9,
       vars: 4,
-      consts: [[1, "reports"], [1, "group"], [3, "date", "dateChange"], ["class", "topbar", 4, "ngIf"], ["class", "options", 4, "ngIf", "ngIfElse"], ["report_display", ""], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], [1, "options"], ["class", "card", "mat-button", "", 3, "routerLink", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "card", 3, "routerLink"], [1, "content"], [1, "icon"], [3, "icon"], [1, "details"], [1, "desc"], [3, "report"]],
+      consts: [[1, "reports"], [1, "group"], [3, "date", "dateChange"], ["class", "topbar", 4, "ngIf"], ["class", "options", 4, "ngIf", "ngIfElse"], ["report_display", ""], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], ["name", "report-type", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], [1, "options"], ["class", "card", "mat-button", "", 3, "name", "routerLink", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "card", 3, "name", "routerLink"], [1, "content"], [1, "icon"], [3, "icon"], [1, "details"], [1, "desc"], [3, "report"]],
       template: function ReportsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -43035,7 +43367,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate1(" - ", ctx_r1.event.duration > 0 ? ctx_r1.event.end_time : "", "");
         i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate((ctx_r1.event.organiser == null ? null : ctx_r1.event.organiser.name) || ctx_r1.event.organiser_email);
+        i0.ɵɵtextInterpolate(ctx_r1.event.organiser == null ? null : ctx_r1.event.organiser.name);
         i0.ɵɵadvance(11);
         i0.ɵɵproperty("ngForOf", ctx_r1.attendees)("ngForTrackBy", ctx_r1.trackByFn);
         i0.ɵɵadvance(1);
@@ -43696,21 +44028,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (_this225.form.dirty && _this225.form.valid) {
               var attendees = _this225.form.controls.attendees.value;
 
-              var _iterator54 = _createForOfIteratorHelper(attendees),
-                  _step54;
+              var _iterator56 = _createForOfIteratorHelper(attendees),
+                  _step56;
 
               try {
-                for (_iterator54.s(); !(_step54 = _iterator54.n()).done;) {
-                  var attendee = _step54.value;
+                for (_iterator56.s(); !(_step56 = _iterator56.n()).done;) {
+                  var attendee = _step56.value;
 
                   if (!attendee.email) {
                     attendee.email = "".concat(Math.floor(Math.random() * 99999), "@guest.mckinsey.com");
                   }
                 }
               } catch (err) {
-                _iterator54.e(err);
+                _iterator56.e(err);
               } finally {
-                _iterator54.f();
+                _iterator56.f();
               }
 
               var new_booking = new booking_class_1.Booking(Object.assign(Object.assign({}, _this225.booking.toJSON()), _this225.form.value));
@@ -44577,6 +44909,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this228.subscription('bookings', _this228._bookings.booking_list.subscribe(function () {
               return _this228.updateEvents();
             }));
+
+            _this228.updateEvents();
           });
         }
       }, {
@@ -44629,16 +44963,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var end = start.add(booking.duration, 'm');
             return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
           }).filter(function (bkn) {
-            return bkn.space_list.find(function (space) {
+            return !bkn.declined && bkn.space_list.find(function (space) {
               return space.zones.includes(_this230._org.building.id);
             });
           });
 
-          console.log('Events:', bookings.map(function (i) {
-            return "".concat(i.title).concat(i.space_list.map(function (i) {
-              return i.email;
-            }).join(','));
-          }));
           this.bookings = bookings.map(function (bkn) {
             var data = bkn.toJSON();
             var space = bkn.space_list.find(function (space) {
@@ -44677,9 +45006,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             var bookings = _this231._bookings.booking_list.getValue();
 
-            console.log('Booking list:', bookings.map(function (i) {
-              return i.title;
-            }));
             list.forEach(function (space) {
               return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(function (bkn) {
                 return new booking_class_1.Booking(bkn);
@@ -44689,9 +45015,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 to: date.endOf('d').valueOf()
               });
             });
-            console.log('Bookings:', bookings.map(function (i) {
-              return i.title;
-            }));
             bookings.sort(function (a, b) {
               return a.date - b.date;
             });
@@ -45402,7 +45725,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-visitors"]],
       decls: 13,
       vars: 12,
-      consts: [[1, "visitors"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "click", 4, "ngIf"], ["labelPosition", "before", "title", "Show all meetings", 3, "ngModel", "ngModelChange"], [3, "show_all", "date", "search"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], [3, "icon"]],
+      consts: [[1, "visitors"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "click", 4, "ngIf"], ["name", "show-all", "labelPosition", "before", "title", "Show all meetings", 3, "ngModel", "ngModelChange"], [3, "show_all", "date", "search"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], [3, "icon"]],
       template: function VisitorsComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -45998,9 +46321,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx_r0.event.declined || ctx_r0.event.approved);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("title", (ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name) || ctx_r0.event.organiser_email);
+        i0.ɵɵproperty("title", ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name);
         i0.ɵɵadvance(4);
-        i0.ɵɵtextInterpolate((ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name) || ctx_r0.event.organiser_email);
+        i0.ɵɵtextInterpolate(ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("title", (ctx_r0.event.space == null ? null : ctx_r0.event.space.name) || ctx_r0.event.location);
         i0.ɵɵadvance(3);
@@ -46141,10 +46464,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/shared/base.directive */
     "./src/app/shared/base.directive.ts");
 
-    var dayjs = __webpack_require__(
-    /*! dayjs */
-    "./node_modules/dayjs/dayjs.min.js");
-
     var spaces_service_1 = __webpack_require__(
     /*! src/app/services/data/spaces/spaces.service */
     "./src/app/services/data/spaces/spaces.service.ts");
@@ -46164,6 +46483,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var bookings_service_1 = __webpack_require__(
     /*! src/app/services/data/bookings/bookings.service */
     "./src/app/services/data/bookings/bookings.service.ts");
+
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
@@ -46246,12 +46569,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this237 = this;
 
-          this.date_list = this.generateDates(this.date, this.weekends);
-          this.initBookings();
-          this.search$.next("".concat(this.date, "|").concat(this.weekends, "|").concat(this.level));
-          this.interval('update_booking', function () {
-            return _this237.search$.next("".concat(_this237.date, "|").concat(_this237.weekends, "|").concat(_this237.level, "|").concat(dayjs().unix()));
-          }, 30 * 1000);
+          this._spaces.initialised.pipe(operators_1.first(function (_) {
+            return _;
+          })).subscribe(function () {
+            _this237.date_list = _this237.generateDates(_this237.date, _this237.weekends);
+
+            _this237.initBookings();
+
+            _this237.search$.next("".concat(_this237.date, "|").concat(_this237.weekends, "|").concat(_this237.level));
+
+            _this237.interval('update_booking', function () {
+              return _this237.search$.next("".concat(_this237.date, "|").concat(_this237.weekends, "|").concat(_this237.level, "|").concat(dayjs().unix()));
+            }, 30 * 1000);
+          });
         }
       }, {
         key: "ngOnChanges",
@@ -46724,7 +47054,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 11,
       vars: 9,
-      consts: [[1, "week-view"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "space_type", "weekends"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
+      consts: [[1, "week-view"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["name", "weekends", "labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "space_type", "weekends"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
       template: function WeekViewComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -46947,16 +47277,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "2178fb7",
-      "hash": "2178fb7",
+      "raw": "4384a43",
+      "hash": "4384a43",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "2178fb7",
+      "suffix": "4384a43",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1595897401815
+      "time": 1596001607985
     };
     /* tslint:enable */
 

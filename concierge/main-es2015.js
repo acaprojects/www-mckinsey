@@ -887,7 +887,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
 }
 exports.BookingConfirmComponent = BookingConfirmComponent;
 BookingConfirmComponent.ɵfac = function BookingConfirmComponent_Factory(t) { return new (t || BookingConfirmComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.BookingsService), i0.ɵɵdirectiveInject(i4.SpacesService), i0.ɵɵdirectiveInject(i5.Router), i0.ɵɵdirectiveInject(i6.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-BookingConfirmComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingConfirmComponent, selectors: [["a-booking-confirm-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 6, vars: 3, consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], [1, "request"], [1, "info"], [1, "list-item"], [1, "text", 3, "title"], ["class", "tooltip", 3, "matTooltip", 4, "ngIf"], [1, "tooltip", 3, "matTooltip"], [1, "show", 3, "click"], [1, "list-item", 3, "title"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "mat-dialog-close", ""]], template: function BookingConfirmComponent_Template(rf, ctx) { if (rf & 1) {
+BookingConfirmComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingConfirmComponent, selectors: [["a-booking-confirm-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 6, vars: 3, consts: [[4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["success_actions", ""], ["name", "close", "mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], [3, "src"], [1, "text"], ["class", "request", 4, "ngIf"], ["class", "info", 4, "ngIf"], ["name", "title", 1, "field"], [1, "value"], ["name", "when", 1, "field"], ["name", "duration", 1, "field"], ["name", "location", 1, "field", "multi"], [1, "list"], ["class", "list-item", 4, "ngFor", "ngForOf"], ["class", "list-item", 4, "ngIf"], ["class", "show", 3, "click", 4, "ngIf"], ["name", "host", 1, "field"], ["class", "field", "name", "host", 4, "ngIf"], ["name", "attendees", 1, "field"], ["class", "list-item", 3, "title", 4, "ngFor", "ngForOf"], ["name", "notes", 1, "field"], [1, "value", 3, "innerHTML"], ["name", "catering", 1, "field"], [1, "request"], [1, "info"], [1, "list-item"], [1, "text", 3, "title"], ["class", "tooltip", 3, "matTooltip", 4, "ngIf"], [1, "tooltip", 3, "matTooltip"], [1, "show", 3, "click"], [1, "list-item", 3, "title"], [1, "name"], ["class", "email", 4, "ngIf"], [1, "email"], [3, "href"], ["mat-button", "", "name", "previous", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", "name", "next", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "32"], ["mat-button", "", "name", "next", "mat-dialog-close", ""]], template: function BookingConfirmComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, BookingConfirmComponent_mat_dialog_content_0_Template, 75, 37, "mat-dialog-content", 0);
         i0.ɵɵtemplate(1, BookingConfirmComponent_mat_dialog_actions_1_Template, 3, 2, "mat-dialog-actions", 1);
         i0.ɵɵtemplate(2, BookingConfirmComponent_ng_template_2_Template, 6, 1, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
@@ -2219,7 +2219,9 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
     loadMenu() {
         const space = this.space_list.find((space) => space.email === this.form.controls.location_id.value);
         this.loading = true;
-        this._menu.query({ room_id: space.id }).then((list) => {
+        this._menu
+            .query({ zone_id: this._org.buildings.find((bld) => space.zones.includes(bld.id)).id })
+            .then((list) => {
             this.loading = false;
             this.category_list = list.map((i) => new catering_category_class_1.CateringCategory(i));
         }, () => (this.loading = false));
@@ -2285,7 +2287,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
 }
 exports.BookingCateringOrderDetailsComponent = BookingCateringOrderDetailsComponent;
 BookingCateringOrderDetailsComponent.ɵfac = function BookingCateringOrderDetailsComponent_Factory(t) { return new (t || BookingCateringOrderDetailsComponent)(i0.ɵɵdirectiveInject(i1.CateringMenuService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
-BookingCateringOrderDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingCateringOrderDetailsComponent, selectors: [["a-catering-order-details"]], inputs: { order: "order", date: "date", duration: "duration", space_list: "space_list", all_day: "all_day", hide_details: "hide_details", compact: "compact" }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 14, vars: 7, consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", 1, "inverse", 3, "click"], ["mat-button", "", "name", "confirm", 3, "disabled", "click"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "location_id"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "delivery_time"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "click", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "click"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "compact", "category", "symbol", "items", "disabled", "close"]], template: function BookingCateringOrderDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+BookingCateringOrderDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingCateringOrderDetailsComponent, selectors: [["a-catering-order-details"]], inputs: { order: "order", date: "date", duration: "duration", space_list: "space_list", all_day: "all_day", hide_details: "hide_details", compact: "compact" }, outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 14, vars: 7, consts: [[1, "catering", "order-details"], ["class", "header", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [1, "footer"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click"], ["empty_state", ""], ["load_state", ""], ["category_display", ""], [1, "header"], [3, "formGroup"], [1, "field"], ["appearance", "outline"], ["formControlName", "location_id"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "start"], ["name", "start", "formControlName", "delivery_time"], [3, "value"], [1, "body"], [4, "ngIf", "ngIfElse"], ["class", "contents", 4, "ngIf", "ngIfElse"], [1, "contents"], ["mat-button", "", "class", "category", 3, "background-image", "disabled", "click", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "category", 3, "disabled", "click"], [1, "overlay"], [1, "name"], [1, "empty-state", "center"], [1, "icon"], ["alt", "No Catering Available", "src", "assets/img/no-catering.svg"], [1, "bold"], [1, "info-block", "center"], ["diameter", "48"], [1, "text"], [3, "compact", "category", "symbol", "items", "disabled", "close"]], template: function BookingCateringOrderDetailsComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtemplate(1, BookingCateringOrderDetailsComponent_div_1_Template, 14, 3, "div", 1);
         i0.ɵɵtemplate(2, BookingCateringOrderDetailsComponent_div_2_Template, 2, 2, "div", 2);
@@ -3623,7 +3625,7 @@ BookingSpaceFlowFormComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingSpac
     } if (rf & 2) {
         var _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.container = _t.first);
-    } }, inputs: { form: "form", can_return: "can_return" }, outputs: { event: "event" }, decls: 9, vars: 3, consts: [[1, "booking-form"], ["container", ""], [3, "formGroup", "ngSubmit"], [1, "body"], [3, "form"], [1, "footer"], ["mat-button", "", "type", "button", "name", "return", "class", "inverse", 3, "click", 4, "ngIf"], ["mat-button", "", "type", "submit"], ["mat-button", "", "type", "button", "name", "return", 1, "inverse", 3, "click"]], template: function BookingSpaceFlowFormComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { form: "form", can_return: "can_return" }, outputs: { event: "event" }, decls: 9, vars: 3, consts: [[1, "booking-form"], ["container", ""], [3, "formGroup", "ngSubmit"], [1, "body"], [3, "form"], [1, "footer"], ["mat-button", "", "type", "button", "name", "return", "class", "inverse", 3, "click", 4, "ngIf"], ["mat-button", "", "type", "submit", "name", "next"], ["mat-button", "", "type", "button", "name", "return", 1, "inverse", 3, "click"]], template: function BookingSpaceFlowFormComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0, 1);
         i0.ɵɵelementStart(2, "form", 2);
         i0.ɵɵlistener("ngSubmit", function BookingSpaceFlowFormComponent_Template_form_ngSubmit_2_listener() { return ctx.next(); });
@@ -4098,7 +4100,7 @@ CateringDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringDet
     } if (rf & 2) {
         var _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._content_el = _t.first);
-    } }, outputs: { event: "event" }, decls: 17, vars: 5, consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/food-notes.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "click"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]], template: function CateringDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, outputs: { event: "event" }, decls: 17, vars: 5, consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/food-notes.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", "name", "next", 3, "click"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]], template: function CateringDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "mat-tab-group", 2);
@@ -5590,7 +5592,7 @@ class NewUserModalComponent extends base_directive_1.BaseDirective {
 }
 exports.NewUserModalComponent = NewUserModalComponent;
 NewUserModalComponent.ɵfac = function NewUserModalComponent_Factory(t) { return ɵNewUserModalComponent_BaseFactory(t || NewUserModalComponent); };
-NewUserModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: NewUserModalComponent, selectors: [["new-user-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 8, vars: 4, consts: [["mat-dialog-title", ""], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "body"], [3, "form"], ["mat-button", "", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function NewUserModalComponent_Template(rf, ctx) { if (rf & 1) {
+NewUserModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: NewUserModalComponent, selectors: [["new-user-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 8, vars: 4, consts: [["mat-dialog-title", ""], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], ["class", "body", 4, "ngIf", "ngIfElse"], [4, "ngIf"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "body"], [3, "form"], ["mat-button", "", "name", "previous", "mat-dialog-close", "", 1, "inverse"], ["mat-button", "", "name", "next", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function NewUserModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "h3", 0);
         i0.ɵɵtext(2, "Add External Attendee");
@@ -7047,7 +7049,7 @@ class RequirementDetailsModalComponent {
 }
 exports.RequirementDetailsModalComponent = RequirementDetailsModalComponent;
 RequirementDetailsModalComponent.ɵfac = function RequirementDetailsModalComponent_Factory(t) { return new (t || RequirementDetailsModalComponent)(i0.ɵɵdirectiveInject(i1.OrganisationService), i0.ɵɵdirectiveInject(i2.UsersService), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-RequirementDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: RequirementDetailsModalComponent, selectors: [["a-requirement-details-modal"]], outputs: { event: "event" }, decls: 17, vars: 5, consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "click"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], [1, "fieldset"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"], ["for", "head-count"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"]], template: function RequirementDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
+RequirementDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: RequirementDetailsModalComponent, selectors: [["a-requirement-details-modal"]], outputs: { event: "event" }, decls: 17, vars: 5, consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", "name", "next", 3, "click"], [3, "label"], [3, "formGroup"], [1, "field"], ["for", "equipment-notes"], ["appearance", "outline"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], [1, "fieldset"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"], ["for", "head-count"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"]], template: function RequirementDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "mat-tab-group", 2);
@@ -10085,6 +10087,7 @@ class Report {
         }
         else if (this.type === 'bookings') {
             data = data.map((i) => {
+                var _a, _b, _c;
                 const booking = i;
                 if (booking.setup instanceof Object) {
                     booking.setup = booking.setup[booking.room_email];
@@ -10095,8 +10098,8 @@ class Report {
                 booking.setup = general_utilities_1.humaniseDuration((booking.setup || 0) / 60);
                 booking.breakdown = general_utilities_1.humaniseDuration((booking.breakdown || 0) / 60);
                 booking.description = (booking.description || '').replace(/<[^>]*>?/gm, '');
-                booking['Meeting Host'] = booking.organizer;
-                booking['Booked By'] = booking.booked_by.name || booking.booked_by.email;
+                booking['Meeting Host'] = ((_a = booking.organizer) === null || _a === void 0 ? void 0 : _a.name) || booking.organizer;
+                booking['Booked By'] = ((_b = booking.booked_by) === null || _b === void 0 ? void 0 : _b.name) || ((_c = booking.booked_by) === null || _c === void 0 ? void 0 : _c.email) || '';
                 booking.charge_code = booking.equipment_codes
                     ? Object.keys(booking.equipment_codes)
                         .map((key) => booking.equipment_codes[key])
@@ -10828,7 +10831,7 @@ class UsersService extends base_service_1.BaseAPIService {
                         if (this._service.setting('app.user.update_location')) {
                             this.interval('location', () => user.locate(), 5000);
                         }
-                        yield this.loadDelegates();
+                        yield this.loadDelegates().catch(_ => null);
                         resolve();
                         loading.user = {
                             message: 'Loading user credentials',
@@ -10841,7 +10844,7 @@ class UsersService extends base_service_1.BaseAPIService {
                     if (this._service.setting('app.user.update_location')) {
                         this.interval('location', () => current_user.locate(), 5000);
                     }
-                    yield this.loadDelegates();
+                    yield this.loadDelegates().catch(_ => null);
                     resolve();
                     loading.user = { message: 'Loading user credentials', state: 'complete' };
                     this._service.set('loading', loading);
@@ -13374,7 +13377,7 @@ class BookingFormComponent extends base_directive_1.BaseDirective {
 }
 exports.BookingFormComponent = BookingFormComponent;
 BookingFormComponent.ɵfac = function BookingFormComponent_Factory(t) { return new (t || BookingFormComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.UsersService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
-BookingFormComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFormComponent, selectors: [["a-booking-form"]], inputs: { form: "form" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "group", "date"], [1, "group", "time"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["for", "date"], ["name", "date", "formControlName", "date", 3, "from"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], [1, "label-group"], ["for", "duration"], ["formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "time", "specialPreprops"], ["formControlName", "all_day"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["formControlName", "has_catering"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]], template: function BookingFormComponent_Template(rf, ctx) { if (rf & 1) {
+BookingFormComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingFormComponent, selectors: [["a-booking-form"]], inputs: { form: "form" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [["class", "booking-form", 3, "formGroup", 4, "ngIf"], [1, "booking-form", 3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "group", "date"], [1, "group", "time"], [1, "field"], ["for", "spaces"], ["name", "spaces", 3, "placeholder", "onAction"], ["for", "title"], ["appearance", "outline"], ["matInput", "", "name", "title", "formControlName", "title", 6, "placeholder"], [4, "ngIf"], ["for", "date"], ["name", "date", "formControlName", "date", 3, "from"], ["for", "start-time"], ["name", "start-time", 3, "disabled", "ngModel", "ngModelOptions", "ngModelChange"], ["class", "error info", 4, "ngIf"], [1, "error", "info"], [1, "label-group"], ["for", "duration"], ["name", "all-day", "formControlName", "all_day", 4, "ngIf"], ["name", "duration", "formControlName", "duration", 3, "max", "time", "specialPreprops"], ["name", "all-day", "formControlName", "all_day"], ["for", "organiser"], ["name", "organiser", "formControlName", "organiser"], ["for", "attendees"], ["name", "attendees", "formControlName", "attendees", 3, "newUser"], ["for", "booking-type"], ["name", "booking-type", "formControlName", "type"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["name", "catering", "formControlName", "has_catering"], ["for", "body"], ["name", "body", "appearance", "outline", 4, "ngIf", "ngIfElse"], ["html_editor", ""], ["name", "body", "appearance", "outline"], ["matInput", "", "name", "description", "formControlName", "body", 6, "placeholder"], ["formControlName", "body"]], template: function BookingFormComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, BookingFormComponent_div_0_Template, 13, 11, "div", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.form);
@@ -14205,7 +14208,8 @@ function SidebarComponent_a_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const item_r4 = ctx.$implicit;
-    i0.ɵɵproperty("routerLink", i0.ɵɵpureFunction1(3, _c0, item_r4.route));
+    const i_r5 = ctx.index;
+    i0.ɵɵproperty("id", "link-" + (item_r4.id || i_r5))("routerLink", i0.ɵɵpureFunction1(4, _c0, item_r4.route));
     i0.ɵɵadvance(4);
     i0.ɵɵproperty("icon", item_r4.icon);
     i0.ɵɵadvance(2);
@@ -14216,17 +14220,17 @@ function SidebarComponent_div_5_mat_option_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const building_r6 = ctx.$implicit;
-    i0.ɵɵproperty("value", building_r6);
+    const building_r7 = ctx.$implicit;
+    i0.ɵɵproperty("value", building_r7);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", building_r6.name, " ");
+    i0.ɵɵtextInterpolate1(" ", building_r7.name, " ");
 } }
 function SidebarComponent_div_5_Template(rf, ctx) { if (rf & 1) {
-    const _r8 = i0.ɵɵgetCurrentView();
+    const _r9 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 13);
     i0.ɵɵelementStart(1, "mat-form-field", 14);
     i0.ɵɵelementStart(2, "mat-select", 15);
-    i0.ɵɵlistener("ngModelChange", function SidebarComponent_div_5_Template_mat_select_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.active_building = $event; });
+    i0.ɵɵlistener("ngModelChange", function SidebarComponent_div_5_Template_mat_select_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r9); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.active_building = $event; });
     i0.ɵɵtemplate(3, SidebarComponent_div_5_mat_option_3_Template, 2, 2, "mat-option", 16);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -14266,13 +14270,13 @@ class SidebarComponent {
 }
 exports.SidebarComponent = SidebarComponent;
 SidebarComponent.ɵfac = function SidebarComponent_Factory(t) { return new (t || SidebarComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService)); };
-SidebarComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SidebarComponent, selectors: [["a-sidebar"]], decls: 6, vars: 4, consts: [[1, "logo"], [3, "class", 4, "ngIf"], [3, "src", 4, "ngIf"], [1, "menu"], ["mat-button", "", "class", "item", "routerLinkActive", "active", 3, "routerLink", 4, "ngFor", "ngForOf"], ["class", "building dark-mode", 4, "ngIf"], [3, "src"], ["mat-button", "", "routerLinkActive", "active", 1, "item", 3, "routerLink"], [1, "content"], [1, "bar"], [1, "icon"], [3, "icon"], [1, "text"], [1, "building", "dark-mode"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SidebarComponent_Template(rf, ctx) { if (rf & 1) {
+SidebarComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SidebarComponent, selectors: [["a-sidebar"]], decls: 6, vars: 4, consts: [[1, "logo"], [3, "class", 4, "ngIf"], [3, "src", 4, "ngIf"], [1, "menu"], ["mat-button", "", "class", "item", "routerLinkActive", "active", 3, "id", "routerLink", 4, "ngFor", "ngForOf"], ["class", "building dark-mode", 4, "ngIf"], [3, "src"], ["mat-button", "", "routerLinkActive", "active", 1, "item", 3, "id", "routerLink"], [1, "content"], [1, "bar"], [1, "icon"], [3, "icon"], [1, "text"], [1, "building", "dark-mode"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SidebarComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtemplate(1, SidebarComponent_i_1_Template, 2, 3, "i", 1);
         i0.ɵɵtemplate(2, SidebarComponent_img_2_Template, 2, 4, "img", 2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "div", 3);
-        i0.ɵɵtemplate(4, SidebarComponent_a_4_Template, 7, 5, "a", 4);
+        i0.ɵɵtemplate(4, SidebarComponent_a_4_Template, 7, 6, "a", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(5, SidebarComponent_div_5_Template, 4, 2, "div", 5);
     } if (rf & 2) {
@@ -14712,33 +14716,35 @@ const users_mock_1 = __webpack_require__(/*! ./users.mock */ "./src/app/shared/m
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
+const catering_menu_mock_1 = __webpack_require__(/*! ./catering-menu.mock */ "./src/app/shared/mocks/api/catering-menu.mock.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
-exports.MOCK_BOOKINGS = Array(1000)
+exports.MOCK_BOOKINGS = Array(997)
     .fill(0)
     .map((i) => {
-    const rooms = general_utilities_1.unique(Array(general_utilities_1.randomInt(3, 1))
+    const rooms = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(3, 1))
         .fill(0)
-        .map((i) => spaces_mock_1.MOCK_SPACES[Math.floor(Math.random() * spaces_mock_1.MOCK_SPACES.length)]), 'id');
+        .map((i) => spaces_mock_1.MOCK_SPACES[general_utilities_1.predictableRandomInt(spaces_mock_1.MOCK_SPACES.length)]), 'id');
     // Set the organiser with the generated user list
-    const organiser = general_utilities_1.randomInt(9999) % 10 === 0
+    const organizer = general_utilities_1.predictableRandomInt(9999) % 10 === 0
         ? users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1]
-        : users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)];
+        : users_mock_1.MOCK_USERS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_USERS.length)];
     // Set the attendees with the generated user list
-    const attendees = general_utilities_1.unique(Array(general_utilities_1.randomInt(10))
+    const attendees = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(10))
         .fill(0)
-        .map((i) => users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)]), 'email');
-    const guests = general_utilities_1.unique(Array(general_utilities_1.randomInt(10))
+        .map((i) => users_mock_1.MOCK_USERS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_USERS.length)]), 'email');
+    const guests = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(10))
         .fill(0)
-        .map((i) => users_mock_1.MOCK_CONTACTS[general_utilities_1.randomInt(users_mock_1.MOCK_CONTACTS.length)]), 'email');
+        .map((i) => users_mock_1.MOCK_CONTACTS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_CONTACTS.length)]), 'email');
     const booking_data = spec_helpers_1.generateMockBooking({
-        organiser,
+        organizer,
         attendees: attendees.concat(guests),
         room_ids: rooms.map((i) => i.email),
+        menu: catering_menu_mock_1.MOCK_MENU
     });
     for (const space of rooms) {
-        booking_data.status[space.email] = ['approved', 'tentative', 'declined'][general_utilities_1.randomInt(3)];
+        booking_data.status[space.email] = ['approved', 'tentative', 'declined'][general_utilities_1.predictableRandomInt(3)];
     }
     return booking_data;
 });
@@ -14751,11 +14757,11 @@ window.control.handlers.push({
     callback: (event) => {
         const user = users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1];
         let data = !event.query_params.email
-            ? exports.MOCK_BOOKINGS.filter((i) => i.organiser.email === user.email ||
-                i.organiser === user.email ||
+            ? exports.MOCK_BOOKINGS.filter((i) => i.organizer.email === user.email ||
+                i.organizer === user.email ||
                 i.attendees.reduce((a, v) => a || v.email === user.email, false))
-            : exports.MOCK_BOOKINGS.filter((i) => i.organiser.email === event.query_params.email ||
-                i.organiser === event.query_params.email ||
+            : exports.MOCK_BOOKINGS.filter((i) => i.organizer.email === event.query_params.email ||
+                i.organizer === event.query_params.email ||
                 i.attendees.reduce((a, v) => a || v.email === event.query_params.email, false));
         // Filter bookings between a given period
         if (event.query_params.from) {
@@ -14802,7 +14808,7 @@ window.control.handlers.push({
     method: 'POST',
     callback: (event) => {
         if (event.body) {
-            event.body.id = `bkn-${general_utilities_1.randomInt(9999999)}`;
+            event.body.id = `bkn-${general_utilities_1.predictableRandomInt(9999999)}`;
             event.body.icaluid = `ical-${event.body.id}`;
             event.body.approval_status = {};
             for (let i = 0; i < event.body.room_ids.length; i++) {
@@ -14817,6 +14823,54 @@ window.control.handlers.push({
         else {
             throw { status: 500, message: 'Invalid booking data' };
         }
+    },
+});
+// Handler for new bookings
+window.control.handlers.push({
+    path: `${common_mock_1.API}/bookings/:id/checkin`,
+    metadata: exports.MOCK_BOOKINGS,
+    method: 'POST',
+    callback: (event) => {
+        if (event.route_params.id) {
+            const index = exports.MOCK_BOOKINGS.findIndex((i) => i.id === event.route_params.id || i.icaluid === event.route_params.id);
+            if (index >= 0) {
+                const booking = exports.MOCK_BOOKINGS[index];
+                if (!booking.checkins) {
+                    booking.checkins = [];
+                }
+                booking.checkins = general_utilities_1.unique(event.body.attendees.map(i => i.email).concat(booking.checkins));
+                return booking;
+            }
+            else {
+                throw { status: 404, message: 'Booking not found' };
+            }
+        }
+        else
+            throw { status: 500, message: 'Invalid booking ID' };
+    },
+});
+// Handler for new bookings
+window.control.handlers.push({
+    path: `${common_mock_1.API}/bookings/:id/concierge_decline`,
+    metadata: exports.MOCK_BOOKINGS,
+    method: 'POST',
+    callback: (event) => {
+        if (event.route_params.id) {
+            const index = exports.MOCK_BOOKINGS.findIndex((i) => i.id === event.route_params.id || i.icaluid === event.route_params.id);
+            if (index >= 0) {
+                const booking = exports.MOCK_BOOKINGS[index];
+                if (!booking.approval_status) {
+                    booking.approval_status = {};
+                }
+                booking.approval_status[event.body.room_email] = 'declined';
+                return booking;
+            }
+            else {
+                throw { status: 404, message: 'Booking not found' };
+            }
+        }
+        else
+            throw { status: 500, message: 'Invalid booking ID' };
     },
 });
 // Handler for updating existing bookings
@@ -14986,7 +15040,7 @@ exports.MOCK_BUILDINGS = [
     },
 ];
 exports.MOCK_BUILDINGS.push(Object.assign(Object.assign({}, exports.MOCK_BUILDINGS[0]), { name: 'London' }));
-organisation_mock_1.MOCK_ORG[0].discovery_info.buildings = exports.MOCK_BUILDINGS;
+organisation_mock_1.MOCK_ORG[0].settings.discovery_info.buildings = exports.MOCK_BUILDINGS;
 // setTimeout(() => {
 window.control.handlers.push({
     path: '/api/engine/v2/zones',
@@ -15020,7 +15074,8 @@ window.control.handlers.push({
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
 const general_utilities_1 = __webpack_require__(/*! ../../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const MOCK_MENU = {
+const buildings_mock_1 = __webpack_require__(/*! ./buildings.mock */ "./src/app/shared/mocks/api/buildings.mock.ts");
+exports.MOCK_MENU = {
     'zone_bld-01': [
         {
             id: 'snacks',
@@ -15146,8 +15201,9 @@ window.control.handlers.push({
     metadata: [],
     method: 'GET',
     callback: (event) => {
+        console.log('Menu Event:', event, exports.MOCK_MENU);
         if (event.query_params.zone_id) {
-            return MOCK_MENU[event.query_params.zone_id] || [];
+            return exports.MOCK_MENU[event.query_params.zone_id] || [];
         }
         throw { status: 400, message: 'Invalid room ID' };
     },
@@ -15159,19 +15215,20 @@ window.control.handlers.push({
     method: 'POST',
     callback: (event) => {
         if (event.body) {
-            event.body.id = `category-${general_utilities_1.randomInt(99999999)}`;
+            event.body.id = `category-${general_utilities_1.predictableRandomInt(99999999)}`;
             const item = event.body;
-            for (const zone of item.zones) {
-                if (!MOCK_MENU[zone]) {
-                    MOCK_MENU[zone] = [];
+            const zones = buildings_mock_1.MOCK_BUILDINGS.map(i => i.zone_id);
+            for (const zone of zones) {
+                if (!exports.MOCK_MENU[zone]) {
+                    exports.MOCK_MENU[zone] = [];
                 }
                 if (item.parent_categories && item.parent_categories.length) {
-                    const parent = MOCK_MENU[zone].find(cat => cat.id === item.parent_categories[0]);
+                    const parent = exports.MOCK_MENU[zone].find(cat => cat.id === item.parent_categories[0]);
                     if (parent) {
                         parent.items.push(item);
                     }
                     else {
-                        for (const category of MOCK_MENU[zone]) {
+                        for (const category of exports.MOCK_MENU[zone]) {
                             const parent = category.items.find(cat => cat.id === item.parent_categories[0]);
                             if (parent) {
                                 parent.items.push(item);
@@ -15198,13 +15255,16 @@ window.control.handlers.push({
     callback: (event) => {
         if (event.body && event.route_params.id) {
             const category = event.body;
-            for (const zone of category.zones) {
-                if (!MOCK_MENU[zone]) {
-                    MOCK_MENU[zone] = [];
+            const zones = buildings_mock_1.MOCK_BUILDINGS.map(i => i.zone_id);
+            for (const zone of zones) {
+                if (!exports.MOCK_MENU[zone]) {
+                    exports.MOCK_MENU[zone] = [];
                 }
-                const parent = findParent(event.route_params.id, MOCK_MENU[zone]);
+                console.log('List:', exports.MOCK_MENU[zone]);
+                const parent = findParent(event.route_params.id, exports.MOCK_MENU[zone]);
                 if (parent) {
                     parent.items.splice(parent.items.findIndex(itm => itm.id === category.id), 1, category);
+                    break;
                 }
                 else {
                     throw { status: 400, message: `Unable to find item with ID "${event.route_params.id}"` };
@@ -15221,25 +15281,31 @@ window.control.handlers.push({
     metadata: [],
     method: 'POST',
     callback: (event) => {
+        var _a;
         if (event.body) {
-            event.body.id = `category-${general_utilities_1.randomInt(99999999)}`;
+            event.body.id = `category-${general_utilities_1.predictableRandomInt(99999999)}`;
             const category = event.body;
+            let found = false;
             for (const zone of category.zones) {
-                if (!MOCK_MENU[zone]) {
-                    MOCK_MENU[zone] = [];
+                if (!exports.MOCK_MENU[zone]) {
+                    exports.MOCK_MENU[zone] = [];
                 }
-                if (category.parent_categories && category.parent_categories.length) {
-                    const parent = MOCK_MENU[zone].find(cat => cat.id === category.parent_categories[0]);
+                if ((_a = category.parent_categories) === null || _a === void 0 ? void 0 : _a.length) {
+                    const parent = findItem(category.parent_categories[0], exports.MOCK_MENU[zone]);
                     if (parent) {
                         parent.items.push(category);
-                    }
-                    else {
-                        throw { status: 400, message: `Unable to find parent category with id "${category.parent_categories[0]}"` };
+                        found = true;
+                        break;
                     }
                 }
                 else {
-                    MOCK_MENU[zone].push(category);
+                    exports.MOCK_MENU[zone].push(category);
+                    found = true;
+                    break;
                 }
+            }
+            if (!found) {
+                throw { status: 400, message: `Unable to find parent category with id "${category.parent_categories[0]}"` };
             }
             return category;
         }
@@ -15255,21 +15321,23 @@ window.control.handlers.push({
         if (event.body && event.route_params.id) {
             const category = event.body;
             for (const zone of category.zones) {
-                if (!MOCK_MENU[zone]) {
-                    MOCK_MENU[zone] = [];
+                if (!exports.MOCK_MENU[zone]) {
+                    exports.MOCK_MENU[zone] = [];
                 }
-                const index = MOCK_MENU[zone].findIndex((itm) => itm.id === category.id);
+                const index = exports.MOCK_MENU[zone].findIndex((itm) => itm.id === category.id);
                 if (index < 0) {
-                    const parent = findParent(event.route_params.id, MOCK_MENU[zone]);
+                    const parent = findParent(event.route_params.id, exports.MOCK_MENU[zone]);
                     if (parent) {
                         parent.items.splice(parent.items.findIndex(itm => itm.id === category.id), 1, category);
+                        break;
                     }
                     else {
                         throw { status: 400, message: `Unable to find category with ID "${event.route_params.id}"` };
                     }
                 }
                 else {
-                    MOCK_MENU[zone].splice(index, 1, category);
+                    exports.MOCK_MENU[zone].splice(index, 1, category);
+                    break;
                 }
             }
             return category;
@@ -15277,9 +15345,24 @@ window.control.handlers.push({
         throw { status: 400, message: 'No contents for category' };
     },
 });
-function findParent(id, list) {
+function findItem(id, list = []) {
     for (const category of list) {
-        const found = category.items.find((item) => item.id === id);
+        if (category.id === id) {
+            return category;
+        }
+        else {
+            const item = findItem(id, category.items);
+            if (item) {
+                return item;
+            }
+        }
+    }
+    return null;
+}
+function findParent(id, list = []) {
+    var _a;
+    for (const category of list) {
+        const found = (_a = category.items) === null || _a === void 0 ? void 0 : _a.find((item) => item.id === id);
         if (found) {
             return category;
         }
@@ -15307,7 +15390,7 @@ function findParent(id, list) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 /** Domain of the organisation */
-exports.DOMAIN = 'acaprojects.com';
+exports.DOMAIN = 'place.tech';
 /** Endpoint where the staff API is located */
 exports.API = '/api/staff';
 
@@ -15336,7 +15419,7 @@ const levels = buildings_mock_1.MOCK_BUILDINGS.reduce((lvls, bld) => {
     return lvls;
 }, []);
 for (const user of users_mock_1.MOCK_USERS) {
-    if (user.location || general_utilities_1.randomInt(99999) % 2 === 0) {
+    if (user.location || general_utilities_1.predictableRandomInt(99999) % 2 === 0) {
         user.location = spec_helpers_1.generateMockLocation(null, spaces, levels);
         exports.MOCK_LOCATIONS.push(user.location);
     }
@@ -15372,12 +15455,73 @@ setTimeout(() => {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MOCK_ORG = [
     {
-        send_acceptance: true,
-        discovery_info: {
-            buildings: []
-        }
-    }
+        settings: {
+            send_acceptance: true,
+            discovery_info: {
+                buildings: [],
+            },
+        },
+    },
 ];
+
+
+/***/ }),
+
+/***/ "./src/app/shared/mocks/api/reports.mock.ts":
+/*!**************************************************!*\
+  !*** ./src/app/shared/mocks/api/reports.mock.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
+const bookings_mock_1 = __webpack_require__(/*! ./bookings.mock */ "./src/app/shared/mocks/api/bookings.mock.ts");
+const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+// Handler for bookings index
+window.control.handlers.push({
+    path: `${common_mock_1.API}/reports/bookings`,
+    metadata: [],
+    method: 'GET',
+    callback: (event) => {
+        const start = dayjs(+event.query_params.start_date * 1000).startOf('d');
+        const end = dayjs(+event.query_params.end_date * 1000).endOf('d');
+        const bookings = bookings_mock_1.MOCK_BOOKINGS.filter((bkn) => {
+            return booking_utilities_1.timePeriodsIntersect(bkn.start_epoch * 1000 || bkn.date, bkn.end_epoch * 1000 || bkn.date, start.valueOf(), end.valueOf());
+        });
+        console.log('Bookings:', start.format('DD MMM YYYY'), end.format('DD MMM YYYY'), bookings);
+        return bookings.map(bkn => (Object.assign(Object.assign({}, bkn), { start: bkn.start_epoch * 1000, end: bkn.end_epoch * 1000 })));
+    },
+});
+// Handler for bookings index
+window.control.handlers.push({
+    path: `${common_mock_1.API}/reports/catering`,
+    metadata: [],
+    method: 'GET',
+    callback: (event) => {
+        const start = dayjs(+event.query_params.start_date * 1000).startOf('d');
+        const end = dayjs(+event.query_params.end_date * 1000).endOf('d');
+        console.log('Event:', event);
+        const bookings = bookings_mock_1.MOCK_BOOKINGS.filter((bkn) => {
+            return booking_utilities_1.timePeriodsIntersect(bkn.start_epoch * 1000 || bkn.date, bkn.end_epoch * 1000 || bkn.date, start.valueOf(), end.valueOf());
+        });
+        console.log('Bookings:', start.format('DD MMM YYYY'), end.format('DD MMM YYYY'), bookings);
+        let catering = [];
+        for (const booking of bookings) {
+            catering = catering.concat([...booking.catering]);
+        }
+        return catering.map((order) => ({
+            delivery_time: dayjs(order.booking_date)
+                .add(order.delivery_time, 'm')
+                .format('DD MMM YYYY, h:mm A'),
+            location_id: order.location_id,
+            items: order.items.map((i) => i.name),
+        }));
+    },
+});
 
 
 /***/ }),
@@ -15486,12 +15630,13 @@ window.control.handlers.push({
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
 const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
+const general_utilities_1 = __webpack_require__(/*! ../../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
-exports.MOCK_USERS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
+exports.MOCK_USERS = Array(general_utilities_1.predictableRandomInt(300) + 100).fill(0)
     .map(i => spec_helpers_1.generateMockUser());
-exports.MOCK_CONTACTS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
+exports.MOCK_CONTACTS = Array(general_utilities_1.predictableRandomInt(300) + 100).fill(0)
     .map(i => spec_helpers_1.generateMockUser({ external: true }));
 exports.PREDEFINED_USERS = [
     'Jonathan McFarlane',
@@ -15584,6 +15729,8 @@ window.control.handlers.push({
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const systems_mock_1 = __webpack_require__(/*! ./systems.mock */ "./src/app/shared/mocks/systems.mock.ts");
+const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
+faker.seed(2560);
 __webpack_require__(/*! ./api/organisation.mock */ "./src/app/shared/mocks/api/organisation.mock.ts");
 __webpack_require__(/*! ./api/buildings.mock */ "./src/app/shared/mocks/api/buildings.mock.ts");
 __webpack_require__(/*! ./api/users.mock */ "./src/app/shared/mocks/api/users.mock.ts");
@@ -15591,8 +15738,7 @@ __webpack_require__(/*! ./api/spaces.mock */ "./src/app/shared/mocks/api/spaces.
 __webpack_require__(/*! ./api/bookings.mock */ "./src/app/shared/mocks/api/bookings.mock.ts");
 __webpack_require__(/*! ./api/locations.mock */ "./src/app/shared/mocks/api/locations.mock.ts");
 __webpack_require__(/*! ./api/catering-menu.mock */ "./src/app/shared/mocks/api/catering-menu.mock.ts");
-const faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
-faker.seed(2560);
+__webpack_require__(/*! ./api/reports.mock */ "./src/app/shared/mocks/api/reports.mock.ts");
 window.control = window.control || {};
 window.control.systems = Object.assign(Object.assign({}, window.control.systems), { ['sys-B0']: systems_mock_1.createSystem('sys-B0') }) || {};
 window.control.handlers = window.control.handlers || [];
@@ -15612,6 +15758,7 @@ window.control.handlers = window.control.handlers || [];
 Object.defineProperty(exports, "__esModule", { value: true });
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const spec_helpers_1 = __webpack_require__(/*! ../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
+const general_utilities_1 = __webpack_require__(/*! ../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const NUMBERS = '0123456789'.split('');
 let index = 0;
@@ -15631,7 +15778,7 @@ function createSystem(id) {
         cancel_timeout: 600,
         has_catering: true,
         control_url: 'https://aca.im/demo/aca/control/',
-        icon: `/assets/img/${IMAGES[Math.floor(Math.random() * IMAGES.length)]}.png`
+        icon: `/assets/img/${IMAGES[general_utilities_1.predictableRandomInt(IMAGES.length)]}.png`
     };
     const today = dayjs();
     const desk_bindings = {
@@ -16522,6 +16669,39 @@ function flatten(an_array) {
     return res.reverse();
 }
 exports.flatten = flatten;
+const seed = xmur3('PlaceOS');
+const rand = sfc32(0x9E3779B9, 0x243F6A88, 0xB7E15162, seed());
+function predictableRandomInt(ceil = 100, floor = 0) {
+    return Math.floor(rand() * (ceil - floor)) + floor;
+}
+exports.predictableRandomInt = predictableRandomInt;
+// https://stackoverflow.com/questions/521295/seeding-the-random-number-generator-in-javascript
+function xmur3(str) {
+    for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++)
+        h = Math.imul(h ^ str.charCodeAt(i), 3432918353),
+            h = h << 13 | h >>> 19;
+    return function () {
+        h = Math.imul(h ^ h >>> 16, 2246822507);
+        h = Math.imul(h ^ h >>> 13, 3266489909);
+        return (h ^= h >>> 16) >>> 0;
+    };
+}
+function sfc32(a, b, c, d) {
+    return function () {
+        a >>>= 0;
+        b >>>= 0;
+        c >>>= 0;
+        d >>>= 0;
+        var t = (a + b) | 0;
+        a = b ^ b >>> 9;
+        b = c + (c << 3) | 0;
+        c = (c << 21 | c >>> 11);
+        d = d + 1 | 0;
+        t = t + d | 0;
+        c = c + t | 0;
+        return (t >>> 0) / 4294967296;
+    };
+}
 
 
 /***/ }),
@@ -16648,9 +16828,9 @@ let SPACE_COUNT = 0;
 function generateMockSpace(overrides = {}) {
     const id = `space-${SPACE_COUNT++}`;
     const name = `${faker.name.firstName()} ${faker.name.lastName()} Space`;
-    const linked = Math.floor(Math.random() * 99999) % 2 === 0 && SPACE_COUNT > 1;
+    const linked = Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0 && SPACE_COUNT > 1;
     return Object.assign({ id,
-        name, long_name: `${name} with an long name`, map_id: `${SPACE_COUNT}`, capacity: Math.floor(Math.random() * 20 + 1) * 2, email: `${name.toLowerCase().split(' ').join('.')}@${exports.USER_DOMAIN}`, type: faker.commerce.productName(), searchable: Math.floor(Math.random() * 99999) % 2 === 0, controlable: Math.floor(Math.random() * 99999) % 2 === 0, bookable: Math.floor(Math.random() * 99999) % 2 === 0, cost_hour: Math.floor(Math.random() * 300) * 100, setup: Math.floor(Math.random() * 6) * 5, breakdown: Math.floor(Math.random() * 6) * 5, zones: ['zone_lvl-0'], support_url: `/control/#/${id}`, bookings: Array(10).fill(0).map(i => generateMockBooking()), linked_rooms: linked ? [`space-${Math.floor(Math.random() * (SPACE_COUNT - 1))}`] : [], image: faker.image.business() }, overrides);
+        name, long_name: `${name} with an long name`, map_id: `${SPACE_COUNT}`, capacity: Math.floor(general_utilities_1.predictableRandomInt(20) + 1) * 2, email: `${name.toLowerCase().split(' ').join('.')}@${exports.USER_DOMAIN}`, type: faker.commerce.productName(), searchable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0, controlable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0, bookable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0, cost_hour: Math.floor(general_utilities_1.predictableRandomInt(300)) * 100, setup: Math.floor(general_utilities_1.predictableRandomInt(6)) * 5, breakdown: Math.floor(general_utilities_1.predictableRandomInt(6)) * 5, zones: ['zone_lvl-0'], support_url: `/control/#/${id}`, bookings: Array(10).fill(0).map(i => generateMockBooking()), linked_rooms: linked ? [`space-${Math.floor(general_utilities_1.predictableRandomInt(SPACE_COUNT - 1))}`] : [], image: faker.image.business() }, overrides);
 }
 exports.generateMockSpace = generateMockSpace;
 let BOOKING_COUNT = 0;
@@ -16669,13 +16849,17 @@ exports.setMockBookingStartDatetime = setMockBookingStartDatetime;
  */
 function generateMockBooking(override = {}) {
     const id = `booking-${BOOKING_COUNT++}`;
-    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4 + 2) * 15, 'm');
+    BOOKING_DATE = BOOKING_DATE.add(Math.floor(general_utilities_1.predictableRandomInt(4) + 2) * 15, 'm');
     const start = BOOKING_DATE.valueOf();
-    const duration = Math.floor(Math.random() * 4 + 2) * 15;
-    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
-    return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(Math.random() * 5 + 2))
+    const duration = Math.floor(general_utilities_1.predictableRandomInt(4) + 2) * 15;
+    BOOKING_DATE = BOOKING_DATE.add(Math.floor(general_utilities_1.predictableRandomInt(4)) * 15, 'm');
+    const organizer = generateMockUser({ external: false, visitor: false });
+    const orders = Array(Math.floor(general_utilities_1.predictableRandomInt(5)))
+        .fill(0)
+        .map(_ => generateMockCateringOrder({ booking_date: start }, override.room_ids, override.menu));
+    return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(general_utilities_1.predictableRandomInt(99999999)), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(general_utilities_1.predictableRandomInt(5) + 2))
             .fill(0)
-            .map((i) => generateMockUser(override.users)), organiser: generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)], setup: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, breakdown: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, status: {}, catering: [], room_ids: [] }, override);
+            .map((_, i) => i === 0 ? organizer : generateMockUser(override.users)), organizer, start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(general_utilities_1.predictableRandomInt(34567)) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.predictableRandomInt(5)], setup: { 'space-01': Math.max(0, (general_utilities_1.predictableRandomInt(12) - 6) * 5) }, breakdown: { 'space-01': Math.max(0, (general_utilities_1.predictableRandomInt(12) - 6) * 5) }, status: {}, catering: orders, room_ids: [] }, override);
 }
 exports.generateMockBooking = generateMockBooking;
 let BLD_COUNT = 0;
@@ -16691,7 +16875,7 @@ function generateMockBuilding(overrides = {}) {
         .map(i => generateMockLevel());
     const features = {};
     for (const lvl of levels) {
-        const count = Math.floor(Math.random() * 3 + 2);
+        const count = Math.floor(general_utilities_1.predictableRandomInt(3) + 2);
         features[lvl.level_id] = {};
         for (let i = 0; i < count; i++) {
             features[lvl.level_id][faker.commerce.productName()] = `feature-${i + 1}`;
@@ -16750,7 +16934,7 @@ function generateMockLevel(id, map_url) {
 }
 exports.generateMockLevel = generateMockLevel;
 let USER_COUNT = 0;
-exports.USER_DOMAIN = 'acaprojects.com';
+exports.USER_DOMAIN = 'place.tech';
 const USER_EMAILS = [];
 /**
  * Generate raw mock data for a user
@@ -16761,12 +16945,12 @@ const USER_EMAILS = [];
 function generateMockUser(override = {}) {
     const id = `user-${USER_COUNT++}`;
     const name = `${faker.name.firstName()} ${faker.name.lastName()}`;
-    const external = override.external || !((Math.random() * 99999) % 2);
+    const external = override.external || !(general_utilities_1.predictableRandomInt(99999) % 2);
     const organisation = external ? faker.company.companyName() : exports.USER_DOMAIN.split('.')[0];
     let delegates = [];
-    const delegate_count = Math.min(Math.random() * 4 + 1, USER_EMAILS.length);
+    const delegate_count = Math.min(general_utilities_1.predictableRandomInt(4) + 1, USER_EMAILS.length);
     for (let i = 0; i < delegate_count; i++) {
-        delegates.push(USER_EMAILS[Math.floor(Math.random() * USER_EMAILS.length)]);
+        delegates.push(USER_EMAILS[Math.floor(general_utilities_1.predictableRandomInt(USER_EMAILS.length))]);
     }
     delegates = general_utilities_1.unique(delegates);
     const email = `${name
@@ -16781,16 +16965,34 @@ function generateMockUser(override = {}) {
                 .join('.')
                 .toLowerCase(),
             name: organisation
-        }, department: faker.commerce.department(), staff_code: general_utilities_1.padZero(Math.floor(Math.random() * 99999), 5), delegates, image: faker.image.avatar() }, override);
+        }, department: faker.commerce.department(), staff_code: general_utilities_1.padZero(Math.floor(general_utilities_1.predictableRandomInt(99999)), 5), delegates, image: faker.image.avatar() }, override);
 }
 exports.generateMockUser = generateMockUser;
+function generateMockCateringOrder(overrides = {}, room_ids = [], menu = {}) {
+    return Object.assign({ id: `order-${general_utilities_1.predictableRandomInt(99999999)}`, delivery_time: general_utilities_1.predictableRandomInt(6) * 5, location_id: room_ids[general_utilities_1.predictableRandomInt(room_ids.length)], items: new Array(general_utilities_1.predictableRandomInt(5, 1)).fill(0).map(i => pickMenuItem(menu)) }, overrides);
+}
+exports.generateMockCateringOrder = generateMockCateringOrder;
+function pickMenuItem(menu_map = {}) {
+    var _a;
+    const zones = Object.keys(menu_map);
+    const menu = menu_map[zones[general_utilities_1.predictableRandomInt(zones.length)]] || [];
+    const category = menu[general_utilities_1.predictableRandomInt(menu.length)] || { items: [] };
+    const group = Object.assign({}, (category.items[general_utilities_1.predictableRandomInt(category.items.length)] || {}));
+    if (!group.package && ((_a = group.items) === null || _a === void 0 ? void 0 : _a.length)) {
+        const item = Object.assign({}, group.items[general_utilities_1.predictableRandomInt(group.items.length)]);
+        item.amount = general_utilities_1.predictableRandomInt(5, 1);
+        return item;
+    }
+    group.amount = general_utilities_1.predictableRandomInt(5, 1);
+    return group;
+}
 function generateMockLocation(overrides, fixed_locations, maps) {
-    const fixed = general_utilities_1.randomInt(999999999) % 2 === 0;
+    const fixed = general_utilities_1.predictableRandomInt(999999999) % 2 === 0;
     if (fixed && (!overrides || overrides.fixed)) {
-        return Object.assign({ map_id: fixed_locations[general_utilities_1.randomInt(fixed_locations.length)], level: maps[general_utilities_1.randomInt(maps.length)] }, overrides);
+        return Object.assign({ map_id: fixed_locations[general_utilities_1.predictableRandomInt(fixed_locations.length)], level: maps[general_utilities_1.predictableRandomInt(maps.length)] }, overrides);
     }
     else {
-        return Object.assign({ x: general_utilities_1.randomInt(900, 100), x_max: 1000, y: general_utilities_1.randomInt(500, 100), level: maps[general_utilities_1.randomInt(maps.length)], confidence: general_utilities_1.randomInt(30) }, overrides);
+        return Object.assign({ x: general_utilities_1.predictableRandomInt(900, 100), x_max: 1000, y: general_utilities_1.predictableRandomInt(500, 100), level: maps[general_utilities_1.predictableRandomInt(maps.length)], confidence: general_utilities_1.predictableRandomInt(30) }, overrides);
     }
 }
 exports.generateMockLocation = generateMockLocation;
@@ -16944,9 +17146,9 @@ const i15 = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@a
 const _c0 = function () { return { class: "material-icons", content: "close" }; };
 function CateringComponent_div_4_button_4_Template(rf, ctx) { if (rf & 1) {
     const _r9 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 14);
+    i0.ɵɵelementStart(0, "button", 15);
     i0.ɵɵlistener("click", function CateringComponent_div_4_button_4_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r9); const ctx_r8 = i0.ɵɵnextContext(2); return ctx_r8.search_str = ""; });
-    i0.ɵɵelement(1, "app-icon", 15);
+    i0.ɵɵelement(1, "app-icon", 16);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     i0.ɵɵadvance(1);
@@ -16954,16 +17156,16 @@ function CateringComponent_div_4_button_4_Template(rf, ctx) { if (rf & 1) {
 } }
 function CateringComponent_div_4_mat_form_field_5_Template(rf, ctx) { if (rf & 1) {
     const _r11 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "mat-form-field", 9);
-    i0.ɵɵelementStart(1, "mat-select", 16);
+    i0.ɵɵelementStart(0, "mat-form-field", 10);
+    i0.ɵɵelementStart(1, "mat-select", 17);
     i0.ɵɵlistener("ngModelChange", function CateringComponent_div_4_mat_form_field_5_Template_mat_select_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r11); const ctx_r10 = i0.ɵɵnextContext(2); return ctx_r10.order_type = $event; });
-    i0.ɵɵelementStart(2, "mat-option", 17);
+    i0.ɵɵelementStart(2, "mat-option", 18);
     i0.ɵɵtext(3, "All Orders");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "mat-option", 17);
+    i0.ɵɵelementStart(4, "mat-option", 18);
     i0.ɵɵtext(5, "Pantry Only");
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(6, "mat-option", 17);
+    i0.ɵɵelementStart(6, "mat-option", 18);
     i0.ɵɵtext(7, "Kitchen Only");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -16983,15 +17185,15 @@ function CateringComponent_div_4_mat_form_field_5_Template(rf, ctx) { if (rf & 1
 const _c1 = function () { return { class: "material-icons", content: "search" }; };
 function CateringComponent_div_4_Template(rf, ctx) { if (rf & 1) {
     const _r13 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 8);
-    i0.ɵɵelementStart(1, "mat-form-field", 9);
-    i0.ɵɵelement(2, "app-icon", 10);
-    i0.ɵɵelementStart(3, "input", 11);
+    i0.ɵɵelementStart(0, "div", 9);
+    i0.ɵɵelementStart(1, "mat-form-field", 10);
+    i0.ɵɵelement(2, "app-icon", 11);
+    i0.ɵɵelementStart(3, "input", 12);
     i0.ɵɵlistener("ngModelChange", function CateringComponent_div_4_Template_input_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r13); const ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.search_str = $event; });
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(4, CateringComponent_div_4_button_4_Template, 2, 2, "button", 12);
+    i0.ɵɵtemplate(4, CateringComponent_div_4_button_4_Template, 2, 2, "button", 13);
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(5, CateringComponent_div_4_mat_form_field_5_Template, 8, 6, "mat-form-field", 13);
+    i0.ɵɵtemplate(5, CateringComponent_div_4_mat_form_field_5_Template, 8, 6, "mat-form-field", 14);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
@@ -17008,14 +17210,14 @@ function CateringComponent_div_4_Template(rf, ctx) { if (rf & 1) {
 } }
 function CateringComponent_button_5_Template(rf, ctx) { if (rf & 1) {
     const _r15 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 18);
+    i0.ɵɵelementStart(0, "button", 19);
     i0.ɵɵlistener("click", function CateringComponent_button_5_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r15); const ctx_r14 = i0.ɵɵnextContext(); return ctx_r14.category = ctx_r14.category + 1; });
     i0.ɵɵtext(1, "Add Category");
     i0.ɵɵelementEnd();
 } }
 function CateringComponent_button_6_Template(rf, ctx) { if (rf & 1) {
     const _r17 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 18);
+    i0.ɵɵelementStart(0, "button", 20);
     i0.ɵɵlistener("click", function CateringComponent_button_6_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r17); const ctx_r16 = i0.ɵɵnextContext(); return ctx_r16.package = ctx_r16.package + 1; });
     i0.ɵɵtext(1, "Add Sub-Category/Package");
     i0.ɵɵelementEnd();
@@ -17023,7 +17225,7 @@ function CateringComponent_button_6_Template(rf, ctx) { if (rf & 1) {
 function CateringComponent_ng_container_9_Template(rf, ctx) { if (rf & 1) {
     const _r19 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "a-catering-menu", 19);
+    i0.ɵɵelementStart(1, "a-catering-menu", 21);
     i0.ɵɵlistener("length", function CateringComponent_ng_container_9_Template_a_catering_menu_length_1_listener($event) { i0.ɵɵrestoreView(_r19); const ctx_r18 = i0.ɵɵnextContext(); return ctx_r18.length = $event; });
     i0.ɵɵelementEnd();
     i0.ɵɵelementContainerEnd();
@@ -17034,7 +17236,7 @@ function CateringComponent_ng_container_9_Template(rf, ctx) { if (rf & 1) {
 } }
 function CateringComponent_ng_container_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelement(1, "a-catering-orders", 20);
+    i0.ɵɵelement(1, "a-catering-orders", 22);
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
     const ctx_r4 = i0.ɵɵnextContext();
@@ -17045,29 +17247,29 @@ const _c2 = function () { return ["/catering", "menu"]; };
 const _c3 = function () { return ["/catering", "orders"]; };
 function CateringComponent_ng_container_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "div", 21);
-    i0.ɵɵelementStart(2, "a", 22);
-    i0.ɵɵelementStart(3, "div", 23);
-    i0.ɵɵelementStart(4, "div", 24);
+    i0.ɵɵelementStart(1, "div", 23);
+    i0.ɵɵelementStart(2, "a", 24);
+    i0.ɵɵelementStart(3, "div", 25);
+    i0.ɵɵelementStart(4, "div", 26);
     i0.ɵɵpipe(5, "safe");
     i0.ɵɵelementStart(6, "h2");
     i0.ɵɵtext(7, "Menus and Pricing");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(8, "div", 25);
+    i0.ɵɵelementStart(8, "div", 27);
     i0.ɵɵtext(9, "View and edit menus and pricing");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(10, "a", 22);
-    i0.ɵɵelementStart(11, "div", 23);
-    i0.ɵɵelementStart(12, "div", 24);
+    i0.ɵɵelementStart(10, "a", 28);
+    i0.ɵɵelementStart(11, "div", 25);
+    i0.ɵɵelementStart(12, "div", 26);
     i0.ɵɵpipe(13, "safe");
     i0.ɵɵelementStart(14, "h2");
     i0.ɵɵtext(15, "Catering Orders");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(16, "div", 25);
+    i0.ɵɵelementStart(16, "div", 27);
     i0.ɵɵtext(17, " View catering orders and their statuses upon arrival ");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -17108,7 +17310,7 @@ class CateringComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringComponent = CateringComponent;
 CateringComponent.ɵfac = function CateringComponent_Factory(t) { return new (t || CateringComponent)(i0.ɵɵdirectiveInject(i1.ActivatedRoute), i0.ɵɵdirectiveInject(i2.ApplicationService)); };
-CateringComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringComponent, selectors: [["app-catering"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 12, vars: 7, consts: [[1, "catering"], [1, "group"], [3, "date", "dateChange"], ["class", "input-wrapper", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "click", 4, "ngIf"], ["appearance", "outline", 3, "other-field", 4, "ngIf"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], [3, "icon"], [3, "ngModel", "ngModelChange"], [3, "value"], ["mat-button", "", 3, "click"], [3, "search", "category", "package", "length"], [3, "date", "search", "type"], [1, "options"], ["mat-button", "", 1, "card", 3, "routerLink"], [1, "content"], [1, "img"], [1, "desc"]], template: function CateringComponent_Template(rf, ctx) { if (rf & 1) {
+CateringComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringComponent, selectors: [["app-catering"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 12, vars: 7, consts: [[1, "catering"], [1, "group"], [3, "date", "dateChange"], ["class", "input-wrapper", 4, "ngIf"], ["mat-button", "", "name", "add-category", 3, "click", 4, "ngIf"], ["mat-button", "", "name", "add-package", 3, "click", 4, "ngIf"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "click", 4, "ngIf"], ["appearance", "outline", 3, "other-field", 4, "ngIf"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], [3, "icon"], [3, "ngModel", "ngModelChange"], [3, "value"], ["mat-button", "", "name", "add-category", 3, "click"], ["mat-button", "", "name", "add-package", 3, "click"], [3, "search", "category", "package", "length"], [3, "date", "search", "type"], [1, "options"], ["name", "menu", "mat-button", "", 1, "card", 3, "routerLink"], [1, "content"], [1, "img"], [1, "desc"], ["name", "orders", "mat-button", "", 1, "card", 3, "routerLink"]], template: function CateringComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "a-sidebar");
         i0.ɵɵelementStart(2, "div", 1);
@@ -17116,13 +17318,13 @@ CateringComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringComponent, sele
         i0.ɵɵlistener("dateChange", function CateringComponent_Template_a_topbar_header_dateChange_3_listener($event) { return ctx.date = $event; });
         i0.ɵɵtemplate(4, CateringComponent_div_4_Template, 6, 7, "div", 3);
         i0.ɵɵtemplate(5, CateringComponent_button_5_Template, 2, 0, "button", 4);
-        i0.ɵɵtemplate(6, CateringComponent_button_6_Template, 2, 0, "button", 4);
+        i0.ɵɵtemplate(6, CateringComponent_button_6_Template, 2, 0, "button", 5);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(7, "main");
-        i0.ɵɵelementContainerStart(8, 5);
-        i0.ɵɵtemplate(9, CateringComponent_ng_container_9_Template, 2, 3, "ng-container", 6);
-        i0.ɵɵtemplate(10, CateringComponent_ng_container_10_Template, 2, 3, "ng-container", 6);
-        i0.ɵɵtemplate(11, CateringComponent_ng_container_11_Template, 18, 14, "ng-container", 7);
+        i0.ɵɵelementContainerStart(8, 6);
+        i0.ɵɵtemplate(9, CateringComponent_ng_container_9_Template, 2, 3, "ng-container", 7);
+        i0.ɵɵtemplate(10, CateringComponent_ng_container_10_Template, 2, 3, "ng-container", 7);
+        i0.ɵɵtemplate(11, CateringComponent_ng_container_11_Template, 18, 14, "ng-container", 8);
         i0.ɵɵelementContainerEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -17729,11 +17931,11 @@ CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuIte
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(8, _c3));
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Edit ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item.package ? "Package" : "Sub-category" : "item", "");
+        i0.ɵɵtextInterpolate1("Edit ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item.package ? "Package" : "Sub-category" : "Item", "");
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(9, _c4));
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Delete ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item.package ? "Package" : "Sub-category" : "item", "");
+        i0.ɵɵtextInterpolate1("Delete ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item.package ? "Package" : "Sub-category" : "Item", "");
     } }, directives: [i6.NgIf, i6.NgForOf, i7._MatMenu, i7.MatMenuItem, i8.IconComponent, i9.MatButton, i7.MatMenuTrigger, CateringMenuItemComponent], pipes: [i6.CurrencyPipe], styles: [".catering-item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.5rem;\n}\n.subitem[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n}\n.name[_ngcontent-%COMP%] {\n  max-width: 480px;\n}\n.image[_ngcontent-%COMP%] {\n  height: 3em;\n  width: 3em;\n  min-width: 3em;\n  border-radius: 4px;\n  background-color: rgba(0, 0, 0, 0.05);\n  background-position: center;\n  background-size: cover;\n  border: 1px solid rgba(0, 0, 0, 0.05);\n}\n.details[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 25%;\n  padding: 0 0.5em;\n  display: flex;\n  flex-direction: column;\n}\n.details[_ngcontent-%COMP%]   *[_ngcontent-%COMP%]    >  {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.options[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.options[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  background: none;\n  border: none;\n  font-size: 0.8em;\n  height: 1.5em;\n  color: rgba(0, 0, 0, 0.85);\n  line-height: 1em;\n  padding: 0 0.25em;\n  text-decoration: underline;\n}\n.option[_ngcontent-%COMP%] {\n  padding: 0.25em 0.5em;\n  border-radius: 4px;\n  color: #fff;\n  font-size: 0.8rem;\n  background-color: #1937ea;\n  margin: 0.25em;\n  margin-right: 0.4rem;\n  margin-left: 0;\n  white-space: nowrap;\n}\n.description[_ngcontent-%COMP%] {\n  font-size: 0.75em;\n  margin-top: 0.25em;\n}\n.children[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  background-color: rgba(0, 0, 0, 0.05);\n}\n.group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.hide[_ngcontent-%COMP%] {\n  opacity: 0;\n  pointer-events: none;\n}\n.delete[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  color: #e53935;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL2NhdGVyaW5nL21lbnUvaXRlbS9pdGVtLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9tZW51L2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUM1Q0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxlQUFBO0FDUUo7QURMQTtFQUNJLDBCQUFBO0FDUUo7QURMQTtFQUNJLGdCQUFBO0FDUUo7QURMQTtFQUNJLFdBQUE7RUFDQSxVQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EscUNBQUE7RUFDQSwyQkFBQTtFQUNBLHNCQUFBO0VBQ0EscUNBQUE7QUNRSjtBRExBO0VBQ0ksT0FBQTtFQUNBLGNBQUE7RUFDQSxnQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtBQ1FKO0FETkk7RUFDSSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsdUJBQUE7QUNRUjtBREpBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0FDT0o7QURMSTtFQUNJLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLDBCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLDBCQUFBO0FDT1I7QURIQTtFQUNJLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxXQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkQxQ1k7RUMyQ1osY0FBQTtFQUNBLG9CQUFBO0VBQ0EsY0FBQTtFQUNBLG1CQUFBO0FDTUo7QURIQTtFQUNJLGlCQUFBO0VBQ0Esa0JBQUE7QUNNSjtBREhBO0VBQ0ksZ0JBQUE7RUFDQSxxQ0FBQTtBQ01KO0FESEE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7QUNNSjtBREhBO0VBQ0ksVUFBQTtFQUNBLG9CQUFBO0FDTUo7QURGSTtFQUNJLGNEM0VBO0FFZ0ZSIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvY2F0ZXJpbmcvbWVudS9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbi5jYXRlcmluZy1pdGVtIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMC41cmVtO1xufVxuXG4uc3ViaXRlbSB7XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbi5uYW1lIHtcbiAgICBtYXgtd2lkdGg6IDQ4MHB4O1xufVxuXG4uaW1hZ2Uge1xuICAgIGhlaWdodDogM2VtO1xuICAgIHdpZHRoOiAzZW07XG4gICAgbWluLXdpZHRoOiAzZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoIzAwMCwgMC4wNSk7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgjMDAwLCAwLjA1KTtcbn1cblxuLmRldGFpbHMge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiAyNSU7XG4gICAgcGFkZGluZzogMCAwLjVlbTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cbiAgICAqID4ge1xuICAgICAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbiAgICB9XG59XG5cbi5vcHRpb25zIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cbiAgICBidXR0b24ge1xuICAgICAgICBiYWNrZ3JvdW5kOiBub25lO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICAgIGZvbnQtc2l6ZTogMC44ZW07XG4gICAgICAgIGhlaWdodDogMS41ZW07XG4gICAgICAgIGNvbG9yOiByZ2JhKCMwMDAsIDAuODUpO1xuICAgICAgICBsaW5lLWhlaWdodDogMWVtO1xuICAgICAgICBwYWRkaW5nOiAwIDAuMjVlbTtcbiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG4gICAgfVxufVxuXG4ub3B0aW9uIHtcbiAgICBwYWRkaW5nOiAwLjI1ZW0gMC41ZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGNvbG9yOiAjZmZmO1xuICAgIGZvbnQtc2l6ZTogMC44cmVtO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRjb2xvci1wcmltYXJ5O1xuICAgIG1hcmdpbjogMC4yNWVtO1xuICAgIG1hcmdpbi1yaWdodDogMC40cmVtO1xuICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG59XG5cbi5kZXNjcmlwdGlvbiB7XG4gICAgZm9udC1zaXplOiAwLjc1ZW07XG4gICAgbWFyZ2luLXRvcDogMC4yNWVtO1xufVxuXG4uY2hpbGRyZW4ge1xuICAgIGZvbnQtc2l6ZTogMC45ZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgjMDAwLCAwLjA1KTtcbn1cblxuLmdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5oaWRlIHtcbiAgICBvcGFjaXR5OiAwO1xuICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xufVxuXG4uZGVsZXRlIHtcbiAgICBhcHAtaWNvbiB7XG4gICAgICAgIGNvbG9yOiAkZXJyb3I7XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmNhdGVyaW5nLWl0ZW0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVyZW07XG59XG5cbi5zdWJpdGVtIHtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbi5uYW1lIHtcbiAgbWF4LXdpZHRoOiA0ODBweDtcbn1cblxuLmltYWdlIHtcbiAgaGVpZ2h0OiAzZW07XG4gIHdpZHRoOiAzZW07XG4gIG1pbi13aWR0aDogM2VtO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjA1KTtcbn1cblxuLmRldGFpbHMge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDI1JTtcbiAgcGFkZGluZzogMCAwLjVlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWxzICogPiB7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG4ub3B0aW9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4ub3B0aW9ucyBidXR0b24ge1xuICBiYWNrZ3JvdW5kOiBub25lO1xuICBib3JkZXI6IG5vbmU7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIGhlaWdodDogMS41ZW07XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpO1xuICBsaW5lLWhlaWdodDogMWVtO1xuICBwYWRkaW5nOiAwIDAuMjVlbTtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5cbi5vcHRpb24ge1xuICBwYWRkaW5nOiAwLjI1ZW0gMC41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgY29sb3I6ICNmZmY7XG4gIGZvbnQtc2l6ZTogMC44cmVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICBtYXJnaW46IDAuMjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAwLjRyZW07XG4gIG1hcmdpbi1sZWZ0OiAwO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuXG4uZGVzY3JpcHRpb24ge1xuICBmb250LXNpemU6IDAuNzVlbTtcbiAgbWFyZ2luLXRvcDogMC4yNWVtO1xufVxuXG4uY2hpbGRyZW4ge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuMDUpO1xufVxuXG4uZ3JvdXAge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uaGlkZSB7XG4gIG9wYWNpdHk6IDA7XG4gIHBvaW50ZXItZXZlbnRzOiBub25lO1xufVxuXG4uZGVsZXRlIGFwcC1pY29uIHtcbiAgY29sb3I6ICNlNTM5MzU7XG59Il19 */"], data: { animation: [angular_animations_1.ANIMATION_SHOW_CONTRACT_EXPAND] } });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CateringMenuItemComponent, [{
         type: core_1.Component,
@@ -18622,6 +18824,7 @@ const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular
 const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const ngx_uploads_1 = __webpack_require__(/*! @acaprojects/ngx-uploads */ "./node_modules/@acaprojects/ngx-uploads/__ivy_ngcc__/fesm2015/acaprojects-ngx-uploads.js");
+const catering_category_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-category.class */ "./src/app/services/data/catering/catering-category.class.ts");
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const blobUtil = __webpack_require__(/*! blob-util */ "./node_modules/blob-util/dist/blob-util.es.js");
@@ -18790,12 +18993,13 @@ class CateringCategoryModalComponent extends base_directive_1.BaseDirective {
         this.form.markAllAsTouched();
         /* istanbul ignore else */
         if (this.form.valid) {
-            const data = Object.assign(Object.assign({}, this.category.toJSON()), this.form.value);
-            const request = this.category.id
-                ? this._menu_categories.update(this.category.id, data)
+            const category = new catering_category_class_1.CateringCategory(this.category);
+            const data = Object.assign(Object.assign({}, category.toJSON()), this.form.value);
+            const request = category.id
+                ? this._menu_categories.update(category.id, data)
                 : this._menu_categories.add(data);
             request.then((item) => {
-                item.items = this.category.items;
+                item.items = category.items;
                 this.event.emit({ reason: 'done', metadata: item });
                 this._dialog_ref.close();
             }, (err) => this._service.notifyError(`Error ${this.category.id ? 'updating' : 'creating'} category. Error: ${err.message || err}`));
@@ -18834,7 +19038,7 @@ class CateringCategoryModalComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringCategoryModalComponent = CateringCategoryModalComponent;
 CateringCategoryModalComponent.ɵfac = function CateringCategoryModalComponent_Factory(t) { return new (t || CateringCategoryModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.CateringCategoriesService), i0.ɵɵdirectiveInject(i3.UploadManager), i0.ɵɵdirectiveInject(i4.MatDialog), i0.ɵɵdirectiveInject(i4.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-CateringCategoryModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringCategoryModalComponent, selectors: [["a-catering-category-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 6, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", 3, "error", "click", 4, "ngIf"], ["mat-button", "", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup", 4, "ngIf"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], ["for", "name"], ["appearance", "outline"], ["matInput", "", "name", "name", "placeholder", "Category Name", "formControlName", "name"], ["for", "description"], ["matInput", "", "name", "description", "placeholder", "Category Description", "formControlName", "description"], ["diameter", "48"], ["mat-button", "", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringCategoryModalComponent_Template(rf, ctx) { if (rf & 1) {
+CateringCategoryModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringCategoryModalComponent, selectors: [["a-catering-category-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 6, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", "name", "delete", 3, "error", "click", 4, "ngIf"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup", 4, "ngIf"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], ["for", "name"], ["appearance", "outline"], ["matInput", "", "name", "name", "placeholder", "Category Name", "formControlName", "name"], ["for", "description"], ["matInput", "", "name", "description", "placeholder", "Category Description", "formControlName", "description"], ["diameter", "48"], ["mat-button", "", "name", "delete", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringCategoryModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2);
@@ -19197,7 +19401,7 @@ class CateringGroupModalComponent extends base_directive_1.BaseDirective {
                 : this._menu_categories.add(data);
             request.then((item) => {
                 item.items = this.category.items;
-                this.event.emit({ reason: 'done', metadata: item });
+                this.event.emit({ reason: 'done', metadata: new catering_category_class_1.CateringCategory(item) });
                 this._dialog_ref.close();
             }, (err) => this._service.notifyError(`Error ${this.category.id ? 'updating' : 'creating'} category. Error: ${err.message || err}`));
         }
@@ -19235,7 +19439,7 @@ class CateringGroupModalComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringGroupModalComponent = CateringGroupModalComponent;
 CateringGroupModalComponent.ɵfac = function CateringGroupModalComponent_Factory(t) { return new (t || CateringGroupModalComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.CateringCategoriesService), i0.ɵɵdirectiveInject(i3.UploadManager), i0.ɵɵdirectiveInject(i4.MatDialog), i0.ɵɵdirectiveInject(i4.MatDialogRef), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-CateringGroupModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringGroupModalComponent, selectors: [["a-catering-group-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", "name", "delete", 3, "error", "click", 4, "ngIf"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], [1, "field", "padded"], ["for", "name"], [1, "value"], ["formControlName", "package"], ["appearance", "outline"], ["matInput", "", "name", "name", "formControlName", "name", 3, "placeholder"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "formControlName", "description", 3, "placeholder"], [4, "ngIf"], ["for", "must-select"], ["matInput", "", "name", "must-select", "type", "number", "placeholder", "Must select X items from grouping", "formControlName", "must_select"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], ["diameter", "48"], [3, "value"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["mat-button", "", "name", "delete", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringGroupModalComponent_Template(rf, ctx) { if (rf & 1) {
+CateringGroupModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringGroupModalComponent, selectors: [["a-catering-group-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 13, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", "", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["mat-button", "", "name", "delete", 3, "error", "click", 4, "ngIf"], ["mat-button", "", "name", "save", 3, "disabled", "click"], ["load_state", ""], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [3, "formGroup"], [1, "field"], [1, "image"], [3, "icon", 4, "ngIf"], ["diameter", "48", 4, "ngIf"], ["type", "file", 3, "change"], [1, "field", "padded"], ["for", "name"], [1, "value"], ["name", "package", "formControlName", "package"], ["appearance", "outline"], ["matInput", "", "name", "name", "formControlName", "name", 3, "placeholder"], ["for", "type"], ["name", "type", "formControlName", "catering_type", "placeholder", "Select type"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "description"], ["matInput", "", "name", "description", "formControlName", "description", 3, "placeholder"], [4, "ngIf"], ["for", "must-select"], ["matInput", "", "name", "must-select", "type", "number", "placeholder", "Must select X items from grouping", "formControlName", "must_select"], ["for", "min-quanity"], ["matInput", "", "name", "min-quanity", "type", "number", "placeholder", "Minimum Quantity", "formControlName", "minimum_quantity"], ["for", "max-quanity"], ["matInput", "", "name", "max-quanity", "type", "number", "placeholder", "Maximum Quantity", "formControlName", "maximum_quantity"], ["diameter", "48"], [3, "value"], ["formControlName", "out_of_stock"], ["formControlName", "order_anytime"], ["for", "unit-price"], ["matInput", "", "name", "unit-price", "type", "number", "placeholder", "Price for one unit of the item without decimal places", "formControlName", "unit_price"], ["mat-button", "", "name", "delete", 3, "click"], [1, "info-block"], [1, "icon"], ["diameter", "32"], [1, "text"]], template: function CateringGroupModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2);
@@ -19630,7 +19834,7 @@ class OrderBookingDetailsComponent {
 }
 exports.OrderBookingDetailsComponent = OrderBookingDetailsComponent;
 OrderBookingDetailsComponent.ɵfac = function OrderBookingDetailsComponent_Factory(t) { return new (t || OrderBookingDetailsComponent)(); };
-OrderBookingDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderBookingDetailsComponent, selectors: [["order-booking-details"]], inputs: { space: "space", booking: "booking" }, decls: 25, vars: 11, consts: [[1, "heading"], [1, "content"], [1, "field"], ["for", "host"], ["name", "host", 1, "value"], ["for", "space"], ["name", "space", 1, "value"], ["for", "period"], ["name", "period", 1, "value"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["button", "", "mat-button", "", "mat-dialog-close", "", 1, "footer", 3, "routerLink", "queryParams", "click"]], template: function OrderBookingDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+OrderBookingDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderBookingDetailsComponent, selectors: [["order-booking-details"]], inputs: { space: "space", booking: "booking" }, decls: 25, vars: 11, consts: [[1, "heading"], [1, "content"], [1, "field"], ["for", "host"], ["name", "host", 1, "value"], ["for", "space"], ["name", "space", 1, "value"], ["for", "period"], ["name", "period", 1, "value"], ["for", "attendees"], ["name", "attendees", 1, "value"], ["name", "view-meeting", "button", "", "mat-button", "", "mat-dialog-close", "", 1, "footer", 3, "routerLink", "queryParams", "click"]], template: function OrderBookingDetailsComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtext(1, " Meeting Details\n");
         i0.ɵɵelementEnd();
@@ -19900,7 +20104,7 @@ class OrderDetailsItemsComponent {
 }
 exports.OrderDetailsItemsComponent = OrderDetailsItemsComponent;
 OrderDetailsItemsComponent.ɵfac = function OrderDetailsItemsComponent_Factory(t) { return new (t || OrderDetailsItemsComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService)); };
-OrderDetailsItemsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderDetailsItemsComponent, selectors: [["order-details-items"]], inputs: { booking: "booking", order: "order" }, decls: 10, vars: 4, consts: [[1, "heading"], ["class", "content padded", 4, "ngIf", "ngIfElse"], ["edit_state", ""], ["class", "footer", "mat-button", "", 3, "click", 4, "ngIf"], ["empty_state", ""], ["load_state", ""], [1, "content", "padded"], [4, "ngIf", "ngIfElse"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "amount"], [4, "ngIf"], ["class", "sub-item", 4, "ngFor", "ngForOf"], [1, "sub-item"], [1, "content"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event", 4, "ngIf", "ngIfElse"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event"], ["mat-button", "", 1, "footer", 3, "click"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"], ["diameter", "32"]], template: function OrderDetailsItemsComponent_Template(rf, ctx) { if (rf & 1) {
+OrderDetailsItemsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderDetailsItemsComponent, selectors: [["order-details-items"]], inputs: { booking: "booking", order: "order" }, decls: 10, vars: 4, consts: [[1, "heading"], ["class", "content padded", 4, "ngIf", "ngIfElse"], ["edit_state", ""], ["class", "footer", "name", "edit", "mat-button", "", 3, "click", 4, "ngIf"], ["empty_state", ""], ["load_state", ""], [1, "content", "padded"], [4, "ngIf", "ngIfElse"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "amount"], [4, "ngIf"], ["class", "sub-item", 4, "ngFor", "ngForOf"], [1, "sub-item"], [1, "content"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event", 4, "ngIf", "ngIfElse"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event"], ["name", "edit", "mat-button", "", 1, "footer", 3, "click"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"], ["diameter", "32"]], template: function OrderDetailsItemsComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
@@ -21051,7 +21255,7 @@ const i15 = __webpack_require__(/*! ./timeline/timeline.component */ "./src/app/
 const i16 = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 const i17 = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
 function DayViewComponent_mat_form_field_7_mat_option_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "mat-option", 21);
+    i0.ɵɵelementStart(0, "mat-option", 22);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -21063,7 +21267,7 @@ function DayViewComponent_mat_form_field_7_mat_option_2_Template(rf, ctx) { if (
 function DayViewComponent_mat_form_field_7_Template(rf, ctx) { if (rf & 1) {
     const _r13 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "mat-form-field", 7);
-    i0.ɵɵelementStart(1, "mat-select", 20);
+    i0.ɵɵelementStart(1, "mat-select", 21);
     i0.ɵɵlistener("ngModelChange", function DayViewComponent_mat_form_field_7_Template_mat_select_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r13); const ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.active_level = $event; })("ngModelChange", function DayViewComponent_mat_form_field_7_Template_mat_select_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r13); const ctx_r14 = i0.ɵɵnextContext(); return ctx_r14.updateLevel(); });
     i0.ɵɵtemplate(2, DayViewComponent_mat_form_field_7_mat_option_2_Template, 2, 2, "mat-option", 9);
     i0.ɵɵelementEnd();
@@ -21077,7 +21281,7 @@ function DayViewComponent_mat_form_field_7_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵproperty("ngForOf", ctx_r0.levels);
 } }
 function DayViewComponent_mat_form_field_8_mat_option_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "mat-option", 21);
+    i0.ɵɵelementStart(0, "mat-option", 22);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -21089,7 +21293,7 @@ function DayViewComponent_mat_form_field_8_mat_option_2_Template(rf, ctx) { if (
 function DayViewComponent_mat_form_field_8_Template(rf, ctx) { if (rf & 1) {
     const _r18 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "mat-form-field", 7);
-    i0.ɵɵelementStart(1, "mat-select", 22);
+    i0.ɵɵelementStart(1, "mat-select", 23);
     i0.ɵɵlistener("ngModelChange", function DayViewComponent_mat_form_field_8_Template_mat_select_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r18); const ctx_r17 = i0.ɵɵnextContext(); return ctx_r17.active_type = $event; });
     i0.ɵɵtemplate(2, DayViewComponent_mat_form_field_8_mat_option_2_Template, 2, 2, "mat-option", 9);
     i0.ɵɵelementEnd();
@@ -21103,13 +21307,13 @@ function DayViewComponent_mat_form_field_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵproperty("ngForOf", ctx_r1.space_types);
 } }
 function DayViewComponent_mat_option_13_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "mat-option", 21);
-    i0.ɵɵelementStart(1, "div", 23);
-    i0.ɵɵelementStart(2, "div", 24);
+    i0.ɵɵelementStart(0, "mat-option", 22);
+    i0.ɵɵelementStart(1, "div", 24);
+    i0.ɵɵelementStart(2, "div", 25);
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "div", 25);
-    i0.ɵɵelement(5, "div", 26);
+    i0.ɵɵelementStart(4, "div", 26);
+    i0.ɵɵelement(5, "div", 27);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -21149,15 +21353,15 @@ function DayViewComponent_button_34_Template(rf, ctx) { if (rf & 1) {
 } }
 function DayViewComponent_div_37_Template(rf, ctx) { if (rf & 1) {
     const _r28 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 27);
-    i0.ɵɵelementStart(1, "mat-checkbox", 28);
+    i0.ɵɵelementStart(0, "div", 28);
+    i0.ɵɵelementStart(1, "mat-checkbox", 29);
     i0.ɵɵlistener("ngModelChange", function DayViewComponent_div_37_Template_mat_checkbox_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r28); const key_r26 = ctx.$implicit; return key_r26.active = $event; })("ngModelChange", function DayViewComponent_div_37_Template_mat_checkbox_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r28); const ctx_r29 = i0.ɵɵnextContext(); return ctx_r29.updateLegend(true); })("click", function DayViewComponent_div_37_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r28); return $event.stopPropagation(); });
-    i0.ɵɵelementStart(2, "div", 23);
-    i0.ɵɵelementStart(3, "div", 24);
+    i0.ɵɵelementStart(2, "div", 24);
+    i0.ɵɵelementStart(3, "div", 25);
     i0.ɵɵtext(4);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(5, "div", 25);
-    i0.ɵɵelement(6, "div", 26);
+    i0.ɵɵelementStart(5, "div", 26);
+    i0.ɵɵelement(6, "div", 27);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -21256,7 +21460,7 @@ class DayViewComponent extends base_directive_1.BaseDirective {
 }
 exports.DayViewComponent = DayViewComponent;
 DayViewComponent.ɵfac = function DayViewComponent_Factory(t) { return new (t || DayViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.Router), i0.ɵɵdirectiveInject(i4.ActivatedRoute)); };
-DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, selectors: [["a-day-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 38, vars: 28, consts: [[1, "day-view"], [1, "group"], [3, "date", "zone", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["mat-icon-button", "", 1, "not-desktop", 3, "matMenuTriggerFor"], [3, "icon"], ["appearance", "outline", 3, "desktop-only", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "legend", "overflow_only", "space_type"], ["menu", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["level_list", "matMenu"], ["mat-menu-item", "", 3, "selected", "click", 4, "ngFor", "ngForOf"], ["space_type_list", "matMenu"], ["legend_listing", "matMenu"], ["mat-menu-item", "", 4, "ngFor", "ngForOf"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"], ["mat-menu-item", ""], [3, "ngModel", "ngModelChange", "click"]], template: function DayViewComponent_Template(rf, ctx) { if (rf & 1) {
+DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, selectors: [["a-day-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 38, vars: 28, consts: [[1, "day-view"], [1, "group"], [3, "date", "zone", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["mat-icon-button", "", 1, "not-desktop", 3, "matMenuTriggerFor"], [3, "icon"], ["appearance", "outline", 3, "desktop-only", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "overflow", "labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "legend", "overflow_only", "space_type"], ["menu", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], ["level_list", "matMenu"], ["mat-menu-item", "", 3, "selected", "click", 4, "ngFor", "ngForOf"], ["space_type_list", "matMenu"], ["legend_listing", "matMenu"], ["mat-menu-item", "", 4, "ngFor", "ngForOf"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"], ["mat-menu-item", ""], [3, "ngModel", "ngModelChange", "click"]], template: function DayViewComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "a-sidebar");
         i0.ɵɵelementStart(2, "div", 1);
@@ -21300,20 +21504,20 @@ DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, select
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(26, "div", 14);
         i0.ɵɵlistener("click", function DayViewComponent_Template_div_click_26_listener($event) { return $event.stopPropagation(); });
-        i0.ɵɵelementStart(27, "mat-slide-toggle", 10);
+        i0.ɵɵelementStart(27, "mat-slide-toggle", 15);
         i0.ɵɵlistener("ngModelChange", function DayViewComponent_Template_mat_slide_toggle_ngModelChange_27_listener($event) { return ctx.only_overflow = $event; });
         i0.ɵɵtext(28, " Only Setup/Breakdown ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(29, "mat-menu", null, 15);
-        i0.ɵɵtemplate(31, DayViewComponent_button_31_Template, 2, 3, "button", 16);
+        i0.ɵɵelementStart(29, "mat-menu", null, 16);
+        i0.ɵɵtemplate(31, DayViewComponent_button_31_Template, 2, 3, "button", 17);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(32, "mat-menu", null, 17);
-        i0.ɵɵtemplate(34, DayViewComponent_button_34_Template, 2, 3, "button", 16);
+        i0.ɵɵelementStart(32, "mat-menu", null, 18);
+        i0.ɵɵtemplate(34, DayViewComponent_button_34_Template, 2, 3, "button", 17);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(35, "mat-menu", null, 18);
-        i0.ɵɵtemplate(37, DayViewComponent_div_37_Template, 7, 4, "div", 19);
+        i0.ɵɵelementStart(35, "mat-menu", null, 19);
+        i0.ɵɵtemplate(37, DayViewComponent_div_37_Template, 7, 4, "div", 20);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         const _r3 = i0.ɵɵreference(19);
@@ -23219,7 +23423,7 @@ function ReportsComponent_div_6_a_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const report_r11 = ctx.$implicit;
-    i0.ɵɵproperty("routerLink", i0.ɵɵpureFunction1(5, _c0, report_r11.id));
+    i0.ɵɵproperty("name", report_r11.id + "-report")("routerLink", i0.ɵɵpureFunction1(6, _c0, report_r11.id));
     i0.ɵɵadvance(3);
     i0.ɵɵproperty("icon", report_r11.icon);
     i0.ɵɵadvance(2);
@@ -23227,11 +23431,11 @@ function ReportsComponent_div_6_a_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(3);
     i0.ɵɵtextInterpolate(report_r11.description);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(7, _c1));
+    i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(8, _c1));
 } }
 function ReportsComponent_div_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 12);
-    i0.ɵɵtemplate(1, ReportsComponent_div_6_a_1_Template, 10, 8, "a", 13);
+    i0.ɵɵtemplate(1, ReportsComponent_div_6_a_1_Template, 10, 9, "a", 13);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r1 = i0.ɵɵnextContext();
@@ -23289,7 +23493,7 @@ class ReportsComponent extends base_directive_1.BaseDirective {
 }
 exports.ReportsComponent = ReportsComponent;
 ReportsComponent.ɵfac = function ReportsComponent_Factory(t) { return new (t || ReportsComponent)(i0.ɵɵdirectiveInject(i1.ActivatedRoute), i0.ɵɵdirectiveInject(i1.Router), i0.ɵɵdirectiveInject(i2.ApplicationService)); };
-ReportsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ReportsComponent, selectors: [["a-reports"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 9, vars: 4, consts: [[1, "reports"], [1, "group"], [3, "date", "dateChange"], ["class", "topbar", 4, "ngIf"], ["class", "options", 4, "ngIf", "ngIfElse"], ["report_display", ""], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], [1, "options"], ["class", "card", "mat-button", "", 3, "routerLink", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "card", 3, "routerLink"], [1, "content"], [1, "icon"], [3, "icon"], [1, "details"], [1, "desc"], [3, "report"]], template: function ReportsComponent_Template(rf, ctx) { if (rf & 1) {
+ReportsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ReportsComponent, selectors: [["a-reports"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 9, vars: 4, consts: [[1, "reports"], [1, "group"], [3, "date", "dateChange"], ["class", "topbar", 4, "ngIf"], ["class", "options", 4, "ngIf", "ngIfElse"], ["report_display", ""], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], ["name", "report-type", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], [1, "options"], ["class", "card", "mat-button", "", 3, "name", "routerLink", 4, "ngFor", "ngForOf"], ["mat-button", "", 1, "card", 3, "name", "routerLink"], [1, "content"], [1, "icon"], [3, "icon"], [1, "details"], [1, "desc"], [3, "report"]], template: function ReportsComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "a-sidebar");
         i0.ɵɵelementStart(2, "div", 1);
@@ -23716,7 +23920,7 @@ function EventFormComponent_form_0_div_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate1(" - ", ctx_r1.event.duration > 0 ? ctx_r1.event.end_time : "", "");
     i0.ɵɵadvance(5);
-    i0.ɵɵtextInterpolate((ctx_r1.event.organiser == null ? null : ctx_r1.event.organiser.name) || ctx_r1.event.organiser_email);
+    i0.ɵɵtextInterpolate(ctx_r1.event.organiser == null ? null : ctx_r1.event.organiser.name);
     i0.ɵɵadvance(11);
     i0.ɵɵproperty("ngForOf", ctx_r1.attendees)("ngForTrackBy", ctx_r1.trackByFn);
     i0.ɵɵadvance(1);
@@ -24507,6 +24711,7 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
                 .subscribe((_) => this.search$.next(`${this.date}|${_.id}`)));
             this.interval('update_bookings', () => this.search$.next(`${this.date}|${dayjs().unix()}`), 30 * 1000);
             this.subscription('bookings', this._bookings.booking_list.subscribe(() => this.updateEvents()));
+            this.updateEvents();
         });
     }
     ngOnChanges(changes) {
@@ -24540,8 +24745,7 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
             const end = start.add(booking.duration, 'm');
             return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
         })
-            .filter((bkn) => bkn.space_list.find((space) => space.zones.includes(this._org.building.id)));
-        console.log('Events:', bookings.map((i) => `${i.title}${i.space_list.map(i => i.email).join(',')}`));
+            .filter((bkn) => !bkn.declined && bkn.space_list.find((space) => space.zones.includes(this._org.building.id)));
         this.bookings = bookings.map((bkn) => {
             const data = bkn.toJSON();
             const space = bkn.space_list.find((space) => space.zones.includes(this._org.building.id)) ||
@@ -24565,13 +24769,11 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
         }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((list) => {
             const date = dayjs(this.date).startOf('d');
             let bookings = this._bookings.booking_list.getValue();
-            console.log('Booking list:', bookings.map((i) => i.title));
             list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map((bkn) => new booking_class_1.Booking(bkn)), {
                 space: space.email,
                 from: date.valueOf(),
                 to: date.endOf('d').valueOf(),
             })));
-            console.log('Bookings:', bookings.map((i) => i.title));
             bookings.sort((a, b) => a.date - b.date);
             this._bookings.booking_list.next(bookings);
             this.updateEvents();
@@ -24901,7 +25103,7 @@ class VisitorsComponent {
 }
 exports.VisitorsComponent = VisitorsComponent;
 VisitorsComponent.ɵfac = function VisitorsComponent_Factory(t) { return new (t || VisitorsComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.MatDialog), i0.ɵɵdirectiveInject(i3.SpacesService), i0.ɵɵdirectiveInject(i4.OrganisationService)); };
-VisitorsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorsComponent, selectors: [["app-visitors"]], decls: 13, vars: 12, consts: [[1, "visitors"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "click", 4, "ngIf"], ["labelPosition", "before", "title", "Show all meetings", 3, "ngModel", "ngModelChange"], [3, "show_all", "date", "search"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], [3, "icon"]], template: function VisitorsComponent_Template(rf, ctx) { if (rf & 1) {
+VisitorsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorsComponent, selectors: [["app-visitors"]], decls: 13, vars: 12, consts: [[1, "visitors"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "input-wrapper"], ["appearance", "outline"], ["matPrefix", "", 3, "icon"], ["matInput", "", "name", "visitor-name", "placeholder", "Search...", 3, "ngModel", "ngModelChange"], ["mat-icon-button", "", "matSuffix", "", 3, "click", 4, "ngIf"], ["name", "show-all", "labelPosition", "before", "title", "Show all meetings", 3, "ngModel", "ngModelChange"], [3, "show_all", "date", "search"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], [3, "icon"]], template: function VisitorsComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "a-sidebar");
         i0.ɵɵelementStart(2, "div", 1);
@@ -25233,9 +25435,9 @@ function WeekViewItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(2);
     i0.ɵɵproperty("ngIf", ctx_r0.event.declined || ctx_r0.event.approved);
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("title", (ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name) || ctx_r0.event.organiser_email);
+    i0.ɵɵproperty("title", ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name);
     i0.ɵɵadvance(4);
-    i0.ɵɵtextInterpolate((ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name) || ctx_r0.event.organiser_email);
+    i0.ɵɵtextInterpolate(ctx_r0.event.organiser == null ? null : ctx_r0.event.organiser.name);
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("title", (ctx_r0.event.space == null ? null : ctx_r0.event.space.name) || ctx_r0.event.location);
     i0.ɵɵadvance(3);
@@ -25308,12 +25510,12 @@ const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular
 const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
 const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
 const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const bookings_service_1 = __webpack_require__(/*! src/app/services/data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
@@ -25347,10 +25549,12 @@ class WeekViewTimelineComponent extends base_directive_1.BaseDirective {
         this.search$ = new rxjs_1.Subject();
     }
     ngOnInit() {
-        this.date_list = this.generateDates(this.date, this.weekends);
-        this.initBookings();
-        this.search$.next(`${this.date}|${this.weekends}|${this.level}`);
-        this.interval('update_booking', () => this.search$.next(`${this.date}|${this.weekends}|${this.level}|${dayjs().unix()}`), 30 * 1000);
+        this._spaces.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
+            this.date_list = this.generateDates(this.date, this.weekends);
+            this.initBookings();
+            this.search$.next(`${this.date}|${this.weekends}|${this.level}`);
+            this.interval('update_booking', () => this.search$.next(`${this.date}|${this.weekends}|${this.level}|${dayjs().unix()}`), 30 * 1000);
+        });
     }
     ngOnChanges(changes) {
         /* istanbul ignore else */
@@ -25579,7 +25783,7 @@ class WeekViewComponent extends base_directive_1.BaseDirective {
 }
 exports.WeekViewComponent = WeekViewComponent;
 WeekViewComponent.ɵfac = function WeekViewComponent_Factory(t) { return new (t || WeekViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.Router), i0.ɵɵdirectiveInject(i4.ActivatedRoute)); };
-WeekViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewComponent, selectors: [["a-week-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 11, vars: 9, consts: [[1, "week-view"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "space_type", "weekends"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function WeekViewComponent_Template(rf, ctx) { if (rf & 1) {
+WeekViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewComponent, selectors: [["a-week-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 11, vars: 9, consts: [[1, "week-view"], [1, "group"], [3, "date", "show_add_item", "dateChange", "event"], [1, "topbar"], ["appearance", "outline", 4, "ngIf"], ["name", "weekends", "labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "space_type", "weekends"], ["appearance", "outline"], [3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function WeekViewComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "a-sidebar");
         i0.ɵɵelementStart(2, "div", 1);
@@ -25697,16 +25901,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "2178fb7",
-    "hash": "2178fb7",
+    "raw": "4384a43",
+    "hash": "4384a43",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "2178fb7",
+    "suffix": "4384a43",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595897401815
+    "time": 1596001607985
 };
 /* tslint:enable */
 
