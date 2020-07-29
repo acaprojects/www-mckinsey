@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1595897814819,
+  "timestamp": 1595998768091,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -378,7 +378,7 @@
     "/staff/assets/img/skyline.jpg": "c47ac628178df00b6cb24b959bc88be223eac30c",
     "/staff/assets/img/storage.svg": "06e314fdf75ea7852e958e7a759c0f933d052821",
     "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
-    "/staff/assets/maps/abu_dhabi/level_23.svg": "7acafbe54cf681880f2842b7c6dd1b3854171e0e",
+    "/staff/assets/maps/abu_dhabi/level_23.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
     "/staff/assets/maps/bangalore_bgl/level_06.svg": "b1b1e0d50828faea0e95e879e6f37f427c17cf2d",
     "/staff/assets/maps/bangalore_blc/level_07.svg": "93f2ff6a69b7fa1ff73709411d5a15c8d2b73722",
     "/staff/assets/maps/bangalore_bng/level_06.svg": "c98a79182dc30b8b0473d023686c9b4bd20a9e71",
@@ -447,8 +447,8 @@
     "/staff/assets/maps/sydney/level_35.svg": "be832bb516b300f5672b9ec4b881811406cb8d2d",
     "/staff/assets/maps/sydney/level_36.svg": "1393f4889357b9925aaf52e9d7cb02306230f78b",
     "/staff/assets/maps/taipei/level_47.svg": "637cbadc4b664d2c6df6b4a22b46d4e5c57ecc42",
-    "/staff/assets/maps/tokyo/level_32.svg": "1b6fd71b6e07d4f3d63f542cec3842b04084762f",
-    "/staff/assets/maps/tokyo/level_33.svg": "8e025f4b2e3711e7f579e07dc73bff575b8132b2",
+    "/staff/assets/maps/tokyo/level_32.svg": "c0d442d965c1859b804a3b57df8ab04dab7f3f4f",
+    "/staff/assets/maps/tokyo/level_33.svg": "ad075bf354d3f5258a3cfab1d373050a4c4112ce",
     "/staff/assets/maps/toronto/level_01.svg": "0eacba63a07334f8a94c34dca1c1f77e723191eb",
     "/staff/assets/maps/toronto/level_02.svg": "65de2ce8bed64ebfc6594c2697c642a1bfed1a95",
     "/staff/assets/maps/toronto/level_03.svg": "324c9717594e49560d29f5ffc363a6962e09e1cf",
@@ -466,8 +466,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "a8303ff8bef6ab5fcf265b71f2e1274786813f5c",
-    "/staff/main-es5.js": "06db19210b474c3ebb88a737ff54dc55fa7e4eaa",
+    "/staff/main-es2015.js": "10a9d43349a09f0b41f478d14ab3bb791f7f037a",
+    "/staff/main-es5.js": "228f5f6a0b9d64aedd6db685425ac6b99d9d5d0b",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
