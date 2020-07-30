@@ -10097,7 +10097,7 @@ class Report {
                 }
                 booking.setup = general_utilities_1.humaniseDuration((booking.setup || 0) / 60);
                 booking.breakdown = general_utilities_1.humaniseDuration((booking.breakdown || 0) / 60);
-                booking.description = (booking.description || '').replace(/<[^>]*>?/gm, '').replace(/\,/g, '٫');
+                booking.description = (booking.description || '').replace(/<[^>]*>?/gm, '').replace(/\,/g, '٫').replace(/\\n/g, ' ');
                 booking['Meeting Host'] = ((_a = booking.organizer) === null || _a === void 0 ? void 0 : _a.name) || booking.organizer;
                 booking['Booked By'] = ((_b = booking.booked_by) === null || _b === void 0 ? void 0 : _b.name) || ((_c = booking.booked_by) === null || _c === void 0 ? void 0 : _c.email) || '';
                 booking.charge_code = booking.equipment_codes
@@ -10113,7 +10113,7 @@ class Report {
                 booking.end = dayjs(booking.end).format('DD MMM YYYY٫ h:mm A');
                 booking.notes = (booking.notes || [])
                     .map((note) => note.author && (note.type === 'description' || note.type === 'private')
-                    ? `[${note.author}|${note.type}]${note.message.replace(/<[^>]*>?/gm, '').replace(/\,/g, '٫')}`
+                    ? `[${note.author}|${note.type}]${note.message.replace(/<[^>]*>?/gm, '').replace(/\,/g, '٫').replace(/\\n/g, ' ')}`
                     : '')
                     .join('\n');
                 booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({ start: booking.date }, booking.recurr));
@@ -25901,16 +25901,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "2830338",
-    "hash": "2830338",
+    "raw": "0569349",
+    "hash": "0569349",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "2830338",
+    "suffix": "0569349",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596071197524
+    "time": 1596073947786
 };
 /* tslint:enable */
 
