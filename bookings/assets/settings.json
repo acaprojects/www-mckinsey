@@ -3,8 +3,8 @@
     "debug": true,
     "composer": {
         "domain": "",
-        "route": "/bookings",
-        "protocol": "https:",
+        "route": "",
+        "protocol": "http:",
         "use_domain": true,
         "local_login": false
     },
@@ -79,6 +79,5 @@
                 }
             ]
         }
-    },
-    "mock": false
+    }
 }
