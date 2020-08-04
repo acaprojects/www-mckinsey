@@ -6,7 +6,7 @@ var settings = {
     debug: true,
     composer: {
         domain: '',
-        route: '/staff',
+        route: '/bookings',
         protocol: '',
         port: '',
         use_domain: false,
@@ -20,8 +20,8 @@ var settings = {
  */
 settings.app = {
     title: 'McKinsey & Company',
-    description: 'McKinsey & Company Staff UI written with Angular Framework',
-    short_name: 'STAFF',
+    description: 'McKinsey & Company Booking Panel UI written with Angular Framework',
+    short_name: 'PANEL',
     logo_light: {
         type: 'img',
         src: 'assets/img/logo.svg',
@@ -37,7 +37,7 @@ settings.app = {
         force_ssl: true,
         secure_cookie: true,
         disable_text_capture: true,
-        cookie_path: '/staff/'
+        cookie_path: '/bookings/'
     },
     general: {},
     home: {},
