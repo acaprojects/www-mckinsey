@@ -5277,7 +5277,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _r32 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementStart(0, "div", 18);
-        i0.ɵɵelementStart(1, "div", 29);
+        i0.ɵɵelementStart(1, "div", 30);
         i0.ɵɵelement(2, "app-icon", 2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "div", 19);
@@ -5295,7 +5295,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(12, "div", 24);
-        i0.ɵɵelementStart(13, "button", 27);
+        i0.ɵɵelementStart(13, "button", 31);
         i0.ɵɵlistener("click", function SpaceSelectModalComponent_div_11_ng_container_4_div_1_Template_button_click_13_listener() {
           i0.ɵɵrestoreView(_r32);
           var space_r30 = ctx.$implicit;
@@ -5362,7 +5362,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵtemplate(4, SpaceSelectModalComponent_div_11_ng_container_4_Template, 2, 1, "ng-container", 6);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(5, "footer");
-        i0.ɵɵelementStart(6, "button", 25);
+        i0.ɵɵelementStart(6, "button", 27);
         i0.ɵɵlistener("click", function SpaceSelectModalComponent_div_11_Template_button_click_6_listener() {
           i0.ɵɵrestoreView(_r34);
           var ctx_r33 = i0.ɵɵnextContext();
@@ -5371,7 +5371,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵtext(7, "Add to booking");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(8, "button", 27);
+        i0.ɵɵelementStart(8, "button", 28);
         i0.ɵɵlistener("click", function SpaceSelectModalComponent_div_11_Template_button_click_8_listener() {
           i0.ɵɵrestoreView(_r34);
           var ctx_r35 = i0.ɵɵnextContext();
@@ -5379,8 +5379,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
         i0.ɵɵelement(9, "app-icon", 2);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(10, "div", 28);
-        i0.ɵɵelementStart(11, "button", 27);
+        i0.ɵɵelementStart(10, "div", 29);
+        i0.ɵɵelementStart(11, "button", 28);
         i0.ɵɵlistener("click", function SpaceSelectModalComponent_div_11_Template_button_click_11_listener() {
           i0.ɵɵrestoreView(_r34);
           var ctx_r36 = i0.ɵɵnextContext();
@@ -5411,9 +5411,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function SpaceSelectModalComponent_ng_template_12_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 30);
-        i0.ɵɵelementStart(1, "div", 31);
-        i0.ɵɵelement(2, "mat-spinner", 32);
+        i0.ɵɵelementStart(0, "div", 32);
+        i0.ɵɵelementStart(1, "div", 33);
+        i0.ɵɵelement(2, "mat-spinner", 34);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "div", 23);
         i0.ɵɵtext(4, "Loading available spaces...");
@@ -5424,8 +5424,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function SpaceSelectModalComponent_ng_template_14_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 30);
-        i0.ɵɵelementStart(1, "div", 31);
+        i0.ɵɵelementStart(0, "div", 32);
+        i0.ɵɵelementStart(1, "div", 33);
         i0.ɵɵelement(2, "app-icon", 2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "div", 23);
@@ -5442,8 +5442,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function SpaceSelectModalComponent_ng_template_16_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 30);
-        i0.ɵɵelementStart(1, "div", 31);
+        i0.ɵɵelementStart(0, "div", 32);
+        i0.ɵɵelementStart(1, "div", 33);
         i0.ɵɵelement(2, "app-icon", 2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(3, "div", 23);
@@ -5640,7 +5640,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 18,
       vars: 7,
-      consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "block", "available"], [4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["class", "block selected", 3, "show", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], ["empty_select_state", ""], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "info"], [1, "capacity"], [1, "text"], [1, "actions"], ["mat-button", "", 3, "click"], [1, "block", "selected"], ["mat-icon-button", "", 3, "click"], [1, "tag", "mobile-only"], [1, "icon", 3, "matTooltip"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"]],
+      consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "block", "available"], [4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["class", "block selected", 3, "show", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], ["empty_select_state", ""], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "info"], [1, "capacity"], [1, "text"], [1, "actions"], ["name", "add", "mat-button", "", 3, "click"], [1, "block", "selected"], ["mat-button", "", "name", "next", 3, "click"], ["mat-icon-button", "", 3, "click"], [1, "tag", "mobile-only"], [1, "icon", 3, "matTooltip"], ["mat-icon-button", "", "name", "remove", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"]],
       template: function SpaceSelectModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "header");
@@ -10984,7 +10984,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this55._service = _service;
         service_manager_class_1.ServiceManager.setService(space_class_1.Space, _assertThisInitialized(_this55));
         _this55._name = 'Space';
-        _this55._api_route = '/rooms';
+        _this55._api_route = 'rooms';
 
         _this55._compare = function (a, b) {
           return !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
@@ -18939,14 +18939,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     window.control.systems = window.control.systems || {};
     window.control.handlers = window.control.handlers || [];
     exports.MOCK_BOOKINGS = Array(200).fill(0).map(function (i) {
-      var rooms = general_utilities_1.unique(Array(general_utilities_1.randomInt(4)).fill(0).map(function (i) {
-        return spaces_mock_1.MOCK_SPACES[Math.floor(Math.random() * spaces_mock_1.MOCK_SPACES.length)];
+      var rooms = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(4)).fill(0).map(function (i) {
+        return spaces_mock_1.MOCK_SPACES[general_utilities_1.predictableRandomInt(spaces_mock_1.MOCK_SPACES.length)];
       }), 'id'); // Set the organiser with the generated user list
 
-      var organiser = general_utilities_1.randomInt(9999) % 10 === 0 ? users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1] : users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)]; // Set the attendees with the generated user list
+      var organiser = general_utilities_1.predictableRandomInt(9999) % 10 === 0 ? users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1] : users_mock_1.MOCK_USERS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_USERS.length)]; // Set the attendees with the generated user list
 
-      var attendees = general_utilities_1.unique(Array(general_utilities_1.randomInt(20)).fill(0).map(function (i) {
-        return users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)];
+      var attendees = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(20)).fill(0).map(function (i) {
+        return users_mock_1.MOCK_USERS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_USERS.length)];
       }), 'email');
       return spec_helpers_1.generateMockBooking({
         organiser: organiser,
@@ -19033,7 +19033,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       method: 'POST',
       callback: function callback(event) {
         if (event.body) {
-          event.body.id = "bkn-".concat(general_utilities_1.randomInt(9999999));
+          event.body.id = "bkn-".concat(general_utilities_1.predictableRandomInt(9999999));
           event.body.icaluid = "ical-".concat(event.body.id);
           event.body.approval_status = {};
 
@@ -19159,14 +19159,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       name: 'Sydney',
       settings: {
         discovery_info: {
+          code: 'SYD',
           timezone: 'Australia/Sydney',
           neighbourhoods: {
             'zone_lvl-01': {
               'Test Searchable': 'Device_Bench'
             }
-          },
-          required: {
-            expected_attendees: true
           },
           visitor_space: "sydney-01.02@".concat(common_mock_1.DOMAIN),
           booking_rules: {
@@ -19219,37 +19217,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       name: 'London Post',
       settings: {
         discovery_info: {
+          code: 'LON',
           timezone: 'Europe/London',
           visitor_space: "london-01.02@".concat(common_mock_1.DOMAIN),
-          required: {
-            equipment_code: true,
-            expected_attendees: true
-          },
+          holding_bay: "11.10@".concat(common_mock_1.DOMAIN),
           levels: [{
-            level_id: 'zone_lvl-06',
-            level_name: 'Level 6',
-            number: 1,
-            map_url: 'assets/maps/london/level_06.svg',
-            floor_type: 'staff'
-          }, {
-            level_id: 'zone_lvl-07',
-            level_name: 'Level 7',
-            number: 1,
-            map_url: 'assets/maps/london/level_07.svg',
-            floor_type: 'staff'
-          }, {
-            level_id: 'zone_lvl-8',
-            level_name: 'Level 8',
-            number: 1,
-            map_url: 'assets/maps/london/level_08.svg',
-            floor_type: 'staff'
-          }, {
-            level_id: 'zone_lvl-09',
-            level_name: 'Level 9',
-            number: 1,
-            map_url: 'assets/maps/london/level_09.svg',
-            floor_type: 'staff'
-          }, {
             level_id: 'zone_lvl-10',
             level_name: 'Level 10',
             number: 1,
@@ -19268,31 +19240,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.MOCK_BUILDINGS.push(Object.assign(Object.assign({}, exports.MOCK_BUILDINGS[0]), {
       name: 'London'
     }));
-    organisation_mock_1.MOCK_ORG[0].discovery_info.buildings = exports.MOCK_BUILDINGS;
-    setTimeout(function () {
-      window.control.handlers.push({
-        path: '/api/engine/v2/zones',
-        metadata: exports.MOCK_BUILDINGS,
-        callback: function callback(event) {
-          if (event.query_params.tags === 'building') {
-            return {
-              total: exports.MOCK_BUILDINGS.length,
-              results: exports.MOCK_BUILDINGS
-            };
-          } else if (event.query_params.tags === 'org') {
-            return {
-              total: organisation_mock_1.MOCK_ORG.length,
-              results: organisation_mock_1.MOCK_ORG
-            };
-          } else if (event.query_params.tags === 'level') {
-            return {
-              total: 0,
-              results: []
-            };
-          }
+    organisation_mock_1.MOCK_ORG[0].settings.discovery_info.buildings = exports.MOCK_BUILDINGS; // setTimeout(() => {
+
+    window.control.handlers.push({
+      path: '/api/engine/v2/zones',
+      metadata: exports.MOCK_BUILDINGS,
+      callback: function callback(event) {
+        if (event.query_params.tags === 'building') {
+          return {
+            total: exports.MOCK_BUILDINGS.length,
+            results: exports.MOCK_BUILDINGS
+          };
+        } else if (event.query_params.tags === 'org') {
+          return {
+            total: organisation_mock_1.MOCK_ORG.length,
+            results: organisation_mock_1.MOCK_ORG
+          };
+        } else if (event.query_params.tags === 'level') {
+          return {
+            total: 0,
+            results: []
+          };
         }
-      });
-    });
+      }
+    }); // });
+
     /***/
   },
 
@@ -19602,7 +19574,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
         var user = _step19.value;
 
-        if (user.location || general_utilities_1.randomInt(99999) % 2 === 0) {
+        if (user.location || general_utilities_1.predictableRandomInt(99999) % 2 === 0) {
           user.location = spec_helpers_1.generateMockLocation(null, spaces, levels);
           exports.MOCK_LOCATIONS.push(user.location);
         }
@@ -19654,9 +19626,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       value: true
     });
     exports.MOCK_ORG = [{
-      send_acceptance: true,
-      discovery_info: {
-        buildings: []
+      settings: {
+        send_acceptance: true,
+        discovery_info: {
+          buildings: []
+        }
       }
     }];
     /***/
@@ -19686,9 +19660,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../utilities/spec-helpers */
     "./src/app/shared/utilities/spec-helpers.ts");
 
-    var dayjs = __webpack_require__(
-    /*! dayjs */
-    "./node_modules/dayjs/dayjs.min.js");
+    var booking_utilities_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/booking.utilities */
+    "./src/app/services/data/bookings/booking.utilities.ts");
 
     window.control = window.control || {};
     window.control.systems = window.control.systems || {};
@@ -19699,8 +19673,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       zones: ['zone_bld-01', 'zone_lvl-35'],
       bookable: true
     }, {
-      id: '36.08',
+      id: '3.08',
       name: 'SYD-36-Trickett-internal-05-DV',
+      zones: ['zone_bld-01', 'zone_lvl-36'],
+      bookable: true
+    }, {
+      id: '35.08',
+      name: 'SYD-35-Durack-internal-05-DV',
       zones: ['zone_bld-01', 'zone_lvl-36'],
       bookable: true
     }, {
@@ -19716,23 +19695,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       id: '10.02',
       name: 'LON-10-10_02_Village_green',
-      zones: ['zone_bld-01', 'zone_lvl-10']
+      zones: ['zone_bld-02', 'zone_lvl-10']
     }, {
       id: '10.47',
       name: 'LON-10-EC10_10_47_Gallery',
-      zones: ['zone_bld-01', 'zone_lvl-10']
+      zones: ['zone_bld-02', 'zone_lvl-10']
     }, {
       id: '11.07',
       name: 'LON-11-EC11_11_07_Client',
-      zones: ['zone_bld-01', 'zone_lvl-11']
+      zones: ['zone_bld-02', 'zone_lvl-11']
     }, {
       id: '11.10',
       name: 'LON-11-EC11_11_10_Client',
-      zones: ['zone_bld-01', 'zone_lvl-11']
+      zones: ['zone_bld-02', 'zone_lvl-11']
     }].map(function (space_data) {
-      var space = spec_helpers_1.generateMockSpace(Object.assign(Object.assign({}, space_data), {
+      var space = spec_helpers_1.generateMockSpace(Object.assign(Object.assign({
+        bookable: true
+      }, space_data), {
         map_id: "".concat(space_data.id),
         id: "sys_rm-".concat(space_data.id),
+        email: "".concat(space_data.id, "@").concat(common_mock_1.DOMAIN),
         name: "".concat(space_data.name)
       }));
       window.control.systems[space.id] = {
@@ -19793,8 +19775,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
         if (event.query_params.available_from) {
-          var from = dayjs(+event.query_params.available_from * 1000);
-          var to = dayjs(+event.query_params.available_to * 1000);
           results.forEach(function (space) {
             var _iterator21 = _createForOfIteratorHelper(space.bookings),
                 _step21;
@@ -19802,10 +19782,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             try {
               for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
                 var booking = _step21.value;
-                var start = dayjs(booking.start_epoch * 1000);
-                var end = dayjs(booking.end_epoch * 1000);
 
-                if (from.isAfter(start, 'm') && from.isBefore(end, 'm') || to.isAfter(start, 'm') && to.isBefore(end, 'm') || start.isAfter(from, 'm') && start.isBefore(to, 'm')) {
+                if (booking_utilities_1.timePeriodsIntersect(booking.start_epoch, booking.end_epoch, +event.query_params.available_from, +event.query_params.available_to)) {
                   space.settings = {
                     available: false
                   };
@@ -19853,13 +19831,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../utilities/spec-helpers */
     "./src/app/shared/utilities/spec-helpers.ts");
 
+    var general_utilities_1 = __webpack_require__(
+    /*! ../../utilities/general.utilities */
+    "./src/app/shared/utilities/general.utilities.ts");
+
     window.control = window.control || {};
     window.control.systems = window.control.systems || {};
     window.control.handlers = window.control.handlers || [];
-    exports.MOCK_USERS = Array(Math.floor(Math.random() * 300 + 100)).fill(0).map(function (i) {
+    exports.MOCK_USERS = Array(Math.floor(general_utilities_1.predictableRandomInt(300) + 100)).fill(0).map(function (i) {
       return spec_helpers_1.generateMockUser();
     });
-    exports.MOCK_CONTACTS = Array(Math.floor(Math.random() * 300 + 100)).fill(0).map(function (i) {
+    exports.MOCK_CONTACTS = Array(Math.floor(general_utilities_1.predictableRandomInt(300) + 100)).fill(0).map(function (i) {
       return spec_helpers_1.generateMockUser({
         external: true
       });
@@ -21210,7 +21192,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     exports.flatten = flatten;
+    var seed = xmur3('PlaceOS');
+    var rand = sfc32(0x9E3779B9, 0x243F6A88, 0xB7E15162, seed());
+
+    function predictableRandomInt() {
+      var ceil = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 100;
+      var floor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      return Math.floor(rand() * (ceil - floor)) + floor;
+    }
+
+    exports.predictableRandomInt = predictableRandomInt; // https://stackoverflow.com/questions/521295/seeding-the-random-number-generator-in-javascript
+
+    function xmur3(str) {
+      for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++) {
+        h = Math.imul(h ^ str.charCodeAt(i), 3432918353), h = h << 13 | h >>> 19;
+      }
+
+      return function () {
+        h = Math.imul(h ^ h >>> 16, 2246822507);
+        h = Math.imul(h ^ h >>> 13, 3266489909);
+        return (h ^= h >>> 16) >>> 0;
+      };
+    }
+
+    function sfc32(a, b, c, d) {
+      return function () {
+        a >>>= 0;
+        b >>>= 0;
+        c >>>= 0;
+        d >>>= 0;
+        var t = a + b | 0;
+        a = b ^ b >>> 9;
+        b = c + (c << 3) | 0;
+        c = c << 21 | c >>> 11;
+        d = d + 1 | 0;
+        t = t + d | 0;
+        c = c + t | 0;
+        return (t >>> 0) / 4294967296;
+      };
+    }
     /***/
+
   },
 
   /***/
@@ -21400,27 +21422,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var overrides = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var id = "space-".concat(SPACE_COUNT++);
       var name = "".concat(faker.name.firstName(), " ").concat(faker.name.lastName(), " Space");
-      var linked = Math.floor(Math.random() * 99999) % 2 === 0 && SPACE_COUNT > 1;
+      var linked = Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0 && SPACE_COUNT > 1;
       return Object.assign({
         id: id,
         name: name,
         long_name: "".concat(name, " with an long name"),
         map_id: "".concat(SPACE_COUNT),
-        capacity: Math.floor(Math.random() * 20 + 1) * 2,
+        capacity: Math.floor(general_utilities_1.predictableRandomInt(20) + 1) * 2,
         email: "".concat(name.toLowerCase().split(' ').join('.'), "@").concat(exports.USER_DOMAIN),
         type: faker.commerce.productName(),
-        searchable: Math.floor(Math.random() * 99999) % 2 === 0,
-        controlable: Math.floor(Math.random() * 99999) % 2 === 0,
-        bookable: Math.floor(Math.random() * 99999) % 2 === 0,
-        cost_hour: Math.floor(Math.random() * 300) * 100,
-        setup: Math.floor(Math.random() * 6) * 5,
-        breakdown: Math.floor(Math.random() * 6) * 5,
+        searchable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0,
+        controlable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0,
+        bookable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0,
+        cost_hour: Math.floor(general_utilities_1.predictableRandomInt(300)) * 100,
+        setup: Math.floor(general_utilities_1.predictableRandomInt(6)) * 5,
+        breakdown: Math.floor(general_utilities_1.predictableRandomInt(6)) * 5,
         zones: ['zone_lvl-0'],
         support_url: "/control/#/".concat(id),
         bookings: Array(10).fill(0).map(function (i) {
           return generateMockBooking();
         }),
-        linked_rooms: linked ? ["space-".concat(Math.floor(Math.random() * (SPACE_COUNT - 1)))] : [],
+        linked_rooms: linked ? ["space-".concat(Math.floor(general_utilities_1.predictableRandomInt(SPACE_COUNT - 1)))] : [],
         image: faker.image.business()
       }, overrides);
     }
@@ -21446,15 +21468,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function generateMockBooking() {
       var override = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var id = "booking-".concat(BOOKING_COUNT++);
-      BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4 + 2) * 15, 'm');
+      BOOKING_DATE = BOOKING_DATE.add(Math.floor(general_utilities_1.predictableRandomInt(4) + 2) * 15, 'm');
       var start = BOOKING_DATE.valueOf();
-      var duration = Math.floor(Math.random() * 4 + 2) * 15;
-      BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
+      var duration = Math.floor(general_utilities_1.predictableRandomInt(4) + 2) * 15;
+      BOOKING_DATE = BOOKING_DATE.add(Math.floor(general_utilities_1.predictableRandomInt(4)) * 15, 'm');
       return Object.assign({
         id: id,
-        icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8),
+        icaluid: general_utilities_1.padZero(Math.floor(general_utilities_1.predictableRandomInt(99999999)), 8),
         title: "".concat(faker.commerce.productName(), " Meeting"),
-        attendees: Array(Math.floor(Math.random() * 5 + 2)).fill(0).map(function (i) {
+        attendees: Array(Math.floor(general_utilities_1.predictableRandomInt(5) + 2)).fill(0).map(function (i) {
           return generateMockUser(override.users);
         }),
         organiser: generateMockUser(),
@@ -21466,13 +21488,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           message: faker.lorem.paragraph()
         }],
         location: faker.address.city(),
-        has_catering: Math.floor(Math.random() * 34567) % 3 === 0,
-        booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)],
+        has_catering: Math.floor(general_utilities_1.predictableRandomInt(34567)) % 3 === 0,
+        booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.predictableRandomInt(5)],
         setup: {
-          'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5)
+          'space-01': Math.max(0, (general_utilities_1.predictableRandomInt(12) - 6) * 5)
         },
         breakdown: {
-          'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5)
+          'space-01': Math.max(0, (general_utilities_1.predictableRandomInt(12) - 6) * 5)
         },
         status: {},
         catering: [],
@@ -21502,7 +21524,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       try {
         for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
           var lvl = _step32.value;
-          var count = Math.floor(Math.random() * 3 + 2);
+          var count = Math.floor(general_utilities_1.predictableRandomInt(3) + 2);
           features[lvl.level_id] = {};
 
           for (var i = 0; i < count; i++) {
@@ -21584,13 +21606,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var override = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var id = "user-".concat(USER_COUNT++);
       var name = "".concat(faker.name.firstName(), " ").concat(faker.name.lastName());
-      var external = override.external || !(Math.random() * 99999 % 2);
+      var external = override.external || !(general_utilities_1.predictableRandomInt(99999) % 2);
       var organisation = external ? faker.company.companyName() : exports.USER_DOMAIN.split('.')[0];
       var delegates = [];
-      var delegate_count = Math.min(Math.random() * 4 + 1, USER_EMAILS.length);
+      var delegate_count = Math.min(general_utilities_1.predictableRandomInt(4) + 1, USER_EMAILS.length);
 
       for (var i = 0; i < delegate_count; i++) {
-        delegates.push(USER_EMAILS[Math.floor(Math.random() * USER_EMAILS.length)]);
+        delegates.push(USER_EMAILS[Math.floor(general_utilities_1.predictableRandomInt(USER_EMAILS.length))]);
       }
 
       delegates = general_utilities_1.unique(delegates);
@@ -21609,7 +21631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           name: organisation
         },
         department: faker.commerce.department(),
-        staff_code: general_utilities_1.padZero(Math.floor(Math.random() * 99999), 5),
+        staff_code: general_utilities_1.padZero(Math.floor(general_utilities_1.predictableRandomInt(99999)), 5),
         delegates: delegates,
         image: faker.image.avatar()
       }, override);
@@ -21618,20 +21640,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.generateMockUser = generateMockUser;
 
     function generateMockLocation(overrides, fixed_locations, maps) {
-      var fixed = general_utilities_1.randomInt(999999999) % 2 === 0;
+      var fixed = general_utilities_1.predictableRandomInt(999999999) % 2 === 0;
 
       if (fixed && (!overrides || overrides.fixed)) {
         return Object.assign({
-          map_id: fixed_locations[general_utilities_1.randomInt(fixed_locations.length)],
-          level: maps[general_utilities_1.randomInt(maps.length)]
+          map_id: fixed_locations[general_utilities_1.predictableRandomInt(fixed_locations.length)],
+          level: maps[general_utilities_1.predictableRandomInt(maps.length)]
         }, overrides);
       } else {
         return Object.assign({
-          x: general_utilities_1.randomInt(900, 100),
+          x: general_utilities_1.predictableRandomInt(900, 100),
           x_max: 1000,
-          y: general_utilities_1.randomInt(500, 100),
-          level: maps[general_utilities_1.randomInt(maps.length)],
-          confidence: general_utilities_1.randomInt(30)
+          y: general_utilities_1.predictableRandomInt(500, 100),
+          level: maps[general_utilities_1.predictableRandomInt(maps.length)],
+          confidence: general_utilities_1.predictableRandomInt(30)
         }, overrides);
       }
     }
@@ -25378,12 +25400,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function RequirementDetailsModalComponent_form_13_div_1_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 16);
-        i0.ɵɵelementStart(1, "label", 20);
+        i0.ɵɵelementStart(0, "div", 21);
+        i0.ɵɵelementStart(1, "label", 22);
         i0.ɵɵi18n(2, I18N_12);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "mat-form-field", 18);
-        i0.ɵɵelementStart(4, "textarea", 21);
+        i0.ɵɵelementStart(3, "mat-form-field", 19);
+        i0.ɵɵelementStart(4, "textarea", 23);
         i0.ɵɵi18nAttributes(5, _c16);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -25453,14 +25475,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function RequirementDetailsModalComponent_form_13_div_3_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 16);
-        i0.ɵɵelementStart(1, "label", 22);
+        i0.ɵɵelementStart(0, "div", 24);
+        i0.ɵɵelementStart(1, "label", 25);
         i0.ɵɵi18nStart(2, I18N_17);
-        i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_span_3_Template, 2, 0, "span", 23);
+        i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_span_3_Template, 2, 0, "span", 26);
         i0.ɵɵi18nEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "mat-form-field", 18);
-        i0.ɵɵelementStart(5, "input", 24);
+        i0.ɵɵelementStart(4, "mat-form-field", 19);
+        i0.ɵɵelementStart(5, "input", 27);
         i0.ɵɵi18nAttributes(6, _c20);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(7, "mat-hint");
@@ -25489,15 +25511,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementStart(0, "form", 13);
         i0.ɵɵtemplate(1, RequirementDetailsModalComponent_form_13_div_1_Template, 6, 0, "div", 14);
         i0.ɵɵelementStart(2, "div", 15);
-        i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_Template, 12, 3, "div", 14);
-        i0.ɵɵelementStart(4, "div", 16);
-        i0.ɵɵelementStart(5, "label", 17);
+        i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_Template, 12, 3, "div", 16);
+        i0.ɵɵelementStart(4, "div", 17);
+        i0.ɵɵelementStart(5, "label", 18);
         i0.ɵɵi18nStart(6, I18N_3);
         i0.ɵɵelement(7, "span");
         i0.ɵɵi18nEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(8, "mat-form-field", 18);
-        i0.ɵɵelementStart(9, "input", 19);
+        i0.ɵɵelementStart(8, "mat-form-field", 19);
+        i0.ɵɵelementStart(9, "input", 20);
         i0.ɵɵi18nAttributes(10, _c7);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(11, "mat-hint");
@@ -25728,7 +25750,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 18,
       vars: 6,
-      consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], ["content", ""], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "click"], [3, "label"], [3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "fieldset"], [1, "field"], ["for", "head-count"], ["appearance", "outline"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"], ["for", "equipment-notes"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]],
+      consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], ["content", ""], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "click"], [3, "label"], [3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "fieldset"], ["class", "field", "name", "charge-code", 4, "ngIf"], ["name", "head-count", 1, "field"], ["for", "head-count"], ["appearance", "outline"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"], [1, "field"], ["for", "equipment-notes"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["name", "charge-code", 1, "field"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]],
       template: function RequirementDetailsModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -35892,7 +35914,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 18,
       vars: 10,
-      consts: [[1, "event-list"], [1, "header", "dark-mode"], [1, "user"], ["appearance", "outline", 4, "ngIf"], [1, "flex"], [1, "date"], ["mat-icon-button", "", 3, "matMenuTriggerFor", "click"], [3, "icon"], [1, "progress"], ["mode", "indeterminate", 4, "ngIf"], [1, "body"], ["itemSize", "80", 1, "viewport", 3, "scroll"], [4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTrackBy"], [1, "footer"], [3, "closed"], ["appMenu", "matMenu"], ["mat-menu-item", "", 1, "date-picker", 3, "click"], [3, "ngModel", "ngModelChange"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mode", "indeterminate"], [3, "user", "event"]],
+      consts: [[1, "event-list"], [1, "header", "dark-mode"], [1, "user"], ["appearance", "outline", 4, "ngIf"], [1, "flex"], [1, "date"], ["mat-icon-button", "", "name", "date", 3, "matMenuTriggerFor", "click"], [3, "icon"], [1, "progress"], ["mode", "indeterminate", 4, "ngIf"], [1, "body"], ["itemSize", "80", 1, "viewport", 3, "scroll"], [4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTrackBy"], [1, "footer"], [3, "closed"], ["appMenu", "matMenu"], ["mat-menu-item", "", 1, "date-picker", 3, "click"], [3, "ngModel", "ngModelChange"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mode", "indeterminate"], [3, "user", "event"]],
       template: function ScheduleEventListComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -38621,16 +38643,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "294d53b",
-      "hash": "294d53b",
+      "raw": "0ea4054",
+      "hash": "0ea4054",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "294d53b",
+      "suffix": "0ea4054",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1596451055423
+      "time": 1596511737812
     };
     /* tslint:enable */
 

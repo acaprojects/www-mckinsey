@@ -2434,7 +2434,7 @@ const _c2 = function () { return { class: "material-icons", content: "close" }; 
 function SpaceSelectModalComponent_div_11_ng_container_4_div_1_Template(rf, ctx) { if (rf & 1) {
     const _r32 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 18);
-    i0.ɵɵelementStart(1, "div", 29);
+    i0.ɵɵelementStart(1, "div", 30);
     i0.ɵɵelement(2, "app-icon", 2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "div", 19);
@@ -2452,7 +2452,7 @@ function SpaceSelectModalComponent_div_11_ng_container_4_div_1_Template(rf, ctx)
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(12, "div", 24);
-    i0.ɵɵelementStart(13, "button", 27);
+    i0.ɵɵelementStart(13, "button", 31);
     i0.ɵɵlistener("click", function SpaceSelectModalComponent_div_11_ng_container_4_div_1_Template_button_click_13_listener() { i0.ɵɵrestoreView(_r32); const space_r30 = ctx.$implicit; const ctx_r31 = i0.ɵɵnextContext(3); return ctx_r31.removeSpace(space_r30); });
     i0.ɵɵelement(14, "app-icon", 2);
     i0.ɵɵelementEnd();
@@ -2497,17 +2497,17 @@ function SpaceSelectModalComponent_div_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtemplate(4, SpaceSelectModalComponent_div_11_ng_container_4_Template, 2, 1, "ng-container", 6);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(5, "footer");
-    i0.ɵɵelementStart(6, "button", 25);
+    i0.ɵɵelementStart(6, "button", 27);
     i0.ɵɵlistener("click", function SpaceSelectModalComponent_div_11_Template_button_click_6_listener() { i0.ɵɵrestoreView(_r34); const ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.save(ctx_r33.selected_spaces); });
     i0.ɵɵtext(7, "Add to booking");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(8, "button", 27);
+    i0.ɵɵelementStart(8, "button", 28);
     i0.ɵɵlistener("click", function SpaceSelectModalComponent_div_11_Template_button_click_8_listener() { i0.ɵɵrestoreView(_r34); const ctx_r35 = i0.ɵɵnextContext(); return ctx_r35.show_list = false; });
     i0.ɵɵelement(9, "app-icon", 2);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(10, "div", 28);
-    i0.ɵɵelementStart(11, "button", 27);
+    i0.ɵɵelementStart(10, "div", 29);
+    i0.ɵɵelementStart(11, "button", 28);
     i0.ɵɵlistener("click", function SpaceSelectModalComponent_div_11_Template_button_click_11_listener() { i0.ɵɵrestoreView(_r34); const ctx_r36 = i0.ɵɵnextContext(); return ctx_r36.show_list = true; });
     i0.ɵɵelement(12, "app-icon", 2);
     i0.ɵɵelementEnd();
@@ -2527,9 +2527,9 @@ function SpaceSelectModalComponent_div_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(11, _c3));
 } }
 function SpaceSelectModalComponent_ng_template_12_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 30);
-    i0.ɵɵelementStart(1, "div", 31);
-    i0.ɵɵelement(2, "mat-spinner", 32);
+    i0.ɵɵelementStart(0, "div", 32);
+    i0.ɵɵelementStart(1, "div", 33);
+    i0.ɵɵelement(2, "mat-spinner", 34);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "div", 23);
     i0.ɵɵtext(4, "Loading available spaces...");
@@ -2537,8 +2537,8 @@ function SpaceSelectModalComponent_ng_template_12_Template(rf, ctx) { if (rf & 1
     i0.ɵɵelementEnd();
 } }
 function SpaceSelectModalComponent_ng_template_14_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 30);
-    i0.ɵɵelementStart(1, "div", 31);
+    i0.ɵɵelementStart(0, "div", 32);
+    i0.ɵɵelementStart(1, "div", 33);
     i0.ɵɵelement(2, "app-icon", 2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "div", 23);
@@ -2550,8 +2550,8 @@ function SpaceSelectModalComponent_ng_template_14_Template(rf, ctx) { if (rf & 1
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(1, _c2));
 } }
 function SpaceSelectModalComponent_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 30);
-    i0.ɵɵelementStart(1, "div", 31);
+    i0.ɵɵelementStart(0, "div", 32);
+    i0.ɵɵelementStart(1, "div", 33);
     i0.ɵɵelement(2, "app-icon", 2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(3, "div", 23);
@@ -2658,7 +2658,7 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
 }
 exports.SpaceSelectModalComponent = SpaceSelectModalComponent;
 SpaceSelectModalComponent.ɵfac = function SpaceSelectModalComponent_Factory(t) { return new (t || SpaceSelectModalComponent)(i0.ɵɵdirectiveInject(i1.OrganisationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
-SpaceSelectModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SpaceSelectModalComponent, selectors: [["a-space-select-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 18, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "block", "available"], [4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["class", "block selected", 3, "show", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], ["empty_select_state", ""], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "info"], [1, "capacity"], [1, "text"], [1, "actions"], ["mat-button", "", 3, "click"], [1, "block", "selected"], ["mat-icon-button", "", 3, "click"], [1, "tag", "mobile-only"], [1, "icon", 3, "matTooltip"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"]], template: function SpaceSelectModalComponent_Template(rf, ctx) { if (rf & 1) {
+SpaceSelectModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SpaceSelectModalComponent, selectors: [["a-space-select-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 18, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "block", "available"], [4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["class", "block selected", 3, "show", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], ["empty_select_state", ""], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "info"], [1, "capacity"], [1, "text"], [1, "actions"], ["name", "add", "mat-button", "", 3, "click"], [1, "block", "selected"], ["mat-button", "", "name", "next", 3, "click"], ["mat-icon-button", "", 3, "click"], [1, "tag", "mobile-only"], [1, "icon", 3, "matTooltip"], ["mat-icon-button", "", "name", "remove", 3, "click"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"]], template: function SpaceSelectModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵtext(2);
@@ -5734,7 +5734,7 @@ class SpacesService extends base_service_1.BaseAPIService {
         this._service = _service;
         service_manager_class_1.ServiceManager.setService(space_class_1.Space, this);
         this._name = 'Space';
-        this._api_route = '/rooms';
+        this._api_route = 'rooms';
         this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
         this._list_filter = (a) => {
             const bld = this._org.building;
@@ -10125,17 +10125,17 @@ window.control.handlers = window.control.handlers || [];
 exports.MOCK_BOOKINGS = Array(200)
     .fill(0)
     .map((i) => {
-    const rooms = general_utilities_1.unique(Array(general_utilities_1.randomInt(4))
+    const rooms = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(4))
         .fill(0)
-        .map((i) => spaces_mock_1.MOCK_SPACES[Math.floor(Math.random() * spaces_mock_1.MOCK_SPACES.length)]), 'id');
+        .map((i) => spaces_mock_1.MOCK_SPACES[general_utilities_1.predictableRandomInt(spaces_mock_1.MOCK_SPACES.length)]), 'id');
     // Set the organiser with the generated user list
-    const organiser = general_utilities_1.randomInt(9999) % 10 === 0
+    const organiser = general_utilities_1.predictableRandomInt(9999) % 10 === 0
         ? users_mock_1.MOCK_USERS[users_mock_1.MOCK_USERS.length - 1]
-        : users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)];
+        : users_mock_1.MOCK_USERS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_USERS.length)];
     // Set the attendees with the generated user list
-    const attendees = general_utilities_1.unique(Array(general_utilities_1.randomInt(20))
+    const attendees = general_utilities_1.unique(Array(general_utilities_1.predictableRandomInt(20))
         .fill(0)
-        .map((i) => users_mock_1.MOCK_USERS[general_utilities_1.randomInt(users_mock_1.MOCK_USERS.length)]), 'email');
+        .map((i) => users_mock_1.MOCK_USERS[general_utilities_1.predictableRandomInt(users_mock_1.MOCK_USERS.length)]), 'email');
     return spec_helpers_1.generateMockBooking({
         organiser,
         attendees,
@@ -10206,7 +10206,7 @@ window.control.handlers.push({
     method: 'POST',
     callback: (event) => {
         if (event.body) {
-            event.body.id = `bkn-${general_utilities_1.randomInt(9999999)}`;
+            event.body.id = `bkn-${general_utilities_1.predictableRandomInt(9999999)}`;
             event.body.icaluid = `ical-${event.body.id}`;
             event.body.approval_status = {};
             for (let i = 0; i < event.body.room_ids.length; i++) {
@@ -10296,14 +10296,12 @@ exports.MOCK_BUILDINGS = [
         name: 'Sydney',
         settings: {
             discovery_info: {
+                code: 'SYD',
                 timezone: 'Australia/Sydney',
                 neighbourhoods: {
                     'zone_lvl-01': {
                         'Test Searchable': 'Device_Bench',
                     },
-                },
-                required: {
-                    expected_attendees: true
                 },
                 visitor_space: `sydney-01.02@${common_mock_1.DOMAIN}`,
                 booking_rules: {
@@ -10367,41 +10365,11 @@ exports.MOCK_BUILDINGS = [
         name: 'London Post',
         settings: {
             discovery_info: {
+                code: 'LON',
                 timezone: 'Europe/London',
                 visitor_space: `london-01.02@${common_mock_1.DOMAIN}`,
-                required: {
-                    equipment_code: true,
-                    expected_attendees: true
-                },
+                holding_bay: `11.10@${common_mock_1.DOMAIN}`,
                 levels: [
-                    {
-                        level_id: 'zone_lvl-06',
-                        level_name: 'Level 6',
-                        number: 1,
-                        map_url: 'assets/maps/london/level_06.svg',
-                        floor_type: 'staff',
-                    },
-                    {
-                        level_id: 'zone_lvl-07',
-                        level_name: 'Level 7',
-                        number: 1,
-                        map_url: 'assets/maps/london/level_07.svg',
-                        floor_type: 'staff',
-                    },
-                    {
-                        level_id: 'zone_lvl-8',
-                        level_name: 'Level 8',
-                        number: 1,
-                        map_url: 'assets/maps/london/level_08.svg',
-                        floor_type: 'staff',
-                    },
-                    {
-                        level_id: 'zone_lvl-09',
-                        level_name: 'Level 9',
-                        number: 1,
-                        map_url: 'assets/maps/london/level_09.svg',
-                        floor_type: 'staff',
-                    },
                     {
                         level_id: 'zone_lvl-10',
                         level_name: 'Level 10',
@@ -10422,24 +10390,24 @@ exports.MOCK_BUILDINGS = [
     },
 ];
 exports.MOCK_BUILDINGS.push(Object.assign(Object.assign({}, exports.MOCK_BUILDINGS[0]), { name: 'London' }));
-organisation_mock_1.MOCK_ORG[0].discovery_info.buildings = exports.MOCK_BUILDINGS;
-setTimeout(() => {
-    window.control.handlers.push({
-        path: '/api/engine/v2/zones',
-        metadata: exports.MOCK_BUILDINGS,
-        callback: (event) => {
-            if (event.query_params.tags === 'building') {
-                return { total: exports.MOCK_BUILDINGS.length, results: exports.MOCK_BUILDINGS };
-            }
-            else if (event.query_params.tags === 'org') {
-                return { total: organisation_mock_1.MOCK_ORG.length, results: organisation_mock_1.MOCK_ORG };
-            }
-            else if (event.query_params.tags === 'level') {
-                return { total: 0, results: [] };
-            }
-        },
-    });
+organisation_mock_1.MOCK_ORG[0].settings.discovery_info.buildings = exports.MOCK_BUILDINGS;
+// setTimeout(() => {
+window.control.handlers.push({
+    path: '/api/engine/v2/zones',
+    metadata: exports.MOCK_BUILDINGS,
+    callback: (event) => {
+        if (event.query_params.tags === 'building') {
+            return { total: exports.MOCK_BUILDINGS.length, results: exports.MOCK_BUILDINGS };
+        }
+        else if (event.query_params.tags === 'org') {
+            return { total: organisation_mock_1.MOCK_ORG.length, results: organisation_mock_1.MOCK_ORG };
+        }
+        else if (event.query_params.tags === 'level') {
+            return { total: 0, results: [] };
+        }
+    },
 });
+// });
 
 
 /***/ }),
@@ -10635,7 +10603,7 @@ const levels = buildings_mock_1.MOCK_BUILDINGS.reduce((lvls, bld) => {
     return lvls;
 }, []);
 for (const user of users_mock_1.MOCK_USERS) {
-    if (user.location || general_utilities_1.randomInt(99999) % 2 === 0) {
+    if (user.location || general_utilities_1.predictableRandomInt(99999) % 2 === 0) {
         user.location = spec_helpers_1.generateMockLocation(null, spaces, levels);
         exports.MOCK_LOCATIONS.push(user.location);
     }
@@ -10671,11 +10639,13 @@ setTimeout(() => {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MOCK_ORG = [
     {
-        send_acceptance: true,
-        discovery_info: {
-            buildings: []
-        }
-    }
+        settings: {
+            send_acceptance: true,
+            discovery_info: {
+                buildings: [],
+            },
+        },
+    },
 ];
 
 
@@ -10693,27 +10663,53 @@ exports.MOCK_ORG = [
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
 const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const booking_utilities_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
 exports.MOCK_SPACES = [
-    { id: '35.06', name: 'SYD-35-Durack-internal-05-DV', zones: ['zone_bld-01', 'zone_lvl-35'], bookable: true },
-    { id: '36.08', name: 'SYD-36-Trickett-internal-05-DV', zones: ['zone_bld-01', 'zone_lvl-36'], bookable: true },
-    { id: '33.02', name: 'SYD-33West-Wedding Cake-10V', zones: ['zone_bld-01', 'zone_lvl-33'], bookable: false },
-    { id: '33.03', name: 'SYD-33West-Pinchgut-05DV', zones: ['zone_bld-01', 'zone_lvl-33'], bookable: true },
-    { id: '10.02', name: 'LON-10-10_02_Village_green', zones: ['zone_bld-01', 'zone_lvl-10'] },
-    { id: '10.47', name: 'LON-10-EC10_10_47_Gallery', zones: ['zone_bld-01', 'zone_lvl-10'] },
-    { id: '11.07', name: 'LON-11-EC11_11_07_Client', zones: ['zone_bld-01', 'zone_lvl-11'] },
-    { id: '11.10', name: 'LON-11-EC11_11_10_Client', zones: ['zone_bld-01', 'zone_lvl-11'] }
+    {
+        id: '35.06',
+        name: 'SYD-35-Durack-internal-05-DV',
+        zones: ['zone_bld-01', 'zone_lvl-35'],
+        bookable: true,
+    },
+    {
+        id: '3.08',
+        name: 'SYD-36-Trickett-internal-05-DV',
+        zones: ['zone_bld-01', 'zone_lvl-36'],
+        bookable: true,
+    },
+    {
+        id: '35.08',
+        name: 'SYD-35-Durack-internal-05-DV',
+        zones: ['zone_bld-01', 'zone_lvl-36'],
+        bookable: true,
+    },
+    {
+        id: '33.02',
+        name: 'SYD-33West-Wedding Cake-10V',
+        zones: ['zone_bld-01', 'zone_lvl-33'],
+        bookable: false,
+    },
+    {
+        id: '33.03',
+        name: 'SYD-33West-Pinchgut-05DV',
+        zones: ['zone_bld-01', 'zone_lvl-33'],
+        bookable: true,
+    },
+    { id: '10.02', name: 'LON-10-10_02_Village_green', zones: ['zone_bld-02', 'zone_lvl-10'] },
+    { id: '10.47', name: 'LON-10-EC10_10_47_Gallery', zones: ['zone_bld-02', 'zone_lvl-10'] },
+    { id: '11.07', name: 'LON-11-EC11_11_07_Client', zones: ['zone_bld-02', 'zone_lvl-11'] },
+    { id: '11.10', name: 'LON-11-EC11_11_10_Client', zones: ['zone_bld-02', 'zone_lvl-11'] },
 ].map((space_data) => {
-    const space = spec_helpers_1.generateMockSpace(Object.assign(Object.assign({}, space_data), { map_id: `${space_data.id}`, id: `sys_rm-${space_data.id}`, name: `${space_data.name}` }));
+    const space = spec_helpers_1.generateMockSpace(Object.assign(Object.assign({ bookable: true }, space_data), { map_id: `${space_data.id}`, id: `sys_rm-${space_data.id}`, email: `${space_data.id}@${common_mock_1.DOMAIN}`, name: `${space_data.name}` }));
     window.control.systems[space.id] = {
         Bookings: [
             {
-                today: space.bookings
-            }
-        ]
+                today: space.bookings,
+            },
+        ],
     };
     return space;
 });
@@ -10721,18 +10717,18 @@ exports.MOCK_SPACES = [
 window.control.handlers.push({
     path: `${common_mock_1.API}/rooms`,
     metadata: exports.MOCK_SPACES,
-    callback: event => {
+    callback: (event) => {
         let results = exports.MOCK_SPACES;
         if (event.query_params.q) {
             const query = event.query_params.q.toLowerCase();
-            results = results.filter(i => (i.id || '').toLowerCase().indexOf(query) >= 0 ||
+            results = results.filter((i) => (i.id || '').toLowerCase().indexOf(query) >= 0 ||
                 (i.name || '').toLowerCase().indexOf(query) >= 0 ||
                 (i.email || '').toLowerCase().indexOf(query) >= 0);
         }
         // Remove rooms without given zones from results
         if (event.query_params.zone_ids) {
             const zone_ids = event.query_params.zone_ids.split(',');
-            results = results.filter(i => {
+            results = results.filter((i) => {
                 let count = 0;
                 for (const zone of zone_ids) {
                     if (i.zones.indexOf(zone) >= 0) {
@@ -10745,19 +10741,13 @@ window.control.handlers.push({
         // Remove rooms without given ids from results
         if (event.query_params.room_ids) {
             const room_ids = event.query_params.room_ids.split(',');
-            results = results.filter(i => room_ids.indexOf(i.id) >= 0);
+            results = results.filter((i) => room_ids.indexOf(i.id) >= 0);
         }
         // Update availability status of each room results
         if (event.query_params.available_from) {
-            const from = dayjs(+event.query_params.available_from * 1000);
-            const to = dayjs(+event.query_params.available_to * 1000);
-            results.forEach(space => {
+            results.forEach((space) => {
                 for (const booking of space.bookings) {
-                    const start = dayjs(booking.start_epoch * 1000);
-                    const end = dayjs(booking.end_epoch * 1000);
-                    if ((from.isAfter(start, 'm') && from.isBefore(end, 'm')) ||
-                        (to.isAfter(start, 'm') && to.isBefore(end, 'm')) ||
-                        (start.isAfter(from, 'm') && start.isBefore(to, 'm'))) {
+                    if (booking_utilities_1.timePeriodsIntersect(booking.start_epoch, booking.end_epoch, +event.query_params.available_from, +event.query_params.available_to)) {
                         space.settings = { available: false };
                     }
                     else {
@@ -10767,7 +10757,7 @@ window.control.handlers.push({
             });
         }
         return results;
-    }
+    },
 });
 
 
@@ -10785,12 +10775,13 @@ window.control.handlers.push({
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_mock_1 = __webpack_require__(/*! ./common.mock */ "./src/app/shared/mocks/api/common.mock.ts");
 const spec_helpers_1 = __webpack_require__(/*! ../../utilities/spec-helpers */ "./src/app/shared/utilities/spec-helpers.ts");
+const general_utilities_1 = __webpack_require__(/*! ../../utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 window.control = window.control || {};
 window.control.systems = window.control.systems || {};
 window.control.handlers = window.control.handlers || [];
-exports.MOCK_USERS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
+exports.MOCK_USERS = Array(Math.floor(general_utilities_1.predictableRandomInt(300) + 100)).fill(0)
     .map(i => spec_helpers_1.generateMockUser());
-exports.MOCK_CONTACTS = Array(Math.floor(Math.random() * 300 + 100)).fill(0)
+exports.MOCK_CONTACTS = Array(Math.floor(general_utilities_1.predictableRandomInt(300) + 100)).fill(0)
     .map(i => spec_helpers_1.generateMockUser({ external: true }));
 exports.PREDEFINED_USERS = [
     'Jonathan McFarlane',
@@ -11807,6 +11798,39 @@ function flatten(an_array) {
     return res.reverse();
 }
 exports.flatten = flatten;
+const seed = xmur3('PlaceOS');
+const rand = sfc32(0x9E3779B9, 0x243F6A88, 0xB7E15162, seed());
+function predictableRandomInt(ceil = 100, floor = 0) {
+    return Math.floor(rand() * (ceil - floor)) + floor;
+}
+exports.predictableRandomInt = predictableRandomInt;
+// https://stackoverflow.com/questions/521295/seeding-the-random-number-generator-in-javascript
+function xmur3(str) {
+    for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++)
+        h = Math.imul(h ^ str.charCodeAt(i), 3432918353),
+            h = h << 13 | h >>> 19;
+    return function () {
+        h = Math.imul(h ^ h >>> 16, 2246822507);
+        h = Math.imul(h ^ h >>> 13, 3266489909);
+        return (h ^= h >>> 16) >>> 0;
+    };
+}
+function sfc32(a, b, c, d) {
+    return function () {
+        a >>>= 0;
+        b >>>= 0;
+        c >>>= 0;
+        d >>>= 0;
+        var t = (a + b) | 0;
+        a = b ^ b >>> 9;
+        b = c + (c << 3) | 0;
+        c = (c << 21 | c >>> 11);
+        d = d + 1 | 0;
+        t = t + d | 0;
+        c = c + t | 0;
+        return (t >>> 0) / 4294967296;
+    };
+}
 
 
 /***/ }),
@@ -11931,9 +11955,9 @@ let SPACE_COUNT = 0;
 function generateMockSpace(overrides = {}) {
     const id = `space-${SPACE_COUNT++}`;
     const name = `${faker.name.firstName()} ${faker.name.lastName()} Space`;
-    const linked = Math.floor(Math.random() * 99999) % 2 === 0 && SPACE_COUNT > 1;
+    const linked = Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0 && SPACE_COUNT > 1;
     return Object.assign({ id,
-        name, long_name: `${name} with an long name`, map_id: `${SPACE_COUNT}`, capacity: Math.floor(Math.random() * 20 + 1) * 2, email: `${name.toLowerCase().split(' ').join('.')}@${exports.USER_DOMAIN}`, type: faker.commerce.productName(), searchable: Math.floor(Math.random() * 99999) % 2 === 0, controlable: Math.floor(Math.random() * 99999) % 2 === 0, bookable: Math.floor(Math.random() * 99999) % 2 === 0, cost_hour: Math.floor(Math.random() * 300) * 100, setup: Math.floor(Math.random() * 6) * 5, breakdown: Math.floor(Math.random() * 6) * 5, zones: ['zone_lvl-0'], support_url: `/control/#/${id}`, bookings: Array(10).fill(0).map(i => generateMockBooking()), linked_rooms: linked ? [`space-${Math.floor(Math.random() * (SPACE_COUNT - 1))}`] : [], image: faker.image.business() }, overrides);
+        name, long_name: `${name} with an long name`, map_id: `${SPACE_COUNT}`, capacity: Math.floor(general_utilities_1.predictableRandomInt(20) + 1) * 2, email: `${name.toLowerCase().split(' ').join('.')}@${exports.USER_DOMAIN}`, type: faker.commerce.productName(), searchable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0, controlable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0, bookable: Math.floor(general_utilities_1.predictableRandomInt(99999)) % 2 === 0, cost_hour: Math.floor(general_utilities_1.predictableRandomInt(300)) * 100, setup: Math.floor(general_utilities_1.predictableRandomInt(6)) * 5, breakdown: Math.floor(general_utilities_1.predictableRandomInt(6)) * 5, zones: ['zone_lvl-0'], support_url: `/control/#/${id}`, bookings: Array(10).fill(0).map(i => generateMockBooking()), linked_rooms: linked ? [`space-${Math.floor(general_utilities_1.predictableRandomInt(SPACE_COUNT - 1))}`] : [], image: faker.image.business() }, overrides);
 }
 exports.generateMockSpace = generateMockSpace;
 let BOOKING_COUNT = 0;
@@ -11952,13 +11976,13 @@ exports.setMockBookingStartDatetime = setMockBookingStartDatetime;
  */
 function generateMockBooking(override = {}) {
     const id = `booking-${BOOKING_COUNT++}`;
-    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4 + 2) * 15, 'm');
+    BOOKING_DATE = BOOKING_DATE.add(Math.floor(general_utilities_1.predictableRandomInt(4) + 2) * 15, 'm');
     const start = BOOKING_DATE.valueOf();
-    const duration = Math.floor(Math.random() * 4 + 2) * 15;
-    BOOKING_DATE = BOOKING_DATE.add(Math.floor(Math.random() * 4) * 15, 'm');
-    return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(Math.random() * 99999999), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(Math.random() * 5 + 2))
+    const duration = Math.floor(general_utilities_1.predictableRandomInt(4) + 2) * 15;
+    BOOKING_DATE = BOOKING_DATE.add(Math.floor(general_utilities_1.predictableRandomInt(4)) * 15, 'm');
+    return Object.assign({ id, icaluid: general_utilities_1.padZero(Math.floor(general_utilities_1.predictableRandomInt(99999999)), 8), title: `${faker.commerce.productName()} Meeting`, attendees: Array(Math.floor(general_utilities_1.predictableRandomInt(5) + 2))
             .fill(0)
-            .map((i) => generateMockUser(override.users)), organiser: generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(Math.random() * 34567) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.randomInt(5)], setup: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, breakdown: { 'space-01': Math.max(0, (general_utilities_1.randomInt(12) - 6) * 5) }, status: {}, catering: [], room_ids: [] }, override);
+            .map((i) => generateMockUser(override.users)), organiser: generateMockUser(), start_epoch: dayjs(start).unix(), end_epoch: dayjs(start).add(duration, 'm').unix(), description: faker.lorem.paragraph(), notes: [{ type: 'other', message: faker.lorem.paragraph() }], location: faker.address.city(), has_catering: Math.floor(general_utilities_1.predictableRandomInt(34567)) % 3 === 0, booking_type: ['internal', 'training', 'setup', 'client', 'Interview'][general_utilities_1.predictableRandomInt(5)], setup: { 'space-01': Math.max(0, (general_utilities_1.predictableRandomInt(12) - 6) * 5) }, breakdown: { 'space-01': Math.max(0, (general_utilities_1.predictableRandomInt(12) - 6) * 5) }, status: {}, catering: [], room_ids: [] }, override);
 }
 exports.generateMockBooking = generateMockBooking;
 let BLD_COUNT = 0;
@@ -11974,7 +11998,7 @@ function generateMockBuilding(overrides = {}) {
         .map(i => generateMockLevel());
     const features = {};
     for (const lvl of levels) {
-        const count = Math.floor(Math.random() * 3 + 2);
+        const count = Math.floor(general_utilities_1.predictableRandomInt(3) + 2);
         features[lvl.level_id] = {};
         for (let i = 0; i < count; i++) {
             features[lvl.level_id][faker.commerce.productName()] = `feature-${i + 1}`;
@@ -12044,12 +12068,12 @@ const USER_EMAILS = [];
 function generateMockUser(override = {}) {
     const id = `user-${USER_COUNT++}`;
     const name = `${faker.name.firstName()} ${faker.name.lastName()}`;
-    const external = override.external || !((Math.random() * 99999) % 2);
+    const external = override.external || !(general_utilities_1.predictableRandomInt(99999) % 2);
     const organisation = external ? faker.company.companyName() : exports.USER_DOMAIN.split('.')[0];
     let delegates = [];
-    const delegate_count = Math.min(Math.random() * 4 + 1, USER_EMAILS.length);
+    const delegate_count = Math.min(general_utilities_1.predictableRandomInt(4) + 1, USER_EMAILS.length);
     for (let i = 0; i < delegate_count; i++) {
-        delegates.push(USER_EMAILS[Math.floor(Math.random() * USER_EMAILS.length)]);
+        delegates.push(USER_EMAILS[Math.floor(general_utilities_1.predictableRandomInt(USER_EMAILS.length))]);
     }
     delegates = general_utilities_1.unique(delegates);
     const email = `${name
@@ -12064,16 +12088,16 @@ function generateMockUser(override = {}) {
                 .join('.')
                 .toLowerCase(),
             name: organisation
-        }, department: faker.commerce.department(), staff_code: general_utilities_1.padZero(Math.floor(Math.random() * 99999), 5), delegates, image: faker.image.avatar() }, override);
+        }, department: faker.commerce.department(), staff_code: general_utilities_1.padZero(Math.floor(general_utilities_1.predictableRandomInt(99999)), 5), delegates, image: faker.image.avatar() }, override);
 }
 exports.generateMockUser = generateMockUser;
 function generateMockLocation(overrides, fixed_locations, maps) {
-    const fixed = general_utilities_1.randomInt(999999999) % 2 === 0;
+    const fixed = general_utilities_1.predictableRandomInt(999999999) % 2 === 0;
     if (fixed && (!overrides || overrides.fixed)) {
-        return Object.assign({ map_id: fixed_locations[general_utilities_1.randomInt(fixed_locations.length)], level: maps[general_utilities_1.randomInt(maps.length)] }, overrides);
+        return Object.assign({ map_id: fixed_locations[general_utilities_1.predictableRandomInt(fixed_locations.length)], level: maps[general_utilities_1.predictableRandomInt(maps.length)] }, overrides);
     }
     else {
-        return Object.assign({ x: general_utilities_1.randomInt(900, 100), x_max: 1000, y: general_utilities_1.randomInt(500, 100), level: maps[general_utilities_1.randomInt(maps.length)], confidence: general_utilities_1.randomInt(30) }, overrides);
+        return Object.assign({ x: general_utilities_1.predictableRandomInt(900, 100), x_max: 1000, y: general_utilities_1.predictableRandomInt(500, 100), level: maps[general_utilities_1.predictableRandomInt(maps.length)], confidence: general_utilities_1.predictableRandomInt(30) }, overrides);
     }
 }
 exports.generateMockLocation = generateMockLocation;
@@ -14262,12 +14286,12 @@ else {
 }
 const _c16 = ["placeholder", I18N_14];
 function RequirementDetailsModalComponent_form_13_div_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 16);
-    i0.ɵɵelementStart(1, "label", 20);
+    i0.ɵɵelementStart(0, "div", 21);
+    i0.ɵɵelementStart(1, "label", 22);
     i0.ɵɵi18n(2, I18N_12);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "mat-form-field", 18);
-    i0.ɵɵelementStart(4, "textarea", 21);
+    i0.ɵɵelementStart(3, "mat-form-field", 19);
+    i0.ɵɵelementStart(4, "textarea", 23);
     i0.ɵɵi18nAttributes(5, _c16);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -14321,14 +14345,14 @@ function RequirementDetailsModalComponent_form_13_div_3_span_3_Template(rf, ctx)
     i0.ɵɵi18nEnd();
 } }
 function RequirementDetailsModalComponent_form_13_div_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 16);
-    i0.ɵɵelementStart(1, "label", 22);
+    i0.ɵɵelementStart(0, "div", 24);
+    i0.ɵɵelementStart(1, "label", 25);
     i0.ɵɵi18nStart(2, I18N_17);
-    i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_span_3_Template, 2, 0, "span", 23);
+    i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_span_3_Template, 2, 0, "span", 26);
     i0.ɵɵi18nEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "mat-form-field", 18);
-    i0.ɵɵelementStart(5, "input", 24);
+    i0.ɵɵelementStart(4, "mat-form-field", 19);
+    i0.ɵɵelementStart(5, "input", 27);
     i0.ɵɵi18nAttributes(6, _c20);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(7, "mat-hint");
@@ -14352,15 +14376,15 @@ function RequirementDetailsModalComponent_form_13_Template(rf, ctx) { if (rf & 1
     i0.ɵɵelementStart(0, "form", 13);
     i0.ɵɵtemplate(1, RequirementDetailsModalComponent_form_13_div_1_Template, 6, 0, "div", 14);
     i0.ɵɵelementStart(2, "div", 15);
-    i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_Template, 12, 3, "div", 14);
-    i0.ɵɵelementStart(4, "div", 16);
-    i0.ɵɵelementStart(5, "label", 17);
+    i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_Template, 12, 3, "div", 16);
+    i0.ɵɵelementStart(4, "div", 17);
+    i0.ɵɵelementStart(5, "label", 18);
     i0.ɵɵi18nStart(6, I18N_3);
     i0.ɵɵelement(7, "span");
     i0.ɵɵi18nEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(8, "mat-form-field", 18);
-    i0.ɵɵelementStart(9, "input", 19);
+    i0.ɵɵelementStart(8, "mat-form-field", 19);
+    i0.ɵɵelementStart(9, "input", 20);
     i0.ɵɵi18nAttributes(10, _c7);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(11, "mat-hint");
@@ -14486,7 +14510,7 @@ RequirementDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: Requirem
     } if (rf & 2) {
         var _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._content_el = _t.first);
-    } }, outputs: { event: "event" }, decls: 18, vars: 6, consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], ["content", ""], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "click"], [3, "label"], [3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "fieldset"], [1, "field"], ["for", "head-count"], ["appearance", "outline"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"], ["for", "equipment-notes"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]], template: function RequirementDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, outputs: { event: "event" }, decls: 18, vars: 6, consts: [[1, "header"], [1, "tabs"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], ["content", ""], [1, "details"], ["src", "assets/img/equipment.svg"], [1, "text"], [3, "formGroup", 4, "ngIf"], ["mat-button", "", 3, "click"], [3, "label"], [3, "formGroup"], ["class", "field", 4, "ngIf"], [1, "fieldset"], ["class", "field", "name", "charge-code", 4, "ngIf"], ["name", "head-count", 1, "field"], ["for", "head-count"], ["appearance", "outline"], ["matInput", "", "name", "head-count", "formControlName", "head_count", "type", "number", 6, "placeholder"], [1, "field"], ["for", "equipment-notes"], ["matInput", "", "name", "equipment-notes", "formControlName", "notes", 6, "placeholder"], ["name", "charge-code", 1, "field"], ["for", "charge-code"], [4, "ngIf"], ["matInput", "", "name", "charge-code", "formControlName", "code", 6, "placeholder"]], template: function RequirementDetailsModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "mat-tab-group", 2);
@@ -20081,7 +20105,7 @@ ScheduleEventListComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ScheduleEventL
         var _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.scroll_viewport = _t.first);
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.trigger = _t.first);
-    } }, outputs: { event_list: "eventList" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 18, vars: 10, consts: [[1, "event-list"], [1, "header", "dark-mode"], [1, "user"], ["appearance", "outline", 4, "ngIf"], [1, "flex"], [1, "date"], ["mat-icon-button", "", 3, "matMenuTriggerFor", "click"], [3, "icon"], [1, "progress"], ["mode", "indeterminate", 4, "ngIf"], [1, "body"], ["itemSize", "80", 1, "viewport", 3, "scroll"], [4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTrackBy"], [1, "footer"], [3, "closed"], ["appMenu", "matMenu"], ["mat-menu-item", "", 1, "date-picker", 3, "click"], [3, "ngModel", "ngModelChange"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mode", "indeterminate"], [3, "user", "event"]], template: function ScheduleEventListComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, outputs: { event_list: "eventList" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 18, vars: 10, consts: [[1, "event-list"], [1, "header", "dark-mode"], [1, "user"], ["appearance", "outline", 4, "ngIf"], [1, "flex"], [1, "date"], ["mat-icon-button", "", "name", "date", 3, "matMenuTriggerFor", "click"], [3, "icon"], [1, "progress"], ["mode", "indeterminate", 4, "ngIf"], [1, "body"], ["itemSize", "80", 1, "viewport", 3, "scroll"], [4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTrackBy"], [1, "footer"], [3, "closed"], ["appMenu", "matMenu"], ["mat-menu-item", "", 1, "date-picker", 3, "click"], [3, "ngModel", "ngModelChange"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mode", "indeterminate"], [3, "user", "event"]], template: function ScheduleEventListComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "div", 2);
@@ -21651,16 +21675,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "294d53b",
-    "hash": "294d53b",
+    "raw": "0ea4054",
+    "hash": "0ea4054",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "294d53b",
+    "suffix": "0ea4054",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596451055423
+    "time": 1596511737812
 };
 /* tslint:enable */
 
