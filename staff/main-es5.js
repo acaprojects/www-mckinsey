@@ -20999,8 +20999,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function is24HourTime() {
       var date = new Date();
-      var localeString = date.toLocaleTimeString();
-      return localeString.indexOf('AM') < 0 && localeString.indexOf('PM') < 0;
+      var localeString = date.toLocaleTimeString(document.querySelector('html').getAttribute('lang') || navigator.language).toLowerCase();
+      return localeString.indexOf('am') < 0 && localeString.indexOf('pm') < 0;
     }
 
     exports.is24HourTime = is24HourTime;
@@ -21193,7 +21193,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.flatten = flatten;
     var seed = xmur3('PlaceOS');
-    var rand = sfc32(0x9E3779B9, 0x243F6A88, 0xB7E15162, seed());
+    var rand = sfc32(0x9e3779b9, 0x243f6a88, 0xb7e15162, seed());
 
     function predictableRandomInt() {
       var ceil = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 100;
@@ -38643,16 +38643,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "0ea4054",
-      "hash": "0ea4054",
+      "raw": "32b4a0d",
+      "hash": "32b4a0d",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "0ea4054",
+      "suffix": "32b4a0d",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1596511737812
+      "time": 1596591518757
     };
     /* tslint:enable */
 

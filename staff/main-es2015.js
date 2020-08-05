@@ -11665,8 +11665,8 @@ exports.timeFormatString = timeFormatString;
 /** Whether locale string is displayed in 24 hour time */
 function is24HourTime() {
     const date = new Date();
-    const localeString = date.toLocaleTimeString();
-    return localeString.indexOf('AM') < 0 && localeString.indexOf('PM') < 0;
+    const localeString = date.toLocaleTimeString(document.querySelector('html').getAttribute('lang') || navigator.language).toLowerCase();
+    return localeString.indexOf('am') < 0 && localeString.indexOf('pm') < 0;
 }
 exports.is24HourTime = is24HourTime;
 /* istanbul ignore next */
@@ -11799,7 +11799,7 @@ function flatten(an_array) {
 }
 exports.flatten = flatten;
 const seed = xmur3('PlaceOS');
-const rand = sfc32(0x9E3779B9, 0x243F6A88, 0xB7E15162, seed());
+const rand = sfc32(0x9e3779b9, 0x243f6a88, 0xb7e15162, seed());
 function predictableRandomInt(ceil = 100, floor = 0) {
     return Math.floor(rand() * (ceil - floor)) + floor;
 }
@@ -11807,11 +11807,10 @@ exports.predictableRandomInt = predictableRandomInt;
 // https://stackoverflow.com/questions/521295/seeding-the-random-number-generator-in-javascript
 function xmur3(str) {
     for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++)
-        h = Math.imul(h ^ str.charCodeAt(i), 3432918353),
-            h = h << 13 | h >>> 19;
+        (h = Math.imul(h ^ str.charCodeAt(i), 3432918353)), (h = (h << 13) | (h >>> 19));
     return function () {
-        h = Math.imul(h ^ h >>> 16, 2246822507);
-        h = Math.imul(h ^ h >>> 13, 3266489909);
+        h = Math.imul(h ^ (h >>> 16), 2246822507);
+        h = Math.imul(h ^ (h >>> 13), 3266489909);
         return (h ^= h >>> 16) >>> 0;
     };
 }
@@ -11822,12 +11821,12 @@ function sfc32(a, b, c, d) {
         c >>>= 0;
         d >>>= 0;
         var t = (a + b) | 0;
-        a = b ^ b >>> 9;
-        b = c + (c << 3) | 0;
-        c = (c << 21 | c >>> 11);
-        d = d + 1 | 0;
-        t = t + d | 0;
-        c = c + t | 0;
+        a = b ^ (b >>> 9);
+        b = (c + (c << 3)) | 0;
+        c = (c << 21) | (c >>> 11);
+        d = (d + 1) | 0;
+        t = (t + d) | 0;
+        c = (c + t) | 0;
         return (t >>> 0) / 4294967296;
     };
 }
@@ -21675,16 +21674,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "0ea4054",
-    "hash": "0ea4054",
+    "raw": "32b4a0d",
+    "hash": "32b4a0d",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "0ea4054",
+    "suffix": "32b4a0d",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596511737812
+    "time": 1596591518757
 };
 /* tslint:enable */
 
