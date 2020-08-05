@@ -16539,8 +16539,8 @@ exports.timeFormatString = timeFormatString;
 /** Whether locale string is displayed in 24 hour time */
 function is24HourTime() {
     const date = new Date();
-    const localeString = date.toLocaleTimeString();
-    return localeString.indexOf('AM') < 0 && localeString.indexOf('PM') < 0;
+    const localeString = date.toLocaleTimeString(document.querySelector('html').getAttribute('lang') || navigator.language).toLowerCase();
+    return localeString.indexOf('am') < 0 && localeString.indexOf('pm') < 0;
 }
 exports.is24HourTime = is24HourTime;
 /**
@@ -25903,16 +25903,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "871d06a",
-    "hash": "871d06a",
+    "raw": "688544f",
+    "hash": "688544f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "871d06a",
+    "suffix": "688544f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596512217975
+    "time": 1596591281818
 };
 /* tslint:enable */
 
