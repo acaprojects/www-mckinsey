@@ -16555,7 +16555,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                     const rules = space.rulesFor({
                         host: this.form.controls.organiser.value,
                         date: this.form.controls.date.value,
-                        duration: this.form.controls.duration.value,
+                        duration: this.form.controls.all_day.value ? 24 * 60 : this.form.controls.duration.value,
                     });
                     if (!space.was_available || rules.hide) {
                         return false;
@@ -21679,16 +21679,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "b00c2e1",
-    "hash": "b00c2e1",
+    "raw": "325fc46",
+    "hash": "325fc46",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b00c2e1",
+    "suffix": "325fc46",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596685961162
+    "time": 1596688859986
 };
 /* tslint:enable */
 

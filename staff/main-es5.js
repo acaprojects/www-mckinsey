@@ -29412,7 +29412,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 var rules = space.rulesFor({
                   host: _this140.form.controls.organiser.value,
                   date: _this140.form.controls.date.value,
-                  duration: _this140.form.controls.duration.value
+                  duration: _this140.form.controls.all_day.value ? 24 * 60 : _this140.form.controls.duration.value
                 });
 
                 if (!space.was_available || rules.hide) {
@@ -38649,16 +38649,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "b00c2e1",
-      "hash": "b00c2e1",
+      "raw": "325fc46",
+      "hash": "325fc46",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "b00c2e1",
+      "suffix": "325fc46",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1596685961162
+      "time": 1596688859986
     };
     /* tslint:enable */
 
