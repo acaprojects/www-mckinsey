@@ -16552,7 +16552,12 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
             // Process API results
             this.subscription('search_results', this.search_results$.subscribe((list) => {
                 this.space_list = list.filter((space) => {
-                    if (!space.was_available) {
+                    const rules = space.rulesFor({
+                        host: this.form.controls.organiser.value,
+                        date: this.form.controls.date.value,
+                        duration: this.form.controls.duration.value,
+                    });
+                    if (!space.was_available || rules.hide) {
                         return false;
                     }
                     for (const zone of this.zone_ids) {
@@ -21674,16 +21679,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "32b4a0d",
-    "hash": "32b4a0d",
+    "raw": "b00c2e1",
+    "hash": "b00c2e1",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "32b4a0d",
+    "suffix": "b00c2e1",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596591518757
+    "time": 1596685961162
 };
 /* tslint:enable */
 
