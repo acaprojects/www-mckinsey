@@ -29359,15 +29359,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var request_id = 0; // Listen for input changes
 
             _this140.search_results$ = _this140.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
+              var _a;
+
               _this140.loading = true;
               request_id = general_utilities_1.randomInt(99999999);
+              var recurrence = _this140.form.controls.recurrence ? _this140.form.controls.recurrence.value : null;
+              var recurrence_properties = ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None' ? {
+                recurr_period: (recurrence.period || '').toLowerCase(),
+                recurr_end: dayjs(recurrence.end * 1000).endOf('d').unix()
+              } : {};
               var date = dayjs(_this140.form.controls.date.value);
-              var query = {
+              var query = Object.assign({
                 date: _this140.form.controls.all_day.value ? date.startOf('d').valueOf() : date.valueOf(),
                 duration: _this140.form.controls.all_day.value ? 24 * 60 : _this140.form.controls.duration.value,
                 zone_ids: _this140._org.building.id,
                 bookable: true
-              };
+              }, recurrence_properties);
               /* istanbul ignore else */
 
               if (_this140.zone_ids && _this140.zone_ids.length) {
@@ -29399,23 +29406,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }), operators_1.catchError(function (_) {
               return rxjs_1.of({
                 id: request_id,
-                list: [],
-                error: _
+                list: []
               });
             }), operators_1.map(function (resp) {
+              var _a;
+
               _this140.loading = false;
-              return resp.id === request_id ? resp.list : _this140.space_list;
+              var list = resp.id === request_id ? resp.list : _this140.space_list;
+              var recurrence = _this140.form.controls.recurrence ? _this140.form.controls.recurrence.value : null;
+              var date = dayjs(_this140.form.controls.date.value);
+              return ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None' ? list.filter(function (space) {
+                return space.recurr_available.find(function (block) {
+                  return block.available && dayjs(block.date * 1000).isSame(date, 'd');
+                });
+              }) : list;
             })); // Process API results
 
             _this140.subscription('search_results', _this140.search_results$.subscribe(function (list) {
               _this140.space_list = list.filter(function (space) {
                 var rules = space.rulesFor({
-                  host: _this140.form.controls.organiser.value,
                   date: _this140.form.controls.date.value,
-                  duration: _this140.form.controls.all_day.value ? 24 * 60 : _this140.form.controls.duration.value
+                  duration: _this140.form.controls.all_day.value ? 24 * 60 : _this140.form.controls.duration.value,
+                  host: _this140.form.controls.organiser.value
                 });
 
-                if (!space.was_available || rules.hide) {
+                if (rules.hide || !space.was_available) {
                   return false;
                 }
 
@@ -38649,16 +38664,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "325fc46",
-      "hash": "325fc46",
+      "raw": "cad9024",
+      "hash": "cad9024",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "325fc46",
+      "suffix": "cad9024",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1596688859986
+      "time": 1596791611848
     };
     /* tslint:enable */
 

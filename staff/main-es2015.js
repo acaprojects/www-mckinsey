@@ -16526,38 +16526,55 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
             let request_id = 0;
             // Listen for input changes
             this.search_results$ = this.change$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
+                var _a;
                 this.loading = true;
                 request_id = general_utilities_1.randomInt(99999999);
+                const recurrence = this.form.controls.recurrence
+                    ? this.form.controls.recurrence.value
+                    : null;
+                const recurrence_properties = ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None'
+                    ? {
+                        recurr_period: (recurrence.period || '').toLowerCase(),
+                        recurr_end: dayjs(recurrence.end * 1000)
+                            .endOf('d')
+                            .unix(),
+                    }
+                    : {};
                 const date = dayjs(this.form.controls.date.value);
-                const query = {
-                    date: this.form.controls.all_day.value
+                const query = Object.assign({ date: this.form.controls.all_day.value
                         ? date.startOf('d').valueOf()
-                        : date.valueOf(),
-                    duration: this.form.controls.all_day.value
+                        : date.valueOf(), duration: this.form.controls.all_day.value
                         ? 24 * 60
-                        : this.form.controls.duration.value,
-                    zone_ids: this._org.building.id,
-                    bookable: true
-                };
+                        : this.form.controls.duration.value, zone_ids: this._org.building.id, bookable: true }, recurrence_properties);
                 /* istanbul ignore else */
                 if (this.zone_ids && this.zone_ids.length) {
                     query.zone_ids = this.zone_ids.join(',');
                 }
                 const id = request_id;
                 return this._spaces.available(query).then((list) => tslib_1.__awaiter(this, void 0, void 0, function* () { return ({ id, list }); }));
-            }), operators_1.catchError((_) => rxjs_1.of({ id: request_id, list: [], error: _ })), operators_1.map((resp) => {
+            }), operators_1.catchError((_) => rxjs_1.of({ id: request_id, list: [] })), operators_1.map((resp) => {
+                var _a;
                 this.loading = false;
-                return resp.id === request_id ? resp.list : this.space_list;
+                const list = resp.id === request_id ? resp.list : this.space_list;
+                const recurrence = this.form.controls.recurrence
+                    ? this.form.controls.recurrence.value
+                    : null;
+                const date = dayjs(this.form.controls.date.value);
+                return ((_a = recurrence) === null || _a === void 0 ? void 0 : _a.period) && recurrence.period !== 'None'
+                    ? list.filter((space) => space.recurr_available.find((block) => block.available && dayjs(block.date * 1000).isSame(date, 'd')))
+                    : list;
             }));
             // Process API results
             this.subscription('search_results', this.search_results$.subscribe((list) => {
                 this.space_list = list.filter((space) => {
                     const rules = space.rulesFor({
-                        host: this.form.controls.organiser.value,
                         date: this.form.controls.date.value,
-                        duration: this.form.controls.all_day.value ? 24 * 60 : this.form.controls.duration.value,
+                        duration: this.form.controls.all_day.value
+                            ? 24 * 60
+                            : this.form.controls.duration.value,
+                        host: this.form.controls.organiser.value,
                     });
-                    if (!space.was_available || rules.hide) {
+                    if (rules.hide || !space.was_available) {
                         return false;
                     }
                     for (const zone of this.zone_ids) {
@@ -21679,16 +21696,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "325fc46",
-    "hash": "325fc46",
+    "raw": "cad9024",
+    "hash": "cad9024",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "325fc46",
+    "suffix": "cad9024",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596688859986
+    "time": 1596791611848
 };
 /* tslint:enable */
 
