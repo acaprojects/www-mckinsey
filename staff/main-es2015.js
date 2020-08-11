@@ -21696,16 +21696,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "394f69f",
-    "hash": "394f69f",
+    "raw": "5991fdb",
+    "hash": "5991fdb",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "394f69f",
+    "suffix": "5991fdb",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1597125866427
+    "time": 1597143437598
 };
 /* tslint:enable */
 
