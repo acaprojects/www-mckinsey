@@ -7123,11 +7123,12 @@ const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/ind
 const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const general_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const organisation_service_1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
+const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
+const space_utilities_1 = __webpack_require__(/*! src/app/services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-const i1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
-const i2 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
+const i1 = __webpack_require__(/*! src/app/services/data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
+const i2 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const i3 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 const i4 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const i5 = __webpack_require__(/*! ../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
@@ -7388,10 +7389,10 @@ function SpaceSelectModalComponent_ng_template_16_Template(rf, ctx) { if (rf & 1
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(1, _c2));
 } }
 class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
-    constructor(_spaces, _org, _data) {
+    constructor(_org, _spaces, _data) {
         super();
-        this._spaces = _spaces;
         this._org = _org;
+        this._spaces = _spaces;
         this._data = _data;
         /** Emitter for user action on the modal */
         this.event = new core_1.EventEmitter();
@@ -7418,35 +7419,35 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
         return !!this._data.zone_ids;
     }
     ngOnInit() {
+        var _a;
         this.selected_spaces = [].concat(this._data.spaces || []);
         // Listen for input changes
-        this.search_results$ = this.search$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(_ => {
+        this.search_results$ = this.search$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
             this.loading = true;
             const zone_ids = [];
             /* istanbul ignore else */
             if (this.active_building) {
                 zone_ids.push(this.active_building.id);
             }
-            /* istanbul ignore else */
-            if (this.active_type) {
-                zone_ids.push(`${this.active_type.id}`);
-            }
             return this._spaces.available({
                 zone_ids: this._data.zone_ids || zone_ids.join(','),
                 date: this._data.date,
-                duration: this._data.duration
+                duration: this._data.duration,
             });
-        }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
+        }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((list) => {
             this.loading = false;
             const selected = this.selected_spaces;
-            return list.filter((item) => !selected.find(space => space.id === item.id));
+            return list.filter((item) => (this.active_type && this.active_type.id ? item.zones.includes(`${this.active_type.id}`) : true) &&
+                !selected.find((space) => space.id === item.id));
         }));
         // Process API results
-        this.subscription('search_results', this.search_results$.subscribe(list => {
+        this.subscription('search_results', this.search_results$.subscribe((list) => {
             this.spaces = list;
+            this.spaces.sort((a, b) => space_utilities_1.sort(a, b, this._org.buildings));
             this.update();
         }));
-        this.active_building = this._org.building;
+        this.active_building = ((_a = this._data.spaces) === null || _a === void 0 ? void 0 : _a.length) ? this._org.buildings.find((i) => i.id === this._data.spaces[0].level.building_id)
+            : this._org.building;
         this.types = [{ id: '', name: 'Any Space Type' }].concat(this._org.space_types || []);
         this.active_type = this.types[0];
         this.search$.next('');
@@ -7458,7 +7459,7 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
     }
     /** Remove space from selected list */
     removeSpace(space) {
-        this.selected_spaces = this.selected_spaces.filter(a_space => a_space.id !== space.id);
+        this.selected_spaces = this.selected_spaces.filter((a_space) => a_space.id !== space.id);
     }
     /** Emit current state of the selected list */
     save(list) {
@@ -7469,15 +7470,15 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
         const options = {
             date: this._data.date,
             duration: this._data.duration,
-            host: this._data.host
+            host: this._data.host,
         };
-        this.selected_spaces.forEach(space => (map[space.id] = space.byRequest(options)));
-        this.spaces.forEach(space => (map[space.id] = space.byRequest(options)));
+        this.selected_spaces.forEach((space) => (map[space.id] = space.byRequest(options)));
+        this.spaces.forEach((space) => (map[space.id] = space.byRequest(options)));
         this.request_map = map;
     }
 }
 exports.SpaceSelectModalComponent = SpaceSelectModalComponent;
-SpaceSelectModalComponent.ɵfac = function SpaceSelectModalComponent_Factory(t) { return new (t || SpaceSelectModalComponent)(i0.ɵɵdirectiveInject(i1.SpacesService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
+SpaceSelectModalComponent.ɵfac = function SpaceSelectModalComponent_Factory(t) { return new (t || SpaceSelectModalComponent)(i0.ɵɵdirectiveInject(i1.OrganisationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(dialog_1.MAT_DIALOG_DATA)); };
 SpaceSelectModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SpaceSelectModalComponent, selectors: [["a-space-select-modal"]], outputs: { event: "event" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 18, vars: 7, consts: [[1, "heading"], ["mat-icon-button", "", "mat-dialog-close", ""], [3, "icon"], [1, "block", "available"], [4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["class", "block selected", 3, "show", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], ["empty_select_state", ""], ["appearance", "outline", 4, "ngIf"], ["appearance", "outline"], [3, "value", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "info"], [1, "capacity"], [1, "text"], [1, "actions"], ["mat-button", "", 3, "click"], [1, "block", "selected"], ["mat-icon-button", "", 3, "click"], [1, "tag", "mobile-only"], [1, "icon", 3, "matTooltip"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"]], template: function SpaceSelectModalComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "header");
         i0.ɵɵelementStart(1, "div", 0);
@@ -7519,9 +7520,9 @@ SpaceSelectModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SpaceSelectModa
         args: [{
                 selector: 'a-space-select-modal',
                 templateUrl: './space-select-modal.component.html',
-                styleUrls: ['./space-select-modal.component.scss']
+                styleUrls: ['./space-select-modal.component.scss'],
             }]
-    }], function () { return [{ type: i1.SpacesService }, { type: i2.OrganisationService }, { type: undefined, decorators: [{
+    }], function () { return [{ type: i1.OrganisationService }, { type: i2.SpacesService }, { type: undefined, decorators: [{
                 type: core_1.Inject,
                 args: [dialog_1.MAT_DIALOG_DATA]
             }] }]; }, { event: [{
@@ -10189,7 +10190,6 @@ class Report {
                 return output;
             });
         }
-        console.log('Report:', data);
         return data;
     }
 }
@@ -10437,6 +10437,37 @@ function availabilityOptionsToQuery(options) {
     return query;
 }
 exports.availabilityOptionsToQuery = availabilityOptionsToQuery;
+/**
+ * Compare two spaces to determine order
+ * @param first First space to compare
+ * @param second Second space to compare
+ */
+function sort(first, second, blds = []) {
+    var _a;
+    const bld = blds.find(bld => first.zones.includes(bld.id));
+    const bld_b = blds.find(bld => second.zones.includes(bld.id));
+    if (bld) {
+        if (bld !== bld_b) {
+            return (bld.name).localeCompare((_a = bld_b) === null || _a === void 0 ? void 0 : _a.name);
+        }
+        const sort_order = [...bld.sort_order].reverse();
+        for (const zone_id of sort_order) {
+            if (zone_id === '*') {
+                continue;
+            }
+            const a_has_zone = first.zones.indexOf(zone_id) >= 0;
+            const b_has_zone = second.zones.indexOf(zone_id) >= 0;
+            if (a_has_zone && !b_has_zone) {
+                return 1;
+            }
+            else if (b_has_zone && !a_has_zone) {
+                return -1;
+            }
+        }
+    }
+    return first.name.localeCompare(second.name);
+}
+exports.sort = sort;
 
 
 /***/ }),
@@ -25903,16 +25934,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "688544f",
-    "hash": "688544f",
+    "raw": "faad47a",
+    "hash": "faad47a",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "688544f",
+    "suffix": "faad47a",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1596591281818
+    "time": 1597281580799
 };
 /* tslint:enable */
 
