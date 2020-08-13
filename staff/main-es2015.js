@@ -2596,37 +2596,32 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
         var _a;
         this.selected_spaces = [].concat(this._data.spaces || []);
         // Listen for input changes
-        this.search_results$ = this.search$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap(_ => {
-            var _a;
+        this.search_results$ = this.search$.pipe(operators_1.debounceTime(400), operators_1.distinctUntilChanged(), operators_1.switchMap((_) => {
             this.loading = true;
             const zone_ids = [];
             /* istanbul ignore else */
             if (this.active_building) {
                 zone_ids.push(this.active_building.id);
             }
-            /* istanbul ignore else */
-            if ((_a = this.active_type) === null || _a === void 0 ? void 0 : _a.id) {
-                zone_ids.push(`${this.active_type.id}`);
-            }
             return this._spaces.available({
                 zone_ids: this._data.zone_ids || zone_ids.join(','),
                 date: this._data.date,
-                duration: this._data.duration
+                duration: this._data.duration,
             });
-        }), operators_1.catchError(_ => rxjs_1.of([])), operators_1.map((list) => {
+        }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((list) => {
             this.loading = false;
             const selected = this.selected_spaces;
-            return list.filter((item) => !selected.find(space => space.id === item.id));
+            return list.filter((item) => (this.active_type && this.active_type.id ? item.zones.includes(`${this.active_type.id}`) : true) &&
+                !selected.find((space) => space.id === item.id));
         }));
         // Process API results
-        this.subscription('search_results', this.search_results$.subscribe(list => {
+        this.subscription('search_results', this.search_results$.subscribe((list) => {
             this.spaces = list;
             this.spaces.sort((a, b) => space_utilities_1.sort(a, b, this._org.buildings));
             this.update();
         }));
-        this.active_building = ((_a = this._data.spaces) === null || _a === void 0 ? void 0 : _a.length) ?
-            this._org.buildings.find(i => i.id === this._data.spaces[0].level.building_id) :
-            this._org.building;
+        this.active_building = ((_a = this._data.spaces) === null || _a === void 0 ? void 0 : _a.length) ? this._org.buildings.find((i) => i.id === this._data.spaces[0].level.building_id)
+            : this._org.building;
         this.types = [{ id: '', name: 'Any Space Type' }].concat(this._org.space_types || []);
         this.active_type = this.types[0];
         this.search$.next('');
@@ -2638,7 +2633,7 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
     }
     /** Remove space from selected list */
     removeSpace(space) {
-        this.selected_spaces = this.selected_spaces.filter(a_space => a_space.id !== space.id);
+        this.selected_spaces = this.selected_spaces.filter((a_space) => a_space.id !== space.id);
     }
     /** Emit current state of the selected list */
     save(list) {
@@ -2649,10 +2644,10 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
         const options = {
             date: this._data.date,
             duration: this._data.duration,
-            host: this._data.host
+            host: this._data.host,
         };
-        this.selected_spaces.forEach(space => (map[space.id] = space.byRequest(options)));
-        this.spaces.forEach(space => (map[space.id] = space.byRequest(options)));
+        this.selected_spaces.forEach((space) => (map[space.id] = space.byRequest(options)));
+        this.spaces.forEach((space) => (map[space.id] = space.byRequest(options)));
         this.request_map = map;
     }
 }
@@ -2699,7 +2694,7 @@ SpaceSelectModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SpaceSelectModa
         args: [{
                 selector: 'a-space-select-modal',
                 templateUrl: './space-select-modal.component.html',
-                styleUrls: ['./space-select-modal.component.scss']
+                styleUrls: ['./space-select-modal.component.scss'],
             }]
     }], function () { return [{ type: i1.OrganisationService }, { type: i2.SpacesService }, { type: undefined, decorators: [{
                 type: core_1.Inject,
@@ -21696,16 +21691,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "5991fdb",
-    "hash": "5991fdb",
+    "raw": "e3bc89e",
+    "hash": "e3bc89e",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "5991fdb",
+    "suffix": "e3bc89e",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1597143437598
+    "time": 1597279842674
 };
 /* tslint:enable */
 
