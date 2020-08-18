@@ -515,9 +515,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -655,7 +655,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           path: "**",
           redirectTo: "bootstrap"
         }]];
-      }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_f"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ChildrenOutletContexts"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTES"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlHandlingStrategy"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouteReuseStrategy"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterModule"], [[2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_a"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_routing_module__WEBPACK_IMPORTED_MODULE_34__["AppRoutingModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_34__["AppRoutingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientXsrfModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientXsrfModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_d"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_35__["ComposerModule"], _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_35__["ComposerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__["AGoogleAnalyticsModule"], _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__["AGoogleAnalyticsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["BidiModule"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["BidiModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__["PortalModule"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__["PortalModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__["PlatformModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__["PlatformModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__["ScrollingModule"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__["ScrollingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__["AOverlayModule"], _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__["AOverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ReactiveFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__["ADropdownsModule"], _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__["ADropdownsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__["ASpinnerModule"], _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__["ASpinnerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__["ACustomEventsModule"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__["ACustomEventsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__["AButtonsModule"], _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__["AButtonsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__["TextFieldModule"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__["TextFieldModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__["ACheckboxModule"], _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__["ACheckboxModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__["ADynamicFormsModule"], _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__["ADynamicFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__["APipesModule"], _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__["APipesModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__["SharedContentModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__["SharedContentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__["SharedOverlaysModule"], _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__["SharedOverlaysModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ServiceWorkerModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ServiceWorkerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["DEFAULT_CURRENCY_CODE"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_u"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵINJECTOR_SCOPE"], "root", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ANIMATION_MODULE_TYPE"], "BrowserAnimations", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_e"], "XSRF-TOKEN", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_f"], "X-XSRF-TOKEN", [])]);
+      }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_f"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ChildrenOutletContexts"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTES"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlHandlingStrategy"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouteReuseStrategy"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterModule"], [[2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_a"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_routing_module__WEBPACK_IMPORTED_MODULE_34__["AppRoutingModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_34__["AppRoutingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientXsrfModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientXsrfModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_d"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _placeos_composer__WEBPACK_IMPORTED_MODULE_35__["ComposerModule"], _placeos_composer__WEBPACK_IMPORTED_MODULE_35__["ComposerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__["AGoogleAnalyticsModule"], _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__["AGoogleAnalyticsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["BidiModule"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["BidiModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__["PortalModule"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__["PortalModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__["PlatformModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__["PlatformModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__["ScrollingModule"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__["ScrollingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__["AOverlayModule"], _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__["AOverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ReactiveFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__["ADropdownsModule"], _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__["ADropdownsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__["ASpinnerModule"], _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__["ASpinnerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__["ACustomEventsModule"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__["ACustomEventsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__["AButtonsModule"], _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__["AButtonsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__["TextFieldModule"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__["TextFieldModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__["ACheckboxModule"], _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__["ACheckboxModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__["ADynamicFormsModule"], _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__["ADynamicFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__["APipesModule"], _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__["APipesModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__["SharedContentModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__["SharedContentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__["SharedOverlaysModule"], _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__["SharedOverlaysModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ServiceWorkerModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ServiceWorkerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["DEFAULT_CURRENCY_CODE"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_u"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵINJECTOR_SCOPE"], "root", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ANIMATION_MODULE_TYPE"], "BrowserAnimations", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_e"], "XSRF-TOKEN", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_f"], "X-XSRF-TOKEN", [])]);
     });
     /***/
 
@@ -2124,9 +2124,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -2723,7 +2723,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     ApplicationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
       factory: function ApplicationService_Factory() {
-        return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_3__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_9__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_11__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_13__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__["PollingService"]));
+        return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_3__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_9__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_11__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_13__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__["PollingService"]));
       },
       token: ApplicationService,
       providedIn: "root"
@@ -4340,9 +4340,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -4484,7 +4484,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     BookingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
       factory: function BookingsService_Factory() {
-        return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
+        return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
       },
       token: BookingsService,
       providedIn: "root"
@@ -4895,9 +4895,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -5193,7 +5193,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     OrganisationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
       factory: function OrganisationService_Factory() {
-        return new OrganisationService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
+        return new OrganisationService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
       },
       token: OrganisationService,
       providedIn: "root"
@@ -5235,9 +5235,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -5336,7 +5336,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     PollingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
       factory: function PollingService_Factory() {
-        return new PollingService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_1__["ComposerService"]));
+        return new PollingService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_1__["ComposerService"]));
       },
       token: PollingService,
       providedIn: "root"
@@ -5732,9 +5732,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -5881,7 +5881,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({
       factory: function SpacesService_Factory() {
-        return new SpacesService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_1__["ComposerService"]));
+        return new SpacesService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_1__["ComposerService"]));
       },
       token: SpacesService,
       providedIn: "root"
@@ -5911,9 +5911,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -6043,7 +6043,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
       factory: function SystemsManagerService_Factory() {
-        return new SystemsManagerService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
+        return new SystemsManagerService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
       },
       token: SystemsManagerService,
       providedIn: "root"
@@ -6378,9 +6378,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -6607,7 +6607,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({
       factory: function UsersService_Factory() {
-        return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["Location"]));
+        return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["Location"]));
       },
       token: UsersService,
       providedIn: "root"
@@ -11241,9 +11241,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -11343,7 +11343,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -11360,7 +11360,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -11377,7 +11377,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"]
@@ -11844,9 +11844,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -11978,7 +11978,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -11995,7 +11995,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12012,7 +12012,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12029,7 +12029,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12046,7 +12046,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12063,7 +12063,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12080,7 +12080,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12097,7 +12097,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12114,7 +12114,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12131,7 +12131,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12148,7 +12148,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12165,7 +12165,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12659,9 +12659,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -12764,7 +12764,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12781,7 +12781,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12798,7 +12798,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13103,9 +13103,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -13205,7 +13205,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13222,7 +13222,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13239,7 +13239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"]
@@ -13260,7 +13260,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13282,7 +13282,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13304,7 +13304,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13321,7 +13321,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13338,7 +13338,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13355,7 +13355,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13372,7 +13372,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13389,7 +13389,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13406,7 +13406,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13951,9 +13951,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -14137,7 +14137,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14154,7 +14154,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14171,7 +14171,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14188,7 +14188,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14205,7 +14205,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14222,7 +14222,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14239,7 +14239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14473,9 +14473,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -14579,7 +14579,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14601,7 +14601,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14618,7 +14618,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14635,7 +14635,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14652,7 +14652,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14669,7 +14669,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14686,7 +14686,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -15080,9 +15080,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @acaprojects/ngx-composer */
-    "./node_modules/@acaprojects/ngx-composer/fesm2015/acaprojects-ngx-composer.js");
+    var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @placeos/composer */
+    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
     /* harmony import */
 
 
@@ -15151,7 +15151,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -15168,7 +15168,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_acaprojects_ngx_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"]
@@ -15643,16 +15643,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "1eca778",
-      "hash": "1eca778",
+      "raw": "5753d7e",
+      "hash": "5753d7e",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "1eca778",
+      "suffix": "5753d7e",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1597712994705
+      "time": 1597790373893
     };
     /* tslint:enable */
 
