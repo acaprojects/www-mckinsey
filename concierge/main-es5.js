@@ -18560,7 +18560,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return this.query({
                       tags: 'building',
                       engine: true,
-                      limit: 500
+                      limit: 1000
                     });
 
                   case 2:
@@ -18603,7 +18603,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _context16.next = 2;
                     return this.query({
                       tags: 'level',
-                      engine: true
+                      engine: true,
+                      limit: 1000
                     });
 
                   case 2:
@@ -18639,7 +18640,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _context17.next = 2;
                     return this.query({
                       tags: 'room',
-                      engine: true
+                      engine: true,
+                      limit: 1000
                     });
 
                   case 2:
@@ -47339,16 +47341,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "faad47a",
-      "hash": "faad47a",
+      "raw": "f596ce2",
+      "hash": "f596ce2",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "faad47a",
+      "suffix": "f596ce2",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1597281580799
+      "time": 1597821559720
     };
     /* tslint:enable */
 
