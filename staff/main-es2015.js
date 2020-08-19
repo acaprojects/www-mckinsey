@@ -5399,7 +5399,7 @@ class OrganisationService extends base_service_1.BaseAPIService {
      */
     loadBuildings() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            const bld_data = yield this.query({ tags: 'building', engine: true, limit: 500 });
+            const bld_data = yield this.query({ tags: 'building', engine: true, limit: 1000 });
             const buildings = bld_data
                 .map((i) => new building_class_1.Building(i))
                 .filter((bld) => this._organisation.available_buildings.includes(bld.id));
@@ -5415,7 +5415,7 @@ class OrganisationService extends base_service_1.BaseAPIService {
      */
     loadLevels() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            const lvl_data = yield this.query({ tags: 'level', engine: true });
+            const lvl_data = yield this.query({ tags: 'level', engine: true, limit: 1000 });
             const levels = lvl_data.map((i) => new level_class_1.BuildingLevel(i));
             this.set('levels', levels);
         });
@@ -5425,7 +5425,7 @@ class OrganisationService extends base_service_1.BaseAPIService {
      */
     loadSpaceTypes() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            const type_data = yield this.query({ tags: 'room', engine: true });
+            const type_data = yield this.query({ tags: 'room', engine: true, limit: 1000 });
             const types = type_data.map((i) => ({ id: i.id, name: i.name }));
             this.set('space_types', types);
         });
@@ -21691,16 +21691,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "48534a7",
-    "hash": "48534a7",
+    "raw": "e110e23",
+    "hash": "e110e23",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "48534a7",
+    "suffix": "e110e23",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1597706108929
+    "time": 1597821754667
 };
 /* tslint:enable */
 
