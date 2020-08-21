@@ -20047,43 +20047,61 @@ const i4 = __webpack_require__(/*! ../../../../../overlays/booking-modal/caterin
 const i5 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 const i6 = __webpack_require__(/*! ../../../../../shared/components/icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
 const i7 = __webpack_require__(/*! @angular/material/progress-spinner */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-spinner.js");
-function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_ng_container_3_div_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 15);
+function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_div_1_ng_container_3_ng_container_1_div_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 16);
     i0.ɵɵelementStart(1, "div", 11);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const sub_sub_item_r16 = ctx.$implicit;
+    const sub_sub_item_r17 = i0.ɵɵnextContext().$implicit;
     i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(sub_sub_item_r16.name);
+    i0.ɵɵtextInterpolate(sub_sub_item_r17.name);
 } }
-function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_ng_container_3_Template(rf, ctx) { if (rf & 1) {
+function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_div_1_ng_container_3_ng_container_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_ng_container_3_div_1_Template, 3, 1, "div", 14);
+    i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_div_1_ng_container_3_ng_container_1_div_1_Template, 3, 1, "div", 15);
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
-    const sub_item_r13 = i0.ɵɵnextContext().$implicit;
+    const sub_sub_item_r17 = ctx.$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", sub_sub_item_r17.amount);
+} }
+function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_div_1_ng_container_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementContainerStart(0);
+    i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_div_1_ng_container_3_ng_container_1_Template, 2, 1, "ng-container", 14);
+    i0.ɵɵelementContainerEnd();
+} if (rf & 2) {
+    const sub_item_r13 = i0.ɵɵnextContext(2).$implicit;
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngForOf", sub_item_r13.items);
 } }
-function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 15);
+function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_div_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 16);
     i0.ɵɵelementStart(1, "div", 11);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(3, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_ng_container_3_Template, 2, 1, "ng-container", 13);
+    i0.ɵɵtemplate(3, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_div_1_ng_container_3_Template, 2, 1, "ng-container", 13);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const sub_item_r13 = ctx.$implicit;
+    const sub_item_r13 = i0.ɵɵnextContext().$implicit;
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate(sub_item_r13.name);
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngIf", sub_item_r13.items);
 } }
+function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementContainerStart(0);
+    i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_div_1_Template, 4, 2, "div", 15);
+    i0.ɵɵelementContainerEnd();
+} if (rf & 2) {
+    const sub_item_r13 = ctx.$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", sub_item_r13.amount || sub_item_r13.items);
+} }
 function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_div_1_Template, 4, 2, "div", 14);
+    i0.ɵɵtemplate(1, OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng_container_1_Template, 2, 1, "ng-container", 14);
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
     const item_r10 = i0.ɵɵnextContext().$implicit;
@@ -20132,17 +20150,17 @@ function OrderDetailsItemsComponent_div_2_Template(rf, ctx) { if (rf & 1) {
 } }
 const _c0 = function (a0) { return [a0]; };
 function OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template(rf, ctx) { if (rf & 1) {
-    const _r21 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "a-catering-order-details", 18);
-    i0.ɵɵlistener("event", function OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template_a_catering_order_details_event_0_listener($event) { i0.ɵɵrestoreView(_r21); const ctx_r20 = i0.ɵɵnextContext(2); return $event ? ctx_r20.handleOrderEvent($event) : ctx_r20.editing = false; });
+    const _r25 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "a-catering-order-details", 19);
+    i0.ɵɵlistener("event", function OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template_a_catering_order_details_event_0_listener($event) { i0.ɵɵrestoreView(_r25); const ctx_r24 = i0.ɵɵnextContext(2); return $event ? ctx_r24.handleOrderEvent($event) : ctx_r24.editing = false; });
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r19 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("space_list", i0.ɵɵpureFunction1(7, _c0, ctx_r19.booking.space))("order", ctx_r19.order)("date", ctx_r19.booking.date)("duration", ctx_r19.booking.duration)("all_day", ctx_r19.booking.all_day)("hide_details", true)("compact", true);
+    const ctx_r23 = i0.ɵɵnextContext(2);
+    i0.ɵɵproperty("space_list", i0.ɵɵpureFunction1(7, _c0, ctx_r23.booking.space))("order", ctx_r23.order)("date", ctx_r23.booking.date)("duration", ctx_r23.booking.duration)("all_day", ctx_r23.booking.all_day)("hide_details", true)("compact", true);
 } }
 function OrderDetailsItemsComponent_ng_template_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 16);
-    i0.ɵɵtemplate(1, OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template, 1, 9, "a-catering-order-details", 17);
+    i0.ɵɵelementStart(0, "div", 17);
+    i0.ɵɵtemplate(1, OrderDetailsItemsComponent_ng_template_3_a_catering_order_details_1_Template, 1, 9, "a-catering-order-details", 18);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r2 = i0.ɵɵnextContext();
@@ -20151,19 +20169,19 @@ function OrderDetailsItemsComponent_ng_template_3_Template(rf, ctx) { if (rf & 1
     i0.ɵɵproperty("ngIf", !ctx_r2.loading)("ngIfElse", _r6);
 } }
 function OrderDetailsItemsComponent_button_5_Template(rf, ctx) { if (rf & 1) {
-    const _r23 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 19);
-    i0.ɵɵlistener("click", function OrderDetailsItemsComponent_button_5_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r23); const ctx_r22 = i0.ɵɵnextContext(); return ctx_r22.editOrder(); });
+    const _r27 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "button", 20);
+    i0.ɵɵlistener("click", function OrderDetailsItemsComponent_button_5_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r27); const ctx_r26 = i0.ɵɵnextContext(); return ctx_r26.editOrder(); });
     i0.ɵɵtext(1, " Edit Order\n");
     i0.ɵɵelementEnd();
 } }
 const _c1 = function () { return { class: "material-icons", content: "close" }; };
 function OrderDetailsItemsComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 20);
-    i0.ɵɵelementStart(1, "div", 21);
-    i0.ɵɵelement(2, "app-icon", 22);
+    i0.ɵɵelementStart(0, "div", 21);
+    i0.ɵɵelementStart(1, "div", 22);
+    i0.ɵɵelement(2, "app-icon", 23);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "div", 23);
+    i0.ɵɵelementStart(3, "div", 24);
     i0.ɵɵtext(4, " No items in order ");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -20172,11 +20190,11 @@ function OrderDetailsItemsComponent_ng_template_6_Template(rf, ctx) { if (rf & 1
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(1, _c1));
 } }
 function OrderDetailsItemsComponent_ng_template_8_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 20);
-    i0.ɵɵelementStart(1, "div", 21);
-    i0.ɵɵelement(2, "mat-spinner", 24);
+    i0.ɵɵelementStart(0, "div", 21);
+    i0.ɵɵelementStart(1, "div", 22);
+    i0.ɵɵelement(2, "mat-spinner", 25);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "div", 23);
+    i0.ɵɵelementStart(3, "div", 24);
     i0.ɵɵtext(4, " Updating order ");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -20185,6 +20203,7 @@ class OrderDetailsItemsComponent {
     constructor(_service, _bookings) {
         this._service = _service;
         this._bookings = _bookings;
+        setTimeout(() => console.log('Order:', this.order), 300);
     }
     /** List of items in the order */
     get items() {
@@ -20223,7 +20242,7 @@ class OrderDetailsItemsComponent {
 }
 exports.OrderDetailsItemsComponent = OrderDetailsItemsComponent;
 OrderDetailsItemsComponent.ɵfac = function OrderDetailsItemsComponent_Factory(t) { return new (t || OrderDetailsItemsComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService)); };
-OrderDetailsItemsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderDetailsItemsComponent, selectors: [["order-details-items"]], inputs: { booking: "booking", order: "order" }, decls: 10, vars: 4, consts: [[1, "heading"], ["class", "content padded", 4, "ngIf", "ngIfElse"], ["edit_state", ""], ["class", "footer", "name", "edit", "mat-button", "", 3, "click", 4, "ngIf"], ["empty_state", ""], ["load_state", ""], [1, "content", "padded"], [4, "ngIf", "ngIfElse"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "amount"], [4, "ngIf"], ["class", "sub-item", 4, "ngFor", "ngForOf"], [1, "sub-item"], [1, "content"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event", 4, "ngIf", "ngIfElse"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event"], ["name", "edit", "mat-button", "", 1, "footer", 3, "click"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"], ["diameter", "32"]], template: function OrderDetailsItemsComponent_Template(rf, ctx) { if (rf & 1) {
+OrderDetailsItemsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderDetailsItemsComponent, selectors: [["order-details-items"]], inputs: { booking: "booking", order: "order" }, decls: 10, vars: 4, consts: [[1, "heading"], ["class", "content padded", 4, "ngIf", "ngIfElse"], ["edit_state", ""], ["class", "footer", "name", "edit", "mat-button", "", 3, "click", 4, "ngIf"], ["empty_state", ""], ["load_state", ""], [1, "content", "padded"], [4, "ngIf", "ngIfElse"], ["class", "item", 4, "ngFor", "ngForOf"], [1, "item"], [1, "details"], [1, "name"], [1, "amount"], [4, "ngIf"], [4, "ngFor", "ngForOf"], ["class", "sub-item", 4, "ngIf"], [1, "sub-item"], [1, "content"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event", 4, "ngIf", "ngIfElse"], [3, "space_list", "order", "date", "duration", "all_day", "hide_details", "compact", "event"], ["name", "edit", "mat-button", "", 1, "footer", 3, "click"], [1, "info-block", "center"], [1, "icon"], [3, "icon"], [1, "text"], ["diameter", "32"]], template: function OrderDetailsItemsComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
@@ -26045,16 +26064,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d961c3a",
-    "hash": "d961c3a",
+    "raw": "097baf6",
+    "hash": "097baf6",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d961c3a",
+    "suffix": "097baf6",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1597975873452
+    "time": 1597976440495
 };
 /* tslint:enable */
 
