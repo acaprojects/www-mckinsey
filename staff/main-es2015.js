@@ -17815,10 +17815,11 @@ function MapViewComponent_a_timeline_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵproperty("date", ctx_r2.date);
 } }
 class MapViewComponent extends base_directive_1.BaseDirective {
-    constructor(_service, _route, _dialog, _org, _users, _spaces) {
+    constructor(_service, _route, _router, _dialog, _org, _users, _spaces) {
         super();
         this._service = _service;
         this._route = _route;
+        this._router = _router;
         this._dialog = _dialog;
         this._org = _org;
         this._users = _users;
@@ -17857,7 +17858,7 @@ class MapViewComponent extends base_directive_1.BaseDirective {
             if (!this.active_level) {
                 const bld = this._org.building;
                 if (bld && bld.levels.length) {
-                    this.active_level = bld.levels[0].id;
+                    this.updateLevel(bld.levels[0].id);
                 }
             }
             this.settings = this._service.setting('app.explore') || {};
@@ -17938,11 +17939,12 @@ class MapViewComponent extends base_directive_1.BaseDirective {
      */
     loadSpaceLocation(space_id) {
         const space = this._spaces.find(space_id);
+        console.log('Locate Space:', space_id, space);
         /* istanbul ignore else */
         if (space) {
             this.message = `Loading location of ${space.name}`;
             this.loading = true;
-            this.active_level = space.level.id;
+            this.updateLevel(space.level.id);
             this.focus = `area-${space.map_id}-status`;
             this.focus_feature = {
                 id: `area-${space.map_id}-status`,
@@ -17977,7 +17979,7 @@ class MapViewComponent extends base_directive_1.BaseDirective {
             /* istanbul ignore else */
             if (!location)
                 return user;
-            this.active_level = location.level.id;
+            this.updateLevel(location.level.id);
             if (location.fixed) {
                 this.focus = location.id;
                 this.focus_feature = {
@@ -18014,9 +18016,17 @@ class MapViewComponent extends base_directive_1.BaseDirective {
             return user;
         });
     }
+    updateLevel(lvl_id) {
+        this.active_level = lvl_id;
+        this._router.navigate([], {
+            relativeTo: this._route,
+            queryParamsHandling: 'merge',
+            queryParams: { level: lvl_id },
+        });
+    }
 }
 exports.MapViewComponent = MapViewComponent;
-MapViewComponent.ɵfac = function MapViewComponent_Factory(t) { return new (t || MapViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.ActivatedRoute), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.OrganisationService), i0.ɵɵdirectiveInject(i5.UsersService), i0.ɵɵdirectiveInject(i6.SpacesService)); };
+MapViewComponent.ɵfac = function MapViewComponent_Factory(t) { return new (t || MapViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.ActivatedRoute), i0.ɵɵdirectiveInject(i2.Router), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.OrganisationService), i0.ɵɵdirectiveInject(i5.UsersService), i0.ɵɵdirectiveInject(i6.SpacesService)); };
 MapViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MapViewComponent, selectors: [["explore-map-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 15, vars: 17, consts: [[1, "map-view"], [1, "header"], [3, "level"], [1, "body"], ["hidden", "", 1, "status-list"], ["space-status", "", 3, "zone", "date", "status", "listeners", "features"], ["desk-status", "", 3, "zone", "status"], ["overlay", "", 3, "level", "levelChange"], ["mat-icon-button", "", "class", "rules", "name", "booking-rules", 3, "click", 4, "ngIf"], [3, "zoom", "center", "src", "css", "listeners", "features", "focus", "zoomChange", "centerChange"], ["diameter", "32"], ["overlay", "", 3, "zoom", "position", "zoomChange", "positionChange"], ["overlay", ""], ["class", "message", 4, "ngIf"], [3, "date", "dateChange", 4, "ngIf"], ["mat-icon-button", "", "name", "booking-rules", 1, "rules", 3, "click"], [1, "message"], [1, "text"], [1, "loader"], ["mode", "indeterminate", 4, "ngIf"], ["mode", "indeterminate"], [3, "date", "dateChange"]], template: function MapViewComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
@@ -18074,7 +18084,7 @@ MapViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MapViewComponent, select
                 templateUrl: './map-view.component.html',
                 styleUrls: ['./map-view.component.scss'],
             }]
-    }], function () { return [{ type: i1.ApplicationService }, { type: i2.ActivatedRoute }, { type: i3.MatDialog }, { type: i4.OrganisationService }, { type: i5.UsersService }, { type: i6.SpacesService }]; }, null); })();
+    }], function () { return [{ type: i1.ApplicationService }, { type: i2.ActivatedRoute }, { type: i2.Router }, { type: i3.MatDialog }, { type: i4.OrganisationService }, { type: i5.UsersService }, { type: i6.SpacesService }]; }, null); })();
 
 
 /***/ }),
@@ -19161,7 +19171,9 @@ class ExploreSpaceStatusComponent extends base_directive_1.BaseDirective {
             const statuses = [];
             for (const space of this.space_list) {
                 const status = this.getStatus(space, this.date);
-                const id = space.map_id.indexOf('area') < 0 ? `area-${space.map_id}-status` : space.map_id;
+                const id = `${space.map_id}`.indexOf('area') < 0
+                    ? `area-${space.map_id}-status`
+                    : space.map_id;
                 statuses.push({
                     id,
                     styles: {
@@ -19243,7 +19255,9 @@ class ExploreSpaceStatusComponent extends base_directive_1.BaseDirective {
         this.space_list = this._spaces.filter((space) => space.zones.indexOf(this.zone) >= 0);
         const listeners = [];
         for (const space of this.space_list) {
-            const id = space.map_id.indexOf('area') < 0 ? `area-${space.map_id}-status` : space.map_id;
+            const id = `${space.map_id}`.indexOf('area') < 0
+                ? `area-${space.map_id}-status`
+                : space.map_id;
             listeners.push({
                 id,
                 event: 'mouseenter',
@@ -19283,7 +19297,7 @@ class ExploreSpaceStatusComponent extends base_directive_1.BaseDirective {
      * @param space Space to show details for
      */
     showSpaceInfo(space) {
-        const id = space.map_id.indexOf('area') < 0 ? `area-${space.map_id}-status` : space.map_id;
+        const id = `${space.map_id}`.indexOf('area') < 0 ? `area-${space.map_id}-status` : space.map_id;
         this.features.emit([
             {
                 id,
@@ -21691,16 +21705,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "e110e23",
-    "hash": "e110e23",
+    "raw": "427089f",
+    "hash": "427089f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "e110e23",
+    "suffix": "427089f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1597821754667
+    "time": 1597970846511
 };
 /* tslint:enable */
 

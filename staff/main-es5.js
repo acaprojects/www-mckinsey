@@ -31742,7 +31742,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super55 = _createSuper(MapViewComponent);
 
-      function MapViewComponent(_service, _route, _dialog, _org, _users, _spaces) {
+      function MapViewComponent(_service, _route, _router, _dialog, _org, _users, _spaces) {
         var _this154;
 
         _classCallCheck(this, MapViewComponent);
@@ -31750,6 +31750,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this154 = _super55.call(this);
         _this154._service = _service;
         _this154._route = _route;
+        _this154._router = _router;
         _this154._dialog = _dialog;
         _this154._org = _org;
         _this154._users = _users;
@@ -31796,7 +31797,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var bld = _this155._org.building;
 
               if (bld && bld.levels.length) {
-                _this155.active_level = bld.levels[0].id;
+                _this155.updateLevel(bld.levels[0].id);
               }
             }
 
@@ -31908,13 +31909,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "loadSpaceLocation",
         value: function loadSpaceLocation(space_id) {
           var space = this._spaces.find(space_id);
-          /* istanbul ignore else */
 
+          console.log('Locate Space:', space_id, space);
+          /* istanbul ignore else */
 
           if (space) {
             this.message = "Loading location of ".concat(space.name);
             this.loading = true;
-            this.active_level = space.level.id;
+            this.updateLevel(space.level.id);
             this.focus = "area-".concat(space.map_id, "-status");
             this.focus_feature = {
               id: "area-".concat(space.map_id, "-status"),
@@ -31979,7 +31981,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return _context19.abrupt("return", user);
 
                   case 15:
-                    this.active_level = location.level.id;
+                    this.updateLevel(location.level.id);
 
                     if (location.fixed) {
                       this.focus = location.id;
@@ -32025,6 +32027,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
+        key: "updateLevel",
+        value: function updateLevel(lvl_id) {
+          this.active_level = lvl_id;
+
+          this._router.navigate([], {
+            relativeTo: this._route,
+            queryParamsHandling: 'merge',
+            queryParams: {
+              level: lvl_id
+            }
+          });
+        }
+      }, {
         key: "map_url",
         get: function get() {
           var level = this._org.levelWithID(this.active_level) || {
@@ -32052,7 +32067,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     exports.MapViewComponent = MapViewComponent;
 
     MapViewComponent.ɵfac = function MapViewComponent_Factory(t) {
-      return new (t || MapViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.ActivatedRoute), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.OrganisationService), i0.ɵɵdirectiveInject(i5.UsersService), i0.ɵɵdirectiveInject(i6.SpacesService));
+      return new (t || MapViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.ActivatedRoute), i0.ɵɵdirectiveInject(i2.Router), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.OrganisationService), i0.ɵɵdirectiveInject(i5.UsersService), i0.ɵɵdirectiveInject(i6.SpacesService));
     };
 
     MapViewComponent.ɵcmp = i0.ɵɵdefineComponent({
@@ -32162,6 +32177,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: i1.ApplicationService
         }, {
           type: i2.ActivatedRoute
+        }, {
+          type: i2.Router
         }, {
           type: i3.MatDialog
         }, {
@@ -34201,7 +34218,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 var status = _this172.getStatus(space, _this172.date);
 
-                var id = space.map_id.indexOf('area') < 0 ? "area-".concat(space.map_id, "-status") : space.map_id;
+                var id = "".concat(space.map_id).indexOf('area') < 0 ? "area-".concat(space.map_id, "-status") : space.map_id;
                 statuses.push({
                   id: id,
                   styles: {
@@ -34327,7 +34344,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           try {
             var _loop6 = function _loop6() {
               var space = _step43.value;
-              var id = space.map_id.indexOf('area') < 0 ? "area-".concat(space.map_id, "-status") : space.map_id;
+              var id = "".concat(space.map_id).indexOf('area') < 0 ? "area-".concat(space.map_id, "-status") : space.map_id;
               listeners.push({
                 id: id,
                 event: 'mouseenter',
@@ -34392,7 +34409,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "showSpaceInfo",
         value: function showSpaceInfo(space) {
-          var id = space.map_id.indexOf('area') < 0 ? "area-".concat(space.map_id, "-status") : space.map_id;
+          var id = "".concat(space.map_id).indexOf('area') < 0 ? "area-".concat(space.map_id, "-status") : space.map_id;
           this.features.emit([{
             id: id,
             coordinates: null,
@@ -38658,16 +38675,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "e110e23",
-      "hash": "e110e23",
+      "raw": "427089f",
+      "hash": "427089f",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "e110e23",
+      "suffix": "427089f",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1597821754667
+      "time": 1597970846511
     };
     /* tslint:enable */
 
