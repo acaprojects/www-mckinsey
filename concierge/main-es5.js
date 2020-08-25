@@ -674,14 +674,6 @@ function _templateObject25() {
   return data;
 }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
 function _templateObject24() {
   var data = _taggedTemplateLiteral([":Booking spaces empty label\u241F48997dd49d1f8759b5b9d7e3751c29159bcc09c9\u241F7321019911548192695: No spaces available for the selected time "]);
 
@@ -926,7 +918,15 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
@@ -2236,10 +2236,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this4.loading = 'Processing booking request...';
             _this4.booking.time_changed = _this4.old_booking && (_this4.old_booking.date !== _this4.booking.date || _this4.old_booking.duration !== _this4.booking.duration);
 
-            _this4._bookings.save(_this4.booking).then(function () {
+            _this4._bookings.save(_this4.booking).then(function (bkn) {
               _this4.loading = null;
               _this4.success = true;
               _this4._dialog_ref.disableClose = false;
+
+              var bookings = _this4._bookings.booking_list.getValue();
+
+              var index = bookings.findIndex(function (booking) {
+                return booking.icaluid === bkn.icaluid;
+              });
+
+              if (index >= 0) {
+                bookings.splice(index, 1, bkn);
+              } else {
+                bookings.push(bkn);
+              }
+
+              _this4._bookings.booking_list.next(_toConsumableArray(bookings));
+
               localStorage.removeItem('ACA_STAFF.booking_form_data');
 
               _this4.event.emit({
@@ -47779,16 +47794,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "f974d86",
-      "hash": "f974d86",
+      "raw": "250fd37",
+      "hash": "250fd37",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "f974d86",
+      "suffix": "250fd37",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598317260887
+      "time": 1598350479165
     };
     /* tslint:enable */
 

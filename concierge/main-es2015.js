@@ -876,10 +876,19 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
                 this.old_booking &&
                     (this.old_booking.date !== this.booking.date ||
                         this.old_booking.duration !== this.booking.duration);
-            this._bookings.save(this.booking).then(() => {
+            this._bookings.save(this.booking).then((bkn) => {
                 this.loading = null;
                 this.success = true;
                 this._dialog_ref.disableClose = false;
+                const bookings = this._bookings.booking_list.getValue();
+                const index = bookings.findIndex(booking => booking.icaluid === bkn.icaluid);
+                if (index >= 0) {
+                    bookings.splice(index, 1, bkn);
+                }
+                else {
+                    bookings.push(bkn);
+                }
+                this._bookings.booking_list.next([...bookings]);
                 localStorage.removeItem('ACA_STAFF.booking_form_data');
                 this.event.emit({ reason: 'done' });
                 this._service.notifySuccess(`Successfully ${this.booking.id ? 'updated' : 'created'} booking`);
@@ -26195,16 +26204,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f974d86",
-    "hash": "f974d86",
+    "raw": "250fd37",
+    "hash": "250fd37",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f974d86",
+    "suffix": "250fd37",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598317260887
+    "time": 1598350479165
 };
 /* tslint:enable */
 
