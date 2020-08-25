@@ -119,8 +119,7 @@ settings.app.booking = {
         'title',
         'type',
         'all_day',
-        'needs_space',
-        'has_catering'
+        'needs_space'
     ],
     html_body: true,
     multiple_spaces: true,
