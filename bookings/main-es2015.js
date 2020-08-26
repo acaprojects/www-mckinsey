@@ -1028,13 +1028,9 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
     }
     /** Wait for settings to be initialised before setting up the application */
     waitForSettings() {
+        this.log('SYSTEM', 'Waiting for settings...');
         // Wait until the settings have loaded before initialising
-        this.subscription('setting_setup', this._settings.initialised.subscribe((setup) => {
-            if (setup) {
-                this.init();
-                this.unsub('setting_setup');
-            }
-        }));
+        this._settings.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])(_ => _)).subscribe(() => this.init());
     }
     /**
      * Initialise application services
@@ -1077,6 +1073,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
         const mock = this.setting('mock');
         // Generate configuration object
         const config = {
+            auth_type: 'auth_code',
             scope: 'public',
             host: `${host}:${port}`,
             auth_uri: `${url}/auth/oauth/authorize`,
@@ -2849,21 +2846,23 @@ SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInj
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SystemsManagerService", function() { return SystemsManagerService; });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
-/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/base.class */ "./src/app/shared/base.class.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
+/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/base.class */ "./src/app/shared/base.class.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
 
-class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["BaseClass"] {
+
+class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_3__["BaseClass"] {
     constructor() {
         super();
         /** Subject for System list */
         this._list = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"]([]);
         /** Observable for system list */
         this.systems = this._list.asObservable();
-        this.timeout('init', () => this.load(), 2000);
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["onlineState"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["first"])(_ => _)).subscribe(() => this.load());
     }
     /** List of available systems */
     get list() {
@@ -2876,7 +2875,7 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
      * @param index Index of the module
      */
     get(sys_id, mod_id, index) {
-        return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(sys_id, mod_id, index);
+        return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["getModule"])(sys_id, mod_id, index);
     }
     /**
      * Load Systems
@@ -2889,7 +2888,7 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
      * @param offset Item offset for the page to load
      */
     loadSystems(offset = 0, limit = 2000) {
-        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["querySystems"])({ offset, limit })
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["querySystems"])({ offset, limit })
             .toPromise()
             .then((details) => {
             const systems = [...this.list, ...details.data];
@@ -2902,7 +2901,7 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
             .catch((e) => this.timeout('retry', () => this.loadSystems(offset), 2000));
     }
 }
-SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function SystemsManagerService_Factory() { return new SystemsManagerService(); }, token: SystemsManagerService, providedIn: "root" });
+SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function SystemsManagerService_Factory() { return new SystemsManagerService(); }, token: SystemsManagerService, providedIn: "root" });
 
 
 /***/ }),
@@ -3205,7 +3204,8 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPISe
             }
             this.show('current', { engine: true }).then(current_user => {
                 this.set('status', 'available');
-                this.set('current_user', current_user);
+                this.set('check_initialised', current_user);
+                this.clearTimeout('load');
                 if (this.parent && this.parent.setting('app.user.grab_api_details')) {
                     this.show(current_user.email).then(user => {
                         this.set('current_user', user);
@@ -3516,10 +3516,8 @@ class BaseClass {
         this._subscriptions = {};
         /** Subject which stores the initialised state of the object */
         this._initialised = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"](false);
-    }
-    /** Observable of the initialised state of the object */
-    get initialised() {
-        return this._initialised;
+        /** Observable of the initialised state of the object */
+        this.initialised = this._initialised.asObservable();
     }
     /** Whether the object has been initialised */
     get is_initialised() {
@@ -7024,16 +7022,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "44d014b",
-    "hash": "44d014b",
+    "raw": "195502a",
+    "hash": "195502a",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "44d014b",
+    "suffix": "195502a",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598408385001
+    "time": 1598436547851
 };
 /* tslint:enable */
 
