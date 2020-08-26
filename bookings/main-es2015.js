@@ -1040,7 +1040,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
     init() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             yield this.setupComposer().catch(_ => _);
-            this.timeout('inited', () => {
+            Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["listenForToken"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["delay"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["first"])(_ => Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["hasToken"])())).subscribe(_ => {
                 this._users.init();
                 // Setup analytics
                 this._analytics.enabled = !!this.setting('app.analytics.enabled');
@@ -1058,8 +1058,8 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
                 this._bookings.init();
                 this._spaces.init();
                 this._polling.init();
-                this.timeout('inited', () => this._initialised.next(true), 500);
-            }, 500);
+                this._initialised.next(true);
+            });
         });
     }
     /**
@@ -2866,7 +2866,7 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
         this._list = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"]([]);
         /** Observable for system list */
         this.systems = this._list.asObservable();
-        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["onlineState"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["first"])(_ => _)).subscribe(() => this.load());
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["listenForToken"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["delay"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["first"])(_ => Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["hasToken"])())).subscribe(() => this.load());
     }
     /** List of available systems */
     get list() {
@@ -5290,18 +5290,19 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
      * Check if the application has previously been bootstrapped
      */
     checkBootstrapped() {
-        this.loading = true;
         if (localStorage) {
             const system_id = localStorage.getItem('ACA.PANEL.system') || localStorage.getItem('ACA.CONTROL.system');
             if (system_id) {
+                this.service.log('BOOT', `Already bootstrapped, redirecting to ${system_id}...`);
                 this.service.navigate(['panel', system_id]);
                 return;
             }
         }
         const user = this.service.Users.current;
-        if (user) {
+        if (user && user.email) {
             const space = this.service.Spaces.item(user.email);
             if (space) {
+                this.service.log('BOOT', `Bootstrapped as user, redirecting to ${space.id}...`);
                 this.service.navigate(['panel', space.id]);
                 return;
             }
@@ -5313,6 +5314,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
      * @param system_id System to bootstrap
      */
     configure(system_id) {
+        this.service.log('BOOT', `Bootstrapping system ${system_id}...`);
         if (localStorage) {
             localStorage.setItem('ACA.PANEL.system', system_id);
         }
@@ -7026,16 +7028,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "cb21c61",
-    "hash": "cb21c61",
+    "raw": "18714e9",
+    "hash": "18714e9",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "cb21c61",
+    "suffix": "18714e9",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598438695048
+    "time": 1598444585926
 };
 /* tslint:enable */
 

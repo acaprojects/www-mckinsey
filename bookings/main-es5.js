@@ -2454,7 +2454,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     });
 
                   case 2:
-                    this.timeout('inited', function () {
+                    Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["listenForToken"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["delay"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["first"])(function (_) {
+                      return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["hasToken"])();
+                    })).subscribe(function (_) {
                       _this11._users.init(); // Setup analytics
 
 
@@ -2483,10 +2485,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                       _this11._polling.init();
 
-                      _this11.timeout('inited', function () {
-                        return _this11._initialised.next(true);
-                      }, 500);
-                    }, 500);
+                      _this11._initialised.next(true);
+                    });
 
                   case 3:
                   case "end":
@@ -5902,8 +5902,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Observable for system list */
 
         _this46.systems = _this46._list.asObservable();
-        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["onlineState"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["first"])(function (_) {
-          return _;
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["listenForToken"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["delay"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["first"])(function (_) {
+          return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["hasToken"])();
         })).subscribe(function () {
           return _this46.load();
         });
@@ -10817,12 +10817,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "checkBootstrapped",
         value: function checkBootstrapped() {
-          this.loading = true;
-
           if (localStorage) {
             var system_id = localStorage.getItem('ACA.PANEL.system') || localStorage.getItem('ACA.CONTROL.system');
 
             if (system_id) {
+              this.service.log('BOOT', "Already bootstrapped, redirecting to ".concat(system_id, "..."));
               this.service.navigate(['panel', system_id]);
               return;
             }
@@ -10830,10 +10829,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var user = this.service.Users.current;
 
-          if (user) {
+          if (user && user.email) {
             var space = this.service.Spaces.item(user.email);
 
             if (space) {
+              this.service.log('BOOT', "Bootstrapped as user, redirecting to ".concat(space.id, "..."));
               this.service.navigate(['panel', space.id]);
               return;
             }
@@ -10849,6 +10849,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "configure",
         value: function configure(system_id) {
+          this.service.log('BOOT', "Bootstrapping system ".concat(system_id, "..."));
+
           if (localStorage) {
             localStorage.setItem('ACA.PANEL.system', system_id);
           }
@@ -15657,16 +15659,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "cb21c61",
-      "hash": "cb21c61",
+      "raw": "18714e9",
+      "hash": "18714e9",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "cb21c61",
+      "suffix": "18714e9",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598438695048
+      "time": 1598444585926
     };
     /* tslint:enable */
 
