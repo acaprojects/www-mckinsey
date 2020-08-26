@@ -146,47 +146,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shell_panel_array_panel_array_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shell/panel-array/panel-array.component.ngfactory */ "./src/app/shell/panel-array/panel-array.component.ngfactory.js");
 /* harmony import */ var _shell_panel_select_panel_select_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shell/panel-select/panel-select.component.ngfactory */ "./src/app/shell/panel-select/panel-select.component.ngfactory.js");
 /* harmony import */ var _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../node_modules/@acaprojects/ngx-overlays/acaprojects-ngx-overlays.ngfactory */ "./node_modules/@acaprojects/ngx-overlays/acaprojects-ngx-overlays.ngfactory.js");
-/* harmony import */ var _shared_base_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/base.component.ngfactory */ "./src/app/shared/base.component.ngfactory.js");
-/* harmony import */ var _shared_components_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/components/user-search-field/user-search-field.component.ngfactory */ "./src/app/shared/components/user-search-field/user-search-field.component.ngfactory.js");
-/* harmony import */ var _shared_components_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./shared/components/time-field/time-field.component.ngfactory */ "./src/app/shared/components/time-field/time-field.component.ngfactory.js");
-/* harmony import */ var _shared_components_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./shared/components/duration-field/duration-field.component.ngfactory */ "./src/app/shared/components/duration-field/duration-field.component.ngfactory.js");
-/* harmony import */ var _overlays_confirm_modal_confirm_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./overlays/confirm-modal/confirm-modal.component.ngfactory */ "./src/app/overlays/confirm-modal/confirm-modal.component.ngfactory.js");
-/* harmony import */ var _overlays_embedded_control_modal_embedded_control_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./overlays/embedded-control-modal/embedded-control-modal.component.ngfactory */ "./src/app/overlays/embedded-control-modal/embedded-control-modal.component.ngfactory.js");
-/* harmony import */ var _overlays_booking_modal_booking_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./overlays/booking-modal/booking-modal.component.ngfactory */ "./src/app/overlays/booking-modal/booking-modal.component.ngfactory.js");
-/* harmony import */ var _app_component_ngfactory__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./app.component.ngfactory */ "./src/app/app.component.ngfactory.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/animations/browser */ "./node_modules/@angular/animations/fesm2015/browser.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm2015/animations.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/cdk/overlay */ "./node_modules/@angular/cdk/esm2015/overlay.js");
-/* harmony import */ var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/cdk/bidi */ "./node_modules/@angular/cdk/esm2015/bidi.js");
-/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
-/* harmony import */ var _shell_shell_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./shell/shell.component */ "./src/app/shell/shell.component.ts");
-/* harmony import */ var _shell_bootstrap_bootstrap_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./shell/bootstrap/bootstrap.component */ "./src/app/shell/bootstrap/bootstrap.component.ts");
-/* harmony import */ var _shell_panel_panel_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./shell/panel/panel.component */ "./src/app/shell/panel/panel.component.ts");
-/* harmony import */ var _shell_panel_array_panel_array_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./shell/panel-array/panel-array.component */ "./src/app/shell/panel-array/panel-array.component.ts");
-/* harmony import */ var _shell_panel_select_panel_select_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./shell/panel-select/panel-select.component */ "./src/app/shell/panel-select/panel-select.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-/* harmony import */ var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @acaprojects/ngx-google-analytics */ "./node_modules/@acaprojects/ngx-google-analytics/fesm2015/acaprojects-ngx-google-analytics.js");
-/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/esm2015/portal.js");
-/* harmony import */ var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @angular/cdk/platform */ "./node_modules/@angular/cdk/esm2015/platform.js");
-/* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @angular/cdk/scrolling */ "./node_modules/@angular/cdk/esm2015/scrolling.js");
-/* harmony import */ var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @acaprojects/ngx-overlays */ "./node_modules/@acaprojects/ngx-overlays/fesm2015/acaprojects-ngx-overlays.js");
-/* harmony import */ var _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @acaprojects/ngx-dropdown */ "./node_modules/@acaprojects/ngx-dropdown/fesm2015/acaprojects-ngx-dropdown.js");
-/* harmony import */ var _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @acaprojects/ngx-spinners */ "./node_modules/@acaprojects/ngx-spinners/fesm2015/acaprojects-ngx-spinners.js");
-/* harmony import */ var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
-/* harmony import */ var _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @acaprojects/ngx-buttons */ "./node_modules/@acaprojects/ngx-buttons/fesm2015/acaprojects-ngx-buttons.js");
-/* harmony import */ var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! @angular/cdk/text-field */ "./node_modules/@angular/cdk/esm2015/text-field.js");
-/* harmony import */ var _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! @acaprojects/ngx-checkbox */ "./node_modules/@acaprojects/ngx-checkbox/fesm2015/acaprojects-ngx-checkbox.js");
-/* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
-/* harmony import */ var _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
-/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./shared/shared.module */ "./src/app/shared/shared.module.ts");
-/* harmony import */ var _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./overlays/overlays.module */ "./src/app/overlays/overlays.module.ts");
+/* harmony import */ var _shared_components_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/components/user-search-field/user-search-field.component.ngfactory */ "./src/app/shared/components/user-search-field/user-search-field.component.ngfactory.js");
+/* harmony import */ var _shared_components_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/components/time-field/time-field.component.ngfactory */ "./src/app/shared/components/time-field/time-field.component.ngfactory.js");
+/* harmony import */ var _shared_components_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./shared/components/duration-field/duration-field.component.ngfactory */ "./src/app/shared/components/duration-field/duration-field.component.ngfactory.js");
+/* harmony import */ var _overlays_confirm_modal_confirm_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./overlays/confirm-modal/confirm-modal.component.ngfactory */ "./src/app/overlays/confirm-modal/confirm-modal.component.ngfactory.js");
+/* harmony import */ var _overlays_embedded_control_modal_embedded_control_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./overlays/embedded-control-modal/embedded-control-modal.component.ngfactory */ "./src/app/overlays/embedded-control-modal/embedded-control-modal.component.ngfactory.js");
+/* harmony import */ var _overlays_booking_modal_booking_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./overlays/booking-modal/booking-modal.component.ngfactory */ "./src/app/overlays/booking-modal/booking-modal.component.ngfactory.js");
+/* harmony import */ var _app_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./app.component.ngfactory */ "./src/app/app.component.ngfactory.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/animations/browser */ "./node_modules/@angular/animations/fesm2015/browser.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm2015/animations.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/cdk/overlay */ "./node_modules/@angular/cdk/esm2015/overlay.js");
+/* harmony import */ var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/cdk/bidi */ "./node_modules/@angular/cdk/esm2015/bidi.js");
+/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
+/* harmony import */ var _shell_shell_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./shell/shell.component */ "./src/app/shell/shell.component.ts");
+/* harmony import */ var _shell_bootstrap_bootstrap_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./shell/bootstrap/bootstrap.component */ "./src/app/shell/bootstrap/bootstrap.component.ts");
+/* harmony import */ var _shell_panel_panel_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./shell/panel/panel.component */ "./src/app/shell/panel/panel.component.ts");
+/* harmony import */ var _shell_panel_array_panel_array_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./shell/panel-array/panel-array.component */ "./src/app/shell/panel-array/panel-array.component.ts");
+/* harmony import */ var _shell_panel_select_panel_select_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./shell/panel-select/panel-select.component */ "./src/app/shell/panel-select/panel-select.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @acaprojects/ngx-google-analytics */ "./node_modules/@acaprojects/ngx-google-analytics/fesm2015/acaprojects-ngx-google-analytics.js");
+/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/esm2015/portal.js");
+/* harmony import */ var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @angular/cdk/platform */ "./node_modules/@angular/cdk/esm2015/platform.js");
+/* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/cdk/scrolling */ "./node_modules/@angular/cdk/esm2015/scrolling.js");
+/* harmony import */ var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @acaprojects/ngx-overlays */ "./node_modules/@acaprojects/ngx-overlays/fesm2015/acaprojects-ngx-overlays.js");
+/* harmony import */ var _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @acaprojects/ngx-dropdown */ "./node_modules/@acaprojects/ngx-dropdown/fesm2015/acaprojects-ngx-dropdown.js");
+/* harmony import */ var _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @acaprojects/ngx-spinners */ "./node_modules/@acaprojects/ngx-spinners/fesm2015/acaprojects-ngx-spinners.js");
+/* harmony import */ var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
+/* harmony import */ var _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @acaprojects/ngx-buttons */ "./node_modules/@acaprojects/ngx-buttons/fesm2015/acaprojects-ngx-buttons.js");
+/* harmony import */ var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @angular/cdk/text-field */ "./node_modules/@angular/cdk/esm2015/text-field.js");
+/* harmony import */ var _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @acaprojects/ngx-checkbox */ "./node_modules/@acaprojects/ngx-checkbox/fesm2015/acaprojects-ngx-checkbox.js");
+/* harmony import */ var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! @acaprojects/ngx-dynamic-forms */ "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
+/* harmony import */ var _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! @acaprojects/ngx-pipes */ "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./overlays/overlays.module */ "./src/app/overlays/overlays.module.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -242,9 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-var AppModuleNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵcmf"](_app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]], function (_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmod"]([_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵCodegenComponentFactoryResolver"], [[8, [_node_modules_angular_router_router_ngfactory__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_router_router_lNgFactory"], _shell_shell_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["ShellWrapperComponentNgFactory"], _shell_bootstrap_bootstrap_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["BootstrapComponentNgFactory"], _shell_panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_6__["BookingPanelComponentNgFactory"], _shell_panel_array_panel_array_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["BookingPanelArrayComponentNgFactory"], _shell_panel_select_panel_select_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["BookingPanelSelectComponentNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵaNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵbNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵcNgFactory"], _shared_base_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["BaseComponentNgFactory"], _shared_components_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__["CustomUserSearchFieldComponentNgFactory"], _shared_components_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["CustomTimeFieldComponentNgFactory"], _shared_components_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["CustomDurationFieldComponentNgFactory"], _overlays_confirm_modal_confirm_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["ConfirmModalComponentNgFactory"], _overlays_embedded_control_modal_embedded_control_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["EmbeddedControlModalComponentNgFactory"], _overlays_booking_modal_booking_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__["BookingModalComponentNgFactory"], _app_component_ngfactory__WEBPACK_IMPORTED_MODULE_17__["AppComponentNgFactory"]]], [3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_r"], [[3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common__WEBPACK_IMPORTED_MODULE_18__["NgLocalization"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["NgLocaleLocalization"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_x"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_t"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_ID"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_g"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["IterableDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_p"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_q"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSanitizerImpl"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Sanitizer"], null, [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["HAMMER_GESTURE_CONFIG"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["HammerGestureConfig"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EVENT_MANAGER_PLUGINS"], function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3) { return [new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomEventsPlugin"](p0_0, p0_1, p0_2), new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵKeyEventsPlugin"](p1_0), new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵHammerGesturesPlugin"](p2_0, p2_1, p2_2, p2_3)]; }, [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["HAMMER_GESTURE_CONFIG"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵConsole"], [2, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["HAMMER_LOADER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EventManager"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EventManager"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EVENT_MANAGER_PLUGINS"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSharedStylesHost"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSharedStylesHost"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomRendererFactory2"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomRendererFactory2"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EventManager"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSharedStylesHost"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["AnimationDriver"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_platform_browser_animations_animations_a"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["ɵAnimationStyleNormalizer"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_platform_browser_animations_animations_b"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["ɵAnimationEngine"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵInjectableAnimationEngine"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["AnimationDriver"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["ɵAnimationStyleNormalizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_platform_browser_animations_animations_c"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomRendererFactory2"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["ɵAnimationEngine"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵSharedStylesHost"], null, [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSharedStylesHost"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Testability"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Testability"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_animations__WEBPACK_IMPORTED_MODULE_22__["AnimationBuilder"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵBrowserAnimationBuilder"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_g"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_router__WEBPACK_IMPORTED_MODULE_23__["NoPreloading"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["NoPreloading"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_router__WEBPACK_IMPORTED_MODULE_23__["PreloadingStrategy"], null, [_angular_router__WEBPACK_IMPORTED_MODULE_23__["NoPreloading"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterPreloader"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterPreloader"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["PreloadingStrategy"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_router__WEBPACK_IMPORTED_MODULE_23__["PreloadAllModules"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["PreloadAllModules"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_o"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_c"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["ViewportScroller"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_INITIALIZER"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_j"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_BOOTSTRAP_LISTENER"], function (p0_0) { return [p0_0]; }, [_angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_INITIALIZER"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_g"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_e"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_h"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_h"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_f"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HTTP_INTERCEPTORS"], function (p0_0) { return [p0_0]; }, [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_d"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["XhrFactory"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_d"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXhrBackend"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXhrBackend"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["XhrFactory"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpBackend"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXhrBackend"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpHandler"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵHttpInterceptingHandler"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpBackend"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClient"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClient"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpHandler"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_n"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_n"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["Overlay"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["Overlay"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["ScrollStrategyOptions"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayContainer"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayPositionBuilder"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayKeyboardDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["Directionality"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["ɵc"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["ɵd"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["Overlay"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormBuilder"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormBuilder"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_a"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_d"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwRegistrationOptions"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwPush"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwPush"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_a"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwUpdate"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwUpdate"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_a"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common__WEBPACK_IMPORTED_MODULE_18__["CommonModule"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["CommonModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_platform_browser_platform_browser_a"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgProbeToken"], function () { return [_angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_b"]()]; }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_h"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_h"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_b"], "ngsw-worker.js", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwRegistrationOptions"], { enabled: true }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], function (p0_0, p1_0, p2_0, p2_1, p2_2, p2_3) { return [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_platform_browser_platform_browser_m"](p0_0), _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_i"](p1_0), _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_c"](p2_0, p2_1, p2_2, p2_3)]; }, [[2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgProbeToken"]], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_h"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_b"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwRegistrationOptions"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"], [[2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](131584, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵConsole"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationModule"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationModule"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["BrowserModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["BrowserModule"], [[3, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["BrowserModule"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["BrowserAnimationsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["BrowserAnimationsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_a"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_e"], [[3, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["DefaultUrlSerializer"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ChildrenOutletContexts"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ChildrenOutletContexts"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"], { useHash: true }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_common__WEBPACK_IMPORTED_MODULE_18__["LocationStrategy"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_d"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["PlatformLocation"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_18__["APP_BASE_HREF"]], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["LocationStrategy"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["PlatformLocation"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["SystemJsNgModuleLoader"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], [2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["SystemJsNgModuleLoaderConfig"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTES"], function () { return [[{ path: "", component: _shell_shell_component__WEBPACK_IMPORTED_MODULE_29__["ShellWrapperComponent"], children: [{ path: "bootstrap", component: _shell_bootstrap_bootstrap_component__WEBPACK_IMPORTED_MODULE_30__["BootstrapComponent"] }, { path: "panel/:system_id", component: _shell_panel_panel_component__WEBPACK_IMPORTED_MODULE_31__["BookingPanelComponent"] }, { path: "panel-array", component: _shell_panel_array_panel_array_component__WEBPACK_IMPORTED_MODULE_32__["BookingPanelArrayComponent"] }, { path: "panel-select", component: _shell_panel_select_panel_select_component__WEBPACK_IMPORTED_MODULE_33__["BookingPanelSelectComponent"] }, { path: "**", redirectTo: "bootstrap" }] }, { path: "**", redirectTo: "bootstrap" }]]; }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_f"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ChildrenOutletContexts"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTES"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlHandlingStrategy"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouteReuseStrategy"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterModule"], [[2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_a"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_routing_module__WEBPACK_IMPORTED_MODULE_34__["AppRoutingModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_34__["AppRoutingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientXsrfModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientXsrfModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_d"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _placeos_composer__WEBPACK_IMPORTED_MODULE_35__["ComposerModule"], _placeos_composer__WEBPACK_IMPORTED_MODULE_35__["ComposerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__["AGoogleAnalyticsModule"], _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__["AGoogleAnalyticsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["BidiModule"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["BidiModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__["PortalModule"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__["PortalModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__["PlatformModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__["PlatformModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__["ScrollingModule"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__["ScrollingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__["AOverlayModule"], _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__["AOverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ReactiveFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__["ADropdownsModule"], _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__["ADropdownsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__["ASpinnerModule"], _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__["ASpinnerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__["ACustomEventsModule"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__["ACustomEventsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__["AButtonsModule"], _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__["AButtonsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__["TextFieldModule"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__["TextFieldModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__["ACheckboxModule"], _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__["ACheckboxModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__["ADynamicFormsModule"], _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__["ADynamicFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__["APipesModule"], _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__["APipesModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__["SharedContentModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__["SharedContentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__["SharedOverlaysModule"], _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__["SharedOverlaysModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ServiceWorkerModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ServiceWorkerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["DEFAULT_CURRENCY_CODE"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_u"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵINJECTOR_SCOPE"], "root", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ANIMATION_MODULE_TYPE"], "BrowserAnimations", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_e"], "XSRF-TOKEN", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_f"], "X-XSRF-TOKEN", [])]); });
+var AppModuleNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵcmf"](_app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]], function (_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmod"]([_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵCodegenComponentFactoryResolver"], [[8, [_node_modules_angular_router_router_ngfactory__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_router_router_lNgFactory"], _shell_shell_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["ShellWrapperComponentNgFactory"], _shell_bootstrap_bootstrap_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["BootstrapComponentNgFactory"], _shell_panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_6__["BookingPanelComponentNgFactory"], _shell_panel_array_panel_array_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["BookingPanelArrayComponentNgFactory"], _shell_panel_select_panel_select_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["BookingPanelSelectComponentNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵaNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵbNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵcNgFactory"], _shared_components_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["CustomUserSearchFieldComponentNgFactory"], _shared_components_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__["CustomTimeFieldComponentNgFactory"], _shared_components_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["CustomDurationFieldComponentNgFactory"], _overlays_confirm_modal_confirm_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["ConfirmModalComponentNgFactory"], _overlays_embedded_control_modal_embedded_control_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["EmbeddedControlModalComponentNgFactory"], _overlays_booking_modal_booking_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["BookingModalComponentNgFactory"], _app_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__["AppComponentNgFactory"]]], [3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_r"], [[3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common__WEBPACK_IMPORTED_MODULE_17__["NgLocalization"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["NgLocaleLocalization"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_x"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_t"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_ID"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_g"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["IterableDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_p"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_q"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["DomSanitizer"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSanitizerImpl"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Sanitizer"], null, [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["DomSanitizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["HAMMER_GESTURE_CONFIG"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["HammerGestureConfig"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EVENT_MANAGER_PLUGINS"], function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3) { return [new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomEventsPlugin"](p0_0, p0_1, p0_2), new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵKeyEventsPlugin"](p1_0), new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵHammerGesturesPlugin"](p2_0, p2_1, p2_2, p2_3)]; }, [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["HAMMER_GESTURE_CONFIG"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵConsole"], [2, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["HAMMER_LOADER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EventManager"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EventManager"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EVENT_MANAGER_PLUGINS"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSharedStylesHost"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSharedStylesHost"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomRendererFactory2"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomRendererFactory2"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EventManager"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSharedStylesHost"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["AnimationDriver"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_platform_browser_animations_animations_a"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["ɵAnimationStyleNormalizer"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_platform_browser_animations_animations_b"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["ɵAnimationEngine"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵInjectableAnimationEngine"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["AnimationDriver"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["ɵAnimationStyleNormalizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_platform_browser_animations_animations_c"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomRendererFactory2"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["ɵAnimationEngine"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵSharedStylesHost"], null, [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSharedStylesHost"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Testability"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Testability"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_animations__WEBPACK_IMPORTED_MODULE_21__["AnimationBuilder"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵBrowserAnimationBuilder"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_g"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_router__WEBPACK_IMPORTED_MODULE_22__["NoPreloading"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["NoPreloading"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_router__WEBPACK_IMPORTED_MODULE_22__["PreloadingStrategy"], null, [_angular_router__WEBPACK_IMPORTED_MODULE_22__["NoPreloading"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterPreloader"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterPreloader"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["PreloadingStrategy"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_router__WEBPACK_IMPORTED_MODULE_22__["PreloadAllModules"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["PreloadAllModules"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_o"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_c"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["ViewportScroller"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_CONFIGURATION"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_INITIALIZER"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_j"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_BOOTSTRAP_LISTENER"], function (p0_0) { return [p0_0]; }, [_angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_INITIALIZER"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_g"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_e"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_h"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_h"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_f"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HTTP_INTERCEPTORS"], function (p0_0) { return [p0_0]; }, [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_d"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["XhrFactory"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_d"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXhrBackend"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXhrBackend"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["XhrFactory"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpBackend"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXhrBackend"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpHandler"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵHttpInterceptingHandler"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpBackend"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClient"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClient"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpHandler"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_forms_forms_n"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_forms_forms_n"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["Overlay"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["Overlay"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["ScrollStrategyOptions"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayContainer"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayPositionBuilder"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayKeyboardDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_26__["Directionality"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_17__["Location"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["ɵc"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["ɵd"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["Overlay"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormBuilder"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormBuilder"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_a"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_d"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwRegistrationOptions"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwPush"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwPush"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_a"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwUpdate"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwUpdate"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_a"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common__WEBPACK_IMPORTED_MODULE_17__["CommonModule"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["CommonModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵangular_packages_platform_browser_platform_browser_a"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgProbeToken"], function () { return [_angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_b"]()]; }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_h"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_h"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_b"], "ngsw-worker.js", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwRegistrationOptions"], { enabled: true }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], function (p0_0, p1_0, p2_0, p2_1, p2_2, p2_3) { return [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵangular_packages_platform_browser_platform_browser_m"](p0_0), _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_i"](p1_0), _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_c"](p2_0, p2_1, p2_2, p2_3)]; }, [[2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgProbeToken"]], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_h"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_b"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwRegistrationOptions"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"], [[2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](131584, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵConsole"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationModule"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationModule"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["BrowserModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["BrowserModule"], [[3, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["BrowserModule"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["BrowserAnimationsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["BrowserAnimationsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_a"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_e"], [[3, _angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_22__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["DefaultUrlSerializer"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ChildrenOutletContexts"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ChildrenOutletContexts"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_CONFIGURATION"], { useHash: true }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_common__WEBPACK_IMPORTED_MODULE_17__["LocationStrategy"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_d"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["PlatformLocation"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_17__["APP_BASE_HREF"]], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_CONFIGURATION"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_common__WEBPACK_IMPORTED_MODULE_17__["Location"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["Location"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["LocationStrategy"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["PlatformLocation"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["SystemJsNgModuleLoader"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], [2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["SystemJsNgModuleLoaderConfig"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTES"], function () { return [[{ path: "", component: _shell_shell_component__WEBPACK_IMPORTED_MODULE_28__["ShellWrapperComponent"], children: [{ path: "bootstrap", component: _shell_bootstrap_bootstrap_component__WEBPACK_IMPORTED_MODULE_29__["BootstrapComponent"] }, { path: "panel/:system_id", component: _shell_panel_panel_component__WEBPACK_IMPORTED_MODULE_30__["BookingPanelComponent"] }, { path: "panel-array", component: _shell_panel_array_panel_array_component__WEBPACK_IMPORTED_MODULE_31__["BookingPanelArrayComponent"] }, { path: "panel-select", component: _shell_panel_select_panel_select_component__WEBPACK_IMPORTED_MODULE_32__["BookingPanelSelectComponent"] }, { path: "**", redirectTo: "bootstrap" }] }, { path: "**", redirectTo: "bootstrap" }]]; }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_f"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ChildrenOutletContexts"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTES"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_CONFIGURATION"], [2, _angular_router__WEBPACK_IMPORTED_MODULE_22__["UrlHandlingStrategy"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouteReuseStrategy"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"], [[2, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_a"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_routing_module__WEBPACK_IMPORTED_MODULE_33__["AppRoutingModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_33__["AppRoutingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientXsrfModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientXsrfModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_forms_forms_d"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_forms_forms_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_34__["AGoogleAnalyticsModule"], _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_34__["AGoogleAnalyticsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_26__["BidiModule"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_26__["BidiModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_35__["PortalModule"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_35__["PortalModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_36__["PlatformModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_36__["PlatformModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_37__["ScrollingModule"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_37__["ScrollingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_38__["AOverlayModule"], _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_38__["AOverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ReactiveFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_39__["ADropdownsModule"], _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_39__["ADropdownsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_40__["ASpinnerModule"], _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_40__["ASpinnerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_41__["ACustomEventsModule"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_41__["ACustomEventsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_42__["AButtonsModule"], _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_42__["AButtonsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_43__["TextFieldModule"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_43__["TextFieldModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_44__["ACheckboxModule"], _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_44__["ACheckboxModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_45__["ADynamicFormsModule"], _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_45__["ADynamicFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_46__["APipesModule"], _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_46__["APipesModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_shared_module__WEBPACK_IMPORTED_MODULE_47__["SharedContentModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_47__["SharedContentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_48__["SharedOverlaysModule"], _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_48__["SharedOverlaysModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ServiceWorkerModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ServiceWorkerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["DEFAULT_CURRENCY_CODE"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_u"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵINJECTOR_SCOPE"], "root", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ANIMATION_MODULE_TYPE"], "BrowserAnimations", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_e"], "XSRF-TOKEN", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_f"], "X-XSRF-TOKEN", [])]); });
 
 
 
@@ -775,7 +771,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
 /* harmony import */ var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @acaprojects/ngx-overlays */ "./node_modules/@acaprojects/ngx-overlays/fesm2015/acaprojects-ngx-overlays.js");
 /* harmony import */ var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @acaprojects/ngx-google-analytics */ "./node_modules/@acaprojects/ngx-google-analytics/fesm2015/acaprojects-ngx-google-analytics.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
@@ -823,9 +819,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__["BaseClass"] {
-    constructor(_app_ref, _zone, _title, _router, _cache, _settings, _overlay, _composer, _analytics, _hotkeys, _systems, _organisation, _users, _bookings, _spaces, _polling) {
+    constructor(_app_ref, _zone, _title, _router, _cache, _settings, _overlay, _analytics, _hotkeys, _systems, _organisation, _users, _bookings, _spaces, _polling) {
         super();
         this._app_ref = _app_ref;
         this._zone = _zone;
@@ -834,7 +829,6 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
         this._cache = _cache;
         this._settings = _settings;
         this._overlay = _overlay;
-        this._composer = _composer;
         this._analytics = _analytics;
         this._hotkeys = _hotkeys;
         this._systems = _systems;
@@ -849,11 +843,10 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
         this._subjects = {};
         /** Map of observables for state variables */
         this._observers = {};
-        this._organisation.parent = this._users.parent = this._bookings.parent
-            = this._spaces.parent = this._systems.parent = this._polling.parent = this;
+        this._organisation.parent = this._users.parent = this._bookings.parent = this._spaces.parent = this._polling.parent = this;
         this.set('system', null);
         this.log('APP', `Waiting for Application to stablised...`, undefined, undefined, true);
-        this._app_ref.isStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])(_ => _)).subscribe(() => {
+        this._app_ref.isStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])((_) => _)).subscribe(() => {
             this.log('APP', `Application has stablised.`, undefined, undefined, true);
             this._zone.run(() => {
                 this._stable = true;
@@ -929,11 +922,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
     }
     /** Root API Endpoint for engine */
     get engine_endpoint() {
-        return `${this._composer.auth.api_endpoint}/`;
-    }
-    /** Get websocket */
-    get websocket() {
-        return this._composer.realtime;
+        return `/control/api/`;
     }
     /**
      * Create notification popup
@@ -1051,27 +1040,27 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
      * Initialise application services
      */
     init() {
-        this.setupComposer();
-        // Setup analytics
-        this._analytics.enabled = !!this.setting('app.analytics.enabled');
-        if (this._analytics.enabled) {
-            this._analytics.load(this.setting('app.analytics.tracking_id'));
-        }
-        this._composer.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])(_ => _)).subscribe(() => {
+        this.setupComposer().catch(_ => _);
+        this.timeout('inited', () => {
             this._users.init();
+            // Setup analytics
+            this._analytics.enabled = !!this.setting('app.analytics.enabled');
+            if (this._analytics.enabled) {
+                this._analytics.load(this.setting('app.analytics.tracking_id'));
+            }
+            // Add service to window if in debug mode
+            if (window.debug) {
+                window.application = this;
+            }
+            this._hotkeys.listen(['Shift', 'Backslash'], () => {
+                this.navigate('bootstrap', { clear: true });
+            });
             this._organisation.init();
             this._bookings.init();
             this._spaces.init();
             this._polling.init();
-            this._initialised.next(true);
-        });
-        // Add service to window if in debug mode
-        if (window.debug) {
-            window.application = this;
-        }
-        this._hotkeys.listen(['Shift', 'Backslash'], () => {
-            this.navigate('bootstrap', { clear: true });
-        });
+            this.timeout('inited', () => this._initialised.next(true), 500);
+        }, 500);
     }
     /**
      * Initialise the composer library comms
@@ -1094,13 +1083,15 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
             token_uri: `${url}/auth/token`,
             redirect_uri: `${location.origin}${route}/oauth-resp.html`,
             handle_login: !settings.local_login,
-            mock
+            use_iframe: true,
+            token_header: true,
+            mock,
         };
         if (localStorage) {
             localStorage.setItem('oauth_redirect', location.href);
         }
-        this._composer.setup(config);
         this.log('SYSTEM', 'Finsihed setting up composer.');
+        return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_4__["setup"])(config);
     }
     /**
      * Setup handler for cache change events
@@ -1122,17 +1113,6 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
                 this._cache.checkForUpdate();
             }, 5 * 60 * 1000);
         }
-        this._users.init();
-        this._organisation.init();
-        this._bookings.init();
-        this._spaces.init();
-        // Add service to window if in debug mode
-        if (window.debug) {
-            window.application = this;
-        }
-        this._hotkeys.listen(['Shift', 'Backslash'], () => {
-            this.navigate('bootstrap', { clear: true });
-        });
     }
     /**
      * Update the cache and reload the page
@@ -1154,7 +1134,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
         }
     }
 }
-ApplicationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ factory: function ApplicationService_Factory() { return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_3__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_9__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_11__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_13__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__["PollingService"])); }, token: ApplicationService, providedIn: "root" });
+ApplicationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ factory: function ApplicationService_Factory() { return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_3__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_9__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_11__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_13__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__["PollingService"])); }, token: ApplicationService, providedIn: "root" });
 
 
 /***/ }),
@@ -1343,18 +1323,19 @@ class BaseDataClass extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Bas
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseAPIService", function() { return BaseAPIService; });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _base_api_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base-api.class */ "./src/app/services/data/base-api.class.ts");
-/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/base.class */ "./src/app/shared/base.class.ts");
-/* harmony import */ var _shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/utilities/api.utilities */ "./src/app/shared/utilities/api.utilities.ts");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _base_api_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./base-api.class */ "./src/app/services/data/base-api.class.ts");
+/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/base.class */ "./src/app/shared/base.class.ts");
+/* harmony import */ var _shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/utilities/api.utilities */ "./src/app/shared/utilities/api.utilities.ts");
 
 
 
 
-class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["BaseClass"] {
-    constructor(_composer) {
+
+class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_3__["BaseClass"] {
+    constructor() {
         super();
-        this._composer = _composer;
         /** Map of state variables for Service */
         this._subjects = {};
         /** Map of observables for state variables */
@@ -1371,16 +1352,10 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
         this._api_route = 'base';
         this.set('list', []);
     }
-    get http() {
-        return this._composer.http;
-    }
     /**
      * Initailise service
      */
     init() {
-        if (!this.parent || !this.parent.is_initialised) {
-            return this.timeout('init', () => this.init());
-        }
         this.load().then(_ => this._initialised.next(true));
     }
     /**
@@ -1407,7 +1382,7 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
      * @param name Property name
      */
     get(name) {
-        return this._subjects[name] && this._subjects[name] instanceof rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"]
+        return this._subjects[name] && this._subjects[name] instanceof rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]
             ? this._subjects[name].getValue()
             : null;
     }
@@ -1416,8 +1391,8 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
      * @param name Property name
      * @param next Callback for value changes
      */
-    listen(name, next) {
-        return this._observers[name] ? this._observers[name].subscribe(next) : null;
+    listen(name) {
+        return this._observers[name] ? this._observers[name] : null;
     }
     /**
      * Update the value of the named property
@@ -1426,7 +1401,7 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
      */
     set(name, value) {
         if (!this._subjects[name]) {
-            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"](value);
+            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](value);
             this._observers[name] = this._subjects[name].asObservable();
         }
         else {
@@ -1464,13 +1439,13 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
             cache = query_params.cache || 1000;
             delete query_params.cache;
         }
-        const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params);
+        const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params);
         const key = `query|${query}`;
         if (!this._promises[key]) {
             this._promises[key] = new Promise((resolve, reject) => {
                 const url = `${this.route(engine)}${query ? '?' + query : ''}`;
                 let result = [];
-                this.http.get(url).subscribe((d) => {
+                Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["get"])(url).subscribe((d) => {
                     result = d && d instanceof Array
                         ? d.map(i => this.process(i))
                         : (d && !(d instanceof Array) && d.results
@@ -1480,7 +1455,7 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
                     reject(e);
                     this._promises[key] = null;
                 }, () => {
-                    if ((!query || (query_params && query_params.update_list)) && result.length > 0 && result[0] instanceof _base_api_class__WEBPACK_IMPORTED_MODULE_1__["BaseDataClass"]) {
+                    if ((!query || (query_params && query_params.update_list)) && result.length > 0 && result[0] instanceof _base_api_class__WEBPACK_IMPORTED_MODULE_2__["BaseDataClass"]) {
                         this.set('list', this.updateList(this.get('list'), result));
                     }
                     resolve(result);
@@ -1501,13 +1476,13 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
             engine = !!query_params.engine;
             delete query_params.engine;
         }
-        const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params);
+        const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params);
         const key = `show|${id}|${query}`;
         if (!this._promises[key]) {
             this._promises[key] = new Promise((resolve, reject) => {
                 const url = `${this.route(engine)}/${id}${query ? '?' + query : ''}`;
                 let result = null;
-                this.http.get(url).subscribe(d => result = this.process(d), e => {
+                Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["get"])(url).subscribe(d => result = this.process(d), e => {
                     reject(e);
                     this._promises[key] = null;
                 }, () => {
@@ -1526,10 +1501,10 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
     add(form_data, query_params = {}) {
         if (!this._promises.new_item) {
             this._promises.new_item = new Promise((resolve, reject) => {
-                const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params);
+                const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params);
                 const url = `${this.route(query_params.engine)}${query ? '?' + query : ''}`;
                 let result = null;
-                this.http.post(url, form_data).subscribe(d => (result = this.process(d)), e => {
+                Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["post"])(url, form_data).subscribe(d => (result = this.process(d)), e => {
                     reject(e);
                     this.analyticsEvent(`create-${this._name.toLowerCase()}-failed`);
                     this._promises.new_item = null;
@@ -1550,14 +1525,14 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
      * @param form_data Map of data to pass to the API
      */
     task(id, task_name, form_data = {}) {
-        const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(form_data);
+        const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(form_data);
         const key = `task|${id}|${task_name}|${query}`;
         if (!this._promises[key]) {
             this._promises[key] = new Promise((resolve, reject) => {
                 const post_data = Object.assign(Object.assign({}, form_data), { id, _task: task_name });
                 const url = `${this.route(form_data.engine)}/${id}/${task_name}`;
                 let result = null;
-                this.http.post(url, post_data).subscribe(d => result = d, e => {
+                Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["post"])(url, post_data).subscribe(d => result = d, e => {
                     reject(e);
                     this.analyticsEvent(`${this._name.toLowerCase()}-task-${task_name}-failed`, id);
                     this._promises[key] = null;
@@ -1577,9 +1552,9 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
      * @param delay Delay between each poll event
      */
     poll(id, query_params = {}, delay = 5000) {
-        const key = `poll|${id || ''}|${Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params) || ''}`;
+        const key = `poll|${id || ''}|${Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params) || ''}`;
         this.stopPoll(id, query_params);
-        this._subjects[key] = new rxjs__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        this._subjects[key] = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
         this._observers[key] = this._subjects[key].asObservable();
         const sub = this._subjects[key];
         const query = Object.assign(Object.assign({}, (query_params || {})), { _poll: true });
@@ -1603,7 +1578,7 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
      * @param query_params
      */
     stopPoll(id, query_params = {}) {
-        const key = `poll|${id || ''}|${Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params) || ''}`;
+        const key = `poll|${id || ''}|${Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params) || ''}`;
         if (this._subjects[key]) {
             this._subjects[key].complete();
             this._subjects[key] = null;
@@ -1620,10 +1595,10 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
         const key = `update|${id}`;
         if (!this._promises[key]) {
             this._promises[key] = new Promise((resolve, reject) => {
-                const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params);
+                const query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params);
                 const url = `${this.route(query_params.engine)}/${id}${query ? '?' + query : ''}`;
                 let result = null;
-                this.http.put(url, form_data).subscribe(d => (result = this.process(d)), e => {
+                Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["put"])(url, form_data).subscribe(d => (result = this.process(d)), e => {
                     reject(e);
                     this.analyticsEvent(`update-${this._name.toLowerCase()}-failed`, id);
                     this._promises[key] = null;
@@ -1646,7 +1621,7 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
         if (!this._promises[key]) {
             this._promises[key] = new Promise((resolve, reject) => {
                 const url = `${this.route()}/${id}`;
-                this.http.delete(url).subscribe(_ => null, e => reject(e), () => {
+                Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["del"])(url).subscribe(_ => null, e => reject(e), () => {
                     this.set('list', this.removeItem(this.get('list'), { id }));
                     resolve();
                 });
@@ -2091,22 +2066,18 @@ function getNextFreeBookingSlot(list, date = dayjs__WEBPACK_IMPORTED_MODULE_3__(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingsService", function() { return BookingsService; });
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
-/* harmony import */ var _booking_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./booking.class */ "./src/app/services/data/bookings/booking.class.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
+/* harmony import */ var _booking_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./booking.class */ "./src/app/services/data/bookings/booking.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
 
-
-
-class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"] {
-    constructor(_composer) {
-        super(_composer);
-        this._composer = _composer;
+class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_0__["BaseAPIService"] {
+    constructor() {
+        super();
         this._name = 'Bookings';
         this._api_route = 'bookings';
         this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.icaluid.localeCompare(b.icaluid);
@@ -2151,12 +2122,12 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAP
                     },
                     staff_id: '',
                     start: booking.date.valueOf(),
-                    end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.period.duration, 'm').valueOf(),
+                    end: dayjs__WEBPACK_IMPORTED_MODULE_2__(booking.date).add(booking.period.duration, 'm').valueOf(),
                     host: booking.host || booking.user || { name: 'Panel User' }
                 };
                 const module = this.parent.Systems.get(space.id, 'Bookings');
                 if (request && module) {
-                    module.exec('create_meeting', [request]).then(() => {
+                    module.execute('create_meeting', [request]).then(() => {
                         this.analyticsEvent('create-success');
                         resolve();
                     }, (err) => {
@@ -2174,10 +2145,10 @@ class BookingsService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAP
         });
     }
     process(raw_data) {
-        return new _booking_class__WEBPACK_IMPORTED_MODULE_2__["Booking"](this, raw_data);
+        return new _booking_class__WEBPACK_IMPORTED_MODULE_1__["Booking"](this, raw_data);
     }
 }
-BookingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: BookingsService, providedIn: "root" });
+BookingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function BookingsService_Factory() { return new BookingsService(); }, token: BookingsService, providedIn: "root" });
 
 
 /***/ }),
@@ -2378,21 +2349,17 @@ class Organisation extends _base_api_class__WEBPACK_IMPORTED_MODULE_1__["BaseDat
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrganisationService", function() { return OrganisationService; });
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
-/* harmony import */ var _organisation_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
-/* harmony import */ var _building_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./building.class */ "./src/app/services/data/organisation/building.class.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
+/* harmony import */ var _organisation_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
+/* harmony import */ var _building_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./building.class */ "./src/app/services/data/organisation/building.class.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
 
-
-
-class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"] {
-    constructor(_composer) {
-        super(_composer);
-        this._composer = _composer;
+class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_0__["BaseAPIService"] {
+    constructor() {
+        super();
         this._name = 'Organisation';
         this._api_route = 'zones';
         this.set('buildings', []);
@@ -2416,7 +2383,7 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["Ba
         return (this.buildings.find(i => i.id === this._active_building));
     }
     set building(bld) {
-        if (bld instanceof _building_class__WEBPACK_IMPORTED_MODULE_3__["Building"]) {
+        if (bld instanceof _building_class__WEBPACK_IMPORTED_MODULE_2__["Building"]) {
             this._active_building = bld.id;
         }
         else {
@@ -2477,7 +2444,7 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["Ba
     loadOrganisation() {
         return new Promise((resolve) => {
             this.query({ tags: 'org', engine: true }).then((org_data) => {
-                this._organisation = new _organisation_class__WEBPACK_IMPORTED_MODULE_2__["Organisation"](this, org_data[0]);
+                this._organisation = new _organisation_class__WEBPACK_IMPORTED_MODULE_1__["Organisation"](this, org_data[0]);
                 this.set('organisation', this._organisation);
                 this.shown_error = false;
                 resolve();
@@ -2496,7 +2463,7 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["Ba
     loadBuildings() {
         return new Promise((resolve) => {
             this.query({ tags: 'building', engine: true }).then((bld_data) => {
-                const buildings = bld_data.map(i => new _building_class__WEBPACK_IMPORTED_MODULE_3__["Building"](this, i));
+                const buildings = bld_data.map(i => new _building_class__WEBPACK_IMPORTED_MODULE_2__["Building"](this, i));
                 this.set('buildings', buildings || []);
                 if (!this._active_building && buildings && buildings.length > 0) {
                     this._active_building = buildings[0].id;
@@ -2522,7 +2489,7 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["Ba
         });
     }
 }
-OrganisationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function OrganisationService_Factory() { return new OrganisationService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: OrganisationService, providedIn: "root" });
+OrganisationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function OrganisationService_Factory() { return new OrganisationService(); }, token: OrganisationService, providedIn: "root" });
 
 
 /***/ }),
@@ -2539,11 +2506,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PingHistory", function() { return PingHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PollingService", function() { return PollingService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-
-
+/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
@@ -2557,10 +2521,9 @@ class PingHistory {
 }
 const SECONDS = 1000;
 const MINUTES = 60 * SECONDS;
-class PollingService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseAPIService"] {
-    constructor(_composer) {
-        super(_composer);
-        this._composer = _composer;
+class PollingService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"] {
+    constructor() {
+        super();
         this._name = 'Users';
         this._api_route = 'pings';
     }
@@ -2589,7 +2552,7 @@ class PollingService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseAPI
         return new PingHistory(data);
     }
 }
-PollingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function PollingService_Factory() { return new PollingService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_1__["ComposerService"])); }, token: PollingService, providedIn: "root" });
+PollingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ factory: function PollingService_Factory() { return new PollingService(); }, token: PollingService, providedIn: "root" });
 
 
 /***/ }),
@@ -2801,23 +2764,19 @@ function generateMockSpace(id, zones) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpacesService", function() { return SpacesService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
-/* harmony import */ var _space_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./space.class */ "./src/app/services/data/spaces/space.class.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
+/* harmony import */ var _space_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./space.class */ "./src/app/services/data/spaces/space.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
 
 
-
-
-class SpacesService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseAPIService"] {
-    constructor(_composer) {
-        super(_composer);
-        this._composer = _composer;
+class SpacesService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"] {
+    constructor() {
+        super();
         this._name = 'Space';
         this._api_route = 'rooms';
         this._compare = (a, b) => !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
@@ -2835,7 +2794,7 @@ class SpacesService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseAPIS
             throw new Error('Space avilability requires request options');
         }
         if (!options.date) {
-            options.date = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('m').valueOf();
+            options.date = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m').valueOf();
         }
         const key = `available|${options.id ? options.id : ''}`;
         if (!this._promises[key]) {
@@ -2871,10 +2830,10 @@ class SpacesService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseAPIS
      * @param raw_data Raw API data
      */
     process(raw_data) {
-        return new _space_class__WEBPACK_IMPORTED_MODULE_3__["Space"](this, raw_data);
+        return new _space_class__WEBPACK_IMPORTED_MODULE_2__["Space"](this, raw_data);
     }
 }
-SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function SpacesService_Factory() { return new SpacesService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_1__["ComposerService"])); }, token: SpacesService, providedIn: "root" });
+SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function SpacesService_Factory() { return new SpacesService(); }, token: SpacesService, providedIn: "root" });
 
 
 /***/ }),
@@ -2889,39 +2848,26 @@ SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInj
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SystemsManagerService", function() { return SystemsManagerService; });
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
 /* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/base.class */ "./src/app/shared/base.class.ts");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
 
-
 class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["BaseClass"] {
-    constructor(_composer) {
+    constructor() {
         super();
-        this._composer = _composer;
         /** Subject for System list */
-        this._list = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]([]);
-        this._composer.initialised.subscribe((state) => {
-            if (state) {
-                this._resources = this._composer.systems;
-                this.load();
-            }
-        });
+        this._list = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"]([]);
+        /** Observable for system list */
+        this.systems = this._list.asObservable();
+        this.timeout('init', () => this.load(), 2000);
     }
     /** List of available systems */
     get list() {
         return this._list.getValue() || [];
-    }
-    /**
-     * List to changes on observable
-     * @param name Name of the observable
-     * @param next Callback for changes to the observable
-     */
-    listen(name, next) {
-        return this._list.subscribe(next);
     }
     /**
      * Get engine module for the given system
@@ -2930,33 +2876,33 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
      * @param index Index of the module
      */
     get(sys_id, mod_id, index) {
-        return this._composer.bindings.module(sys_id, mod_id, index);
+        return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(sys_id, mod_id, index);
     }
     /**
      * Load Systems
      */
     load() {
-        if (!this.parent || !this.parent.is_initialised || !this.parent.Users || !this.parent.Users.initialised) {
-            return this.timeout('load', () => this.load());
-        }
         this.loadSystems();
     }
     /**
      * Load one page of systems
      * @param offset Item offset for the page to load
      */
-    loadSystems(offset = 0, limit = 250) {
-        this._resources.query({ offset, limit }).then((list) => {
-            const total = this._resources.last_total;
-            const systems = [...this.list, ...list];
-            this._list.next(systems.sort((a, b) => (a.name || '').localeCompare(b.name)));
-            if (systems.length < total) {
+    loadSystems(offset = 0, limit = 2000) {
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["querySystems"])({ offset, limit })
+            .toPromise()
+            .then((details) => {
+            const systems = [...this.list, ...details.data];
+            systems.sort((a, b) => (a.name || '').localeCompare(b.name));
+            this._list.next(systems);
+            if (systems.length < details.total) {
                 this.loadSystems(systems.length);
             }
-        });
+        })
+            .catch((e) => this.timeout('retry', () => this.loadSystems(offset), 2000));
     }
 }
-SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function SystemsManagerService_Factory() { return new SystemsManagerService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"])); }, token: SystemsManagerService, providedIn: "root" });
+SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function SystemsManagerService_Factory() { return new SystemsManagerService(); }, token: SystemsManagerService, providedIn: "root" });
 
 
 /***/ }),
@@ -3160,9 +3106,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersService", function() { return UsersService; });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ts-md5/dist/md5 */ "./node_modules/ts-md5/dist/md5.js");
-/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ts-md5/dist/md5 */ "./node_modules/ts-md5/dist/md5.js");
+/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
 /* harmony import */ var _base_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../base.service */ "./src/app/services/data/base.service.ts");
 /* harmony import */ var _user_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user.class */ "./src/app/services/data/users/user.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
@@ -3178,11 +3124,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPIService"] {
-    constructor(_composer, uhttp, location) {
-        super(_composer);
-        this._composer = _composer;
+    constructor(uhttp, location) {
+        super();
         this.uhttp = uhttp;
         this.location = location;
         this._name = 'Users';
@@ -3207,7 +3151,7 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPISe
                 .valueOf();
         }
         const path = `${location.origin}${this.parent.setting('composer.route') || ''}/oauth-resp.html`;
-        const client_id = ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__["Md5"].hashStr(path);
+        const client_id = ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_2__["Md5"].hashStr(path);
         if (sessionStorage) {
             sessionStorage.setItem(`${client_id}_access_token`, token);
             sessionStorage.setItem(`${client_id}_expires_at`, `${expiry}`);
@@ -3236,7 +3180,7 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPISe
                 }
                 const url = (options ? options.url : '') || '/auth/signin';
                 this.uhttp.post(url, query_params, { headers }).subscribe(_ => null, e => reject(e), () => {
-                    this._composer.auth.authorise();
+                    Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_3__["authorise"])();
                     resolve();
                 });
             });
@@ -3247,7 +3191,7 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPISe
      * Logout of user and redirect to logout URL
      */
     logout() {
-        this._composer.auth.logout();
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_3__["logout"])();
     }
     /**
      * Load initial data for the service
@@ -3282,7 +3226,7 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPISe
         return new _user_class__WEBPACK_IMPORTED_MODULE_5__["User"](this, raw_data);
     }
 }
-UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({ factory: function UsersService_Factory() { return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["Location"])); }, token: UsersService, providedIn: "root" });
+UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({ factory: function UsersService_Factory() { return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["Location"])); }, token: UsersService, providedIn: "root" });
 
 
 /***/ }),
@@ -3659,40 +3603,6 @@ class BaseClass {
         }
     }
 }
-
-
-/***/ }),
-
-/***/ "./src/app/shared/base.component.ngfactory.js":
-/*!****************************************************!*\
-  !*** ./src/app/shared/base.component.ngfactory.js ***!
-  \****************************************************/
-/*! exports provided: RenderType_BaseComponent, View_BaseComponent_0, View_BaseComponent_Host_0, BaseComponentNgFactory */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderType_BaseComponent", function() { return RenderType_BaseComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_BaseComponent_0", function() { return View_BaseComponent_0; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_BaseComponent_Host_0", function() { return View_BaseComponent_Host_0; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseComponentNgFactory", function() { return BaseComponentNgFactory; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.component */ "./src/app/shared/base.component.ts");
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes,extraRequire}
- * tslint:disable
- */ 
-
-
-var styles_BaseComponent = [""];
-var RenderType_BaseComponent = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵcrt"]({ encapsulation: 0, styles: styles_BaseComponent, data: {} });
-
-function View_BaseComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵvid"](0, [], null, null); }
-function View_BaseComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵeld"](0, 0, null, null, 1, "a-very-basic-component-base-that-should-not-be-used", [], null, null, null, View_BaseComponent_0, RenderType_BaseComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵdid"](1, 180224, null, 0, _base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"], [], null, null)], null, null); }
-var BaseComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵccf"]("a-very-basic-component-base-that-should-not-be-used", _base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"], View_BaseComponent_Host_0, {}, {}, []);
-
 
 
 /***/ }),
@@ -4381,6 +4291,110 @@ _globals_form_fields__WEBPACK_IMPORTED_MODULE_7__["FORM_FIELDS"].host = CustomUs
 
 /***/ }),
 
+/***/ "./src/app/shared/directives/binding/binding.directive.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/shared/directives/binding/binding.directive.ts ***!
+  \****************************************************************/
+/*! exports provided: BindingDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BindingDirective", function() { return BindingDirective; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
+
+
+class BindingDirective {
+    constructor(_element, _renderer) {
+        this._element = _element;
+        this._renderer = _renderer;
+        /** Index of the system to bind */
+        this.index = 1;
+        /** ID of the system to bind to */
+        this.params = [];
+        /** Emitter for changes to the value of the binding */
+        this.modelChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    ngOnInit() {
+        this.init_listener = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["onlineState"])().subscribe(init => {
+            if (init) {
+                this.bindVariable();
+                if (this.init_listener) {
+                    this.init_listener.unsubscribe();
+                    this.init_listener = null;
+                }
+            }
+        });
+    }
+    ngOnDestroy() {
+        if (this.listener) {
+            this.listener.unsubscribe();
+            this.listener = null;
+        }
+        if (this.unbind) {
+            this.unbind();
+            this.unbind = null;
+        }
+        if (this.event_listener) {
+            this.event_listener();
+            this.event_listener = null;
+        }
+    }
+    ngOnChanges(changes) {
+        if (changes.sys || changes.mod || changes.bind) {
+            this.ngOnDestroy();
+            this.bindVariable();
+        }
+        if (changes.on_event && this.on_event) {
+            if (this.event_listener) {
+                this.event_listener();
+                this.event_listener = null;
+            }
+            this.event_listener = this._renderer.listen(this._element.nativeElement, this.on_event, () => this.execute());
+        }
+    }
+    /** Bind to set status variable */
+    bindVariable() {
+        if (Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["authority"])() && this.bind && this.sys && this.mod) {
+            const module = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(this.sys, this.mod, this.index);
+            const binding = module.binding(this.bind);
+            this.unbind = binding.bind();
+            this.listener = binding.listen().subscribe(value => setTimeout(() => {
+                this.model = value;
+                this.modelChange.emit(this.model);
+            }, 10));
+        }
+    }
+    /** Excute the set method on the module */
+    execute() {
+        if (Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["authority"])() && this.exec && this.sys && this.mod) {
+            const module = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(this.sys, this.mod, this.index);
+            module.execute(this.exec, this.params).then(result => {
+                // Emit exec result if not bound to status variable
+                if (!this.bind) {
+                    this.model = result;
+                    this.modelChange.emit(this.model);
+                }
+            });
+        }
+    }
+    /**
+     * Update local value when form control value is changed
+     * @param value The new value for the component
+     */
+    writeValue(value) {
+        this.model = value;
+        this.modelChange.emit(this.model);
+        if (this.exec) {
+            this.execute();
+        }
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/app/shared/globals/application.ts":
 /*!***********************************************!*\
   !*** ./src/app/shared/globals/application.ts ***!
@@ -4470,11 +4484,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵ4", function() { return ɵ4; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵ5", function() { return ɵ5; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵ6", function() { return ɵ6; });
-/* harmony import */ var _services_data_spaces_space_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
-/* harmony import */ var _services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
-/* harmony import */ var _services_data_users_user_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data/users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
+/* harmony import */ var _services_data_spaces_space_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/data/spaces/space.utilities */ "./src/app/services/data/spaces/space.utilities.ts");
+/* harmony import */ var _services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+/* harmony import */ var _services_data_users_user_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/data/users/user.utilities */ "./src/app/services/data/users/user.utilities.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -4489,8 +4505,8 @@ const IMAGES = ['large_down', 'large_up', 'small_down', 'small_up'];
  */
 function createSystem() {
     const id = `sys-${LETTERS[Math.floor(index / NUMBERS.length)]}${NUMBERS[(index++) % NUMBERS.length]}`;
-    Object(_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_1__["setMockBookingStartDatetime"])(dayjs__WEBPACK_IMPORTED_MODULE_3__().minute(-50).valueOf());
-    const space = Object(_services_data_spaces_space_utilities__WEBPACK_IMPORTED_MODULE_0__["generateMockSpace"])(id);
+    Object(_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_2__["setMockBookingStartDatetime"])(dayjs__WEBPACK_IMPORTED_MODULE_4__().minute(-50).valueOf());
+    const space = Object(_services_data_spaces_space_utilities__WEBPACK_IMPORTED_MODULE_1__["generateMockSpace"])(id);
     SPACE_LIST.push(space);
     const bindings = {
         touch_enabled: true,
@@ -4504,7 +4520,7 @@ function createSystem() {
         id, name: space.name,
         Bookings: []
     };
-    system.Bookings.push(Object.assign(Object.assign({}, bindings), { room_name: space.name, today: space.bookings, reload: dayjs__WEBPACK_IMPORTED_MODULE_3__().add(1, 'h').unix(), $start_meeting: (time) => {
+    system.Bookings.push(Object.assign(Object.assign({}, bindings), { room_name: space.name, today: space.bookings, reload: dayjs__WEBPACK_IMPORTED_MODULE_4__().add(1, 'h').unix(), $start_meeting: (time) => {
             system.Bookings[0].last_meeting_started = time;
         }, $cancel_meeting: (time, reason) => {
             const list = system.Bookings[0].today;
@@ -4516,15 +4532,10 @@ function createSystem() {
 }
 const ɵ0 = i => createSystem();
 const MOCK_SYSTEMS = Array(10).fill(0).map(ɵ0);
-// Add mock systems to the global space so that the mock websocket can hook into them
-if (!window.control) {
-    window.control = { systems: {} };
+for (const system of MOCK_SYSTEMS) {
+    Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["registerSystem"])(system.id, system);
 }
-window.control.systems = MOCK_SYSTEMS.reduce((a, v) => {
-    a[v.id] = v;
-    return a;
-}, {});
-const ɵ1 = i => Object(_services_data_users_user_utilities__WEBPACK_IMPORTED_MODULE_2__["generateMockUser"])();
+const ɵ1 = i => Object(_services_data_users_user_utilities__WEBPACK_IMPORTED_MODULE_3__["generateMockUser"])();
 // Add mock data for API endpoints
 const USER_LIST = Array(1000).fill(0).map(ɵ1);
 const ɵ2 = _ => ({ total: 10, results: MOCK_SYSTEMS }), ɵ3 = _ => SPACE_LIST, ɵ4 = _ => USER_LIST, ɵ5 = _ => USER_LIST[0], ɵ6 = _ => ({ total: 1, results: [{ id: 'zone_org-1' }] });
@@ -4560,7 +4571,9 @@ const handlers = [
         callback: ɵ6
     }
 ];
-window.control.handlers = handlers;
+for (const handler of handlers) {
+    Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["registerMockEndpoint"])(handler);
+}
 
 
 
@@ -4581,13 +4594,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_user_search_field_user_search_field_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/user-search-field/user-search-field.component */ "./src/app/shared/components/user-search-field/user-search-field.component.ts");
 /* harmony import */ var _components_time_field_time_field_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/time-field/time-field.component */ "./src/app/shared/components/time-field/time-field.component.ts");
 /* harmony import */ var _components_duration_field_duration_field_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/duration-field/duration-field.component */ "./src/app/shared/components/duration-field/duration-field.component.ts");
+/* harmony import */ var _directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./directives/binding/binding.directive */ "./src/app/shared/directives/binding/binding.directive.ts");
+
 
 
 
 
 
 const COMPONENTS = [
-    _base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]
+    _base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"],
+    _directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_5__["BindingDirective"]
 ];
 const ENTRY_COMPONENT = [
     _components_user_search_field_user_search_field_component__WEBPACK_IMPORTED_MODULE_2__["CustomUserSearchFieldComponent"],
@@ -5249,11 +5265,11 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
                     this.bootstrap();
                 }
             }));
-            this.subscription('system_list', this.service.Systems.listen('list', (systems) => {
+            this.subscription('system_list', this.service.Systems.systems.subscribe((systems) => {
                 this.system_list = systems || [];
                 this.manual_input = !this.system_list || this.system_list.length <= 0;
+                this.loading = false;
             }));
-            this.loadList();
             this.checkBootstrapped();
         });
     }
@@ -5267,21 +5283,6 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         else if (this.selected_system) {
             this.configure(this.selected_system.id);
         }
-    }
-    /**
-     * Grab the list of systems from the Systems Manager
-     * @param tries Number of previous attempts
-     */
-    loadList(tries = 0) {
-        this.system_list = this.service.Systems.list || [];
-        if ((!this.system_list || this.system_list.length <= 0) && tries < 10) {
-            this.timeout('load', () => this.loadList(++tries));
-            return;
-        }
-        if (!this.system_list || this.system_list.length <= 0) {
-            this.manual_input = true;
-        }
-        this.loading = false;
     }
     /**
      * Check if the application has previously been bootstrapped
@@ -5465,7 +5466,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingPanelSelectComponentNgFactory", function() { return BookingPanelSelectComponentNgFactory; });
 /* harmony import */ var _panel_select_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./panel-select.component.scss.shim.ngstyle */ "./src/app/shell/panel-select/panel-select.component.scss.shim.ngstyle.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+/* harmony import */ var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/directives/binding/binding.directive */ "./src/app/shared/directives/binding/binding.directive.ts");
 /* harmony import */ var _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@acaprojects/ngx-spinners/acaprojects-ngx-spinners.ngfactory */ "./node_modules/@acaprojects/ngx-spinners/acaprojects-ngx-spinners.ngfactory.js");
 /* harmony import */ var _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-spinners */ "./node_modules/@acaprojects/ngx-spinners/fesm2015/acaprojects-ngx-spinners.js");
 /* harmony import */ var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
@@ -5505,13 +5506,13 @@ var RenderType_BookingPanelSelectComponent = _angular_core__WEBPACK_IMPORTED_MOD
 function View_BookingPanelSelectComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "room_name"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.system_name[_v.parent.context.$implicit] = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "icon"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "icon"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.system_icon[_v.parent.context.$implicit] = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "today"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "today"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = (_co.updateStatus(_v.parent.context.$implicit, $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.parent.context.$implicit; var currVal_1 = "Bookings"; var currVal_2 = "room_name"; var currVal_3 = _co.system_name[_v.parent.context.$implicit]; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _v.parent.context.$implicit; var currVal_5 = "Bookings"; var currVal_6 = "icon"; var currVal_7 = _co.system_icon[_v.parent.context.$implicit]; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _v.parent.context.$implicit; var currVal_9 = "Bookings"; var currVal_10 = "today"; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10); }, null); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.parent.context.$implicit; var currVal_1 = "Bookings"; var currVal_2 = "room_name"; var currVal_3 = _co.system_name[_v.parent.context.$implicit]; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _v.parent.context.$implicit; var currVal_5 = "Bookings"; var currVal_6 = "icon"; var currVal_7 = _co.system_icon[_v.parent.context.$implicit]; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _v.parent.context.$implicit; var currVal_9 = "Bookings"; var currVal_10 = "today"; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10); }, null); }
 function View_BookingPanelSelectComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 0, "img", [], [[8, "src", 4]], null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.system_icon[_v.parent.context.$implicit]; _ck(_v, 0, 0, currVal_0); }); }
 function View_BookingPanelSelectComponent_5(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "a-spinner", [["circle-ring", ""], ["color", "#fff"]], null, null, null, _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ɵc_0"], _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ɵc"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 49152, null, 0, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_4__["ɵc"], [], { color: [0, "color"] }, null)], function (_ck, _v) { var currVal_0 = "#fff"; _ck(_v, 1, 0, currVal_0); }, null); }
 function View_BookingPanelSelectComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "div", [["class", "item"]], null, [[null, "tapped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
@@ -5670,7 +5671,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-buttons */ "./node_modules/@acaprojects/ngx-buttons/fesm2015/acaprojects-ngx-buttons.js");
 /* harmony import */ var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+/* harmony import */ var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/directives/binding/binding.directive */ "./src/app/shared/directives/binding/binding.directive.ts");
 /* harmony import */ var _booking_actions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./booking-actions.component */ "./src/app/shell/panel/booking-actions/booking-actions.component.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /**
@@ -5717,40 +5718,40 @@ function View_PanelBookingActionsComponent_1(_l) { return _angular_core__WEBPACK
 function View_PanelBookingActionsComponent_5(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 24, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "booking_disabled"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.no_booking = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "last_meeting_started"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "last_meeting_started"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.last_started = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "is_endable"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "is_endable"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.is_endable = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["bind", "timeout"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["bind", "timeout"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.pending_timeout = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "i", [["bind", "cancel_timeout"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "i", [["bind", "cancel_timeout"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.cancel_timeout = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "i", [["bind", "ask_start"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "i", [["bind", "ask_start"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.ask_start = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "i", [["bind", "ask_end"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "i", [["bind", "ask_end"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.ask_end = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 1, "i", [["bind", "default_title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 1, "i", [["bind", "default_title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.default_title = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 1, "i", [["bind", "min_duration"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 1, "i", [["bind", "min_duration"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.min_duration = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "i", [["bind", "max_duration"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "i", [["bind", "max_duration"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.max_duration = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 1, "i", [["bind", "business_start"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 1, "i", [["bind", "business_start"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.business_start = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](23, 0, null, null, 1, "i", [["bind", "business_end"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](23, 0, null, null, 1, "i", [["bind", "business_end"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.business_end = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "booking_disabled"; var currVal_3 = _co.no_booking; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "last_meeting_started"; var currVal_7 = _co.last_started; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "is_endable"; var currVal_11 = _co.is_endable; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = _co.space.id; var currVal_13 = "Bookings"; var currVal_14 = "timeout"; var currVal_15 = _co.pending_timeout; _ck(_v, 8, 0, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_16 = _co.space.id; var currVal_17 = "Bookings"; var currVal_18 = "cancel_timeout"; var currVal_19 = _co.cancel_timeout; _ck(_v, 10, 0, currVal_16, currVal_17, currVal_18, currVal_19); var currVal_20 = _co.space.id; var currVal_21 = "Bookings"; var currVal_22 = "ask_start"; var currVal_23 = _co.ask_start; _ck(_v, 12, 0, currVal_20, currVal_21, currVal_22, currVal_23); var currVal_24 = _co.space.id; var currVal_25 = "Bookings"; var currVal_26 = "ask_end"; var currVal_27 = _co.ask_end; _ck(_v, 14, 0, currVal_24, currVal_25, currVal_26, currVal_27); var currVal_28 = _co.space.id; var currVal_29 = "Bookings"; var currVal_30 = "default_title"; var currVal_31 = _co.default_title; _ck(_v, 16, 0, currVal_28, currVal_29, currVal_30, currVal_31); var currVal_32 = _co.space.id; var currVal_33 = "Bookings"; var currVal_34 = "min_duration"; var currVal_35 = _co.min_duration; _ck(_v, 18, 0, currVal_32, currVal_33, currVal_34, currVal_35); var currVal_36 = _co.space.id; var currVal_37 = "Bookings"; var currVal_38 = "max_duration"; var currVal_39 = _co.max_duration; _ck(_v, 20, 0, currVal_36, currVal_37, currVal_38, currVal_39); var currVal_40 = _co.space.id; var currVal_41 = "Bookings"; var currVal_42 = "business_start"; var currVal_43 = _co.business_start; _ck(_v, 22, 0, currVal_40, currVal_41, currVal_42, currVal_43); var currVal_44 = _co.space.id; var currVal_45 = "Bookings"; var currVal_46 = "business_end"; var currVal_47 = _co.business_end; _ck(_v, 24, 0, currVal_44, currVal_45, currVal_46, currVal_47); }, null); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "booking_disabled"; var currVal_3 = _co.no_booking; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "last_meeting_started"; var currVal_7 = _co.last_started; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "is_endable"; var currVal_11 = _co.is_endable; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = _co.space.id; var currVal_13 = "Bookings"; var currVal_14 = "timeout"; var currVal_15 = _co.pending_timeout; _ck(_v, 8, 0, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_16 = _co.space.id; var currVal_17 = "Bookings"; var currVal_18 = "cancel_timeout"; var currVal_19 = _co.cancel_timeout; _ck(_v, 10, 0, currVal_16, currVal_17, currVal_18, currVal_19); var currVal_20 = _co.space.id; var currVal_21 = "Bookings"; var currVal_22 = "ask_start"; var currVal_23 = _co.ask_start; _ck(_v, 12, 0, currVal_20, currVal_21, currVal_22, currVal_23); var currVal_24 = _co.space.id; var currVal_25 = "Bookings"; var currVal_26 = "ask_end"; var currVal_27 = _co.ask_end; _ck(_v, 14, 0, currVal_24, currVal_25, currVal_26, currVal_27); var currVal_28 = _co.space.id; var currVal_29 = "Bookings"; var currVal_30 = "default_title"; var currVal_31 = _co.default_title; _ck(_v, 16, 0, currVal_28, currVal_29, currVal_30, currVal_31); var currVal_32 = _co.space.id; var currVal_33 = "Bookings"; var currVal_34 = "min_duration"; var currVal_35 = _co.min_duration; _ck(_v, 18, 0, currVal_32, currVal_33, currVal_34, currVal_35); var currVal_36 = _co.space.id; var currVal_37 = "Bookings"; var currVal_38 = "max_duration"; var currVal_39 = _co.max_duration; _ck(_v, 20, 0, currVal_36, currVal_37, currVal_38, currVal_39); var currVal_40 = _co.space.id; var currVal_41 = "Bookings"; var currVal_42 = "business_start"; var currVal_43 = _co.business_start; _ck(_v, 22, 0, currVal_40, currVal_41, currVal_42, currVal_43); var currVal_44 = _co.space.id; var currVal_45 = "Bookings"; var currVal_46 = "business_end"; var currVal_47 = _co.business_end; _ck(_v, 24, 0, currVal_44, currVal_45, currVal_46, currVal_47); }, null); }
 function View_PanelBookingActionsComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "booking-actions"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelBookingActionsComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelBookingActionsComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space; _ck(_v, 2, 0, currVal_0); var currVal_1 = _co.space; _ck(_v, 4, 0, currVal_1); }, null); }
 function View_PanelBookingActionsComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "panel-booking-actions", [], null, null, null, View_PanelBookingActionsComponent_0, RenderType_PanelBookingActionsComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _booking_actions_component__WEBPACK_IMPORTED_MODULE_8__["PanelBookingActionsComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["ApplicationService"]], null, null)], null, null); }
 var PanelBookingActionsComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("panel-booking-actions", _booking_actions_component__WEBPACK_IMPORTED_MODULE_8__["PanelBookingActionsComponent"], View_PanelBookingActionsComponent_Host_0, { space: "space" }, {}, []);
@@ -5893,7 +5894,7 @@ class PanelBookingActionsComponent extends _shared_base_component__WEBPACK_IMPOR
             const module = this.service.Systems.get(this.space.id, 'Bookings');
             if (meeting && module) {
                 const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(meeting.date);
-                module.exec('start_meeting', [meeting.date]).then(_ => {
+                module.execute('start_meeting', [meeting.date]).then(_ => {
                     this.service.Analytics.event('Checkin', 'checked-in', `${this.space.id} at ${date.format('DD MMM YYYY, h:mm A Z')}`);
                 }, (e) => {
                     this.service.notifyError(`Error starting meeting. ${e}`);
@@ -5925,7 +5926,7 @@ class PanelBookingActionsComponent extends _shared_base_component__WEBPACK_IMPOR
             const module = this.service.Systems.get(this.space.id, 'Bookings');
             if (meeting && module) {
                 const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(meeting.date);
-                module.exec('cancel_meeting', [meeting.date, reason]).then(_ => {
+                module.execute('cancel_meeting', [meeting.date, reason]).then(_ => {
                     this.service.Analytics.event('Checkin', 'cancelled', `${this.space.id} at ${date.format('DD MMM YYYY, h:mm A Z')} | ${reason}`);
                 }, (e) => {
                     this.service.notifyError(`Error starting meeting. ${e}`);
@@ -5959,7 +5960,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-buttons */ "./node_modules/@acaprojects/ngx-buttons/fesm2015/acaprojects-ngx-buttons.js");
 /* harmony import */ var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+/* harmony import */ var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/directives/binding/binding.directive */ "./src/app/shared/directives/binding/binding.directive.ts");
 /* harmony import */ var _custom_actions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./custom-actions.component */ "./src/app/shell/panel/custom-actions/custom-actions.component.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /**
@@ -5999,13 +6000,13 @@ function View_PanelCustomActionsComponent_1(_l) { return _angular_core__WEBPACK_
 function View_PanelCustomActionsComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "control_url"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.control_url = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "can_control"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "can_control"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.can_control = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "has_catering"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "has_catering"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.catering = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "control_url"; var currVal_3 = _co.control_url; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "can_control"; var currVal_7 = _co.can_control; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "has_catering"; var currVal_11 = _co.catering; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); }, null); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "control_url"; var currVal_3 = _co.control_url; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "can_control"; var currVal_7 = _co.can_control; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "has_catering"; var currVal_11 = _co.catering; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); }, null); }
 function View_PanelCustomActionsComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [["class", "custom-actions"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelCustomActionsComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelCustomActionsComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space; _ck(_v, 2, 0, currVal_0); var currVal_1 = _co.space; _ck(_v, 4, 0, currVal_1); }, null); }
 function View_PanelCustomActionsComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "panel-custom-actions", [], null, null, null, View_PanelCustomActionsComponent_0, RenderType_PanelCustomActionsComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 49152, null, 0, _custom_actions_component__WEBPACK_IMPORTED_MODULE_8__["PanelCustomActionsComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["ApplicationService"]], null, null)], null, null); }
 var PanelCustomActionsComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("panel-custom-actions", _custom_actions_component__WEBPACK_IMPORTED_MODULE_8__["PanelCustomActionsComponent"], View_PanelCustomActionsComponent_Host_0, { space: "space" }, {}, []);
@@ -6074,7 +6075,7 @@ class PanelCustomActionsComponent {
         if (this.space) {
             const module = this.service.Systems.get(this.space.id, 'Bookings');
             if (module) {
-                module.exec('waiter_call', []).then(_ => {
+                module.execute('waiter_call', []).then(_ => {
                     this.service.Analytics.event('Catering', 'waiter-call', (new Date).toISOString());
                 }, (e) => {
                     this.service.Analytics.event('Catering', 'waiter-call-failed', (new Date).toISOString());
@@ -6124,7 +6125,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _custom_actions_custom_actions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./custom-actions/custom-actions.component */ "./src/app/shell/panel/custom-actions/custom-actions.component.ts");
 /* harmony import */ var _timeline_timeline_component_ngfactory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./timeline/timeline.component.ngfactory */ "./src/app/shell/panel/timeline/timeline.component.ngfactory.js");
 /* harmony import */ var _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./timeline/timeline.component */ "./src/app/shell/panel/timeline/timeline.component.ts");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+/* harmony import */ var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../shared/directives/binding/binding.directive */ "./src/app/shared/directives/binding/binding.directive.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
 /* harmony import */ var _panel_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./panel.component */ "./src/app/shell/panel/panel.component.ts");
@@ -6161,49 +6162,49 @@ function View_BookingPanelComponent_4(_l) { return _angular_core__WEBPACK_IMPORT
 function View_BookingPanelComponent_5(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 24, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "room_name"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.space_name = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "touch_enabled"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "touch_enabled"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.interactive = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "today"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "today"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = (_co.updateBookings($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["bind", "timeout"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["bind", "timeout"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.pending_timeout = $event) !== false);
         ad = (pd_0 && ad);
     } if (("modelChange" === en)) {
         var pd_1 = (_co.updateStatus() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "i", [["bind", "cancel_timeout"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "i", [["bind", "cancel_timeout"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.cancel_timeout = $event) !== false);
         ad = (pd_0 && ad);
     } if (("modelChange" === en)) {
         var pd_1 = (_co.updateStatus() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "i", [["bind", "last_meeting_started"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "i", [["bind", "last_meeting_started"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.last_started = $event) !== false);
         ad = (pd_0 && ad);
     } if (("modelChange" === en)) {
         var pd_1 = (_co.updateStatus() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "i", [["bind", "hide_all"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "i", [["bind", "hide_all"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.hide_all = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 1, "i", [["bind", "flip_status"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 1, "i", [["bind", "flip_status"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.flip_status = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 1, "i", [["bind", "can_cancel"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 1, "i", [["bind", "can_cancel"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.can_cancel = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "i", [["bind", "business_start"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "i", [["bind", "business_start"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.business_start = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 1, "i", [["bind", "business_end"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 1, "i", [["bind", "business_end"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.business_end = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](23, 0, null, null, 1, "i", [["bind", "status_override"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](23, 0, null, null, 1, "i", [["bind", "status_override"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.status_overrides = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.system_id; var currVal_1 = "Bookings"; var currVal_2 = "room_name"; var currVal_3 = _co.space_name; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.system_id; var currVal_5 = "Bookings"; var currVal_6 = "touch_enabled"; var currVal_7 = _co.interactive; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.system_id; var currVal_9 = "Bookings"; var currVal_10 = "today"; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10); var currVal_11 = _co.system_id; var currVal_12 = "Bookings"; var currVal_13 = "timeout"; var currVal_14 = _co.pending_timeout; _ck(_v, 8, 0, currVal_11, currVal_12, currVal_13, currVal_14); var currVal_15 = _co.system_id; var currVal_16 = "Bookings"; var currVal_17 = "cancel_timeout"; var currVal_18 = _co.cancel_timeout; _ck(_v, 10, 0, currVal_15, currVal_16, currVal_17, currVal_18); var currVal_19 = _co.system_id; var currVal_20 = "Bookings"; var currVal_21 = "last_meeting_started"; var currVal_22 = _co.last_started; _ck(_v, 12, 0, currVal_19, currVal_20, currVal_21, currVal_22); var currVal_23 = _co.system_id; var currVal_24 = "Bookings"; var currVal_25 = "hide_all"; var currVal_26 = _co.hide_all; _ck(_v, 14, 0, currVal_23, currVal_24, currVal_25, currVal_26); var currVal_27 = _co.system_id; var currVal_28 = "Bookings"; var currVal_29 = "flip_status"; var currVal_30 = _co.flip_status; _ck(_v, 16, 0, currVal_27, currVal_28, currVal_29, currVal_30); var currVal_31 = _co.system_id; var currVal_32 = "Bookings"; var currVal_33 = "can_cancel"; var currVal_34 = _co.can_cancel; _ck(_v, 18, 0, currVal_31, currVal_32, currVal_33, currVal_34); var currVal_35 = _co.system_id; var currVal_36 = "Bookings"; var currVal_37 = "business_start"; var currVal_38 = _co.business_start; _ck(_v, 20, 0, currVal_35, currVal_36, currVal_37, currVal_38); var currVal_39 = _co.system_id; var currVal_40 = "Bookings"; var currVal_41 = "business_end"; var currVal_42 = _co.business_end; _ck(_v, 22, 0, currVal_39, currVal_40, currVal_41, currVal_42); var currVal_43 = _co.system_id; var currVal_44 = "Bookings"; var currVal_45 = "status_override"; var currVal_46 = _co.status_overrides; _ck(_v, 24, 0, currVal_43, currVal_44, currVal_45, currVal_46); }, null); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.system_id; var currVal_1 = "Bookings"; var currVal_2 = "room_name"; var currVal_3 = _co.space_name; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.system_id; var currVal_5 = "Bookings"; var currVal_6 = "touch_enabled"; var currVal_7 = _co.interactive; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.system_id; var currVal_9 = "Bookings"; var currVal_10 = "today"; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10); var currVal_11 = _co.system_id; var currVal_12 = "Bookings"; var currVal_13 = "timeout"; var currVal_14 = _co.pending_timeout; _ck(_v, 8, 0, currVal_11, currVal_12, currVal_13, currVal_14); var currVal_15 = _co.system_id; var currVal_16 = "Bookings"; var currVal_17 = "cancel_timeout"; var currVal_18 = _co.cancel_timeout; _ck(_v, 10, 0, currVal_15, currVal_16, currVal_17, currVal_18); var currVal_19 = _co.system_id; var currVal_20 = "Bookings"; var currVal_21 = "last_meeting_started"; var currVal_22 = _co.last_started; _ck(_v, 12, 0, currVal_19, currVal_20, currVal_21, currVal_22); var currVal_23 = _co.system_id; var currVal_24 = "Bookings"; var currVal_25 = "hide_all"; var currVal_26 = _co.hide_all; _ck(_v, 14, 0, currVal_23, currVal_24, currVal_25, currVal_26); var currVal_27 = _co.system_id; var currVal_28 = "Bookings"; var currVal_29 = "flip_status"; var currVal_30 = _co.flip_status; _ck(_v, 16, 0, currVal_27, currVal_28, currVal_29, currVal_30); var currVal_31 = _co.system_id; var currVal_32 = "Bookings"; var currVal_33 = "can_cancel"; var currVal_34 = _co.can_cancel; _ck(_v, 18, 0, currVal_31, currVal_32, currVal_33, currVal_34); var currVal_35 = _co.system_id; var currVal_36 = "Bookings"; var currVal_37 = "business_start"; var currVal_38 = _co.business_start; _ck(_v, 20, 0, currVal_35, currVal_36, currVal_37, currVal_38); var currVal_39 = _co.system_id; var currVal_40 = "Bookings"; var currVal_41 = "business_end"; var currVal_42 = _co.business_end; _ck(_v, 22, 0, currVal_39, currVal_40, currVal_41, currVal_42); var currVal_43 = _co.system_id; var currVal_44 = "Bookings"; var currVal_45 = "status_override"; var currVal_46 = _co.status_overrides; _ck(_v, 24, 0, currVal_43, currVal_44, currVal_45, currVal_46); }, null); }
 function View_BookingPanelComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 19, "div", [["class", "booking-panel"]], [[2, "disabled", null], [2, "reverse", null], [2, "no-time", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 2, "div", [], [[8, "className", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 13, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 10, "div", [["class", "details-display"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 7, "div", [["class", "content"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 2, "div", [["class", "title"]], [[2, "show", null]], [[null, "tapped"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
         var pd_0 = (_co.showTitle() !== false);
         ad = (pd_0 && ad);
@@ -6313,9 +6314,8 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                     }
                 }));
                 this.timeout('websocket', () => {
-                    this._service.websocket.status(status => {
-                        this.websocket_connected = status;
-                    });
+                    this.websocket_connected = true;
+                    // status().subscribe(status => this.websocket_connected = status);
                 });
                 this.unsub('app_ready');
             }
@@ -6395,7 +6395,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
             }
             if (meeting && module && meeting.date !== this.last_cancel) {
                 const date = dayjs__WEBPACK_IMPORTED_MODULE_5__(meeting.date);
-                module.exec('cancel_meeting', [meeting.date, reason]).then(_ => {
+                module.execute('cancel_meeting', [meeting.date, reason]).then(_ => {
                     this._service.Analytics.event('Checkin', 'cancelled', `${this.space.id} at ${date.format('DD MMM YYYY, h:mm A Z')} | ${reason}`);
                     this.last_cancel = meeting.date;
                 }, e => {
@@ -6426,7 +6426,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _space_details_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./space-details.component.scss.shim.ngstyle */ "./src/app/shell/panel/space-details/space-details.component.scss.shim.ngstyle.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+/* harmony import */ var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/directives/binding/binding.directive */ "./src/app/shared/directives/binding/binding.directive.ts");
 /* harmony import */ var _space_details_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./space-details.component */ "./src/app/shell/panel/space-details/space-details.component.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
@@ -6457,25 +6457,25 @@ function View_PanelSpaceDetailsComponent_11(_l) { return _angular_core__WEBPACK_
 function View_PanelSpaceDetailsComponent_13(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "hide_details"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.hide_details = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "hide_title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "hide_title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.hide_title = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "hide_availability"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "hide_availability"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.hide_availability = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["bind", "hide_user"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["bind", "hide_user"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.hide_user = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "i", [["bind", "title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "i", [["bind", "title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.title = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "i", [["bind", "description"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "i", [["bind", "description"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.description = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "i", [["bind", "icon"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "i", [["bind", "icon"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.icon = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "hide_details"; var currVal_3 = _co.hide_details; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "hide_title"; var currVal_7 = _co.hide_title; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "hide_availability"; var currVal_11 = _co.hide_availability; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = _co.space.id; var currVal_13 = "Bookings"; var currVal_14 = "hide_user"; var currVal_15 = _co.hide_user; _ck(_v, 8, 0, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_16 = _co.space.id; var currVal_17 = "Bookings"; var currVal_18 = "title"; var currVal_19 = _co.title; _ck(_v, 10, 0, currVal_16, currVal_17, currVal_18, currVal_19); var currVal_20 = _co.space.id; var currVal_21 = "Bookings"; var currVal_22 = "description"; var currVal_23 = _co.description; _ck(_v, 12, 0, currVal_20, currVal_21, currVal_22, currVal_23); var currVal_24 = _co.space.id; var currVal_25 = "Bookings"; var currVal_26 = "icon"; var currVal_27 = _co.icon; _ck(_v, 14, 0, currVal_24, currVal_25, currVal_26, currVal_27); }, null); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "hide_details"; var currVal_3 = _co.hide_details; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "hide_title"; var currVal_7 = _co.hide_title; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "hide_availability"; var currVal_11 = _co.hide_availability; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = _co.space.id; var currVal_13 = "Bookings"; var currVal_14 = "hide_user"; var currVal_15 = _co.hide_user; _ck(_v, 8, 0, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_16 = _co.space.id; var currVal_17 = "Bookings"; var currVal_18 = "title"; var currVal_19 = _co.title; _ck(_v, 10, 0, currVal_16, currVal_17, currVal_18, currVal_19); var currVal_20 = _co.space.id; var currVal_21 = "Bookings"; var currVal_22 = "description"; var currVal_23 = _co.description; _ck(_v, 12, 0, currVal_20, currVal_21, currVal_22, currVal_23); var currVal_24 = _co.space.id; var currVal_25 = "Bookings"; var currVal_26 = "icon"; var currVal_27 = _co.icon; _ck(_v, 14, 0, currVal_24, currVal_25, currVal_26, currVal_27); }, null); }
 function View_PanelSpaceDetailsComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "div", [["class", "space-booking-details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_13)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.space && _co.space.current); _ck(_v, 2, 0, currVal_0); var currVal_1 = (_co.space && _co.space.next); _ck(_v, 4, 0, currVal_1); var currVal_2 = ((_co.space && _co.space.current) && _co.space.next); _ck(_v, 6, 0, currVal_2); var currVal_3 = (_co.title || _co.description); _ck(_v, 8, 0, currVal_3); var currVal_4 = _co.space; _ck(_v, 10, 0, currVal_4); }, null); }
 function View_PanelSpaceDetailsComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "panel-space-details", [], null, null, null, View_PanelSpaceDetailsComponent_0, RenderType_PanelSpaceDetailsComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 49152, null, 0, _space_details_component__WEBPACK_IMPORTED_MODULE_4__["PanelSpaceDetailsComponent"], [], null, null)], null, null); }
 var PanelSpaceDetailsComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("panel-space-details", _space_details_component__WEBPACK_IMPORTED_MODULE_4__["PanelSpaceDetailsComponent"], View_PanelSpaceDetailsComponent_Host_0, { space: "space" }, {}, []);
@@ -6541,7 +6541,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @acaprojects/ngx-custom-events */ "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+/* harmony import */ var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/directives/binding/binding.directive */ "./src/app/shared/directives/binding/binding.directive.ts");
 /* harmony import */ var _timeline_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./timeline.component */ "./src/app/shell/panel/timeline/timeline.component.ts");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../services/app.service */ "./src/app/services/app.service.ts");
 /**
@@ -6573,28 +6573,28 @@ function View_PanelTimelineComponent_5(_l) { return _angular_core__WEBPACK_IMPOR
     } if (("modelChange" === en)) {
         var pd_1 = (_co.checkBookings() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "hide_all"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "hide_all"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.hide_all = $event) !== false);
         ad = (pd_0 && ad);
     } if (("modelChange" === en)) {
         var pd_1 = (_co.checkBookings() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "booking_disabled"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "booking_disabled"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.no_bookings = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["bind", "no_timeline_bookings"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "i", [["bind", "no_timeline_bookings"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.no_timeline_bookings = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "i", [["bind", "default_title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "i", [["bind", "default_title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.default_title = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "i", [["bind", "min_duration"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "i", [["bind", "min_duration"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.min_duration = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "i", [["bind", "max_duration"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "i", [["bind", "max_duration"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.max_duration = $event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "hide_availability"; var currVal_3 = _co.hide_status; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "hide_all"; var currVal_7 = _co.hide_all; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "booking_disabled"; var currVal_11 = _co.no_bookings; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = _co.space.id; var currVal_13 = "Bookings"; var currVal_14 = "no_timeline_bookings"; var currVal_15 = _co.no_timeline_bookings; _ck(_v, 8, 0, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_16 = _co.space.id; var currVal_17 = "Bookings"; var currVal_18 = "default_title"; var currVal_19 = _co.default_title; _ck(_v, 10, 0, currVal_16, currVal_17, currVal_18, currVal_19); var currVal_20 = _co.space.id; var currVal_21 = "Bookings"; var currVal_22 = "min_duration"; var currVal_23 = _co.min_duration; _ck(_v, 12, 0, currVal_20, currVal_21, currVal_22, currVal_23); var currVal_24 = _co.space.id; var currVal_25 = "Bookings"; var currVal_26 = "max_duration"; var currVal_27 = _co.max_duration; _ck(_v, 14, 0, currVal_24, currVal_25, currVal_26, currVal_27); }, null); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "hide_availability"; var currVal_3 = _co.hide_status; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "hide_all"; var currVal_7 = _co.hide_all; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "booking_disabled"; var currVal_11 = _co.no_bookings; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = _co.space.id; var currVal_13 = "Bookings"; var currVal_14 = "no_timeline_bookings"; var currVal_15 = _co.no_timeline_bookings; _ck(_v, 8, 0, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_16 = _co.space.id; var currVal_17 = "Bookings"; var currVal_18 = "default_title"; var currVal_19 = _co.default_title; _ck(_v, 10, 0, currVal_16, currVal_17, currVal_18, currVal_19); var currVal_20 = _co.space.id; var currVal_21 = "Bookings"; var currVal_22 = "min_duration"; var currVal_23 = _co.min_duration; _ck(_v, 12, 0, currVal_20, currVal_21, currVal_22, currVal_23); var currVal_24 = _co.space.id; var currVal_25 = "Bookings"; var currVal_26 = "max_duration"; var currVal_27 = _co.max_duration; _ck(_v, 14, 0, currVal_24, currVal_25, currVal_26, currVal_27); }, null); }
 function View_PanelTimelineComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 11, "div", [["class", "timeline"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelTimelineComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 6, "div", [["class", "overlay"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 0, "div", [["class", "expired"]], [[4, "width", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 4, "div", [["class", "current-block"]], [[4, "left", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 0, "div", [["class", "bar"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 0, "div", [["class", "triangle"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelTimelineComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelTimelineComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.time_blocks && (_co.time_blocks.length > 0)); _ck(_v, 2, 0, currVal_0); var currVal_3 = _co.display_time; _ck(_v, 9, 0, currVal_3); var currVal_4 = _co.space; _ck(_v, 11, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = ((((((_co.options == null) ? null : _co.options.start_offset) || 120) / (((_co.options == null) ? null : _co.options.duration) || 720)) * 100) + "%"); _ck(_v, 4, 0, currVal_1); var currVal_2 = ((((((_co.options == null) ? null : _co.options.start_offset) || 120) / (((_co.options == null) ? null : _co.options.duration) || 720)) * 100) + "%"); _ck(_v, 5, 0, currVal_2); }); }
 function View_PanelTimelineComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "panel-timeline", [], null, null, null, View_PanelTimelineComponent_0, RenderType_PanelTimelineComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 770048, null, 0, _timeline_component__WEBPACK_IMPORTED_MODULE_5__["PanelTimelineComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_6__["ApplicationService"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var PanelTimelineComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("panel-timeline", _timeline_component__WEBPACK_IMPORTED_MODULE_5__["PanelTimelineComponent"], View_PanelTimelineComponent_Host_0, { space: "space", options: "options" }, { event: "event" }, []);
@@ -6748,7 +6748,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShellWrapperComponentNgFactory", function() { return ShellWrapperComponentNgFactory; });
 /* harmony import */ var _shell_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shell.component.scss.shim.ngstyle */ "./src/app/shell/shell.component.scss.shim.ngstyle.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @placeos/composer */ "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+/* harmony import */ var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/directives/binding/binding.directive */ "./src/app/shared/directives/binding/binding.directive.ts");
 /* harmony import */ var _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/@acaprojects/ngx-spinners/acaprojects-ngx-spinners.ngfactory */ "./node_modules/@acaprojects/ngx-spinners/acaprojects-ngx-spinners.ngfactory.js");
 /* harmony import */ var _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @acaprojects/ngx-spinners */ "./node_modules/@acaprojects/ngx-spinners/fesm2015/acaprojects-ngx-spinners.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
@@ -6779,10 +6779,10 @@ function View_ShellWrapperComponent_1(_l) { return _angular_core__WEBPACK_IMPORT
     } if (("modelChange" === en)) {
         var pd_1 = (_co.checkLoading() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "reload"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "reload"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = (_co.reloadAt($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.system_id; var currVal_1 = "Bookings"; var currVal_2 = "room_name"; var currVal_3 = _co.system_name; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.system_id; var currVal_5 = "Bookings"; var currVal_6 = "reload"; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6); }, null); }
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.system_id; var currVal_1 = "Bookings"; var currVal_2 = "room_name"; var currVal_3 = _co.system_name; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.system_id; var currVal_5 = "Bookings"; var currVal_6 = "reload"; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6); }, null); }
 function View_ShellWrapperComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "div", [["class", "loading-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 9, "div", [["class", "info-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, ["Connecting to system(", ")..."])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Attempting to connect to engine server..."])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 1, "div", [["class", "text message"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](7, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "a-spinner", [["color", "#000"], ["ring-rotate", ""]], null, null, null, _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_3__["View_ɵp_0"], _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_3__["RenderType_ɵp"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 49152, null, 0, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_4__["ɵp"], [], { color: [0, "color"] }, null)], function (_ck, _v) { var currVal_2 = "#000"; _ck(_v, 10, 0, currVal_2); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.system_id; _ck(_v, 3, 0, currVal_0); var currVal_1 = _co.info_messages[_co.message_index]; _ck(_v, 7, 0, currVal_1); }); }
 function View_ShellWrapperComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "version"]], [[2, "loading", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" Version: ", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "br", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, [" Built: ", " "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.system_id && !_co.system_name); _ck(_v, 0, 0, currVal_0); var currVal_1 = _co.version; _ck(_v, 1, 0, currVal_1); var currVal_2 = _co.build; _ck(_v, 3, 0, currVal_2); }); }
 function View_ShellWrapperComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 9, "div", [["class", "shell"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 2, "div", [["class", "view"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 212992, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterOutlet"], [_angular_router__WEBPACK_IMPORTED_MODULE_5__["ChildrenOutletContexts"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShellWrapperComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShellWrapperComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShellWrapperComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 3, 0); var currVal_0 = _co.system_id; _ck(_v, 5, 0, currVal_0); var currVal_1 = (_co.system_id && !_co.system_name); _ck(_v, 7, 0, currVal_1); var currVal_2 = _co.show_version; _ck(_v, 9, 0, currVal_2); }, null); }
@@ -6886,6 +6886,7 @@ class ShellWrapperComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
      * @param delay Delay before first loading message update
      */
     checkLoading(delay = 3000) {
+        console.log('Check Loading:', this.system_name);
         if (!this.system_name) {
             this.message_index = 0;
             this.timeout('update_msg', () => this.updateMessage(), delay);
@@ -7023,16 +7024,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "5753d7e",
-    "hash": "5753d7e",
+    "raw": "44d014b",
+    "hash": "44d014b",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "5753d7e",
+    "suffix": "44d014b",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1597790373893
+    "time": 1598408385001
 };
 /* tslint:enable */
 

@@ -365,247 +365,235 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _shared_base_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
-    /*! ./shared/base.component.ngfactory */
-    "./src/app/shared/base.component.ngfactory.js");
-    /* harmony import */
-
-
-    var _shared_components_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _shared_components_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./shared/components/user-search-field/user-search-field.component.ngfactory */
     "./src/app/shared/components/user-search-field/user-search-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _shared_components_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./shared/components/time-field/time-field.component.ngfactory */
     "./src/app/shared/components/time-field/time-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _shared_components_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _shared_components_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ./shared/components/duration-field/duration-field.component.ngfactory */
     "./src/app/shared/components/duration-field/duration-field.component.ngfactory.js");
     /* harmony import */
 
 
-    var _overlays_confirm_modal_confirm_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _overlays_confirm_modal_confirm_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ./overlays/confirm-modal/confirm-modal.component.ngfactory */
     "./src/app/overlays/confirm-modal/confirm-modal.component.ngfactory.js");
     /* harmony import */
 
 
-    var _overlays_embedded_control_modal_embedded_control_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _overlays_embedded_control_modal_embedded_control_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ./overlays/embedded-control-modal/embedded-control-modal.component.ngfactory */
     "./src/app/overlays/embedded-control-modal/embedded-control-modal.component.ngfactory.js");
     /* harmony import */
 
 
-    var _overlays_booking_modal_booking_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _overlays_booking_modal_booking_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ./overlays/booking-modal/booking-modal.component.ngfactory */
     "./src/app/overlays/booking-modal/booking-modal.component.ngfactory.js");
     /* harmony import */
 
 
-    var _app_component_ngfactory__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _app_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! ./app.component.ngfactory */
     "./src/app/app.component.ngfactory.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! @angular/platform-browser */
     "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
     /* harmony import */
 
 
-    var _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+    var _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
     /*! @angular/animations/browser */
     "./node_modules/@angular/animations/fesm2015/browser.js");
     /* harmony import */
 
 
-    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
     /*! @angular/platform-browser/animations */
     "./node_modules/@angular/platform-browser/fesm2015/animations.js");
     /* harmony import */
 
 
-    var _angular_animations__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+    var _angular_animations__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
     /*! @angular/animations */
     "./node_modules/@angular/animations/fesm2015/animations.js");
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
 
 
-    var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
+    var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
     /*! @angular/cdk/overlay */
     "./node_modules/@angular/cdk/esm2015/overlay.js");
     /* harmony import */
 
 
-    var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
+    var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
     /*! @angular/cdk/bidi */
     "./node_modules/@angular/cdk/esm2015/bidi.js");
     /* harmony import */
 
 
-    var _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
+    var _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
     /*! @angular/service-worker */
     "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
     /* harmony import */
 
 
-    var _shell_shell_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
+    var _shell_shell_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
     /*! ./shell/shell.component */
     "./src/app/shell/shell.component.ts");
     /* harmony import */
 
 
-    var _shell_bootstrap_bootstrap_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
+    var _shell_bootstrap_bootstrap_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
     /*! ./shell/bootstrap/bootstrap.component */
     "./src/app/shell/bootstrap/bootstrap.component.ts");
     /* harmony import */
 
 
-    var _shell_panel_panel_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
+    var _shell_panel_panel_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
     /*! ./shell/panel/panel.component */
     "./src/app/shell/panel/panel.component.ts");
     /* harmony import */
 
 
-    var _shell_panel_array_panel_array_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(
+    var _shell_panel_array_panel_array_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
     /*! ./shell/panel-array/panel-array.component */
     "./src/app/shell/panel-array/panel-array.component.ts");
     /* harmony import */
 
 
-    var _shell_panel_select_panel_select_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(
+    var _shell_panel_select_panel_select_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(
     /*! ./shell/panel-select/panel-select.component */
     "./src/app/shell/panel-select/panel-select.component.ts");
     /* harmony import */
 
 
-    var _app_routing_module__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-    /* harmony import */
-
-
-    var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
+    var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
     /*! @acaprojects/ngx-google-analytics */
     "./node_modules/@acaprojects/ngx-google-analytics/fesm2015/acaprojects-ngx-google-analytics.js");
     /* harmony import */
 
 
-    var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
+    var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
     /*! @angular/cdk/portal */
     "./node_modules/@angular/cdk/esm2015/portal.js");
     /* harmony import */
 
 
-    var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
+    var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
     /*! @angular/cdk/platform */
     "./node_modules/@angular/cdk/esm2015/platform.js");
     /* harmony import */
 
 
-    var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(
+    var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
     /*! @angular/cdk/scrolling */
     "./node_modules/@angular/cdk/esm2015/scrolling.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(
+    var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
     /*! @acaprojects/ngx-overlays */
     "./node_modules/@acaprojects/ngx-overlays/fesm2015/acaprojects-ngx-overlays.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(
+    var _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(
     /*! @acaprojects/ngx-dropdown */
     "./node_modules/@acaprojects/ngx-dropdown/fesm2015/acaprojects-ngx-dropdown.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(
+    var _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(
     /*! @acaprojects/ngx-spinners */
     "./node_modules/@acaprojects/ngx-spinners/fesm2015/acaprojects-ngx-spinners.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
+    var _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(
     /*! @acaprojects/ngx-custom-events */
     "./node_modules/@acaprojects/ngx-custom-events/fesm2015/acaprojects-ngx-custom-events.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
+    var _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(
     /*! @acaprojects/ngx-buttons */
     "./node_modules/@acaprojects/ngx-buttons/fesm2015/acaprojects-ngx-buttons.js");
     /* harmony import */
 
 
-    var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
+    var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
     /*! @angular/cdk/text-field */
     "./node_modules/@angular/cdk/esm2015/text-field.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
+    var _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
     /*! @acaprojects/ngx-checkbox */
     "./node_modules/@acaprojects/ngx-checkbox/fesm2015/acaprojects-ngx-checkbox.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
+    var _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
     /*! @acaprojects/ngx-dynamic-forms */
     "./node_modules/@acaprojects/ngx-dynamic-forms/fesm2015/acaprojects-ngx-dynamic-forms.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
+    var _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
     /*! @acaprojects/ngx-pipes */
     "./node_modules/@acaprojects/ngx-pipes/fesm2015/acaprojects-ngx-pipes.js");
     /* harmony import */
 
 
-    var _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
+    var _shared_shared_module__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
     /*! ./shared/shared.module */
     "./src/app/shared/shared.module.ts");
     /* harmony import */
 
 
-    var _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
+    var _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
     /*! ./overlays/overlays.module */
     "./src/app/overlays/overlays.module.ts");
     /**
@@ -617,36 +605,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var AppModuleNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵcmf"](_app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]], function (_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmod"]([_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵCodegenComponentFactoryResolver"], [[8, [_node_modules_angular_router_router_ngfactory__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_router_router_lNgFactory"], _shell_shell_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["ShellWrapperComponentNgFactory"], _shell_bootstrap_bootstrap_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["BootstrapComponentNgFactory"], _shell_panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_6__["BookingPanelComponentNgFactory"], _shell_panel_array_panel_array_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["BookingPanelArrayComponentNgFactory"], _shell_panel_select_panel_select_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["BookingPanelSelectComponentNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵaNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵbNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵcNgFactory"], _shared_base_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["BaseComponentNgFactory"], _shared_components_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__["CustomUserSearchFieldComponentNgFactory"], _shared_components_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["CustomTimeFieldComponentNgFactory"], _shared_components_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["CustomDurationFieldComponentNgFactory"], _overlays_confirm_modal_confirm_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["ConfirmModalComponentNgFactory"], _overlays_embedded_control_modal_embedded_control_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["EmbeddedControlModalComponentNgFactory"], _overlays_booking_modal_booking_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__["BookingModalComponentNgFactory"], _app_component_ngfactory__WEBPACK_IMPORTED_MODULE_17__["AppComponentNgFactory"]]], [3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_r"], [[3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common__WEBPACK_IMPORTED_MODULE_18__["NgLocalization"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["NgLocaleLocalization"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_x"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_t"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_ID"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_g"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["IterableDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_p"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_q"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSanitizerImpl"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Sanitizer"], null, [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["HAMMER_GESTURE_CONFIG"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["HammerGestureConfig"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EVENT_MANAGER_PLUGINS"], function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3) {
-        return [new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomEventsPlugin"](p0_0, p0_1, p0_2), new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵKeyEventsPlugin"](p1_0), new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵHammerGesturesPlugin"](p2_0, p2_1, p2_2, p2_3)];
-      }, [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["HAMMER_GESTURE_CONFIG"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵConsole"], [2, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["HAMMER_LOADER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EventManager"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EventManager"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EVENT_MANAGER_PLUGINS"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSharedStylesHost"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSharedStylesHost"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomRendererFactory2"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomRendererFactory2"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["EventManager"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSharedStylesHost"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["AnimationDriver"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_platform_browser_animations_animations_a"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["ɵAnimationStyleNormalizer"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_platform_browser_animations_animations_b"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["ɵAnimationEngine"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵInjectableAnimationEngine"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["AnimationDriver"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["ɵAnimationStyleNormalizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵangular_packages_platform_browser_animations_animations_c"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomRendererFactory2"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_20__["ɵAnimationEngine"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵSharedStylesHost"], null, [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵDomSharedStylesHost"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Testability"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Testability"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_animations__WEBPACK_IMPORTED_MODULE_22__["AnimationBuilder"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ɵBrowserAnimationBuilder"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_g"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_router__WEBPACK_IMPORTED_MODULE_23__["NoPreloading"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["NoPreloading"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_router__WEBPACK_IMPORTED_MODULE_23__["PreloadingStrategy"], null, [_angular_router__WEBPACK_IMPORTED_MODULE_23__["NoPreloading"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterPreloader"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterPreloader"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["PreloadingStrategy"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_router__WEBPACK_IMPORTED_MODULE_23__["PreloadAllModules"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["PreloadAllModules"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_o"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_c"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["ViewportScroller"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_INITIALIZER"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_j"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_BOOTSTRAP_LISTENER"], function (p0_0) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmod"]([_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵCodegenComponentFactoryResolver"], [[8, [_node_modules_angular_router_router_ngfactory__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_router_router_lNgFactory"], _shell_shell_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["ShellWrapperComponentNgFactory"], _shell_bootstrap_bootstrap_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__["BootstrapComponentNgFactory"], _shell_panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_6__["BookingPanelComponentNgFactory"], _shell_panel_array_panel_array_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["BookingPanelArrayComponentNgFactory"], _shell_panel_select_panel_select_component_ngfactory__WEBPACK_IMPORTED_MODULE_8__["BookingPanelSelectComponentNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵaNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵbNgFactory"], _node_modules_acaprojects_ngx_overlays_acaprojects_ngx_overlays_ngfactory__WEBPACK_IMPORTED_MODULE_9__["ɵcNgFactory"], _shared_components_user_search_field_user_search_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_10__["CustomUserSearchFieldComponentNgFactory"], _shared_components_time_field_time_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_11__["CustomTimeFieldComponentNgFactory"], _shared_components_duration_field_duration_field_component_ngfactory__WEBPACK_IMPORTED_MODULE_12__["CustomDurationFieldComponentNgFactory"], _overlays_confirm_modal_confirm_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_13__["ConfirmModalComponentNgFactory"], _overlays_embedded_control_modal_embedded_control_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["EmbeddedControlModalComponentNgFactory"], _overlays_booking_modal_booking_modal_component_ngfactory__WEBPACK_IMPORTED_MODULE_15__["BookingModalComponentNgFactory"], _app_component_ngfactory__WEBPACK_IMPORTED_MODULE_16__["AppComponentNgFactory"]]], [3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_r"], [[3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common__WEBPACK_IMPORTED_MODULE_17__["NgLocalization"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["NgLocaleLocalization"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_x"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_t"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_ID"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_g"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["IterableDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_p"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_q"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["DomSanitizer"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSanitizerImpl"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Sanitizer"], null, [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["DomSanitizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["HAMMER_GESTURE_CONFIG"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["HammerGestureConfig"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EVENT_MANAGER_PLUGINS"], function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3) {
+        return [new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomEventsPlugin"](p0_0, p0_1, p0_2), new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵKeyEventsPlugin"](p1_0), new _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵHammerGesturesPlugin"](p2_0, p2_1, p2_2, p2_3)];
+      }, [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["HAMMER_GESTURE_CONFIG"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵConsole"], [2, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["HAMMER_LOADER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EventManager"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EventManager"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EVENT_MANAGER_PLUGINS"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSharedStylesHost"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSharedStylesHost"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomRendererFactory2"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomRendererFactory2"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["EventManager"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSharedStylesHost"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["AnimationDriver"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_platform_browser_animations_animations_a"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["ɵAnimationStyleNormalizer"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_platform_browser_animations_animations_b"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["ɵAnimationEngine"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵInjectableAnimationEngine"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["AnimationDriver"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["ɵAnimationStyleNormalizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵangular_packages_platform_browser_animations_animations_c"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomRendererFactory2"], _angular_animations_browser__WEBPACK_IMPORTED_MODULE_19__["ɵAnimationEngine"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵSharedStylesHost"], null, [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵDomSharedStylesHost"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Testability"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Testability"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_animations__WEBPACK_IMPORTED_MODULE_21__["AnimationBuilder"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ɵBrowserAnimationBuilder"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["RendererFactory2"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_g"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_router__WEBPACK_IMPORTED_MODULE_22__["NoPreloading"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["NoPreloading"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_router__WEBPACK_IMPORTED_MODULE_22__["PreloadingStrategy"], null, [_angular_router__WEBPACK_IMPORTED_MODULE_22__["NoPreloading"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](135680, _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterPreloader"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterPreloader"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["PreloadingStrategy"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_router__WEBPACK_IMPORTED_MODULE_22__["PreloadAllModules"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["PreloadAllModules"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_o"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_c"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["ViewportScroller"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_CONFIGURATION"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_INITIALIZER"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_j"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_BOOTSTRAP_LISTENER"], function (p0_0) {
         return [p0_0];
-      }, [_angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_INITIALIZER"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_g"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_e"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_h"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_h"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_f"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HTTP_INTERCEPTORS"], function (p0_0) {
+      }, [_angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_INITIALIZER"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_g"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_e"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_h"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_h"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXsrfTokenExtractor"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_f"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HTTP_INTERCEPTORS"], function (p0_0) {
         return [p0_0];
-      }, [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_d"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["XhrFactory"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_d"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXhrBackend"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXhrBackend"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["XhrFactory"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpBackend"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpXhrBackend"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpHandler"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵHttpInterceptingHandler"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpBackend"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClient"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClient"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpHandler"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_n"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_n"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["Overlay"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["Overlay"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["ScrollStrategyOptions"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayContainer"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayPositionBuilder"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayKeyboardDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["DOCUMENT"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["Directionality"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["ɵc"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["ɵd"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["Overlay"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormBuilder"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormBuilder"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_a"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_d"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwRegistrationOptions"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwPush"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwPush"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_a"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwUpdate"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwUpdate"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_a"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common__WEBPACK_IMPORTED_MODULE_18__["CommonModule"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["CommonModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_platform_browser_platform_browser_a"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgProbeToken"], function () {
-        return [_angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_b"]()];
-      }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_h"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_h"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_b"], "ngsw-worker.js", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwRegistrationOptions"], {
+      }, [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_h"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_d"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["XhrFactory"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_d"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXhrBackend"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXhrBackend"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["XhrFactory"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](6144, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpBackend"], null, [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpXhrBackend"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpHandler"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵHttpInterceptingHandler"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpBackend"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClient"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClient"], [_angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpHandler"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_forms_forms_n"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_forms_forms_n"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["Overlay"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["Overlay"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["ScrollStrategyOptions"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayContainer"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayPositionBuilder"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayKeyboardDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["DOCUMENT"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_26__["Directionality"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_17__["Location"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["ɵc"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["ɵd"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["Overlay"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormBuilder"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormBuilder"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](5120, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_a"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_d"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwRegistrationOptions"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwPush"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwPush"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_a"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwUpdate"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwUpdate"], [_angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_a"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common__WEBPACK_IMPORTED_MODULE_17__["CommonModule"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["CommonModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵangular_packages_platform_browser_platform_browser_a"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgProbeToken"], function () {
+        return [_angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_b"]()];
+      }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_h"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_h"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_b"], "ngsw-worker.js", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwRegistrationOptions"], {
         enabled: true
       }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], function (p0_0, p1_0, p2_0, p2_1, p2_2, p2_3) {
-        return [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_platform_browser_platform_browser_m"](p0_0), _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_i"](p1_0), _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_c"](p2_0, p2_1, p2_2, p2_3)];
-      }, [[2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgProbeToken"]], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_h"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ɵangular_packages_service_worker_service_worker_b"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["SwRegistrationOptions"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"], [[2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](131584, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵConsole"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationModule"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationModule"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["BrowserModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["BrowserModule"], [[3, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["BrowserModule"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["BrowserAnimationsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["BrowserAnimationsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_a"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_e"], [[3, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["DefaultUrlSerializer"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ChildrenOutletContexts"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ChildrenOutletContexts"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"], {
+        return [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["ɵangular_packages_platform_browser_platform_browser_m"](p0_0), _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_i"](p1_0), _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_c"](p2_0, p2_1, p2_2, p2_3)];
+      }, [[2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgProbeToken"]], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_h"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ɵangular_packages_service_worker_service_worker_b"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["SwRegistrationOptions"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"], [[2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](131584, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵConsole"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationInitStatus"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationModule"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationModule"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["BrowserModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["BrowserModule"], [[3, _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["BrowserModule"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["BrowserAnimationsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["BrowserAnimationsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_a"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_e"], [[3, _angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_22__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["DefaultUrlSerializer"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ChildrenOutletContexts"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ChildrenOutletContexts"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_CONFIGURATION"], {
         useHash: true
-      }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_common__WEBPACK_IMPORTED_MODULE_18__["LocationStrategy"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_d"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["PlatformLocation"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_18__["APP_BASE_HREF"]], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"], [_angular_common__WEBPACK_IMPORTED_MODULE_18__["LocationStrategy"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["PlatformLocation"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["SystemJsNgModuleLoader"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], [2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["SystemJsNgModuleLoaderConfig"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTES"], function () {
+      }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_common__WEBPACK_IMPORTED_MODULE_17__["LocationStrategy"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_d"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["PlatformLocation"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_17__["APP_BASE_HREF"]], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_CONFIGURATION"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_common__WEBPACK_IMPORTED_MODULE_17__["Location"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["Location"], [_angular_common__WEBPACK_IMPORTED_MODULE_17__["LocationStrategy"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["PlatformLocation"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["SystemJsNgModuleLoader"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], [2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["SystemJsNgModuleLoaderConfig"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTES"], function () {
         return [[{
           path: "",
-          component: _shell_shell_component__WEBPACK_IMPORTED_MODULE_29__["ShellWrapperComponent"],
+          component: _shell_shell_component__WEBPACK_IMPORTED_MODULE_28__["ShellWrapperComponent"],
           children: [{
             path: "bootstrap",
-            component: _shell_bootstrap_bootstrap_component__WEBPACK_IMPORTED_MODULE_30__["BootstrapComponent"]
+            component: _shell_bootstrap_bootstrap_component__WEBPACK_IMPORTED_MODULE_29__["BootstrapComponent"]
           }, {
             path: "panel/:system_id",
-            component: _shell_panel_panel_component__WEBPACK_IMPORTED_MODULE_31__["BookingPanelComponent"]
+            component: _shell_panel_panel_component__WEBPACK_IMPORTED_MODULE_30__["BookingPanelComponent"]
           }, {
             path: "panel-array",
-            component: _shell_panel_array_panel_array_component__WEBPACK_IMPORTED_MODULE_32__["BookingPanelArrayComponent"]
+            component: _shell_panel_array_panel_array_component__WEBPACK_IMPORTED_MODULE_31__["BookingPanelArrayComponent"]
           }, {
             path: "panel-select",
-            component: _shell_panel_select_panel_select_component__WEBPACK_IMPORTED_MODULE_33__["BookingPanelSelectComponent"]
+            component: _shell_panel_select_panel_select_component__WEBPACK_IMPORTED_MODULE_32__["BookingPanelSelectComponent"]
           }, {
             path: "**",
             redirectTo: "bootstrap"
@@ -655,7 +643,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           path: "**",
           redirectTo: "bootstrap"
         }]];
-      }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_f"], [_angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ChildrenOutletContexts"], _angular_common__WEBPACK_IMPORTED_MODULE_18__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTES"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["ROUTER_CONFIGURATION"], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["UrlHandlingStrategy"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouteReuseStrategy"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_23__["RouterModule"], [[2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_router_router_a"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_23__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_routing_module__WEBPACK_IMPORTED_MODULE_34__["AppRoutingModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_34__["AppRoutingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientXsrfModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientXsrfModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["HttpClientModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_d"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_forms_forms_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["FormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _placeos_composer__WEBPACK_IMPORTED_MODULE_35__["ComposerModule"], _placeos_composer__WEBPACK_IMPORTED_MODULE_35__["ComposerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__["AGoogleAnalyticsModule"], _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_36__["AGoogleAnalyticsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["BidiModule"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_27__["BidiModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__["PortalModule"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_37__["PortalModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__["PlatformModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_38__["PlatformModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__["ScrollingModule"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_39__["ScrollingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_26__["OverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__["AOverlayModule"], _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_40__["AOverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_25__["ReactiveFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__["ADropdownsModule"], _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_41__["ADropdownsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__["ASpinnerModule"], _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_42__["ASpinnerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__["ACustomEventsModule"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_43__["ACustomEventsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__["AButtonsModule"], _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_44__["AButtonsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__["TextFieldModule"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_45__["TextFieldModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__["ACheckboxModule"], _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_46__["ACheckboxModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__["ADynamicFormsModule"], _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_47__["ADynamicFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__["APipesModule"], _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_48__["APipesModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__["SharedContentModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_49__["SharedContentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__["SharedOverlaysModule"], _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_50__["SharedOverlaysModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ServiceWorkerModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_28__["ServiceWorkerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["DEFAULT_CURRENCY_CODE"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_u"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵINJECTOR_SCOPE"], "root", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["ANIMATION_MODULE_TYPE"], "BrowserAnimations", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_e"], "XSRF-TOKEN", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_common_http_http_f"], "X-XSRF-TOKEN", [])]);
+      }, []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_f"], [_angular_router__WEBPACK_IMPORTED_MODULE_22__["UrlSerializer"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ChildrenOutletContexts"], _angular_common__WEBPACK_IMPORTED_MODULE_17__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Compiler"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTES"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["ROUTER_CONFIGURATION"], [2, _angular_router__WEBPACK_IMPORTED_MODULE_22__["UrlHandlingStrategy"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouteReuseStrategy"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"], [[2, _angular_router__WEBPACK_IMPORTED_MODULE_22__["ɵangular_packages_router_router_a"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_22__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_routing_module__WEBPACK_IMPORTED_MODULE_33__["AppRoutingModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_33__["AppRoutingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientXsrfModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientXsrfModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_forms_forms_d"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ɵangular_packages_forms_forms_d"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_34__["AGoogleAnalyticsModule"], _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_34__["AGoogleAnalyticsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_26__["BidiModule"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_26__["BidiModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_35__["PortalModule"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_35__["PortalModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_36__["PlatformModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_36__["PlatformModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_37__["ScrollingModule"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_37__["ScrollingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_25__["OverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_38__["AOverlayModule"], _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_38__["AOverlayModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ReactiveFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_39__["ADropdownsModule"], _acaprojects_ngx_dropdown__WEBPACK_IMPORTED_MODULE_39__["ADropdownsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_40__["ASpinnerModule"], _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_40__["ASpinnerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_41__["ACustomEventsModule"], _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_41__["ACustomEventsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_42__["AButtonsModule"], _acaprojects_ngx_buttons__WEBPACK_IMPORTED_MODULE_42__["AButtonsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_43__["TextFieldModule"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_43__["TextFieldModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_44__["ACheckboxModule"], _acaprojects_ngx_checkbox__WEBPACK_IMPORTED_MODULE_44__["ACheckboxModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_45__["ADynamicFormsModule"], _acaprojects_ngx_dynamic_forms__WEBPACK_IMPORTED_MODULE_45__["ADynamicFormsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_46__["APipesModule"], _acaprojects_ngx_pipes__WEBPACK_IMPORTED_MODULE_46__["APipesModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_shared_module__WEBPACK_IMPORTED_MODULE_47__["SharedContentModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_47__["SharedContentModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_48__["SharedOverlaysModule"], _overlays_overlays_module__WEBPACK_IMPORTED_MODULE_48__["SharedOverlaysModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ServiceWorkerModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_27__["ServiceWorkerModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], _app_module__WEBPACK_IMPORTED_MODULE_1__["AppModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["DEFAULT_CURRENCY_CODE"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_core_core_u"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵINJECTOR_SCOPE"], "root", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["ANIMATION_MODULE_TYPE"], "BrowserAnimations", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_e"], "XSRF-TOKEN", []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](256, _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["ɵangular_packages_common_http_http_f"], "X-XSRF-TOKEN", [])]);
     });
     /***/
 
@@ -2124,9 +2112,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @placeos/ts-client */
+    "./node_modules/@placeos/ts-client/dist/esm/index.js");
     /* harmony import */
 
 
@@ -2217,7 +2205,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super4 = _createSuper(ApplicationService);
 
-      function ApplicationService(_app_ref, _zone, _title, _router, _cache, _settings, _overlay, _composer, _analytics, _hotkeys, _systems, _organisation, _users, _bookings, _spaces, _polling) {
+      function ApplicationService(_app_ref, _zone, _title, _router, _cache, _settings, _overlay, _analytics, _hotkeys, _systems, _organisation, _users, _bookings, _spaces, _polling) {
         var _this9;
 
         _classCallCheck(this, ApplicationService);
@@ -2230,7 +2218,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this9._cache = _cache;
         _this9._settings = _settings;
         _this9._overlay = _overlay;
-        _this9._composer = _composer;
         _this9._analytics = _analytics;
         _this9._hotkeys = _hotkeys;
         _this9._systems = _systems;
@@ -2248,7 +2235,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Map of observables for state variables */
 
         _this9._observers = {};
-        _this9._organisation.parent = _this9._users.parent = _this9._bookings.parent = _this9._spaces.parent = _this9._systems.parent = _this9._polling.parent = _assertThisInitialized(_this9);
+        _this9._organisation.parent = _this9._users.parent = _this9._bookings.parent = _this9._spaces.parent = _this9._polling.parent = _assertThisInitialized(_this9);
 
         _this9.set('system', null);
 
@@ -2451,18 +2438,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function init() {
           var _this11 = this;
 
-          this.setupComposer(); // Setup analytics
-
-          this._analytics.enabled = !!this.setting('app.analytics.enabled');
-
-          if (this._analytics.enabled) {
-            this._analytics.load(this.setting('app.analytics.tracking_id'));
-          }
-
-          this._composer.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])(function (_) {
+          this.setupComposer()["catch"](function (_) {
             return _;
-          })).subscribe(function () {
-            _this11._users.init();
+          });
+          this.timeout('inited', function () {
+            _this11._users.init(); // Setup analytics
+
+
+            _this11._analytics.enabled = !!_this11.setting('app.analytics.enabled');
+
+            if (_this11._analytics.enabled) {
+              _this11._analytics.load(_this11.setting('app.analytics.tracking_id'));
+            } // Add service to window if in debug mode
+
+
+            if (window.debug) {
+              window.application = _this11;
+            }
+
+            _this11._hotkeys.listen(['Shift', 'Backslash'], function () {
+              _this11.navigate('bootstrap', {
+                clear: true
+              });
+            });
 
             _this11._organisation.init();
 
@@ -2472,19 +2470,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             _this11._polling.init();
 
-            _this11._initialised.next(true);
-          }); // Add service to window if in debug mode
-
-
-          if (window.debug) {
-            window.application = this;
-          }
-
-          this._hotkeys.listen(['Shift', 'Backslash'], function () {
-            _this11.navigate('bootstrap', {
-              clear: true
-            });
-          });
+            _this11.timeout('inited', function () {
+              return _this11._initialised.next(true);
+            }, 500);
+          }, 500);
         }
         /**
          * Initialise the composer library comms
@@ -2510,6 +2499,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             token_uri: "".concat(url, "/auth/token"),
             redirect_uri: "".concat(location.origin).concat(route, "/oauth-resp.html"),
             handle_login: !settings.local_login,
+            use_iframe: true,
+            token_header: true,
             mock: mock
           };
 
@@ -2517,9 +2508,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             localStorage.setItem('oauth_redirect', location.href);
           }
 
-          this._composer.setup(config);
-
           this.log('SYSTEM', 'Finsihed setting up composer.');
+          return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_4__["setup"])(config);
         }
         /**
          * Setup handler for cache change events
@@ -2552,25 +2542,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this12._cache.checkForUpdate();
             }, 5 * 60 * 1000);
           }
-
-          this._users.init();
-
-          this._organisation.init();
-
-          this._bookings.init();
-
-          this._spaces.init(); // Add service to window if in debug mode
-
-
-          if (window.debug) {
-            window.application = this;
-          }
-
-          this._hotkeys.listen(['Shift', 'Backslash'], function () {
-            _this12.navigate('bootstrap', {
-              clear: true
-            });
-          });
         }
         /**
          * Update the cache and reload the page
@@ -2707,14 +2678,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "engine_endpoint",
         get: function get() {
-          return "".concat(this._composer.auth.api_endpoint, "/");
-        }
-        /** Get websocket */
-
-      }, {
-        key: "websocket",
-        get: function get() {
-          return this._composer.realtime;
+          return "/control/api/";
         }
       }]);
 
@@ -2723,7 +2687,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     ApplicationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
       factory: function ApplicationService_Factory() {
-        return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_3__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_9__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_11__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_13__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__["PollingService"]));
+        return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_3__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_9__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_11__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_13__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__["PollingService"]));
       },
       token: ApplicationService,
       providedIn: "root"
@@ -3053,25 +3017,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @placeos/ts-client */
+    "./node_modules/@placeos/ts-client/dist/esm/index.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
     /* harmony import */
 
 
-    var _base_api_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _base_api_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ./base-api.class */
     "./src/app/services/data/base-api.class.ts");
     /* harmony import */
 
 
-    var _shared_base_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _shared_base_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../shared/base.class */
     "./src/app/shared/base.class.ts");
     /* harmony import */
 
 
-    var _shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../../shared/utilities/api.utilities */
     "./src/app/shared/utilities/api.utilities.ts");
 
@@ -3080,13 +3050,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super6 = _createSuper(BaseAPIService);
 
-      function BaseAPIService(_composer) {
+      function BaseAPIService() {
         var _this14;
 
         _classCallCheck(this, BaseAPIService);
 
         _this14 = _super6.call(this);
-        _this14._composer = _composer;
         /** Map of state variables for Service */
 
         _this14._subjects = {};
@@ -3118,21 +3087,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         return _this14;
       }
+      /**
+       * Initailise service
+       */
+
 
       _createClass(BaseAPIService, [{
         key: "init",
-
-        /**
-         * Initailise service
-         */
         value: function init() {
           var _this15 = this;
-
-          if (!this.parent || !this.parent.is_initialised) {
-            return this.timeout('init', function () {
-              return _this15.init();
-            });
-          }
 
           this.load().then(function (_) {
             return _this15._initialised.next(true);
@@ -3170,7 +3133,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "get",
         value: function get(name) {
-          return this._subjects[name] && this._subjects[name] instanceof rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"] ? this._subjects[name].getValue() : null;
+          return this._subjects[name] && this._subjects[name] instanceof rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"] ? this._subjects[name].getValue() : null;
         }
         /**
          * Listen to value change of the named property
@@ -3180,8 +3143,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       }, {
         key: "listen",
-        value: function listen(name, next) {
-          return this._observers[name] ? this._observers[name].subscribe(next) : null;
+        value: function listen(name) {
+          return this._observers[name] ? this._observers[name] : null;
         }
         /**
          * Update the value of the named property
@@ -3193,7 +3156,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "set",
         value: function set(name, value) {
           if (!this._subjects[name]) {
-            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"](value);
+            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](value);
             this._observers[name] = this._subjects[name].asObservable();
           } else {
             this._subjects[name].next(value);
@@ -3253,15 +3216,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             delete query_params.cache;
           }
 
-          var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params);
+          var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params);
           var key = "query|".concat(query);
 
           if (!this._promises[key]) {
             this._promises[key] = new Promise(function (resolve, reject) {
               var url = "".concat(_this16.route(engine)).concat(query ? '?' + query : '');
               var result = [];
-
-              _this16.http.get(url).subscribe(function (d) {
+              Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["get"])(url).subscribe(function (d) {
                 result = d && d instanceof Array ? d.map(function (i) {
                   return _this16.process(i);
                 }) : d && !(d instanceof Array) && d.results ? d.results : [];
@@ -3269,7 +3231,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 reject(e);
                 _this16._promises[key] = null;
               }, function () {
-                if ((!query || query_params && query_params.update_list) && result.length > 0 && result[0] instanceof _base_api_class__WEBPACK_IMPORTED_MODULE_1__["BaseDataClass"]) {
+                if ((!query || query_params && query_params.update_list) && result.length > 0 && result[0] instanceof _base_api_class__WEBPACK_IMPORTED_MODULE_2__["BaseDataClass"]) {
                   _this16.set('list', _this16.updateList(_this16.get('list'), result));
                 }
 
@@ -3303,15 +3265,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             delete query_params.engine;
           }
 
-          var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params);
+          var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params);
           var key = "show|".concat(id, "|").concat(query);
 
           if (!this._promises[key]) {
             this._promises[key] = new Promise(function (resolve, reject) {
               var url = "".concat(_this17.route(engine), "/").concat(id).concat(query ? '?' + query : '');
               var result = null;
-
-              _this17.http.get(url).subscribe(function (d) {
+              Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["get"])(url).subscribe(function (d) {
                 return result = _this17.process(d);
               }, function (e) {
                 reject(e);
@@ -3343,11 +3304,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (!this._promises.new_item) {
             this._promises.new_item = new Promise(function (resolve, reject) {
-              var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params);
+              var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params);
               var url = "".concat(_this18.route(query_params.engine)).concat(query ? '?' + query : '');
               var result = null;
-
-              _this18.http.post(url, form_data).subscribe(function (d) {
+              Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["post"])(url, form_data).subscribe(function (d) {
                 return result = _this18.process(d);
               }, function (e) {
                 reject(e);
@@ -3382,7 +3342,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this19 = this;
 
           var form_data = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-          var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(form_data);
+          var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(form_data);
           var key = "task|".concat(id, "|").concat(task_name, "|").concat(query);
 
           if (!this._promises[key]) {
@@ -3393,8 +3353,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               });
               var url = "".concat(_this19.route(form_data.engine), "/").concat(id, "/").concat(task_name);
               var result = null;
-
-              _this19.http.post(url, post_data).subscribe(function (d) {
+              Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["post"])(url, post_data).subscribe(function (d) {
                 return result = d;
               }, function (e) {
                 reject(e);
@@ -3430,9 +3389,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var query_params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
           var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 5000;
-          var key = "poll|".concat(id || '', "|").concat(Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params) || '');
+          var key = "poll|".concat(id || '', "|").concat(Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params) || '');
           this.stopPoll(id, query_params);
-          this._subjects[key] = new rxjs__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+          this._subjects[key] = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
           this._observers[key] = this._subjects[key].asObservable();
           var sub = this._subjects[key];
           var query = Object.assign(Object.assign({}, query_params || {}), {
@@ -3479,7 +3438,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "stopPoll",
         value: function stopPoll(id) {
           var query_params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-          var key = "poll|".concat(id || '', "|").concat(Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params) || '');
+          var key = "poll|".concat(id || '', "|").concat(Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params) || '');
 
           if (this._subjects[key]) {
             this._subjects[key].complete();
@@ -3505,11 +3464,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (!this._promises[key]) {
             this._promises[key] = new Promise(function (resolve, reject) {
-              var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_3__["toQueryString"])(query_params);
+              var query = Object(_shared_utilities_api_utilities__WEBPACK_IMPORTED_MODULE_4__["toQueryString"])(query_params);
               var url = "".concat(_this21.route(query_params.engine), "/").concat(id).concat(query ? '?' + query : '');
               var result = null;
-
-              _this21.http.put(url, form_data).subscribe(function (d) {
+              Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["put"])(url, form_data).subscribe(function (d) {
                 return result = _this21.process(d);
               }, function (e) {
                 reject(e);
@@ -3548,8 +3506,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (!this._promises[key]) {
             this._promises[key] = new Promise(function (resolve, reject) {
               var url = "".concat(_this22.route(), "/").concat(id);
-
-              _this22.http["delete"](url).subscribe(function (_) {
+              Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["del"])(url).subscribe(function (_) {
                 return null;
               }, function (e) {
                 return reject(e);
@@ -3723,11 +3680,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return new_list;
         }
       }, {
-        key: "http",
-        get: function get() {
-          return this._composer.http;
-        }
-      }, {
         key: "api_route",
         get: function get() {
           return this._api_route;
@@ -3735,7 +3687,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]);
 
       return BaseAPIService;
-    }(_shared_base_class__WEBPACK_IMPORTED_MODULE_2__["BaseClass"]);
+    }(_shared_base_class__WEBPACK_IMPORTED_MODULE_3__["BaseClass"]);
     /***/
 
   },
@@ -4340,35 +4292,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-    /* harmony import */
-
-
-    var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _base_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! ../base.service */
     "./src/app/services/data/base.service.ts");
     /* harmony import */
 
 
-    var _booking_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _booking_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! ./booking.class */
     "./src/app/services/data/bookings/booking.class.ts");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
@@ -4377,13 +4323,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super8 = _createSuper(BookingsService);
 
-      function BookingsService(_composer) {
+      function BookingsService() {
         var _this27;
 
         _classCallCheck(this, BookingsService);
 
-        _this27 = _super8.call(this, _composer);
-        _this27._composer = _composer;
+        _this27 = _super8.call(this);
         _this27._name = 'Bookings';
         _this27._api_route = 'bookings';
 
@@ -4446,7 +4391,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 },
                 staff_id: '',
                 start: booking.date.valueOf(),
-                end: dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).add(booking.period.duration, 'm').valueOf(),
+                end: dayjs__WEBPACK_IMPORTED_MODULE_2__(booking.date).add(booking.period.duration, 'm').valueOf(),
                 host: booking.host || booking.user || {
                   name: 'Panel User'
                 }
@@ -4455,7 +4400,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var _module = _this29.parent.Systems.get(space.id, 'Bookings');
 
               if (request && _module) {
-                _module.exec('create_meeting', [request]).then(function () {
+                _module.execute('create_meeting', [request]).then(function () {
                   _this29.analyticsEvent('create-success');
 
                   resolve();
@@ -4475,16 +4420,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "process",
         value: function process(raw_data) {
-          return new _booking_class__WEBPACK_IMPORTED_MODULE_2__["Booking"](this, raw_data);
+          return new _booking_class__WEBPACK_IMPORTED_MODULE_1__["Booking"](this, raw_data);
         }
       }]);
 
       return BookingsService;
-    }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"]);
+    }(_base_service__WEBPACK_IMPORTED_MODULE_0__["BaseAPIService"]);
 
-    BookingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
+    BookingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
       factory: function BookingsService_Factory() {
-        return new BookingsService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
+        return new BookingsService();
       },
       token: BookingsService,
       providedIn: "root"
@@ -4895,31 +4840,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-    /* harmony import */
-
-
-    var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _base_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! ../base.service */
     "./src/app/services/data/base.service.ts");
     /* harmony import */
 
 
-    var _organisation_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _organisation_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! ./organisation.class */
     "./src/app/services/data/organisation/organisation.class.ts");
     /* harmony import */
 
 
-    var _building_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _building_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ./building.class */
     "./src/app/services/data/organisation/building.class.ts");
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
@@ -4928,13 +4867,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super11 = _createSuper(OrganisationService);
 
-      function OrganisationService(_composer) {
+      function OrganisationService() {
         var _this33;
 
         _classCallCheck(this, OrganisationService);
 
-        _this33 = _super11.call(this, _composer);
-        _this33._composer = _composer;
+        _this33 = _super11.call(this);
         _this33._name = 'Organisation';
         _this33._api_route = 'zones';
 
@@ -5080,7 +5018,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               tags: 'org',
               engine: true
             }).then(function (org_data) {
-              _this35._organisation = new _organisation_class__WEBPACK_IMPORTED_MODULE_2__["Organisation"](_this35, org_data[0]);
+              _this35._organisation = new _organisation_class__WEBPACK_IMPORTED_MODULE_1__["Organisation"](_this35, org_data[0]);
 
               _this35.set('organisation', _this35._organisation);
 
@@ -5116,7 +5054,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               engine: true
             }).then(function (bld_data) {
               var buildings = bld_data.map(function (i) {
-                return new _building_class__WEBPACK_IMPORTED_MODULE_3__["Building"](_this36, i);
+                return new _building_class__WEBPACK_IMPORTED_MODULE_2__["Building"](_this36, i);
               });
 
               _this36.set('buildings', buildings || []);
@@ -5173,7 +5111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         },
         set: function set(bld) {
-          if (bld instanceof _building_class__WEBPACK_IMPORTED_MODULE_3__["Building"]) {
+          if (bld instanceof _building_class__WEBPACK_IMPORTED_MODULE_2__["Building"]) {
             this._active_building = bld.id;
           } else {
             this._active_building = bld;
@@ -5189,11 +5127,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]);
 
       return OrganisationService;
-    }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"]);
+    }(_base_service__WEBPACK_IMPORTED_MODULE_0__["BaseAPIService"]);
 
-    OrganisationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
+    OrganisationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
       factory: function OrganisationService_Factory() {
-        return new OrganisationService(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
+        return new OrganisationService();
       },
       token: OrganisationService,
       providedIn: "root"
@@ -5235,19 +5173,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-    /* harmony import */
-
-
-    var _base_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! ../base.service */
     "./src/app/services/data/base.service.ts");
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
@@ -5268,13 +5200,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super12 = _createSuper(PollingService);
 
-      function PollingService(_composer) {
+      function PollingService() {
         var _this39;
 
         _classCallCheck(this, PollingService);
 
-        _this39 = _super12.call(this, _composer);
-        _this39._composer = _composer;
+        _this39 = _super12.call(this);
         _this39._name = 'Users';
         _this39._api_route = 'pings';
         return _this39;
@@ -5332,11 +5263,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]);
 
       return PollingService;
-    }(_base_service__WEBPACK_IMPORTED_MODULE_2__["BaseAPIService"]);
+    }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"]);
 
-    PollingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
+    PollingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({
       factory: function PollingService_Factory() {
-        return new PollingService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_1__["ComposerService"]));
+        return new PollingService();
       },
       token: PollingService,
       providedIn: "root"
@@ -5732,35 +5663,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-    /* harmony import */
-
-
-    var _base_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _base_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! ../base.service */
     "./src/app/services/data/base.service.ts");
     /* harmony import */
 
 
-    var _space_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _space_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ./space.class */
     "./src/app/services/data/spaces/space.class.ts");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
@@ -5769,13 +5694,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super14 = _createSuper(SpacesService);
 
-      function SpacesService(_composer) {
+      function SpacesService() {
         var _this44;
 
         _classCallCheck(this, SpacesService);
 
-        _this44 = _super14.call(this, _composer);
-        _this44._composer = _composer;
+        _this44 = _super14.call(this);
         _this44._name = 'Space';
         _this44._api_route = 'rooms';
 
@@ -5806,7 +5730,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           if (!options.date) {
-            options.date = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('m').valueOf();
+            options.date = dayjs__WEBPACK_IMPORTED_MODULE_3__().startOf('m').valueOf();
           }
 
           var key = "available|".concat(options.id ? options.id : '');
@@ -5872,16 +5796,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "process",
         value: function process(raw_data) {
-          return new _space_class__WEBPACK_IMPORTED_MODULE_3__["Space"](this, raw_data);
+          return new _space_class__WEBPACK_IMPORTED_MODULE_2__["Space"](this, raw_data);
         }
       }]);
 
       return SpacesService;
-    }(_base_service__WEBPACK_IMPORTED_MODULE_2__["BaseAPIService"]);
+    }(_base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"]);
 
-    SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({
+    SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
       factory: function SpacesService_Factory() {
-        return new SpacesService(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_1__["ComposerService"]));
+        return new SpacesService();
       },
       token: SpacesService,
       providedIn: "root"
@@ -5911,15 +5835,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
+    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @placeos/ts-client */
+    "./node_modules/@placeos/ts-client/dist/esm/index.js");
     /* harmony import */
 
 
@@ -5938,24 +5862,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super15 = _createSuper(SystemsManagerService);
 
-      function SystemsManagerService(_composer) {
+      function SystemsManagerService() {
         var _this46;
 
         _classCallCheck(this, SystemsManagerService);
 
         _this46 = _super15.call(this);
-        _this46._composer = _composer;
         /** Subject for System list */
 
-        _this46._list = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]([]);
+        _this46._list = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"]([]);
+        /** Observable for system list */
 
-        _this46._composer.initialised.subscribe(function (state) {
-          if (state) {
-            _this46._resources = _this46._composer.systems;
+        _this46.systems = _this46._list.asObservable();
 
-            _this46.load();
-          }
-        });
+        _this46.timeout('init', function () {
+          return _this46.load();
+        }, 2000);
 
         return _this46;
       }
@@ -5963,27 +5885,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
       _createClass(SystemsManagerService, [{
-        key: "listen",
+        key: "get",
 
-        /**
-         * List to changes on observable
-         * @param name Name of the observable
-         * @param next Callback for changes to the observable
-         */
-        value: function listen(name, next) {
-          return this._list.subscribe(next);
-        }
         /**
          * Get engine module for the given system
          * @param sys_id ID of the system to get the module from
          * @param mod_id ID of the module with the given system
          * @param index Index of the module
          */
-
-      }, {
-        key: "get",
         value: function get(sys_id, mod_id, index) {
-          return this._composer.bindings.module(sys_id, mod_id, index);
+          return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(sys_id, mod_id, index);
         }
         /**
          * Load Systems
@@ -5992,14 +5903,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "load",
         value: function load() {
-          var _this47 = this;
-
-          if (!this.parent || !this.parent.is_initialised || !this.parent.Users || !this.parent.Users.initialised) {
-            return this.timeout('load', function () {
-              return _this47.load();
-            });
-          }
-
           this.loadSystems();
         }
         /**
@@ -6010,25 +5913,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadSystems",
         value: function loadSystems() {
-          var _this48 = this;
+          var _this47 = this;
 
           var offset = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-          var limit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
-
-          this._resources.query({
+          var limit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;
+          Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["querySystems"])({
             offset: offset,
             limit: limit
-          }).then(function (list) {
-            var total = _this48._resources.last_total;
-            var systems = [].concat(_toConsumableArray(_this48.list), _toConsumableArray(list));
-
-            _this48._list.next(systems.sort(function (a, b) {
+          }).toPromise().then(function (details) {
+            var systems = [].concat(_toConsumableArray(_this47.list), _toConsumableArray(details.data));
+            systems.sort(function (a, b) {
               return (a.name || '').localeCompare(b.name);
-            }));
+            });
 
-            if (systems.length < total) {
-              _this48.loadSystems(systems.length);
+            _this47._list.next(systems);
+
+            if (systems.length < details.total) {
+              _this47.loadSystems(systems.length);
             }
+          })["catch"](function (e) {
+            return _this47.timeout('retry', function () {
+              return _this47.loadSystems(offset);
+            }, 2000);
           });
         }
       }, {
@@ -6043,7 +5949,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
       factory: function SystemsManagerService_Factory() {
-        return new SystemsManagerService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_0__["ComposerService"]));
+        return new SystemsManagerService();
       },
       token: SystemsManagerService,
       providedIn: "root"
@@ -6089,29 +5995,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super16 = _createSuper(User);
 
       function User(service) {
-        var _this49;
+        var _this48;
 
         var raw_data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
         _classCallCheck(this, User);
 
-        _this49 = _super16.call(this, service, raw_data);
-        _this49.service = service;
-        _this49.first_name = raw_data.first_name;
-        _this49.last_name = raw_data.last_name;
-        _this49.windows_id = raw_data.email;
-        _this49.type = raw_data.visitor ? 'external' : raw_data.type || 'internal';
-        _this49.phone = raw_data.phone || raw_data.mobile;
-        _this49.business_unit = raw_data.business_unit || raw_data.department;
-        _this49._organisation = raw_data.organisation || {
+        _this48 = _super16.call(this, service, raw_data);
+        _this48.service = service;
+        _this48.first_name = raw_data.first_name;
+        _this48.last_name = raw_data.last_name;
+        _this48.windows_id = raw_data.email;
+        _this48.type = raw_data.visitor ? 'external' : raw_data.type || 'internal';
+        _this48.phone = raw_data.phone || raw_data.mobile;
+        _this48.business_unit = raw_data.business_unit || raw_data.department;
+        _this48._organisation = raw_data.organisation || {
           id: raw_data.organisation_id,
           name: raw_data.organisation_name
         };
-        _this49.external = _this49.type === 'external';
-        _this49._location = null;
-        _this49.staff_code = raw_data.staff_code || raw_data.fmno;
-        _this49._delegates = raw_data.delegates;
-        return _this49;
+        _this48.external = _this48.type === 'external';
+        _this48._location = null;
+        _this48.staff_code = raw_data.staff_code || raw_data.fmno;
+        _this48._delegates = raw_data.delegates;
+        return _this48;
       }
       /** Organisation the user is associated with */
 
@@ -6123,15 +6029,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * Ask the server for the users current location
          */
         value: function locate() {
-          var _this50 = this;
+          var _this49 = this;
 
           var service = this.service.parent || {};
           return new Promise(function (resolve, reject) {
             if (service.Location) {
-              service.Location.show(_this50.id, {
-                desk: _this50.email
+              service.Location.show(_this49.id, {
+                desk: _this49.email
               }).then(function (l) {
-                _this50._location = l;
+                _this49._location = l;
                 resolve(l);
               }, function (e) {
                 return reject(e);
@@ -6150,11 +6056,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "available",
         value: function available(start, end) {
-          var _this51 = this;
+          var _this50 = this;
 
           return new Promise(function (resolve) {
-            _this51.service.query({
-              email: _this51.email,
+            _this50.service.query({
+              email: _this50.email,
               start: start,
               end: end
             }).then(function (l) {
@@ -6378,19 +6284,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
-    /* harmony import */
-
-
-    var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ts-md5/dist/md5 */
     "./node_modules/ts-md5/dist/md5.js");
     /* harmony import */
 
 
-    var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__);
+    var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_2__);
+    /* harmony import */
+
+
+    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @placeos/ts-client */
+    "./node_modules/@placeos/ts-client/dist/esm/index.js");
     /* harmony import */
 
 
@@ -6425,28 +6331,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super17 = _createSuper(UsersService);
 
-      function UsersService(_composer, uhttp, location) {
-        var _this52;
+      function UsersService(uhttp, location) {
+        var _this51;
 
         _classCallCheck(this, UsersService);
 
-        _this52 = _super17.call(this, _composer);
-        _this52._composer = _composer;
-        _this52.uhttp = uhttp;
-        _this52.location = location;
-        _this52._name = 'Users';
-        _this52._api_route = 'users';
+        _this51 = _super17.call(this);
+        _this51.uhttp = uhttp;
+        _this51.location = location;
+        _this51._name = 'Users';
+        _this51._api_route = 'users';
 
-        _this52._compare = function (a, b) {
+        _this51._compare = function (a, b) {
           return !a.id.localeCompare(b.id) || !a.email.localeCompare(b.email);
         };
 
-        _this52.set('current_user', new _user_class__WEBPACK_IMPORTED_MODULE_5__["User"](_assertThisInitialized(_this52), {
+        _this51.set('current_user', new _user_class__WEBPACK_IMPORTED_MODULE_5__["User"](_assertThisInitialized(_this51), {
           id: 'local_user',
           name: 'Local User'
         }));
 
-        return _this52;
+        return _this51;
       }
       /** Currently logged in user */
 
@@ -6468,7 +6373,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           var path = "".concat(location.origin).concat(this.parent.setting('composer.route') || '', "/oauth-resp.html");
-          var client_id = ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_3__["Md5"].hashStr(path);
+          var client_id = ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_2__["Md5"].hashStr(path);
 
           if (sessionStorage) {
             sessionStorage.setItem("".concat(client_id, "_access_token"), token);
@@ -6495,13 +6400,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "login",
         value: function login(query_params) {
-          var _this53 = this;
+          var _this52 = this;
 
           var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
           if (!this._promises['login']) {
             this._promises['login'] = new Promise(function (resolve, reject) {
-              _this53.set('status', 'loading');
+              _this52.set('status', 'loading');
 
               var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
 
@@ -6511,15 +6416,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               var url = (options ? options.url : '') || '/auth/signin';
 
-              _this53.uhttp.post(url, query_params, {
+              _this52.uhttp.post(url, query_params, {
                 headers: headers
               }).subscribe(function (_) {
                 return null;
               }, function (e) {
                 return reject(e);
               }, function () {
-                _this53._composer.auth.authorise();
-
+                Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_3__["authorise"])();
                 resolve();
               });
             });
@@ -6534,7 +6438,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "logout",
         value: function logout() {
-          this._composer.auth.logout();
+          Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_3__["logout"])();
         }
         /**
          * Load initial data for the service
@@ -6543,32 +6447,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "load",
         value: function load() {
-          var _this54 = this;
+          var _this53 = this;
 
           var tries = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
           this.set('status', 'loading');
           return new Promise(function (resolve) {
             if (tries > 4) {
-              _this54.set('status', 'invalid');
+              _this53.set('status', 'invalid');
 
               return resolve();
             }
 
-            _this54.show('current', {
+            _this53.show('current', {
               engine: true
             }).then(function (current_user) {
-              _this54.set('status', 'available');
+              _this53.set('status', 'available');
 
-              _this54.set('current_user', current_user);
+              _this53.set('current_user', current_user);
 
-              if (_this54.parent && _this54.parent.setting('app.user.grab_api_details')) {
-                _this54.show(current_user.email).then(function (user) {
-                  _this54.set('current_user', user);
+              if (_this53.parent && _this53.parent.setting('app.user.grab_api_details')) {
+                _this53.show(current_user.email).then(function (user) {
+                  _this53.set('current_user', user);
 
                   resolve();
                 }, function () {
-                  return _this54.timeout('load', function () {
-                    return _this54.load(++tries).then(function () {
+                  return _this53.timeout('load', function () {
+                    return _this53.load(++tries).then(function () {
                       return resolve();
                     });
                   });
@@ -6577,8 +6481,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 resolve();
               }
             }, function () {
-              return _this54.timeout('load', function () {
-                return _this54.load(++tries).then(function () {
+              return _this53.timeout('load', function () {
+                return _this53.load(++tries).then(function () {
                   return resolve();
                 });
               });
@@ -6607,7 +6511,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({
       factory: function UsersService_Factory() {
-        return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["ComposerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["Location"]));
+        return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["Location"]));
       },
       token: UsersService,
       providedIn: "root"
@@ -6659,7 +6563,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var HotkeysService = /*#__PURE__*/function () {
       function HotkeysService() {
-        var _this55 = this;
+        var _this54 = this;
 
         _classCallCheck(this, HotkeysService);
 
@@ -6678,30 +6582,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.counter = 0;
         window.addEventListener('keydown', function (event) {
-          var code = _this55.mapKey((event.code || '').toLowerCase());
+          var code = _this54.mapKey((event.code || '').toLowerCase());
 
-          if (_this55.last_down !== code) {
-            if (!_this55.keydown_states[code]) {
-              _this55.keydown_states[code] = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"](null);
-              _this55.keydown_observers[code] = _this55.keydown_states[code].asObservable();
+          if (_this54.last_down !== code) {
+            if (!_this54.keydown_states[code]) {
+              _this54.keydown_states[code] = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"](null);
+              _this54.keydown_observers[code] = _this54.keydown_states[code].asObservable();
             }
 
-            _this55.keydown_states[code].next(_this55.counter++);
+            _this54.keydown_states[code].next(_this54.counter++);
 
-            if (_this55.combo_end.indexOf(code) >= 0) {
+            if (_this54.combo_end.indexOf(code) >= 0) {
               event.preventDefault();
             }
 
-            _this55.last_down = code;
+            _this54.last_down = code;
           }
         });
         window.addEventListener('keyup', function (event) {
-          var code = _this55.mapKey((event.code || '').toLowerCase());
+          var code = _this54.mapKey((event.code || '').toLowerCase());
 
-          _this55.keydown_states[code].next(null);
+          _this54.keydown_states[code].next(null);
 
-          if (_this55.last_down === code) {
-            _this55.last_down = null;
+          if (_this54.last_down === code) {
+            _this54.last_down = null;
           }
         });
       }
@@ -6715,11 +6619,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(HotkeysService, [{
         key: "listen",
         value: function listen(combo, next) {
-          var _this56 = this;
+          var _this55 = this;
 
           combo = combo instanceof Array ? combo : combo.split('+');
           var combination = combo.map(function (i) {
-            return _this56.mapKey(i.toLowerCase());
+            return _this55.mapKey(i.toLowerCase());
           });
 
           if (combination.length > 0 && this.validCombination(combination)) {
@@ -6744,7 +6648,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   try {
                     for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
                       var key = _step16.value;
-                      var state = _this56.keydown_states[key];
+                      var state = _this55.keydown_states[key];
                       presses.push(state ? state.getValue() || -1 : -1);
                     } // Check that keys are pressed in the correct order
 
@@ -6923,36 +6827,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super18 = _createSuper(SettingsService);
 
       function SettingsService(http) {
-        var _this57;
+        var _this56;
 
         _classCallCheck(this, SettingsService);
 
-        _this57 = _super18.call(this);
-        _this57.http = http;
+        _this56 = _super18.call(this);
+        _this56.http = http;
         /** Map of settings */
 
-        _this57._settings = {
+        _this56._settings = {
           api: {},
           local: {},
           session: {}
         };
         /** Store for promises */
 
-        _this57._promises = {};
+        _this56._promises = {};
         /** Name of the application */
 
-        _this57._app_name = 'PlaceOS';
+        _this56._app_name = 'PlaceOS';
         var now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
         var build = dayjs__WEBPACK_IMPORTED_MODULE_5__(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].time);
         var built = now.isSame(build, 'd') ? "Today at ".concat(build.format('h:mmA')) : build.format('D MMM YYYY, h:mmA');
 
-        _this57.log('CORE', "".concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].core_version), null, 'debug', true);
+        _this56.log('CORE', "".concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].core_version), null, 'debug', true);
 
-        _this57.log('APP', "".concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].version, " - ").concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].hash, " | Built: ").concat(built), null, 'debug', true);
+        _this56.log('APP', "".concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].version, " - ").concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].hash, " | Built: ").concat(built), null, 'debug', true);
 
-        _this57.init();
+        _this56.init();
 
-        return _this57;
+        return _this56;
       }
       /**
        * Initialise the settings
@@ -7052,7 +6956,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var file = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'assets/settings.json';
           var tries = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
-            var _this58 = this;
+            var _this57 = this;
 
             var file_name, key;
             return regeneratorRuntime.wrap(function _callee8$(_context8) {
@@ -7082,15 +6986,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     if (!this._promises[key]) {
                       this._promises[key] = new Promise(function (resolve, reject) {
-                        _this58.http.get(file).subscribe(function (data) {
-                          _this58._settings[name] = Object.assign(Object.assign({}, _this58._settings[name] || {}), data || {});
+                        _this57.http.get(file).subscribe(function (data) {
+                          _this57._settings[name] = Object.assign(Object.assign({}, _this57._settings[name] || {}), data || {});
                         }, function (e) {
-                          _this58.log('Settings', "Failed to load settings from \"".concat(file, "\""));
+                          _this57.log('Settings', "Failed to load settings from \"".concat(file, "\""));
 
-                          _this58._promises[key] = null;
+                          _this57._promises[key] = null;
 
-                          _this58.timeout("load_".concat(file_name), function () {
-                            _this58.loadFromFile(name, file, ++tries).then(function () {
+                          _this57.timeout("load_".concat(file_name), function () {
+                            _this57.loadFromFile(name, file, ++tries).then(function () {
                               return resolve();
                             });
                           });
@@ -7185,7 +7089,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * @param delay Callback delay
          */
         value: function timeout(name, fn) {
-          var _this59 = this;
+          var _this58 = this;
 
           var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 300;
 
@@ -7193,7 +7097,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.clearTimeout(name);
             this._timers[name] = setTimeout(function () {
               fn();
-              _this59._timers[name] = null;
+              _this58._timers[name] = null;
             }, delay);
           } else {
             throw new Error(name ? 'Cannot create named timeout without a name' : 'Cannot create a timeout without a callback');
@@ -7312,84 +7216,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       return BaseClass;
     }();
-    /***/
-
-  },
-
-  /***/
-  "./src/app/shared/base.component.ngfactory.js":
-  /*!****************************************************!*\
-    !*** ./src/app/shared/base.component.ngfactory.js ***!
-    \****************************************************/
-
-  /*! exports provided: RenderType_BaseComponent, View_BaseComponent_0, View_BaseComponent_Host_0, BaseComponentNgFactory */
-
-  /***/
-  function srcAppSharedBaseComponentNgfactoryJs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "RenderType_BaseComponent", function () {
-      return RenderType_BaseComponent;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "View_BaseComponent_0", function () {
-      return View_BaseComponent_0;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "View_BaseComponent_Host_0", function () {
-      return View_BaseComponent_Host_0;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "BaseComponentNgFactory", function () {
-      return BaseComponentNgFactory;
-    });
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ./base.component */
-    "./src/app/shared/base.component.ts");
-    /**
-     * @fileoverview This file was generated by the Angular template compiler. Do not edit.
-     *
-     * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes,extraRequire}
-     * tslint:disable
-     */
-
-
-    var styles_BaseComponent = [""];
-
-    var RenderType_BaseComponent = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵcrt"]({
-      encapsulation: 0,
-      styles: styles_BaseComponent,
-      data: {}
-    });
-
-    function View_BaseComponent_0(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵvid"](0, [], null, null);
-    }
-
-    function View_BaseComponent_Host_0(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵeld"](0, 0, null, null, 1, "a-very-basic-component-base-that-should-not-be-used", [], null, null, null, View_BaseComponent_0, RenderType_BaseComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵdid"](1, 180224, null, 0, _base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"], [], null, null)], null, null);
-    }
-
-    var BaseComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵccf"]("a-very-basic-component-base-that-should-not-be-used", _base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"], View_BaseComponent_Host_0, {}, {}, []);
     /***/
 
   },
@@ -7743,44 +7569,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super20 = _createSuper(CustomDurationFieldComponent);
 
       function CustomDurationFieldComponent(field, group) {
-        var _this60;
+        var _this59;
 
         _classCallCheck(this, CustomDurationFieldComponent);
 
-        _this60 = _super20.call(this);
-        _this60.field = field;
-        _this60.group = group;
+        _this59 = _super20.call(this);
+        _this59.field = field;
+        _this59.group = group;
         /** Step size for available times */
 
-        _this60.block_size = 15;
+        _this59.block_size = 15;
         /** List of available durations */
 
-        _this60.options = [];
-        return _this60;
+        _this59.options = [];
+        return _this59;
       }
 
       _createClass(CustomDurationFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this61 = this;
+          var _this60 = this;
 
           if (this.group) {
             if (this.group.controls.date) {
               this.date_control = this.group.controls.date;
               this.subscription('date', this.date_control.valueChanges.subscribe(function () {
-                return _this61.calculateAvailableDurations();
+                return _this60.calculateAvailableDurations();
               }));
             }
 
             if (this.group.controls.room || this.group.controls.space) {
               this.space_control = this.group.controls.room || this.group.controls.space;
               this.subscription('space', this.space_control.valueChanges.subscribe(function () {
-                return _this61.calculateAvailableDurations();
+                return _this60.calculateAvailableDurations();
               }));
             }
 
             this.subscription('control', this.field.control.valueChanges.subscribe(function () {
-              return _this61.updateDisplay();
+              return _this60.updateDisplay();
             }));
           }
 
@@ -7793,13 +7619,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateDisplay",
         value: function updateDisplay() {
-          var _this62 = this;
+          var _this61 = this;
 
           if (this.options && this.options.length > 0) {
             if (!this.active_duration) {
               if (this.field.getValue()) {
                 this.active_duration = this.options.find(function (i) {
-                  return i.id === _this62.field.getValue();
+                  return i.id === _this61.field.getValue();
                 });
               }
 
@@ -7808,7 +7634,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 this.setValue(this.options[0]);
               }
             } else if (!this.options.find(function (i) {
-              return i.id === _this62.active_duration.id;
+              return i.id === _this61.active_duration.id;
             })) {
               var diff = 9999;
               var new_opt = null;
@@ -8179,44 +8005,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super21 = _createSuper(CustomTimeFieldComponent);
 
       function CustomTimeFieldComponent(field, group) {
-        var _this63;
+        var _this62;
 
         _classCallCheck(this, CustomTimeFieldComponent);
 
-        _this63 = _super21.call(this);
-        _this63.field = field;
-        _this63.group = group;
+        _this62 = _super21.call(this);
+        _this62.field = field;
+        _this62.group = group;
         /** Step size for available times */
 
-        _this63.block_size = 5;
+        _this62.block_size = 5;
         /** Step size for available times */
 
-        _this63.min_size = _this63.block_size * 6;
-        return _this63;
+        _this62.min_size = _this62.block_size * 6;
+        return _this62;
       }
 
       _createClass(CustomTimeFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this64 = this;
+          var _this63 = this;
 
           if (this.group) {
             if (this.group.controls.date) {
               this.date_control = this.group.controls.date;
               this.subscription('date', this.date_control.valueChanges.subscribe(function () {
-                return _this64.updateDisplay(true);
+                return _this63.updateDisplay(true);
               }));
             }
 
             if (this.group.controls.room || this.group.controls.space) {
               this.space_control = this.group.controls.room || this.group.controls.space;
               this.subscription('space', this.space_control.valueChanges.subscribe(function () {
-                return _this64.updateDisplay();
+                return _this63.updateDisplay();
               }));
             }
 
             this.subscription('control', this.field.control.valueChanges.subscribe(function () {
-              return _this64.updateDisplay();
+              return _this63.updateDisplay();
             }));
           }
 
@@ -8303,7 +8129,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "calculateAvailableTimes",
         value: function calculateAvailableTimes() {
-          var _this65 = this;
+          var _this64 = this;
 
           this.times = [];
           var date = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('m');
@@ -8323,7 +8149,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (slots.find(function (i) {
                 return i.start <= value && value < i.end && dayjs__WEBPACK_IMPORTED_MODULE_4__(i.end).diff(date, 'm') >= min_duration;
               })) {
-                _this65.times.push({
+                _this64.times.push({
                   id: date.format('HH:mm'),
                   name: date.format('h:mm A'),
                   value: date.valueOf()
@@ -8790,27 +8616,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super22 = _createSuper(CustomUserSearchFieldComponent);
 
       function CustomUserSearchFieldComponent(field, group, service) {
-        var _this66;
+        var _this65;
 
         _classCallCheck(this, CustomUserSearchFieldComponent);
 
-        _this66 = _super22.call(this);
-        _this66.field = field;
-        _this66.group = group;
-        _this66.service = service;
+        _this65 = _super22.call(this);
+        _this65.field = field;
+        _this65.group = group;
+        _this65.service = service;
         /** List of users from an API search */
 
-        _this66.filtered_list = [];
+        _this65.filtered_list = [];
         /** Subject holding the value of the search */
 
-        _this66.search$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-        return _this66;
+        _this65.search$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        return _this65;
       }
 
       _createClass(CustomUserSearchFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this67 = this;
+          var _this66 = this;
 
           if (this.group) {
             if (this.field.references && this.field.references.length > 0) {
@@ -8818,35 +8644,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               if (control) {
                 this.subscription('reference', control.valueChanges.subscribe(function () {
-                  return _this67.updateDisplay();
+                  return _this66.updateDisplay();
                 }));
               }
             }
 
             this.subscription('control', this.field.control.valueChanges.subscribe(function () {
-              return _this67.updateDisplay();
+              return _this66.updateDisplay();
             }));
           } // Listen for input changes
 
 
           this.search_results$ = this.search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(400), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function (query) {
-            _this67.searching = true;
-            _this67.show = true;
-            return query.length >= 3 ? _this67.service.Users.query({
+            _this66.searching = true;
+            _this66.show = true;
+            return query.length >= 3 ? _this66.service.Users.query({
               q: query.slice(0, 3),
               cache: 60 * 1000
             }) : Promise.resolve([]);
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (err) {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])([]);
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (list) {
-            _this67.searching = false;
-            return Object(_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["filterList"])(_this67.search_str, list, ['name', 'email']);
+            _this66.searching = false;
+            return Object(_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["filterList"])(_this66.search_str, list, ['name', 'email']);
           })); // Process API results
 
           this.search_results$.subscribe(function (list) {
-            _this67.filtered_list = list;
+            _this66.filtered_list = list;
 
-            _this67.filtered_list.forEach(function (i) {
+            _this66.filtered_list.forEach(function (i) {
               i.match_name = Object(_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["matchToHighlight"])(i.match_name);
               i.match_email = Object(_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["matchToHighlight"])(i.match_email);
               return i;
@@ -8881,12 +8707,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "reset",
         value: function reset() {
-          var _this68 = this;
+          var _this67 = this;
 
           this.timeout('reset', function () {
-            var value = _this68.field.control.value;
-            _this68.search_str = value ? value.name : '';
-            _this68.show = false;
+            var value = _this67.field.control.value;
+            _this67.search_str = value ? value.name : '';
+            _this67.show = false;
           });
         }
         /**
@@ -8897,14 +8723,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "select",
         value: function select(user) {
-          var _this69 = this;
+          var _this68 = this;
 
           if (user) {
             this.field.setValue(user);
           }
 
           this.timeout('hide', function () {
-            _this69.show = false;
+            _this68.show = false;
           }, 100);
         }
       }]);
@@ -8914,6 +8740,176 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     _globals_form_fields__WEBPACK_IMPORTED_MODULE_7__["FORM_FIELDS"].host = CustomUserSearchFieldComponent;
     /***/
+  },
+
+  /***/
+  "./src/app/shared/directives/binding/binding.directive.ts":
+  /*!****************************************************************!*\
+    !*** ./src/app/shared/directives/binding/binding.directive.ts ***!
+    \****************************************************************/
+
+  /*! exports provided: BindingDirective */
+
+  /***/
+  function srcAppSharedDirectivesBindingBindingDirectiveTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "BindingDirective", function () {
+      return BindingDirective;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @placeos/ts-client */
+    "./node_modules/@placeos/ts-client/dist/esm/index.js");
+
+    var BindingDirective = /*#__PURE__*/function () {
+      function BindingDirective(_element, _renderer) {
+        _classCallCheck(this, BindingDirective);
+
+        this._element = _element;
+        this._renderer = _renderer;
+        /** Index of the system to bind */
+
+        this.index = 1;
+        /** ID of the system to bind to */
+
+        this.params = [];
+        /** Emitter for changes to the value of the binding */
+
+        this.modelChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+      }
+
+      _createClass(BindingDirective, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this69 = this;
+
+          this.init_listener = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["onlineState"])().subscribe(function (init) {
+            if (init) {
+              _this69.bindVariable();
+
+              if (_this69.init_listener) {
+                _this69.init_listener.unsubscribe();
+
+                _this69.init_listener = null;
+              }
+            }
+          });
+        }
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          if (this.listener) {
+            this.listener.unsubscribe();
+            this.listener = null;
+          }
+
+          if (this.unbind) {
+            this.unbind();
+            this.unbind = null;
+          }
+
+          if (this.event_listener) {
+            this.event_listener();
+            this.event_listener = null;
+          }
+        }
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          var _this70 = this;
+
+          if (changes.sys || changes.mod || changes.bind) {
+            this.ngOnDestroy();
+            this.bindVariable();
+          }
+
+          if (changes.on_event && this.on_event) {
+            if (this.event_listener) {
+              this.event_listener();
+              this.event_listener = null;
+            }
+
+            this.event_listener = this._renderer.listen(this._element.nativeElement, this.on_event, function () {
+              return _this70.execute();
+            });
+          }
+        }
+        /** Bind to set status variable */
+
+      }, {
+        key: "bindVariable",
+        value: function bindVariable() {
+          var _this71 = this;
+
+          if (Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["authority"])() && this.bind && this.sys && this.mod) {
+            var _module2 = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(this.sys, this.mod, this.index);
+
+            var binding = _module2.binding(this.bind);
+
+            this.unbind = binding.bind();
+            this.listener = binding.listen().subscribe(function (value) {
+              return setTimeout(function () {
+                _this71.model = value;
+
+                _this71.modelChange.emit(_this71.model);
+              }, 10);
+            });
+          }
+        }
+        /** Excute the set method on the module */
+
+      }, {
+        key: "execute",
+        value: function execute() {
+          var _this72 = this;
+
+          if (Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["authority"])() && this.exec && this.sys && this.mod) {
+            var _module3 = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(this.sys, this.mod, this.index);
+
+            _module3.execute(this.exec, this.params).then(function (result) {
+              // Emit exec result if not bound to status variable
+              if (!_this72.bind) {
+                _this72.model = result;
+
+                _this72.modelChange.emit(_this72.model);
+              }
+            });
+          }
+        }
+        /**
+         * Update local value when form control value is changed
+         * @param value The new value for the component
+         */
+
+      }, {
+        key: "writeValue",
+        value: function writeValue(value) {
+          this.model = value;
+          this.modelChange.emit(this.model);
+
+          if (this.exec) {
+            this.execute();
+          }
+        }
+      }]);
+
+      return BindingDirective;
+    }();
+    /***/
+
   },
 
   /***/
@@ -9109,31 +9105,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _services_data_spaces_space_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @placeos/ts-client */
+    "./node_modules/@placeos/ts-client/dist/esm/index.js");
+    /* harmony import */
+
+
+    var _services_data_spaces_space_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! ../../services/data/spaces/space.utilities */
     "./src/app/services/data/spaces/space.utilities.ts");
     /* harmony import */
 
 
-    var _services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../../services/data/bookings/booking.utilities */
     "./src/app/services/data/bookings/booking.utilities.ts");
     /* harmony import */
 
 
-    var _services_data_users_user_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _services_data_users_user_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../services/data/users/user.utilities */
     "./src/app/services/data/users/user.utilities.ts");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+    var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
 
     var LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     var NUMBERS = '0123456789'.split('');
@@ -9146,8 +9148,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function createSystem() {
       var id = "sys-".concat(LETTERS[Math.floor(index / NUMBERS.length)]).concat(NUMBERS[index++ % NUMBERS.length]);
-      Object(_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_1__["setMockBookingStartDatetime"])(dayjs__WEBPACK_IMPORTED_MODULE_3__().minute(-50).valueOf());
-      var space = Object(_services_data_spaces_space_utilities__WEBPACK_IMPORTED_MODULE_0__["generateMockSpace"])(id);
+      Object(_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_2__["setMockBookingStartDatetime"])(dayjs__WEBPACK_IMPORTED_MODULE_4__().minute(-50).valueOf());
+      var space = Object(_services_data_spaces_space_utilities__WEBPACK_IMPORTED_MODULE_1__["generateMockSpace"])(id);
       SPACE_LIST.push(space);
       var bindings = {
         touch_enabled: true,
@@ -9165,7 +9167,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       system.Bookings.push(Object.assign(Object.assign({}, bindings), {
         room_name: space.name,
         today: space.bookings,
-        reload: dayjs__WEBPACK_IMPORTED_MODULE_3__().add(1, 'h').unix(),
+        reload: dayjs__WEBPACK_IMPORTED_MODULE_4__().add(1, 'h').unix(),
         $start_meeting: function $start_meeting(time) {
           system.Bookings[0].last_meeting_started = time;
         },
@@ -9186,21 +9188,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return createSystem();
     };
 
-    var MOCK_SYSTEMS = Array(10).fill(0).map(ɵ0); // Add mock systems to the global space so that the mock websocket can hook into them
+    var MOCK_SYSTEMS = Array(10).fill(0).map(ɵ0);
 
-    if (!window.control) {
-      window.control = {
-        systems: {}
-      };
+    var _iterator22 = _createForOfIteratorHelper(MOCK_SYSTEMS),
+        _step22;
+
+    try {
+      for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+        var system = _step22.value;
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["registerSystem"])(system.id, system);
+      }
+    } catch (err) {
+      _iterator22.e(err);
+    } finally {
+      _iterator22.f();
     }
 
-    window.control.systems = MOCK_SYSTEMS.reduce(function (a, v) {
-      a[v.id] = v;
-      return a;
-    }, {});
-
     var ɵ1 = function ɵ1(i) {
-      return Object(_services_data_users_user_utilities__WEBPACK_IMPORTED_MODULE_2__["generateMockUser"])();
+      return Object(_services_data_users_user_utilities__WEBPACK_IMPORTED_MODULE_3__["generateMockUser"])();
     }; // Add mock data for API endpoints
 
 
@@ -9256,8 +9261,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       method: 'GET',
       callback: ɵ6
     }];
-    window.control.handlers = handlers;
+
+    for (var _i = 0, _handlers = handlers; _i < _handlers.length; _i++) {
+      var handler = _handlers[_i];
+      Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["registerMockEndpoint"])(handler);
+    }
     /***/
+
   },
 
   /***/
@@ -9309,8 +9319,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _components_duration_field_duration_field_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./components/duration-field/duration-field.component */
     "./src/app/shared/components/duration-field/duration-field.component.ts");
+    /* harmony import */
 
-    var COMPONENTS = [_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]];
+
+    var _directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./directives/binding/binding.directive */
+    "./src/app/shared/directives/binding/binding.directive.ts");
+
+    var COMPONENTS = [_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"], _directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_5__["BindingDirective"]];
     var ENTRY_COMPONENT = [_components_user_search_field_user_search_field_component__WEBPACK_IMPORTED_MODULE_2__["CustomUserSearchFieldComponent"], _components_time_field_time_field_component__WEBPACK_IMPORTED_MODULE_3__["CustomTimeFieldComponent"], _components_duration_field_duration_field_component__WEBPACK_IMPORTED_MODULE_4__["CustomDurationFieldComponent"]];
 
     var SharedContentModule = function SharedContentModule() {
@@ -9492,12 +9508,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var length = users.length + (host ? 1 : 0);
         attendee_str = "".concat(length, " Attendee").concat(length === 1 ? '' : 's', "; ").concat(host ? host.name : '');
 
-        var _iterator22 = _createForOfIteratorHelper(users),
-            _step22;
+        var _iterator23 = _createForOfIteratorHelper(users),
+            _step23;
 
         try {
-          for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-            var item = _step22.value;
+          for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+            var item = _step23.value;
 
             if (attendee_str) {
               attendee_str += ', ';
@@ -9506,9 +9522,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             attendee_str += item.name;
           }
         } catch (err) {
-          _iterator22.e(err);
+          _iterator23.e(err);
         } finally {
-          _iterator22.f();
+          _iterator23.f();
         }
 
         attendee_str = attendee_str.replace('; ,', ';');
@@ -9809,12 +9825,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var filters = (filter || '').toLowerCase().split(' ');
       var list = {};
 
-      var _iterator23 = _createForOfIteratorHelper(filters),
-          _step23;
+      var _iterator24 = _createForOfIteratorHelper(filters),
+          _step24;
 
       try {
-        for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-          var _f5 = _step23.value;
+        for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+          var _f5 = _step24.value;
 
           if (_f5) {
             if (!list[_f5]) {
@@ -9826,9 +9842,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // Group similar tokens
 
       } catch (err) {
-        _iterator23.e(err);
+        _iterator24.e(err);
       } finally {
-        _iterator23.f();
+        _iterator24.f();
       }
 
       var parts = [];
@@ -9855,12 +9871,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           item.match = '';
           var field_list = {}; // Initialise field match variables
 
-          var _iterator24 = _createForOfIteratorHelper(fields),
-              _step24;
+          var _iterator25 = _createForOfIteratorHelper(fields),
+              _step25;
 
           try {
-            for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-              var _f = _step24.value;
+            for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+              var _f = _step25.value;
               field_list[_f] = {
                 value: (item[_f] || '').toLowerCase(),
                 index: 65536,
@@ -9869,26 +9885,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } // Search for matches with the tokenised filter string
 
           } catch (err) {
-            _iterator24.e(err);
+            _iterator25.e(err);
           } finally {
-            _iterator24.f();
+            _iterator25.f();
           }
 
-          var _iterator25 = _createForOfIteratorHelper(parts),
-              _step25;
+          var _iterator26 = _createForOfIteratorHelper(parts),
+              _step26;
 
           try {
-            for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-              var i = _step25.value;
+            for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+              var i = _step26.value;
 
               if (i.word) {
                 // Check fields for matches
-                var _iterator27 = _createForOfIteratorHelper(fields),
-                    _step27;
+                var _iterator28 = _createForOfIteratorHelper(fields),
+                    _step28;
 
                 try {
-                  for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-                    var _f2 = _step27.value;
+                  for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                    var _f2 = _step28.value;
                     var field = field_list[_f2];
                     var index = field.value.indexOf(i.word);
                     field.index = index < field.index ? index : field.index;
@@ -9897,17 +9913,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   } // Update token match count
 
                 } catch (err) {
-                  _iterator27.e(err);
+                  _iterator28.e(err);
                 } finally {
-                  _iterator27.f();
+                  _iterator28.f();
                 }
 
-                var _iterator28 = _createForOfIteratorHelper(fields),
-                    _step28;
+                var _iterator29 = _createForOfIteratorHelper(fields),
+                    _step29;
 
                 try {
-                  for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-                    var _f3 = _step28.value;
+                  for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                    var _f3 = _step29.value;
                     var _field = field_list[_f3];
 
                     if (_field.matches >= i.count) {
@@ -9916,12 +9932,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       var changed = 0;
                       var tokens = (item["match_".concat(_f3)] || item[_f3] || '').split(' ');
 
-                      var _iterator29 = _createForOfIteratorHelper(tokens),
-                          _step29;
+                      var _iterator30 = _createForOfIteratorHelper(tokens),
+                          _step30;
 
                       try {
-                        for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                          var k = _step29.value;
+                        for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                          var k = _step30.value;
 
                           if (changed >= i.count) {
                             break;
@@ -9933,9 +9949,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           }
                         }
                       } catch (err) {
-                        _iterator29.e(err);
+                        _iterator30.e(err);
                       } finally {
-                        _iterator29.f();
+                        _iterator30.f();
                       }
 
                       item["match_".concat(_f3)] = tokens.join(' ');
@@ -9943,25 +9959,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
                   }
                 } catch (err) {
-                  _iterator28.e(err);
+                  _iterator29.e(err);
                 } finally {
-                  _iterator28.f();
+                  _iterator29.f();
                 }
               }
             } // Get field with the most relevent match
 
           } catch (err) {
-            _iterator25.e(err);
+            _iterator26.e(err);
           } finally {
-            _iterator25.f();
+            _iterator26.f();
           }
 
-          var _iterator26 = _createForOfIteratorHelper(fields),
-              _step26;
+          var _iterator27 = _createForOfIteratorHelper(fields),
+              _step27;
 
           try {
-            for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-              var _f4 = _step26.value;
+            for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+              var _f4 = _step27.value;
               var _field2 = field_list[_f4];
 
               if (_field2.index < item.match_index && _field2.index >= 0) {
@@ -9970,9 +9986,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator26.e(err);
+            _iterator27.e(err);
           } finally {
-            _iterator26.f();
+            _iterator27.f();
           }
 
           return item.match_index >= 0 && item.match && match_count >= parts.length;
@@ -10708,52 +10724,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super23 = _createSuper(BootstrapComponent);
 
       function BootstrapComponent(service, route) {
-        var _this70;
+        var _this73;
 
         _classCallCheck(this, BootstrapComponent);
 
-        _this70 = _super23.call(this);
-        _this70.service = service;
-        _this70.route = route;
+        _this73 = _super23.call(this);
+        _this73.service = service;
+        _this73.route = route;
         /** List of available systems */
 
-        _this70.system_list = [];
+        _this73.system_list = [];
         /** Selected system to bootstrap */
 
-        _this70.selected_system = null;
-        return _this70;
+        _this73.selected_system = null;
+        return _this73;
       }
 
       _createClass(BootstrapComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this71 = this;
+          var _this74 = this;
 
           this.loading = true;
           this.service.Spaces.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])(function (_) {
             return _;
           })).subscribe(function () {
-            _this71.subscription('route.query', _this71.route.queryParamMap.subscribe(function (params) {
+            _this74.subscription('route.query', _this74.route.queryParamMap.subscribe(function (params) {
               if (params.has('clear') && params.get('clear')) {
-                _this71.clearBootstrap();
+                _this74.clearBootstrap();
               }
 
               if (params.has('system_id') || params.has('sys_id')) {
-                _this71.system_id = params.get('system_id') || params.get('sys_id');
-                _this71.manual_input = true;
+                _this74.system_id = params.get('system_id') || params.get('sys_id');
+                _this74.manual_input = true;
 
-                _this71.bootstrap();
+                _this74.bootstrap();
               }
             }));
 
-            _this71.subscription('system_list', _this71.service.Systems.listen('list', function (systems) {
-              _this71.system_list = systems || [];
-              _this71.manual_input = !_this71.system_list || _this71.system_list.length <= 0;
+            _this74.subscription('system_list', _this74.service.Systems.systems.subscribe(function (systems) {
+              _this74.system_list = systems || [];
+              _this74.manual_input = !_this74.system_list || _this74.system_list.length <= 0;
+              _this74.loading = false;
             }));
 
-            _this71.loadList();
-
-            _this71.checkBootstrapped();
+            _this74.checkBootstrapped();
           });
         }
         /**
@@ -10768,32 +10783,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           } else if (this.selected_system) {
             this.configure(this.selected_system.id);
           }
-        }
-        /**
-         * Grab the list of systems from the Systems Manager
-         * @param tries Number of previous attempts
-         */
-
-      }, {
-        key: "loadList",
-        value: function loadList() {
-          var _this72 = this;
-
-          var tries = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-          this.system_list = this.service.Systems.list || [];
-
-          if ((!this.system_list || this.system_list.length <= 0) && tries < 10) {
-            this.timeout('load', function () {
-              return _this72.loadList(++tries);
-            });
-            return;
-          }
-
-          if (!this.system_list || this.system_list.length <= 0) {
-            this.manual_input = true;
-          }
-
-          this.loading = false;
         }
         /**
          * Check if the application has previously been bootstrapped
@@ -11143,14 +11132,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super24 = _createSuper(BookingPanelArrayComponent);
 
       function BookingPanelArrayComponent(route, _service) {
-        var _this73;
+        var _this75;
 
         _classCallCheck(this, BookingPanelArrayComponent);
 
-        _this73 = _super24.call(this);
-        _this73.route = route;
-        _this73._service = _service;
-        return _this73;
+        _this75 = _super24.call(this);
+        _this75.route = route;
+        _this75._service = _service;
+        return _this75;
       }
       /** Display value for the current time */
 
@@ -11158,21 +11147,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(BookingPanelArrayComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this74 = this;
+          var _this76 = this;
 
           this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
             if (is_ready) {
-              _this74.subscription('route.query', _this74.route.queryParamMap.subscribe(function (params) {
+              _this76.subscription('route.query', _this76.route.queryParamMap.subscribe(function (params) {
                 if (params.has('system_ids')) {
-                  _this74.systems = (params.get('system_ids') || '').split(',');
+                  _this76.systems = (params.get('system_ids') || '').split(',');
                 }
               }));
 
-              var logo = _this74._service.setting('app.logo');
+              var logo = _this76._service.setting('app.logo');
 
-              _this74.logo = (logo ? logo.inverse : null) || '';
+              _this76.logo = (logo ? logo.inverse : null) || '';
 
-              _this74.unsub('app_ready');
+              _this76.unsub('app_ready');
             }
           }));
         }
@@ -11241,9 +11230,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../../shared/directives/binding/binding.directive */
+    "./src/app/shared/directives/binding/binding.directive.ts");
     /* harmony import */
 
 
@@ -11343,7 +11332,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -11360,7 +11349,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -11377,7 +11366,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"]
@@ -11659,33 +11648,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super25 = _createSuper(BookingPanelSelectComponent);
 
       function BookingPanelSelectComponent(route, service) {
-        var _this75;
+        var _this77;
 
         _classCallCheck(this, BookingPanelSelectComponent);
 
-        _this75 = _super25.call(this);
-        _this75.route = route;
-        _this75.service = service;
+        _this77 = _super25.call(this);
+        _this77.route = route;
+        _this77.service = service;
         /** Names for the list of systems */
 
-        _this75.system_name = {};
+        _this77.system_name = {};
         /** Icons for the list of systems */
 
-        _this75.system_icon = {};
+        _this77.system_icon = {};
         /** Status for the list of systems */
 
-        _this75.system_status = {};
-        return _this75;
+        _this77.system_status = {};
+        return _this77;
       }
 
       _createClass(BookingPanelSelectComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this76 = this;
+          var _this78 = this;
 
           this.subscription('route.query', this.route.queryParamMap.subscribe(function (params) {
             if (params.has('system_ids')) {
-              _this76.systems = (params.get('system_ids') || '').split(',');
+              _this78.systems = (params.get('system_ids') || '').split(',');
             }
           }));
         }
@@ -11732,12 +11721,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "reset",
         value: function reset() {
-          var _this77 = this;
+          var _this79 = this;
 
           if (this.active_system) {
             this.countdown = 30;
             this.interval('countdown', function () {
-              return _this77.tick();
+              return _this79.tick();
             }, 1000);
           }
         }
@@ -11844,9 +11833,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../../../shared/directives/binding/binding.directive */
+    "./src/app/shared/directives/binding/binding.directive.ts");
     /* harmony import */
 
 
@@ -11978,7 +11967,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -11995,7 +11984,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12012,7 +12001,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12029,7 +12018,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12046,7 +12035,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12063,7 +12052,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12080,7 +12069,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12097,7 +12086,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12114,7 +12103,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12131,7 +12120,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12148,7 +12137,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12165,7 +12154,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12379,19 +12368,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super26 = _createSuper(PanelBookingActionsComponent);
 
       function PanelBookingActionsComponent(service) {
-        var _this78;
+        var _this80;
 
         _classCallCheck(this, PanelBookingActionsComponent);
 
-        _this78 = _super26.call(this);
-        _this78.service = service;
+        _this80 = _super26.call(this);
+        _this80.service = service;
         /** Whether booking is allowed */
 
-        _this78.no_booking = false;
+        _this80.no_booking = false;
         /** Time of the last automatic confirmation of start or end */
 
-        _this78.last_confirm = 0;
-        return _this78;
+        _this80.last_confirm = 0;
+        return _this80;
       }
       /** Current status of the active system */
 
@@ -12417,7 +12406,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "confirmStart",
         value: function confirmStart() {
-          var _this79 = this;
+          var _this81 = this;
 
           this.service.Overlay.open('confirm', {
             config: 'modal',
@@ -12430,7 +12419,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           }, function (_) {
-            return _this79.startMeeting();
+            return _this81.startMeeting();
           });
         }
         /**
@@ -12440,22 +12429,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "startMeeting",
         value: function startMeeting() {
-          var _this80 = this;
+          var _this82 = this;
 
           if (this.space) {
             var meeting = this.space.current || this.space.next;
 
-            var _module2 = this.service.Systems.get(this.space.id, 'Bookings');
+            var _module4 = this.service.Systems.get(this.space.id, 'Bookings');
 
-            if (meeting && _module2) {
+            if (meeting && _module4) {
               var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(meeting.date);
 
-              _module2.exec('start_meeting', [meeting.date]).then(function (_) {
-                _this80.service.Analytics.event('Checkin', 'checked-in', "".concat(_this80.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z')));
+              _module4.execute('start_meeting', [meeting.date]).then(function (_) {
+                _this82.service.Analytics.event('Checkin', 'checked-in', "".concat(_this82.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z')));
               }, function (e) {
-                _this80.service.notifyError("Error starting meeting. ".concat(e));
+                _this82.service.notifyError("Error starting meeting. ".concat(e));
 
-                _this80.service.Analytics.event('Checkin', 'checked-in-failed', "".concat(_this80.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z')));
+                _this82.service.Analytics.event('Checkin', 'checked-in-failed', "".concat(_this82.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z')));
               });
             }
           }
@@ -12467,7 +12456,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "confirmEnd",
         value: function confirmEnd() {
-          var _this81 = this;
+          var _this83 = this;
 
           this.service.Overlay.open('confirm', {
             config: 'modal',
@@ -12480,7 +12469,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           }, function (_) {
-            return _this81.endMeeting();
+            return _this83.endMeeting();
           });
         }
         /**
@@ -12491,24 +12480,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "endMeeting",
         value: function endMeeting() {
-          var _this82 = this;
+          var _this84 = this;
 
           var reason = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'user_input';
 
           if (this.space) {
             var meeting = this.space.current || this.space.next;
 
-            var _module3 = this.service.Systems.get(this.space.id, 'Bookings');
+            var _module5 = this.service.Systems.get(this.space.id, 'Bookings');
 
-            if (meeting && _module3) {
+            if (meeting && _module5) {
               var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(meeting.date);
 
-              _module3.exec('cancel_meeting', [meeting.date, reason]).then(function (_) {
-                _this82.service.Analytics.event('Checkin', 'cancelled', "".concat(_this82.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
+              _module5.execute('cancel_meeting', [meeting.date, reason]).then(function (_) {
+                _this84.service.Analytics.event('Checkin', 'cancelled', "".concat(_this84.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
               }, function (e) {
-                _this82.service.notifyError("Error starting meeting. ".concat(e));
+                _this84.service.notifyError("Error starting meeting. ".concat(e));
 
-                _this82.service.Analytics.event('Checkin', 'cancel-failed', "".concat(_this82.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
+                _this84.service.Analytics.event('Checkin', 'cancel-failed', "".concat(_this84.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
               });
             }
           }
@@ -12659,9 +12648,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../../../shared/directives/binding/binding.directive */
+    "./src/app/shared/directives/binding/binding.directive.ts");
     /* harmony import */
 
 
@@ -12764,7 +12753,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12781,7 +12770,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12798,7 +12787,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_7__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_7__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -12935,7 +12924,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PanelCustomActionsComponent, [{
         key: "confirmWaiterCall",
         value: function confirmWaiterCall() {
-          var _this83 = this;
+          var _this85 = this;
 
           this.service.Overlay.open('confirm', {
             config: 'modal',
@@ -12948,7 +12937,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           }, function (_) {
-            return _this83.callWaiter();
+            return _this85.callWaiter();
           });
         }
         /**
@@ -12958,18 +12947,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "callWaiter",
         value: function callWaiter() {
-          var _this84 = this;
+          var _this86 = this;
 
           if (this.space) {
-            var _module4 = this.service.Systems.get(this.space.id, 'Bookings');
+            var _module6 = this.service.Systems.get(this.space.id, 'Bookings');
 
-            if (_module4) {
-              _module4.exec('waiter_call', []).then(function (_) {
-                _this84.service.Analytics.event('Catering', 'waiter-call', new Date().toISOString());
+            if (_module6) {
+              _module6.execute('waiter_call', []).then(function (_) {
+                _this86.service.Analytics.event('Catering', 'waiter-call', new Date().toISOString());
               }, function (e) {
-                _this84.service.Analytics.event('Catering', 'waiter-call-failed', new Date().toISOString());
+                _this86.service.Analytics.event('Catering', 'waiter-call-failed', new Date().toISOString());
 
-                _this84.service.notifyError("Error calling waiter. ".concat(e));
+                _this86.service.notifyError("Error calling waiter. ".concat(e));
               });
             }
           }
@@ -13103,9 +13092,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ../../shared/directives/binding/binding.directive */
+    "./src/app/shared/directives/binding/binding.directive.ts");
     /* harmony import */
 
 
@@ -13205,7 +13194,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13222,7 +13211,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13239,7 +13228,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"]
@@ -13260,7 +13249,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13282,7 +13271,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13304,7 +13293,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13321,7 +13310,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13338,7 +13327,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13355,7 +13344,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13372,7 +13361,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13389,7 +13378,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13406,7 +13395,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_11__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_11__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -13686,20 +13675,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super27 = _createSuper(BookingPanelComponent);
 
       function BookingPanelComponent(_service, _route) {
-        var _this85;
+        var _this87;
 
         _classCallCheck(this, BookingPanelComponent);
 
-        _this85 = _super27.call(this);
-        _this85._service = _service;
-        _this85._route = _route;
+        _this87 = _super27.call(this);
+        _this87._service = _service;
+        _this87._route = _route;
         /** Whether to show the time at the bottom of the status */
 
-        _this85.show_time = true;
+        _this87.show_time = true;
         /** Whether user interaction is enabled for the panel */
 
-        _this85.interactive = true;
-        return _this85;
+        _this87.interactive = true;
+        return _this87;
       }
       /** Get the display value for the status */
 
@@ -13707,25 +13696,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(BookingPanelComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this86 = this;
+          var _this88 = this;
 
           this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
             if (is_ready) {
-              _this86.subscription('route.params', _this86._route.paramMap.subscribe(function (params) {
+              _this88.subscription('route.params', _this88._route.paramMap.subscribe(function (params) {
                 if (params.has('system_id')) {
-                  _this86.system_id = params.get('system_id');
+                  _this88.system_id = params.get('system_id');
 
-                  _this86._service.set('system', _this86.system_id);
+                  _this88._service.set('system', _this88.system_id);
                 }
               }));
 
-              _this86.timeout('websocket', function () {
-                _this86._service.websocket.status(function (status) {
-                  _this86.websocket_connected = status;
-                });
+              _this88.timeout('websocket', function () {
+                _this88.websocket_connected = true; // status().subscribe(status => this.websocket_connected = status);
               });
 
-              _this86.unsub('app_ready');
+              _this88.unsub('app_ready');
             }
           }));
         }
@@ -13796,11 +13783,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "showTitle",
         value: function showTitle() {
-          var _this87 = this;
+          var _this89 = this;
 
           this.show_title = true;
           this.timeout('hide_title', function () {
-            return _this87.show_title = false;
+            return _this89.show_title = false;
           }, 3000);
         }
         /**
@@ -13811,30 +13798,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "endMeeting",
         value: function endMeeting() {
-          var _this88 = this;
+          var _this90 = this;
 
           var reason = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'user_input';
 
           if (this.space && this.can_cancel !== false) {
             var meeting = this.space.current || this.space.next;
 
-            var _module5 = this._service.Systems.get(this.space.id, 'Bookings');
+            var _module7 = this._service.Systems.get(this.space.id, 'Bookings');
 
             if (meeting.duration >= 8 * 60 && reason === 'timeout') {
               reason = 'hide multi-day';
             }
 
-            if (meeting && _module5 && meeting.date !== this.last_cancel) {
+            if (meeting && _module7 && meeting.date !== this.last_cancel) {
               var date = dayjs__WEBPACK_IMPORTED_MODULE_5__(meeting.date);
 
-              _module5.exec('cancel_meeting', [meeting.date, reason]).then(function (_) {
-                _this88._service.Analytics.event('Checkin', 'cancelled', "".concat(_this88.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
+              _module7.execute('cancel_meeting', [meeting.date, reason]).then(function (_) {
+                _this90._service.Analytics.event('Checkin', 'cancelled', "".concat(_this90.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
 
-                _this88.last_cancel = meeting.date;
+                _this90.last_cancel = meeting.date;
               }, function (e) {
-                _this88._service.notifyError("Error cancelling meeting. ".concat(e));
+                _this90._service.notifyError("Error cancelling meeting. ".concat(e));
 
-                _this88._service.Analytics.event('Checkin', 'cancel-failed', "".concat(_this88.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
+                _this90._service.Analytics.event('Checkin', 'cancel-failed', "".concat(_this90.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
               });
             }
           }
@@ -13951,9 +13938,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../../shared/directives/binding/binding.directive */
+    "./src/app/shared/directives/binding/binding.directive.ts");
     /* harmony import */
 
 
@@ -14137,7 +14124,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14154,7 +14141,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14171,7 +14158,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14188,7 +14175,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14205,7 +14192,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14222,7 +14209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14239,7 +14226,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_3__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14473,9 +14460,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../../shared/directives/binding/binding.directive */
+    "./src/app/shared/directives/binding/binding.directive.ts");
     /* harmony import */
 
 
@@ -14579,7 +14566,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14601,7 +14588,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14618,7 +14605,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14635,7 +14622,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14652,7 +14639,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14669,7 +14656,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14686,7 +14673,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_4__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_4__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -14885,19 +14872,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super28 = _createSuper(PanelTimelineComponent);
 
       function PanelTimelineComponent(service) {
-        var _this89;
+        var _this91;
 
         _classCallCheck(this, PanelTimelineComponent);
 
-        _this89 = _super28.call(this);
-        _this89.service = service;
+        _this91 = _super28.call(this);
+        _this91.service = service;
         /** Emitter for user events on the timeline */
 
-        _this89.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        _this91.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         /** List of display time block  */
 
-        _this89.time_blocks = [];
-        return _this89;
+        _this91.time_blocks = [];
+        return _this91;
       }
       /** Display string for the current time */
 
@@ -14905,11 +14892,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PanelTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this90 = this;
+          var _this92 = this;
 
           this.generateTimelineBlocks();
           this.interval('update_blocks', function () {
-            return _this90.generateTimelineBlocks();
+            return _this92.generateTimelineBlocks();
           }, 60 * 1000);
         }
       }, {
@@ -14965,21 +14952,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
 
             if (!this.hide_status && !this.hide_all) {
-              var _iterator30 = _createForOfIteratorHelper(bookings),
-                  _step30;
+              var _iterator31 = _createForOfIteratorHelper(bookings),
+                  _step31;
 
               try {
-                for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-                  var booking = _step30.value;
+                for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
+                  var booking = _step31.value;
                   var start = dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date);
                   var end = start.add(booking.duration, 'm');
 
-                  var _iterator31 = _createForOfIteratorHelper(this.time_blocks),
-                      _step31;
+                  var _iterator32 = _createForOfIteratorHelper(this.time_blocks),
+                      _step32;
 
                   try {
-                    for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-                      var block = _step31.value;
+                    for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                      var block = _step32.value;
                       var block_time = dayjs__WEBPACK_IMPORTED_MODULE_3__(block.value);
 
                       if (block_time.isSame(start, 'm') || block_time.isAfter(start, 'm') && block_time.isBefore(end, 'm')) {
@@ -14987,15 +14974,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       }
                     }
                   } catch (err) {
-                    _iterator31.e(err);
+                    _iterator32.e(err);
                   } finally {
-                    _iterator31.f();
+                    _iterator32.f();
                   }
                 }
               } catch (err) {
-                _iterator30.e(err);
+                _iterator31.e(err);
               } finally {
-                _iterator30.f();
+                _iterator31.f();
               }
             }
           }
@@ -15080,9 +15067,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_composer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @placeos/composer */
-    "./node_modules/@placeos/composer/fesm2015/placeos-composer.js");
+    var _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../shared/directives/binding/binding.directive */
+    "./src/app/shared/directives/binding/binding.directive.ts");
     /* harmony import */
 
 
@@ -15151,7 +15138,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"],
@@ -15168,7 +15155,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_placeos_composer__WEBPACK_IMPORTED_MODULE_2__["BindingService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_2__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
         bind: [2, "bind"]
@@ -15355,20 +15342,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super29 = _createSuper(ShellWrapperComponent);
 
       function ShellWrapperComponent(_service, _router) {
-        var _this91;
+        var _this93;
 
         _classCallCheck(this, ShellWrapperComponent);
 
-        _this91 = _super29.call(this);
-        _this91._service = _service;
-        _this91._router = _router;
+        _this93 = _super29.call(this);
+        _this93._service = _service;
+        _this93._router = _router;
         /** List of informational messages to display while connecting to the active system */
 
-        _this91.info_messages = ['If this message persists, check you network connection and then try reloading this page.', 'It seems to be taking a while. Make sure the selected system is valid.', 'Still nothing, huh. Are you authenticated? Do you have have a network connection?', 'Try reloading the page. If this persists contact your administrator.'];
+        _this93.info_messages = ['If this message persists, check you network connection and then try reloading this page.', 'It seems to be taking a while. Make sure the selected system is valid.', 'Still nothing, huh. Are you authenticated? Do you have have a network connection?', 'Try reloading the page. If this persists contact your administrator.'];
         /** Index of the info message being displayed */
 
-        _this91.message_index = 0;
-        return _this91;
+        _this93.message_index = 0;
+        return _this93;
       }
       /** Current version of the application */
 
@@ -15376,27 +15363,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShellWrapperComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this92 = this;
+          var _this94 = this;
 
           this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
             var _a;
 
             if (is_ready) {
               // Listen for system changes
-              _this92.subscription('system', _this92._service.listen('system', function (value) {
-                return _this92.system_id = value;
+              _this94.subscription('system', _this94._service.listen('system', function (value) {
+                return _this94.system_id = value;
               })); // Listen for routing events
 
 
-              _this92.page = ((_a = _this92._router.url) === null || _a === void 0 ? void 0 : _a.split('/')[1]) || '';
+              _this94.page = ((_a = _this94._router.url) === null || _a === void 0 ? void 0 : _a.split('/')[1]) || '';
 
-              _this92.subscription('router.change', _this92._router.events.subscribe(function (event) {
+              _this94.subscription('router.change', _this94._router.events.subscribe(function (event) {
                 if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_0__["NavigationEnd"]) {
-                  _this92.page = _this92._router.url.split('/')[1] || '';
+                  _this94.page = _this94._router.url.split('/')[1] || '';
                 }
               }));
 
-              _this92.unsub('app_ready');
+              _this94.unsub('app_ready');
             }
           }));
         }
@@ -15408,14 +15395,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "checkLoading",
         value: function checkLoading() {
-          var _this93 = this;
+          var _this95 = this;
 
           var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;
+          console.log('Check Loading:', this.system_name);
 
           if (!this.system_name) {
             this.message_index = 0;
             this.timeout('update_msg', function () {
-              return _this93.updateMessage();
+              return _this95.updateMessage();
             }, delay);
           }
         }
@@ -15426,7 +15414,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateMessage",
         value: function updateMessage() {
-          var _this94 = this;
+          var _this96 = this;
 
           if (!this.system_id) {
             return;
@@ -15440,7 +15428,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.timeout('update_msg', function () {
-            return _this94.updateMessage();
+            return _this96.updateMessage();
           }, 3000);
         }
         /**
@@ -15451,7 +15439,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "reloadAt",
         value: function reloadAt(time) {
-          var _this95 = this;
+          var _this97 = this;
 
           if (time && typeof time === 'number') {
             this.clearTimeout('reload_ui');
@@ -15467,7 +15455,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.timeout('update_msg', function () {
-            return _this95.updateMessage();
+            return _this97.updateMessage();
           }, 3000);
         }
       }, {
@@ -15643,16 +15631,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "5753d7e",
-      "hash": "5753d7e",
+      "raw": "44d014b",
+      "hash": "44d014b",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "5753d7e",
+      "suffix": "44d014b",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1597790373893
+      "time": 1598408385001
     };
     /* tslint:enable */
 
