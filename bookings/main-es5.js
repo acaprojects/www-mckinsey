@@ -2420,14 +2420,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function waitForSettings() {
           var _this10 = this;
 
-          // Wait until the settings have loaded before initialising
-          this.subscription('setting_setup', this._settings.initialised.subscribe(function (setup) {
-            if (setup) {
-              _this10.init();
+          this.log('SYSTEM', 'Waiting for settings...'); // Wait until the settings have loaded before initialising
 
-              _this10.unsub('setting_setup');
-            }
-          }));
+          this._settings.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])(function (_) {
+            return _;
+          })).subscribe(function () {
+            return _this10.init();
+          });
         }
         /**
          * Initialise application services
@@ -2493,6 +2492,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var mock = this.setting('mock'); // Generate configuration object
 
           var config = {
+            auth_type: 'auth_code',
             scope: 'public',
             host: "".concat(host, ":").concat(port),
             auth_uri: "".concat(url, "/auth/oauth/authorize"),
@@ -5841,19 +5841,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @placeos/ts-client */
     "./node_modules/@placeos/ts-client/dist/esm/index.js");
     /* harmony import */
 
 
-    var _shared_base_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _shared_base_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../../shared/base.class */
     "./src/app/shared/base.class.ts");
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
@@ -5874,11 +5880,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Observable for system list */
 
         _this46.systems = _this46._list.asObservable();
-
-        _this46.timeout('init', function () {
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["onlineState"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["first"])(function (_) {
+          return _;
+        })).subscribe(function () {
           return _this46.load();
-        }, 2000);
-
+        });
         return _this46;
       }
       /** List of available systems */
@@ -5894,7 +5900,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * @param index Index of the module
          */
         value: function get(sys_id, mod_id, index) {
-          return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(sys_id, mod_id, index);
+          return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["getModule"])(sys_id, mod_id, index);
         }
         /**
          * Load Systems
@@ -5917,7 +5923,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var offset = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
           var limit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;
-          Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["querySystems"])({
+          Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["querySystems"])({
             offset: offset,
             limit: limit
           }).toPromise().then(function (details) {
@@ -5945,9 +5951,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]);
 
       return SystemsManagerService;
-    }(_shared_base_class__WEBPACK_IMPORTED_MODULE_2__["BaseClass"]);
+    }(_shared_base_class__WEBPACK_IMPORTED_MODULE_3__["BaseClass"]);
 
-    SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
+    SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
       factory: function SystemsManagerService_Factory() {
         return new SystemsManagerService();
       },
@@ -6463,7 +6469,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }).then(function (current_user) {
               _this53.set('status', 'available');
 
-              _this53.set('current_user', current_user);
+              _this53.set('check_initialised', current_user);
+
+              _this53.clearTimeout('load');
 
               if (_this53.parent && _this53.parent.setting('app.user.grab_api_details')) {
                 _this53.show(current_user.email).then(function (user) {
@@ -7075,8 +7083,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Subject which stores the initialised state of the object */
 
         this._initialised = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"](false);
+        /** Observable of the initialised state of the object */
+
+        this.initialised = this._initialised.asObservable();
       }
-      /** Observable of the initialised state of the object */
+      /** Whether the object has been initialised */
 
 
       _createClass(BaseClass, [{
@@ -7200,13 +7211,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this._subscriptions[name] = null;
           }
         }
-      }, {
-        key: "initialised",
-        get: function get() {
-          return this._initialised;
-        }
-        /** Whether the object has been initialised */
-
       }, {
         key: "is_initialised",
         get: function get() {
@@ -15631,16 +15635,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "44d014b",
-      "hash": "44d014b",
+      "raw": "195502a",
+      "hash": "195502a",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "44d014b",
+      "suffix": "195502a",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598408385001
+      "time": 1598436547851
     };
     /* tslint:enable */
 
