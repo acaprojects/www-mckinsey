@@ -767,25 +767,26 @@ class SharedOverlaysModule {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationService", function() { return ApplicationService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
-/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
-/* harmony import */ var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @acaprojects/ngx-overlays */ "./node_modules/@acaprojects/ngx-overlays/fesm2015/acaprojects-ngx-overlays.js");
-/* harmony import */ var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @acaprojects/ngx-google-analytics */ "./node_modules/@acaprojects/ngx-google-analytics/fesm2015/acaprojects-ngx-google-analytics.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
-/* harmony import */ var _settings_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./settings.service */ "./src/app/services/settings.service.ts");
-/* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
-/* harmony import */ var _hotkeys_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./hotkeys.service */ "./src/app/services/hotkeys.service.ts");
-/* harmony import */ var _data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
-/* harmony import */ var _data_users_users_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./data/users/users.service */ "./src/app/services/data/users/users.service.ts");
-/* harmony import */ var _data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
-/* harmony import */ var _data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
-/* harmony import */ var _data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./data/systems-manager/systems-manager.service */ "./src/app/services/data/systems-manager/systems-manager.service.ts");
-/* harmony import */ var _data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./data/polling/polling.service */ "./src/app/services/data/polling/polling.service.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
+/* harmony import */ var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @acaprojects/ngx-overlays */ "./node_modules/@acaprojects/ngx-overlays/fesm2015/acaprojects-ngx-overlays.js");
+/* harmony import */ var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @acaprojects/ngx-google-analytics */ "./node_modules/@acaprojects/ngx-google-analytics/fesm2015/acaprojects-ngx-google-analytics.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
+/* harmony import */ var _settings_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./settings.service */ "./src/app/services/settings.service.ts");
+/* harmony import */ var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../shared/globals/overlay-register */ "./src/app/shared/globals/overlay-register.ts");
+/* harmony import */ var _hotkeys_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./hotkeys.service */ "./src/app/services/hotkeys.service.ts");
+/* harmony import */ var _data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./data/organisation/organisation.service */ "./src/app/services/data/organisation/organisation.service.ts");
+/* harmony import */ var _data_users_users_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./data/users/users.service */ "./src/app/services/data/users/users.service.ts");
+/* harmony import */ var _data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./data/bookings/bookings.service */ "./src/app/services/data/bookings/bookings.service.ts");
+/* harmony import */ var _data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
+/* harmony import */ var _data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./data/systems-manager/systems-manager.service */ "./src/app/services/data/systems-manager/systems-manager.service.ts");
+/* harmony import */ var _data_polling_polling_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./data/polling/polling.service */ "./src/app/services/data/polling/polling.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 
 
 
@@ -819,7 +820,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__["BaseClass"] {
+
+class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__["BaseClass"] {
     constructor(_app_ref, _zone, _title, _router, _cache, _settings, _overlay, _analytics, _hotkeys, _systems, _organisation, _users, _bookings, _spaces, _polling) {
         super();
         this._app_ref = _app_ref;
@@ -846,7 +848,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
         this._organisation.parent = this._users.parent = this._bookings.parent = this._spaces.parent = this._polling.parent = this;
         this.set('system', null);
         this.log('APP', `Waiting for Application to stablised...`, undefined, undefined, true);
-        this._app_ref.isStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])((_) => _)).subscribe(() => {
+        this._app_ref.isStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["first"])((_) => _)).subscribe(() => {
             this.log('APP', `Application has stablised.`, undefined, undefined, true);
             this._zone.run(() => {
                 this._stable = true;
@@ -1000,7 +1002,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
      * @param name Property name
      */
     get(name) {
-        return this._subjects[name] && this._subjects[name] instanceof rxjs__WEBPACK_IMPORTED_MODULE_7__["BehaviorSubject"]
+        return this._subjects[name] && this._subjects[name] instanceof rxjs__WEBPACK_IMPORTED_MODULE_8__["BehaviorSubject"]
             ? this._subjects[name].getValue()
             : null;
     }
@@ -1019,7 +1021,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
      */
     set(name, value) {
         if (!this._subjects[name]) {
-            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_7__["BehaviorSubject"](value);
+            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_8__["BehaviorSubject"](value);
             this._observers[name] = this._subjects[name].asObservable();
         }
         else {
@@ -1030,33 +1032,35 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
     waitForSettings() {
         this.log('SYSTEM', 'Waiting for settings...');
         // Wait until the settings have loaded before initialising
-        this._settings.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])(_ => _)).subscribe(() => this.init());
+        this._settings.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["first"])(_ => _)).subscribe(() => this.init());
     }
     /**
      * Initialise application services
      */
     init() {
-        this.setupComposer().catch(_ => _);
-        this.timeout('inited', () => {
-            this._users.init();
-            // Setup analytics
-            this._analytics.enabled = !!this.setting('app.analytics.enabled');
-            if (this._analytics.enabled) {
-                this._analytics.load(this.setting('app.analytics.tracking_id'));
-            }
-            // Add service to window if in debug mode
-            if (window.debug) {
-                window.application = this;
-            }
-            this._hotkeys.listen(['Shift', 'Backslash'], () => {
-                this.navigate('bootstrap', { clear: true });
-            });
-            this._organisation.init();
-            this._bookings.init();
-            this._spaces.init();
-            this._polling.init();
-            this.timeout('inited', () => this._initialised.next(true), 500);
-        }, 500);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            yield this.setupComposer().catch(_ => _);
+            this.timeout('inited', () => {
+                this._users.init();
+                // Setup analytics
+                this._analytics.enabled = !!this.setting('app.analytics.enabled');
+                if (this._analytics.enabled) {
+                    this._analytics.load(this.setting('app.analytics.tracking_id'));
+                }
+                // Add service to window if in debug mode
+                if (window.debug) {
+                    window.application = this;
+                }
+                this._hotkeys.listen(['Shift', 'Backslash'], () => {
+                    this.navigate('bootstrap', { clear: true });
+                });
+                this._organisation.init();
+                this._bookings.init();
+                this._spaces.init();
+                this._polling.init();
+                this.timeout('inited', () => this._initialised.next(true), 500);
+            }, 500);
+        });
     }
     /**
      * Initialise the composer library comms
@@ -1088,7 +1092,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
             localStorage.setItem('oauth_redirect', location.href);
         }
         this.log('SYSTEM', 'Finsihed setting up composer.');
-        return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_4__["setup"])(config);
+        return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["setup"])(config);
     }
     /**
      * Setup handler for cache change events
@@ -1124,14 +1128,14 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_8__
      * Pre-register available overlays
      */
     registerOverlays() {
-        if (_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_10__["OVERLAY_REGISTER"]) {
-            for (const overlay of _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_10__["OVERLAY_REGISTER"]) {
+        if (_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_11__["OVERLAY_REGISTER"]) {
+            for (const overlay of _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_11__["OVERLAY_REGISTER"]) {
                 this._overlay.register(overlay.id, overlay.config);
             }
         }
     }
 }
-ApplicationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ factory: function ApplicationService_Factory() { return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_3__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_9__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_11__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_13__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__["PollingService"])); }, token: ApplicationService, providedIn: "root" });
+ApplicationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ factory: function ApplicationService_Factory() { return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_10__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_6__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_7__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_12__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_17__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_13__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_14__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_15__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_16__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_18__["PollingService"])); }, token: ApplicationService, providedIn: "root" });
 
 
 /***/ }),
@@ -7022,16 +7026,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "195502a",
-    "hash": "195502a",
+    "raw": "cb21c61",
+    "hash": "cb21c61",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "195502a",
+    "suffix": "cb21c61",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598436547851
+    "time": 1598438695048
 };
 /* tslint:enable */
 

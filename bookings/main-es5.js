@@ -2088,115 +2088,121 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
-    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/platform-browser */
     "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
 
 
-    var _angular_service_worker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/service-worker */
     "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
     /* harmony import */
 
 
-    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @placeos/ts-client */
     "./node_modules/@placeos/ts-client/dist/esm/index.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @acaprojects/ngx-overlays */
     "./node_modules/@acaprojects/ngx-overlays/fesm2015/acaprojects-ngx-overlays.js");
     /* harmony import */
 
 
-    var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! @acaprojects/ngx-google-analytics */
     "./node_modules/@acaprojects/ngx-google-analytics/fesm2015/acaprojects-ngx-google-analytics.js");
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
     /* harmony import */
 
 
-    var _shared_base_class__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _shared_base_class__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ../shared/base.class */
     "./src/app/shared/base.class.ts");
     /* harmony import */
 
 
-    var _settings_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _settings_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./settings.service */
     "./src/app/services/settings.service.ts");
     /* harmony import */
 
 
-    var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ../shared/globals/overlay-register */
     "./src/app/shared/globals/overlay-register.ts");
     /* harmony import */
 
 
-    var _hotkeys_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _hotkeys_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ./hotkeys.service */
     "./src/app/services/hotkeys.service.ts");
     /* harmony import */
 
 
-    var _data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ./data/organisation/organisation.service */
     "./src/app/services/data/organisation/organisation.service.ts");
     /* harmony import */
 
 
-    var _data_users_users_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _data_users_users_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ./data/users/users.service */
     "./src/app/services/data/users/users.service.ts");
     /* harmony import */
 
 
-    var _data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ./data/bookings/bookings.service */
     "./src/app/services/data/bookings/bookings.service.ts");
     /* harmony import */
 
 
-    var _data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! ./data/spaces/spaces.service */
     "./src/app/services/data/spaces/spaces.service.ts");
     /* harmony import */
 
 
-    var _data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
     /*! ./data/systems-manager/systems-manager.service */
     "./src/app/services/data/systems-manager/systems-manager.service.ts");
     /* harmony import */
 
 
-    var _data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _data_polling_polling_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! ./data/polling/polling.service */
     "./src/app/services/data/polling/polling.service.ts");
     /* harmony import */
 
 
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
 
@@ -2241,7 +2247,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _this9.log('APP', "Waiting for Application to stablised...", undefined, undefined, true);
 
-        _this9._app_ref.isStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])(function (_) {
+        _this9._app_ref.isStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["first"])(function (_) {
           return _;
         })).subscribe(function () {
           _this9.log('APP', "Application has stablised.", undefined, undefined, true);
@@ -2384,7 +2390,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "get",
         value: function get(name) {
-          return this._subjects[name] && this._subjects[name] instanceof rxjs__WEBPACK_IMPORTED_MODULE_7__["BehaviorSubject"] ? this._subjects[name].getValue() : null;
+          return this._subjects[name] && this._subjects[name] instanceof rxjs__WEBPACK_IMPORTED_MODULE_8__["BehaviorSubject"] ? this._subjects[name].getValue() : null;
         }
         /**
          * Listen to value change of the named property
@@ -2407,7 +2413,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "set",
         value: function set(name, value) {
           if (!this._subjects[name]) {
-            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_7__["BehaviorSubject"](value);
+            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_8__["BehaviorSubject"](value);
             this._observers[name] = this._subjects[name].asObservable();
           } else {
             this._subjects[name].next(value);
@@ -2422,7 +2428,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.log('SYSTEM', 'Waiting for settings...'); // Wait until the settings have loaded before initialising
 
-          this._settings.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_18__["first"])(function (_) {
+          this._settings.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["first"])(function (_) {
             return _;
           })).subscribe(function () {
             return _this10.init();
@@ -2435,44 +2441,60 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "init",
         value: function init() {
-          var _this11 = this;
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var _this11 = this;
 
-          this.setupComposer()["catch"](function (_) {
-            return _;
-          });
-          this.timeout('inited', function () {
-            _this11._users.init(); // Setup analytics
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.setupComposer()["catch"](function (_) {
+                      return _;
+                    });
+
+                  case 2:
+                    this.timeout('inited', function () {
+                      _this11._users.init(); // Setup analytics
 
 
-            _this11._analytics.enabled = !!_this11.setting('app.analytics.enabled');
+                      _this11._analytics.enabled = !!_this11.setting('app.analytics.enabled');
 
-            if (_this11._analytics.enabled) {
-              _this11._analytics.load(_this11.setting('app.analytics.tracking_id'));
-            } // Add service to window if in debug mode
+                      if (_this11._analytics.enabled) {
+                        _this11._analytics.load(_this11.setting('app.analytics.tracking_id'));
+                      } // Add service to window if in debug mode
 
 
-            if (window.debug) {
-              window.application = _this11;
-            }
+                      if (window.debug) {
+                        window.application = _this11;
+                      }
 
-            _this11._hotkeys.listen(['Shift', 'Backslash'], function () {
-              _this11.navigate('bootstrap', {
-                clear: true
-              });
-            });
+                      _this11._hotkeys.listen(['Shift', 'Backslash'], function () {
+                        _this11.navigate('bootstrap', {
+                          clear: true
+                        });
+                      });
 
-            _this11._organisation.init();
+                      _this11._organisation.init();
 
-            _this11._bookings.init();
+                      _this11._bookings.init();
 
-            _this11._spaces.init();
+                      _this11._spaces.init();
 
-            _this11._polling.init();
+                      _this11._polling.init();
 
-            _this11.timeout('inited', function () {
-              return _this11._initialised.next(true);
-            }, 500);
-          }, 500);
+                      _this11.timeout('inited', function () {
+                        return _this11._initialised.next(true);
+                      }, 500);
+                    }, 500);
+
+                  case 3:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
         }
         /**
          * Initialise the composer library comms
@@ -2509,7 +2531,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.log('SYSTEM', 'Finsihed setting up composer.');
-          return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_4__["setup"])(config);
+          return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["setup"])(config);
         }
         /**
          * Setup handler for cache change events
@@ -2565,8 +2587,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "registerOverlays",
         value: function registerOverlays() {
-          if (_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_10__["OVERLAY_REGISTER"]) {
-            var _iterator = _createForOfIteratorHelper(_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_10__["OVERLAY_REGISTER"]),
+          if (_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_11__["OVERLAY_REGISTER"]) {
+            var _iterator = _createForOfIteratorHelper(_shared_globals_overlay_register__WEBPACK_IMPORTED_MODULE_11__["OVERLAY_REGISTER"]),
                 _step;
 
             try {
@@ -2683,11 +2705,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]);
 
       return ApplicationService;
-    }(_shared_base_class__WEBPACK_IMPORTED_MODULE_8__["BaseClass"]);
+    }(_shared_base_class__WEBPACK_IMPORTED_MODULE_9__["BaseClass"]);
 
-    ApplicationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+    ApplicationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
       factory: function ApplicationService_Factory() {
-        return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_3__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_9__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_5__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_6__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_11__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_16__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_12__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_13__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_14__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_15__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_17__["PollingService"]));
+        return new ApplicationService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["SwUpdate"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_settings_service__WEBPACK_IMPORTED_MODULE_10__["SettingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_acaprojects_ngx_overlays__WEBPACK_IMPORTED_MODULE_6__["AOverlayService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_acaprojects_ngx_google_analytics__WEBPACK_IMPORTED_MODULE_7__["GoogleAnalyticsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_hotkeys_service__WEBPACK_IMPORTED_MODULE_12__["HotkeysService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_17__["SystemsManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_organisation_organisation_service__WEBPACK_IMPORTED_MODULE_13__["OrganisationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_users_users_service__WEBPACK_IMPORTED_MODULE_14__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_bookings_bookings_service__WEBPACK_IMPORTED_MODULE_15__["BookingsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_spaces_spaces_service__WEBPACK_IMPORTED_MODULE_16__["SpacesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_data_polling_polling_service__WEBPACK_IMPORTED_MODULE_18__["PollingService"]));
       },
       token: ApplicationService,
       providedIn: "root"
@@ -4585,19 +4607,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "save",
         value: function save() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            return regeneratorRuntime.wrap(function _callee$(_context) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
               while (1) {
-                switch (_context.prev = _context.next) {
+                switch (_context2.prev = _context2.next) {
                   case 0:
                     throw new Error('Building objects are readonly and cannot be changed');
 
                   case 1:
                   case "end":
-                    return _context.stop();
+                    return _context2.stop();
                 }
               }
-            }, _callee);
+            }, _callee2);
           }));
         }
         /**
@@ -4607,19 +4629,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
               while (1) {
-                switch (_context2.prev = _context2.next) {
+                switch (_context3.prev = _context3.next) {
                   case 0:
                     throw new Error('Building objects are readonly and cannot be deleted');
 
                   case 1:
                   case "end":
-                    return _context2.stop();
+                    return _context3.stop();
                 }
               }
-            }, _callee2);
+            }, _callee3);
           }));
         }
       }, {
@@ -4773,19 +4795,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "save",
         value: function save() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
               while (1) {
-                switch (_context3.prev = _context3.next) {
+                switch (_context4.prev = _context4.next) {
                   case 0:
                     throw new Error('Organisation objects are readonly and cannot be changed');
 
                   case 1:
                   case "end":
-                    return _context3.stop();
+                    return _context4.stop();
                 }
               }
-            }, _callee3);
+            }, _callee4);
           }));
         }
         /**
@@ -4795,19 +4817,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delete",
         value: function _delete() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+            return regeneratorRuntime.wrap(function _callee5$(_context5) {
               while (1) {
-                switch (_context4.prev = _context4.next) {
+                switch (_context5.prev = _context5.next) {
                   case 0:
                     throw new Error('Organisation objects are readonly and cannot be deleted');
 
                   case 1:
                   case "end":
-                    return _context4.stop();
+                    return _context5.stop();
                 }
               }
-            }, _callee4);
+            }, _callee5);
           }));
         }
       }]);
@@ -5214,12 +5236,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PollingService, [{
         key: "load",
         value: function load() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
             var _this40 = this;
 
-            return regeneratorRuntime.wrap(function _callee5$(_context5) {
+            return regeneratorRuntime.wrap(function _callee6$(_context6) {
               while (1) {
-                switch (_context5.prev = _context5.next) {
+                switch (_context6.prev = _context6.next) {
                   case 0:
                     this.interval('poll_endpoint', function () {
                       _this40.add({
@@ -5229,10 +5251,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 1:
                   case "end":
-                    return _context5.stop();
+                    return _context6.stop();
                 }
               }
-            }, _callee5, this);
+            }, _callee6, this);
           }));
         }
       }, {
@@ -5772,20 +5794,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "load",
         value: function load() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
-            return regeneratorRuntime.wrap(function _callee6$(_context6) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+            return regeneratorRuntime.wrap(function _callee7$(_context7) {
               while (1) {
-                switch (_context6.prev = _context6.next) {
+                switch (_context7.prev = _context7.next) {
                   case 0:
-                    _context6.next = 2;
+                    _context7.next = 2;
                     return this.query();
 
                   case 2:
                   case "end":
-                    return _context6.stop();
+                    return _context7.stop();
                 }
               }
-            }, _callee6, this);
+            }, _callee7, this);
           }));
         }
         /**
@@ -6874,12 +6896,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SettingsService, [{
         key: "init",
         value: function init() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
-            return regeneratorRuntime.wrap(function _callee7$(_context7) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+            return regeneratorRuntime.wrap(function _callee8$(_context8) {
               while (1) {
-                switch (_context7.prev = _context7.next) {
+                switch (_context8.prev = _context8.next) {
                   case 0:
-                    _context7.next = 2;
+                    _context8.next = 2;
                     return this.loadFromFile('api');
 
                   case 2:
@@ -6900,10 +6922,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 6:
                   case "end":
-                    return _context7.stop();
+                    return _context8.stop();
                 }
               }
-            }, _callee7, this);
+            }, _callee8, this);
           }));
         }
         /** Whether settings service has initialised */
@@ -6963,31 +6985,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function loadFromFile(name) {
           var file = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'assets/settings.json';
           var tries = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
             var _this57 = this;
 
             var file_name, key;
-            return regeneratorRuntime.wrap(function _callee8$(_context8) {
+            return regeneratorRuntime.wrap(function _callee9$(_context9) {
               while (1) {
-                switch (_context8.prev = _context8.next) {
+                switch (_context9.prev = _context9.next) {
                   case 0:
                     if (!(file !== 'assets/settings.json' && tries > 5)) {
-                      _context8.next = 2;
+                      _context9.next = 2;
                       break;
                     }
 
-                    return _context8.abrupt("return", Promise.resolve());
+                    return _context9.abrupt("return", Promise.resolve());
 
                   case 2:
                     file_name = file.split('/')[file.split('/').length - 1]; // Check if data has been loaded into the global space
 
                     if (!(window[file_name] instanceof Object)) {
-                      _context8.next = 6;
+                      _context9.next = 6;
                       break;
                     }
 
                     this._settings[name] = Object.assign(Object.assign({}, this._settings[name] || {}), window[file_name]);
-                    return _context8.abrupt("return", Promise.resolve());
+                    return _context9.abrupt("return", Promise.resolve());
 
                   case 6:
                     key = "load|".concat(name, "|").concat(file);
@@ -7012,14 +7034,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       });
                     }
 
-                    return _context8.abrupt("return", this._promises[key]);
+                    return _context9.abrupt("return", this._promises[key]);
 
                   case 9:
                   case "end":
-                    return _context8.stop();
+                    return _context9.stop();
                 }
               }
-            }, _callee8, this);
+            }, _callee9, this);
           }));
         }
       }, {
@@ -15635,16 +15657,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "195502a",
-      "hash": "195502a",
+      "raw": "cb21c61",
+      "hash": "cb21c61",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "195502a",
+      "suffix": "cb21c61",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598436547851
+      "time": 1598438695048
     };
     /* tslint:enable */
 
