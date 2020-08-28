@@ -15978,11 +15978,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this84.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
         _this84.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
         _this84.all_day = !!raw_data.all_day || _this84.duration > 23 * 60;
-
-        if (_this84.all_day) {
-          _this84.date = dayjs(_this84.date).startOf('d').valueOf();
-        }
-
         _this84.old_start = raw_data.old_start || dayjs(_this84.date).unix();
         _this84.old_end = raw_data.old_end || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
         _this84.body = (typeof raw_data.body === 'string' ? raw_data.body : '') || raw_data.description;
@@ -47897,16 +47892,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "e0c86dd",
-      "hash": "e0c86dd",
+      "raw": "48c4a64",
+      "hash": "48c4a64",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "e0c86dd",
+      "suffix": "48c4a64",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598573240207
+      "time": 1598574974073
     };
     /* tslint:enable */
 

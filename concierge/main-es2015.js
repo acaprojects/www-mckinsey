@@ -8468,9 +8468,6 @@ class Booking extends base_api_class_1.BaseDataClass {
                 dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') ||
                 60;
         this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
-        if (this.all_day) {
-            this.date = dayjs(this.date).startOf('d').valueOf();
-        }
         this.old_start = raw_data.old_start || dayjs(this.date).unix();
         this.old_end =
             raw_data.old_end ||
@@ -26254,16 +26251,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "e0c86dd",
-    "hash": "e0c86dd",
+    "raw": "48c4a64",
+    "hash": "48c4a64",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "e0c86dd",
+    "suffix": "48c4a64",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598573240207
+    "time": 1598574974073
 };
 /* tslint:enable */
 
