@@ -1277,7 +1277,7 @@ BookingModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BookingModalCompone
         i0.ɵɵproperty("ngSwitchCase", "search");
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngSwitchCase", "catering");
-    } }, styles: ["header[_ngcontent-%COMP%] {\n  height: 3.5em;\n}\n\n.heading[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9vdmVybGF5cy9ib29raW5nLW1vZGFsL2Jvb2tpbmctbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvYm9va2luZy1tb2RhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGFBQUE7QUNBSjs7QURHQTtFQUNJLE9BQUE7RUFDQSxjQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy9ib29raW5nLW1vZGFsL2Jvb2tpbmctbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbmhlYWRlciB7XG4gICAgaGVpZ2h0OiAzLjVlbTtcbn1cblxuLmhlYWRpbmcge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiA1MCU7XG59XG4iLCJoZWFkZXIge1xuICBoZWlnaHQ6IDMuNWVtO1xufVxuXG4uaGVhZGluZyB7XG4gIGZsZXg6IDE7XG4gIG1pbi13aWR0aDogNTAlO1xufSJdfQ== */"] });
+    } }, styles: ["header[_ngcontent-%COMP%] {\n  height: 3.5em;\n}\n\n.heading[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 50%;\n}\n\nmain[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9vdmVybGF5cy9ib29raW5nLW1vZGFsL2Jvb2tpbmctbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL292ZXJsYXlzL2Jvb2tpbmctbW9kYWwvYm9va2luZy1tb2RhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGFBQUE7QUNBSjs7QURHQTtFQUNJLE9BQUE7RUFDQSxjQUFBO0FDQUo7O0FER0E7RUFDSSxnQkFBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvb3ZlcmxheXMvYm9va2luZy1tb2RhbC9ib29raW5nLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG5oZWFkZXIge1xuICAgIGhlaWdodDogMy41ZW07XG59XG5cbi5oZWFkaW5nIHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi13aWR0aDogNTAlO1xufVxuXG5tYWluIHtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xufVxuIiwiaGVhZGVyIHtcbiAgaGVpZ2h0OiAzLjVlbTtcbn1cblxuLmhlYWRpbmcge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDUwJTtcbn1cblxubWFpbiB7XG4gIG92ZXJmbG93OiBoaWRkZW47XG59Il19 */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BookingModalComponent, [{
         type: core_1.Component,
         args: [{
@@ -26254,16 +26254,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "07af0c4",
-    "hash": "07af0c4",
+    "raw": "e0c86dd",
+    "hash": "e0c86dd",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "07af0c4",
+    "suffix": "e0c86dd",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598571747376
+    "time": 1598573240207
 };
 /* tslint:enable */
 
