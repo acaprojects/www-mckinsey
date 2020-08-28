@@ -6402,7 +6402,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.locations.splice(this.locations.findIndex(function (id) {
             return building.id === id;
           }), 1);
-          this.locationsChange.emit(this.locations);
+          this.locationsChange.emit(_toConsumableArray(this.locations));
         }
       }, {
         key: "is_today",
@@ -47892,16 +47892,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "48c4a64",
-      "hash": "48c4a64",
+      "raw": "b1569f0",
+      "hash": "b1569f0",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "48c4a64",
+      "suffix": "b1569f0",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598574974073
+      "time": 1598582676665
     };
     /* tslint:enable */
 
