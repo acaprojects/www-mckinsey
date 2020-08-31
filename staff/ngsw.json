@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1598845662753,
+  "timestamp": 1598845822864,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -207,6 +207,7 @@
         "/staff/assets/maps/shenzhen/level_39.svg",
         "/staff/assets/maps/singapore/level_24.svg",
         "/staff/assets/maps/solingen/level_01.svg",
+        "/staff/assets/maps/st_louis/level_08.svg",
         "/staff/assets/maps/sydney/level_33.svg",
         "/staff/assets/maps/sydney/level_35.svg",
         "/staff/assets/maps/sydney/level_36.svg",
@@ -447,6 +448,7 @@
     "/staff/assets/maps/shenzhen/level_39.svg": "82ab11328673ef667db2bf02a904849dfade386b",
     "/staff/assets/maps/singapore/level_24.svg": "86c260e8e97661aec34d7d2c72d797c1338ae14b",
     "/staff/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
+    "/staff/assets/maps/st_louis/level_08.svg": "9a5c8d223ca79cc8c2f0fce429b188c659f63d89",
     "/staff/assets/maps/sydney/level_33.svg": "7cf8ddb683729caa1bb8edc088140e6e8c708c3b",
     "/staff/assets/maps/sydney/level_35.svg": "be832bb516b300f5672b9ec4b881811406cb8d2d",
     "/staff/assets/maps/sydney/level_36.svg": "1393f4889357b9925aaf52e9d7cb02306230f78b",
@@ -470,8 +472,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "06944badfd17382f20dc06b24dca1d3873b82c2d",
-    "/staff/main-es5.js": "c4ee10c1a468eb77dbe26e96302ac70e566d5ec7",
+    "/staff/main-es2015.js": "00f3932b90fb96f70a0796070199bec35b25e1b6",
+    "/staff/main-es5.js": "f36d9b8884073ba686d77877a7171919a2ca98a4",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
