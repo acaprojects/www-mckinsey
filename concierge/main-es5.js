@@ -19206,12 +19206,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 booking.notes = (booking.notes || []).map(function (note) {
                   return note.author && (note.type === 'description' || note.type === 'private') ? "[".concat(note.author, "|").concat(note.type, "]").concat(note.message.replace(/<[^>]*>?/gm, '').replace(/\,/g, '٫').replace(/\r?\n|\r/g, ' ')) : '';
                 }).join(' | ');
+                booking.cancelled = booking.isCancelled;
+                booking.status = Object.keys(booking.status).map(function (key) {
+                  return "[".concat(key, ": ").concat(booking.status[key], "]");
+                }).join(' ');
                 booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({
                   start: booking.date
                 }, booking.recurr));
               } catch (e) {}
 
-              var remove_fields = ['id', 'icaluid', 'accepted_at', 'accepted_by', 'check_ins', 'changeKey', 'created', 'booking_type', 'edit_history', 'end_epoch', 'old_attendees', 'start_epoch', 'expected_attendees', 'isAllDay', 'isCancelled', 'body', 'is_free', 'lastModifiedDateTime', 'locationType', 'locations', 'organizer', 'booked_by', 'originalEndTimeZone', 'originalStartTimeZone', 'recurr', 'room_booking_status', 'room_email', 'room_emails', 'room_id', 'sensitivity', 'seriesMasterId', 'show_as', 'notes', 'status', 'subject', 'type', 'previous_booking', 'catering', 'responseStatus', 'equipment_codes'];
+              var remove_fields = ['id', 'icaluid', 'accepted_at', 'accepted_by', 'check_ins', 'changeKey', 'created', 'booking_type', 'edit_history', 'end_epoch', 'old_attendees', 'start_epoch', 'expected_attendees', 'isAllDay', 'isCancelled', 'body', 'is_free', 'lastModifiedDateTime', 'locationType', 'locations', 'organizer', 'booked_by', 'originalEndTimeZone', 'originalStartTimeZone', 'recurr', 'room_booking_status', 'room_email', 'room_emails', 'room_id', 'sensitivity', 'seriesMasterId', 'show_as', 'notes', 'subject', 'type', 'previous_booking', 'catering', 'responseStatus', 'equipment_codes'];
 
               for (var _i5 = 0, _remove_fields = remove_fields; _i5 < _remove_fields.length; _i5++) {
                 var _field = _remove_fields[_i5];
@@ -19222,7 +19226,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
 
               var output = {};
-              var order = ['title', 'start', 'end', 'location', 'Meeting Host', 'Booked By', 'all_day', 'recurrence', 'attendees', 'description'];
+              var order = ['title', 'start', 'end', 'location', 'Meeting Host', 'Booked By', 'all_day', 'recurrence', 'attendees', 'description', 'cancelled'];
               var keys = Object.keys(booking);
               keys.sort(function (a, b) {
                 var idx_a = order.indexOf(a);
@@ -47892,16 +47896,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "51ba215",
-      "hash": "51ba215",
+      "raw": "477584a",
+      "hash": "477584a",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "51ba215",
+      "suffix": "477584a",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598927485795
+      "time": 1598941263647
     };
     /* tslint:enable */
 

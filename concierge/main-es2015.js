@@ -10311,6 +10311,8 @@ class Report {
                             .replace(/\r?\n|\r/g, ' ')}`
                         : '')
                         .join(' | ');
+                    booking.cancelled = booking.isCancelled;
+                    booking.status = Object.keys(booking.status).map(key => `[${key}: ${booking.status[key]}]`).join(' ');
                     booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({ start: booking.date }, booking.recurr));
                 }
                 catch (e) { }
@@ -10348,7 +10350,6 @@ class Report {
                     'seriesMasterId',
                     'show_as',
                     'notes',
-                    'status',
                     'subject',
                     'type',
                     'previous_booking',
@@ -10373,6 +10374,7 @@ class Report {
                     'recurrence',
                     'attendees',
                     'description',
+                    'cancelled'
                 ];
                 const keys = Object.keys(booking);
                 keys.sort((a, b) => {
@@ -26251,16 +26253,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "51ba215",
-    "hash": "51ba215",
+    "raw": "477584a",
+    "hash": "477584a",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "51ba215",
+    "suffix": "477584a",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598927485795
+    "time": 1598941263647
 };
 /* tslint:enable */
 
