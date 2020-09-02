@@ -27712,6 +27712,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           })) {
             this.form.controls.delivery_time.setValue(this.available_times[0].id);
           }
+
+          console.log('In restricted time:', this.within_restricted_time);
         }
       }, {
         key: "confirmOrder",
@@ -27920,7 +27922,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "within_restricted_time",
         get: function get() {
-          return false;
+          var expired = dayjs().add(this.active_building.catering_restricted_from, 'h').endOf('d');
+          return dayjs(this.date).isBefore(expired);
         }
         /** Whether items are available for order at anytime */
 
@@ -38943,16 +38946,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "bf659d3",
-      "hash": "bf659d3",
+      "raw": "4b9461a",
+      "hash": "4b9461a",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "bf659d3",
+      "suffix": "4b9461a",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599005844597
+      "time": 1599009925927
     };
     /* tslint:enable */
 
