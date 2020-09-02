@@ -20580,7 +20580,7 @@ class OrderDetailsNotesComponent {
                         date: date.valueOf(),
                         author: user.name,
                         order_id: this.order.id,
-                        space: this.booking.space.email,
+                        space: this.order.location_id,
                         message: this.new_note,
                         time: date.format('h:mm A'),
                     },
@@ -26248,16 +26248,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "65b5d84",
-    "hash": "65b5d84",
+    "raw": "f3e177f",
+    "hash": "f3e177f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "65b5d84",
+    "suffix": "f3e177f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599014735508
+    "time": 1599019349106
 };
 /* tslint:enable */
 
