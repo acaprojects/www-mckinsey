@@ -12997,7 +12997,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
         this._data = _data;
         /** Emitter for user actions on the modal */
         this.event = new core_1.EventEmitter();
-        this.is_request = !!this._data.booking.toJSON().auto_approve.find(i => !i);
+        this.is_request = this._data.booking.toJSON().auto_approve.find(i => i === false) != null;
     }
     /** Booking to confirm changes to */
     get old_booking() {
@@ -21845,16 +21845,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "4b9461a",
-    "hash": "4b9461a",
+    "raw": "77be555",
+    "hash": "77be555",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "4b9461a",
+    "suffix": "77be555",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599009925927
+    "time": 1599015241489
 };
 /* tslint:enable */
 

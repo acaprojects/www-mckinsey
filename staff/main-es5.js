@@ -23156,9 +23156,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Emitter for user actions on the modal */
 
         _this107.event = new core_1.EventEmitter();
-        _this107.is_request = !!_this107._data.booking.toJSON().auto_approve.find(function (i) {
-          return !i;
-        });
+        _this107.is_request = _this107._data.booking.toJSON().auto_approve.find(function (i) {
+          return i === false;
+        }) != null;
         return _this107;
       }
       /** Booking to confirm changes to */
@@ -38946,16 +38946,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "4b9461a",
-      "hash": "4b9461a",
+      "raw": "77be555",
+      "hash": "77be555",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "4b9461a",
+      "suffix": "77be555",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599009925927
+      "time": 1599015241489
     };
     /* tslint:enable */
 
