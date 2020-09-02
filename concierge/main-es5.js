@@ -2332,14 +2332,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "is_request",
         get: function get() {
-          var options = {
-            date: this.booking.date,
-            duration: this.booking.duration,
-            host: this.organiser
-          };
-          return this.spaces.reduce(function (request, space) {
-            return request || space.byRequest(options);
-          }, false);
+          return false;
         }
         /** Booking to confirm changes to */
 
@@ -47894,16 +47887,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "f53a4fd",
-      "hash": "f53a4fd",
+      "raw": "c6c6a3c",
+      "hash": "c6c6a3c",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "f53a4fd",
+      "suffix": "c6c6a3c",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599007531256
+      "time": 1599011816790
     };
     /* tslint:enable */
 

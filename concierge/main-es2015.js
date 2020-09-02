@@ -757,12 +757,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
     }
     /** Whether booking needs to be accepted */
     get is_request() {
-        const options = {
-            date: this.booking.date,
-            duration: this.booking.duration,
-            host: this.organiser,
-        };
-        return this.spaces.reduce((request, space) => request || space.byRequest(options), false);
+        return false;
     }
     /** Booking to confirm changes to */
     get old_booking() {
@@ -26253,16 +26248,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f53a4fd",
-    "hash": "f53a4fd",
+    "raw": "c6c6a3c",
+    "hash": "c6c6a3c",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f53a4fd",
+    "suffix": "c6c6a3c",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599007531256
+    "time": 1599011816790
 };
 /* tslint:enable */
 
