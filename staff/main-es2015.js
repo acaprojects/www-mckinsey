@@ -1666,13 +1666,18 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     deleteMeeting() {
         var _a;
         this.loading = 'Deleting meeting...';
-        this._bookings
-            .delete(this.booking.id, {
-            delegate: this._data.as_delegate ? this._data.delegate : null,
-            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id,
-        })
-            .then(() => {
+        const can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
+        const params = [this.booking.id, {
+                icaluid: this.booking.icaluid,
+                host_email: this.booking.organiser.email,
+                user_email: this._data.as_delegate ? this._data.delegate : this._users.current.email,
+                room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id,
+                start: Math.floor(this.booking.date / 1000),
+            }];
+        const method = can_delete ? this._bookings.delete(params[0], params[1]) : this._bookings.decline(params[0], params[1]);
+        method.then(() => {
             this._service.notifySuccess('Successfully deleted meeting.');
+            this.event.emit({ reason: 'action' });
             this.loading = null;
             this._dialog_ref.close();
         }, (err) => {
@@ -1684,13 +1689,18 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     deleteSeries() {
         var _a;
         this.loading = 'Deleting series...';
-        this._bookings
-            .delete(this.booking.recurrence.series_id, {
-            delegate: this._data.as_delegate ? this._data.delegate : null,
-            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id,
-        })
-            .then(() => {
+        const can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
+        const params = [this.booking.recurrence.series_id, {
+                icaluid: this.booking.icaluid,
+                host_email: this.booking.organiser.email,
+                user_email: this._data.as_delegate ? this._data.delegate : this._users.current.email,
+                room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id,
+                start: Math.floor(this.booking.date / 1000),
+            }];
+        const method = can_delete ? this._bookings.delete(params[0], params[1]) : this._bookings.decline(params[0], params[1]);
+        method.then(() => {
             this._service.notifySuccess('Successfully deleted series.');
+            this.event.emit({ reason: 'action' });
             this.loading = null;
             this._dialog_ref.close();
         }, (err) => {
@@ -4599,7 +4609,7 @@ class BookingsService extends base_service_1.BaseAPIService {
         return this.task(id, 'accept', fields);
     }
     decline(id, fields) {
-        return this.task(id, 'concierge_decline', fields);
+        return this.task(id, 'decline', fields);
     }
     process(raw_data) {
         return new booking_class_1.Booking(raw_data);
@@ -12987,15 +12997,7 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
         this._data = _data;
         /** Emitter for user actions on the modal */
         this.event = new core_1.EventEmitter();
-    }
-    /** Whether booking needs to be accepted */
-    get is_request() {
-        const options = {
-            date: this.booking.date,
-            duration: this.booking.duration,
-            host: this.organiser,
-        };
-        return this.spaces.reduce((request, space) => request || space.byRequest(options), false);
+        this.is_request = !!this._data.booking.toJSON().auto_approve.find(i => !i);
     }
     /** Booking to confirm changes to */
     get old_booking() {
@@ -20047,9 +20049,12 @@ function ScheduleEventListComponent_mat_progress_bar_9_Template(rf, ctx) { if (r
     i0.ɵɵelement(0, "mat-progress-bar", 23);
 } }
 function ScheduleEventListComponent_ng_container_12_Template(rf, ctx) { if (rf & 1) {
+    const _r12 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelement(1, "schedule-event-item", 24);
+    i0.ɵɵelementStart(1, "schedule-event-item", 24);
+    i0.ɵɵlistener("deleted", function ScheduleEventListComponent_ng_container_12_Template_schedule_event_item_deleted_1_listener() { i0.ɵɵrestoreView(_r12); const item_r10 = ctx.$implicit; const ctx_r11 = i0.ɵɵnextContext(); return ctx_r11.removeEvent(item_r10); });
     i0.ɵɵpipe(2, "slice");
+    i0.ɵɵelementEnd();
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
     const item_r10 = ctx.$implicit;
@@ -20105,6 +20110,9 @@ class ScheduleEventListComponent extends base_directive_1.BaseDirective {
                 }
             }));
         });
+    }
+    removeEvent(event) {
+        this.events = this.events.filter(item => item.id !== event.id);
     }
     /**
      * Update the list of events for the currently visible period
@@ -20265,7 +20273,7 @@ ScheduleEventListComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ScheduleEventL
         var _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.scroll_viewport = _t.first);
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.trigger = _t.first);
-    } }, outputs: { event_list: "eventList" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 18, vars: 10, consts: [[1, "event-list"], [1, "header", "dark-mode"], [1, "user"], ["appearance", "outline", 4, "ngIf"], [1, "flex"], [1, "date"], ["mat-icon-button", "", "name", "date", 3, "matMenuTriggerFor", "click"], [3, "icon"], [1, "progress"], ["mode", "indeterminate", 4, "ngIf"], [1, "body"], ["itemSize", "80", 1, "viewport", 3, "scroll"], [4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTrackBy"], [1, "footer"], [3, "closed"], ["appMenu", "matMenu"], ["mat-menu-item", "", 1, "date-picker", 3, "click"], [3, "ngModel", "ngModelChange"], ["appearance", "outline"], [3, "value", "placeholder", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mode", "indeterminate"], [3, "user", "event"]], template: function ScheduleEventListComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, outputs: { event_list: "eventList" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 18, vars: 10, consts: [[1, "event-list"], [1, "header", "dark-mode"], [1, "user"], ["appearance", "outline", 4, "ngIf"], [1, "flex"], [1, "date"], ["mat-icon-button", "", "name", "date", 3, "matMenuTriggerFor", "click"], [3, "icon"], [1, "progress"], ["mode", "indeterminate", 4, "ngIf"], [1, "body"], ["itemSize", "80", 1, "viewport", 3, "scroll"], [4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTrackBy"], [1, "footer"], [3, "closed"], ["appMenu", "matMenu"], ["mat-menu-item", "", 1, "date-picker", 3, "click"], [3, "ngModel", "ngModelChange"], ["appearance", "outline"], [3, "value", "placeholder", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mode", "indeterminate"], [3, "user", "event", "deleted"]], template: function ScheduleEventListComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "div", 2);
@@ -20352,9 +20360,10 @@ const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_mod
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const meeting_details_overlay_component_1 = __webpack_require__(/*! src/app/overlays/meeting-details-overlay/meeting-details-overlay.component */ "./src/app/overlays/meeting-details-overlay/meeting-details-overlay.component.ts");
+const users_service_1 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
 const user_class_1 = __webpack_require__(/*! src/app/services/data/users/user.class */ "./src/app/services/data/users/user.class.ts");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-const users_service_1 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
+const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const i2 = __webpack_require__(/*! src/app/services/data/users/users.service */ "./src/app/services/data/users/users.service.ts");
@@ -20449,6 +20458,7 @@ class ScheduleEventListItemComponent extends base_directive_1.BaseDirective {
         super();
         this._dialog = _dialog;
         this._users = _users;
+        this.deleted = new core_1.EventEmitter();
     }
     get in_progress() {
         return this.event.status === 'in_progress';
@@ -20493,7 +20503,7 @@ class ScheduleEventListItemComponent extends base_directive_1.BaseDirective {
     openDetailsModal() {
         /* istanbul ignore else */
         if (this.event instanceof booking_class_1.Booking) {
-            this._dialog.open(meeting_details_overlay_component_1.MeetingDetailsOverlayComponent, {
+            const ref = this._dialog.open(meeting_details_overlay_component_1.MeetingDetailsOverlayComponent, {
                 maxHeight: 'auto',
                 maxWidth: 'auto',
                 width: 'auto',
@@ -20508,12 +20518,15 @@ class ScheduleEventListItemComponent extends base_directive_1.BaseDirective {
                     is_last: false,
                 },
             });
+            ref.componentInstance.event
+                .pipe(operators_1.first((_) => _.reason === 'action'))
+                .subscribe(() => this.deleted.emit());
         }
     }
 }
 exports.ScheduleEventListItemComponent = ScheduleEventListItemComponent;
 ScheduleEventListItemComponent.ɵfac = function ScheduleEventListItemComponent_Factory(t) { return new (t || ScheduleEventListItemComponent)(i0.ɵɵdirectiveInject(i1.MatDialog), i0.ɵɵdirectiveInject(i2.UsersService)); };
-ScheduleEventListItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ScheduleEventListItemComponent, selectors: [["schedule-event-item"]], inputs: { event: "event", user: "user" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [[3, "ngSwitch", 4, "ngIf"], [3, "ngSwitch"], ["class", "day display", 4, "ngSwitchCase"], ["class", "emptied display", 4, "ngSwitchCase"], [3, "class", 4, "ngSwitchDefault"], [1, "day", "display"], [1, "content"], [1, "emptied", "display"], [3, "click"], [1, "time"], ["class", "info", 4, "ngIf"], [1, "icon"], [3, "src"], [1, "details"], [1, "title", "text"], [1, "location", "text"], ["src", "assets/img/location.svg"], [1, "text"], [1, "info"]], template: function ScheduleEventListItemComponent_Template(rf, ctx) { if (rf & 1) {
+ScheduleEventListItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ScheduleEventListItemComponent, selectors: [["schedule-event-item"]], inputs: { event: "event", user: "user" }, outputs: { deleted: "deleted" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 1, vars: 1, consts: [[3, "ngSwitch", 4, "ngIf"], [3, "ngSwitch"], ["class", "day display", 4, "ngSwitchCase"], ["class", "emptied display", 4, "ngSwitchCase"], [3, "class", 4, "ngSwitchDefault"], [1, "day", "display"], [1, "content"], [1, "emptied", "display"], [3, "click"], [1, "time"], ["class", "info", 4, "ngIf"], [1, "icon"], [3, "src"], [1, "details"], [1, "title", "text"], [1, "location", "text"], ["src", "assets/img/location.svg"], [1, "text"], [1, "info"]], template: function ScheduleEventListItemComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, ScheduleEventListItemComponent_ng_container_0_Template, 4, 3, "ng-container", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.event);
@@ -20529,6 +20542,8 @@ ScheduleEventListItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ScheduleEv
             type: core_1.Input
         }], user: [{
             type: core_1.Input
+        }], deleted: [{
+            type: core_1.Output
         }] }); })();
 
 
@@ -21828,16 +21843,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d09ac8d",
-    "hash": "d09ac8d",
+    "raw": "bf659d3",
+    "hash": "bf659d3",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d09ac8d",
+    "suffix": "bf659d3",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598930259474
+    "time": 1599005844597
 };
 /* tslint:enable */
 

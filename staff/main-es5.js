@@ -3813,12 +3813,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _a;
 
           this.loading = 'Deleting meeting...';
-
-          this._bookings["delete"](this.booking.id, {
-            delegate: this._data.as_delegate ? this._data.delegate : null,
-            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id
-          }).then(function () {
+          var can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
+          var params = [this.booking.id, {
+            icaluid: this.booking.icaluid,
+            host_email: this.booking.organiser.email,
+            user_email: this._data.as_delegate ? this._data.delegate : this._users.current.email,
+            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id,
+            start: Math.floor(this.booking.date / 1000)
+          }];
+          var method = can_delete ? this._bookings["delete"](params[0], params[1]) : this._bookings.decline(params[0], params[1]);
+          method.then(function () {
             _this15._service.notifySuccess('Successfully deleted meeting.');
+
+            _this15.event.emit({
+              reason: 'action'
+            });
 
             _this15.loading = null;
 
@@ -3839,12 +3848,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _a;
 
           this.loading = 'Deleting series...';
-
-          this._bookings["delete"](this.booking.recurrence.series_id, {
-            delegate: this._data.as_delegate ? this._data.delegate : null,
-            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id
-          }).then(function () {
+          var can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
+          var params = [this.booking.recurrence.series_id, {
+            icaluid: this.booking.icaluid,
+            host_email: this.booking.organiser.email,
+            user_email: this._data.as_delegate ? this._data.delegate : this._users.current.email,
+            room_id: (_a = this.booking.space) === null || _a === void 0 ? void 0 : _a.id,
+            start: Math.floor(this.booking.date / 1000)
+          }];
+          var method = can_delete ? this._bookings["delete"](params[0], params[1]) : this._bookings.decline(params[0], params[1]);
+          method.then(function () {
             _this16._service.notifySuccess('Successfully deleted series.');
+
+            _this16.event.emit({
+              reason: 'action'
+            });
 
             _this16.loading = null;
 
@@ -8805,7 +8823,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "decline",
         value: function decline(id, fields) {
-          return this.task(id, 'concierge_decline', fields);
+          return this.task(id, 'decline', fields);
         }
       }, {
         key: "process",
@@ -23138,9 +23156,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Emitter for user actions on the modal */
 
         _this107.event = new core_1.EventEmitter();
+        _this107.is_request = !!_this107._data.booking.toJSON().auto_approve.find(function (i) {
+          return !i;
+        });
         return _this107;
       }
-      /** Whether booking needs to be accepted */
+      /** Booking to confirm changes to */
 
 
       _createClass(BookingConfirmComponent, [{
@@ -23255,20 +23276,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
           });
         }
-      }, {
-        key: "is_request",
-        get: function get() {
-          var options = {
-            date: this.booking.date,
-            duration: this.booking.duration,
-            host: this.organiser
-          };
-          return this.spaces.reduce(function (request, space) {
-            return request || space.byRequest(options);
-          }, false);
-        }
-        /** Booking to confirm changes to */
-
       }, {
         key: "old_booking",
         get: function get() {
@@ -35850,9 +35857,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function ScheduleEventListComponent_ng_container_12_Template(rf, ctx) {
       if (rf & 1) {
+        var _r12 = i0.ɵɵgetCurrentView();
+
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelement(1, "schedule-event-item", 24);
+        i0.ɵɵelementStart(1, "schedule-event-item", 24);
+        i0.ɵɵlistener("deleted", function ScheduleEventListComponent_ng_container_12_Template_schedule_event_item_deleted_1_listener() {
+          i0.ɵɵrestoreView(_r12);
+          var item_r10 = ctx.$implicit;
+          var ctx_r11 = i0.ɵɵnextContext();
+          return ctx_r11.removeEvent(item_r10);
+        });
         i0.ɵɵpipe(2, "slice");
+        i0.ɵɵelementEnd();
         i0.ɵɵelementContainerEnd();
       }
 
@@ -35953,6 +35969,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             }));
+          });
+        }
+      }, {
+        key: "removeEvent",
+        value: function removeEvent(event) {
+          this.events = this.events.filter(function (item) {
+            return item.id !== event.id;
           });
         }
         /**
@@ -36193,7 +36216,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 18,
       vars: 10,
-      consts: [[1, "event-list"], [1, "header", "dark-mode"], [1, "user"], ["appearance", "outline", 4, "ngIf"], [1, "flex"], [1, "date"], ["mat-icon-button", "", "name", "date", 3, "matMenuTriggerFor", "click"], [3, "icon"], [1, "progress"], ["mode", "indeterminate", 4, "ngIf"], [1, "body"], ["itemSize", "80", 1, "viewport", 3, "scroll"], [4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTrackBy"], [1, "footer"], [3, "closed"], ["appMenu", "matMenu"], ["mat-menu-item", "", 1, "date-picker", 3, "click"], [3, "ngModel", "ngModelChange"], ["appearance", "outline"], [3, "value", "placeholder", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mode", "indeterminate"], [3, "user", "event"]],
+      consts: [[1, "event-list"], [1, "header", "dark-mode"], [1, "user"], ["appearance", "outline", 4, "ngIf"], [1, "flex"], [1, "date"], ["mat-icon-button", "", "name", "date", 3, "matMenuTriggerFor", "click"], [3, "icon"], [1, "progress"], ["mode", "indeterminate", 4, "ngIf"], [1, "body"], ["itemSize", "80", 1, "viewport", 3, "scroll"], [4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTrackBy"], [1, "footer"], [3, "closed"], ["appMenu", "matMenu"], ["mat-menu-item", "", 1, "date-picker", 3, "click"], [3, "ngModel", "ngModelChange"], ["appearance", "outline"], [3, "value", "placeholder", "valueChange"], ["select", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mode", "indeterminate"], [3, "user", "event", "deleted"]],
       template: function ScheduleEventListComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -36346,6 +36369,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/overlays/meeting-details-overlay/meeting-details-overlay.component */
     "./src/app/overlays/meeting-details-overlay/meeting-details-overlay.component.ts");
 
+    var users_service_1 = __webpack_require__(
+    /*! src/app/services/data/users/users.service */
+    "./src/app/services/data/users/users.service.ts");
+
     var user_class_1 = __webpack_require__(
     /*! src/app/services/data/users/user.class */
     "./src/app/services/data/users/user.class.ts");
@@ -36354,9 +36381,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
 
-    var users_service_1 = __webpack_require__(
-    /*! src/app/services/data/users/users.service */
-    "./src/app/services/data/users/users.service.ts");
+    var operators_1 = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
@@ -36502,15 +36529,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this189 = _super64.call(this);
         _this189._dialog = _dialog;
         _this189._users = _users;
+        _this189.deleted = new core_1.EventEmitter();
         return _this189;
       }
 
       _createClass(ScheduleEventListItemComponent, [{
         key: "openDetailsModal",
         value: function openDetailsModal() {
+          var _this190 = this;
+
           /* istanbul ignore else */
           if (this.event instanceof booking_class_1.Booking) {
-            this._dialog.open(meeting_details_overlay_component_1.MeetingDetailsOverlayComponent, {
+            var ref = this._dialog.open(meeting_details_overlay_component_1.MeetingDetailsOverlayComponent, {
               maxHeight: 'auto',
               maxWidth: 'auto',
               width: 'auto',
@@ -36524,6 +36554,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 is_first: false,
                 is_last: false
               }
+            });
+
+            ref.componentInstance.event.pipe(operators_1.first(function (_) {
+              return _.reason === 'action';
+            })).subscribe(function () {
+              return _this190.deleted.emit();
             });
           }
         }
@@ -36599,6 +36635,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         event: "event",
         user: "user"
       },
+      outputs: {
+        deleted: "deleted"
+      },
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 1,
       vars: 1,
@@ -36637,6 +36676,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }],
         user: [{
           type: core_1.Input
+        }],
+        deleted: [{
+          type: core_1.Output
         }]
       });
     })();
@@ -36746,17 +36788,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super65 = _createSuper(ScheduleComponent);
 
       function ScheduleComponent(_route, _service) {
-        var _this190;
+        var _this191;
 
         _classCallCheck(this, ScheduleComponent);
 
-        _this190 = _super65.call(this);
-        _this190._route = _route;
-        _this190._service = _service;
+        _this191 = _super65.call(this);
+        _this191._route = _route;
+        _this191._service = _service;
         /** Whether to show menu */
 
-        _this190.show_menu = false;
-        return _this190;
+        _this191.show_menu = false;
+        return _this191;
       }
       /** ID of the event after the active event */
 
@@ -36764,15 +36806,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ScheduleComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this191 = this;
+          var _this192 = this;
 
           this.subscription('route.route', this._route.paramMap.subscribe(function (params) {
             if (params.has('page')) {
-              _this191.page = params.get('page');
+              _this192.page = params.get('page');
             }
 
             if (params.has('id')) {
-              _this191.id = params.get('id');
+              _this192.id = params.get('id');
             }
           }));
           this.loadEvents();
@@ -36815,11 +36857,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "next",
         get: function get() {
-          var _this192 = this;
+          var _this193 = this;
 
           if (this.events) {
             var index = this.events.findIndex(function (i) {
-              return _this192.id === i.id;
+              return _this193.id === i.id;
             }) + 1;
 
             if (index > -1 && this.events[index]) {
@@ -36834,11 +36876,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "previous",
         get: function get() {
-          var _this193 = this;
+          var _this194 = this;
 
           if (this.events) {
             var index = this.events.findIndex(function (i) {
-              return _this193.id === i.id;
+              return _this194.id === i.id;
             }) - 1;
 
             if (index > -1 && this.events[index]) {
@@ -37427,24 +37469,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super66 = _createSuper(EventDetailsComponent);
 
       function EventDetailsComponent(_users, _dialog, _router) {
-        var _this194;
+        var _this195;
 
         _classCallCheck(this, EventDetailsComponent);
 
-        _this194 = _super66.call(this);
-        _this194._users = _users;
-        _this194._dialog = _dialog;
-        _this194._router = _router;
+        _this195 = _super66.call(this);
+        _this195._users = _users;
+        _this195._dialog = _dialog;
+        _this195._router = _router;
         /** Emitter for action on the display view */
 
-        _this194.change = new core_1.EventEmitter();
+        _this195.change = new core_1.EventEmitter();
         /** Emitter for changes to the loading state */
 
-        _this194.loading = new core_1.EventEmitter();
+        _this195.loading = new core_1.EventEmitter();
         /** Mapping of spaces to last checkin time */
 
-        _this194.last_start = {};
-        return _this194;
+        _this195.last_start = {};
+        return _this195;
       }
       /** Title of the displayed event */
 
@@ -37567,14 +37609,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "attendees",
         get: function get() {
-          var _this195 = this;
+          var _this196 = this;
 
           if (!this.event) {
             return [];
           }
 
           return this.event.attendees.filter(function (i) {
-            return i.email !== _this195.organiser.email;
+            return i.email !== _this196.organiser.email;
           });
         }
         /** Host of the event */
@@ -37636,10 +37678,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "is_checked_in",
         get: function get() {
-          var _this196 = this;
+          var _this197 = this;
 
           return this.spaces.reduce(function (a, v) {
-            return a && _this196.event.date <= (_this196.last_start[v.id] || 0);
+            return a && _this197.event.date <= (_this197.last_start[v.id] || 0);
           }, true);
         }
         /** Whether the spaces can be controlled */
@@ -37962,21 +38004,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super67 = _createSuper(EventEditComponent);
 
       function EventEditComponent(_service, _users, _dialog) {
-        var _this197;
+        var _this198;
 
         _classCallCheck(this, EventEditComponent);
 
-        _this197 = _super67.call(this);
-        _this197._service = _service;
-        _this197._users = _users;
-        _this197._dialog = _dialog;
+        _this198 = _super67.call(this);
+        _this198._service = _service;
+        _this198._users = _users;
+        _this198._dialog = _dialog;
         /** Emitter for action on the display view */
 
-        _this197.change = new core_1.EventEmitter();
+        _this198.change = new core_1.EventEmitter();
         /** Emitter for changes to the loading state */
 
-        _this197.loading = new core_1.EventEmitter();
-        return _this197;
+        _this198.loading = new core_1.EventEmitter();
+        return _this198;
       }
 
       _createClass(EventEditComponent, [{
@@ -38033,7 +38075,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "save",
         value: function save() {
-          var _this198 = this;
+          var _this199 = this;
 
           /* istanbul ignore else */
           if (!this.form.dirty) {
@@ -38057,7 +38099,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             dialog_ref.componentInstance.event.subscribe(function (event) {
               /* istanbul ignore else */
               if (event.reason === 'success') {
-                _this198.change.emit({
+                _this199.change.emit({
                   type: 'view'
                 });
               }
@@ -38296,30 +38338,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super68 = _createSuper(ScheduleViewEventComponent);
 
       function ScheduleViewEventComponent(_service, _bookings, _router) {
-        var _this199;
+        var _this200;
 
         _classCallCheck(this, ScheduleViewEventComponent);
 
-        _this199 = _super68.call(this);
-        _this199._service = _service;
-        _this199._bookings = _bookings;
-        _this199._router = _router;
-        return _this199;
+        _this200 = _super68.call(this);
+        _this200._service = _service;
+        _this200._bookings = _bookings;
+        _this200._router = _router;
+        return _this200;
       }
 
       _createClass(ScheduleViewEventComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this200 = this;
+          var _this201 = this;
 
           this.subscription('arrow_right', this._service.Hotkeys.listen(['ArrowRight'], function () {
-            return _this200.nextBooking();
+            return _this201.nextBooking();
           }));
           this.subscription('arrow_left', this._service.Hotkeys.listen(['ArrowLeft'], function () {
-            return _this200.previousBooking();
+            return _this201.previousBooking();
           }));
           this.subscription('changes', this._bookings.listen('list').subscribe(function () {
-            return _this200.loadEvent();
+            return _this201.loadEvent();
           }));
         }
       }, {
@@ -38340,7 +38382,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadEvent",
         value: function loadEvent() {
-          var _this201 = this;
+          var _this202 = this;
 
           this.loading = 'Loading booking data...';
 
@@ -38351,14 +38393,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.loading = '';
           } else {
             this._bookings.show(this.id, {}).then(function (bkn) {
-              _this201.loading = '';
-              _this201.event = bkn;
+              _this202.loading = '';
+              _this202.event = bkn;
             }, function () {
-              _this201.loading = '';
+              _this202.loading = '';
 
-              _this201._service.notifyError("Failed to loaded booking data<br>ID: ".concat(_this201.id));
+              _this202._service.notifyError("Failed to loaded booking data<br>ID: ".concat(_this202.id));
 
-              _this201._router.navigate(['/schedule']);
+              _this202._router.navigate(['/schedule']);
             });
           }
         }
@@ -38733,14 +38775,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super69 = _createSuper(ShellWrapperComponent);
 
       function ShellWrapperComponent(_service, _users) {
-        var _this202;
+        var _this203;
 
         _classCallCheck(this, ShellWrapperComponent);
 
-        _this202 = _super69.call(this);
-        _this202._service = _service;
-        _this202._users = _users;
-        return _this202;
+        _this203 = _super69.call(this);
+        _this203._service = _service;
+        _this203._users = _users;
+        return _this203;
       }
       /** Whether the user needs to login */
 
@@ -38748,16 +38790,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShellWrapperComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this203 = this;
+          var _this204 = this;
 
           this.subscription('loading', this._service.listen('loading', function (loading) {
-            _this203.loading_state = loading;
+            _this204.loading_state = loading;
           }));
 
           this._service.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this203.logo = _this203._service.setting('app.logo_light') || {
+            _this204.logo = _this204._service.setting('app.logo_light') || {
               type: 'icon'
             };
           });
@@ -38901,16 +38943,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "d09ac8d",
-      "hash": "d09ac8d",
+      "raw": "bf659d3",
+      "hash": "bf659d3",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "d09ac8d",
+      "suffix": "bf659d3",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598930259474
+      "time": 1599005844597
     };
     /* tslint:enable */
 
