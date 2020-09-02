@@ -19207,9 +19207,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   return note.author && (note.type === 'description' || note.type === 'private') ? "[".concat(note.author, "|").concat(note.type, "]").concat(note.message.replace(/<[^>]*>?/gm, '').replace(/\,/g, '٫').replace(/\r?\n|\r/g, ' ')) : '';
                 }).join(' | ');
                 booking.cancelled = booking.isCancelled;
-                booking.status = Object.keys(booking.status).map(function (key) {
-                  return "[".concat(key, ": ").concat(booking.status[key], "]");
-                }).join(' ');
+                booking.status = booking.status[booking.room_email] || '';
                 booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({
                   start: booking.date
                 }, booking.recurr));
@@ -47896,16 +47894,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "477584a",
-      "hash": "477584a",
+      "raw": "f53a4fd",
+      "hash": "f53a4fd",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "477584a",
+      "suffix": "f53a4fd",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1598941263647
+      "time": 1599007531256
     };
     /* tslint:enable */
 

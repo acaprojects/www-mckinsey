@@ -10312,7 +10312,7 @@ class Report {
                         : '')
                         .join(' | ');
                     booking.cancelled = booking.isCancelled;
-                    booking.status = Object.keys(booking.status).map(key => `[${key}: ${booking.status[key]}]`).join(' ');
+                    booking.status = booking.status[booking.room_email] || '';
                     booking.recurrence = formatting_utilities_1.formatRecurrence(Object.assign({ start: booking.date }, booking.recurr));
                 }
                 catch (e) { }
@@ -26253,16 +26253,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "477584a",
-    "hash": "477584a",
+    "raw": "f53a4fd",
+    "hash": "f53a4fd",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "477584a",
+    "suffix": "f53a4fd",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1598941263647
+    "time": 1599007531256
 };
 /* tslint:enable */
 
