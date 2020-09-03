@@ -7445,7 +7445,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 id: id,
                 _task: task_name
               });
-              var url = "".concat(_this39.api_route, "/").concat(id, "/").concat(task_name);
+              var url = "".concat(_this39.route(false), "/").concat(id, "/").concat(task_name);
               var result;
               var request = method === 'post' ? _this39.http.post(url, post_data) : _this39.http.get("".concat(url).concat(query ? '?' + query : ''));
               request.subscribe(function (d) {
@@ -7909,6 +7909,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
           }
 
+          data.breakdown = data.breakdown || {};
+          data.setup = data.setup || {};
           data.organiser = data.organiser.toJSON();
           data.creator = data.creator.toJSON();
           data.attendees = general_utilities_1.unique([data.organiser].concat(data.attendees.map(function (i) {
@@ -10170,7 +10172,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee7() {
-            var loading, user, building;
+            var loading, user, id, building;
             return regeneratorRuntime.wrap(function _callee7$(_context7) {
               while (1) {
                 switch (_context7.prev = _context7.next) {
@@ -10247,7 +10249,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     user = this._users.current;
 
                     if (user) {
+                      id = localStorage.getItem('PlaceOS.building');
                       building = this.buildings.find(function (bld) {
+                        return id && bld.id === id;
+                      }) || this.buildings.find(function (bld) {
                         return bld.code === user.location;
                       });
 
@@ -10444,6 +10449,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.set('active_building', this.building);
+          localStorage.setItem('PlaceOS.building', this._active_building);
         }
         /** List of buildings for the organisation */
 
@@ -17571,6 +17577,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (building) {
             this.building_details = building;
             this.building = bld_id;
+            this._org.building = building;
             this.level_list = building.levels;
             /* istanbul ignore else */
 
@@ -23156,6 +23163,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Emitter for user actions on the modal */
 
         _this107.event = new core_1.EventEmitter();
+        _this107.booking.time_changed = _this107.old_booking && (_this107.old_booking.date !== _this107.booking.date || _this107.old_booking.duration !== _this107.booking.duration);
         _this107.is_request = _this107._data.booking.toJSON().auto_approve.find(function (i) {
           return i === false;
         }) != null;
@@ -23177,7 +23185,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this._dialog_ref.disableClose = true;
           this.checkSpaceAvailability().then(function () {
             _this108.loading = 'Processing booking request...';
-            _this108.booking.time_changed = _this108.old_booking && (_this108.old_booking.date !== _this108.booking.date || _this108.old_booking.duration !== _this108.booking.duration);
 
             _this108._bookings.save(_this108.booking).then(function () {
               _this108.loading = null;
@@ -38946,16 +38953,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "77be555",
-      "hash": "77be555",
+      "raw": "dd7f95c",
+      "hash": "dd7f95c",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "77be555",
+      "suffix": "dd7f95c",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599015241489
+      "time": 1599110332338
     };
     /* tslint:enable */
 

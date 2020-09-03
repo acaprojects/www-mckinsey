@@ -3694,7 +3694,7 @@ class BaseAPIService extends base_class_1.BaseClass {
         if (!this._promises[key]) {
             this._promises[key] = new Promise((resolve, reject) => {
                 const post_data = Object.assign(Object.assign({}, form_data), { id, _task: task_name });
-                const url = `${this.api_route}/${id}/${task_name}`;
+                const url = `${this.route(false)}/${id}/${task_name}`;
                 let result;
                 const request = method === 'post'
                     ? this.http.post(url, post_data)
@@ -4069,6 +4069,8 @@ class Booking extends base_api_class_1.BaseDataClass {
             });
             data.notes.sort((a, b) => b.date - a.date);
         }
+        data.breakdown = data.breakdown || {};
+        data.setup = data.setup || {};
         data.organiser = data.organiser.toJSON();
         data.creator = data.creator.toJSON();
         data.attendees = general_utilities_1.unique([data.organiser].concat(data.attendees.map((i) => i.toJSON())), 'email');
@@ -5330,6 +5332,7 @@ class OrganisationService extends base_service_1.BaseAPIService {
             this._active_building = bld;
         }
         this.set('active_building', this.building);
+        localStorage.setItem('PlaceOS.building', this._active_building);
     }
     /** List of buildings for the organisation */
     get buildings() {
@@ -5393,7 +5396,8 @@ class OrganisationService extends base_service_1.BaseAPIService {
             this._service.set('loading', loading);
             const user = this._users.current;
             if (user) {
-                const building = this.buildings.find((bld) => bld.code === user.location);
+                const id = localStorage.getItem('PlaceOS.building');
+                const building = this.buildings.find(bld => id && bld.id === id) || this.buildings.find((bld) => bld.code === user.location);
                 if (building) {
                     this._active_building = building.id;
                     this.set('active_building', building);
@@ -9448,6 +9452,7 @@ class MapControlsComponent extends base_directive_1.BaseDirective {
         if (building) {
             this.building_details = building;
             this.building = bld_id;
+            this._org.building = building;
             this.level_list = building.levels;
             /* istanbul ignore else */
             if (this.level_list.length && !this.level_list.find(lvl => lvl.id === this.level)) {
@@ -12997,6 +13002,10 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
         this._data = _data;
         /** Emitter for user actions on the modal */
         this.event = new core_1.EventEmitter();
+        this.booking.time_changed =
+            this.old_booking &&
+                (this.old_booking.date !== this.booking.date ||
+                    this.old_booking.duration !== this.booking.duration);
         this.is_request = this._data.booking.toJSON().auto_approve.find(i => i === false) != null;
     }
     /** Booking to confirm changes to */
@@ -13104,10 +13113,6 @@ class BookingConfirmComponent extends base_directive_1.BaseDirective {
         this._dialog_ref.disableClose = true;
         this.checkSpaceAvailability().then(() => {
             this.loading = 'Processing booking request...';
-            this.booking.time_changed =
-                this.old_booking &&
-                    (this.old_booking.date !== this.booking.date ||
-                        this.old_booking.duration !== this.booking.duration);
             this._bookings.save(this.booking).then(() => {
                 this.loading = null;
                 this.success = true;
@@ -21845,16 +21850,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "77be555",
-    "hash": "77be555",
+    "raw": "dd7f95c",
+    "hash": "dd7f95c",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "77be555",
+    "suffix": "dd7f95c",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599015241489
+    "time": 1599110332338
 };
 /* tslint:enable */
 
