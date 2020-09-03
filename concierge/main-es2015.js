@@ -9321,6 +9321,9 @@ const catering_item_class_1 = __webpack_require__(/*! ./catering-item.class */ "
 class CateringCategory extends catering_item_class_1.CateringItem {
     constructor(data) {
         super(data);
+        /** Whether item is a category */
+        this.is_category = true;
+        this.is_category = true;
         this.must_select = this.must_select || 0;
         this.order_anytime = !!data.order_anytime && this.package;
     }
@@ -9353,9 +9356,12 @@ class CateringItem {
         var _a;
         /** Number of this item in the assoicated order */
         this._amount = 0;
+        /** Whether item is a category */
+        this.is_category = false;
         this.instance_id = `item-${Math.floor(Math.random() * 999999999)}`;
         this.id = data.id || '';
         this.name = data.name || '';
+        this.is_category = data.is_category || !!(data.parent_categories || []).length || false;
         this.available = {
             from_month: (data.available ? data.available.from_month : data.available_from) || -1,
             to_month: (data.available ? data.available.to_month : data.available_to) || -1,
@@ -10287,11 +10293,7 @@ class Report {
                     booking['Meeting Host'] = ((_a = booking.organizer) === null || _a === void 0 ? void 0 : _a.name) || booking.organizer;
                     booking['Booked By'] =
                         ((_b = booking.booked_by) === null || _b === void 0 ? void 0 : _b.name) || ((_c = booking.booked_by) === null || _c === void 0 ? void 0 : _c.email) || '';
-                    booking.charge_code = booking.equipment_codes
-                        ? Object.keys(booking.equipment_codes)
-                            .map((key) => booking.equipment_codes[key])
-                            .join('٫ ')
-                        : '';
+                    booking.charge_code = booking.equipment_codes[booking.room_email] || '';
                     //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
                     booking.attendees = (booking.attendees || [])
                         .map((person) => person.name || person.email || person)
@@ -18150,7 +18152,7 @@ CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuIte
         i0.ɵɵelementStart(3, "mat-menu", null, 3);
         i0.ɵɵtemplate(5, CateringMenuItemComponent_ng_container_5_Template, 7, 3, "ng-container", 4);
         i0.ɵɵelementStart(6, "button", 5);
-        i0.ɵɵlistener("click", function CateringMenuItemComponent_Template_button_click_6_listener() { return ctx.item.items ? ctx.openGroupModal(ctx.item) : ctx.openItemModal(ctx.item); });
+        i0.ɵɵlistener("click", function CateringMenuItemComponent_Template_button_click_6_listener() { return ctx.item.items.length || ctx.item.is_category ? ctx.openGroupModal(ctx.item) : ctx.openItemModal(ctx.item); });
         i0.ɵɵelementStart(7, "div", 6);
         i0.ɵɵelement(8, "app-icon", 7);
         i0.ɵɵelementStart(9, "div", 8);
@@ -18175,15 +18177,15 @@ CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuIte
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngForOf", ctx.item.items);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("ngIf", ctx.item.items);
+        i0.ɵɵproperty("ngIf", ctx.item.items.length || ctx.item.is_category);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(8, _c3));
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Edit ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item.package ? "Package" : "Sub-category" : "Item", "");
+        i0.ɵɵtextInterpolate1(" Edit ", ctx.item.items.length || ctx.item.is_category ? ctx.subitem ? "Group" : ctx.item.package ? "Package" : "Sub-category" : "Item", " ");
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(9, _c4));
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Delete ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item.package ? "Package" : "Sub-category" : "Item", "");
+        i0.ɵɵtextInterpolate1(" Delete ", ctx.item.items.length || ctx.item.is_category ? ctx.subitem ? "Group" : ctx.item.package ? "Package" : "Sub-category" : "Item", " ");
     } }, directives: [i6.NgIf, i6.NgForOf, i7._MatMenu, i7.MatMenuItem, i8.IconComponent, i9.MatButton, i7.MatMenuTrigger, CateringMenuItemComponent], pipes: [i6.CurrencyPipe], styles: [".catering-item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  padding: 0.5rem;\n}\n.subitem[_ngcontent-%COMP%] {\n  border-top: 1px solid #ccc;\n}\n.name[_ngcontent-%COMP%] {\n  max-width: 480px;\n}\n.image[_ngcontent-%COMP%] {\n  height: 3em;\n  width: 3em;\n  min-width: 3em;\n  border-radius: 4px;\n  background-color: rgba(0, 0, 0, 0.05);\n  background-position: center;\n  background-size: cover;\n  border: 1px solid rgba(0, 0, 0, 0.05);\n}\n.details[_ngcontent-%COMP%] {\n  flex: 1;\n  min-width: 25%;\n  padding: 0 0.5em;\n  display: flex;\n  flex-direction: column;\n}\n.details[_ngcontent-%COMP%]   *[_ngcontent-%COMP%]    >  {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.options[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.options[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  background: none;\n  border: none;\n  font-size: 0.8em;\n  height: 1.5em;\n  color: rgba(0, 0, 0, 0.85);\n  line-height: 1em;\n  padding: 0 0.25em;\n  text-decoration: underline;\n}\n.option[_ngcontent-%COMP%] {\n  padding: 0.25em 0.5em;\n  border-radius: 4px;\n  color: #fff;\n  font-size: 0.8rem;\n  background-color: #1937ea;\n  margin: 0.25em;\n  margin-right: 0.4rem;\n  margin-left: 0;\n  white-space: nowrap;\n}\n.description[_ngcontent-%COMP%] {\n  font-size: 0.75em;\n  margin-top: 0.25em;\n}\n.children[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  background-color: rgba(0, 0, 0, 0.05);\n}\n.group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}\n.hide[_ngcontent-%COMP%] {\n  opacity: 0;\n  pointer-events: none;\n}\n.delete[_ngcontent-%COMP%]   app-icon[_ngcontent-%COMP%] {\n  color: #e53935;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvc3R5bGVzL3ZhcmlhYmxlcy5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbWNraW5zZXktY29uY2llcmdlLXVpL21ja2luc2V5LWNvbmNpZXJnZS11aS9zcmMvYXBwL3NoZWxsL2NhdGVyaW5nL21lbnUvaXRlbS9pdGVtLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9tZW51L2l0ZW0vaXRlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7MEJBQUE7QUFnQ0E7O2NBQUE7QUFhQTs7c0JBQUE7QUM1Q0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxlQUFBO0FDUUo7QURMQTtFQUNJLDBCQUFBO0FDUUo7QURMQTtFQUNJLGdCQUFBO0FDUUo7QURMQTtFQUNJLFdBQUE7RUFDQSxVQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EscUNBQUE7RUFDQSwyQkFBQTtFQUNBLHNCQUFBO0VBQ0EscUNBQUE7QUNRSjtBRExBO0VBQ0ksT0FBQTtFQUNBLGNBQUE7RUFDQSxnQkFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtBQ1FKO0FETkk7RUFDSSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsdUJBQUE7QUNRUjtBREpBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0FDT0o7QURMSTtFQUNJLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLDBCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLDBCQUFBO0FDT1I7QURIQTtFQUNJLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxXQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkQxQ1k7RUMyQ1osY0FBQTtFQUNBLG9CQUFBO0VBQ0EsY0FBQTtFQUNBLG1CQUFBO0FDTUo7QURIQTtFQUNJLGlCQUFBO0VBQ0Esa0JBQUE7QUNNSjtBREhBO0VBQ0ksZ0JBQUE7RUFDQSxxQ0FBQTtBQ01KO0FESEE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7QUNNSjtBREhBO0VBQ0ksVUFBQTtFQUNBLG9CQUFBO0FDTUo7QURGSTtFQUNJLGNEM0VBO0FFZ0ZSIiwiZmlsZSI6InNyYy9hcHAvc2hlbGwvY2F0ZXJpbmcvbWVudS9pdGVtL2l0ZW0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuXG4kZm9udC1kYXJrOiAjMDAwO1xuJGZvbnQtbGlnaHQ6ICNmZmY7XG5cbiRzdWNjZXNzOiAjNDNhMDQ3O1xuJHN1Y2Nlc3MtbGlnaHQ6IGxpZ2h0ZW4oJHN1Y2Nlc3MsIDEwKTtcbiRzdWNjZXNzLWRhcms6IGRhcmtlbigkc3VjY2VzcywgMTApO1xuXG4kcGVuZGluZzogI2ZmYjMwMDtcbiRwZW5kaW5nLWxpZ2h0OiBsaWdodGVuKCRwZW5kaW5nLCAxMCk7XG4kcGVuZGluZy1kYXJrOiBkYXJrZW4oJHBlbmRpbmcsIDEwKTtcblxuJGVycm9yOiAjZTUzOTM1O1xuJGVycm9yLWxpZ2h0OiBsaWdodGVuKCRlcnJvciwgMTApO1xuJGVycm9yLWRhcms6IGRhcmtlbigkZXJyb3IsIDEwKTtcblxuJGNvbG9yLXByaW1hcnk6ICMxOTM3ZWE7XG4kY29sb3ItcHJpbWFyeS1saWdodDogbGlnaHRlbigkY29sb3ItcHJpbWFyeSwgMTApO1xuJGNvbG9yLXByaW1hcnktZGFyazogZGFya2VuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG5cbiRjb2xvci1zZWNvbmRhcnk6ICM0Mjg1RjQ7XG4kY29sb3Itc2Vjb25kYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcbiRjb2xvci1zZWNvbmRhcnktZGFyazogZGFya2VuKCRjb2xvci1zZWNvbmRhcnksIDEwKTtcblxuJGJhY2tncm91bmQ6ICNmMGYwZjA7XG4kZm9vdGVyLWJhY2s6ICMyNjMyMzg7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRiYXNlLXNpemU6IDE2cHg7XG4kdGFibGV0LXNpemU6IDE2cHg7XG4kbW9iaWxlLXNpemU6IDE2cHg7XG5cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuXG4kYnJlYWstbW9iaWxlOiA0NTBweDtcbiRicmVhay10YWJsZXQ6IDgwMHB4O1xuJGJyZWFrLWxhcHRvcDogMTAyNHB4O1xuXG4kYnJlYWstbGFuZHNjYXBlLW1vYmlsZTogODAwcHg7XG4kYnJlYWstbGFuZHNjYXBlLXRhYmxldDogMTA0OHB4O1xuJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3A6IDEyODBweDtcbiIsIkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbi5jYXRlcmluZy1pdGVtIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMC41cmVtO1xufVxuXG4uc3ViaXRlbSB7XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbi5uYW1lIHtcbiAgICBtYXgtd2lkdGg6IDQ4MHB4O1xufVxuXG4uaW1hZ2Uge1xuICAgIGhlaWdodDogM2VtO1xuICAgIHdpZHRoOiAzZW07XG4gICAgbWluLXdpZHRoOiAzZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoIzAwMCwgMC4wNSk7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgjMDAwLCAwLjA1KTtcbn1cblxuLmRldGFpbHMge1xuICAgIGZsZXg6IDE7XG4gICAgbWluLXdpZHRoOiAyNSU7XG4gICAgcGFkZGluZzogMCAwLjVlbTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cbiAgICAqID4ge1xuICAgICAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbiAgICB9XG59XG5cbi5vcHRpb25zIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cbiAgICBidXR0b24ge1xuICAgICAgICBiYWNrZ3JvdW5kOiBub25lO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICAgIGZvbnQtc2l6ZTogMC44ZW07XG4gICAgICAgIGhlaWdodDogMS41ZW07XG4gICAgICAgIGNvbG9yOiByZ2JhKCMwMDAsIDAuODUpO1xuICAgICAgICBsaW5lLWhlaWdodDogMWVtO1xuICAgICAgICBwYWRkaW5nOiAwIDAuMjVlbTtcbiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG4gICAgfVxufVxuXG4ub3B0aW9uIHtcbiAgICBwYWRkaW5nOiAwLjI1ZW0gMC41ZW07XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIGNvbG9yOiAjZmZmO1xuICAgIGZvbnQtc2l6ZTogMC44cmVtO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRjb2xvci1wcmltYXJ5O1xuICAgIG1hcmdpbjogMC4yNWVtO1xuICAgIG1hcmdpbi1yaWdodDogMC40cmVtO1xuICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG59XG5cbi5kZXNjcmlwdGlvbiB7XG4gICAgZm9udC1zaXplOiAwLjc1ZW07XG4gICAgbWFyZ2luLXRvcDogMC4yNWVtO1xufVxuXG4uY2hpbGRyZW4ge1xuICAgIGZvbnQtc2l6ZTogMC45ZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgjMDAwLCAwLjA1KTtcbn1cblxuLmdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5oaWRlIHtcbiAgICBvcGFjaXR5OiAwO1xuICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xufVxuXG4uZGVsZXRlIHtcbiAgICBhcHAtaWNvbiB7XG4gICAgICAgIGNvbG9yOiAkZXJyb3I7XG4gICAgfVxufVxuIiwiLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PSpcXFxufHwgICBNZWRpYSBRdWVyaWVzICAgfHxcblxcKj09PT09PT09PT09PT09PT09PT0qL1xuLmNhdGVyaW5nLWl0ZW0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwLjVyZW07XG59XG5cbi5zdWJpdGVtIHtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XG59XG5cbi5uYW1lIHtcbiAgbWF4LXdpZHRoOiA0ODBweDtcbn1cblxuLmltYWdlIHtcbiAgaGVpZ2h0OiAzZW07XG4gIHdpZHRoOiAzZW07XG4gIG1pbi13aWR0aDogM2VtO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjA1KTtcbn1cblxuLmRldGFpbHMge1xuICBmbGV4OiAxO1xuICBtaW4td2lkdGg6IDI1JTtcbiAgcGFkZGluZzogMCAwLjVlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5kZXRhaWxzICogPiB7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG4ub3B0aW9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4ub3B0aW9ucyBidXR0b24ge1xuICBiYWNrZ3JvdW5kOiBub25lO1xuICBib3JkZXI6IG5vbmU7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIGhlaWdodDogMS41ZW07XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpO1xuICBsaW5lLWhlaWdodDogMWVtO1xuICBwYWRkaW5nOiAwIDAuMjVlbTtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5cbi5vcHRpb24ge1xuICBwYWRkaW5nOiAwLjI1ZW0gMC41ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgY29sb3I6ICNmZmY7XG4gIGZvbnQtc2l6ZTogMC44cmVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTkzN2VhO1xuICBtYXJnaW46IDAuMjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAwLjRyZW07XG4gIG1hcmdpbi1sZWZ0OiAwO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuXG4uZGVzY3JpcHRpb24ge1xuICBmb250LXNpemU6IDAuNzVlbTtcbiAgbWFyZ2luLXRvcDogMC4yNWVtO1xufVxuXG4uY2hpbGRyZW4ge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuMDUpO1xufVxuXG4uZ3JvdXAge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uaGlkZSB7XG4gIG9wYWNpdHk6IDA7XG4gIHBvaW50ZXItZXZlbnRzOiBub25lO1xufVxuXG4uZGVsZXRlIGFwcC1pY29uIHtcbiAgY29sb3I6ICNlNTM5MzU7XG59Il19 */"], data: { animation: [angular_animations_1.ANIMATION_SHOW_CONTRACT_EXPAND] } });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CateringMenuItemComponent, [{
         type: core_1.Component,
@@ -18721,7 +18723,7 @@ class CateringOrdersItemComponent {
             if (item.items) {
                 const items = [];
                 for (const sub_item of item.items) {
-                    if (!sub_item.items && sub_item.amount) {
+                    if (!sub_item.items.length && sub_item.amount) {
                         items.push(sub_item);
                     }
                     else {
@@ -20281,7 +20283,7 @@ function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_ng
 } if (rf & 2) {
     const sub_item_r13 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", sub_item_r13.amount || sub_item_r13.items);
+    i0.ɵɵproperty("ngIf", sub_item_r13.amount || sub_item_r13.items.length);
 } }
 function OrderDetailsItemsComponent_div_2_ng_container_1_div_1_ng_container_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0);
@@ -24700,7 +24702,10 @@ function VisitorBookingItemComponent_div_0_ng_container_6_Template(rf, ctx) { if
     i0.ɵɵelementContainerEnd();
 } }
 function VisitorBookingItemComponent_div_0_a_visitor_32_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "a-visitor", 23);
+    const _r6 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "a-visitor", 23);
+    i0.ɵɵlistener("checked", function VisitorBookingItemComponent_div_0_a_visitor_32_Template_a_visitor_checked_0_listener() { i0.ɵɵrestoreView(_r6); const ctx_r5 = i0.ɵɵnextContext(2); return ctx_r5.checked.emit(); });
+    i0.ɵɵelementEnd();
 } if (rf & 2) {
     const item_r4 = ctx.$implicit;
     const ctx_r3 = i0.ɵɵnextContext(2);
@@ -24713,7 +24718,7 @@ const _c3 = function () { return { class: "material-icons", content: "event_avai
 const _c4 = function () { return { class: "material-icons", content: "edit" }; };
 const _c5 = function (a1) { return { class: "material-icons", content: a1 }; };
 function VisitorBookingItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
-    const _r6 = i0.ɵɵgetCurrentView();
+    const _r8 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 1);
     i0.ɵɵelementStart(1, "div", 2);
     i0.ɵɵelementStart(2, "div", 3);
@@ -24747,17 +24752,17 @@ function VisitorBookingItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(22, "action-icon", 4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(23, "button", 15);
-    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_23_listener() { i0.ɵɵrestoreView(_r6); const ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.checkin(); });
+    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_23_listener() { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.checkin(); });
     i0.ɵɵelement(24, "action-icon", 16);
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(25, "button", 17);
-    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_25_listener() { i0.ɵɵrestoreView(_r6); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.openEditModal(); });
+    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_25_listener() { i0.ɵɵrestoreView(_r8); const ctx_r9 = i0.ɵɵnextContext(); return ctx_r9.openEditModal(); });
     i0.ɵɵelement(26, "action-icon", 4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(27, "div", 18);
     i0.ɵɵelementStart(28, "button", 19);
-    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_28_listener() { i0.ɵɵrestoreView(_r6); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.show_attendees = !ctx_r8.show_attendees; });
+    i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_28_listener() { i0.ɵɵrestoreView(_r8); const ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.show_attendees = !ctx_r10.show_attendees; });
     i0.ɵɵelement(29, "app-icon", 4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -24812,6 +24817,8 @@ class VisitorBookingItemComponent {
         this._service = _service;
         this._bookings = _bookings;
         this._dialog = _dialog;
+        /** Emitter for changed to the checked in status */
+        this.checked = new core_1.EventEmitter();
         /** Whether all the attendees have checked in */
         this.checked_in = false;
     }
@@ -24860,6 +24867,7 @@ class VisitorBookingItemComponent {
             });
             if (value) {
                 this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event.toJSON()), { checked_in: general_utilities_1.unique([...this.event.checked_in, ...this.event.attendees.map(user => user.email)]) }));
+                this.checked.emit();
             }
             this.loading = false;
         });
@@ -24891,7 +24899,7 @@ class VisitorBookingItemComponent {
 }
 exports.VisitorBookingItemComponent = VisitorBookingItemComponent;
 VisitorBookingItemComponent.ɵfac = function VisitorBookingItemComponent_Factory(t) { return new (t || VisitorBookingItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.BookingsService), i0.ɵɵdirectiveInject(i3.MatDialog)); };
-VisitorBookingItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorBookingItemComponent, selectors: [["a-visitor-booking"]], inputs: { event: "event", search: "search" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Attendees", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]], template: function VisitorBookingItemComponent_Template(rf, ctx) { if (rf & 1) {
+VisitorBookingItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorBookingItemComponent, selectors: [["a-visitor-booking"]], inputs: { event: "event", search: "search" }, outputs: { checked: "checked" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Attendees", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", "checked", 4, "ngFor", "ngForOf"], [3, "event", "person", "search", "checked"]], template: function VisitorBookingItemComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, VisitorBookingItemComponent_div_0_Template, 33, 39, "div", 0);
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.event);
@@ -24908,6 +24916,8 @@ VisitorBookingItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorBookin
             type: core_1.Input
         }], search: [{
             type: core_1.Input
+        }], checked: [{
+            type: core_1.Output
         }] }); })();
 
 
@@ -24957,8 +24967,11 @@ function VisitorTimelineComponent_ng_container_15_ng_container_2_div_2_Template(
     i0.ɵɵelementEnd();
 } }
 function VisitorTimelineComponent_ng_container_15_ng_container_2_Template(rf, ctx) { if (rf & 1) {
+    const _r10 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelement(1, "a-visitor-booking", 18);
+    i0.ɵɵelementStart(1, "a-visitor-booking", 18);
+    i0.ɵɵlistener("checked", function VisitorTimelineComponent_ng_container_15_ng_container_2_Template_a_visitor_booking_checked_1_listener() { i0.ɵɵrestoreView(_r10); const ctx_r9 = i0.ɵɵnextContext(2); return ctx_r9.resetPolling(); });
+    i0.ɵɵelementEnd();
     i0.ɵɵtemplate(2, VisitorTimelineComponent_ng_container_15_ng_container_2_div_2_Template, 2, 0, "div", 14);
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
@@ -25050,6 +25063,9 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
     trackByFn(index, booking) {
         return booking.id;
     }
+    resetPolling() {
+        this.interval('update_bookings', () => this.search$.next(`${this.date}|${dayjs().unix()}`), 30 * 1000);
+    }
     /** Filter the visitor bookings */
     filter(str = '') {
         const search = str.toLowerCase();
@@ -25107,7 +25123,7 @@ class VisitorTimelineComponent extends base_directive_1.BaseDirective {
 }
 exports.VisitorTimelineComponent = VisitorTimelineComponent;
 VisitorTimelineComponent.ɵfac = function VisitorTimelineComponent_Factory(t) { return new (t || VisitorTimelineComponent)(i0.ɵɵdirectiveInject(i1.OrganisationService), i0.ɵɵdirectiveInject(i2.SpacesService), i0.ɵɵdirectiveInject(i3.BookingsService)); };
-VisitorTimelineComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorTimelineComponent, selectors: [["visitor-timeline"]], inputs: { date: "date", search: "search", show_all: "show_all" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 18, vars: 3, consts: [[1, "visitor-timeline"], ["class", "loader", 4, "ngIf"], [1, "heading"], [1, "icon"], [1, "time"], [1, "host"], [1, "title"], [1, "location"], [1, "state"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "loader"], ["mode", "indeterminate"], ["class", "current-line", 4, "ngIf"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [1, "current-line"], [1, "triangle"], [3, "event", "search"], [1, "info-block"], [3, "icon"], [1, "text"]], template: function VisitorTimelineComponent_Template(rf, ctx) { if (rf & 1) {
+VisitorTimelineComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorTimelineComponent, selectors: [["visitor-timeline"]], inputs: { date: "date", search: "search", show_all: "show_all" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 18, vars: 3, consts: [[1, "visitor-timeline"], ["class", "loader", 4, "ngIf"], [1, "heading"], [1, "icon"], [1, "time"], [1, "host"], [1, "title"], [1, "location"], [1, "state"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "loader"], ["mode", "indeterminate"], ["class", "current-line", 4, "ngIf"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [1, "current-line"], [1, "triangle"], [3, "event", "search", "checked"], [1, "info-block"], [3, "icon"], [1, "text"]], template: function VisitorTimelineComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵtemplate(1, VisitorTimelineComponent_div_1_Template, 2, 0, "div", 1);
         i0.ɵɵelementStart(2, "div", 2);
@@ -25219,6 +25235,8 @@ class VisitorComponent {
         this._renderer = _renderer;
         this._bookings = _bookings;
         this._service = _service;
+        /** Emitter for changed to the checked in status */
+        this.checked = new core_1.EventEmitter();
     }
     /** Whether attendee is late */
     get late() {
@@ -25275,6 +25293,7 @@ class VisitorComponent {
             });
             if (value) {
                 this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event.toJSON()), { checked_in: [...this.event.checked_in, this.person.email] }));
+                this.checked.emit();
             }
             this.loading = false;
         });
@@ -25282,7 +25301,7 @@ class VisitorComponent {
 }
 exports.VisitorComponent = VisitorComponent;
 VisitorComponent.ɵfac = function VisitorComponent_Factory(t) { return new (t || VisitorComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(i1.BookingsService), i0.ɵɵdirectiveInject(i2.ApplicationService)); };
-VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorComponent, selectors: [["a-visitor"]], inputs: { event: "event", person: "person", search: "search" }, features: [i0.ɵɵNgOnChangesFeature], decls: 18, vars: 24, consts: [["matTooltipPosition", "right", 1, "icon", 3, "matTooltip"], [3, "icon"], [1, "details"], [1, "user"], [1, "name"], [1, "title"], ["class", "status", 4, "ngIf"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href", 4, "ngIf"], ["mat-icon-button", "", 3, "matTooltip", "disabled", "href"], ["name", "checkin", "mat-icon-button", "", "matTooltip", "Checkin Visitor", 3, "disabled", "click"], [3, "loading", "icon", 4, "ngIf"], ["mat-icon-button", "", 3, "disabled"], [1, "empty"], [1, "bar"], [1, "status"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href"], [3, "loading", "icon"]], template: function VisitorComponent_Template(rf, ctx) { if (rf & 1) {
+VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorComponent, selectors: [["a-visitor"]], inputs: { event: "event", person: "person", search: "search" }, outputs: { checked: "checked" }, features: [i0.ɵɵNgOnChangesFeature], decls: 18, vars: 24, consts: [["matTooltipPosition", "right", 1, "icon", 3, "matTooltip"], [3, "icon"], [1, "details"], [1, "user"], [1, "name"], [1, "title"], ["class", "status", 4, "ngIf"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href", 4, "ngIf"], ["mat-icon-button", "", 3, "matTooltip", "disabled", "href"], ["name", "checkin", "mat-icon-button", "", "matTooltip", "Checkin Visitor", 3, "disabled", "click"], [3, "loading", "icon", 4, "ngIf"], ["mat-icon-button", "", 3, "disabled"], [1, "empty"], [1, "bar"], [1, "status"], ["mat-icon-button", "", "matTooltip", "Phone Staff Member", 3, "disabled", "href"], [3, "loading", "icon"]], template: function VisitorComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "app-icon", 1);
         i0.ɵɵelementEnd();
@@ -25346,6 +25365,8 @@ VisitorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: VisitorComponent, select
             type: core_1.Input
         }], search: [{
             type: core_1.Input
+        }], checked: [{
+            type: core_1.Output
         }] }); })();
 
 
@@ -25775,7 +25796,7 @@ function WeekViewItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵclassMap("event" + (ctx_r0.type ? " " + ctx_r0.type : "") + (ctx_r0.event.status === "done" ? " ended" : "") + (ctx_r0.event.status === "in_progress" ? "in-progress" : ""));
+    i0.ɵɵclassMap("event" + (ctx_r0.type ? " " + ctx_r0.type : "") + (ctx_r0.event.status === "done" ? " ended" : "") + (ctx_r0.event.status === "in_progress" ? " in-progress" : ""));
     i0.ɵɵattribute("id", ctx_r0.event == null ? null : ctx_r0.event.id);
     i0.ɵɵadvance(3);
     i0.ɵɵtextInterpolate(ctx_r0.event.all_day ? "All Day" : ctx_r0.event.time_period);
@@ -25800,7 +25821,8 @@ class WeekViewItemComponent {
     }
     /** Type of booking */
     get type() {
-        if (this.event.declined) {
+        var _a;
+        if (!this.event || ((_a = this.event.approval_status[this.event.space.email]) === null || _a === void 0 ? void 0 : _a.includes('decline'))) {
             return 'cancelled';
         }
         const booking_type = this.event.type;
@@ -25899,15 +25921,15 @@ class WeekViewTimelineComponent extends base_directive_1.BaseDirective {
         this._spaces.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
             this.date_list = this.generateDates(this.date, this.weekends);
             this.initBookings();
-            this.search$.next(`${this.date}|${this.weekends}|${this.level}`);
-            this.interval('update_booking', () => this.search$.next(`${this.date}|${this.weekends}|${this.level}|${dayjs().unix()}`), 30 * 1000);
+            this.search$.next(`${this.date}|${this.weekends}|${this.level}|${this.space_type}`);
+            this.interval('update_booking', () => this.search$.next(`${this.date}|${this.weekends}|${this.level}|${this.space_type}|${dayjs().unix()}`), 30 * 1000);
         });
     }
     ngOnChanges(changes) {
         /* istanbul ignore else */
-        if (changes.date || changes.weekends || changes.level) {
+        if (changes.date || changes.weekends || changes.level || changes.space_type) {
             this.date_list = this.generateDates(this.date, this.weekends);
-            this.search$.next(`${this.date}|${this.weekends}|${this.level}`);
+            this.search$.next(`${this.date}|${this.weekends}|${this.level}|${this.space_type}`);
         }
     }
     /**
@@ -25934,12 +25956,12 @@ class WeekViewTimelineComponent extends base_directive_1.BaseDirective {
             this.loading = true;
             const date = dayjs(this.date).startOf('w');
             return this._spaces.query({
-                zone_ids: `${this.level ? this.level : this._org.building.id}${this.space_type ? ',' + this.space_type : ''}`,
+                zone_ids: `${this.level ? this.level : this._org.building.id}`,
                 available_from: Math.floor(this.date_list[0] / 1000) || date.unix(),
                 available_to: Math.floor(this.date_list[this.date_list.length - 1] / 1000) ||
                     date.endOf('w').unix(),
             });
-        }), operators_1.catchError((_) => rxjs_1.of([])));
+        }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((list) => list.filter(space => !this.space_type || space.zones.includes(this.space_type))));
         // Process API results
         this.subscription('search_results', this.search_results$.subscribe((list) => {
             this.loading = false;
@@ -26248,16 +26270,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f3e177f",
-    "hash": "f3e177f",
+    "raw": "42dcb20",
+    "hash": "42dcb20",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f3e177f",
+    "suffix": "42dcb20",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599019349106
+    "time": 1599114985364
 };
 /* tslint:enable */
 

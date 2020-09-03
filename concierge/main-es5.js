@@ -17294,6 +17294,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, CateringCategory);
 
         _this87 = _super25.call(this, data);
+        /** Whether item is a category */
+
+        _this87.is_category = true;
+        _this87.is_category = true;
         _this87.must_select = _this87.must_select || 0;
         _this87.order_anytime = !!data.order_anytime && _this87["package"];
         return _this87;
@@ -17347,9 +17351,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
         this._amount = 0;
+        /** Whether item is a category */
+
+        this.is_category = false;
         this.instance_id = "item-".concat(Math.floor(Math.random() * 999999999));
         this.id = data.id || '';
         this.name = data.name || '';
+        this.is_category = data.is_category || !!(data.parent_categories || []).length || false;
         this.available = {
           from_month: (data.available ? data.available.from_month : data.available_from) || -1,
           to_month: (data.available ? data.available.to_month : data.available_to) || -1
@@ -19187,9 +19195,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 booking.description = (booking.description || '').replace(/<[^>]*>?/gm, '').replace(/\,/g, '٫').replace(/\r?\n|\r/g, ' ');
                 booking['Meeting Host'] = ((_a = booking.organizer) === null || _a === void 0 ? void 0 : _a.name) || booking.organizer;
                 booking['Booked By'] = ((_b = booking.booked_by) === null || _b === void 0 ? void 0 : _b.name) || ((_c = booking.booked_by) === null || _c === void 0 ? void 0 : _c.email) || '';
-                booking.charge_code = booking.equipment_codes ? Object.keys(booking.equipment_codes).map(function (key) {
-                  return booking.equipment_codes[key];
-                }).join('٫ ') : ''; //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
+                booking.charge_code = booking.equipment_codes[booking.room_email] || ''; //    booking.expected_attendees = Object.keys(booking.expected_attendees).map(key => booking.expected_attendees[key]).join(', ');
 
                 booking.attendees = (booking.attendees || []).map(function (person) {
                   return person.name || person.email || person;
@@ -32764,7 +32770,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵtemplate(5, CateringMenuItemComponent_ng_container_5_Template, 7, 3, "ng-container", 4);
           i0.ɵɵelementStart(6, "button", 5);
           i0.ɵɵlistener("click", function CateringMenuItemComponent_Template_button_click_6_listener() {
-            return ctx.item.items ? ctx.openGroupModal(ctx.item) : ctx.openItemModal(ctx.item);
+            return ctx.item.items.length || ctx.item.is_category ? ctx.openGroupModal(ctx.item) : ctx.openItemModal(ctx.item);
           });
           i0.ɵɵelementStart(7, "div", 6);
           i0.ɵɵelement(8, "app-icon", 7);
@@ -32794,15 +32800,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngForOf", ctx.item.items);
           i0.ɵɵadvance(3);
-          i0.ɵɵproperty("ngIf", ctx.item.items);
+          i0.ɵɵproperty("ngIf", ctx.item.items.length || ctx.item.is_category);
           i0.ɵɵadvance(3);
           i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(8, _c3));
           i0.ɵɵadvance(2);
-          i0.ɵɵtextInterpolate1("Edit ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "Item", "");
+          i0.ɵɵtextInterpolate1(" Edit ", ctx.item.items.length || ctx.item.is_category ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "Item", " ");
           i0.ɵɵadvance(3);
           i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(9, _c4));
           i0.ɵɵadvance(2);
-          i0.ɵɵtextInterpolate1("Delete ", ctx.item.items ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "Item", "");
+          i0.ɵɵtextInterpolate1(" Delete ", ctx.item.items.length || ctx.item.is_category ? ctx.subitem ? "Group" : ctx.item["package"] ? "Package" : "Sub-category" : "Item", " ");
         }
       },
       directives: [i6.NgIf, i6.NgForOf, i7._MatMenu, i7.MatMenuItem, i8.IconComponent, i9.MatButton, i7.MatMenuTrigger, CateringMenuItemComponent],
@@ -33836,7 +33842,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   for (_iterator58.s(); !(_step58 = _iterator58.n()).done;) {
                     var sub_item = _step58.value;
 
-                    if (!sub_item.items && sub_item.amount) {
+                    if (!sub_item.items.length && sub_item.amount) {
                       items.push(sub_item);
                     } else {
                       var _iterator59 = _createForOfIteratorHelper(sub_item.items),
@@ -36656,7 +36662,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var sub_item_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", sub_item_r13.amount || sub_item_r13.items);
+        i0.ɵɵproperty("ngIf", sub_item_r13.amount || sub_item_r13.items.length);
       }
     }
 
@@ -44847,7 +44853,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function VisitorBookingItemComponent_div_0_a_visitor_32_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelement(0, "a-visitor", 23);
+        var _r6 = i0.ɵɵgetCurrentView();
+
+        i0.ɵɵelementStart(0, "a-visitor", 23);
+        i0.ɵɵlistener("checked", function VisitorBookingItemComponent_div_0_a_visitor_32_Template_a_visitor_checked_0_listener() {
+          i0.ɵɵrestoreView(_r6);
+          var ctx_r5 = i0.ɵɵnextContext(2);
+          return ctx_r5.checked.emit();
+        });
+        i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
@@ -44901,7 +44915,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function VisitorBookingItemComponent_div_0_Template(rf, ctx) {
       if (rf & 1) {
-        var _r6 = i0.ɵɵgetCurrentView();
+        var _r8 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementStart(0, "div", 1);
         i0.ɵɵelementStart(1, "div", 2);
@@ -44937,17 +44951,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(23, "button", 15);
         i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_23_listener() {
-          i0.ɵɵrestoreView(_r6);
-          var ctx_r5 = i0.ɵɵnextContext();
-          return ctx_r5.checkin();
+          i0.ɵɵrestoreView(_r8);
+          var ctx_r7 = i0.ɵɵnextContext();
+          return ctx_r7.checkin();
         });
         i0.ɵɵelement(24, "action-icon", 16);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(25, "button", 17);
         i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_25_listener() {
-          i0.ɵɵrestoreView(_r6);
-          var ctx_r7 = i0.ɵɵnextContext();
-          return ctx_r7.openEditModal();
+          i0.ɵɵrestoreView(_r8);
+          var ctx_r9 = i0.ɵɵnextContext();
+          return ctx_r9.openEditModal();
         });
         i0.ɵɵelement(26, "action-icon", 4);
         i0.ɵɵelementEnd();
@@ -44955,9 +44969,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementStart(27, "div", 18);
         i0.ɵɵelementStart(28, "button", 19);
         i0.ɵɵlistener("click", function VisitorBookingItemComponent_div_0_Template_button_click_28_listener() {
-          i0.ɵɵrestoreView(_r6);
-          var ctx_r8 = i0.ɵɵnextContext();
-          return ctx_r8.show_attendees = !ctx_r8.show_attendees;
+          i0.ɵɵrestoreView(_r8);
+          var ctx_r10 = i0.ɵɵnextContext();
+          return ctx_r10.show_attendees = !ctx_r10.show_attendees;
         });
         i0.ɵɵelement(29, "app-icon", 4);
         i0.ɵɵelementEnd();
@@ -45021,6 +45035,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this._service = _service;
         this._bookings = _bookings;
         this._dialog = _dialog;
+        /** Emitter for changed to the checked in status */
+
+        this.checked = new core_1.EventEmitter();
         /** Whether all the attendees have checked in */
 
         this.checked_in = false;
@@ -45095,6 +45112,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           return user.email;
                         }))))
                       }));
+                      this.checked.emit();
                     }
 
                     this.loading = false;
@@ -45178,10 +45196,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         event: "event",
         search: "search"
       },
+      outputs: {
+        checked: "checked"
+      },
       features: [i0.ɵɵNgOnChangesFeature],
       decls: 1,
       vars: 1,
-      consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Attendees", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", 4, "ngFor", "ngForOf"], [3, "event", "person", "search"]],
+      consts: [["class", "visitor-booking", 3, "showing", 4, "ngIf"], [1, "visitor-booking"], [1, "details"], [1, "icon"], [3, "icon"], [1, "time"], [4, "ngIf"], [1, "host"], [1, "name"], [1, "title"], [1, "location"], [1, "status"], [1, "actions"], ["mat-icon-button", "", "matTooltip", "Phone Host", 3, "disabled", "href"], ["mat-icon-button", "", "matTooltip", "Email Attendees", "name", "email-all", 3, "href"], ["mat-icon-button", "", "name", "checkin-all", "matTooltip", "Checkin All Visitors", 3, "click"], [3, "loading", "icon"], ["mat-icon-button", "", "matTooltip", "Edit Visitors", "name", "edit", 3, "click"], [1, "toggle"], ["mat-icon-button", "", "name", "show-attendees", 3, "click"], [1, "attendees"], [1, "bar"], [3, "event", "person", "search", "checked", 4, "ngFor", "ngForOf"], [3, "event", "person", "search", "checked"]],
       template: function VisitorBookingItemComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, VisitorBookingItemComponent_div_0_Template, 33, 39, "div", 0);
@@ -45223,6 +45244,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }],
         search: [{
           type: core_1.Input
+        }],
+        checked: [{
+          type: core_1.Output
         }]
       });
     })();
@@ -45344,8 +45368,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function VisitorTimelineComponent_ng_container_15_ng_container_2_Template(rf, ctx) {
       if (rf & 1) {
+        var _r10 = i0.ɵɵgetCurrentView();
+
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelement(1, "a-visitor-booking", 18);
+        i0.ɵɵelementStart(1, "a-visitor-booking", 18);
+        i0.ɵɵlistener("checked", function VisitorTimelineComponent_ng_container_15_ng_container_2_Template_a_visitor_booking_checked_1_listener() {
+          i0.ɵɵrestoreView(_r10);
+          var ctx_r9 = i0.ɵɵnextContext(2);
+          return ctx_r9.resetPolling();
+        });
+        i0.ɵɵelementEnd();
         i0.ɵɵtemplate(2, VisitorTimelineComponent_ng_container_15_ng_container_2_div_2_Template, 2, 0, "div", 14);
         i0.ɵɵelementContainerEnd();
       }
@@ -45482,12 +45514,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function trackByFn(index, booking) {
           return booking.id;
         }
+      }, {
+        key: "resetPolling",
+        value: function resetPolling() {
+          var _this231 = this;
+
+          this.interval('update_bookings', function () {
+            return _this231.search$.next("".concat(_this231.date, "|").concat(dayjs().unix()));
+          }, 30 * 1000);
+        }
         /** Filter the visitor bookings */
 
       }, {
         key: "filter",
         value: function filter() {
-          var _this231 = this;
+          var _this232 = this;
 
           var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
           var search = str.toLowerCase();
@@ -45496,13 +45537,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return user.name.toLowerCase().indexOf(search) >= 0 || user.email.toLowerCase().indexOf(search) >= 0;
             });
           }).filter(function (bkn) {
-            return _this231.show_all ? true : bkn.has_visitors;
+            return _this232.show_all ? true : bkn.has_visitors;
           });
         }
       }, {
         key: "updateEvents",
         value: function updateEvents() {
-          var _this232 = this;
+          var _this233 = this;
 
           var date = dayjs(this.date).startOf('d');
 
@@ -45512,14 +45553,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
           }).filter(function (bkn) {
             return !bkn.declined && bkn.space_list.find(function (space) {
-              return space.zones.includes(_this232._org.building.id);
+              return space.zones.includes(_this233._org.building.id);
             });
           });
 
           this.bookings = bookings.map(function (bkn) {
             var data = bkn.toJSON();
             var space = bkn.space_list.find(function (space) {
-              return space.zones.includes(_this232._org.building.id);
+              return space.zones.includes(_this233._org.building.id);
             }) || bkn.space;
             return new booking_class_1.Booking(Object.assign(Object.assign({}, data), {
               room_ids: [space.email].concat(bkn.space_list.map(function (space) {
@@ -45532,17 +45573,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this233 = this;
+          var _this234 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this233.loading = true;
+            _this234.loading = true;
 
-            _this233.updateEvents();
+            _this234.updateEvents();
 
-            var date = dayjs(_this233.date).startOf('d');
-            var zone = _this233._org.building.id;
-            return _this233._spaces.query({
+            var date = dayjs(_this234.date).startOf('d');
+            var zone = _this234._org.building.id;
+            return _this234._spaces.query({
               zone_ids: zone,
               available_from: date.unix(),
               available_to: date.endOf('d').unix()
@@ -45550,9 +45591,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
           }), operators_1.map(function (list) {
-            var date = dayjs(_this233.date).startOf('d');
+            var date = dayjs(_this234.date).startOf('d');
 
-            var bookings = _this233._bookings.booking_list.getValue();
+            var bookings = _this234._bookings.booking_list.getValue();
 
             list.forEach(function (space) {
               return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(function (bkn) {
@@ -45567,15 +45608,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return a.date - b.date;
             });
 
-            _this233._bookings.booking_list.next(bookings);
+            _this234._bookings.booking_list.next(bookings);
 
-            _this233.updateEvents();
+            _this234.updateEvents();
 
             return bookings;
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (_) {
-            return _this233.loading = false;
+            return _this234.loading = false;
           }));
         }
       }, {
@@ -45619,7 +45660,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 18,
       vars: 3,
-      consts: [[1, "visitor-timeline"], ["class", "loader", 4, "ngIf"], [1, "heading"], [1, "icon"], [1, "time"], [1, "host"], [1, "title"], [1, "location"], [1, "state"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "loader"], ["mode", "indeterminate"], ["class", "current-line", 4, "ngIf"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [1, "current-line"], [1, "triangle"], [3, "event", "search"], [1, "info-block"], [3, "icon"], [1, "text"]],
+      consts: [[1, "visitor-timeline"], ["class", "loader", 4, "ngIf"], [1, "heading"], [1, "icon"], [1, "time"], [1, "host"], [1, "title"], [1, "location"], [1, "state"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "loader"], ["mode", "indeterminate"], ["class", "current-line", 4, "ngIf"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [1, "current-line"], [1, "triangle"], [3, "event", "search", "checked"], [1, "info-block"], [3, "icon"], [1, "text"]],
       template: function VisitorTimelineComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -45850,6 +45891,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this._renderer = _renderer;
         this._bookings = _bookings;
         this._service = _service;
+        /** Emitter for changed to the checked in status */
+
+        this.checked = new core_1.EventEmitter();
       }
       /** Whether attendee is late */
 
@@ -45875,7 +45919,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib_1.__awaiter(this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee33() {
-            var _this234 = this;
+            var _this235 = this;
 
             var value;
             return regeneratorRuntime.wrap(function _callee33$(_context33) {
@@ -45897,7 +45941,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       response_type: 'accepted',
                       room_id: this.event.space.id
                     })["catch"](function (err) {
-                      _this234._service.notifyError("Error checking in user. Error: ".concat(err.message || err));
+                      _this235._service.notifyError("Error checking in user. Error: ".concat(err.message || err));
                     });
 
                   case 3:
@@ -45907,6 +45951,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       this.event = new booking_class_1.Booking(Object.assign(Object.assign({}, this.event.toJSON()), {
                         checked_in: [].concat(_toConsumableArray(this.event.checked_in), [this.person.email])
                       }));
+                      this.checked.emit();
                     }
 
                     this.loading = false;
@@ -45969,6 +46014,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         event: "event",
         person: "person",
         search: "search"
+      },
+      outputs: {
+        checked: "checked"
       },
       features: [i0.ɵɵNgOnChangesFeature],
       decls: 18,
@@ -46064,6 +46112,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }],
         search: [{
           type: core_1.Input
+        }],
+        checked: [{
+          type: core_1.Output
         }]
       });
     })();
@@ -46237,24 +46288,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super72 = _createSuper(VisitorsComponent);
 
       function VisitorsComponent(_route, _router, _service, _dialog, _spaces, _org) {
-        var _this235;
+        var _this236;
 
         _classCallCheck(this, VisitorsComponent);
 
-        _this235 = _super72.call(this);
-        _this235._route = _route;
-        _this235._router = _router;
-        _this235._service = _service;
-        _this235._dialog = _dialog;
-        _this235._spaces = _spaces;
-        _this235._org = _org;
-        return _this235;
+        _this236 = _super72.call(this);
+        _this236._route = _route;
+        _this236._router = _router;
+        _this236._service = _service;
+        _this236._dialog = _dialog;
+        _this236._spaces = _spaces;
+        _this236._org = _org;
+        return _this236;
       }
 
       _createClass(VisitorsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this236 = this;
+          var _this237 = this;
 
           this._service.title = 'Visitors';
 
@@ -46263,25 +46314,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           })).subscribe(function () {
             var _a;
 
-            _this236.subscription('route.query_params', _this236._route.queryParamMap.subscribe(function (params) {
-              if (params.has('zone') && params.get('zone') !== _this236._org.building.id) {
+            _this237.subscription('route.query_params', _this237._route.queryParamMap.subscribe(function (params) {
+              if (params.has('zone') && params.get('zone') !== _this237._org.building.id) {
                 var id = params.get('zone');
 
-                var bld = _this236._org.buildings.find(function (building) {
+                var bld = _this237._org.buildings.find(function (building) {
                   return building.id === id;
                 });
 
                 if (bld) {
-                  _this236._org.building = bld;
+                  _this237._org.building = bld;
                 }
               }
             }));
 
-            _this236.subscription('building', (_a = _this236._org.listen('active_building')) === null || _a === void 0 ? void 0 : _a.subscribe(function () {
-              _this236._router.navigate([], {
-                relativeTo: _this236._route,
+            _this237.subscription('building', (_a = _this237._org.listen('active_building')) === null || _a === void 0 ? void 0 : _a.subscribe(function () {
+              _this237._router.navigate([], {
+                relativeTo: _this237._route,
                 queryParams: {
-                  zone: _this236._org.building.id
+                  zone: _this237._org.building.id
                 }
               });
             }));
@@ -46665,16 +46716,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super73 = _createSuper(WeekViewDayDisplayComponent);
 
       function WeekViewDayDisplayComponent(_bookings) {
-        var _this237;
+        var _this238;
 
         _classCallCheck(this, WeekViewDayDisplayComponent);
 
-        _this237 = _super73.call(this);
-        _this237._bookings = _bookings;
+        _this238 = _super73.call(this);
+        _this238._bookings = _bookings;
         /** List of bookings for this date */
 
-        _this237.booking_list = [];
-        return _this237;
+        _this238.booking_list = [];
+        return _this238;
       }
       /** Display string for the set date */
 
@@ -46682,10 +46733,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(WeekViewDayDisplayComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this238 = this;
+          var _this239 = this;
 
           this.subscription('bookings', this._bookings.booking_list.subscribe(function () {
-            return _this238.updateEvents();
+            return _this239.updateEvents();
           }));
         }
       }, {
@@ -46699,7 +46750,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateEvents",
         value: function updateEvents() {
-          var _this239 = this;
+          var _this240 = this;
 
           var date = dayjs(this.date).startOf('d');
 
@@ -46707,7 +46758,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var start = dayjs(booking.date);
             var end = start.add(booking.duration, 'm');
             return booking.space_list.find(function (space) {
-              return _this239.spaces.find(function (a_space) {
+              return _this240.spaces.find(function (a_space) {
                 return a_space.email === space.email;
               });
             }) && booking_utilities_1.timePeriodsIntersect(date.valueOf(), date.endOf('d').valueOf(), start.valueOf(), end.valueOf());
@@ -46924,7 +46975,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵclassMap("event" + (ctx_r0.type ? " " + ctx_r0.type : "") + (ctx_r0.event.status === "done" ? " ended" : "") + (ctx_r0.event.status === "in_progress" ? "in-progress" : ""));
+        i0.ɵɵclassMap("event" + (ctx_r0.type ? " " + ctx_r0.type : "") + (ctx_r0.event.status === "done" ? " ended" : "") + (ctx_r0.event.status === "in_progress" ? " in-progress" : ""));
         i0.ɵɵattribute("id", ctx_r0.event == null ? null : ctx_r0.event.id);
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate(ctx_r0.event.all_day ? "All Day" : ctx_r0.event.time_period);
@@ -46974,7 +47025,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "type",
         get: function get() {
-          if (this.event.declined) {
+          var _a;
+
+          if (!this.event || ((_a = this.event.approval_status[this.event.space.email]) === null || _a === void 0 ? void 0 : _a.includes('decline'))) {
             return 'cancelled';
           }
 
@@ -47154,42 +47207,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super74 = _createSuper(WeekViewTimelineComponent);
 
       function WeekViewTimelineComponent(_spaces, _org, _bookings) {
-        var _this240;
+        var _this241;
 
         _classCallCheck(this, WeekViewTimelineComponent);
 
-        _this240 = _super74.call(this);
-        _this240._spaces = _spaces;
-        _this240._org = _org;
-        _this240._bookings = _bookings;
+        _this241 = _super74.call(this);
+        _this241._spaces = _spaces;
+        _this241._org = _org;
+        _this241._bookings = _bookings;
         /** List of dates to display */
 
-        _this240.date_list = [];
+        _this241.date_list = [];
         /** List of spaces to display bookings for */
 
-        _this240.space_list = [];
+        _this241.space_list = [];
         /** Subject holding the value of the search */
 
-        _this240.search$ = new rxjs_1.Subject();
-        return _this240;
+        _this241.search$ = new rxjs_1.Subject();
+        return _this241;
       }
 
       _createClass(WeekViewTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this241 = this;
+          var _this242 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this241.date_list = _this241.generateDates(_this241.date, _this241.weekends);
+            _this242.date_list = _this242.generateDates(_this242.date, _this242.weekends);
 
-            _this241.initBookings();
+            _this242.initBookings();
 
-            _this241.search$.next("".concat(_this241.date, "|").concat(_this241.weekends, "|").concat(_this241.level));
+            _this242.search$.next("".concat(_this242.date, "|").concat(_this242.weekends, "|").concat(_this242.level, "|").concat(_this242.space_type));
 
-            _this241.interval('update_booking', function () {
-              return _this241.search$.next("".concat(_this241.date, "|").concat(_this241.weekends, "|").concat(_this241.level, "|").concat(dayjs().unix()));
+            _this242.interval('update_booking', function () {
+              return _this242.search$.next("".concat(_this242.date, "|").concat(_this242.weekends, "|").concat(_this242.level, "|").concat(_this242.space_type, "|").concat(dayjs().unix()));
             }, 30 * 1000);
           });
         }
@@ -47197,9 +47250,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
           /* istanbul ignore else */
-          if (changes.date || changes.weekends || changes.level) {
+          if (changes.date || changes.weekends || changes.level || changes.space_type) {
             this.date_list = this.generateDates(this.date, this.weekends);
-            this.search$.next("".concat(this.date, "|").concat(this.weekends, "|").concat(this.level));
+            this.search$.next("".concat(this.date, "|").concat(this.weekends, "|").concat(this.level, "|").concat(this.space_type));
           }
         }
         /**
@@ -47230,26 +47283,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "initBookings",
         value: function initBookings() {
-          var _this242 = this;
+          var _this243 = this;
 
           // Listen for input changes
           this.search_results$ = this.search$.pipe(operators_1.debounceTime(100), operators_1.distinctUntilChanged(), operators_1.switchMap(function (_) {
-            _this242.loading = true;
-            var date = dayjs(_this242.date).startOf('w');
-            return _this242._spaces.query({
-              zone_ids: "".concat(_this242.level ? _this242.level : _this242._org.building.id).concat(_this242.space_type ? ',' + _this242.space_type : ''),
-              available_from: Math.floor(_this242.date_list[0] / 1000) || date.unix(),
-              available_to: Math.floor(_this242.date_list[_this242.date_list.length - 1] / 1000) || date.endOf('w').unix()
+            _this243.loading = true;
+            var date = dayjs(_this243.date).startOf('w');
+            return _this243._spaces.query({
+              zone_ids: "".concat(_this243.level ? _this243.level : _this243._org.building.id),
+              available_from: Math.floor(_this243.date_list[0] / 1000) || date.unix(),
+              available_to: Math.floor(_this243.date_list[_this243.date_list.length - 1] / 1000) || date.endOf('w').unix()
             });
           }), operators_1.catchError(function (_) {
             return rxjs_1.of([]);
+          }), operators_1.map(function (list) {
+            return list.filter(function (space) {
+              return !_this243.space_type || space.zones.includes(_this243.space_type);
+            });
           })); // Process API results
 
           this.subscription('search_results', this.search_results$.subscribe(function (list) {
-            _this242.loading = false;
-            var date = dayjs(_this242.date).startOf('d');
+            _this243.loading = false;
+            var date = dayjs(_this243.date).startOf('d');
 
-            var bookings = _this242._bookings.booking_list.getValue();
+            var bookings = _this243._bookings.booking_list.getValue();
 
             list.forEach(function (space) {
               return bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(function (bkn) {
@@ -47264,9 +47321,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return a.date - b.date;
             });
 
-            _this242._bookings.booking_list.next(bookings);
+            _this243._bookings.booking_list.next(bookings);
 
-            _this242.space_list = list;
+            _this243.space_list = list;
           }));
         }
       }]);
@@ -47548,90 +47605,90 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super75 = _createSuper(WeekViewComponent);
 
       function WeekViewComponent(_service, _org, _dialog, _router, _route) {
-        var _this243;
+        var _this244;
 
         _classCallCheck(this, WeekViewComponent);
 
-        _this243 = _super75.call(this);
-        _this243._service = _service;
-        _this243._org = _org;
-        _this243._dialog = _dialog;
-        _this243._router = _router;
-        _this243._route = _route;
+        _this244 = _super75.call(this);
+        _this244._service = _service;
+        _this244._org = _org;
+        _this244._dialog = _dialog;
+        _this244._router = _router;
+        _this244._route = _route;
         /** ID of the currently selected level */
 
-        _this243.active_level = '';
+        _this244.active_level = '';
         /** ID of the currently selected level */
 
-        _this243.active_type = '';
+        _this244.active_type = '';
         /** List of levels available for the active building */
 
-        _this243.levels = [];
+        _this244.levels = [];
         /** List of space types available for the active building */
 
-        _this243.space_types = [];
-        return _this243;
+        _this244.space_types = [];
+        return _this244;
       }
 
       _createClass(WeekViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this244 = this;
+          var _this245 = this;
 
           this._service.title = 'Week View';
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this244.subscription('route.params', _this244._route.paramMap.subscribe(function (params) {
+            _this245.subscription('route.params', _this245._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this244.active_level !== params.get('level')) {
-                var level = _this244._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this245.active_level !== params.get('level')) {
+                var level = _this245._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this244._org.buildings.find(function (bld) {
+                  var building = _this245._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this244.active_level = level.id;
-                    _this244._org.building = building;
+                    _this245.active_level = level.id;
+                    _this245._org.building = building;
                   }
                 }
               }
             }));
 
-            _this244.subscription('building', _this244._org.listen('active_building').subscribe(function () {
-              var building = _this244._org.building;
+            _this245.subscription('building', _this245._org.listen('active_building').subscribe(function () {
+              var building = _this245._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this244.active_level;
+                return lvl.id === _this245.active_level;
               })) {
-                _this244.active_level = (building.levels[0] || {
+                _this245.active_level = (building.levels[0] || {
                   id: ''
                 }).id;
 
-                _this244.updateLevel();
+                _this245.updateLevel();
               }
 
-              _this244.levels = [{
+              _this245.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
 
-              _this244.levels.sort(function (a, b) {
+              _this245.levels.sort(function (a, b) {
                 return a.name.localeCompare(b.name);
               });
 
-              _this244.space_types = [{
+              _this245.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this244._org.space_types);
+              }].concat(_this245._org.space_types);
             }));
           });
         }
@@ -47887,16 +47944,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "f3e177f",
-      "hash": "f3e177f",
+      "raw": "42dcb20",
+      "hash": "42dcb20",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "f3e177f",
+      "suffix": "42dcb20",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599019349106
+      "time": 1599114985364
     };
     /* tslint:enable */
 
