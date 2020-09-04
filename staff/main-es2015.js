@@ -1665,8 +1665,8 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     /** Delete the meeting */
     deleteMeeting() {
         var _a;
-        this.loading = 'Deleting meeting...';
         const can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
+        this.loading = `${can_delete ? 'Deleting' : 'Declining'} meeting...`;
         const params = [this.booking.id, {
                 icaluid: this.booking.icaluid,
                 host_email: this.booking.organiser.email,
@@ -1676,20 +1676,20 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
             }];
         const method = can_delete ? this._bookings.delete(params[0], params[1]) : this._bookings.decline(params[0], params[1]);
         method.then(() => {
-            this._service.notifySuccess('Successfully deleted meeting.');
+            this._service.notifySuccess(`Successfully ${can_delete ? 'deleted' : 'declined'} meeting.`);
             this.event.emit({ reason: 'action' });
             this.loading = null;
             this._dialog_ref.close();
         }, (err) => {
             this.loading = null;
-            this._service.notifyError(`Error deleting meeting. Error: ${err.message || err}`);
+            this._service.notifyError(`Error ${can_delete ? 'deleting' : 'declining'} meeting. Error: ${err.message || err}`);
         });
     }
     /** Delete series */
     deleteSeries() {
         var _a;
-        this.loading = 'Deleting series...';
         const can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
+        this.loading = `${can_delete ? 'Deleting' : 'Declining'} series...`;
         const params = [this.booking.recurrence.series_id, {
                 icaluid: this.booking.icaluid,
                 host_email: this.booking.organiser.email,
@@ -1699,13 +1699,13 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
             }];
         const method = can_delete ? this._bookings.delete(params[0], params[1]) : this._bookings.decline(params[0], params[1]);
         method.then(() => {
-            this._service.notifySuccess('Successfully deleted series.');
+            this._service.notifySuccess(`Successfully ${can_delete ? 'deleted' : 'declined'} series.`);
             this.event.emit({ reason: 'action' });
             this.loading = null;
             this._dialog_ref.close();
         }, (err) => {
             this.loading = null;
-            this._service.notifyError(`Error deleting series. Error: ${err.message || err}`);
+            this._service.notifyError(`Error ${can_delete ? 'deleting' : 'declining'} series. Error: ${err.message || err}`);
         });
     }
 }
@@ -21811,16 +21811,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "e4dcdfe",
-    "hash": "e4dcdfe",
+    "raw": "d7bcdaa",
+    "hash": "d7bcdaa",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "e4dcdfe",
+    "suffix": "d7bcdaa",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599178659560
+    "time": 1599180436284
 };
 /* tslint:enable */
 
