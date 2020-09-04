@@ -2079,7 +2079,7 @@ function BookingCateringOrderDetailsComponent_div_1_Template(rf, ctx) { if (rf &
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(13, _c9, ctx_r0.show_search ? "close" : "search"));
     i0.ɵɵadvance(1);
-    i0.ɵɵclassProp("show", ctx_r0.show_search);
+    i0.ɵɵclassProp("show", ctx_r0.show_search || ctx_r0.compact);
     i0.ɵɵadvance(3);
     i0.ɵɵproperty("ngModel", i0.ɵɵpipeBind1(12, 11, ctx_r0.search$))("ngModelOptions", i0.ɵɵpureFunction0(15, _c10));
 } }
@@ -20189,7 +20189,7 @@ OrderBookingDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderBooking
         i0.ɵɵadvance(7);
         i0.ɵɵtextInterpolate1(" ", ctx.booking.organiser == null ? null : ctx.booking.organiser.name, " ");
         i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate1(" ", ctx.booking.space == null ? null : ctx.booking.space.name, " ");
+        i0.ɵɵtextInterpolate1(" ", ctx.space, " ");
         i0.ɵɵadvance(5);
         i0.ɵɵtextInterpolate1(" ", ctx.booking.time_period, " ");
         i0.ɵɵadvance(5);
@@ -20891,7 +20891,7 @@ OrderDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderDetailsMo
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx.statuses && ctx.statuses.length > 1);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("space", ctx.order.location_id)("booking", ctx.booking);
+        i0.ɵɵproperty("space", ctx.space == null ? null : ctx.space.name)("booking", ctx.booking);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("booking", ctx.booking)("order", ctx.order);
         i0.ɵɵadvance(2);
@@ -26233,16 +26233,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "06d8a1b",
-    "hash": "06d8a1b",
+    "raw": "c6fad8c",
+    "hash": "c6fad8c",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "06d8a1b",
+    "suffix": "c6fad8c",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599179951231
+    "time": 1599203637687
 };
 /* tslint:enable */
 
