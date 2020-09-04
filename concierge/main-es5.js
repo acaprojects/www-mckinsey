@@ -10271,7 +10271,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             icaluid: this.booking.icaluid,
             start: event.start,
             end: event.end
-          }).then(function () {
+          }).then(function (item) {
             _this49._service.notifySuccess('Meeting approved.');
 
             _this49.booking.approval_status[_this49.space.email] = 'accepted';
@@ -10280,7 +10280,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             bookings.splice(bookings.findIndex(function (bkn) {
               return bkn.icaluid === _this49.booking.icaluid;
-            }), 1, _this49.booking);
+            }), 1, new booking_class_1.Booking(item));
 
             _this49._bookings.booking_list.next(bookings);
 
@@ -38737,7 +38737,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 icaluid: _this191.event.icaluid,
                 start: _event.start,
                 end: _event.end
-              }).then(function () {
+              }).then(function (item) {
                 var _a;
 
                 _this191._service.notifySuccess('Meeting approved.');
@@ -38749,7 +38749,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 bookings.splice(bookings.findIndex(function (bkn) {
                   return bkn.icaluid === _this191.event.icaluid;
-                }), 1, _this191.event);
+                }), 1, new booking_class_1.Booking(item));
 
                 _this191._bookings.booking_list.next(bookings);
 
@@ -47889,16 +47889,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "e384bf8",
-      "hash": "e384bf8",
+      "raw": "06d8a1b",
+      "hash": "06d8a1b",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "e384bf8",
+      "suffix": "06d8a1b",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599178903396
+      "time": 1599179951231
     };
     /* tslint:enable */
 

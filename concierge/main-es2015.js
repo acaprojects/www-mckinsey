@@ -5255,11 +5255,11 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
             start: event.start,
             end: event.end,
         })
-            .then(() => {
+            .then((item) => {
             this._service.notifySuccess('Meeting approved.');
             this.booking.approval_status[this.space.email] = 'accepted';
             const bookings = this._bookings.booking_list.getValue();
-            bookings.splice(bookings.findIndex((bkn) => bkn.icaluid === this.booking.icaluid), 1, this.booking);
+            bookings.splice(bookings.findIndex((bkn) => bkn.icaluid === this.booking.icaluid), 1, new booking_class_1.Booking(item));
             this._bookings.booking_list.next(bookings);
             this.setLoading(null);
             this.event.emit({ reason: 'action', metadata: 'approved' });
@@ -21432,13 +21432,13 @@ class DayViewApprovalsEventComponent extends base_directive_1.BaseDirective {
                     start: event.start,
                     end: event.end
                 })
-                    .then(() => {
+                    .then((item) => {
                     var _a;
                     this._service.notifySuccess('Meeting approved.');
                     this.event.approval_status[(_a = this.event.space) === null || _a === void 0 ? void 0 : _a.email] = 'accepted';
                     STATES[this.event.id] = 'accepted';
                     const bookings = this._bookings.booking_list.getValue();
-                    bookings.splice(bookings.findIndex(bkn => bkn.icaluid === this.event.icaluid), 1, this.event);
+                    bookings.splice(bookings.findIndex(bkn => bkn.icaluid === this.event.icaluid), 1, new booking_class_1.Booking(item));
                     this._bookings.booking_list.next(bookings);
                     this._service.set('BOOKING.states', STATES);
                     this.loading = false;
@@ -26233,16 +26233,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "e384bf8",
-    "hash": "e384bf8",
+    "raw": "06d8a1b",
+    "hash": "06d8a1b",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "e384bf8",
+    "suffix": "06d8a1b",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599178903396
+    "time": 1599179951231
 };
 /* tslint:enable */
 
