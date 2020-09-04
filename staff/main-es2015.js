@@ -1557,11 +1557,12 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     }
     /** Open confirmation modal for deleting the meeting */
     confirmDeleteMeeting() {
+        const can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
         const ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), { data: {
                 title: 'Delete meeting',
                 icon: { type: 'icon', class: 'material-icons', content: 'delete' },
                 content: `
-                        <p>Are you sure you want to delete this meeting on ${this.booking.date_string}${this.has_recurrence ? ' from your series' : ''}?</p>
+                        <p>Are you sure you want to ${can_delete ? 'deleted' : 'declined'} this meeting on ${this.booking.date_string}${this.has_recurrence ? ' from your series' : ''}?</p>
                         <p>All attendees will be notified.</p>
                     `,
             } }));
@@ -1578,11 +1579,12 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
         if (!this.booking.recurrence) {
             return;
         }
+        const can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
         const ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), { data: {
                 title: 'Delete series',
                 icon: { type: 'icon', class: 'material-icons', content: 'delete' },
                 content: `
-                        <p>All bookings in the series will be deleted. Are you sure you want to delete the series?</p>
+                        <p>All bookings in the series will be ${can_delete ? 'deleted' : 'declined'}. Are you sure you want to ${can_delete ? 'delete' : 'decline'} the series?</p>
                         <p>All attendees will be notified.</p>
                     `,
             } }));
@@ -15386,7 +15388,7 @@ function BookingCateringOrderDetailsComponent_div_1_Template(rf, ctx) { if (rf &
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(13, _c9, ctx_r0.show_search ? "close" : "search"));
     i0.ɵɵadvance(1);
-    i0.ɵɵclassProp("show", ctx_r0.show_search);
+    i0.ɵɵclassProp("show", ctx_r0.show_search || ctx_r0.compact);
     i0.ɵɵadvance(3);
     i0.ɵɵproperty("ngModel", i0.ɵɵpipeBind1(12, 11, ctx_r0.search$))("ngModelOptions", i0.ɵɵpureFunction0(15, _c10));
 } }
@@ -19286,7 +19288,7 @@ class ExploreSpaceStatusComponent extends base_directive_1.BaseDirective {
         return dayjs().isSame(dayjs(this.date), 'd');
     }
     ngOnInit() {
-        this._service.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
+        this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
             this.colour_map = this._service.setting('app.explore.colors') || {};
             this.subscription('spaces', this._spaces.listen('list').subscribe(() => this.loadSpaces()));
             this.interval('update_status', () => {
@@ -21811,16 +21813,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d7bcdaa",
-    "hash": "d7bcdaa",
+    "raw": "9bc7bb5",
+    "hash": "9bc7bb5",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d7bcdaa",
+    "suffix": "9bc7bb5",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599180436284
+    "time": 1599203454336
 };
 /* tslint:enable */
 

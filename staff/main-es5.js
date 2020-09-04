@@ -3638,6 +3638,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function confirmDeleteMeeting() {
           var _this11 = this;
 
+          var can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
+
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
               title: 'Delete meeting',
@@ -3646,7 +3648,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 "class": 'material-icons',
                 content: 'delete'
               },
-              content: "\n                        <p>Are you sure you want to delete this meeting on ".concat(this.booking.date_string).concat(this.has_recurrence ? ' from your series' : '', "?</p>\n                        <p>All attendees will be notified.</p>\n                    ")
+              content: "\n                        <p>Are you sure you want to ".concat(can_delete ? 'deleted' : 'declined', " this meeting on ").concat(this.booking.date_string).concat(this.has_recurrence ? ' from your series' : '', "?</p>\n                        <p>All attendees will be notified.</p>\n                    ")
             }
           }));
 
@@ -3671,6 +3673,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return;
           }
 
+          var can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
+
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
               title: 'Delete series',
@@ -3679,7 +3683,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 "class": 'material-icons',
                 content: 'delete'
               },
-              content: "\n                        <p>All bookings in the series will be deleted. Are you sure you want to delete the series?</p>\n                        <p>All attendees will be notified.</p>\n                    "
+              content: "\n                        <p>All bookings in the series will be ".concat(can_delete ? 'deleted' : 'declined', ". Are you sure you want to ").concat(can_delete ? 'delete' : 'decline', " the series?</p>\n                        <p>All attendees will be notified.</p>\n                    ")
             }
           }));
 
@@ -27314,7 +27318,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("icon", i0.ɵɵpureFunction1(13, _c9, ctx_r0.show_search ? "close" : "search"));
         i0.ɵɵadvance(1);
-        i0.ɵɵclassProp("show", ctx_r0.show_search);
+        i0.ɵɵclassProp("show", ctx_r0.show_search || ctx_r0.compact);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("ngModel", i0.ɵɵpipeBind1(12, 11, ctx_r0.search$))("ngModelOptions", i0.ɵɵpureFunction0(15, _c10));
       }
@@ -34427,7 +34431,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this172 = this;
 
-          this._service.initialised.pipe(operators_1.first(function (_) {
+          this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
             _this172.colour_map = _this172._service.setting('app.explore.colors') || {};
@@ -38898,16 +38902,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "d7bcdaa",
-      "hash": "d7bcdaa",
+      "raw": "9bc7bb5",
+      "hash": "9bc7bb5",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "d7bcdaa",
+      "suffix": "9bc7bb5",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599180436284
+      "time": 1599203454336
     };
     /* tslint:enable */
 
