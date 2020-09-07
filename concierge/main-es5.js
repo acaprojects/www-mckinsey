@@ -3918,7 +3918,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.item.unit_price);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", !ctx_r0.item.items || ctx_r0.item["package"]);
+        i0.ɵɵproperty("ngIf", !ctx_r0.item.items.length || ctx_r0.item["package"]);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.item.items && ctx_r0.item.items.length && !ctx_r0.item["package"]);
       }
@@ -47940,16 +47940,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "7043e07",
-      "hash": "7043e07",
+      "raw": "4772762",
+      "hash": "4772762",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "7043e07",
+      "suffix": "4772762",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599442264570
+      "time": 1599461907763
     };
     /* tslint:enable */
 
