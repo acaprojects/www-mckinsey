@@ -22943,7 +22943,16 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
     ngOnChanges(changes) {
         /* istanbul ignore else */
         if (changes.date) {
-            this.is_today = dayjs().isSame(dayjs(this.date), 'd');
+            const time = dayjs(this.date);
+            this.is_today = dayjs().isSame(time, 'd');
+            const visible_rooms = this.spaces.filter((i) => this.in_view[i.id] !== false);
+            let bookings = this._bookings.booking_list.getValue();
+            visible_rooms.forEach((space) => booking_utilities_1.replaceBookings(bookings, [], {
+                space: space.email,
+                from: time.startOf('d').valueOf(),
+                to: time.endOf('d').valueOf(),
+            }));
+            this._bookings.booking_list.next(bookings);
             this.updateBookings();
         }
         /* istanbul ignore else */
@@ -23030,6 +23039,7 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
                 if (this.space_type) {
                     zone_ids.push(this.space_type);
                 }
+                let bookings = this._bookings.booking_list.getValue();
                 this.loading = true;
                 this._spaces
                     .query({
@@ -23038,11 +23048,11 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
                     available_to: end.unix(),
                 })
                     .then((room_list) => {
-                    let bookings = this._bookings.booking_list.getValue();
-                    room_list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map(bkn => new booking_class_1.Booking(bkn)), {
+                    bookings = this._bookings.booking_list.getValue();
+                    room_list.forEach((space) => (bookings = booking_utilities_1.replaceBookings(bookings, space.bookings.map((bkn) => new booking_class_1.Booking(bkn)), {
                         space: space.email,
                         from: time.valueOf(),
-                        to: end.valueOf()
+                        to: end.valueOf(),
                     })));
                     this._bookings.booking_list.next(bookings);
                     this.last_update = dayjs().valueOf();
@@ -23084,7 +23094,8 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
             /* istanbul ignore else */
             if (element) {
                 const scroll_box = this.scroll_area.nativeElement.getBoundingClientRect();
-                const date_percent = Math.abs(dayjs(booking.date).diff(dayjs(booking.date).startOf('d'), 'm')) / (24 * 60);
+                const date_percent = Math.abs(dayjs(booking.date).diff(dayjs(booking.date).startOf('d'), 'm')) /
+                    (24 * 60);
                 const box = element.getBoundingClientRect();
                 this.scroll_area.nativeElement.scrollTo({
                     left: box.left - scroll_box.left + this.scroll_area.nativeElement.scrollLeft - 10,
@@ -26256,16 +26267,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "4772762",
-    "hash": "4772762",
+    "raw": "de51dd7",
+    "hash": "de51dd7",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "4772762",
+    "suffix": "de51dd7",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599461907763
+    "time": 1599477951400
 };
 /* tslint:enable */
 
