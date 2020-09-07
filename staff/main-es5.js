@@ -3642,13 +3642,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
-              title: 'Delete meeting',
+              title: "".concat(can_delete ? 'Delete' : 'Decline', " meeting"),
               icon: {
                 type: 'icon',
                 "class": 'material-icons',
                 content: 'delete'
               },
-              content: "\n                        <p>Are you sure you want to ".concat(can_delete ? 'deleted' : 'declined', " this meeting on ").concat(this.booking.date_string).concat(this.has_recurrence ? ' from your series' : '', "?</p>\n                        <p>All attendees will be notified.</p>\n                    ")
+              content: "\n                        <p>Are you sure you want to ".concat(can_delete ? 'delete' : 'decline', " this meeting on ").concat(this.booking.date_string).concat(this.has_recurrence ? ' from your series' : '', "?</p>\n                        <p>All attendees will be notified.</p>\n                    ")
             }
           }));
 
@@ -3677,7 +3677,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), {
             data: {
-              title: 'Delete series',
+              title: "".concat(can_delete ? 'Delete' : 'Decline', " series"),
               icon: {
                 type: 'icon',
                 "class": 'material-icons',
@@ -7927,6 +7927,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           data.catering = data.catering.filter(function (order) {
             return data.room_ids.includes(order.location_id);
           });
+          data.catering = mergeCateringOrders(data.catering);
           data.old_date = this.date;
 
           if (data.id) {
@@ -8124,6 +8125,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }(base_api_class_1.BaseDataClass);
 
     exports.Booking = Booking;
+    /**
+     * Merge catering orders with same time and location
+     * @param order_list List of catering orders
+     */
+
+    function mergeCateringOrders(order_list) {
+      var _loop2 = function _loop2(_i2) {
+        var orders = order_list.filter(function (order) {
+          return order.location_id === order_list[_i2].location_id && order.delivery_time === order_list[_i2].delivery_time;
+        });
+
+        if (orders.length > 1) {
+          var new_list = order_list.filter(function (order) {
+            return !(order.location_id === order_list[_i2].location_id && order.delivery_time === order_list[_i2].delivery_time);
+          });
+          new_list.push(new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order_list[_i2]), {
+            items: general_utilities_1.flatten(orders.map(function (order) {
+              return order.items;
+            }))
+          })));
+          order_list = new_list;
+          _i2 = 0;
+        }
+
+        i = _i2;
+      };
+
+      for (var i = 0; i < order_list.length; i++) {
+        _loop2(i);
+      }
+
+      return order_list;
+    }
+
+    exports.mergeCateringOrders = mergeCateringOrders;
     /***/
   },
 
@@ -8459,7 +8495,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /* istanbul ignore else */
 
       if (options.space) {
-        var _loop2 = function _loop2(type) {
+        var _loop3 = function _loop3(type) {
           if (options.rules.hasOwnProperty(type) && options.rules[type] instanceof Array && options.space.zones.find(function (zone) {
             return zone === type;
           })) {
@@ -8523,7 +8559,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         };
 
         for (var type in options.rules) {
-          var _ret = _loop2(type);
+          var _ret = _loop3(type);
 
           if (_ret === "break") break;
         }
@@ -8553,8 +8589,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var count = Object.keys(options.rules).length;
         var matches = 0;
 
-        var _loop3 = function _loop3() {
-          var key = _Object$keys[_i2];
+        var _loop4 = function _loop4() {
+          var key = _Object$keys[_i3];
           var counter = 0;
           var condition = options.rules[key] instanceof Array ? options.rules[key] : [options.rules[key]];
 
@@ -8640,8 +8676,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         };
 
-        for (var _i2 = 0, _Object$keys = Object.keys(options.rules); _i2 < _Object$keys.length; _i2++) {
-          _loop3();
+        for (var _i3 = 0, _Object$keys = Object.keys(options.rules); _i3 < _Object$keys.length; _i3++) {
+          _loop4();
         }
 
         return matches >= count;
@@ -9063,8 +9099,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           obj.categories = obj.parent_categories;
           var keys = Object.keys(obj);
 
-          for (var _i3 = 0, _keys2 = keys; _i3 < _keys2.length; _i3++) {
-            var key = _keys2[_i3];
+          for (var _i4 = 0, _keys2 = keys; _i4 < _keys2.length; _i4++) {
+            var key = _keys2[_i4];
 
             if (key[0] === '_') {
               var new_key = key.substr(1);
@@ -9324,8 +9360,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var keys = Object.keys(obj);
 
-          for (var _i4 = 0, _keys3 = keys; _i4 < _keys3.length; _i4++) {
-            var key = _keys3[_i4];
+          for (var _i5 = 0, _keys3 = keys; _i5 < _keys3.length; _i5++) {
+            var key = _keys3[_i5];
 
             if (key[0] === '_') {
               var new_key = this._server_names[key.substr(1)] || key.substr(1);
@@ -12005,8 +12041,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _iterator15.f();
                   }
 
-                  for (var i = 0; i < combination.length - 1; i++) {
-                    if (presses[i] > presses[i + 1]) {
+                  for (var _i6 = 0; _i6 < combination.length - 1; _i6++) {
+                    if (presses[_i6] > presses[_i6 + 1]) {
                       return;
                     }
                   }
@@ -19088,8 +19124,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           event.body.icaluid = "ical-".concat(event.body.id);
           event.body.approval_status = {};
 
-          for (var i = 0; i < event.body.room_ids.length; i++) {
-            event.body.approval_status[event.body.room_ids[i]] = event.body.auto_approve[i] ? 'approved' : 'tentative';
+          for (var _i7 = 0; _i7 < event.body.room_ids.length; _i7++) {
+            event.body.approval_status[event.body.room_ids[_i7]] = event.body.auto_approve[_i7] ? 'approved' : 'tentative';
           }
 
           exports.MOCK_BOOKINGS.push(event.body);
@@ -19121,8 +19157,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (index >= 0) {
             event.body.approval_status = {};
 
-            for (var i = 0; i < event.body.room_ids.length; i++) {
-              event.body.approval_status[event.body.room_ids[i]] = event.body.auto_approve[i] ? 'approved' : 'tentative';
+            for (var _i8 = 0; _i8 < event.body.room_ids.length; _i8++) {
+              event.body.approval_status[event.body.room_ids[_i8]] = event.body.auto_approve[_i8] ? 'approved' : 'tentative';
             }
 
             exports.MOCK_BOOKINGS[index] = event.body;
@@ -20882,10 +20918,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           try {
             for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-              var i = _step26.value;
+              var _i9 = _step26.value;
 
               /* istanbul ignore else */
-              if (i.word) {
+              if (_i9.word) {
                 // Check fields for matches
                 var _iterator28 = _createForOfIteratorHelper(fields),
                     _step28;
@@ -20894,10 +20930,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
                     var _f2 = _step28.value;
                     var field = field_list[_f2];
-                    var index = field.value.indexOf(i.word);
+                    var index = field.value.indexOf(_i9.word);
                     field.index = index < field.index ? index : field.index;
-                    field.matches = (field.value.match(i.regex) || []).length;
-                    field.value = field.value.replace(i.regex, ' ');
+                    field.matches = (field.value.match(_i9.regex) || []).length;
+                    field.value = field.value.replace(_i9.regex, ' ');
                   } // Update token match count
 
                 } catch (err) {
@@ -20915,7 +20951,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     var _field = field_list[_f3];
                     /* istanbul ignore else */
 
-                    if (_field.matches >= i.count) {
+                    if (_field.matches >= _i9.count) {
                       match_count++; // Update field matches
 
                       var changed = 0;
@@ -20929,14 +20965,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           var k = _step30.value;
 
                           /* istanbul ignore else */
-                          if (changed >= i.count) {
+                          if (changed >= _i9.count) {
                             break;
                           }
                           /* istanbul ignore else */
 
 
-                          if (k.toLowerCase().indexOf(i.word) >= 0 && k.indexOf('`') < 0) {
-                            tokens[tokens.indexOf(k)] = k.replace(i.regex, '`$&`');
+                          if (k.toLowerCase().indexOf(_i9.word) >= 0 && k.indexOf('`') < 0) {
+                            tokens[tokens.indexOf(k)] = k.replace(_i9.regex, '`$&`');
                             changed++;
                           }
                         }
@@ -21102,13 +21138,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (parts.length >= fields.length) {
             var item = {};
 
-            for (var i = 0; i <= parts.length; i++) {
+            for (var _i10 = 0; _i10 <= parts.length; _i10++) {
               var part = null;
-              part = parts[i];
+              part = parts[_i10];
               /* istanbul ignore else */
 
               if (part !== undefined) {
-                item[(fields[i] || '').split(' ').join('_').toLowerCase()] = part;
+                item[(fields[_i10] || '').split(' ').join('_').toLowerCase()] = part;
               }
             }
 
@@ -21578,8 +21614,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var count = Math.floor(general_utilities_1.predictableRandomInt(3) + 2);
           features[lvl.level_id] = {};
 
-          for (var i = 0; i < count; i++) {
-            features[lvl.level_id][faker.commerce.productName()] = "feature-".concat(i + 1);
+          for (var _i11 = 0; _i11 < count; _i11++) {
+            features[lvl.level_id][faker.commerce.productName()] = "feature-".concat(_i11 + 1);
           }
         }
       } catch (err) {
@@ -21662,7 +21698,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var delegates = [];
       var delegate_count = Math.min(general_utilities_1.predictableRandomInt(4) + 1, USER_EMAILS.length);
 
-      for (var i = 0; i < delegate_count; i++) {
+      for (var _i12 = 0; _i12 < delegate_count; _i12++) {
         delegates.push(USER_EMAILS[Math.floor(general_utilities_1.predictableRandomInt(USER_EMAILS.length))]);
       }
 
@@ -25728,7 +25764,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _step36;
 
           try {
-            var _loop4 = function _loop4() {
+            var _loop5 = function _loop5() {
               var space = _step36.value;
 
               var building = _this123._org.buildings.find(function (bld) {
@@ -25744,7 +25780,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
 
             for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
-              _loop4();
+              _loop5();
             }
           } catch (err) {
             _iterator36.e(err);
@@ -34128,7 +34164,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _step44;
 
           try {
-            var _loop5 = function _loop5() {
+            var _loop6 = function _loop6() {
               var desk_id = _step44.value;
               var in_use = (_this170.in_use || []).find(function (id) {
                 return id === desk_id;
@@ -34148,7 +34184,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
 
             for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
-              _loop5();
+              _loop6();
             }
           } catch (err) {
             _iterator44.e(err);
@@ -34612,7 +34648,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _step46;
 
           try {
-            var _loop6 = function _loop6() {
+            var _loop7 = function _loop7() {
               var space = _step46.value;
               var id = "".concat(space.map_id).indexOf('area') < 0 ? "area-".concat(space.map_id, "-status") : space.map_id;
               listeners.push({
@@ -34649,7 +34685,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
 
             for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
-              _loop6();
+              _loop7();
             }
           } catch (err) {
             _iterator46.e(err);
@@ -38902,16 +38938,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "9bc7bb5",
-      "hash": "9bc7bb5",
+      "raw": "56ae7fd",
+      "hash": "56ae7fd",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "9bc7bb5",
+      "suffix": "56ae7fd",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599203454336
+      "time": 1599442087204
     };
     /* tslint:enable */
 

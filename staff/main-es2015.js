@@ -1559,10 +1559,10 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
     confirmDeleteMeeting() {
         const can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
         const ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), { data: {
-                title: 'Delete meeting',
+                title: `${can_delete ? 'Delete' : 'Decline'} meeting`,
                 icon: { type: 'icon', class: 'material-icons', content: 'delete' },
                 content: `
-                        <p>Are you sure you want to ${can_delete ? 'deleted' : 'declined'} this meeting on ${this.booking.date_string}${this.has_recurrence ? ' from your series' : ''}?</p>
+                        <p>Are you sure you want to ${can_delete ? 'delete' : 'decline'} this meeting on ${this.booking.date_string}${this.has_recurrence ? ' from your series' : ''}?</p>
                         <p>All attendees will be notified.</p>
                     `,
             } }));
@@ -1581,7 +1581,7 @@ class MeetingDetailsOverlayComponent extends base_directive_1.BaseDirective {
         }
         const can_delete = this._data.as_delegate || this.booking.organiser.email === this._users.current.email;
         const ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, Object.assign(Object.assign({}, confirm_modal_component_1.CONFIRM_METADATA), { data: {
-                title: 'Delete series',
+                title: `${can_delete ? 'Delete' : 'Decline'} series`,
                 icon: { type: 'icon', class: 'material-icons', content: 'delete' },
                 content: `
                         <p>All bookings in the series will be ${can_delete ? 'deleted' : 'declined'}. Are you sure you want to ${can_delete ? 'delete' : 'decline'} the series?</p>
@@ -4079,6 +4079,7 @@ class Booking extends base_api_class_1.BaseDataClass {
         data.notify_users = [data.organiser.email];
         data.room_ids = data.space_list.map((space) => space.email);
         data.catering = data.catering.filter((order) => data.room_ids.includes(order.location_id));
+        data.catering = mergeCateringOrders(data.catering);
         data.old_date = this.date;
         if (data.id) {
             data.from_room = this.space ? this.space.email : '';
@@ -4103,6 +4104,25 @@ class Booking extends base_api_class_1.BaseDataClass {
     }
 }
 exports.Booking = Booking;
+/**
+ * Merge catering orders with same time and location
+ * @param order_list List of catering orders
+ */
+function mergeCateringOrders(order_list) {
+    for (let i = 0; i < order_list.length; i++) {
+        const orders = order_list.filter((order) => order.location_id === order_list[i].location_id &&
+            order.delivery_time === order_list[i].delivery_time);
+        if (orders.length > 1) {
+            const new_list = order_list.filter((order) => !(order.location_id === order_list[i].location_id &&
+                order.delivery_time === order_list[i].delivery_time));
+            new_list.push(new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order_list[i]), { items: general_utilities_1.flatten(orders.map(order => order.items)) })));
+            order_list = new_list;
+            i = 0;
+        }
+    }
+    return order_list;
+}
+exports.mergeCateringOrders = mergeCateringOrders;
 
 
 /***/ }),
@@ -21813,16 +21833,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "9bc7bb5",
-    "hash": "9bc7bb5",
+    "raw": "56ae7fd",
+    "hash": "56ae7fd",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "9bc7bb5",
+    "suffix": "56ae7fd",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599203454336
+    "time": 1599442087204
 };
 /* tslint:enable */
 
