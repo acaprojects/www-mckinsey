@@ -8520,6 +8520,9 @@ class Booking extends base_api_class_1.BaseDataClass {
             duration: general_utilities_1.humaniseDuration(this.duration),
         };
         const space_ids = general_utilities_1.unique(raw_data.room_ids || raw_data.room_id || raw_data._space_list || []);
+        for (const id of space_ids) {
+            this.approval_status[id] = this.approval_status[id] || 'accepted';
+        }
         const space_service = service_manager_class_1.ServiceManager.serviceFor(space_class_1.Space);
         if (space_service) {
             this.space_list = space_ids.map((id) => {
@@ -8698,6 +8701,7 @@ class Booking extends base_api_class_1.BaseDataClass {
             }
         }
         data.catering = data.catering.filter((order) => data.room_ids.includes(order.location_id));
+        data.catering = mergeCateringOrders(data.catering);
         if (data.catering && data.catering.length) {
             for (const order of data.catering) {
                 data.setup[order.location_id] = data.setup[order.location_id] || 15;
@@ -8724,6 +8728,25 @@ class Booking extends base_api_class_1.BaseDataClass {
     }
 }
 exports.Booking = Booking;
+/**
+ * Merge catering orders with same time and location
+ * @param order_list List of catering orders
+ */
+function mergeCateringOrders(order_list) {
+    for (let i = 0; i < order_list.length; i++) {
+        const orders = order_list.filter((order) => order.location_id === order_list[i].location_id &&
+            order.delivery_time === order_list[i].delivery_time);
+        if (orders.length > 1) {
+            const new_list = order_list.filter((order) => !(order.location_id === order_list[i].location_id &&
+                order.delivery_time === order_list[i].delivery_time));
+            new_list.push(new catering_order_class_1.CateringOrder(Object.assign(Object.assign({}, order_list[i]), { items: general_utilities_1.flatten(orders.map(order => order.items)) })));
+            order_list = new_list;
+            i = 0;
+        }
+    }
+    return order_list;
+}
+exports.mergeCateringOrders = mergeCateringOrders;
 
 
 /***/ }),
@@ -26233,16 +26256,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "c6fad8c",
-    "hash": "c6fad8c",
+    "raw": "7043e07",
+    "hash": "7043e07",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "c6fad8c",
+    "suffix": "7043e07",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599203637687
+    "time": 1599442264570
 };
 /* tslint:enable */
 
