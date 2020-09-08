@@ -17039,7 +17039,9 @@ class BookingSpaceItemComponent extends base_directive_1.BaseDirective {
                 maxHeight: '95vh',
                 data: {
                     space: this.space,
-                    duration: this.form.controls.duration.value,
+                    duration: this.form.controls.all_day.value
+                        ? 24 * 60
+                        : this.form.controls.duration.value,
                     host: this.form.controls.organiser.value,
                     conflicts: this.form.controls.recurrence.value.conflicts || [],
                 },
@@ -17049,7 +17051,7 @@ class BookingSpaceItemComponent extends base_directive_1.BaseDirective {
                 if (event.reason === 'done') {
                     const recurr = this.form.controls.recurrence
                         .value;
-                    const conflict_list = event.metadata.filter(i => i.space);
+                    const conflict_list = event.metadata.filter((i) => i.space);
                     this.form.controls.recurrence.setValue(Object.assign(Object.assign({}, recurr), { conflicts: conflict_list }));
                     this.form.controls.space_list.setValue([]);
                     this.select.emit();
@@ -21833,16 +21835,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "a1760cf",
-    "hash": "a1760cf",
+    "raw": "e8bb631",
+    "hash": "e8bb631",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "a1760cf",
+    "suffix": "e8bb631",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599526278672
+    "time": 1599542319751
 };
 /* tslint:enable */
 
