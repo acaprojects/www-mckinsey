@@ -26973,7 +26973,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         if (rf & 2) {
-          i0.ɵɵproperty("ngIf", ctx.item);
+          i0.ɵɵproperty("ngIf", ctx.item && !ctx.item.out_of_stock);
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("@show", ctx.show_children ? "show" : "hide");
           i0.ɵɵadvance(1);
@@ -38938,16 +38938,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "56ae7fd",
-      "hash": "56ae7fd",
+      "raw": "a1760cf",
+      "hash": "a1760cf",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "56ae7fd",
+      "suffix": "a1760cf",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599442087204
+      "time": 1599526278672
     };
     /* tslint:enable */
 
