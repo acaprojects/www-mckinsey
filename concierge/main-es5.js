@@ -31042,24 +31042,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     ;
     /* istanbul ignore file */
 
-    exports.booking_state = {
-      bookings: rxjs_1.of([]),
-      filtered: rxjs_1.of([]),
-      filtered_week: rxjs_1.of([]),
-      filtered_month: rxjs_1.of([]),
-      setZone: jest.fn(),
-      setDate: jest.fn(),
-      setFilters: jest.fn(),
-      add: jest.fn(),
-      replace: jest.fn(),
-      remove: jest.fn(),
-      startPolling: jest.fn(),
-      startPollingMonth: jest.fn(),
-      startPollingWeek: jest.fn()
+    exports.bookingState = function () {
+      return {
+        bookings: rxjs_1.of([]),
+        filtered: rxjs_1.of([]),
+        filtered_week: rxjs_1.of([]),
+        filtered_month: rxjs_1.of([]),
+        setZone: jest.fn(),
+        setDate: jest.fn(),
+        setFilters: jest.fn(),
+        add: jest.fn(),
+        replace: jest.fn(),
+        remove: jest.fn(),
+        startPolling: jest.fn(),
+        startPollingMonth: jest.fn(),
+        startPollingWeek: jest.fn()
+      };
     };
     /**
      * Generate a mocked version of the application service
      */
+
 
     function generateMockAppService() {
       SERVICE = {
@@ -47923,16 +47926,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "e112252",
-      "hash": "e112252",
+      "raw": "8e67335",
+      "hash": "8e67335",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "e112252",
+      "suffix": "8e67335",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599651893466
+      "time": 1599657498311
     };
     /* tslint:enable */
 

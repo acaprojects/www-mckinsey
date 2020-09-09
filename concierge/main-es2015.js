@@ -17221,7 +17221,7 @@ const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.j
 let SERVICE;
 ;
 /* istanbul ignore file */
-exports.booking_state = {
+exports.bookingState = () => ({
     bookings: rxjs_1.of([]),
     filtered: rxjs_1.of([]),
     filtered_week: rxjs_1.of([]),
@@ -17235,7 +17235,7 @@ exports.booking_state = {
     startPolling: jest.fn(),
     startPollingMonth: jest.fn(),
     startPollingWeek: jest.fn()
-};
+});
 /**
  * Generate a mocked version of the application service
  */
@@ -26229,16 +26229,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "e112252",
-    "hash": "e112252",
+    "raw": "8e67335",
+    "hash": "8e67335",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "e112252",
+    "suffix": "8e67335",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599651893466
+    "time": 1599657498311
 };
 /* tslint:enable */
 
