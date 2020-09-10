@@ -5575,9 +5575,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }), operators_1.map(function (list) {
             _this21.loading = false;
             var selected = _this21.selected_spaces;
-            return list.filter(function (item) {
-              return (_this21.active_type && _this21.active_type.id ? item.zones.includes("".concat(_this21.active_type.id)) : true) && !selected.find(function (space) {
-                return space.id === item.id;
+            return list.filter(function (space) {
+              var rules = space.rulesFor({
+                date: _this21._data.date,
+                duration: _this21._data.duration,
+                host: _this21._data.host
+              });
+
+              if (rules.hide || !space.was_available) {
+                return false;
+              }
+
+              return (_this21.active_type && _this21.active_type.id ? space.zones.includes("".concat(_this21.active_type.id)) : true) && !selected.find(function (space) {
+                return space.id === space.id;
               });
             });
           })); // Process API results
@@ -35882,6 +35892,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         })("valueChange", function ScheduleEventListComponent_mat_form_field_3_Template_mat_select_valueChange_1_listener($event) {
           i0.ɵɵrestoreView(_r8);
           var ctx_r9 = i0.ɵɵnextContext();
+          ctx_r9.event_promise = null;
           ctx_r9.updateEvents($event);
           return ctx_r9.events = [];
         });
@@ -36046,13 +36057,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.event_promise = new Promise(function (resolve) {
               var start = dayjs().add(_this185.date_offset, 'd').startOf('d');
               var end = start.add(7, 'd').endOf('d');
+              var email = (_this185.active_user ? _this185.active_user.email : '') || _this185._users.current.email;
               _this185.loading = true;
 
               _this185._bookings.query({
-                email: (_this185.active_user ? _this185.active_user.email : '') || _this185._users.current.email,
+                email: email,
                 from: start.unix(),
                 to: end.unix()
               }).then(function (list) {
+                if (email !== _this185.active_user.email) {
+                  return;
+                }
+
                 var old_events = _this185.events.filter(function (i) {
                   var date = dayjs(i.date);
                   return i.type !== 'date' && i.type !== 'empty' && (date.isBefore(start, 's') || date.isAfter(end, 's'));
@@ -38970,9 +38986,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "v1.7.0-589-g5d7fa0fb",
-      "hash": "g5d7fa0fb",
-      "distance": 589,
+      "raw": "v1.7.0-591-g006e9e78",
+      "hash": "g006e9e78",
+      "distance": 591,
       "tag": "v1.7.0",
       "semver": {
         "options": {
@@ -38988,11 +39004,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "build": [],
         "version": "1.7.0"
       },
-      "suffix": "589-g5d7fa0fb",
-      "semverString": "1.7.0+589.g5d7fa0fb",
+      "suffix": "591-g006e9e78",
+      "semverString": "1.7.0+591.g006e9e78",
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1599703485268
+      "time": 1599705284637
     };
     /* tslint:enable */
 

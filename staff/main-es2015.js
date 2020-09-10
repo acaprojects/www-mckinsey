@@ -2634,8 +2634,18 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
         }), operators_1.catchError((_) => rxjs_1.of([])), operators_1.map((list) => {
             this.loading = false;
             const selected = this.selected_spaces;
-            return list.filter((item) => (this.active_type && this.active_type.id ? item.zones.includes(`${this.active_type.id}`) : true) &&
-                !selected.find((space) => space.id === item.id));
+            return list.filter((space) => {
+                const rules = space.rulesFor({
+                    date: this._data.date,
+                    duration: this._data.duration,
+                    host: this._data.host,
+                });
+                if (rules.hide || !space.was_available) {
+                    return false;
+                }
+                return (this.active_type && this.active_type.id ? space.zones.includes(`${this.active_type.id}`) : true) &&
+                    !selected.find((space) => space.id === space.id);
+            });
         }));
         // Process API results
         this.subscription('search_results', this.search_results$.subscribe((list) => {
@@ -20067,7 +20077,7 @@ function ScheduleEventListComponent_mat_form_field_3_Template(rf, ctx) { if (rf 
     const _r8 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "mat-form-field", 18);
     i0.ɵɵelementStart(1, "mat-select", 19, 20);
-    i0.ɵɵlistener("valueChange", function ScheduleEventListComponent_mat_form_field_3_Template_mat_select_valueChange_1_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.active_user = $event; })("valueChange", function ScheduleEventListComponent_mat_form_field_3_Template_mat_select_valueChange_1_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r9 = i0.ɵɵnextContext(); ctx_r9.updateEvents($event); return ctx_r9.events = []; });
+    i0.ɵɵlistener("valueChange", function ScheduleEventListComponent_mat_form_field_3_Template_mat_select_valueChange_1_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.active_user = $event; })("valueChange", function ScheduleEventListComponent_mat_form_field_3_Template_mat_select_valueChange_1_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r9 = i0.ɵɵnextContext(); ctx_r9.event_promise = null; ctx_r9.updateEvents($event); return ctx_r9.events = []; });
     i0.ɵɵtemplate(3, ScheduleEventListComponent_mat_form_field_3_mat_option_3_Template, 2, 2, "mat-option", 21);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -20156,15 +20166,19 @@ class ScheduleEventListComponent extends base_directive_1.BaseDirective {
             this.event_promise = new Promise((resolve) => {
                 const start = dayjs().add(this.date_offset, 'd').startOf('d');
                 const end = start.add(7, 'd').endOf('d');
+                const email = (this.active_user ? this.active_user.email : '') ||
+                    this._users.current.email;
                 this.loading = true;
                 this._bookings
                     .query({
-                    email: (this.active_user ? this.active_user.email : '') ||
-                        this._users.current.email,
+                    email,
                     from: start.unix(),
                     to: end.unix(),
                 })
                     .then((list) => {
+                    if (email !== this.active_user.email) {
+                        return;
+                    }
                     const old_events = this.events.filter((i) => {
                         const date = dayjs(i.date);
                         return (i.type !== 'date' &&
@@ -21852,9 +21866,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "v1.7.0-589-g5d7fa0fb",
-    "hash": "g5d7fa0fb",
-    "distance": 589,
+    "raw": "v1.7.0-591-g006e9e78",
+    "hash": "g006e9e78",
+    "distance": 591,
     "tag": "v1.7.0",
     "semver": {
         "options": {
@@ -21870,11 +21884,11 @@ exports.VERSION = {
         "build": [],
         "version": "1.7.0"
     },
-    "suffix": "589-g5d7fa0fb",
-    "semverString": "1.7.0+589.g5d7fa0fb",
+    "suffix": "591-g006e9e78",
+    "semverString": "1.7.0+591.g006e9e78",
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1599703485268
+    "time": 1599705284637
 };
 /* tslint:enable */
 
