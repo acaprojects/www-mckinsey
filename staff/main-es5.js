@@ -5581,13 +5581,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 duration: _this21._data.duration,
                 host: _this21._data.host
               });
-
-              if (rules.hide || !space.was_available) {
-                return false;
-              }
-
-              return (_this21.active_type && _this21.active_type.id ? space.zones.includes("".concat(_this21.active_type.id)) : true) && !selected.find(function (space) {
-                return space.id === space.id;
+              return !rules.hide && (_this21.active_type && _this21.active_type.id ? space.zones.includes("".concat(_this21.active_type.id)) : true) && !selected.find(function (_space) {
+                return _space.id === space.id;
               });
             });
           })); // Process API results

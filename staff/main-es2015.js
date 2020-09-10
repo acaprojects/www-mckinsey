@@ -2640,11 +2640,11 @@ class SpaceSelectModalComponent extends base_directive_1.BaseDirective {
                     duration: this._data.duration,
                     host: this._data.host,
                 });
-                if (rules.hide || !space.was_available) {
-                    return false;
-                }
-                return (this.active_type && this.active_type.id ? space.zones.includes(`${this.active_type.id}`) : true) &&
-                    !selected.find((space) => space.id === space.id);
+                return (!rules.hide &&
+                    (this.active_type && this.active_type.id
+                        ? space.zones.includes(`${this.active_type.id}`)
+                        : true) &&
+                    !selected.find((_space) => _space.id === space.id));
             });
         }));
         // Process API results
