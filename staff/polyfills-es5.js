@@ -19305,7 +19305,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! /home/runner/work/mckinsey-staff-ui/mckinsey-staff-ui/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
+    /*! /Users/alexsorafumo/Documents/client_repos/mckinsey-staff-app/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
     __webpack_require__(
@@ -19313,7 +19313,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/zone.js/dist/zone-legacy.js");
 
     module.exports = __webpack_require__(
-    /*! /home/runner/work/mckinsey-staff-ui/mckinsey-staff-ui/src/polyfills.ts */
+    /*! /Users/alexsorafumo/Documents/client_repos/mckinsey-staff-app/src/polyfills.ts */
     "./src/polyfills.ts");
     /***/
   }
