@@ -8474,6 +8474,7 @@ class BookingStateService extends base_class_1.BaseClass {
         this.loading = this._loading.asObservable();
         /** Obsevable for filtered list of bookings */
         this.filtered = this._state.pipe(operators_1.map(() => {
+            console.log('Date:', this._date.getValue());
             const start = date_fns_1.startOfDay(new Date(this._date.getValue()));
             const end = date_fns_1.endOfDay(start);
             return this.filterBookings(start, end);
@@ -21936,7 +21937,7 @@ class DayViewComponent extends base_directive_1.BaseDirective {
 }
 exports.DayViewComponent = DayViewComponent;
 DayViewComponent.ɵfac = function DayViewComponent_Factory(t) { return new (t || DayViewComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.OrganisationService), i0.ɵɵdirectiveInject(i3.MatDialog), i0.ɵɵdirectiveInject(i4.Router), i0.ɵɵdirectiveInject(i4.ActivatedRoute), i0.ɵɵdirectiveInject(i5.BookingStateService)); };
-DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, selectors: [["a-day-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 38, vars: 26, consts: [[1, "day-view"], [1, "group"], [3, "date", "zone", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["mat-icon-button", "", 1, "not-desktop", 3, "matMenuTriggerFor"], [3, "icon"], ["appearance", "outline", 3, "desktop-only", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "overflow", "labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "level", "overflow_only", "space_type"], ["menu", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], ["level_list", "matMenu"], ["mat-menu-item", "", 3, "selected", "click", 4, "ngFor", "ngForOf"], ["space_type_list", "matMenu"], ["legend_listing", "matMenu"], ["mat-menu-item", "", 4, "ngFor", "ngForOf"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"], ["mat-menu-item", ""], [3, "ngModel", "ngModelChange", "click"]], template: function DayViewComponent_Template(rf, ctx) { if (rf & 1) {
+DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, selectors: [["a-day-view"]], features: [i0.ɵɵInheritDefinitionFeature], decls: 38, vars: 27, consts: [[1, "day-view"], [1, "group"], [3, "date", "zone", "show_events", "show_add_item", "dateChange", "event"], [1, "topbar"], ["mat-icon-button", "", 1, "not-desktop", 3, "matMenuTriggerFor"], [3, "icon"], ["appearance", "outline", 3, "desktop-only", 4, "ngIf"], ["appearance", "outline"], ["name", "legend", "multiple", "", "placeholder", "No items shown", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "overflow", "labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], [3, "date", "level", "overflow_only", "space_type"], ["menu", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["labelPosition", "before", "title", "Only show meetings with setup and breakdown times", 3, "ngModel", "ngModelChange"], ["level_list", "matMenu"], ["mat-menu-item", "", 3, "selected", "click", 4, "ngFor", "ngForOf"], ["space_type_list", "matMenu"], ["legend_listing", "matMenu"], ["mat-menu-item", "", 4, "ngFor", "ngForOf"], ["name", "level", 3, "ngModel", "ngModelChange"], [3, "value"], ["name", "space-type", 3, "ngModel", "ngModelChange"], [1, "key"], [1, "text"], [1, "colour"], [1, "blob"], ["mat-menu-item", ""], [3, "ngModel", "ngModelChange", "click"]], template: function DayViewComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelement(1, "a-sidebar");
         i0.ɵɵelementStart(2, "div", 1);
@@ -22005,7 +22006,7 @@ DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, select
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("matMenuTriggerFor", _r3);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(25, _c0));
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(26, _c0));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx.levels && ctx.levels.length > 1);
         i0.ɵɵadvance(1);
@@ -22020,7 +22021,7 @@ DayViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DayViewComponent, select
         i0.ɵɵclassProp("desktop-only", true);
         i0.ɵɵproperty("ngModel", ctx.only_overflow);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("level", ctx.active_level)("overflow_only", ctx.only_overflow)("space_type", ctx.active_type);
+        i0.ɵɵproperty("date", ctx.date)("level", ctx.active_level)("overflow_only", ctx.only_overflow)("space_type", ctx.active_type);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("matMenuTriggerFor", _r4);
         i0.ɵɵadvance(2);
@@ -22332,7 +22333,7 @@ class DayViewSpaceEventComponent extends base_directive_1.BaseDirective {
     ngOnChanges(changes) {
         /* istanbul ignore else */
         if (changes.event || changes.overlap || changes.date) {
-            this.calculatePosition();
+            this.timeout('update_post', () => this.calculatePosition(), 50);
         }
     }
     /**
@@ -26234,9 +26235,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "v1.0.1-826-gf81abc55",
-    "hash": "gf81abc55",
-    "distance": 826,
+    "raw": "v1.0.1-891-gb916d924",
+    "hash": "gb916d924",
+    "distance": 891,
     "tag": "v1.0.1",
     "semver": {
         "options": {
@@ -26252,11 +26253,11 @@ exports.VERSION = {
         "build": [],
         "version": "1.0.1"
     },
-    "suffix": "826-gf81abc55",
-    "semverString": "1.0.1+826.gf81abc55",
+    "suffix": "891-gb916d924",
+    "semverString": "1.0.1+891.gb916d924",
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1595980114270
+    "time": 1599699679666
 };
 /* tslint:enable */
 
