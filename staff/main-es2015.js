@@ -15612,7 +15612,7 @@ class BookingCateringOrderDetailsComponent extends base_directive_1.BaseDirectiv
     }
     /** Whether booking is with the restricted ordering period */
     get within_restricted_time() {
-        const expired = dayjs().add(this.active_building.catering_restricted_from, 'h').endOf('d');
+        const expired = dayjs().add(this.active_building.catering_restricted_from, 'h').startOf('m');
         return dayjs(this.date).isBefore(expired);
     }
     /** Whether items are available for order at anytime */

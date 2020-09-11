@@ -27974,7 +27974,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "within_restricted_time",
         get: function get() {
-          var expired = dayjs().add(this.active_building.catering_restricted_from, 'h').endOf('d');
+          var expired = dayjs().add(this.active_building.catering_restricted_from, 'h').startOf('m');
           return dayjs(this.date).isBefore(expired);
         }
         /** Whether items are available for order at anytime */
