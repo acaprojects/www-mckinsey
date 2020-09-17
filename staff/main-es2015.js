@@ -20176,7 +20176,7 @@ class ScheduleEventListComponent extends base_directive_1.BaseDirective {
                     to: end.unix(),
                 })
                     .then((list) => {
-                    if (email !== this.active_user.email) {
+                    if (this.active_user && email !== this.active_user.email) {
                         return;
                     }
                     const old_events = this.events.filter((i) => {
@@ -21866,16 +21866,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "d83feaa",
-    "hash": "d83feaa",
+    "raw": "f9c18ae",
+    "hash": "f9c18ae",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d83feaa",
+    "suffix": "f9c18ae",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1600243306416
+    "time": 1600338511717
 };
 /* tslint:enable */
 

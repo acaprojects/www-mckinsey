@@ -36060,7 +36060,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 from: start.unix(),
                 to: end.unix()
               }).then(function (list) {
-                if (email !== _this185.active_user.email) {
+                if (_this185.active_user && email !== _this185.active_user.email) {
                   return;
                 }
 
@@ -38981,16 +38981,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "d83feaa",
-      "hash": "d83feaa",
+      "raw": "f9c18ae",
+      "hash": "f9c18ae",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "d83feaa",
+      "suffix": "f9c18ae",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1600243306416
+      "time": 1600338511717
     };
     /* tslint:enable */
 
