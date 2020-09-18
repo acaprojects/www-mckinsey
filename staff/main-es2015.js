@@ -9497,7 +9497,6 @@ class MapControlsComponent extends base_directive_1.BaseDirective {
         this.levelChange.emit(this.level);
         this._router.navigate([], {
             relativeTo: this._route,
-            queryParamsHandling: 'merge',
             queryParams: { level: lvl_id }
         });
     }
@@ -21866,16 +21865,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "8b85e80",
-    "hash": "8b85e80",
+    "raw": "973f43e",
+    "hash": "973f43e",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "8b85e80",
+    "suffix": "973f43e",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1600350114676
+    "time": 1600413492529
 };
 /* tslint:enable */
 
