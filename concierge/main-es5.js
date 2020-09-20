@@ -36790,6 +36790,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/data/bookings/booking.class */
     "./src/app/services/data/bookings/booking.class.ts");
 
+    var space_class_1 = __webpack_require__(
+    /*! src/app/services/data/spaces/space.class */
+    "./src/app/services/data/spaces/space.class.ts");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -36903,11 +36907,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(7);
           i0.ɵɵtextInterpolate1(" ", ctx.booking.organiser == null ? null : ctx.booking.organiser.name, " ");
           i0.ɵɵadvance(5);
-          i0.ɵɵtextInterpolate1(" ", ctx.space, " ");
+          i0.ɵɵtextInterpolate1(" ", ctx.space == null ? null : ctx.space.name, " ");
           i0.ɵɵadvance(5);
           i0.ɵɵtextInterpolate1(" ", ctx.booking.time_period, " ");
           i0.ɵɵadvance(5);
-          i0.ɵɵtextInterpolate2(" ", (ctx.booking.attendees == null ? null : ctx.booking.attendees.length) || "0", "(", ctx.booking.expected_attendees[ctx.space] || 0, " expected) ");
+          i0.ɵɵtextInterpolate2(" ", (ctx.booking.attendees == null ? null : ctx.booking.attendees.length) || "0", "(", ctx.booking.expected_attendees[ctx.space == null ? null : ctx.space.email] || 0, " expected) ");
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("routerLink", i0.ɵɵpureFunction1(7, _c0, ctx.booking.space == null ? null : ctx.booking.space.level.id))("queryParams", i0.ɵɵpureFunction1(9, _c1, ctx.booking.id.slice(0, 10)));
         }
@@ -38255,7 +38259,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(2);
           i0.ɵɵproperty("ngIf", ctx.statuses && ctx.statuses.length > 1);
           i0.ɵɵadvance(3);
-          i0.ɵɵproperty("space", ctx.space == null ? null : ctx.space.name)("booking", ctx.booking);
+          i0.ɵɵproperty("space", ctx.space)("booking", ctx.booking);
           i0.ɵɵadvance(2);
           i0.ɵɵproperty("booking", ctx.booking)("order", ctx.order);
           i0.ɵɵadvance(2);
@@ -47950,16 +47954,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "610dbba",
-      "hash": "610dbba",
+      "raw": "d90ec77",
+      "hash": "d90ec77",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "610dbba",
+      "suffix": "d90ec77",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1600305499271
+      "time": 1600602377091
     };
     /* tslint:enable */
 

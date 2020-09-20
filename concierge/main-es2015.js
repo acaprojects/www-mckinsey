@@ -20357,6 +20357,7 @@ CateringItemModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringItemMo
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
+const space_class_1 = __webpack_require__(/*! src/app/services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 const i2 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
@@ -20418,11 +20419,11 @@ OrderBookingDetailsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderBooking
         i0.ɵɵadvance(7);
         i0.ɵɵtextInterpolate1(" ", ctx.booking.organiser == null ? null : ctx.booking.organiser.name, " ");
         i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate1(" ", ctx.space, " ");
+        i0.ɵɵtextInterpolate1(" ", ctx.space == null ? null : ctx.space.name, " ");
         i0.ɵɵadvance(5);
         i0.ɵɵtextInterpolate1(" ", ctx.booking.time_period, " ");
         i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate2(" ", (ctx.booking.attendees == null ? null : ctx.booking.attendees.length) || "0", "(", ctx.booking.expected_attendees[ctx.space] || 0, " expected) ");
+        i0.ɵɵtextInterpolate2(" ", (ctx.booking.attendees == null ? null : ctx.booking.attendees.length) || "0", "(", ctx.booking.expected_attendees[ctx.space == null ? null : ctx.space.email] || 0, " expected) ");
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("routerLink", i0.ɵɵpureFunction1(7, _c0, ctx.booking.space == null ? null : ctx.booking.space.level.id))("queryParams", i0.ɵɵpureFunction1(9, _c1, ctx.booking.id.slice(0, 10)));
     } }, directives: [i1.MatAnchor, i2.RouterLinkWithHref, i3.MatDialogClose], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n}\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.heading[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 1em;\n  font-weight: 500;\n  background-color: #ccc;\n}\n.content[_ngcontent-%COMP%] {\n  flex: 1;\n  min-height: 50%;\n  overflow: auto;\n  padding: 0.5em 1em;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 0.8em;\n  margin: 0.5em 0 1em;\n}\nlabel[_ngcontent-%COMP%] {\n  margin-right: 1em;\n  font-weight: 500;\n}\n.footer[_ngcontent-%COMP%] {\n  width: 100%;\n  border-radius: 0;\n  padding: 0.35em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL2Jvb2tpbmctZGV0YWlscy9ib29raW5nLWRldGFpbHMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoZWxsL2NhdGVyaW5nL292ZXJsYXlzL29yZGVyLWRldGFpbHMtbW9kYWwvYm9va2luZy1kZXRhaWxzL2Jvb2tpbmctZGV0YWlscy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7QUNBSjtBRENJO0VBQ0ksV0FBQTtBQ0NSO0FER0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtFQUNBLHNCQUFBO0FDQUo7QURHQTtFQUNJLE9BQUE7RUFDQSxlQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0FDQUo7QURHQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsbUJBQUE7QUNBSjtBREdBO0VBQ0ksaUJBQUE7RUFDQSxnQkFBQTtBQ0FKO0FER0E7RUFDSSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9jYXRlcmluZy9vdmVybGF5cy9vcmRlci1kZXRhaWxzLW1vZGFsL2Jvb2tpbmctZGV0YWlscy9ib29raW5nLWRldGFpbHMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbjpob3N0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgPiAqIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgfVxufVxuXG4uaGVhZGluZyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHBhZGRpbmc6IDFlbTtcbiAgICBmb250LXdlaWdodDogNTAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG59XG5cbi5jb250ZW50IHtcbiAgICBmbGV4OiAxO1xuICAgIG1pbi1oZWlnaHQ6IDUwJTtcbiAgICBvdmVyZmxvdzogYXV0bztcbiAgICBwYWRkaW5nOiAuNWVtIDFlbTtcbn1cblxuLmZpZWxkIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAuOGVtO1xuICAgIG1hcmdpbjogLjVlbSAwIDFlbTtcbn1cblxubGFiZWwge1xuICAgIG1hcmdpbi1yaWdodDogMWVtO1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbi5mb290ZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1yYWRpdXM6IDA7XG4gICAgcGFkZGluZzogLjM1ZW07XG59XG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG46aG9zdCA+ICoge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmhlYWRpbmcge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgcGFkZGluZzogMWVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2NjO1xufVxuXG4uY29udGVudCB7XG4gIGZsZXg6IDE7XG4gIG1pbi1oZWlnaHQ6IDUwJTtcbiAgb3ZlcmZsb3c6IGF1dG87XG4gIHBhZGRpbmc6IDAuNWVtIDFlbTtcbn1cblxuLmZpZWxkIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgbWFyZ2luOiAwLjVlbSAwIDFlbTtcbn1cblxubGFiZWwge1xuICBtYXJnaW4tcmlnaHQ6IDFlbTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbn1cblxuLmZvb3RlciB7XG4gIHdpZHRoOiAxMDAlO1xuICBib3JkZXItcmFkaXVzOiAwO1xuICBwYWRkaW5nOiAwLjM1ZW07XG59Il19 */"] });
@@ -21123,7 +21124,7 @@ OrderDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderDetailsMo
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx.statuses && ctx.statuses.length > 1);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("space", ctx.space == null ? null : ctx.space.name)("booking", ctx.booking);
+        i0.ɵɵproperty("space", ctx.space)("booking", ctx.booking);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("booking", ctx.booking)("order", ctx.order);
         i0.ɵɵadvance(2);
@@ -26242,16 +26243,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "610dbba",
-    "hash": "610dbba",
+    "raw": "d90ec77",
+    "hash": "d90ec77",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "610dbba",
+    "suffix": "d90ec77",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1600305499271
+    "time": 1600602377091
 };
 /* tslint:enable */
 
