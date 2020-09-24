@@ -903,7 +903,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([":Catering order item available options label\u241F8d2393e9c6ca1b836a6850f9fdb5f171e496ea1b\u241F7552499218458333923: ", ":ICU: "]);
+  var data = _taggedTemplateLiteral([":Catering order item available options label\u241Fdf4bdeaa8fbd0db45d5da5f1c472a9a3473857a2\u241F6971522583297058037: ", ":ICU: "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -913,7 +913,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral([":\u241F326d978c4b2de6f42edfe0ac588e188b6fc40471\u241F3278355766885608724:{VAR_PLURAL, plural, =1 {Contains {INTERPOLATION} item } other {Contains {INTERPOLATION} items }}"]);
+  var data = _taggedTemplateLiteral([":\u241F262009a8d19fd04040af573d31865e4b7367f1c2\u241F2616675308033337849:{VAR_PLURAL, plural, =1 {Contains {INTERPOLATION} item } other {Contains {INTERPOLATION} items }}"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -3451,7 +3451,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r0.category.items);
+        i0.ɵɵproperty("ngForOf", ctx_r0.category.availableItems);
       }
     }
 
@@ -3555,7 +3555,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(2);
           i0.ɵɵtextInterpolate(ctx.category == null ? null : ctx.category.name);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("ngIf", ctx.category.items && ctx.category.items.length)("ngIfElse", _r1);
+          i0.ɵɵproperty("ngIf", ctx.category.availableItems && ctx.category.availableItems.length)("ngIfElse", _r1);
         }
       },
       directives: [i1.MatButton, i2.IconComponent, i3.NgIf, i3.NgForOf, i4.CateringMenuItemComponent],
@@ -3713,8 +3713,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var I18N_1;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      var MSG_EXTERNAL_3278355766885608724$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___2 = goog.getMsg("{VAR_PLURAL, plural, =1 {Contains {INTERPOLATION} item } other {Contains {INTERPOLATION} items }}");
-      I18N_1 = MSG_EXTERNAL_3278355766885608724$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___2;
+      var MSG_EXTERNAL_2616675308033337849$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___2 = goog.getMsg("{VAR_PLURAL, plural, =1 {Contains {INTERPOLATION} item } other {Contains {INTERPOLATION} items }}");
+      I18N_1 = MSG_EXTERNAL_2616675308033337849$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___2;
     } else {
       I18N_1 = $localize(_templateObject2());
     }
@@ -3729,10 +3729,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Catering order item available options label
        */
-      var MSG_EXTERNAL_7552499218458333923$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___3 = goog.getMsg(" {$icu} ", {
+      var MSG_EXTERNAL_6971522583297058037$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___3 = goog.getMsg(" {$icu} ", {
         "icu": I18N_1
       });
-      I18N_0 = MSG_EXTERNAL_7552499218458333923$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___3;
+      I18N_0 = MSG_EXTERNAL_6971522583297058037$$SRC_APP_OVERLAYS_BOOKING_MODAL_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___3;
     } else {
       I18N_0 = $localize(_templateObject3(), I18N_1);
     }
@@ -3748,7 +3748,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var ctx_r4 = i0.ɵɵnextContext(2);
         i0.ɵɵproperty("matTooltip", ctx_r4.contents);
         i0.ɵɵadvance(1);
-        i0.ɵɵi18nExp(ctx_r4.item.items.length)(ctx_r4.item.items.length);
+        i0.ɵɵi18nExp(ctx_r4.item.availableItems.length)(ctx_r4.item.availableItems.length);
         i0.ɵɵi18nApply(1);
       }
     }
@@ -3909,7 +3909,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx_r0.item.unit_price);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.item["package"] && ctx_r0.item.items.length && !ctx_r0.item.must_select);
+        i0.ɵɵproperty("ngIf", ctx_r0.item["package"] && ctx_r0.item.availableItems.length && !ctx_r0.item.must_select);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.item["package"] && ctx_r0.item.must_select && ctx_r0.item.amount > 0);
         i0.ɵɵadvance(1);
@@ -3917,9 +3917,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.item.unit_price);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", !ctx_r0.item.items.length || ctx_r0.item["package"]);
+        i0.ɵɵproperty("ngIf", !ctx_r0.item.availableItems.length || ctx_r0.item["package"]);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.item.items && ctx_r0.item.items.length && !ctx_r0.item["package"]);
+        i0.ɵɵproperty("ngIf", ctx_r0.item.availableItems && ctx_r0.item.availableItems.length && !ctx_r0.item["package"]);
       }
     }
 
@@ -4184,7 +4184,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("@show", ctx.show_children ? "show" : "hide");
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("ngForOf", ctx.item.items);
+          i0.ɵɵproperty("ngForOf", ctx.item.availableItems);
         }
       },
       directives: [i3.NgIf, i3.NgForOf, i4.MatTooltip, i5.MatButton, i6.CounterComponent, i7.NgControlStatus, i7.NgModel, i8.IconComponent, CateringMenuItemComponent],
@@ -5013,6 +5013,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this25.loading = false;
             _this25.category_list = list.map(function (i) {
               return new catering_category_class_1.CateringCategory(i);
+            }).filter(function (c) {
+              return !c.out_of_stock;
             });
           }, function () {
             return _this25.loading = false;
@@ -17843,12 +17845,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.image_path = data.image_path || '';
         this.catering_type = data.catering_type;
         this.must_select = (_a = data.must_select, _a !== null && _a !== void 0 ? _a : 0);
-        this.out_of_stock = !!data.out_of_stock;
         this._amount = data._amount || data.amount || 0;
         this.allergy = data.allergy || '';
-        this.items = (data.items || []).map(function (item) {
+        var cateringItems = (data.items || []).map(function (item) {
           return new CateringItem(item);
         });
+        this.items = cateringItems;
+        var filteredCateringItems = cateringItems.filter(function (c) {
+          return !c.out_of_stock;
+        });
+        this.availableItems = filteredCateringItems;
+        this.out_of_stock = !!data.out_of_stock || data.hide || // if original items are empty, we hit the bottom, so if we filter out items then its out of stock.
+        cateringItems.length > 0 && filteredCateringItems.length === 0;
         this["package"] = data["package"] === 'true' || data["package"] === true;
         this.zones = data.zones && data.zones.length ? _toConsumableArray(data.zones) : [];
       }
@@ -17921,6 +17929,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           delete obj._server_names; // Convert remaining members to be public
 
           obj.price = obj.unit_price;
+          obj.hide = obj.out_of_stock;
           obj.categories = obj.parent_categories;
           var keys = Object.keys(obj);
 
@@ -47954,16 +47963,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "d90ec77",
-      "hash": "d90ec77",
+      "raw": "5cdd6c7",
+      "hash": "5cdd6c7",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "d90ec77",
+      "suffix": "5cdd6c7",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1600602377091
+      "time": 1600957468353
     };
     /* tslint:enable */
 
