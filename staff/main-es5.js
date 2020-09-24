@@ -289,7 +289,7 @@ function _templateObject70() {
 }
 
 function _templateObject69() {
-  var data = _taggedTemplateLiteral([":Catering order item available options label\u241F8d2393e9c6ca1b836a6850f9fdb5f171e496ea1b\u241F7552499218458333923: ", ":ICU: "]);
+  var data = _taggedTemplateLiteral([":Catering order item available options label\u241Fdf4bdeaa8fbd0db45d5da5f1c472a9a3473857a2\u241F6971522583297058037: ", ":ICU: "]);
 
   _templateObject69 = function _templateObject69() {
     return data;
@@ -299,7 +299,7 @@ function _templateObject69() {
 }
 
 function _templateObject68() {
-  var data = _taggedTemplateLiteral([":\u241F326d978c4b2de6f42edfe0ac588e188b6fc40471\u241F3278355766885608724:{VAR_PLURAL, plural, =1 {Contains {INTERPOLATION} item } other {Contains {INTERPOLATION} items }}"]);
+  var data = _taggedTemplateLiteral([":\u241F262009a8d19fd04040af573d31865e4b7367f1c2\u241F2616675308033337849:{VAR_PLURAL, plural, =1 {Contains {INTERPOLATION} item } other {Contains {INTERPOLATION} items }}"]);
 
   _templateObject68 = function _templateObject68() {
     return data;
@@ -8957,37 +8957,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, CateringCategory);
 
         _this45 = _super16.call(this, data);
-        _this45.items = (data.items || []).map(function (item) {
-          return item.items ? new CateringCategory(item) : new catering_item_class_1.CateringItem(item);
-        });
-        _this45["package"] = data["package"] === 'true' || data["package"] === true;
-        _this45.zones = data.zones && data.zones.length ? _toConsumableArray(data.zones) : [];
-        _this45.must_select = _this45.must_select || _this45.items.length;
+        /** Whether item is a category */
+
+        _this45.is_category = true;
+        _this45.is_category = true;
+        _this45.must_select = _this45.must_select || 0;
         _this45.order_anytime = !!data.order_anytime && _this45["package"];
         return _this45;
       }
+      /**
+       * Convert class object into plain object
+       */
+
 
       _createClass(CateringCategory, [{
         key: "toJSON",
-
-        /**
-         * Convert class object into plain object
-         */
         value: function toJSON() {
           var obj = _get(_getPrototypeOf(CateringCategory.prototype), "toJSON", this).call(this);
 
-          obj.items = obj.items.map(function (item) {
-            return item.toJSON();
-          });
           obj.order_anytime = !!obj.order_anytime && obj["package"];
           return obj;
-        }
-      }, {
-        key: "can_order_anytime",
-        get: function get() {
-          return this.order_anytime || this.items.reduce(function (anytime, item) {
-            return anytime || item.can_order_anytime;
-          }, false);
         }
       }]);
 
@@ -9020,11 +9009,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function CateringItem(data) {
         _classCallCheck(this, CateringItem);
 
+        var _a;
         /** Number of this item in the assoicated order */
+
+
         this._amount = 0;
+        /** Whether item is a category */
+
+        this.is_category = false;
         this.instance_id = "item-".concat(Math.floor(Math.random() * 999999999));
         this.id = data.id || '';
         this.name = data.name || '';
+        this.is_category = data.is_category || !!(data.parent_categories || []).length || false;
         this.available = {
           from_month: (data.available ? data.available.from_month : data.available_from) || -1,
           to_month: (data.available ? data.available.to_month : data.available_to) || -1
@@ -9039,10 +9035,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.order_anytime = !!data.order_anytime;
         this.image_path = data.image_path || '';
         this.catering_type = data.catering_type;
-        this.must_select = data.must_select || 0;
-        this.out_of_stock = !!data.out_of_stock || data.hide;
+        this.must_select = (_a = data.must_select, _a !== null && _a !== void 0 ? _a : 0);
         this._amount = data._amount || data.amount || 0;
-        this.allergy = data.allergy;
+        this.allergy = data.allergy || '';
+        var cateringItems = (data.items || []).map(function (item) {
+          return new CateringItem(item);
+        });
+        this.items = cateringItems;
+        var filteredCateringItems = cateringItems.filter(function (c) {
+          return !c.out_of_stock;
+        });
+        this.availableItems = filteredCateringItems;
+        this.out_of_stock = !!data.out_of_stock || data.hide || // if original items are empty, we hit the bottom, so if we filter out items then its out of stock.
+        cateringItems.length > 0 && filteredCateringItems.length === 0;
+        this["package"] = data["package"] === 'true' || data["package"] === true;
+        this.zones = data.zones && data.zones.length ? _toConsumableArray(data.zones) : [];
       }
 
       _createClass(CateringItem, [{
@@ -9129,12 +9136,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          obj.items = obj.items.map(function (item) {
+            return item.toJSON();
+          });
           return obj;
         }
       }, {
         key: "can_order_anytime",
         get: function get() {
-          return this.order_anytime;
+          return this.order_anytime || this.items.reduce(function (anytime, item) {
+            return anytime || item.can_order_anytime;
+          }, false);
         }
         /** Number of this item in the assoicated order */
 
@@ -26612,7 +26624,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r0.category.items);
+        i0.ɵɵproperty("ngForOf", ctx_r0.category.availableItems);
       }
     }
 
@@ -26716,7 +26728,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(2);
           i0.ɵɵtextInterpolate(ctx.category == null ? null : ctx.category.name);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("ngIf", ctx.category.items && ctx.category.items.length)("ngIfElse", _r1);
+          i0.ɵɵproperty("ngIf", ctx.category.availableItems && ctx.category.availableItems.length)("ngIfElse", _r1);
         }
       },
       directives: [i1.MatButton, i2.IconComponent, i3.NgIf, i3.NgForOf, i4.CateringMenuItemComponent],
@@ -26874,8 +26886,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var I18N_1;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-      var MSG_EXTERNAL_3278355766885608724$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___2 = goog.getMsg("{VAR_PLURAL, plural, =1 {Contains {INTERPOLATION} item } other {Contains {INTERPOLATION} items }}");
-      I18N_1 = MSG_EXTERNAL_3278355766885608724$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___2;
+      var MSG_EXTERNAL_2616675308033337849$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___2 = goog.getMsg("{VAR_PLURAL, plural, =1 {Contains {INTERPOLATION} item } other {Contains {INTERPOLATION} items }}");
+      I18N_1 = MSG_EXTERNAL_2616675308033337849$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___2;
     } else {
       I18N_1 = $localize(_templateObject68());
     }
@@ -26890,10 +26902,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Catering order item available options label
        */
-      var MSG_EXTERNAL_7552499218458333923$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___3 = goog.getMsg(" {$icu} ", {
+      var MSG_EXTERNAL_6971522583297058037$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___3 = goog.getMsg(" {$icu} ", {
         "icu": I18N_1
       });
-      I18N_0 = MSG_EXTERNAL_7552499218458333923$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___3;
+      I18N_0 = MSG_EXTERNAL_6971522583297058037$$SRC_APP_SHELL_BOOKINGS_SPACE_FLOW_CATERING_ORDER_DETAILS_ITEM_ITEM_COMPONENT_TS___3;
     } else {
       I18N_0 = $localize(_templateObject69(), I18N_1);
     }
@@ -26909,7 +26921,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var ctx_r4 = i0.ɵɵnextContext(2);
         i0.ɵɵproperty("matTooltip", ctx_r4.contents);
         i0.ɵɵadvance(1);
-        i0.ɵɵi18nExp(ctx_r4.item.items.length)(ctx_r4.item.items.length);
+        i0.ɵɵi18nExp(ctx_r4.item.availableItems.length)(ctx_r4.item.availableItems.length);
         i0.ɵɵi18nApply(1);
       }
     }
@@ -27070,7 +27082,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx_r0.item.unit_price);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.item["package"] && ctx_r0.item.items.length && !ctx_r0.item.must_select);
+        i0.ɵɵproperty("ngIf", ctx_r0.item["package"] && ctx_r0.item.availableItems.length && !ctx_r0.item.must_select);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.item["package"] && ctx_r0.item.must_select && ctx_r0.item.amount > 0);
         i0.ɵɵadvance(1);
@@ -27078,9 +27090,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r0.item.unit_price);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", !ctx_r0.item.items || ctx_r0.item["package"]);
+        i0.ɵɵproperty("ngIf", !ctx_r0.item.availableItems || ctx_r0.item["package"]);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.item.items && ctx_r0.item.items.length && !ctx_r0.item["package"]);
+        i0.ɵɵproperty("ngIf", ctx_r0.item.availableItems && ctx_r0.item.availableItems.length && !ctx_r0.item["package"]);
       }
     }
 
@@ -27345,7 +27357,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("@show", ctx.show_children ? "show" : "hide");
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("ngForOf", ctx.item.items);
+          i0.ɵɵproperty("ngForOf", ctx.item.availableItems);
         }
       },
       directives: [i3.NgIf, i3.NgForOf, i4.MatTooltip, i5.MatButton, i6.CounterComponent, i7.NgControlStatus, i7.NgModel, i8.IconComponent, CateringMenuItemComponent],
@@ -28176,6 +28188,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this134.loading = false;
             _this134.category_list = list.map(function (i) {
               return new catering_category_class_1.CateringCategory(i);
+            }).filter(function (c) {
+              return !c.out_of_stock;
             });
           }, function () {
             return _this134.loading = false;
@@ -39497,16 +39511,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "a3345bd",
-      "hash": "a3345bd",
+      "raw": "d581205",
+      "hash": "d581205",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "a3345bd",
+      "suffix": "d581205",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1600957279160
+      "time": 1600957452921
     };
     /* tslint:enable */
 
