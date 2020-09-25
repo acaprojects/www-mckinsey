@@ -18889,7 +18889,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function TopbarHeaderComponent_div_5_i_1_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "i");
+        i0.ɵɵelementStart(0, "i", 14);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
       }
@@ -18904,7 +18904,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function TopbarHeaderComponent_div_5_img_2_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelement(0, "img", 14);
+        i0.ɵɵelement(0, "img", 15);
         i0.ɵɵpipe(1, "safe");
       }
 
@@ -19050,7 +19050,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature],
       decls: 12,
       vars: 7,
-      consts: [[1, "block", "home"], ["mat-icon-button", "", "name", "home-button", 1, "home-button", 3, "click"], ["src", "assets/img/home.svg"], [1, "block", "company-logo-container"], ["class", "logo", 4, "ngIf"], [1, "block", "actions-container"], ["mat-icon-button", "", "name", "feedback-button", "matTooltip", "Feedback", 1, "feedback-button"], [1, "action-link", 3, "href"], ["src", "assets/img/chat.svg", "alt", "Feedback Icon"], ["mat-icon-button", "", "name", "help-button", "matTooltip", "Help", 1, "help-button", 3, "click"], ["src", "assets/img/question.svg", "alt", "Help Icon"], [1, "logo"], [3, "class", 4, "ngIf"], [3, "src", 4, "ngIf"], [3, "src"]],
+      consts: [[1, "block", "home"], ["mat-icon-button", "", "name", "home-button", 1, "home-button", 3, "click"], ["src", "assets/img/home.svg"], [1, "block", "company-logo-container"], ["class", "logo", 4, "ngIf"], [1, "block", "actions-container"], ["mat-icon-button", "", "name", "feedback-button", "matTooltip", "Feedback", 1, "feedback-button"], [1, "action-link", 3, "href"], ["src", "assets/img/chat.svg", "alt", "Feedback Icon"], ["mat-icon-button", "", "name", "help-button", "matTooltip", "Help", 1, "help-button", 3, "click"], ["src", "assets/img/question.svg", "alt", "Help Icon"], [1, "logo"], ["aria-label", "McKinsey & Company", 3, "class", 4, "ngIf"], ["aria-label", "McKinsey & Company", 3, "src", 4, "ngIf"], ["aria-label", "McKinsey & Company"], ["aria-label", "McKinsey & Company", 3, "src"]],
       template: function TopbarHeaderComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div");
@@ -19106,7 +19106,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: core_1.Component,
         args: [{
           selector: 'a-topbar-header',
-          template: "\n        <div [class]=\"'topbar-header ' + page\">\n            <div class=\"block home\">\n                <button mat-icon-button name=\"home-button\" class=\"home-button\"\n                        [attr.aria-label]=\"'Home'\"\n                        (click)=\"goToHome()\">\n                    <img src=\"assets/img/home.svg\"/>\n                </button>\n            </div>\n            <div class=\"block company-logo-container\">\n                <div class=\"logo\" *ngIf=\"logo\">\n                    <i *ngIf=\"logo.type === 'icon'\" [class]=\"logo.class\">{{ logo.content }}</i>\n                    <img *ngIf=\"logo.type === 'img'\" [src]=\"logo.src | safe: 'resource'\"/>\n                </div>\n            </div>\n            <div class=\"block actions-container\">\n                <button mat-icon-button name=\"feedback-button\" class=\"feedback-button\"\n                        matTooltip=\"Feedback\"\n                        [attr.aria-label]=\"'Feedback'\">\n                    <a [href]=\"feedback\" class=\"action-link\">\n                        <img src=\"assets/img/chat.svg\" alt=\"Feedback Icon\"/>\n                    </a>\n                </button>\n                <button mat-icon-button name=\"help-button\" class=\"help-button\"\n                        matTooltip=\"Help\"\n                        [attr.aria-label]=\"'Help'\"\n                        (click)=\"goToHelp()\">\n                    <img src=\"assets/img/question.svg\" alt=\"Help Icon\"/>\n                </button>\n            </div>\n        </div>\n    ",
+          template: "\n        <div [class]=\"'topbar-header ' + page\">\n            <div class=\"block home\">\n                <button mat-icon-button name=\"home-button\" class=\"home-button\"\n                        [attr.aria-label]=\"'Home'\"\n                        (click)=\"goToHome()\">\n                    <img src=\"assets/img/home.svg\"/>\n                </button>\n            </div>\n            <div class=\"block company-logo-container\">\n                <div class=\"logo\" *ngIf=\"logo\">\n                    <i *ngIf=\"logo.type === 'icon'\" [class]=\"logo.class\"\n                       aria-label=\"McKinsey & Company\">{{ logo.content }}</i>\n                    <img *ngIf=\"logo.type === 'img'\" [src]=\"logo.src | safe: 'resource'\"\n                         aria-label=\"McKinsey & Company\"\n                    />\n                </div>\n            </div>\n            <div class=\"block actions-container\">\n                <button mat-icon-button name=\"feedback-button\" class=\"feedback-button\"\n                        matTooltip=\"Feedback\"\n                        [attr.aria-label]=\"'Feedback'\">\n                    <a [href]=\"feedback\" class=\"action-link\">\n                        <img src=\"assets/img/chat.svg\" alt=\"Feedback Icon\"/>\n                    </a>\n                </button>\n                <button mat-icon-button name=\"help-button\" class=\"help-button\"\n                        matTooltip=\"Help\"\n                        [attr.aria-label]=\"'Help'\"\n                        (click)=\"goToHelp()\">\n                    <img src=\"assets/img/question.svg\" alt=\"Help Icon\"/>\n                </button>\n            </div>\n        </div>\n    ",
           styleUrls: ['./topbar-header.component.scss']
         }]
       }], function () {
@@ -29882,13 +29882,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingFindSpaceComponent_ng_container_5_cdk_virtual_scroll_viewport_1_ng_container_1_Template(rf, ctx) {
+    function BookingFindSpaceComponent_ng_container_6_cdk_virtual_scroll_viewport_1_ng_container_1_Template(rf, ctx) {
       if (rf & 1) {
         var _r14 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementContainerStart(0);
         i0.ɵɵelementStart(1, "a-booking-space-item", 16);
-        i0.ɵɵlistener("select", function BookingFindSpaceComponent_ng_container_5_cdk_virtual_scroll_viewport_1_ng_container_1_Template_a_booking_space_item_select_1_listener() {
+        i0.ɵɵlistener("select", function BookingFindSpaceComponent_ng_container_6_cdk_virtual_scroll_viewport_1_ng_container_1_Template_a_booking_space_item_select_1_listener() {
           i0.ɵɵrestoreView(_r14);
           var space_r12 = ctx.$implicit;
           var ctx_r13 = i0.ɵɵnextContext(3);
@@ -29906,10 +29906,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingFindSpaceComponent_ng_container_5_cdk_virtual_scroll_viewport_1_Template(rf, ctx) {
+    function BookingFindSpaceComponent_ng_container_6_cdk_virtual_scroll_viewport_1_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 14);
-        i0.ɵɵtemplate(1, BookingFindSpaceComponent_ng_container_5_cdk_virtual_scroll_viewport_1_ng_container_1_Template, 2, 3, "ng-container", 15);
+        i0.ɵɵtemplate(1, BookingFindSpaceComponent_ng_container_6_cdk_virtual_scroll_viewport_1_ng_container_1_Template, 2, 3, "ng-container", 15);
         i0.ɵɵelementEnd();
       }
 
@@ -29921,17 +29921,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingFindSpaceComponent_ng_container_5_Template(rf, ctx) {
+    function BookingFindSpaceComponent_ng_container_6_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, BookingFindSpaceComponent_ng_container_5_cdk_virtual_scroll_viewport_1_Template, 2, 2, "cdk-virtual-scroll-viewport", 13);
+        i0.ɵɵtemplate(1, BookingFindSpaceComponent_ng_container_6_cdk_virtual_scroll_viewport_1_Template, 2, 2, "cdk-virtual-scroll-viewport", 13);
         i0.ɵɵelementContainerEnd();
       }
 
       if (rf & 2) {
         var ctx_r1 = i0.ɵɵnextContext();
 
-        var _r5 = i0.ɵɵreference(14);
+        var _r5 = i0.ɵɵreference(15);
 
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx_r1.space_list && ctx_r1.space_list.length && ctx_r1.hasLoaded)("ngIfElse", ctx_r1.hasLoaded && _r5);
@@ -29950,12 +29950,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       I18N_2 = $localize(_templateObject88());
     }
 
-    function BookingFindSpaceComponent_button_10_Template(rf, ctx) {
+    function BookingFindSpaceComponent_button_11_Template(rf, ctx) {
       if (rf & 1) {
         var _r16 = i0.ɵɵgetCurrentView();
 
         i0.ɵɵelementStart(0, "button", 17);
-        i0.ɵɵlistener("click", function BookingFindSpaceComponent_button_10_Template_button_click_0_listener() {
+        i0.ɵɵlistener("click", function BookingFindSpaceComponent_button_11_Template_button_click_0_listener() {
           i0.ɵɵrestoreView(_r16);
           var ctx_r15 = i0.ɵɵnextContext();
           return ctx_r15.next();
@@ -29982,7 +29982,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       I18N_4 = $localize(_templateObject89());
     }
 
-    function BookingFindSpaceComponent_ng_template_11_Template(rf, ctx) {
+    function BookingFindSpaceComponent_ng_template_12_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 18);
         i0.ɵɵelementStart(1, "div", 19);
@@ -29997,7 +29997,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingFindSpaceComponent_ng_template_13_Template(rf, ctx) {
+    function BookingFindSpaceComponent_ng_template_14_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelement(0, "app-informational-image", 23);
       }
@@ -30341,8 +30341,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         event: "event"
       },
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
-      decls: 15,
-      vars: 6,
+      decls: 16,
+      vars: 8,
       consts: [[1, "find-space"], [1, "background"], [1, "header"], [3, "date", "locations", "locationsChange"], [3, "mode", "message", "buttonText", "close", "action", 4, "ngIf"], [4, "ngIf", "ngIfElse"], [1, "footer"], [1, "box"], ["mat-button", "", "name", "previous", 1, "inverse", 3, "click"], ["mat-button", "", "name", "next", 3, "disabled", "click", 4, "ngIf"], ["load_state", ""], ["empty_state", ""], [3, "mode", "message", "buttonText", "close", "action"], ["minBufferPx", "900", "maxBufferPx", "1200", 3, "itemSize", 4, "ngIf", "ngIfElse"], ["minBufferPx", "900", "maxBufferPx", "1200", 3, "itemSize"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [3, "form", "space", "multi", "select"], ["mat-button", "", "name", "next", 3, "disabled", "click"], [1, "body"], [1, "info-block", "center"], [1, "icon"], ["diameter", "48"], [1, "text"], ["src", "assets/img/no_space_results.svg"]],
       template: function BookingFindSpaceComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -30357,32 +30357,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
           i0.ɵɵelementEnd();
           i0.ɵɵtemplate(4, BookingFindSpaceComponent_app_alert_banner_4_Template, 3, 7, "app-alert-banner", 4);
+          i0.ɵɵpipe(5, "async");
           i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(5, BookingFindSpaceComponent_ng_container_5_Template, 2, 2, "ng-container", 5);
-          i0.ɵɵelementStart(6, "div", 6);
-          i0.ɵɵelementStart(7, "div", 7);
-          i0.ɵɵelementStart(8, "button", 8);
-          i0.ɵɵlistener("click", function BookingFindSpaceComponent_Template_button_click_8_listener() {
+          i0.ɵɵtemplate(6, BookingFindSpaceComponent_ng_container_6_Template, 2, 2, "ng-container", 5);
+          i0.ɵɵelementStart(7, "div", 6);
+          i0.ɵɵelementStart(8, "div", 7);
+          i0.ɵɵelementStart(9, "button", 8);
+          i0.ɵɵlistener("click", function BookingFindSpaceComponent_Template_button_click_9_listener() {
             return ctx.previous();
           });
-          i0.ɵɵi18n(9, I18N_0);
+          i0.ɵɵi18n(10, I18N_0);
           i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(10, BookingFindSpaceComponent_button_10_Template, 2, 1, "button", 9);
+          i0.ɵɵtemplate(11, BookingFindSpaceComponent_button_11_Template, 2, 1, "button", 9);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(11, BookingFindSpaceComponent_ng_template_11_Template, 6, 0, "ng-template", null, 10, i0.ɵɵtemplateRefExtractor);
-          i0.ɵɵtemplate(13, BookingFindSpaceComponent_ng_template_13_Template, 1, 0, "ng-template", null, 11, i0.ɵɵtemplateRefExtractor);
+          i0.ɵɵtemplate(12, BookingFindSpaceComponent_ng_template_12_Template, 6, 0, "ng-template", null, 10, i0.ɵɵtemplateRefExtractor);
+          i0.ɵɵtemplate(14, BookingFindSpaceComponent_ng_template_14_Template, 1, 0, "ng-template", null, 11, i0.ɵɵtemplateRefExtractor);
         }
 
         if (rf & 2) {
-          var _r3 = i0.ɵɵreference(12);
+          var _r3 = i0.ɵɵreference(13);
 
           i0.ɵɵadvance(3);
           i0.ɵɵproperty("date", ctx.form == null ? null : ctx.form.controls == null ? null : ctx.form.controls.date)("locations", ctx.zone_ids);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("ngIf", !ctx.loading && !(ctx.space_list == null ? null : ctx.space_list.length) && ctx.showBanner && ctx.hasLoaded);
-          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("ngIf", !ctx.loading && !(ctx.space_list == null ? null : ctx.space_list.length) && i0.ɵɵpipeBind1(5, 6, ctx.showBanner) && ctx.hasLoaded);
+          i0.ɵɵadvance(2);
           i0.ɵɵproperty("ngIf", !ctx.loading)("ngIfElse", _r3);
           i0.ɵɵadvance(5);
           i0.ɵɵproperty("ngIf", ctx.multiple);
@@ -39511,16 +39512,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "531b9b3",
-      "hash": "531b9b3",
+      "raw": "cb7b0db",
+      "hash": "cb7b0db",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "531b9b3",
+      "suffix": "cb7b0db",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601068983211
+      "time": 1601069964020
     };
     /* tslint:enable */
 
