@@ -4748,7 +4748,7 @@ class CateringItem {
         this.items = cateringItems;
         const filteredCateringItems = cateringItems.filter(c => !c.out_of_stock);
         this.availableItems = filteredCateringItems;
-        this.out_of_stock = !!data.out_of_stock || data.hide ||
+        this.out_of_stock = !!data.out_of_stock ||
             // if original items are empty, we hit the bottom, so if we filter out items then its out of stock.
             (cateringItems.length > 0 && filteredCateringItems.length === 0);
         this.package = data.package === 'true' || data.package === true;
@@ -4820,7 +4820,6 @@ class CateringItem {
         delete obj._server_names;
         // Convert remaining members to be public
         obj.price = obj.unit_price;
-        obj.hide = obj.out_of_stock;
         obj.categories = obj.parent_categories;
         const keys = Object.keys(obj);
         for (const key of keys) {
@@ -22247,16 +22246,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "c830859",
-    "hash": "c830859",
+    "raw": "531b9b3",
+    "hash": "531b9b3",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "c830859",
+    "suffix": "531b9b3",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1600977703182
+    "time": 1601068983211
 };
 /* tslint:enable */
 
