@@ -5221,6 +5221,10 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
     }
     set booking(booking) {
         this._data.booking = booking;
+        // if space selected no longer exists on booking change, pick first one.
+        if (!this._data.booking.space_list.find(s => { var _a; return s.id === ((_a = this._data.space) === null || _a === void 0 ? void 0 : _a.id); })) {
+            this._data.space = this._data.booking.space_list[0];
+        }
     }
     /** Space to display booking details for */
     get space() {
@@ -26282,16 +26286,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "2410d29",
-    "hash": "2410d29",
+    "raw": "1949b31",
+    "hash": "1949b31",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "2410d29",
+    "suffix": "1949b31",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601297911050
+    "time": 1601323574743
 };
 /* tslint:enable */
 
