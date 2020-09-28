@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1601323113815,
+  "timestamp": 1601326913342,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -116,6 +116,7 @@
         "/staff/assets/img/catering/refreshments.jpg",
         "/staff/assets/img/chat.svg",
         "/staff/assets/img/close_outline.svg",
+        "/staff/assets/img/close_outline_coachmark.svg",
         "/staff/assets/img/coffee.svg",
         "/staff/assets/img/concierge.svg",
         "/staff/assets/img/confirmed.svg",
@@ -372,6 +373,7 @@
     "/staff/assets/img/catering/refreshments.jpg": "4d7d09d70ea01fc47815537b384d759f9ff398b6",
     "/staff/assets/img/chat.svg": "af9f1f2c495ecfea651c511c495571e83d331dc1",
     "/staff/assets/img/close_outline.svg": "099d3d28bf8764f685a0d2749da07d04bb767611",
+    "/staff/assets/img/close_outline_coachmark.svg": "70b3fc283d9e02cdbc0351e4be4ef7e57161f369",
     "/staff/assets/img/coffee.svg": "8aae8d94029b017c4c24cb1c80423496b7d768da",
     "/staff/assets/img/concierge.svg": "c1e47bb9084a2ce32c86595768b33b38e54b88bc",
     "/staff/assets/img/confirmed.svg": "773a4395ab76b41c12d923e3e63ebf7177173654",
@@ -502,8 +504,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "4fb3c343360dd0e732f66b78aa59ec3dacd73693",
-    "/staff/main-es5.js": "ad775b35ceeb85400a7da4e7835f4d665e4c242f",
+    "/staff/main-es2015.js": "8406992141162e81b7cb62c24bd6629a3afa3086",
+    "/staff/main-es5.js": "cd1486033c4add4099a9de68fc4f94033e70658b",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
