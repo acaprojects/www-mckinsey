@@ -30124,7 +30124,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               // count if a booking was filtered out for rule, or availability
               // we will change the mode to match whichever is largest.
               var rulesCount = 0;
-              var availableCount = 0;
               _this141.space_list = list.filter(function (space) {
                 var rules = space.rulesFor({
                   date: _this141.form.controls.date.value,
@@ -30132,11 +30131,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   host: _this141.form.controls.organiser.value
                 });
                 var hide = rules.hide;
-                var spaceNotAvailable = !space.was_available;
 
-                if (hide || spaceNotAvailable) {
+                if (hide) {
                   rulesCount += hide ? 1 : 0;
-                  availableCount += spaceNotAvailable ? 1 : 0;
                   return false;
                 }
 
@@ -30166,7 +30163,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               if (rulesCount > 0 && !_this141.space_list.length) {
                 _this141.bannerMode.next(BannerMode.OfficeRules);
-              } else if (availableCount > 0 && !_this141.space_list.length) {
+              } else if (!_this141.space_list.length) {
                 _this141.bannerMode.next(BannerMode.SearchFilters);
               } else {
                 _this141.bannerMode.next(BannerMode.None);
@@ -39512,16 +39509,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "cb7b0db",
-      "hash": "cb7b0db",
+      "raw": "883c78d",
+      "hash": "883c78d",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "cb7b0db",
+      "suffix": "883c78d",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601069964020
+      "time": 1601322803289
     };
     /* tslint:enable */
 

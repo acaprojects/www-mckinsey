@@ -17059,7 +17059,6 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 // count if a booking was filtered out for rule, or availability
                 // we will change the mode to match whichever is largest.
                 let rulesCount = 0;
-                let availableCount = 0;
                 this.space_list = list.filter((space) => {
                     const rules = space.rulesFor({
                         date: this.form.controls.date.value,
@@ -17069,10 +17068,8 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                         host: this.form.controls.organiser.value,
                     });
                     const hide = rules.hide;
-                    const spaceNotAvailable = !space.was_available;
-                    if (hide || spaceNotAvailable) {
+                    if (hide) {
                         rulesCount += hide ? 1 : 0;
-                        availableCount += spaceNotAvailable ? 1 : 0;
                         return false;
                     }
                     for (const zone of this.zone_ids) {
@@ -17086,7 +17083,7 @@ class BookingFindSpaceComponent extends base_directive_1.BaseDirective {
                 if (rulesCount > 0 && !this.space_list.length) {
                     this.bannerMode.next(BannerMode.OfficeRules);
                 }
-                else if (availableCount > 0 && !this.space_list.length) {
+                else if (!this.space_list.length) {
                     this.bannerMode.next(BannerMode.SearchFilters);
                 }
                 else {
@@ -22250,16 +22247,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "cb7b0db",
-    "hash": "cb7b0db",
+    "raw": "883c78d",
+    "hash": "883c78d",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "cb7b0db",
+    "suffix": "883c78d",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601069964020
+    "time": 1601322803289
 };
 /* tslint:enable */
 
