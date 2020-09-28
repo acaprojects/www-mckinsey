@@ -17855,7 +17855,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return !c.out_of_stock;
         });
         this.availableItems = filteredCateringItems;
-        this.out_of_stock = !!data.out_of_stock || data.hide || // if original items are empty, we hit the bottom, so if we filter out items then its out of stock.
+        this.out_of_stock = !!data.out_of_stock || // if original items are empty, we hit the bottom, so if we filter out items then its out of stock.
         cateringItems.length > 0 && filteredCateringItems.length === 0;
         this["package"] = data["package"] === 'true' || data["package"] === true;
         this.zones = data.zones && data.zones.length ? _toConsumableArray(data.zones) : [];
@@ -17929,7 +17929,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           delete obj._server_names; // Convert remaining members to be public
 
           obj.price = obj.unit_price;
-          obj.hide = obj.out_of_stock;
           obj.categories = obj.parent_categories;
           var keys = Object.keys(obj);
 
@@ -18406,6 +18405,65 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.CateringOrder = CateringOrder;
     /***/
+  },
+
+  /***/
+  "./src/app/services/data/catering/catering.utilities.ts":
+  /*!**************************************************************!*\
+    !*** ./src/app/services/data/catering/catering.utilities.ts ***!
+    \**************************************************************/
+
+  /*! no static exports found */
+
+  /***/
+  function srcAppServicesDataCateringCateringUtilitiesTs(module, exports, __webpack_require__) {
+    "use strict";
+
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+
+    var forms_1 = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+
+    var dayjs = __webpack_require__(
+    /*! dayjs */
+    "./node_modules/dayjs/dayjs.min.js");
+
+    var catering_item_class_1 = __webpack_require__(
+    /*! ./catering-item.class */
+    "./src/app/services/data/catering/catering-item.class.ts");
+
+    function generateCateringOrderFormFields(order) {
+      var form = new forms_1.FormGroup({
+        items: new forms_1.FormControl(order.items && order.items.length ? _toConsumableArray(order.items) : [], [forms_1.Validators.required]),
+        delivery_time: new forms_1.FormControl(order.delivery_time || dayjs().startOf('m').valueOf(), [forms_1.Validators.required]),
+        location_id: new forms_1.FormControl(order.location_id || '', [forms_1.Validators.required]),
+        charge_code: new forms_1.FormControl(order.charge_code || '', [forms_1.Validators.required]),
+        notes: new forms_1.FormControl(order.notes || '')
+      });
+
+      var _loop6 = function _loop6(key) {
+        form.controls[key].valueChanges.subscribe(function (value) {
+          return order.storePendingChanges(key, value);
+        });
+      };
+
+      for (var key in form.controls) {
+        _loop6(key);
+      }
+
+      return form;
+    }
+
+    exports.generateCateringOrderFormFields = generateCateringOrderFormFields;
+
+    exports.mergeCateringItemWithFormData = function (existing, override) {
+      return new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, existing instanceof catering_item_class_1.CateringItem ? existing.toJSON() : existing), override));
+    };
+    /***/
+
   },
 
   /***/
@@ -36268,10 +36326,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/services/app.service */
     "./src/app/services/app.service.ts");
 
-    var catering_item_class_1 = __webpack_require__(
-    /*! src/app/services/data/catering/catering-item.class */
-    "./src/app/services/data/catering/catering-item.class.ts");
-
     var catering_items_service_1 = __webpack_require__(
     /*! src/app/services/data/catering/catering-items.service */
     "./src/app/services/data/catering/catering-items.service.ts");
@@ -36279,6 +36333,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var confirm_modal_component_1 = __webpack_require__(
     /*! src/app/overlays/confirm-modal/confirm-modal.component */
     "./src/app/overlays/confirm-modal/confirm-modal.component.ts");
+
+    var catering_utilities_1 = __webpack_require__(
+    /*! ../../../../services/data/catering/catering.utilities */
+    "./src/app/services/data/catering/catering.utilities.ts");
 
     var i0 = __webpack_require__(
     /*! @angular/core */
@@ -36649,7 +36707,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /* istanbul ignore else */
 
           if (this.form.valid) {
-            var data = new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, this.item instanceof catering_item_class_1.CateringItem ? this.item.toJSON() : this.item), this.form.value)).toJSON();
+            var data = catering_utilities_1.mergeCateringItemWithFormData(this.item, this.form.value).toJSON();
             var request = this.item.id ? this._menu_items.update(this.item.id, data) : this._menu_items.add(data);
             request.then(function (item) {
               _this178.event.emit({
@@ -40923,7 +40981,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _step61;
 
           try {
-            var _loop6 = function _loop6() {
+            var _loop7 = function _loop7() {
               var bkn = _step61.value;
               var bkn_start = dayjs(bkn.date).startOf('m');
               var bkn_end = dayjs(bkn_start).add(bkn.duration, 'm').startOf('m');
@@ -40935,7 +40993,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   _step62;
 
               try {
-                var _loop7 = function _loop7() {
+                var _loop8 = function _loop8() {
                   var cmp = _step62.value;
 
                   /* istanbul ignore else */
@@ -40961,7 +41019,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 };
 
                 for (_iterator62.s(); !(_step62 = _iterator62.n()).done;) {
-                  _loop7();
+                  _loop8();
                 }
               } catch (err) {
                 _iterator62.e(err);
@@ -40976,7 +41034,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
 
             for (_iterator61.s(); !(_step61 = _iterator61.n()).done;) {
-              _loop6();
+              _loop7();
             }
           } catch (err) {
             _iterator61.e(err);
@@ -47963,16 +48021,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "5cdd6c7",
-      "hash": "5cdd6c7",
+      "raw": "2410d29",
+      "hash": "2410d29",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "5cdd6c7",
+      "suffix": "2410d29",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1600957468353
+      "time": 1601297911050
     };
     /* tslint:enable */
 

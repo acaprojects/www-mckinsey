@@ -9643,7 +9643,7 @@ class CateringItem {
         this.items = cateringItems;
         const filteredCateringItems = cateringItems.filter(c => !c.out_of_stock);
         this.availableItems = filteredCateringItems;
-        this.out_of_stock = !!data.out_of_stock || data.hide ||
+        this.out_of_stock = !!data.out_of_stock ||
             // if original items are empty, we hit the bottom, so if we filter out items then its out of stock.
             (cateringItems.length > 0 && filteredCateringItems.length === 0);
         this.package = data.package === 'true' || data.package === true;
@@ -9715,7 +9715,6 @@ class CateringItem {
         delete obj._server_names;
         // Convert remaining members to be public
         obj.price = obj.unit_price;
-        obj.hide = obj.out_of_stock;
         obj.categories = obj.parent_categories;
         const keys = Object.keys(obj);
         for (const key of keys) {
@@ -9966,6 +9965,38 @@ class CateringOrder {
     }
 }
 exports.CateringOrder = CateringOrder;
+
+
+/***/ }),
+
+/***/ "./src/app/services/data/catering/catering.utilities.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/services/data/catering/catering.utilities.ts ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const catering_item_class_1 = __webpack_require__(/*! ./catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
+function generateCateringOrderFormFields(order) {
+    const form = new forms_1.FormGroup({
+        items: new forms_1.FormControl(order.items && order.items.length ? [...order.items] : [], [forms_1.Validators.required]),
+        delivery_time: new forms_1.FormControl(order.delivery_time || dayjs().startOf('m').valueOf(), [forms_1.Validators.required]),
+        location_id: new forms_1.FormControl(order.location_id || '', [forms_1.Validators.required]),
+        charge_code: new forms_1.FormControl(order.charge_code || '', [forms_1.Validators.required]),
+        notes: new forms_1.FormControl(order.notes || ''),
+    });
+    for (const key in form.controls) {
+        form.controls[key].valueChanges.subscribe((value) => order.storePendingChanges(key, value));
+    }
+    return form;
+}
+exports.generateCateringOrderFormFields = generateCateringOrderFormFields;
+exports.mergeCateringItemWithFormData = (existing, override) => new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, (existing instanceof catering_item_class_1.CateringItem ? existing.toJSON() : existing)), override));
 
 
 /***/ }),
@@ -20051,9 +20082,9 @@ const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angul
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
-const catering_item_class_1 = __webpack_require__(/*! src/app/services/data/catering/catering-item.class */ "./src/app/services/data/catering/catering-item.class.ts");
 const catering_items_service_1 = __webpack_require__(/*! src/app/services/data/catering/catering-items.service */ "./src/app/services/data/catering/catering-items.service.ts");
 const confirm_modal_component_1 = __webpack_require__(/*! src/app/overlays/confirm-modal/confirm-modal.component */ "./src/app/overlays/confirm-modal/confirm-modal.component.ts");
+const catering_utilities_1 = __webpack_require__(/*! ../../../../services/data/catering/catering.utilities */ "./src/app/services/data/catering/catering.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const i2 = __webpack_require__(/*! src/app/services/data/catering/catering-items.service */ "./src/app/services/data/catering/catering-items.service.ts");
@@ -20290,7 +20321,7 @@ class CateringItemModalComponent extends base_directive_1.BaseDirective {
         this.form.markAllAsTouched();
         /* istanbul ignore else */
         if (this.form.valid) {
-            const data = new catering_item_class_1.CateringItem(Object.assign(Object.assign({}, (this.item instanceof catering_item_class_1.CateringItem ? this.item.toJSON() : this.item)), this.form.value)).toJSON();
+            const data = catering_utilities_1.mergeCateringItemWithFormData(this.item, this.form.value).toJSON();
             const request = this.item.id
                 ? this._menu_items.update(this.item.id, data)
                 : this._menu_items.add(data);
@@ -26251,16 +26282,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "5cdd6c7",
-    "hash": "5cdd6c7",
+    "raw": "2410d29",
+    "hash": "2410d29",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "5cdd6c7",
+    "suffix": "2410d29",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1600957468353
+    "time": 1601297911050
 };
 /* tslint:enable */
 
