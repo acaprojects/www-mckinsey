@@ -19363,6 +19363,7 @@ class ExploreSearchComponent extends base_directive_1.BaseDirective {
         }
         /* istanbul ignore else */
         if (changes.level) {
+            this.search_str = '';
             this.search$.next(this.level);
         }
     }
@@ -22258,16 +22259,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "44a05f0",
-    "hash": "44a05f0",
+    "raw": "1812f83",
+    "hash": "1812f83",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "44a05f0",
+    "suffix": "1812f83",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601414429782
+    "time": 1601422214614
 };
 /* tslint:enable */
 
