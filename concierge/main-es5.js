@@ -36910,6 +36910,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Store booking details to be used in another component */
         value: function storeBooking() {
           localStorage.setItem('CONCIERGE.view_booking', JSON.stringify(this.booking.toJSON()));
+          localStorage.setItem('CONCIERGE.view_booking_space', JSON.stringify(this.space.toJSON()));
           localStorage.setItem('CONCIERGE.date', "".concat(this.booking.date));
         }
       }]);
@@ -41468,6 +41469,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/shared/base.directive */
     "./src/app/shared/base.directive.ts");
 
+    var space_class_1 = __webpack_require__(
+    /*! src/app/services/data/spaces/space.class */
+    "./src/app/services/data/spaces/space.class.ts");
+
     var app_service_1 = __webpack_require__(
     /*! src/app/services/app.service */
     "./src/app/services/app.service.ts");
@@ -41874,14 +41879,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (params.has('view')) {
               _this209.view_id = params.get('view');
               var details = localStorage.getItem('CONCIERGE.view_booking');
+              var spaceJson = localStorage.getItem('CONCIERGE.view_booking_space');
               /* istanbul ignore else */
 
               if (details) {
                 var booking = new booking_class_1.Booking(JSON.parse(details));
+                var space = spaceJson ? new space_class_1.Space(JSON.parse(spaceJson)) : undefined;
 
-                _this209.view(booking);
+                _this209.view(booking, space);
 
                 localStorage.removeItem('CONCIERGE.view_booking');
+                localStorage.removeItem('CONCIERGE.view_booking_space');
               }
             }
           }));
@@ -41939,14 +41947,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /**
          * View booking details
          * @param booking Booking to view the details of
+         * @param space Space that's selected.
          */
 
       }, {
         key: "view",
-        value: function view(booking) {
+        value: function view(booking, space) {
           this._dialog.open(meeting_details_modal_component_1.MeetingDetailsModalComponent, {
             data: {
-              space: booking.space,
+              space: space || booking.space,
               booking: booking
             }
           });
@@ -48031,16 +48040,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "1949b31",
-      "hash": "1949b31",
+      "raw": "c59388b",
+      "hash": "c59388b",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "1949b31",
+      "suffix": "c59388b",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601323574743
+      "time": 1601388358308
     };
     /* tslint:enable */
 

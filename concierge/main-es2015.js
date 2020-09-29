@@ -20411,6 +20411,7 @@ class OrderBookingDetailsComponent {
     /** Store booking details to be used in another component */
     storeBooking() {
         localStorage.setItem('CONCIERGE.view_booking', JSON.stringify(this.booking.toJSON()));
+        localStorage.setItem('CONCIERGE.view_booking_space', JSON.stringify(this.space.toJSON()));
         localStorage.setItem('CONCIERGE.date', `${this.booking.date}`);
     }
 }
@@ -22888,6 +22889,7 @@ const router_1 = __webpack_require__(/*! @angular/router */ "./node_modules/@ang
 const dialog_1 = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
 const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
+const space_class_1 = __webpack_require__(/*! src/app/services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
 const app_service_1 = __webpack_require__(/*! src/app/services/app.service */ "./src/app/services/app.service.ts");
 const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const meeting_details_modal_component_1 = __webpack_require__(/*! src/app/overlays/meeting-details-modal/meeting-details-modal.component */ "./src/app/overlays/meeting-details-modal/meeting-details-modal.component.ts");
@@ -23112,11 +23114,14 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
             if (params.has('view')) {
                 this.view_id = params.get('view');
                 const details = localStorage.getItem('CONCIERGE.view_booking');
+                const spaceJson = localStorage.getItem('CONCIERGE.view_booking_space');
                 /* istanbul ignore else */
                 if (details) {
                     const booking = new booking_class_1.Booking(JSON.parse(details));
-                    this.view(booking);
+                    const space = spaceJson ? new space_class_1.Space(JSON.parse(spaceJson)) : undefined;
+                    this.view(booking, space);
                     localStorage.removeItem('CONCIERGE.view_booking');
+                    localStorage.removeItem('CONCIERGE.view_booking_space');
                 }
             }
         }));
@@ -23160,11 +23165,12 @@ class DayViewTimelineComponent extends base_directive_1.BaseDirective {
     /**
      * View booking details
      * @param booking Booking to view the details of
+     * @param space Space that's selected.
      */
-    view(booking) {
+    view(booking, space) {
         this._dialog.open(meeting_details_modal_component_1.MeetingDetailsModalComponent, {
             data: {
-                space: booking.space,
+                space: space || booking.space,
                 booking,
             },
         });
@@ -26286,16 +26292,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "1949b31",
-    "hash": "1949b31",
+    "raw": "c59388b",
+    "hash": "c59388b",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "1949b31",
+    "suffix": "c59388b",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601323574743
+    "time": 1601388358308
 };
 /* tslint:enable */
 
