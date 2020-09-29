@@ -39522,16 +39522,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "87e3b20",
-      "hash": "87e3b20",
+      "raw": "44a05f0",
+      "hash": "44a05f0",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "87e3b20",
+      "suffix": "44a05f0",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601411685651
+      "time": 1601414429782
     };
     /* tslint:enable */
 
