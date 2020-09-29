@@ -38409,6 +38409,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
 
+    var booking_class_1 = __webpack_require__(
+    /*! src/app/services/data/bookings/booking.class */
+    "./src/app/services/data/bookings/booking.class.ts");
+
     var base_directive_1 = __webpack_require__(
     /*! src/app/shared/base.directive */
     "./src/app/shared/base.directive.ts");
@@ -38547,9 +38551,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Observable for tentative events */
 
         _this186.events = _this186._bookings.filtered.pipe(operators_1.map(function (bookings) {
-          return bookings.filter(function (bkn) {
+          var list = bookings.filter(function (bkn) {
             return bkn.tentative;
           });
+          var length = list.length;
+
+          for (var _i15 = 0; _i15 < length; _i15++) {
+            var ids = Object.keys(list[_i15].approval_status);
+
+            var _loop7 = function _loop7() {
+              var id = _ids[_i16];
+
+              if (list[_i15].approval_status[id].includes('tentative') && list[_i15].space.email !== id) {
+                var obj = new booking_class_1.Booking(list[_i15]).toJSON();
+                var room_ids = obj.room_ids.filter(function (i) {
+                  return i !== id;
+                });
+                room_ids.unshift(id);
+                console.log(Object.assign(Object.assign({}, obj), {
+                  room_ids: room_ids
+                }));
+                list.push(new booking_class_1.Booking(Object.assign(Object.assign({}, obj), {
+                  room_ids: room_ids
+                })));
+              }
+            };
+
+            for (var _i16 = 0, _ids = ids; _i16 < _ids.length; _i16++) {
+              _loop7();
+            }
+          }
+
+          list.sort(function (a, b) {
+            return a.date - b.date;
+          });
+          return list;
         }));
         return _this186;
       }
@@ -40992,7 +41028,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _step61;
 
           try {
-            var _loop7 = function _loop7() {
+            var _loop8 = function _loop8() {
               var bkn = _step61.value;
               var bkn_start = dayjs(bkn.date).startOf('m');
               var bkn_end = dayjs(bkn_start).add(bkn.duration, 'm').startOf('m');
@@ -41004,7 +41040,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   _step62;
 
               try {
-                var _loop8 = function _loop8() {
+                var _loop9 = function _loop9() {
                   var cmp = _step62.value;
 
                   /* istanbul ignore else */
@@ -41030,7 +41066,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 };
 
                 for (_iterator62.s(); !(_step62 = _iterator62.n()).done;) {
-                  _loop8();
+                  _loop9();
                 }
               } catch (err) {
                 _iterator62.e(err);
@@ -41045,7 +41081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
 
             for (_iterator61.s(); !(_step61 = _iterator61.n()).done;) {
-              _loop7();
+              _loop8();
             }
           } catch (err) {
             _iterator61.e(err);
@@ -41926,10 +41962,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var blocks = [];
           var date = dayjs().startOf('h');
 
-          for (var _i15 = 0; _i15 < 24; _i15++) {
+          for (var _i17 = 0; _i17 < 24; _i17++) {
             blocks.push({
-              id: date.hour(_i15).format('HH:mm'),
-              name: date.hour(_i15).format('h:mm A')
+              id: date.hour(_i17).format('HH:mm'),
+              name: date.hour(_i17).format('h:mm A')
             });
           }
 
@@ -48040,16 +48076,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "0003a5c",
-      "hash": "0003a5c",
+      "raw": "715a5a5",
+      "hash": "715a5a5",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "0003a5c",
+      "suffix": "715a5a5",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601411450895
+      "time": 1601422894265
     };
     /* tslint:enable */
 

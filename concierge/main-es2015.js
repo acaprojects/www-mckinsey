@@ -21205,6 +21205,7 @@ OrderDetailsModalComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OrderDetailsMo
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+const booking_class_1 = __webpack_require__(/*! src/app/services/data/bookings/booking.class */ "./src/app/services/data/bookings/booking.class.ts");
 const base_directive_1 = __webpack_require__(/*! src/app/shared/base.directive */ "./src/app/shared/base.directive.ts");
 const spaces_service_1 = __webpack_require__(/*! src/app/services/data/spaces/spaces.service */ "./src/app/services/data/spaces/spaces.service.ts");
 const booking_state_service_1 = __webpack_require__(/*! src/app/services/data/bookings/booking-state.service */ "./src/app/services/data/bookings/booking-state.service.ts");
@@ -21277,7 +21278,24 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
         /** List of spaces to check for pending approvals */
         this.space_list = [];
         /** Observable for tentative events */
-        this.events = this._bookings.filtered.pipe(operators_1.map((bookings) => bookings.filter((bkn) => bkn.tentative)));
+        this.events = this._bookings.filtered.pipe(operators_1.map((bookings) => {
+            const list = bookings.filter((bkn) => bkn.tentative);
+            const length = list.length;
+            for (let i = 0; i < length; i++) {
+                const ids = Object.keys(list[i].approval_status);
+                for (const id of ids) {
+                    if (list[i].approval_status[id].includes('tentative') && list[i].space.email !== id) {
+                        const obj = new booking_class_1.Booking(list[i]).toJSON();
+                        const room_ids = obj.room_ids.filter(i => i !== id);
+                        room_ids.unshift(id);
+                        console.log(Object.assign(Object.assign({}, obj), { room_ids }));
+                        list.push(new booking_class_1.Booking(Object.assign(Object.assign({}, obj), { room_ids })));
+                    }
+                }
+            }
+            list.sort((a, b) => a.date - b.date);
+            return list;
+        }));
     }
     /** Display value for the active date */
     get date_display() {
@@ -26292,16 +26310,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "0003a5c",
-    "hash": "0003a5c",
+    "raw": "715a5a5",
+    "hash": "715a5a5",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "0003a5c",
+    "suffix": "715a5a5",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601411450895
+    "time": 1601422894265
 };
 /* tslint:enable */
 
