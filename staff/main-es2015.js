@@ -14165,13 +14165,13 @@ function PackageOptionsModalComponent_ng_template_12_ng_container_0_Template(rf,
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("ngModel", ctx_r4.active_items[package_r3.id]);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngForOf", package_r3.items);
+    i0.ɵɵproperty("ngForOf", package_r3.availableItems);
 } }
 function PackageOptionsModalComponent_ng_template_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtemplate(0, PackageOptionsModalComponent_ng_template_12_ng_container_0_Template, 3, 2, "ng-container", 5);
 } if (rf & 2) {
     const package_r3 = ctx.package;
-    i0.ɵɵproperty("ngIf", package_r3.items && package_r3.items.length);
+    i0.ɵɵproperty("ngIf", package_r3.availableItems && package_r3.availableItems.length);
 } }
 const _c5 = function () { return { class: "material-icons", content: "close" }; };
 function checkItemRequirements(category) {
@@ -22258,16 +22258,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "9e3c99b",
-    "hash": "9e3c99b",
+    "raw": "87e3b20",
+    "hash": "87e3b20",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "9e3c99b",
+    "suffix": "87e3b20",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601386278321
+    "time": 1601411685651
 };
 /* tslint:enable */
 
