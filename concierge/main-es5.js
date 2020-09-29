@@ -11988,7 +11988,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngModel", ctx_r4.active_items[package_r3.id]);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", package_r3.items);
+        i0.ɵɵproperty("ngForOf", package_r3.availableItems);
       }
     }
 
@@ -11999,7 +11999,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var package_r3 = ctx["package"];
-        i0.ɵɵproperty("ngIf", package_r3.items && package_r3.items.length);
+        i0.ɵɵproperty("ngIf", package_r3.availableItems && package_r3.availableItems.length);
       }
     }
 
@@ -48040,16 +48040,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "c59388b",
-      "hash": "c59388b",
+      "raw": "0003a5c",
+      "hash": "0003a5c",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "c59388b",
+      "suffix": "0003a5c",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601388358308
+      "time": 1601411450895
     };
     /* tslint:enable */
 
