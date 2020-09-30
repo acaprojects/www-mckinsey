@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1601422516125,
+  "timestamp": 1601449187803,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -414,7 +414,7 @@
     "/staff/assets/maps/amsterdam/level_06.svg": "c6351a35f4c3bd40fa1f3e6891727cdb939fae4d",
     "/staff/assets/maps/atlanta/level_07.svg": "19d3d7da5851e56c86829d2375606848c8083986",
     "/staff/assets/maps/atlanta/level_08.svg": "d570d97169ef16846128ac3d7f98ecc25a5c9410",
-    "/staff/assets/maps/auckland/level_13.svg": "135e57240a5d660f4a96491ea26844fe2bb4d06e",
+    "/staff/assets/maps/auckland/level_13.svg": "bec9d650c2a4f4622766f8797995b694abd4728e",
     "/staff/assets/maps/bangalore_bgl/.gitkeep": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/staff/assets/maps/bangalore_bgl/level_06.svg": "b1b1e0d50828faea0e95e879e6f37f427c17cf2d",
     "/staff/assets/maps/bangalore_blc/level_07.svg": "93f2ff6a69b7fa1ff73709411d5a15c8d2b73722",
@@ -506,8 +506,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "d557727a107aa80fb60b76c70d439e16e8c774c8",
-    "/staff/main-es2015.js": "9b7df1fbb73e02a71463d5f13edbbaa8a42e865b",
-    "/staff/main-es5.js": "8ba6bdb92d60e4aa58b0ad49e7f5f985ac21bb4d",
+    "/staff/main-es2015.js": "47294622cff0e81cf2c364e3db26743ddb857899",
+    "/staff/main-es5.js": "3d150769728632b002dd5406d74aaf5cf17879c2",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
