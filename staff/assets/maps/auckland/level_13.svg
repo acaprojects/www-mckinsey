@@ -33,6 +33,10 @@
 	.st27{font-size:17.388px;}
 	.st28{font-size:17.435px;}
 	.st29{fill:none;stroke:#7A8E93;stroke-linecap:round;stroke-linejoin:round;}
+	.st30{fill:#767E80;}
+	.st31{font-size:17.9907px;}
+	.st32{fill:#EBF1F2;}
+	.st33{fill:none;stroke:#7A8E93;stroke-width:0.827;stroke-miterlimit:10;}
 </style>
 <g id="shadow">
 	<polygon class="st0" points="588.9,1849.6 1313.5,1426.7 1479.4,1715.6 1793.7,1715.6 1793.7,924.8 1801.1,915.6 1792,847.7 
@@ -252,11 +256,11 @@
 	<rect x="783.2" y="580.6" class="st9" width="204.6" height="81.2"/>
 	<rect x="784.2" y="580.6" class="st10" width="204.6" height="81.2"/>
 	
-		<rect x="408.8" y="386.2" transform="matrix(0.5095 -0.8605 0.8605 0.5095 -216.0784 657.9807)" class="st8" width="120.6" height="264.6"/>
+		<rect x="408.8" y="386.2" transform="matrix(0.5095 -0.8605 0.8605 0.5095 -216.05 658.0146)" class="st8" width="120.6" height="264.6"/>
 	
-		<rect x="410.2" y="387.4" transform="matrix(0.5101 -0.8601 0.8601 0.5101 -216.5014 659.234)" class="st9" width="120.5" height="264.6"/>
+		<rect x="410.2" y="387.4" transform="matrix(0.5101 -0.8601 0.8601 0.5101 -216.551 659.2223)" class="st9" width="120.5" height="264.6"/>
 	
-		<rect x="412.1" y="388.1" transform="matrix(0.5095 -0.8605 0.8605 0.5095 -216.0909 661.7273)" class="st10" width="120.6" height="264.6"/>
+		<rect x="412.2" y="388.1" transform="matrix(0.5095 -0.8605 0.8605 0.5095 -216.0703 661.8108)" class="st10" width="120.6" height="264.6"/>
 	<path class="st4" d="M450.3,430L450.3,430c-5.8-3.6-7.5-11.2-3.9-17l0,0l0.6-0.9l0,0l5.5-7.7c5.1-7.6,15.2-9.9,23.1-5.3l0,0
 		c7.8,4.8,10.4,14.9,6,22.9l-4.6,8.3l-0.3,0.5c-3.9,6.1-11.5,7.9-18,4.5l0,0L450.3,430L450.3,430z"/>
 	<path class="st5" d="M451,431c-5.8-3.6-7.5-11.2-3.9-17l0,0l0.6-0.9l0,0l5-8c5.1-7.6,15.2-9.9,23.1-5.3l0,0
@@ -583,21 +587,21 @@
 		c0.7,0.1,1.2,0.7,1.2,1.4l0,0V680C841.9,687,836.1,692.7,829.1,692.7L829.1,692.7z"/>
 	<path class="st15" d="M841.8,668.2v11.4c0.1,7.1-5.5,12.9-12.6,13.1h-0.1c-7.1,0-12.9-5.7-13.1-12.8l0,0v-11.4"/>
 	
-		<rect x="942" y="992.4" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -368.7931 612.1015)" class="st8" width="120.8" height="57.4"/>
+		<rect x="942" y="992.4" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -368.7953 612.1014)" class="st8" width="120.8" height="57.4"/>
 	
-		<rect x="942.9" y="991.9" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -368.4389 612.4744)" class="st9" width="120.8" height="57.4"/>
+		<rect x="942.9" y="991.9" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -368.4413 612.4742)" class="st9" width="120.8" height="57.4"/>
 	
-		<rect x="943.5" y="991.7" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -368.2628 612.7458)" class="st10" width="120.8" height="57.4"/>
+		<rect x="943.5" y="991.7" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -368.2695 612.7385)" class="st10" width="120.8" height="57.4"/>
 	<path class="st5" d="M970.3,1126.9l-18.9-30.7c0,0-10.5-15.8,5.3-23.3s110.3-64.4,110.3-64.4l27.6,46.6L970.3,1126.9z"/>
 	<path class="st6" d="M970.3,1129.3l-18.9-30.7c0,0-10.5-15.8,5.3-23.3s110.3-64.4,110.3-64.4l27.6,46.6L970.3,1129.3z"/>
 	<path class="st5" d="M894.1,994.9l16.9,31.9c0,0,8.3,17.1,22.7,7.3s111.4-62.5,111.4-62.5l-26.2-47.4L894.1,994.9z"/>
 	<path class="st6" d="M892,993.7l16.9,31.9c0,0,8.3,17.1,22.7,7.3s111.4-62.5,111.4-62.5l-26.2-47.4L892,993.7z"/>
 	
-		<rect x="1017.6" y="1124.7" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -423.345 665.1614)" class="st8" width="120.8" height="57.4"/>
+		<rect x="1017.6" y="1124.7" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -423.3475 665.1605)" class="st8" width="120.8" height="57.4"/>
 	
-		<rect x="1018.5" y="1124.2" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -422.9908 665.5345)" class="st9" width="120.8" height="57.4"/>
+		<rect x="1018.5" y="1124.2" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -422.9935 665.5333)" class="st9" width="120.8" height="57.4"/>
 	
-		<rect x="1019.1" y="1124" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -422.8149 665.8058)" class="st10" width="120.8" height="57.4"/>
+		<rect x="1019.1" y="1124" transform="matrix(0.8753 -0.4836 0.4836 0.8753 -422.8218 665.7977)" class="st10" width="120.8" height="57.4"/>
 	<path class="st5" d="M1045.9,1259.2l-18.9-30.7c0,0-10.5-15.8,5.3-23.3s110.3-64.4,110.3-64.4l27.6,46.6L1045.9,1259.2z"/>
 	<path class="st6" d="M1045.9,1261.6l-18.9-30.7c0,0-10.5-15.8,5.3-23.3s110.3-64.4,110.3-64.4l27.6,46.6L1045.9,1261.6z"/>
 	<path class="st5" d="M969.7,1127.2l16.9,31.9c0,0,8.3,17.1,22.7,7.3s111.4-62.5,111.4-62.5l-26.2-47.4L969.7,1127.2z"/>
@@ -606,19 +610,27 @@
 		c-5.9,10.1-18.8,13.6-29,7.8l-10.9-6.3C523.1,706.3,519.6,693.4,525.4,683.2z"/>
 </g>
 <g id="booking">
-	<polygon id="area-13.05-status" class="st16" points="707.2,1470.7 825.7,1678.3 1033.3,1557.2 912,1351.5 	"/>
-	<polygon id="area-13.04-status" class="st16" points="477.1,1602.7 707.2,1470.7 825.7,1678.3 577.3,1823.4 476,1649.3 
+	<polygon id="area-13.09-status" class="st16" points="834.8,1026 916.8,1157.8 1094.6,1055.1 1015.6,922.1 	"/>
+	<polygon id="area-13.08-status" class="st16" points="1103.3,1070.1 1170.2,1189.8 998.7,1287.8 916.8,1157.8 1094.6,1055.1 	"/>
+	<polygon id="area-13.07-status" class="st16" points="4.6,783.1 323,783.1 323,632.4 151.5,532.3 	"/>
+	<polygon id="area-13.06-status" class="st16" points="4.6,783.1 323,783.1 323,928.8 145.4,1030.8 	"/>
+	<polygon id="area-13.05-status" class="st16" points="477.1,1602.7 707.2,1470.7 825.7,1678.3 577.3,1823.4 476,1649.3 
 		499.8,1629.5 	"/>
-	<rect id="area-13.02-status" x="1027.5" y="26" class="st16" width="553.3" height="304.8"/>
+	<polygon id="area-13.04-status" class="st16" points="704.8,1473.1 822.2,1676.9 1030.4,1557.2 912.1,1351.5 	"/>
 	<path id="area-13.03-status" class="st16" d="M680.3,22.9h347.1v307.9H752.8c0,0-64.9,0.4-72.5-86.8V22.9z"/>
+	<rect id="area-13.02-status" x="1027.5" y="26" class="st16" width="553.3" height="304.8"/>
 	<rect id="area-13.01-status" x="1127.1" y="476.9" class="st16" width="250.9" height="336.3"/>
 	<text transform="matrix(1 0 0 1 1233.089 185.466)" class="st10 st17 st18">Boardroom</text>
 	<text transform="matrix(1 0 0 1 809.958 186.238)" class="st10 st17 st18">W</text>
 	<text transform="matrix(1 0 0 1 831.72 186.238)" class="st10 st17 st18">aitakere</text>
 	<text transform="matrix(1 0 0 1 1186.975 652.214)" class="st10 st17 st18">W</text>
 	<text transform="matrix(1 0 0 1 1208.7369 652.214)" class="st10 st17 st18">aitemata</text>
-	<text transform="matrix(1 0 0 1 609.7125 1648.7181)" class="st10 st17 st18">Project 2</text>
+	<text transform="matrix(1 0 0 1 573.6105 1662.9485)" class="st10 st17 st18">Partner Room O1</text>
 	<text transform="matrix(1 0 0 1 822.1593 1529.988)" class="st10 st17 st18">Project 1</text>
+	<text transform="matrix(1 0 0 1 86.0502 868.9058)" class="st10 st17 st18">Partner Room O2</text>
+	<text transform="matrix(1 0 0 1 97.2921 702.5865)" class="st10 st17 st18">Partner Room O3</text>
+	<text transform="matrix(1 0 0 1 935 1042.9996)" class="st10 st17 st18">Booth 2</text>
+	<text transform="matrix(1 0 0 1 998.0227 1178.8003)" class="st10 st17 st18">Booth 1</text>
 </g>
 <g id="outline">
 	<line class="st19" x1="1378" y1="330.8" x2="1241.2" y2="330.8"/>
@@ -722,4 +734,10 @@
 	<text transform="matrix(1 0 0 1 504.01 875.352)" class="st21 st22 st28">orkspace</text>
 	<text transform="matrix(1 0 0 1 1076.969 1389.564)" class="st21 st22 st28">Comms</text>
 </g>
+<text transform="matrix(1 0 0 1 470.4693 79.0898)" class="st21 st22 st28">Collaboration Space</text>
+<text transform="matrix(1 0 0 1 263.7103 1057.0443)" class="st30 st22 st31">Bubbly</text>
+<circle class="st32" cx="289.9" cy="1001.2" r="38.3"/>
+<path class="st33" d="M303,1005.8c-0.4,7.5-6.8,13.2-14.3,12.8c-6.9-0.4-12.5-5.9-12.8-12.8c0-7.6,10.2-22.1,13.6-27.1
+	C292.8,983.7,303,998.2,303,1005.8z"/>
+<path class="st33" d="M289.9,987.1c0,0,3.8,2,5.5,6.1"/>
 </svg>
