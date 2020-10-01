@@ -329,7 +329,7 @@ function _templateObject66() {
 }
 
 function _templateObject65() {
-  var data = _taggedTemplateLiteral([":Booking equipment charge code error\u241F4f760d1a2cab17d0ce19d5d0301fed983c524fee\u241F987760363308336949: Charge Code is required "]);
+  var data = _taggedTemplateLiteral([":Catering details charge code error\u241Fee81cc70734494d90d4d961fdb612969979c404a\u241F3934704995297708704: ", ":INTERPOLATION: "]);
 
   _templateObject65 = function _templateObject65() {
     return data;
@@ -419,7 +419,7 @@ function _templateObject57() {
 }
 
 function _templateObject56() {
-  var data = _taggedTemplateLiteral([":Booking equipment information\u241F2a62274340e45582dd6ba1d558265b1522390060\u241F8750507219969801055: ", ":INTERPOLATION: "]);
+  var data = _taggedTemplateLiteral([":Booking equipment information\u241Fa46248eda08d404343c8d92f925e96f75ba34d49\u241F422612229071578760: ", ":INTERPOLATION: "]);
 
   _templateObject56 = function _templateObject56() {
     return data;
@@ -489,7 +489,7 @@ function _templateObject50() {
 }
 
 function _templateObject49() {
-  var data = _taggedTemplateLiteral([":Catering details charge code hint\u241F309202b2ded3e8d0aa94923fa187763d6ba21830\u241F1078849591937392404:", ":START_TAG_SPAN:Note:", ":CLOSE_TAG_SPAN: Your booking will be confirmed before you are charged. "]);
+  var data = _taggedTemplateLiteral([":Catering details charge code error\u241F3dce1436f3a70527d8c6c3119c15ff97204a26b6\u241F7247506792911961758: ", ":INTERPOLATION: "]);
 
   _templateObject49 = function _templateObject49() {
     return data;
@@ -499,7 +499,7 @@ function _templateObject49() {
 }
 
 function _templateObject48() {
-  var data = _taggedTemplateLiteral([":Catering details charge code error\u241F4b1851c001235398631979c2ebff230f501e3fb9\u241F6433134519537727373: Charge Code is required "]);
+  var data = _taggedTemplateLiteral([":Catering details charge code hint\u241F309202b2ded3e8d0aa94923fa187763d6ba21830\u241F1078849591937392404:", ":START_TAG_SPAN:Note:", ":CLOSE_TAG_SPAN: Your booking will be confirmed before you are charged. "]);
 
   _templateObject48 = function _templateObject48() {
     return data;
@@ -24472,27 +24472,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
-       * @desc Catering details charge code error
+       * @desc Catering details charge code hint
        */
-      var MSG_EXTERNAL_6433134519537727373$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__13 = goog.getMsg(" Charge Code is required ");
-      I18N_12 = MSG_EXTERNAL_6433134519537727373$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__13;
+      var MSG_EXTERNAL_1078849591937392404$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__13 = goog.getMsg("{$startTagSpan}Note:{$closeTagSpan} Your booking will be confirmed before you are charged. ", {
+        "startTagSpan": "\uFFFD#16\uFFFD",
+        "closeTagSpan": "\uFFFD/#16\uFFFD"
+      });
+      I18N_12 = MSG_EXTERNAL_1078849591937392404$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__13;
     } else {
-      I18N_12 = $localize(_templateObject48());
+      I18N_12 = $localize(_templateObject48(), "\uFFFD#16\uFFFD", "\uFFFD/#16\uFFFD");
     }
 
     var I18N_14;
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
-       * @desc Catering details charge code hint
+       * @desc Catering details charge code error
        */
-      var MSG_EXTERNAL_1078849591937392404$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__15 = goog.getMsg("{$startTagSpan}Note:{$closeTagSpan} Your booking will be confirmed before you are charged. ", {
-        "startTagSpan": "\uFFFD#18\uFFFD",
-        "closeTagSpan": "\uFFFD/#18\uFFFD"
+      var MSG_EXTERNAL_7247506792911961758$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__15 = goog.getMsg(" {$interpolation} ", {
+        "interpolation": "\uFFFD0\uFFFD"
       });
-      I18N_14 = MSG_EXTERNAL_1078849591937392404$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__15;
+      I18N_14 = MSG_EXTERNAL_7247506792911961758$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_CATERING_DETAILS_MODAL_CATERING_DETAILS_MODAL_COMPONENT_TS__15;
     } else {
-      I18N_14 = $localize(_templateObject49(), "\uFFFD#18\uFFFD", "\uFFFD/#18\uFFFD");
+      I18N_14 = $localize(_templateObject49(), "\uFFFD0\uFFFD");
     }
 
     var I18N_8;
@@ -24541,13 +24543,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementStart(12, "input", 19);
         i0.ɵɵi18nAttributes(13, _c11);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(14, "mat-error");
-        i0.ɵɵi18n(15, I18N_12);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(16, "mat-hint");
-        i0.ɵɵi18nStart(17, I18N_14);
-        i0.ɵɵelement(18, "span");
+        i0.ɵɵelementStart(14, "mat-hint");
+        i0.ɵɵi18nStart(15, I18N_12);
+        i0.ɵɵelement(16, "span");
         i0.ɵɵi18nEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(17, "mat-error");
+        i0.ɵɵi18n(18, I18N_14);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -24561,6 +24563,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵclassProp("error", ctx_r1.active_form.controls.code.touched && ctx_r1.active_form.controls.code.invalid);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx_r1.needs_charge_code[ctx_r1.space_list[ctx_r1.active_space].email]);
+        i0.ɵɵadvance(8);
+        i0.ɵɵi18nExp(ctx_r1.invalid_charge_code ? "Valid Charge Code Required" : "Charge Code is required");
+        i0.ɵɵi18nApply(18);
       }
     }
 
@@ -24679,7 +24684,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var space = _step36.value;
               this.form[space.email] = new forms_1.FormGroup({
                 notes: new forms_1.FormControl(this.notes[space.email] || ''),
-                code: new forms_1.FormControl(this.codes[space.email] || '')
+                code: new forms_1.FormControl(this.codes[space.email] || '', this.needs_charge_code[space.email] ? [forms_1.Validators.required, forms_1.Validators.minLength(4)] : [])
               });
             }
           } catch (err) {
@@ -24693,7 +24698,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_scrollToBottom",
         value: function _scrollToBottom() {
-          this._content_el.nativeElement.scrollTo({
+          var _a;
+
+          (_a = this._content_el) === null || _a === void 0 ? void 0 : _a.nativeElement.scrollTo({
             top: this._content_el.nativeElement.scrollHeight,
             left: 0,
             behavior: 'smooth'
@@ -24714,6 +24721,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "active_form",
         get: function get() {
           return this.form[this.space_list[this.active_space].email];
+        }
+      }, {
+        key: "invalid_charge_code",
+        get: function get() {
+          var _a;
+
+          return (_a = this.active_form.controls.code.errors) === null || _a === void 0 ? void 0 : _a.minlength;
         }
         /** Whether form fields are valid */
 
@@ -24780,7 +24794,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵtext(11, "Please specify any allergies or gluten intolerances");
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(12, CateringDetailsModalComponent_form_12_Template, 19, 4, "form", 9);
+          i0.ɵɵtemplate(12, CateringDetailsModalComponent_form_12_Template, 19, 5, "form", 9);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementStart(13, "mat-dialog-actions");
@@ -24806,7 +24820,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵproperty("ngIf", ctx.space_list[ctx.active_space] && ctx.active_form);
         }
       },
-      directives: [i2.MatTabGroup, i3.NgForOf, i4.MatButton, i5.MatDialogClose, i6.IconComponent, i5.MatDialogContent, i3.NgIf, i5.MatDialogActions, i2.MatTab, i7.ɵangular_packages_forms_forms_y, i7.NgControlStatusGroup, i7.FormGroupDirective, i8.MatFormField, i9.MatInput, i7.DefaultValueAccessor, i7.NgControlStatus, i7.FormControlName, i8.MatError, i8.MatHint],
+      directives: [i2.MatTabGroup, i3.NgForOf, i4.MatButton, i5.MatDialogClose, i6.IconComponent, i5.MatDialogContent, i3.NgIf, i5.MatDialogActions, i2.MatTab, i7.ɵangular_packages_forms_forms_y, i7.NgControlStatusGroup, i7.FormGroupDirective, i8.MatFormField, i9.MatInput, i7.DefaultValueAccessor, i7.NgControlStatus, i7.FormControlName, i8.MatHint, i8.MatError],
       styles: [".header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid #ccc;\n  width: 100%;\n}\n.header[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%] {\n  min-width: 50%;\n  flex: 1;\n}\n.details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  text-align: center;\n  margin-bottom: 1em;\n}\nmain[_ngcontent-%COMP%] {\n  padding: 1em 1em 0;\n}\nmat-hint[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #1937ea;\n}\nlabel[_ngcontent-%COMP%] {\n  min-width: 100%;\n  margin-top: 1.25em;\n  margin-right: 1em;\n  font-weight: bold;\n  font-size: 0.8em;\n  width: 100%;\n  margin-top: 0;\n  margin-bottom: 0.5em;\n}\nlabel[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #ffb300;\n}\nlabel.error[_ngcontent-%COMP%] {\n  color: #e53935;\n}\nmat-form-field[_ngcontent-%COMP%] {\n  flex: 1;\n}\nmat-tab[_ngcontent-%COMP%] {\n  display: none !important;\n}\n.field[_ngcontent-%COMP%] {\n  display: flex;\n  min-width: 14em;\n  flex: 1;\n  flex-wrap: wrap;\n}\ntextarea[_ngcontent-%COMP%] {\n  min-height: 7em;\n}\n.fieldset[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%] {\n  margin: 0 0.25em;\n}\n@media only screen and (orientation: portrait) and (max-width: 450px) {\n  .fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n@media only screen and (orientation: landscape) and (max-width: 800px) {\n  .fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n.fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%]:first-child {\n  margin-left: 0;\n}\n.fieldset[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%]:last-child {\n  margin-right: 0;\n}\n.error[_ngcontent-%COMP%] {\n  color: #e53935;\n}\nfooter[_ngcontent-%COMP%] {\n  width: 100%;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy92YXJpYWJsZXMuc2NzcyIsIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hlbGwvYm9va2luZ3Mvb3ZlcmxheXMvY2F0ZXJpbmctZGV0YWlscy1tb2RhbC9jYXRlcmluZy1kZXRhaWxzLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGVsbC9ib29raW5ncy9vdmVybGF5cy9jYXRlcmluZy1kZXRhaWxzLW1vZGFsL2NhdGVyaW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7OzBCQUFBO0FBU0E7OzBCQUFBO0FBb0NBOztjQUFBO0FBZ0JBOztzQkFBQTtBQzFEQTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLDZCQUFBO0VBQ0EsV0FBQTtBQ1VKO0FEUkk7RUFDSSxjQUFBO0VBQ0EsT0FBQTtBQ1VSO0FETkE7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0Esa0JBQUE7QUNTSjtBRE5BO0VBQ0ksa0JBQUE7QUNTSjtBRExJO0VBQ0ksY0REUTtBRVNoQjtBREpBO0VBQ0ksZUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBRUksV0FBQTtFQUNBLGFBQUE7RUFDQSxvQkFBQTtBQ01SO0FESEk7RUFDSSxjRDFCRTtBRStCVjtBREZJO0VBQ0ksY0QxQkE7QUU4QlI7QURBQTtFQUNJLE9BQUE7QUNHSjtBREFBO0VBQ0ksd0JBQUE7QUNHSjtBREFBO0VBQ0ksYUFBQTtFQUNBLGVBQUE7RUFDQSxPQUFBO0VBR0ksZUFBQTtBQ0NSO0FER0E7RUFDSSxlQUFBO0FDQUo7QURHQTtFQUNJLGFBQUE7RUFDQSxlQUFBO0FDQUo7QURFSTtFQUNJLGdCQUFBO0FDQVI7QUZOUTtFQ0tKO0lBSVEsU0FBQTtFQ0NWO0FBQ0Y7QUZSUTtFQ0VKO0lBSVEsU0FBQTtFQ01WO0FBQ0Y7QURKUTtFQUNJLGNBQUE7QUNNWjtBREhRO0VBQ0ksZUFBQTtBQ0taO0FEQUE7RUFDSSxjRDFFSTtBRTZFUjtBREFBO0VBQ0ksV0FBQTtFQUNBLGtCQUFBO0FDR0oiLCJmaWxlIjoic3JjL2FwcC9zaGVsbC9ib29raW5ncy9vdmVybGF5cy9jYXRlcmluZy1kZXRhaWxzLW1vZGFsL2NhdGVyaW5nLWRldGFpbHMtbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgTURTIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRjb2xvci1icmFuZC1lbGVjdHJpYy1ibHVlOiAjMjI1MWZmO1xuJGNvbG9yLWJyYW5kLWRlZXAtYmx1ZTogIzA1MWMyYztcbiRjb2xvci1icmFuZC1jeWFuOiAjMDBhOWY0O1xuJGNvbG9yLWJyYW5kLXllbGxvdzogI2ZmZDA0ODtcblxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcbiRoZWFkZXItYmFjazogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCAjMDUxQzJDLCAjMDUxQzJDIDQwJSwgIzBCMjQ1MyA2MCUsICMxRjQwRTYgMTAwJSk7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4kbGlnaHQteWVsbG93OiAjZmZmM2NlO1xuJGNvYWNobWFyay10ZXh0OiAjNmY0ZDAwO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRmb250LWZhbWlseS1wcmltYXJ5OiBcIk1jS2luc2V5IFNhbnNcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBDYWxpYnJpLCBDb3JiZWwsIEhlbHZldGljYSwgUm9ib3RvLCBEcm9pZCwgc2Fucy1zZXJpZjtcbiRmb250LWZhbWlseS1zZWNvbmRhcnk6IFwiQm93ZXJcIiwgR2VvcmdpYSwgXCJUaW1lcyBOZXcgUm9tYW5cIiBzZXJpZjtcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbi5oZWFkZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYztcbiAgICB3aWR0aDogMTAwJTtcblxuICAgIC50YWJzIHtcbiAgICAgICAgbWluLXdpZHRoOiA1MCU7XG4gICAgICAgIGZsZXg6IDE7XG4gICAgfVxufVxuXG4uZGV0YWlscyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbn1cblxubWFpbiB7XG4gICAgcGFkZGluZzogMWVtIDFlbSAwO1xufVxuXG5tYXQtaGludCB7XG4gICAgc3BhbiB7XG4gICAgICAgIGNvbG9yOiAkY29sb3ItcHJpbWFyeTtcbiAgICB9XG59XG5cbmxhYmVsIHtcbiAgICBtaW4td2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luLXRvcDogMS4yNWVtO1xuICAgIG1hcmdpbi1yaWdodDogMWVtO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIGZvbnQtc2l6ZTogLjhlbTtcbiAgICAvLyBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbWFyZ2luLXRvcDogMDtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogLjVlbTtcbiAgICAvLyB9XG5cbiAgICBzcGFuIHtcbiAgICAgICAgY29sb3I6ICRwZW5kaW5nO1xuICAgIH1cblxuICAgICYuZXJyb3Ige1xuICAgICAgICBjb2xvcjogJGVycm9yO1xuICAgIH1cbn1cblxubWF0LWZvcm0tZmllbGQge1xuICAgIGZsZXg6IDE7XG59XG5cbm1hdC10YWIge1xuICAgIGRpc3BsYXk6IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLmZpZWxkIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIG1pbi13aWR0aDogMTRlbTtcbiAgICBmbGV4OiAxO1xuXG4gICAgLy8gQGluY2x1ZGUgcmVzcG9uZC10byhtb2JpbGUpIHtcbiAgICAgICAgZmxleC13cmFwOiB3cmFwO1xuICAgIC8vIH1cbn1cblxudGV4dGFyZWEge1xuICAgIG1pbi1oZWlnaHQ6IDdlbTtcbn1cblxuLmZpZWxkc2V0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcblxuICAgIC5maWVsZCB7XG4gICAgICAgIG1hcmdpbjogMCAuMjVlbTtcblxuICAgICAgICBAaW5jbHVkZSByZXNwb25kLXRvKG1vYmlsZSkge1xuICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICB9XG5cbiAgICAgICAgJjpmaXJzdC1jaGlsZCB7XG4gICAgICAgICAgICBtYXJnaW4tbGVmdDogMDtcbiAgICAgICAgfVxuXG4gICAgICAgICY6bGFzdC1jaGlsZCB7XG4gICAgICAgICAgICBtYXJnaW4tcmlnaHQ6IDA7XG4gICAgICAgIH1cbiAgICB9XG59XG5cbi5lcnJvciB7XG4gICAgY29sb3I6ICRlcnJvcjtcbn1cblxuZm9vdGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iLCIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgTURTIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgQXBwbGljYXRpb24gQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT0qXFxcbnx8ICAgRm9udHMgICB8fFxuXFwqPT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG4uaGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmhlYWRlciAudGFicyB7XG4gIG1pbi13aWR0aDogNTAlO1xuICBmbGV4OiAxO1xufVxuXG4uZGV0YWlscyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbWFyZ2luLWJvdHRvbTogMWVtO1xufVxuXG5tYWluIHtcbiAgcGFkZGluZzogMWVtIDFlbSAwO1xufVxuXG5tYXQtaGludCBzcGFuIHtcbiAgY29sb3I6ICMxOTM3ZWE7XG59XG5cbmxhYmVsIHtcbiAgbWluLXdpZHRoOiAxMDAlO1xuICBtYXJnaW4tdG9wOiAxLjI1ZW07XG4gIG1hcmdpbi1yaWdodDogMWVtO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgZm9udC1zaXplOiAwLjhlbTtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi10b3A6IDA7XG4gIG1hcmdpbi1ib3R0b206IDAuNWVtO1xufVxubGFiZWwgc3BhbiB7XG4gIGNvbG9yOiAjZmZiMzAwO1xufVxubGFiZWwuZXJyb3Ige1xuICBjb2xvcjogI2U1MzkzNTtcbn1cblxubWF0LWZvcm0tZmllbGQge1xuICBmbGV4OiAxO1xufVxuXG5tYXQtdGFiIHtcbiAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50O1xufVxuXG4uZmllbGQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBtaW4td2lkdGg6IDE0ZW07XG4gIGZsZXg6IDE7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cblxudGV4dGFyZWEge1xuICBtaW4taGVpZ2h0OiA3ZW07XG59XG5cbi5maWVsZHNldCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cbi5maWVsZHNldCAuZmllbGQge1xuICBtYXJnaW46IDAgMC4yNWVtO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgLmZpZWxkc2V0IC5maWVsZCB7XG4gICAgbWFyZ2luOiAwO1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1heC13aWR0aDogODAwcHgpIHtcbiAgLmZpZWxkc2V0IC5maWVsZCB7XG4gICAgbWFyZ2luOiAwO1xuICB9XG59XG4uZmllbGRzZXQgLmZpZWxkOmZpcnN0LWNoaWxkIHtcbiAgbWFyZ2luLWxlZnQ6IDA7XG59XG4uZmllbGRzZXQgLmZpZWxkOmxhc3QtY2hpbGQge1xuICBtYXJnaW4tcmlnaHQ6IDA7XG59XG5cbi5lcnJvciB7XG4gIGNvbG9yOiAjZTUzOTM1O1xufVxuXG5mb290ZXIge1xuICB3aWR0aDogMTAwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -25778,10 +25792,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @desc Booking equipment information
        */
-      var MSG_EXTERNAL_8750507219969801055$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_2 = goog.getMsg(" {$interpolation} ", {
+      var MSG_EXTERNAL_422612229071578760$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_2 = goog.getMsg(" {$interpolation} ", {
         "interpolation": "\uFFFD0\uFFFD"
       });
-      I18N_1 = MSG_EXTERNAL_8750507219969801055$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_2;
+      I18N_1 = MSG_EXTERNAL_422612229071578760$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS_2;
     } else {
       I18N_1 = $localize(_templateObject56(), "\uFFFD0\uFFFD");
     }
@@ -25929,12 +25943,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
       /**
-       * @desc Booking equipment charge code error
+       * @desc Catering details charge code error
        */
-      var MSG_EXTERNAL_987760363308336949$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___24 = goog.getMsg(" Charge Code is required ");
-      I18N_23 = MSG_EXTERNAL_987760363308336949$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___24;
+      var MSG_EXTERNAL_3934704995297708704$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___24 = goog.getMsg(" {$interpolation} ", {
+        "interpolation": "\uFFFD0\uFFFD"
+      });
+      I18N_23 = MSG_EXTERNAL_3934704995297708704$$SRC_APP_SHELL_BOOKINGS_OVERLAYS_REQUIREMENT_DETAILS_MODAL_REQUIREMENT_DETAILS_MODAL_COMPONENT_TS___24;
     } else {
-      I18N_23 = $localize(_templateObject65());
+      I18N_23 = $localize(_templateObject65(), "\uFFFD0\uFFFD");
     }
 
     var I18N_17;
@@ -25990,6 +26006,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵclassProp("error", ctx_r7.active_form.controls.code.touched && ctx_r7.active_form.controls.code.invalid);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngIf", ctx_r7.needs_charge_code[ctx_r7.space_list[ctx_r7.active_space].email]);
+        i0.ɵɵadvance(8);
+        i0.ɵɵi18nExp(ctx_r7.invalid_charge_code ? "Valid Charge Code Required" : "Charge Code is required");
+        i0.ɵɵi18nApply(11);
       }
     }
 
@@ -25998,7 +26017,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementStart(0, "form", 13);
         i0.ɵɵtemplate(1, RequirementDetailsModalComponent_form_13_div_1_Template, 6, 0, "div", 14);
         i0.ɵɵelementStart(2, "div", 15);
-        i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_Template, 12, 3, "div", 16);
+        i0.ɵɵtemplate(3, RequirementDetailsModalComponent_form_13_div_3_Template, 12, 4, "div", 16);
         i0.ɵɵelementStart(4, "div", 17);
         i0.ɵɵelementStart(5, "label", 18);
         i0.ɵɵi18nStart(6, I18N_3);
@@ -26167,7 +26186,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this121.needs_charge_code[space.email] = ((_b = (_a = building) === null || _a === void 0 ? void 0 : _a.required) === null || _b === void 0 ? void 0 : _b.equipment_code) || false;
               _this121.form[space.email] = new forms_1.FormGroup({
                 notes: new forms_1.FormControl(_this121.notes[space.email] || ''),
-                code: new forms_1.FormControl(_this121.codes[space.email] || '', _this121.needs_charge_code[space.email] ? [forms_1.Validators.required] : []),
+                code: new forms_1.FormControl(_this121.codes[space.email] || '', _this121.needs_charge_code[space.email] ? [forms_1.Validators.required, forms_1.Validators.minLength(4)] : []),
                 head_count: new forms_1.FormControl(_this121.head_counts[space.email] || '', [forms_1.Validators.required])
               });
             };
@@ -26195,6 +26214,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "active_form",
         get: function get() {
           return this.form[this.space_list[this.active_space].email];
+        }
+      }, {
+        key: "invalid_charge_code",
+        get: function get() {
+          var _a;
+
+          return (_a = this.active_form.controls.code.errors) === null || _a === void 0 ? void 0 : _a.minlength;
         }
         /** Whether form fields are valid */
 
@@ -39734,16 +39760,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "943329c",
-      "hash": "943329c",
+      "raw": "5359908",
+      "hash": "5359908",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "943329c",
+      "suffix": "5359908",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601561132530
+      "time": 1601584253651
     };
     /* tslint:enable */
 
