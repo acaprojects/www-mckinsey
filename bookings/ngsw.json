@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1600720596430,
+  "timestamp": 1601596782723,
   "index": "/bookings/index.html",
   "assetGroups": [
     {
@@ -183,8 +183,8 @@
     "/bookings/assets/settings.js": "cb215e3650006f65d2d34d76d5e9421232a3a809",
     "/bookings/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/bookings/index.html": "d3851005a22f05ed584c3a2ccde689c080edb726",
-    "/bookings/main-es2015.js": "314ba71f930fd1783c17ff143d4c62d42f74a3d8",
-    "/bookings/main-es5.js": "cc18369e482fb2740e6975767a83cc72f83a4e5b",
+    "/bookings/main-es2015.js": "2e09c0d55b01eeb385118663226f4f91ca541203",
+    "/bookings/main-es5.js": "df9bf191ed8f4d3f72cacdc9968253afd7cb2df2",
     "/bookings/polyfills-es2015.js": "5e5856df0c22b352d5c53a20a43e7b1dceca9cd8",
     "/bookings/polyfills-es5.js": "bcb73036fcba0bdbbb7598d7da04a101f8f735fd",
     "/bookings/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
