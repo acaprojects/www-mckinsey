@@ -19363,7 +19363,9 @@ class ExploreSearchComponent extends base_directive_1.BaseDirective {
         }
         /* istanbul ignore else */
         if (changes.level) {
-            this.search_str = '';
+            if (!this._showing_option) {
+                this.search_str = '';
+            }
             this.search$.next(this.level);
         }
     }
@@ -19404,6 +19406,8 @@ class ExploreSearchComponent extends base_directive_1.BaseDirective {
             });
         }
         this.search_str = item.name;
+        this._showing_option = true;
+        this.timeout('selected_option', () => this._showing_option = false, 1000);
     }
 }
 exports.ExploreSearchComponent = ExploreSearchComponent;
@@ -22259,16 +22263,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "fa4e9ad",
-    "hash": "fa4e9ad",
+    "raw": "7df68f1",
+    "hash": "7df68f1",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "fa4e9ad",
+    "suffix": "7df68f1",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601480941826
+    "time": 1601561056519
 };
 /* tslint:enable */
 
