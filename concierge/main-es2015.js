@@ -7742,6 +7742,7 @@ const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/ind
 const base_class_1 = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
 const settings_service_1 = __webpack_require__(/*! ./settings.service */ "./src/app/services/settings.service.ts");
 const hotkeys_service_1 = __webpack_require__(/*! ./hotkeys.service */ "./src/app/services/hotkeys.service.ts");
+const general_utilities_1 = __webpack_require__(/*! ../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 const i2 = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
@@ -7909,7 +7910,7 @@ class ApplicationService extends base_class_1.BaseClass {
      * @param force Whether to force message to be emitted when debug is disabled
      */
     log(type, msg, args, stream = 'debug', force = false) {
-        this._settings.log(type, msg, args, stream, force);
+        general_utilities_1.log(type, msg, args, stream, force);
     }
     /**
      * Get the current value of the named property
@@ -7981,8 +7982,10 @@ class ApplicationService extends base_class_1.BaseClass {
         const host = settings.domain || location.hostname;
         const port = settings.port || location.port;
         const url = settings.use_domain ? `${protocol}//${host}:${port}` : location.origin;
-        const route = settings.route || '';
-        const mock = this._settings.get('mock');
+        const route = host.includes('localhost') && port === '4200' ? '' : settings.route || '';
+        const mock = this._settings.get('mock') ||
+            location.href.includes('mock=true') ||
+            localStorage.getItem('mock') === 'true';
         // Generate configuration object
         const config = {
             scope: 'public',
@@ -11582,69 +11585,87 @@ HotkeysService.ɵprov = i0.ɵɵdefineInjectable({ token: HotkeysService, factory
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-const http_1 = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-const general_utilities_1 = __webpack_require__(/*! ../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-const base_class_1 = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
+const platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
+const rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+const date_fns_1 = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/index.js");
 const version_1 = __webpack_require__(/*! src/environments/version */ "./src/environments/version.ts");
-const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+const settings_1 = __webpack_require__(/*! src/environments/settings */ "./src/environments/settings.ts");
+const base_class_1 = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
+const general_utilities_1 = __webpack_require__(/*! ../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-const i1 = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+const i1 = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 class SettingsService extends base_class_1.BaseClass {
-    constructor(http) {
+    constructor(_title) {
         super();
-        this.http = http;
-        /** Map of settings */
-        this._settings = { api: {}, local: {}, session: {} };
-        /** Store for promises */
-        this._promises = {};
+        this._title = _title;
         /** Name of the application */
         this._app_name = 'PlaceOS';
-        const now = dayjs();
-        const build = dayjs(version_1.VERSION.time);
-        const built = now.isSame(build, 'd') ? `Today at ${build.format('h:mmA')}` : build.format('D MMM YYYY, h:mmA');
-        this.log('CORE', `${version_1.VERSION.core_version}`, null, 'debug', true);
-        this.log('APP', `${version_1.VERSION.version} - ${version_1.VERSION.hash} | Built: ${built}`, null, 'debug', true);
+        /** List of override settings in order of priority */
+        this._overrides = new rxjs_1.BehaviorSubject([]);
+        /** Mapping of behaviour subjects */
+        this._subjects = {};
+        /** Mapping of observables */
+        this._observables = {};
+        const now = new Date();
+        const time = new Date(version_1.VERSION.time);
+        const built = date_fns_1.isSameDay(now, time)
+            ? `Today at ${date_fns_1.format(time, 'h:mma')}`
+            : date_fns_1.format(time, 'do MMM yyyy, h:mma');
+        general_utilities_1.log('CORE', `${version_1.VERSION.semver}`, null, 'debug', true);
+        general_utilities_1.log('APP', `${version_1.VERSION.hash} | Built: ${built}`, null, 'debug', true);
         this.init();
+    }
+    /**
+     * @hidden
+     */
+    set overrides(value) {
+        this._overrides.next(value);
+    }
+    /** Get observable for key */
+    listen(name) {
+        if (!this._observables[name]) {
+            this._subjects[name] = new rxjs_1.BehaviorSubject(null);
+            this._observables[name] = this._subjects[name].asObservable();
+        }
+        return this._observables[name];
+    }
+    /** Update observable value for key */
+    post(name, value) {
+        if (!this._observables[name]) {
+            this._subjects[name] = new rxjs_1.BehaviorSubject(null);
+            this._observables[name] = this._subjects[name].asObservable();
+        }
+        this._subjects[name].next(value);
+    }
+    value(name) {
+        return !this._observables[name] ? null : this._subjects[name].getValue();
+    }
+    /** Page title */
+    get title() {
+        return this._title.getTitle();
+    }
+    set title(value) {
+        this._title.setTitle(`${value} | ${this._app_name}`);
     }
     /**
      * Initialise the settings
      */
     init() {
+        var _a;
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            yield this.loadFromFile('api');
-            /* istanbul ignore next */
-            if (this._settings.api.debug) {
+            if (this.get('debug')) {
                 window.debug = true;
             }
-            /* istanbul ignore next */
-            if (this._settings.api.app && this._settings.api.app.name) {
-                this._app_name = this._settings.api.app.name;
+            if ((_a = this.get('app')) === null || _a === void 0 ? void 0 : _a.name) {
+                this._app_name = this.get('app').name;
             }
-            this.log('Settings', 'Successfully loaded settings');
+            general_utilities_1.log('Settings', 'Successfully loaded settings');
             this._initialised.next(true);
         });
     }
     /** Whether settings service has initialised */
-    get app_name() { return this._app_name; }
-    /* istanbul ignore next */
-    /**
-     * Log data to the browser console
-     * @param type Type of message
-     * @param msg Message body
-     * @param args array of argments to log to the console
-     * @param stream Stream to emit the console on. 'debug', 'log', 'warn' or 'error'
-     * @param force Whether to force message to be emitted when debug is disabled
-     */
-    log(type, msg, args, stream = 'debug', force = false) {
-        if (window.debug || force) {
-            const colors = ['color: #E91E63', 'color: #3F51B5', 'color: default'];
-            if (args) {
-                console[stream](`%c[${this.app_name}]%c[${type}] %c${msg}`, ...colors, args);
-            }
-            else {
-                console[stream](`%c[${this.app_name}]%c[${type}] %c${msg}`, ...colors);
-            }
-        }
+    get app_name() {
+        return this._app_name;
     }
     /**
      * Get a setting
@@ -11652,56 +11673,28 @@ class SettingsService extends base_class_1.BaseClass {
      */
     get(key) {
         const keys = key.split('.');
-        let value = null;
-        value = general_utilities_1.getItemWithKeys(keys, this._settings.api) ||
-            general_utilities_1.getItemWithKeys(keys, this._settings.session) ||
-            general_utilities_1.getItemWithKeys(keys, this._settings.local);
-        return value;
-    }
-    /* istanbul ignore next */
-    /**
-     * Load setting data from a file
-     * @param name Namespace to add file data to
-     * @param file URL to file to load setting data from
-     */
-    loadFromFile(name, file = 'assets/settings.json', tries = 0) {
-        return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            if (file !== 'assets/settings.json' && tries > 5) {
-                return Promise.resolve();
+        if (keys[0] !== 'app') {
+            return general_utilities_1.getItemWithKeys(keys, settings_1.DEFAULT_SETTINGS);
+        }
+        const override_settings = this._overrides.getValue();
+        for (const override of override_settings) {
+            const value = general_utilities_1.getItemWithKeys(keys.slice(1), override);
+            if (value != null) {
+                return value;
             }
-            const file_name = file.split('/')[file.split('/').length - 1];
-            // Check if data has been loaded into the global space
-            if (window[file_name] instanceof Object) {
-                this._settings[name] = Object.assign(Object.assign({}, (this._settings[name] || {})), window[file_name]);
-                return Promise.resolve();
-            }
-            const key = `load|${name}|${file}`;
-            if (!this._promises[key]) {
-                this._promises[key] = new Promise((resolve, reject) => {
-                    this.http.get(file).subscribe((data) => {
-                        this._settings[name] = Object.assign(Object.assign({}, (this._settings[name] || {})), (data || {}));
-                    }, (e) => {
-                        this.log('Settings', `Failed to load settings from "${file}"`);
-                        this._promises[key] = null;
-                        this.timeout(`load_${file_name}`, () => {
-                            this.loadFromFile(name, file, ++tries).then(() => resolve());
-                        });
-                    }, () => resolve());
-                });
-            }
-            return this._promises[key];
-        });
+        }
+        return general_utilities_1.getItemWithKeys(keys, settings_1.DEFAULT_SETTINGS);
     }
 }
 exports.SettingsService = SettingsService;
-SettingsService.ɵfac = function SettingsService_Factory(t) { return new (t || SettingsService)(i0.ɵɵinject(i1.HttpClient)); };
+SettingsService.ɵfac = function SettingsService_Factory(t) { return new (t || SettingsService)(i0.ɵɵinject(i1.Title)); };
 SettingsService.ɵprov = i0.ɵɵdefineInjectable({ token: SettingsService, factory: SettingsService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SettingsService, [{
         type: core_1.Injectable,
         args: [{
-                providedIn: 'root'
+                providedIn: 'root',
             }]
-    }], function () { return [{ type: i1.HttpClient }]; }, null); })();
+    }], function () { return [{ type: i1.Title }]; }, null); })();
 
 
 /***/ }),
@@ -16841,6 +16834,26 @@ exports.formatSpaces = formatSpaces;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/**
+ * Log data to the browser console
+ * @param type Type of message
+ * @param msg Message body
+ * @param args array of argments to log to the console
+ * @param stream Stream to emit the console on. 'debug', 'log', 'warn' or 'error'
+ * @param force Whether to force message to be emitted when debug is disabled
+ */
+function log(type, msg, args, stream = 'debug', force = false, app_name = 'STAFF') {
+    if (window.debug || force) {
+        const colors = ['color: #E91E63', 'color: #3F51B5', 'color: default'];
+        if (args) {
+            console[stream](`%c[${app_name}]%c[${type}] %c${msg}`, ...colors, args);
+        }
+        else {
+            console[stream](`%c[${app_name}]%c[${type}] %c${msg}`, ...colors);
+        }
+    }
+}
+exports.log = log;
 function getItemWithKeys(keys, map) {
     const key = keys.shift();
     if (map[key]) {
@@ -26295,6 +26308,158 @@ exports.environment = {
 
 /***/ }),
 
+/***/ "./src/environments/settings.ts":
+/*!**************************************!*\
+  !*** ./src/environments/settings.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * GENERAL APPLICATION SETTINGS
+ */
+const general = {
+    menu: {
+        items: [
+            {
+                name: 'Day View',
+                route: '/day-view',
+                icon: {
+                    type: 'icon',
+                    class: 'material-icons',
+                    content: 'wb_sunny',
+                },
+            },
+            {
+                name: 'Week View',
+                route: '/week-view',
+                icon: {
+                    type: 'icon',
+                    class: 'material-icons',
+                    content: 'date_range',
+                },
+            },
+            {
+                name: 'Catering',
+                route: '/catering',
+                icon: {
+                    type: 'icon',
+                    class: 'material-icons',
+                    content: 'room_service',
+                },
+            },
+            {
+                name: 'Visitors',
+                route: '/visitors',
+                icon: {
+                    type: 'icon',
+                    class: 'material-icons',
+                    content: 'face',
+                },
+            },
+            {
+                name: 'Reports',
+                route: '/reports',
+                icon: {
+                    type: 'icon',
+                    class: 'material-icons',
+                    content: 'warning',
+                },
+            },
+        ],
+        copyright: 'PlaceOS',
+    },
+};
+/*=========================*\
+||  BOOKING FLOW SETTINGS  ||
+\*=========================*/
+const booking = {
+    booking_types: [
+        { name: 'Internal', id: 'internal' },
+        { name: 'Client', id: 'client' },
+        { name: 'External', id: 'external' },
+        { name: 'Setup', id: 'setup' },
+        { name: 'Training', id: 'training' },
+        { name: 'Interview', id: 'interview' },
+    ],
+    show_fields: [
+        'attendees',
+        'body',
+        'catering',
+        'date',
+        'duration',
+        'organiser',
+        'recurrence',
+        'title',
+        'type',
+        'all_day',
+        'has_catering',
+    ],
+    html_body: true,
+    multiple_spaces: true,
+    desk_start: 9,
+};
+/*=========================*\
+||    DAY VIEW SETTINGS    ||
+\*=========================*/
+const day_view = {
+    dragdrop: false,
+};
+/*=========================*\
+||    VISITORS SETTINGS    ||
+\*=========================*/
+const visitors = {};
+/*=========================*\
+||    REPORTS SETTINGS     ||
+\*=========================*/
+const reports = {};
+/**
+ * ROOT APPLICATION SETTINGS
+ */
+const app = {
+    title: 'McKinsey Concierge',
+    description: 'McKinsey Concierge UI written with Angular Framework',
+    short_name: 'CONCIERGE',
+    logo_dark: {
+        type: 'img',
+        src: 'assets/img/logo.svg',
+        background: '',
+    },
+    logo_light: {
+        type: 'img',
+        src: 'assets/img/logo-inverse.svg',
+        background: '#0a0d2e',
+    },
+    general,
+    booking,
+    day_view,
+    visitors,
+    reports,
+};
+/**
+ * ROOT SETTIGNS
+ */
+exports.DEFAULT_SETTINGS = {
+    env: 'prod',
+    debug: true,
+    composer: {
+        domain: '',
+        route: '/concierge',
+        protocol: '',
+        port: '',
+        use_domain: false,
+        local_login: false,
+    },
+    app,
+    mock: false,
+};
+
+
+/***/ }),
+
 /***/ "./src/environments/version.ts":
 /*!*************************************!*\
   !*** ./src/environments/version.ts ***!
@@ -26309,16 +26474,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "ebea36b",
-    "hash": "ebea36b",
+    "raw": "a9bb0cc",
+    "hash": "a9bb0cc",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "ebea36b",
+    "suffix": "a9bb0cc",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601558090309
+    "time": 1601558235505
 };
 /* tslint:enable */
 
