@@ -21279,16 +21279,15 @@ class DayViewApprovalsComponent extends base_directive_1.BaseDirective {
         this.space_list = [];
         /** Observable for tentative events */
         this.events = this._bookings.filtered.pipe(operators_1.map((bookings) => {
-            const list = bookings.filter((bkn) => bkn.tentative);
-            const length = list.length;
+            const list = [];
+            const length = bookings.length;
             for (let i = 0; i < length; i++) {
-                const ids = Object.keys(list[i].approval_status);
+                const ids = Object.keys(bookings[i].approval_status);
                 for (const id of ids) {
-                    if (list[i].approval_status[id].includes('tentative') && list[i].space.email !== id) {
-                        const obj = new booking_class_1.Booking(list[i]).toJSON();
-                        const room_ids = obj.room_ids.filter(i => i !== id);
+                    if (bookings[i].approval_status[id].includes('tentative')) {
+                        const obj = new booking_class_1.Booking(bookings[i]).toJSON();
+                        const room_ids = bookings[i].space_list.map(i => i.email).filter(i => i !== id);
                         room_ids.unshift(id);
-                        console.log(Object.assign(Object.assign({}, obj), { room_ids }));
                         list.push(new booking_class_1.Booking(Object.assign(Object.assign({}, obj), { room_ids })));
                     }
                 }
@@ -26310,16 +26309,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "715a5a5",
-    "hash": "715a5a5",
+    "raw": "ebea36b",
+    "hash": "ebea36b",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "715a5a5",
+    "suffix": "ebea36b",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601422894265
+    "time": 1601558090309
 };
 /* tslint:enable */
 

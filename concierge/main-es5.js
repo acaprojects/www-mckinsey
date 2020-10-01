@@ -38551,26 +38551,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Observable for tentative events */
 
         _this186.events = _this186._bookings.filtered.pipe(operators_1.map(function (bookings) {
-          var list = bookings.filter(function (bkn) {
-            return bkn.tentative;
-          });
-          var length = list.length;
+          var list = [];
+          var length = bookings.length;
 
           for (var _i15 = 0; _i15 < length; _i15++) {
-            var ids = Object.keys(list[_i15].approval_status);
+            var ids = Object.keys(bookings[_i15].approval_status);
 
             var _loop7 = function _loop7() {
               var id = _ids[_i16];
 
-              if (list[_i15].approval_status[id].includes('tentative') && list[_i15].space.email !== id) {
-                var obj = new booking_class_1.Booking(list[_i15]).toJSON();
-                var room_ids = obj.room_ids.filter(function (i) {
+              if (bookings[_i15].approval_status[id].includes('tentative')) {
+                var obj = new booking_class_1.Booking(bookings[_i15]).toJSON();
+
+                var room_ids = bookings[_i15].space_list.map(function (i) {
+                  return i.email;
+                }).filter(function (i) {
                   return i !== id;
                 });
+
                 room_ids.unshift(id);
-                console.log(Object.assign(Object.assign({}, obj), {
-                  room_ids: room_ids
-                }));
                 list.push(new booking_class_1.Booking(Object.assign(Object.assign({}, obj), {
                   room_ids: room_ids
                 })));
@@ -48076,16 +48075,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "715a5a5",
-      "hash": "715a5a5",
+      "raw": "ebea36b",
+      "hash": "ebea36b",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "715a5a5",
+      "suffix": "ebea36b",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601422894265
+      "time": 1601558090309
     };
     /* tslint:enable */
 
