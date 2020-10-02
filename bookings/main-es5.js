@@ -15063,20 +15063,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this90 = this;
 
-          this.subscription('get_current_space', this._service.Spaces.listen('list').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (spaces) {
-            return spaces.filter(function (space) {
-              return space.id === _this90.system_id;
-            });
-          })).subscribe(function (value) {
-            if (value.length >= 1) {
-              _this90.space = value[0];
-            }
-          }));
-          this.subscription('levels', this._service.Organisation.listen('levels').subscribe(function () {
-            // this requires a refactor, but essentially the rules will check for building
-            // levels. We need to listen for level loading to then load the rules.
-            _this90.rules = _this90.space && _this90.space.rulesFor({});
-          }));
           this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
             if (is_ready) {
               _this90.subscription('route.params', _this90._route.paramMap.subscribe(function (params) {
@@ -15085,6 +15071,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   _this90._service.set('system', _this90.system_id);
                 }
+              }));
+
+              _this90.subscription('get_current_space', _this90._service.Spaces.listen('list').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (spaces) {
+                return spaces.filter(function (space) {
+                  return space.id === _this90.system_id;
+                });
+              })).subscribe(function (value) {
+                if (value.length >= 1) {
+                  console.log('SPACE LOADED');
+                  _this90.space = value[0];
+                }
+              }));
+
+              _this90.subscription('levels', _this90._service.Organisation.listen('levels').subscribe(function () {
+                console.log('RULES'); // this requires a refactor, but essentially the rules will check for building
+                // levels. We need to listen for level loading to then load the rules.
+
+                _this90.rules = _this90.space && _this90.space.rulesFor({});
               }));
 
               _this90.timeout('websocket', function () {
@@ -18172,16 +18176,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "b68bfdc",
-      "hash": "b68bfdc",
+      "raw": "d329dd6",
+      "hash": "d329dd6",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "b68bfdc",
+      "suffix": "d329dd6",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601658747997
+      "time": 1601666336440
     };
     /* tslint:enable */
 
