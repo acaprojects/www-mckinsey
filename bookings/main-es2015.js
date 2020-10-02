@@ -6986,20 +6986,6 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         }
     }
     ngOnInit() {
-        this.subscription('get_current_space', this._service.Spaces
-            .listen('list')
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(spaces => spaces.filter(space => space.id === this.system_id)))
-            .subscribe(value => {
-            if (value.length >= 1) {
-                this.space = value[0];
-            }
-        }));
-        this.subscription('levels', this._service.Organisation.listen('levels')
-            .subscribe(() => {
-            // this requires a refactor, but essentially the rules will check for building
-            // levels. We need to listen for level loading to then load the rules.
-            this.rules = this.space && this.space.rulesFor({});
-        }));
         this.subscription('app_ready', this._service.initialised.subscribe((is_ready) => {
             if (is_ready) {
                 this.subscription('route.params', this._route.paramMap.subscribe(params => {
@@ -7007,6 +6993,22 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                         this.system_id = params.get('system_id');
                         this._service.set('system', this.system_id);
                     }
+                }));
+                this.subscription('get_current_space', this._service.Spaces
+                    .listen('list')
+                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(spaces => spaces.filter(space => space.id === this.system_id)))
+                    .subscribe(value => {
+                    if (value.length >= 1) {
+                        console.log('SPACE LOADED');
+                        this.space = value[0];
+                    }
+                }));
+                this.subscription('levels', this._service.Organisation.listen('levels')
+                    .subscribe(() => {
+                    console.log('RULES');
+                    // this requires a refactor, but essentially the rules will check for building
+                    // levels. We need to listen for level loading to then load the rules.
+                    this.rules = this.space && this.space.rulesFor({});
                 }));
                 this.timeout('websocket', () => {
                     this.websocket_connected = true;
@@ -8176,16 +8178,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "b68bfdc",
-    "hash": "b68bfdc",
+    "raw": "d329dd6",
+    "hash": "d329dd6",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b68bfdc",
+    "suffix": "d329dd6",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601658747997
+    "time": 1601666336440
 };
 /* tslint:enable */
 
