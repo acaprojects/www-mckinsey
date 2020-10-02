@@ -19265,33 +19265,33 @@ const _c0 = ["input"];
 const _c1 = function () { return { class: "material-icons", content: "close" }; };
 function ExploreSearchComponent_div_0_button_7_Template(rf, ctx) { if (rf & 1) {
     const _r7 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "button", 13);
+    i0.ɵɵelementStart(0, "button", 12);
     i0.ɵɵlistener("click", function ExploreSearchComponent_div_0_button_7_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r7); const ctx_r6 = i0.ɵɵnextContext(2); ctx_r6.search_str = ""; ctx_r6.search$.next(""); return ctx_r6.checkEmpty(""); });
-    i0.ɵɵelement(1, "app-icon", 6);
+    i0.ɵɵelement(1, "app-icon", 5);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     i0.ɵɵadvance(1);
     i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(1, _c1));
 } }
 function ExploreSearchComponent_div_0_mat_spinner_8_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "mat-spinner", 14);
+    i0.ɵɵelement(0, "mat-spinner", 13);
 } }
 const _c2 = function () { return { type: "icon", class: "material-icons", content: "search" }; };
 function ExploreSearchComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     const _r9 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 4);
+    i0.ɵɵelementStart(0, "div", 3);
     i0.ɵɵlistener("focus", function ExploreSearchComponent_div_0_Template_div_focus_0_listener() { i0.ɵɵrestoreView(_r9); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.focusField(); })("click", function ExploreSearchComponent_div_0_Template_div_click_0_listener() { i0.ɵɵrestoreView(_r9); const ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.focusField(); });
-    i0.ɵɵelementStart(1, "div", 5);
-    i0.ɵɵelement(2, "app-icon", 6);
+    i0.ɵɵelementStart(1, "div", 4);
+    i0.ɵɵelement(2, "app-icon", 5);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "div", 7);
-    i0.ɵɵelementStart(4, "input", 8, 9);
+    i0.ɵɵelementStart(3, "div", 6);
+    i0.ɵɵelementStart(4, "input", 7, 8);
     i0.ɵɵlistener("ngModelChange", function ExploreSearchComponent_div_0_Template_input_ngModelChange_4_listener($event) { i0.ɵɵrestoreView(_r9); const ctx_r11 = i0.ɵɵnextContext(); return ctx_r11.search_str = $event; })("ngModelChange", function ExploreSearchComponent_div_0_Template_input_ngModelChange_4_listener($event) { i0.ɵɵrestoreView(_r9); const ctx_r12 = i0.ɵɵnextContext(); ctx_r12.search$.next($event); return ctx_r12.checkEmpty($event); });
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(6, "div", 10);
-    i0.ɵɵtemplate(7, ExploreSearchComponent_div_0_button_7_Template, 2, 2, "button", 11);
-    i0.ɵɵtemplate(8, ExploreSearchComponent_div_0_mat_spinner_8_Template, 1, 0, "mat-spinner", 12);
+    i0.ɵɵelementStart(6, "div", 9);
+    i0.ɵɵtemplate(7, ExploreSearchComponent_div_0_button_7_Template, 2, 2, "button", 10);
+    i0.ɵɵtemplate(8, ExploreSearchComponent_div_0_mat_spinner_8_Template, 1, 0, "mat-spinner", 11);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -19307,17 +19307,19 @@ function ExploreSearchComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵproperty("ngIf", ctx_r0.loading);
 } }
 function ExploreSearchComponent_mat_option_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "mat-option", 15);
-    i0.ɵɵelementStart(1, "div", 16);
+    const _r15 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "mat-option", 14);
+    i0.ɵɵlistener("click", function ExploreSearchComponent_mat_option_3_Template_mat_option_click_0_listener() { i0.ɵɵrestoreView(_r15); const option_r13 = ctx.$implicit; const ctx_r14 = i0.ɵɵnextContext(); return ctx_r14.selectOption(option_r13); });
+    i0.ɵɵelementStart(1, "div", 15);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "div", 17);
+    i0.ɵɵelementStart(3, "div", 16);
     i0.ɵɵtext(4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const option_r13 = ctx.$implicit;
-    i0.ɵɵproperty("value", option_r13);
+    i0.ɵɵproperty("value", option_r13.name);
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate(option_r13.name);
     i0.ɵɵadvance(2);
@@ -19435,7 +19437,6 @@ class ExploreSearchComponent extends base_directive_1.BaseDirective {
                 queryParamsHandling: 'merge',
             });
         }
-        this.search_str = item.name;
         this._showing_option = true;
         this.timeout('selected_option', () => this._showing_option = false, 1000);
     }
@@ -19447,11 +19448,10 @@ ExploreSearchComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ExploreSearchCompo
     } if (rf & 2) {
         var _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.input_field = _t.first);
-    } }, inputs: { type: "type", autofocus: "autofocus", placeholder: "placeholder", level: "level" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 4, vars: 2, consts: [["class", "searchbar", "tabindex", "0", 3, "focus", "click", 4, "ngIf"], [3, "optionSelected"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], ["tabindex", "0", 1, "searchbar", 3, "focus", "click"], [1, "prefix"], [3, "icon"], [1, "input"], ["type", "text", 3, "ngModel", "matAutocomplete", "placeholder", "ngModelChange"], ["input", ""], [1, "suffix"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], ["diameter", "32", 4, "ngIf"], ["mat-icon-button", "", 3, "click"], ["diameter", "32"], [3, "value"], [1, "name"], [1, "email"]], template: function ExploreSearchComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { type: "type", autofocus: "autofocus", placeholder: "placeholder", level: "level" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 4, vars: 2, consts: [["class", "searchbar", "tabindex", "0", 3, "focus", "click", 4, "ngIf"], ["auto", "matAutocomplete"], [3, "value", "click", 4, "ngFor", "ngForOf"], ["tabindex", "0", 1, "searchbar", 3, "focus", "click"], [1, "prefix"], [3, "icon"], [1, "input"], ["type", "text", 3, "ngModel", "matAutocomplete", "placeholder", "ngModelChange"], ["input", ""], [1, "suffix"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], ["diameter", "32", 4, "ngIf"], ["mat-icon-button", "", 3, "click"], ["diameter", "32"], [3, "value", "click"], [1, "name"], [1, "email"]], template: function ExploreSearchComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, ExploreSearchComponent_div_0_Template, 9, 7, "div", 0);
-        i0.ɵɵelementStart(1, "mat-autocomplete", 1, 2);
-        i0.ɵɵlistener("optionSelected", function ExploreSearchComponent_Template_mat_autocomplete_optionSelected_1_listener($event) { return ctx.selectOption($event.option.value); });
-        i0.ɵɵtemplate(3, ExploreSearchComponent_mat_option_3_Template, 5, 3, "mat-option", 3);
+        i0.ɵɵelementStart(1, "mat-autocomplete", null, 1);
+        i0.ɵɵtemplate(3, ExploreSearchComponent_mat_option_3_Template, 5, 3, "mat-option", 2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.type);
@@ -22481,16 +22481,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "5359908",
-    "hash": "5359908",
+    "raw": "385a198",
+    "hash": "385a198",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "5359908",
+    "suffix": "385a198",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601584253651
+    "time": 1601667035276
 };
 /* tslint:enable */
 
