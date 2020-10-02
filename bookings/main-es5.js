@@ -2727,6 +2727,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             redirect_uri: "".concat(location.origin).concat(route, "/oauth-resp.html"),
             handle_login: !settings.local_login,
             use_iframe: true,
+            token_header: true,
             mock: mock
           };
           Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["setup"])(config);
@@ -18171,16 +18172,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "382e521",
-      "hash": "382e521",
+      "raw": "b68bfdc",
+      "hash": "b68bfdc",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "382e521",
+      "suffix": "b68bfdc",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601596986674
+      "time": 1601658747997
     };
     /* tslint:enable */
 

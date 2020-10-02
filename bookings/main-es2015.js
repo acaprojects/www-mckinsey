@@ -1163,6 +1163,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
             redirect_uri: `${location.origin}${route}/oauth-resp.html`,
             handle_login: !settings.local_login,
             use_iframe: true,
+            token_header: true,
             mock
         };
         Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["setup"])(config);
@@ -8175,16 +8176,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "382e521",
-    "hash": "382e521",
+    "raw": "b68bfdc",
+    "hash": "b68bfdc",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "382e521",
+    "suffix": "b68bfdc",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601596986674
+    "time": 1601658747997
 };
 /* tslint:enable */
 
