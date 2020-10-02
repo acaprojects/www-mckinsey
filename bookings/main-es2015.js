@@ -861,6 +861,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_systems_manager_systems_manager_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./data/systems-manager/systems-manager.service */ "./src/app/services/data/systems-manager/systems-manager.service.ts");
 /* harmony import */ var _data_polling_polling_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./data/polling/polling.service */ "./src/app/services/data/polling/polling.service.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+
 
 
 
@@ -1047,7 +1049,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
      * @param force Whether to force message to be emitted when debug is disabled
      */
     log(type, msg, args, stream = 'debug', force = false) {
-        this._settings.log(type, msg, args, stream, force);
+        Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_20__["log"])(type, msg, args, stream, force);
     }
     /**
      * Navigate to the given path
@@ -1142,13 +1144,15 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
     setupComposer() {
         this.log('SYSTEM', 'Setting up composer...');
         // Get application settings
-        const settings = this.setting('composer') || {};
+        const settings = this._settings.get('composer') || {};
         const protocol = settings.protocol || location.protocol;
         const host = settings.domain || location.hostname;
         const port = settings.port || location.port;
         const url = settings.use_domain ? `${protocol}//${host}:${port}` : location.origin;
-        const route = settings.route || '';
-        const mock = this.setting('mock');
+        const route = host.includes('localhost') && port === '4200' ? '' : settings.route || '';
+        const mock = this._settings.get('mock') ||
+            location.href.includes('mock=true') ||
+            localStorage.getItem('mock') === 'true';
         // Generate configuration object
         const config = {
             auth_type: 'auth_code',
@@ -1159,12 +1163,9 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
             redirect_uri: `${location.origin}${route}/oauth-resp.html`,
             handle_login: !settings.local_login,
             use_iframe: true,
-            token_header: true,
-            mock,
+            mock
         };
-        if (localStorage) {
-            localStorage.setItem('oauth_redirect', location.href);
-        }
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["setup"])(config);
         this.log('SYSTEM', 'Finsihed setting up composer.');
         return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["setup"])(config);
     }
@@ -3840,13 +3841,14 @@ HotkeysService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineIn
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsService", function() { return SettingsService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/index.js");
 /* harmony import */ var src_environments_version__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/environments/version */ "./src/environments/version.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_environments_settings__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/environments/settings */ "./src/environments/settings.ts");
+/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/base.class */ "./src/app/shared/base.class.ts");
+/* harmony import */ var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
@@ -3855,62 +3857,80 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class SettingsService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_3__["BaseClass"] {
-    constructor(http) {
+
+
+class SettingsService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_6__["BaseClass"] {
+    constructor(_title) {
         super();
-        this.http = http;
-        /** Map of settings */
-        this._settings = { api: {}, local: {}, session: {} };
-        /** Store for promises */
-        this._promises = {};
+        this._title = _title;
         /** Name of the application */
         this._app_name = 'PlaceOS';
-        const now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
-        const build = dayjs__WEBPACK_IMPORTED_MODULE_5__(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].time);
-        const built = now.isSame(build, 'd') ? `Today at ${build.format('h:mmA')}` : build.format('D MMM YYYY, h:mmA');
-        this.log('CORE', `${src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].core_version}`, null, 'debug', true);
-        this.log('APP', `${src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].version} - ${src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].hash} | Built: ${built}`, null, 'debug', true);
+        /** List of override settings in order of priority */
+        this._overrides = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        /** Mapping of behaviour subjects */
+        this._subjects = {};
+        /** Mapping of observables */
+        this._observables = {};
+        const now = new Date();
+        const time = new Date(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].time);
+        const built = Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["isSameDay"])(now, time)
+            ? `Today at ${Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["format"])(time, 'h:mma')}`
+            : Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["format"])(time, 'do MMM yyyy, h:mma');
+        Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["log"])('CORE', `${src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].semver}`, null, 'debug', true);
+        Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["log"])('APP', `${src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].hash} | Built: ${built}`, null, 'debug', true);
         this.init();
+    }
+    /**
+     * @hidden
+     */
+    set overrides(value) {
+        this._overrides.next(value);
+    }
+    /** Get observable for key */
+    listen(name) {
+        if (!this._observables[name]) {
+            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
+            this._observables[name] = this._subjects[name].asObservable();
+        }
+        return this._observables[name];
+    }
+    /** Update observable value for key */
+    post(name, value) {
+        if (!this._observables[name]) {
+            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
+            this._observables[name] = this._subjects[name].asObservable();
+        }
+        this._subjects[name].next(value);
+    }
+    value(name) {
+        return !this._observables[name] ? null : this._subjects[name].getValue();
+    }
+    /** Page title */
+    get title() {
+        return this._title.getTitle();
+    }
+    set title(value) {
+        this._title.setTitle(`${value} | ${this._app_name}`);
     }
     /**
      * Initialise the settings
      */
     init() {
+        var _a;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            yield this.loadFromFile('api');
-            /* istanbul ignore next */
-            if (this._settings.api.debug) {
+            if (this.get('debug')) {
                 window.debug = true;
             }
-            /* istanbul ignore next */
-            if (this._settings.api.app && this._settings.api.app.name) {
-                this._app_name = this._settings.api.app.name;
+            if ((_a = this.get('app')) === null || _a === void 0 ? void 0 : _a.name) {
+                this._app_name = this.get('app').name;
             }
-            this.log('Settings', 'Successfully loaded settings');
+            Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["log"])('Settings', 'Successfully loaded settings');
             this._initialised.next(true);
         });
     }
     /** Whether settings service has initialised */
-    get app_name() { return this._app_name; }
-    /* istanbul ignore next */
-    /**
-     * Log data to the browser console
-     * @param type Type of message
-     * @param msg Message body
-     * @param args array of argments to log to the console
-     * @param stream Stream to emit the console on. 'debug', 'log', 'warn' or 'error'
-     * @param force Whether to force message to be emitted when debug is disabled
-     */
-    log(type, msg, args, stream = 'debug', force = false) {
-        if (window.debug || force) {
-            const colors = ['color: #E91E63', 'color: #3F51B5', 'color: default'];
-            if (args) {
-                console[stream](`%c[${this.app_name}]%c[${type}] %c${msg}`, ...colors, args);
-            }
-            else {
-                console[stream](`%c[${this.app_name}]%c[${type}] %c${msg}`, ...colors);
-            }
-        }
+    get app_name() {
+        return this._app_name;
     }
     /**
      * Get a setting
@@ -3918,47 +3938,20 @@ class SettingsService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_3__["B
      */
     get(key) {
         const keys = key.split('.');
-        let value = null;
-        value = Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_2__["getItemWithKeys"])(keys, this._settings.api) ||
-            Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_2__["getItemWithKeys"])(keys, this._settings.session) ||
-            Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_2__["getItemWithKeys"])(keys, this._settings.local);
-        return value;
-    }
-    /**
-     * Load setting data from a file
-     * @param name Namespace to add file data to
-     * @param file URL to file to load setting data from
-     */
-    loadFromFile(name, file = 'assets/settings.json', tries = 0) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            if (file !== 'assets/settings.json' && tries > 5) {
-                return Promise.resolve();
+        if (keys[0] !== 'app') {
+            return Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["getItemWithKeys"])(keys, src_environments_settings__WEBPACK_IMPORTED_MODULE_5__["DEFAULT_SETTINGS"]);
+        }
+        const override_settings = this._overrides.getValue();
+        for (const override of override_settings) {
+            const value = Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["getItemWithKeys"])(keys.slice(1), override);
+            if (value != null) {
+                return value;
             }
-            const file_name = file.split('/')[file.split('/').length - 1];
-            // Check if data has been loaded into the global space
-            if (window[file_name] instanceof Object) {
-                this._settings[name] = Object.assign(Object.assign({}, (this._settings[name] || {})), window[file_name]);
-                return Promise.resolve();
-            }
-            const key = `load|${name}|${file}`;
-            if (!this._promises[key]) {
-                this._promises[key] = new Promise((resolve, reject) => {
-                    this.http.get(file).subscribe((data) => {
-                        this._settings[name] = Object.assign(Object.assign({}, (this._settings[name] || {})), (data || {}));
-                    }, (e) => {
-                        this.log('Settings', `Failed to load settings from "${file}"`);
-                        this._promises[key] = null;
-                        this.timeout(`load_${file_name}`, () => {
-                            this.loadFromFile(name, file, ++tries).then(() => resolve());
-                        });
-                    }, () => resolve());
-                });
-            }
-            return this._promises[key];
-        });
+        }
+        return Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["getItemWithKeys"])(keys, src_environments_settings__WEBPACK_IMPORTED_MODULE_5__["DEFAULT_SETTINGS"]);
     }
 }
-SettingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjectable"]({ factory: function SettingsService_Factory() { return new SettingsService(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); }, token: SettingsService, providedIn: "root" });
+SettingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({ factory: function SettingsService_Factory() { return new SettingsService(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"])); }, token: SettingsService, providedIn: "root" });
 
 
 /***/ }),
@@ -5250,11 +5243,12 @@ function formatSpaces(list) {
 /*!*******************************************************!*\
   !*** ./src/app/shared/utilities/general.utilities.ts ***!
   \*******************************************************/
-/*! exports provided: predictableRandomInt, getItemWithKeys, isMobileDevice, isMobileSafari, isAndroidChrome, padZero, unique, humaniseDuration, filterList, matchToHighlight, timeToDate, flatten */
+/*! exports provided: log, predictableRandomInt, getItemWithKeys, isMobileDevice, isMobileSafari, isAndroidChrome, padZero, unique, humaniseDuration, filterList, matchToHighlight, timeToDate, flatten */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "log", function() { return log; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "predictableRandomInt", function() { return predictableRandomInt; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getItemWithKeys", function() { return getItemWithKeys; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobileDevice", function() { return isMobileDevice; });
@@ -5270,6 +5264,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
 
+/**
+ * Log data to the browser console
+ * @param type Type of message
+ * @param msg Message body
+ * @param args array of argments to log to the console
+ * @param stream Stream to emit the console on. 'debug', 'log', 'warn' or 'error'
+ * @param force Whether to force message to be emitted when debug is disabled
+ */
+function log(type, msg, args, stream = 'debug', force = false, app_name = 'STAFF') {
+    if (window.debug || force) {
+        const colors = ['color: #E91E63', 'color: #3F51B5', 'color: default'];
+        if (args) {
+            console[stream](`%c[${app_name}]%c[${type}] %c${msg}`, ...colors, args);
+        }
+        else {
+            console[stream](`%c[${app_name}]%c[${type}] %c${msg}`, ...colors);
+        }
+    }
+}
 const seed = xmur3('PlaceOS');
 const rand = sfc32(0x9e3779b9, 0x243f6a88, 0xb7e15162, seed());
 function predictableRandomInt(ceil = 100, floor = 0) {
@@ -7961,6 +7974,193 @@ const environment = {
 
 /***/ }),
 
+/***/ "./src/environments/settings.ts":
+/*!**************************************!*\
+  !*** ./src/environments/settings.ts ***!
+  \**************************************/
+/*! exports provided: DEFAULT_SETTINGS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEFAULT_SETTINGS", function() { return DEFAULT_SETTINGS; });
+/**
+ * GENERAL APPLICATION SETTINGS
+ */
+const general = {
+    menu: {
+        items: [],
+        copyright: 'McKinsey & Company',
+        position: 'left'
+    }
+};
+/**
+ * HOME PAGE SETTINGS
+ */
+const home = {
+    background: 'assets/img/skyline.jpg',
+    tiles: [
+        {
+            name: 'Book',
+            route: '/book/spaces',
+            icon: {
+                type: 'icon',
+                class: 'custom-book'
+            }
+        },
+        {
+            name: 'Maps',
+            route: '/explore/space',
+            icon: {
+                type: 'icon',
+                class: 'custom-spaces'
+            }
+        },
+        {
+            name: 'My Day',
+            route: '/schedule',
+            icon: {
+                type: 'icon',
+                class: 'custom-schedule'
+            }
+        }
+    ]
+};
+/**
+ * HELP/SUPPORT SETTINGS
+ */
+const help = {
+    tiles: [],
+    columns: 2
+};
+/**
+ * BOOKING FLOW SETTINGS
+ */
+const booking = {
+    booking_types: [
+        { name: 'Internal', id: 'internal' },
+        { name: 'Client', id: 'client' },
+        { name: 'External', id: 'external' },
+        { name: 'Setup', id: 'setup' },
+        { name: 'Training', id: 'training' },
+        { name: 'Interview', id: 'interview' }
+    ],
+    show_fields: [
+        'attendees',
+        'body',
+        'catering',
+        'date',
+        'duration',
+        'organiser',
+        'recurrence',
+        'title',
+        'type',
+        'all_day',
+        'needs_space',
+        'has_catering'
+    ],
+    html_body: true,
+    multiple_spaces: true,
+    desk_start: 9
+};
+/*===========================*\
+||  SPACE LISTING SETTINGS   ||
+\*===========================*/
+const space_display = {
+    show_images: false
+};
+/*===========================*\
+||  USER DIRECTORY SETTINGS  ||
+\*===========================*/
+const directory = {
+    show_avatars: true,
+    min_search_length: 3
+};
+/*===========================*\
+||    EXPLORE MAP SETTINGS   ||
+\*===========================*/
+const explore = {
+    colors: {
+        'space-available': '#43a047',
+        'space-requestable': '#ffb300',
+        'space-unavailable': '#e53935',
+        'space-not-bookable': '#ccc',
+        'desk-available': '#43a047',
+        'desk-available-stroke': '#1b5e20',
+        'desk-unavailable': '#e53935',
+        'desk-unavailable-stroke': '#b71c1c',
+        'desk-reserved': '#ffb300',
+        'desk-reserved-stroke': '#ff6f00',
+        'desk-not-bookable': '#fff',
+        'desk-not-bookable-stroke': '#ccc',
+        'zone-low': '#43a047',
+        'zone-medium': '#ffb300',
+        'zone-high': '#e53935'
+    },
+    can_select_building: true,
+    show_legend_group_names: false,
+    show_timeline: true,
+    legend: {
+        General: [
+            { key: 'space-available', name: 'Available' },
+            { key: 'space-requestable', name: 'Available by request' },
+            { key: 'space-unavailable', name: 'In use' },
+            { key: 'space-not-bookable', name: 'Not Bookable' }
+        ]
+    }
+};
+/**
+ * ROOT APPLICATION SETTINGS
+ */
+const app = {
+    title: 'McKinsey & Company',
+    description: 'McKinsey & Company Booking Panel UI written with Angular Framework',
+    short_name: 'PANEL',
+    logo_light: {
+        type: 'img',
+        src: 'assets/img/logo.svg',
+        background: ''
+    },
+    logo_dark: {
+        type: 'img',
+        src: 'assets/img/logo-inverse.svg',
+        background: ''
+    },
+    heap_io: {
+        app_id: 3540602199,
+        force_ssl: true,
+        secure_cookie: true,
+        disable_text_capture: true,
+        cookie_path: '/bookings/'
+    },
+    general,
+    home,
+    help,
+    booking,
+    space_display,
+    directory,
+    explore
+};
+/**
+ * ROOT SETTIGNS
+ */
+const DEFAULT_SETTINGS = {
+    debug: true,
+    composer: {
+        domain: '',
+        route: '/bookings',
+        protocol: '',
+        port: '',
+        use_domain: false,
+        local_login: false
+    },
+    app,
+    mock: false
+};
+
+
+/***/ }),
+
 /***/ "./src/environments/version.ts":
 /*!*************************************!*\
   !*** ./src/environments/version.ts ***!
@@ -7975,16 +8175,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "db8a171",
-    "hash": "db8a171",
+    "raw": "382e521",
+    "hash": "382e521",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "db8a171",
+    "suffix": "382e521",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601596577128
+    "time": 1601596986674
 };
 /* tslint:enable */
 

@@ -2405,6 +2405,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+    /*! ../shared/utilities/general.utilities */
+    "./src/app/shared/utilities/general.utilities.ts");
 
     var ApplicationService = /*#__PURE__*/function (_shared_base_class__W) {
       _inherits(ApplicationService, _shared_base_class__W);
@@ -2545,8 +2551,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function log(type, msg, args) {
           var stream = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'debug';
           var force = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
-
-          this._settings.log(type, msg, args, stream, force);
+          Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_20__["log"])(type, msg, args, stream, force);
         }
         /**
          * Navigate to the given path
@@ -2705,13 +2710,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function setupComposer() {
           this.log('SYSTEM', 'Setting up composer...'); // Get application settings
 
-          var settings = this.setting('composer') || {};
+          var settings = this._settings.get('composer') || {};
           var protocol = settings.protocol || location.protocol;
           var host = settings.domain || location.hostname;
           var port = settings.port || location.port;
           var url = settings.use_domain ? "".concat(protocol, "//").concat(host, ":").concat(port) : location.origin;
-          var route = settings.route || '';
-          var mock = this.setting('mock'); // Generate configuration object
+          var route = host.includes('localhost') && port === '4200' ? '' : settings.route || '';
+          var mock = this._settings.get('mock') || location.href.includes('mock=true') || localStorage.getItem('mock') === 'true'; // Generate configuration object
 
           var config = {
             auth_type: 'auth_code',
@@ -2722,14 +2727,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             redirect_uri: "".concat(location.origin).concat(route, "/oauth-resp.html"),
             handle_login: !settings.local_login,
             use_iframe: true,
-            token_header: true,
             mock: mock
           };
-
-          if (localStorage) {
-            localStorage.setItem('oauth_redirect', location.href);
-          }
-
+          Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["setup"])(config);
           this.log('SYSTEM', 'Finsihed setting up composer.');
           return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["setup"])(config);
         }
@@ -7729,21 +7729,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/platform-browser */
+    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
     /* harmony import */
 
 
-    var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../shared/utilities/general.utilities */
-    "./src/app/shared/utilities/general.utilities.ts");
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
     /* harmony import */
 
 
-    var _shared_base_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ../shared/base.class */
-    "./src/app/shared/base.class.ts");
+    var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! date-fns */
+    "./node_modules/date-fns/esm/index.js");
     /* harmony import */
 
 
@@ -7753,17 +7753,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! dayjs */
-    "./node_modules/dayjs/dayjs.min.js");
+    var src_environments_settings__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! src/environments/settings */
+    "./src/environments/settings.ts");
     /* harmony import */
 
 
-    var dayjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_5__);
+    var _shared_base_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../shared/base.class */
+    "./src/app/shared/base.class.ts");
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../shared/utilities/general.utilities */
+    "./src/app/shared/utilities/general.utilities.ts");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
@@ -7772,71 +7780,98 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       var _super18 = _createSuper(SettingsService);
 
-      function SettingsService(http) {
+      function SettingsService(_title) {
         var _this58;
 
         _classCallCheck(this, SettingsService);
 
         _this58 = _super18.call(this);
-        _this58.http = http;
-        /** Map of settings */
-
-        _this58._settings = {
-          api: {},
-          local: {},
-          session: {}
-        };
-        /** Store for promises */
-
-        _this58._promises = {};
+        _this58._title = _title;
         /** Name of the application */
 
         _this58._app_name = 'PlaceOS';
-        var now = dayjs__WEBPACK_IMPORTED_MODULE_5__();
-        var build = dayjs__WEBPACK_IMPORTED_MODULE_5__(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].time);
-        var built = now.isSame(build, 'd') ? "Today at ".concat(build.format('h:mmA')) : build.format('D MMM YYYY, h:mmA');
+        /** List of override settings in order of priority */
 
-        _this58.log('CORE', "".concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].core_version), null, 'debug', true);
+        _this58._overrides = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        /** Mapping of behaviour subjects */
 
-        _this58.log('APP', "".concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].version, " - ").concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].hash, " | Built: ").concat(built), null, 'debug', true);
+        _this58._subjects = {};
+        /** Mapping of observables */
+
+        _this58._observables = {};
+        var now = new Date();
+        var time = new Date(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].time);
+        var built = Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["isSameDay"])(now, time) ? "Today at ".concat(Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["format"])(time, 'h:mma')) : Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["format"])(time, 'do MMM yyyy, h:mma');
+        Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["log"])('CORE', "".concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].semver), null, 'debug', true);
+        Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["log"])('APP', "".concat(src_environments_version__WEBPACK_IMPORTED_MODULE_4__["VERSION"].hash, " | Built: ").concat(built), null, 'debug', true);
 
         _this58.init();
 
         return _this58;
       }
       /**
-       * Initialise the settings
+       * @hidden
        */
 
 
       _createClass(SettingsService, [{
+        key: "listen",
+
+        /** Get observable for key */
+        value: function listen(name) {
+          if (!this._observables[name]) {
+            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
+            this._observables[name] = this._subjects[name].asObservable();
+          }
+
+          return this._observables[name];
+        }
+        /** Update observable value for key */
+
+      }, {
+        key: "post",
+        value: function post(name, value) {
+          if (!this._observables[name]) {
+            this._subjects[name] = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
+            this._observables[name] = this._subjects[name].asObservable();
+          }
+
+          this._subjects[name].next(value);
+        }
+      }, {
+        key: "value",
+        value: function value(name) {
+          return !this._observables[name] ? null : this._subjects[name].getValue();
+        }
+        /** Page title */
+
+      }, {
         key: "init",
+
+        /**
+         * Initialise the settings
+         */
         value: function init() {
+          var _a;
+
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
             return regeneratorRuntime.wrap(function _callee8$(_context8) {
               while (1) {
                 switch (_context8.prev = _context8.next) {
                   case 0:
-                    _context8.next = 2;
-                    return this.loadFromFile('api');
-
-                  case 2:
-                    /* istanbul ignore next */
-                    if (this._settings.api.debug) {
+                    if (this.get('debug')) {
                       window.debug = true;
                     }
-                    /* istanbul ignore next */
 
-
-                    if (this._settings.api.app && this._settings.api.app.name) {
-                      this._app_name = this._settings.api.app.name;
+                    if ((_a = this.get('app')) === null || _a === void 0 ? void 0 : _a.name) {
+                      this._app_name = this.get('app').name;
                     }
 
-                    this.log('Settings', 'Successfully loaded settings');
+                    Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["log"])('Settings', 'Successfully loaded settings');
 
                     this._initialised.next(true);
 
-                  case 6:
+                  case 4:
                   case "end":
                     return _context8.stop();
                 }
@@ -7847,118 +7882,53 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Whether settings service has initialised */
 
       }, {
-        key: "log",
+        key: "get",
 
-        /* istanbul ignore next */
-
-        /**
-         * Log data to the browser console
-         * @param type Type of message
-         * @param msg Message body
-         * @param args array of argments to log to the console
-         * @param stream Stream to emit the console on. 'debug', 'log', 'warn' or 'error'
-         * @param force Whether to force message to be emitted when debug is disabled
-         */
-        value: function log(type, msg, args) {
-          var stream = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'debug';
-          var force = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
-
-          if (window.debug || force) {
-            var colors = ['color: #E91E63', 'color: #3F51B5', 'color: default'];
-
-            if (args) {
-              var _console;
-
-              (_console = console)[stream].apply(_console, ["%c[".concat(this.app_name, "]%c[").concat(type, "] %c").concat(msg)].concat(colors, [args]));
-            } else {
-              var _console2;
-
-              (_console2 = console)[stream].apply(_console2, ["%c[".concat(this.app_name, "]%c[").concat(type, "] %c").concat(msg)].concat(colors));
-            }
-          }
-        }
         /**
          * Get a setting
          * @param key Name of the setting. i.e. nested items can be grabbed using `.` to seperate key names
          */
-
-      }, {
-        key: "get",
         value: function get(key) {
           var keys = key.split('.');
-          var value = null;
-          value = Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_2__["getItemWithKeys"])(keys, this._settings.api) || Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_2__["getItemWithKeys"])(keys, this._settings.session) || Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_2__["getItemWithKeys"])(keys, this._settings.local);
-          return value;
-        }
-        /**
-         * Load setting data from a file
-         * @param name Namespace to add file data to
-         * @param file URL to file to load setting data from
-         */
 
-      }, {
-        key: "loadFromFile",
-        value: function loadFromFile(name) {
-          var file = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'assets/settings.json';
-          var tries = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
-            var _this59 = this;
+          if (keys[0] !== 'app') {
+            return Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["getItemWithKeys"])(keys, src_environments_settings__WEBPACK_IMPORTED_MODULE_5__["DEFAULT_SETTINGS"]);
+          }
 
-            var file_name, key;
-            return regeneratorRuntime.wrap(function _callee9$(_context9) {
-              while (1) {
-                switch (_context9.prev = _context9.next) {
-                  case 0:
-                    if (!(file !== 'assets/settings.json' && tries > 5)) {
-                      _context9.next = 2;
-                      break;
-                    }
+          var override_settings = this._overrides.getValue();
 
-                    return _context9.abrupt("return", Promise.resolve());
+          var _iterator20 = _createForOfIteratorHelper(override_settings),
+              _step20;
 
-                  case 2:
-                    file_name = file.split('/')[file.split('/').length - 1]; // Check if data has been loaded into the global space
+          try {
+            for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+              var override = _step20.value;
+              var value = Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["getItemWithKeys"])(keys.slice(1), override);
 
-                    if (!(window[file_name] instanceof Object)) {
-                      _context9.next = 6;
-                      break;
-                    }
-
-                    this._settings[name] = Object.assign(Object.assign({}, this._settings[name] || {}), window[file_name]);
-                    return _context9.abrupt("return", Promise.resolve());
-
-                  case 6:
-                    key = "load|".concat(name, "|").concat(file);
-
-                    if (!this._promises[key]) {
-                      this._promises[key] = new Promise(function (resolve, reject) {
-                        _this59.http.get(file).subscribe(function (data) {
-                          _this59._settings[name] = Object.assign(Object.assign({}, _this59._settings[name] || {}), data || {});
-                        }, function (e) {
-                          _this59.log('Settings', "Failed to load settings from \"".concat(file, "\""));
-
-                          _this59._promises[key] = null;
-
-                          _this59.timeout("load_".concat(file_name), function () {
-                            _this59.loadFromFile(name, file, ++tries).then(function () {
-                              return resolve();
-                            });
-                          });
-                        }, function () {
-                          return resolve();
-                        });
-                      });
-                    }
-
-                    return _context9.abrupt("return", this._promises[key]);
-
-                  case 9:
-                  case "end":
-                    return _context9.stop();
-                }
+              if (value != null) {
+                return value;
               }
-            }, _callee9, this);
-          }));
+            }
+          } catch (err) {
+            _iterator20.e(err);
+          } finally {
+            _iterator20.f();
+          }
+
+          return Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["getItemWithKeys"])(keys, src_environments_settings__WEBPACK_IMPORTED_MODULE_5__["DEFAULT_SETTINGS"]);
+        }
+      }, {
+        key: "overrides",
+        set: function set(value) {
+          this._overrides.next(value);
+        }
+      }, {
+        key: "title",
+        get: function get() {
+          return this._title.getTitle();
+        },
+        set: function set(value) {
+          this._title.setTitle("".concat(value, " | ").concat(this._app_name));
         }
       }, {
         key: "app_name",
@@ -7968,11 +7938,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]);
 
       return SettingsService;
-    }(_shared_base_class__WEBPACK_IMPORTED_MODULE_3__["BaseClass"]);
+    }(_shared_base_class__WEBPACK_IMPORTED_MODULE_6__["BaseClass"]);
 
-    SettingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjectable"]({
+    SettingsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({
       factory: function SettingsService_Factory() {
-        return new SettingsService(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]));
+        return new SettingsService(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"]));
       },
       token: SettingsService,
       providedIn: "root"
@@ -8038,7 +8008,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * @param delay Callback delay
          */
         value: function timeout(name, fn) {
-          var _this60 = this;
+          var _this59 = this;
 
           var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 300;
 
@@ -8046,7 +8016,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.clearTimeout(name);
             this._timers[name] = setTimeout(function () {
               fn();
-              _this60._timers[name] = null;
+              _this59._timers[name] = null;
             }, delay);
           } else {
             throw new Error(name ? 'Cannot create named timeout without a name' : 'Cannot create a timeout without a callback');
@@ -8511,44 +8481,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super20 = _createSuper(CustomDurationFieldComponent);
 
       function CustomDurationFieldComponent(field, group) {
-        var _this61;
+        var _this60;
 
         _classCallCheck(this, CustomDurationFieldComponent);
 
-        _this61 = _super20.call(this);
-        _this61.field = field;
-        _this61.group = group;
+        _this60 = _super20.call(this);
+        _this60.field = field;
+        _this60.group = group;
         /** Step size for available times */
 
-        _this61.block_size = 15;
+        _this60.block_size = 15;
         /** List of available durations */
 
-        _this61.options = [];
-        return _this61;
+        _this60.options = [];
+        return _this60;
       }
 
       _createClass(CustomDurationFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this62 = this;
+          var _this61 = this;
 
           if (this.group) {
             if (this.group.controls.date) {
               this.date_control = this.group.controls.date;
               this.subscription('date', this.date_control.valueChanges.subscribe(function () {
-                return _this62.calculateAvailableDurations();
+                return _this61.calculateAvailableDurations();
               }));
             }
 
             if (this.group.controls.room || this.group.controls.space) {
               this.space_control = this.group.controls.room || this.group.controls.space;
               this.subscription('space', this.space_control.valueChanges.subscribe(function () {
-                return _this62.calculateAvailableDurations();
+                return _this61.calculateAvailableDurations();
               }));
             }
 
             this.subscription('control', this.field.control.valueChanges.subscribe(function () {
-              return _this62.updateDisplay();
+              return _this61.updateDisplay();
             }));
           }
 
@@ -8561,13 +8531,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateDisplay",
         value: function updateDisplay() {
-          var _this63 = this;
+          var _this62 = this;
 
           if (this.options && this.options.length > 0) {
             if (!this.active_duration) {
               if (this.field.getValue()) {
                 this.active_duration = this.options.find(function (i) {
-                  return i.id === _this63.field.getValue();
+                  return i.id === _this62.field.getValue();
                 });
               }
 
@@ -8576,17 +8546,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 this.setValue(this.options[0]);
               }
             } else if (!this.options.find(function (i) {
-              return i.id === _this63.active_duration.id;
+              return i.id === _this62.active_duration.id;
             })) {
               var diff = 9999;
               var new_opt = null;
 
-              var _iterator20 = _createForOfIteratorHelper(this.options),
-                  _step20;
+              var _iterator21 = _createForOfIteratorHelper(this.options),
+                  _step21;
 
               try {
-                for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-                  var option = _step20.value;
+                for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                  var option = _step21.value;
 
                   if (Math.abs(option.id - this.active_duration.id) < diff) {
                     diff = Math.abs(option.id - this.active_duration.id);
@@ -8594,9 +8564,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   }
                 }
               } catch (err) {
-                _iterator20.e(err);
+                _iterator21.e(err);
               } finally {
-                _iterator20.f();
+                _iterator21.f();
               }
 
               if (new_opt) {
@@ -8947,44 +8917,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super21 = _createSuper(CustomTimeFieldComponent);
 
       function CustomTimeFieldComponent(field, group) {
-        var _this64;
+        var _this63;
 
         _classCallCheck(this, CustomTimeFieldComponent);
 
-        _this64 = _super21.call(this);
-        _this64.field = field;
-        _this64.group = group;
+        _this63 = _super21.call(this);
+        _this63.field = field;
+        _this63.group = group;
         /** Step size for available times */
 
-        _this64.block_size = 5;
+        _this63.block_size = 5;
         /** Step size for available times */
 
-        _this64.min_size = _this64.block_size * 6;
-        return _this64;
+        _this63.min_size = _this63.block_size * 6;
+        return _this63;
       }
 
       _createClass(CustomTimeFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this65 = this;
+          var _this64 = this;
 
           if (this.group) {
             if (this.group.controls.date) {
               this.date_control = this.group.controls.date;
               this.subscription('date', this.date_control.valueChanges.subscribe(function () {
-                return _this65.updateDisplay(true);
+                return _this64.updateDisplay(true);
               }));
             }
 
             if (this.group.controls.room || this.group.controls.space) {
               this.space_control = this.group.controls.room || this.group.controls.space;
               this.subscription('space', this.space_control.valueChanges.subscribe(function () {
-                return _this65.updateDisplay();
+                return _this64.updateDisplay();
               }));
             }
 
             this.subscription('control', this.field.control.valueChanges.subscribe(function () {
-              return _this65.updateDisplay();
+              return _this64.updateDisplay();
             }));
           }
 
@@ -9011,12 +8981,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var from_ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
           if (this.times) {
-            var _iterator21 = _createForOfIteratorHelper(this.times),
-                _step21;
+            var _iterator22 = _createForOfIteratorHelper(this.times),
+                _step22;
 
             try {
-              for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                var _time = _step21.value;
+              for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                var _time = _step22.value;
 
                 if (this.field.getValue() === _time.id) {
                   this.active_time = _time;
@@ -9024,9 +8994,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator21.e(err);
+              _iterator22.e(err);
             } finally {
-              _iterator21.f();
+              _iterator22.f();
             }
 
             if (!this.field.getValue()) {
@@ -9036,12 +9006,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 date = date.minute(Math.ceil(date.minute() / 5) * 5);
                 var date_str = date.format('HH:mm');
 
-                var _iterator22 = _createForOfIteratorHelper(this.times),
-                    _step22;
+                var _iterator23 = _createForOfIteratorHelper(this.times),
+                    _step23;
 
                 try {
-                  for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-                    var time = _step22.value;
+                  for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                    var time = _step23.value;
 
                     if (date.valueOf() - time.value <= 0) {
                       this.active_time = time;
@@ -9050,9 +9020,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
                   }
                 } catch (err) {
-                  _iterator22.e(err);
+                  _iterator23.e(err);
                 } finally {
-                  _iterator22.f();
+                  _iterator23.f();
                 }
               } // Set to default value
 
@@ -9071,7 +9041,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "calculateAvailableTimes",
         value: function calculateAvailableTimes() {
-          var _this66 = this;
+          var _this65 = this;
 
           this.times = [];
           var date = dayjs__WEBPACK_IMPORTED_MODULE_4__().startOf('m');
@@ -9091,7 +9061,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (slots.find(function (i) {
                 return i.start <= value && value < i.end && dayjs__WEBPACK_IMPORTED_MODULE_4__(i.end).diff(date, 'm') >= min_duration;
               })) {
-                _this66.times.push({
+                _this65.times.push({
                   id: date.format('HH:mm'),
                   name: date.format('h:mm A'),
                   value: date.valueOf()
@@ -9558,27 +9528,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super22 = _createSuper(CustomUserSearchFieldComponent);
 
       function CustomUserSearchFieldComponent(field, group, service) {
-        var _this67;
+        var _this66;
 
         _classCallCheck(this, CustomUserSearchFieldComponent);
 
-        _this67 = _super22.call(this);
-        _this67.field = field;
-        _this67.group = group;
-        _this67.service = service;
+        _this66 = _super22.call(this);
+        _this66.field = field;
+        _this66.group = group;
+        _this66.service = service;
         /** List of users from an API search */
 
-        _this67.filtered_list = [];
+        _this66.filtered_list = [];
         /** Subject holding the value of the search */
 
-        _this67.search$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-        return _this67;
+        _this66.search$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        return _this66;
       }
 
       _createClass(CustomUserSearchFieldComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this68 = this;
+          var _this67 = this;
 
           if (this.group) {
             if (this.field.references && this.field.references.length > 0) {
@@ -9586,35 +9556,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               if (control) {
                 this.subscription('reference', control.valueChanges.subscribe(function () {
-                  return _this68.updateDisplay();
+                  return _this67.updateDisplay();
                 }));
               }
             }
 
             this.subscription('control', this.field.control.valueChanges.subscribe(function () {
-              return _this68.updateDisplay();
+              return _this67.updateDisplay();
             }));
           } // Listen for input changes
 
 
           this.search_results$ = this.search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(400), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function (query) {
-            _this68.searching = true;
-            _this68.show = true;
-            return query.length >= 3 ? _this68.service.Users.query({
+            _this67.searching = true;
+            _this67.show = true;
+            return query.length >= 3 ? _this67.service.Users.query({
               q: query.slice(0, 3),
               cache: 60 * 1000
             }) : Promise.resolve([]);
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (err) {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])([]);
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (list) {
-            _this68.searching = false;
-            return Object(_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["filterList"])(_this68.search_str, list, ['name', 'email']);
+            _this67.searching = false;
+            return Object(_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["filterList"])(_this67.search_str, list, ['name', 'email']);
           })); // Process API results
 
           this.search_results$.subscribe(function (list) {
-            _this68.filtered_list = list;
+            _this67.filtered_list = list;
 
-            _this68.filtered_list.forEach(function (i) {
+            _this67.filtered_list.forEach(function (i) {
               i.match_name = Object(_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["matchToHighlight"])(i.match_name);
               i.match_email = Object(_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["matchToHighlight"])(i.match_email);
               return i;
@@ -9649,12 +9619,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "reset",
         value: function reset() {
-          var _this69 = this;
+          var _this68 = this;
 
           this.timeout('reset', function () {
-            var value = _this69.field.control.value;
-            _this69.search_str = value ? value.name : '';
-            _this69.show = false;
+            var value = _this68.field.control.value;
+            _this68.search_str = value ? value.name : '';
+            _this68.show = false;
           });
         }
         /**
@@ -9665,14 +9635,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "select",
         value: function select(user) {
-          var _this70 = this;
+          var _this69 = this;
 
           if (user) {
             this.field.setValue(user);
           }
 
           this.timeout('hide', function () {
-            _this70.show = false;
+            _this69.show = false;
           }, 100);
         }
       }]);
@@ -9736,16 +9706,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(BindingDirective, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this71 = this;
+          var _this70 = this;
 
           this.init_listener = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["onlineState"])().subscribe(function (init) {
             if (init) {
-              _this71.bindVariable();
+              _this70.bindVariable();
 
-              if (_this71.init_listener) {
-                _this71.init_listener.unsubscribe();
+              if (_this70.init_listener) {
+                _this70.init_listener.unsubscribe();
 
-                _this71.init_listener = null;
+                _this70.init_listener = null;
               }
             }
           });
@@ -9771,7 +9741,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this72 = this;
+          var _this71 = this;
 
           if (changes.sys || changes.mod || changes.bind) {
             this.ngOnDestroy();
@@ -9785,7 +9755,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
 
             this.event_listener = this._renderer.listen(this._element.nativeElement, this.on_event, function () {
-              return _this72.execute();
+              return _this71.execute();
             });
           }
         }
@@ -9794,7 +9764,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "bindVariable",
         value: function bindVariable() {
-          var _this73 = this;
+          var _this72 = this;
 
           if (Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["authority"])() && this.bind && this.sys && this.mod) {
             var _module2 = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(this.sys, this.mod, this.index);
@@ -9804,9 +9774,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.unbind = binding.bind();
             this.listener = binding.listen().subscribe(function (value) {
               return setTimeout(function () {
-                _this73.model = value;
+                _this72.model = value;
 
-                _this73.modelChange.emit(_this73.model);
+                _this72.modelChange.emit(_this72.model);
               }, 10);
             });
           }
@@ -9816,17 +9786,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "execute",
         value: function execute() {
-          var _this74 = this;
+          var _this73 = this;
 
           if (Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["authority"])() && this.exec && this.sys && this.mod) {
             var _module3 = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(this.sys, this.mod, this.index);
 
             _module3.execute(this.exec, this.params).then(function (result) {
               // Emit exec result if not bound to status variable
-              if (!_this74.bind) {
-                _this74.model = result;
+              if (!_this73.bind) {
+                _this73.model = result;
 
-                _this74.modelChange.emit(_this74.model);
+                _this73.modelChange.emit(_this73.model);
               }
             });
           }
@@ -10134,18 +10104,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var MOCK_SYSTEMS = Array(10).fill(0).map(ɵ0);
 
-    var _iterator23 = _createForOfIteratorHelper(MOCK_SYSTEMS),
-        _step23;
+    var _iterator24 = _createForOfIteratorHelper(MOCK_SYSTEMS),
+        _step24;
 
     try {
-      for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-        var system = _step23.value;
+      for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+        var system = _step24.value;
         Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_0__["registerSystem"])(system.id, system);
       }
     } catch (err) {
-      _iterator23.e(err);
+      _iterator24.e(err);
     } finally {
-      _iterator23.f();
+      _iterator24.f();
     }
 
     var ɵ1 = function ɵ1(i) {
@@ -10452,12 +10422,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var length = users.length + (host ? 1 : 0);
         attendee_str = "".concat(length, " Attendee").concat(length === 1 ? '' : 's', "; ").concat(host ? host.name : '');
 
-        var _iterator24 = _createForOfIteratorHelper(users),
-            _step24;
+        var _iterator25 = _createForOfIteratorHelper(users),
+            _step25;
 
         try {
-          for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-            var item = _step24.value;
+          for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+            var item = _step25.value;
 
             if (attendee_str) {
               attendee_str += ', ';
@@ -10466,9 +10436,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             attendee_str += item.name;
           }
         } catch (err) {
-          _iterator24.e(err);
+          _iterator25.e(err);
         } finally {
-          _iterator24.f();
+          _iterator25.f();
         }
 
         attendee_str = attendee_str.replace('; ,', ';');
@@ -10573,13 +10543,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/shared/utilities/general.utilities.ts ***!
     \*******************************************************/
 
-  /*! exports provided: predictableRandomInt, getItemWithKeys, isMobileDevice, isMobileSafari, isAndroidChrome, padZero, unique, humaniseDuration, filterList, matchToHighlight, timeToDate, flatten */
+  /*! exports provided: log, predictableRandomInt, getItemWithKeys, isMobileDevice, isMobileSafari, isAndroidChrome, padZero, unique, humaniseDuration, filterList, matchToHighlight, timeToDate, flatten */
 
   /***/
   function srcAppSharedUtilitiesGeneralUtilitiesTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "log", function () {
+      return log;
+    });
     /* harmony export (binding) */
 
 
@@ -10662,6 +10638,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
+    /**
+     * Log data to the browser console
+     * @param type Type of message
+     * @param msg Message body
+     * @param args array of argments to log to the console
+     * @param stream Stream to emit the console on. 'debug', 'log', 'warn' or 'error'
+     * @param force Whether to force message to be emitted when debug is disabled
+     */
+
+
+    function log(type, msg, args) {
+      var stream = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'debug';
+      var force = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+      var app_name = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 'STAFF';
+
+      if (window.debug || force) {
+        var colors = ['color: #E91E63', 'color: #3F51B5', 'color: default'];
+
+        if (args) {
+          var _console;
+
+          (_console = console)[stream].apply(_console, ["%c[".concat(app_name, "]%c[").concat(type, "] %c").concat(msg)].concat(colors, [args]));
+        } else {
+          var _console2;
+
+          (_console2 = console)[stream].apply(_console2, ["%c[".concat(app_name, "]%c[").concat(type, "] %c").concat(msg)].concat(colors));
+        }
+      }
+    }
 
     var seed = xmur3('PlaceOS');
     var rand = sfc32(0x9e3779b9, 0x243f6a88, 0xb7e15162, seed());
@@ -10784,12 +10789,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var filters = (filter || '').toLowerCase().split(' ');
       var list = {};
 
-      var _iterator25 = _createForOfIteratorHelper(filters),
-          _step25;
+      var _iterator26 = _createForOfIteratorHelper(filters),
+          _step26;
 
       try {
-        for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-          var _f5 = _step25.value;
+        for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+          var _f5 = _step26.value;
 
           if (_f5) {
             if (!list[_f5]) {
@@ -10801,9 +10806,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // Group similar tokens
 
       } catch (err) {
-        _iterator25.e(err);
+        _iterator26.e(err);
       } finally {
-        _iterator25.f();
+        _iterator26.f();
       }
 
       var parts = [];
@@ -10830,12 +10835,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           item.match = '';
           var field_list = {}; // Initialise field match variables
 
-          var _iterator26 = _createForOfIteratorHelper(fields),
-              _step26;
+          var _iterator27 = _createForOfIteratorHelper(fields),
+              _step27;
 
           try {
-            for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-              var _f = _step26.value;
+            for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+              var _f = _step27.value;
               field_list[_f] = {
                 value: (item[_f] || '').toLowerCase(),
                 index: 65536,
@@ -10844,26 +10849,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } // Search for matches with the tokenised filter string
 
           } catch (err) {
-            _iterator26.e(err);
+            _iterator27.e(err);
           } finally {
-            _iterator26.f();
+            _iterator27.f();
           }
 
-          var _iterator27 = _createForOfIteratorHelper(parts),
-              _step27;
+          var _iterator28 = _createForOfIteratorHelper(parts),
+              _step28;
 
           try {
-            for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-              var i = _step27.value;
+            for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+              var i = _step28.value;
 
               if (i.word) {
                 // Check fields for matches
-                var _iterator29 = _createForOfIteratorHelper(fields),
-                    _step29;
+                var _iterator30 = _createForOfIteratorHelper(fields),
+                    _step30;
 
                 try {
-                  for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                    var _f2 = _step29.value;
+                  for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                    var _f2 = _step30.value;
                     var field = field_list[_f2];
                     var index = field.value.indexOf(i.word);
                     field.index = index < field.index ? index : field.index;
@@ -10872,17 +10877,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   } // Update token match count
 
                 } catch (err) {
-                  _iterator29.e(err);
+                  _iterator30.e(err);
                 } finally {
-                  _iterator29.f();
+                  _iterator30.f();
                 }
 
-                var _iterator30 = _createForOfIteratorHelper(fields),
-                    _step30;
+                var _iterator31 = _createForOfIteratorHelper(fields),
+                    _step31;
 
                 try {
-                  for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-                    var _f3 = _step30.value;
+                  for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
+                    var _f3 = _step31.value;
                     var _field = field_list[_f3];
 
                     if (_field.matches >= i.count) {
@@ -10891,12 +10896,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       var changed = 0;
                       var tokens = (item["match_".concat(_f3)] || item[_f3] || '').split(' ');
 
-                      var _iterator31 = _createForOfIteratorHelper(tokens),
-                          _step31;
+                      var _iterator32 = _createForOfIteratorHelper(tokens),
+                          _step32;
 
                       try {
-                        for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-                          var k = _step31.value;
+                        for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                          var k = _step32.value;
 
                           if (changed >= i.count) {
                             break;
@@ -10908,9 +10913,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           }
                         }
                       } catch (err) {
-                        _iterator31.e(err);
+                        _iterator32.e(err);
                       } finally {
-                        _iterator31.f();
+                        _iterator32.f();
                       }
 
                       item["match_".concat(_f3)] = tokens.join(' ');
@@ -10918,25 +10923,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
                   }
                 } catch (err) {
-                  _iterator30.e(err);
+                  _iterator31.e(err);
                 } finally {
-                  _iterator30.f();
+                  _iterator31.f();
                 }
               }
             } // Get field with the most relevent match
 
           } catch (err) {
-            _iterator27.e(err);
+            _iterator28.e(err);
           } finally {
-            _iterator27.f();
+            _iterator28.f();
           }
 
-          var _iterator28 = _createForOfIteratorHelper(fields),
-              _step28;
+          var _iterator29 = _createForOfIteratorHelper(fields),
+              _step29;
 
           try {
-            for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-              var _f4 = _step28.value;
+            for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+              var _f4 = _step29.value;
               var _field2 = field_list[_f4];
 
               if (_field2.index < item.match_index && _field2.index >= 0) {
@@ -10945,9 +10950,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator28.e(err);
+            _iterator29.e(err);
           } finally {
-            _iterator28.f();
+            _iterator29.f();
           }
 
           return item.match_index >= 0 && item.match && match_count >= parts.length;
@@ -11719,56 +11724,56 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super23 = _createSuper(BootstrapComponent);
 
       function BootstrapComponent(service, route) {
-        var _this75;
+        var _this74;
 
         _classCallCheck(this, BootstrapComponent);
 
-        _this75 = _super23.call(this);
-        _this75.service = service;
-        _this75.route = route;
+        _this74 = _super23.call(this);
+        _this74.service = service;
+        _this74.route = route;
         /** List of available systems */
 
-        _this75.system_list = [];
+        _this74.system_list = [];
         /** Selected system to bootstrap */
 
-        _this75.selected_system = null; // ensure app is trusted in dev mode so we can preserve login.
+        _this74.selected_system = null; // ensure app is trusted in dev mode so we can preserve login.
 
         if (!_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
           localStorage.setItem('trusted', 'true');
         }
 
-        return _this75;
+        return _this74;
       }
 
       _createClass(BootstrapComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this76 = this;
+          var _this75 = this;
 
           this.loading = true;
           this.service.Spaces.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])(function (_) {
             return _;
           })).subscribe(function () {
-            _this76.subscription('route.query', _this76.route.queryParamMap.subscribe(function (params) {
+            _this75.subscription('route.query', _this75.route.queryParamMap.subscribe(function (params) {
               if (params.has('clear') && params.get('clear')) {
-                _this76.clearBootstrap();
+                _this75.clearBootstrap();
               }
 
               if (params.has('system_id') || params.has('sys_id')) {
-                _this76.system_id = params.get('system_id') || params.get('sys_id');
-                _this76.manual_input = true;
+                _this75.system_id = params.get('system_id') || params.get('sys_id');
+                _this75.manual_input = true;
 
-                _this76.bootstrap();
+                _this75.bootstrap();
               }
             }));
 
-            _this76.subscription('system_list', _this76.service.Systems.systems.subscribe(function (systems) {
-              _this76.system_list = systems || [];
-              _this76.manual_input = !_this76.system_list || _this76.system_list.length <= 0;
-              _this76.loading = false;
+            _this75.subscription('system_list', _this75.service.Systems.systems.subscribe(function (systems) {
+              _this75.system_list = systems || [];
+              _this75.manual_input = !_this75.system_list || _this75.system_list.length <= 0;
+              _this75.loading = false;
             }));
 
-            _this76.checkBootstrapped();
+            _this75.checkBootstrapped();
           });
         }
         /**
@@ -12134,14 +12139,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super24 = _createSuper(BookingPanelArrayComponent);
 
       function BookingPanelArrayComponent(route, _service) {
-        var _this77;
+        var _this76;
 
         _classCallCheck(this, BookingPanelArrayComponent);
 
-        _this77 = _super24.call(this);
-        _this77.route = route;
-        _this77._service = _service;
-        return _this77;
+        _this76 = _super24.call(this);
+        _this76.route = route;
+        _this76._service = _service;
+        return _this76;
       }
       /** Display value for the current time */
 
@@ -12149,21 +12154,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(BookingPanelArrayComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this78 = this;
+          var _this77 = this;
 
           this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
             if (is_ready) {
-              _this78.subscription('route.query', _this78.route.queryParamMap.subscribe(function (params) {
+              _this77.subscription('route.query', _this77.route.queryParamMap.subscribe(function (params) {
                 if (params.has('system_ids')) {
-                  _this78.systems = (params.get('system_ids') || '').split(',');
+                  _this77.systems = (params.get('system_ids') || '').split(',');
                 }
               }));
 
-              var logo = _this78._service.setting('app.logo');
+              var logo = _this77._service.setting('app.logo');
 
-              _this78.logo = (logo ? logo.inverse : null) || '';
+              _this77.logo = (logo ? logo.inverse : null) || '';
 
-              _this78.unsub('app_ready');
+              _this77.unsub('app_ready');
             }
           }));
         }
@@ -12650,33 +12655,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super25 = _createSuper(BookingPanelSelectComponent);
 
       function BookingPanelSelectComponent(route, service) {
-        var _this79;
+        var _this78;
 
         _classCallCheck(this, BookingPanelSelectComponent);
 
-        _this79 = _super25.call(this);
-        _this79.route = route;
-        _this79.service = service;
+        _this78 = _super25.call(this);
+        _this78.route = route;
+        _this78.service = service;
         /** Names for the list of systems */
 
-        _this79.system_name = {};
+        _this78.system_name = {};
         /** Icons for the list of systems */
 
-        _this79.system_icon = {};
+        _this78.system_icon = {};
         /** Status for the list of systems */
 
-        _this79.system_status = {};
-        return _this79;
+        _this78.system_status = {};
+        return _this78;
       }
 
       _createClass(BookingPanelSelectComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this80 = this;
+          var _this79 = this;
 
           this.subscription('route.query', this.route.queryParamMap.subscribe(function (params) {
             if (params.has('system_ids')) {
-              _this80.systems = (params.get('system_ids') || '').split(',');
+              _this79.systems = (params.get('system_ids') || '').split(',');
             }
           }));
         }
@@ -12723,12 +12728,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "reset",
         value: function reset() {
-          var _this81 = this;
+          var _this80 = this;
 
           if (this.active_system) {
             this.countdown = 30;
             this.interval('countdown', function () {
-              return _this81.tick();
+              return _this80.tick();
             }, 1000);
           }
         }
@@ -13370,19 +13375,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super26 = _createSuper(PanelBookingActionsComponent);
 
       function PanelBookingActionsComponent(service) {
-        var _this82;
+        var _this81;
 
         _classCallCheck(this, PanelBookingActionsComponent);
 
-        _this82 = _super26.call(this);
-        _this82.service = service;
+        _this81 = _super26.call(this);
+        _this81.service = service;
         /** Whether booking is allowed */
 
-        _this82.no_booking = false;
+        _this81.no_booking = false;
         /** Time of the last automatic confirmation of start or end */
 
-        _this82.last_confirm = 0;
-        return _this82;
+        _this81.last_confirm = 0;
+        return _this81;
       }
       /** Current status of the active system */
 
@@ -13408,7 +13413,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "confirmStart",
         value: function confirmStart() {
-          var _this83 = this;
+          var _this82 = this;
 
           this.service.Overlay.open('confirm', {
             config: 'modal',
@@ -13421,7 +13426,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           }, function (_) {
-            return _this83.startMeeting();
+            return _this82.startMeeting();
           });
         }
         /**
@@ -13431,7 +13436,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "startMeeting",
         value: function startMeeting() {
-          var _this84 = this;
+          var _this83 = this;
 
           if (this.space) {
             var meeting = this.space.current || this.space.next;
@@ -13442,11 +13447,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(meeting.date);
 
               _module4.execute('start_meeting', [meeting.date]).then(function (_) {
-                _this84.service.Analytics.event('Checkin', 'checked-in', "".concat(_this84.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z')));
+                _this83.service.Analytics.event('Checkin', 'checked-in', "".concat(_this83.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z')));
               }, function (e) {
-                _this84.service.notifyError("Error starting meeting. ".concat(e));
+                _this83.service.notifyError("Error starting meeting. ".concat(e));
 
-                _this84.service.Analytics.event('Checkin', 'checked-in-failed', "".concat(_this84.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z')));
+                _this83.service.Analytics.event('Checkin', 'checked-in-failed', "".concat(_this83.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z')));
               });
             }
           }
@@ -13458,7 +13463,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "confirmEnd",
         value: function confirmEnd() {
-          var _this85 = this;
+          var _this84 = this;
 
           this.service.Overlay.open('confirm', {
             config: 'modal',
@@ -13471,7 +13476,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           }, function (_) {
-            return _this85.endMeeting();
+            return _this84.endMeeting();
           });
         }
         /**
@@ -13482,7 +13487,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "endMeeting",
         value: function endMeeting() {
-          var _this86 = this;
+          var _this85 = this;
 
           var reason = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'user_input';
 
@@ -13495,11 +13500,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var date = dayjs__WEBPACK_IMPORTED_MODULE_4__(meeting.date);
 
               _module5.execute('cancel_meeting', [meeting.date, reason]).then(function (_) {
-                _this86.service.Analytics.event('Checkin', 'cancelled', "".concat(_this86.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
+                _this85.service.Analytics.event('Checkin', 'cancelled', "".concat(_this85.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
               }, function (e) {
-                _this86.service.notifyError("Error starting meeting. ".concat(e));
+                _this85.service.notifyError("Error starting meeting. ".concat(e));
 
-                _this86.service.Analytics.event('Checkin', 'cancel-failed', "".concat(_this86.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
+                _this85.service.Analytics.event('Checkin', 'cancel-failed', "".concat(_this85.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
               });
             }
           }
@@ -13926,7 +13931,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PanelCustomActionsComponent, [{
         key: "confirmWaiterCall",
         value: function confirmWaiterCall() {
-          var _this87 = this;
+          var _this86 = this;
 
           this.service.Overlay.open('confirm', {
             config: 'modal',
@@ -13939,7 +13944,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           }, function (_) {
-            return _this87.callWaiter();
+            return _this86.callWaiter();
           });
         }
         /**
@@ -13949,18 +13954,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "callWaiter",
         value: function callWaiter() {
-          var _this88 = this;
+          var _this87 = this;
 
           if (this.space) {
             var _module6 = this.service.Systems.get(this.space.id, 'Bookings');
 
             if (_module6) {
               _module6.execute('waiter_call', []).then(function (_) {
-                _this88.service.Analytics.event('Catering', 'waiter-call', new Date().toISOString());
+                _this87.service.Analytics.event('Catering', 'waiter-call', new Date().toISOString());
               }, function (e) {
-                _this88.service.Analytics.event('Catering', 'waiter-call-failed', new Date().toISOString());
+                _this87.service.Analytics.event('Catering', 'waiter-call-failed', new Date().toISOString());
 
-                _this88.service.notifyError("Error calling waiter. ".concat(e));
+                _this87.service.notifyError("Error calling waiter. ".concat(e));
               });
             }
           }
@@ -14244,11 +14249,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * Show full room name if overflowing
          */
         value: function showTitle() {
-          var _this89 = this;
+          var _this88 = this;
 
           this.show_title = true;
           this.timeout('hide_title', function () {
-            return _this89.show_title = false;
+            return _this88.show_title = false;
           }, 3000);
         }
       }]);
@@ -15029,20 +15034,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super28 = _createSuper(BookingPanelComponent);
 
       function BookingPanelComponent(_service, _route) {
-        var _this90;
+        var _this89;
 
         _classCallCheck(this, BookingPanelComponent);
 
-        _this90 = _super28.call(this);
-        _this90._service = _service;
-        _this90._route = _route;
+        _this89 = _super28.call(this);
+        _this89._service = _service;
+        _this89._route = _route;
         /** Whether to show the time at the bottom of the status */
 
-        _this90.show_time = true;
+        _this89.show_time = true;
         /** Whether user interaction is enabled for the panel */
 
-        _this90.interactive = true;
-        return _this90;
+        _this89.interactive = true;
+        return _this89;
       }
 
       _createClass(BookingPanelComponent, [{
@@ -15055,37 +15060,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this91 = this;
+          var _this90 = this;
 
           this.subscription('get_current_space', this._service.Spaces.listen('list').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (spaces) {
             return spaces.filter(function (space) {
-              return space.id === _this91.system_id;
+              return space.id === _this90.system_id;
             });
           })).subscribe(function (value) {
             if (value.length >= 1) {
-              _this91.space = value[0];
+              _this90.space = value[0];
             }
           }));
           this.subscription('levels', this._service.Organisation.listen('levels').subscribe(function () {
             // this requires a refactor, but essentially the rules will check for building
             // levels. We need to listen for level loading to then load the rules.
-            _this91.rules = _this91.space && _this91.space.rulesFor({});
+            _this90.rules = _this90.space && _this90.space.rulesFor({});
           }));
           this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
             if (is_ready) {
-              _this91.subscription('route.params', _this91._route.paramMap.subscribe(function (params) {
+              _this90.subscription('route.params', _this90._route.paramMap.subscribe(function (params) {
                 if (params.has('system_id')) {
-                  _this91.system_id = params.get('system_id');
+                  _this90.system_id = params.get('system_id');
 
-                  _this91._service.set('system', _this91.system_id);
+                  _this90._service.set('system', _this90.system_id);
                 }
               }));
 
-              _this91.timeout('websocket', function () {
-                _this91.websocket_connected = true; // status().subscribe(status => this.websocket_connected = status);
+              _this90.timeout('websocket', function () {
+                _this90.websocket_connected = true; // status().subscribe(status => this.websocket_connected = status);
               });
 
-              _this91.unsub('app_ready');
+              _this90.unsub('app_ready');
             }
           }));
         }
@@ -15170,7 +15175,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "endMeeting",
         value: function endMeeting() {
-          var _this92 = this;
+          var _this91 = this;
 
           var reason = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'user_input';
 
@@ -15187,13 +15192,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var date = dayjs__WEBPACK_IMPORTED_MODULE_2__(meeting.date);
 
               _module7.execute('cancel_meeting', [meeting.date, reason]).then(function (_) {
-                _this92._service.Analytics.event('Checkin', 'cancelled', "".concat(_this92.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
+                _this91._service.Analytics.event('Checkin', 'cancelled', "".concat(_this91.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
 
-                _this92.last_cancel = meeting.date;
+                _this91.last_cancel = meeting.date;
               }, function (e) {
-                _this92._service.notifyError("Error cancelling meeting. ".concat(e));
+                _this91._service.notifyError("Error cancelling meeting. ".concat(e));
 
-                _this92._service.Analytics.event('Checkin', 'cancel-failed', "".concat(_this92.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
+                _this91._service.Analytics.event('Checkin', 'cancel-failed', "".concat(_this91.space.id, " at ").concat(date.format('DD MMM YYYY, h:mm A Z'), " | ").concat(reason));
               });
             }
           }
@@ -16279,19 +16284,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super29 = _createSuper(PanelTimelineComponent);
 
       function PanelTimelineComponent(service) {
-        var _this93;
+        var _this92;
 
         _classCallCheck(this, PanelTimelineComponent);
 
-        _this93 = _super29.call(this);
-        _this93.service = service;
+        _this92 = _super29.call(this);
+        _this92.service = service;
         /** Emitter for user events on the timeline */
 
-        _this93.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        _this92.event = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         /** List of display time block  */
 
-        _this93.time_blocks = [];
-        return _this93;
+        _this92.time_blocks = [];
+        return _this92;
       }
       /** Display string for the current time */
 
@@ -16299,11 +16304,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PanelTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this94 = this;
+          var _this93 = this;
 
           this.generateTimelineBlocks();
           this.interval('update_blocks', function () {
-            return _this94.generateTimelineBlocks();
+            return _this93.generateTimelineBlocks();
           }, 60 * 1000);
         }
       }, {
@@ -16476,21 +16481,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
 
       if (showInUse) {
-        var _iterator32 = _createForOfIteratorHelper(shownBookings),
-            _step32;
+        var _iterator33 = _createForOfIteratorHelper(shownBookings),
+            _step33;
 
         try {
-          for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
-            var booking = _step32.value;
+          for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
+            var booking = _step33.value;
             var start = dayjs__WEBPACK_IMPORTED_MODULE_0__(booking.date);
             var end = start.add(booking.duration, 'm');
 
-            var _iterator33 = _createForOfIteratorHelper(timeBlocks),
-                _step33;
+            var _iterator34 = _createForOfIteratorHelper(timeBlocks),
+                _step34;
 
             try {
-              for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                var block = _step33.value;
+              for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                var block = _step34.value;
                 var blockTime = dayjs__WEBPACK_IMPORTED_MODULE_0__(block.value);
 
                 if (blockTime.isSame(start, 'm') || blockTime.isAfter(start, 'm') && blockTime.isBefore(end, 'm')) {
@@ -16498,15 +16503,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             } catch (err) {
-              _iterator33.e(err);
+              _iterator34.e(err);
             } finally {
-              _iterator33.f();
+              _iterator34.f();
             }
           }
         } catch (err) {
-          _iterator32.e(err);
+          _iterator33.e(err);
         } finally {
-          _iterator32.f();
+          _iterator33.f();
         }
       }
 
@@ -16813,11 +16818,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * Show full room name if overflowing
          */
         value: function showTitle() {
-          var _this95 = this;
+          var _this94 = this;
 
           this.show_title = true;
           this.timeout('hide_title', function () {
-            return _this95.show_title = false;
+            return _this94.show_title = false;
           }, 3000);
         }
       }]);
@@ -17671,20 +17676,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super31 = _createSuper(ShellWrapperComponent);
 
       function ShellWrapperComponent(_service, _router) {
-        var _this96;
+        var _this95;
 
         _classCallCheck(this, ShellWrapperComponent);
 
-        _this96 = _super31.call(this);
-        _this96._service = _service;
-        _this96._router = _router;
+        _this95 = _super31.call(this);
+        _this95._service = _service;
+        _this95._router = _router;
         /** List of informational messages to display while connecting to the active system */
 
-        _this96.info_messages = ['If this message persists, check you network connection and then try reloading this page.', 'It seems to be taking a while. Make sure the selected system is valid.', 'Still nothing, huh. Are you authenticated? Do you have have a network connection?', 'Try reloading the page. If this persists contact your administrator.'];
+        _this95.info_messages = ['If this message persists, check you network connection and then try reloading this page.', 'It seems to be taking a while. Make sure the selected system is valid.', 'Still nothing, huh. Are you authenticated? Do you have have a network connection?', 'Try reloading the page. If this persists contact your administrator.'];
         /** Index of the info message being displayed */
 
-        _this96.message_index = 0;
-        return _this96;
+        _this95.message_index = 0;
+        return _this95;
       }
       /** Current version of the application */
 
@@ -17692,27 +17697,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShellWrapperComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this97 = this;
+          var _this96 = this;
 
           this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
             var _a;
 
             if (is_ready) {
               // Listen for system changes
-              _this97.subscription('system', _this97._service.listen('system', function (value) {
-                return _this97.system_id = value;
+              _this96.subscription('system', _this96._service.listen('system', function (value) {
+                return _this96.system_id = value;
               })); // Listen for routing events
 
 
-              _this97.page = ((_a = _this97._router.url) === null || _a === void 0 ? void 0 : _a.split('/')[1]) || '';
+              _this96.page = ((_a = _this96._router.url) === null || _a === void 0 ? void 0 : _a.split('/')[1]) || '';
 
-              _this97.subscription('router.change', _this97._router.events.subscribe(function (event) {
+              _this96.subscription('router.change', _this96._router.events.subscribe(function (event) {
                 if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_0__["NavigationEnd"]) {
-                  _this97.page = _this97._router.url.split('/')[1] || '';
+                  _this96.page = _this96._router.url.split('/')[1] || '';
                 }
               }));
 
-              _this97.unsub('app_ready');
+              _this96.unsub('app_ready');
             }
           }));
         }
@@ -17724,7 +17729,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "checkLoading",
         value: function checkLoading() {
-          var _this98 = this;
+          var _this97 = this;
 
           var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;
           console.log('Check Loading:', this.system_name);
@@ -17732,7 +17737,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (!this.system_name) {
             this.message_index = 0;
             this.timeout('update_msg', function () {
-              return _this98.updateMessage();
+              return _this97.updateMessage();
             }, delay);
           }
         }
@@ -17743,7 +17748,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateMessage",
         value: function updateMessage() {
-          var _this99 = this;
+          var _this98 = this;
 
           if (!this.system_id) {
             return;
@@ -17757,7 +17762,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.timeout('update_msg', function () {
-            return _this99.updateMessage();
+            return _this98.updateMessage();
           }, 3000);
         }
         /**
@@ -17768,7 +17773,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "reloadAt",
         value: function reloadAt(time) {
-          var _this100 = this;
+          var _this99 = this;
 
           if (time && typeof time === 'number') {
             this.clearTimeout('reload_ui');
@@ -17784,7 +17789,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.timeout('update_msg', function () {
-            return _this100.updateMessage();
+            return _this99.updateMessage();
           }, 3000);
         }
       }, {
@@ -17936,6 +17941,212 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/environments/settings.ts":
+  /*!**************************************!*\
+    !*** ./src/environments/settings.ts ***!
+    \**************************************/
+
+  /*! exports provided: DEFAULT_SETTINGS */
+
+  /***/
+  function srcEnvironmentsSettingsTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DEFAULT_SETTINGS", function () {
+      return DEFAULT_SETTINGS;
+    });
+    /**
+     * GENERAL APPLICATION SETTINGS
+     */
+
+
+    var general = {
+      menu: {
+        items: [],
+        copyright: 'McKinsey & Company',
+        position: 'left'
+      }
+    };
+    /**
+     * HOME PAGE SETTINGS
+     */
+
+    var home = {
+      background: 'assets/img/skyline.jpg',
+      tiles: [{
+        name: 'Book',
+        route: '/book/spaces',
+        icon: {
+          type: 'icon',
+          "class": 'custom-book'
+        }
+      }, {
+        name: 'Maps',
+        route: '/explore/space',
+        icon: {
+          type: 'icon',
+          "class": 'custom-spaces'
+        }
+      }, {
+        name: 'My Day',
+        route: '/schedule',
+        icon: {
+          type: 'icon',
+          "class": 'custom-schedule'
+        }
+      }]
+    };
+    /**
+     * HELP/SUPPORT SETTINGS
+     */
+
+    var help = {
+      tiles: [],
+      columns: 2
+    };
+    /**
+     * BOOKING FLOW SETTINGS
+     */
+
+    var booking = {
+      booking_types: [{
+        name: 'Internal',
+        id: 'internal'
+      }, {
+        name: 'Client',
+        id: 'client'
+      }, {
+        name: 'External',
+        id: 'external'
+      }, {
+        name: 'Setup',
+        id: 'setup'
+      }, {
+        name: 'Training',
+        id: 'training'
+      }, {
+        name: 'Interview',
+        id: 'interview'
+      }],
+      show_fields: ['attendees', 'body', 'catering', 'date', 'duration', 'organiser', 'recurrence', 'title', 'type', 'all_day', 'needs_space', 'has_catering'],
+      html_body: true,
+      multiple_spaces: true,
+      desk_start: 9
+    };
+    /*===========================*\
+    ||  SPACE LISTING SETTINGS   ||
+    \*===========================*/
+
+    var space_display = {
+      show_images: false
+    };
+    /*===========================*\
+    ||  USER DIRECTORY SETTINGS  ||
+    \*===========================*/
+
+    var directory = {
+      show_avatars: true,
+      min_search_length: 3
+    };
+    /*===========================*\
+    ||    EXPLORE MAP SETTINGS   ||
+    \*===========================*/
+
+    var explore = {
+      colors: {
+        'space-available': '#43a047',
+        'space-requestable': '#ffb300',
+        'space-unavailable': '#e53935',
+        'space-not-bookable': '#ccc',
+        'desk-available': '#43a047',
+        'desk-available-stroke': '#1b5e20',
+        'desk-unavailable': '#e53935',
+        'desk-unavailable-stroke': '#b71c1c',
+        'desk-reserved': '#ffb300',
+        'desk-reserved-stroke': '#ff6f00',
+        'desk-not-bookable': '#fff',
+        'desk-not-bookable-stroke': '#ccc',
+        'zone-low': '#43a047',
+        'zone-medium': '#ffb300',
+        'zone-high': '#e53935'
+      },
+      can_select_building: true,
+      show_legend_group_names: false,
+      show_timeline: true,
+      legend: {
+        General: [{
+          key: 'space-available',
+          name: 'Available'
+        }, {
+          key: 'space-requestable',
+          name: 'Available by request'
+        }, {
+          key: 'space-unavailable',
+          name: 'In use'
+        }, {
+          key: 'space-not-bookable',
+          name: 'Not Bookable'
+        }]
+      }
+    };
+    /**
+     * ROOT APPLICATION SETTINGS
+     */
+
+    var app = {
+      title: 'McKinsey & Company',
+      description: 'McKinsey & Company Booking Panel UI written with Angular Framework',
+      short_name: 'PANEL',
+      logo_light: {
+        type: 'img',
+        src: 'assets/img/logo.svg',
+        background: ''
+      },
+      logo_dark: {
+        type: 'img',
+        src: 'assets/img/logo-inverse.svg',
+        background: ''
+      },
+      heap_io: {
+        app_id: 3540602199,
+        force_ssl: true,
+        secure_cookie: true,
+        disable_text_capture: true,
+        cookie_path: '/bookings/'
+      },
+      general: general,
+      home: home,
+      help: help,
+      booking: booking,
+      space_display: space_display,
+      directory: directory,
+      explore: explore
+    };
+    /**
+     * ROOT SETTIGNS
+     */
+
+    var DEFAULT_SETTINGS = {
+      debug: true,
+      composer: {
+        domain: '',
+        route: '/bookings',
+        protocol: '',
+        port: '',
+        use_domain: false,
+        local_login: false
+      },
+      app: app,
+      mock: false
+    };
+    /***/
+  },
+
+  /***/
   "./src/environments/version.ts":
   /*!*************************************!*\
     !*** ./src/environments/version.ts ***!
@@ -17960,16 +18171,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "db8a171",
-      "hash": "db8a171",
+      "raw": "382e521",
+      "hash": "382e521",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "db8a171",
+      "suffix": "382e521",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601596577128
+      "time": 1601596986674
     };
     /* tslint:enable */
 
