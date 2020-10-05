@@ -7788,8 +7788,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var time = raw_data.date || raw_data.start_epoch * 1000 || raw_data.start * 1000 || raw_data.Start;
         var start = dayjs(time).startOf('m');
         _this42.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
-        _this42.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
-        _this42.all_day = !!raw_data.all_day || _this42.duration > 23 * 60;
+        _this42.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60; // if it exists as a key, use the value directly.
+        // if we initialize without a value, switch to checking duration.
+        // This fixes MCK-826
+
+        if ('all_day' in raw_data) {
+          _this42.all_day = raw_data.all_day;
+        } else {
+          _this42.all_day = !!raw_data.all_day || _this42.duration > 23 * 60;
+        }
 
         if (_this42.all_day) {
           _this42.date = dayjs(_this42.date).startOf('d').valueOf();
@@ -8233,6 +8240,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../users/user.class */
     "./src/app/services/data/users/user.class.ts");
 
+    var mockdate_1 = __webpack_require__(
+    /*! mockdate */
+    "./node_modules/mockdate/lib/mockdate.js");
+
     var MINUTE = 1;
     var HOUR = 60;
     var DAY = 24 * HOUR;
@@ -8250,6 +8261,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       minute: MINUTE,
       minutes: MINUTE
     };
+    /**
+     * August 13, 2020 at 7:22:12 UTC
+     */
+
+    var initialTime = 1597346532 * 1000;
+
+    exports.mockDate = function () {
+      return mockdate_1["default"].set(initialTime);
+    };
+
     var BOOKING_COUNT = 0;
     var BOOKING_DATE = dayjs().hour(6).minute(0).subtract(1, 'd').startOf('m');
     /**
@@ -39764,16 +39785,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "385a198",
-      "hash": "385a198",
+      "raw": "647b939",
+      "hash": "647b939",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "385a198",
+      "suffix": "647b939",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601667035276
+      "time": 1601914455647
     };
     /* tslint:enable */
 

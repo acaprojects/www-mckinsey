@@ -3894,7 +3894,15 @@ class Booking extends base_api_class_1.BaseDataClass {
             raw_data.duration ||
                 dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') ||
                 60;
-        this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
+        // if it exists as a key, use the value directly.
+        // if we initialize without a value, switch to checking duration.
+        // This fixes MCK-826
+        if ('all_day' in raw_data) {
+            this.all_day = raw_data.all_day;
+        }
+        else {
+            this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
+        }
         if (this.all_day) {
             this.date = dayjs(this.date).startOf('d').valueOf();
         }
@@ -4167,6 +4175,7 @@ const general_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/ge
 const catering_order_class_1 = __webpack_require__(/*! ../catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 const service_manager_class_1 = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 const user_class_1 = __webpack_require__(/*! ../users/user.class */ "./src/app/services/data/users/user.class.ts");
+const mockdate_1 = __webpack_require__(/*! mockdate */ "./node_modules/mockdate/lib/mockdate.js");
 const MINUTE = 1;
 const HOUR = 60;
 const DAY = 24 * HOUR;
@@ -4184,6 +4193,11 @@ const DURATION_MAP = {
     minute: MINUTE,
     minutes: MINUTE,
 };
+/**
+ * August 13, 2020 at 7:22:12 UTC
+ */
+const initialTime = 1597346532 * 1000;
+exports.mockDate = () => mockdate_1.default.set(initialTime);
 const BOOKING_COUNT = 0;
 let BOOKING_DATE = dayjs().hour(6).minute(0).subtract(1, 'd').startOf('m');
 /**
@@ -22481,16 +22495,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "385a198",
-    "hash": "385a198",
+    "raw": "647b939",
+    "hash": "647b939",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "385a198",
+    "suffix": "647b939",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601667035276
+    "time": 1601914455647
 };
 /* tslint:enable */
 
