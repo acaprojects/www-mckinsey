@@ -24791,7 +24791,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var space = _step36.value;
               this.form[space.email] = new forms_1.FormGroup({
                 notes: new forms_1.FormControl(this.notes[space.email] || ''),
-                code: new forms_1.FormControl(this.codes[space.email] || '', this.needs_charge_code[space.email] ? [forms_1.Validators.required, forms_1.Validators.minLength(4)] : [])
+                code: new forms_1.FormControl(this.codes[space.email] || '', this.needs_charge_code[space.email] ? [forms_1.Validators.required, forms_1.Validators.minLength(4)] : [forms_1.Validators.minLength(4)])
               });
             }
           } catch (err) {
@@ -26293,7 +26293,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this121.needs_charge_code[space.email] = ((_b = (_a = building) === null || _a === void 0 ? void 0 : _a.required) === null || _b === void 0 ? void 0 : _b.equipment_code) || false;
               _this121.form[space.email] = new forms_1.FormGroup({
                 notes: new forms_1.FormControl(_this121.notes[space.email] || ''),
-                code: new forms_1.FormControl(_this121.codes[space.email] || '', _this121.needs_charge_code[space.email] ? [forms_1.Validators.required, forms_1.Validators.minLength(4)] : []),
+                code: new forms_1.FormControl(_this121.codes[space.email] || '', _this121.needs_charge_code[space.email] ? [forms_1.Validators.required, forms_1.Validators.minLength(4)] : [forms_1.Validators.minLength(4)]),
                 head_count: new forms_1.FormControl(_this121.head_counts[space.email] || '', [forms_1.Validators.required])
               });
             };
@@ -39871,16 +39871,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "b15be35",
-      "hash": "b15be35",
+      "raw": "e6a6215",
+      "hash": "e6a6215",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "b15be35",
+      "suffix": "e6a6215",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601915050118
+      "time": 1601923711788
     };
     /* tslint:enable */
 
