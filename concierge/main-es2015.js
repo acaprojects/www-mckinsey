@@ -5267,10 +5267,10 @@ class MeetingDetailsModalComponent extends base_directive_1.BaseDirective {
             start: event.start,
             end: event.end,
         })
-            .then((item) => {
+            .then(() => {
             this._service.notifySuccess('Meeting approved.');
             this.booking.approval_status[this.space.email] = 'accepted';
-            this._booking_state.replace(item);
+            this._booking_state.replace(this.booking);
             this.setLoading(null);
             this.event.emit({ reason: 'action', metadata: 'approved' });
         }, this._on_error('Unable to approving meeting'));
@@ -21678,7 +21678,7 @@ class DayViewApprovalsEventComponent extends base_directive_1.BaseDirective {
                     this._service.notifySuccess('Meeting approved.');
                     this.event.approval_status[(_a = this.event.space) === null || _a === void 0 ? void 0 : _a.email] = 'accepted';
                     STATES[this.event.id] = 'accepted';
-                    this._booking_state.replace(item);
+                    this._booking_state.replace(new booking_class_1.Booking(item));
                     this._service.set('BOOKING.states', STATES);
                     this.loading = false;
                     this.acting.emit(false);
@@ -26489,16 +26489,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "c4343fb",
-    "hash": "c4343fb",
+    "raw": "f808962",
+    "hash": "f808962",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "c4343fb",
+    "suffix": "f808962",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601667997097
+    "time": 1601907653986
 };
 /* tslint:enable */
 

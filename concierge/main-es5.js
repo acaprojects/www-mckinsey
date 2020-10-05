@@ -10293,12 +10293,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             icaluid: this.booking.icaluid,
             start: event.start,
             end: event.end
-          }).then(function (item) {
+          }).then(function () {
             _this49._service.notifySuccess('Meeting approved.');
 
             _this49.booking.approval_status[_this49.space.email] = 'accepted';
 
-            _this49._booking_state.replace(item);
+            _this49._booking_state.replace(_this49.booking);
 
             _this49.setLoading(null);
 
@@ -39163,7 +39163,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _this189.event.approval_status[(_a = _this189.event.space) === null || _a === void 0 ? void 0 : _a.email] = 'accepted';
                 STATES[_this189.event.id] = 'accepted';
 
-                _this189._booking_state.replace(item);
+                _this189._booking_state.replace(new booking_class_1.Booking(item));
 
                 _this189._service.set('BOOKING.states', STATES);
 
@@ -48253,16 +48253,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "c4343fb",
-      "hash": "c4343fb",
+      "raw": "f808962",
+      "hash": "f808962",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "c4343fb",
+      "suffix": "f808962",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601667997097
+      "time": 1601907653986
     };
     /* tslint:enable */
 
