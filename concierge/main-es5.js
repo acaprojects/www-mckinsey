@@ -3840,7 +3840,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       if (rf & 2) {
         var ctx_r8 = i0.ɵɵnextContext(2);
-        i0.ɵɵproperty("max", ctx_r8.item.maximum_quantity)("ngModel", ctx_r8.item.amount);
+        i0.ɵɵproperty("useInput", ctx_r8.item.must_select === 0)("max", ctx_r8.item.maximum_quantity)("ngModel", ctx_r8.item.amount);
       }
     }
 
@@ -3891,7 +3891,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵtemplate(12, CateringMenuItemComponent_div_0_div_12_Template, 3, 4, "div", 12);
-        i0.ɵɵtemplate(13, CateringMenuItemComponent_div_0_a_counter_13_Template, 1, 2, "a-counter", 13);
+        i0.ɵɵtemplate(13, CateringMenuItemComponent_div_0_a_counter_13_Template, 1, 3, "a-counter", 13);
         i0.ɵɵtemplate(14, CateringMenuItemComponent_div_0_button_14_Template, 2, 3, "button", 14);
         i0.ɵɵelementEnd();
       }
@@ -4170,7 +4170,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 3,
       vars: 3,
-      consts: [["class", "catering-item", 3, "compact", "subitem", 4, "ngIf"], [1, "children"], [3, "compact", "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "max", "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "max", "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "compact", "subitem", "symbol", "item", "field"]],
+      consts: [["class", "catering-item", 3, "compact", "subitem", 4, "ngIf"], [1, "children"], [3, "compact", "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "useInput", "max", "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "useInput", "max", "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "compact", "subitem", "symbol", "item", "field"]],
       template: function CateringMenuItemComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 15, 16, "div", 0);
@@ -22505,6 +22505,65 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../../icon/icon.component */
     "./src/app/shared/components/icon/icon.component.ts");
 
+    var i3 = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
+    var i4 = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+
+    function CounterComponent_input_3_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r4 = i0.ɵɵgetCurrentView();
+
+        i0.ɵɵelementStart(0, "input", 6, 7);
+        i0.ɵɵlistener("keyup.enter", function CounterComponent_input_3_Template_input_keyup_enter_0_listener() {
+          i0.ɵɵrestoreView(_r4);
+
+          var _r2 = i0.ɵɵreference(1);
+
+          var ctx_r3 = i0.ɵɵnextContext();
+          return ctx_r3.onInputChange(_r2.value);
+        })("blur", function CounterComponent_input_3_Template_input_blur_0_listener() {
+          i0.ɵɵrestoreView(_r4);
+
+          var _r2 = i0.ɵɵreference(1);
+
+          var ctx_r5 = i0.ɵɵnextContext();
+          return ctx_r5.onInputChange(_r2.value);
+        })("ngModelChange", function CounterComponent_input_3_Template_input_ngModelChange_0_listener($event) {
+          i0.ɵɵrestoreView(_r4);
+          var ctx_r6 = i0.ɵɵnextContext();
+          return ctx_r6.onInputChange($event);
+        })("ngModelChange", function CounterComponent_input_3_Template_input_ngModelChange_0_listener($event) {
+          i0.ɵɵrestoreView(_r4);
+          var ctx_r7 = i0.ɵɵnextContext();
+          return ctx_r7.value = $event;
+        });
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r0 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("ngModel", ctx_r0.value);
+      }
+    }
+
+    function CounterComponent_div_4_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 8);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var ctx_r1 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", ctx_r1.value || "0", " ");
+      }
+    }
+
     var _c0 = function _c0() {
       return {
         "class": "material-icons",
@@ -22533,6 +22592,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Minimum amount for the counter */
 
         this.min = 0;
+        this.useInput = false;
+        this.previous_value = 0;
       }
       /**
        * Add the `step` to the current value
@@ -22573,6 +22634,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.setValue(this.value);
         }
+      }, {
+        key: "onInputChange",
+        value: function onInputChange(new_value) {
+          var value = Number(new_value);
+
+          if (isNaN(value)) {
+            value = this.previous_value;
+          }
+
+          if (value < this.min) {
+            value = this.min || 0;
+          }
+
+          if (value > this.max) {
+            value = this.max || 10;
+          }
+
+          this.setValue(value);
+        }
         /**
          * Update the form field value
          * @param new_value New value to set on the form field
@@ -22581,6 +22661,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "setValue",
         value: function setValue(new_value) {
+          this.previous_value = new_value;
           this.value = new_value;
           /* istanbul ignore else */
 
@@ -22639,7 +22720,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       inputs: {
         step: "step",
         max: "max",
-        min: "min"
+        min: "min",
+        useInput: "useInput"
       },
       features: [i0.ɵɵProvidersFeature([{
         provide: forms_1.NG_VALUE_ACCESSOR,
@@ -22651,8 +22733,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         multi: true
       }])],
       decls: 7,
-      vars: 7,
-      consts: [[1, "counter", 3, "keydown.shift", "keydown.control", "keydown.meta", "keyup.shift", "keyup.control", "keyup.meta"], ["mat-icon-button", "", "name", "remove", 3, "disabled", "click"], [3, "icon"], [1, "value"], ["mat-icon-button", "", "name", "add", 3, "disabled", "click"]],
+      vars: 8,
+      consts: [[1, "counter", 3, "keydown.shift", "keydown.control", "keydown.meta", "keyup.shift", "keyup.control", "keyup.meta"], ["mat-icon-button", "", "name", "remove", 3, "disabled", "click"], [3, "icon"], ["aria-label", "value input", "class", "value", 3, "ngModel", "keyup.enter", "blur", "ngModelChange", 4, "ngIf"], ["class", "value", "aria-label", "value", 4, "ngIf"], ["mat-icon-button", "", "name", "add", 3, "disabled", "click"], ["aria-label", "value input", 1, "value", 3, "ngModel", "keyup.enter", "blur", "ngModelChange"], ["inputValue", ""], ["aria-label", "value", 1, "value"]],
       template: function CounterComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "div", 0);
@@ -22675,10 +22757,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
           i0.ɵɵelement(2, "app-icon", 2);
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(3, "div", 3);
-          i0.ɵɵtext(4);
-          i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(5, "button", 4);
+          i0.ɵɵtemplate(3, CounterComponent_input_3_Template, 2, 1, "input", 3);
+          i0.ɵɵtemplate(4, CounterComponent_div_4_Template, 2, 1, "div", 4);
+          i0.ɵɵelementStart(5, "button", 5);
           i0.ɵɵlistener("click", function CounterComponent_Template_button_click_5_listener() {
             return ctx.add();
           });
@@ -22691,17 +22772,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("disabled", !ctx.value || ctx.value === ctx.min);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(5, _c0));
-          i0.ɵɵadvance(2);
-          i0.ɵɵtextInterpolate1(" ", ctx.value || "0", " ");
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(6, _c0));
+          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("ngIf", ctx.useInput);
+          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("ngIf", !ctx.useInput);
           i0.ɵɵadvance(1);
           i0.ɵɵproperty("disabled", ctx.value === ctx.max);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(6, _c1));
+          i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(7, _c1));
         }
       },
-      directives: [i1.MatButton, i2.IconComponent],
-      styles: [".counter[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 1rem;\n}\n\n.value[_ngcontent-%COMP%] {\n  padding: 0.25em;\n  min-width: 3em;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy9jdXN0b20tZmllbGRzL2NvdW50ZXIvY291bnRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvY3VzdG9tLWZpZWxkcy9jb3VudGVyL2NvdW50ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxlQUFBO0FDQUo7O0FER0E7RUFDSSxlQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy9jdXN0b20tZmllbGRzL2NvdW50ZXIvY291bnRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmNvdW50ZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDFyZW07XG59XG5cbi52YWx1ZSB7XG4gICAgcGFkZGluZzogLjI1ZW07XG4gICAgbWluLXdpZHRoOiAzZW07XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuIiwiLmNvdW50ZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXNpemU6IDFyZW07XG59XG5cbi52YWx1ZSB7XG4gIHBhZGRpbmc6IDAuMjVlbTtcbiAgbWluLXdpZHRoOiAzZW07XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iXX0= */"]
+      directives: [i1.MatButton, i2.IconComponent, i3.NgIf, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel],
+      styles: [".counter[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 1rem;\n}\n\n.value[_ngcontent-%COMP%] {\n  padding: 0.25em;\n  min-width: 3em;\n  text-align: center;\n  max-width: 3em;\n  border: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LWNvbmNpZXJnZS11aS9tY2tpbnNleS1jb25jaWVyZ2UtdWkvc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy9jdXN0b20tZmllbGRzL2NvdW50ZXIvY291bnRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvY3VzdG9tLWZpZWxkcy9jb3VudGVyL2NvdW50ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxlQUFBO0FDQUo7O0FER0E7RUFDSSxlQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsY0FBQTtFQUNBLFlBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL2N1c3RvbS1maWVsZHMvY291bnRlci9jb3VudGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4uY291bnRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZvbnQtc2l6ZTogMXJlbTtcbn1cblxuLnZhbHVlIHtcbiAgICBwYWRkaW5nOiAuMjVlbTtcbiAgICBtaW4td2lkdGg6IDNlbTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbWF4LXdpZHRoOiAzZW07XG4gICAgYm9yZGVyOiBub25lO1xufVxuIiwiLmNvdW50ZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXNpemU6IDFyZW07XG59XG5cbi52YWx1ZSB7XG4gIHBhZGRpbmc6IDAuMjVlbTtcbiAgbWluLXdpZHRoOiAzZW07XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbWF4LXdpZHRoOiAzZW07XG4gIGJvcmRlcjogbm9uZTtcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -22730,6 +22813,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: core_1.Input
         }],
         min: [{
+          type: core_1.Input
+        }],
+        useInput: [{
           type: core_1.Input
         }]
       });
@@ -48275,16 +48361,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "4f8aae9",
-      "hash": "4f8aae9",
+      "raw": "5141cdd",
+      "hash": "5141cdd",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "4f8aae9",
+      "suffix": "5141cdd",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601914574864
+      "time": 1601915485770
     };
     /* tslint:enable */
 
