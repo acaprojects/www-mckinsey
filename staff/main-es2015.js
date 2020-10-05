@@ -6949,6 +6949,26 @@ const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angul
 const i0 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 const i1 = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
 const i2 = __webpack_require__(/*! ../../icon/icon.component */ "./src/app/shared/components/icon/icon.component.ts");
+const i3 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+const i4 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+function CounterComponent_input_3_Template(rf, ctx) { if (rf & 1) {
+    const _r4 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "input", 6, 7);
+    i0.ɵɵlistener("keyup.enter", function CounterComponent_input_3_Template_input_keyup_enter_0_listener() { i0.ɵɵrestoreView(_r4); const _r2 = i0.ɵɵreference(1); const ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.onInputChange(_r2.value); })("blur", function CounterComponent_input_3_Template_input_blur_0_listener() { i0.ɵɵrestoreView(_r4); const _r2 = i0.ɵɵreference(1); const ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.onInputChange(_r2.value); })("ngModelChange", function CounterComponent_input_3_Template_input_ngModelChange_0_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r6 = i0.ɵɵnextContext(); return ctx_r6.onInputChange($event); })("ngModelChange", function CounterComponent_input_3_Template_input_ngModelChange_0_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.value = $event; });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("ngModel", ctx_r0.value);
+} }
+function CounterComponent_div_4_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 8);
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" ", ctx_r1.value || "0", " ");
+} }
 const _c0 = function () { return { class: "material-icons", content: "remove" }; };
 const _c1 = function () { return { class: "material-icons", content: "add" }; };
 class CounterComponent {
@@ -6959,6 +6979,8 @@ class CounterComponent {
         this.max = 10;
         /** Minimum amount for the counter */
         this.min = 0;
+        this.useInput = false;
+        this.previous_value = 0;
     }
     /**
      * Add the `step` to the current value
@@ -6986,11 +7008,25 @@ class CounterComponent {
         }
         this.setValue(this.value);
     }
+    onInputChange(new_value) {
+        let value = Number(new_value);
+        if (isNaN(value)) {
+            value = this.previous_value;
+        }
+        if (value < this.min) {
+            value = this.min || 0;
+        }
+        if (value > this.max) {
+            value = this.max || 10;
+        }
+        this.setValue(value);
+    }
     /**
      * Update the form field value
      * @param new_value New value to set on the form field
      */
     setValue(new_value) {
+        this.previous_value = new_value;
         this.value = new_value;
         /* istanbul ignore else */
         if (this._onChange) {
@@ -7023,24 +7059,23 @@ class CounterComponent {
 }
 exports.CounterComponent = CounterComponent;
 CounterComponent.ɵfac = function CounterComponent_Factory(t) { return new (t || CounterComponent)(); };
-CounterComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CounterComponent, selectors: [["a-counter"]], inputs: { step: "step", max: "max", min: "min" }, features: [i0.ɵɵProvidersFeature([
+CounterComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CounterComponent, selectors: [["a-counter"]], inputs: { step: "step", max: "max", min: "min", useInput: "useInput" }, features: [i0.ɵɵProvidersFeature([
             {
                 provide: forms_1.NG_VALUE_ACCESSOR,
                 /* istanbul ignore next */
                 useExisting: core_1.forwardRef(() => CounterComponent),
-                multi: true
-            }
-        ])], decls: 7, vars: 7, consts: [[1, "counter", 3, "keydown.shift", "keydown.control", "keydown.meta", "keyup.shift", "keyup.control", "keyup.meta"], ["mat-icon-button", "", "name", "remove", 3, "disabled", "click"], [3, "icon"], [1, "value"], ["mat-icon-button", "", "name", "add", 3, "disabled", "click"]], template: function CounterComponent_Template(rf, ctx) { if (rf & 1) {
+                multi: true,
+            },
+        ])], decls: 7, vars: 8, consts: [[1, "counter", 3, "keydown.shift", "keydown.control", "keydown.meta", "keyup.shift", "keyup.control", "keyup.meta"], ["mat-icon-button", "", "name", "remove", 3, "disabled", "click"], [3, "icon"], ["aria-label", "value input", "class", "value", 3, "ngModel", "keyup.enter", "blur", "ngModelChange", 4, "ngIf"], ["class", "value", "aria-label", "value", 4, "ngIf"], ["mat-icon-button", "", "name", "add", 3, "disabled", "click"], ["aria-label", "value input", 1, "value", 3, "ngModel", "keyup.enter", "blur", "ngModelChange"], ["inputValue", ""], ["aria-label", "value", 1, "value"]], template: function CounterComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵlistener("keydown.shift", function CounterComponent_Template_div_keydown_shift_0_listener() { return ctx.shift_key = true; }, false, i0.ɵɵresolveWindow)("keydown.control", function CounterComponent_Template_div_keydown_control_0_listener() { return ctx.ctrl_key = true; }, false, i0.ɵɵresolveWindow)("keydown.meta", function CounterComponent_Template_div_keydown_meta_0_listener() { return ctx.ctrl_key = true; }, false, i0.ɵɵresolveWindow)("keyup.shift", function CounterComponent_Template_div_keyup_shift_0_listener() { return ctx.shift_key = false; }, false, i0.ɵɵresolveWindow)("keyup.control", function CounterComponent_Template_div_keyup_control_0_listener() { return ctx.ctrl_key = false; }, false, i0.ɵɵresolveWindow)("keyup.meta", function CounterComponent_Template_div_keyup_meta_0_listener() { return ctx.ctrl_key = false; }, false, i0.ɵɵresolveWindow);
         i0.ɵɵelementStart(1, "button", 1);
         i0.ɵɵlistener("click", function CounterComponent_Template_button_click_1_listener() { return ctx.remove(); });
         i0.ɵɵelement(2, "app-icon", 2);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "div", 3);
-        i0.ɵɵtext(4);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "button", 4);
+        i0.ɵɵtemplate(3, CounterComponent_input_3_Template, 2, 1, "input", 3);
+        i0.ɵɵtemplate(4, CounterComponent_div_4_Template, 2, 1, "div", 4);
+        i0.ɵɵelementStart(5, "button", 5);
         i0.ɵɵlistener("click", function CounterComponent_Template_button_click_5_listener() { return ctx.add(); });
         i0.ɵɵelement(6, "app-icon", 2);
         i0.ɵɵelementEnd();
@@ -7049,14 +7084,16 @@ CounterComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CounterComponent, select
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("disabled", !ctx.value || ctx.value === ctx.min);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(5, _c0));
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx.value || "0", " ");
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(6, _c0));
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.useInput);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx.useInput);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("disabled", ctx.value === ctx.max);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(6, _c1));
-    } }, directives: [i1.MatButton, i2.IconComponent], styles: [".counter[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 1rem;\n}\n\n.value[_ngcontent-%COMP%] {\n  padding: 0.25em;\n  min-width: 3em;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvY3VzdG9tLWZpZWxkcy9jb3VudGVyL2NvdW50ZXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL2N1c3RvbS1maWVsZHMvY291bnRlci9jb3VudGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtBQ0FKOztBREdBO0VBQ0ksZUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvY3VzdG9tLWZpZWxkcy9jb3VudGVyL2NvdW50ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5jb3VudGVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAxcmVtO1xufVxuXG4udmFsdWUge1xuICAgIHBhZGRpbmc6IC4yNWVtO1xuICAgIG1pbi13aWR0aDogM2VtO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiIsIi5jb3VudGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC1zaXplOiAxcmVtO1xufVxuXG4udmFsdWUge1xuICBwYWRkaW5nOiAwLjI1ZW07XG4gIG1pbi13aWR0aDogM2VtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59Il19 */"] });
+        i0.ɵɵproperty("icon", i0.ɵɵpureFunction0(7, _c1));
+    } }, directives: [i1.MatButton, i2.IconComponent, i3.NgIf, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel], styles: [".counter[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 1rem;\n}\n\n.value[_ngcontent-%COMP%] {\n  padding: 0.25em;\n  min-width: 3em;\n  max-width: 3em;\n  text-align: center;\n  border: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvY3VzdG9tLWZpZWxkcy9jb3VudGVyL2NvdW50ZXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL2N1c3RvbS1maWVsZHMvY291bnRlci9jb3VudGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtBQ0FKOztBREdBO0VBQ0ksZUFBQTtFQUNBLGNBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy9jdXN0b20tZmllbGRzL2NvdW50ZXIvY291bnRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmNvdW50ZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDFyZW07XG59XG5cbi52YWx1ZSB7XG4gICAgcGFkZGluZzogLjI1ZW07XG4gICAgbWluLXdpZHRoOiAzZW07XG4gICAgbWF4LXdpZHRoOiAzZW07XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGJvcmRlcjogbm9uZTtcbn1cbiIsIi5jb3VudGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC1zaXplOiAxcmVtO1xufVxuXG4udmFsdWUge1xuICBwYWRkaW5nOiAwLjI1ZW07XG4gIG1pbi13aWR0aDogM2VtO1xuICBtYXgtd2lkdGg6IDNlbTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBib3JkZXI6IG5vbmU7XG59Il19 */"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CounterComponent, [{
         type: core_1.Component,
         args: [{
@@ -7068,15 +7105,17 @@ CounterComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CounterComponent, select
                         provide: forms_1.NG_VALUE_ACCESSOR,
                         /* istanbul ignore next */
                         useExisting: core_1.forwardRef(() => CounterComponent),
-                        multi: true
-                    }
-                ]
+                        multi: true,
+                    },
+                ],
             }]
     }], null, { step: [{
             type: core_1.Input
         }], max: [{
             type: core_1.Input
         }], min: [{
+            type: core_1.Input
+        }], useInput: [{
             type: core_1.Input
         }] }); })();
 
@@ -15344,7 +15383,7 @@ function CateringMenuItemComponent_div_0_a_counter_13_Template(rf, ctx) { if (rf
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r8 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("max", ctx_r8.item.maximum_quantity)("ngModel", ctx_r8.item.amount);
+    i0.ɵɵproperty("useInput", ctx_r8.item.must_select === 0)("max", ctx_r8.item.maximum_quantity)("ngModel", ctx_r8.item.amount);
 } }
 const _c8 = function (a1) { return { class: "material-icons", content: a1 }; };
 function CateringMenuItemComponent_div_0_button_14_Template(rf, ctx) { if (rf & 1) {
@@ -15376,7 +15415,7 @@ function CateringMenuItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵtemplate(12, CateringMenuItemComponent_div_0_div_12_Template, 3, 4, "div", 12);
-    i0.ɵɵtemplate(13, CateringMenuItemComponent_div_0_a_counter_13_Template, 1, 2, "a-counter", 13);
+    i0.ɵɵtemplate(13, CateringMenuItemComponent_div_0_a_counter_13_Template, 1, 3, "a-counter", 13);
     i0.ɵɵtemplate(14, CateringMenuItemComponent_div_0_button_14_Template, 2, 3, "button", 14);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -15547,7 +15586,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringMenuItemComponent = CateringMenuItemComponent;
 CateringMenuItemComponent.ɵfac = function CateringMenuItemComponent_Factory(t) { return new (t || CateringMenuItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.MatDialog)); };
-CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-order-item"]], inputs: { subitem: "subitem", item: "item", field: "field", symbol: "symbol", disabled: "disabled", compact: "compact" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [["class", "catering-item", 3, "compact", "subitem", 4, "ngIf"], [1, "children"], [3, "compact", "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "max", "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "max", "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "compact", "subitem", "symbol", "item", "field"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
+CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-order-item"]], inputs: { subitem: "subitem", item: "item", field: "field", symbol: "symbol", disabled: "disabled", compact: "compact" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [["class", "catering-item", 3, "compact", "subitem", 4, "ngIf"], [1, "children"], [3, "compact", "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "useInput", "max", "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "useInput", "max", "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "compact", "subitem", "symbol", "item", "field"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 15, 16, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵtemplate(2, CateringMenuItemComponent_a_catering_order_item_2_Template, 1, 5, "a-catering-order-item", 2);
@@ -22495,16 +22534,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "647b939",
-    "hash": "647b939",
+    "raw": "b15be35",
+    "hash": "b15be35",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "647b939",
+    "suffix": "b15be35",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601914455647
+    "time": 1601915050118
 };
 /* tslint:enable */
 
