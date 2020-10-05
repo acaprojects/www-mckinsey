@@ -8723,7 +8723,15 @@ class Booking extends base_api_class_1.BaseDataClass {
             raw_data.duration ||
                 dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') ||
                 60;
-        this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
+        // if it exists as a key, use the value directly.
+        // if we initialize without a value, switch to checking duration.
+        // This fixes MCK-826
+        if ('all_day' in raw_data) {
+            this.all_day = raw_data.all_day;
+        }
+        else {
+            this.all_day = !!raw_data.all_day || this.duration > 23 * 60;
+        }
         this.old_start = raw_data.old_start || dayjs(this.date).unix();
         this.old_end =
             raw_data.old_end ||
@@ -9022,6 +9030,7 @@ const forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angul
 const general_utilities_1 = __webpack_require__(/*! ../../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 const catering_order_class_1 = __webpack_require__(/*! ../catering/catering-order.class */ "./src/app/services/data/catering/catering-order.class.ts");
 const validation_utilities_1 = __webpack_require__(/*! src/app/shared/utilities/validation.utilities */ "./src/app/shared/utilities/validation.utilities.ts");
+const mockdate_1 = __webpack_require__(/*! mockdate */ "./node_modules/mockdate/lib/mockdate.js");
 const dayjs = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 const MINUTE = 1;
 const HOUR = 60;
@@ -9040,6 +9049,11 @@ const DURATION_MAP = {
     minute: MINUTE,
     minutes: MINUTE,
 };
+/**
+ * August 13, 2020 at 7:22:12 UTC
+ */
+const initialTime = 1597346532 * 1000;
+exports.mockDate = () => mockdate_1.default.set(initialTime);
 /**
  * Generate a list of free time slots between the given bookings
  * @param list List of bookings to find slots between
@@ -26489,16 +26503,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f808962",
-    "hash": "f808962",
+    "raw": "4f8aae9",
+    "hash": "4f8aae9",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f808962",
+    "suffix": "4f8aae9",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601907653986
+    "time": 1601914574864
 };
 /* tslint:enable */
 

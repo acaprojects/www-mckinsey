@@ -16430,8 +16430,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var time = raw_data.date || raw_data.start_epoch * 1000 || raw_data.start * 1000 || raw_data.Start;
         var start = dayjs(time).startOf('m');
         _this89.date = !time ? start.minute(Math.ceil(start.minute() / 5) * 5).valueOf() : start.valueOf();
-        _this89.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60;
-        _this89.all_day = !!raw_data.all_day || _this89.duration > 23 * 60;
+        _this89.duration = raw_data.duration || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).diff(start, 'm') || 60; // if it exists as a key, use the value directly.
+        // if we initialize without a value, switch to checking duration.
+        // This fixes MCK-826
+
+        if ('all_day' in raw_data) {
+          _this89.all_day = raw_data.all_day;
+        } else {
+          _this89.all_day = !!raw_data.all_day || _this89.duration > 23 * 60;
+        }
+
         _this89.old_start = raw_data.old_start || dayjs(_this89.date).unix();
         _this89.old_end = raw_data.old_end || dayjs(raw_data.end_epoch * 1000 || raw_data.end * 1000 || raw_data.End).unix();
         _this89.body = (typeof raw_data.body === 'string' ? raw_data.body : '') || raw_data.description;
@@ -16945,6 +16953,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! src/app/shared/utilities/validation.utilities */
     "./src/app/shared/utilities/validation.utilities.ts");
 
+    var mockdate_1 = __webpack_require__(
+    /*! mockdate */
+    "./node_modules/mockdate/lib/mockdate.js");
+
     var dayjs = __webpack_require__(
     /*! dayjs */
     "./node_modules/dayjs/dayjs.min.js");
@@ -16967,10 +16979,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       minutes: MINUTE
     };
     /**
+     * August 13, 2020 at 7:22:12 UTC
+     */
+
+    var initialTime = 1597346532 * 1000;
+
+    exports.mockDate = function () {
+      return mockdate_1["default"].set(initialTime);
+    };
+    /**
      * Generate a list of free time slots between the given bookings
      * @param list List of bookings to find slots between
      * @param min_size Minimum length of a free slot in minutes
      */
+
 
     function getFreeBookingSlots(list) {
       var min_size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 30;
@@ -48253,16 +48275,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "f808962",
-      "hash": "f808962",
+      "raw": "4f8aae9",
+      "hash": "4f8aae9",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "f808962",
+      "suffix": "4f8aae9",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601907653986
+      "time": 1601914574864
     };
     /* tslint:enable */
 
