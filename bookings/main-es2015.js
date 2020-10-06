@@ -2749,6 +2749,18 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_0__["Ba
         }
         return null;
     }
+    buildingWithID(ids) {
+        const list = ids instanceof Array ? ids : [ids];
+        const bld_list = this.buildings;
+        for (const id of list) {
+            for (const bld of bld_list) {
+                if (bld.id === id) {
+                    return bld;
+                }
+            }
+        }
+        return null;
+    }
     /**
      * Initialise service data
      */
@@ -2964,7 +2976,8 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
         super(service, raw_data);
         this.service = service;
         const settings = raw_data.settings || {};
-        this.theme_rbp = settings.theme_rbp || raw_data.theme_rbp;
+        this.zones = raw_data.zones instanceof Array ? raw_data.zones : [];
+        this._theme_rbp = settings.theme_rbp || raw_data.theme_rbp || (this.building.setting('theme_rpb'));
         this.long_name = settings.long_name || raw_data.long_name;
         this.map_id = settings.map_id || raw_data.map_id;
         this.type =
@@ -2981,7 +2994,6 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
         this.breakdown = ((settings.breakdown || 0) / 60) || raw_data.breakdown || 0;
         this.capacity = raw_data.capacity || 0;
         this.was_available = settings.available || raw_data.available || raw_data.was_available || false;
-        this.zones = raw_data.zones instanceof Array ? raw_data.zones : [];
         const raw_bookings = settings.bookings || raw_data.bookings || [];
         this._bookings = raw_bookings.map(i => i.id);
         if (this.service.parent && this.service.parent.Bookings) {
@@ -3025,6 +3037,10 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
         }
         return null;
     }
+    get theme_rbp() {
+        var _a;
+        return (_a = this._theme_rbp) !== null && _a !== void 0 ? _a : this.building.setting('theme_rbp');
+    }
     /** List of stored bookings for the space */
     get bookings() {
         const bookingService = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_bookings_booking_class__WEBPACK_IMPORTED_MODULE_1__["Booking"]);
@@ -3045,6 +3061,11 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
         const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_6__["Organisation"]);
         const newVar = service ? service.levelWithID(this.zones) : null;
         return newVar || new _organisation_level_class__WEBPACK_IMPORTED_MODULE_7__["BuildingLevel"]({});
+    }
+    get building() {
+        const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_6__["Organisation"]);
+        const building = service ? service.buildingWithID(this.zones) : null;
+        return building || new _organisation_building_class__WEBPACK_IMPORTED_MODULE_5__["Building"](service, {});
     }
     /**
      * Get bookings for space
@@ -6908,6 +6929,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
     }
     setSpace(space) {
         this.space = space;
+        this._theme = this.space.theme_rbp;
     }
     /** Get the display value for the status */
     get status_display() {
@@ -6999,16 +7021,17 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                     .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(spaces => spaces.filter(space => space.id === this.system_id)))
                     .subscribe(value => {
                     if (value.length >= 1) {
-                        console.log('SPACE LOADED');
-                        this.space = value[0];
+                        this.setSpace(value[0]);
                     }
                 }));
                 this.subscription('levels', this._service.Organisation.listen('levels')
                     .subscribe(() => {
-                    console.log('RULES');
                     // this requires a refactor, but essentially the rules will check for building
                     // levels. We need to listen for level loading to then load the rules.
                     this.rules = this.space && this.space.rulesFor({});
+                    if (this.space) {
+                        this.setSpace(this.space);
+                    }
                 }));
                 this.timeout('websocket', () => {
                     this.websocket_connected = true;
@@ -7019,8 +7042,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         }));
     }
     isV1() {
-        var _a;
-        return ((_a = this.space) === null || _a === void 0 ? void 0 : _a.theme_rbp) === _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["SpaceTheme"].v1;
+        return this._theme === _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["SpaceTheme"].v1;
     }
     /**
      * Update the bookings for the active space
@@ -7031,11 +7053,12 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
             this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, {
                 id: this.system_id,
                 name: this.space_name,
-                bookings
+                bookings,
+                theme_rbp: this._theme
             }));
         }
         else {
-            this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, Object.assign(Object.assign({}, this.space), { bookings })));
+            this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, Object.assign(Object.assign({}, this.space), { bookings, theme_rbp: this._theme })));
         }
     }
     /**
@@ -7147,11 +7170,10 @@ function View_PanelSpaceDetailsComponent_1(_l) { return _angular_core__WEBPACK_I
 function View_PanelSpaceDetailsComponent_5(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "host"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.space.next == null) ? null : ((_co.space.next.organiser == null) ? null : _co.space.next.organiser.name)); _ck(_v, 1, 0, currVal_0); }); }
 function View_PanelSpaceDetailsComponent_6(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["Booked at ", " on ", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.space.next == null) ? null : _co.space.next.start_time); var currVal_1 = ((_co.space.next == null) ? null : _co.space.next.start_date); _ck(_v, 1, 0, currVal_0, currVal_1); }); }
 function View_PanelSpaceDetailsComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "details next"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "heading"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Next Booking:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (!_co.hide_user && !_co.hide_details); _ck(_v, 4, 0, currVal_0); var currVal_1 = !_co.hide_availability; _ck(_v, 6, 0, currVal_1); }, null); }
-function View_PanelSpaceDetailsComponent_8(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Room Availability:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, [" Free at ", " on ", " "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.current.end_time; var currVal_1 = _co.space.current.end_date; _ck(_v, 3, 0, currVal_0, currVal_1); }); }
-function View_PanelSpaceDetailsComponent_7(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "div", [["class", "details other"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "div", [["class", "time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Make a reservation at:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" roombooking.intranet.mckinsey.com "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.hide_availability; _ck(_v, 2, 0, currVal_0); }, null); }
-function View_PanelSpaceDetailsComponent_10(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [], [[8, "src", 4]], null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.icon; _ck(_v, 1, 0, currVal_0); }); }
-function View_PanelSpaceDetailsComponent_9(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 7, "div", [["class", "information"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 4, "div", [["class", "block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](7, null, ["", ""]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.icon; _ck(_v, 5, 0, currVal_1); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 2, 0, currVal_0); var currVal_2 = _co.description; _ck(_v, 7, 0, currVal_2); }); }
-function View_PanelSpaceDetailsComponent_11(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "hide_details"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
+function View_PanelSpaceDetailsComponent_7(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Room Availability:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, [" Free at ", " on ", " "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.current.end_time; var currVal_1 = _co.space.current.end_date; _ck(_v, 3, 0, currVal_0, currVal_1); }); }
+function View_PanelSpaceDetailsComponent_9(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [], [[8, "src", 4]], null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.icon; _ck(_v, 1, 0, currVal_0); }); }
+function View_PanelSpaceDetailsComponent_8(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 7, "div", [["class", "information"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 4, "div", [["class", "block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](7, null, ["", ""]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.icon; _ck(_v, 5, 0, currVal_1); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 2, 0, currVal_0); var currVal_2 = _co.description; _ck(_v, 7, 0, currVal_2); }); }
+function View_PanelSpaceDetailsComponent_10(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "hide_details"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.hide_details = $event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "hide_title"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
@@ -7173,7 +7195,7 @@ function View_PanelSpaceDetailsComponent_11(_l) { return _angular_core__WEBPACK_
         var pd_0 = ((_co.icon = $event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_3__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.space.id; var currVal_1 = "Bookings"; var currVal_2 = "hide_details"; var currVal_3 = _co.hide_details; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.space.id; var currVal_5 = "Bookings"; var currVal_6 = "hide_title"; var currVal_7 = _co.hide_title; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.space.id; var currVal_9 = "Bookings"; var currVal_10 = "hide_availability"; var currVal_11 = _co.hide_availability; _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = _co.space.id; var currVal_13 = "Bookings"; var currVal_14 = "hide_user"; var currVal_15 = _co.hide_user; _ck(_v, 8, 0, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_16 = _co.space.id; var currVal_17 = "Bookings"; var currVal_18 = "title"; var currVal_19 = _co.title; _ck(_v, 10, 0, currVal_16, currVal_17, currVal_18, currVal_19); var currVal_20 = _co.space.id; var currVal_21 = "Bookings"; var currVal_22 = "description"; var currVal_23 = _co.description; _ck(_v, 12, 0, currVal_20, currVal_21, currVal_22, currVal_23); var currVal_24 = _co.space.id; var currVal_25 = "Bookings"; var currVal_26 = "icon"; var currVal_27 = _co.icon; _ck(_v, 14, 0, currVal_24, currVal_25, currVal_26, currVal_27); }, null); }
-function View_PanelSpaceDetailsComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 11, "div", [["class", "space-booking-details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "div", [["class", "booking-container"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.space && _co.space.current); _ck(_v, 3, 0, currVal_0); var currVal_1 = (_co.space && _co.space.next); _ck(_v, 5, 0, currVal_1); var currVal_2 = (_co.space && _co.space.current); _ck(_v, 7, 0, currVal_2); var currVal_3 = (_co.title || _co.description); _ck(_v, 9, 0, currVal_3); var currVal_4 = _co.space; _ck(_v, 11, 0, currVal_4); }, null); }
+function View_PanelSpaceDetailsComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 16, "div", [["class", "space-booking-details"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 4, "div", [["class", "booking-container"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 6, "div", [["class", "details other"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 3, "div", [["class", "time"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Make a reservation at:"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" roombooking.intranet.mckinsey.com "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PanelSpaceDetailsComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.space && _co.space.current); _ck(_v, 3, 0, currVal_0); var currVal_1 = (_co.space && _co.space.next); _ck(_v, 5, 0, currVal_1); var currVal_2 = (!_co.hide_availability && ((_co.space == null) ? null : _co.space.current)); _ck(_v, 8, 0, currVal_2); var currVal_3 = (_co.title || _co.description); _ck(_v, 14, 0, currVal_3); var currVal_4 = _co.space; _ck(_v, 16, 0, currVal_4); }, null); }
 function View_PanelSpaceDetailsComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-panel-space-details", [], null, null, null, View_PanelSpaceDetailsComponent_0, RenderType_PanelSpaceDetailsComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 49152, null, 0, _space_details_component__WEBPACK_IMPORTED_MODULE_4__["PanelSpaceDetailsComponent"], [], null, null)], null, null); }
 var PanelSpaceDetailsComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-panel-space-details", _space_details_component__WEBPACK_IMPORTED_MODULE_4__["PanelSpaceDetailsComponent"], View_PanelSpaceDetailsComponent_Host_0, { space: "space" }, {}, []);
 
@@ -8178,16 +8200,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "d329dd6",
-    "hash": "d329dd6",
+    "raw": "2aec775",
+    "hash": "2aec775",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "d329dd6",
+    "suffix": "2aec775",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1601666336440
+    "time": 1602006963720
 };
 /* tslint:enable */
 
