@@ -2031,6 +2031,27 @@ class Booking extends _base_api_class__WEBPACK_IMPORTED_MODULE_3__["BaseDataClas
 
 /***/ }),
 
+/***/ "./src/app/services/data/bookings/booking.interfaces.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/services/data/bookings/booking.interfaces.ts ***!
+  \**************************************************************/
+/*! exports provided: SpaceRulesReason */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpaceRulesReason", function() { return SpaceRulesReason; });
+var SpaceRulesReason;
+(function (SpaceRulesReason) {
+    SpaceRulesReason["NoBuildingService"] = "NoBuildingService";
+    SpaceRulesReason["BuildingNotFound"] = "BuildingNotFound";
+    SpaceRulesReason["NoMatchingRules"] = "NoMatchingRules";
+    SpaceRulesReason["MatchesRules"] = "MatchesRules";
+})(SpaceRulesReason || (SpaceRulesReason = {}));
+
+
+/***/ }),
+
 /***/ "./src/app/services/data/bookings/booking.utilities.ts":
 /*!*************************************************************!*\
   !*** ./src/app/services/data/bookings/booking.utilities.ts ***!
@@ -2056,6 +2077,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var mockdate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mockdate */ "./node_modules/mockdate/lib/mockdate.js");
 /* harmony import */ var mockdate__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(mockdate__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _booking_interfaces__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./booking.interfaces */ "./src/app/services/data/bookings/booking.interfaces.ts");
+
 
 
 
@@ -2076,7 +2099,7 @@ const DURATION_MAP = {
     hour: HOUR,
     hours: HOUR,
     minute: MINUTE,
-    minutes: MINUTE,
+    minutes: MINUTE
 };
 /**
  * August 13, 2020 at 7:22:12 UTC
@@ -2187,7 +2210,7 @@ function rulesForSpace(options) {
     }
     const space_rules_for_user = {
         auto_approve: true,
-        hide: true,
+        hide: true
     };
     let match = false;
     /* istanbul ignore else */
@@ -2198,14 +2221,19 @@ function rulesForSpace(options) {
                 options.space.zones.find((zone) => zone === type)) {
                 for (const rule_block of options.rules[type]) {
                     /* istanbul ignore else */
-                    if (checkRules({
+                    const { passes_rules, failures } = checkRules({
                         user: options.user,
                         space: options.space,
                         time: options.time,
                         recurr_end: options.recurr_end,
                         duration: options.duration,
-                        rules: rule_block.conditions,
-                    })) {
+                        rules: rule_block.conditions
+                    });
+                    if (!space_rules_for_user.failures) {
+                        space_rules_for_user.failures = [];
+                    }
+                    space_rules_for_user.failures.concat(failures);
+                    if (passes_rules) {
                         const ruleset = rule_block.rules;
                         const conditions = rule_block.conditions;
                         space_rules_for_user.hide = false;
@@ -2237,7 +2265,11 @@ function rulesForSpace(options) {
         }
     }
     if (!match) {
+        space_rules_for_user.reason = _booking_interfaces__WEBPACK_IMPORTED_MODULE_5__["SpaceRulesReason"].NoMatchingRules;
         space_rules_for_user.hide = true;
+    }
+    else {
+        space_rules_for_user.reason = _booking_interfaces__WEBPACK_IMPORTED_MODULE_5__["SpaceRulesReason"].MatchesRules;
     }
     return space_rules_for_user;
 }
@@ -2248,6 +2280,9 @@ function rulesForSpace(options) {
 function checkRules(options) {
     /* istanbul ignore else */
     if (options.rules) {
+        // list of failure reasons based on rules
+        // no current attempt at deduplication.
+        const failures = [];
         const time = dayjs__WEBPACK_IMPORTED_MODULE_3__(options.time);
         const recurr = options.recurr_end ? dayjs__WEBPACK_IMPORTED_MODULE_3__(options.recurr_end) : dayjs__WEBPACK_IMPORTED_MODULE_3__();
         const count = Object.keys(options.rules).length;
@@ -2267,6 +2302,9 @@ function checkRules(options) {
                         if (counter > 0) {
                             matches++;
                         }
+                        else {
+                            failures.push('groups');
+                        }
                     }
                     break;
                 case 'locations':
@@ -2279,6 +2317,9 @@ function checkRules(options) {
                         /* istanbul ignore else */
                         if (counter >= options.rules[key].length) {
                             matches++;
+                        }
+                        else {
+                            failures.push('locations');
                         }
                     }
                     break;
@@ -2293,6 +2334,9 @@ function checkRules(options) {
                             match = match && recurr.isBefore(check, 'm');
                         }
                         matches += match ? 1 : 0;
+                        if (!match) {
+                            failures.push('is_before');
+                        }
                     }
                     break;
                 case 'is_after':
@@ -2300,26 +2344,44 @@ function checkRules(options) {
                     if (options.time) {
                         const duration = stringToMinutes(condition[0]);
                         const check = dayjs__WEBPACK_IMPORTED_MODULE_3__().add(duration, 'm');
-                        time.isAfter(check, 'm') ? matches++ : '';
+                        const isAfter = time.isAfter(check, 'm');
+                        if (isAfter) {
+                            matches++;
+                        }
+                        else {
+                            failures.push('is_after');
+                        }
                     }
                     break;
                 case 'min_length':
                     /* istanbul ignore else */
                     if (options.duration) {
-                        matches += durationGreaterThanOrEqual(options.duration, condition[0]) ? 1 : 0;
+                        const durationGreater = durationGreaterThanOrEqual(options.duration, condition[0]);
+                        matches += durationGreater ? 1 : 0;
+                        if (!durationGreater) {
+                            failures.push('min_length');
+                        }
                     }
                     break;
                 case 'max_length':
                     /* istanbul ignore else */
                     if (options.duration) {
-                        durationGreaterThanOrEqual(condition[0], options.duration) ? matches++ : '';
+                        const durationGreater = durationGreaterThanOrEqual(condition[0], options.duration);
+                        if (durationGreater) {
+                            matches++;
+                        }
+                        else {
+                            failures.push('max_length');
+                        }
                     }
                     break;
             }
         });
-        return matches >= count;
+        const passes_rules = matches >= count;
+        // if pass, dont supply failures.
+        return { passes_rules, failures: passes_rules ? [] : failures };
     }
-    return false;
+    return { passes_rules: false, failures: [] };
 }
 /**
  * Whether the first input is greater than the last. Converts duration strings into minutes
@@ -2771,7 +2833,9 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_0__["Ba
         return new Promise((resolve) => {
             this.loadOrganisation().then(() => {
                 this.loadBuildings().then(() => {
-                    this.loadLevels().then(() => resolve());
+                    this.loadLevels().then(() => {
+                        resolve();
+                    });
                 });
             });
         });
@@ -2821,6 +2885,7 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_0__["Ba
             this.query({ tags: 'level', engine: true, limit: 1000 }).then((lvl_data) => {
                 const levels = lvl_data.map((i) => new _level_class__WEBPACK_IMPORTED_MODULE_4__["BuildingLevel"](i));
                 this.set('levels', levels);
+                resolve();
             }, _ => {
                 this.parent.notifyError('Error loading level data. Retrying...');
                 this.timeout('load_lvl', () => this.loadLevels().then(() => resolve()), 1000);
@@ -2863,7 +2928,7 @@ const MINUTES = 60 * SECONDS;
 class PollingService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIService"] {
     constructor() {
         super();
-        this._name = 'Users';
+        this._name = 'Polling';
         this._api_route = 'pings';
     }
     load() {
@@ -2951,10 +3016,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
-/* harmony import */ var _service_manager_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
-/* harmony import */ var _organisation_building_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisation/building.class */ "./src/app/services/data/organisation/building.class.ts");
-/* harmony import */ var _organisation_organisation_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisation/organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
-/* harmony import */ var _organisation_level_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisation/level.class */ "./src/app/services/data/organisation/level.class.ts");
+/* harmony import */ var _bookings_booking_interfaces__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../bookings/booking.interfaces */ "./src/app/services/data/bookings/booking.interfaces.ts");
+/* harmony import */ var _service_manager_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
+/* harmony import */ var _organisation_building_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisation/building.class */ "./src/app/services/data/organisation/building.class.ts");
+/* harmony import */ var _organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisation/organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
 
 
 
@@ -2973,6 +3038,7 @@ var SpaceTheme;
 })(SpaceTheme || (SpaceTheme = {}));
 class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"] {
     constructor(service, raw_data = {}) {
+        var _a;
         super(service, raw_data);
         this.service = service;
         const settings = raw_data.settings || {};
@@ -2982,7 +3048,7 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
         this.map_id = settings.map_id || raw_data.map_id;
         this.type =
             settings.book_type ||
-                (this.level.settings || {}).book_type ||
+                (((_a = this.level) === null || _a === void 0 ? void 0 : _a.settings) || {}).book_type ||
                 raw_data.book_type ||
                 raw_data.type ||
                 'book';
@@ -3043,7 +3109,7 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
     }
     /** List of stored bookings for the space */
     get bookings() {
-        const bookingService = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_bookings_booking_class__WEBPACK_IMPORTED_MODULE_1__["Booking"]);
+        const bookingService = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_bookings_booking_class__WEBPACK_IMPORTED_MODULE_1__["Booking"]);
         const booking_list = (bookingService
             && bookingService.list((booking) => this._bookings.indexOf(booking.id) >= 0) || []);
         return booking_list.sort((a, b) => a.date - b.date);
@@ -3058,14 +3124,13 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
     }
     /** Level in which the space is associated */
     get level() {
-        const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_6__["Organisation"]);
-        const newVar = service ? service.levelWithID(this.zones) : null;
-        return newVar || new _organisation_level_class__WEBPACK_IMPORTED_MODULE_7__["BuildingLevel"]({});
+        const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__["Organisation"]);
+        return service ? service.levelWithID(this.zones) : null;
     }
     get building() {
-        const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_6__["Organisation"]);
+        const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__["Organisation"]);
         const building = service ? service.buildingWithID(this.zones) : null;
-        return building || new _organisation_building_class__WEBPACK_IMPORTED_MODULE_5__["Building"](service, {});
+        return building || new _organisation_building_class__WEBPACK_IMPORTED_MODULE_6__["Building"](service, {});
     }
     /**
      * Get bookings for space
@@ -3114,23 +3179,27 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
      * @param options Conditions for generating the space rules
      */
     rulesFor(options) {
-        const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_organisation_building_class__WEBPACK_IMPORTED_MODULE_5__["Building"]);
+        const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_organisation_building_class__WEBPACK_IMPORTED_MODULE_6__["Building"]);
         if (!service || !this.level) {
-            return { auto_approve: true, hide: false };
+            return {
+                auto_approve: true,
+                hide: false,
+                reason: _bookings_booking_interfaces__WEBPACK_IMPORTED_MODULE_4__["SpaceRulesReason"].NoBuildingService,
+                failures: [!this.level ? 'No Level' : 'No Service']
+            };
         }
         const building = service.buildings.find((bld) => bld.id === this.level.building_id);
         if (!building) {
-            return { auto_approve: true, hide: false };
+            return { auto_approve: true, hide: false, reason: _bookings_booking_interfaces__WEBPACK_IMPORTED_MODULE_4__["SpaceRulesReason"].BuildingNotFound };
         }
         const { date, duration, host } = options;
-        const rules = Object(_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
+        return Object(_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
             time: date,
             duration,
             space: this,
             user: host,
             rules: building.booking_rules
         });
-        return rules;
     }
     /**
      * Whether space can only be booked by request
@@ -6902,6 +6971,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
 
 
 
@@ -6926,6 +6997,10 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         this.show_time = true;
         /** Whether user interaction is enabled for the panel */
         this.interactive = true;
+        /**
+         * When bookings loaded, triggers change.
+         */
+        this.bookingsLoaded = new rxjs__WEBPACK_IMPORTED_MODULE_7__["BehaviorSubject"]([]);
     }
     setSpace(space) {
         this.space = space;
@@ -6987,7 +7062,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
             case RoomDisplayStatus.NotBookable:
                 return 'Unbookable';
             case RoomDisplayStatus.AvailableByRequest:
-                return 'Available By Request';
+                return 'Available by Request';
             case RoomDisplayStatus.InUse:
                 return 'In Use';
             case RoomDisplayStatus.Pending:
@@ -7016,21 +7091,27 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                         this._service.set('system', this.system_id);
                     }
                 }));
-                this.subscription('get_current_space', this._service.Spaces
-                    .listen('list')
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(spaces => spaces.filter(space => space.id === this.system_id)))
-                    .subscribe(value => {
-                    if (value.length >= 1) {
-                        this.setSpace(value[0]);
-                    }
-                }));
-                this.subscription('levels', this._service.Organisation.listen('levels')
-                    .subscribe(() => {
-                    // this requires a refactor, but essentially the rules will check for building
-                    // levels. We need to listen for level loading to then load the rules.
-                    this.rules = this.space && this.space.rulesFor({});
-                    if (this.space) {
-                        this.setSpace(this.space);
+                this.subscription('spaces_list_levels', Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["combineLatest"])([
+                    this._service.Spaces
+                        .listen('list')
+                        .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(spaces => spaces.filter(space => space.id === this.system_id))),
+                    this._service.Organisation.listen('levels'),
+                    this.bookingsLoaded
+                ]).subscribe(([spaces, levels, bookings]) => {
+                    if (spaces.length >= 1 && levels.length > 0) {
+                        // this requires a refactor, but essentially the rules will check for building
+                        // levels. We need to listen for level loading to then load the rules.
+                        const foundSpace = spaces[0];
+                        // As per MCK-480, these default options are based on the staff map default rules,
+                        // except for the host "user". The RBP does not have a real user so, we do not
+                        // evaluate rules for the user. This may lead to some inconsistencies when looking at
+                        // booking panel vs the staff application. In future we should place defaults in a better spot.
+                        this.rules = foundSpace.rulesFor({
+                            date: dayjs__WEBPACK_IMPORTED_MODULE_2__().valueOf(),
+                            duration: 30
+                        });
+                        this._service.log('Panel', 'Evaluated Rules', this.rules);
+                        this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, Object.assign(Object.assign({}, foundSpace), { bookings, theme_rbp: this._theme })));
                     }
                 }));
                 this.timeout('websocket', () => {
@@ -7049,17 +7130,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
      * @param bookings Array of raw booking data
      */
     updateBookings(bookings) {
-        if (!this.space) {
-            this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, {
-                id: this.system_id,
-                name: this.space_name,
-                bookings,
-                theme_rbp: this._theme
-            }));
-        }
-        else {
-            this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, Object.assign(Object.assign({}, this.space), { bookings, theme_rbp: this._theme })));
-        }
+        this.bookingsLoaded.next(bookings);
     }
     /**
      * Update the current status of the active space
@@ -7875,7 +7946,6 @@ class ShellWrapperComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
      * @param delay Delay before first loading message update
      */
     checkLoading(delay = 3000) {
-        console.log('Check Loading:', this.system_name);
         if (!this.system_name) {
             this.message_index = 0;
             this.timeout('update_msg', () => this.updateMessage(), delay);
@@ -8200,16 +8270,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "2aec775",
-    "hash": "2aec775",
+    "raw": "571de95",
+    "hash": "571de95",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "2aec775",
+    "suffix": "571de95",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1602006963720
+    "time": 1602101521502
 };
 /* tslint:enable */
 
