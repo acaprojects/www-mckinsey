@@ -1,4 +1,12 @@
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -4297,6 +4305,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/services/data/bookings/booking.interfaces.ts":
+  /*!**************************************************************!*\
+    !*** ./src/app/services/data/bookings/booking.interfaces.ts ***!
+    \**************************************************************/
+
+  /*! exports provided: SpaceRulesReason */
+
+  /***/
+  function srcAppServicesDataBookingsBookingInterfacesTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SpaceRulesReason", function () {
+      return SpaceRulesReason;
+    });
+
+    var SpaceRulesReason;
+
+    (function (SpaceRulesReason) {
+      SpaceRulesReason["NoBuildingService"] = "NoBuildingService";
+      SpaceRulesReason["BuildingNotFound"] = "BuildingNotFound";
+      SpaceRulesReason["NoMatchingRules"] = "NoMatchingRules";
+      SpaceRulesReason["MatchesRules"] = "MatchesRules";
+    })(SpaceRulesReason || (SpaceRulesReason = {}));
+    /***/
+
+  },
+
+  /***/
   "./src/app/services/data/bookings/booking.utilities.ts":
   /*!*************************************************************!*\
     !*** ./src/app/services/data/bookings/booking.utilities.ts ***!
@@ -4399,6 +4439,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var mockdate__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(mockdate__WEBPACK_IMPORTED_MODULE_4__);
+    /* harmony import */
+
+
+    var _booking_interfaces__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./booking.interfaces */
+    "./src/app/services/data/bookings/booking.interfaces.ts");
 
     var MINUTE = 1;
     var HOUR = 60;
@@ -4605,14 +4651,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 var rule_block = _step10.value;
 
                 /* istanbul ignore else */
-                if (checkRules({
+                var _checkRules = checkRules({
                   user: options.user,
                   space: options.space,
                   time: options.time,
                   recurr_end: options.recurr_end,
                   duration: options.duration,
                   rules: rule_block.conditions
-                })) {
+                }),
+                    passes_rules = _checkRules.passes_rules,
+                    failures = _checkRules.failures;
+
+                if (!space_rules_for_user.failures) {
+                  space_rules_for_user.failures = [];
+                }
+
+                space_rules_for_user.failures.concat(failures);
+
+                if (passes_rules) {
                   var ruleset = rule_block.rules;
                   var conditions = rule_block.conditions;
                   space_rules_for_user.hide = false;
@@ -4664,7 +4720,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (!match) {
+        space_rules_for_user.reason = _booking_interfaces__WEBPACK_IMPORTED_MODULE_5__["SpaceRulesReason"].NoMatchingRules;
         space_rules_for_user.hide = true;
+      } else {
+        space_rules_for_user.reason = _booking_interfaces__WEBPACK_IMPORTED_MODULE_5__["SpaceRulesReason"].MatchesRules;
       }
 
       return space_rules_for_user;
@@ -4678,6 +4737,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function checkRules(options) {
       /* istanbul ignore else */
       if (options.rules) {
+        // list of failure reasons based on rules
+        // no current attempt at deduplication.
+        var failures = [];
         var time = dayjs__WEBPACK_IMPORTED_MODULE_3__(options.time);
         var recurr = options.recurr_end ? dayjs__WEBPACK_IMPORTED_MODULE_3__(options.recurr_end) : dayjs__WEBPACK_IMPORTED_MODULE_3__();
         var count = Object.keys(options.rules).length;
@@ -4700,6 +4762,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 if (counter > 0) {
                   matches++;
+                } else {
+                  failures.push('groups');
                 }
               }
 
@@ -4716,6 +4780,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 if (counter >= options.rules[key].length) {
                   matches++;
+                } else {
+                  failures.push('locations');
                 }
               }
 
@@ -4734,6 +4800,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
 
                 matches += match ? 1 : 0;
+
+                if (!match) {
+                  failures.push('is_before');
+                }
               }
 
               break;
@@ -4745,7 +4815,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 var _check = dayjs__WEBPACK_IMPORTED_MODULE_3__().add(_duration, 'm');
 
-                time.isAfter(_check, 'm') ? matches++ : '';
+                var isAfter = time.isAfter(_check, 'm');
+
+                if (isAfter) {
+                  matches++;
+                } else {
+                  failures.push('is_after');
+                }
               }
 
               break;
@@ -4753,7 +4829,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             case 'min_length':
               /* istanbul ignore else */
               if (options.duration) {
-                matches += durationGreaterThanOrEqual(options.duration, condition[0]) ? 1 : 0;
+                var durationGreater = durationGreaterThanOrEqual(options.duration, condition[0]);
+                matches += durationGreater ? 1 : 0;
+
+                if (!durationGreater) {
+                  failures.push('min_length');
+                }
               }
 
               break;
@@ -4761,16 +4842,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             case 'max_length':
               /* istanbul ignore else */
               if (options.duration) {
-                durationGreaterThanOrEqual(condition[0], options.duration) ? matches++ : '';
+                var _durationGreater = durationGreaterThanOrEqual(condition[0], options.duration);
+
+                if (_durationGreater) {
+                  matches++;
+                } else {
+                  failures.push('max_length');
+                }
               }
 
               break;
           }
         });
-        return matches >= count;
+        var passes_rules = matches >= count; // if pass, dont supply failures.
+
+        return {
+          passes_rules: passes_rules,
+          failures: passes_rules ? [] : failures
+        };
       }
 
-      return false;
+      return {
+        passes_rules: false,
+        failures: []
+      };
     }
     /**
      * Whether the first input is greater than the last. Converts duration strings into minutes
@@ -5634,7 +5729,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this34.loadOrganisation().then(function () {
               _this34.loadBuildings().then(function () {
                 _this34.loadLevels().then(function () {
-                  return resolve();
+                  resolve();
                 });
               });
             });
@@ -5732,6 +5827,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               });
 
               _this37.set('levels', levels);
+
+              resolve();
             }, function (_) {
               _this37.parent.notifyError('Error loading level data. Retrying...');
 
@@ -5848,7 +5945,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, PollingService);
 
         _this39 = _super12.call(this);
-        _this39._name = 'Users';
+        _this39._name = 'Polling';
         _this39._api_route = 'pings';
         return _this39;
       }
@@ -6048,27 +6145,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _service_manager_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _bookings_booking_interfaces__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../bookings/booking.interfaces */
+    "./src/app/services/data/bookings/booking.interfaces.ts");
+    /* harmony import */
+
+
+    var _service_manager_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ../service-manager.class */
     "./src/app/services/data/service-manager.class.ts");
     /* harmony import */
 
 
-    var _organisation_building_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _organisation_building_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ../organisation/building.class */
     "./src/app/services/data/organisation/building.class.ts");
     /* harmony import */
 
 
-    var _organisation_organisation_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ../organisation/organisation.class */
     "./src/app/services/data/organisation/organisation.class.ts");
-    /* harmony import */
-
-
-    var _organisation_level_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ../organisation/level.class */
-    "./src/app/services/data/organisation/level.class.ts");
 
     var OPTION_DEFAULTS = {
       duration: 60
@@ -6092,6 +6189,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, Space);
 
+        var _a;
+
         _this41 = _super13.call(this, service, raw_data);
         _this41.service = service;
         var settings = raw_data.settings || {};
@@ -6099,7 +6198,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this41._theme_rbp = settings.theme_rbp || raw_data.theme_rbp || _this41.building.setting('theme_rpb');
         _this41.long_name = settings.long_name || raw_data.long_name;
         _this41.map_id = settings.map_id || raw_data.map_id;
-        _this41.type = settings.book_type || (_this41.level.settings || {}).book_type || raw_data.book_type || raw_data.type || 'book';
+        _this41.type = settings.book_type || (((_a = _this41.level) === null || _a === void 0 ? void 0 : _a.settings) || {}).book_type || raw_data.book_type || raw_data.type || 'book';
         _this41.can_search = settings.searchable || raw_data.searchable || raw_data.can_search || false;
         _this41.can_control = settings.controlable || raw_data.controlable || raw_data.can_control || false;
         _this41.hourly_rate = settings.cost_hour || raw_data.cost_hour || raw_data.hourly_rate || 0;
@@ -6223,12 +6322,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function rulesFor(options) {
           var _this43 = this;
 
-          var service = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_organisation_building_class__WEBPACK_IMPORTED_MODULE_5__["Building"]);
+          var service = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_organisation_building_class__WEBPACK_IMPORTED_MODULE_6__["Building"]);
 
           if (!service || !this.level) {
             return {
               auto_approve: true,
-              hide: false
+              hide: false,
+              reason: _bookings_booking_interfaces__WEBPACK_IMPORTED_MODULE_4__["SpaceRulesReason"].NoBuildingService,
+              failures: [!this.level ? 'No Level' : 'No Service']
             };
           }
 
@@ -6239,21 +6340,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (!building) {
             return {
               auto_approve: true,
-              hide: false
+              hide: false,
+              reason: _bookings_booking_interfaces__WEBPACK_IMPORTED_MODULE_4__["SpaceRulesReason"].BuildingNotFound
             };
           }
 
           var date = options.date,
               duration = options.duration,
               host = options.host;
-          var rules = Object(_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
+          return Object(_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_3__["rulesForSpace"])({
             time: date,
             duration: duration,
             space: this,
             user: host,
             rules: building.booking_rules
           });
-          return rules;
         }
         /**
          * Whether space can only be booked by request
@@ -6339,7 +6440,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         get: function get() {
           var _this44 = this;
 
-          var bookingService = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_bookings_booking_class__WEBPACK_IMPORTED_MODULE_1__["Booking"]);
+          var bookingService = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_bookings_booking_class__WEBPACK_IMPORTED_MODULE_1__["Booking"]);
 
           var booking_list = bookingService && bookingService.list(function (booking) {
             return _this44._bookings.indexOf(booking.id) >= 0;
@@ -6367,18 +6468,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "level",
         get: function get() {
-          var service = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_6__["Organisation"]);
+          var service = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__["Organisation"]);
 
-          var newVar = service ? service.levelWithID(this.zones) : null;
-          return newVar || new _organisation_level_class__WEBPACK_IMPORTED_MODULE_7__["BuildingLevel"]({});
+          return service ? service.levelWithID(this.zones) : null;
         }
       }, {
         key: "building",
         get: function get() {
-          var service = _service_manager_class__WEBPACK_IMPORTED_MODULE_4__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_6__["Organisation"]);
+          var service = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__["Organisation"]);
 
           var building = service ? service.buildingWithID(this.zones) : null;
-          return building || new _organisation_building_class__WEBPACK_IMPORTED_MODULE_5__["Building"](service, {});
+          return building || new _organisation_building_class__WEBPACK_IMPORTED_MODULE_6__["Building"](service, {});
         }
       }]);
 
@@ -15071,6 +15171,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
 
     var RoomDisplayStatus;
 
@@ -15101,6 +15207,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /** Whether user interaction is enabled for the panel */
 
         _this89.interactive = true;
+        /**
+         * When bookings loaded, triggers change.
+         */
+
+        _this89.bookingsLoaded = new rxjs__WEBPACK_IMPORTED_MODULE_7__["BehaviorSubject"]([]);
         return _this89;
       }
 
@@ -15127,23 +15238,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }));
 
-              _this90.subscription('get_current_space', _this90._service.Spaces.listen('list').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (spaces) {
+              _this90.subscription('spaces_list_levels', Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["combineLatest"])([_this90._service.Spaces.listen('list').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (spaces) {
                 return spaces.filter(function (space) {
                   return space.id === _this90.system_id;
                 });
-              })).subscribe(function (value) {
-                if (value.length >= 1) {
-                  _this90.setSpace(value[0]);
-                }
-              }));
+              })), _this90._service.Organisation.listen('levels'), _this90.bookingsLoaded]).subscribe(function (_ref) {
+                var _ref2 = _slicedToArray(_ref, 3),
+                    spaces = _ref2[0],
+                    levels = _ref2[1],
+                    bookings = _ref2[2];
 
-              _this90.subscription('levels', _this90._service.Organisation.listen('levels').subscribe(function () {
-                // this requires a refactor, but essentially the rules will check for building
-                // levels. We need to listen for level loading to then load the rules.
-                _this90.rules = _this90.space && _this90.space.rulesFor({});
+                if (spaces.length >= 1 && levels.length > 0) {
+                  // this requires a refactor, but essentially the rules will check for building
+                  // levels. We need to listen for level loading to then load the rules.
+                  var foundSpace = spaces[0]; // As per MCK-480, these default options are based on the staff map default rules,
+                  // except for the host "user". The RBP does not have a real user so, we do not
+                  // evaluate rules for the user. This may lead to some inconsistencies when looking at
+                  // booking panel vs the staff application. In future we should place defaults in a better spot.
 
-                if (_this90.space) {
-                  _this90.setSpace(_this90.space);
+                  _this90.rules = foundSpace.rulesFor({
+                    date: dayjs__WEBPACK_IMPORTED_MODULE_2__().valueOf(),
+                    duration: 30
+                  });
+
+                  _this90._service.log('Panel', 'Evaluated Rules', _this90.rules);
+
+                  _this90.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](_this90._service.Spaces, Object.assign(Object.assign({}, foundSpace), {
+                    bookings: bookings,
+                    theme_rbp: _this90._theme
+                  })));
                 }
               }));
 
@@ -15168,19 +15291,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateBookings",
         value: function updateBookings(bookings) {
-          if (!this.space) {
-            this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, {
-              id: this.system_id,
-              name: this.space_name,
-              bookings: bookings,
-              theme_rbp: this._theme
-            }));
-          } else {
-            this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, Object.assign(Object.assign({}, this.space), {
-              bookings: bookings,
-              theme_rbp: this._theme
-            })));
-          }
+          this.bookingsLoaded.next(bookings);
         }
         /**
          * Update the current status of the active space
@@ -15340,7 +15451,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return 'Unbookable';
 
             case RoomDisplayStatus.AvailableByRequest:
-              return 'Available By Request';
+              return 'Available by Request';
 
             case RoomDisplayStatus.InUse:
               return 'In Use';
@@ -17782,7 +17893,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this97 = this;
 
           var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;
-          console.log('Check Loading:', this.system_name);
 
           if (!this.system_name) {
             this.message_index = 0;
@@ -18221,16 +18331,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "2aec775",
-      "hash": "2aec775",
+      "raw": "571de95",
+      "hash": "571de95",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "2aec775",
+      "suffix": "571de95",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1602006963720
+      "time": 1602101521502
     };
     /* tslint:enable */
 
