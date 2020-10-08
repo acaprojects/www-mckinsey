@@ -1515,64 +1515,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _c0 = ["content"];
 
-    function BookingRulesModalComponent_li_9_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_7_li_2_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelement(0, "li", 10);
+        i0.ɵɵelement(0, "li", 12);
         i0.ɵɵpipe(1, "safe");
       }
 
       if (rf & 2) {
-        var item_r8 = ctx.$implicit;
-        i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, item_r8), i0.ɵɵsanitizeHtml);
+        var item_r10 = ctx.$implicit;
+        i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, item_r10), i0.ɵɵsanitizeHtml);
       }
     }
 
-    function BookingRulesModalComponent_ng_container_10_ng_container_1_li_3_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_7_ng_container_3_ng_container_1_li_3_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelement(0, "li", 10);
+        i0.ɵɵelement(0, "li", 12);
         i0.ɵɵpipe(1, "safe");
       }
 
       if (rf & 2) {
-        var item_r12 = ctx.$implicit;
-        i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, item_r12), i0.ɵɵsanitizeHtml);
+        var item_r14 = ctx.$implicit;
+        i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, item_r14), i0.ɵɵsanitizeHtml);
       }
     }
 
-    function BookingRulesModalComponent_ng_container_10_ng_container_1_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_7_ng_container_3_ng_container_1_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
         i0.ɵɵtext(1);
         i0.ɵɵelementStart(2, "ul");
-        i0.ɵɵtemplate(3, BookingRulesModalComponent_ng_container_10_ng_container_1_li_3_Template, 2, 3, "li", 4);
+        i0.ɵɵtemplate(3, BookingRulesModalComponent_div_7_ng_container_3_ng_container_1_li_3_Template, 2, 3, "li", 8);
         i0.ɵɵelementEnd();
         i0.ɵɵelementContainerEnd();
       }
 
       if (rf & 2) {
-        var ruleset_r10 = ctx.$implicit;
+        var ruleset_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", ruleset_r10.title, " ");
+        i0.ɵɵtextInterpolate1(" ", ruleset_r12.title, " ");
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngForOf", ruleset_r10.rules);
+        i0.ɵɵproperty("ngForOf", ruleset_r12.rules);
       }
     }
 
-    function BookingRulesModalComponent_ng_container_10_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_7_ng_container_3_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_container_10_ng_container_1_Template, 4, 2, "ng-container", 11);
+        i0.ɵɵtemplate(1, BookingRulesModalComponent_div_7_ng_container_3_ng_container_1_Template, 4, 2, "ng-container", 13);
         i0.ɵɵelementContainerEnd();
       }
 
       if (rf & 2) {
-        var ctx_r2 = i0.ɵɵnextContext();
+        var ctx_r6 = i0.ɵɵnextContext(2);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r2.other_rules);
+        i0.ɵɵproperty("ngForOf", ctx_r6.other_rules);
       }
     }
 
-    function BookingRulesModalComponent_ul_13_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_7_ul_6_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "ul");
         i0.ɵɵelementStart(1, "li");
@@ -1591,7 +1591,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BookingRulesModalComponent_ng_template_14_li_1_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_7_ng_template_7_li_1_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "li");
         i0.ɵɵtext(1);
@@ -1599,50 +1599,90 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var item_r14 = ctx.$implicit;
+        var item_r16 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r14);
+        i0.ɵɵtextInterpolate(item_r16);
       }
     }
 
-    function BookingRulesModalComponent_ng_template_14_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_7_ng_template_7_Template(rf, ctx) {
       if (rf & 1) {
         i0.ɵɵelementStart(0, "ul");
-        i0.ɵɵtemplate(1, BookingRulesModalComponent_ng_template_14_li_1_Template, 2, 1, "li", 11);
+        i0.ɵɵtemplate(1, BookingRulesModalComponent_div_7_ng_template_7_li_1_Template, 2, 1, "li", 13);
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var ctx_r5 = i0.ɵɵnextContext();
+        var ctx_r9 = i0.ɵɵnextContext(2);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r5.map_rules);
+        i0.ɵɵproperty("ngForOf", ctx_r9.map_rules);
       }
     }
 
-    function BookingRulesModalComponent_div_16_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_7_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 12);
+        i0.ɵɵelementStart(0, "div", 7);
+        i0.ɵɵelementStart(1, "ul");
+        i0.ɵɵtemplate(2, BookingRulesModalComponent_div_7_li_2_Template, 2, 3, "li", 8);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(3, BookingRulesModalComponent_div_7_ng_container_3_Template, 2, 1, "ng-container", 9);
+        i0.ɵɵelementContainerStart(4);
+        i0.ɵɵtext(5, " When booking from Maps: ");
+        i0.ɵɵtemplate(6, BookingRulesModalComponent_div_7_ul_6_Template, 9, 0, "ul", 10);
+        i0.ɵɵtemplate(7, BookingRulesModalComponent_div_7_ng_template_7_Template, 2, 1, "ng-template", null, 11, i0.ɵɵtemplateRefExtractor);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementEnd();
+      }
+
+      if (rf & 2) {
+        var _r8 = i0.ɵɵreference(8);
+
+        var ctx_r1 = i0.ɵɵnextContext();
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngForOf", ctx_r1.rules);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx_r1.other_rules);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("ngIf", !ctx_r1.map_rules || ctx_r1.map_rules.length <= 0)("ngIfElse", _r8);
+      }
+    }
+
+    function BookingRulesModalComponent_div_8_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelement(0, "div", 14);
+        i0.ɵɵpipe(1, "safe");
+      }
+
+      if (rf & 2) {
+        var ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind1(1, 1, ctx_r2.customHtml), i0.ɵɵsanitizeHtml);
+      }
+    }
+
+    function BookingRulesModalComponent_div_9_Template(rf, ctx) {
+      if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 15);
         i0.ɵɵtext(1, " For more info email:");
         i0.ɵɵelement(2, "br");
-        i0.ɵɵelementStart(3, "a", 13);
+        i0.ɵɵelementStart(3, "a", 16);
         i0.ɵɵtext(4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
       }
 
       if (rf & 2) {
-        var ctx_r6 = i0.ɵɵnextContext();
+        var ctx_r3 = i0.ɵɵnextContext();
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("href", "mailto:" + ctx_r6.contact + "?subject=" + ctx_r6.location + " Booking Rules", i0.ɵɵsanitizeUrl);
+        i0.ɵɵproperty("href", "mailto:" + ctx_r3.contact + "?subject=" + ctx_r3.location + " Booking Rules", i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(ctx_r6.contact);
+        i0.ɵɵtextInterpolate(ctx_r3.contact);
       }
     }
 
-    function BookingRulesModalComponent_div_17_Template(rf, ctx) {
+    function BookingRulesModalComponent_div_10_Template(rf, ctx) {
       if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 12);
-        i0.ɵɵelementStart(1, "a", 13);
+        i0.ɵɵelementStart(0, "div", 15);
+        i0.ɵɵelementStart(1, "a", 16);
         i0.ɵɵpipe(2, "safe");
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
@@ -1650,11 +1690,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r7 = i0.ɵɵnextContext();
+        var ctx_r4 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("href", i0.ɵɵpipeBind2(2, 2, ctx_r7.link.url, "url"), i0.ɵɵsanitizeUrl);
+        i0.ɵɵproperty("href", i0.ɵɵpipeBind2(2, 2, ctx_r4.link.url, "url"), i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(ctx_r7.link.name);
+        i0.ɵɵtextInterpolate(ctx_r4.link.name);
       }
     }
 
@@ -1715,6 +1755,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var building = this._data.building;
           var details = building.booking_details;
           return details.info || '';
+        }
+      }, {
+        key: "customHtml",
+        get: function get() {
+          var building = this._data.building;
+          var details = building.booking_details;
+          return details.custom_html;
         }
         /** Booking map rule details */
 
@@ -1784,9 +1831,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         event: "event"
       },
       features: [i0.ɵɵInheritDefinitionFeature],
-      decls: 22,
-      vars: 8,
-      consts: [["content", ""], [1, "header"], [1, "info"], [1, "rules"], [3, "innerHTML", 4, "ngFor", "ngForOf"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["rules_list", ""], ["class", "contact", 4, "ngIf"], ["mat-button", "", "mat-dialog-close", ""], [3, "innerHTML"], [4, "ngFor", "ngForOf"], [1, "contact"], [3, "href"]],
+      decls: 15,
+      vars: 6,
+      consts: [["content", ""], [1, "header"], [1, "info"], ["class", "rules", 4, "ngIf"], ["class", "rules", 3, "innerHTML", 4, "ngIf"], ["class", "contact", 4, "ngIf"], ["mat-button", "", "mat-dialog-close", ""], [1, "rules"], [3, "innerHTML", 4, "ngFor", "ngForOf"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["rules_list", ""], [3, "innerHTML"], [4, "ngFor", "ngForOf"], [1, "rules", 3, "innerHTML"], [1, "contact"], [3, "href"]],
       template: function BookingRulesModalComponent_Template(rf, ctx) {
         if (rf & 1) {
           i0.ɵɵelementStart(0, "mat-dialog-content", null, 0);
@@ -1797,50 +1844,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           i0.ɵɵelementStart(5, "div", 2);
           i0.ɵɵtext(6);
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(7, "div", 3);
-          i0.ɵɵelementStart(8, "ul");
-          i0.ɵɵtemplate(9, BookingRulesModalComponent_li_9_Template, 2, 3, "li", 4);
-          i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(10, BookingRulesModalComponent_ng_container_10_Template, 2, 1, "ng-container", 5);
-          i0.ɵɵelementContainerStart(11);
-          i0.ɵɵtext(12, " When booking from Maps: ");
-          i0.ɵɵtemplate(13, BookingRulesModalComponent_ul_13_Template, 9, 0, "ul", 6);
-          i0.ɵɵtemplate(14, BookingRulesModalComponent_ng_template_14_Template, 2, 1, "ng-template", null, 7, i0.ɵɵtemplateRefExtractor);
-          i0.ɵɵelementContainerEnd();
-          i0.ɵɵelementEnd();
-          i0.ɵɵtemplate(16, BookingRulesModalComponent_div_16_Template, 5, 2, "div", 8);
-          i0.ɵɵtemplate(17, BookingRulesModalComponent_div_17_Template, 4, 5, "div", 8);
+          i0.ɵɵtemplate(7, BookingRulesModalComponent_div_7_Template, 9, 4, "div", 3);
+          i0.ɵɵtemplate(8, BookingRulesModalComponent_div_8_Template, 2, 3, "div", 4);
+          i0.ɵɵtemplate(9, BookingRulesModalComponent_div_9_Template, 5, 2, "div", 5);
+          i0.ɵɵtemplate(10, BookingRulesModalComponent_div_10_Template, 4, 5, "div", 5);
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
-          i0.ɵɵelementStart(18, "mat-dialog-actions");
-          i0.ɵɵelementStart(19, "footer");
-          i0.ɵɵelementStart(20, "button", 9);
-          i0.ɵɵtext(21, "Ok");
+          i0.ɵɵelementStart(11, "mat-dialog-actions");
+          i0.ɵɵelementStart(12, "footer");
+          i0.ɵɵelementStart(13, "button", 6);
+          i0.ɵɵtext(14, "Ok");
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
           i0.ɵɵelementEnd();
         }
 
         if (rf & 2) {
-          var _r4 = i0.ɵɵreference(15);
-
           i0.ɵɵadvance(4);
           i0.ɵɵtextInterpolate1("Booking in ", ctx.location, "");
           i0.ɵɵadvance(2);
           i0.ɵɵtextInterpolate(ctx.info || "You may request restricted rooms but they will need to be approved by an admin");
-          i0.ɵɵadvance(3);
-          i0.ɵɵproperty("ngForOf", ctx.rules);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("ngIf", ctx.other_rules);
-          i0.ɵɵadvance(3);
-          i0.ɵɵproperty("ngIf", !ctx.map_rules || ctx.map_rules.length <= 0)("ngIfElse", _r4);
-          i0.ɵɵadvance(3);
+          i0.ɵɵproperty("ngIf", !ctx.customHtml);
+          i0.ɵɵadvance(1);
+          i0.ɵɵproperty("ngIf", ctx.customHtml);
+          i0.ɵɵadvance(1);
           i0.ɵɵproperty("ngIf", ctx.contact);
           i0.ɵɵadvance(1);
-          i0.ɵɵproperty("ngIf", ctx.link);
+          i0.ɵɵproperty("ngIf", ctx.link.url);
         }
       },
-      directives: [i1.MatDialogContent, i2.NgForOf, i2.NgIf, i1.MatDialogActions, i3.MatButton, i1.MatDialogClose],
+      directives: [i1.MatDialogContent, i2.NgIf, i1.MatDialogActions, i3.MatButton, i1.MatDialogClose, i2.NgForOf],
       pipes: [i4.ɵa],
       styles: ["main[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 24em;\n  padding: 1em 1em 0.4em;\n}\n.header[_ngcontent-%COMP%] {\n  font-size: 1.5em;\n}\n.info[_ngcontent-%COMP%] {\n  color: #6d6e71;\n  font-size: 0.9em;\n  text-align: center;\n  width: 100%;\n  color: #ffb300;\n  font-style: italic;\n  margin: 0.5em 0 1em;\n}\nfooter[_ngcontent-%COMP%] {\n  text-align: center;\n  width: 100%;\n}\nbutton[_ngcontent-%COMP%] {\n  min-width: 8em;\n}\nul[_ngcontent-%COMP%] {\n  padding-left: 1.5em;\n}\nli[_ngcontent-%COMP%] {\n  margin-bottom: 1em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvc2hhcmVkL3N0eWxlcy92YXJpYWJsZXMuc2NzcyIsIi9ob21lL3J1bm5lci93b3JrL21ja2luc2V5LXN0YWZmLXVpL21ja2luc2V5LXN0YWZmLXVpL3NyYy9hcHAvb3ZlcmxheXMvYm9va2luZy1ydWxlcy1tb2RhbC9ib29raW5nLXJ1bGVzLW1vZGFsLnN0eWxlcy5zY3NzIiwic3JjL2FwcC9vdmVybGF5cy9ib29raW5nLXJ1bGVzLW1vZGFsL2Jvb2tpbmctcnVsZXMtbW9kYWwuc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7OzBCQUFBO0FBU0E7OzBCQUFBO0FBb0NBOztjQUFBO0FBZ0JBOztzQkFBQTtBQzFEQTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtFQUNBLHNCQUFBO0FDVUo7QURQQTtFQUNJLGdCQUFBO0FDVUo7QURQQTtFQUNJLGNBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FDVUo7QURQQTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtBQ1VKO0FEUEE7RUFDSSxjQUFBO0FDVUo7QURQQTtFQUNJLG1CQUFBO0FDVUo7QURQQTtFQUNJLGtCQUFBO0FDVUoiLCJmaWxlIjoic3JjL2FwcC9vdmVybGF5cy9ib29raW5nLXJ1bGVzLW1vZGFsL2Jvb2tpbmctcnVsZXMtbW9kYWwuc3R5bGVzLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKj09PT09PT09PT09PT09PT09PT09PT09KlxcXG58fCAgTURTIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRjb2xvci1icmFuZC1lbGVjdHJpYy1ibHVlOiAjMjI1MWZmO1xuJGNvbG9yLWJyYW5kLWRlZXAtYmx1ZTogIzA1MWMyYztcbiRjb2xvci1icmFuZC1jeWFuOiAjMDBhOWY0O1xuJGNvbG9yLWJyYW5kLXllbGxvdzogI2ZmZDA0ODtcblxuLyo9PT09PT09PT09PT09PT09PT09PT09PSpcXFxufHwgIEFwcGxpY2F0aW9uIENvbG91cnMgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09PT09PSovXG5cbiRmb250LWRhcms6ICMwMDA7XG4kZm9udC1saWdodDogI2ZmZjtcblxuJHN1Y2Nlc3M6ICM0M2EwNDc7XG4kc3VjY2Vzcy1saWdodDogbGlnaHRlbigkc3VjY2VzcywgMTApO1xuJHN1Y2Nlc3MtZGFyazogZGFya2VuKCRzdWNjZXNzLCAxMCk7XG5cbiRwZW5kaW5nOiAjZmZiMzAwO1xuJHBlbmRpbmctbGlnaHQ6IGxpZ2h0ZW4oJHBlbmRpbmcsIDEwKTtcbiRwZW5kaW5nLWRhcms6IGRhcmtlbigkcGVuZGluZywgMTApO1xuXG4kZXJyb3I6ICNlNTM5MzU7XG4kZXJyb3ItbGlnaHQ6IGxpZ2h0ZW4oJGVycm9yLCAxMCk7XG4kZXJyb3ItZGFyazogZGFya2VuKCRlcnJvciwgMTApO1xuXG4kY29sb3ItcHJpbWFyeTogIzE5MzdlYTtcbiRjb2xvci1wcmltYXJ5LWxpZ2h0OiBsaWdodGVuKCRjb2xvci1wcmltYXJ5LCAxMCk7XG4kY29sb3ItcHJpbWFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXByaW1hcnksIDEwKTtcblxuJGNvbG9yLXNlY29uZGFyeTogIzQyODVGNDtcbiRjb2xvci1zZWNvbmRhcnktbGlnaHQ6IGxpZ2h0ZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuJGNvbG9yLXNlY29uZGFyeS1kYXJrOiBkYXJrZW4oJGNvbG9yLXNlY29uZGFyeSwgMTApO1xuXG4kYmFja2dyb3VuZDogI2YwZjBmMDtcbiRmb290ZXItYmFjazogIzI2MzIzODtcbiRoZWFkZXItYmFjazogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCAjMDUxQzJDLCAjMDUxQzJDIDQwJSwgIzBCMjQ1MyA2MCUsICMxRjQwRTYgMTAwJSk7XG5cbiRjb2xvci10ZXJuYXJ5OiAjMDUxYzJjO1xuXG4kbGlnaHQteWVsbG93OiAjZmZmM2NlO1xuJGNvYWNobWFyay10ZXh0OiAjNmY0ZDAwO1xuXG4vKj09PT09PT09PT09KlxcXG58fCAgIEZvbnRzICAgfHxcblxcKj09PT09PT09PT09Ki9cblxuJGZvbnQtc3RhY2s6IFwiVGhlaW5oYXJkdFwiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBzYW5zLXNlcmlmO1xuXG4kaGVhZGluZy1mb250OiBcIkxhcmlzaE1jS2luc2V5XCIsICdHZW9yZ2lhJywgc2VyaWY7XG4kZm9udDogJGZvbnQtc3RhY2s7XG5cbiRmb250LWZhbWlseS1wcmltYXJ5OiBcIk1jS2luc2V5IFNhbnNcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBDYWxpYnJpLCBDb3JiZWwsIEhlbHZldGljYSwgUm9ib3RvLCBEcm9pZCwgc2Fucy1zZXJpZjtcbiRmb250LWZhbWlseS1zZWNvbmRhcnk6IFwiQm93ZXJcIiwgR2VvcmdpYSwgXCJUaW1lcyBOZXcgUm9tYW5cIiBzZXJpZjtcblxuJGJhc2Utc2l6ZTogMTZweDtcbiR0YWJsZXQtc2l6ZTogMTZweDtcbiRtb2JpbGUtc2l6ZTogMTZweDtcblxuLyo9PT09PT09PT09PT09PT09PT09KlxcXG58fCAgIE1lZGlhIFF1ZXJpZXMgICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PSovXG5cbiRicmVhay1tb2JpbGU6IDQ1MHB4O1xuJGJyZWFrLXRhYmxldDogODAwcHg7XG4kYnJlYWstbGFwdG9wOiAxMDI0cHg7XG5cbiRicmVhay1sYW5kc2NhcGUtbW9iaWxlOiA4MDBweDtcbiRicmVhay1sYW5kc2NhcGUtdGFibGV0OiAxMDQ4cHg7XG4kYnJlYWstbGFuZHNjYXBlLWxhcHRvcDogMTI4MHB4O1xuXG5AbWl4aW4gcmVzcG9uZC10bygkbWVkaWEpIHtcbiAgICBAaWYgJG1lZGlhID09IG1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBtb2JpbGUtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IG1vYmlsZS1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1tb2JpbGUpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbm90LW1vYmlsZSB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1tb2JpbGUgKyAxKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhcHRvcCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0ICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGxhcHRvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS1sYXB0b3ApIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFwdG9wLXBvcnRyYWl0IHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLXRhYmxldCArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFwdG9wKSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gIEBlbHNlIGlmICRtZWRpYSA9PSBsYXQge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBsYW5kc2NhcGUpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLW1vYmlsZSArIDEpIGFuZCAobWF4LXdpZHRoOiAkYnJlYWstbGFuZHNjYXBlLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSB0YWJsZXQtbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtaW4td2lkdGg6ICRicmVhay1sYW5kc2NhcGUtbW9iaWxlICsgMSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IHRhYmxldC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay1tb2JpbGUgKyAxKSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICgkbWVkaWEgPT0gdGFibGV0LW1vYmlsZSBvciAkbWVkaWEgPT0gbm90LWRlc2t0b3ApIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IHBvcnRyYWl0KSBhbmQgKG1heC13aWR0aDogJGJyZWFrLXRhYmxldCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkgYW5kIChtYXgtd2lkdGg6ICRicmVhay1sYW5kc2NhcGUtdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgIH0gQGVsc2UgaWYgJG1lZGlhID09IGRlc2t0b3Age1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogcG9ydHJhaXQpIGFuZCAobWluLXdpZHRoOiAkYnJlYWstdGFibGV0KSB7XG4gICAgICAgICAgICBAY29udGVudDtcbiAgICAgICAgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1sYW5kc2NhcGUge1xuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChvcmllbnRhdGlvbjogbGFuZHNjYXBlKSBhbmQgKG1pbi13aWR0aDogJGJyZWFrLWxhbmRzY2FwZS10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gZGVza3RvcC1wb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkgYW5kIChtaW4td2lkdGg6ICRicmVhay10YWJsZXQpIHtcbiAgICAgICAgICAgIEBjb250ZW50O1xuICAgICAgICB9XG4gICAgfSBAZWxzZSBpZiAkbWVkaWEgPT0gbGFuZHNjYXBlIHtcbiAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAob3JpZW50YXRpb246IGxhbmRzY2FwZSkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9IEBlbHNlIGlmICRtZWRpYSA9PSBwb3J0cmFpdCB7XG4gICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG9yaWVudGF0aW9uOiBwb3J0cmFpdCkge1xuICAgICAgICAgICAgQGNvbnRlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59XG4iLCJcbkBpbXBvcnQgJ3ZhcmlhYmxlcyc7XG5cbm1haW4ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHdpZHRoOiAyNGVtO1xuICAgIHBhZGRpbmc6IDFlbSAxZW0gLjRlbTtcbn1cblxuLmhlYWRlciB7XG4gICAgZm9udC1zaXplOiAxLjVlbTtcbn1cblxuLmluZm8ge1xuICAgIGNvbG9yOiAjNmQ2ZTcxO1xuICAgIGZvbnQtc2l6ZTogLjllbTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgY29sb3I6ICRwZW5kaW5nO1xuICAgIGZvbnQtc3R5bGU6IGl0YWxpYztcbiAgICBtYXJnaW46IC41ZW0gMCAxZW07XG59XG5cbmZvb3RlciB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG5idXR0b24ge1xuICAgIG1pbi13aWR0aDogOGVtO1xufVxuXG51bCB7XG4gICAgcGFkZGluZy1sZWZ0OiAxLjVlbTtcbn1cblxubGkge1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbn1cbiIsIi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBNRFMgQ29sb3VycyAgfHxcblxcKj09PT09PT09PT09PT09PT09PT09PT09Ki9cbi8qPT09PT09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICBBcHBsaWNhdGlvbiBDb2xvdXJzICB8fFxuXFwqPT09PT09PT09PT09PT09PT09PT09PT0qL1xuLyo9PT09PT09PT09PSpcXFxufHwgICBGb250cyAgIHx8XG5cXCo9PT09PT09PT09PSovXG4vKj09PT09PT09PT09PT09PT09PT0qXFxcbnx8ICAgTWVkaWEgUXVlcmllcyAgIHx8XG5cXCo9PT09PT09PT09PT09PT09PT09Ki9cbm1haW4ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB3aWR0aDogMjRlbTtcbiAgcGFkZGluZzogMWVtIDFlbSAwLjRlbTtcbn1cblxuLmhlYWRlciB7XG4gIGZvbnQtc2l6ZTogMS41ZW07XG59XG5cbi5pbmZvIHtcbiAgY29sb3I6ICM2ZDZlNzE7XG4gIGZvbnQtc2l6ZTogMC45ZW07XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgd2lkdGg6IDEwMCU7XG4gIGNvbG9yOiAjZmZiMzAwO1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG4gIG1hcmdpbjogMC41ZW0gMCAxZW07XG59XG5cbmZvb3RlciB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbmJ1dHRvbiB7XG4gIG1pbi13aWR0aDogOGVtO1xufVxuXG51bCB7XG4gIHBhZGRpbmctbGVmdDogMS41ZW07XG59XG5cbmxpIHtcbiAgbWFyZ2luLWJvdHRvbTogMWVtO1xufSJdfQ== */"]
     });
@@ -4561,6 +4595,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./recurrence-modal/recurrence-modal.component */
     "./src/app/overlays/recurrence-modal/recurrence-modal.component.ts");
 
+    var ngx_pipes_1 = __webpack_require__(
+    /*! @acaprojects/ngx-pipes */
+    "./node_modules/@acaprojects/ngx-pipes/__ivy_ngcc__/fesm2015/acaprojects-ngx-pipes.js");
+
     var i0 = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
@@ -4579,13 +4617,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       factory: function SharedOverlaysModule_Factory(t) {
         return new (t || SharedOverlaysModule)();
       },
-      imports: [[common_1.CommonModule, shared_module_1.SharedContentModule, forms_1.FormsModule, forms_1.ReactiveFormsModule]]
+      imports: [[common_1.CommonModule, shared_module_1.SharedContentModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, ngx_pipes_1.LibraryModule]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SharedOverlaysModule, {
         declarations: [confirm_modal_component_1.ConfirmModalComponent, view_room_modal_component_1.ViewRoomModalComponent, booking_confirm_component_1.BookingConfirmComponent, new_user_modal_component_1.NewUserModalComponent, booking_rules_modal_component_1.BookingRulesModalComponent, meeting_details_overlay_component_1.MeetingDetailsOverlayComponent, time_extension_component_1.TimeExtensionModalComponent, recurrence_modal_component_1.RecurrenceModalComponent, catering_component_1.MeetingDetailsCateringComponent, display_component_1.MeetingDetailsDisplayComponent, space_component_1.MeetingDetailsSpaceComponent, space_select_modal_component_1.SpaceSelectModalComponent],
-        imports: [common_1.CommonModule, shared_module_1.SharedContentModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
+        imports: [common_1.CommonModule, shared_module_1.SharedContentModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, ngx_pipes_1.LibraryModule],
         exports: [confirm_modal_component_1.ConfirmModalComponent, view_room_modal_component_1.ViewRoomModalComponent, booking_confirm_component_1.BookingConfirmComponent, new_user_modal_component_1.NewUserModalComponent, booking_rules_modal_component_1.BookingRulesModalComponent, meeting_details_overlay_component_1.MeetingDetailsOverlayComponent, time_extension_component_1.TimeExtensionModalComponent, recurrence_modal_component_1.RecurrenceModalComponent]
       });
     })();
@@ -4597,7 +4635,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: core_1.NgModule,
         args: [{
           declarations: [].concat(OVERLAYS, [catering_component_1.MeetingDetailsCateringComponent, display_component_1.MeetingDetailsDisplayComponent, space_component_1.MeetingDetailsSpaceComponent, space_select_modal_component_1.SpaceSelectModalComponent]),
-          imports: [common_1.CommonModule, shared_module_1.SharedContentModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
+          imports: [common_1.CommonModule, shared_module_1.SharedContentModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, ngx_pipes_1.LibraryModule],
           exports: [].concat(OVERLAYS)
         }]
       }], null, null);
@@ -39871,16 +39909,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "24c69fb",
-      "hash": "24c69fb",
+      "raw": "1855e94",
+      "hash": "1855e94",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "24c69fb",
+      "suffix": "1855e94",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1601994117604
+      "time": 1602192872143
     };
     /* tslint:enable */
 
