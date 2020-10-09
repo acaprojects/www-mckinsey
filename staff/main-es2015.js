@@ -4370,6 +4370,11 @@ function generateBookingForm(booking, use_fields) {
     fields.date.valueChanges.subscribe((_) => {
         fields.duration.updateValueAndValidity();
     });
+    fields.needs_space.valueChanges.subscribe((space_needed) => {
+        if (!space_needed) {
+            fields.space_list.setValue([]);
+        }
+    });
     const simplified_fields = [
         'id',
         'space_list',
@@ -22573,16 +22578,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "1855e94",
-    "hash": "1855e94",
+    "raw": "2b8e38c",
+    "hash": "2b8e38c",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "1855e94",
+    "suffix": "2b8e38c",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1602192872143
+    "time": 1602253229564
 };
 /* tslint:enable */
 
