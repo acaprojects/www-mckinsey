@@ -25853,10 +25853,15 @@ class WeekViewDayDisplayComponent extends base_directive_1.BaseDirective {
     get is_today() {
         return dayjs(this.date).isSame(dayjs(), 'd');
     }
+    ngOnChanges(changes) {
+        if (changes.spaces) {
+            this.timeout('changed', () => this._bookings.setFilters(this._bookings.filters), 100);
+        }
+    }
 }
 exports.WeekViewDayDisplayComponent = WeekViewDayDisplayComponent;
 WeekViewDayDisplayComponent.ɵfac = function WeekViewDayDisplayComponent_Factory(t) { return new (t || WeekViewDayDisplayComponent)(i0.ɵɵdirectiveInject(i1.BookingStateService)); };
-WeekViewDayDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewDayDisplayComponent, selectors: [["week-view-day-display"]], inputs: { date: "date", spaces: "spaces" }, features: [i0.ɵɵInheritDefinitionFeature], decls: 9, vars: 6, consts: [[1, "heading"], [1, "text"], ["class", "info", 4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "info"], [3, "event", 4, "ngFor", "ngForOf"], [3, "event"], [1, "info-block"], [1, "icon"], [3, "icon"]], template: function WeekViewDayDisplayComponent_Template(rf, ctx) { if (rf & 1) {
+WeekViewDayDisplayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WeekViewDayDisplayComponent, selectors: [["week-view-day-display"]], inputs: { date: "date", spaces: "spaces" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 9, vars: 6, consts: [[1, "heading"], [1, "text"], ["class", "info", 4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "info"], [3, "event", 4, "ngFor", "ngForOf"], [3, "event"], [1, "info-block"], [1, "icon"], [3, "icon"]], template: function WeekViewDayDisplayComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵtext(2);
@@ -26074,17 +26079,19 @@ class WeekViewTimelineComponent extends base_directive_1.BaseDirective {
         this.space_list = [];
     }
     ngOnInit() {
-        this._spaces.initialised.pipe(operators_1.first(_ => _)).subscribe(() => {
-            this.date_list = this.generateDates(this.date, this.weekends);
+        this._spaces.initialised.pipe(operators_1.first((_) => _)).subscribe(() => {
             this._bookings.startPollingWeek();
-            this.space_list = this._spaces.filter(space => space.zones.includes(this.level));
+            this.date_list = this.generateDates(this.date, this.weekends);
+            this.space_list = this._spaces.filter((space) => space.zones.includes(this.level) &&
+                (!this.space_type || space.zones.includes(this.space_type)));
         });
     }
     ngOnChanges(changes) {
         /* istanbul ignore else */
         if (changes.date || changes.weekends || changes.level || changes.space_type) {
             this.date_list = this.generateDates(this.date, this.weekends);
-            this.space_list = this._spaces.filter(space => space.zones.includes(this.level));
+            this.space_list = this._spaces.filter((space) => space.zones.includes(this.level) &&
+                (!this.space_type || space.zones.includes(this.space_type)));
         }
     }
     ngOnDestroy() {
@@ -26561,16 +26568,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "2f6539d",
-    "hash": "2f6539d",
+    "raw": "efbbd47",
+    "hash": "efbbd47",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "2f6539d",
+    "suffix": "efbbd47",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1602516445214
+    "time": 1602516690039
 };
 /* tslint:enable */
 

@@ -47087,6 +47087,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
       _createClass(WeekViewDayDisplayComponent, [{
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          var _this233 = this;
+
+          if (changes.spaces) {
+            this.timeout('changed', function () {
+              return _this233._bookings.setFilters(_this233._bookings.filters);
+            }, 100);
+          }
+        }
+      }, {
         key: "date_display",
         get: function get() {
           var date = dayjs(this.date);
@@ -47117,7 +47128,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         date: "date",
         spaces: "spaces"
       },
-      features: [i0.ɵɵInheritDefinitionFeature],
+      features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature],
       decls: 9,
       vars: 6,
       consts: [[1, "heading"], [1, "text"], ["class", "info", 4, "ngIf"], [1, "list"], [4, "ngIf", "ngIfElse"], ["empty_state", ""], [1, "info"], [3, "event", 4, "ngFor", "ngForOf"], [3, "event"], [1, "info-block"], [1, "icon"], [3, "icon"]],
@@ -47509,49 +47520,48 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super75 = _createSuper(WeekViewTimelineComponent);
 
       function WeekViewTimelineComponent(_spaces, _bookings) {
-        var _this233;
+        var _this234;
 
         _classCallCheck(this, WeekViewTimelineComponent);
 
-        _this233 = _super75.call(this);
-        _this233._spaces = _spaces;
-        _this233._bookings = _bookings;
+        _this234 = _super75.call(this);
+        _this234._spaces = _spaces;
+        _this234._bookings = _bookings;
         /** List of dates to display */
 
-        _this233.date_list = [];
+        _this234.date_list = [];
         /** List of spaces to display bookings for */
 
-        _this233.space_list = [];
-        return _this233;
+        _this234.space_list = [];
+        return _this234;
       }
 
       _createClass(WeekViewTimelineComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this234 = this;
+          var _this235 = this;
 
           this._spaces.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this234.date_list = _this234.generateDates(_this234.date, _this234.weekends);
+            _this235._bookings.startPollingWeek();
 
-            _this234._bookings.startPollingWeek();
-
-            _this234.space_list = _this234._spaces.filter(function (space) {
-              return space.zones.includes(_this234.level);
+            _this235.date_list = _this235.generateDates(_this235.date, _this235.weekends);
+            _this235.space_list = _this235._spaces.filter(function (space) {
+              return space.zones.includes(_this235.level) && (!_this235.space_type || space.zones.includes(_this235.space_type));
             });
           });
         }
       }, {
         key: "ngOnChanges",
         value: function ngOnChanges(changes) {
-          var _this235 = this;
+          var _this236 = this;
 
           /* istanbul ignore else */
           if (changes.date || changes.weekends || changes.level || changes.space_type) {
             this.date_list = this.generateDates(this.date, this.weekends);
             this.space_list = this._spaces.filter(function (space) {
-              return space.zones.includes(_this235.level);
+              return space.zones.includes(_this236.level) && (!_this236.space_type || space.zones.includes(_this236.space_type));
             });
           }
         }
@@ -47870,93 +47880,93 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super76 = _createSuper(WeekViewComponent);
 
       function WeekViewComponent(_service, _org, _bookings, _dialog, _router, _route) {
-        var _this236;
+        var _this237;
 
         _classCallCheck(this, WeekViewComponent);
 
-        _this236 = _super76.call(this);
-        _this236._service = _service;
-        _this236._org = _org;
-        _this236._bookings = _bookings;
-        _this236._dialog = _dialog;
-        _this236._router = _router;
-        _this236._route = _route;
+        _this237 = _super76.call(this);
+        _this237._service = _service;
+        _this237._org = _org;
+        _this237._bookings = _bookings;
+        _this237._dialog = _dialog;
+        _this237._router = _router;
+        _this237._route = _route;
         /** ID of the currently selected level */
 
-        _this236.active_level = '';
+        _this237.active_level = '';
         /** ID of the currently selected level */
 
-        _this236.active_type = '';
+        _this237.active_type = '';
         /** List of levels available for the active building */
 
-        _this236.levels = [];
+        _this237.levels = [];
         /** List of space types available for the active building */
 
-        _this236.space_types = [];
-        return _this236;
+        _this237.space_types = [];
+        return _this237;
       }
 
       _createClass(WeekViewComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this237 = this;
+          var _this238 = this;
 
           this._service.title = 'Week View';
 
           this._org.initialised.pipe(operators_1.first(function (_) {
             return _;
           })).subscribe(function () {
-            _this237.subscription('route.params', _this237._route.paramMap.subscribe(function (params) {
+            _this238.subscription('route.params', _this238._route.paramMap.subscribe(function (params) {
               /* istanbul ignore else */
-              if (params.has('level') && _this237.active_level !== params.get('level')) {
-                var level = _this237._org.levelWithID(params.get('level'));
+              if (params.has('level') && _this238.active_level !== params.get('level')) {
+                var level = _this238._org.levelWithID(params.get('level'));
                 /* istanbul ignore else */
 
 
                 if (level) {
-                  var building = _this237._org.buildings.find(function (bld) {
+                  var building = _this238._org.buildings.find(function (bld) {
                     return bld.id === level.building_id;
                   });
                   /* istanbul ignore else */
 
 
                   if (building) {
-                    _this237.active_level = level.id;
-                    _this237._org.building = building;
+                    _this238.active_level = level.id;
+                    _this238._org.building = building;
 
-                    _this237._bookings.setZone(_this237.active_level || _this237._org.building.id);
+                    _this238._bookings.setZone(_this238.active_level || _this238._org.building.id);
                   }
                 }
               }
             }));
 
-            _this237.subscription('building', _this237._org.listen('active_building').subscribe(function () {
-              var building = _this237._org.building;
+            _this238.subscription('building', _this238._org.listen('active_building').subscribe(function () {
+              var building = _this238._org.building;
               /* istanbul ignore else */
 
               if (!building.levels.find(function (lvl) {
-                return lvl.id === _this237.active_level;
+                return lvl.id === _this238.active_level;
               })) {
-                _this237.active_level = (building.levels[0] || {
+                _this238.active_level = (building.levels[0] || {
                   id: ''
                 }).id;
 
-                _this237.updateLevel();
+                _this238.updateLevel();
               }
 
-              _this237.levels = [{
+              _this238.levels = [{
                 id: '',
                 name: 'All Levels'
               }].concat(building.levels);
 
-              _this237.levels.sort(function (a, b) {
+              _this238.levels.sort(function (a, b) {
                 return a.name.localeCompare(b.name);
               });
 
-              _this237.space_types = [{
+              _this238.space_types = [{
                 id: '',
                 name: 'All Space Types'
-              }].concat(_this237._org.space_types);
+              }].concat(_this238._org.space_types);
             }));
           });
         }
@@ -48377,16 +48387,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "2f6539d",
-      "hash": "2f6539d",
+      "raw": "efbbd47",
+      "hash": "efbbd47",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "2f6539d",
+      "suffix": "efbbd47",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1602516445214
+      "time": 1602516690039
     };
     /* tslint:enable */
 
