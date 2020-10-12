@@ -15492,7 +15492,7 @@ function CateringMenuItemComponent_a_catering_order_item_2_Template(rf, ctx) { i
 } if (rf & 2) {
     const sub_item_r16 = ctx.$implicit;
     const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("compact", ctx_r1.compact)("subitem", true)("symbol", ctx_r1.symbol)("item", sub_item_r16)("field", ctx_r1.field);
+    i0.ɵɵproperty("compact", ctx_r1.compact)("subitem", true)("symbol", ctx_r1.symbol)("item", sub_item_r16)("disabled", ctx_r1.disabled)("field", ctx_r1.field);
 } }
 function hasSelectionRequirements(category) {
     return (category.must_select < category.items.length ||
@@ -15630,10 +15630,10 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
 }
 exports.CateringMenuItemComponent = CateringMenuItemComponent;
 CateringMenuItemComponent.ɵfac = function CateringMenuItemComponent_Factory(t) { return new (t || CateringMenuItemComponent)(i0.ɵɵdirectiveInject(i1.ApplicationService), i0.ɵɵdirectiveInject(i2.MatDialog)); };
-CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-order-item"]], inputs: { subitem: "subitem", item: "item", field: "field", symbol: "symbol", disabled: "disabled", compact: "compact" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [["class", "catering-item", 3, "compact", "subitem", 4, "ngIf"], [1, "children"], [3, "compact", "subitem", "symbol", "item", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "useInput", "max", "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "useInput", "max", "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "compact", "subitem", "symbol", "item", "field"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
+CateringMenuItemComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CateringMenuItemComponent, selectors: [["a-catering-order-item"]], inputs: { subitem: "subitem", item: "item", field: "field", symbol: "symbol", disabled: "disabled", compact: "compact" }, features: [i0.ɵɵInheritDefinitionFeature, i0.ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [["class", "catering-item", 3, "compact", "subitem", 4, "ngIf"], [1, "children"], [3, "compact", "subitem", "symbol", "item", "disabled", "field", 4, "ngFor", "ngForOf"], [1, "catering-item"], ["class", "image", 3, "background-image", 4, "ngIf"], [1, "details"], [1, "name"], [1, "description"], [1, "options"], ["class", "option price mobile-only", 4, "ngIf"], ["class", "option", 3, "matTooltip", 4, "ngIf"], ["mat-button", "", 3, "click", 4, "ngIf"], ["class", "option price not-mobile", 4, "ngIf"], [3, "useInput", "max", "ngModel", "ngModelChange", 4, "ngIf"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "image"], [1, "option", "price", "mobile-only"], [1, "option", 3, "matTooltip"], [1, "not-mobile"], ["mat-button", "", 3, "click"], [1, "option", "price", "not-mobile"], [3, "useInput", "max", "ngModel", "ngModelChange"], ["mat-icon-button", "", 3, "click"], [3, "icon"], [3, "compact", "subitem", "symbol", "item", "disabled", "field"]], template: function CateringMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, CateringMenuItemComponent_div_0_Template, 15, 16, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
-        i0.ɵɵtemplate(2, CateringMenuItemComponent_a_catering_order_item_2_Template, 1, 5, "a-catering-order-item", 2);
+        i0.ɵɵtemplate(2, CateringMenuItemComponent_a_catering_order_item_2_Template, 1, 6, "a-catering-order-item", 2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵproperty("ngIf", ctx.item && !ctx.item.out_of_stock);
@@ -22578,16 +22578,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "7afa6c3",
-    "hash": "7afa6c3",
+    "raw": "d2dfe3d",
+    "hash": "d2dfe3d",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "7afa6c3",
+    "suffix": "d2dfe3d",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1602515723840
+    "time": 1602515943493
 };
 /* tslint:enable */
 
