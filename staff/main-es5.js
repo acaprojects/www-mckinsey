@@ -8518,6 +8518,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           fields.space_list.setValue([]);
         }
       });
+      fields.has_catering.valueChanges.subscribe(function (has_catering) {
+        if (!has_catering) {
+          fields.catering.setValue([]);
+        }
+      });
       var simplified_fields = ['id', 'space_list', 'space_ids', 'notes', 'booking_type', 'equipment_codes', 'expected_attendees'].concat(_toConsumableArray(use_fields)).reduce(function (map, key) {
         /* istanbul ignore else */
         if (fields[key]) {
@@ -39914,16 +39919,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "d2dfe3d",
-      "hash": "d2dfe3d",
+      "raw": "ad91d65",
+      "hash": "ad91d65",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "d2dfe3d",
+      "suffix": "ad91d65",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1602515943493
+      "time": 1602516770626
     };
     /* tslint:enable */
 
