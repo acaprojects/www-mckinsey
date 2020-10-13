@@ -17900,7 +17900,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.instance_id = "item-".concat(Math.floor(Math.random() * 999999999));
         this.id = data.id || '';
         this.name = data.name || '';
-        this.is_category = data.is_category || !!(data.parent_categories || []).length || false;
+        this.is_category = this.id.includes('category-');
         this.available = {
           from_month: (data.available ? data.available.from_month : data.available_from) || -1,
           to_month: (data.available ? data.available.to_month : data.available_to) || -1
@@ -48387,16 +48387,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "fe8f7e5",
-      "hash": "fe8f7e5",
+      "raw": "0dd3bb0",
+      "hash": "0dd3bb0",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "fe8f7e5",
+      "suffix": "0dd3bb0",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1602526895469
+      "time": 1602609677935
     };
     /* tslint:enable */
 
