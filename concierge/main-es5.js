@@ -37865,7 +37865,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     notes = this.booking.notes;
                     date = dayjs().startOf('m');
                     new_notes = [].concat(_toConsumableArray(notes), [{
-                      type: 'catering',
+                      type: 'catering-private',
                       date: date.valueOf(),
                       author: user.name,
                       order_id: this.order.id,
@@ -37912,7 +37912,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this181 = this;
 
           var notes = this.booking.notes.filter(function (note) {
-            return note.type === 'catering' && note.space === _this181.order.location_id && (!note.order_id || note.order_id === _this181.order.id);
+            return (note.type === 'catering' || note.type === 'catering-private') && note.space === _this181.order.location_id && (!note.order_id || note.order_id === _this181.order.id);
           });
           notes.forEach(function (note) {
             note.time = dayjs(note.date).format('DD MMM, h:mm A');
@@ -48387,16 +48387,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "0dd3bb0",
-      "hash": "0dd3bb0",
+      "raw": "f090336",
+      "hash": "f090336",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "0dd3bb0",
+      "suffix": "f090336",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1602609677935
+      "time": 1602684994259
     };
     /* tslint:enable */
 
