@@ -1859,7 +1859,7 @@ function MeetingDetailsSpaceComponent_div_0_Template(rf, ctx) { if (rf & 1) {
 class MeetingDetailsSpaceComponent {
     /** Latest equipment requirement notes for the active space */
     get notes() {
-        const space_notes = (this.booking.notes || []).filter(note => note.space === this.space.email);
+        const space_notes = (this.booking.notes || []).filter(note => note.space === this.space.email && note.type !== 'catering-private');
         return space_notes.length ? space_notes[space_notes.length - 1].message : '<No requirements>';
     }
     /** Latest equipment charge code for the active space */
@@ -1883,7 +1883,7 @@ MeetingDetailsSpaceComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MeetingDetai
         args: [{
                 selector: 'meeting-details-space',
                 templateUrl: './space.component.html',
-                styleUrls: ['./space.component.scss']
+                styleUrls: ['./space.component.scss'],
             }]
     }], null, { space: [{
             type: core_1.Input
@@ -22583,16 +22583,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f462508",
-    "hash": "f462508",
+    "raw": "95a1456",
+    "hash": "95a1456",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f462508",
+    "suffix": "95a1456",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1602526855069
+    "time": 1602690826361
 };
 /* tslint:enable */
 
