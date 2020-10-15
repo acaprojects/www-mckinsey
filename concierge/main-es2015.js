@@ -18529,7 +18529,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
         }
     }
     deleteItem() {
-        const type = this.item instanceof catering_category_class_1.CateringCategory
+        const type = this.item.is_category
             ? this.item.package
                 ? 'Package'
                 : 'Sub-category'
@@ -18549,7 +18549,7 @@ class CateringMenuItemComponent extends base_directive_1.BaseDirective {
             if (event.reason === 'done') {
                 ref.componentInstance.loading = `Deleting ${type}...`;
                 let e = null;
-                let service = this.item instanceof catering_category_class_1.CateringCategory
+                let service = this.item.is_category
                     ? this._menu_categories
                     : this._menu_items;
                 yield service.delete(this.item.id).catch((err) => e = err || 'Error');
@@ -26568,16 +26568,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 exports.VERSION = {
     "dirty": false,
-    "raw": "f090336",
-    "hash": "f090336",
+    "raw": "e9edd0d",
+    "hash": "e9edd0d",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f090336",
+    "suffix": "e9edd0d",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1602684994259
+    "time": 1602769521375
 };
 /* tslint:enable */
 

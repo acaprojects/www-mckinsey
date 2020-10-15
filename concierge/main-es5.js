@@ -33394,7 +33394,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function deleteItem() {
           var _this158 = this;
 
-          var type = this.item instanceof catering_category_class_1.CateringCategory ? this.item["package"] ? 'Package' : 'Sub-category' : 'Item';
+          var type = this.item.is_category ? this.item["package"] ? 'Package' : 'Sub-category' : 'Item';
 
           var ref = this._dialog.open(confirm_modal_component_1.ConfirmModalComponent, {
             data: {
@@ -33425,7 +33425,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                       ref.componentInstance.loading = "Deleting ".concat(type, "...");
                       e = null;
-                      service = this.item instanceof catering_category_class_1.CateringCategory ? this._menu_categories : this._menu_items;
+                      service = this.item.is_category ? this._menu_categories : this._menu_items;
                       _context23.next = 6;
                       return service["delete"](this.item.id)["catch"](function (err) {
                         return e = err || 'Error';
@@ -48387,16 +48387,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     exports.VERSION = {
       "dirty": false,
-      "raw": "f090336",
-      "hash": "f090336",
+      "raw": "e9edd0d",
+      "hash": "e9edd0d",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "f090336",
+      "suffix": "e9edd0d",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1602684994259
+      "time": 1602769521375
     };
     /* tslint:enable */
 
