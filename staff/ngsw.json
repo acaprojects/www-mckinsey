@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1602699454268,
+  "timestamp": 1602848520639,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -198,6 +198,8 @@
         "/staff/assets/maps/milan/level_3.svg",
         "/staff/assets/maps/milan/level_4.svg",
         "/staff/assets/maps/milan/level_5.svg",
+        "/staff/assets/maps/new_jersey/level_03.svg",
+        "/staff/assets/maps/new_jersey/level_04.svg",
         "/staff/assets/maps/new_york/level_19.svg",
         "/staff/assets/maps/new_york_wtc/level_60.svg",
         "/staff/assets/maps/new_york_wtc/level_61.svg",
@@ -456,6 +458,8 @@
     "/staff/assets/maps/milan/level_3.svg": "152941d0d598f26b63a917f4b981bc65084c40af",
     "/staff/assets/maps/milan/level_4.svg": "1002be0d20d0137c4de6785d1509089822c84e54",
     "/staff/assets/maps/milan/level_5.svg": "14219f25d75d5f206fe7564577d7088624ef617b",
+    "/staff/assets/maps/new_jersey/level_03.svg": "3c318626dbc5b774463e6a0cf52def3b2aaeb3bd",
+    "/staff/assets/maps/new_jersey/level_04.svg": "2856f4e7618b3b4b81b485eddc96d828087340d6",
     "/staff/assets/maps/new_york/level_19.svg": "6ce8c466ea78f844c4ff26cec9430a083062c9ed",
     "/staff/assets/maps/new_york_wtc/level_60.svg": "b210cc8d953f6c0a0db2b9fbc208a3989c5f34dc",
     "/staff/assets/maps/new_york_wtc/level_61.svg": "fe503e47df661b3a763cf7a1bb14c8e7db06224e",
@@ -506,8 +510,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "e0883adcff606e53d58207a92c3f690fecf10c32",
-    "/staff/main-es5.js": "6eea435ad9c8cf7baf2b6a9137a8aa792c92bb8e",
+    "/staff/main-es2015.js": "9972b2a185f08e547953216fe9f781f13acc7f90",
+    "/staff/main-es5.js": "53044085773b22812054c6344356f9c4f4981c8b",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
