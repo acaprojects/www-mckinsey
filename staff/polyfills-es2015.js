@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
 
-/***/ "../../node_modules/@angular/localize/fesm2015/init.js":
-/*!*************************************************************************************************************!*\
-  !*** /home/runner/work/mckinsey-converge/mckinsey-converge/node_modules/@angular/localize/fesm2015/init.js ***!
-  \*************************************************************************************************************/
+/***/ "./node_modules/@angular/localize/fesm2015/init.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@angular/localize/fesm2015/init.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -209,10 +209,10 @@ _global.$localize = $localize;
 
 /***/ }),
 
-/***/ "../../node_modules/zone.js/dist/zone-evergreen.js":
-/*!*********************************************************************************************************!*\
-  !*** /home/runner/work/mckinsey-converge/mckinsey-converge/node_modules/zone.js/dist/zone-evergreen.js ***!
-  \*********************************************************************************************************/
+/***/ "./node_modules/zone.js/dist/zone-evergreen.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/zone.js/dist/zone-evergreen.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3177,7 +3177,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /***************************************************************************************************
  * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
  */
-__webpack_require__(/*! @angular/localize/init */ "../../node_modules/@angular/localize/fesm2015/init.js");
+__webpack_require__(/*! @angular/localize/init */ "./node_modules/@angular/localize/fesm2015/init.js");
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -3230,7 +3230,7 @@ __webpack_require__(/*! @angular/localize/init */ "../../node_modules/@angular/l
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-__webpack_require__(/*! zone.js/dist/zone */ "../../node_modules/zone.js/dist/zone-evergreen.js"); // Included with Angular CLI.
+__webpack_require__(/*! zone.js/dist/zone */ "./node_modules/zone.js/dist/zone-evergreen.js"); // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
@@ -3245,7 +3245,7 @@ __webpack_require__(/*! zone.js/dist/zone */ "../../node_modules/zone.js/dist/zo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/runner/work/mckinsey-converge/mckinsey-converge/apps/staff/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /home/runner/work/mckinsey-staff-ui/mckinsey-staff-ui/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })
