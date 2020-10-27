@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1603751887921,
+  "timestamp": 1603822035952,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -101,6 +101,7 @@
         "/staff/assets/img/book_desk.svg",
         "/staff/assets/img/book_red.svg",
         "/staff/assets/img/book_room.svg",
+        "/staff/assets/img/booking_header.svg",
         "/staff/assets/img/caterer-01.jpg",
         "/staff/assets/img/caterer-02.jpg",
         "/staff/assets/img/caterer-03.jpg",
@@ -363,6 +364,7 @@
     "/staff/assets/img/book_desk.svg": "7898795138dbd43202541a8569252ddb0032c14f",
     "/staff/assets/img/book_red.svg": "a3379785f8225c47aa8510582d5e86a60da38053",
     "/staff/assets/img/book_room.svg": "08a138b8c872230e088b1285095f53bbe4a002c8",
+    "/staff/assets/img/booking_header.svg": "d4d6618f20bfd5c2af0b8ab65354eb5c170d8c3d",
     "/staff/assets/img/caterer-01.jpg": "18f9b877954267a56fe26d0fd77f3a56735503bf",
     "/staff/assets/img/caterer-02.jpg": "076b6d2d512b8e5939f863e24300ba19b1f6faac",
     "/staff/assets/img/caterer-03.jpg": "c7e2b4735c10ad80492a72fd4ddfdeba85994ee6",
@@ -514,17 +516,17 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "67e96eb42a6b246545cfe969e4115e0806b6bf3b",
-    "/staff/main-es5.js": "babb1ee563bccd2603574ba9afcf92e4296c4bb7",
+    "/staff/main-es2015.js": "deb74cfd3bcd8463586707e27559efa0f42ff9ac",
+    "/staff/main-es5.js": "e70af37215f63e3068c7f9f9522279278426f2fe",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "820472da62ccb60c8e7a119e97b25105752cef05",
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
     "/staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/staff/styles-es2015.js": "aaaf019c1c76223d76f6990500bfe2b8c4bdf88c",
-    "/staff/styles-es5.js": "ff2fd65c41f3eece3d1a24a4ab705a784f45ff02",
-    "/staff/vendor-es2015.js": "47655073a57eb000cda7a495efec53d47779c69e",
-    "/staff/vendor-es5.js": "a64cf879d60f2eac99b4974d343b6d08fb2fda54"
+    "/staff/styles-es2015.js": "5ac0336512d54438feb420d19542a001bc7b9332",
+    "/staff/styles-es5.js": "c0e1d5104f8263e53d6957fed2d5fd8323a4ee50",
+    "/staff/vendor-es2015.js": "fe6792619f361861098c76e5d48a8e859f6e7623",
+    "/staff/vendor-es5.js": "8f890af63b8560c3988d968d346d8c957b389367"
   },
   "navigationUrls": [
     {
