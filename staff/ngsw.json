@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604086885226,
+  "timestamp": 1604289174556,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -460,7 +460,7 @@
     "/staff/assets/maps/london_kinnaird_house/level_06.svg": "ff713772afc8b86338fa9f7c512e17f059128103",
     "/staff/assets/maps/london_kinnaird_house/level_gr.svg": "415445cfea397428b0459b11bc8cdee87ff33a9c",
     "/staff/assets/maps/macc/level_26.svg": "2535dcf1c953c2c2342c47b58c3255e83cd85d5f",
-    "/staff/assets/maps/melbourne/level_30.svg": "c11dd13594defffb9e15b949624fb400fe18ff9b",
+    "/staff/assets/maps/melbourne/level_30.svg": "1e06be0af6c1713806c75d0d5c3b8be095d0017e",
     "/staff/assets/maps/melbourne/level_31.svg": "42bf2c84c2329b13459e45ee7eccbe0daebb8ce6",
     "/staff/assets/maps/milan/level_2.svg": "1cc4642251d5a7f77913c630edc7600cd6820549",
     "/staff/assets/maps/milan/level_3.svg": "152941d0d598f26b63a917f4b981bc65084c40af",
@@ -520,8 +520,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "1601b5a5b17a94ce49bff115460a92d00954a8ce",
-    "/staff/main-es5.js": "a97e3ac549eef6e52d0f1432672c8008a75b3915",
+    "/staff/main-es2015.js": "a2447701f15247fabc99003507f63a10bf791d46",
+    "/staff/main-es5.js": "45e70884ebddea62efe40eb07959af364819fe36",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "820472da62ccb60c8e7a119e97b25105752cef05",
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
