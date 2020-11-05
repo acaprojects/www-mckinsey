@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604540497816,
+  "timestamp": 1604588825420,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -103,6 +103,7 @@
         "/staff/assets/img/book_desk.svg",
         "/staff/assets/img/book_red.svg",
         "/staff/assets/img/book_room.svg",
+        "/staff/assets/img/booking-coachmark-desktop.png",
         "/staff/assets/img/booking-coachmark.png",
         "/staff/assets/img/booking_header.svg",
         "/staff/assets/img/caterer-01.jpg",
@@ -258,7 +259,9 @@
         "/staff/assets/maps/wroclaw/level_06.svg",
         "/staff/assets/maps/zagreb/level_08.svg",
         "/staff/assets/new-relic.js",
-        "/staff/assets/not-supported.html"
+        "/staff/assets/not-supported.html",
+        "/staff/booking-coachmark-desktop.png",
+        "/staff/booking-coachmark.png"
       ],
       "patterns": []
     },
@@ -374,6 +377,7 @@
     "/staff/assets/img/book_desk.svg": "7898795138dbd43202541a8569252ddb0032c14f",
     "/staff/assets/img/book_red.svg": "a3379785f8225c47aa8510582d5e86a60da38053",
     "/staff/assets/img/book_room.svg": "08a138b8c872230e088b1285095f53bbe4a002c8",
+    "/staff/assets/img/booking-coachmark-desktop.png": "c155f7f29dbedb725eaa1c21327e1b7bc5c8bba2",
     "/staff/assets/img/booking-coachmark.png": "5a4af5e7add0442ce2310be0f54988089db95b37",
     "/staff/assets/img/booking_header.svg": "d4d6618f20bfd5c2af0b8ab65354eb5c170d8c3d",
     "/staff/assets/img/caterer-01.jpg": "18f9b877954267a56fe26d0fd77f3a56735503bf",
@@ -530,19 +534,21 @@
     "/staff/assets/maps/zagreb/level_08.svg": "3a02c36f0d32424c9632aadcaa194b70a59c77d1",
     "/staff/assets/new-relic.js": "5010feb7ede36abe3878678c9b91ceb74509b172",
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
+    "/staff/booking-coachmark-desktop.png": "c155f7f29dbedb725eaa1c21327e1b7bc5c8bba2",
+    "/staff/booking-coachmark.png": "5a4af5e7add0442ce2310be0f54988089db95b37",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "f51eeb309990819e2301886418fe175cacd728ec",
-    "/staff/main-es5.js": "77eadb4db3495177bcbe1edf061e4be61e017772",
+    "/staff/main-es2015.js": "94aea21bb25003acebccfcc3cd7e0e008e5ff4d5",
+    "/staff/main-es5.js": "79e3d0f8cb9b2f9ca7cfb96a0d5f133880d9187c",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "820472da62ccb60c8e7a119e97b25105752cef05",
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
     "/staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/staff/styles-es2015.js": "09dd39b43cacfece7a1278de82fcc271e4f540e9",
-    "/staff/styles-es5.js": "2115b07af9dca4bab212967a7eb2f12c9f87f75f",
-    "/staff/vendor-es2015.js": "72f3ff1980c38af74ffa7b3b2c7547a56ac72295",
-    "/staff/vendor-es5.js": "e6bf34acd10626550b8222212b4edebeea3728da"
+    "/staff/styles-es2015.js": "ea49724fa60b752fcd04d3f39e9dcf2e58c92a10",
+    "/staff/styles-es5.js": "678a5d0af5dfec2f0c900872c2e4c7ea06b51a4a",
+    "/staff/vendor-es2015.js": "925750a64370c0ec215875985ecf1e5e46ef73a7",
+    "/staff/vendor-es5.js": "dbe06a4f6f7420f568fcc8d0aacadba11c1c5603"
   },
   "navigationUrls": [
     {
