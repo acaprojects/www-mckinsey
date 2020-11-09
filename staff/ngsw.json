@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604948321300,
+  "timestamp": 1604959710033,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -29,6 +29,7 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/staff/Bower-Bold.woff",
         "/staff/Custom-Icons.eot",
         "/staff/Custom-Icons.svg",
         "/staff/Custom-Icons.ttf",
@@ -48,6 +49,12 @@
         "/staff/MaterialIcons-Regular.ttf",
         "/staff/MaterialIcons-Regular.woff",
         "/staff/MaterialIcons-Regular.woff2",
+        "/staff/McKinseySans-Italic.woff",
+        "/staff/McKinseySans-Light.woff",
+        "/staff/McKinseySans-LightItalic.woff",
+        "/staff/McKinseySans-Medium.woff",
+        "/staff/McKinseySans-MediumItalic.woff",
+        "/staff/McKinseySans-Regular.woff",
         "/staff/TheinhardtTT-Italic.ttf",
         "/staff/TheinhardtTT-Light.ttf",
         "/staff/TheinhardtTT-LightItalic.ttf",
@@ -303,6 +310,7 @@
     }
   ],
   "hashTable": {
+    "/staff/Bower-Bold.woff": "92fdd9f724f1f050ba4910006f33949619f476ef",
     "/staff/Custom-Icons.eot": "0a2d15a1b6155347eb8be107a4a0db0b1e5682e6",
     "/staff/Custom-Icons.svg": "2b841d41199ea84913d38bbd7848e3807153559b",
     "/staff/Custom-Icons.ttf": "1c541f61650be14c28db99356952b41ae5f12364",
@@ -322,6 +330,12 @@
     "/staff/MaterialIcons-Regular.ttf": "fc05de31234e0090f7ddc28ce1b23af4026cb1da",
     "/staff/MaterialIcons-Regular.woff": "c6c953c2ccb2ca9abb21db8dbf473b5a435f0082",
     "/staff/MaterialIcons-Regular.woff2": "09963592e8c953cc7e14e3fb0a5b05d5042e8435",
+    "/staff/McKinseySans-Italic.woff": "76fe9a4324dfd7de2d24afd19a89843a5cdedfb5",
+    "/staff/McKinseySans-Light.woff": "16885b3e018f57004483e6566cdfd80efa59666c",
+    "/staff/McKinseySans-LightItalic.woff": "7c7821e94e64b1b3481b7a8d3f30ec5650f5cbd4",
+    "/staff/McKinseySans-Medium.woff": "e30e14f1d99cf786287686423e9872c3531ec6ae",
+    "/staff/McKinseySans-MediumItalic.woff": "8e0774a005b3f65fbc682c7dabeedb64c8ab2c0a",
+    "/staff/McKinseySans-Regular.woff": "f6d3ab7cd71fd5f53944bee85ccf13d3d334abe5",
     "/staff/TheinhardtTT-Italic.ttf": "22a0a28f4a3d3851c9f9fd57a8bda2e2bb6e14be",
     "/staff/TheinhardtTT-Light.ttf": "c89c0692049f60fb0e7e470f7bd9efd4f65fda12",
     "/staff/TheinhardtTT-LightItalic.ttf": "1f0c0d528eb3b9176c55807ed518f4482e55b72c",
@@ -538,8 +552,8 @@
     "/staff/booking-coachmark.png": "5a4af5e7add0442ce2310be0f54988089db95b37",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "841e3455e3b23dd34884b0f3f6c045fbfb0603ee",
-    "/staff/main-es5.js": "bbe8c326f817e96e14c3535341a6f66c730b3b13",
+    "/staff/main-es2015.js": "f17de1098290658bea9ac6d8626b9020ef710199",
+    "/staff/main-es5.js": "09e0c0c16f9b07445d623c43f302936d97db311e",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "820472da62ccb60c8e7a119e97b25105752cef05",
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
