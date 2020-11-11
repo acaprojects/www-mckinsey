@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1605104124340,
+  "timestamp": 1605134754576,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -552,15 +552,15 @@
     "/staff/booking-coachmark.png": "5a4af5e7add0442ce2310be0f54988089db95b37",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "435da9ce7fdb95b98e535665a4e8736743667fb1",
-    "/staff/main-es5.js": "f396e5ebea0a9456355876609e99672125e87a70",
+    "/staff/main-es2015.js": "80adefc78e56a7276496275700efb4a5b952fbff",
+    "/staff/main-es5.js": "09bab02902011d928d8655f616cc11deb23eeb1e",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "820472da62ccb60c8e7a119e97b25105752cef05",
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
     "/staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/staff/styles-es2015.js": "87adcc2457bb0e7fa592c5bba46b64164f43d240",
-    "/staff/styles-es5.js": "49d8921b0fad764845d14e19878ba273ba3f09da",
+    "/staff/styles-es2015.js": "59a70ac82303511aa6a5f290c19a7013bba834f8",
+    "/staff/styles-es5.js": "ed8c026e36a3d35d5983660ce22066adfff5aa01",
     "/staff/vendor-es2015.js": "9a2a9733da94372a4289612bd6937cdce2fcc31d",
     "/staff/vendor-es5.js": "7062622cc47987c9b725c31daaa1324bb89b53a1"
   },
