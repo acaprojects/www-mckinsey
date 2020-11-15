@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1605214051377,
+  "timestamp": 1605483257292,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -178,6 +178,7 @@
         "/staff/assets/maps/bangalore_bng/level_06.svg",
         "/staff/assets/maps/beijing/level_19.svg",
         "/staff/assets/maps/beijing/level_20.svg",
+        "/staff/assets/maps/brisbane/level_20.svg",
         "/staff/assets/maps/brussels/level_01.svg",
         "/staff/assets/maps/brussels/level_02.svg",
         "/staff/assets/maps/brussels/level_03.svg",
@@ -459,6 +460,7 @@
     "/staff/assets/maps/bangalore_bng/level_06.svg": "c98a79182dc30b8b0473d023686c9b4bd20a9e71",
     "/staff/assets/maps/beijing/level_19.svg": "39d36fe52dd7faec0c9884f04f734c4b71e37b82",
     "/staff/assets/maps/beijing/level_20.svg": "1d2044ce718f8e2975b789cc47a05a26613d2776",
+    "/staff/assets/maps/brisbane/level_20.svg": "41f8e4668515580e07c977c0c4417bb4f5316206",
     "/staff/assets/maps/brussels/level_01.svg": "5fcd1005b5207f41efd54d155bd694716bd35538",
     "/staff/assets/maps/brussels/level_02.svg": "eb3a522f03d98bfdc425630aff4a66b987110ffa",
     "/staff/assets/maps/brussels/level_03.svg": "dfb8bccf32368632624dd0753415bdaba50a248a",
@@ -552,8 +554,8 @@
     "/staff/booking-coachmark.png": "5a4af5e7add0442ce2310be0f54988089db95b37",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "32d04c2a515eae0f828b5877c29f549b71079bd0",
-    "/staff/main-es5.js": "764d4e9ac494beb94d249f1c2f44f7efda9c1be1",
+    "/staff/main-es2015.js": "b90484dbc797316d795cf5d6c2df40d72f24be83",
+    "/staff/main-es5.js": "412b515aece0b587524dca8b225cd9b583457686",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "820472da62ccb60c8e7a119e97b25105752cef05",
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
