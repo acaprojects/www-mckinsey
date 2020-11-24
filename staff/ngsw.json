@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1606158724189,
+  "timestamp": 1606182321803,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -153,6 +153,7 @@
         "/staff/assets/img/logo.svg",
         "/staff/assets/img/mck_logo_blue.svg",
         "/staff/assets/img/mckinsey_lines.svg",
+        "/staff/assets/img/modal_close.svg",
         "/staff/assets/img/no-catering.svg",
         "/staff/assets/img/no_space_results.svg",
         "/staff/assets/img/pantry.svg",
@@ -274,7 +275,9 @@
         "/staff/assets/not-supported.html",
         "/staff/booking-coachmark-desktop.png",
         "/staff/booking-coachmark.png",
-        "/staff/error-close.svg"
+        "/staff/error-close.svg",
+        "/staff/modal-close-desktop.svg",
+        "/staff/modal-close.svg"
       ],
       "patterns": []
     },
@@ -440,6 +443,7 @@
     "/staff/assets/img/logo.svg": "25bf1eb9ceba670c2065eb60004626082ca97858",
     "/staff/assets/img/mck_logo_blue.svg": "8dda982a9d1fb5419f8e93376d92708b2a58db13",
     "/staff/assets/img/mckinsey_lines.svg": "1dfaefcaef8b5074f44ddfc2231c76e7e8f9c746",
+    "/staff/assets/img/modal_close.svg": "11e0084e69b439f66a6ae9418c97146d96f47792",
     "/staff/assets/img/no-catering.svg": "a046e0ab0f8668896ab84294418c96350730e781",
     "/staff/assets/img/no_space_results.svg": "a6da97be4f1d7d8f63b008a1533ccc0c0190fd6e",
     "/staff/assets/img/pantry.svg": "c2ec5963210f409f858ef55334467c60a05b4f4e",
@@ -564,15 +568,17 @@
     "/staff/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "6bf08f89b5afd05342af6cc04b961e67abb68da3",
-    "/staff/main-es5.js": "9ecbfc7be17cf388ef2b850286bb9c61a0b9450f",
+    "/staff/main-es2015.js": "9444188d486b1c9365cd275b0edf5fdb6866659f",
+    "/staff/main-es5.js": "178721d0955965aa73b3441350e225f18b545ef9",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
+    "/staff/modal-close-desktop.svg": "11e0084e69b439f66a6ae9418c97146d96f47792",
+    "/staff/modal-close.svg": "b36c5fa2cfe79e21ab315b5d563e2064f02926ea",
     "/staff/polyfills-es2015.js": "820472da62ccb60c8e7a119e97b25105752cef05",
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
     "/staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/staff/styles-es2015.js": "2300ac1adabc2fb9802059929f373b76a00fa75d",
-    "/staff/styles-es5.js": "645ed5904e14cdca5c0413b6c0d73d0a5e00a6f1",
+    "/staff/styles-es2015.js": "7703da37c45cc046de3470fc973b8bbfe9c5d593",
+    "/staff/styles-es5.js": "f9d997ac0f7df61c7ef2d86153b634d2ace36b4a",
     "/staff/vendor-es2015.js": "3efdb01a5fb7e6af2ba3dbb2fc3a9544307b6eb7",
     "/staff/vendor-es5.js": "3fc910a9823e22922406d3455ff4f6dabbae9c5f"
   },
