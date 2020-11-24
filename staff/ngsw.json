@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1606232518048,
+  "timestamp": 1606232699212,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -568,8 +568,8 @@
     "/staff/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "bf28998043518eceed2ba649ea7b0096a41a8743",
-    "/staff/main-es5.js": "fea9cc34b8dc727294af60a6aeba1deed03d0e87",
+    "/staff/main-es2015.js": "2eeef60b0853124b02565f090f0e6010d65664f9",
+    "/staff/main-es5.js": "0eea8c45cae5616fa1ff39f69812ccc6d7be911a",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/modal-close-desktop.svg": "11e0084e69b439f66a6ae9418c97146d96f47792",
     "/staff/modal-close.svg": "b36c5fa2cfe79e21ab315b5d563e2064f02926ea",
