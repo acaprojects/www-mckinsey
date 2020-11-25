@@ -1,0 +1,25 @@
+{
+    "status": {
+        "available": "Available",
+        "not-bookable": "Unbookable",
+        "available-by-request": "Available by Request",
+        "in-use": "In Use",
+        "none": ""
+    },
+    "space-details": {
+        "booking": {
+            "current": {
+                "heading": "Current Booking:",
+                "time-range": "Booked until {{ time }} on {{ date }}"
+            },
+            "next": {
+                "heading": "Next Booking:",
+                "time-range": "Booked at {{ time }} on {{ date }}"
+            }
+        },
+        "other": {
+            "availability": "<b>Room Availability:</b> Free at {{ time }} on {{ date }}",
+            "link": "<b>Make a reservation at:</b> roombooking.intranet.mckinsey.com"
+        }
+    }
+}
