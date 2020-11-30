@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1606232699212,
+  "timestamp": 1606715874533,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -194,6 +194,9 @@
         "/staff/assets/maps/casablanca/level_02.svg",
         "/staff/assets/maps/charlotte/level_11.svg",
         "/staff/assets/maps/chengdu/level_15.svg",
+        "/staff/assets/maps/chennai/level_17.svg",
+        "/staff/assets/maps/chennai/level_18.svg",
+        "/staff/assets/maps/chennai/level_19.svg",
         "/staff/assets/maps/chicago/level_04.svg",
         "/staff/assets/maps/doha/level_01.svg",
         "/staff/assets/maps/dublin/level_04.svg",
@@ -484,6 +487,9 @@
     "/staff/assets/maps/casablanca/level_02.svg": "deb25e72e8eaad9637dda40f17299d3a25341ab0",
     "/staff/assets/maps/charlotte/level_11.svg": "5ffb05478ae9a232ebfca66ed8eba113768ee3f5",
     "/staff/assets/maps/chengdu/level_15.svg": "151fd39bcf1604fb9a38e73f7e22d6df26d8db85",
+    "/staff/assets/maps/chennai/level_17.svg": "76fe0ec855b5dc1afbbd6c88d9b9f8856357447b",
+    "/staff/assets/maps/chennai/level_18.svg": "d85a7d1e5797b9a42a1ffa29715e53499b92349d",
+    "/staff/assets/maps/chennai/level_19.svg": "ea8f18424eac02d6db7f2926058e48e2986aec19",
     "/staff/assets/maps/chicago/level_04.svg": "50cc15a9a68d4850a56639e42926f6051f80de34",
     "/staff/assets/maps/doha/level_01.svg": "d78bee9bd18af89e6003007682db4d9de1ffb7c5",
     "/staff/assets/maps/dublin/level_04.svg": "b9ecf2241f580ce113b2f55facf5ec760be58b7c",
@@ -568,8 +574,8 @@
     "/staff/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "2eeef60b0853124b02565f090f0e6010d65664f9",
-    "/staff/main-es5.js": "0eea8c45cae5616fa1ff39f69812ccc6d7be911a",
+    "/staff/main-es2015.js": "168c0bfe5279939036cb47633cd770aa7f71bb91",
+    "/staff/main-es5.js": "b9600053f1f1586ee17da0e7efd540bcd436e97b",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/modal-close-desktop.svg": "11e0084e69b439f66a6ae9418c97146d96f47792",
     "/staff/modal-close.svg": "b36c5fa2cfe79e21ab315b5d563e2064f02926ea",
