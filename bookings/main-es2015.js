@@ -5699,7 +5699,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const ɵ0 = client => new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_2__["TranslateHttpLoader"](client);
+const ɵ0 = client => new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_2__["TranslateHttpLoader"](client, "assets/i18n/");
 // Kudos to the guide in https://github.com/ngx-translate/http-loader/blob/0409e32f75/README.md for syntax.
 const standardLoader = {
     provide: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_1__["TranslateLoader"],
@@ -8474,16 +8474,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "1bd9ce4",
-    "hash": "1bd9ce4",
+    "raw": "48bad2d",
+    "hash": "48bad2d",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "1bd9ce4",
+    "suffix": "48bad2d",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1606331876490
+    "time": 1606933683643
 };
 /* tslint:enable */
 
