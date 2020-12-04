@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1607095741479,
+  "timestamp": 1607096535220,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -277,7 +277,6 @@
         "/staff/assets/maps/zagreb/level_08.svg",
         "/staff/assets/new-relic.js",
         "/staff/assets/not-supported.html",
-        "/staff/assets/oauth-resp.html",
         "/staff/booking-coachmark-desktop.png",
         "/staff/booking-coachmark.png",
         "/staff/chevron-close-large.svg",
@@ -577,7 +576,6 @@
     "/staff/assets/maps/zagreb/level_08.svg": "3a02c36f0d32424c9632aadcaa194b70a59c77d1",
     "/staff/assets/new-relic.js": "5010feb7ede36abe3878678c9b91ceb74509b172",
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
-    "/staff/assets/oauth-resp.html": "659af30275af8fd5e3940fbef409d43936e973e6",
     "/staff/booking-coachmark-desktop.png": "c155f7f29dbedb725eaa1c21327e1b7bc5c8bba2",
     "/staff/booking-coachmark.png": "5a4af5e7add0442ce2310be0f54988089db95b37",
     "/staff/chevron-close-large.svg": "6b4bef14bd64fa10a15feb61b1dfa6f2cfe1cfea",
@@ -586,8 +584,8 @@
     "/staff/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/staff/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
-    "/staff/main-es2015.js": "a22d31d8d24abbed992b74b3f94ac883ff8dac8e",
-    "/staff/main-es5.js": "2e4cbf91aac90b64dccdba4488a0c860aa2597d5",
+    "/staff/main-es2015.js": "c9b67fab630516f02405b77be109651130274289",
+    "/staff/main-es5.js": "dc727be92e801d5885825f22ec361591b9fbc951",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/staff/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
