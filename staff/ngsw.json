@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1607008764333,
+  "timestamp": 1607056291314,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -495,9 +495,9 @@
     "/staff/assets/maps/casablanca/level_02.svg": "deb25e72e8eaad9637dda40f17299d3a25341ab0",
     "/staff/assets/maps/charlotte/level_11.svg": "5ffb05478ae9a232ebfca66ed8eba113768ee3f5",
     "/staff/assets/maps/chengdu/level_15.svg": "151fd39bcf1604fb9a38e73f7e22d6df26d8db85",
-    "/staff/assets/maps/chennai/level_17.svg": "7292b174e3ff807659303ab7a0203d48509acfa3",
-    "/staff/assets/maps/chennai/level_18.svg": "082f0d2c7b8ef1fde9402e310b5f9f6db1cc852a",
-    "/staff/assets/maps/chennai/level_19.svg": "f2a02676445eb03925ff57db90e278c69740ac87",
+    "/staff/assets/maps/chennai/level_17.svg": "e6857d3b0a00ca00b1824199daceb652c28292af",
+    "/staff/assets/maps/chennai/level_18.svg": "1ba1d38a36c8d69e4f891c944c11b3caf58a1a6d",
+    "/staff/assets/maps/chennai/level_19.svg": "396bcc8c4317321c15bf1f60cd98fc418a68b5ce",
     "/staff/assets/maps/chicago/level_04.svg": "50cc15a9a68d4850a56639e42926f6051f80de34",
     "/staff/assets/maps/doha/level_01.svg": "d78bee9bd18af89e6003007682db4d9de1ffb7c5",
     "/staff/assets/maps/dublin/level_04.svg": "b9ecf2241f580ce113b2f55facf5ec760be58b7c",
@@ -586,8 +586,8 @@
     "/staff/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/staff/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
-    "/staff/main-es2015.js": "48ea59bdbd8fab1a4410b1604e4dfb7de4049cee",
-    "/staff/main-es5.js": "9b0275ca075f15922d340553ec952668e04203a7",
+    "/staff/main-es2015.js": "2098c7632890b89ab5b4d11c8709d441dd20c11c",
+    "/staff/main-es5.js": "dcf9377d74832cbcca6c21c81cfbd341f6edaee9",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/staff/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
