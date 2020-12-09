@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1607463757167,
+  "timestamp": 1607536534591,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -113,6 +113,7 @@
         "/staff/assets/img/book_red.svg",
         "/staff/assets/img/book_room.svg",
         "/staff/assets/img/booking-coachmark-desktop.png",
+        "/staff/assets/img/booking-coachmark-no-results.svg",
         "/staff/assets/img/booking-coachmark.png",
         "/staff/assets/img/booking_header.svg",
         "/staff/assets/img/caterer-01.jpg",
@@ -412,6 +413,7 @@
     "/staff/assets/img/book_red.svg": "a3379785f8225c47aa8510582d5e86a60da38053",
     "/staff/assets/img/book_room.svg": "08a138b8c872230e088b1285095f53bbe4a002c8",
     "/staff/assets/img/booking-coachmark-desktop.png": "c155f7f29dbedb725eaa1c21327e1b7bc5c8bba2",
+    "/staff/assets/img/booking-coachmark-no-results.svg": "77c26599d3fb2dc796803b478ccaace3e380ea62",
     "/staff/assets/img/booking-coachmark.png": "5a4af5e7add0442ce2310be0f54988089db95b37",
     "/staff/assets/img/booking_header.svg": "d4d6618f20bfd5c2af0b8ab65354eb5c170d8c3d",
     "/staff/assets/img/caterer-01.jpg": "18f9b877954267a56fe26d0fd77f3a56735503bf",
@@ -584,8 +586,8 @@
     "/staff/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/staff/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
-    "/staff/main-es2015.js": "bad6317512e74740f3a1b5376cc89c35ac2652f0",
-    "/staff/main-es5.js": "4b172e215f4ed21b06f1df895e80956cfb801c1d",
+    "/staff/main-es2015.js": "945d76bf8aed61b76b3525f76ec0f263a121d8e8",
+    "/staff/main-es5.js": "98483b566a00c06c6f4c683145c0a23072f78e7d",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/staff/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
@@ -593,8 +595,8 @@
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
     "/staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/staff/styles-es2015.js": "8ae7583d08b4c5a8507e6d6178fdf2919c2c4671",
-    "/staff/styles-es5.js": "e0a4f8e609255a16c84bb344dc40cba1fb2dd435",
+    "/staff/styles-es2015.js": "634479ead4ac6e55321f7a76e31a99e1b9a5c1df",
+    "/staff/styles-es5.js": "d77be82ab5711abc29edea6c389f18d570de3f81",
     "/staff/vendor-es2015.js": "1685a588300133aebd5451bea702f73de8ccc144",
     "/staff/vendor-es5.js": "11327f00e3f37a6f3368af99fc73f2325ae5b7c9"
   },
