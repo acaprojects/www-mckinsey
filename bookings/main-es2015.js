@@ -1828,6 +1828,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var dayjs_locale_en__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(dayjs_locale_en__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var dayjs_locale_fr_ca__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! dayjs/locale/fr-ca */ "./node_modules/dayjs/locale/fr-ca.js");
 /* harmony import */ var dayjs_locale_fr_ca__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(dayjs_locale_fr_ca__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _booking_utilities__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+
 
 
 
@@ -2030,7 +2032,7 @@ class Booking extends _base_api_class__WEBPACK_IMPORTED_MODULE_3__["BaseDataClas
         // dayjs doesn't understand most valid BCP47 codes. Mangle the input value passed in to fit.
         const dayjsLocaleCode = localeCode.toLowerCase();
         const start = dayjs__WEBPACK_IMPORTED_MODULE_9__(this.date).locale(dayjsLocaleCode);
-        const timeFormat = 'h:mma';
+        const timeFormat = Object(_booking_utilities__WEBPACK_IMPORTED_MODULE_12__["is24HourTime"])(localeCode) ? 'HH:mm' : 'h:mma';
         // Define our own format string for dates (dayjs does not offer a built in constant for this).
         const dateFormat = localeCode === 'en' ? 'MMMM Do' : 'D MMMM';
         this._display = {
@@ -2080,13 +2082,14 @@ var SpaceRulesReason;
 /*!*************************************************************!*\
   !*** ./src/app/services/data/bookings/booking.utilities.ts ***!
   \*************************************************************/
-/*! exports provided: mockDate, setMockBookingStartDatetime, generateMockBooking, getFreeBookingSlots, getNextFreeBookingSlot, rulesForSpace, durationGreaterThanOrEqual, stringToMinutes */
+/*! exports provided: mockDate, setMockBookingStartDatetime, is24HourTime, generateMockBooking, getFreeBookingSlots, getNextFreeBookingSlot, rulesForSpace, durationGreaterThanOrEqual, stringToMinutes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mockDate", function() { return mockDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setMockBookingStartDatetime", function() { return setMockBookingStartDatetime; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "is24HourTime", function() { return is24HourTime; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateMockBooking", function() { return generateMockBooking; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFreeBookingSlots", function() { return getFreeBookingSlots; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextFreeBookingSlot", function() { return getNextFreeBookingSlot; });
@@ -2138,6 +2141,16 @@ let BOOKING_DATE = dayjs__WEBPACK_IMPORTED_MODULE_3__().minute(0).startOf('m');
  */
 function setMockBookingStartDatetime(time) {
     BOOKING_DATE = dayjs__WEBPACK_IMPORTED_MODULE_3__(time).startOf('m');
+}
+/**
+ * Return whether locale string is displayed in 24 hour time
+ *
+ * (Function copied from -converge repository, file general.utilities.ts)
+ */
+function is24HourTime(localeCode) {
+    const date = new Date();
+    const localeString = date.toLocaleTimeString(localeCode || document.querySelector('html').getAttribute('lang') || navigator.language).toLowerCase();
+    return localeString.indexOf('am') < 0 && localeString.indexOf('pm') < 0;
 }
 /**
  * Create mock raw API data for a booking
@@ -8474,16 +8487,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "48bad2d",
-    "hash": "48bad2d",
+    "raw": "026b4e5",
+    "hash": "026b4e5",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "48bad2d",
+    "suffix": "026b4e5",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1606933683643
+    "time": 1607715693813
 };
 /* tslint:enable */
 
