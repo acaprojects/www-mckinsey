@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1607707229842,
+  "timestamp": 1608008176689,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -524,7 +524,7 @@
     "/staff/assets/maps/milan/level_3.svg": "152941d0d598f26b63a917f4b981bc65084c40af",
     "/staff/assets/maps/milan/level_4.svg": "1002be0d20d0137c4de6785d1509089822c84e54",
     "/staff/assets/maps/milan/level_5.svg": "14219f25d75d5f206fe7564577d7088624ef617b",
-    "/staff/assets/maps/montreal/level_44.svg": "ec666b1844d36bc1ce7043285deb14b24d86a756",
+    "/staff/assets/maps/montreal/level_44.svg": "153cffa59354c92525ec83f09505566767736524",
     "/staff/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
     "/staff/assets/maps/new_jersey/level_04.svg": "51ef13fd0139b20da0e6fad1f915e98994e576d1",
     "/staff/assets/maps/new_york/level_19.svg": "6ce8c466ea78f844c4ff26cec9430a083062c9ed",
@@ -586,8 +586,8 @@
     "/staff/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/staff/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
-    "/staff/main-es2015.js": "5fecd147b90c46a911f5633c84c4e90239ec0de4",
-    "/staff/main-es5.js": "7ceb868646e6154d60685774b6765436f646bccc",
+    "/staff/main-es2015.js": "57769c1d7b46d6fc91ae93fc47944958bd110f4a",
+    "/staff/main-es5.js": "45c557fddeccd75ab90fd1fa57c19fccdee8e06a",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/staff/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
