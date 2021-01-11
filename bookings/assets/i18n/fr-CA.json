@@ -21,5 +21,8 @@
             "availability": "<b>Disponibilité de l'espace:</b> Libre à {{ time }} le {{ date }}",
             "link": "<b>Faire un réservation sur:</b> roombooking.intranet.mckinsey.com"
         }
+    },
+    "timeline": {
+        "now-label": "Maintenant"
     }
 }
