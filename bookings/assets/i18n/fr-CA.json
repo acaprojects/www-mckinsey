@@ -10,11 +10,11 @@
         "booking": {
             "current": {
                 "heading": "Réservation en cours:",
-                "time-range": "Réservez à {{ time }} le {{ date }}"
+                "time-range": "Réservez jusqu'à {{ time }} le {{ date }}"
             },
             "next": {
                 "heading": "Prochaine réservation:",
-                "time-range": "Réservez jusqu'à {{ time }} le {{ date }}"
+                "time-range": "Réservez à {{ time }} le {{ date }}"
             }
         },
         "other": {
