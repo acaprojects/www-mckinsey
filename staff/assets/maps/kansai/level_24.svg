@@ -1669,7 +1669,7 @@
 	<rect id="area-24.11-status" x="771.5" y="500.1" class="st30" width="199.5" height="172.1"/>
 	<rect id="area-24.10-status" x="603.2" y="500.1" class="st30" width="167.9" height="172.1"/>
 	<rect id="area-24.09-status" x="442.8" y="499.8" class="st30" width="160.4" height="172.1"/>
-	<polygon id="area-24.08-status_1_" class="st30" points="335,39.7 335,501.3 442.8,501.3 442.8,940.2 20.9,940.2 20.9,308.9 
+	<polygon id="area-24.08-status" class="st30" points="335,39.7 335,501.3 442.8,501.3 442.8,940.2 20.9,940.2 20.9,308.9 
 		297.4,39.5 	"/>
 	<rect id="area-24.07-status" x="697.1" y="672.2" class="st30" width="99.8" height="208.9"/>
 	<rect id="area-24.06-status" x="602.7" y="672.2" class="st30" width="94.9" height="208.9"/>
