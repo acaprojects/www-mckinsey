@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1611899808175,
+  "timestamp": 1611931270388,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -587,7 +587,7 @@
     "/staff/assets/maps/sydney/level_33.svg": "7cf8ddb683729caa1bb8edc088140e6e8c708c3b",
     "/staff/assets/maps/sydney/level_35.svg": "be832bb516b300f5672b9ec4b881811406cb8d2d",
     "/staff/assets/maps/sydney/level_36.svg": "1393f4889357b9925aaf52e9d7cb02306230f78b",
-    "/staff/assets/maps/taipei/level_47.svg": "4427050c641d80d2aba238dcfdeb1448b575e439",
+    "/staff/assets/maps/taipei/level_47.svg": "67b1b1dd8bffaf7f83c3d628bec05f7854c8871e",
     "/staff/assets/maps/tokyo/level_32.svg": "c0d442d965c1859b804a3b57df8ab04dab7f3f4f",
     "/staff/assets/maps/tokyo/level_33.svg": "ad075bf354d3f5258a3cfab1d373050a4c4112ce",
     "/staff/assets/maps/toronto/level_01.svg": "0eacba63a07334f8a94c34dca1c1f77e723191eb",
@@ -616,8 +616,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "e1325f635307946d6d1c6931f05aaeb45221c2da",
-    "/staff/main-es5.js": "a543af2622887c89b56f40aad5e6401562d5fa3f",
+    "/staff/main-es2015.js": "6a7fd142eb0b02ae4c678db5cceae5caa3dd1bb2",
+    "/staff/main-es5.js": "54b5cdc8d16818678f5998dd038e449a555249cb",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
