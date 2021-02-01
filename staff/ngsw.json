@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1611931270388,
+  "timestamp": 1612194315309,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -70,6 +70,8 @@
         "/staff/assets/icon/add-user.svg",
         "/staff/assets/icon/add.svg",
         "/staff/assets/icon/attendee.svg",
+        "/staff/assets/icon/back-arrow-light.svg",
+        "/staff/assets/icon/back-arrow.svg",
         "/staff/assets/icon/calendar.svg",
         "/staff/assets/icon/clock.svg",
         "/staff/assets/icon/date.svg",
@@ -163,6 +165,10 @@
         "/staff/assets/img/question-dark.svg",
         "/staff/assets/img/question-light.svg",
         "/staff/assets/img/requested.svg",
+        "/staff/assets/img/rooms/not-found.png",
+        "/staff/assets/img/rooms/room-p-1.png",
+        "/staff/assets/img/rooms/room-p-2.png",
+        "/staff/assets/img/rooms/room-p-3.png",
         "/staff/assets/img/skyline.jpg",
         "/staff/assets/img/storage.svg",
         "/staff/assets/img/visa.svg",
@@ -389,6 +395,8 @@
     "/staff/assets/icon/add-user.svg": "7b0548ecba1bceae8cd5d1fd9076159a886935cf",
     "/staff/assets/icon/add.svg": "45e7e0ecf34f2e939cc50f5c07c78330c5c4ce24",
     "/staff/assets/icon/attendee.svg": "fbe58cbda8ed9368754c93c4c4936c278d1be8d1",
+    "/staff/assets/icon/back-arrow-light.svg": "f3615f01940f8b572e0ec1938e835b8a03169bc3",
+    "/staff/assets/icon/back-arrow.svg": "7be15aacff49d7103a47ee343c47db985d425dce",
     "/staff/assets/icon/calendar.svg": "447bdebdaa944f9ea41cab828a59037c4f79dfe5",
     "/staff/assets/icon/clock.svg": "2053a6eff11b0d0a34a8263e2f08cefea31a785c",
     "/staff/assets/icon/date.svg": "cea7cc0fa3f2974eb6191adae4900d55a22d0830",
@@ -482,6 +490,10 @@
     "/staff/assets/img/question-dark.svg": "899444cab381468cdceac467bf463730f9e395f1",
     "/staff/assets/img/question-light.svg": "294017d8e7bc969b2d81823f761b9aef8a18ff49",
     "/staff/assets/img/requested.svg": "34d2ba468c9b1c1a7d8d74ec9ef24d75546945ac",
+    "/staff/assets/img/rooms/not-found.png": "ef0143d4384c1be032e153ce40cb57dde95c5428",
+    "/staff/assets/img/rooms/room-p-1.png": "e2ee3d01c7f1118eed76f683426f106a9959d8d4",
+    "/staff/assets/img/rooms/room-p-2.png": "c45b66ac4f8e616fa4a19f533f57866b28175f96",
+    "/staff/assets/img/rooms/room-p-3.png": "ddce98b5e2cb71ffdf2942e74302e02f4a2c48a4",
     "/staff/assets/img/skyline.jpg": "c47ac628178df00b6cb24b959bc88be223eac30c",
     "/staff/assets/img/storage.svg": "06e314fdf75ea7852e958e7a759c0f933d052821",
     "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
@@ -616,8 +628,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "6a7fd142eb0b02ae4c678db5cceae5caa3dd1bb2",
-    "/staff/main-es5.js": "54b5cdc8d16818678f5998dd038e449a555249cb",
+    "/staff/main-es2015.js": "c0e29111a1927e797ba320f5791e99c82a152a00",
+    "/staff/main-es5.js": "9dd22ad44e1c9f5570a3fda115e8d806cf78aada",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
@@ -635,8 +647,8 @@
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
     "/staff/styles-es2015.js": "6888c0160d7d6fd8c440f2093314371ae10aa505",
     "/staff/styles-es5.js": "0a89bd6e16050fc41220591546c58170d63ecaed",
-    "/staff/vendor-es2015.js": "c69c3bb91b8de624f41956e43924dc311084fba5",
-    "/staff/vendor-es5.js": "fa0a3907b5961161e26c5a268cd5136bdb3fc04a"
+    "/staff/vendor-es2015.js": "4d912e63bdc0598ac3e80596b822f231e3bce07b",
+    "/staff/vendor-es5.js": "0530834b64de035a43fea2a8a9e539d952fa18f4"
   },
   "navigationUrls": [
     {
