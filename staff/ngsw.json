@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1613667878147,
+  "timestamp": 1614006122429,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -486,7 +486,7 @@
     "/staff/assets/maps/gurugram/level_07.svg": "97769cf6ea6eb39c97aa247a8bcc91642286b8e9",
     "/staff/assets/maps/gurugram/level_08.svg": "01adbc5576157918eaadb5be291f9b083cafd7c3",
     "/staff/assets/maps/gurugram/level_TH.svg": "3f7433145eb52e895601ff22dd52ccbcf31bafaf",
-    "/staff/assets/maps/gurugram/level_g.svg": "2d1f4faa5fba3151d0aaf80b2e59ba48777085eb",
+    "/staff/assets/maps/gurugram/level_g.svg": "09c9a208fe323230defd67cd2ca425991088d2ce",
     "/staff/assets/maps/hong_kong/level_40.svg": "21ed5ed554b5d3d0fdd03ac4cd048171f0c34ff2",
     "/staff/assets/maps/istanbul/level_28.svg": "226a886b10e2a977968e6a38af6450da7be2e150",
     "/staff/assets/maps/istanbul/level_29.svg": "3904910929edc7b6e101f9900c9c02bc467165ef",
@@ -566,8 +566,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "fb6498b732625b08a2e0303d21a9a7789972811a",
-    "/staff/main-es5.js": "b635896815ac0cdcda6d018411dcf6ef372c89cf",
+    "/staff/main-es2015.js": "5317a1feb4f2dfaba47b92385f568cc2c1f169ca",
+    "/staff/main-es5.js": "8633919d610a8f5878f46b667ad802fef357060c",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
