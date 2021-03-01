@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1614331881436,
+  "timestamp": 1614600250952,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -467,7 +467,7 @@
     "/staff/assets/maps/chengdu/level_15.svg": "151fd39bcf1604fb9a38e73f7e22d6df26d8db85",
     "/staff/assets/maps/chennai/level_17.svg": "e6857d3b0a00ca00b1824199daceb652c28292af",
     "/staff/assets/maps/chennai/level_18.svg": "1ba1d38a36c8d69e4f891c944c11b3caf58a1a6d",
-    "/staff/assets/maps/chennai/level_19.svg": "396bcc8c4317321c15bf1f60cd98fc418a68b5ce",
+    "/staff/assets/maps/chennai/level_19.svg": "47989f1855657ad40550b27e5d723be61e259119",
     "/staff/assets/maps/chicago/level_04.svg": "50cc15a9a68d4850a56639e42926f6051f80de34",
     "/staff/assets/maps/doha/level_01.svg": "d78bee9bd18af89e6003007682db4d9de1ffb7c5",
     "/staff/assets/maps/dublin/level_04.svg": "b9ecf2241f580ce113b2f55facf5ec760be58b7c",
@@ -568,8 +568,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "d6ab2166dfe92d900bb7077b06c70ab765c2f9a2",
-    "/staff/main-es5.js": "90599d60308b0be160de89a084bb024d511aa065",
+    "/staff/main-es2015.js": "fd4d3e7eae8c945fdfe95e031fa3d2a153239a0d",
+    "/staff/main-es5.js": "3436e50c8334d51b0f4df120c63554accc949c83",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
