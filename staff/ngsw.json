@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1614971272044,
+  "timestamp": 1615200640998,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -251,9 +251,6 @@
         "/staff/assets/maps/london/level_10.svg",
         "/staff/assets/maps/london/level_11.svg",
         "/staff/assets/maps/london_jermyn/level_04.svg",
-        "/staff/assets/maps/london_kinnaird_house/level_03.svg",
-        "/staff/assets/maps/london_kinnaird_house/level_06.svg",
-        "/staff/assets/maps/london_kinnaird_house/level_gr.svg",
         "/staff/assets/maps/macc/level_26.svg",
         "/staff/assets/maps/melbourne/level_30.svg",
         "/staff/assets/maps/melbourne/level_31.svg",
@@ -599,9 +596,6 @@
     "/staff/assets/maps/london/level_10.svg": "c17137a2a74cf15fcbf3ca089577ed3bcac99d37",
     "/staff/assets/maps/london/level_11.svg": "d9618d003cdfe56c0b89c79ab42917c2cfc97f7e",
     "/staff/assets/maps/london_jermyn/level_04.svg": "ad07701c027f72ef6f306f1b04d3781cee7017a4",
-    "/staff/assets/maps/london_kinnaird_house/level_03.svg": "ffe409cd6d723a0a83d6d13d8e1517ccf7586ee0",
-    "/staff/assets/maps/london_kinnaird_house/level_06.svg": "ff713772afc8b86338fa9f7c512e17f059128103",
-    "/staff/assets/maps/london_kinnaird_house/level_gr.svg": "415445cfea397428b0459b11bc8cdee87ff33a9c",
     "/staff/assets/maps/macc/level_26.svg": "2535dcf1c953c2c2342c47b58c3255e83cd85d5f",
     "/staff/assets/maps/melbourne/level_30.svg": "1e06be0af6c1713806c75d0d5c3b8be095d0017e",
     "/staff/assets/maps/melbourne/level_31.svg": "42bf2c84c2329b13459e45ee7eccbe0daebb8ce6",
@@ -674,8 +668,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "f2edc23883d89f5e9828bb846c5e53c5e1134bb9",
-    "/staff/main-es5.js": "7150bbfed7c3bd64d8afaf133ae31676bf73e7c7",
+    "/staff/main-es2015.js": "da655ebfd56a995c039986dfacd548ada7703b61",
+    "/staff/main-es5.js": "9b5f5018df15a6f52aff1836a239982ee330db93",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
