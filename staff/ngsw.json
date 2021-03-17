@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1615889806023,
+  "timestamp": 1615979489344,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -528,7 +528,7 @@
     "/staff/assets/maps/perth/level_02.svg": "392d8bf6fa54651629d0fb56d92351aa74995109",
     "/staff/assets/maps/perth/level_03.svg": "969ac23d391a7703f6cdf3f2de21cddda928b3b5",
     "/staff/assets/maps/philadelphia/level_14.svg": "68e4265783364d46460b0c021e81d6882844731b",
-    "/staff/assets/maps/poznan/level_ba.svg": "2c2972b48e60e8b0b76a3fd65c99644b73b4e2f9",
+    "/staff/assets/maps/poznan/level_ba.svg": "d99d87819ea304fc57131a47666d841435290eb0",
     "/staff/assets/maps/poznan/level_c3.svg": "091bc6ddaca701c6c9b71da2d8f30a0839f611e1",
     "/staff/assets/maps/poznan/level_c4.svg": "1d6acb42208f2767e197cb94ba00b50e865994de",
     "/staff/assets/maps/poznan/level_e0.svg": "be9e73941ef317e8df82614c8ca0ed1bf92d957c",
@@ -584,8 +584,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "e182657aa505a3ca3f0313d98ad8137c18054397",
-    "/staff/main-es5.js": "a6530f4ab1ffd2d71e2ed60544c27074d571889c",
+    "/staff/main-es2015.js": "4cd1f2d0e99078d1089015e7349b94bc7cc06d13",
+    "/staff/main-es5.js": "f113a39c1bc67d8f115eb591d0145b098f2713e7",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
