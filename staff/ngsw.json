@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1616056223004,
+  "timestamp": 1616067206501,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -622,7 +622,7 @@
     "/staff/assets/maps/london/level_11.svg": "d9618d003cdfe56c0b89c79ab42917c2cfc97f7e",
     "/staff/assets/maps/london_jermyn/level_04.svg": "ad07701c027f72ef6f306f1b04d3781cee7017a4",
     "/staff/assets/maps/macc/level_26.svg": "2535dcf1c953c2c2342c47b58c3255e83cd85d5f",
-    "/staff/assets/maps/manila/level_07.svg": "399328fbe8cd7819ceaeb53f818854337a0d2916",
+    "/staff/assets/maps/manila/level_07.svg": "ee1165f77387bf075a1fc3dfd09c74bc9a7a4d26",
     "/staff/assets/maps/manila/level_17.svg": "f1d1e47d47e2cbdd15a7e3ebdcf03c3a6d337a1d",
     "/staff/assets/maps/melbourne/level_30.svg": "1e06be0af6c1713806c75d0d5c3b8be095d0017e",
     "/staff/assets/maps/melbourne/level_31.svg": "42bf2c84c2329b13459e45ee7eccbe0daebb8ce6",
@@ -706,8 +706,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "fe1dbaed323c3267eedf57a47edb6f530f981c35",
-    "/staff/main-es5.js": "311562376094ac52c86a3a7a9aeb4209b455c3fd",
+    "/staff/main-es2015.js": "0172723cb94e7a87f213cfc4f2d3552de60cc1af",
+    "/staff/main-es5.js": "3db1e6afc4b4ca979529a731cdd2ce3e71170b2d",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
