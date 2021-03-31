@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1617224004244,
+  "timestamp": 1617224260345,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -81,7 +81,6 @@
         "/staff/assets/icon/chevron-down.svg",
         "/staff/assets/icon/chevron-left.svg",
         "/staff/assets/icon/chevron-right.svg",
-        "/staff/assets/icon/clock-circle-filled.svg",
         "/staff/assets/icon/clock.svg",
         "/staff/assets/icon/close.svg",
         "/staff/assets/icon/date.svg",
@@ -461,7 +460,6 @@
     "/staff/assets/icon/chevron-down.svg": "b7c2d1c36b93114008cc2073be9d7725ecf31033",
     "/staff/assets/icon/chevron-left.svg": "7a476cdfbc0a117ee2b4cd6b6f6fca9a6dfa33d1",
     "/staff/assets/icon/chevron-right.svg": "cca11a94ea2946e4fd6998db97a0f8091a29ded4",
-    "/staff/assets/icon/clock-circle-filled.svg": "ba8a8076df31869824474ecd018fc9b6f5041785",
     "/staff/assets/icon/clock.svg": "2053a6eff11b0d0a34a8263e2f08cefea31a785c",
     "/staff/assets/icon/close.svg": "88938dbc99fba72be8685cd763d28ff79857e304",
     "/staff/assets/icon/date.svg": "cea7cc0fa3f2974eb6191adae4900d55a22d0830",
@@ -738,8 +736,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "167d9a333d177e9f14266935a7284d00d00c5a52",
-    "/staff/main-es5.js": "e08aaf85b0633f910f339289bbd3b64d5771e4f8",
+    "/staff/main-es2015.js": "a9ced494da6d3bf4ca5dd8cc7be86487b3a97d12",
+    "/staff/main-es5.js": "112013f5627762ec71297822a22a0c15e1ae0ad0",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
