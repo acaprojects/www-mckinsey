@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1617228387859,
+  "timestamp": 1617290138855,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -657,7 +657,7 @@
     "/staff/assets/maps/moscow/level_04.svg": "69d25bd1ddfe6474230ec2e5cdb2bc60b975ab36",
     "/staff/assets/maps/moscow/level_05.svg": "e00b0539523e78291f686a3cb212cfc0d37a431b",
     "/staff/assets/maps/nairobi/level_02.svg": "d5a9bff2b5aee5df90ff334d873c57d6e0e74f12",
-    "/staff/assets/maps/nairobi/level_03.svg": "55b4ac7bff2a92a19efdaab53b72213f01f6c9c7",
+    "/staff/assets/maps/nairobi/level_03.svg": "644bdff271b731d2ca1231d5c47d937d4385b319",
     "/staff/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
     "/staff/assets/maps/new_jersey/level_04.svg": "51ef13fd0139b20da0e6fad1f915e98994e576d1",
     "/staff/assets/maps/new_york/level_19.svg": "6ce8c466ea78f844c4ff26cec9430a083062c9ed",
@@ -738,8 +738,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "4df09fe4028c13e012acb7b54bf8b91682892522",
-    "/staff/main-es5.js": "e8e599f525168da84ff3c18e997a537244d93f87",
+    "/staff/main-es2015.js": "ccb1821c8689a0bba05c245ab9fbc1f6efdc9d74",
+    "/staff/main-es5.js": "cdb262ff18e646c560eb5baa565f9f30e1ffa25e",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
