@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1617265397027,
+  "timestamp": 1617828576512,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -264,6 +264,8 @@
         "/staff/assets/maps/sao_paulo/level_21.svg",
         "/staff/assets/maps/sao_paulo/level_22.svg",
         "/staff/assets/maps/sao_paulo/level_23.svg",
+        "/staff/assets/maps/seoul/level_54.svg",
+        "/staff/assets/maps/seoul/level_55.svg",
         "/staff/assets/maps/shanghai/level_20.svg",
         "/staff/assets/maps/shanghai/level_21.svg",
         "/staff/assets/maps/shanghai/level_22.svg",
@@ -573,6 +575,8 @@
     "/staff/assets/maps/sao_paulo/level_21.svg": "6600de1dea0cf9fe50b5d35acfe23cffec78690b",
     "/staff/assets/maps/sao_paulo/level_22.svg": "e23f95e2fef7e59f571abc897799d4804f9c4f74",
     "/staff/assets/maps/sao_paulo/level_23.svg": "ae30c0c0da0f4d5cd8bcfd716922beb03d0e9e2a",
+    "/staff/assets/maps/seoul/level_54.svg": "43022006a290b931fe1b4054296ac06e82c7fb88",
+    "/staff/assets/maps/seoul/level_55.svg": "d88677cf6e4ba11f4a4be9e0972f03ac79a6a475",
     "/staff/assets/maps/shanghai/level_20.svg": "1db4b7ab88f05a65b8798ea90c6e8c4089a1edd0",
     "/staff/assets/maps/shanghai/level_21.svg": "eaacb270728d27e1816157ea85df85e7c85999d0",
     "/staff/assets/maps/shanghai/level_22.svg": "c2966cbe825010791063021f6addf6ce422b4b3c",
@@ -608,8 +612,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "703d17ca560edf0d547896d1cb5a84bcdca66116",
-    "/staff/main-es5.js": "dcaa3238bf2b65e1e26f8c11af4fcf7c9cb8b21d",
+    "/staff/main-es2015.js": "94c7a73b8be464716b1be49490c9401d27fddb5f",
+    "/staff/main-es5.js": "7b5861373517ad8c6a4ecc8c9f2d7fb790e74555",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
