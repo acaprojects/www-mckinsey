@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1617983788913,
+  "timestamp": 1617989734912,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -101,6 +101,7 @@
         "/staff/assets/icon/roombooked.svg",
         "/staff/assets/icon/spaces-filter.svg",
         "/staff/assets/icon/spaces.svg",
+        "/staff/assets/icon/stop.svg",
         "/staff/assets/icon/subject.svg",
         "/staff/assets/icon/tick.svg",
         "/staff/assets/icon/title-calendar-selected.svg",
@@ -483,6 +484,7 @@
     "/staff/assets/icon/roombooked.svg": "d050ebe15e51c8a306db06b335e940a0e7c39dc0",
     "/staff/assets/icon/spaces-filter.svg": "f3040c7080878328b4125dfd4c4d19eb2f343f9b",
     "/staff/assets/icon/spaces.svg": "783fc83af107311291398ced22b99ca735839ddc",
+    "/staff/assets/icon/stop.svg": "aae4034db622d5b4c7735ddf6ad1d6af1087a135",
     "/staff/assets/icon/subject.svg": "aebb6982ee9dcc690eeb88eaddacd84a57752227",
     "/staff/assets/icon/tick.svg": "5beb556c8efa9effbc722cd38301c0682056b665",
     "/staff/assets/icon/title-calendar-selected.svg": "cfdabccbe9db904dc564e64b6540d99a429f1239",
@@ -742,8 +744,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "9c3595e7f0d037e2181b90cd1473df1c135ee7a1",
-    "/staff/main-es5.js": "4129fa650fe5303b923afcbc3fd9a353b3098341",
+    "/staff/main-es2015.js": "b3703f8a24f070f80dcaaa8e2e69c17ea44b8e6b",
+    "/staff/main-es5.js": "cb9285a7dc3a78d9ed9b61ffe56995695fe67ba6",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
@@ -759,8 +761,8 @@
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
     "/staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/staff/styles-es2015.js": "67b9193c639cacb36e9d81430bc7cb3e94417fa0",
-    "/staff/styles-es5.js": "2b6227c31a23244d6f25c125c0de94e161d98c02",
+    "/staff/styles-es2015.js": "5c0b4aa57b1ce42d23eab6eba12e0fd533cc443a",
+    "/staff/styles-es5.js": "8806f9576fa1abe4aa671413b1d65c5532984b6b",
     "/staff/vendor-es2015.js": "ea716e638e0f7cae24ce9f4cc9ef6bdbe1b9a06e",
     "/staff/vendor-es5.js": "6cf8499c4bcb7baeda4864b9f1e3166c38418c1d"
   },
