@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1618303753662,
+  "timestamp": 1618310915295,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -458,7 +458,7 @@
     "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
     "/staff/assets/maps/abu_dhabi/level_23.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
     "/staff/assets/maps/amsterdam/level_0.5.svg": "f7aac7996699409ffcd1bb5f6e97763e861ab104",
-    "/staff/assets/maps/amsterdam/level_00.svg": "70aa9f46d5dd590645185f20214f11d29a7a04e4",
+    "/staff/assets/maps/amsterdam/level_00.svg": "c278829c9eb6915bfa75ada87701bbac8e7e3bfd",
     "/staff/assets/maps/amsterdam/level_01.svg": "e4aa3afa7d28aa26853b435630739f2e139e9e74",
     "/staff/assets/maps/amsterdam/level_02.svg": "796c132afda74aa435b93836f85c98100ce7937f",
     "/staff/assets/maps/amsterdam/level_03.svg": "b3ec8587cafaae1ea3e232430a5efbef60f4fdf1",
@@ -612,8 +612,8 @@
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/staff/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
     "/staff/index.html": "dc1bd6320f46d787220001358313f94cb5346358",
-    "/staff/main-es2015.js": "cecfeb1c0c6da60d754d9c7ed0abcd316c7cc152",
-    "/staff/main-es5.js": "f22d19688d9e6c442f216f858c1ce348ca576890",
+    "/staff/main-es2015.js": "acded567687b815913ee9b9bd486adee47affc9e",
+    "/staff/main-es5.js": "1c5e49c3c5ac4dadd71bc45d6bbbea7da3b547b6",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/polyfills-es2015.js": "784f42a20353dfc85449b6418a993bf9c821dd0e",
     "/staff/polyfills-es5.js": "65076555a04f780b0fc49aa28647b6cb08cb5c17",
