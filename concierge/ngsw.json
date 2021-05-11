@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1620760071452,
+  "timestamp": 1620760857364,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -83,9 +83,6 @@
         "/concierge/assets/img/support/opera-logo.svg",
         "/concierge/assets/img/support/safari-logo.svg",
         "/concierge/assets/maps/abu_dhabi/level_23.svg",
-        "/concierge/assets/maps/abu_dhabi/level_333.svg",
-        "/concierge/assets/maps/abu_dhabi/level_4444.svg",
-        "/concierge/assets/maps/abu_dhabi/level_55555.svg",
         "/concierge/assets/maps/amsterdam/level_0.5.svg",
         "/concierge/assets/maps/amsterdam/level_00.svg",
         "/concierge/assets/maps/amsterdam/level_01.svg",
@@ -355,9 +352,6 @@
     "/concierge/assets/img/support/opera-logo.svg": "23f8e25409598ac843eefe81ea3c09b4f460844d",
     "/concierge/assets/img/support/safari-logo.svg": "1c510b0c330f84f6662351e4a0abd7fb8af2f678",
     "/concierge/assets/maps/abu_dhabi/level_23.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
-    "/concierge/assets/maps/abu_dhabi/level_333.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
-    "/concierge/assets/maps/abu_dhabi/level_4444.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
-    "/concierge/assets/maps/abu_dhabi/level_55555.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
     "/concierge/assets/maps/amsterdam/level_0.5.svg": "f7aac7996699409ffcd1bb5f6e97763e861ab104",
     "/concierge/assets/maps/amsterdam/level_00.svg": "c278829c9eb6915bfa75ada87701bbac8e7e3bfd",
     "/concierge/assets/maps/amsterdam/level_01.svg": "e4aa3afa7d28aa26853b435630739f2e139e9e74",
@@ -532,8 +526,8 @@
     "/concierge/assets/new-relic.js": "5010feb7ede36abe3878678c9b91ceb74509b172",
     "/concierge/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "1abaa72aa2db69f76b05d69c5eaaeebd63a658eb",
-    "/concierge/main-es5.js": "c681bc7684e124706b5aaa2db1e2c6fbe174c4d4",
+    "/concierge/main-es2015.js": "1bc26c26850a1db9689c946f75f7d602b1394ebe",
+    "/concierge/main-es5.js": "392a89ef4fb523924ec49cd3cb0a887a86dfd095",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/polyfills-es2015.js": "6a65fc80e1103ae3c1c07311d409f1faa6ed621e",
     "/concierge/polyfills-es5.js": "e7dcc05189c78443dc2205c307e0429aa5f93e3a",
