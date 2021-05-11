@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1620759974600,
+  "timestamp": 1620760763741,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -200,9 +200,6 @@
         "/staff/assets/img/storage.svg",
         "/staff/assets/img/visa.svg",
         "/staff/assets/maps/abu_dhabi/level_23.svg",
-        "/staff/assets/maps/abu_dhabi/level_333.svg",
-        "/staff/assets/maps/abu_dhabi/level_4444.svg",
-        "/staff/assets/maps/abu_dhabi/level_55555.svg",
         "/staff/assets/maps/amsterdam/level_0.5.svg",
         "/staff/assets/maps/amsterdam/level_00.svg",
         "/staff/assets/maps/amsterdam/level_01.svg",
@@ -604,9 +601,6 @@
     "/staff/assets/img/storage.svg": "06e314fdf75ea7852e958e7a759c0f933d052821",
     "/staff/assets/img/visa.svg": "4e6f9087da8e2caa8f7b8a98383e2aca0cc375bb",
     "/staff/assets/maps/abu_dhabi/level_23.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
-    "/staff/assets/maps/abu_dhabi/level_333.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
-    "/staff/assets/maps/abu_dhabi/level_4444.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
-    "/staff/assets/maps/abu_dhabi/level_55555.svg": "62a4e4a6e4a09f597f9cf4dbc8f03a2e3a8d2d5a",
     "/staff/assets/maps/amsterdam/level_0.5.svg": "f7aac7996699409ffcd1bb5f6e97763e861ab104",
     "/staff/assets/maps/amsterdam/level_00.svg": "c278829c9eb6915bfa75ada87701bbac8e7e3bfd",
     "/staff/assets/maps/amsterdam/level_01.svg": "e4aa3afa7d28aa26853b435630739f2e139e9e74",
@@ -786,8 +780,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "d7bf7436ed73e9aa3818bea3f2cdf9f303f2a14a",
-    "/staff/main-es5.js": "a831e0378e9143b1a8d3cbeb1bacc30cad86f093",
+    "/staff/main-es2015.js": "d1ac9df19699ee3a47e0f2e45923bf4f9e4f9b73",
+    "/staff/main-es5.js": "d771a1adc8105f57b53fa92657b253e00a9cb96f",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
