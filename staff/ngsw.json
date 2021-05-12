@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1620769453267,
+  "timestamp": 1620828756885,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -84,6 +84,7 @@
         "/staff/assets/icon/clock-circle-filled.svg",
         "/staff/assets/icon/clock.svg",
         "/staff/assets/icon/close-blue.svg",
+        "/staff/assets/icon/close-red.svg",
         "/staff/assets/icon/close.svg",
         "/staff/assets/icon/date.svg",
         "/staff/assets/icon/description.svg",
@@ -485,6 +486,7 @@
     "/staff/assets/icon/clock-circle-filled.svg": "ba8a8076df31869824474ecd018fc9b6f5041785",
     "/staff/assets/icon/clock.svg": "2053a6eff11b0d0a34a8263e2f08cefea31a785c",
     "/staff/assets/icon/close-blue.svg": "5ec9d0cbf04825b70e6bfcae0da7ac30792194af",
+    "/staff/assets/icon/close-red.svg": "25ae7ed7965a8e36a7d00ef74b1fd5c4f809d5b6",
     "/staff/assets/icon/close.svg": "88938dbc99fba72be8685cd763d28ff79857e304",
     "/staff/assets/icon/date.svg": "cea7cc0fa3f2974eb6191adae4900d55a22d0830",
     "/staff/assets/icon/description.svg": "46bf367629198c670d4e4fd1f3e362abe8264a0b",
@@ -780,8 +782,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "2d90b79d7e0e15b1271f6ce1d7967e234d31eec1",
-    "/staff/main-es5.js": "1c2a5addc3492728642081741a82ab13f5c22341",
+    "/staff/main-es2015.js": "28486a958d1c0116e8dca98e0cd47bc7ecd5a64d",
+    "/staff/main-es5.js": "96c2a3cc3a58fe5b4662726811cdc347d3bb17b2",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
@@ -797,8 +799,8 @@
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
     "/staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/staff/styles-es2015.js": "299da9e211739425571beea6ec225ca2075aa22c",
-    "/staff/styles-es5.js": "70481e7424ddc9bf99de31ad9c67752cf2ce0a45",
+    "/staff/styles-es2015.js": "adf83572919636c20f0ed4eca8076cfddeca50cc",
+    "/staff/styles-es5.js": "cd2173eaa49095262288995d112b2ea51ea494e2",
     "/staff/vendor-es2015.js": "ea716e638e0f7cae24ce9f4cc9ef6bdbe1b9a06e",
     "/staff/vendor-es5.js": "6cf8499c4bcb7baeda4864b9f1e3166c38418c1d"
   },
