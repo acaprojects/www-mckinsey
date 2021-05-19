@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1621337424212,
+  "timestamp": 1621418809237,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -319,6 +319,8 @@
         "/staff/assets/maps/rome/level_4.svg",
         "/staff/assets/maps/rome/level_5.svg",
         "/staff/assets/maps/salvador/level_12.svg",
+        "/staff/assets/maps/san_francisco/level_47.svg",
+        "/staff/assets/maps/san_francisco/level_48.svg",
         "/staff/assets/maps/san_francisco_design_studio/level_01.svg",
         "/staff/assets/maps/san_francisco_design_studio/level_02.svg",
         "/staff/assets/maps/san_jose/level_03.svg",
@@ -722,6 +724,8 @@
     "/staff/assets/maps/rome/level_4.svg": "d69b3f3bae807991a4a3c2341eba0c8ed6165c85",
     "/staff/assets/maps/rome/level_5.svg": "b4a07bcc9d5eb5e884fcfa0942da9998fbea2aac",
     "/staff/assets/maps/salvador/level_12.svg": "3d7314bc617fb968c29eeae1fda18383dc5e86b7",
+    "/staff/assets/maps/san_francisco/level_47.svg": "8e7df037c711fa31560ade65e05e1e20d6240fa0",
+    "/staff/assets/maps/san_francisco/level_48.svg": "e8837c1b3b1933c6d2d50258aceebb3dd33c7aae",
     "/staff/assets/maps/san_francisco_design_studio/level_01.svg": "ac451e01f7b12b63ce3ca74f046604c42cb27ed2",
     "/staff/assets/maps/san_francisco_design_studio/level_02.svg": "3fc7166ff6799ece8f4b014ee8d1f56781fd95f7",
     "/staff/assets/maps/san_jose/level_03.svg": "6064008e883f6e898104b043219c8bbcab49eb6f",
@@ -784,8 +788,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "67d7fbfeadd14d27f50eb8a2d6cf99b372b4f4d2",
-    "/staff/main-es5.js": "be07829ab4be77c681d07b1a6f6e7dffec201225",
+    "/staff/main-es2015.js": "3ef0386a08d1e15ef8ac2e632bb2e11e60f4ebb9",
+    "/staff/main-es5.js": "9da1d2809989bde8198840e7eb1311ead9547d74",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
