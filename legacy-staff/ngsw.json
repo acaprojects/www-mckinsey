@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1621337536084,
+  "timestamp": 1621418907627,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -317,6 +317,8 @@
         "/legacy-staff/assets/maps/rome/level_4.svg",
         "/legacy-staff/assets/maps/rome/level_5.svg",
         "/legacy-staff/assets/maps/salvador/level_12.svg",
+        "/legacy-staff/assets/maps/san_francisco/level_47.svg",
+        "/legacy-staff/assets/maps/san_francisco/level_48.svg",
         "/legacy-staff/assets/maps/san_francisco_design_studio/level_01.svg",
         "/legacy-staff/assets/maps/san_francisco_design_studio/level_02.svg",
         "/legacy-staff/assets/maps/san_jose/level_03.svg",
@@ -716,6 +718,8 @@
     "/legacy-staff/assets/maps/rome/level_4.svg": "d69b3f3bae807991a4a3c2341eba0c8ed6165c85",
     "/legacy-staff/assets/maps/rome/level_5.svg": "b4a07bcc9d5eb5e884fcfa0942da9998fbea2aac",
     "/legacy-staff/assets/maps/salvador/level_12.svg": "3d7314bc617fb968c29eeae1fda18383dc5e86b7",
+    "/legacy-staff/assets/maps/san_francisco/level_47.svg": "8e7df037c711fa31560ade65e05e1e20d6240fa0",
+    "/legacy-staff/assets/maps/san_francisco/level_48.svg": "e8837c1b3b1933c6d2d50258aceebb3dd33c7aae",
     "/legacy-staff/assets/maps/san_francisco_design_studio/level_01.svg": "ac451e01f7b12b63ce3ca74f046604c42cb27ed2",
     "/legacy-staff/assets/maps/san_francisco_design_studio/level_02.svg": "3fc7166ff6799ece8f4b014ee8d1f56781fd95f7",
     "/legacy-staff/assets/maps/san_jose/level_03.svg": "6064008e883f6e898104b043219c8bbcab49eb6f",
@@ -776,8 +780,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "647d491d0bf9e8a66970698c117030a0b76d1a47",
-    "/legacy-staff/main-es5.js": "3449f77ce24047b35ce3738bba4eb179bd24d985",
+    "/legacy-staff/main-es2015.js": "0ed2129f8f0eb7820e70e70a190858fa315e94ae",
+    "/legacy-staff/main-es5.js": "c412d7e37b35c3f9ee9b90912fd6008b5f42deac",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
