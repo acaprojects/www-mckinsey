@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1622133024905,
+  "timestamp": 1622220373482,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -194,6 +194,9 @@
         "/staff/assets/img/rooms/abd-1-1-test_room-part-2.png",
         "/staff/assets/img/rooms/abd-1-1-test_room-part-3.png",
         "/staff/assets/img/rooms/not-found.png",
+        "/staff/assets/img/rooms/placeholder-1.png",
+        "/staff/assets/img/rooms/placeholder-2.png",
+        "/staff/assets/img/rooms/placeholder-3.png",
         "/staff/assets/img/rooms/room-part-1.png",
         "/staff/assets/img/rooms/room-part-2.png",
         "/staff/assets/img/rooms/room-part-3.png",
@@ -609,6 +612,9 @@
     "/staff/assets/img/rooms/abd-1-1-test_room-part-2.png": "c45b66ac4f8e616fa4a19f533f57866b28175f96",
     "/staff/assets/img/rooms/abd-1-1-test_room-part-3.png": "ddce98b5e2cb71ffdf2942e74302e02f4a2c48a4",
     "/staff/assets/img/rooms/not-found.png": "ef0143d4384c1be032e153ce40cb57dde95c5428",
+    "/staff/assets/img/rooms/placeholder-1.png": "3e37f166c4140e641ac540c119b8533b227a8fc4",
+    "/staff/assets/img/rooms/placeholder-2.png": "1b7e5fbf80b5573474db2dab7b318b41e00bd6c0",
+    "/staff/assets/img/rooms/placeholder-3.png": "d47673f87a51a244ba04256247aba66f7f2e96ac",
     "/staff/assets/img/rooms/room-part-1.png": "e2ee3d01c7f1118eed76f683426f106a9959d8d4",
     "/staff/assets/img/rooms/room-part-2.png": "c45b66ac4f8e616fa4a19f533f57866b28175f96",
     "/staff/assets/img/rooms/room-part-3.png": "ddce98b5e2cb71ffdf2942e74302e02f4a2c48a4",
@@ -808,8 +814,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "92dfa04d0ee5ad3b934ef17a9bbc33e9cef81b18",
-    "/staff/main-es5.js": "19286061c495e323d36011a61c842e6f319132b1",
+    "/staff/main-es2015.js": "1ab4d532caf20211bbc245bd694e4a41a30bc8fa",
+    "/staff/main-es5.js": "9ee12f8ac37b186c50505be220776f84b939249d",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
