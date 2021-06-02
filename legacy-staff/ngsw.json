@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1622581398199,
+  "timestamp": 1622633114327,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -619,7 +619,7 @@
     "/legacy-staff/assets/maps/bangalore_bgl/level_06.svg": "b1b1e0d50828faea0e95e879e6f37f427c17cf2d",
     "/legacy-staff/assets/maps/bangalore_blc/level_07.svg": "93f2ff6a69b7fa1ff73709411d5a15c8d2b73722",
     "/legacy-staff/assets/maps/bangalore_bng/level_06.svg": "c98a79182dc30b8b0473d023686c9b4bd20a9e71",
-    "/legacy-staff/assets/maps/bangkok/level_24.svg": "3b3fc4bf9d270bb763fa63d83c7fc0d6e3c2453e",
+    "/legacy-staff/assets/maps/bangkok/level_24.svg": "df69bbd477f2953cbfd33bf4ab319cfde6f27cbf",
     "/legacy-staff/assets/maps/beijing/level_19.svg": "39d36fe52dd7faec0c9884f04f734c4b71e37b82",
     "/legacy-staff/assets/maps/beijing/level_20.svg": "1d2044ce718f8e2975b789cc47a05a26613d2776",
     "/legacy-staff/assets/maps/brisbane/level_20.svg": "41f8e4668515580e07c977c0c4417bb4f5316206",
@@ -794,8 +794,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "b6c8c320943ea214d8625756d2e030728f9f3ae1",
-    "/legacy-staff/main-es5.js": "625d7d2819ca6a83335a8e715e57cd4323ffb26e",
+    "/legacy-staff/main-es2015.js": "fa8beb81e24bfcff40c1e7056d175a84e81d57a0",
+    "/legacy-staff/main-es5.js": "e1b7a5295f19b5501b7de6ace0cfb723a57925d4",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
