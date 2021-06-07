@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1622842394747,
+  "timestamp": 1623068044940,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -276,6 +276,7 @@
         "/staff/assets/maps/jakarta/level_41.svg",
         "/staff/assets/maps/johannesburg/level_07.svg",
         "/staff/assets/maps/kansai/level_24.svg",
+        "/staff/assets/maps/kuala_lumpur/level_27.svg",
         "/staff/assets/maps/lagos/level_06.svg",
         "/staff/assets/maps/london/level_06.svg",
         "/staff/assets/maps/london/level_07.svg",
@@ -694,6 +695,7 @@
     "/staff/assets/maps/jakarta/level_41.svg": "faabf926cefcf55c5efecf8671ffc87c90d0aee6",
     "/staff/assets/maps/johannesburg/level_07.svg": "29d8b6117f48ff2364bb4cb1481a5025c338bfc2",
     "/staff/assets/maps/kansai/level_24.svg": "e695352ee0d22f02869039986164805e70fd690e",
+    "/staff/assets/maps/kuala_lumpur/level_27.svg": "cdebf59ba1b023874a965a9fdfdaf633ec366a1b",
     "/staff/assets/maps/lagos/level_06.svg": "f7050ec1522c43178e919c76aaa2178141bf7dc7",
     "/staff/assets/maps/london/level_06.svg": "d09caabae2f8d46c0e20fa9b680ff5560cb1fa74",
     "/staff/assets/maps/london/level_07.svg": "b5a88c80b4309911e713afa4f8583db9b05b29e4",
@@ -814,8 +816,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "6b7359d1bea096fec41b0016f20e68ca4283ed12",
-    "/staff/main-es5.js": "dbddf83c298348865db9c150c6a85c1a3a7261cc",
+    "/staff/main-es2015.js": "81f36573f37f14ead28c151338f61f3d405318ff",
+    "/staff/main-es5.js": "a6c4ff257d50be7c02810389d74a3a6009bd5d5a",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
