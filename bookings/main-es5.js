@@ -10733,20 +10733,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.service.Spaces.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])(function (_) {
             return _;
           })).subscribe(function () {
+            console.log('Bootstrap!!!! space initialised');
+
             _this71.subscription('route.query', _this71.route.queryParamMap.subscribe(function (params) {
               if (params.has('clear') && params.get('clear')) {
+                console.log('Bootstrap!!!! Clear bootstrap');
+
                 _this71.clearBootstrap();
               }
 
               if (params.has('system_id') || params.has('sys_id')) {
                 _this71.system_id = params.get('system_id') || params.get('sys_id');
                 _this71.manual_input = true;
+                console.log('Bootstrap!!!! has system id', _this71.system_id);
 
                 _this71.bootstrap();
               }
             }));
 
             _this71.subscription('system_list', _this71.service.Systems.listen('list', function (systems) {
+              console.log('Bootstrap!!!! Loaded systems');
               _this71.system_list = systems || [];
               _this71.manual_input = !_this71.system_list || _this71.system_list.length <= 0;
             }));
@@ -10763,6 +10769,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "bootstrap",
         value: function bootstrap() {
+          console.log('Bootstrap!!!! Starting', this.manual_input, this.system_id, this.selected_system);
+
           if (this.manual_input && this.system_id) {
             this.configure(this.system_id);
           } else if (this.selected_system) {
@@ -10783,6 +10791,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.system_list = this.service.Systems.list || [];
 
           if ((!this.system_list || this.system_list.length <= 0) && tries < 10) {
+            console.log('Bootstrap!!!! loading list attempt#', tries);
             this.timeout('load', function () {
               return _this72.loadList(++tries);
             });
@@ -10790,9 +10799,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           if (!this.system_list || this.system_list.length <= 0) {
+            console.log('Bootstrap!!!! Manual input since system list was 0');
             this.manual_input = true;
           }
 
+          console.log('Bootstrap!!!! Loading finished from loading list');
           this.loading = false;
         }
         /**
@@ -10802,6 +10813,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "checkBootstrapped",
         value: function checkBootstrapped() {
+          console.log('Bootstrap!!!! Checking bootstrapped');
           this.loading = true;
 
           if (localStorage) {
@@ -10820,6 +10832,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var space = this.service.Spaces.item(user.email);
 
             if (space) {
+              console.log('Bootstrap!!!! Going to panel from space', space.id);
               this.service.navigate(['panel', space.id]);
               return;
             } else {
@@ -10830,6 +10843,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.loading = false;
+          console.log('Bootstrap!!!! Loading stopped from bootstrap!');
         }
         /**
          * Save the bootstrapped ID and redirect to the panel for that ID
@@ -10839,6 +10853,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "configure",
         value: function configure(system_id) {
+          console.log('Bootstrap!!!! Configuring system');
+
           if (localStorage) {
             localStorage.setItem('ACA.PANEL.system', system_id);
           }
@@ -15651,16 +15667,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "5cd4bd9",
-      "hash": "5cd4bd9",
+      "raw": "e9b4fb8",
+      "hash": "e9b4fb8",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "5cd4bd9",
+      "suffix": "e9b4fb8",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1624547392656
+      "time": 1624548845153
     };
     /* tslint:enable */
 

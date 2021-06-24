@@ -5239,17 +5239,21 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
     ngOnInit() {
         this.loading = true;
         this.service.Spaces.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])(_ => _)).subscribe(() => {
+            console.log('Bootstrap!!!! space initialised');
             this.subscription('route.query', this.route.queryParamMap.subscribe((params) => {
                 if (params.has('clear') && params.get('clear')) {
+                    console.log('Bootstrap!!!! Clear bootstrap');
                     this.clearBootstrap();
                 }
                 if (params.has('system_id') || params.has('sys_id')) {
                     this.system_id = params.get('system_id') || params.get('sys_id');
                     this.manual_input = true;
+                    console.log('Bootstrap!!!! has system id', this.system_id);
                     this.bootstrap();
                 }
             }));
             this.subscription('system_list', this.service.Systems.listen('list', (systems) => {
+                console.log('Bootstrap!!!! Loaded systems');
                 this.system_list = systems || [];
                 this.manual_input = !this.system_list || this.system_list.length <= 0;
             }));
@@ -5261,6 +5265,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
      * Setup the default system for the application to bind to
      */
     bootstrap() {
+        console.log('Bootstrap!!!! Starting', this.manual_input, this.system_id, this.selected_system);
         if (this.manual_input && this.system_id) {
             this.configure(this.system_id);
         }
@@ -5275,18 +5280,22 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
     loadList(tries = 0) {
         this.system_list = this.service.Systems.list || [];
         if ((!this.system_list || this.system_list.length <= 0) && tries < 10) {
+            console.log('Bootstrap!!!! loading list attempt#', tries);
             this.timeout('load', () => this.loadList(++tries));
             return;
         }
         if (!this.system_list || this.system_list.length <= 0) {
+            console.log('Bootstrap!!!! Manual input since system list was 0');
             this.manual_input = true;
         }
+        console.log('Bootstrap!!!! Loading finished from loading list');
         this.loading = false;
     }
     /**
      * Check if the application has previously been bootstrapped
      */
     checkBootstrapped() {
+        console.log('Bootstrap!!!! Checking bootstrapped');
         this.loading = true;
         if (localStorage) {
             const system_id = localStorage.getItem('ACA.PANEL.system') || localStorage.getItem('ACA.CONTROL.system');
@@ -5300,6 +5309,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         if (user) {
             const space = this.service.Spaces.item(user.email);
             if (space) {
+                console.log('Bootstrap!!!! Going to panel from space', space.id);
                 this.service.navigate(['panel', space.id]);
                 return;
             }
@@ -5311,12 +5321,14 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
             console.log('Bootstrap!!!: No user found');
         }
         this.loading = false;
+        console.log('Bootstrap!!!! Loading stopped from bootstrap!');
     }
     /**
      * Save the bootstrapped ID and redirect to the panel for that ID
      * @param system_id System to bootstrap
      */
     configure(system_id) {
+        console.log('Bootstrap!!!! Configuring system');
         if (localStorage) {
             localStorage.setItem('ACA.PANEL.system', system_id);
         }
@@ -7032,16 +7044,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "5cd4bd9",
-    "hash": "5cd4bd9",
+    "raw": "e9b4fb8",
+    "hash": "e9b4fb8",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "5cd4bd9",
+    "suffix": "e9b4fb8",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1624547392656
+    "time": 1624548845153
 };
 /* tslint:enable */
 
