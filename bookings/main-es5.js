@@ -10809,6 +10809,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             if (system_id) {
               this.service.navigate(['panel', system_id]);
+              console.log('Bootstrap!!!!!! NAVIGATING TO SYSTEM FROM STORAGE', system_id);
               return;
             }
           }
@@ -10821,7 +10822,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (space) {
               this.service.navigate(['panel', space.id]);
               return;
+            } else {
+              console.log('Bootstrap!!!!: No space found');
             }
+          } else {
+            console.log('Bootstrap!!!: No user found');
           }
 
           this.loading = false;
@@ -10839,6 +10844,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.service.navigate(['panel', system_id]);
+          console.log('Bootstrap!!!!!! Configured System', system_id);
         }
         /**
          * Remove any previously set bootstrapping details
@@ -10850,6 +10856,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (localStorage) {
             localStorage.removeItem('ACA.PANEL.system');
           }
+
+          console.log('Bootstrap!!!!!! CLEARING SYSTEM');
         }
       }]);
 
@@ -15643,16 +15651,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "2fb20e2",
-      "hash": "2fb20e2",
+      "raw": "5cd4bd9",
+      "hash": "5cd4bd9",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "2fb20e2",
+      "suffix": "5cd4bd9",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1624543767683
+      "time": 1624547392656
     };
     /* tslint:enable */
 

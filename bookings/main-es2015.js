@@ -5292,6 +5292,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
             const system_id = localStorage.getItem('ACA.PANEL.system') || localStorage.getItem('ACA.CONTROL.system');
             if (system_id) {
                 this.service.navigate(['panel', system_id]);
+                console.log('Bootstrap!!!!!! NAVIGATING TO SYSTEM FROM STORAGE', system_id);
                 return;
             }
         }
@@ -5302,6 +5303,12 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
                 this.service.navigate(['panel', space.id]);
                 return;
             }
+            else {
+                console.log('Bootstrap!!!!: No space found');
+            }
+        }
+        else {
+            console.log('Bootstrap!!!: No user found');
         }
         this.loading = false;
     }
@@ -5314,6 +5321,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
             localStorage.setItem('ACA.PANEL.system', system_id);
         }
         this.service.navigate(['panel', system_id]);
+        console.log('Bootstrap!!!!!! Configured System', system_id);
     }
     /**
      * Remove any previously set bootstrapping details
@@ -5322,6 +5330,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         if (localStorage) {
             localStorage.removeItem('ACA.PANEL.system');
         }
+        console.log('Bootstrap!!!!!! CLEARING SYSTEM');
     }
 }
 
@@ -7023,16 +7032,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "2fb20e2",
-    "hash": "2fb20e2",
+    "raw": "5cd4bd9",
+    "hash": "5cd4bd9",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "2fb20e2",
+    "suffix": "5cd4bd9",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1624543767683
+    "time": 1624547392656
 };
 /* tslint:enable */
 
