@@ -2926,6 +2926,8 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
         this._composer = _composer;
         /** Subject for System list */
         this._list = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](undefined);
+    }
+    doLoad() {
         this._composer.initialised.subscribe((state) => {
             if (state) {
                 this._resources = this._composer.systems;
@@ -5276,6 +5278,8 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         };
     }
     ngOnInit() {
+        // do load manually
+        this.service.Systems.doLoad();
         this.log('manual', this.useManualInput);
         this.log('routeParams', this.routeParams);
         this.log('currentSystemId', this.currentSystemId);
@@ -7184,16 +7188,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "b7fd200",
-    "hash": "b7fd200",
+    "raw": "a552c21",
+    "hash": "a552c21",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b7fd200",
+    "suffix": "a552c21",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1624644333856
+    "time": 1624644537065
 };
 /* tslint:enable */
 
