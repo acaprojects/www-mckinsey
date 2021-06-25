@@ -10800,7 +10800,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.log('manual', this.useManualInput);
           this.log('routeParams', this.routeParams);
-          this.log('currentSystem', this.currentSystemId);
+          this.log('currentSystemId', this.currentSystemId);
+          this.log('currentSystem', this.currentSystem);
           this.log('systemsList', this.systemsList);
           this.log('isLoading', this.isLoading);
           this.isLoading.next(true);
@@ -10881,7 +10882,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "selectItem",
         value: function selectItem(engine) {
-          console.log('Item', engine);
           this.currentSystemId.next(engine.id);
         }
         /**
@@ -15717,16 +15717,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "8063170",
-      "hash": "8063170",
+      "raw": "47bc429",
+      "hash": "47bc429",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "8063170",
+      "suffix": "47bc429",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1624631356502
+      "time": 1624631409326
     };
     /* tslint:enable */
 
