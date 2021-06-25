@@ -3166,9 +3166,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
           }
 
-          this.load().then(function (_) {
-            return _this15._initialised.next(true);
-          });
+          if (this.shouldLoadOnInit()) {
+            this.load().then(function (_) {
+              return _this15._initialised.next(true);
+            });
+          }
+        }
+        /**
+         * Override to prevent loading.
+         * @protected
+         */
+
+      }, {
+        key: "shouldLoadOnInit",
+        value: function shouldLoadOnInit() {
+          return true;
         }
         /**
          * Get API route for the service
@@ -4062,14 +4074,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           return 'done';
         }
-        /** Get the first space from the space list */
+        /** Get the first space from the space list TODO: deprecated, not used by any active config for MCK. */
 
       }, {
         key: "space",
         get: function get() {
           return this.service && this.service.parent && this.service.parent.Spaces && this._space_list && this._space_list.length > 0 ? this.service.parent.Spaces.item(this._space_list[0]) : null;
         }
-        /** Spaces associated with the booking */
+        /** Spaces associated with the booking TODO: deprecated, only used in tests. */
 
       }, {
         key: "space_list",
@@ -5828,13 +5840,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         return _this44;
       }
-      /**
-       * Get available spaces
-       * @param options
-       */
-
 
       _createClass(SpacesService, [{
+        key: "shouldLoadOnInit",
+        value: function shouldLoadOnInit() {
+          return false;
+        }
+        /**
+         * Get available spaces
+         * @param options
+         */
+
+      }, {
         key: "available",
         value: function available(options) {
           var _this45 = this;
@@ -10871,11 +10888,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this72.isLoading.next(false);
             }
           }));
-          this.subscription('Spaces.initialized', this.service.Spaces.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])(function (_) {
-            return _;
-          })).subscribe(function () {
-            _this72.checkBootstrapped();
-          }));
+          this.checkBootstrapped();
         }
       }, {
         key: "toggleManualInput",
@@ -15990,16 +16003,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "a552c21",
-      "hash": "a552c21",
+      "raw": "76680aa",
+      "hash": "76680aa",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "a552c21",
+      "suffix": "76680aa",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1624644537065
+      "time": 1624645280569
     };
     /* tslint:enable */
 

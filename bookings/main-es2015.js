@@ -1388,7 +1388,16 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["Ba
         if (!this.parent || !this.parent.is_initialised) {
             return this.timeout('init', () => this.init());
         }
-        this.load().then(_ => this._initialised.next(true));
+        if (this.shouldLoadOnInit()) {
+            this.load().then(_ => this._initialised.next(true));
+        }
+    }
+    /**
+     * Override to prevent loading.
+     * @protected
+     */
+    shouldLoadOnInit() {
+        return true;
     }
     /**
      * Get API route for the service
@@ -1868,12 +1877,12 @@ class Booking extends _base_api_class__WEBPACK_IMPORTED_MODULE_3__["BaseDataClas
         }
         return 'done';
     }
-    /** Get the first space from the space list */
+    /** Get the first space from the space list TODO: deprecated, not used by any active config for MCK. */
     get space() {
         return this.service && this.service.parent && this.service.parent.Spaces && this._space_list && this._space_list.length > 0
             ? this.service.parent.Spaces.item(this._space_list[0]) : null;
     }
-    /** Spaces associated with the booking */
+    /** Spaces associated with the booking TODO: deprecated, only used in tests. */
     get space_list() {
         return this.service && this.service.parent && this.service.parent.Spaces
             ? this.service.parent.Spaces.list((space) => this._space_list.indexOf(space.id) >= 0)
@@ -2837,6 +2846,9 @@ class SpacesService extends _base_service__WEBPACK_IMPORTED_MODULE_2__["BaseAPIS
             const bld = this.parent.Organisation.building;
             return a.level.bld_id === bld.id;
         };
+    }
+    shouldLoadOnInit() {
+        return false;
     }
     /**
      * Get available spaces
@@ -5312,9 +5324,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
                 this.isLoading.next(false);
             }
         }));
-        this.subscription('Spaces.initialized', this.service.Spaces.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])(_ => _)).subscribe(() => {
-            this.checkBootstrapped();
-        }));
+        this.checkBootstrapped();
     }
     toggleManualInput() {
         this.useManualInput.next(!this.useManualInput.value);
@@ -7188,16 +7198,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "a552c21",
-    "hash": "a552c21",
+    "raw": "76680aa",
+    "hash": "76680aa",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "a552c21",
+    "suffix": "76680aa",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1624644537065
+    "time": 1624645280569
 };
 /* tslint:enable */
 
