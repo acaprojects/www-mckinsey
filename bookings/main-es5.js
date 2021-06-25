@@ -10814,10 +10814,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           })).subscribe(function (next) {
             _this71.currentSystemId.next(next);
 
-            _this71.useManualInput.next(true); // TODO: react
+            _this71.useManualInput.next(true);
 
-
-            _this71.bootstrap();
+            _this71.configure(next);
           }));
           this.subscription('route.params.clear', this.routeParams.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (params) {
             return params.has('clear') && params.get('clear');
@@ -15718,16 +15717,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "8924599",
-      "hash": "8924599",
+      "raw": "8063170",
+      "hash": "8063170",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "8924599",
+      "suffix": "8063170",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1624631092637
+      "time": 1624631356502
     };
     /* tslint:enable */
 

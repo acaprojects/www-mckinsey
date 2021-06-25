@@ -5283,8 +5283,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
             .subscribe(next => {
             this.currentSystemId.next(next);
             this.useManualInput.next(true);
-            // TODO: react
-            this.bootstrap();
+            this.configure(next);
         }));
         this.subscription('route.params.clear', this.routeParams.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(params => params.has('clear') && params.get('clear')), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(f => !!f))
             .subscribe(next => {
@@ -7060,16 +7059,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "8924599",
-    "hash": "8924599",
+    "raw": "8063170",
+    "hash": "8063170",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "8924599",
+    "suffix": "8063170",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1624631092637
+    "time": 1624631356502
 };
 /* tslint:enable */
 
