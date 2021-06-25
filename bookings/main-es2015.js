@@ -6879,6 +6879,9 @@ class PreloadComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE_0
         }));
     }
     pushToPanel(id) {
+        if (localStorage) {
+            localStorage.setItem('ACA.PANEL.system', id);
+        }
         this.service.navigate(['panel', id]);
     }
     pushToRoomSelect(params) {
@@ -7198,16 +7201,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "76680aa",
-    "hash": "76680aa",
+    "raw": "fdca22f",
+    "hash": "fdca22f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "76680aa",
+    "suffix": "fdca22f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1624645280569
+    "time": 1624645416005
 };
 /* tslint:enable */
 
