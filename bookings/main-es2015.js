@@ -5288,6 +5288,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         }));
         this.subscription('route.params.clear', this.routeParams.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(params => params.has('clear') && params.get('clear')), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(f => !!f))
             .subscribe(next => {
+            this.currentSystemId.next(undefined);
             this.clearBootstrap();
         }));
         this.subscription('system_list', this.service.Systems
@@ -5306,7 +5307,11 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         this.subscription('User.currentUser', this.service.Users.currentUser
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(current => !!current), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mergeMap"])(current => this.service.Spaces.observeItem(current.email)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(i => !!i), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1))))
-            .subscribe(space => this.currentSystemId.next(space.id)));
+            .subscribe(space => {
+            // once we have space, then go to next
+            this.currentSystemId.next(space.id);
+            this.configure(space.id);
+        }));
     }
     toggleManualInput() {
         this.useManualInput.next(!this.useManualInput.value);
@@ -7055,16 +7060,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "a2b94c3",
-    "hash": "a2b94c3",
+    "raw": "8924599",
+    "hash": "8924599",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "a2b94c3",
+    "suffix": "8924599",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1624628735328
+    "time": 1624631092637
 };
 /* tslint:enable */
 

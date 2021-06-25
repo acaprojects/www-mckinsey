@@ -10824,6 +10824,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(function (f) {
             return !!f;
           })).subscribe(function (next) {
+            _this71.currentSystemId.next(undefined);
+
             _this71.clearBootstrap();
           }));
           this.subscription('system_list', this.service.Systems.list().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["withLatestFrom"])(this.isLoading)).subscribe(function (_ref3) {
@@ -10851,7 +10853,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return !!i;
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1));
           })).subscribe(function (space) {
-            return _this71.currentSystemId.next(space.id);
+            // once we have space, then go to next
+            _this71.currentSystemId.next(space.id);
+
+            _this71.configure(space.id);
           }));
         }
       }, {
@@ -15713,16 +15718,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "a2b94c3",
-      "hash": "a2b94c3",
+      "raw": "8924599",
+      "hash": "8924599",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "a2b94c3",
+      "suffix": "8924599",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1624628735328
+      "time": 1624631092637
     };
     /* tslint:enable */
 
