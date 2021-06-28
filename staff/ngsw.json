@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1624376407598,
+  "timestamp": 1624895944514,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -702,7 +702,7 @@
     "/staff/assets/maps/istanbul/level_29.svg": "3904910929edc7b6e101f9900c9c02bc467165ef",
     "/staff/assets/maps/jakarta/level_40.svg": "68deece10e3392d91389e1ad9bba2056239b852a",
     "/staff/assets/maps/jakarta/level_41.svg": "faabf926cefcf55c5efecf8671ffc87c90d0aee6",
-    "/staff/assets/maps/johannesburg/level_07.svg": "29d8b6117f48ff2364bb4cb1481a5025c338bfc2",
+    "/staff/assets/maps/johannesburg/level_07.svg": "97546fa50539cc297ff8158570a31f81a0ccc25f",
     "/staff/assets/maps/kansai/level_24.svg": "e695352ee0d22f02869039986164805e70fd690e",
     "/staff/assets/maps/kuala_lumpur/level_27.svg": "cdebf59ba1b023874a965a9fdfdaf633ec366a1b",
     "/staff/assets/maps/lagos/level_06.svg": "f7050ec1522c43178e919c76aaa2178141bf7dc7",
@@ -826,8 +826,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "2a03c7d3430f2505cb8154b369d4bcb803b833a2",
-    "/staff/main-es5.js": "1f69cabd51d3d6416a3c0e96681b89c52f09d462",
+    "/staff/main-es2015.js": "51865f40ec6917864aed2619494386e9430a39ad",
+    "/staff/main-es5.js": "347928f67d96a713e53edb43e9c89639b0d962c6",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
