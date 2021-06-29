@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1624895944514,
+  "timestamp": 1624962868120,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -756,7 +756,7 @@
     "/staff/assets/maps/rio/level_14.svg": "3a64aa56b9412ddcd9ba53ea6ceb4d59904f65e5",
     "/staff/assets/maps/rome/level_4.svg": "d69b3f3bae807991a4a3c2341eba0c8ed6165c85",
     "/staff/assets/maps/rome/level_5.svg": "b4a07bcc9d5eb5e884fcfa0942da9998fbea2aac",
-    "/staff/assets/maps/salvador/level_12.svg": "3d7314bc617fb968c29eeae1fda18383dc5e86b7",
+    "/staff/assets/maps/salvador/level_12.svg": "3d8d370931f8579bc4d5f62b2cc8701bc441febd",
     "/staff/assets/maps/san_francisco/level_47.svg": "8e7df037c711fa31560ade65e05e1e20d6240fa0",
     "/staff/assets/maps/san_francisco/level_48.svg": "e8837c1b3b1933c6d2d50258aceebb3dd33c7aae",
     "/staff/assets/maps/san_francisco_design_studio/level_01.svg": "ac451e01f7b12b63ce3ca74f046604c42cb27ed2",
@@ -826,8 +826,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "51865f40ec6917864aed2619494386e9430a39ad",
-    "/staff/main-es5.js": "347928f67d96a713e53edb43e9c89639b0d962c6",
+    "/staff/main-es2015.js": "8daf74ef477d8e95e2c592e3e523910925e64deb",
+    "/staff/main-es5.js": "ddf3479ab576ae073277fb7c22481785ddfa1ac1",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
