@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1624962926827,
+  "timestamp": 1624969743488,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -561,7 +561,7 @@
     "/concierge/assets/maps/rio/level_14.svg": "3a64aa56b9412ddcd9ba53ea6ceb4d59904f65e5",
     "/concierge/assets/maps/rome/level_4.svg": "d69b3f3bae807991a4a3c2341eba0c8ed6165c85",
     "/concierge/assets/maps/rome/level_5.svg": "b4a07bcc9d5eb5e884fcfa0942da9998fbea2aac",
-    "/concierge/assets/maps/salvador/level_12.svg": "3d8d370931f8579bc4d5f62b2cc8701bc441febd",
+    "/concierge/assets/maps/salvador/level_12.svg": "7df2c1c8f64009608b1bb143cd42187eaa5931bb",
     "/concierge/assets/maps/san_francisco/level_47.svg": "8e7df037c711fa31560ade65e05e1e20d6240fa0",
     "/concierge/assets/maps/san_francisco/level_48.svg": "e8837c1b3b1933c6d2d50258aceebb3dd33c7aae",
     "/concierge/assets/maps/san_francisco_design_studio/level_01.svg": "ac451e01f7b12b63ce3ca74f046604c42cb27ed2",
@@ -628,8 +628,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "246119689cc83d0971144bd74f3fc9b24f7073b8",
-    "/concierge/main-es5.js": "b7238e46a7d8e8c401d331327463814e3e82bccc",
+    "/concierge/main-es2015.js": "e857fb09a7c03084dd9b0bf44d394a9799c85dc0",
+    "/concierge/main-es5.js": "04e41172cfcbf69df2e78ac0df9e68e48f6f7b60",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
