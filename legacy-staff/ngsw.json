@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1624896035555,
+  "timestamp": 1624962962871,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -738,7 +738,7 @@
     "/legacy-staff/assets/maps/rio/level_14.svg": "3a64aa56b9412ddcd9ba53ea6ceb4d59904f65e5",
     "/legacy-staff/assets/maps/rome/level_4.svg": "d69b3f3bae807991a4a3c2341eba0c8ed6165c85",
     "/legacy-staff/assets/maps/rome/level_5.svg": "b4a07bcc9d5eb5e884fcfa0942da9998fbea2aac",
-    "/legacy-staff/assets/maps/salvador/level_12.svg": "3d7314bc617fb968c29eeae1fda18383dc5e86b7",
+    "/legacy-staff/assets/maps/salvador/level_12.svg": "3d8d370931f8579bc4d5f62b2cc8701bc441febd",
     "/legacy-staff/assets/maps/san_francisco/level_47.svg": "8e7df037c711fa31560ade65e05e1e20d6240fa0",
     "/legacy-staff/assets/maps/san_francisco/level_48.svg": "e8837c1b3b1933c6d2d50258aceebb3dd33c7aae",
     "/legacy-staff/assets/maps/san_francisco_design_studio/level_01.svg": "ac451e01f7b12b63ce3ca74f046604c42cb27ed2",
@@ -806,8 +806,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "840d10cacd39eacc3e68a4775d9450be87357535",
-    "/legacy-staff/main-es5.js": "c85da33acb57e65667d3550be9159f547aeab636",
+    "/legacy-staff/main-es2015.js": "f70ebaea8be86a7c2caf54f6c2cd35dad15c8bd5",
+    "/legacy-staff/main-es5.js": "c7cdf4b83414547716b4aac9803fc91bb08eb904",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
