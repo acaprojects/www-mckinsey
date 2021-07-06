@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1625255779004,
+  "timestamp": 1625567079033,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -453,8 +453,8 @@
     "/concierge/assets/maps/bangkok/level_24.svg": "df69bbd477f2953cbfd33bf4ab319cfde6f27cbf",
     "/concierge/assets/maps/beijing/level_19.svg": "39d36fe52dd7faec0c9884f04f734c4b71e37b82",
     "/concierge/assets/maps/beijing/level_20.svg": "1d2044ce718f8e2975b789cc47a05a26613d2776",
-    "/concierge/assets/maps/bogota/level_15.svg": "3e5155f0ca47380d95f67b12c6c70b5eec4f9d34",
-    "/concierge/assets/maps/bogota/level_16.svg": "5dbf14b6a99dc0a9144cbd9b8b283c691b1da742",
+    "/concierge/assets/maps/bogota/level_15.svg": "28b9d6e92c58dacc37dbaf65f1559a7b3669ccb2",
+    "/concierge/assets/maps/bogota/level_16.svg": "4d0f8e3c245b336edbf1b653c6e4fc97fe2db650",
     "/concierge/assets/maps/brisbane/level_20.svg": "41f8e4668515580e07c977c0c4417bb4f5316206",
     "/concierge/assets/maps/brussels/level_01.svg": "aaf9eda9c373da3b3d03df320d4680c7a1718149",
     "/concierge/assets/maps/brussels/level_02.svg": "b72f6ecb1de92a40f88fb6636b04170a026fddc2",
@@ -634,8 +634,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "b66056a914196fe47b97e76766bfc5ebb1a85101",
-    "/concierge/main-es5.js": "8298887e8abe767ce35197193762bb0e222ff4a1",
+    "/concierge/main-es2015.js": "b14ce06ad5bfc67bf2c232937b8f05d47e381420",
+    "/concierge/main-es5.js": "fa0d0335e78da3ceedbdaf798b814e8d316985e0",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
