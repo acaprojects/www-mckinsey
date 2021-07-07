@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1625567079033,
+  "timestamp": 1625677217327,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -203,6 +203,7 @@
         "/concierge/assets/maps/macc/level_26.svg",
         "/concierge/assets/maps/manila/level_07.svg",
         "/concierge/assets/maps/manila/level_17.svg",
+        "/concierge/assets/maps/medellin/level_404.svg",
         "/concierge/assets/maps/melbourne/level_30.svg",
         "/concierge/assets/maps/melbourne/level_31.svg",
         "/concierge/assets/maps/milan/level_2.svg",
@@ -527,6 +528,7 @@
     "/concierge/assets/maps/macc/level_26.svg": "2535dcf1c953c2c2342c47b58c3255e83cd85d5f",
     "/concierge/assets/maps/manila/level_07.svg": "3e378aa67492332d4c6492d436bf14416aa629c0",
     "/concierge/assets/maps/manila/level_17.svg": "9e5a3557049d16aefc74595cc9490fb4c66de11f",
+    "/concierge/assets/maps/medellin/level_404.svg": "8efd73990b9dc0b0d53e937bcae207ffc75525b2",
     "/concierge/assets/maps/melbourne/level_30.svg": "1e06be0af6c1713806c75d0d5c3b8be095d0017e",
     "/concierge/assets/maps/melbourne/level_31.svg": "42bf2c84c2329b13459e45ee7eccbe0daebb8ce6",
     "/concierge/assets/maps/milan/level_2.svg": "1cc4642251d5a7f77913c630edc7600cd6820549",
@@ -634,8 +636,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "b14ce06ad5bfc67bf2c232937b8f05d47e381420",
-    "/concierge/main-es5.js": "fa0d0335e78da3ceedbdaf798b814e8d316985e0",
+    "/concierge/main-es2015.js": "96cb2b5a5a429e5ad3ea15d7a4b0095b8f5bcd6a",
+    "/concierge/main-es5.js": "ca4dbc518bbeb1951c780b83e2de2a81a406668d",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
