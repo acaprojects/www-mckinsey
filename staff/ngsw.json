@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626094333780,
+  "timestamp": 1626171041702,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -748,7 +748,7 @@
     "/staff/assets/maps/moscow/level_03.svg": "4880ee743066f2e04082be06b0fcd5a0fa2cc21e",
     "/staff/assets/maps/moscow/level_04.svg": "69d25bd1ddfe6474230ec2e5cdb2bc60b975ab36",
     "/staff/assets/maps/moscow/level_05.svg": "e00b0539523e78291f686a3cb212cfc0d37a431b",
-    "/staff/assets/maps/nairobi/level_02.svg": "1c1ab8d5ff8f4f7250c0488172fd8b3b67253979",
+    "/staff/assets/maps/nairobi/level_02.svg": "d5e83fbcf6b68d54dca08455343185594ba38dd9",
     "/staff/assets/maps/nairobi/level_03.svg": "72da757a69e7a341934bcae7cc7ef4811d17b7f7",
     "/staff/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
     "/staff/assets/maps/new_jersey/level_04.svg": "51ef13fd0139b20da0e6fad1f915e98994e576d1",
@@ -848,8 +848,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "d22930dc90b7939e13bb605edfbb5a78fa2c6664",
-    "/staff/main-es5.js": "132d034f51e4b65dd62b3166f727883be7646f05",
+    "/staff/main-es2015.js": "08840350c9a5463a5900b09917072004bf8ff6da",
+    "/staff/main-es5.js": "088e4156958571b8a654910e71084537892cb1bd",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
@@ -865,8 +865,8 @@
     "/staff/polyfills-es5.js": "5a4e295b159a492fba2bb8d2858500d727c8dcaa",
     "/staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/staff/styles-es2015.js": "4ea67ec463967015ea268ae3912f7d96958fa0c7",
-    "/staff/styles-es5.js": "36eb74bc7b2ddd870bff337344b9b661f313dd72",
+    "/staff/styles-es2015.js": "1bb69f6225ba81f5fbcfa4a78c6ec29685ee275f",
+    "/staff/styles-es5.js": "55228bd9cab1083db4a95f2f21535fb4cf916e66",
     "/staff/vendor-es2015.js": "ea716e638e0f7cae24ce9f4cc9ef6bdbe1b9a06e",
     "/staff/vendor-es5.js": "6cf8499c4bcb7baeda4864b9f1e3166c38418c1d"
   },
