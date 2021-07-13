@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626094431622,
+  "timestamp": 1626171146486,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -549,7 +549,7 @@
     "/concierge/assets/maps/moscow/level_03.svg": "4880ee743066f2e04082be06b0fcd5a0fa2cc21e",
     "/concierge/assets/maps/moscow/level_04.svg": "69d25bd1ddfe6474230ec2e5cdb2bc60b975ab36",
     "/concierge/assets/maps/moscow/level_05.svg": "e00b0539523e78291f686a3cb212cfc0d37a431b",
-    "/concierge/assets/maps/nairobi/level_02.svg": "1c1ab8d5ff8f4f7250c0488172fd8b3b67253979",
+    "/concierge/assets/maps/nairobi/level_02.svg": "d5e83fbcf6b68d54dca08455343185594ba38dd9",
     "/concierge/assets/maps/nairobi/level_03.svg": "72da757a69e7a341934bcae7cc7ef4811d17b7f7",
     "/concierge/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
     "/concierge/assets/maps/new_jersey/level_04.svg": "51ef13fd0139b20da0e6fad1f915e98994e576d1",
@@ -646,8 +646,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "ec190bf0a3dca644215a9617ff793b8108d0f5ac",
-    "/concierge/main-es5.js": "f56f77c2685325358874b986d630933e8b8e5103",
+    "/concierge/main-es2015.js": "8b7e9746be0343b828ffa2210ae8f0ac99d54b5d",
+    "/concierge/main-es5.js": "6d2ce74b2b541c01cf7ae28b466dd8d569b52b84",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
