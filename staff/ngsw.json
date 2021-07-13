@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626192757565,
+  "timestamp": 1626193311147,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -652,9 +652,9 @@
     "/staff/assets/maps/amsterdam/level_04.svg": "a75cce09686e7bf4d14b777498fa5224ee2d47aa",
     "/staff/assets/maps/amsterdam/level_05.svg": "c0837caef1994ba03e8b566dae48dd939e3c0614",
     "/staff/assets/maps/amsterdam/level_06.svg": "c6351a35f4c3bd40fa1f3e6891727cdb939fae4d",
-    "/staff/assets/maps/athens/level_02.svg": "fd0e860d3dee83cfb589681ba23c3b8ad837cce6",
-    "/staff/assets/maps/athens/level_03.svg": "c11dc28ff84d090969187dc25f40544111f0a906",
-    "/staff/assets/maps/athens/level_04.svg": "3e6bb5908389c60bdd1c44dc357e80795f23a535",
+    "/staff/assets/maps/athens/level_02.svg": "236782ac67be2fe5c985f07ce661cf20cf717dac",
+    "/staff/assets/maps/athens/level_03.svg": "abfa2ee0bef342d02a2fda315ea9f3427d52fa91",
+    "/staff/assets/maps/athens/level_04.svg": "3145a1a1593fc09f050b79320761538cb0ddd9f2",
     "/staff/assets/maps/atlanta/level_07.svg": "19d3d7da5851e56c86829d2375606848c8083986",
     "/staff/assets/maps/atlanta/level_08.svg": "d570d97169ef16846128ac3d7f98ecc25a5c9410",
     "/staff/assets/maps/auckland/level_13.svg": "16a3882b7ae29a75c89d8a25daa15ee34cf916a8",
@@ -848,8 +848,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "3097d35619ee1268fe8c7c2c161f7b6fc9eda348",
-    "/staff/main-es5.js": "3d24127794283dcde142816a510002cc589eca9c",
+    "/staff/main-es2015.js": "af4f908a8ccafe7d5a069175f1acb9b9e32f6bae",
+    "/staff/main-es5.js": "15a49b06ff9d3ce2a55b09752cb13ff15ac7e7a4",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
