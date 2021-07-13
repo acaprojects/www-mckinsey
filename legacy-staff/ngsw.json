@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626094531819,
+  "timestamp": 1626171252002,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -726,7 +726,7 @@
     "/legacy-staff/assets/maps/moscow/level_03.svg": "4880ee743066f2e04082be06b0fcd5a0fa2cc21e",
     "/legacy-staff/assets/maps/moscow/level_04.svg": "69d25bd1ddfe6474230ec2e5cdb2bc60b975ab36",
     "/legacy-staff/assets/maps/moscow/level_05.svg": "e00b0539523e78291f686a3cb212cfc0d37a431b",
-    "/legacy-staff/assets/maps/nairobi/level_02.svg": "1c1ab8d5ff8f4f7250c0488172fd8b3b67253979",
+    "/legacy-staff/assets/maps/nairobi/level_02.svg": "d5e83fbcf6b68d54dca08455343185594ba38dd9",
     "/legacy-staff/assets/maps/nairobi/level_03.svg": "72da757a69e7a341934bcae7cc7ef4811d17b7f7",
     "/legacy-staff/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
     "/legacy-staff/assets/maps/new_jersey/level_04.svg": "51ef13fd0139b20da0e6fad1f915e98994e576d1",
@@ -824,8 +824,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "362ebd9309f28d049317c88746c6198ee4e4e081",
-    "/legacy-staff/main-es5.js": "136ef15c02ea28d0cb8262638878927089163857",
+    "/legacy-staff/main-es2015.js": "2e95964c66ac76f2d432a89ebaac131194a6a356",
+    "/legacy-staff/main-es5.js": "7cea9adec29feb82206b70b24a90fa65474f5bea",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
@@ -841,8 +841,8 @@
     "/legacy-staff/polyfills-es5.js": "a2b671ed8795a0764daeb1c82049e1306b5e08cb",
     "/legacy-staff/runtime-es2015.js": "c27a19a0c937e2b87a604560d34cd277072daef2",
     "/legacy-staff/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
-    "/legacy-staff/styles-es2015.js": "2d6d45bf4a189e38e0163555e56c0a9d7cb90b9c",
-    "/legacy-staff/styles-es5.js": "ef9930e04c49fbe623e87edba780a186b603be83",
+    "/legacy-staff/styles-es2015.js": "4620c406b80ff38e7b48d8e25556d49d68812aa1",
+    "/legacy-staff/styles-es5.js": "3c43f90524cd43252684931df183617bbab76f47",
     "/legacy-staff/vendor-es2015.js": "4d912e63bdc0598ac3e80596b822f231e3bce07b",
     "/legacy-staff/vendor-es5.js": "0530834b64de035a43fea2a8a9e539d952fa18f4"
   },
