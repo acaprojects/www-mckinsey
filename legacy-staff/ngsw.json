@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626099743396,
+  "timestamp": 1626171100203,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -726,7 +726,7 @@
     "/legacy-staff/assets/maps/moscow/level_03.svg": "4880ee743066f2e04082be06b0fcd5a0fa2cc21e",
     "/legacy-staff/assets/maps/moscow/level_04.svg": "69d25bd1ddfe6474230ec2e5cdb2bc60b975ab36",
     "/legacy-staff/assets/maps/moscow/level_05.svg": "e00b0539523e78291f686a3cb212cfc0d37a431b",
-    "/legacy-staff/assets/maps/nairobi/level_02.svg": "1c1ab8d5ff8f4f7250c0488172fd8b3b67253979",
+    "/legacy-staff/assets/maps/nairobi/level_02.svg": "d5e83fbcf6b68d54dca08455343185594ba38dd9",
     "/legacy-staff/assets/maps/nairobi/level_03.svg": "72da757a69e7a341934bcae7cc7ef4811d17b7f7",
     "/legacy-staff/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
     "/legacy-staff/assets/maps/new_jersey/level_04.svg": "51ef13fd0139b20da0e6fad1f915e98994e576d1",
@@ -824,8 +824,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "a47b2137ed8b69b4dd23f4313b038e689534f5f1",
-    "/legacy-staff/main-es5.js": "6137e1f695bcf94bb8769a9b017c153da4624280",
+    "/legacy-staff/main-es2015.js": "592a8e5dadd2cf1cafdb811418ad2e71f4867731",
+    "/legacy-staff/main-es5.js": "a27962c733cfab07e6855b5d13acfc7fac8f21f0",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
