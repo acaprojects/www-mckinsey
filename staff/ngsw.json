@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626963558653,
+  "timestamp": 1626964864957,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -318,6 +318,7 @@
         "/staff/assets/maps/new_jersey/level_03.svg",
         "/staff/assets/maps/new_jersey/level_04.svg",
         "/staff/assets/maps/new_york/level_19.svg",
+        "/staff/assets/maps/new_york/level_4.svg",
         "/staff/assets/maps/new_york_wtc/level_60.svg",
         "/staff/assets/maps/new_york_wtc/level_61.svg",
         "/staff/assets/maps/new_york_wtc/level_62.svg",
@@ -753,6 +754,7 @@
     "/staff/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
     "/staff/assets/maps/new_jersey/level_04.svg": "51ef13fd0139b20da0e6fad1f915e98994e576d1",
     "/staff/assets/maps/new_york/level_19.svg": "6ce8c466ea78f844c4ff26cec9430a083062c9ed",
+    "/staff/assets/maps/new_york/level_4.svg": "ac71e52e09fb65caf5e456bb4567a6ec54e7e481",
     "/staff/assets/maps/new_york_wtc/level_60.svg": "94e3601bc3b59ad1c6a9aa4581d29640dc865e53",
     "/staff/assets/maps/new_york_wtc/level_61.svg": "ed41369543687e780b8d47a719c03a997b8ea006",
     "/staff/assets/maps/new_york_wtc/level_62.svg": "3f22185ecc5ba788e8206b6161990a6e4d08b7fd",
@@ -848,8 +850,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "0c58090fee2bb4f64fb01be65fcb618fd06c182e",
-    "/staff/main-es5.js": "37f65f43a60ee5379b121061e914e079753ddd6a",
+    "/staff/main-es2015.js": "2a72ad86f0810baae80efe784f5227067c0c4b89",
+    "/staff/main-es5.js": "84fb53695f7104d2a64ba0104da67f140428b3c2",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
