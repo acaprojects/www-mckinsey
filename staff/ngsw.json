@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626964864957,
+  "timestamp": 1627053091750,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -240,6 +240,7 @@
         "/staff/assets/maps/brussels/level_05.svg",
         "/staff/assets/maps/brussels/level_gr.svg",
         "/staff/assets/maps/brussels/level_ll.svg",
+        "/staff/assets/maps/buenos_aires/level_24.svg",
         "/staff/assets/maps/canberra/level_02.svg",
         "/staff/assets/maps/casablanca/level_01.svg",
         "/staff/assets/maps/casablanca/level_02.svg",
@@ -676,6 +677,7 @@
     "/staff/assets/maps/brussels/level_05.svg": "739e199efe6e099d3c42e2d86b29dd925ccb0694",
     "/staff/assets/maps/brussels/level_gr.svg": "3e839c10944a5a3821e305a5bc4018e38a688f3d",
     "/staff/assets/maps/brussels/level_ll.svg": "9ab91d4469b321ada121f2e61fcd3ebb4d60ae11",
+    "/staff/assets/maps/buenos_aires/level_24.svg": "75325402cb675806d99f0cca8a68ee88977ad773",
     "/staff/assets/maps/canberra/level_02.svg": "45e2834d3f32d416a7a870f0d7ae00c024e54613",
     "/staff/assets/maps/casablanca/level_01.svg": "2743ffc8fb28a54ec13f067574b6b0f2ab615467",
     "/staff/assets/maps/casablanca/level_02.svg": "deb25e72e8eaad9637dda40f17299d3a25341ab0",
@@ -850,8 +852,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "2a72ad86f0810baae80efe784f5227067c0c4b89",
-    "/staff/main-es5.js": "84fb53695f7104d2a64ba0104da67f140428b3c2",
+    "/staff/main-es2015.js": "00ac6b59dc55b4c7240e2c62ac567ae82c44b152",
+    "/staff/main-es5.js": "23ec3203898f6bd25c9a11e086a19073491ce625",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
