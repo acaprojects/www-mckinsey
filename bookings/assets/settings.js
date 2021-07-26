@@ -33,7 +33,7 @@ settings.app = {
         background: ''
     },
     heap_io: {
-        app_id: 3540602199,
+        app_id: 91016686,
         force_ssl: true,
         secure_cookie: true,
         disable_text_capture: true,
