@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1627998404562,
+  "timestamp": 1627999575380,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -455,7 +455,7 @@
     "/concierge/assets/maps/alamelu_terrace/level_05.svg": "aa41b3bff134a1865842844d494a25f21f535cef",
     "/concierge/assets/maps/almaty/level_15.svg": "7e3c6147e68d717269913b1bba4eac24d3945e70",
     "/concierge/assets/maps/amsterdam/level_0.5.svg": "f7aac7996699409ffcd1bb5f6e97763e861ab104",
-    "/concierge/assets/maps/amsterdam/level_00.svg": "c278829c9eb6915bfa75ada87701bbac8e7e3bfd",
+    "/concierge/assets/maps/amsterdam/level_00.svg": "193b6b34bdaea3c848b0c19160063268bf1fa7c5",
     "/concierge/assets/maps/amsterdam/level_01.svg": "e4aa3afa7d28aa26853b435630739f2e139e9e74",
     "/concierge/assets/maps/amsterdam/level_02.svg": "796c132afda74aa435b93836f85c98100ce7937f",
     "/concierge/assets/maps/amsterdam/level_03.svg": "b3ec8587cafaae1ea3e232430a5efbef60f4fdf1",
@@ -670,8 +670,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "31ce9483c28d7c1c1c15b52370bb0fec080aff8c",
-    "/concierge/main-es5.js": "4aa9b648929f5249e0f550d4353786b2c6be156e",
+    "/concierge/main-es2015.js": "a68af28cf899c4ba0d432865945b9df5187de470",
+    "/concierge/main-es5.js": "6028a2f3e162ecb98f696aa60f9f69b625ea78d9",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
