@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1627999575380,
+  "timestamp": 1628157552311,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -161,6 +161,7 @@
         "/concierge/assets/maps/chicago/level_31.svg",
         "/concierge/assets/maps/chicago/level_32.svg",
         "/concierge/assets/maps/chicago/level_33.svg",
+        "/concierge/assets/maps/cleveland/level_12.svg",
         "/concierge/assets/maps/colombo/level_08.svg",
         "/concierge/assets/maps/copenhagen/level_00.svg",
         "/concierge/assets/maps/copenhagen/level_01.svg",
@@ -503,6 +504,7 @@
     "/concierge/assets/maps/chicago/level_31.svg": "4f46811d4e473ea6e0aa4953422d7eeaca0b764a",
     "/concierge/assets/maps/chicago/level_32.svg": "2d237bce2fe6b46f8f4706bc20ffe11c5d103981",
     "/concierge/assets/maps/chicago/level_33.svg": "00c8e872d8b2dcb1b658d610c272e92fe97beeda",
+    "/concierge/assets/maps/cleveland/level_12.svg": "cfa9d535f1e60af73cfc3484b62f6a5966e087e4",
     "/concierge/assets/maps/colombo/level_08.svg": "4cc651a1e98da21a60809229d156633293ab48a3",
     "/concierge/assets/maps/copenhagen/level_00.svg": "7c01b2b01445301cd312f0b8aea6e3f36d1bb636",
     "/concierge/assets/maps/copenhagen/level_01.svg": "c662f90c05c4b136b5cec1f1b46cc6efb112bcb6",
@@ -562,7 +564,7 @@
     "/concierge/assets/maps/medellin/level_404.svg": "8efd73990b9dc0b0d53e937bcae207ffc75525b2",
     "/concierge/assets/maps/melbourne/level_30.svg": "1e06be0af6c1713806c75d0d5c3b8be095d0017e",
     "/concierge/assets/maps/melbourne/level_31.svg": "42bf2c84c2329b13459e45ee7eccbe0daebb8ce6",
-    "/concierge/assets/maps/miami/level_10.svg": "8cb395583ce93efe1723e7a0ae6f2a931be90aec",
+    "/concierge/assets/maps/miami/level_10.svg": "774926153c678839a247219260031e07d91a20c7",
     "/concierge/assets/maps/milan/level_2.svg": "1cc4642251d5a7f77913c630edc7600cd6820549",
     "/concierge/assets/maps/milan/level_3.svg": "152941d0d598f26b63a917f4b981bc65084c40af",
     "/concierge/assets/maps/milan/level_4.svg": "1002be0d20d0137c4de6785d1509089822c84e54",
@@ -670,8 +672,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "a68af28cf899c4ba0d432865945b9df5187de470",
-    "/concierge/main-es5.js": "6028a2f3e162ecb98f696aa60f9f69b625ea78d9",
+    "/concierge/main-es2015.js": "28c1c1b2eec87efd3a64803e3396eac90cdd462f",
+    "/concierge/main-es5.js": "38523d272b7b6c480ae9279a82f36d3863d4988b",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
