@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1628178129426,
+  "timestamp": 1628507794110,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -226,6 +226,7 @@
         "/concierge/assets/maps/milan/level_3.svg",
         "/concierge/assets/maps/milan/level_4.svg",
         "/concierge/assets/maps/milan/level_5.svg",
+        "/concierge/assets/maps/minneapolis/level_23.svg",
         "/concierge/assets/maps/montreal/level_44.svg",
         "/concierge/assets/maps/moscow/level_03.svg",
         "/concierge/assets/maps/moscow/level_04.svg",
@@ -569,6 +570,7 @@
     "/concierge/assets/maps/milan/level_3.svg": "41ad67965c354b1657d3162432a6a069bf607aeb",
     "/concierge/assets/maps/milan/level_4.svg": "8e6de911f9942b0c69eed7e38614402715c2282c",
     "/concierge/assets/maps/milan/level_5.svg": "1dfa215dab88d03cc7696d22d8fb35d9b4abdd83",
+    "/concierge/assets/maps/minneapolis/level_23.svg": "62f26e14458d176396d92b78d9165894963867f4",
     "/concierge/assets/maps/montreal/level_44.svg": "9ceac73893c09f8c5473155f2f6f79fc3f6c22a4",
     "/concierge/assets/maps/moscow/level_03.svg": "4880ee743066f2e04082be06b0fcd5a0fa2cc21e",
     "/concierge/assets/maps/moscow/level_04.svg": "69d25bd1ddfe6474230ec2e5cdb2bc60b975ab36",
@@ -672,8 +674,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "93377ffa5ef9f5c9ff164d926099a8fbff372c5f",
-    "/concierge/main-es5.js": "cbe22b15f14cf8c785df9569962c1226ebed2a0c",
+    "/concierge/main-es2015.js": "3e8460cb3c76bebd7dc969ce6b88b934876b5314",
+    "/concierge/main-es5.js": "f63a0931382f55afb7c1f7346cf2fc079c477741",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
