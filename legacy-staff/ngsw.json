@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1628692963311,
+  "timestamp": 1628698118024,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -842,7 +842,7 @@
     "/legacy-staff/assets/maps/warsaw/.gitkeep": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/legacy-staff/assets/maps/warsaw/level_05.svg": "bc3b927aba3dfdb38f79847a0dd18d76cd6d975e",
     "/legacy-staff/assets/maps/washington_dc/level_10.svg": "12e9b87c703858e83f2cdd4bc6b59729b110bdcd",
-    "/legacy-staff/assets/maps/washington_dc/level_11.svg": "7eff82f197b717152be6b94c1b9b905cf6f08091",
+    "/legacy-staff/assets/maps/washington_dc/level_11.svg": "2ee77e22c656769c24903f3efee74b499e76d131",
     "/legacy-staff/assets/maps/wroclaw/level_05.svg": "152c640a36a86b23b5c7b6a8386c7277f998934d",
     "/legacy-staff/assets/maps/wroclaw/level_06.svg": "13bf9d3b8c18ceebf559d0e19fac112344c90d59",
     "/legacy-staff/assets/maps/zagreb/level_08.svg": "3a02c36f0d32424c9632aadcaa194b70a59c77d1",
@@ -856,8 +856,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "335ef58eb5d90b6282fc1b0d30cebefa4557d05c",
-    "/legacy-staff/main-es5.js": "523cac20f7d52dcc60ecea2cecc710ce7d43de15",
+    "/legacy-staff/main-es2015.js": "345d901ce09bd89e0cd79c1e8eee09547bc19638",
+    "/legacy-staff/main-es5.js": "88f4a78dff2d291cacfd58af0dc7c2c436fcdf4c",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
