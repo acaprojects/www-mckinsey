@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1628698066565,
+  "timestamp": 1628782170218,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -408,6 +408,7 @@
         "/staff/assets/maps/toronto/level_02.svg",
         "/staff/assets/maps/toronto/level_03.svg",
         "/staff/assets/maps/toronto_pmx/level_24.svg",
+        "/staff/assets/maps/vancouver/level_28.svg",
         "/staff/assets/maps/waltham/level_01.svg",
         "/staff/assets/maps/waltham/level_02.svg",
         "/staff/assets/maps/waltham/level_03.svg",
@@ -860,6 +861,7 @@
     "/staff/assets/maps/toronto/level_02.svg": "e0134ea614f9c7313828ce6866a1f16592a7b3d2",
     "/staff/assets/maps/toronto/level_03.svg": "cc6ebb7d2097e906f59910e02a8cfe8c7c146f8c",
     "/staff/assets/maps/toronto_pmx/level_24.svg": "fd40cc8f26b158877f54fe82afc2d5191f93aed3",
+    "/staff/assets/maps/vancouver/level_28.svg": "75dfe11d1d745b3480c52af75bd7d845840ec819",
     "/staff/assets/maps/waltham/level_01.svg": "ede70f5fc625072ec1d2fbab47b4f2eaa1324827",
     "/staff/assets/maps/waltham/level_02.svg": "719fb33fb73b9c90e8908e72d25c826741a6bae7",
     "/staff/assets/maps/waltham/level_03.svg": "52b62fcbd39de7b81c8e4cd89247d1846321da8a",
@@ -882,8 +884,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "e5cf5898c5b27b9d5e4d27ef02b4d64256cff4e9",
-    "/staff/main-es5.js": "4c8e840487dac553434bb1138804c7ee02689d49",
+    "/staff/main-es2015.js": "f4836cc6058766562329ef4d5a88ce0cca25da57",
+    "/staff/main-es5.js": "9a5ee7f06351a62b2257b32f3e91b1afe6567711",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
