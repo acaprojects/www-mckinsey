@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1628779469436,
+  "timestamp": 1628781776079,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -397,6 +397,7 @@
         "/legacy-staff/assets/maps/toronto/level_02.svg",
         "/legacy-staff/assets/maps/toronto/level_03.svg",
         "/legacy-staff/assets/maps/toronto_pmx/level_24.svg",
+        "/legacy-staff/assets/maps/vancouver/level_28.svg",
         "/legacy-staff/assets/maps/waltham/level_01.svg",
         "/legacy-staff/assets/maps/waltham/level_02.svg",
         "/legacy-staff/assets/maps/waltham/level_03.svg",
@@ -836,6 +837,7 @@
     "/legacy-staff/assets/maps/toronto/level_02.svg": "e0134ea614f9c7313828ce6866a1f16592a7b3d2",
     "/legacy-staff/assets/maps/toronto/level_03.svg": "cc6ebb7d2097e906f59910e02a8cfe8c7c146f8c",
     "/legacy-staff/assets/maps/toronto_pmx/level_24.svg": "fd40cc8f26b158877f54fe82afc2d5191f93aed3",
+    "/legacy-staff/assets/maps/vancouver/level_28.svg": "75dfe11d1d745b3480c52af75bd7d845840ec819",
     "/legacy-staff/assets/maps/waltham/level_01.svg": "ede70f5fc625072ec1d2fbab47b4f2eaa1324827",
     "/legacy-staff/assets/maps/waltham/level_02.svg": "719fb33fb73b9c90e8908e72d25c826741a6bae7",
     "/legacy-staff/assets/maps/waltham/level_03.svg": "52b62fcbd39de7b81c8e4cd89247d1846321da8a",
@@ -856,8 +858,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "86dbe071ac6ce028b7c668d8151015f07c528ac5",
-    "/legacy-staff/main-es5.js": "f09bc905b008ee785ba690d0266fb0f4d80cc3ab",
+    "/legacy-staff/main-es2015.js": "8e130cab9ef6ac07e56f75a34122f96c3544e1bd",
+    "/legacy-staff/main-es5.js": "98e090959a1a43d2f73f3f3bf86ccddeb24a6c1b",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
