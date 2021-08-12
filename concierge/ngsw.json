@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1628698169922,
+  "timestamp": 1628782279498,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -313,6 +313,7 @@
         "/concierge/assets/maps/toronto/level_02.svg",
         "/concierge/assets/maps/toronto/level_03.svg",
         "/concierge/assets/maps/toronto_pmx/level_24.svg",
+        "/concierge/assets/maps/vancouver/level_28.svg",
         "/concierge/assets/maps/waltham/level_01.svg",
         "/concierge/assets/maps/waltham/level_02.svg",
         "/concierge/assets/maps/waltham/level_03.svg",
@@ -659,6 +660,7 @@
     "/concierge/assets/maps/toronto/level_02.svg": "e0134ea614f9c7313828ce6866a1f16592a7b3d2",
     "/concierge/assets/maps/toronto/level_03.svg": "cc6ebb7d2097e906f59910e02a8cfe8c7c146f8c",
     "/concierge/assets/maps/toronto_pmx/level_24.svg": "fd40cc8f26b158877f54fe82afc2d5191f93aed3",
+    "/concierge/assets/maps/vancouver/level_28.svg": "75dfe11d1d745b3480c52af75bd7d845840ec819",
     "/concierge/assets/maps/waltham/level_01.svg": "ede70f5fc625072ec1d2fbab47b4f2eaa1324827",
     "/concierge/assets/maps/waltham/level_02.svg": "719fb33fb73b9c90e8908e72d25c826741a6bae7",
     "/concierge/assets/maps/waltham/level_03.svg": "52b62fcbd39de7b81c8e4cd89247d1846321da8a",
@@ -678,8 +680,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "5dbc9c344f39c6d5df3f4f822adb575393eee36a",
-    "/concierge/main-es5.js": "2d1e253f28347b9723cf9615fdf851cf8071f35b",
+    "/concierge/main-es2015.js": "5e49880f2848e55375e8c5123784754b254ffd7e",
+    "/concierge/main-es5.js": "a3b415946b2ad9da3ebbf022882d7513bca8dbb8",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
