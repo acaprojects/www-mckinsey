@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1628782934328,
+  "timestamp": 1628848627931,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -767,7 +767,7 @@
     "/legacy-staff/assets/maps/new_york_wtc/level_62.svg": "2d2b354bfaa089b93eee0b845a6c4ee69e54643d",
     "/legacy-staff/assets/maps/new_york_wtc/level_63.svg": "b3acbf0dd2d167169e9cb924fc4fb7bfe8b623ae",
     "/legacy-staff/assets/maps/new_york_wtc/level_64.svg": "4f4486d880bdef1b4fce4ed7b2fed2e4ec457b73",
-    "/legacy-staff/assets/maps/nur-sultan/level_2.svg": "e67ba8e00e7d4ac924611440a0b0bf09fc5cac7a",
+    "/legacy-staff/assets/maps/nur-sultan/level_2.svg": "fe9b1c73d54af31466d15c7739b76d09a7062e54",
     "/legacy-staff/assets/maps/panama/level_21.svg": "b355a8ee037de0ad20b41f405cda0c8f266d16f1",
     "/legacy-staff/assets/maps/perth/level_02.svg": "7cff02ad6851a039fa072971cd16d59a2cec94be",
     "/legacy-staff/assets/maps/perth/level_03.svg": "969ac23d391a7703f6cdf3f2de21cddda928b3b5",
@@ -858,8 +858,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "9a28249f53520df16aa48be967627c6cda59a296",
-    "/legacy-staff/main-es5.js": "c8c91ab7676623c17589a483f0e3ffb9a7519ea5",
+    "/legacy-staff/main-es2015.js": "a6725cddcd807c48d3028f2e0349d4a1d0b5116e",
+    "/legacy-staff/main-es5.js": "ecb8066eace8dc8fa989a114b287b83610b15276",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
