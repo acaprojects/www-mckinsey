@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1629209924447,
+  "timestamp": 1629300779660,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -793,8 +793,8 @@
     "/legacy-staff/assets/maps/poznan/level_e5.svg": "81e5136095ca47b02ff626ed709289a84f02f1cd",
     "/legacy-staff/assets/maps/poznan/level_f1.svg": "4dbd8be5e23a973b11b7093ac516f0ca436a7d22",
     "/legacy-staff/assets/maps/poznan/level_f2.svg": "15ca12441f14b28cbcdfce1c388997bb98cbb4fe",
-    "/legacy-staff/assets/maps/prague/level_09.svg": "75898e58db0f05142abb6dfca43effc06f8c3510",
-    "/legacy-staff/assets/maps/prague/level_10.svg": "068ca716b03498ce3ff77c6cbc8c6e82ab8326bf",
+    "/legacy-staff/assets/maps/prague/level_09.svg": "027d1940ae655ba8368cc6a0dc60524d23ff6aa0",
+    "/legacy-staff/assets/maps/prague/level_10.svg": "9dd12831ca88249f7af64efd66cc827326b5a4eb",
     "/legacy-staff/assets/maps/rio/level_14.svg": "3a64aa56b9412ddcd9ba53ea6ceb4d59904f65e5",
     "/legacy-staff/assets/maps/rome/level_4.svg": "ed992326573ff4b6c560d4d8c19d3abd4c29bb31",
     "/legacy-staff/assets/maps/rome/level_5.svg": "02f7d708dcb94aa3c4f79bec327ad69c96cbcc75",
@@ -868,8 +868,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "6f4ee8addf38d1658014f534fd419cdb4f86a506",
-    "/legacy-staff/main-es5.js": "fc8d49cd2199f2a55f398035fdff0ebc32ece562",
+    "/legacy-staff/main-es2015.js": "0c57f4a139aaeb132b6e97ce617025968835eeff",
+    "/legacy-staff/main-es5.js": "0c66c53d198a6259bbfb5397ad52005533a45871",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
