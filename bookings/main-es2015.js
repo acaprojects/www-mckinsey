@@ -3319,7 +3319,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _space_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./space.class */ "./src/app/services/data/spaces/space.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
 
 
 
@@ -3377,6 +3379,15 @@ class SpacesService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIS
         });
     }
     /**
+     * Observes an item by id and returns the one from the list by id or email that matches id.
+     */
+    observeItem(idOrEmail) {
+        return this._observers.list.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((list) => {
+            const space = list === null || list === void 0 ? void 0 : list.find(i => i.id === idOrEmail || i.email === idOrEmail);
+            return space;
+        }));
+    }
+    /**
      * Convert raw data into API object
      * @param raw_data Raw API data
      */
@@ -3384,7 +3395,7 @@ class SpacesService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIS
         return new _space_class__WEBPACK_IMPORTED_MODULE_2__["Space"](this, raw_data);
     }
 }
-SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function SpacesService_Factory() { return new SpacesService(); }, token: SpacesService, providedIn: "root" });
+SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function SpacesService_Factory() { return new SpacesService(); }, token: SpacesService, providedIn: "root" });
 
 
 /***/ }),
@@ -3672,7 +3683,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user.class */ "./src/app/services/data/users/user.class.ts");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
 
 
 
@@ -3696,6 +3709,11 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPISe
     /** Currently logged in user */
     get current() {
         return this.get('current_user');
+    }
+    get currentUser() {
+        return this._observers.current_user.pipe(
+        // don't want the local user
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["filter"])(u => u.id !== 'local_user'));
     }
     /**
      * Sets the access token and expiry for the user
@@ -3773,6 +3791,7 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPISe
                     }, () => this.timeout('load', () => this.load(++tries).then(() => resolve())));
                 }
                 else {
+                    this.set('current_user', current_user);
                     resolve();
                 }
             }, () => this.timeout('load', () => this.load(++tries).then(() => resolve())));
@@ -3786,7 +3805,7 @@ class UsersService extends _base_service__WEBPACK_IMPORTED_MODULE_4__["BaseAPISe
         return new _user_class__WEBPACK_IMPORTED_MODULE_5__["User"](this, raw_data);
     }
 }
-UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({ factory: function UsersService_Factory() { return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["Location"])); }, token: UsersService, providedIn: "root" });
+UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({ factory: function UsersService_Factory() { return new UsersService(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["Location"])); }, token: UsersService, providedIn: "root" });
 
 
 /***/ }),
@@ -5990,6 +6009,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/base.component */ "./src/app/shared/base.component.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
 
 
 
@@ -6011,6 +6033,16 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
     }
     ngOnInit() {
         this.loading = true;
+        // Subscribe to the current user so when the user is no longer "local", but instead
+        // identifies the room by email and then redirects to the panel with the space ID.
+        this.subscription('User.currentUser', this.service.Users.currentUser
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(current => !!current), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])((prev, current) => prev.email === current.email), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mergeMap"])(current => Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["from"])(this.service.Spaces.show(current.email))
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(_ => Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(undefined)))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])())
+            .subscribe((space) => {
+            this.manual_input = true;
+            this.system_id = space.id;
+            this.bootstrap();
+        }));
         this.service.Spaces.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])(_ => _)).subscribe(() => {
             this.subscription('route.query', this.route.queryParamMap.subscribe((params) => {
                 if (params.has('clear') && params.get('clear')) {
@@ -8539,16 +8571,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "b2b637b",
-    "hash": "b2b637b",
+    "raw": "4d424a6",
+    "hash": "4d424a6",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "b2b637b",
+    "suffix": "4d424a6",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1610487822787
+    "time": 1629296358158
 };
 /* tslint:enable */
 
