@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1629305878971,
+  "timestamp": 1629369311523,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -532,8 +532,8 @@
     "/concierge/assets/maps/dusseldorf/level_20.svg": "e66189e8caec8864a7bc3b2b370cc130c3f3a9f9",
     "/concierge/assets/maps/dusseldorf/level_21.svg": "e0c877a238db0eca694be4e3e0965b373d63a314",
     "/concierge/assets/maps/dusseldorf/level_22.svg": "ed54b56446439e65247e02cc698610b5ef961682",
-    "/concierge/assets/maps/frankfurt/level_36.svg": "d318f2a8ada8d7a69b340e6dc46f100717d70159",
-    "/concierge/assets/maps/frankfurt/level_37.svg": "c8daeefcf620d7a659b6bc081c5fdefa18b56107",
+    "/concierge/assets/maps/frankfurt/level_36.svg": "4c70d2ec85593019b0bf715601f618a63a629944",
+    "/concierge/assets/maps/frankfurt/level_37.svg": "84f71df962b7ddd1cffe75836eeb116bde87f472",
     "/concierge/assets/maps/gothenburg/level_02.svg": "05ba9da2478ec359081245b5752479d36302b09c",
     "/concierge/assets/maps/gurugram/level_01.svg": "2e9d5e2f81f1134d9a2c16f2b70eb239a947e60d",
     "/concierge/assets/maps/gurugram/level_02.svg": "6c2c7fd3f9bbf4de526c19310045a79564379003",
@@ -690,8 +690,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "f9512a5008bc63ba549d827c59f67399ddae49a8",
-    "/concierge/main-es5.js": "9a366ddc734acf8139639883dbb688a65443c961",
+    "/concierge/main-es2015.js": "c91c73d932639feb7e203ac70841e7d94c728720",
+    "/concierge/main-es5.js": "26864e7d885c9794cc9dcdd99a237efd1f4c4112",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
