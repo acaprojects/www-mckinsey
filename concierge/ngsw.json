@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1629827654646,
+  "timestamp": 1629829445270,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -82,6 +82,7 @@
         "/concierge/assets/icons/mstile-310x150.png",
         "/concierge/assets/icons/mstile-310x310.png",
         "/concierge/assets/icons/mstile-70x70.png",
+        "/concierge/assets/img/access-denied.svg",
         "/concierge/assets/img/book_desk.svg",
         "/concierge/assets/img/book_room.svg",
         "/concierge/assets/img/close_outline.svg",
@@ -434,6 +435,7 @@
     "/concierge/assets/icons/mstile-310x150.png": "2e85cd2ae48153b16a71d9b1b3c24906f1e6dbd0",
     "/concierge/assets/icons/mstile-310x310.png": "443404399628aea17a5f04a97be68452c9603954",
     "/concierge/assets/icons/mstile-70x70.png": "8c55c5bc87cdef89ec7f5620d98011bf952bb244",
+    "/concierge/assets/img/access-denied.svg": "7564eb26c76bc38a197b90c2d8a11f8fbc054fb6",
     "/concierge/assets/img/book_desk.svg": "7898795138dbd43202541a8569252ddb0032c14f",
     "/concierge/assets/img/book_room.svg": "08a138b8c872230e088b1285095f53bbe4a002c8",
     "/concierge/assets/img/close_outline.svg": "099d3d28bf8764f685a0d2749da07d04bb767611",
@@ -690,8 +692,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "dfc08dddfa776b7ab3399b43b218378c8e497d96",
-    "/concierge/main-es5.js": "2ffda7e152b2c121c3c8241a545db2bf949e40af",
+    "/concierge/main-es2015.js": "05d6068f3aea0997989bfa9d4ff99df3a6a3874b",
+    "/concierge/main-es5.js": "3e4407152173e0f4bb7a605395f988a5b2e200d9",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
