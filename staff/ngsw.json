@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1629369789677,
+  "timestamp": 1630062953865,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -837,9 +837,9 @@
     "/staff/assets/maps/san_jose/level_06.svg": "91db3e00e5a8d2ed8cadcd6ad65a7af3b746644a",
     "/staff/assets/maps/san_jose/level_07.svg": "a9585f08c063dccca983ca258fb2dd4e079aedf4",
     "/staff/assets/maps/san_jose/level_08.svg": "8d44554c64b981a68206a36e42a85d51c26370c5",
-    "/staff/assets/maps/sao_paulo/level_21.svg": "caaf84f6ae74e877ca9284dbd43b1933bc67eb94",
-    "/staff/assets/maps/sao_paulo/level_22.svg": "4953acda457f90967de95a7e98dce9d3b323e3de",
-    "/staff/assets/maps/sao_paulo/level_23.svg": "572f5aa8a1a6f955366555934cb0d359a03cf08e",
+    "/staff/assets/maps/sao_paulo/level_21.svg": "d0a08ffb8eb63b43a09d50c5fa1d4a42e40a052d",
+    "/staff/assets/maps/sao_paulo/level_22.svg": "11f9269c0475b820ff5d74f79baeab635720ac6b",
+    "/staff/assets/maps/sao_paulo/level_23.svg": "510874e8531d83acb47c4a5851c440b84dc748ce",
     "/staff/assets/maps/seattle/level_43.svg": "f9f02ceff62f5b3ee378f7ed6de5d1a0125ed12c",
     "/staff/assets/maps/seoul/level_54.svg": "0123b7e0f6df2897aec667058fac2b3300571efb",
     "/staff/assets/maps/seoul/level_55.svg": "9f879ff41b6ea7afa8dd0c39ac3fd28d5a85f781",
@@ -898,8 +898,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "d9910735ca2ea61645d244076100b1b3fe4f24f0",
-    "/staff/main-es5.js": "4da559b80ad59c6c0e3e40efe643492a98352d74",
+    "/staff/main-es2015.js": "7bb2730405900a5e728d6db915bc7681db306198",
+    "/staff/main-es5.js": "369404dc82f10312efa83c8f069ff9673e978a2f",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
