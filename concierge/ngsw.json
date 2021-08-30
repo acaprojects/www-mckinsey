@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1630070715235,
+  "timestamp": 1630339851961,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -99,6 +99,7 @@
         "/concierge/assets/img/logo-inverse.svg",
         "/concierge/assets/img/logo.svg",
         "/concierge/assets/img/menus.jpg",
+        "/concierge/assets/img/no-catering-room.svg",
         "/concierge/assets/img/no-catering.svg",
         "/concierge/assets/img/orders.jpg",
         "/concierge/assets/img/report-booking.svg",
@@ -452,6 +453,7 @@
     "/concierge/assets/img/logo-inverse.svg": "1c96a25f61231a0f2f325be7c259df02dc67fa7b",
     "/concierge/assets/img/logo.svg": "31333281839d4feb3502ff90f90a95de725e502e",
     "/concierge/assets/img/menus.jpg": "6e6080aabfeed4acfbcb47c4ce546a6076b0edd0",
+    "/concierge/assets/img/no-catering-room.svg": "b7fc7e06895eb10b6dc49089cb13d1b025174dc4",
     "/concierge/assets/img/no-catering.svg": "a046e0ab0f8668896ab84294418c96350730e781",
     "/concierge/assets/img/orders.jpg": "d444da6f6ef20ae2975da80b16fe2f751f1dcbc0",
     "/concierge/assets/img/report-booking.svg": "a206bac8d8edf99f24f5aa32b2150720ae6e3848",
@@ -692,8 +694,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "544ada3171dea87ac1598748490376a527249920",
-    "/concierge/main-es5.js": "f85d8d3ec20e2caabb69bc8ff518dbc7d9b57a2b",
+    "/concierge/main-es2015.js": "6d54048a787b6a12223485ce8dc0961cf093e905",
+    "/concierge/main-es5.js": "5a90bf7ab180291346f97d6361487f7acc1eb1f9",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
