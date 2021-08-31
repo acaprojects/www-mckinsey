@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1630071027288,
+  "timestamp": 1630412409654,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -843,9 +843,9 @@
     "/staff/assets/maps/seattle/level_43.svg": "f9f02ceff62f5b3ee378f7ed6de5d1a0125ed12c",
     "/staff/assets/maps/seoul/level_54.svg": "0123b7e0f6df2897aec667058fac2b3300571efb",
     "/staff/assets/maps/seoul/level_55.svg": "9f879ff41b6ea7afa8dd0c39ac3fd28d5a85f781",
-    "/staff/assets/maps/shanghai/level_20.svg": "1db4b7ab88f05a65b8798ea90c6e8c4089a1edd0",
-    "/staff/assets/maps/shanghai/level_21.svg": "eaacb270728d27e1816157ea85df85e7c85999d0",
-    "/staff/assets/maps/shanghai/level_22.svg": "c2966cbe825010791063021f6addf6ce422b4b3c",
+    "/staff/assets/maps/shanghai/level_20.svg": "2b9599da6c192d06163f355d841589b044ece16f",
+    "/staff/assets/maps/shanghai/level_21.svg": "c96f461d56f7771c2a9a9392087ebf6528a0de9d",
+    "/staff/assets/maps/shanghai/level_22.svg": "158ad7e310b2ed7e28bd8df0b857096c8a156168",
     "/staff/assets/maps/shenzhen/level_39.svg": "82ab11328673ef667db2bf02a904849dfade386b",
     "/staff/assets/maps/silicon_valley/level_02.svg": "78e49d37094e6b2a8e22180318c85698f38709d9",
     "/staff/assets/maps/silicon_valley/level_03.svg": "09c16335ae73a897203ce9d95be1a873f88424dc",
@@ -898,8 +898,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "fc6d85d84cac482d4979ffe22f29b208849cfcab",
-    "/staff/main-es5.js": "8052af36e421c358e5490a705c5853203e04a6e6",
+    "/staff/main-es2015.js": "84bf5fa2c87ae8bdc56b6ba089e46460ed3619d3",
+    "/staff/main-es5.js": "2c64be5a16cb68694e385133cb7c05ae18836984",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
