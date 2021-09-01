@@ -76,25 +76,9 @@
                     "id": "internal"
                 },
                 {
-                    "name": "Client",
-                    "id": "client"
-                },
-                {
                     "name": "External",
                     "id": "external"
                 },
-                {
-                    "name": "Setup",
-                    "id": "setup"
-                },
-                {
-                    "name": "Training",
-                    "id": "training"
-                },
-                {
-                    "name": "Interview",
-                    "id": "interview"
-                }
             ],
             "show_fields": [
                 "attendees",
