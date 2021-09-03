@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1630578125120,
+  "timestamp": 1630676912008,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -297,6 +297,7 @@
         "/concierge/assets/maps/singapore/level_24.svg",
         "/concierge/assets/maps/solingen/level_01.svg",
         "/concierge/assets/maps/st_louis/level_08.svg",
+        "/concierge/assets/maps/stamford/level_4.svg",
         "/concierge/assets/maps/stockholm/level_06.svg",
         "/concierge/assets/maps/stockholm/level_07.svg",
         "/concierge/assets/maps/stockholm/level_08.svg",
@@ -651,6 +652,7 @@
     "/concierge/assets/maps/singapore/level_24.svg": "86c260e8e97661aec34d7d2c72d797c1338ae14b",
     "/concierge/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
     "/concierge/assets/maps/st_louis/level_08.svg": "9fad82b1b7e9371057fdcadd41abfe155fd4b451",
+    "/concierge/assets/maps/stamford/level_4.svg": "0c1980b4adb8f03b7281a77f6eb99e23a046e642",
     "/concierge/assets/maps/stockholm/level_06.svg": "ee4259dc66349d12e2d0cb0b4142f7f0ea649b1b",
     "/concierge/assets/maps/stockholm/level_07.svg": "61441e173fecaf1fddcbf33951367c2e4538c784",
     "/concierge/assets/maps/stockholm/level_08.svg": "13e6273af73a929081029b5518f26c3b324889ac",
@@ -694,8 +696,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "8019d3ace45dda7acf04ac0bdb4198fe8e2daf53",
-    "/concierge/main-es5.js": "5f7254a386c90c98f30e5b9bae0a69628c94e03e",
+    "/concierge/main-es2015.js": "31bd7d5d1161dc50de20254cb58d26522a9c485c",
+    "/concierge/main-es5.js": "3c412857c1970dbaa1daef16dfdd8c4a2658a639",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
