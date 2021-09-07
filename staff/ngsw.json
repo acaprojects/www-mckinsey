@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1631012529159,
+  "timestamp": 1631012918687,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -377,6 +377,8 @@
         "/staff/assets/maps/san_jose/level_06.svg",
         "/staff/assets/maps/san_jose/level_07.svg",
         "/staff/assets/maps/san_jose/level_08.svg",
+        "/staff/assets/maps/santiago/level_19.svg",
+        "/staff/assets/maps/santiago/level_20.svg",
         "/staff/assets/maps/sao_paulo/level_21.svg",
         "/staff/assets/maps/sao_paulo/level_22.svg",
         "/staff/assets/maps/sao_paulo/level_23.svg",
@@ -838,6 +840,8 @@
     "/staff/assets/maps/san_jose/level_06.svg": "0a47ed8f8306c53f6b9cdd0f279cc8625d6691d8",
     "/staff/assets/maps/san_jose/level_07.svg": "345c1a06de8308dee1debf3d8cebff363043cac4",
     "/staff/assets/maps/san_jose/level_08.svg": "87d7ecfcd6592e474e8807fbd9a819150878a35c",
+    "/staff/assets/maps/santiago/level_19.svg": "2035cdfa46e3dd99d79f04dcf8b0e39c9d765bdd",
+    "/staff/assets/maps/santiago/level_20.svg": "c3bd861044a476a32826d87c90d623f51f0cec4f",
     "/staff/assets/maps/sao_paulo/level_21.svg": "d0a08ffb8eb63b43a09d50c5fa1d4a42e40a052d",
     "/staff/assets/maps/sao_paulo/level_22.svg": "11f9269c0475b820ff5d74f79baeab635720ac6b",
     "/staff/assets/maps/sao_paulo/level_23.svg": "510874e8531d83acb47c4a5851c440b84dc748ce",
@@ -900,8 +904,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "e6c2174607cfde37814ff8836fb75aec0f1d0349",
-    "/staff/main-es5.js": "b5c4f3a6c9ede5839eb0c8020f6249a227e4a3aa",
+    "/staff/main-es2015.js": "71769cfcc5b909eae59df1e848d7c4f8ac55c9bc",
+    "/staff/main-es5.js": "f40a5fad278c99eae9a4e1ee0fe07fc25c433c01",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
