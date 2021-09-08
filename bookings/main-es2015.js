@@ -3080,7 +3080,7 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
         this.service = service;
         const settings = raw_data.settings || {};
         this.zones = raw_data.zones instanceof Array ? raw_data.zones : [];
-        this._theme_rbp = settings.theme_rbp || raw_data.theme_rbp || (this.building.setting('theme_rpb'));
+        this._theme_rbp = settings.theme_rbp || raw_data.theme_rbp || (this.building.setting('theme_rpb')) || 'v1';
         console.log('set this._theme_rbp', this._theme_rbp);
         this._locale_code = raw_data.locale_code || this.building.setting('locale_code');
         this.long_name = settings.long_name || raw_data.long_name;
@@ -8573,16 +8573,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "7141a0d",
-    "hash": "7141a0d",
+    "raw": "95bb3b4",
+    "hash": "95bb3b4",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "7141a0d",
+    "suffix": "95bb3b4",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1631032904681
+    "time": 1631109562111
 };
 /* tslint:enable */
 
