@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1631100829447,
+  "timestamp": 1631103379004,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -892,7 +892,7 @@
     "/staff/assets/maps/washington_dc/level_10.svg": "12e9b87c703858e83f2cdd4bc6b59729b110bdcd",
     "/staff/assets/maps/washington_dc/level_11.svg": "2ee77e22c656769c24903f3efee74b499e76d131",
     "/staff/assets/maps/wroclaw/level_05.svg": "5cf4d6437dc7d9f8dafbf4176ff27289bb019301",
-    "/staff/assets/maps/wroclaw/level_06.svg": "efe127f3586188b8e641382811793bf36c1aeb7b",
+    "/staff/assets/maps/wroclaw/level_06.svg": "7d372fe27d0296f846272e914ce279383dae35fc",
     "/staff/assets/maps/zagreb/level_08.svg": "3a02c36f0d32424c9632aadcaa194b70a59c77d1",
     "/staff/assets/new-relic.js": "5010feb7ede36abe3878678c9b91ceb74509b172",
     "/staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
@@ -906,8 +906,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "b2030efad82d4a4dcc88912d45b57b8a1b3c0084",
-    "/staff/main-es5.js": "b5d0542b004af3e0381e83add85a6cdda9637767",
+    "/staff/main-es2015.js": "7940ce4ad2d227b7f7c1f09268fac89b406c93ff",
+    "/staff/main-es5.js": "ddf1a2fa96fdfe17ca0726074c4902e783632cf8",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
