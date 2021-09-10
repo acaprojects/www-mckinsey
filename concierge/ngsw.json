@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1631203628126,
+  "timestamp": 1631269325669,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -582,7 +582,7 @@
     "/concierge/assets/maps/medellin/level_404.svg": "8efd73990b9dc0b0d53e937bcae207ffc75525b2",
     "/concierge/assets/maps/melbourne/level_30.svg": "1e06be0af6c1713806c75d0d5c3b8be095d0017e",
     "/concierge/assets/maps/melbourne/level_31.svg": "42bf2c84c2329b13459e45ee7eccbe0daebb8ce6",
-    "/concierge/assets/maps/mexico/level_23.svg": "6347c96a06caeb0f10ab8a52e9aa8a5c69744b22",
+    "/concierge/assets/maps/mexico/level_23.svg": "14c99391507e19afc2615c7d1fbaf69151751b35",
     "/concierge/assets/maps/miami/level_10.svg": "774926153c678839a247219260031e07d91a20c7",
     "/concierge/assets/maps/milan/level_2.svg": "e9f120e3e432df2a63f3f47b1f6ba7c065c4efee",
     "/concierge/assets/maps/milan/level_3.svg": "41ad67965c354b1657d3162432a6a069bf607aeb",
@@ -702,8 +702,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "18930c3a758166fb10080f7bd914b312a4d5b8d2",
-    "/concierge/main-es5.js": "9feb9adb50f02aa8a71f21241bb1992d3dd0be3e",
+    "/concierge/main-es2015.js": "952ac939153c2b283f356442ed5310589fb919f0",
+    "/concierge/main-es5.js": "d0efac2489e541fdff4a210e045cbd9dd31a9c09",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
