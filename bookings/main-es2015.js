@@ -1138,6 +1138,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
                 this._bookings.init();
                 this._spaces.init();
                 this._polling.init();
+                this._systems.load();
                 this._initialised.next(true);
             });
         });
@@ -1437,7 +1438,19 @@ class BaseAPIService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_3__["Ba
      * Initailise service
      */
     init() {
-        this.load().then(_ => this._initialised.next(true));
+        if (!this.parent || !this.parent.is_initialised) {
+            return this.timeout('init', () => this.init());
+        }
+        if (this.shouldLoadOnInit()) {
+            this.load().then(_ => this._initialised.next(true));
+        }
+    }
+    /**
+     * Override to prevent loading.
+     * @protected
+     */
+    shouldLoadOnInit() {
+        return true;
     }
     /**
      * Get API route for the service
@@ -3057,6 +3070,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_manager_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 /* harmony import */ var _organisation_building_class__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisation/building.class */ "./src/app/services/data/organisation/building.class.ts");
 /* harmony import */ var _organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisation/organisation.class */ "./src/app/services/data/organisation/organisation.class.ts");
+/* harmony import */ var _organisation_level_class__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../organisation/level.class */ "./src/app/services/data/organisation/level.class.ts");
+
 
 
 
@@ -3149,7 +3164,6 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
         return this._locale_code || this.building.setting('locale_code') || 'en';
     }
     get theme_rbp() {
-        console.log('get theme_rbp', this._theme_rbp || this.building.setting('theme_rbp') || 'v1');
         return this._theme_rbp || this.building.setting('theme_rbp') || 'v1';
     }
     /** List of stored bookings for the space */
@@ -3170,7 +3184,7 @@ class Space extends _base_api_class__WEBPACK_IMPORTED_MODULE_0__["BaseDataClass"
     /** Level in which the space is associated */
     get level() {
         const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__["Organisation"]);
-        return service ? service.levelWithID(this.zones) : null;
+        return service ? service.levelWithID(this.zones) :  false || new _organisation_level_class__WEBPACK_IMPORTED_MODULE_8__["BuildingLevel"]({});
     }
     get building() {
         const service = _service_manager_class__WEBPACK_IMPORTED_MODULE_5__["ServiceManager"].serviceFor(_organisation_organisation_class__WEBPACK_IMPORTED_MODULE_7__["Organisation"]);
@@ -3338,6 +3352,9 @@ class SpacesService extends _base_service__WEBPACK_IMPORTED_MODULE_1__["BaseAPIS
             return a.level.building_id === bld.id;
         };
     }
+    shouldLoadOnInit() {
+        return false;
+    }
     /**
      * Get available spaces
      * @param options
@@ -3411,23 +3428,21 @@ SpacesService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInj
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SystemsManagerService", function() { return SystemsManagerService; });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
-/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/base.class */ "./src/app/shared/base.class.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
+/* harmony import */ var _shared_base_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/base.class */ "./src/app/shared/base.class.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
 
 
-
-class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_3__["BaseClass"] {
+class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_2__["BaseClass"] {
     constructor() {
         super();
         /** Subject for System list */
         this._list = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"]([]);
         /** Observable for system list */
         this.systems = this._list.asObservable();
-        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["listenForToken"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["delay"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["first"])(_ => Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["hasToken"])())).subscribe(() => this.load());
+        // listenForToken().pipe(delay(500), first(_ => hasToken())).subscribe(() => this.load());
     }
     /** List of available systems */
     get list() {
@@ -3440,12 +3455,13 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
      * @param index Index of the module
      */
     get(sys_id, mod_id, index) {
-        return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["getModule"])(sys_id, mod_id, index);
+        return Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["getModule"])(sys_id, mod_id, index);
     }
     /**
      * Load Systems
      */
     load() {
+        console.log('1 loadSystems');
         this.loadSystems();
     }
     /**
@@ -3453,7 +3469,7 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
      * @param offset Item offset for the page to load
      */
     loadSystems(offset = 0, limit = 2000) {
-        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_2__["querySystems"])({ offset, limit })
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_1__["querySystems"])({ offset, limit })
             .toPromise()
             .then((details) => {
             const systems = [...this.list, ...details.data];
@@ -3466,7 +3482,7 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
             .catch((e) => this.timeout('retry', () => this.loadSystems(offset), 2000));
     }
 }
-SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({ factory: function SystemsManagerService_Factory() { return new SystemsManagerService(); }, token: SystemsManagerService, providedIn: "root" });
+SystemsManagerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function SystemsManagerService_Factory() { return new SystemsManagerService(); }, token: SystemsManagerService, providedIn: "root" });
 
 
 /***/ }),
@@ -6007,10 +6023,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
 /* harmony import */ var _shared_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/base.component */ "./src/app/shared/base.component.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-
 
 
 
@@ -6027,7 +6042,7 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         /** Selected system to bootstrap */
         this.selected_system = null;
         // ensure app is trusted in dev mode so we can preserve login.
-        if (!_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
+        if (!_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
             localStorage.setItem('trusted', 'true');
         }
     }
@@ -6036,65 +6051,44 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         // Subscribe to the current user so when the user is no longer "local", but instead
         // identifies the room by email and then redirects to the panel with the space ID.
         this.subscription('User.currentUser', this.service.Users.currentUser
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(current => !!current), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])((prev, current) => prev.email === current.email), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mergeMap"])(current => Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["from"])(this.service.Spaces.show(current.email))
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(_ => Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(undefined)))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])())
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(current => !!current), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["mergeMap"])(current => {
+            this.email = current.email;
+            console.log('current.email', current.email);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["from"])(this.service.Spaces.show(current.email)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(_ => Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(undefined)));
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["distinctUntilChanged"])())
             .subscribe((space) => {
-            this.manual_input = true;
-            this.system_id = space.id;
-            this.bootstrap();
+            this.loading = false;
+            console.log('this.loading', this.loading);
+            if (space) {
+                this.manual_input = true;
+                this.system_id = space.id;
+                this.bootstrap();
+            }
+            else {
+                this.subscription('system_list', this.service.Systems.systems.subscribe((systems) => {
+                    this.system_list = systems || [];
+                    this.manual_input = !this.system_list || this.system_list.length <= 0;
+                }));
+            }
         }));
-        this.service.Spaces.initialised.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])(_ => _)).subscribe(() => {
-            this.subscription('route.query', this.route.queryParamMap.subscribe((params) => {
-                if (params.has('clear') && params.get('clear')) {
-                    this.clearBootstrap();
-                }
-                if (params.has('system_id') || params.has('sys_id')) {
-                    this.system_id = params.get('system_id') || params.get('sys_id');
-                    this.manual_input = true;
-                    this.bootstrap();
-                }
-            }));
-            this.subscription('system_list', this.service.Systems.systems.subscribe((systems) => {
-                this.system_list = systems || [];
-                this.manual_input = !this.system_list || this.system_list.length <= 0;
-                this.loading = false;
-            }));
-            this.checkBootstrapped();
-        });
     }
     /**
      * Setup the default system for the application to bind to
      */
     bootstrap() {
+        if (localStorage) {
+            const system_id = localStorage.getItem('ACA.PANEL.system') || localStorage.getItem('ACA.CONTROL.system');
+            if (system_id) {
+                this.manual_input = true;
+                this.system_id = system_id;
+            }
+        }
         if (this.manual_input && this.system_id) {
             this.configure(this.system_id);
         }
         else if (this.selected_system) {
             this.configure(this.selected_system.id);
         }
-    }
-    /**
-     * Check if the application has previously been bootstrapped
-     */
-    checkBootstrapped() {
-        if (localStorage) {
-            const system_id = localStorage.getItem('ACA.PANEL.system') || localStorage.getItem('ACA.CONTROL.system');
-            if (system_id) {
-                this.service.log('BOOT', `Already bootstrapped, redirecting to ${system_id}...`);
-                this.service.navigate(['panel', system_id]);
-                return;
-            }
-        }
-        const user = this.service.Users.current;
-        if (user && user.email) {
-            const space = this.service.Spaces.item(user.email);
-            if (space) {
-                this.service.log('BOOT', `Bootstrapped as user, redirecting to ${space.id}...`);
-                this.service.navigate(['panel', space.id]);
-                return;
-            }
-        }
-        this.loading = false;
     }
     /**
      * Save the bootstrapped ID and redirect to the panel for that ID
@@ -6106,14 +6100,6 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
             localStorage.setItem('ACA.PANEL.system', system_id);
         }
         this.service.navigate(['panel', system_id]);
-    }
-    /**
-     * Remove any previously set bootstrapping details
-     */
-    clearBootstrap() {
-        if (localStorage) {
-            localStorage.removeItem('ACA.PANEL.system');
-        }
     }
 }
 
@@ -7322,38 +7308,37 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         this._translate.setDefaultLang('en');
         this.subscription('app_ready', this._service.initialised.subscribe((is_ready) => {
             if (is_ready) {
-                this.subscription('route.params', this._route.paramMap.subscribe(params => {
-                    if (params.has('system_id')) {
-                        this.system_id = params.get('system_id');
-                        this._service.set('system', this.system_id);
-                    }
+                this.subscription('route.params', this._route.paramMap
+                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["mergeMap"])(params => {
+                    this.system_id = params.get('system_id');
+                    this._service.set('system', this.system_id);
+                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["from"])(this._service.Spaces.show(this.system_id)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["catchError"])(_ => Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])(undefined)));
+                }))
+                    .subscribe(space => {
+                    this.foundSpace = space;
                 }));
                 this.subscription('spaces_list_levels', Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["combineLatest"])([
-                    this._service.Spaces
-                        .listen('list')
-                        .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(spaces => spaces.filter(space => space.id === this.system_id))),
                     this._service.Organisation.listen('levels'),
                     this.bookingsLoaded
-                ]).subscribe(([spaces, levels, bookings]) => {
-                    if (spaces.length >= 1 && levels.length > 0) {
+                ]).subscribe(([levels, bookings]) => {
+                    if (this.foundSpace && levels.length > 0) {
                         // this requires a refactor, but essentially the rules will check for building
                         // levels. We need to listen for level loading to then load the rules.
-                        const foundSpace = spaces[0];
+                        // const foundSpace = spaces[0];
                         // As per MCK-480, these default options are based on the staff map default rules,
                         // except for the host "user". The RBP does not have a real user so, we do not
                         // evaluate rules for the user. This may lead to some inconsistencies when looking at
                         // booking panel vs the staff application. In future we should place defaults in a better spot.
-                        this.rules = foundSpace.rulesFor({
+                        this.rules = this.foundSpace.rulesFor({
                             date: dayjs__WEBPACK_IMPORTED_MODULE_2__().valueOf(),
                             duration: 30
                         });
                         this._service.log('Panel', 'Evaluated Rules', this.rules);
-                        this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, Object.assign(Object.assign({}, foundSpace), { bookings, theme_rbp: this._theme })));
+                        this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, Object.assign(Object.assign({}, this.foundSpace), { bookings, theme_rbp: this._theme })));
                     }
                 }));
                 this.timeout('websocket', () => {
                     this.websocket_connected = true;
-                    // status().subscribe(status => this.websocket_connected = status);
                 });
                 this.unsub('app_ready');
             }
@@ -8571,16 +8556,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "2d03e18",
-    "hash": "2d03e18",
+    "raw": "f609c3e",
+    "hash": "f609c3e",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "2d03e18",
+    "suffix": "f609c3e",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1631116324235
+    "time": 1631563467140
 };
 /* tslint:enable */
 
