@@ -3461,7 +3461,6 @@ class SystemsManagerService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_
      * Load Systems
      */
     load() {
-        console.log('1 loadSystems');
         this.loadSystems();
     }
     /**
@@ -6053,12 +6052,10 @@ class BootstrapComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE
         this.subscription('User.currentUser', this.service.Users.currentUser
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(current => !!current), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["mergeMap"])(current => {
             this.email = current.email;
-            console.log('current.email', current.email);
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["from"])(this.service.Spaces.show(current.email)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(_ => Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(undefined)));
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["distinctUntilChanged"])())
             .subscribe((space) => {
             this.loading = false;
-            console.log('this.loading', this.loading);
             if (space) {
                 this.manual_input = true;
                 this.system_id = space.id;
@@ -8556,16 +8553,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "f609c3e",
-    "hash": "f609c3e",
+    "raw": "16b8ae2",
+    "hash": "16b8ae2",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f609c3e",
+    "suffix": "16b8ae2",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1631563467140
+    "time": 1631563642583
 };
 /* tslint:enable */
 
