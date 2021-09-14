@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1631568451611,
+  "timestamp": 1631617355385,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -258,6 +258,7 @@
         "/legacy-staff/assets/maps/copenhagen/level_02.svg",
         "/legacy-staff/assets/maps/copenhagen/level_03.svg",
         "/legacy-staff/assets/maps/copenhagen/level_04.svg",
+        "/legacy-staff/assets/maps/dallas/level_18.svg",
         "/legacy-staff/assets/maps/delhi/level_01.svg",
         "/legacy-staff/assets/maps/delhi/level_gr.svg",
         "/legacy-staff/assets/maps/doha/level_01.svg",
@@ -709,6 +710,7 @@
     "/legacy-staff/assets/maps/copenhagen/level_02.svg": "b439d2593188a433acb52e87857e2db2e401ef23",
     "/legacy-staff/assets/maps/copenhagen/level_03.svg": "dd08b67f27adf5aad5619f52376d815e77f22b1f",
     "/legacy-staff/assets/maps/copenhagen/level_04.svg": "1a51558b84e6b3ffd4845e9fa3886f250d4ba8dc",
+    "/legacy-staff/assets/maps/dallas/level_18.svg": "3fbc28e4d510531f0c97038b6a92eda1912941aa",
     "/legacy-staff/assets/maps/delhi/level_01.svg": "ff3f683d3dedeff26f4e4e60816e67e37fae3e9b",
     "/legacy-staff/assets/maps/delhi/level_gr.svg": "019c0a897fa64dd90f98fcfdbe478667a5dd3625",
     "/legacy-staff/assets/maps/doha/level_01.svg": "d78bee9bd18af89e6003007682db4d9de1ffb7c5",
@@ -743,7 +745,7 @@
     "/legacy-staff/assets/maps/johannesburg/level_07.svg": "97546fa50539cc297ff8158570a31f81a0ccc25f",
     "/legacy-staff/assets/maps/kansai/level_24.svg": "e695352ee0d22f02869039986164805e70fd690e",
     "/legacy-staff/assets/maps/kuala_lumpur/level_27.svg": "cdebf59ba1b023874a965a9fdfdaf633ec366a1b",
-    "/legacy-staff/assets/maps/lagos/level_06.svg": "a706780ec6db683bbcf3c44cf2e25ea177523aa9",
+    "/legacy-staff/assets/maps/lagos/level_06.svg": "f371442a5505aa97fc481b40213730a599cd2ac4",
     "/legacy-staff/assets/maps/lima/level_16.svg": "03521217fe77856fc67f46a402e856204d6b6ed7",
     "/legacy-staff/assets/maps/london/level_06.svg": "bb6be6e09d59cca3815e4320ce678bd8eb3b0f64",
     "/legacy-staff/assets/maps/london/level_07.svg": "e01a42e0d2831cad32ab9d0ca54f27d64cf0d915",
@@ -880,8 +882,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "5e40438e55085271958e92735afdac717fdc026d",
-    "/legacy-staff/main-es5.js": "bce9d8478bdfa2e857b608d150ed287eb76da01e",
+    "/legacy-staff/main-es2015.js": "8b13137628a5b35269e2136f90dda703708ef6a6",
+    "/legacy-staff/main-es5.js": "50642657867c00fb66473533b92d75725dd81cae",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
