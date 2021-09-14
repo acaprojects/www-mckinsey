@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1631551271426,
+  "timestamp": 1631617835807,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -173,6 +173,7 @@
         "/concierge/assets/maps/copenhagen/level_02.svg",
         "/concierge/assets/maps/copenhagen/level_03.svg",
         "/concierge/assets/maps/copenhagen/level_04.svg",
+        "/concierge/assets/maps/dallas/level_18.svg",
         "/concierge/assets/maps/delhi/level_01.svg",
         "/concierge/assets/maps/delhi/level_gr.svg",
         "/concierge/assets/maps/doha/level_01.svg",
@@ -533,6 +534,7 @@
     "/concierge/assets/maps/copenhagen/level_02.svg": "b439d2593188a433acb52e87857e2db2e401ef23",
     "/concierge/assets/maps/copenhagen/level_03.svg": "dd08b67f27adf5aad5619f52376d815e77f22b1f",
     "/concierge/assets/maps/copenhagen/level_04.svg": "1a51558b84e6b3ffd4845e9fa3886f250d4ba8dc",
+    "/concierge/assets/maps/dallas/level_18.svg": "3fbc28e4d510531f0c97038b6a92eda1912941aa",
     "/concierge/assets/maps/delhi/level_01.svg": "ff3f683d3dedeff26f4e4e60816e67e37fae3e9b",
     "/concierge/assets/maps/delhi/level_gr.svg": "019c0a897fa64dd90f98fcfdbe478667a5dd3625",
     "/concierge/assets/maps/doha/level_01.svg": "d78bee9bd18af89e6003007682db4d9de1ffb7c5",
@@ -567,7 +569,7 @@
     "/concierge/assets/maps/johannesburg/level_07.svg": "97546fa50539cc297ff8158570a31f81a0ccc25f",
     "/concierge/assets/maps/kansai/level_24.svg": "e695352ee0d22f02869039986164805e70fd690e",
     "/concierge/assets/maps/kuala_lumpur/level_27.svg": "cdebf59ba1b023874a965a9fdfdaf633ec366a1b",
-    "/concierge/assets/maps/lagos/level_06.svg": "a706780ec6db683bbcf3c44cf2e25ea177523aa9",
+    "/concierge/assets/maps/lagos/level_06.svg": "f371442a5505aa97fc481b40213730a599cd2ac4",
     "/concierge/assets/maps/level_01.svg": "f89e28f409f9506edf144c9d42c57e38e4e21d68",
     "/concierge/assets/maps/level_02.svg": "8d1b73b96ec01809ba6ec67199a37c412ecf3a24",
     "/concierge/assets/maps/level_03.svg": "70f71fd5eb21bcec2776dde59d8c3ace3fa7274f",
@@ -706,8 +708,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "9fb7e448b3f86c787e15b4619fbf48a360e28577",
-    "/concierge/main-es5.js": "3d8320c1c614833090429e695d74bcc329543778",
+    "/concierge/main-es2015.js": "79836748b413fe9de45e8cdc4e53778c756f4323",
+    "/concierge/main-es5.js": "2843ee020e026a02c4feb58e6b0e22a015ed1ebd",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
