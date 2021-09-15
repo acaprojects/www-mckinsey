@@ -1342,12 +1342,12 @@
 	<rect x="269.8" y="190.1" class="st15" width="28.4" height="82.9"/>
 </g>
 <g id="bookable_spaces">
-	<rect id="area-8.VR1-status" x="605.8" y="340.7" class="st35" width="173.5" height="149.3"/>
-	<rect id="area-8.O1-status" x="792.6" y="150.5" class="st35" width="116.4" height="149"/>
-	<rect id="area-8.O2-status" x="909" y="150.5" class="st35" width="125.6" height="148.5"/>
-	<rect id="area-8.O3-status" x="1034.6" y="150.5" class="st35" width="110.5" height="147.4"/>
-	<rect id="area-8.O4-status" x="1144.3" y="150.5" class="st35" width="100.6" height="146.8"/>
-	<polygon id="area-8.VR2-status" class="st35" points="817,340.4 962.7,340.4 962.7,485.8 908.8,485.8 908.8,490 779.3,490 
+	<rect id="area-08.VR1-status" x="605.8" y="340.7" class="st35" width="173.5" height="149.3"/>
+	<rect id="area-08.O1-status" x="792.6" y="150.5" class="st35" width="116.4" height="149"/>
+	<rect id="area-08.O2-status" x="909" y="150.5" class="st35" width="125.6" height="148.5"/>
+	<rect id="area-08.O3-status" x="1034.6" y="150.5" class="st35" width="110.5" height="147.4"/>
+	<rect id="area-08.O4-status" x="1144.3" y="150.5" class="st35" width="100.6" height="146.8"/>
+	<polygon id="area-08.VR2-status" class="st35" points="817,340.4 962.7,340.4 962.7,485.8 908.8,485.8 908.8,490 779.3,490 
 		779.3,340.4 	"/>
 	<g>
 		<g class="st36">
