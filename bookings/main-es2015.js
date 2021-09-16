@@ -7342,7 +7342,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         }));
     }
     isV1() {
-        return this._theme === _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["SpaceTheme"].v1;
+        return !this._theme || this._theme === _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["SpaceTheme"].v1;
     }
     /**
      * Update the bookings for the active space
@@ -8553,16 +8553,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "aebb213",
-    "hash": "aebb213",
+    "raw": "bbdb00d",
+    "hash": "bbdb00d",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "aebb213",
+    "suffix": "bbdb00d",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1631568192135
+    "time": 1631799184872
 };
 /* tslint:enable */
 
