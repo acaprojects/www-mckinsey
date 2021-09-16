@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1631734599254,
+  "timestamp": 1631790825166,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -319,6 +319,7 @@
         "/staff/assets/maps/london/level_11.svg",
         "/staff/assets/maps/london_jermyn/level_04.svg",
         "/staff/assets/maps/los_angeles/level_08.svg",
+        "/staff/assets/maps/lyon/level_2.svg",
         "/staff/assets/maps/macc/level_26.svg",
         "/staff/assets/maps/manila/level_07.svg",
         "/staff/assets/maps/manila/level_17.svg",
@@ -789,6 +790,7 @@
     "/staff/assets/maps/london/level_11.svg": "550a6bb58d5d3af5ebace2a40b1ebd3e22012fca",
     "/staff/assets/maps/london_jermyn/level_04.svg": "ad07701c027f72ef6f306f1b04d3781cee7017a4",
     "/staff/assets/maps/los_angeles/level_08.svg": "fdcf337a02263c413bd807a6323d1fe6f64e5d16",
+    "/staff/assets/maps/lyon/level_2.svg": "51e72eb43f6b8b72a0fb3f9067c719364eb8ed9a",
     "/staff/assets/maps/macc/level_26.svg": "2535dcf1c953c2c2342c47b58c3255e83cd85d5f",
     "/staff/assets/maps/manila/level_07.svg": "3e378aa67492332d4c6492d436bf14416aa629c0",
     "/staff/assets/maps/manila/level_17.svg": "9e5a3557049d16aefc74595cc9490fb4c66de11f",
@@ -918,8 +920,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "4b50735e0ed03cdc319ee239eedc1949421480b1",
-    "/staff/main-es5.js": "6ac5deed5b5cb04a0e026ce50152efccf5df264c",
+    "/staff/main-es2015.js": "2e38ae7d8efd9cfd4b0f3ced0aa4714c506c15eb",
+    "/staff/main-es5.js": "ba41cad1916de3f98621b0c3c9a8103df82a1a5b",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
