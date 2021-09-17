@@ -12231,7 +12231,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this75 = this;
 
-          this.loading = true; // Subscribe to the current user so when the user is no longer "local", but instead
+          this.loading = true;
+          this.bootstrap(); // Subscribe to the current user so when the user is no longer "local", but instead
           // identifies the room by email and then redirects to the panel with the space ID.
 
           this.subscription('User.currentUser', this.service.Users.currentUser.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(function (current) {
@@ -13710,11 +13711,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function View_BookingPanelComponent_10(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Bootstrapping a system..."]))], null, null);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Starting Application..."]))], null, null);
     }
 
     function View_BookingPanelComponent_11(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["Connecting to system(", ")..."]))], null, function (_ck, _v) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["System (", ") found..."]))], null, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.system_id;
 
@@ -13723,17 +13724,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function View_BookingPanelComponent_12(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["", " Panel connecting..."]))], null, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.space_name;
+
+        _ck(_v, 1, 0, currVal_0);
+      });
+    }
+
+    function View_BookingPanelComponent_13(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Loading Panel settings..."]))], null, null);
     }
 
+    function View_BookingPanelComponent_14(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Applying Panel settings..."]))], null, null);
+    }
+
     function View_BookingPanelComponent_9(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 10, "div", [["class", "loading-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 9, "div", [["class", "info-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [["class", "loading-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 13, "div", [["class", "info-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_12)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "a-spinner", [["color", "#000"], ["ring-rotate", ""]], null, null, null, _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_ɵp_0"], _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_ɵp"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 49152, null, 0, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_12__["ɵp"], [], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_13)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_14)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "a-spinner", [["color", "#000"], ["ring-rotate", ""]], null, null, null, _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_ɵp_0"], _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_ɵp"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 49152, null, 0, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_12__["ɵp"], [], {
         color: [0, "color"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
@@ -13741,21 +13759,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _ck(_v, 3, 0, currVal_0);
 
-        var currVal_1 = _co.system_id;
+        var currVal_1 = _co.system_id && !_co.space_name;
 
         _ck(_v, 5, 0, currVal_1);
 
-        var currVal_2 = _co.system_id;
+        var currVal_2 = _co.space_name;
 
         _ck(_v, 7, 0, currVal_2);
 
-        var currVal_3 = "#000";
+        var currVal_3 = _co.system_id && !_co.space_name;
 
-        _ck(_v, 10, 0, currVal_3);
+        _ck(_v, 9, 0, currVal_3);
+
+        var currVal_4 = _co.space_name;
+
+        _ck(_v, 11, 0, currVal_4);
+
+        var currVal_5 = "#000";
+
+        _ck(_v, 14, 0, currVal_5);
       }, null);
     }
 
-    function View_BookingPanelComponent_13(_l) {
+    function View_BookingPanelComponent_15(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 24, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "room_name"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -14074,7 +14100,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_13)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_15)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
@@ -14364,6 +14390,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this83 = this;
 
+          // console.log('INNNNN system_id', this.system_id)
           // We want to prepare the translation service early on ('defaultLang' should
           // be described before we display any placeholder text)
           this._translate.addLangs(['en', 'fr-CA']);
@@ -14372,7 +14399,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
             if (is_ready) {
-              _this83.subscription('route.params', _this83._route.paramMap.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["mergeMap"])(function (params) {
+              _this83.subscription('spaces_list_buildings', Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["combineLatest"])([_this83._route.paramMap.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["mergeMap"])(function (params) {
                 _this83.system_id = params.get('system_id');
 
                 _this83._service.set('system', _this83.system_id);
@@ -14380,16 +14407,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["from"])(_this83._service.Spaces.show(_this83.system_id)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["catchError"])(function (_) {
                   return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])(undefined);
                 }));
-              })).subscribe(function (space) {
-                _this83.foundSpace = space;
-              }));
+              })), _this83._service.Organisation.listen('buildings'), _this83.bookingsLoaded]).subscribe(function (_ref) {
+                var _ref2 = _slicedToArray(_ref, 3),
+                    space = _ref2[0],
+                    buildings = _ref2[1],
+                    bookings = _ref2[2];
 
-              _this83.subscription('spaces_list_levels', Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["combineLatest"])([_this83._service.Organisation.listen('levels'), _this83.bookingsLoaded]).subscribe(function (_ref) {
-                var _ref2 = _slicedToArray(_ref, 2),
-                    levels = _ref2[0],
-                    bookings = _ref2[1];
-
-                if (_this83.foundSpace && levels.length > 0) {
+                if (space && buildings.length > 0) {
                   // this requires a refactor, but essentially the rules will check for building
                   // levels. We need to listen for level loading to then load the rules.
                   // const foundSpace = spaces[0];
@@ -14397,14 +14421,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   // except for the host "user". The RBP does not have a real user so, we do not
                   // evaluate rules for the user. This may lead to some inconsistencies when looking at
                   // booking panel vs the staff application. In future we should place defaults in a better spot.
-                  _this83.rules = _this83.foundSpace.rulesFor({
+                  _this83.rules = space.rulesFor({
                     date: dayjs__WEBPACK_IMPORTED_MODULE_2__().valueOf(),
                     duration: 30
                   });
 
                   _this83._service.log('Panel', 'Evaluated Rules', _this83.rules);
 
-                  _this83.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](_this83._service.Spaces, Object.assign(Object.assign({}, _this83.foundSpace), {
+                  _this83.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](_this83._service.Spaces, Object.assign(Object.assign({}, space), {
                     bookings: bookings,
                     theme_rbp: _this83._theme
                   })));
@@ -16976,9 +17000,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function View_ShellWrapperComponent_Host_0(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-shell-wrapper", [], null, null, null, View_ShellWrapperComponent_0, RenderType_ShellWrapperComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _shell_component__WEBPACK_IMPORTED_MODULE_7__["ShellWrapperComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_8__["ApplicationService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]], null, null)], function (_ck, _v) {
-        _ck(_v, 1, 0);
-      }, null);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-shell-wrapper", [], null, null, null, View_ShellWrapperComponent_0, RenderType_ShellWrapperComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 180224, null, 0, _shell_component__WEBPACK_IMPORTED_MODULE_7__["ShellWrapperComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_8__["ApplicationService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]], null, null)], null, null);
     }
 
     var ShellWrapperComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-shell-wrapper", _shell_component__WEBPACK_IMPORTED_MODULE_7__["ShellWrapperComponent"], View_ShellWrapperComponent_Host_0, {}, {}, []);
@@ -17096,48 +17118,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
       _createClass(ShellWrapperComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this90 = this;
+        key: "checkLoading",
 
-          this.subscription('app_ready', this._service.initialised.subscribe(function (is_ready) {
-            var _a;
-
-            if (is_ready) {
-              // Listen for system changes
-              _this90.subscription('system', _this90._service.listen('system', function (value) {
-                return _this90.system_id = value;
-              })); // Listen for routing events
-
-
-              _this90.page = ((_a = _this90._router.url) === null || _a === void 0 ? void 0 : _a.split('/')[1]) || '';
-
-              _this90.subscription('router.change', _this90._router.events.subscribe(function (event) {
-                if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_0__["NavigationEnd"]) {
-                  _this90.page = _this90._router.url.split('/')[1] || '';
-                }
-              }));
-
-              _this90.unsub('app_ready');
-            }
-          }));
-        }
         /**
          * Check if the system data has loaded
          * @param delay Delay before first loading message update
          */
-
-      }, {
-        key: "checkLoading",
         value: function checkLoading() {
-          var _this91 = this;
+          var _this90 = this;
 
           var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;
 
           if (!this.system_name) {
             this.message_index = 0;
             this.timeout('update_msg', function () {
-              return _this91.updateMessage();
+              return _this90.updateMessage();
             }, delay);
           }
         }
@@ -17148,7 +17143,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "updateMessage",
         value: function updateMessage() {
-          var _this92 = this;
+          var _this91 = this;
 
           if (!this.system_id) {
             return;
@@ -17162,7 +17157,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.timeout('update_msg', function () {
-            return _this92.updateMessage();
+            return _this91.updateMessage();
           }, 3000);
         }
         /**
@@ -17173,7 +17168,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "reloadAt",
         value: function reloadAt(time) {
-          var _this93 = this;
+          var _this92 = this;
 
           if (time && typeof time === 'number') {
             this.clearTimeout('reload_ui');
@@ -17189,7 +17184,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.timeout('update_msg', function () {
-            return _this93.updateMessage();
+            return _this92.updateMessage();
           }, 3000);
         }
       }, {
@@ -17571,16 +17566,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "239f1cd",
-      "hash": "239f1cd",
+      "raw": "b79f8e9",
+      "hash": "b79f8e9",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "239f1cd",
+      "suffix": "b79f8e9",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1631810659478
+      "time": 1631895205534
     };
     /* tslint:enable */
 
