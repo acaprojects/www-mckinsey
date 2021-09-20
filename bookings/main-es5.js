@@ -13799,7 +13799,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         model: [3, "model"]
       }, {
         modelChange: "modelChange"
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["bind", "touch_enabled"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) {
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "i", [["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -13812,8 +13812,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_13__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], {
         sys: [0, "sys"],
         mod: [1, "mod"],
-        bind: [2, "bind"],
-        model: [3, "model"]
+        model: [2, "model"]
       }, {
         modelChange: "modelChange"
       }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "i", [["bind", "today"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) {
@@ -14011,79 +14010,78 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         var currVal_4 = _co.system_id;
         var currVal_5 = "Bookings";
-        var currVal_6 = "touch_enabled";
-        var currVal_7 = _co.interactive;
+        var currVal_6 = _co.interactive;
 
-        _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6, currVal_7);
+        _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6);
 
-        var currVal_8 = _co.system_id;
-        var currVal_9 = "Bookings";
-        var currVal_10 = "today";
+        var currVal_7 = _co.system_id;
+        var currVal_8 = "Bookings";
+        var currVal_9 = "today";
 
-        _ck(_v, 6, 0, currVal_8, currVal_9, currVal_10);
+        _ck(_v, 6, 0, currVal_7, currVal_8, currVal_9);
 
-        var currVal_11 = _co.system_id;
-        var currVal_12 = "Bookings";
-        var currVal_13 = "timeout";
-        var currVal_14 = _co.pending_timeout;
+        var currVal_10 = _co.system_id;
+        var currVal_11 = "Bookings";
+        var currVal_12 = "timeout";
+        var currVal_13 = _co.pending_timeout;
 
-        _ck(_v, 8, 0, currVal_11, currVal_12, currVal_13, currVal_14);
+        _ck(_v, 8, 0, currVal_10, currVal_11, currVal_12, currVal_13);
 
-        var currVal_15 = _co.system_id;
-        var currVal_16 = "Bookings";
-        var currVal_17 = "cancel_timeout";
-        var currVal_18 = _co.cancel_timeout;
+        var currVal_14 = _co.system_id;
+        var currVal_15 = "Bookings";
+        var currVal_16 = "cancel_timeout";
+        var currVal_17 = _co.cancel_timeout;
 
-        _ck(_v, 10, 0, currVal_15, currVal_16, currVal_17, currVal_18);
+        _ck(_v, 10, 0, currVal_14, currVal_15, currVal_16, currVal_17);
 
-        var currVal_19 = _co.system_id;
-        var currVal_20 = "Bookings";
-        var currVal_21 = "last_meeting_started";
-        var currVal_22 = _co.last_started;
+        var currVal_18 = _co.system_id;
+        var currVal_19 = "Bookings";
+        var currVal_20 = "last_meeting_started";
+        var currVal_21 = _co.last_started;
 
-        _ck(_v, 12, 0, currVal_19, currVal_20, currVal_21, currVal_22);
+        _ck(_v, 12, 0, currVal_18, currVal_19, currVal_20, currVal_21);
 
-        var currVal_23 = _co.system_id;
-        var currVal_24 = "Bookings";
-        var currVal_25 = "hide_all";
-        var currVal_26 = _co.hide_all;
+        var currVal_22 = _co.system_id;
+        var currVal_23 = "Bookings";
+        var currVal_24 = "hide_all";
+        var currVal_25 = _co.hide_all;
 
-        _ck(_v, 14, 0, currVal_23, currVal_24, currVal_25, currVal_26);
+        _ck(_v, 14, 0, currVal_22, currVal_23, currVal_24, currVal_25);
 
-        var currVal_27 = _co.system_id;
-        var currVal_28 = "Bookings";
-        var currVal_29 = "flip_status";
-        var currVal_30 = _co.flip_status;
+        var currVal_26 = _co.system_id;
+        var currVal_27 = "Bookings";
+        var currVal_28 = "flip_status";
+        var currVal_29 = _co.flip_status;
 
-        _ck(_v, 16, 0, currVal_27, currVal_28, currVal_29, currVal_30);
+        _ck(_v, 16, 0, currVal_26, currVal_27, currVal_28, currVal_29);
 
-        var currVal_31 = _co.system_id;
-        var currVal_32 = "Bookings";
-        var currVal_33 = "can_cancel";
-        var currVal_34 = _co.can_cancel;
+        var currVal_30 = _co.system_id;
+        var currVal_31 = "Bookings";
+        var currVal_32 = "can_cancel";
+        var currVal_33 = _co.can_cancel;
 
-        _ck(_v, 18, 0, currVal_31, currVal_32, currVal_33, currVal_34);
+        _ck(_v, 18, 0, currVal_30, currVal_31, currVal_32, currVal_33);
 
-        var currVal_35 = _co.system_id;
-        var currVal_36 = "Bookings";
-        var currVal_37 = "business_start";
-        var currVal_38 = _co.business_start;
+        var currVal_34 = _co.system_id;
+        var currVal_35 = "Bookings";
+        var currVal_36 = "business_start";
+        var currVal_37 = _co.business_start;
 
-        _ck(_v, 20, 0, currVal_35, currVal_36, currVal_37, currVal_38);
+        _ck(_v, 20, 0, currVal_34, currVal_35, currVal_36, currVal_37);
 
-        var currVal_39 = _co.system_id;
-        var currVal_40 = "Bookings";
-        var currVal_41 = "business_end";
-        var currVal_42 = _co.business_end;
+        var currVal_38 = _co.system_id;
+        var currVal_39 = "Bookings";
+        var currVal_40 = "business_end";
+        var currVal_41 = _co.business_end;
 
-        _ck(_v, 22, 0, currVal_39, currVal_40, currVal_41, currVal_42);
+        _ck(_v, 22, 0, currVal_38, currVal_39, currVal_40, currVal_41);
 
-        var currVal_43 = _co.system_id;
-        var currVal_44 = "Bookings";
-        var currVal_45 = "status_override";
-        var currVal_46 = _co.status_overrides;
+        var currVal_42 = _co.system_id;
+        var currVal_43 = "Bookings";
+        var currVal_44 = "status_override";
+        var currVal_45 = _co.status_overrides;
 
-        _ck(_v, 24, 0, currVal_43, currVal_44, currVal_45, currVal_46);
+        _ck(_v, 24, 0, currVal_42, currVal_43, currVal_44, currVal_45);
       }, null);
     }
 
@@ -17566,16 +17564,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "b79f8e9",
-      "hash": "b79f8e9",
+      "raw": "4ec2780",
+      "hash": "4ec2780",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "b79f8e9",
+      "suffix": "4ec2780",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1631895205534
+      "time": 1632154640865
     };
     /* tslint:enable */
 
