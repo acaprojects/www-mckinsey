@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1632236606155,
+  "timestamp": 1632304903358,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -727,7 +727,7 @@
     "/staff/assets/maps/budapest/level_05.svg": "1ae7d078866bf4ce3d5295b2381dafee33a61597",
     "/staff/assets/maps/buenos_aires/level_24.svg": "75325402cb675806d99f0cca8a68ee88977ad773",
     "/staff/assets/maps/calgary/level_22.svg": "03592a625ebb4a16faf572aa617570fcd54bca9c",
-    "/staff/assets/maps/canberra/level_02.svg": "45e2834d3f32d416a7a870f0d7ae00c024e54613",
+    "/staff/assets/maps/canberra/level_02.svg": "c361d9de03cbabcaf5f04b2583c5a92d03b00ddd",
     "/staff/assets/maps/casablanca/level_01.svg": "2743ffc8fb28a54ec13f067574b6b0f2ab615467",
     "/staff/assets/maps/casablanca/level_02.svg": "deb25e72e8eaad9637dda40f17299d3a25341ab0",
     "/staff/assets/maps/charlotte/level_11.svg": "13e13435a369c776e5e638c755b7c8f42ec41d1e",
@@ -926,8 +926,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "52b30908b84129d60946bd185348ce559e7129f6",
-    "/staff/main-es5.js": "1d4453aae1066135c43692bf82e85cfc444fae49",
+    "/staff/main-es2015.js": "c2cf2de231ebca0473248440498aea7d3b884fc5",
+    "/staff/main-es5.js": "842103ea9071ad196c7f8be12563f5de6ea60a2d",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
