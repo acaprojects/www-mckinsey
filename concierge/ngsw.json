@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1633457561048,
+  "timestamp": 1633519136960,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -524,7 +524,7 @@
     "/concierge/assets/maps/brussels/level_gr.svg": "3e839c10944a5a3821e305a5bc4018e38a688f3d",
     "/concierge/assets/maps/brussels/level_ll.svg": "9ab91d4469b321ada121f2e61fcd3ebb4d60ae11",
     "/concierge/assets/maps/budapest/level_01.svg": "fb60767caf138d24fb268e1aed1c44775462239e",
-    "/concierge/assets/maps/budapest/level_02.svg": "2905745e8c07b53df01b648acdbfeda6e91f1f73",
+    "/concierge/assets/maps/budapest/level_02.svg": "7b1630ed6d9436990d42a094c2397c4709bd490f",
     "/concierge/assets/maps/budapest/level_03.svg": "6b1c6b753a30610b4f03c93731c2c31bc25ed60f",
     "/concierge/assets/maps/budapest/level_04.svg": "4a626255c887d686c33a9a8e13454e8eb596e0b2",
     "/concierge/assets/maps/budapest/level_05.svg": "1ae7d078866bf4ce3d5295b2381dafee33a61597",
@@ -694,7 +694,7 @@
     "/concierge/assets/maps/st_louis/level_08.svg": "9fad82b1b7e9371057fdcadd41abfe155fd4b451",
     "/concierge/assets/maps/stamford/level_4.svg": "0c1980b4adb8f03b7281a77f6eb99e23a046e642",
     "/concierge/assets/maps/stockholm/level_06.svg": "308379cb6cf48eda9028094d2fd45be440fdfc5c",
-    "/concierge/assets/maps/stockholm/level_07.svg": "8c32b8e5b09306895b7c76a909e8820df21a30c3",
+    "/concierge/assets/maps/stockholm/level_07.svg": "51ec4517e459d25e1f88430b7e944f75a6ad4510",
     "/concierge/assets/maps/stockholm/level_08.svg": "13e6273af73a929081029b5518f26c3b324889ac",
     "/concierge/assets/maps/stockholm_design/level_01.svg": "fe1f2660ba856126d6b97fcb7f9bd3403b7ec7cb",
     "/concierge/assets/maps/stockholm_design/level_02.svg": "712561e231028b6231b9a6c9fd02697f0c7ca629",
@@ -738,8 +738,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "9cddbc3c5f0c4b4ada7191c30d49c414a09590a4",
-    "/concierge/main-es5.js": "e435f472881a33593b8feb238b3dcb6a2262bba8",
+    "/concierge/main-es2015.js": "1707430b408715311a362911e96dadc35df3c703",
+    "/concierge/main-es5.js": "2dac026948ae6a120b0a34d930b7a68d5f01d98c",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
