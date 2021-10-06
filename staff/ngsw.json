@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1633457463911,
+  "timestamp": 1633519022007,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -740,7 +740,7 @@
     "/staff/assets/maps/brussels/level_gr.svg": "3e839c10944a5a3821e305a5bc4018e38a688f3d",
     "/staff/assets/maps/brussels/level_ll.svg": "9ab91d4469b321ada121f2e61fcd3ebb4d60ae11",
     "/staff/assets/maps/budapest/level_01.svg": "fb60767caf138d24fb268e1aed1c44775462239e",
-    "/staff/assets/maps/budapest/level_02.svg": "2905745e8c07b53df01b648acdbfeda6e91f1f73",
+    "/staff/assets/maps/budapest/level_02.svg": "7b1630ed6d9436990d42a094c2397c4709bd490f",
     "/staff/assets/maps/budapest/level_03.svg": "6b1c6b753a30610b4f03c93731c2c31bc25ed60f",
     "/staff/assets/maps/budapest/level_04.svg": "4a626255c887d686c33a9a8e13454e8eb596e0b2",
     "/staff/assets/maps/budapest/level_05.svg": "1ae7d078866bf4ce3d5295b2381dafee33a61597",
@@ -907,7 +907,7 @@
     "/staff/assets/maps/st_louis/level_08.svg": "9fad82b1b7e9371057fdcadd41abfe155fd4b451",
     "/staff/assets/maps/stamford/level_4.svg": "0c1980b4adb8f03b7281a77f6eb99e23a046e642",
     "/staff/assets/maps/stockholm/level_06.svg": "308379cb6cf48eda9028094d2fd45be440fdfc5c",
-    "/staff/assets/maps/stockholm/level_07.svg": "8c32b8e5b09306895b7c76a909e8820df21a30c3",
+    "/staff/assets/maps/stockholm/level_07.svg": "51ec4517e459d25e1f88430b7e944f75a6ad4510",
     "/staff/assets/maps/stockholm/level_08.svg": "13e6273af73a929081029b5518f26c3b324889ac",
     "/staff/assets/maps/stockholm_design/level_01.svg": "fe1f2660ba856126d6b97fcb7f9bd3403b7ec7cb",
     "/staff/assets/maps/stockholm_design/level_02.svg": "712561e231028b6231b9a6c9fd02697f0c7ca629",
@@ -954,8 +954,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "40bc2427c9c134b6a674eca529050694440965d0",
-    "/staff/main-es5.js": "d72d1e7139e5bd94452615371fbd8c817966a31c",
+    "/staff/main-es2015.js": "5109ca609c0253c4e14984144c190d53b785e34b",
+    "/staff/main-es5.js": "0153e3b922cc928b9fda635ad4d91ceaba954fd0",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
