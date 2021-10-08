@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1633699667123,
+  "timestamp": 1633703843318,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -406,6 +406,7 @@
         "/legacy-staff/assets/maps/stockholm_design/level_02.svg",
         "/legacy-staff/assets/maps/stockholm_design/level_03.svg",
         "/legacy-staff/assets/maps/stockholm_design/level_04.svg",
+        "/legacy-staff/assets/maps/stuttgart/level_4.svg",
         "/legacy-staff/assets/maps/sydney/level_33.svg",
         "/legacy-staff/assets/maps/sydney/level_35.svg",
         "/legacy-staff/assets/maps/sydney/level_36.svg",
@@ -873,6 +874,7 @@
     "/legacy-staff/assets/maps/stockholm_design/level_02.svg": "712561e231028b6231b9a6c9fd02697f0c7ca629",
     "/legacy-staff/assets/maps/stockholm_design/level_03.svg": "21c2cd083f5e3042b7108ca6983f8288b88607af",
     "/legacy-staff/assets/maps/stockholm_design/level_04.svg": "56e9eeb019672c8ca4ead0ac593d23b678aeaded",
+    "/legacy-staff/assets/maps/stuttgart/level_4.svg": "0a6b91fb92863b82c8bd502a18e66fb106205612",
     "/legacy-staff/assets/maps/sydney/level_33.svg": "ca77ec68c75fe926bcbe34678ac1b9d3ed414b59",
     "/legacy-staff/assets/maps/sydney/level_35.svg": "94d8e5661b6a63b98c765e7cd86fe65bdb2aafd3",
     "/legacy-staff/assets/maps/sydney/level_36.svg": "c12a0d83bae2b4cfdff92f8aef119e582d88ae4e",
@@ -912,8 +914,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "8ea07df6d35999d2503828d4ff9c406751234922",
-    "/legacy-staff/main-es5.js": "6b7fdaa8f4d88f9036d387235435a159faadcd61",
+    "/legacy-staff/main-es2015.js": "c27521f633784ccbc7e6263d561853d8227c2d84",
+    "/legacy-staff/main-es5.js": "0877bb901153c00f1cda8e4ffb3b3232ad363c05",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
