@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1633699616418,
+  "timestamp": 1633703784470,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -324,6 +324,7 @@
         "/concierge/assets/maps/stockholm_design/level_02.svg",
         "/concierge/assets/maps/stockholm_design/level_03.svg",
         "/concierge/assets/maps/stockholm_design/level_04.svg",
+        "/concierge/assets/maps/stuttgart/level_4.svg",
         "/concierge/assets/maps/sydney/level_33.svg",
         "/concierge/assets/maps/sydney/level_35.svg",
         "/concierge/assets/maps/sydney/level_36.svg",
@@ -700,6 +701,7 @@
     "/concierge/assets/maps/stockholm_design/level_02.svg": "712561e231028b6231b9a6c9fd02697f0c7ca629",
     "/concierge/assets/maps/stockholm_design/level_03.svg": "21c2cd083f5e3042b7108ca6983f8288b88607af",
     "/concierge/assets/maps/stockholm_design/level_04.svg": "56e9eeb019672c8ca4ead0ac593d23b678aeaded",
+    "/concierge/assets/maps/stuttgart/level_4.svg": "0a6b91fb92863b82c8bd502a18e66fb106205612",
     "/concierge/assets/maps/sydney/level_33.svg": "ca77ec68c75fe926bcbe34678ac1b9d3ed414b59",
     "/concierge/assets/maps/sydney/level_35.svg": "94d8e5661b6a63b98c765e7cd86fe65bdb2aafd3",
     "/concierge/assets/maps/sydney/level_36.svg": "c12a0d83bae2b4cfdff92f8aef119e582d88ae4e",
@@ -738,8 +740,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "53ac35bcb5ad70a494dc8c8f447cb1dda1255aba",
-    "/concierge/main-es5.js": "a0cd20c32c9baac32763b9f33ba9949bfd753d92",
+    "/concierge/main-es2015.js": "2b78fcbdddeaea5774adebd4ec45b9dbb7e8b9f2",
+    "/concierge/main-es5.js": "90c6becd17da1e8a5d6241c306987e2909c8018c",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
