@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1633603751183,
+  "timestamp": 1634054793190,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -324,6 +324,7 @@
         "/concierge/assets/maps/stockholm_design/level_02.svg",
         "/concierge/assets/maps/stockholm_design/level_03.svg",
         "/concierge/assets/maps/stockholm_design/level_04.svg",
+        "/concierge/assets/maps/stuttgart/level_4.svg",
         "/concierge/assets/maps/sydney/level_33.svg",
         "/concierge/assets/maps/sydney/level_35.svg",
         "/concierge/assets/maps/sydney/level_36.svg",
@@ -630,7 +631,7 @@
     "/concierge/assets/maps/nairobi/level_03.svg": "72da757a69e7a341934bcae7cc7ef4811d17b7f7",
     "/concierge/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
     "/concierge/assets/maps/new_jersey/level_04.svg": "51ef13fd0139b20da0e6fad1f915e98994e576d1",
-    "/concierge/assets/maps/new_york/level_19.svg": "6ce8c466ea78f844c4ff26cec9430a083062c9ed",
+    "/concierge/assets/maps/new_york/level_19.svg": "f2ea05c9df5e7acff179cc158a9f615f5ecb56c6",
     "/concierge/assets/maps/new_york/level_4.svg": "ff88df127fd8a399b09327cbae1d683227857db4",
     "/concierge/assets/maps/new_york_wtc/level_60.svg": "45d4e1003b5b1ebab6981e3964d07565fd703db8",
     "/concierge/assets/maps/new_york_wtc/level_61.svg": "041eb638d4a24ae782d1ace9290bcad3a2fd6959",
@@ -700,6 +701,7 @@
     "/concierge/assets/maps/stockholm_design/level_02.svg": "712561e231028b6231b9a6c9fd02697f0c7ca629",
     "/concierge/assets/maps/stockholm_design/level_03.svg": "21c2cd083f5e3042b7108ca6983f8288b88607af",
     "/concierge/assets/maps/stockholm_design/level_04.svg": "56e9eeb019672c8ca4ead0ac593d23b678aeaded",
+    "/concierge/assets/maps/stuttgart/level_4.svg": "0a6b91fb92863b82c8bd502a18e66fb106205612",
     "/concierge/assets/maps/sydney/level_33.svg": "ca77ec68c75fe926bcbe34678ac1b9d3ed414b59",
     "/concierge/assets/maps/sydney/level_35.svg": "94d8e5661b6a63b98c765e7cd86fe65bdb2aafd3",
     "/concierge/assets/maps/sydney/level_36.svg": "c12a0d83bae2b4cfdff92f8aef119e582d88ae4e",
@@ -717,8 +719,8 @@
     "/concierge/assets/maps/toronto/level_03.svg": "c5b72c8303b242bc084d5c88e59e94dc4001e5a0",
     "/concierge/assets/maps/toronto_pmx/level_24.svg": "fd40cc8f26b158877f54fe82afc2d5191f93aed3",
     "/concierge/assets/maps/vancouver/level_28.svg": "75dfe11d1d745b3480c52af75bd7d845840ec819",
-    "/concierge/assets/maps/vienna/level_1.svg": "b88b90c5f6569b7ccf9f9701d9110c7d3f943f4a",
-    "/concierge/assets/maps/vienna/level_2.svg": "e59af9add7106e79d825666796a0764cdb0deef9",
+    "/concierge/assets/maps/vienna/level_1.svg": "1933aade2273b62d6cd7cafe2251adb06a18a8d5",
+    "/concierge/assets/maps/vienna/level_2.svg": "af8fa2cb1d541bcc0e3459455a8ebd2faa4f235c",
     "/concierge/assets/maps/waltham/level_01.svg": "ede70f5fc625072ec1d2fbab47b4f2eaa1324827",
     "/concierge/assets/maps/waltham/level_02.svg": "719fb33fb73b9c90e8908e72d25c826741a6bae7",
     "/concierge/assets/maps/waltham/level_03.svg": "52b62fcbd39de7b81c8e4cd89247d1846321da8a",
@@ -738,8 +740,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "15cd0036b0ff22097bb9f5da284adefa9f141d2b",
-    "/concierge/main-es5.js": "d2fd665f4b0fb60dbff6256742cb772fb5b404cb",
+    "/concierge/main-es2015.js": "abb8f378448d87341d3b020e5719049f2d2e1d4c",
+    "/concierge/main-es5.js": "fcd113ada57f541094c31ce7431ba940e20ff65a",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
@@ -749,8 +751,8 @@
     "/concierge/runtime-es5.js": "f289cfd699eea8098c5fa10afa97fb9bc1a57498",
     "/concierge/styles-es2015.js": "4e57f0028fd896266f38495d25505cf256a38f08",
     "/concierge/styles-es5.js": "0af10f760d54491a6051518671832c719273e759",
-    "/concierge/vendor-es2015.js": "3881a4a07dfe5663f47d18fd3ac749306af6eaf2",
-    "/concierge/vendor-es5.js": "fba2efd86454711bb3d840d4c8d9e9652059619c"
+    "/concierge/vendor-es2015.js": "de858bf22fc52c08e17cd9d97b8ba9236fe6359c",
+    "/concierge/vendor-es5.js": "2fe848620ae15d5036c28b5cabaab3f82d073006"
   },
   "navigationUrls": [
     {
