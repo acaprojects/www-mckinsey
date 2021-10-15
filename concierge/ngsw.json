@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1634297861569,
+  "timestamp": 1634309656316,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -133,6 +133,7 @@
         "/concierge/assets/maps/bangalore_blc/level_07.svg",
         "/concierge/assets/maps/bangalore_bng/level_06.svg",
         "/concierge/assets/maps/bangkok/level_24.svg",
+        "/concierge/assets/maps/barcelona/level_4.svg",
         "/concierge/assets/maps/beijing/level_19.svg",
         "/concierge/assets/maps/beijing/level_20.svg",
         "/concierge/assets/maps/bogota/level_15.svg",
@@ -513,6 +514,7 @@
     "/concierge/assets/maps/bangalore_blc/level_07.svg": "93f2ff6a69b7fa1ff73709411d5a15c8d2b73722",
     "/concierge/assets/maps/bangalore_bng/level_06.svg": "c98a79182dc30b8b0473d023686c9b4bd20a9e71",
     "/concierge/assets/maps/bangkok/level_24.svg": "df69bbd477f2953cbfd33bf4ab319cfde6f27cbf",
+    "/concierge/assets/maps/barcelona/level_4.svg": "781c09617a756c29bb2a0524d55b93a6b0f8bc42",
     "/concierge/assets/maps/beijing/level_19.svg": "39d36fe52dd7faec0c9884f04f734c4b71e37b82",
     "/concierge/assets/maps/beijing/level_20.svg": "1d2044ce718f8e2975b789cc47a05a26613d2776",
     "/concierge/assets/maps/bogota/level_15.svg": "28b9d6e92c58dacc37dbaf65f1559a7b3669ccb2",
@@ -746,8 +748,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "6671e1c71eb8439552e33281b20d8312c5cca738",
-    "/concierge/main-es5.js": "820ff3b78115b030f22302c4ee00e1b3f4206bfb",
+    "/concierge/main-es2015.js": "9cf04cb2fde7f655f66b5b6915323a97fd9333e7",
+    "/concierge/main-es5.js": "08d8d314a9c622788bf33e02cf356dad28d3e1e0",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
