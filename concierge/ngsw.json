@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1634321529637,
+  "timestamp": 1634330035381,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -94,6 +94,7 @@
         "/concierge/assets/img/equipment.svg",
         "/concierge/assets/img/food-notes.svg",
         "/concierge/assets/img/it-banner.jpg",
+        "/concierge/assets/img/loader.gif",
         "/concierge/assets/img/location-img.svg",
         "/concierge/assets/img/location.svg",
         "/concierge/assets/img/logo-inverse.svg",
@@ -475,6 +476,7 @@
     "/concierge/assets/img/equipment.svg": "0a7bdea9011ddb790c3b7f8966d82e9468d14c72",
     "/concierge/assets/img/food-notes.svg": "d90b7ad273bc91c145d6c98af22b96ef7e248ae1",
     "/concierge/assets/img/it-banner.jpg": "7c336c8f5c623eef1a80a8e75adf7264654c54f7",
+    "/concierge/assets/img/loader.gif": "fa758731f7914bc27facccc4721e2e7223688864",
     "/concierge/assets/img/location-img.svg": "a0b8715f6b7a2e1cc17d3a3eb37e81ea1343588b",
     "/concierge/assets/img/location.svg": "7bf86d5c86c163af1a6f2b21a5b899fc76db9003",
     "/concierge/assets/img/logo-inverse.svg": "1c96a25f61231a0f2f325be7c259df02dc67fa7b",
@@ -748,8 +750,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "9dce71f26758da3de3da48d9b178e542b701e760",
-    "/concierge/main-es5.js": "70cda5bfdc6d00ea295617ff3dcfb5f0e8fcceda",
+    "/concierge/main-es2015.js": "3283568f559a30e3d18a5b19ea2f78fd5ffc5f4e",
+    "/concierge/main-es5.js": "2cea56455c195bbe10e869778e57a5a92878cabc",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
