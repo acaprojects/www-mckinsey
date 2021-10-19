@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1632327602011,
+  "timestamp": 1634647647713,
   "index": "/bookings/index.html",
   "assetGroups": [
     {
@@ -8,14 +8,18 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
+        "/bookings/5-es2015.006af9969075c7b651a2.js",
+        "/bookings/5-es5.006af9969075c7b651a2.js",
+        "/bookings/6-es2015.a706abd9f8fa3f0a34b6.js",
+        "/bookings/6-es5.a706abd9f8fa3f0a34b6.js",
         "/bookings/favicon.ico",
         "/bookings/index.html",
-        "/bookings/main-es2015.21a5cda1bf5d0eabf2c3.js",
-        "/bookings/main-es5.21a5cda1bf5d0eabf2c3.js",
+        "/bookings/main-es2015.8a7aac81c19fa4582237.js",
+        "/bookings/main-es5.8a7aac81c19fa4582237.js",
         "/bookings/polyfills-es2015.09ee2f719bd21ab5c7b1.js",
-        "/bookings/polyfills-es5.0ad9cb93a6af494566c6.js",
-        "/bookings/runtime-es2015.0dae8cbc97194c7caed4.js",
-        "/bookings/runtime-es5.0dae8cbc97194c7caed4.js",
+        "/bookings/polyfills-es5.12b5c32d1603e35dd556.js",
+        "/bookings/runtime-es2015.9216843e239dd352ce17.js",
+        "/bookings/runtime-es5.9216843e239dd352ce17.js",
         "/bookings/styles.8a423d7c38b6021b3291.css"
       ],
       "patterns": []
@@ -123,6 +127,10 @@
     }
   ],
   "hashTable": {
+    "/bookings/5-es2015.006af9969075c7b651a2.js": "6e88a587bf00c9aeef5d679aea7caedd622d6d11",
+    "/bookings/5-es5.006af9969075c7b651a2.js": "6e88a587bf00c9aeef5d679aea7caedd622d6d11",
+    "/bookings/6-es2015.a706abd9f8fa3f0a34b6.js": "bdb58a74ce2624e24b74cc2f595701b97833381c",
+    "/bookings/6-es5.a706abd9f8fa3f0a34b6.js": "bdb58a74ce2624e24b74cc2f595701b97833381c",
     "/bookings/Larish_McKinsey_Regular.33f5ad3dc30374be15f7.woff": "489cdd882a22ff934a9e22cdba51591f1ac64c46",
     "/bookings/Larish_McKinsey_Regular.5788757e0c4fdaeb5c3b.woff2": "8dca218477235f22abb9fff70441da0f01f6abcc",
     "/bookings/Larish_McKinsey_Regular.b139899483918a9205dc.eot": "b65557377cfaa062acd32cc34921ee576c5fbdc8",
@@ -144,7 +152,7 @@
     "/bookings/TheinhardtTT-MediumItalic.9cb51dec8dc6bf95ca6c.ttf": "eacb63959ca9548ecea5dc3afe108e2efdd91400",
     "/bookings/TheinhardtTT-Regular.cb19ce90a6b82e697dfd.ttf": "021ed9c14081144a47abe9ec336ca2865c888d45",
     "/bookings/assets/i18n/en.json": "9447f3419005b5f77ed5d99d625d19558049e431",
-    "/bookings/assets/i18n/fr-CA.json": "60aab988b119749df2efaa20a099fce239f6366a",
+    "/bookings/assets/i18n/fr-CA.json": "0557655585fb63fe9e4fedf2c5f9b908ed50a560",
     "/bookings/assets/icons/apple-touch-icon-114x114.png": "241494476bc4b58b78b6aefa73fcc2babb24b96f",
     "/bookings/assets/icons/apple-touch-icon-120x120.png": "360b856a08ec92c793f406e02114326c43f34a67",
     "/bookings/assets/icons/apple-touch-icon-144x144.png": "ae900ff23acdd437d535cc5ee2fa83f07b5e7777",
@@ -181,13 +189,13 @@
     "/bookings/assets/img/small_up.png": "555616ebdfd077fcda51501df3ffdb392f42510b",
     "/bookings/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/bookings/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/bookings/index.html": "9c198f7955ab1c5782c9507f3bf2da683e2b1a50",
-    "/bookings/main-es2015.21a5cda1bf5d0eabf2c3.js": "4a92192ab930c928fc59dd3c0843bbbff623d957",
-    "/bookings/main-es5.21a5cda1bf5d0eabf2c3.js": "f6bf35cff75682214c8620cf0dbc761dd84c4612",
+    "/bookings/index.html": "fbde469f32732430ca94828a7de13dfff365ad04",
+    "/bookings/main-es2015.8a7aac81c19fa4582237.js": "6bf459547509c1074c5f95799522ed8242a4cd95",
+    "/bookings/main-es5.8a7aac81c19fa4582237.js": "2fe1cbc70e302be6117eba15a630dd70018b80d3",
     "/bookings/polyfills-es2015.09ee2f719bd21ab5c7b1.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
-    "/bookings/polyfills-es5.0ad9cb93a6af494566c6.js": "c390b99d4d83e624546b67be7ad521eb12162e13",
-    "/bookings/runtime-es2015.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/bookings/runtime-es5.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/bookings/polyfills-es5.12b5c32d1603e35dd556.js": "cb1e2d25bf2b29b2dfe65e4431d47f930f3b3b1b",
+    "/bookings/runtime-es2015.9216843e239dd352ce17.js": "bbceac6f8a5c4adbedac4ed500e478b75235451e",
+    "/bookings/runtime-es5.9216843e239dd352ce17.js": "03919553666dc6964b810d9a17246f30134201f6",
     "/bookings/styles.8a423d7c38b6021b3291.css": "c971298eee67cde3e3109be029135a902ed31ca2"
   },
   "navigationUrls": [
