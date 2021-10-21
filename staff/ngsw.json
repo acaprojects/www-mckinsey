@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1634807971846,
+  "timestamp": 1634810758190,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -253,7 +253,7 @@
         "/staff/assets/maps/brussels/level_05.svg",
         "/staff/assets/maps/brussels/level_gr.svg",
         "/staff/assets/maps/brussels/level_ll.svg",
-        "/staff/assets/maps/bucharest/level_1.svg",
+        "/staff/assets/maps/bucharest/level_7.svg",
         "/staff/assets/maps/budapest/level_01.svg",
         "/staff/assets/maps/budapest/level_02.svg",
         "/staff/assets/maps/budapest/level_03.svg",
@@ -748,7 +748,7 @@
     "/staff/assets/maps/brussels/level_05.svg": "739e199efe6e099d3c42e2d86b29dd925ccb0694",
     "/staff/assets/maps/brussels/level_gr.svg": "3e839c10944a5a3821e305a5bc4018e38a688f3d",
     "/staff/assets/maps/brussels/level_ll.svg": "9ab91d4469b321ada121f2e61fcd3ebb4d60ae11",
-    "/staff/assets/maps/bucharest/level_1.svg": "29266dff9f51b282fd5f0bc23caf39fa00875576",
+    "/staff/assets/maps/bucharest/level_7.svg": "29266dff9f51b282fd5f0bc23caf39fa00875576",
     "/staff/assets/maps/budapest/level_01.svg": "fb60767caf138d24fb268e1aed1c44775462239e",
     "/staff/assets/maps/budapest/level_02.svg": "7b1630ed6d9436990d42a094c2397c4709bd490f",
     "/staff/assets/maps/budapest/level_03.svg": "6b1c6b753a30610b4f03c93731c2c31bc25ed60f",
@@ -968,8 +968,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "77922f9f295f43131f5ac350fef798446a315a38",
-    "/staff/main-es5.js": "45aa81d9be282de196f7df51dd2c2f82ab0eb4e6",
+    "/staff/main-es2015.js": "2f04e08d9df4e9d047134afcc4cf570b0fca64e8",
+    "/staff/main-es5.js": "4decdd2dafbd9da0bc03e166272f55c2f3a4f699",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
