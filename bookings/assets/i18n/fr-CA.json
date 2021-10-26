@@ -19,7 +19,7 @@
         },
         "other": {
             "availability": "<b>Disponibilité de l'espace:</b> Libre à {{ time }} le {{ date }}",
-            "link": "<b>Faire une reservation sur:</b> roombooking.intranet.mckinsey.com"
+            "link": "<b>Faire une réservation sur:</b> roombooking.intranet.mckinsey.com"
         }
     },
     "timeline": {
