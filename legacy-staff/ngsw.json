@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1636390302071,
+  "timestamp": 1636457422490,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -293,6 +293,7 @@
         "/legacy-staff/assets/maps/hamburg/level_6.svg",
         "/legacy-staff/assets/maps/hamburg/level_7.svg",
         "/legacy-staff/assets/maps/hanoi/level_08.svg",
+        "/legacy-staff/assets/maps/helsinki/level_06.svg",
         "/legacy-staff/assets/maps/helsinki/level_07.svg",
         "/legacy-staff/assets/maps/hong_kong/level_40.svg",
         "/legacy-staff/assets/maps/houston/level_22.svg",
@@ -770,6 +771,7 @@
     "/legacy-staff/assets/maps/hamburg/level_6.svg": "24c34c98854ddefb4407bf31082c56f868e0619d",
     "/legacy-staff/assets/maps/hamburg/level_7.svg": "93cd3dba12229d0a8d8610882429984636e42dca",
     "/legacy-staff/assets/maps/hanoi/level_08.svg": "8d27ab2d7f82d7f4c25d01f8d8f70077c5428c9d",
+    "/legacy-staff/assets/maps/helsinki/level_06.svg": "9230679829d953af663733df2a0c59436ad7f24b",
     "/legacy-staff/assets/maps/helsinki/level_07.svg": "5d0fa2f8c49f1b276269b3e928a811393a175dd6",
     "/legacy-staff/assets/maps/hong_kong/level_40.svg": "21ed5ed554b5d3d0fdd03ac4cd048171f0c34ff2",
     "/legacy-staff/assets/maps/houston/level_22.svg": "00ae6d6df88af1eb657ae0ab041184108be39db5",
@@ -932,8 +934,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "a88c808e1ad4360672283fb8f327ad79a9e49704",
-    "/legacy-staff/main-es5.js": "f457d79349d66e2ad0dede71e16dc072177933fe",
+    "/legacy-staff/main-es2015.js": "359796de8ed9d71ea85c31aed601fbe346c0116b",
+    "/legacy-staff/main-es5.js": "43672fb5869667bbd9fe22c56213356f617b6288",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
