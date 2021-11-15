@@ -1,25 +1,25 @@
 {
     "status": {
-        "available": "Disponible",
+        "available": "Salle libre",
         "not-bookable": "Réservation Interdit",
-        "available-by-request": "Disponible sur Demande",
-        "in-use": "Utilisé",
+        "available-by-request": "Salle disponible sur réservation",
+        "in-use": "Salle occupée",
         "none": ""
     },
     "space-details": {
         "booking": {
             "current": {
-                "heading": "Réservation en cours:",
-                "time-range": "Réservez jusqu'à {{ time }} le {{ date }}"
+                "heading": "Réservation en cours :",
+                "time-range": "Salle réservée jusqu’à {{ time }} le {{ date }}"
             },
             "next": {
-                "heading": "Prochaine réservation:",
-                "time-range": "Réservez à {{ time }} le {{ date }}"
+                "heading": "Prochaine réservation :",
+                "time-range": "Salle réservée à {{ time }} le {{ date }}"
             }
         },
         "other": {
             "availability": "<b>Disponibilité de l'espace:</b> Libre à {{ time }} le {{ date }}",
-            "link": "<b>Faire une réservation sur:</b> roombooking.intranet.mckinsey.com"
+            "link": "<b>Réservez sur :</b> roombooking.intranet.mckinsey.com"
         }
     },
     "timeline": {
