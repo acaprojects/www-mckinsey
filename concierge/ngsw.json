@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1636979639949,
+  "timestamp": 1637065612631,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -268,7 +268,7 @@
         "/concierge/assets/maps/munich/level_3.svg",
         "/concierge/assets/maps/munich/level_5.svg",
         "/concierge/assets/maps/munich/level_6.svg",
-        "/concierge/assets/maps/munich/level_EG.svg",
+        "/concierge/assets/maps/munich/level_eg.svg",
         "/concierge/assets/maps/nairobi/level_02.svg",
         "/concierge/assets/maps/nairobi/level_03.svg",
         "/concierge/assets/maps/new_jersey/level_03.svg",
@@ -664,7 +664,7 @@
     "/concierge/assets/maps/munich/level_3.svg": "0ae7f5fced90c9eb7f34649c7e750ed7ce970fd9",
     "/concierge/assets/maps/munich/level_5.svg": "3b6305107492de303c175ed37ee76fc0f6088982",
     "/concierge/assets/maps/munich/level_6.svg": "3432ba23a48fd89d23470055367caa0edde5ef0d",
-    "/concierge/assets/maps/munich/level_EG.svg": "9ab5fc4b8b56bde7927408168f38a3091aad05b7",
+    "/concierge/assets/maps/munich/level_eg.svg": "9ab5fc4b8b56bde7927408168f38a3091aad05b7",
     "/concierge/assets/maps/nairobi/level_02.svg": "d5e83fbcf6b68d54dca08455343185594ba38dd9",
     "/concierge/assets/maps/nairobi/level_03.svg": "72da757a69e7a341934bcae7cc7ef4811d17b7f7",
     "/concierge/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
@@ -778,8 +778,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "14e52a0a3a1c89ffd29e27224e7458a128efeb19",
-    "/concierge/main-es2015.js": "cf3cd19bb53f1eebb4ab4f20975cbc998a4c135f",
-    "/concierge/main-es5.js": "323f303c38b79b08472e14d7bfca5b9ed4892c29",
+    "/concierge/main-es2015.js": "1281ea69e46c40345d94572dcb48461c6c7d969f",
+    "/concierge/main-es5.js": "34022204a684583f07953400a64e9a7185a745e3",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
