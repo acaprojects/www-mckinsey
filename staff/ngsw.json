@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1636979482691,
+  "timestamp": 1637065511638,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -363,7 +363,7 @@
         "/staff/assets/maps/munich/level_3.svg",
         "/staff/assets/maps/munich/level_5.svg",
         "/staff/assets/maps/munich/level_6.svg",
-        "/staff/assets/maps/munich/level_EG.svg",
+        "/staff/assets/maps/munich/level_eg.svg",
         "/staff/assets/maps/nairobi/level_02.svg",
         "/staff/assets/maps/nairobi/level_03.svg",
         "/staff/assets/maps/new_jersey/level_03.svg",
@@ -865,7 +865,7 @@
     "/staff/assets/maps/munich/level_3.svg": "0ae7f5fced90c9eb7f34649c7e750ed7ce970fd9",
     "/staff/assets/maps/munich/level_5.svg": "3b6305107492de303c175ed37ee76fc0f6088982",
     "/staff/assets/maps/munich/level_6.svg": "3432ba23a48fd89d23470055367caa0edde5ef0d",
-    "/staff/assets/maps/munich/level_EG.svg": "9ab5fc4b8b56bde7927408168f38a3091aad05b7",
+    "/staff/assets/maps/munich/level_eg.svg": "9ab5fc4b8b56bde7927408168f38a3091aad05b7",
     "/staff/assets/maps/nairobi/level_02.svg": "d5e83fbcf6b68d54dca08455343185594ba38dd9",
     "/staff/assets/maps/nairobi/level_03.svg": "72da757a69e7a341934bcae7cc7ef4811d17b7f7",
     "/staff/assets/maps/new_jersey/level_03.svg": "f6d7de0dd80afb25f092bfa226a93be7bcb34187",
@@ -982,8 +982,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "80d7949e8d61e17d9e0088a3b732b3cefb165208",
-    "/staff/main-es5.js": "47dde8b3cd335e070d0079ae42b1de1918018c30",
+    "/staff/main-es2015.js": "60eed1325c592a7bd271c537f4ff0349a966e25f",
+    "/staff/main-es5.js": "bd80f2f3d999d36c599633813497f2808620fda1",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
