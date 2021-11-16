@@ -6878,14 +6878,14 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                     this._service.Organisation.listen('buildings'),
                     this.bookingsLoaded
                 ]).subscribe(([space, buildings, bookings]) => {
-                    if (bookings) {
-                        if (bookings[0] && !bookings[0].Subject) {
-                            bookings[0].Subject = 'current meeting...';
-                        }
-                        if (bookings[1] && !bookings[1].Subject) {
-                            bookings[1].Subject = 'next meeting...';
-                        }
-                    }
+                    // if (bookings) {
+                    //     if (bookings[0] && !bookings[0].Subject) {
+                    //         bookings[0].Subject = 'current meeting...';
+                    //     }
+                    //     if (bookings[1] && !bookings[1].Subject) {
+                    //         bookings[1].Subject = 'next meeting...';
+                    //     }                        
+                    // }
                     if (space && buildings.length > 0) {
                         // this requires a refactor, but essentially the rules will check for building
                         // levels. We need to listen for level loading to then load the rules.
@@ -8098,16 +8098,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "f499d07",
-    "hash": "f499d07",
+    "raw": "e7b9253",
+    "hash": "e7b9253",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f499d07",
+    "suffix": "e7b9253",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1637015096597
+    "time": 1637081682119
 };
 /* tslint:enable */
 
