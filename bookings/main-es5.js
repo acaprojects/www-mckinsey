@@ -14550,16 +14550,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     buildings = _ref2[1],
                     bookings = _ref2[2];
 
-                if (bookings) {
-                  if (bookings[0] && !bookings[0].Subject) {
-                    bookings[0].Subject = 'current meeting...';
-                  }
-
-                  if (bookings[1] && !bookings[1].Subject) {
-                    bookings[1].Subject = 'next meeting...';
-                  }
-                }
-
+                // if (bookings) {
+                //     if (bookings[0] && !bookings[0].Subject) {
+                //         bookings[0].Subject = 'current meeting...';
+                //     }
+                //     if (bookings[1] && !bookings[1].Subject) {
+                //         bookings[1].Subject = 'next meeting...';
+                //     }                        
+                // }
                 if (space && buildings.length > 0) {
                   // this requires a refactor, but essentially the rules will check for building
                   // levels. We need to listen for level loading to then load the rules.
@@ -17560,16 +17558,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "f499d07",
-      "hash": "f499d07",
+      "raw": "e7b9253",
+      "hash": "e7b9253",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "f499d07",
+      "suffix": "e7b9253",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1637015060315
+      "time": 1637081712569
     };
     /* tslint:enable */
 
