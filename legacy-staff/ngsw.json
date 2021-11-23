@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1637583042801,
+  "timestamp": 1637686730795,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -784,7 +784,7 @@
     "/legacy-staff/assets/maps/hamburg/level_6.svg": "24c34c98854ddefb4407bf31082c56f868e0619d",
     "/legacy-staff/assets/maps/hamburg/level_7.svg": "93cd3dba12229d0a8d8610882429984636e42dca",
     "/legacy-staff/assets/maps/hanoi/level_08.svg": "8d27ab2d7f82d7f4c25d01f8d8f70077c5428c9d",
-    "/legacy-staff/assets/maps/helsinki/level_06.svg": "6d897688349c68b6b8e67761c5293a4267ad90f2",
+    "/legacy-staff/assets/maps/helsinki/level_06.svg": "df48848a3ef6a23168c0cbedc43fd1640a286260",
     "/legacy-staff/assets/maps/helsinki/level_07.svg": "5d0fa2f8c49f1b276269b3e928a811393a175dd6",
     "/legacy-staff/assets/maps/hong_kong/level_40.svg": "21ed5ed554b5d3d0fdd03ac4cd048171f0c34ff2",
     "/legacy-staff/assets/maps/houston/level_22.svg": "00ae6d6df88af1eb657ae0ab041184108be39db5",
@@ -954,8 +954,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "0199173b43ebb4cd7c6e341d4ce448e60dccd0f2",
-    "/legacy-staff/main-es5.js": "a6c0a1599c3e5194409767fc06af9685e8cc1190",
+    "/legacy-staff/main-es2015.js": "4cb4b5cccbe280f42f03f45d419741ccf708badb",
+    "/legacy-staff/main-es5.js": "3461952fa825a6e50cfd28251a4542bc45e0dd87",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
