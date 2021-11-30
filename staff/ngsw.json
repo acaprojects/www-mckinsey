@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1637941212588,
+  "timestamp": 1638285080646,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -920,7 +920,7 @@
     "/staff/assets/maps/santiago/level_19.svg": "2035cdfa46e3dd99d79f04dcf8b0e39c9d765bdd",
     "/staff/assets/maps/santiago/level_20.svg": "c3bd861044a476a32826d87c90d623f51f0cec4f",
     "/staff/assets/maps/sao_paulo/level_21.svg": "4c8739731acf4daddb1845512efcc01c3830b287",
-    "/staff/assets/maps/sao_paulo/level_22.svg": "cf44479a0e0da7d4db3baef18797f2fdcdc5129b",
+    "/staff/assets/maps/sao_paulo/level_22.svg": "8f4a21d0d07cbd0534aeb4a726e750b223d8310e",
     "/staff/assets/maps/sao_paulo/level_23.svg": "fb397ec519b901afe4cfde8d8022ea91a96a650d",
     "/staff/assets/maps/seattle/level_43.svg": "76727526c6e45e29f1d16f7eba6e249088132273",
     "/staff/assets/maps/seoul/level_54.svg": "0123b7e0f6df2897aec667058fac2b3300571efb",
@@ -984,8 +984,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "0caee477b0c893fb06109bf3a8128fef619d8cb6",
-    "/staff/main-es5.js": "aa4d1e386f4c81003803d4129d2c5e135c2df2f7",
+    "/staff/main-es2015.js": "db0d62df9ab317b80216c7c24802219148c11a52",
+    "/staff/main-es5.js": "d233c7bfdf84381723a6ad1831e5ed738ff3e942",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
