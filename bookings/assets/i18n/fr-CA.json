@@ -18,7 +18,7 @@
             }
         },
         "other": {
-            "availability": "<b>Disponibilité de l'espace:</b> Libre à {{ time }} le {{ date }}",
+            "availability": "<b>Disponibilité de l'espace:</b> Salle libre à {{ time }} le {{ date }}",
             "link": "<b>Réservez sur :</b> roombooking.intranet.mckinsey.com"
         }
     },

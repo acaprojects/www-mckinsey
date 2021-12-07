@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1638897368688,
+  "timestamp": 1638902255276,
   "index": "/bookings/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/bookings/favicon.ico",
         "/bookings/index.html",
-        "/bookings/main-es2015.068bca2d2f89f3dcdcec.js",
-        "/bookings/main-es5.068bca2d2f89f3dcdcec.js",
+        "/bookings/main-es2015.c27ce4364dd6b6d63194.js",
+        "/bookings/main-es5.c27ce4364dd6b6d63194.js",
         "/bookings/polyfills-es2015.09ee2f719bd21ab5c7b1.js",
         "/bookings/polyfills-es5.0ad9cb93a6af494566c6.js",
         "/bookings/runtime-es2015.0dae8cbc97194c7caed4.js",
@@ -144,7 +144,7 @@
     "/bookings/TheinhardtTT-MediumItalic.9cb51dec8dc6bf95ca6c.ttf": "eacb63959ca9548ecea5dc3afe108e2efdd91400",
     "/bookings/TheinhardtTT-Regular.cb19ce90a6b82e697dfd.ttf": "021ed9c14081144a47abe9ec336ca2865c888d45",
     "/bookings/assets/i18n/en.json": "9447f3419005b5f77ed5d99d625d19558049e431",
-    "/bookings/assets/i18n/fr-CA.json": "7c276f4e068c33c6f8c880e9eff78eeeb5cb9e5b",
+    "/bookings/assets/i18n/fr-CA.json": "b2113ffa610f56a843525f9118c03c4cb358f8c0",
     "/bookings/assets/icons/apple-touch-icon-114x114.png": "241494476bc4b58b78b6aefa73fcc2babb24b96f",
     "/bookings/assets/icons/apple-touch-icon-120x120.png": "360b856a08ec92c793f406e02114326c43f34a67",
     "/bookings/assets/icons/apple-touch-icon-144x144.png": "ae900ff23acdd437d535cc5ee2fa83f07b5e7777",
@@ -181,9 +181,9 @@
     "/bookings/assets/img/small_up.png": "555616ebdfd077fcda51501df3ffdb392f42510b",
     "/bookings/assets/new-relic.js": "86c58df329d4dc6ee8307416b639a50164c508dd",
     "/bookings/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
-    "/bookings/index.html": "88a3a75a7e7f84795005a7cf7858b967b07d5388",
-    "/bookings/main-es2015.068bca2d2f89f3dcdcec.js": "d496a9cb826fcc206326c9d2a4dae0ff98dd6737",
-    "/bookings/main-es5.068bca2d2f89f3dcdcec.js": "a8b97af91ab192e30b3be3f16321b6cb587a9840",
+    "/bookings/index.html": "cffa9710c57b9df7e03e66fcb60656cd416b0f4b",
+    "/bookings/main-es2015.c27ce4364dd6b6d63194.js": "8bd3bf92671c85ea77792e400399ecbd7c775b0f",
+    "/bookings/main-es5.c27ce4364dd6b6d63194.js": "cc11c2d38fb9e950a46ee9dbdbe8b9e6ad46d9cf",
     "/bookings/polyfills-es2015.09ee2f719bd21ab5c7b1.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/bookings/polyfills-es5.0ad9cb93a6af494566c6.js": "c390b99d4d83e624546b67be7ad521eb12162e13",
     "/bookings/runtime-es2015.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
