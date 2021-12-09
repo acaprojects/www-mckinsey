@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1638285080646,
+  "timestamp": 1639045810523,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -283,6 +283,7 @@
         "/staff/assets/maps/dallas/level_18.svg",
         "/staff/assets/maps/delhi/level_01.svg",
         "/staff/assets/maps/delhi/level_gr.svg",
+        "/staff/assets/maps/detroit/level_28.svg",
         "/staff/assets/maps/doha/level_01.svg",
         "/staff/assets/maps/dublin/level_04.svg",
         "/staff/assets/maps/dusseldorf/level_16.svg",
@@ -786,6 +787,7 @@
     "/staff/assets/maps/dallas/level_18.svg": "5f3f43721f075d503a3b180e32674ad92c202196",
     "/staff/assets/maps/delhi/level_01.svg": "ff3f683d3dedeff26f4e4e60816e67e37fae3e9b",
     "/staff/assets/maps/delhi/level_gr.svg": "019c0a897fa64dd90f98fcfdbe478667a5dd3625",
+    "/staff/assets/maps/detroit/level_28.svg": "d9a3a0a83bcab7c28428c6121d49aa0c868dc0b9",
     "/staff/assets/maps/doha/level_01.svg": "d78bee9bd18af89e6003007682db4d9de1ffb7c5",
     "/staff/assets/maps/dublin/level_04.svg": "b9ecf2241f580ce113b2f55facf5ec760be58b7c",
     "/staff/assets/maps/dusseldorf/level_16.svg": "6f09fbda3c9902b3a9c1e637d5868d4229481cdd",
@@ -984,8 +986,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "db0d62df9ab317b80216c7c24802219148c11a52",
-    "/staff/main-es5.js": "d233c7bfdf84381723a6ad1831e5ed738ff3e942",
+    "/staff/main-es2015.js": "a838a2780782158b02dca4fe932166b8bd877cc9",
+    "/staff/main-es5.js": "66cbbe2368ce604e6f84771e852b509829d0b60e",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
