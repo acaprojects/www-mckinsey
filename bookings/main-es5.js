@@ -20,7 +20,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
@@ -36,7 +36,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -151,9 +151,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       redirectTo: 'bootstrap'
     }];
 
-    var AppRoutingModule = function AppRoutingModule() {
+    var AppRoutingModule = /*#__PURE__*/_createClass(function AppRoutingModule() {
       _classCallCheck(this, AppRoutingModule);
-    };
+    });
     /***/
 
   },
@@ -300,11 +300,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return AppComponent;
     });
 
-    var AppComponent = function AppComponent() {
+    var AppComponent = /*#__PURE__*/_createClass(function AppComponent() {
       _classCallCheck(this, AppComponent);
 
       window.app_loaded = true;
-    };
+    });
     /***/
 
   },
@@ -719,11 +719,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../environments/environment */
     "./src/environments/environment.ts");
 
-    var AppModule = function AppModule() {
+    var AppModule = /*#__PURE__*/_createClass(function AppModule() {
       _classCallCheck(this, AppModule);
 
       console.log('Production:', !!_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].production);
-    };
+    });
     /***/
 
   },
@@ -2279,9 +2279,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var OVERLAYS = [_confirm_modal_confirm_modal_component__WEBPACK_IMPORTED_MODULE_1__["ConfirmModalComponent"], _embedded_control_modal_embedded_control_modal_component__WEBPACK_IMPORTED_MODULE_2__["EmbeddedControlModalComponent"], _booking_modal_booking_modal_component__WEBPACK_IMPORTED_MODULE_3__["BookingModalComponent"]];
 
-    var SharedOverlaysModule = function SharedOverlaysModule() {
+    var SharedOverlaysModule = /*#__PURE__*/_createClass(function SharedOverlaysModule() {
       _classCallCheck(this, SharedOverlaysModule);
-    };
+    });
     /***/
 
   },
@@ -5456,7 +5456,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /** Building Level data */
 
 
-    var BuildingLevel = function BuildingLevel() {
+    var BuildingLevel = /*#__PURE__*/_createClass(function BuildingLevel() {
       var _data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       _classCallCheck(this, BuildingLevel);
@@ -5470,7 +5470,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       this.map_url = _data.map_url || '';
       this.type = _data.type || _data.floor_type || 'any';
       this.settings = _data.settings;
-    };
+    });
     /***/
 
   },
@@ -6023,14 +6023,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var PingHistory = function PingHistory(data) {
+    var PingHistory = /*#__PURE__*/_createClass(function PingHistory(data) {
       _classCallCheck(this, PingHistory);
 
       this.history = data.history;
       this.last_ping = data.last_ping;
       this.room_email = data.room_email;
       this.room_id = data.room_id;
-    };
+    });
 
     var SECONDS = 1000;
     var MINUTES = 60 * SECONDS;
@@ -10573,9 +10573,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var COMPONENTS = [_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"], _directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_5__["BindingDirective"]];
     var ENTRY_COMPONENT = [_components_user_search_field_user_search_field_component__WEBPACK_IMPORTED_MODULE_2__["CustomUserSearchFieldComponent"], _components_time_field_time_field_component__WEBPACK_IMPORTED_MODULE_3__["CustomTimeFieldComponent"], _components_duration_field_duration_field_component__WEBPACK_IMPORTED_MODULE_4__["CustomDurationFieldComponent"]];
 
-    var SharedContentModule = function SharedContentModule() {
+    var SharedContentModule = /*#__PURE__*/_createClass(function SharedContentModule() {
       _classCallCheck(this, SharedContentModule);
-    };
+    });
     /***/
 
   },
@@ -15173,9 +15173,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
 
-    var PanelSpaceDetailsComponent = function PanelSpaceDetailsComponent() {
+    var PanelSpaceDetailsComponent = /*#__PURE__*/_createClass(function PanelSpaceDetailsComponent() {
       _classCallCheck(this, PanelSpaceDetailsComponent);
-    };
+    });
     /***/
 
   },
@@ -17558,16 +17558,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var VERSION = {
       "dirty": false,
-      "raw": "e7b9253",
-      "hash": "e7b9253",
+      "raw": "7fb5a45",
+      "hash": "7fb5a45",
       "distance": null,
       "tag": null,
       "semver": null,
-      "suffix": "e7b9253",
+      "suffix": "7fb5a45",
       "semverString": null,
       "version": "0.0.0",
       "core_version": "1.0.0",
-      "time": 1637081682119
+      "time": 1641514185339
     };
     /* tslint:enable */
 
