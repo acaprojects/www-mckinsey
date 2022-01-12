@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1641918462556,
+  "timestamp": 1641986973675,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -9,8 +9,8 @@
       "updateMode": "prefetch",
       "urls": [
         "/legacy-staff/index.html",
-        "/legacy-staff/main-es2015.e1bc55f099684f992745.js",
-        "/legacy-staff/main-es5.e1bc55f099684f992745.js",
+        "/legacy-staff/main-es2015.adfb028acf7ade5cbe95.js",
+        "/legacy-staff/main-es5.adfb028acf7ade5cbe95.js",
         "/legacy-staff/manifest.webmanifest",
         "/legacy-staff/polyfills-es2015.08a9b6981f243407e8aa.js",
         "/legacy-staff/polyfills-es5.f6cde6c36fd7b2bb65f9.js",
@@ -874,7 +874,7 @@
     "/legacy-staff/assets/maps/poznan/level_e2.svg": "20a048d7f079418ada9deb000fe59adcd278c10a",
     "/legacy-staff/assets/maps/poznan/level_e3.svg": "4a1a5544a418e2d5b030bc9ed299a8bf4d9e5f5b",
     "/legacy-staff/assets/maps/poznan/level_e4.svg": "58b94bbbf983f5661e4f9077871e8489cd3e9165",
-    "/legacy-staff/assets/maps/poznan/level_e5.svg": "81e5136095ca47b02ff626ed709289a84f02f1cd",
+    "/legacy-staff/assets/maps/poznan/level_e5.svg": "b25e734d812c21d1f09e5a3b963099b39d2bfc2d",
     "/legacy-staff/assets/maps/poznan/level_f1.svg": "4dbd8be5e23a973b11b7093ac516f0ca436a7d22",
     "/legacy-staff/assets/maps/poznan/level_f2.svg": "15ca12441f14b28cbcdfce1c388997bb98cbb4fe",
     "/legacy-staff/assets/maps/prague/level_09.svg": "027d1940ae655ba8368cc6a0dc60524d23ff6aa0",
@@ -960,11 +960,11 @@
     "/legacy-staff/chevron-open-large.a3b00608d896d6340f7f.svg": "6b4bef14bd64fa10a15feb61b1dfa6f2cfe1cfea",
     "/legacy-staff/chevron-open.fdb44b7f91005546cb7f.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/legacy-staff/error-close.eaf6edd89db48db36edc.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
-    "/legacy-staff/index.html": "336a4e37e06487a2a9775ad719045cbdbe6c6662",
+    "/legacy-staff/index.html": "b54fe07f950f4389775554247cb6155af8ec211f",
     "/legacy-staff/info-icon-large.2e38a50d8ebfbb50a411.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.9c443a0375085313692a.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.e1bc55f099684f992745.js": "ecaa251c2c463ee27bccf78a610ec1889a939dc4",
-    "/legacy-staff/main-es5.e1bc55f099684f992745.js": "a21870cf63db94272d652bf6e1c5190ac46a4d89",
+    "/legacy-staff/main-es2015.adfb028acf7ade5cbe95.js": "a345c29796323ab7189763e75f90501812ccc71a",
+    "/legacy-staff/main-es5.adfb028acf7ade5cbe95.js": "87b77c0c2219f023f787fb9d1ab00f7bd2299072",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.883c8799617940ff2d01.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.fd2d29c479ebb61664e8.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
