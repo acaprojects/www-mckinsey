@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1643780237739,
+  "timestamp": 1643782401867,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -758,7 +758,7 @@
     "/legacy-staff/assets/maps/colombo/level_08.svg": "4cc651a1e98da21a60809229d156633293ab48a3",
     "/legacy-staff/assets/maps/copenhagen/level_00.svg": "c74cdb461936870c8836b2400cc319b10b2cbc96",
     "/legacy-staff/assets/maps/copenhagen/level_01.svg": "09d0eedd1358bfb52c11758fcdee8b6146acfbbf",
-    "/legacy-staff/assets/maps/copenhagen/level_02.svg": "028163d426ed1d44a8a81fd5d9a340a5e46265d3",
+    "/legacy-staff/assets/maps/copenhagen/level_02.svg": "e9c439889f1962fbcdde0b2b7bfbb1c8afe18237",
     "/legacy-staff/assets/maps/copenhagen/level_03.svg": "9ea2f22684675a3c98db772a9c4dbae2ec3d5345",
     "/legacy-staff/assets/maps/copenhagen/level_04.svg": "599482804a8afd922d0efa07dab0667faf81e141",
     "/legacy-staff/assets/maps/dallas/level_18.svg": "5f3f43721f075d503a3b180e32674ad92c202196",
@@ -966,8 +966,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "779e4829a78bff55cce4cce178aa930d21f66726",
-    "/legacy-staff/main-es5.js": "3f2fb51a52bd4731835b9fa2361bcd47144466d1",
+    "/legacy-staff/main-es2015.js": "375837e1647d46f97fcf419ea7e1ce07e5b6b5a7",
+    "/legacy-staff/main-es5.js": "791397fda5b94b32c5ab3fdf994b822570dea81d",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
