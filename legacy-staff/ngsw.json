@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1643670118663,
+  "timestamp": 1643780237739,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -954,7 +954,7 @@
     "/legacy-staff/assets/maps/zurich/level_1.svg": "e6cfe7384684f912a120c52b9549371f7a784a93",
     "/legacy-staff/assets/maps/zurich/level_2.svg": "1dd23d56985e97eafc1ce5f73a9c50dca0fda36e",
     "/legacy-staff/assets/maps/zurich/level_3.svg": "bcf8a6e7342f8fbbb7c253734718457de6c0688d",
-    "/legacy-staff/assets/maps/zurich/level_5.svg": "9bd0a55cc52a4f241f52f588ec8959a038016f4f",
+    "/legacy-staff/assets/maps/zurich/level_5.svg": "02b4389fdd6eee1cb1d9298bec809749a4ec9102",
     "/legacy-staff/assets/maps/zurich/level_eg.svg": "29506204f2511c03a13de1568644697441ccea1e",
     "/legacy-staff/assets/new-relic.js": "5010feb7ede36abe3878678c9b91ceb74509b172",
     "/legacy-staff/assets/not-supported.html": "95103c6d901e99e32b94b716edc18f85004d7c87",
@@ -966,8 +966,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "cb2fcbd9907137f20dc245166d79dfa7773ec5fa",
-    "/legacy-staff/main-es5.js": "755a04fb277e214f7312a993796243999eec23c5",
+    "/legacy-staff/main-es2015.js": "779e4829a78bff55cce4cce178aa930d21f66726",
+    "/legacy-staff/main-es5.js": "3f2fb51a52bd4731835b9fa2361bcd47144466d1",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
