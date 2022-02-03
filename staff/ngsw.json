@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1643782352800,
+  "timestamp": 1643848347945,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -957,7 +957,7 @@
     "/staff/assets/maps/tampa/level_03.svg": "6d2dfbf9fd3acceaf1b48a27fbe46b1362acf92d",
     "/staff/assets/maps/tampa/level_07.svg": "709ea215623243869d54a279ab0cd5cf739874c1",
     "/staff/assets/maps/tampa/level_08.svg": "45d8a462bd30ab290a0009e6d3570c4e98d79b7a",
-    "/staff/assets/maps/tel_aviv/level_23.svg": "bb7d9641a42841844cded81f575777dcdd45d9bb",
+    "/staff/assets/maps/tel_aviv/level_23.svg": "4c671a7091c0927559d6f6ccee1a3a25d5c5d8ba",
     "/staff/assets/maps/thiruvananthapuram/level_05.svg": "a2342aac830d640676e6474d9a011b85e85110d7",
     "/staff/assets/maps/tokyo/level_32.svg": "c0d442d965c1859b804a3b57df8ab04dab7f3f4f",
     "/staff/assets/maps/tokyo/level_33.svg": "ad075bf354d3f5258a3cfab1d373050a4c4112ce",
@@ -996,8 +996,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "f3d06eeae238a00e813aab8f39f5cfbebdad1113",
-    "/staff/main-es5.js": "0ef2f5a3376292565890e158bea957d9f4354552",
+    "/staff/main-es2015.js": "7d4cc7ed7e4cbaa27e35caa91e6985d870114369",
+    "/staff/main-es5.js": "1d4ba10e1b59f3b114572cd63832ccadca041fb0",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
