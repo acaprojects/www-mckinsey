@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1645490402677,
+  "timestamp": 1645658086289,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -916,8 +916,8 @@
     "/legacy-staff/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
     "/legacy-staff/assets/maps/st_louis/level_08.svg": "9fad82b1b7e9371057fdcadd41abfe155fd4b451",
     "/legacy-staff/assets/maps/stamford/level_4.svg": "0c1980b4adb8f03b7281a77f6eb99e23a046e642",
-    "/legacy-staff/assets/maps/stockholm/level_06.svg": "c7b06a9b69a5097d4787fe45102b4849510ad594",
-    "/legacy-staff/assets/maps/stockholm/level_07.svg": "aa4d6ffdef555390dd8aa4b88248159ebff91f48",
+    "/legacy-staff/assets/maps/stockholm/level_06.svg": "e8d039473e3e1740b331214f8f767622c0e93941",
+    "/legacy-staff/assets/maps/stockholm/level_07.svg": "5500452c0bfb1b65ad11d8e10511f9aa0473feca",
     "/legacy-staff/assets/maps/stockholm/level_08.svg": "13e6273af73a929081029b5518f26c3b324889ac",
     "/legacy-staff/assets/maps/stockholm_design/level_01.svg": "fe1f2660ba856126d6b97fcb7f9bd3403b7ec7cb",
     "/legacy-staff/assets/maps/stockholm_design/level_02.svg": "712561e231028b6231b9a6c9fd02697f0c7ca629",
@@ -968,8 +968,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "a6160583d52ab8d7142c83b90ac4d052fa1c6d37",
-    "/legacy-staff/main-es5.js": "0eb63c6f83a355bd658a59d61b9e11809eab00f7",
+    "/legacy-staff/main-es2015.js": "4adc418d81daa78bb93c22e1dc9ab96971bea2a6",
+    "/legacy-staff/main-es5.js": "8e3a5689b9f9d39b53e3ee727d7e58e052067baf",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
