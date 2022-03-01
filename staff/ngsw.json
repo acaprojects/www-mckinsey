@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1645658019491,
+  "timestamp": 1646095604762,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -848,7 +848,7 @@
     "/staff/assets/maps/los_angeles/level_08.svg": "fdcf337a02263c413bd807a6323d1fe6f64e5d16",
     "/staff/assets/maps/luanda/level_21.svg": "63d4f81b93c3e9e06aba5d7c8968c36736d79c87",
     "/staff/assets/maps/lyon/level_2.svg": "51e72eb43f6b8b72a0fb3f9067c719364eb8ed9a",
-    "/staff/assets/maps/macc/level_26.svg": "2535dcf1c953c2c2342c47b58c3255e83cd85d5f",
+    "/staff/assets/maps/macc/level_26.svg": "525a8b2bd110b2695f7c1a4b783a2a93b4f2b538",
     "/staff/assets/maps/madrid/level_1.svg": "92a4c17f7f5e49c35302e8955938626e9fddbe88",
     "/staff/assets/maps/madrid/level_2.svg": "7e92d6076221e574a2f77d7ca7390a2bdabfd4e7",
     "/staff/assets/maps/madrid/level_3.svg": "0eb05309ca13f3c8e694387fef9a9a6b99d77e90",
@@ -916,8 +916,8 @@
     "/staff/assets/maps/rome/level_4.svg": "ed992326573ff4b6c560d4d8c19d3abd4c29bb31",
     "/staff/assets/maps/rome/level_5.svg": "02f7d708dcb94aa3c4f79bec327ad69c96cbcc75",
     "/staff/assets/maps/salvador/level_12.svg": "7df2c1c8f64009608b1bb143cd42187eaa5931bb",
-    "/staff/assets/maps/san_francisco/level_47.svg": "8e7df037c711fa31560ade65e05e1e20d6240fa0",
-    "/staff/assets/maps/san_francisco/level_48.svg": "e8837c1b3b1933c6d2d50258aceebb3dd33c7aae",
+    "/staff/assets/maps/san_francisco/level_47.svg": "3cb8da35c1a35eab5b07c67a8e2340203e26f758",
+    "/staff/assets/maps/san_francisco/level_48.svg": "61dae1f61b39e7c321f95714f2f668b6511cdd1e",
     "/staff/assets/maps/san_francisco_design_studio/level_01.svg": "ac451e01f7b12b63ce3ca74f046604c42cb27ed2",
     "/staff/assets/maps/san_francisco_design_studio/level_02.svg": "3fc7166ff6799ece8f4b014ee8d1f56781fd95f7",
     "/staff/assets/maps/san_jose/level_03.svg": "d43d5508f2ba681a6c0e0b28d4380236b534e7f0",
@@ -998,8 +998,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "4a261ce2c33535c4019b570cb9a3b50c2ed2e02f",
-    "/staff/main-es5.js": "809eba5b1e55fff6b0bd08d6716b3da5f88ed230",
+    "/staff/main-es2015.js": "a2ca2ff09ca0e14473d468aff77d6bcca8b1c0e7",
+    "/staff/main-es5.js": "6411fd8258467ce63de650556d926915722a83db",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
