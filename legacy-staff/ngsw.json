@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1645658086289,
+  "timestamp": 1646095675158,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -820,7 +820,7 @@
     "/legacy-staff/assets/maps/los_angeles/level_08.svg": "fdcf337a02263c413bd807a6323d1fe6f64e5d16",
     "/legacy-staff/assets/maps/luanda/level_21.svg": "63d4f81b93c3e9e06aba5d7c8968c36736d79c87",
     "/legacy-staff/assets/maps/lyon/level_2.svg": "51e72eb43f6b8b72a0fb3f9067c719364eb8ed9a",
-    "/legacy-staff/assets/maps/macc/level_26.svg": "2535dcf1c953c2c2342c47b58c3255e83cd85d5f",
+    "/legacy-staff/assets/maps/macc/level_26.svg": "525a8b2bd110b2695f7c1a4b783a2a93b4f2b538",
     "/legacy-staff/assets/maps/madrid/level_1.svg": "92a4c17f7f5e49c35302e8955938626e9fddbe88",
     "/legacy-staff/assets/maps/madrid/level_2.svg": "7e92d6076221e574a2f77d7ca7390a2bdabfd4e7",
     "/legacy-staff/assets/maps/madrid/level_3.svg": "0eb05309ca13f3c8e694387fef9a9a6b99d77e90",
@@ -888,8 +888,8 @@
     "/legacy-staff/assets/maps/rome/level_4.svg": "ed992326573ff4b6c560d4d8c19d3abd4c29bb31",
     "/legacy-staff/assets/maps/rome/level_5.svg": "02f7d708dcb94aa3c4f79bec327ad69c96cbcc75",
     "/legacy-staff/assets/maps/salvador/level_12.svg": "7df2c1c8f64009608b1bb143cd42187eaa5931bb",
-    "/legacy-staff/assets/maps/san_francisco/level_47.svg": "8e7df037c711fa31560ade65e05e1e20d6240fa0",
-    "/legacy-staff/assets/maps/san_francisco/level_48.svg": "e8837c1b3b1933c6d2d50258aceebb3dd33c7aae",
+    "/legacy-staff/assets/maps/san_francisco/level_47.svg": "3cb8da35c1a35eab5b07c67a8e2340203e26f758",
+    "/legacy-staff/assets/maps/san_francisco/level_48.svg": "61dae1f61b39e7c321f95714f2f668b6511cdd1e",
     "/legacy-staff/assets/maps/san_francisco_design_studio/level_01.svg": "ac451e01f7b12b63ce3ca74f046604c42cb27ed2",
     "/legacy-staff/assets/maps/san_francisco_design_studio/level_02.svg": "3fc7166ff6799ece8f4b014ee8d1f56781fd95f7",
     "/legacy-staff/assets/maps/san_jose/level_03.svg": "d43d5508f2ba681a6c0e0b28d4380236b534e7f0",
@@ -968,8 +968,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "4adc418d81daa78bb93c22e1dc9ab96971bea2a6",
-    "/legacy-staff/main-es5.js": "8e3a5689b9f9d39b53e3ee727d7e58e052067baf",
+    "/legacy-staff/main-es2015.js": "2c3addd6ca6f1f60b3e99ec138177dd1881ebd89",
+    "/legacy-staff/main-es5.js": "3b01c66f5fb76741bdc6e96005e20369437206d9",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
