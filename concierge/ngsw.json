@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1646327165996,
+  "timestamp": 1646614674969,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -743,7 +743,7 @@
     "/concierge/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
     "/concierge/assets/maps/st_louis/level_08.svg": "9fad82b1b7e9371057fdcadd41abfe155fd4b451",
     "/concierge/assets/maps/stamford/level_4.svg": "0c1980b4adb8f03b7281a77f6eb99e23a046e642",
-    "/concierge/assets/maps/stockholm/level_06.svg": "e8d039473e3e1740b331214f8f767622c0e93941",
+    "/concierge/assets/maps/stockholm/level_06.svg": "e4ab3d4fe1012cf2a1c38be60684c29e0ed429e3",
     "/concierge/assets/maps/stockholm/level_07.svg": "5500452c0bfb1b65ad11d8e10511f9aa0473feca",
     "/concierge/assets/maps/stockholm/level_08.svg": "13e6273af73a929081029b5518f26c3b324889ac",
     "/concierge/assets/maps/stockholm_design/level_01.svg": "fe1f2660ba856126d6b97fcb7f9bd3403b7ec7cb",
@@ -794,8 +794,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "aa0153894fb09874d12f3cb179ed317c80b9ce09",
-    "/concierge/main-es2015.js": "ba681b38967d4589ca354f6b1c669c38fff4ebbc",
-    "/concierge/main-es5.js": "e9380607eac75cc18e6394e1bce9d80984d9a4c9",
+    "/concierge/main-es2015.js": "2797290a1162a59f79cac95708358aaacfe432e5",
+    "/concierge/main-es5.js": "dd77d1ab2d92d9c2ef23c7fc29b1b9e4d1af50a9",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
