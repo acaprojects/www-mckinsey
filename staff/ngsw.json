@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1646327063477,
+  "timestamp": 1646614566620,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -944,7 +944,7 @@
     "/staff/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
     "/staff/assets/maps/st_louis/level_08.svg": "9fad82b1b7e9371057fdcadd41abfe155fd4b451",
     "/staff/assets/maps/stamford/level_4.svg": "0c1980b4adb8f03b7281a77f6eb99e23a046e642",
-    "/staff/assets/maps/stockholm/level_06.svg": "e8d039473e3e1740b331214f8f767622c0e93941",
+    "/staff/assets/maps/stockholm/level_06.svg": "e4ab3d4fe1012cf2a1c38be60684c29e0ed429e3",
     "/staff/assets/maps/stockholm/level_07.svg": "5500452c0bfb1b65ad11d8e10511f9aa0473feca",
     "/staff/assets/maps/stockholm/level_08.svg": "13e6273af73a929081029b5518f26c3b324889ac",
     "/staff/assets/maps/stockholm_design/level_01.svg": "fe1f2660ba856126d6b97fcb7f9bd3403b7ec7cb",
@@ -998,8 +998,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "bc5b33133763971feda7df4ce9963655df4e3088",
-    "/staff/main-es5.js": "15df1b76872332d4de29f0fb8cffebc2fbbd95e0",
+    "/staff/main-es2015.js": "aba9dc45d47246d89bbf7ff01d0ea26b843c385d",
+    "/staff/main-es5.js": "35a360db5d5826c5485983adc396758687648065",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
