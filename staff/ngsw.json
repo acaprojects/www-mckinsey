@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1646414516210,
+  "timestamp": 1646621364417,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -9,8 +9,8 @@
       "updateMode": "prefetch",
       "urls": [
         "/staff/index.html",
-        "/staff/main-es2015.3202a408c8d6bb399b67.js",
-        "/staff/main-es5.3202a408c8d6bb399b67.js",
+        "/staff/main-es2015.1933e08d0de00e14775b.js",
+        "/staff/main-es5.1933e08d0de00e14775b.js",
         "/staff/manifest.webmanifest",
         "/staff/polyfills-es2015.08a9b6981f243407e8aa.js",
         "/staff/polyfills-es5.f6cde6c36fd7b2bb65f9.js",
@@ -941,7 +941,7 @@
     "/staff/assets/maps/solingen/level_01.svg": "04e024a1b48ddd699ceec763ab8f0db187edbec5",
     "/staff/assets/maps/st_louis/level_08.svg": "9fad82b1b7e9371057fdcadd41abfe155fd4b451",
     "/staff/assets/maps/stamford/level_4.svg": "0c1980b4adb8f03b7281a77f6eb99e23a046e642",
-    "/staff/assets/maps/stockholm/level_06.svg": "e8d039473e3e1740b331214f8f767622c0e93941",
+    "/staff/assets/maps/stockholm/level_06.svg": "e4ab3d4fe1012cf2a1c38be60684c29e0ed429e3",
     "/staff/assets/maps/stockholm/level_07.svg": "5500452c0bfb1b65ad11d8e10511f9aa0473feca",
     "/staff/assets/maps/stockholm/level_08.svg": "13e6273af73a929081029b5518f26c3b324889ac",
     "/staff/assets/maps/stockholm_design/level_01.svg": "fe1f2660ba856126d6b97fcb7f9bd3403b7ec7cb",
@@ -992,11 +992,11 @@
     "/staff/chevron-open-large.a3b00608d896d6340f7f.svg": "6b4bef14bd64fa10a15feb61b1dfa6f2cfe1cfea",
     "/staff/chevron-open.fdb44b7f91005546cb7f.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/staff/error-close.eaf6edd89db48db36edc.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
-    "/staff/index.html": "6b3b80cacbed0186a19348c62f4016034e804b94",
+    "/staff/index.html": "c3ed8ac799fe323a2d1f451d38b540a969063bd0",
     "/staff/info-icon-large.2e38a50d8ebfbb50a411.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.9c443a0375085313692a.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.3202a408c8d6bb399b67.js": "95c0ff00ffbe7812ae5ecdc19e7d11a4869ff4ee",
-    "/staff/main-es5.3202a408c8d6bb399b67.js": "df822b63b975fe092b66d7511e8da556f7437ad5",
+    "/staff/main-es2015.1933e08d0de00e14775b.js": "25edb9a5b0e3af692acb7b46eb02604683f9b982",
+    "/staff/main-es5.1933e08d0de00e14775b.js": "0a2e32e3de45f0a94a2483a48aa7ee630ddb9f7d",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.883c8799617940ff2d01.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.fd2d29c479ebb61664e8.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
