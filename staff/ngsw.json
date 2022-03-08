@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1646614566620,
+  "timestamp": 1646702343530,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -357,6 +357,7 @@
         "/staff/assets/maps/milan/level_4.svg",
         "/staff/assets/maps/milan/level_5.svg",
         "/staff/assets/maps/minneapolis/level_23.svg",
+        "/staff/assets/maps/monterrey/level_4.svg",
         "/staff/assets/maps/montreal/level_44.svg",
         "/staff/assets/maps/moscow/level_03.svg",
         "/staff/assets/maps/moscow/level_04.svg",
@@ -867,6 +868,7 @@
     "/staff/assets/maps/milan/level_4.svg": "8e6de911f9942b0c69eed7e38614402715c2282c",
     "/staff/assets/maps/milan/level_5.svg": "1dfa215dab88d03cc7696d22d8fb35d9b4abdd83",
     "/staff/assets/maps/minneapolis/level_23.svg": "62f26e14458d176396d92b78d9165894963867f4",
+    "/staff/assets/maps/monterrey/level_4.svg": "faf638c402e3c722997f186833ba0ec2786d50d1",
     "/staff/assets/maps/montreal/level_44.svg": "9ceac73893c09f8c5473155f2f6f79fc3f6c22a4",
     "/staff/assets/maps/moscow/level_03.svg": "4880ee743066f2e04082be06b0fcd5a0fa2cc21e",
     "/staff/assets/maps/moscow/level_04.svg": "69d25bd1ddfe6474230ec2e5cdb2bc60b975ab36",
@@ -998,8 +1000,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "aba9dc45d47246d89bbf7ff01d0ea26b843c385d",
-    "/staff/main-es5.js": "35a360db5d5826c5485983adc396758687648065",
+    "/staff/main-es2015.js": "6d222a46535b08940eb258411f0d2f2658b965ab",
+    "/staff/main-es5.js": "4c611f2fcc28d5e3f7523b20500e611f77387f68",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
