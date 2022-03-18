@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1647569278448,
+  "timestamp": 1647575907073,
   "index": "/legacy-staff/index.html",
   "assetGroups": [
     {
@@ -378,7 +378,7 @@
         "/legacy-staff/assets/maps/perth/level_02.svg",
         "/legacy-staff/assets/maps/perth/level_03.svg",
         "/legacy-staff/assets/maps/philadelphia/level_14.svg",
-        "/legacy-staff/assets/maps/pittsburg/level_23.svg",
+        "/legacy-staff/assets/maps/pittsburgh/level_23.svg",
         "/legacy-staff/assets/maps/poznan/level_ba.svg",
         "/legacy-staff/assets/maps/poznan/level_c3.svg",
         "/legacy-staff/assets/maps/poznan/level_c4.svg",
@@ -876,7 +876,7 @@
     "/legacy-staff/assets/maps/perth/level_02.svg": "7cff02ad6851a039fa072971cd16d59a2cec94be",
     "/legacy-staff/assets/maps/perth/level_03.svg": "969ac23d391a7703f6cdf3f2de21cddda928b3b5",
     "/legacy-staff/assets/maps/philadelphia/level_14.svg": "68e4265783364d46460b0c021e81d6882844731b",
-    "/legacy-staff/assets/maps/pittsburg/level_23.svg": "7cf904bc6de0fce141a82eb87ce088d67546b34d",
+    "/legacy-staff/assets/maps/pittsburgh/level_23.svg": "7cf904bc6de0fce141a82eb87ce088d67546b34d",
     "/legacy-staff/assets/maps/poznan/level_ba.svg": "d99d87819ea304fc57131a47666d841435290eb0",
     "/legacy-staff/assets/maps/poznan/level_c3.svg": "e57b408cc070ddfaf824623b7ec84683b764adcd",
     "/legacy-staff/assets/maps/poznan/level_c4.svg": "81e09de12a9ae07a14c8dbbc7b5a61f772239f38",
@@ -974,8 +974,8 @@
     "/legacy-staff/index.html": "c2eac7a3e6af40bffd7fcbf98a5f7b20cb888e31",
     "/legacy-staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/legacy-staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/legacy-staff/main-es2015.js": "a2422b985710823342825cef92d63a7d3e74bff5",
-    "/legacy-staff/main-es5.js": "55f583b85f7e2e6ded7deed4a3bf811ba7350710",
+    "/legacy-staff/main-es2015.js": "216212d4ae45356e89ad31dcaffd7a497ad78d05",
+    "/legacy-staff/main-es5.js": "da7bae70c4844897fb7eea3257567fa6ec0c9b5b",
     "/legacy-staff/manifest.webmanifest": "c0de610e35208ac6c883cad1073a1d5c5f10163f",
     "/legacy-staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/legacy-staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
