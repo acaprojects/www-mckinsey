@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1648073818049,
+  "timestamp": 1648082025259,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -684,7 +684,7 @@
     "/concierge/assets/maps/mumbai/level_10.svg": "9c23e81445eef4bc8a3c70421025dfd919765278",
     "/concierge/assets/maps/mumbai/level_2.svg": "c8434bbb7c1e4e89940d8406f4d644a079593e83",
     "/concierge/assets/maps/mumbai/level_9.svg": "045f1de062ea73fb628403f536f5feffb683d4c7",
-    "/concierge/assets/maps/mumbai/level_g.svg": "76e0f49fc825fb36cc3642ef386ace3ea9ff7673",
+    "/concierge/assets/maps/mumbai/level_g.svg": "ba48314e3f0cd9efe684cb8a1ed1597351bf3383",
     "/concierge/assets/maps/munich/level_1.svg": "3721b60faa56249038cc3a6026688c0d6bde4522",
     "/concierge/assets/maps/munich/level_2.svg": "562b2e282eaf70fa3500303ee8ca681e6be03fb3",
     "/concierge/assets/maps/munich/level_3.svg": "9a20086b0fb16f9f208d2b121fd1d1a4ea16faa2",
@@ -810,8 +810,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "aa0153894fb09874d12f3cb179ed317c80b9ce09",
-    "/concierge/main-es2015.js": "5f761952742d0f2a2b769f6c904ed547ab995898",
-    "/concierge/main-es5.js": "2e335e2b0c8a0b63ec6929290c6727afd8252f0c",
+    "/concierge/main-es2015.js": "956ea3b4d726c7848f190c97ba3b8380d9b6cb28",
+    "/concierge/main-es5.js": "df8ff2f1b5f8f4cd66c50754dcb2bfabf6fa8d34",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
