@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1648437220961,
+  "timestamp": 1648438507705,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -62,6 +62,8 @@
         "/concierge/arrow-backward.svg",
         "/concierge/arrow-forward.svg",
         "/concierge/assets/favicon.ico",
+        "/concierge/assets/icon/info-bg-blue.svg",
+        "/concierge/assets/icon/info-bg-dark.svg",
         "/concierge/assets/icon/warning-yellow.svg",
         "/concierge/assets/icons/apple-touch-icon-114x114.png",
         "/concierge/assets/icons/apple-touch-icon-120x120.png",
@@ -476,6 +478,8 @@
     "/concierge/arrow-backward.svg": "666f8d954f4486ae09daca9b191e4bf8c9df5901",
     "/concierge/arrow-forward.svg": "83b40fb550fb65cb0166adca8ebe4ccac092c40f",
     "/concierge/assets/favicon.ico": "aa51e7a7f3732093d87f624dda6283b80642aa69",
+    "/concierge/assets/icon/info-bg-blue.svg": "635e7d9d1b8174d029cc697b016538ae606fc054",
+    "/concierge/assets/icon/info-bg-dark.svg": "fbaf8f33d0e5ea7487305a6bb01f04e809c9150a",
     "/concierge/assets/icon/warning-yellow.svg": "1bef5b5c47fd3d8fb1d39400d4802b61d8c88323",
     "/concierge/assets/icons/apple-touch-icon-114x114.png": "241494476bc4b58b78b6aefa73fcc2babb24b96f",
     "/concierge/assets/icons/apple-touch-icon-120x120.png": "360b856a08ec92c793f406e02114326c43f34a67",
@@ -814,8 +818,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "aa0153894fb09874d12f3cb179ed317c80b9ce09",
-    "/concierge/main-es2015.js": "c284dc5fa73a92c58c122cda332fcf23829135f0",
-    "/concierge/main-es5.js": "7eecb3cf88260033d4ae3cf1188adf574be2698c",
+    "/concierge/main-es2015.js": "e46b1f1598394c8ea071f0175e8829c1a386c40c",
+    "/concierge/main-es5.js": "2caa62df12b2af18509b3d8d7cdaddc0195ac50b",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
