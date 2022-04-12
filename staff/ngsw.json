@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1649311514804,
+  "timestamp": 1649728242523,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -9,14 +9,14 @@
       "updateMode": "prefetch",
       "urls": [
         "/staff/index.html",
-        "/staff/main-es2015.71366894b64fd5c3656e.js",
-        "/staff/main-es5.71366894b64fd5c3656e.js",
+        "/staff/main-es2015.49966f9966a7763f527a.js",
+        "/staff/main-es5.49966f9966a7763f527a.js",
         "/staff/manifest.webmanifest",
         "/staff/polyfills-es2015.08a9b6981f243407e8aa.js",
         "/staff/polyfills-es5.f6cde6c36fd7b2bb65f9.js",
         "/staff/runtime-es2015.0dae8cbc97194c7caed4.js",
         "/staff/runtime-es5.0dae8cbc97194c7caed4.js",
-        "/staff/styles.589a91e674b2883dabbc.css"
+        "/staff/styles.c4ed9f3603a04fc90a3f.css"
       ],
       "patterns": []
     },
@@ -92,6 +92,7 @@
         "/staff/assets/icon/events.svg",
         "/staff/assets/icon/expand-button.svg",
         "/staff/assets/icon/info-bg-blue.svg",
+        "/staff/assets/icon/info-bg-dark.svg",
         "/staff/assets/icon/info.svg",
         "/staff/assets/icon/launch.png",
         "/staff/assets/icon/left-arrow.svg",
@@ -114,6 +115,7 @@
         "/staff/assets/icon/triangle-pattern.svg",
         "/staff/assets/icon/upcoming.svg",
         "/staff/assets/icon/warning-icon.svg",
+        "/staff/assets/icon/warning-yellow.svg",
         "/staff/assets/icon/white-location.svg",
         "/staff/assets/icons/apple-touch-icon-114x114.png",
         "/staff/assets/icons/apple-touch-icon-120x120.png",
@@ -135,6 +137,7 @@
         "/staff/assets/icons/mstile-310x150.png",
         "/staff/assets/icons/mstile-310x310.png",
         "/staff/assets/icons/mstile-70x70.png",
+        "/staff/assets/icons/warning-yellow.svg",
         "/staff/assets/img/banner.jpg",
         "/staff/assets/img/book_booth.svg",
         "/staff/assets/img/book_confirmed.svg",
@@ -610,6 +613,7 @@
     "/staff/assets/icon/events.svg": "beb0eb09bd4d7485b9dde96d55d037d6f62d2449",
     "/staff/assets/icon/expand-button.svg": "1c3513748c5dbf56f7aac021f606b84b883d415c",
     "/staff/assets/icon/info-bg-blue.svg": "635e7d9d1b8174d029cc697b016538ae606fc054",
+    "/staff/assets/icon/info-bg-dark.svg": "fbaf8f33d0e5ea7487305a6bb01f04e809c9150a",
     "/staff/assets/icon/info.svg": "0a598b0b9fad9706be4f4d7d7ed17b52e5a532bc",
     "/staff/assets/icon/launch.png": "98df582f92701da1badfcafff07a7be0afba0f58",
     "/staff/assets/icon/left-arrow.svg": "e8d25102d6f5d7bb95fd05df433e4381b047f604",
@@ -632,6 +636,7 @@
     "/staff/assets/icon/triangle-pattern.svg": "a414b7f69961126163d88957cd64b96e4537869e",
     "/staff/assets/icon/upcoming.svg": "74c483a94f90a0d0a934c6bd2e2e51316f920b3b",
     "/staff/assets/icon/warning-icon.svg": "c2bcc0d47946812a2176475033b8506c2e7b7a2b",
+    "/staff/assets/icon/warning-yellow.svg": "1bef5b5c47fd3d8fb1d39400d4802b61d8c88323",
     "/staff/assets/icon/white-location.svg": "37d308911321e0a5302e2fbb40a64c684dbcbe64",
     "/staff/assets/icons/apple-touch-icon-114x114.png": "241494476bc4b58b78b6aefa73fcc2babb24b96f",
     "/staff/assets/icons/apple-touch-icon-120x120.png": "360b856a08ec92c793f406e02114326c43f34a67",
@@ -653,6 +658,7 @@
     "/staff/assets/icons/mstile-310x150.png": "2e85cd2ae48153b16a71d9b1b3c24906f1e6dbd0",
     "/staff/assets/icons/mstile-310x310.png": "443404399628aea17a5f04a97be68452c9603954",
     "/staff/assets/icons/mstile-70x70.png": "8c55c5bc87cdef89ec7f5620d98011bf952bb244",
+    "/staff/assets/icons/warning-yellow.svg": "1bef5b5c47fd3d8fb1d39400d4802b61d8c88323",
     "/staff/assets/img/banner.jpg": "b26b788d7c97f02f91a832168d2ca2db5067b042",
     "/staff/assets/img/book_booth.svg": "eb75bbf7cc3983654c5a320df6e882033166d2c4",
     "/staff/assets/img/book_confirmed.svg": "036450091c097f77f4ce388bc9484be279a51534",
@@ -1008,11 +1014,11 @@
     "/staff/chevron-open-large.a3b00608d896d6340f7f.svg": "6b4bef14bd64fa10a15feb61b1dfa6f2cfe1cfea",
     "/staff/chevron-open.fdb44b7f91005546cb7f.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/staff/error-close.eaf6edd89db48db36edc.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
-    "/staff/index.html": "a47f20bc6df1ed827e5b96e5029439b54d44e7ba",
+    "/staff/index.html": "ca429431d43bcd7bd1bfaf6c757df4152228709b",
     "/staff/info-icon-large.2e38a50d8ebfbb50a411.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.9c443a0375085313692a.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.71366894b64fd5c3656e.js": "de2ea60fbb6bfcf1b71100dda5f68b7a51daeedb",
-    "/staff/main-es5.71366894b64fd5c3656e.js": "432c65b71822ae43a74c936df3fa563b6baf83cf",
+    "/staff/main-es2015.49966f9966a7763f527a.js": "e81235edf4a785068d2a814ab6f579cbd387ebac",
+    "/staff/main-es5.49966f9966a7763f527a.js": "3e1449b4f38669a6b3b08a52be61becd0b5cff0e",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.883c8799617940ff2d01.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.fd2d29c479ebb61664e8.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
@@ -1028,7 +1034,7 @@
     "/staff/polyfills-es5.f6cde6c36fd7b2bb65f9.js": "2dd0666c721e2c231db6aaef08278178389d54f7",
     "/staff/runtime-es2015.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/staff/runtime-es5.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/staff/styles.589a91e674b2883dabbc.css": "b8364be2ef6bee1898618719c6621fbbb7b2df46"
+    "/staff/styles.c4ed9f3603a04fc90a3f.css": "7dfde2ae76369fd6c78efd39b2b0e1fb79ddea62"
   },
   "navigationUrls": [
     {
