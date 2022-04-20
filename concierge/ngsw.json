@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1649831644876,
+  "timestamp": 1650435244692,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -335,6 +335,7 @@
         "/concierge/assets/maps/san_jose/level_08.svg",
         "/concierge/assets/maps/santiago/level_19.svg",
         "/concierge/assets/maps/santiago/level_20.svg",
+        "/concierge/assets/maps/santo_domingo/level_21.svg",
         "/concierge/assets/maps/sao_paulo/level_21.svg",
         "/concierge/assets/maps/sao_paulo/level_22.svg",
         "/concierge/assets/maps/sao_paulo/level_23.svg",
@@ -751,6 +752,7 @@
     "/concierge/assets/maps/san_jose/level_08.svg": "ecada741e46ff7c23b18ae540e48affa2e0f4513",
     "/concierge/assets/maps/santiago/level_19.svg": "2035cdfa46e3dd99d79f04dcf8b0e39c9d765bdd",
     "/concierge/assets/maps/santiago/level_20.svg": "c3bd861044a476a32826d87c90d623f51f0cec4f",
+    "/concierge/assets/maps/santo_domingo/level_21.svg": "e54e3765ddbcba2ceba18decfcb4aee07720d6e9",
     "/concierge/assets/maps/sao_paulo/level_21.svg": "1eb758f2db2d417391d7770357aa15764a88d9ec",
     "/concierge/assets/maps/sao_paulo/level_22.svg": "13054245b8f1cc36f7cf4c3988460111cc32d1a6",
     "/concierge/assets/maps/sao_paulo/level_23.svg": "82291970e5d2307a746a99523fab9e56424b34c1",
@@ -818,8 +820,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "aa0153894fb09874d12f3cb179ed317c80b9ce09",
-    "/concierge/main-es2015.js": "28f40a32ee7176b748d30b3b0a8f27474f07eeeb",
-    "/concierge/main-es5.js": "aba79a1745b624bdb833f9bc8694a4c8cabd6705",
+    "/concierge/main-es2015.js": "18624060a0664746c18e774546f3f48825ad716c",
+    "/concierge/main-es5.js": "efca83837cc863d4419548ab89d2c345ef3d2b69",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
