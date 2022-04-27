@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1650435106398,
+  "timestamp": 1651026593470,
   "index": "/staff/index.html",
   "assetGroups": [
     {
@@ -951,7 +951,7 @@
     "/staff/assets/maps/san_jose/level_08.svg": "ecada741e46ff7c23b18ae540e48affa2e0f4513",
     "/staff/assets/maps/santiago/level_19.svg": "2035cdfa46e3dd99d79f04dcf8b0e39c9d765bdd",
     "/staff/assets/maps/santiago/level_20.svg": "c3bd861044a476a32826d87c90d623f51f0cec4f",
-    "/staff/assets/maps/santo_domingo/level_21.svg": "e54e3765ddbcba2ceba18decfcb4aee07720d6e9",
+    "/staff/assets/maps/santo_domingo/level_21.svg": "cea3a14a79c036c8751a126c6e6e776c566a39aa",
     "/staff/assets/maps/sao_paulo/level_21.svg": "1eb758f2db2d417391d7770357aa15764a88d9ec",
     "/staff/assets/maps/sao_paulo/level_22.svg": "13054245b8f1cc36f7cf4c3988460111cc32d1a6",
     "/staff/assets/maps/sao_paulo/level_23.svg": "82291970e5d2307a746a99523fab9e56424b34c1",
@@ -1022,8 +1022,8 @@
     "/staff/index.html": "bff3ee2e6012fcfcb325c84765088fa8e927213b",
     "/staff/info-icon-large.svg": "a850027b550a17e17d3fadb2c279601a518faf4b",
     "/staff/info-icon-small.svg": "a11cd7031a9afacf40a9bbda41fa8172bfe639bb",
-    "/staff/main-es2015.js": "88d8b14922484f8fa13959a8dca2de2e842a0fe3",
-    "/staff/main-es5.js": "8c622f673a5e138b93f777cb09f5e8043e284dc3",
+    "/staff/main-es2015.js": "c04ea48408572f6f55d1642256b2973d250074a0",
+    "/staff/main-es5.js": "b10c7c56982c8abf28488d13c55f35d80c2d2b17",
     "/staff/manifest.webmanifest": "c3dd3dc7e7a679cb553a51b6eca19c2b336ba11e",
     "/staff/map-pin.svg": "89ef1ce478a10a2bbf4f513254124a31fc76f203",
     "/staff/map-refresh-large.svg": "f037ee9cf8beaed9b8947ecf1292bbea54455dd8",
