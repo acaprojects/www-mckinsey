@@ -84,7 +84,7 @@
                 "attendees",
                 "body",
                 "catering",
-                "date",
+                "dateTz",
                 "duration",
                 "organiser",
                 "title",
