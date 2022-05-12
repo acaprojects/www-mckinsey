@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652247110022,
+  "timestamp": 1652337958615,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -319,6 +319,7 @@
         "/concierge/assets/maps/poznan/level_f2.svg",
         "/concierge/assets/maps/prague/level_09.svg",
         "/concierge/assets/maps/prague/level_10.svg",
+        "/concierge/assets/maps/quito/level_6.svg",
         "/concierge/assets/maps/rio/level_14.svg",
         "/concierge/assets/maps/rome/level_4.svg",
         "/concierge/assets/maps/rome/level_5.svg",
@@ -736,6 +737,7 @@
     "/concierge/assets/maps/poznan/level_f2.svg": "b26bfe950bbeb45c248629d3754e0f4dc5af01ba",
     "/concierge/assets/maps/prague/level_09.svg": "027d1940ae655ba8368cc6a0dc60524d23ff6aa0",
     "/concierge/assets/maps/prague/level_10.svg": "d6781268e73e1fb5311ffa85e679fb2b76bd4caa",
+    "/concierge/assets/maps/quito/level_6.svg": "bbf378370425b91f573635e82ecd16bde2cbe4ca",
     "/concierge/assets/maps/rio/level_14.svg": "3a64aa56b9412ddcd9ba53ea6ceb4d59904f65e5",
     "/concierge/assets/maps/rome/level_4.svg": "ed992326573ff4b6c560d4d8c19d3abd4c29bb31",
     "/concierge/assets/maps/rome/level_5.svg": "02f7d708dcb94aa3c4f79bec327ad69c96cbcc75",
@@ -820,8 +822,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "aa0153894fb09874d12f3cb179ed317c80b9ce09",
-    "/concierge/main-es2015.js": "cea9164d32e27c95caab2f80290468d376d1d6f6",
-    "/concierge/main-es5.js": "73d6f20143de8f69f5d8836532bdc0bd198a225b",
+    "/concierge/main-es2015.js": "3c731f08de563a9b7a88b103c880a2901f8b6382",
+    "/concierge/main-es5.js": "7f440be664f149db3a77338d32a1a269f62c352e",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
