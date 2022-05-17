@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652752989777,
+  "timestamp": 1652771431427,
   "index": "/concierge/index.html",
   "assetGroups": [
     {
@@ -754,8 +754,8 @@
     "/concierge/assets/maps/san_jose/level_06.svg": "0a47ed8f8306c53f6b9cdd0f279cc8625d6691d8",
     "/concierge/assets/maps/san_jose/level_07.svg": "c1fbbe90bad6b2969904f747bd1622aeb9f9e105",
     "/concierge/assets/maps/san_jose/level_08.svg": "ecada741e46ff7c23b18ae540e48affa2e0f4513",
-    "/concierge/assets/maps/santiago/level_19.svg": "e622fe855aed9c4154296fac240ade184ee53a7a",
-    "/concierge/assets/maps/santiago/level_20.svg": "6b880feec2975db7c0612e2afe6bf48a3348808a",
+    "/concierge/assets/maps/santiago/level_19.svg": "8d33cd9cd3a1fac1d9396ac45c31ead5d0e6af65",
+    "/concierge/assets/maps/santiago/level_20.svg": "a2b716092095d2cd84491ba8ca6915816444b014",
     "/concierge/assets/maps/santo_domingo/level_21.svg": "cea3a14a79c036c8751a126c6e6e776c566a39aa",
     "/concierge/assets/maps/sao_paulo/level_21.svg": "1eb758f2db2d417391d7770357aa15764a88d9ec",
     "/concierge/assets/maps/sao_paulo/level_22.svg": "44e29f5d5ddef49e964f7cd05e2a5239d0940b6c",
@@ -824,8 +824,8 @@
     "/concierge/chevron-open.svg": "2c79ee22b4e8485bee03ac8b09f7dbb609a8551b",
     "/concierge/error-close.svg": "d2086f73830c8c2bd112263edbab2e7f22217170",
     "/concierge/index.html": "aa0153894fb09874d12f3cb179ed317c80b9ce09",
-    "/concierge/main-es2015.js": "f89ef5b9d01b828991fe317ca860c80180b3b6d5",
-    "/concierge/main-es5.js": "6bda513cc294c821cf5c76944744aeb5b621a15c",
+    "/concierge/main-es2015.js": "24cb42904d038760d9acd66faf92100f8827526b",
+    "/concierge/main-es5.js": "e4b85f3e67612ae3e6ccbc12e54433df2f3318cf",
     "/concierge/manifest.webmanifest": "8e069478947d8467cbe9dab0958bb78a8461a2c7",
     "/concierge/modal-close-desktop.svg": "d88e4ef1047cf4dcbb665a320ebc43192e186230",
     "/concierge/modal-close.svg": "adee1ce05dcfdcd0a620e553b141d65a557c0146",
