@@ -36,17 +36,45 @@
             @font-face {
                 font-family: 'Chronicle Display';
                 src: url(assets/fonts/Chronicle_Display_Light.otf);
+            }     
+            
+            .loader-info-block {
+                position: fixed;
+                top: 1em;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0;
+                background-color: #fff;
+                border-radius: 4px;
+                box-shadow: 0 1px 3px 0 rgba(#000, .2),
+                0 1px 1px 0 rgba(#000, .14),
+                0 2px 1px -1px rgba(#000, .12);
+                padding: 1em;
+                width: 360px;
+                max-width: calc(100vw - 2em);
+                display: flex;
+                flex-direction: column;
             }
+
+            .spinner {
+                margin: 1em auto 32px;
+            }
+
+            .loader-text{
+                font-size: 24px;
+                margin: 0 0 1em 0;
+                text-align: center;
+            }
+
         </style>
     </head>
     <body>
         <app-root>
-            <div class="loading center">
-                <div class="bounce">
-                    <div class="circle">
-                        <div class="inner"></div>
-                    </div>
+            <div class="loader-info-block">
+                <div class="spinner">
+                    <img src="assets/img/loader.gif" />
                 </div>
+                <div class="loader-text" i18n="Checking login status">Converge is loading</div>
             </div>
         </app-root>
         <noscript>
@@ -62,6 +90,5 @@
                 <div class="content">Javascript is required for this site to run.</div>
             </div>
         </noscript>
-        <!-- <script type="text/javascript" src="assets/new-relic.js"></script> -->
     <script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
 </html>
