@@ -32,15 +32,44 @@
         <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
         <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
         <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+        <style>
+            .loader-info-block {
+                position: fixed;
+                top: 1em;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0;
+                background-color: #fff;
+                border-radius: 4px;
+                box-shadow: 0 1px 3px 0 rgba(#000, .2),
+                0 1px 1px 0 rgba(#000, .14),
+                0 2px 1px -1px rgba(#000, .12);
+                padding: 1em;
+                width: 360px;
+                max-width: calc(100vw - 2em);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .spinner {
+                margin: 1em auto 32px;
+            }
+
+            .loader-text{
+                font-size: 24px;
+                margin: 0 0 1em 0;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <app-root>
-            <div class="loading center">
-                <div class="bounce">
-                    <div class="circle">
-                        <div class="inner"></div>
-                    </div>
+            <div class="loader-info-block">
+                <div class="spinner">
+                    <img src="assets/img/loader.gif" />
                 </div>
+                <div class="loader-text" i18n="Checking login status">Converge is loading</div>
             </div>
         </app-root>
         <noscript>
