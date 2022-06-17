@@ -32,15 +32,44 @@
         <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
         <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
         <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-    <link rel="stylesheet" href="styles.ccf9fcd6056eb6aa9b0d.css"></head>
+
+        <style>
+            .loader-info-block {
+                position: fixed;
+                top: 1em;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0;
+                background-color: #fff;
+                border-radius: 4px;
+                box-shadow: 0 1px 3px 0 rgba(#000, .2),
+                0 1px 1px 0 rgba(#000, .14),
+                0 2px 1px -1px rgba(#000, .12);
+                padding: 1em;
+                width: 360px;
+                max-width: calc(100vw - 2em);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .spinner {
+                margin: 1em auto 32px;
+            }
+
+            .loader-text{
+                font-size: 24px;
+                margin: 0 0 1em 0;
+                text-align: center;
+            }
+        </style>
+    <link rel="stylesheet" href="styles.81c3c120481f3f7c5eb2.css"></head>
     <body>
         <app-root>
-            <div class="loading center">
-                <div class="bounce">
-                    <div class="circle">
-                        <div class="inner"></div>
-                    </div>
+            <div class="loader-info-block">
+                <div class="spinner">
+                    <img src="assets/img/loader.gif" />
                 </div>
+                <div class="loader-text" i18n="Checking login status">Converge is loading</div>
             </div>
         </app-root>
         <noscript>
@@ -65,5 +94,5 @@
                 }
             }, 5 * 60 * 1000);
         </script>
-    <script src="runtime-es2015.0dae8cbc97194c7caed4.js" type="module"></script><script src="runtime-es5.0dae8cbc97194c7caed4.js" nomodule defer></script><script src="polyfills-es5.f6cde6c36fd7b2bb65f9.js" nomodule defer></script><script src="polyfills-es2015.08a9b6981f243407e8aa.js" type="module"></script><script src="main-es2015.33b60c15533a0de7b513.js" type="module"></script><script src="main-es5.33b60c15533a0de7b513.js" nomodule defer></script></body>
+    <script src="runtime-es2015.0dae8cbc97194c7caed4.js" type="module"></script><script src="runtime-es5.0dae8cbc97194c7caed4.js" nomodule defer></script><script src="polyfills-es5.f6cde6c36fd7b2bb65f9.js" nomodule defer></script><script src="polyfills-es2015.08a9b6981f243407e8aa.js" type="module"></script><script src="main-es2015.bb3949aeefc568b99f84.js" type="module"></script><script src="main-es5.bb3949aeefc568b99f84.js" nomodule defer></script></body>
 </html>
