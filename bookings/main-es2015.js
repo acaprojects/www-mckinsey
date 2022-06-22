@@ -1134,11 +1134,9 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
                 this._hotkeys.listen(['Shift', 'Backslash'], () => {
                     this.navigate('bootstrap', { clear: true });
                 });
-                this._organisation.init();
                 this._bookings.init();
                 this._spaces.init();
                 this._polling.init();
-                this._systems.load();
                 this._initialised.next(true);
             });
         });
@@ -1202,7 +1200,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
     activateUpdate() {
         if (this._cache.isEnabled) {
             this.log('CACHE', `Activating changes to the cache...`);
-            this._cache.activateUpdate().then(() => location.reload(true));
+            this._cache.activateUpdate().then(() => location.reload());
         }
     }
     /**
@@ -2789,7 +2787,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _building_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./building.class */ "./src/app/services/data/organisation/building.class.ts");
 /* harmony import */ var _service_manager_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service-manager.class */ "./src/app/services/data/service-manager.class.ts");
 /* harmony import */ var _level_class__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./level.class */ "./src/app/services/data/organisation/level.class.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
 
 
 
@@ -2877,6 +2879,25 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_0__["Ba
         }
         return null;
     }
+    showBuilding(id) {
+        return new Promise((resolve, reject) => {
+            if (this.buildingWithID(id))
+                return resolve(this.buildingWithID(id));
+            const resp = Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_6__["get"])(`/control/api/zones/${id}`).toPromise().then((bld_data) => {
+                if (!bld_data.tags.includes('building')) {
+                    return reject('Zone is not a building');
+                }
+                const bld = new _building_class__WEBPACK_IMPORTED_MODULE_2__["Building"](this, bld_data);
+                const blds = this.buildings || [];
+                blds.push(bld);
+                this.set('buildings', Object(src_app_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_5__["unique"])(blds, 'id'));
+                if (!this._active_building && blds && blds.length > 0) {
+                    this._active_building = blds[0].id;
+                }
+                resolve(bld);
+            }).catch(_ => reject('Unable to load building.'));
+        });
+    }
     /**
      * Initialise service data
      */
@@ -2947,7 +2968,7 @@ class OrganisationService extends _base_service__WEBPACK_IMPORTED_MODULE_0__["Ba
         });
     }
 }
-OrganisationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({ factory: function OrganisationService_Factory() { return new OrganisationService(); }, token: OrganisationService, providedIn: "root" });
+OrganisationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjectable"]({ factory: function OrganisationService_Factory() { return new OrganisationService(); }, token: OrganisationService, providedIn: "root" });
 
 
 /***/ }),
@@ -6686,18 +6707,20 @@ var styles = [".booking-panel[_ngcontent-%COMP%] {\n  position: absolute;\n  top
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoomDisplayStatus", function() { return RoomDisplayStatus; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingPanelComponent", function() { return BookingPanelComponent; });
-/* harmony import */ var _shared_base_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../shared/base.component */ "./src/app/shared/base.component.ts");
-/* harmony import */ var _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
-/* harmony import */ var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _timeline_timeline_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./timeline/timeline.utils */ "./src/app/shell/panel/timeline/timeline.utils.ts");
-/* harmony import */ var _services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _shared_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/base.component */ "./src/app/shared/base.component.ts");
+/* harmony import */ var _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+/* harmony import */ var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _timeline_timeline_utils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./timeline/timeline.utils */ "./src/app/shell/panel/timeline/timeline.utils.ts");
+/* harmony import */ var _services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+
 
 
 
@@ -6725,7 +6748,7 @@ var RoomDisplayStatus;
     RoomDisplayStatus["InUse"] = "in-use";
     RoomDisplayStatus["Pending"] = "none";
 })(RoomDisplayStatus || (RoomDisplayStatus = {}));
-class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE_0__["BaseComponent"] {
+class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
     constructor(_service, _route, _translate) {
         super();
         this._service = _service;
@@ -6738,7 +6761,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         /**
          * When bookings loaded, triggers change.
          */
-        this.bookingsLoaded = new rxjs__WEBPACK_IMPORTED_MODULE_8__["BehaviorSubject"]([]);
+        this.bookingsLoaded = new rxjs__WEBPACK_IMPORTED_MODULE_9__["BehaviorSubject"]([]);
     }
     setSpace(space) {
         // We have a new Space object. Angular will handle most of the propagation.
@@ -6747,7 +6770,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         this._translate.use(localeCode);
         // ...and then we can assign this new Space
         this.space = space;
-        this.timeline_options = Object.assign(Object.assign({}, _timeline_timeline_utils__WEBPACK_IMPORTED_MODULE_9__["defaultBlockOptions"]), { locale_code: localeCode });
+        this.timeline_options = Object.assign(Object.assign({}, _timeline_timeline_utils__WEBPACK_IMPORTED_MODULE_10__["defaultBlockOptions"]), { locale_code: localeCode });
         this._theme = this.space.theme_rbp;
     }
     /**
@@ -6759,13 +6782,13 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
      */
     get status_display() {
         if (!this.websocket_connected && !this._service.setting('show_status_when_disconnected')) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])(' ');
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])(' ');
         }
         if (this.status_overrides && Object.keys(this.status_overrides).length === 1) {
             this._status = this.space.current ? 'unavailable' : Object.keys(this.status_overrides)[0];
         }
         const permittedStatus = (!this.hide_all ? this._status : null) || 'not-bookable';
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])((this.status_overrides || [])[permittedStatus] || this._status);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])((this.status_overrides || [])[permittedStatus] || this._status);
     }
     /**
      * Current status of the system assigned to this {@link space}.
@@ -6785,7 +6808,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         // Perform any status overrides
         if (this.status_overrides &&
             Object.keys(this.status_overrides).length === 1 &&
-            (this.space && !this.space.current || this._status !== 'unavailable')) {
+            ((this.space && !this.space.current) || this._status !== 'unavailable')) {
             this._status = Object.keys(this.status_overrides)[0];
         }
         return this._status;
@@ -6830,7 +6853,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         const localStatus = this.status;
         const overrideDisplay = this.status_overrides && this.status_overrides[localStatus];
         if (overrideDisplay) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])(overrideDisplay);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])(overrideDisplay);
         }
         return this._translate.stream('status.' + this.normalisedStatus);
     }
@@ -6844,21 +6867,21 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
     }
     /** Display string for the current time */
     get display_time() {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["concat"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])(this._translate.currentLang), this._translate.onLangChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(languageEvent => languageEvent.lang))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(lang => {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["concat"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])(this._translate.currentLang), this._translate.onLangChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])((languageEvent) => languageEvent.lang))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])((lang) => {
             if (this.isV1() === undefined) {
                 return '';
             }
             else if (this.isV1()) {
-                return dayjs__WEBPACK_IMPORTED_MODULE_2__().format('h:mm A');
+                return dayjs__WEBPACK_IMPORTED_MODULE_3__().format('h:mm A');
             }
             else if (lang === 'fr-CA') {
-                return dayjs__WEBPACK_IMPORTED_MODULE_2__().format('HH [h] mm');
+                return dayjs__WEBPACK_IMPORTED_MODULE_3__().format('HH [h] mm');
             }
-            else if (Object(_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_10__["is24HourTime"])(lang)) {
-                return dayjs__WEBPACK_IMPORTED_MODULE_2__().format('HH:mm');
+            else if (Object(_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_11__["is24HourTime"])(lang)) {
+                return dayjs__WEBPACK_IMPORTED_MODULE_3__().format('HH:mm');
             }
             else {
-                return dayjs__WEBPACK_IMPORTED_MODULE_2__().format('h:mma');
+                return dayjs__WEBPACK_IMPORTED_MODULE_3__().format('h:mma');
             }
         }));
     }
@@ -6869,39 +6892,46 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         this._translate.setDefaultLang('en');
         this.subscription('app_ready', this._service.initialised.subscribe((is_ready) => {
             if (is_ready) {
-                this.subscription('spaces_list_buildings', Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["combineLatest"])([
-                    this._route.paramMap.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["mergeMap"])(params => {
+                this.subscription('spaces_list_buildings', Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["combineLatest"])([
+                    this._route.paramMap.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["mergeMap"])((params) => {
                         this.system_id = params.get('system_id');
                         this._service.set('system', this.system_id);
-                        return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["from"])(this._service.Spaces.show(this.system_id)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["catchError"])(_ => Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])(undefined)));
+                        return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["from"])(this._service.Spaces.show(this.system_id)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["catchError"])((_) => Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])(undefined)));
                     })),
-                    this._service.Organisation.listen('buildings'),
-                    this.bookingsLoaded
-                ]).subscribe(([space, buildings, bookings]) => {
+                    this.bookingsLoaded,
+                ]).subscribe(([space, bookings]) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
                     // if (bookings) {
                     //     if (bookings[0] && !bookings[0].Subject) {
                     //         bookings[0].Subject = 'current meeting...';
                     //     }
                     //     if (bookings[1] && !bookings[1].Subject) {
                     //         bookings[1].Subject = 'next meeting...';
-                    //     }                        
+                    //     }
                     // }
-                    if (space && buildings.length > 0) {
-                        // this requires a refactor, but essentially the rules will check for building
-                        // levels. We need to listen for level loading to then load the rules.
-                        // const foundSpace = spaces[0];
-                        // As per MCK-480, these default options are based on the staff map default rules,
-                        // except for the host "user". The RBP does not have a real user so, we do not
-                        // evaluate rules for the user. This may lead to some inconsistencies when looking at
-                        // booking panel vs the staff application. In future we should place defaults in a better spot.
-                        this.rules = space.rulesFor({
-                            date: dayjs__WEBPACK_IMPORTED_MODULE_2__().valueOf(),
-                            duration: 30
-                        });
-                        this._service.log('Panel', 'Evaluated Rules', this.rules);
-                        this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["Space"](this._service.Spaces, Object.assign(Object.assign({}, space), { bookings, theme_rbp: this._theme })));
+                    if (!space)
+                        return;
+                    let bld = null;
+                    for (const zone of space.zones) {
+                        bld = yield this._service.Organisation.showBuilding(zone).catch(_ => null);
+                        if (bld)
+                            break;
                     }
-                }));
+                    if (!bld)
+                        return;
+                    // this requires a refactor, but essentially the rules will check for building
+                    // levels. We need to listen for level loading to then load the rules.
+                    // const foundSpace = spaces[0];
+                    // As per MCK-480, these default options are based on the staff map default rules,
+                    // except for the host "user". The RBP does not have a real user so, we do not
+                    // evaluate rules for the user. This may lead to some inconsistencies when looking at
+                    // booking panel vs the staff application. In future we should place defaults in a better spot.
+                    this.rules = space.rulesFor({
+                        date: dayjs__WEBPACK_IMPORTED_MODULE_3__().valueOf(),
+                        duration: 30,
+                    });
+                    this._service.log('Panel', 'Evaluated Rules', this.rules);
+                    this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_2__["Space"](this._service.Spaces, Object.assign(Object.assign({}, space), { bookings, theme_rbp: this._theme })));
+                })));
                 this.timeout('websocket', () => {
                     this.websocket_connected = true;
                 });
@@ -6910,7 +6940,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         }));
     }
     isV1() {
-        return this._theme ? this._theme === _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_1__["SpaceTheme"].v1 : undefined;
+        return this._theme ? this._theme === _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_2__["SpaceTheme"].v1 : undefined;
     }
     /**
      * Update the bookings for the active space
@@ -6941,8 +6971,8 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                 const booking = this.space.current || this.space.next;
                 this._status = this.space.current ? 'unavailable' : 'available';
                 if (this.pending_timeout) {
-                    const now = dayjs__WEBPACK_IMPORTED_MODULE_2__();
-                    const date = dayjs__WEBPACK_IMPORTED_MODULE_2__(booking.date).startOf('m');
+                    const now = dayjs__WEBPACK_IMPORTED_MODULE_3__();
+                    const date = dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).startOf('m');
                     if (this.last_started >= now.valueOf() || this.last_started >= date.valueOf()) {
                         this._status = 'unavailable';
                     }
@@ -6956,8 +6986,8 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                         }
                         else if (now.isAfter(pending_end, 's') && now.isBefore(end, 'm')) {
                             this._status = 'pending';
-                            const business_start = dayjs__WEBPACK_IMPORTED_MODULE_2__(Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["timeToDate"])(this.business_start || '08:00'));
-                            const business_end = dayjs__WEBPACK_IMPORTED_MODULE_2__(Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_6__["timeToDate"])(this.business_end || '17:30'));
+                            const business_start = dayjs__WEBPACK_IMPORTED_MODULE_3__(Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["timeToDate"])(this.business_start || '08:00'));
+                            const business_end = dayjs__WEBPACK_IMPORTED_MODULE_3__(Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["timeToDate"])(this.business_end || '17:30'));
                             // Check if within business hours before cancelling the meeting
                             if (now.isBefore(business_start, 'm') || now.isAfter(business_end, 'm')) {
                                 return;
@@ -6984,11 +7014,11 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                 reason = 'hide multi-day';
             }
             if (meeting && module && meeting.date !== this.last_cancel) {
-                const date = dayjs__WEBPACK_IMPORTED_MODULE_2__(meeting.date);
-                module.execute('cancel_meeting', [meeting.date, reason]).then(_ => {
+                const date = dayjs__WEBPACK_IMPORTED_MODULE_3__(meeting.date);
+                module.execute('cancel_meeting', [meeting.date, reason]).then((_) => {
                     this._service.Analytics.event('Checkin', 'cancelled', `${this.space.id} at ${date.format('DD MMM YYYY, h:mm A Z')} | ${reason}`);
                     this.last_cancel = meeting.date;
-                }, e => {
+                }, (e) => {
                     this._service.notifyError(`Error cancelling meeting. ${e}`);
                     this._service.Analytics.event('Checkin', 'cancel-failed', `${this.space.id} at ${date.format('DD MMM YYYY, h:mm A Z')} | ${reason}`);
                 });
@@ -8098,16 +8128,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "7fb5a45",
-    "hash": "7fb5a45",
+    "raw": "9b48c1f",
+    "hash": "9b48c1f",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "7fb5a45",
+    "suffix": "9b48c1f",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1641514185339
+    "time": 1655941054055
 };
 /* tslint:enable */
 
