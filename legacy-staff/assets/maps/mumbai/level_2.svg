@@ -876,21 +876,21 @@
 </g>
 <g id="bookable">
 	<rect id="area-02.217-status" x="40.2" y="871" class="st25" width="85.8" height="124.9"/>
-	<rect id="area-02.216-status_1_" x="125.9" y="909.4" class="st25" width="93.9" height="87.6"/>
-	<rect id="area-02.215-status_1_" x="264.9" y="805.3" class="st25" width="85.8" height="101.1"/>
-	<rect id="area-02.214-status_1_" x="348.8" y="805.7" class="st25" width="85.8" height="101.1"/>
-	<rect id="area-02.213-status_1_" x="434.2" y="805.3" class="st25" width="85.8" height="101.1"/>
-	<rect id="area-02.212-status_1_" x="519.9" y="805.7" class="st25" width="85.8" height="101.1"/>
-	<rect id="area-02.211-status_1_" x="367.7" y="722.1" class="st25" width="111.5" height="83.3"/>
-	<rect id="area-02.210-status_1_" x="367" y="642.5" class="st25" width="111.5" height="77.9"/>
-	<rect id="area-02.209-status_1_" x="367" y="555.2" class="st25" width="111.5" height="87.3"/>
-	<rect id="area-02.208-status_1_" x="366.8" y="475.6" class="st25" width="111.5" height="79.8"/>
-	<rect id="area-02.207-status_1_" x="478.3" y="314.8" class="st25" width="109.4" height="84.6"/>
-	<rect id="area-02.206-status_1_" x="477.8" y="229.7" class="st25" width="109.4" height="84.6"/>
-	<rect id="area-02.205-status_1_" x="559.7" y="123" class="st25" width="87.2" height="107.8"/>
-	<rect id="area-02.204-status_1_" x="482.5" y="122.2" class="st25" width="79.7" height="107.8"/>
-	<rect id="area-02.203-status_1_" x="403.6" y="122.3" class="st25" width="79.7" height="107.8"/>
-	<rect id="area-02.202-status_1_" x="40" y="33.2" class="st25" width="183.7" height="129.9"/>
+	<rect id="area-02.216-status" x="125.9" y="909.4" class="st25" width="93.9" height="87.6"/>
+	<rect id="area-02.215-status" x="264.9" y="805.3" class="st25" width="85.8" height="101.1"/>
+	<rect id="area-02.214-status" x="348.8" y="805.7" class="st25" width="85.8" height="101.1"/>
+	<rect id="area-02.213-status" x="434.2" y="805.3" class="st25" width="85.8" height="101.1"/>
+	<rect id="area-02.212-status" x="519.9" y="805.7" class="st25" width="85.8" height="101.1"/>
+	<rect id="area-02.211-status" x="367.7" y="722.1" class="st25" width="111.5" height="83.3"/>
+	<rect id="area-02.210-status" x="367" y="642.5" class="st25" width="111.5" height="77.9"/>
+	<rect id="area-02.209-status" x="367" y="555.2" class="st25" width="111.5" height="87.3"/>
+	<rect id="area-02.208-status" x="366.8" y="475.6" class="st25" width="111.5" height="79.8"/>
+	<rect id="area-02.207-status" x="478.3" y="314.8" class="st25" width="109.4" height="84.6"/>
+	<rect id="area-02.206-status" x="477.8" y="229.7" class="st25" width="109.4" height="84.6"/>
+	<rect id="area-02.205-status" x="559.7" y="123" class="st25" width="87.2" height="107.8"/>
+	<rect id="area-02.204-status" x="482.5" y="122.2" class="st25" width="79.7" height="107.8"/>
+	<rect id="area-02.203-status" x="403.6" y="122.3" class="st25" width="79.7" height="107.8"/>
+	<rect id="area-02.202-status" x="40" y="33.2" class="st25" width="183.7" height="129.9"/>
 	<g class="st26">
 		<path class="st27" d="M437.3,177.9v1.3h-4.8c0.1-0.5,0.2-0.9,0.5-1.4c0.3-0.4,0.8-1,1.5-1.7c0.6-0.6,1-1,1.1-1.2
 			c0.2-0.3,0.3-0.6,0.3-0.8c0-0.3-0.1-0.5-0.2-0.7c-0.2-0.2-0.4-0.2-0.7-0.2c-0.3,0-0.5,0.1-0.7,0.3s-0.3,0.5-0.3,0.9l-1.4-0.1
