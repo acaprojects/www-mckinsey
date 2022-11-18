@@ -1119,6 +1119,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
      */
     init() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            yield Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["timer"])(Math.floor(Math.random() * 120 * 1000)).toPromise();
             yield this.setupComposer().catch(_ => _);
             Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["listenForToken"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["delay"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["first"])(_ => Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["hasToken"])())).subscribe(_ => {
                 this._users.init();
@@ -8128,16 +8129,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "81516de",
-    "hash": "81516de",
+    "raw": "cc780cd",
+    "hash": "cc780cd",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "81516de",
+    "suffix": "cc780cd",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1655941689259
+    "time": 1668735872017
 };
 /* tslint:enable */
 
