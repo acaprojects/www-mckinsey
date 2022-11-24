@@ -6170,7 +6170,7 @@ __webpack_require__.r(__webpack_exports__);
 var styles_BookingPanelArrayComponent = [_panel_array_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
 var RenderType_BookingPanelArrayComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_BookingPanelArrayComponent, data: {} });
 
-function View_BookingPanelArrayComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-booking-panel", [], null, null, null, _panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_BookingPanelComponent_0"], _panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_BookingPanelComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _panel_panel_component__WEBPACK_IMPORTED_MODULE_3__["BookingPanelComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateService"]], { system_id: [0, "system_id"], reverse: [1, "reverse"], show_time: [2, "show_time"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit; var currVal_1 = ((_v.parent.context.index % 2) !== 0); var currVal_2 = false; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
+function View_BookingPanelArrayComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-booking-panel", [], null, null, null, _panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_BookingPanelComponent_0"], _panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_BookingPanelComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _panel_panel_component__WEBPACK_IMPORTED_MODULE_3__["BookingPanelComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_4__["ApplicationService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { system_id: [0, "system_id"], reverse: [1, "reverse"], show_time: [2, "show_time"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit; var currVal_1 = ((_v.parent.context.index % 2) !== 0); var currVal_2 = false; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
 function View_BookingPanelArrayComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "panel-outlet"]], [[4, "height", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelArrayComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null)], function (_ck, _v) { var currVal_1 = _v.context.$implicit; var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent.parent, 4); _ck(_v, 2, 0, currVal_1, currVal_2); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.systems.length >= 2) ? "50%" : "100%"); _ck(_v, 0, 0, currVal_0); }); }
 function View_BookingPanelArrayComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 2, null, View_BookingPanelArrayComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _angular_common__WEBPACK_IMPORTED_MODULE_7__["SlicePipe"], []), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 3).transform(_co.systems, 0, 4)); _ck(_v, 2, 0, currVal_0); }, null); }
 function View_BookingPanelArrayComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "info-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["No systems are set for displaying on the panel array"]))], null, null); }
@@ -6325,7 +6325,7 @@ function View_BookingPanelSelectComponent_2(_l) { return _angular_core__WEBPACK_
         ad = (pd_0 && ad);
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 4341760, null, 0, _acaprojects_ngx_custom_events__WEBPACK_IMPORTED_MODULE_5__["ɵb"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], null, { tapped: "tapped" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelSelectComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 4, "div", [], [[8, "className", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelSelectComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelSelectComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "div", [["class", "text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](10, null, ["", ""]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit; _ck(_v, 3, 0, currVal_0); var currVal_2 = _co.system_name[_v.context.$implicit]; _ck(_v, 6, 0, currVal_2); var currVal_3 = !_co.system_name[_v.context.$implicit]; _ck(_v, 8, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = ("icon" + (_co.system_status[_v.context.$implicit] ? (" " + _co.system_status[_v.context.$implicit]) : "")); _ck(_v, 4, 0, currVal_1); var currVal_4 = (_co.system_name[_v.context.$implicit] || (_v.context.$implicit + " connecting...")); _ck(_v, 10, 0, currVal_4); }); }
 function View_BookingPanelSelectComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, null, null, null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 2, null, View_BookingPanelSelectComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _angular_common__WEBPACK_IMPORTED_MODULE_6__["SlicePipe"], []), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, null, null, 0))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 3).transform(_co.systems, 0, 8)); _ck(_v, 2, 0, currVal_0); }, null); }
-function View_BookingPanelSelectComponent_6(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [["class", "panel-outlet"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "app-booking-panel", [], null, null, null, _panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["View_BookingPanelComponent_0"], _panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["RenderType_BookingPanelComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 245760, null, 0, _panel_panel_component__WEBPACK_IMPORTED_MODULE_8__["BookingPanelComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["ApplicationService"], _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_11__["TranslateService"]], { system_id: [0, "system_id"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 11, "div", [["class", "overlay"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 6, "button", [["class", "action close"], ["widget", ""]], null, [[null, "tapped"], [null, "contextmenu"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
+function View_BookingPanelSelectComponent_6(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [["class", "panel-outlet"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "app-booking-panel", [], null, null, null, _panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["View_BookingPanelComponent_0"], _panel_panel_component_ngfactory__WEBPACK_IMPORTED_MODULE_7__["RenderType_BookingPanelComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 245760, null, 0, _panel_panel_component__WEBPACK_IMPORTED_MODULE_8__["BookingPanelComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["ApplicationService"], _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_11__["TranslateService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], { system_id: [0, "system_id"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 11, "div", [["class", "overlay"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 6, "button", [["class", "action close"], ["widget", ""]], null, [[null, "tapped"], [null, "contextmenu"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("tapped" === en)) {
         var pd_0 = (_co.close() !== false);
         ad = (pd_0 && ad);
     } if (("contextmenu" === en)) {
@@ -6645,8 +6645,8 @@ function View_BookingPanelComponent_15(_l) { return _angular_core__WEBPACK_IMPOR
         var pd_0 = ((_co.status_overrides = $event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 737280, null, 0, _shared_directives_binding_binding_directive__WEBPACK_IMPORTED_MODULE_13__["BindingDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { sys: [0, "sys"], mod: [1, "mod"], bind: [2, "bind"], model: [3, "model"] }, { modelChange: "modelChange" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.system_id; var currVal_1 = "Bookings"; var currVal_2 = "room_name"; var currVal_3 = _co.space_name; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_4 = _co.system_id; var currVal_5 = "Bookings"; var currVal_6 = _co.interactive; _ck(_v, 4, 0, currVal_4, currVal_5, currVal_6); var currVal_7 = _co.system_id; var currVal_8 = "Bookings"; var currVal_9 = "today"; _ck(_v, 6, 0, currVal_7, currVal_8, currVal_9); var currVal_10 = _co.system_id; var currVal_11 = "Bookings"; var currVal_12 = "timeout"; var currVal_13 = _co.pending_timeout; _ck(_v, 8, 0, currVal_10, currVal_11, currVal_12, currVal_13); var currVal_14 = _co.system_id; var currVal_15 = "Bookings"; var currVal_16 = "cancel_timeout"; var currVal_17 = _co.cancel_timeout; _ck(_v, 10, 0, currVal_14, currVal_15, currVal_16, currVal_17); var currVal_18 = _co.system_id; var currVal_19 = "Bookings"; var currVal_20 = "last_meeting_started"; var currVal_21 = _co.last_started; _ck(_v, 12, 0, currVal_18, currVal_19, currVal_20, currVal_21); var currVal_22 = _co.system_id; var currVal_23 = "Bookings"; var currVal_24 = "hide_all"; var currVal_25 = _co.hide_all; _ck(_v, 14, 0, currVal_22, currVal_23, currVal_24, currVal_25); var currVal_26 = _co.system_id; var currVal_27 = "Bookings"; var currVal_28 = "flip_status"; var currVal_29 = _co.flip_status; _ck(_v, 16, 0, currVal_26, currVal_27, currVal_28, currVal_29); var currVal_30 = _co.system_id; var currVal_31 = "Bookings"; var currVal_32 = "can_cancel"; var currVal_33 = _co.can_cancel; _ck(_v, 18, 0, currVal_30, currVal_31, currVal_32, currVal_33); var currVal_34 = _co.system_id; var currVal_35 = "Bookings"; var currVal_36 = "business_start"; var currVal_37 = _co.business_start; _ck(_v, 20, 0, currVal_34, currVal_35, currVal_36, currVal_37); var currVal_38 = _co.system_id; var currVal_39 = "Bookings"; var currVal_40 = "business_end"; var currVal_41 = _co.business_end; _ck(_v, 22, 0, currVal_38, currVal_39, currVal_40, currVal_41); var currVal_42 = _co.system_id; var currVal_43 = "Bookings"; var currVal_44 = "status_override"; var currVal_45 = _co.status_overrides; _ck(_v, 24, 0, currVal_42, currVal_43, currVal_44, currVal_45); }, null); }
-function View_BookingPanelComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 15, "div", [["class", "booking-panel"]], [[2, "disabled", null], [2, "reverse", null], [2, "no-time", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 8, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_15)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_3 = (_co.isV1() === true); _ck(_v, 2, 0, currVal_3); var currVal_4 = (_co.isV1() === false); _ck(_v, 4, 0, currVal_4); var currVal_5 = (_co.isV1() === false); _ck(_v, 7, 0, currVal_5); var currVal_6 = (_co.isV1() === true); _ck(_v, 9, 0, currVal_6); var currVal_7 = _co.show_details; _ck(_v, 11, 0, currVal_7); var currVal_8 = (_co.isV1() === undefined); _ck(_v, 13, 0, currVal_8); var currVal_9 = _co.system_id; _ck(_v, 15, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.interactive === false); var currVal_1 = (_co.reverse || _co.flip_status); var currVal_2 = !_co.show_time; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2); }); }
-function View_BookingPanelComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-booking-panel", [], null, null, null, View_BookingPanelComponent_0, RenderType_BookingPanelComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _panel_component__WEBPACK_IMPORTED_MODULE_14__["BookingPanelComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["ApplicationService"], _angular_router__WEBPACK_IMPORTED_MODULE_15__["ActivatedRoute"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_10__["TranslateService"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_BookingPanelComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 15, "div", [["class", "booking-panel"]], [[2, "disabled", null], [2, "reverse", null], [2, "no-time", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 8, "div", [["class", "body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_15)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_3 = (_co.isV1() === true); _ck(_v, 2, 0, currVal_3); var currVal_4 = (_co.isV1() === false); _ck(_v, 4, 0, currVal_4); var currVal_5 = (_co.isV1() === false); _ck(_v, 7, 0, currVal_5); var currVal_6 = (_co.isV1() === true); _ck(_v, 9, 0, currVal_6); var currVal_7 = _co.show_details; _ck(_v, 11, 0, currVal_7); var currVal_8 = (_co.isV1() === undefined); _ck(_v, 13, 0, currVal_8); var currVal_9 = (_co.system_id && _co.wsStatus); _ck(_v, 15, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.interactive === false); var currVal_1 = (_co.reverse || _co.flip_status); var currVal_2 = !_co.show_time; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2); }); }
+function View_BookingPanelComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-booking-panel", [], null, null, null, View_BookingPanelComponent_0, RenderType_BookingPanelComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 245760, null, 0, _panel_component__WEBPACK_IMPORTED_MODULE_14__["BookingPanelComponent"], [_services_app_service__WEBPACK_IMPORTED_MODULE_9__["ApplicationService"], _angular_router__WEBPACK_IMPORTED_MODULE_15__["ActivatedRoute"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_10__["TranslateService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var BookingPanelComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-booking-panel", _panel_component__WEBPACK_IMPORTED_MODULE_14__["BookingPanelComponent"], View_BookingPanelComponent_Host_0, { system_id: "system_id", reverse: "reverse", show_time: "show_time" }, {}, []);
 
 
@@ -6709,18 +6709,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoomDisplayStatus", function() { return RoomDisplayStatus; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingPanelComponent", function() { return BookingPanelComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _shared_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/base.component */ "./src/app/shared/base.component.ts");
-/* harmony import */ var _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
-/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
-/* harmony import */ var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _timeline_timeline_utils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./timeline/timeline.utils */ "./src/app/shell/panel/timeline/timeline.utils.ts");
-/* harmony import */ var _services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/base.component */ "./src/app/shared/base.component.ts");
+/* harmony import */ var _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/data/spaces/space.class */ "./src/app/services/data/spaces/space.class.ts");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _services_app_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/app.service */ "./src/app/services/app.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+/* harmony import */ var _shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../shared/utilities/general.utilities */ "./src/app/shared/utilities/general.utilities.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _timeline_timeline_utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./timeline/timeline.utils */ "./src/app/shell/panel/timeline/timeline.utils.ts");
+/* harmony import */ var _services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../services/data/bookings/booking.utilities */ "./src/app/services/data/bookings/booking.utilities.ts");
+/* harmony import */ var _placeos_ts_client__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @placeos/ts-client */ "./node_modules/@placeos/ts-client/dist/esm/index.js");
+
+
 
 
 
@@ -6749,20 +6753,22 @@ var RoomDisplayStatus;
     RoomDisplayStatus["InUse"] = "in-use";
     RoomDisplayStatus["Pending"] = "none";
 })(RoomDisplayStatus || (RoomDisplayStatus = {}));
-class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"] {
-    constructor(_service, _route, _translate) {
+class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] {
+    constructor(_service, _route, _translate, cdRef) {
         super();
         this._service = _service;
         this._route = _route;
         this._translate = _translate;
+        this.cdRef = cdRef;
         /** Whether to show the time at the bottom of the status */
         this.show_time = true;
         /** Whether user interaction is enabled for the panel */
         this.interactive = true;
+        this.wsStatus = false;
         /**
          * When bookings loaded, triggers change.
          */
-        this.bookingsLoaded = new rxjs__WEBPACK_IMPORTED_MODULE_9__["BehaviorSubject"]([]);
+        this.bookingsLoaded = new rxjs__WEBPACK_IMPORTED_MODULE_10__["BehaviorSubject"]([]);
     }
     setSpace(space) {
         // We have a new Space object. Angular will handle most of the propagation.
@@ -6771,7 +6777,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         this._translate.use(localeCode);
         // ...and then we can assign this new Space
         this.space = space;
-        this.timeline_options = Object.assign(Object.assign({}, _timeline_timeline_utils__WEBPACK_IMPORTED_MODULE_10__["defaultBlockOptions"]), { locale_code: localeCode });
+        this.timeline_options = Object.assign(Object.assign({}, _timeline_timeline_utils__WEBPACK_IMPORTED_MODULE_11__["defaultBlockOptions"]), { locale_code: localeCode });
         this._theme = this.space.theme_rbp;
     }
     /**
@@ -6783,13 +6789,13 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
      */
     get status_display() {
         if (!this.websocket_connected && !this._service.setting('show_status_when_disconnected')) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])(' ');
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["of"])(' ');
         }
         if (this.status_overrides && Object.keys(this.status_overrides).length === 1) {
             this._status = this.space.current ? 'unavailable' : Object.keys(this.status_overrides)[0];
         }
         const permittedStatus = (!this.hide_all ? this._status : null) || 'not-bookable';
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])((this.status_overrides || [])[permittedStatus] || this._status);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["of"])((this.status_overrides || [])[permittedStatus] || this._status);
     }
     /**
      * Current status of the system assigned to this {@link space}.
@@ -6854,7 +6860,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         const localStatus = this.status;
         const overrideDisplay = this.status_overrides && this.status_overrides[localStatus];
         if (overrideDisplay) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])(overrideDisplay);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["of"])(overrideDisplay);
         }
         return this._translate.stream('status.' + this.normalisedStatus);
     }
@@ -6868,21 +6874,21 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
     }
     /** Display string for the current time */
     get display_time() {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["concat"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])(this._translate.currentLang), this._translate.onLangChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])((languageEvent) => languageEvent.lang))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])((lang) => {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["concat"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["of"])(this._translate.currentLang), this._translate.onLangChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["map"])((languageEvent) => languageEvent.lang))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["map"])((lang) => {
             if (this.isV1() === undefined) {
                 return '';
             }
             else if (this.isV1()) {
-                return dayjs__WEBPACK_IMPORTED_MODULE_3__().format('h:mm A');
+                return dayjs__WEBPACK_IMPORTED_MODULE_4__().format('h:mm A');
             }
             else if (lang === 'fr-CA') {
-                return dayjs__WEBPACK_IMPORTED_MODULE_3__().format('HH [h] mm');
+                return dayjs__WEBPACK_IMPORTED_MODULE_4__().format('HH [h] mm');
             }
-            else if (Object(_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_11__["is24HourTime"])(lang)) {
-                return dayjs__WEBPACK_IMPORTED_MODULE_3__().format('HH:mm');
+            else if (Object(_services_data_bookings_booking_utilities__WEBPACK_IMPORTED_MODULE_12__["is24HourTime"])(lang)) {
+                return dayjs__WEBPACK_IMPORTED_MODULE_4__().format('HH:mm');
             }
             else {
-                return dayjs__WEBPACK_IMPORTED_MODULE_3__().format('h:mma');
+                return dayjs__WEBPACK_IMPORTED_MODULE_4__().format('h:mma');
             }
         }));
     }
@@ -6893,11 +6899,11 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         this._translate.setDefaultLang('en');
         this.subscription('app_ready', this._service.initialised.subscribe((is_ready) => {
             if (is_ready) {
-                this.subscription('spaces_list_buildings', Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["combineLatest"])([
-                    this._route.paramMap.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["mergeMap"])((params) => {
+                this.subscription('spaces_list_buildings', Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["combineLatest"])([
+                    this._route.paramMap.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["mergeMap"])((params) => {
                         this.system_id = params.get('system_id');
                         this._service.set('system', this.system_id);
-                        return Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["from"])(this._service.Spaces.show(this.system_id)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["catchError"])((_) => Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["of"])(undefined)));
+                        return Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["from"])(this._service.Spaces.show(this.system_id)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["catchError"])((_) => Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["of"])(undefined)));
                     })),
                     this.bookingsLoaded,
                 ]).subscribe(([space, bookings]) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
@@ -6927,11 +6933,11 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                     // evaluate rules for the user. This may lead to some inconsistencies when looking at
                     // booking panel vs the staff application. In future we should place defaults in a better spot.
                     this.rules = space.rulesFor({
-                        date: dayjs__WEBPACK_IMPORTED_MODULE_3__().valueOf(),
+                        date: dayjs__WEBPACK_IMPORTED_MODULE_4__().valueOf(),
                         duration: 30,
                     });
                     this._service.log('Panel', 'Evaluated Rules', this.rules);
-                    this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_2__["Space"](this._service.Spaces, Object.assign(Object.assign({}, space), { bookings, theme_rbp: this._theme })));
+                    this.setSpace(new _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_3__["Space"](this._service.Spaces, Object.assign(Object.assign({}, space), { bookings, theme_rbp: this._theme })));
                 })));
                 this.timeout('websocket', () => {
                     this.websocket_connected = true;
@@ -6939,9 +6945,13 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                 this.unsub('app_ready');
             }
         }));
+        Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_13__["status"])().subscribe(val => {
+            this.wsStatus = val;
+            this.cdRef.detectChanges;
+        });
     }
     isV1() {
-        return this._theme ? this._theme === _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_2__["SpaceTheme"].v1 : undefined;
+        return this._theme ? this._theme === _services_data_spaces_space_class__WEBPACK_IMPORTED_MODULE_3__["SpaceTheme"].v1 : undefined;
     }
     /**
      * Update the bookings for the active space
@@ -6972,8 +6982,8 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                 const booking = this.space.current || this.space.next;
                 this._status = this.space.current ? 'unavailable' : 'available';
                 if (this.pending_timeout) {
-                    const now = dayjs__WEBPACK_IMPORTED_MODULE_3__();
-                    const date = dayjs__WEBPACK_IMPORTED_MODULE_3__(booking.date).startOf('m');
+                    const now = dayjs__WEBPACK_IMPORTED_MODULE_4__();
+                    const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(booking.date).startOf('m');
                     if (this.last_started >= now.valueOf() || this.last_started >= date.valueOf()) {
                         this._status = 'unavailable';
                     }
@@ -6987,8 +6997,8 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                         }
                         else if (now.isAfter(pending_end, 's') && now.isBefore(end, 'm')) {
                             this._status = 'pending';
-                            const business_start = dayjs__WEBPACK_IMPORTED_MODULE_3__(Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["timeToDate"])(this.business_start || '08:00'));
-                            const business_end = dayjs__WEBPACK_IMPORTED_MODULE_3__(Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_7__["timeToDate"])(this.business_end || '17:30'));
+                            const business_start = dayjs__WEBPACK_IMPORTED_MODULE_4__(Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_8__["timeToDate"])(this.business_start || '08:00'));
+                            const business_end = dayjs__WEBPACK_IMPORTED_MODULE_4__(Object(_shared_utilities_general_utilities__WEBPACK_IMPORTED_MODULE_8__["timeToDate"])(this.business_end || '17:30'));
                             // Check if within business hours before cancelling the meeting
                             if (now.isBefore(business_start, 'm') || now.isAfter(business_end, 'm')) {
                                 return;
@@ -7015,7 +7025,7 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
                 reason = 'hide multi-day';
             }
             if (meeting && module && meeting.date !== this.last_cancel) {
-                const date = dayjs__WEBPACK_IMPORTED_MODULE_3__(meeting.date);
+                const date = dayjs__WEBPACK_IMPORTED_MODULE_4__(meeting.date);
                 module.execute('cancel_meeting', [meeting.date, reason]).then((_) => {
                     this._service.Analytics.event('Checkin', 'cancelled', `${this.space.id} at ${date.format('DD MMM YYYY, h:mm A Z')} | ${reason}`);
                     this.last_cancel = meeting.date;
@@ -8129,16 +8139,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "cc780cd",
-    "hash": "cc780cd",
+    "raw": "9c78fad",
+    "hash": "9c78fad",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "cc780cd",
+    "suffix": "9c78fad",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1668735872017
+    "time": 1669258327408
 };
 /* tslint:enable */
 
