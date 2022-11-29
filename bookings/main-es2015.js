@@ -1119,7 +1119,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
      */
     init() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            yield Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["timer"])(Math.floor(Math.random() * 120 * 1000)).toPromise();
+            yield Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["timer"])(Math.floor(Math.random() * 5 * 1000)).toPromise();
             yield this.setupComposer().catch(_ => _);
             Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["listenForToken"])().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["delay"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_19__["first"])(_ => Object(_placeos_ts_client__WEBPACK_IMPORTED_MODULE_5__["hasToken"])())).subscribe(_ => {
                 this._users.init();
@@ -8139,16 +8139,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "9c78fad",
-    "hash": "9c78fad",
+    "raw": "ce60965",
+    "hash": "ce60965",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "9c78fad",
+    "suffix": "ce60965",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1669258327408
+    "time": 1669686233877
 };
 /* tslint:enable */
 
