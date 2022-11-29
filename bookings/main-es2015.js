@@ -925,6 +925,7 @@ class ApplicationService extends _shared_base_class__WEBPACK_IMPORTED_MODULE_9__
         this._subjects = {};
         /** Map of observables for state variables */
         this._observers = {};
+        this.set('skip_delay', false);
         this._organisation.parent = this._users.parent = this._bookings.parent = this._spaces.parent = this._polling.parent = this;
         this.set('system', null);
         this.log('APP', `Waiting for Application to stablised...`, undefined, undefined, true);
@@ -8153,16 +8154,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "0d5e22d",
-    "hash": "0d5e22d",
+    "raw": "b5aaa08",
+    "hash": "b5aaa08",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "0d5e22d",
+    "suffix": "b5aaa08",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1669692147111
+    "time": 1669698818672
 };
 /* tslint:enable */
 
