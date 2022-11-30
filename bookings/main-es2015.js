@@ -6608,7 +6608,7 @@ function View_BookingPanelComponent_14(_l) { return _angular_core__WEBPACK_IMPOR
 function View_BookingPanelComponent_15(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "div", [["class", "flex items-center"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" Waiting ", " seconds before connecting... "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "a", [["class", "absolute bottom-2 right-2 ml-2"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.skipDelay() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Connect Now "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.delay_time; _ck(_v, 1, 0, currVal_0); }); }
+    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Connect Now "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.time_delay; _ck(_v, 1, 0, currVal_0); }); }
 function View_BookingPanelComponent_9(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 16, "div", [["class", "loading-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 15, "div", [["class", "info-block relative"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_12)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_13)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_14)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 2, "div", [["class", "icon"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "a-spinner", [["color", "#000"], ["ring-rotate", ""]], null, null, null, _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_ɵp_0"], _node_modules_acaprojects_ngx_spinners_acaprojects_ngx_spinners_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_ɵp"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 49152, null, 0, _acaprojects_ngx_spinners__WEBPACK_IMPORTED_MODULE_12__["ɵp"], [], { color: [0, "color"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_BookingPanelComponent_15)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.system_id; _ck(_v, 3, 0, currVal_0); var currVal_1 = (_co.system_id && !_co.space_name); _ck(_v, 5, 0, currVal_1); var currVal_2 = _co.space_name; _ck(_v, 7, 0, currVal_2); var currVal_3 = (_co.system_id && !_co.space_name); _ck(_v, 9, 0, currVal_3); var currVal_4 = _co.space_name; _ck(_v, 11, 0, currVal_4); var currVal_5 = "#000"; _ck(_v, 14, 0, currVal_5); var currVal_6 = (_co.skip_delay === false); _ck(_v, 16, 0, currVal_6); }, null); }
 function View_BookingPanelComponent_16(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 24, "div", [["class", "bindings"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "i", [["bind", "room_name"], ["binding", ""], ["mod", "Bookings"]], null, [[null, "modelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("modelChange" === en)) {
         var pd_0 = ((_co.space_name = $event) !== false);
@@ -6783,6 +6783,9 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
          */
         this.bookingsLoaded = new rxjs__WEBPACK_IMPORTED_MODULE_10__["BehaviorSubject"]([]);
     }
+    get time_delay() {
+        return Math.floor(this.delay_time / 1000);
+    }
     setSpace(space) {
         // We have a new Space object. Angular will handle most of the propagation.
         // But first, we should hook up translations....
@@ -6913,10 +6916,10 @@ class BookingPanelComponent extends _shared_base_component__WEBPACK_IMPORTED_MOD
         this.subscription('skip_delay', this._service.listen('skip_delay', (_) => (this.skip_delay = _)));
         this.delay_time = this._service.get('delay_time') || 0;
         this.interval('update_delay', () => {
-            this.delay_time -= 1;
+            this.delay_time -= 100;
             if (this.delay_time <= 0)
                 this.clearInterval('update_delay');
-        }, 1000);
+        }, 100);
         this.subscription('app_ready', this._service.initialised.subscribe((is_ready) => {
             if (is_ready) {
                 this.subscription('spaces_list_buildings', Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["combineLatest"])([
@@ -8162,16 +8165,16 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 const VERSION = {
     "dirty": false,
-    "raw": "1b3a166",
-    "hash": "1b3a166",
+    "raw": "a59fe23",
+    "hash": "a59fe23",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "1b3a166",
+    "suffix": "a59fe23",
     "semverString": null,
     "version": "0.0.0",
     "core_version": "1.0.0",
-    "time": 1669774652419
+    "time": 1669775766768
 };
 /* tslint:enable */
 
