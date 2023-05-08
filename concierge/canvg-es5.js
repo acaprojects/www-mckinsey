@@ -10581,7 +10581,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     check(typeof self == 'object' && self) || check(typeof global == 'object' && global) || // eslint-disable-next-line no-new-func -- fallback
     function () {
       return this;
-    }() || Function('return this')();
+    }() || this || Function('return this')();
     /***/
 
   },
@@ -13529,10 +13529,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     (module.exports = function (key, value) {
       return store[key] || (store[key] = value !== undefined ? value : {});
     })('versions', []).push({
-      version: '3.30.1',
+      version: '3.30.2',
       mode: IS_PURE ? 'pure' : 'global',
       copyright: '© 2014-2023 Denis Pushkarev (zloirock.ru)',
-      license: 'https://github.com/zloirock/core-js/blob/v3.30.1/LICENSE',
+      license: 'https://github.com/zloirock/core-js/blob/v3.30.2/LICENSE',
       source: 'https://github.com/zloirock/core-js'
     });
     /***/
@@ -13733,14 +13733,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
     var fails = __webpack_require__(
     /*! ../internals/fails */
-    "../../node_modules/core-js/internals/fails.js"); // eslint-disable-next-line es/no-object-getownpropertysymbols -- required for testing
+    "../../node_modules/core-js/internals/fails.js");
 
+    var global = __webpack_require__(
+    /*! ../internals/global */
+    "../../node_modules/core-js/internals/global.js");
+
+    var $String = global.String; // eslint-disable-next-line es/no-object-getownpropertysymbols -- required for testing
 
     module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
       var symbol = Symbol(); // Chrome 38 Symbol has incorrect toString conversion
       // `get-own-property-symbols` polyfill symbols converted to object are not Symbol instances
+      // nb: Do not call `String` directly to avoid this being optimized out to `symbol+''` which will,
+      // of course, fail.
 
-      return !String(symbol) || !(Object(symbol) instanceof Symbol) || // Chrome 38-40 symbols are not inherited from DOM collections prototypes to instances
+      return !$String(symbol) || !(Object(symbol) instanceof Symbol) || // Chrome 38-40 symbols are not inherited from DOM collections prototypes to instances
       !Symbol.sham && V8_VERSION && V8_VERSION < 41;
     });
     /***/
