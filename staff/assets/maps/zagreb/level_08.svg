@@ -1527,7 +1527,7 @@
 	<polygon id="area-8.VIDEOROOM2-status" class="st25" points="795.2,328.3 940.9,328.3 940.9,473.7 887,473.7 887,477.9 
 		757.5,477.9 757.5,328.3 	"/>
 	<rect id="area-8.TEAM_ROOM_1-status" x="890.3" y="474.6" class="st25" width="186.3" height="127.6"/>
-	<rect id="area-8.TEAM_ROOM_2-status-2" x="1118" y="470.4" class="st25" width="196" height="127.6"/>
+	<rect id="area-8.TEAM_ROOM_2-status" x="1118" y="470.4" class="st25" width="196" height="127.6"/>
 	<rect id="area-8.OFFICE_5-status" x="4" y="687" class="st25" width="109" height="163.6"/>
 </g>
 <g id="outline">
