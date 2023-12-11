@@ -98,7 +98,7 @@
                 "all_day",
                 "has_catering"
             ],
-            "html_body": false,
+            "html_body": true,
             "multiple_spaces": true,
             "desk_start": 9
         },
