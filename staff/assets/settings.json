@@ -145,7 +145,10 @@
                     }
                 ]
             }
-        }
+        },
+        "day_view": {
+            "dragdrop": false
+        },
     },
     "mock": false
 }
