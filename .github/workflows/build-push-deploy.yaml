@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - uat
-      - prod
+      - master
 env:
   IMAGE_NAME: www-mckinsey
   DEV_REGISTRY: mckinsey-cloud-infra-eks-dev-docker.jfrog.io
@@ -30,7 +30,7 @@ jobs:
         run: |
           if [[ ${{ github.ref }} == 'refs/heads/uat' ]]; then
             echo "REGISTRY=${{ env.DEV_REGISTRY }}" >> $GITHUB_ENV
-          elif [[ ${{ github.ref }} == 'refs/heads/prod' ]]; then
+          elif [[ ${{ github.ref }} == 'refs/heads/master' ]]; then
             echo "REGISTRY=${{ env.PROD_REGISTRY }}" >> $GITHUB_ENV
           fi  
           
@@ -71,7 +71,7 @@ jobs:
             echo "DEPLOYMENT_PAT=${{ env.DEV_DEPLOYMENT_PAT }}" >> $GITHUB_ENV
             echo "DEPLOYMENT_DIR=./resources" >> $GITHUB_ENV
             echo "DEPLOYMENT_BRANCH=main" >> $GITHUB_ENV
-          elif [[ ${{ github.ref }} == 'refs/heads/prod' ]]; then
+          elif [[ ${{ github.ref }} == 'refs/heads/master' ]]; then
             echo "DEPLOYMENT_REPO=${{ env.PROD_DEPLOYMENT_REPO }}" >> $GITHUB_ENV
             echo "DEPLOYMENT_PAT=${{ env.PROD_DEPLOYMENT_PAT }}" >> $GITHUB_ENV
             echo "DEPLOYMENT_DIR=./prod/resources" >> $GITHUB_ENV
