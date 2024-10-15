@@ -34,7 +34,7 @@ jobs:
             echo "REGISTRY=${{ env.PROD_REGISTRY }}" >> $GITHUB_ENV
           fi  
           
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Get short SHA of the commit
         run: |
@@ -79,7 +79,7 @@ jobs:
           fi    
 
       - name: Clone deployment repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{ env.DEPLOYMENT_REPO }}
           token: ${{ env.DEPLOYMENT_PAT }}
