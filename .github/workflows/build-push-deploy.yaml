@@ -1,0 +1,104 @@
+name: Build, Push, Deploy
+
+on:
+  push:
+    branches:
+      - uat
+      - master
+env:
+  IMAGE_NAME: www-mckinsey
+  DEV_REGISTRY: mckinsey-cloud-infra-eks-dev-docker.jfrog.io
+  PROD_REGISTRY: mckinsey-cloud-infra-eks-converge-prod-docker.jfrog.io
+  DEV_DOCKER_USERNAME: ${{ secrets.DEV_DOCKER_USERNAME }}
+  DEV_DOCKER_PASSWORD: ${{ secrets.DEV_DOCKER_PASSWORD }}
+  PROD_DOCKER_USERNAME: ${{ secrets.PROD_DOCKER_USERNAME }}
+  PROD_DOCKER_PASSWORD: ${{ secrets.PROD_DOCKER_PASSWORD }}
+  DEV_DEPLOYMENT_REPO: McK-Internal/cloud_infra_eks_dev
+  PROD_DEPLOYMENT_REPO: McK-Internal/cloud_infra_eks_converge_prod
+  DEV_DEPLOYMENT_PAT: ${{ secrets.DEV_DEPLOYMENT_PAT }}
+  PROD_DEPLOYMENT_PAT: ${{ secrets.PROD_DEPLOYMENT_PAT }}
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Set environment variables based on branch
+        run: |
+          if [[ ${{ github.ref }} == 'refs/heads/uat' ]]; then
+            echo "REGISTRY=${{ env.DEV_REGISTRY }}" >> $GITHUB_ENV
+            echo "DOCKER_USERNAME=${{ env.DEV_DOCKER_USERNAME }}" >> $GITHUB_ENV
+            echo "DOCKER_PASSWORD=${{ env.DEV_DOCKER_PASSWORD }}" >> $GITHUB_ENV
+          elif [[ ${{ github.ref }} == 'refs/heads/master' ]]; then
+            echo "REGISTRY=${{ env.PROD_REGISTRY }}" >> $GITHUB_ENV
+            echo "DOCKER_USERNAME=${{ env.PROD_DOCKER_USERNAME }}" >> $GITHUB_ENV
+            echo "DOCKER_PASSWORD=${{ env.PROD_DOCKER_PASSWORD }}" >> $GITHUB_ENV
+          fi  
+          
+      - uses: actions/checkout@v4
+
+      - name: Get short SHA of the commit
+        run: |
+          echo "SHORT_SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Build Docker image
+        run: |
+          docker build . -t $REGISTRY/${{ env.IMAGE_NAME }}:$SHORT_SHA
+
+      - name: Login to image registry
+        uses: docker/login-action@v3
+        with:
+          username: $DOCKER_USERNAME
+          password: $DOCKER_PASSWORD
+          registry: $REGISTRY
+
+      - name: Push Docker image
+        run: |
+          docker push $REGISTRY/${{ env.IMAGE_NAME }}:$SHORT_SHA
+          
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Set environment variables based on branch
+        run: |
+          if [[ ${{ github.ref }} == 'refs/heads/uat' ]]; then
+            echo "REGISTRY=${{ env.DEV_REGISTRY }}" >> $GITHUB_ENV
+            echo "DEPLOYMENT_REPO=${{ env.DEV_DEPLOYMENT_REPO }}" >> $GITHUB_ENV
+            echo "DEPLOYMENT_PAT=${{ env.DEV_DEPLOYMENT_PAT }}" >> $GITHUB_ENV
+            echo "DEPLOYMENT_DIR=./resources" >> $GITHUB_ENV
+            echo "DEPLOYMENT_BRANCH=main" >> $GITHUB_ENV
+          elif [[ ${{ github.ref }} == 'refs/heads/master' ]]; then
+            echo "REGISTRY=${{ env.PROD_REGISTRY }}" >> $GITHUB_ENV
+            echo "DEPLOYMENT_REPO=${{ env.PROD_DEPLOYMENT_REPO }}" >> $GITHUB_ENV
+            echo "DEPLOYMENT_PAT=${{ env.PROD_DEPLOYMENT_PAT }}" >> $GITHUB_ENV
+            echo "DEPLOYMENT_DIR=./prod/resources" >> $GITHUB_ENV
+            echo "DEPLOYMENT_BRANCH=cd/${{ env.IMAGE_NAME }}-${{ env.SHORT_SHA }}" >> $GITHUB_ENV
+          fi    
+
+      - name: Clone deployment repo
+        uses: actions/checkout@v4
+        with:
+          repository: $DEPLOYMENT_REPO
+          token: $DEPLOYMENT_PAT
+          path: 'deployment-repo'
+          ref: main
+
+      - name: Update YAML files with the new tag
+        working-directory: deployment-repo
+        run: |
+          sed -i \
+          "s/${{ env.REGISTRY }}\/${{ env.IMAGE_NAME }}:[^ ]*/${{ env.REGISTRY }}\/${{ env.IMAGE_NAME }}:${{ env.SHORT_SHA }}/g" \
+          ${{ env.DEPLOYMENT_DIR }}/*.yaml
+
+      - name: Commit and push changes
+        working-directory: deployment-repo
+        run: |
+          if [[ "${{ env.DEPLOYMENT_BRANCH }}" != "main" ]]; then
+            git checkout -b ${{ env.DEPLOYMENT_BRANCH }}
+          fi
+          git add ${{ env.DEPLOYMENT_DIR }}/*.yaml
+          git diff --staged --quiet || git commit -m "Update ${{ env.IMAGE_NAME }} image tags to ${{ env.SHORT_SHA }}"
+          git push --set-upstream origin $DEPLOYMENT_BRANCH
