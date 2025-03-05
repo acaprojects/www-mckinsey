@@ -22,6 +22,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.repository != 'acaprojects/www-mckinsey' }}
     steps:
     
       - name: Set environment variables based on branch
