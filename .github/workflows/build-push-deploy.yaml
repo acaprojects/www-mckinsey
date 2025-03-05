@@ -13,8 +13,8 @@ env:
   DEV_DOCKER_PASSWORD: ${{ secrets.DEV_DOCKER_PASSWORD }}
   PROD_DOCKER_USERNAME: ${{ secrets.PROD_DOCKER_USERNAME }}
   PROD_DOCKER_PASSWORD: ${{ secrets.PROD_DOCKER_PASSWORD }}
-  DEV_DEPLOYMENT_REPO: https://github.com/McK-Internal/cloud_infra_eks_dev
-  PROD_DEPLOYMENT_REPO: https://github.com/McK-Internal/cloud_infra_eks_converge_prod
+  DEV_DEPLOYMENT_REPO: McK-Internal/cloud_infra_eks_dev
+  PROD_DEPLOYMENT_REPO: McK-Internal/cloud_infra_eks_converge_prod
   DEV_DEPLOYMENT_PAT: ${{ secrets.DEV_DEPLOYMENT_PAT }}
   PROD_DEPLOYMENT_PAT: ${{ secrets.PROD_DEPLOYMENT_PAT }}
 
@@ -22,8 +22,6 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    outputs:
-      commit: ${{ steps.vars.outputs.commit }}
     steps:
     
       - name: Set environment variables based on branch
@@ -47,10 +45,6 @@ jobs:
       - name: Build Docker image
         run: |
           docker build . -t $REGISTRY/${{ env.IMAGE_NAME }}:$SHORT_SHA
-
-      - name: Set output
-        id: vars
-        run: echo "commit=$SHORT_SHA" >> $GITHUB_OUTPUT
 
       - name: Login to image registry
         uses: docker/login-action@v3
@@ -81,7 +75,7 @@ jobs:
             echo "DEPLOYMENT_REPO=${{ env.PROD_DEPLOYMENT_REPO }}" >> $GITHUB_ENV
             echo "DEPLOYMENT_PAT=${{ env.PROD_DEPLOYMENT_PAT }}" >> $GITHUB_ENV
             echo "DEPLOYMENT_DIR=./prod/resources" >> $GITHUB_ENV
-            echo "DEPLOYMENT_BRANCH=cd/${{ env.IMAGE_NAME }}-${{ needs.build.output.commit }}" >> $GITHUB_ENV
+            echo "DEPLOYMENT_BRANCH=cd/${{ env.IMAGE_NAME }}-${{ env.SHORT_SHA }}" >> $GITHUB_ENV
           fi    
 
       - name: Clone deployment repo
@@ -96,15 +90,15 @@ jobs:
         working-directory: deployment-repo
         run: |
           sed -i \
-          "s/${{ REGISTRY }}\/${{ env.IMAGE_NAME }}:[^ ]*/${{ REGISTRY }}\/${{ env.IMAGE_NAME }}:${{ needs.build.outputs.commit }}/g" \
-          ${{ DEPLOYMENT_DIR }}/*.yaml
+          "s/${{ env.REGISTRY }}\/${{ env.IMAGE_NAME }}:[^ ]*/${{ env.REGISTRY }}\/${{ env.IMAGE_NAME }}:${{ env.SHORT_SHA }}/g" \
+          ${{ env.DEPLOYMENT_DIR }}/*.yaml
 
       - name: Commit and push changes
         working-directory: deployment-repo
         run: |
-          if [[ "${{ DEPLOYMENT_BRANCH }}" != "main" ]]; then
-            git checkout -b ${{ DEPLOYMENT_BRANCH }}
+          if [[ "${{ env.DEPLOYMENT_BRANCH }}" != "main" ]]; then
+            git checkout -b ${{ env.DEPLOYMENT_BRANCH }}
           fi
-          git add ${{ DEPLOYMENT_DIR }}/*.yaml
-          git diff --staged --quiet || git commit -m "Update ${{ env.IMAGE_NAME }} image tags to ${{ needs.build.outputs.commit }}"
+          git add ${{ env.DEPLOYMENT_DIR }}/*.yaml
+          git diff --staged --quiet || git commit -m "Update ${{ env.IMAGE_NAME }} image tags to ${{ env.SHORT_SHA }}"
           git push --set-upstream origin $DEPLOYMENT_BRANCH
